@@ -39,7 +39,12 @@ class HostSecurityState implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -52,7 +57,7 @@ class HostSecurityState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -75,7 +80,11 @@ class HostSecurityState implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getFqdn(): ?string {
-        return $this->getBackingStore()->get('fqdn');
+        $val = $this->getBackingStore()->get('fqdn');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'fqdn'");
     }
 
     /**
@@ -83,7 +92,11 @@ class HostSecurityState implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getIsAzureAdJoined(): ?bool {
-        return $this->getBackingStore()->get('isAzureAdJoined');
+        $val = $this->getBackingStore()->get('isAzureAdJoined');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isAzureAdJoined'");
     }
 
     /**
@@ -91,7 +104,11 @@ class HostSecurityState implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getIsAzureAdRegistered(): ?bool {
-        return $this->getBackingStore()->get('isAzureAdRegistered');
+        $val = $this->getBackingStore()->get('isAzureAdRegistered');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isAzureAdRegistered'");
     }
 
     /**
@@ -99,7 +116,11 @@ class HostSecurityState implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getIsHybridAzureDomainJoined(): ?bool {
-        return $this->getBackingStore()->get('isHybridAzureDomainJoined');
+        $val = $this->getBackingStore()->get('isHybridAzureDomainJoined');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isHybridAzureDomainJoined'");
     }
 
     /**
@@ -107,7 +128,11 @@ class HostSecurityState implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getNetBiosName(): ?string {
-        return $this->getBackingStore()->get('netBiosName');
+        $val = $this->getBackingStore()->get('netBiosName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'netBiosName'");
     }
 
     /**
@@ -115,7 +140,11 @@ class HostSecurityState implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -123,7 +152,11 @@ class HostSecurityState implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOs(): ?string {
-        return $this->getBackingStore()->get('os');
+        $val = $this->getBackingStore()->get('os');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'os'");
     }
 
     /**
@@ -131,7 +164,11 @@ class HostSecurityState implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getPrivateIpAddress(): ?string {
-        return $this->getBackingStore()->get('privateIpAddress');
+        $val = $this->getBackingStore()->get('privateIpAddress');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'privateIpAddress'");
     }
 
     /**
@@ -139,7 +176,11 @@ class HostSecurityState implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getPublicIpAddress(): ?string {
-        return $this->getBackingStore()->get('publicIpAddress');
+        $val = $this->getBackingStore()->get('publicIpAddress');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'publicIpAddress'");
     }
 
     /**
@@ -147,7 +188,11 @@ class HostSecurityState implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getRiskScore(): ?string {
-        return $this->getBackingStore()->get('riskScore');
+        $val = $this->getBackingStore()->get('riskScore');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'riskScore'");
     }
 
     /**

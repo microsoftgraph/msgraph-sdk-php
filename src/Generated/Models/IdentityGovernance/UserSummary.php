@@ -39,7 +39,12 @@ class UserSummary implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -55,7 +60,11 @@ class UserSummary implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getFailedTasks(): ?int {
-        return $this->getBackingStore()->get('failedTasks');
+        $val = $this->getBackingStore()->get('failedTasks');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'failedTasks'");
     }
 
     /**
@@ -63,12 +72,16 @@ class UserSummary implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getFailedUsers(): ?int {
-        return $this->getBackingStore()->get('failedUsers');
+        $val = $this->getBackingStore()->get('failedUsers');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'failedUsers'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -87,7 +100,11 @@ class UserSummary implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -95,7 +112,11 @@ class UserSummary implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getSuccessfulUsers(): ?int {
-        return $this->getBackingStore()->get('successfulUsers');
+        $val = $this->getBackingStore()->get('successfulUsers');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'successfulUsers'");
     }
 
     /**
@@ -103,7 +124,11 @@ class UserSummary implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getTotalTasks(): ?int {
-        return $this->getBackingStore()->get('totalTasks');
+        $val = $this->getBackingStore()->get('totalTasks');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'totalTasks'");
     }
 
     /**
@@ -111,7 +136,11 @@ class UserSummary implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getTotalUsers(): ?int {
-        return $this->getBackingStore()->get('totalUsers');
+        $val = $this->getBackingStore()->get('totalUsers');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'totalUsers'");
     }
 
     /**

@@ -40,7 +40,12 @@ class BitorPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -53,7 +58,7 @@ class BitorPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -68,7 +73,11 @@ class BitorPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
      * @return Json|null
     */
     public function getNumber1(): ?Json {
-        return $this->getBackingStore()->get('number1');
+        $val = $this->getBackingStore()->get('number1');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'number1'");
     }
 
     /**
@@ -76,7 +85,11 @@ class BitorPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
      * @return Json|null
     */
     public function getNumber2(): ?Json {
-        return $this->getBackingStore()->get('number2');
+        $val = $this->getBackingStore()->get('number2');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'number2'");
     }
 
     /**

@@ -9,6 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class SearchHitsContainer implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -39,7 +40,12 @@ class SearchHitsContainer implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -47,7 +53,13 @@ class SearchHitsContainer implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<SearchAggregation>|null
     */
     public function getAggregations(): ?array {
-        return $this->getBackingStore()->get('aggregations');
+        $val = $this->getBackingStore()->get('aggregations');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, SearchAggregation::class);
+            /** @var array<SearchAggregation>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'aggregations'");
     }
 
     /**
@@ -60,7 +72,7 @@ class SearchHitsContainer implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -78,7 +90,13 @@ class SearchHitsContainer implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<SearchHit>|null
     */
     public function getHits(): ?array {
-        return $this->getBackingStore()->get('hits');
+        $val = $this->getBackingStore()->get('hits');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, SearchHit::class);
+            /** @var array<SearchHit>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'hits'");
     }
 
     /**
@@ -86,7 +104,11 @@ class SearchHitsContainer implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getMoreResultsAvailable(): ?bool {
-        return $this->getBackingStore()->get('moreResultsAvailable');
+        $val = $this->getBackingStore()->get('moreResultsAvailable');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'moreResultsAvailable'");
     }
 
     /**
@@ -94,7 +116,11 @@ class SearchHitsContainer implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -102,7 +128,11 @@ class SearchHitsContainer implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getTotal(): ?int {
-        return $this->getBackingStore()->get('total');
+        $val = $this->getBackingStore()->get('total');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'total'");
     }
 
     /**

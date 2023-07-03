@@ -40,7 +40,12 @@ class Confidence_TPostRequestBody implements AdditionalDataHolder, BackedModel, 
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -48,7 +53,11 @@ class Confidence_TPostRequestBody implements AdditionalDataHolder, BackedModel, 
      * @return Json|null
     */
     public function getAlpha(): ?Json {
-        return $this->getBackingStore()->get('alpha');
+        $val = $this->getBackingStore()->get('alpha');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'alpha'");
     }
 
     /**
@@ -61,7 +70,7 @@ class Confidence_TPostRequestBody implements AdditionalDataHolder, BackedModel, 
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -77,7 +86,11 @@ class Confidence_TPostRequestBody implements AdditionalDataHolder, BackedModel, 
      * @return Json|null
     */
     public function getSize(): ?Json {
-        return $this->getBackingStore()->get('size');
+        $val = $this->getBackingStore()->get('size');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'size'");
     }
 
     /**
@@ -85,7 +98,11 @@ class Confidence_TPostRequestBody implements AdditionalDataHolder, BackedModel, 
      * @return Json|null
     */
     public function getStandardDev(): ?Json {
-        return $this->getBackingStore()->get('standardDev');
+        $val = $this->getBackingStore()->get('standardDev');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'standardDev'");
     }
 
     /**

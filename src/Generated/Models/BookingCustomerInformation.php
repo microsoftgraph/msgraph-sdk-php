@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class BookingCustomerInformation extends BookingCustomerInformationBase implements Parsable 
 {
@@ -30,7 +31,11 @@ class BookingCustomerInformation extends BookingCustomerInformationBase implemen
      * @return string|null
     */
     public function getCustomerId(): ?string {
-        return $this->getBackingStore()->get('customerId');
+        $val = $this->getBackingStore()->get('customerId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'customerId'");
     }
 
     /**
@@ -38,7 +43,13 @@ class BookingCustomerInformation extends BookingCustomerInformationBase implemen
      * @return array<BookingQuestionAnswer>|null
     */
     public function getCustomQuestionAnswers(): ?array {
-        return $this->getBackingStore()->get('customQuestionAnswers');
+        $val = $this->getBackingStore()->get('customQuestionAnswers');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, BookingQuestionAnswer::class);
+            /** @var array<BookingQuestionAnswer>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'customQuestionAnswers'");
     }
 
     /**
@@ -46,12 +57,16 @@ class BookingCustomerInformation extends BookingCustomerInformationBase implemen
      * @return string|null
     */
     public function getEmailAddress(): ?string {
-        return $this->getBackingStore()->get('emailAddress');
+        $val = $this->getBackingStore()->get('emailAddress');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'emailAddress'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -72,7 +87,11 @@ class BookingCustomerInformation extends BookingCustomerInformationBase implemen
      * @return Location|null
     */
     public function getLocation(): ?Location {
-        return $this->getBackingStore()->get('location');
+        $val = $this->getBackingStore()->get('location');
+        if (is_null($val) || $val instanceof Location) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'location'");
     }
 
     /**
@@ -80,7 +99,11 @@ class BookingCustomerInformation extends BookingCustomerInformationBase implemen
      * @return string|null
     */
     public function getName(): ?string {
-        return $this->getBackingStore()->get('name');
+        $val = $this->getBackingStore()->get('name');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'name'");
     }
 
     /**
@@ -88,7 +111,11 @@ class BookingCustomerInformation extends BookingCustomerInformationBase implemen
      * @return string|null
     */
     public function getNotes(): ?string {
-        return $this->getBackingStore()->get('notes');
+        $val = $this->getBackingStore()->get('notes');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'notes'");
     }
 
     /**
@@ -96,7 +123,11 @@ class BookingCustomerInformation extends BookingCustomerInformationBase implemen
      * @return string|null
     */
     public function getPhone(): ?string {
-        return $this->getBackingStore()->get('phone');
+        $val = $this->getBackingStore()->get('phone');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'phone'");
     }
 
     /**
@@ -104,7 +135,11 @@ class BookingCustomerInformation extends BookingCustomerInformationBase implemen
      * @return string|null
     */
     public function getTimeZone(): ?string {
-        return $this->getBackingStore()->get('timeZone');
+        $val = $this->getBackingStore()->get('timeZone');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'timeZone'");
     }
 
     /**

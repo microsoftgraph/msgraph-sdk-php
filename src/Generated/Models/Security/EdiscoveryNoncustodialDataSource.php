@@ -30,12 +30,16 @@ class EdiscoveryNoncustodialDataSource extends DataSourceContainer implements Pa
      * @return DataSource|null
     */
     public function getDataSource(): ?DataSource {
-        return $this->getBackingStore()->get('dataSource');
+        $val = $this->getBackingStore()->get('dataSource');
+        if (is_null($val) || $val instanceof DataSource) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'dataSource'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -50,7 +54,11 @@ class EdiscoveryNoncustodialDataSource extends DataSourceContainer implements Pa
      * @return EdiscoveryIndexOperation|null
     */
     public function getLastIndexOperation(): ?EdiscoveryIndexOperation {
-        return $this->getBackingStore()->get('lastIndexOperation');
+        $val = $this->getBackingStore()->get('lastIndexOperation');
+        if (is_null($val) || $val instanceof EdiscoveryIndexOperation) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastIndexOperation'");
     }
 
     /**

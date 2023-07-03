@@ -6,6 +6,7 @@ use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 /**
  * Entity which represents a connection to device management partner.
@@ -33,12 +34,16 @@ class DeviceManagementPartner extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -60,7 +65,13 @@ class DeviceManagementPartner extends Entity implements Parsable
      * @return array<DeviceManagementPartnerAssignment>|null
     */
     public function getGroupsRequiringPartnerEnrollment(): ?array {
-        return $this->getBackingStore()->get('groupsRequiringPartnerEnrollment');
+        $val = $this->getBackingStore()->get('groupsRequiringPartnerEnrollment');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, DeviceManagementPartnerAssignment::class);
+            /** @var array<DeviceManagementPartnerAssignment>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'groupsRequiringPartnerEnrollment'");
     }
 
     /**
@@ -68,7 +79,11 @@ class DeviceManagementPartner extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsConfigured(): ?bool {
-        return $this->getBackingStore()->get('isConfigured');
+        $val = $this->getBackingStore()->get('isConfigured');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isConfigured'");
     }
 
     /**
@@ -76,7 +91,11 @@ class DeviceManagementPartner extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastHeartbeatDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('lastHeartbeatDateTime');
+        $val = $this->getBackingStore()->get('lastHeartbeatDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastHeartbeatDateTime'");
     }
 
     /**
@@ -84,7 +103,11 @@ class DeviceManagementPartner extends Entity implements Parsable
      * @return DeviceManagementPartnerAppType|null
     */
     public function getPartnerAppType(): ?DeviceManagementPartnerAppType {
-        return $this->getBackingStore()->get('partnerAppType');
+        $val = $this->getBackingStore()->get('partnerAppType');
+        if (is_null($val) || $val instanceof DeviceManagementPartnerAppType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'partnerAppType'");
     }
 
     /**
@@ -92,7 +115,11 @@ class DeviceManagementPartner extends Entity implements Parsable
      * @return DeviceManagementPartnerTenantState|null
     */
     public function getPartnerState(): ?DeviceManagementPartnerTenantState {
-        return $this->getBackingStore()->get('partnerState');
+        $val = $this->getBackingStore()->get('partnerState');
+        if (is_null($val) || $val instanceof DeviceManagementPartnerTenantState) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'partnerState'");
     }
 
     /**
@@ -100,7 +127,11 @@ class DeviceManagementPartner extends Entity implements Parsable
      * @return string|null
     */
     public function getSingleTenantAppId(): ?string {
-        return $this->getBackingStore()->get('singleTenantAppId');
+        $val = $this->getBackingStore()->get('singleTenantAppId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'singleTenantAppId'");
     }
 
     /**
@@ -108,7 +139,11 @@ class DeviceManagementPartner extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getWhenPartnerDevicesWillBeMarkedAsNonCompliantDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime');
+        $val = $this->getBackingStore()->get('whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime'");
     }
 
     /**
@@ -116,7 +151,11 @@ class DeviceManagementPartner extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getWhenPartnerDevicesWillBeRemovedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('whenPartnerDevicesWillBeRemovedDateTime');
+        $val = $this->getBackingStore()->get('whenPartnerDevicesWillBeRemovedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'whenPartnerDevicesWillBeRemovedDateTime'");
     }
 
     /**

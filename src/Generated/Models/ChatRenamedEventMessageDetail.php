@@ -30,7 +30,11 @@ class ChatRenamedEventMessageDetail extends EventMessageDetail implements Parsab
      * @return string|null
     */
     public function getChatDisplayName(): ?string {
-        return $this->getBackingStore()->get('chatDisplayName');
+        $val = $this->getBackingStore()->get('chatDisplayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'chatDisplayName'");
     }
 
     /**
@@ -38,12 +42,16 @@ class ChatRenamedEventMessageDetail extends EventMessageDetail implements Parsab
      * @return string|null
     */
     public function getChatId(): ?string {
-        return $this->getBackingStore()->get('chatId');
+        $val = $this->getBackingStore()->get('chatId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'chatId'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -59,7 +67,11 @@ class ChatRenamedEventMessageDetail extends EventMessageDetail implements Parsab
      * @return IdentitySet|null
     */
     public function getInitiator(): ?IdentitySet {
-        return $this->getBackingStore()->get('initiator');
+        $val = $this->getBackingStore()->get('initiator');
+        if (is_null($val) || $val instanceof IdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'initiator'");
     }
 
     /**

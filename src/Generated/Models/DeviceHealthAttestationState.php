@@ -40,7 +40,12 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -48,7 +53,11 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
      * @return string|null
     */
     public function getAttestationIdentityKey(): ?string {
-        return $this->getBackingStore()->get('attestationIdentityKey');
+        $val = $this->getBackingStore()->get('attestationIdentityKey');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'attestationIdentityKey'");
     }
 
     /**
@@ -64,7 +73,11 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
      * @return string|null
     */
     public function getBitLockerStatus(): ?string {
-        return $this->getBackingStore()->get('bitLockerStatus');
+        $val = $this->getBackingStore()->get('bitLockerStatus');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'bitLockerStatus'");
     }
 
     /**
@@ -72,7 +85,11 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
      * @return string|null
     */
     public function getBootAppSecurityVersion(): ?string {
-        return $this->getBackingStore()->get('bootAppSecurityVersion');
+        $val = $this->getBackingStore()->get('bootAppSecurityVersion');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'bootAppSecurityVersion'");
     }
 
     /**
@@ -80,7 +97,11 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
      * @return string|null
     */
     public function getBootDebugging(): ?string {
-        return $this->getBackingStore()->get('bootDebugging');
+        $val = $this->getBackingStore()->get('bootDebugging');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'bootDebugging'");
     }
 
     /**
@@ -88,7 +109,11 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
      * @return string|null
     */
     public function getBootManagerSecurityVersion(): ?string {
-        return $this->getBackingStore()->get('bootManagerSecurityVersion');
+        $val = $this->getBackingStore()->get('bootManagerSecurityVersion');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'bootManagerSecurityVersion'");
     }
 
     /**
@@ -96,7 +121,11 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
      * @return string|null
     */
     public function getBootManagerVersion(): ?string {
-        return $this->getBackingStore()->get('bootManagerVersion');
+        $val = $this->getBackingStore()->get('bootManagerVersion');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'bootManagerVersion'");
     }
 
     /**
@@ -104,7 +133,11 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
      * @return string|null
     */
     public function getBootRevisionListInfo(): ?string {
-        return $this->getBackingStore()->get('bootRevisionListInfo');
+        $val = $this->getBackingStore()->get('bootRevisionListInfo');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'bootRevisionListInfo'");
     }
 
     /**
@@ -112,7 +145,11 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
      * @return string|null
     */
     public function getCodeIntegrity(): ?string {
-        return $this->getBackingStore()->get('codeIntegrity');
+        $val = $this->getBackingStore()->get('codeIntegrity');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'codeIntegrity'");
     }
 
     /**
@@ -120,7 +157,11 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
      * @return string|null
     */
     public function getCodeIntegrityCheckVersion(): ?string {
-        return $this->getBackingStore()->get('codeIntegrityCheckVersion');
+        $val = $this->getBackingStore()->get('codeIntegrityCheckVersion');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'codeIntegrityCheckVersion'");
     }
 
     /**
@@ -128,7 +169,11 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
      * @return string|null
     */
     public function getCodeIntegrityPolicy(): ?string {
-        return $this->getBackingStore()->get('codeIntegrityPolicy');
+        $val = $this->getBackingStore()->get('codeIntegrityPolicy');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'codeIntegrityPolicy'");
     }
 
     /**
@@ -136,7 +181,11 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
      * @return string|null
     */
     public function getContentNamespaceUrl(): ?string {
-        return $this->getBackingStore()->get('contentNamespaceUrl');
+        $val = $this->getBackingStore()->get('contentNamespaceUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'contentNamespaceUrl'");
     }
 
     /**
@@ -144,7 +193,11 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
      * @return string|null
     */
     public function getContentVersion(): ?string {
-        return $this->getBackingStore()->get('contentVersion');
+        $val = $this->getBackingStore()->get('contentVersion');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'contentVersion'");
     }
 
     /**
@@ -152,7 +205,11 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
      * @return string|null
     */
     public function getDataExcutionPolicy(): ?string {
-        return $this->getBackingStore()->get('dataExcutionPolicy');
+        $val = $this->getBackingStore()->get('dataExcutionPolicy');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'dataExcutionPolicy'");
     }
 
     /**
@@ -160,7 +217,11 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
      * @return string|null
     */
     public function getDeviceHealthAttestationStatus(): ?string {
-        return $this->getBackingStore()->get('deviceHealthAttestationStatus');
+        $val = $this->getBackingStore()->get('deviceHealthAttestationStatus');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deviceHealthAttestationStatus'");
     }
 
     /**
@@ -168,12 +229,16 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
      * @return string|null
     */
     public function getEarlyLaunchAntiMalwareDriverProtection(): ?string {
-        return $this->getBackingStore()->get('earlyLaunchAntiMalwareDriverProtection');
+        $val = $this->getBackingStore()->get('earlyLaunchAntiMalwareDriverProtection');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'earlyLaunchAntiMalwareDriverProtection'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -219,7 +284,11 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
      * @return string|null
     */
     public function getHealthAttestationSupportedStatus(): ?string {
-        return $this->getBackingStore()->get('healthAttestationSupportedStatus');
+        $val = $this->getBackingStore()->get('healthAttestationSupportedStatus');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'healthAttestationSupportedStatus'");
     }
 
     /**
@@ -227,7 +296,11 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
      * @return string|null
     */
     public function getHealthStatusMismatchInfo(): ?string {
-        return $this->getBackingStore()->get('healthStatusMismatchInfo');
+        $val = $this->getBackingStore()->get('healthStatusMismatchInfo');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'healthStatusMismatchInfo'");
     }
 
     /**
@@ -235,7 +308,11 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
      * @return DateTime|null
     */
     public function getIssuedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('issuedDateTime');
+        $val = $this->getBackingStore()->get('issuedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'issuedDateTime'");
     }
 
     /**
@@ -243,7 +320,11 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
      * @return string|null
     */
     public function getLastUpdateDateTime(): ?string {
-        return $this->getBackingStore()->get('lastUpdateDateTime');
+        $val = $this->getBackingStore()->get('lastUpdateDateTime');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastUpdateDateTime'");
     }
 
     /**
@@ -251,7 +332,11 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -259,7 +344,11 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
      * @return string|null
     */
     public function getOperatingSystemKernelDebugging(): ?string {
-        return $this->getBackingStore()->get('operatingSystemKernelDebugging');
+        $val = $this->getBackingStore()->get('operatingSystemKernelDebugging');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'operatingSystemKernelDebugging'");
     }
 
     /**
@@ -267,7 +356,11 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
      * @return string|null
     */
     public function getOperatingSystemRevListInfo(): ?string {
-        return $this->getBackingStore()->get('operatingSystemRevListInfo');
+        $val = $this->getBackingStore()->get('operatingSystemRevListInfo');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'operatingSystemRevListInfo'");
     }
 
     /**
@@ -275,7 +368,11 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
      * @return string|null
     */
     public function getPcr0(): ?string {
-        return $this->getBackingStore()->get('pcr0');
+        $val = $this->getBackingStore()->get('pcr0');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'pcr0'");
     }
 
     /**
@@ -283,7 +380,11 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
      * @return string|null
     */
     public function getPcrHashAlgorithm(): ?string {
-        return $this->getBackingStore()->get('pcrHashAlgorithm');
+        $val = $this->getBackingStore()->get('pcrHashAlgorithm');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'pcrHashAlgorithm'");
     }
 
     /**
@@ -291,7 +392,11 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
      * @return int|null
     */
     public function getResetCount(): ?int {
-        return $this->getBackingStore()->get('resetCount');
+        $val = $this->getBackingStore()->get('resetCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resetCount'");
     }
 
     /**
@@ -299,7 +404,11 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
      * @return int|null
     */
     public function getRestartCount(): ?int {
-        return $this->getBackingStore()->get('restartCount');
+        $val = $this->getBackingStore()->get('restartCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'restartCount'");
     }
 
     /**
@@ -307,7 +416,11 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
      * @return string|null
     */
     public function getSafeMode(): ?string {
-        return $this->getBackingStore()->get('safeMode');
+        $val = $this->getBackingStore()->get('safeMode');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'safeMode'");
     }
 
     /**
@@ -315,7 +428,11 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
      * @return string|null
     */
     public function getSecureBoot(): ?string {
-        return $this->getBackingStore()->get('secureBoot');
+        $val = $this->getBackingStore()->get('secureBoot');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'secureBoot'");
     }
 
     /**
@@ -323,7 +440,11 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
      * @return string|null
     */
     public function getSecureBootConfigurationPolicyFingerPrint(): ?string {
-        return $this->getBackingStore()->get('secureBootConfigurationPolicyFingerPrint');
+        $val = $this->getBackingStore()->get('secureBootConfigurationPolicyFingerPrint');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'secureBootConfigurationPolicyFingerPrint'");
     }
 
     /**
@@ -331,7 +452,11 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
      * @return string|null
     */
     public function getTestSigning(): ?string {
-        return $this->getBackingStore()->get('testSigning');
+        $val = $this->getBackingStore()->get('testSigning');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'testSigning'");
     }
 
     /**
@@ -339,7 +464,11 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
      * @return string|null
     */
     public function getTpmVersion(): ?string {
-        return $this->getBackingStore()->get('tpmVersion');
+        $val = $this->getBackingStore()->get('tpmVersion');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'tpmVersion'");
     }
 
     /**
@@ -347,7 +476,11 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
      * @return string|null
     */
     public function getVirtualSecureMode(): ?string {
-        return $this->getBackingStore()->get('virtualSecureMode');
+        $val = $this->getBackingStore()->get('virtualSecureMode');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'virtualSecureMode'");
     }
 
     /**
@@ -355,7 +488,11 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
      * @return string|null
     */
     public function getWindowsPE(): ?string {
-        return $this->getBackingStore()->get('windowsPE');
+        $val = $this->getBackingStore()->get('windowsPE');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'windowsPE'");
     }
 
     /**

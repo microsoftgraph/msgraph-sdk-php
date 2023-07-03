@@ -7,6 +7,7 @@ use Microsoft\Graph\Generated\Models\Entity;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class Group extends Entity implements Parsable 
 {
@@ -31,7 +32,11 @@ class Group extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('createdDateTime');
+        $val = $this->getBackingStore()->get('createdDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdDateTime'");
     }
 
     /**
@@ -39,7 +44,11 @@ class Group extends Entity implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->getBackingStore()->get('description');
+        $val = $this->getBackingStore()->get('description');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'description'");
     }
 
     /**
@@ -47,12 +56,16 @@ class Group extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -71,7 +84,11 @@ class Group extends Entity implements Parsable
      * @return string|null
     */
     public function getParentSiteId(): ?string {
-        return $this->getBackingStore()->get('parentSiteId');
+        $val = $this->getBackingStore()->get('parentSiteId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'parentSiteId'");
     }
 
     /**
@@ -79,7 +96,11 @@ class Group extends Entity implements Parsable
      * @return TermGroupScope|null
     */
     public function getScope(): ?TermGroupScope {
-        return $this->getBackingStore()->get('scope');
+        $val = $this->getBackingStore()->get('scope');
+        if (is_null($val) || $val instanceof TermGroupScope) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'scope'");
     }
 
     /**
@@ -87,7 +108,13 @@ class Group extends Entity implements Parsable
      * @return array<Set>|null
     */
     public function getSets(): ?array {
-        return $this->getBackingStore()->get('sets');
+        $val = $this->getBackingStore()->get('sets');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Set::class);
+            /** @var array<Set>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sets'");
     }
 
     /**

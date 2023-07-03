@@ -9,6 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -39,7 +40,12 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -55,7 +61,13 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
      * @return array<string>|null
     */
     public function getBodyContains(): ?array {
-        return $this->getBackingStore()->get('bodyContains');
+        $val = $this->getBackingStore()->get('bodyContains');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'bodyContains'");
     }
 
     /**
@@ -63,7 +75,13 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
      * @return array<string>|null
     */
     public function getBodyOrSubjectContains(): ?array {
-        return $this->getBackingStore()->get('bodyOrSubjectContains');
+        $val = $this->getBackingStore()->get('bodyOrSubjectContains');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'bodyOrSubjectContains'");
     }
 
     /**
@@ -71,22 +89,56 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
      * @return array<string>|null
     */
     public function getCategories(): ?array {
-        return $this->getBackingStore()->get('categories');
+        $val = $this->getBackingStore()->get('categories');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'categories'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'bodyContains' => fn(ParseNode $n) => $o->setBodyContains($n->getCollectionOfPrimitiveValues()),
-            'bodyOrSubjectContains' => fn(ParseNode $n) => $o->setBodyOrSubjectContains($n->getCollectionOfPrimitiveValues()),
-            'categories' => fn(ParseNode $n) => $o->setCategories($n->getCollectionOfPrimitiveValues()),
+            'bodyContains' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setBodyContains($val);
+            },
+            'bodyOrSubjectContains' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setBodyOrSubjectContains($val);
+            },
+            'categories' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setCategories($val);
+            },
             'fromAddresses' => fn(ParseNode $n) => $o->setFromAddresses($n->getCollectionOfObjectValues([Recipient::class, 'createFromDiscriminatorValue'])),
             'hasAttachments' => fn(ParseNode $n) => $o->setHasAttachments($n->getBooleanValue()),
-            'headerContains' => fn(ParseNode $n) => $o->setHeaderContains($n->getCollectionOfPrimitiveValues()),
+            'headerContains' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setHeaderContains($val);
+            },
             'importance' => fn(ParseNode $n) => $o->setImportance($n->getEnumValue(Importance::class)),
             'isApprovalRequest' => fn(ParseNode $n) => $o->setIsApprovalRequest($n->getBooleanValue()),
             'isAutomaticForward' => fn(ParseNode $n) => $o->setIsAutomaticForward($n->getBooleanValue()),
@@ -102,15 +154,36 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
             'messageActionFlag' => fn(ParseNode $n) => $o->setMessageActionFlag($n->getEnumValue(MessageActionFlag::class)),
             'notSentToMe' => fn(ParseNode $n) => $o->setNotSentToMe($n->getBooleanValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
-            'recipientContains' => fn(ParseNode $n) => $o->setRecipientContains($n->getCollectionOfPrimitiveValues()),
-            'senderContains' => fn(ParseNode $n) => $o->setSenderContains($n->getCollectionOfPrimitiveValues()),
+            'recipientContains' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setRecipientContains($val);
+            },
+            'senderContains' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setSenderContains($val);
+            },
             'sensitivity' => fn(ParseNode $n) => $o->setSensitivity($n->getEnumValue(Sensitivity::class)),
             'sentCcMe' => fn(ParseNode $n) => $o->setSentCcMe($n->getBooleanValue()),
             'sentOnlyToMe' => fn(ParseNode $n) => $o->setSentOnlyToMe($n->getBooleanValue()),
             'sentToAddresses' => fn(ParseNode $n) => $o->setSentToAddresses($n->getCollectionOfObjectValues([Recipient::class, 'createFromDiscriminatorValue'])),
             'sentToMe' => fn(ParseNode $n) => $o->setSentToMe($n->getBooleanValue()),
             'sentToOrCcMe' => fn(ParseNode $n) => $o->setSentToOrCcMe($n->getBooleanValue()),
-            'subjectContains' => fn(ParseNode $n) => $o->setSubjectContains($n->getCollectionOfPrimitiveValues()),
+            'subjectContains' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setSubjectContains($val);
+            },
             'withinSizeRange' => fn(ParseNode $n) => $o->setWithinSizeRange($n->getObjectValue([SizeRange::class, 'createFromDiscriminatorValue'])),
         ];
     }
@@ -120,7 +193,13 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
      * @return array<Recipient>|null
     */
     public function getFromAddresses(): ?array {
-        return $this->getBackingStore()->get('fromAddresses');
+        $val = $this->getBackingStore()->get('fromAddresses');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Recipient::class);
+            /** @var array<Recipient>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'fromAddresses'");
     }
 
     /**
@@ -128,7 +207,11 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
      * @return bool|null
     */
     public function getHasAttachments(): ?bool {
-        return $this->getBackingStore()->get('hasAttachments');
+        $val = $this->getBackingStore()->get('hasAttachments');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'hasAttachments'");
     }
 
     /**
@@ -136,7 +219,13 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
      * @return array<string>|null
     */
     public function getHeaderContains(): ?array {
-        return $this->getBackingStore()->get('headerContains');
+        $val = $this->getBackingStore()->get('headerContains');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'headerContains'");
     }
 
     /**
@@ -144,7 +233,11 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
      * @return Importance|null
     */
     public function getImportance(): ?Importance {
-        return $this->getBackingStore()->get('importance');
+        $val = $this->getBackingStore()->get('importance');
+        if (is_null($val) || $val instanceof Importance) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'importance'");
     }
 
     /**
@@ -152,7 +245,11 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
      * @return bool|null
     */
     public function getIsApprovalRequest(): ?bool {
-        return $this->getBackingStore()->get('isApprovalRequest');
+        $val = $this->getBackingStore()->get('isApprovalRequest');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isApprovalRequest'");
     }
 
     /**
@@ -160,7 +257,11 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
      * @return bool|null
     */
     public function getIsAutomaticForward(): ?bool {
-        return $this->getBackingStore()->get('isAutomaticForward');
+        $val = $this->getBackingStore()->get('isAutomaticForward');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isAutomaticForward'");
     }
 
     /**
@@ -168,7 +269,11 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
      * @return bool|null
     */
     public function getIsAutomaticReply(): ?bool {
-        return $this->getBackingStore()->get('isAutomaticReply');
+        $val = $this->getBackingStore()->get('isAutomaticReply');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isAutomaticReply'");
     }
 
     /**
@@ -176,7 +281,11 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
      * @return bool|null
     */
     public function getIsEncrypted(): ?bool {
-        return $this->getBackingStore()->get('isEncrypted');
+        $val = $this->getBackingStore()->get('isEncrypted');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isEncrypted'");
     }
 
     /**
@@ -184,7 +293,11 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
      * @return bool|null
     */
     public function getIsMeetingRequest(): ?bool {
-        return $this->getBackingStore()->get('isMeetingRequest');
+        $val = $this->getBackingStore()->get('isMeetingRequest');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isMeetingRequest'");
     }
 
     /**
@@ -192,7 +305,11 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
      * @return bool|null
     */
     public function getIsMeetingResponse(): ?bool {
-        return $this->getBackingStore()->get('isMeetingResponse');
+        $val = $this->getBackingStore()->get('isMeetingResponse');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isMeetingResponse'");
     }
 
     /**
@@ -200,7 +317,11 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
      * @return bool|null
     */
     public function getIsNonDeliveryReport(): ?bool {
-        return $this->getBackingStore()->get('isNonDeliveryReport');
+        $val = $this->getBackingStore()->get('isNonDeliveryReport');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isNonDeliveryReport'");
     }
 
     /**
@@ -208,7 +329,11 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
      * @return bool|null
     */
     public function getIsPermissionControlled(): ?bool {
-        return $this->getBackingStore()->get('isPermissionControlled');
+        $val = $this->getBackingStore()->get('isPermissionControlled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isPermissionControlled'");
     }
 
     /**
@@ -216,7 +341,11 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
      * @return bool|null
     */
     public function getIsReadReceipt(): ?bool {
-        return $this->getBackingStore()->get('isReadReceipt');
+        $val = $this->getBackingStore()->get('isReadReceipt');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isReadReceipt'");
     }
 
     /**
@@ -224,7 +353,11 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
      * @return bool|null
     */
     public function getIsSigned(): ?bool {
-        return $this->getBackingStore()->get('isSigned');
+        $val = $this->getBackingStore()->get('isSigned');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isSigned'");
     }
 
     /**
@@ -232,7 +365,11 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
      * @return bool|null
     */
     public function getIsVoicemail(): ?bool {
-        return $this->getBackingStore()->get('isVoicemail');
+        $val = $this->getBackingStore()->get('isVoicemail');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isVoicemail'");
     }
 
     /**
@@ -240,7 +377,11 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
      * @return MessageActionFlag|null
     */
     public function getMessageActionFlag(): ?MessageActionFlag {
-        return $this->getBackingStore()->get('messageActionFlag');
+        $val = $this->getBackingStore()->get('messageActionFlag');
+        if (is_null($val) || $val instanceof MessageActionFlag) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'messageActionFlag'");
     }
 
     /**
@@ -248,7 +389,11 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
      * @return bool|null
     */
     public function getNotSentToMe(): ?bool {
-        return $this->getBackingStore()->get('notSentToMe');
+        $val = $this->getBackingStore()->get('notSentToMe');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'notSentToMe'");
     }
 
     /**
@@ -256,7 +401,11 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -264,7 +413,13 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
      * @return array<string>|null
     */
     public function getRecipientContains(): ?array {
-        return $this->getBackingStore()->get('recipientContains');
+        $val = $this->getBackingStore()->get('recipientContains');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'recipientContains'");
     }
 
     /**
@@ -272,7 +427,13 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
      * @return array<string>|null
     */
     public function getSenderContains(): ?array {
-        return $this->getBackingStore()->get('senderContains');
+        $val = $this->getBackingStore()->get('senderContains');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'senderContains'");
     }
 
     /**
@@ -280,7 +441,11 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
      * @return Sensitivity|null
     */
     public function getSensitivity(): ?Sensitivity {
-        return $this->getBackingStore()->get('sensitivity');
+        $val = $this->getBackingStore()->get('sensitivity');
+        if (is_null($val) || $val instanceof Sensitivity) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sensitivity'");
     }
 
     /**
@@ -288,7 +453,11 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
      * @return bool|null
     */
     public function getSentCcMe(): ?bool {
-        return $this->getBackingStore()->get('sentCcMe');
+        $val = $this->getBackingStore()->get('sentCcMe');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sentCcMe'");
     }
 
     /**
@@ -296,7 +465,11 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
      * @return bool|null
     */
     public function getSentOnlyToMe(): ?bool {
-        return $this->getBackingStore()->get('sentOnlyToMe');
+        $val = $this->getBackingStore()->get('sentOnlyToMe');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sentOnlyToMe'");
     }
 
     /**
@@ -304,7 +477,13 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
      * @return array<Recipient>|null
     */
     public function getSentToAddresses(): ?array {
-        return $this->getBackingStore()->get('sentToAddresses');
+        $val = $this->getBackingStore()->get('sentToAddresses');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Recipient::class);
+            /** @var array<Recipient>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sentToAddresses'");
     }
 
     /**
@@ -312,7 +491,11 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
      * @return bool|null
     */
     public function getSentToMe(): ?bool {
-        return $this->getBackingStore()->get('sentToMe');
+        $val = $this->getBackingStore()->get('sentToMe');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sentToMe'");
     }
 
     /**
@@ -320,7 +503,11 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
      * @return bool|null
     */
     public function getSentToOrCcMe(): ?bool {
-        return $this->getBackingStore()->get('sentToOrCcMe');
+        $val = $this->getBackingStore()->get('sentToOrCcMe');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sentToOrCcMe'");
     }
 
     /**
@@ -328,7 +515,13 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
      * @return array<string>|null
     */
     public function getSubjectContains(): ?array {
-        return $this->getBackingStore()->get('subjectContains');
+        $val = $this->getBackingStore()->get('subjectContains');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'subjectContains'");
     }
 
     /**
@@ -336,7 +529,11 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
      * @return SizeRange|null
     */
     public function getWithinSizeRange(): ?SizeRange {
-        return $this->getBackingStore()->get('withinSizeRange');
+        $val = $this->getBackingStore()->get('withinSizeRange');
+        if (is_null($val) || $val instanceof SizeRange) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'withinSizeRange'");
     }
 
     /**

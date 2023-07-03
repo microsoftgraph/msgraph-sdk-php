@@ -4,6 +4,7 @@ namespace Microsoft\Graph\Generated\Places;
 
 use Microsoft\Graph\Generated\Places\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Places\GraphRoom\GraphRoomRequestBuilder;
+use Microsoft\Graph\Generated\Places\GraphRoomList\GraphRoomListRequestBuilder;
 use Microsoft\Graph\Generated\Places\Item\PlaceItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -25,6 +26,13 @@ class PlacesRequestBuilder extends BaseRequestBuilder
     */
     public function graphRoom(): GraphRoomRequestBuilder {
         return new GraphRoomRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Casts the previous resource to roomList.
+    */
+    public function graphRoomList(): GraphRoomListRequestBuilder {
+        return new GraphRoomListRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

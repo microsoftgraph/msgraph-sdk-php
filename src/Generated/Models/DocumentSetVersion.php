@@ -6,6 +6,7 @@ use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class DocumentSetVersion extends ListItemVersion implements Parsable 
 {
@@ -31,7 +32,11 @@ class DocumentSetVersion extends ListItemVersion implements Parsable
      * @return string|null
     */
     public function getComment(): ?string {
-        return $this->getBackingStore()->get('comment');
+        $val = $this->getBackingStore()->get('comment');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'comment'");
     }
 
     /**
@@ -39,7 +44,11 @@ class DocumentSetVersion extends ListItemVersion implements Parsable
      * @return IdentitySet|null
     */
     public function getCreatedBy(): ?IdentitySet {
-        return $this->getBackingStore()->get('createdBy');
+        $val = $this->getBackingStore()->get('createdBy');
+        if (is_null($val) || $val instanceof IdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdBy'");
     }
 
     /**
@@ -47,12 +56,16 @@ class DocumentSetVersion extends ListItemVersion implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('createdDateTime');
+        $val = $this->getBackingStore()->get('createdDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdDateTime'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -70,7 +83,13 @@ class DocumentSetVersion extends ListItemVersion implements Parsable
      * @return array<DocumentSetVersionItem>|null
     */
     public function getItems(): ?array {
-        return $this->getBackingStore()->get('items');
+        $val = $this->getBackingStore()->get('items');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, DocumentSetVersionItem::class);
+            /** @var array<DocumentSetVersionItem>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'items'");
     }
 
     /**
@@ -78,7 +97,11 @@ class DocumentSetVersion extends ListItemVersion implements Parsable
      * @return bool|null
     */
     public function getShouldCaptureMinorVersion(): ?bool {
-        return $this->getBackingStore()->get('shouldCaptureMinorVersion');
+        $val = $this->getBackingStore()->get('shouldCaptureMinorVersion');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'shouldCaptureMinorVersion'");
     }
 
     /**

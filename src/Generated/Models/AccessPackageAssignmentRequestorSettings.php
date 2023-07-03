@@ -9,6 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -39,7 +40,12 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -47,7 +53,11 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
      * @return bool|null
     */
     public function getAllowCustomAssignmentSchedule(): ?bool {
-        return $this->getBackingStore()->get('allowCustomAssignmentSchedule');
+        $val = $this->getBackingStore()->get('allowCustomAssignmentSchedule');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowCustomAssignmentSchedule'");
     }
 
     /**
@@ -63,7 +73,11 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
      * @return bool|null
     */
     public function getEnableOnBehalfRequestorsToAddAccess(): ?bool {
-        return $this->getBackingStore()->get('enableOnBehalfRequestorsToAddAccess');
+        $val = $this->getBackingStore()->get('enableOnBehalfRequestorsToAddAccess');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'enableOnBehalfRequestorsToAddAccess'");
     }
 
     /**
@@ -71,7 +85,11 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
      * @return bool|null
     */
     public function getEnableOnBehalfRequestorsToRemoveAccess(): ?bool {
-        return $this->getBackingStore()->get('enableOnBehalfRequestorsToRemoveAccess');
+        $val = $this->getBackingStore()->get('enableOnBehalfRequestorsToRemoveAccess');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'enableOnBehalfRequestorsToRemoveAccess'");
     }
 
     /**
@@ -79,7 +97,11 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
      * @return bool|null
     */
     public function getEnableOnBehalfRequestorsToUpdateAccess(): ?bool {
-        return $this->getBackingStore()->get('enableOnBehalfRequestorsToUpdateAccess');
+        $val = $this->getBackingStore()->get('enableOnBehalfRequestorsToUpdateAccess');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'enableOnBehalfRequestorsToUpdateAccess'");
     }
 
     /**
@@ -87,7 +109,11 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
      * @return bool|null
     */
     public function getEnableTargetsToSelfAddAccess(): ?bool {
-        return $this->getBackingStore()->get('enableTargetsToSelfAddAccess');
+        $val = $this->getBackingStore()->get('enableTargetsToSelfAddAccess');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'enableTargetsToSelfAddAccess'");
     }
 
     /**
@@ -95,7 +121,11 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
      * @return bool|null
     */
     public function getEnableTargetsToSelfRemoveAccess(): ?bool {
-        return $this->getBackingStore()->get('enableTargetsToSelfRemoveAccess');
+        $val = $this->getBackingStore()->get('enableTargetsToSelfRemoveAccess');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'enableTargetsToSelfRemoveAccess'");
     }
 
     /**
@@ -103,12 +133,16 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
      * @return bool|null
     */
     public function getEnableTargetsToSelfUpdateAccess(): ?bool {
-        return $this->getBackingStore()->get('enableTargetsToSelfUpdateAccess');
+        $val = $this->getBackingStore()->get('enableTargetsToSelfUpdateAccess');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'enableTargetsToSelfUpdateAccess'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -130,7 +164,11 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -138,7 +176,13 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
      * @return array<SubjectSet>|null
     */
     public function getOnBehalfRequestors(): ?array {
-        return $this->getBackingStore()->get('onBehalfRequestors');
+        $val = $this->getBackingStore()->get('onBehalfRequestors');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, SubjectSet::class);
+            /** @var array<SubjectSet>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'onBehalfRequestors'");
     }
 
     /**

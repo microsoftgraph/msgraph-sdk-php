@@ -18,7 +18,7 @@ class CalendarSharingMessageAction implements AdditionalDataHolder, BackedModel,
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new calendarSharingMessageAction and sets the default values.
+     * Instantiates a new CalendarSharingMessageAction and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
@@ -39,7 +39,11 @@ class CalendarSharingMessageAction implements AdditionalDataHolder, BackedModel,
      * @return CalendarSharingAction|null
     */
     public function getAction(): ?CalendarSharingAction {
-        return $this->getBackingStore()->get('action');
+        $val = $this->getBackingStore()->get('action');
+        if (is_null($val) || $val instanceof CalendarSharingAction) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'action'");
     }
 
     /**
@@ -47,7 +51,11 @@ class CalendarSharingMessageAction implements AdditionalDataHolder, BackedModel,
      * @return CalendarSharingActionType|null
     */
     public function getActionType(): ?CalendarSharingActionType {
-        return $this->getBackingStore()->get('actionType');
+        $val = $this->getBackingStore()->get('actionType');
+        if (is_null($val) || $val instanceof CalendarSharingActionType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'actionType'");
     }
 
     /**
@@ -55,7 +63,12 @@ class CalendarSharingMessageAction implements AdditionalDataHolder, BackedModel,
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -68,7 +81,7 @@ class CalendarSharingMessageAction implements AdditionalDataHolder, BackedModel,
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -85,7 +98,11 @@ class CalendarSharingMessageAction implements AdditionalDataHolder, BackedModel,
      * @return CalendarSharingActionImportance|null
     */
     public function getImportance(): ?CalendarSharingActionImportance {
-        return $this->getBackingStore()->get('importance');
+        $val = $this->getBackingStore()->get('importance');
+        if (is_null($val) || $val instanceof CalendarSharingActionImportance) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'importance'");
     }
 
     /**
@@ -93,7 +110,11 @@ class CalendarSharingMessageAction implements AdditionalDataHolder, BackedModel,
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**

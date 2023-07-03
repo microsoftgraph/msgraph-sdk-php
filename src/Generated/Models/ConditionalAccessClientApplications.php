@@ -9,6 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class ConditionalAccessClientApplications implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -39,7 +40,12 @@ class ConditionalAccessClientApplications implements AdditionalDataHolder, Backe
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -55,18 +61,38 @@ class ConditionalAccessClientApplications implements AdditionalDataHolder, Backe
      * @return array<string>|null
     */
     public function getExcludeServicePrincipals(): ?array {
-        return $this->getBackingStore()->get('excludeServicePrincipals');
+        $val = $this->getBackingStore()->get('excludeServicePrincipals');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'excludeServicePrincipals'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'excludeServicePrincipals' => fn(ParseNode $n) => $o->setExcludeServicePrincipals($n->getCollectionOfPrimitiveValues()),
-            'includeServicePrincipals' => fn(ParseNode $n) => $o->setIncludeServicePrincipals($n->getCollectionOfPrimitiveValues()),
+            'excludeServicePrincipals' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setExcludeServicePrincipals($val);
+            },
+            'includeServicePrincipals' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setIncludeServicePrincipals($val);
+            },
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
@@ -76,7 +102,13 @@ class ConditionalAccessClientApplications implements AdditionalDataHolder, Backe
      * @return array<string>|null
     */
     public function getIncludeServicePrincipals(): ?array {
-        return $this->getBackingStore()->get('includeServicePrincipals');
+        $val = $this->getBackingStore()->get('includeServicePrincipals');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'includeServicePrincipals'");
     }
 
     /**
@@ -84,7 +116,11 @@ class ConditionalAccessClientApplications implements AdditionalDataHolder, Backe
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**

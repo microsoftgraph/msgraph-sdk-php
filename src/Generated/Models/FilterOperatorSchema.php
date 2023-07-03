@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class FilterOperatorSchema extends Entity implements Parsable 
 {
@@ -29,12 +30,16 @@ class FilterOperatorSchema extends Entity implements Parsable
      * @return ScopeOperatorType|null
     */
     public function getArity(): ?ScopeOperatorType {
-        return $this->getBackingStore()->get('arity');
+        $val = $this->getBackingStore()->get('arity');
+        if (is_null($val) || $val instanceof ScopeOperatorType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'arity'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -50,7 +55,11 @@ class FilterOperatorSchema extends Entity implements Parsable
      * @return ScopeOperatorMultiValuedComparisonType|null
     */
     public function getMultivaluedComparisonType(): ?ScopeOperatorMultiValuedComparisonType {
-        return $this->getBackingStore()->get('multivaluedComparisonType');
+        $val = $this->getBackingStore()->get('multivaluedComparisonType');
+        if (is_null($val) || $val instanceof ScopeOperatorMultiValuedComparisonType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'multivaluedComparisonType'");
     }
 
     /**
@@ -58,7 +67,13 @@ class FilterOperatorSchema extends Entity implements Parsable
      * @return array<AttributeType>|null
     */
     public function getSupportedAttributeTypes(): ?array {
-        return $this->getBackingStore()->get('supportedAttributeTypes');
+        $val = $this->getBackingStore()->get('supportedAttributeTypes');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AttributeType::class);
+            /** @var array<AttributeType>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'supportedAttributeTypes'");
     }
 
     /**

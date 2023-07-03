@@ -10,6 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class UserSimulationDetails implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -40,7 +41,12 @@ class UserSimulationDetails implements AdditionalDataHolder, BackedModel, Parsab
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -48,7 +54,11 @@ class UserSimulationDetails implements AdditionalDataHolder, BackedModel, Parsab
      * @return int|null
     */
     public function getAssignedTrainingsCount(): ?int {
-        return $this->getBackingStore()->get('assignedTrainingsCount');
+        $val = $this->getBackingStore()->get('assignedTrainingsCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'assignedTrainingsCount'");
     }
 
     /**
@@ -64,7 +74,11 @@ class UserSimulationDetails implements AdditionalDataHolder, BackedModel, Parsab
      * @return int|null
     */
     public function getCompletedTrainingsCount(): ?int {
-        return $this->getBackingStore()->get('completedTrainingsCount');
+        $val = $this->getBackingStore()->get('completedTrainingsCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'completedTrainingsCount'");
     }
 
     /**
@@ -72,12 +86,16 @@ class UserSimulationDetails implements AdditionalDataHolder, BackedModel, Parsab
      * @return DateTime|null
     */
     public function getCompromisedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('compromisedDateTime');
+        $val = $this->getBackingStore()->get('compromisedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'compromisedDateTime'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -100,7 +118,11 @@ class UserSimulationDetails implements AdditionalDataHolder, BackedModel, Parsab
      * @return int|null
     */
     public function getInProgressTrainingsCount(): ?int {
-        return $this->getBackingStore()->get('inProgressTrainingsCount');
+        $val = $this->getBackingStore()->get('inProgressTrainingsCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'inProgressTrainingsCount'");
     }
 
     /**
@@ -108,7 +130,11 @@ class UserSimulationDetails implements AdditionalDataHolder, BackedModel, Parsab
      * @return bool|null
     */
     public function getIsCompromised(): ?bool {
-        return $this->getBackingStore()->get('isCompromised');
+        $val = $this->getBackingStore()->get('isCompromised');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isCompromised'");
     }
 
     /**
@@ -116,7 +142,11 @@ class UserSimulationDetails implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -124,7 +154,11 @@ class UserSimulationDetails implements AdditionalDataHolder, BackedModel, Parsab
      * @return DateTime|null
     */
     public function getReportedPhishDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('reportedPhishDateTime');
+        $val = $this->getBackingStore()->get('reportedPhishDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'reportedPhishDateTime'");
     }
 
     /**
@@ -132,7 +166,13 @@ class UserSimulationDetails implements AdditionalDataHolder, BackedModel, Parsab
      * @return array<UserSimulationEventInfo>|null
     */
     public function getSimulationEvents(): ?array {
-        return $this->getBackingStore()->get('simulationEvents');
+        $val = $this->getBackingStore()->get('simulationEvents');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, UserSimulationEventInfo::class);
+            /** @var array<UserSimulationEventInfo>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'simulationEvents'");
     }
 
     /**
@@ -140,7 +180,11 @@ class UserSimulationDetails implements AdditionalDataHolder, BackedModel, Parsab
      * @return AttackSimulationUser|null
     */
     public function getSimulationUser(): ?AttackSimulationUser {
-        return $this->getBackingStore()->get('simulationUser');
+        $val = $this->getBackingStore()->get('simulationUser');
+        if (is_null($val) || $val instanceof AttackSimulationUser) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'simulationUser'");
     }
 
     /**
@@ -148,7 +192,13 @@ class UserSimulationDetails implements AdditionalDataHolder, BackedModel, Parsab
      * @return array<UserTrainingEventInfo>|null
     */
     public function getTrainingEvents(): ?array {
-        return $this->getBackingStore()->get('trainingEvents');
+        $val = $this->getBackingStore()->get('trainingEvents');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, UserTrainingEventInfo::class);
+            /** @var array<UserTrainingEventInfo>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'trainingEvents'");
     }
 
     /**

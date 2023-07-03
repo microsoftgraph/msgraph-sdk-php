@@ -37,7 +37,11 @@ class IdentityUserFlowAttribute extends Entity implements Parsable
      * @return IdentityUserFlowAttributeDataType|null
     */
     public function getDataType(): ?IdentityUserFlowAttributeDataType {
-        return $this->getBackingStore()->get('dataType');
+        $val = $this->getBackingStore()->get('dataType');
+        if (is_null($val) || $val instanceof IdentityUserFlowAttributeDataType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'dataType'");
     }
 
     /**
@@ -45,7 +49,11 @@ class IdentityUserFlowAttribute extends Entity implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->getBackingStore()->get('description');
+        $val = $this->getBackingStore()->get('description');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'description'");
     }
 
     /**
@@ -53,12 +61,16 @@ class IdentityUserFlowAttribute extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -75,7 +87,11 @@ class IdentityUserFlowAttribute extends Entity implements Parsable
      * @return IdentityUserFlowAttributeType|null
     */
     public function getUserFlowAttributeType(): ?IdentityUserFlowAttributeType {
-        return $this->getBackingStore()->get('userFlowAttributeType');
+        $val = $this->getBackingStore()->get('userFlowAttributeType');
+        if (is_null($val) || $val instanceof IdentityUserFlowAttributeType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userFlowAttributeType'");
     }
 
     /**

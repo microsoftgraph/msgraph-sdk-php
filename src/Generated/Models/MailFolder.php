@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class MailFolder extends Entity implements Parsable 
 {
@@ -36,7 +37,11 @@ class MailFolder extends Entity implements Parsable
      * @return int|null
     */
     public function getChildFolderCount(): ?int {
-        return $this->getBackingStore()->get('childFolderCount');
+        $val = $this->getBackingStore()->get('childFolderCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'childFolderCount'");
     }
 
     /**
@@ -44,7 +49,13 @@ class MailFolder extends Entity implements Parsable
      * @return array<MailFolder>|null
     */
     public function getChildFolders(): ?array {
-        return $this->getBackingStore()->get('childFolders');
+        $val = $this->getBackingStore()->get('childFolders');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, MailFolder::class);
+            /** @var array<MailFolder>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'childFolders'");
     }
 
     /**
@@ -52,12 +63,16 @@ class MailFolder extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -81,7 +96,11 @@ class MailFolder extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsHidden(): ?bool {
-        return $this->getBackingStore()->get('isHidden');
+        $val = $this->getBackingStore()->get('isHidden');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isHidden'");
     }
 
     /**
@@ -89,7 +108,13 @@ class MailFolder extends Entity implements Parsable
      * @return array<MessageRule>|null
     */
     public function getMessageRules(): ?array {
-        return $this->getBackingStore()->get('messageRules');
+        $val = $this->getBackingStore()->get('messageRules');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, MessageRule::class);
+            /** @var array<MessageRule>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'messageRules'");
     }
 
     /**
@@ -97,7 +122,13 @@ class MailFolder extends Entity implements Parsable
      * @return array<Message>|null
     */
     public function getMessages(): ?array {
-        return $this->getBackingStore()->get('messages');
+        $val = $this->getBackingStore()->get('messages');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Message::class);
+            /** @var array<Message>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'messages'");
     }
 
     /**
@@ -105,7 +136,13 @@ class MailFolder extends Entity implements Parsable
      * @return array<MultiValueLegacyExtendedProperty>|null
     */
     public function getMultiValueExtendedProperties(): ?array {
-        return $this->getBackingStore()->get('multiValueExtendedProperties');
+        $val = $this->getBackingStore()->get('multiValueExtendedProperties');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, MultiValueLegacyExtendedProperty::class);
+            /** @var array<MultiValueLegacyExtendedProperty>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'multiValueExtendedProperties'");
     }
 
     /**
@@ -113,7 +150,11 @@ class MailFolder extends Entity implements Parsable
      * @return string|null
     */
     public function getParentFolderId(): ?string {
-        return $this->getBackingStore()->get('parentFolderId');
+        $val = $this->getBackingStore()->get('parentFolderId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'parentFolderId'");
     }
 
     /**
@@ -121,7 +162,13 @@ class MailFolder extends Entity implements Parsable
      * @return array<SingleValueLegacyExtendedProperty>|null
     */
     public function getSingleValueExtendedProperties(): ?array {
-        return $this->getBackingStore()->get('singleValueExtendedProperties');
+        $val = $this->getBackingStore()->get('singleValueExtendedProperties');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, SingleValueLegacyExtendedProperty::class);
+            /** @var array<SingleValueLegacyExtendedProperty>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'singleValueExtendedProperties'");
     }
 
     /**
@@ -129,7 +176,11 @@ class MailFolder extends Entity implements Parsable
      * @return int|null
     */
     public function getTotalItemCount(): ?int {
-        return $this->getBackingStore()->get('totalItemCount');
+        $val = $this->getBackingStore()->get('totalItemCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'totalItemCount'");
     }
 
     /**
@@ -137,7 +188,11 @@ class MailFolder extends Entity implements Parsable
      * @return int|null
     */
     public function getUnreadItemCount(): ?int {
-        return $this->getBackingStore()->get('unreadItemCount');
+        $val = $this->getBackingStore()->get('unreadItemCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'unreadItemCount'");
     }
 
     /**

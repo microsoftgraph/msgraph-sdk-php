@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class CountryNamedLocation extends NamedLocation implements Parsable 
 {
@@ -29,7 +30,13 @@ class CountryNamedLocation extends NamedLocation implements Parsable
      * @return array<string>|null
     */
     public function getCountriesAndRegions(): ?array {
-        return $this->getBackingStore()->get('countriesAndRegions');
+        $val = $this->getBackingStore()->get('countriesAndRegions');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'countriesAndRegions'");
     }
 
     /**
@@ -37,17 +44,28 @@ class CountryNamedLocation extends NamedLocation implements Parsable
      * @return CountryLookupMethodType|null
     */
     public function getCountryLookupMethod(): ?CountryLookupMethodType {
-        return $this->getBackingStore()->get('countryLookupMethod');
+        $val = $this->getBackingStore()->get('countryLookupMethod');
+        if (is_null($val) || $val instanceof CountryLookupMethodType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'countryLookupMethod'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'countriesAndRegions' => fn(ParseNode $n) => $o->setCountriesAndRegions($n->getCollectionOfPrimitiveValues()),
+            'countriesAndRegions' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setCountriesAndRegions($val);
+            },
             'countryLookupMethod' => fn(ParseNode $n) => $o->setCountryLookupMethod($n->getEnumValue(CountryLookupMethodType::class)),
             'includeUnknownCountriesAndRegions' => fn(ParseNode $n) => $o->setIncludeUnknownCountriesAndRegions($n->getBooleanValue()),
         ]);
@@ -58,7 +76,11 @@ class CountryNamedLocation extends NamedLocation implements Parsable
      * @return bool|null
     */
     public function getIncludeUnknownCountriesAndRegions(): ?bool {
-        return $this->getBackingStore()->get('includeUnknownCountriesAndRegions');
+        $val = $this->getBackingStore()->get('includeUnknownCountriesAndRegions');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'includeUnknownCountriesAndRegions'");
     }
 
     /**

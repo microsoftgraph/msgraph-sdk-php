@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class UserFlowLanguageConfiguration extends Entity implements Parsable 
 {
@@ -29,7 +30,13 @@ class UserFlowLanguageConfiguration extends Entity implements Parsable
      * @return array<UserFlowLanguagePage>|null
     */
     public function getDefaultPages(): ?array {
-        return $this->getBackingStore()->get('defaultPages');
+        $val = $this->getBackingStore()->get('defaultPages');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, UserFlowLanguagePage::class);
+            /** @var array<UserFlowLanguagePage>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'defaultPages'");
     }
 
     /**
@@ -37,12 +44,16 @@ class UserFlowLanguageConfiguration extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -59,7 +70,11 @@ class UserFlowLanguageConfiguration extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsEnabled(): ?bool {
-        return $this->getBackingStore()->get('isEnabled');
+        $val = $this->getBackingStore()->get('isEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isEnabled'");
     }
 
     /**
@@ -67,7 +82,13 @@ class UserFlowLanguageConfiguration extends Entity implements Parsable
      * @return array<UserFlowLanguagePage>|null
     */
     public function getOverridesPages(): ?array {
-        return $this->getBackingStore()->get('overridesPages');
+        $val = $this->getBackingStore()->get('overridesPages');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, UserFlowLanguagePage::class);
+            /** @var array<UserFlowLanguagePage>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'overridesPages'");
     }
 
     /**

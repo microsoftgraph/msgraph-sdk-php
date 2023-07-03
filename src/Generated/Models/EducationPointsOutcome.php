@@ -27,7 +27,7 @@ class EducationPointsOutcome extends EducationOutcome implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -42,7 +42,11 @@ class EducationPointsOutcome extends EducationOutcome implements Parsable
      * @return EducationAssignmentPointsGrade|null
     */
     public function getPoints(): ?EducationAssignmentPointsGrade {
-        return $this->getBackingStore()->get('points');
+        $val = $this->getBackingStore()->get('points');
+        if (is_null($val) || $val instanceof EducationAssignmentPointsGrade) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'points'");
     }
 
     /**
@@ -50,7 +54,11 @@ class EducationPointsOutcome extends EducationOutcome implements Parsable
      * @return EducationAssignmentPointsGrade|null
     */
     public function getPublishedPoints(): ?EducationAssignmentPointsGrade {
-        return $this->getBackingStore()->get('publishedPoints');
+        $val = $this->getBackingStore()->get('publishedPoints');
+        if (is_null($val) || $val instanceof EducationAssignmentPointsGrade) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'publishedPoints'");
     }
 
     /**

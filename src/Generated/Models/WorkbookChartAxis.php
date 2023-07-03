@@ -26,7 +26,7 @@ class WorkbookChartAxis extends Entity implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -47,7 +47,11 @@ class WorkbookChartAxis extends Entity implements Parsable
      * @return WorkbookChartAxisFormat|null
     */
     public function getFormat(): ?WorkbookChartAxisFormat {
-        return $this->getBackingStore()->get('format');
+        $val = $this->getBackingStore()->get('format');
+        if (is_null($val) || $val instanceof WorkbookChartAxisFormat) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'format'");
     }
 
     /**
@@ -55,7 +59,11 @@ class WorkbookChartAxis extends Entity implements Parsable
      * @return WorkbookChartGridlines|null
     */
     public function getMajorGridlines(): ?WorkbookChartGridlines {
-        return $this->getBackingStore()->get('majorGridlines');
+        $val = $this->getBackingStore()->get('majorGridlines');
+        if (is_null($val) || $val instanceof WorkbookChartGridlines) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'majorGridlines'");
     }
 
     /**
@@ -63,7 +71,11 @@ class WorkbookChartAxis extends Entity implements Parsable
      * @return Json|null
     */
     public function getMajorUnit(): ?Json {
-        return $this->getBackingStore()->get('majorUnit');
+        $val = $this->getBackingStore()->get('majorUnit');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'majorUnit'");
     }
 
     /**
@@ -71,7 +83,11 @@ class WorkbookChartAxis extends Entity implements Parsable
      * @return Json|null
     */
     public function getMaximum(): ?Json {
-        return $this->getBackingStore()->get('maximum');
+        $val = $this->getBackingStore()->get('maximum');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'maximum'");
     }
 
     /**
@@ -79,7 +95,11 @@ class WorkbookChartAxis extends Entity implements Parsable
      * @return Json|null
     */
     public function getMinimum(): ?Json {
-        return $this->getBackingStore()->get('minimum');
+        $val = $this->getBackingStore()->get('minimum');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'minimum'");
     }
 
     /**
@@ -87,7 +107,11 @@ class WorkbookChartAxis extends Entity implements Parsable
      * @return WorkbookChartGridlines|null
     */
     public function getMinorGridlines(): ?WorkbookChartGridlines {
-        return $this->getBackingStore()->get('minorGridlines');
+        $val = $this->getBackingStore()->get('minorGridlines');
+        if (is_null($val) || $val instanceof WorkbookChartGridlines) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'minorGridlines'");
     }
 
     /**
@@ -95,7 +119,11 @@ class WorkbookChartAxis extends Entity implements Parsable
      * @return Json|null
     */
     public function getMinorUnit(): ?Json {
-        return $this->getBackingStore()->get('minorUnit');
+        $val = $this->getBackingStore()->get('minorUnit');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'minorUnit'");
     }
 
     /**
@@ -103,7 +131,11 @@ class WorkbookChartAxis extends Entity implements Parsable
      * @return WorkbookChartAxisTitle|null
     */
     public function getTitle(): ?WorkbookChartAxisTitle {
-        return $this->getBackingStore()->get('title');
+        $val = $this->getBackingStore()->get('title');
+        if (is_null($val) || $val instanceof WorkbookChartAxisTitle) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'title'");
     }
 
     /**

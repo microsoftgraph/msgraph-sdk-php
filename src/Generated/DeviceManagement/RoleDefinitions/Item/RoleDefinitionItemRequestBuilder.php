@@ -59,10 +59,10 @@ class RoleDefinitionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the roleDefinition object.
+     * Read properties and relationships of the deviceAndAppManagementRoleDefinition object.
      * @param RoleDefinitionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-rbac-roledefinition-get?view=graph-rest-1.0 Find more info here
+     * @link https://docs.microsoft.com/graph/api/intune-rbac-deviceandappmanagementroledefinition-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?RoleDefinitionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -115,7 +115,7 @@ class RoleDefinitionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the roleDefinition object.
+     * Read properties and relationships of the deviceAndAppManagementRoleDefinition object.
      * @param RoleDefinitionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -6,6 +6,7 @@ use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class PrintJob extends Entity implements Parsable 
 {
@@ -30,7 +31,11 @@ class PrintJob extends Entity implements Parsable
      * @return PrintJobConfiguration|null
     */
     public function getConfiguration(): ?PrintJobConfiguration {
-        return $this->getBackingStore()->get('configuration');
+        $val = $this->getBackingStore()->get('configuration');
+        if (is_null($val) || $val instanceof PrintJobConfiguration) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'configuration'");
     }
 
     /**
@@ -38,7 +43,11 @@ class PrintJob extends Entity implements Parsable
      * @return UserIdentity|null
     */
     public function getCreatedBy(): ?UserIdentity {
-        return $this->getBackingStore()->get('createdBy');
+        $val = $this->getBackingStore()->get('createdBy');
+        if (is_null($val) || $val instanceof UserIdentity) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdBy'");
     }
 
     /**
@@ -46,7 +55,11 @@ class PrintJob extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('createdDateTime');
+        $val = $this->getBackingStore()->get('createdDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdDateTime'");
     }
 
     /**
@@ -54,12 +67,18 @@ class PrintJob extends Entity implements Parsable
      * @return array<PrintDocument>|null
     */
     public function getDocuments(): ?array {
-        return $this->getBackingStore()->get('documents');
+        $val = $this->getBackingStore()->get('documents');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, PrintDocument::class);
+            /** @var array<PrintDocument>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'documents'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -81,7 +100,11 @@ class PrintJob extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsFetchable(): ?bool {
-        return $this->getBackingStore()->get('isFetchable');
+        $val = $this->getBackingStore()->get('isFetchable');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isFetchable'");
     }
 
     /**
@@ -89,7 +112,11 @@ class PrintJob extends Entity implements Parsable
      * @return string|null
     */
     public function getRedirectedFrom(): ?string {
-        return $this->getBackingStore()->get('redirectedFrom');
+        $val = $this->getBackingStore()->get('redirectedFrom');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'redirectedFrom'");
     }
 
     /**
@@ -97,7 +124,11 @@ class PrintJob extends Entity implements Parsable
      * @return string|null
     */
     public function getRedirectedTo(): ?string {
-        return $this->getBackingStore()->get('redirectedTo');
+        $val = $this->getBackingStore()->get('redirectedTo');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'redirectedTo'");
     }
 
     /**
@@ -105,7 +136,11 @@ class PrintJob extends Entity implements Parsable
      * @return PrintJobStatus|null
     */
     public function getStatus(): ?PrintJobStatus {
-        return $this->getBackingStore()->get('status');
+        $val = $this->getBackingStore()->get('status');
+        if (is_null($val) || $val instanceof PrintJobStatus) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
     }
 
     /**
@@ -113,7 +148,13 @@ class PrintJob extends Entity implements Parsable
      * @return array<PrintTask>|null
     */
     public function getTasks(): ?array {
-        return $this->getBackingStore()->get('tasks');
+        $val = $this->getBackingStore()->get('tasks');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, PrintTask::class);
+            /** @var array<PrintTask>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'tasks'");
     }
 
     /**

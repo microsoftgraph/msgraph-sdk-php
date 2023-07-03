@@ -29,7 +29,11 @@ class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase implements P
      * @return UnifiedRoleEligibilitySchedule|null
     */
     public function getActivatedUsing(): ?UnifiedRoleEligibilitySchedule {
-        return $this->getBackingStore()->get('activatedUsing');
+        $val = $this->getBackingStore()->get('activatedUsing');
+        if (is_null($val) || $val instanceof UnifiedRoleEligibilitySchedule) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'activatedUsing'");
     }
 
     /**
@@ -37,12 +41,16 @@ class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase implements P
      * @return string|null
     */
     public function getAssignmentType(): ?string {
-        return $this->getBackingStore()->get('assignmentType');
+        $val = $this->getBackingStore()->get('assignmentType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'assignmentType'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -59,7 +67,11 @@ class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase implements P
      * @return string|null
     */
     public function getMemberType(): ?string {
-        return $this->getBackingStore()->get('memberType');
+        $val = $this->getBackingStore()->get('memberType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'memberType'");
     }
 
     /**
@@ -67,7 +79,11 @@ class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase implements P
      * @return RequestSchedule|null
     */
     public function getScheduleInfo(): ?RequestSchedule {
-        return $this->getBackingStore()->get('scheduleInfo');
+        $val = $this->getBackingStore()->get('scheduleInfo');
+        if (is_null($val) || $val instanceof RequestSchedule) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'scheduleInfo'");
     }
 
     /**

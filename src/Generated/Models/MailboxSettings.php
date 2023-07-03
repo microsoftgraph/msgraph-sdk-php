@@ -39,7 +39,12 @@ class MailboxSettings implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -47,7 +52,11 @@ class MailboxSettings implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getArchiveFolder(): ?string {
-        return $this->getBackingStore()->get('archiveFolder');
+        $val = $this->getBackingStore()->get('archiveFolder');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'archiveFolder'");
     }
 
     /**
@@ -55,7 +64,11 @@ class MailboxSettings implements AdditionalDataHolder, BackedModel, Parsable
      * @return AutomaticRepliesSetting|null
     */
     public function getAutomaticRepliesSetting(): ?AutomaticRepliesSetting {
-        return $this->getBackingStore()->get('automaticRepliesSetting');
+        $val = $this->getBackingStore()->get('automaticRepliesSetting');
+        if (is_null($val) || $val instanceof AutomaticRepliesSetting) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'automaticRepliesSetting'");
     }
 
     /**
@@ -71,7 +84,11 @@ class MailboxSettings implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getDateFormat(): ?string {
-        return $this->getBackingStore()->get('dateFormat');
+        $val = $this->getBackingStore()->get('dateFormat');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'dateFormat'");
     }
 
     /**
@@ -79,12 +96,16 @@ class MailboxSettings implements AdditionalDataHolder, BackedModel, Parsable
      * @return DelegateMeetingMessageDeliveryOptions|null
     */
     public function getDelegateMeetingMessageDeliveryOptions(): ?DelegateMeetingMessageDeliveryOptions {
-        return $this->getBackingStore()->get('delegateMeetingMessageDeliveryOptions');
+        $val = $this->getBackingStore()->get('delegateMeetingMessageDeliveryOptions');
+        if (is_null($val) || $val instanceof DelegateMeetingMessageDeliveryOptions) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'delegateMeetingMessageDeliveryOptions'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -107,7 +128,11 @@ class MailboxSettings implements AdditionalDataHolder, BackedModel, Parsable
      * @return LocaleInfo|null
     */
     public function getLanguage(): ?LocaleInfo {
-        return $this->getBackingStore()->get('language');
+        $val = $this->getBackingStore()->get('language');
+        if (is_null($val) || $val instanceof LocaleInfo) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'language'");
     }
 
     /**
@@ -115,7 +140,11 @@ class MailboxSettings implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -123,7 +152,11 @@ class MailboxSettings implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getTimeFormat(): ?string {
-        return $this->getBackingStore()->get('timeFormat');
+        $val = $this->getBackingStore()->get('timeFormat');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'timeFormat'");
     }
 
     /**
@@ -131,7 +164,11 @@ class MailboxSettings implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getTimeZone(): ?string {
-        return $this->getBackingStore()->get('timeZone');
+        $val = $this->getBackingStore()->get('timeZone');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'timeZone'");
     }
 
     /**
@@ -139,7 +176,11 @@ class MailboxSettings implements AdditionalDataHolder, BackedModel, Parsable
      * @return UserPurpose|null
     */
     public function getUserPurpose(): ?UserPurpose {
-        return $this->getBackingStore()->get('userPurpose');
+        $val = $this->getBackingStore()->get('userPurpose');
+        if (is_null($val) || $val instanceof UserPurpose) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userPurpose'");
     }
 
     /**
@@ -147,7 +188,11 @@ class MailboxSettings implements AdditionalDataHolder, BackedModel, Parsable
      * @return WorkingHours|null
     */
     public function getWorkingHours(): ?WorkingHours {
-        return $this->getBackingStore()->get('workingHours');
+        $val = $this->getBackingStore()->get('workingHours');
+        if (is_null($val) || $val instanceof WorkingHours) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'workingHours'");
     }
 
     /**

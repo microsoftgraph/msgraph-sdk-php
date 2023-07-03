@@ -27,7 +27,7 @@ class WindowsAppXAppAssignmentSettings extends MobileAppAssignmentSettings imple
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -41,7 +41,11 @@ class WindowsAppXAppAssignmentSettings extends MobileAppAssignmentSettings imple
      * @return bool|null
     */
     public function getUseDeviceContext(): ?bool {
-        return $this->getBackingStore()->get('useDeviceContext');
+        $val = $this->getBackingStore()->get('useDeviceContext');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'useDeviceContext'");
     }
 
     /**

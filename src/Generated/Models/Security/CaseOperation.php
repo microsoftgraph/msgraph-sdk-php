@@ -45,7 +45,11 @@ class CaseOperation extends Entity implements Parsable
      * @return CaseAction|null
     */
     public function getAction(): ?CaseAction {
-        return $this->getBackingStore()->get('action');
+        $val = $this->getBackingStore()->get('action');
+        if (is_null($val) || $val instanceof CaseAction) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'action'");
     }
 
     /**
@@ -53,7 +57,11 @@ class CaseOperation extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCompletedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('completedDateTime');
+        $val = $this->getBackingStore()->get('completedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'completedDateTime'");
     }
 
     /**
@@ -61,7 +69,11 @@ class CaseOperation extends Entity implements Parsable
      * @return IdentitySet|null
     */
     public function getCreatedBy(): ?IdentitySet {
-        return $this->getBackingStore()->get('createdBy');
+        $val = $this->getBackingStore()->get('createdBy');
+        if (is_null($val) || $val instanceof IdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdBy'");
     }
 
     /**
@@ -69,12 +81,16 @@ class CaseOperation extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('createdDateTime');
+        $val = $this->getBackingStore()->get('createdDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdDateTime'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -94,7 +110,11 @@ class CaseOperation extends Entity implements Parsable
      * @return int|null
     */
     public function getPercentProgress(): ?int {
-        return $this->getBackingStore()->get('percentProgress');
+        $val = $this->getBackingStore()->get('percentProgress');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'percentProgress'");
     }
 
     /**
@@ -102,7 +122,11 @@ class CaseOperation extends Entity implements Parsable
      * @return ResultInfo|null
     */
     public function getResultInfo(): ?ResultInfo {
-        return $this->getBackingStore()->get('resultInfo');
+        $val = $this->getBackingStore()->get('resultInfo');
+        if (is_null($val) || $val instanceof ResultInfo) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resultInfo'");
     }
 
     /**
@@ -110,7 +134,11 @@ class CaseOperation extends Entity implements Parsable
      * @return CaseOperationStatus|null
     */
     public function getStatus(): ?CaseOperationStatus {
-        return $this->getBackingStore()->get('status');
+        $val = $this->getBackingStore()->get('status');
+        if (is_null($val) || $val instanceof CaseOperationStatus) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
     }
 
     /**

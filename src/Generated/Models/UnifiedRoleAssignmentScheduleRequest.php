@@ -29,7 +29,11 @@ class UnifiedRoleAssignmentScheduleRequest extends Request implements Parsable
      * @return UnifiedRoleScheduleRequestActions|null
     */
     public function getAction(): ?UnifiedRoleScheduleRequestActions {
-        return $this->getBackingStore()->get('action');
+        $val = $this->getBackingStore()->get('action');
+        if (is_null($val) || $val instanceof UnifiedRoleScheduleRequestActions) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'action'");
     }
 
     /**
@@ -37,7 +41,11 @@ class UnifiedRoleAssignmentScheduleRequest extends Request implements Parsable
      * @return UnifiedRoleEligibilitySchedule|null
     */
     public function getActivatedUsing(): ?UnifiedRoleEligibilitySchedule {
-        return $this->getBackingStore()->get('activatedUsing');
+        $val = $this->getBackingStore()->get('activatedUsing');
+        if (is_null($val) || $val instanceof UnifiedRoleEligibilitySchedule) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'activatedUsing'");
     }
 
     /**
@@ -45,7 +53,11 @@ class UnifiedRoleAssignmentScheduleRequest extends Request implements Parsable
      * @return AppScope|null
     */
     public function getAppScope(): ?AppScope {
-        return $this->getBackingStore()->get('appScope');
+        $val = $this->getBackingStore()->get('appScope');
+        if (is_null($val) || $val instanceof AppScope) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'appScope'");
     }
 
     /**
@@ -53,7 +65,11 @@ class UnifiedRoleAssignmentScheduleRequest extends Request implements Parsable
      * @return string|null
     */
     public function getAppScopeId(): ?string {
-        return $this->getBackingStore()->get('appScopeId');
+        $val = $this->getBackingStore()->get('appScopeId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'appScopeId'");
     }
 
     /**
@@ -61,7 +77,11 @@ class UnifiedRoleAssignmentScheduleRequest extends Request implements Parsable
      * @return DirectoryObject|null
     */
     public function getDirectoryScope(): ?DirectoryObject {
-        return $this->getBackingStore()->get('directoryScope');
+        $val = $this->getBackingStore()->get('directoryScope');
+        if (is_null($val) || $val instanceof DirectoryObject) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'directoryScope'");
     }
 
     /**
@@ -69,12 +89,16 @@ class UnifiedRoleAssignmentScheduleRequest extends Request implements Parsable
      * @return string|null
     */
     public function getDirectoryScopeId(): ?string {
-        return $this->getBackingStore()->get('directoryScopeId');
+        $val = $this->getBackingStore()->get('directoryScopeId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'directoryScopeId'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -103,7 +127,11 @@ class UnifiedRoleAssignmentScheduleRequest extends Request implements Parsable
      * @return bool|null
     */
     public function getIsValidationOnly(): ?bool {
-        return $this->getBackingStore()->get('isValidationOnly');
+        $val = $this->getBackingStore()->get('isValidationOnly');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isValidationOnly'");
     }
 
     /**
@@ -111,7 +139,11 @@ class UnifiedRoleAssignmentScheduleRequest extends Request implements Parsable
      * @return string|null
     */
     public function getJustification(): ?string {
-        return $this->getBackingStore()->get('justification');
+        $val = $this->getBackingStore()->get('justification');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'justification'");
     }
 
     /**
@@ -119,7 +151,11 @@ class UnifiedRoleAssignmentScheduleRequest extends Request implements Parsable
      * @return DirectoryObject|null
     */
     public function getPrincipal(): ?DirectoryObject {
-        return $this->getBackingStore()->get('principal');
+        $val = $this->getBackingStore()->get('principal');
+        if (is_null($val) || $val instanceof DirectoryObject) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'principal'");
     }
 
     /**
@@ -127,7 +163,11 @@ class UnifiedRoleAssignmentScheduleRequest extends Request implements Parsable
      * @return string|null
     */
     public function getPrincipalId(): ?string {
-        return $this->getBackingStore()->get('principalId');
+        $val = $this->getBackingStore()->get('principalId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'principalId'");
     }
 
     /**
@@ -135,7 +175,11 @@ class UnifiedRoleAssignmentScheduleRequest extends Request implements Parsable
      * @return UnifiedRoleDefinition|null
     */
     public function getRoleDefinition(): ?UnifiedRoleDefinition {
-        return $this->getBackingStore()->get('roleDefinition');
+        $val = $this->getBackingStore()->get('roleDefinition');
+        if (is_null($val) || $val instanceof UnifiedRoleDefinition) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'roleDefinition'");
     }
 
     /**
@@ -143,7 +187,11 @@ class UnifiedRoleAssignmentScheduleRequest extends Request implements Parsable
      * @return string|null
     */
     public function getRoleDefinitionId(): ?string {
-        return $this->getBackingStore()->get('roleDefinitionId');
+        $val = $this->getBackingStore()->get('roleDefinitionId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'roleDefinitionId'");
     }
 
     /**
@@ -151,7 +199,11 @@ class UnifiedRoleAssignmentScheduleRequest extends Request implements Parsable
      * @return RequestSchedule|null
     */
     public function getScheduleInfo(): ?RequestSchedule {
-        return $this->getBackingStore()->get('scheduleInfo');
+        $val = $this->getBackingStore()->get('scheduleInfo');
+        if (is_null($val) || $val instanceof RequestSchedule) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'scheduleInfo'");
     }
 
     /**
@@ -159,7 +211,11 @@ class UnifiedRoleAssignmentScheduleRequest extends Request implements Parsable
      * @return UnifiedRoleAssignmentSchedule|null
     */
     public function getTargetSchedule(): ?UnifiedRoleAssignmentSchedule {
-        return $this->getBackingStore()->get('targetSchedule');
+        $val = $this->getBackingStore()->get('targetSchedule');
+        if (is_null($val) || $val instanceof UnifiedRoleAssignmentSchedule) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'targetSchedule'");
     }
 
     /**
@@ -167,7 +223,11 @@ class UnifiedRoleAssignmentScheduleRequest extends Request implements Parsable
      * @return string|null
     */
     public function getTargetScheduleId(): ?string {
-        return $this->getBackingStore()->get('targetScheduleId');
+        $val = $this->getBackingStore()->get('targetScheduleId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'targetScheduleId'");
     }
 
     /**
@@ -175,7 +235,11 @@ class UnifiedRoleAssignmentScheduleRequest extends Request implements Parsable
      * @return TicketInfo|null
     */
     public function getTicketInfo(): ?TicketInfo {
-        return $this->getBackingStore()->get('ticketInfo');
+        $val = $this->getBackingStore()->get('ticketInfo');
+        if (is_null($val) || $val instanceof TicketInfo) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'ticketInfo'");
     }
 
     /**

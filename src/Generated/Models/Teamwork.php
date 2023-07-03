@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class Teamwork extends Entity implements Parsable 
 {
@@ -29,12 +30,18 @@ class Teamwork extends Entity implements Parsable
      * @return array<DeletedTeam>|null
     */
     public function getDeletedTeams(): ?array {
-        return $this->getBackingStore()->get('deletedTeams');
+        $val = $this->getBackingStore()->get('deletedTeams');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, DeletedTeam::class);
+            /** @var array<DeletedTeam>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deletedTeams'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -49,7 +56,13 @@ class Teamwork extends Entity implements Parsable
      * @return array<WorkforceIntegration>|null
     */
     public function getWorkforceIntegrations(): ?array {
-        return $this->getBackingStore()->get('workforceIntegrations');
+        $val = $this->getBackingStore()->get('workforceIntegrations');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, WorkforceIntegration::class);
+            /** @var array<WorkforceIntegration>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'workforceIntegrations'");
     }
 
     /**

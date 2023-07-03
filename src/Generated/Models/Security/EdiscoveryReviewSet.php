@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models\Security;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class EdiscoveryReviewSet extends DataSet implements Parsable 
 {
@@ -27,7 +28,7 @@ class EdiscoveryReviewSet extends DataSet implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -41,7 +42,13 @@ class EdiscoveryReviewSet extends DataSet implements Parsable
      * @return array<EdiscoveryReviewSetQuery>|null
     */
     public function getQueries(): ?array {
-        return $this->getBackingStore()->get('queries');
+        $val = $this->getBackingStore()->get('queries');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, EdiscoveryReviewSetQuery::class);
+            /** @var array<EdiscoveryReviewSetQuery>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'queries'");
     }
 
     /**

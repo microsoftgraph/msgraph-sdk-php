@@ -49,7 +49,12 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -57,7 +62,11 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
      * @return DateInterval|null
     */
     public function getAverageInboundJitter(): ?DateInterval {
-        return $this->getBackingStore()->get('averageInboundJitter');
+        $val = $this->getBackingStore()->get('averageInboundJitter');
+        if (is_null($val) || $val instanceof DateInterval) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'averageInboundJitter'");
     }
 
     /**
@@ -65,7 +74,11 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
      * @return float|null
     */
     public function getAverageInboundPacketLossRateInPercentage(): ?float {
-        return $this->getBackingStore()->get('averageInboundPacketLossRateInPercentage');
+        $val = $this->getBackingStore()->get('averageInboundPacketLossRateInPercentage');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'averageInboundPacketLossRateInPercentage'");
     }
 
     /**
@@ -73,7 +86,11 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
      * @return DateInterval|null
     */
     public function getAverageInboundRoundTripDelay(): ?DateInterval {
-        return $this->getBackingStore()->get('averageInboundRoundTripDelay');
+        $val = $this->getBackingStore()->get('averageInboundRoundTripDelay');
+        if (is_null($val) || $val instanceof DateInterval) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'averageInboundRoundTripDelay'");
     }
 
     /**
@@ -81,7 +98,11 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
      * @return DateInterval|null
     */
     public function getAverageOutboundJitter(): ?DateInterval {
-        return $this->getBackingStore()->get('averageOutboundJitter');
+        $val = $this->getBackingStore()->get('averageOutboundJitter');
+        if (is_null($val) || $val instanceof DateInterval) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'averageOutboundJitter'");
     }
 
     /**
@@ -89,7 +110,11 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
      * @return float|null
     */
     public function getAverageOutboundPacketLossRateInPercentage(): ?float {
-        return $this->getBackingStore()->get('averageOutboundPacketLossRateInPercentage');
+        $val = $this->getBackingStore()->get('averageOutboundPacketLossRateInPercentage');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'averageOutboundPacketLossRateInPercentage'");
     }
 
     /**
@@ -97,7 +122,11 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
      * @return DateInterval|null
     */
     public function getAverageOutboundRoundTripDelay(): ?DateInterval {
-        return $this->getBackingStore()->get('averageOutboundRoundTripDelay');
+        $val = $this->getBackingStore()->get('averageOutboundRoundTripDelay');
+        if (is_null($val) || $val instanceof DateInterval) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'averageOutboundRoundTripDelay'");
     }
 
     /**
@@ -113,12 +142,16 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
      * @return int|null
     */
     public function getChannelIndex(): ?int {
-        return $this->getBackingStore()->get('channelIndex');
+        $val = $this->getBackingStore()->get('channelIndex');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'channelIndex'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -153,7 +186,11 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
      * @return int|null
     */
     public function getInboundPackets(): ?int {
-        return $this->getBackingStore()->get('inboundPackets');
+        $val = $this->getBackingStore()->get('inboundPackets');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'inboundPackets'");
     }
 
     /**
@@ -161,7 +198,11 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
      * @return string|null
     */
     public function getLocalIPAddress(): ?string {
-        return $this->getBackingStore()->get('localIPAddress');
+        $val = $this->getBackingStore()->get('localIPAddress');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'localIPAddress'");
     }
 
     /**
@@ -169,7 +210,11 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
      * @return int|null
     */
     public function getLocalPort(): ?int {
-        return $this->getBackingStore()->get('localPort');
+        $val = $this->getBackingStore()->get('localPort');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'localPort'");
     }
 
     /**
@@ -177,7 +222,11 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
      * @return DateInterval|null
     */
     public function getMaximumInboundJitter(): ?DateInterval {
-        return $this->getBackingStore()->get('maximumInboundJitter');
+        $val = $this->getBackingStore()->get('maximumInboundJitter');
+        if (is_null($val) || $val instanceof DateInterval) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'maximumInboundJitter'");
     }
 
     /**
@@ -185,7 +234,11 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
      * @return float|null
     */
     public function getMaximumInboundPacketLossRateInPercentage(): ?float {
-        return $this->getBackingStore()->get('maximumInboundPacketLossRateInPercentage');
+        $val = $this->getBackingStore()->get('maximumInboundPacketLossRateInPercentage');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'maximumInboundPacketLossRateInPercentage'");
     }
 
     /**
@@ -193,7 +246,11 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
      * @return DateInterval|null
     */
     public function getMaximumInboundRoundTripDelay(): ?DateInterval {
-        return $this->getBackingStore()->get('maximumInboundRoundTripDelay');
+        $val = $this->getBackingStore()->get('maximumInboundRoundTripDelay');
+        if (is_null($val) || $val instanceof DateInterval) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'maximumInboundRoundTripDelay'");
     }
 
     /**
@@ -201,7 +258,11 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
      * @return DateInterval|null
     */
     public function getMaximumOutboundJitter(): ?DateInterval {
-        return $this->getBackingStore()->get('maximumOutboundJitter');
+        $val = $this->getBackingStore()->get('maximumOutboundJitter');
+        if (is_null($val) || $val instanceof DateInterval) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'maximumOutboundJitter'");
     }
 
     /**
@@ -209,7 +270,11 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
      * @return float|null
     */
     public function getMaximumOutboundPacketLossRateInPercentage(): ?float {
-        return $this->getBackingStore()->get('maximumOutboundPacketLossRateInPercentage');
+        $val = $this->getBackingStore()->get('maximumOutboundPacketLossRateInPercentage');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'maximumOutboundPacketLossRateInPercentage'");
     }
 
     /**
@@ -217,7 +282,11 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
      * @return DateInterval|null
     */
     public function getMaximumOutboundRoundTripDelay(): ?DateInterval {
-        return $this->getBackingStore()->get('maximumOutboundRoundTripDelay');
+        $val = $this->getBackingStore()->get('maximumOutboundRoundTripDelay');
+        if (is_null($val) || $val instanceof DateInterval) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'maximumOutboundRoundTripDelay'");
     }
 
     /**
@@ -225,7 +294,11 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
      * @return DateInterval|null
     */
     public function getMediaDuration(): ?DateInterval {
-        return $this->getBackingStore()->get('mediaDuration');
+        $val = $this->getBackingStore()->get('mediaDuration');
+        if (is_null($val) || $val instanceof DateInterval) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'mediaDuration'");
     }
 
     /**
@@ -233,7 +306,11 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
      * @return int|null
     */
     public function getNetworkLinkSpeedInBytes(): ?int {
-        return $this->getBackingStore()->get('networkLinkSpeedInBytes');
+        $val = $this->getBackingStore()->get('networkLinkSpeedInBytes');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'networkLinkSpeedInBytes'");
     }
 
     /**
@@ -241,7 +318,11 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -249,7 +330,11 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
      * @return int|null
     */
     public function getOutboundPackets(): ?int {
-        return $this->getBackingStore()->get('outboundPackets');
+        $val = $this->getBackingStore()->get('outboundPackets');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'outboundPackets'");
     }
 
     /**
@@ -257,7 +342,11 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
      * @return string|null
     */
     public function getRemoteIPAddress(): ?string {
-        return $this->getBackingStore()->get('remoteIPAddress');
+        $val = $this->getBackingStore()->get('remoteIPAddress');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'remoteIPAddress'");
     }
 
     /**
@@ -265,7 +354,11 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
      * @return int|null
     */
     public function getRemotePort(): ?int {
-        return $this->getBackingStore()->get('remotePort');
+        $val = $this->getBackingStore()->get('remotePort');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'remotePort'");
     }
 
     /**

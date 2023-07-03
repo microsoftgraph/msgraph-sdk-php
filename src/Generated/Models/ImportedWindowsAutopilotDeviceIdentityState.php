@@ -39,7 +39,12 @@ class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDataHolde
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -55,7 +60,11 @@ class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDataHolde
      * @return int|null
     */
     public function getDeviceErrorCode(): ?int {
-        return $this->getBackingStore()->get('deviceErrorCode');
+        $val = $this->getBackingStore()->get('deviceErrorCode');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deviceErrorCode'");
     }
 
     /**
@@ -63,7 +72,11 @@ class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDataHolde
      * @return string|null
     */
     public function getDeviceErrorName(): ?string {
-        return $this->getBackingStore()->get('deviceErrorName');
+        $val = $this->getBackingStore()->get('deviceErrorName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deviceErrorName'");
     }
 
     /**
@@ -71,7 +84,11 @@ class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDataHolde
      * @return ImportedWindowsAutopilotDeviceIdentityImportStatus|null
     */
     public function getDeviceImportStatus(): ?ImportedWindowsAutopilotDeviceIdentityImportStatus {
-        return $this->getBackingStore()->get('deviceImportStatus');
+        $val = $this->getBackingStore()->get('deviceImportStatus');
+        if (is_null($val) || $val instanceof ImportedWindowsAutopilotDeviceIdentityImportStatus) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deviceImportStatus'");
     }
 
     /**
@@ -79,12 +96,16 @@ class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDataHolde
      * @return string|null
     */
     public function getDeviceRegistrationId(): ?string {
-        return $this->getBackingStore()->get('deviceRegistrationId');
+        $val = $this->getBackingStore()->get('deviceRegistrationId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deviceRegistrationId'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -102,7 +123,11 @@ class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDataHolde
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**

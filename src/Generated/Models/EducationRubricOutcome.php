@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class EducationRubricOutcome extends EducationOutcome implements Parsable 
 {
@@ -27,7 +28,7 @@ class EducationRubricOutcome extends EducationOutcome implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -44,7 +45,13 @@ class EducationRubricOutcome extends EducationOutcome implements Parsable
      * @return array<RubricQualityFeedbackModel>|null
     */
     public function getPublishedRubricQualityFeedback(): ?array {
-        return $this->getBackingStore()->get('publishedRubricQualityFeedback');
+        $val = $this->getBackingStore()->get('publishedRubricQualityFeedback');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, RubricQualityFeedbackModel::class);
+            /** @var array<RubricQualityFeedbackModel>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'publishedRubricQualityFeedback'");
     }
 
     /**
@@ -52,7 +59,13 @@ class EducationRubricOutcome extends EducationOutcome implements Parsable
      * @return array<RubricQualitySelectedColumnModel>|null
     */
     public function getPublishedRubricQualitySelectedLevels(): ?array {
-        return $this->getBackingStore()->get('publishedRubricQualitySelectedLevels');
+        $val = $this->getBackingStore()->get('publishedRubricQualitySelectedLevels');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, RubricQualitySelectedColumnModel::class);
+            /** @var array<RubricQualitySelectedColumnModel>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'publishedRubricQualitySelectedLevels'");
     }
 
     /**
@@ -60,7 +73,13 @@ class EducationRubricOutcome extends EducationOutcome implements Parsable
      * @return array<RubricQualityFeedbackModel>|null
     */
     public function getRubricQualityFeedback(): ?array {
-        return $this->getBackingStore()->get('rubricQualityFeedback');
+        $val = $this->getBackingStore()->get('rubricQualityFeedback');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, RubricQualityFeedbackModel::class);
+            /** @var array<RubricQualityFeedbackModel>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'rubricQualityFeedback'");
     }
 
     /**
@@ -68,7 +87,13 @@ class EducationRubricOutcome extends EducationOutcome implements Parsable
      * @return array<RubricQualitySelectedColumnModel>|null
     */
     public function getRubricQualitySelectedLevels(): ?array {
-        return $this->getBackingStore()->get('rubricQualitySelectedLevels');
+        $val = $this->getBackingStore()->get('rubricQualitySelectedLevels');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, RubricQualitySelectedColumnModel::class);
+            /** @var array<RubricQualitySelectedColumnModel>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'rubricQualitySelectedLevels'");
     }
 
     /**

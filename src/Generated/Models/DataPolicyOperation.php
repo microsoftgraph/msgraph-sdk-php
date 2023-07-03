@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DataPolicyOperation extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new dataPolicyOperation and sets the default values.
+     * Instantiates a new DataPolicyOperation and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -30,12 +30,16 @@ class DataPolicyOperation extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCompletedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('completedDateTime');
+        $val = $this->getBackingStore()->get('completedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'completedDateTime'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -54,7 +58,11 @@ class DataPolicyOperation extends Entity implements Parsable
      * @return float|null
     */
     public function getProgress(): ?float {
-        return $this->getBackingStore()->get('progress');
+        $val = $this->getBackingStore()->get('progress');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'progress'");
     }
 
     /**
@@ -62,7 +70,11 @@ class DataPolicyOperation extends Entity implements Parsable
      * @return DataPolicyOperationStatus|null
     */
     public function getStatus(): ?DataPolicyOperationStatus {
-        return $this->getBackingStore()->get('status');
+        $val = $this->getBackingStore()->get('status');
+        if (is_null($val) || $val instanceof DataPolicyOperationStatus) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
     }
 
     /**
@@ -70,7 +82,11 @@ class DataPolicyOperation extends Entity implements Parsable
      * @return string|null
     */
     public function getStorageLocation(): ?string {
-        return $this->getBackingStore()->get('storageLocation');
+        $val = $this->getBackingStore()->get('storageLocation');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'storageLocation'");
     }
 
     /**
@@ -78,7 +94,11 @@ class DataPolicyOperation extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getSubmittedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('submittedDateTime');
+        $val = $this->getBackingStore()->get('submittedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'submittedDateTime'");
     }
 
     /**
@@ -86,7 +106,11 @@ class DataPolicyOperation extends Entity implements Parsable
      * @return string|null
     */
     public function getUserId(): ?string {
-        return $this->getBackingStore()->get('userId');
+        $val = $this->getBackingStore()->get('userId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userId'");
     }
 
     /**

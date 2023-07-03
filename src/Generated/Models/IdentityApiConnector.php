@@ -29,7 +29,11 @@ class IdentityApiConnector extends Entity implements Parsable
      * @return ApiAuthenticationConfigurationBase|null
     */
     public function getAuthenticationConfiguration(): ?ApiAuthenticationConfigurationBase {
-        return $this->getBackingStore()->get('authenticationConfiguration');
+        $val = $this->getBackingStore()->get('authenticationConfiguration');
+        if (is_null($val) || $val instanceof ApiAuthenticationConfigurationBase) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'authenticationConfiguration'");
     }
 
     /**
@@ -37,12 +41,16 @@ class IdentityApiConnector extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -58,7 +66,11 @@ class IdentityApiConnector extends Entity implements Parsable
      * @return string|null
     */
     public function getTargetUrl(): ?string {
-        return $this->getBackingStore()->get('targetUrl');
+        $val = $this->getBackingStore()->get('targetUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'targetUrl'");
     }
 
     /**

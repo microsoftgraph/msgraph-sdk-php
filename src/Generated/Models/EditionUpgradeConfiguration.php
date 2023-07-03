@@ -27,7 +27,7 @@ class EditionUpgradeConfiguration extends DeviceConfiguration implements Parsabl
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -44,7 +44,11 @@ class EditionUpgradeConfiguration extends DeviceConfiguration implements Parsabl
      * @return string|null
     */
     public function getLicense(): ?string {
-        return $this->getBackingStore()->get('license');
+        $val = $this->getBackingStore()->get('license');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'license'");
     }
 
     /**
@@ -52,7 +56,11 @@ class EditionUpgradeConfiguration extends DeviceConfiguration implements Parsabl
      * @return EditionUpgradeLicenseType|null
     */
     public function getLicenseType(): ?EditionUpgradeLicenseType {
-        return $this->getBackingStore()->get('licenseType');
+        $val = $this->getBackingStore()->get('licenseType');
+        if (is_null($val) || $val instanceof EditionUpgradeLicenseType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'licenseType'");
     }
 
     /**
@@ -60,7 +68,11 @@ class EditionUpgradeConfiguration extends DeviceConfiguration implements Parsabl
      * @return string|null
     */
     public function getProductKey(): ?string {
-        return $this->getBackingStore()->get('productKey');
+        $val = $this->getBackingStore()->get('productKey');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'productKey'");
     }
 
     /**
@@ -68,7 +80,11 @@ class EditionUpgradeConfiguration extends DeviceConfiguration implements Parsabl
      * @return Windows10EditionType|null
     */
     public function getTargetEdition(): ?Windows10EditionType {
-        return $this->getBackingStore()->get('targetEdition');
+        $val = $this->getBackingStore()->get('targetEdition');
+        if (is_null($val) || $val instanceof Windows10EditionType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'targetEdition'");
     }
 
     /**

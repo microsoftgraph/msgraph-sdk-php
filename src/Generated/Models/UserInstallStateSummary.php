@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 /**
  * Contains properties for the installation state summary for a user.
@@ -32,7 +33,13 @@ class UserInstallStateSummary extends Entity implements Parsable
      * @return array<DeviceInstallState>|null
     */
     public function getDeviceStates(): ?array {
-        return $this->getBackingStore()->get('deviceStates');
+        $val = $this->getBackingStore()->get('deviceStates');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, DeviceInstallState::class);
+            /** @var array<DeviceInstallState>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deviceStates'");
     }
 
     /**
@@ -40,12 +47,16 @@ class UserInstallStateSummary extends Entity implements Parsable
      * @return int|null
     */
     public function getFailedDeviceCount(): ?int {
-        return $this->getBackingStore()->get('failedDeviceCount');
+        $val = $this->getBackingStore()->get('failedDeviceCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'failedDeviceCount'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -63,7 +74,11 @@ class UserInstallStateSummary extends Entity implements Parsable
      * @return int|null
     */
     public function getInstalledDeviceCount(): ?int {
-        return $this->getBackingStore()->get('installedDeviceCount');
+        $val = $this->getBackingStore()->get('installedDeviceCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'installedDeviceCount'");
     }
 
     /**
@@ -71,7 +86,11 @@ class UserInstallStateSummary extends Entity implements Parsable
      * @return int|null
     */
     public function getNotInstalledDeviceCount(): ?int {
-        return $this->getBackingStore()->get('notInstalledDeviceCount');
+        $val = $this->getBackingStore()->get('notInstalledDeviceCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'notInstalledDeviceCount'");
     }
 
     /**
@@ -79,7 +98,11 @@ class UserInstallStateSummary extends Entity implements Parsable
      * @return string|null
     */
     public function getUserName(): ?string {
-        return $this->getBackingStore()->get('userName');
+        $val = $this->getBackingStore()->get('userName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userName'");
     }
 
     /**

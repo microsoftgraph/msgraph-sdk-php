@@ -40,7 +40,12 @@ class SubstitutePostRequestBody implements AdditionalDataHolder, BackedModel, Pa
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -53,7 +58,7 @@ class SubstitutePostRequestBody implements AdditionalDataHolder, BackedModel, Pa
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -70,7 +75,11 @@ class SubstitutePostRequestBody implements AdditionalDataHolder, BackedModel, Pa
      * @return Json|null
     */
     public function getInstanceNum(): ?Json {
-        return $this->getBackingStore()->get('instanceNum');
+        $val = $this->getBackingStore()->get('instanceNum');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'instanceNum'");
     }
 
     /**
@@ -78,7 +87,11 @@ class SubstitutePostRequestBody implements AdditionalDataHolder, BackedModel, Pa
      * @return Json|null
     */
     public function getNewText(): ?Json {
-        return $this->getBackingStore()->get('newText');
+        $val = $this->getBackingStore()->get('newText');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'newText'");
     }
 
     /**
@@ -86,7 +99,11 @@ class SubstitutePostRequestBody implements AdditionalDataHolder, BackedModel, Pa
      * @return Json|null
     */
     public function getOldText(): ?Json {
-        return $this->getBackingStore()->get('oldText');
+        $val = $this->getBackingStore()->get('oldText');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'oldText'");
     }
 
     /**
@@ -94,7 +111,11 @@ class SubstitutePostRequestBody implements AdditionalDataHolder, BackedModel, Pa
      * @return Json|null
     */
     public function getText(): ?Json {
-        return $this->getBackingStore()->get('text');
+        $val = $this->getBackingStore()->get('text');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'text'");
     }
 
     /**

@@ -27,7 +27,7 @@ class Relation extends Entity implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -44,7 +44,11 @@ class Relation extends Entity implements Parsable
      * @return Term|null
     */
     public function getFromTerm(): ?Term {
-        return $this->getBackingStore()->get('fromTerm');
+        $val = $this->getBackingStore()->get('fromTerm');
+        if (is_null($val) || $val instanceof Term) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'fromTerm'");
     }
 
     /**
@@ -52,7 +56,11 @@ class Relation extends Entity implements Parsable
      * @return RelationType|null
     */
     public function getRelationship(): ?RelationType {
-        return $this->getBackingStore()->get('relationship');
+        $val = $this->getBackingStore()->get('relationship');
+        if (is_null($val) || $val instanceof RelationType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'relationship'");
     }
 
     /**
@@ -60,7 +68,11 @@ class Relation extends Entity implements Parsable
      * @return Set|null
     */
     public function getSet(): ?Set {
-        return $this->getBackingStore()->get('set');
+        $val = $this->getBackingStore()->get('set');
+        if (is_null($val) || $val instanceof Set) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'set'");
     }
 
     /**
@@ -68,7 +80,11 @@ class Relation extends Entity implements Parsable
      * @return Term|null
     */
     public function getToTerm(): ?Term {
-        return $this->getBackingStore()->get('toTerm');
+        $val = $this->getBackingStore()->get('toTerm');
+        if (is_null($val) || $val instanceof Term) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'toTerm'");
     }
 
     /**

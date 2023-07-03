@@ -39,7 +39,12 @@ class AutomaticRepliesSetting implements AdditionalDataHolder, BackedModel, Pars
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -55,7 +60,11 @@ class AutomaticRepliesSetting implements AdditionalDataHolder, BackedModel, Pars
      * @return ExternalAudienceScope|null
     */
     public function getExternalAudience(): ?ExternalAudienceScope {
-        return $this->getBackingStore()->get('externalAudience');
+        $val = $this->getBackingStore()->get('externalAudience');
+        if (is_null($val) || $val instanceof ExternalAudienceScope) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'externalAudience'");
     }
 
     /**
@@ -63,12 +72,16 @@ class AutomaticRepliesSetting implements AdditionalDataHolder, BackedModel, Pars
      * @return string|null
     */
     public function getExternalReplyMessage(): ?string {
-        return $this->getBackingStore()->get('externalReplyMessage');
+        $val = $this->getBackingStore()->get('externalReplyMessage');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'externalReplyMessage'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -88,7 +101,11 @@ class AutomaticRepliesSetting implements AdditionalDataHolder, BackedModel, Pars
      * @return string|null
     */
     public function getInternalReplyMessage(): ?string {
-        return $this->getBackingStore()->get('internalReplyMessage');
+        $val = $this->getBackingStore()->get('internalReplyMessage');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'internalReplyMessage'");
     }
 
     /**
@@ -96,7 +113,11 @@ class AutomaticRepliesSetting implements AdditionalDataHolder, BackedModel, Pars
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -104,7 +125,11 @@ class AutomaticRepliesSetting implements AdditionalDataHolder, BackedModel, Pars
      * @return DateTimeTimeZone|null
     */
     public function getScheduledEndDateTime(): ?DateTimeTimeZone {
-        return $this->getBackingStore()->get('scheduledEndDateTime');
+        $val = $this->getBackingStore()->get('scheduledEndDateTime');
+        if (is_null($val) || $val instanceof DateTimeTimeZone) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'scheduledEndDateTime'");
     }
 
     /**
@@ -112,7 +137,11 @@ class AutomaticRepliesSetting implements AdditionalDataHolder, BackedModel, Pars
      * @return DateTimeTimeZone|null
     */
     public function getScheduledStartDateTime(): ?DateTimeTimeZone {
-        return $this->getBackingStore()->get('scheduledStartDateTime');
+        $val = $this->getBackingStore()->get('scheduledStartDateTime');
+        if (is_null($val) || $val instanceof DateTimeTimeZone) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'scheduledStartDateTime'");
     }
 
     /**
@@ -120,7 +149,11 @@ class AutomaticRepliesSetting implements AdditionalDataHolder, BackedModel, Pars
      * @return AutomaticRepliesStatus|null
     */
     public function getStatus(): ?AutomaticRepliesStatus {
-        return $this->getBackingStore()->get('status');
+        $val = $this->getBackingStore()->get('status');
+        if (is_null($val) || $val instanceof AutomaticRepliesStatus) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
     }
 
     /**

@@ -10,6 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class GetMailTipsPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -40,7 +41,12 @@ class GetMailTipsPostRequestBody implements AdditionalDataHolder, BackedModel, P
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -56,17 +62,30 @@ class GetMailTipsPostRequestBody implements AdditionalDataHolder, BackedModel, P
      * @return array<string>|null
     */
     public function getEmailAddresses(): ?array {
-        return $this->getBackingStore()->get('emailAddresses');
+        $val = $this->getBackingStore()->get('emailAddresses');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'emailAddresses'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'emailAddresses' => fn(ParseNode $n) => $o->setEmailAddresses($n->getCollectionOfPrimitiveValues()),
+            'emailAddresses' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setEmailAddresses($val);
+            },
             'mailTipsOptions' => fn(ParseNode $n) => $o->setMailTipsOptions($n->getEnumValue(MailTipsType::class)),
         ];
     }
@@ -76,7 +95,11 @@ class GetMailTipsPostRequestBody implements AdditionalDataHolder, BackedModel, P
      * @return MailTipsType|null
     */
     public function getMailTipsOptions(): ?MailTipsType {
-        return $this->getBackingStore()->get('mailTipsOptions');
+        $val = $this->getBackingStore()->get('mailTipsOptions');
+        if (is_null($val) || $val instanceof MailTipsType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'mailTipsOptions'");
     }
 
     /**

@@ -5,11 +5,12 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class DeletedTeam extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new DeletedTeam and sets the default values.
+     * Instantiates a new deletedTeam and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -29,12 +30,18 @@ class DeletedTeam extends Entity implements Parsable
      * @return array<Channel>|null
     */
     public function getChannels(): ?array {
-        return $this->getBackingStore()->get('channels');
+        $val = $this->getBackingStore()->get('channels');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Channel::class);
+            /** @var array<Channel>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'channels'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;

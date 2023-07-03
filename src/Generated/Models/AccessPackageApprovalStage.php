@@ -10,6 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class AccessPackageApprovalStage implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -19,7 +20,7 @@ class AccessPackageApprovalStage implements AdditionalDataHolder, BackedModel, P
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new accessPackageApprovalStage and sets the default values.
+     * Instantiates a new AccessPackageApprovalStage and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
@@ -40,7 +41,12 @@ class AccessPackageApprovalStage implements AdditionalDataHolder, BackedModel, P
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -56,7 +62,11 @@ class AccessPackageApprovalStage implements AdditionalDataHolder, BackedModel, P
      * @return DateInterval|null
     */
     public function getDurationBeforeAutomaticDenial(): ?DateInterval {
-        return $this->getBackingStore()->get('durationBeforeAutomaticDenial');
+        $val = $this->getBackingStore()->get('durationBeforeAutomaticDenial');
+        if (is_null($val) || $val instanceof DateInterval) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'durationBeforeAutomaticDenial'");
     }
 
     /**
@@ -64,7 +74,11 @@ class AccessPackageApprovalStage implements AdditionalDataHolder, BackedModel, P
      * @return DateInterval|null
     */
     public function getDurationBeforeEscalation(): ?DateInterval {
-        return $this->getBackingStore()->get('durationBeforeEscalation');
+        $val = $this->getBackingStore()->get('durationBeforeEscalation');
+        if (is_null($val) || $val instanceof DateInterval) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'durationBeforeEscalation'");
     }
 
     /**
@@ -72,7 +86,13 @@ class AccessPackageApprovalStage implements AdditionalDataHolder, BackedModel, P
      * @return array<SubjectSet>|null
     */
     public function getEscalationApprovers(): ?array {
-        return $this->getBackingStore()->get('escalationApprovers');
+        $val = $this->getBackingStore()->get('escalationApprovers');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, SubjectSet::class);
+            /** @var array<SubjectSet>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'escalationApprovers'");
     }
 
     /**
@@ -80,7 +100,13 @@ class AccessPackageApprovalStage implements AdditionalDataHolder, BackedModel, P
      * @return array<SubjectSet>|null
     */
     public function getFallbackEscalationApprovers(): ?array {
-        return $this->getBackingStore()->get('fallbackEscalationApprovers');
+        $val = $this->getBackingStore()->get('fallbackEscalationApprovers');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, SubjectSet::class);
+            /** @var array<SubjectSet>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'fallbackEscalationApprovers'");
     }
 
     /**
@@ -88,12 +114,18 @@ class AccessPackageApprovalStage implements AdditionalDataHolder, BackedModel, P
      * @return array<SubjectSet>|null
     */
     public function getFallbackPrimaryApprovers(): ?array {
-        return $this->getBackingStore()->get('fallbackPrimaryApprovers');
+        $val = $this->getBackingStore()->get('fallbackPrimaryApprovers');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, SubjectSet::class);
+            /** @var array<SubjectSet>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'fallbackPrimaryApprovers'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -115,7 +147,11 @@ class AccessPackageApprovalStage implements AdditionalDataHolder, BackedModel, P
      * @return bool|null
     */
     public function getIsApproverJustificationRequired(): ?bool {
-        return $this->getBackingStore()->get('isApproverJustificationRequired');
+        $val = $this->getBackingStore()->get('isApproverJustificationRequired');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isApproverJustificationRequired'");
     }
 
     /**
@@ -123,7 +159,11 @@ class AccessPackageApprovalStage implements AdditionalDataHolder, BackedModel, P
      * @return bool|null
     */
     public function getIsEscalationEnabled(): ?bool {
-        return $this->getBackingStore()->get('isEscalationEnabled');
+        $val = $this->getBackingStore()->get('isEscalationEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isEscalationEnabled'");
     }
 
     /**
@@ -131,7 +171,11 @@ class AccessPackageApprovalStage implements AdditionalDataHolder, BackedModel, P
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -139,7 +183,13 @@ class AccessPackageApprovalStage implements AdditionalDataHolder, BackedModel, P
      * @return array<SubjectSet>|null
     */
     public function getPrimaryApprovers(): ?array {
-        return $this->getBackingStore()->get('primaryApprovers');
+        $val = $this->getBackingStore()->get('primaryApprovers');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, SubjectSet::class);
+            /** @var array<SubjectSet>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'primaryApprovers'");
     }
 
     /**

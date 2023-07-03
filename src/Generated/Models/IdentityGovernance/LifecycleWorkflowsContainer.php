@@ -7,6 +7,7 @@ use Microsoft\Graph\Generated\Models\Entity;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class LifecycleWorkflowsContainer extends Entity implements Parsable 
 {
@@ -31,7 +32,13 @@ class LifecycleWorkflowsContainer extends Entity implements Parsable
      * @return array<CustomTaskExtension>|null
     */
     public function getCustomTaskExtensions(): ?array {
-        return $this->getBackingStore()->get('customTaskExtensions');
+        $val = $this->getBackingStore()->get('customTaskExtensions');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, CustomTaskExtension::class);
+            /** @var array<CustomTaskExtension>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'customTaskExtensions'");
     }
 
     /**
@@ -39,12 +46,16 @@ class LifecycleWorkflowsContainer extends Entity implements Parsable
      * @return DeletedItemContainer|null
     */
     public function getDeletedItems(): ?DeletedItemContainer {
-        return $this->getBackingStore()->get('deletedItems');
+        $val = $this->getBackingStore()->get('deletedItems');
+        if (is_null($val) || $val instanceof DeletedItemContainer) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deletedItems'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -63,7 +74,11 @@ class LifecycleWorkflowsContainer extends Entity implements Parsable
      * @return LifecycleManagementSettings|null
     */
     public function getSettings(): ?LifecycleManagementSettings {
-        return $this->getBackingStore()->get('settings');
+        $val = $this->getBackingStore()->get('settings');
+        if (is_null($val) || $val instanceof LifecycleManagementSettings) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'settings'");
     }
 
     /**
@@ -71,7 +86,13 @@ class LifecycleWorkflowsContainer extends Entity implements Parsable
      * @return array<TaskDefinition>|null
     */
     public function getTaskDefinitions(): ?array {
-        return $this->getBackingStore()->get('taskDefinitions');
+        $val = $this->getBackingStore()->get('taskDefinitions');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, TaskDefinition::class);
+            /** @var array<TaskDefinition>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'taskDefinitions'");
     }
 
     /**
@@ -79,7 +100,13 @@ class LifecycleWorkflowsContainer extends Entity implements Parsable
      * @return array<Workflow>|null
     */
     public function getWorkflows(): ?array {
-        return $this->getBackingStore()->get('workflows');
+        $val = $this->getBackingStore()->get('workflows');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Workflow::class);
+            /** @var array<Workflow>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'workflows'");
     }
 
     /**
@@ -87,7 +114,13 @@ class LifecycleWorkflowsContainer extends Entity implements Parsable
      * @return array<WorkflowTemplate>|null
     */
     public function getWorkflowTemplates(): ?array {
-        return $this->getBackingStore()->get('workflowTemplates');
+        $val = $this->getBackingStore()->get('workflowTemplates');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, WorkflowTemplate::class);
+            /** @var array<WorkflowTemplate>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'workflowTemplates'");
     }
 
     /**

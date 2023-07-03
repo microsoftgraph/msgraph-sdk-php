@@ -6,6 +6,7 @@ use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 /**
  * Entity representing a job to export a report
@@ -33,12 +34,16 @@ class DeviceManagementExportJob extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getExpirationDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('expirationDateTime');
+        $val = $this->getBackingStore()->get('expirationDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'expirationDateTime'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -49,7 +54,14 @@ class DeviceManagementExportJob extends Entity implements Parsable
             'localizationType' => fn(ParseNode $n) => $o->setLocalizationType($n->getEnumValue(DeviceManagementExportJobLocalizationType::class)),
             'reportName' => fn(ParseNode $n) => $o->setReportName($n->getStringValue()),
             'requestDateTime' => fn(ParseNode $n) => $o->setRequestDateTime($n->getDateTimeValue()),
-            'select' => fn(ParseNode $n) => $o->setSelect($n->getCollectionOfPrimitiveValues()),
+            'select' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setSelect($val);
+            },
             'snapshotId' => fn(ParseNode $n) => $o->setSnapshotId($n->getStringValue()),
             'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(DeviceManagementReportStatus::class)),
             'url' => fn(ParseNode $n) => $o->setUrl($n->getStringValue()),
@@ -61,7 +73,11 @@ class DeviceManagementExportJob extends Entity implements Parsable
      * @return string|null
     */
     public function getFilter(): ?string {
-        return $this->getBackingStore()->get('filter');
+        $val = $this->getBackingStore()->get('filter');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'filter'");
     }
 
     /**
@@ -69,7 +85,11 @@ class DeviceManagementExportJob extends Entity implements Parsable
      * @return DeviceManagementReportFileFormat|null
     */
     public function getFormat(): ?DeviceManagementReportFileFormat {
-        return $this->getBackingStore()->get('format');
+        $val = $this->getBackingStore()->get('format');
+        if (is_null($val) || $val instanceof DeviceManagementReportFileFormat) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'format'");
     }
 
     /**
@@ -77,7 +97,11 @@ class DeviceManagementExportJob extends Entity implements Parsable
      * @return DeviceManagementExportJobLocalizationType|null
     */
     public function getLocalizationType(): ?DeviceManagementExportJobLocalizationType {
-        return $this->getBackingStore()->get('localizationType');
+        $val = $this->getBackingStore()->get('localizationType');
+        if (is_null($val) || $val instanceof DeviceManagementExportJobLocalizationType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'localizationType'");
     }
 
     /**
@@ -85,7 +109,11 @@ class DeviceManagementExportJob extends Entity implements Parsable
      * @return string|null
     */
     public function getReportName(): ?string {
-        return $this->getBackingStore()->get('reportName');
+        $val = $this->getBackingStore()->get('reportName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'reportName'");
     }
 
     /**
@@ -93,7 +121,11 @@ class DeviceManagementExportJob extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getRequestDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('requestDateTime');
+        $val = $this->getBackingStore()->get('requestDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'requestDateTime'");
     }
 
     /**
@@ -101,7 +133,13 @@ class DeviceManagementExportJob extends Entity implements Parsable
      * @return array<string>|null
     */
     public function getSelect(): ?array {
-        return $this->getBackingStore()->get('select');
+        $val = $this->getBackingStore()->get('select');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'select'");
     }
 
     /**
@@ -109,7 +147,11 @@ class DeviceManagementExportJob extends Entity implements Parsable
      * @return string|null
     */
     public function getSnapshotId(): ?string {
-        return $this->getBackingStore()->get('snapshotId');
+        $val = $this->getBackingStore()->get('snapshotId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'snapshotId'");
     }
 
     /**
@@ -117,7 +159,11 @@ class DeviceManagementExportJob extends Entity implements Parsable
      * @return DeviceManagementReportStatus|null
     */
     public function getStatus(): ?DeviceManagementReportStatus {
-        return $this->getBackingStore()->get('status');
+        $val = $this->getBackingStore()->get('status');
+        if (is_null($val) || $val instanceof DeviceManagementReportStatus) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
     }
 
     /**
@@ -125,7 +171,11 @@ class DeviceManagementExportJob extends Entity implements Parsable
      * @return string|null
     */
     public function getUrl(): ?string {
-        return $this->getBackingStore()->get('url');
+        $val = $this->getBackingStore()->get('url');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'url'");
     }
 
     /**

@@ -6,6 +6,7 @@ use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class MeetingAttendanceReport extends Entity implements Parsable 
 {
@@ -30,12 +31,18 @@ class MeetingAttendanceReport extends Entity implements Parsable
      * @return array<AttendanceRecord>|null
     */
     public function getAttendanceRecords(): ?array {
-        return $this->getBackingStore()->get('attendanceRecords');
+        $val = $this->getBackingStore()->get('attendanceRecords');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AttendanceRecord::class);
+            /** @var array<AttendanceRecord>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'attendanceRecords'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -52,7 +59,11 @@ class MeetingAttendanceReport extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getMeetingEndDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('meetingEndDateTime');
+        $val = $this->getBackingStore()->get('meetingEndDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'meetingEndDateTime'");
     }
 
     /**
@@ -60,7 +71,11 @@ class MeetingAttendanceReport extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getMeetingStartDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('meetingStartDateTime');
+        $val = $this->getBackingStore()->get('meetingStartDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'meetingStartDateTime'");
     }
 
     /**
@@ -68,7 +83,11 @@ class MeetingAttendanceReport extends Entity implements Parsable
      * @return int|null
     */
     public function getTotalParticipantCount(): ?int {
-        return $this->getBackingStore()->get('totalParticipantCount');
+        $val = $this->getBackingStore()->get('totalParticipantCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'totalParticipantCount'");
     }
 
     /**

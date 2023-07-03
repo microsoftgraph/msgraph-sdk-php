@@ -40,7 +40,12 @@ class DbPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -56,12 +61,16 @@ class DbPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
      * @return Json|null
     */
     public function getCost(): ?Json {
-        return $this->getBackingStore()->get('cost');
+        $val = $this->getBackingStore()->get('cost');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'cost'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -79,7 +88,11 @@ class DbPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
      * @return Json|null
     */
     public function getLife(): ?Json {
-        return $this->getBackingStore()->get('life');
+        $val = $this->getBackingStore()->get('life');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'life'");
     }
 
     /**
@@ -87,7 +100,11 @@ class DbPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
      * @return Json|null
     */
     public function getMonth(): ?Json {
-        return $this->getBackingStore()->get('month');
+        $val = $this->getBackingStore()->get('month');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'month'");
     }
 
     /**
@@ -95,7 +112,11 @@ class DbPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
      * @return Json|null
     */
     public function getPeriod(): ?Json {
-        return $this->getBackingStore()->get('period');
+        $val = $this->getBackingStore()->get('period');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'period'");
     }
 
     /**
@@ -103,7 +124,11 @@ class DbPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
      * @return Json|null
     */
     public function getSalvage(): ?Json {
-        return $this->getBackingStore()->get('salvage');
+        $val = $this->getBackingStore()->get('salvage');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'salvage'");
     }
 
     /**

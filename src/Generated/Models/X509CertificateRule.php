@@ -39,7 +39,12 @@ class X509CertificateRule implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -52,7 +57,7 @@ class X509CertificateRule implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -69,7 +74,11 @@ class X509CertificateRule implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getIdentifier(): ?string {
-        return $this->getBackingStore()->get('identifier');
+        $val = $this->getBackingStore()->get('identifier');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'identifier'");
     }
 
     /**
@@ -77,7 +86,11 @@ class X509CertificateRule implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -85,7 +98,11 @@ class X509CertificateRule implements AdditionalDataHolder, BackedModel, Parsable
      * @return X509CertificateAuthenticationMode|null
     */
     public function getX509CertificateAuthenticationMode(): ?X509CertificateAuthenticationMode {
-        return $this->getBackingStore()->get('x509CertificateAuthenticationMode');
+        $val = $this->getBackingStore()->get('x509CertificateAuthenticationMode');
+        if (is_null($val) || $val instanceof X509CertificateAuthenticationMode) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'x509CertificateAuthenticationMode'");
     }
 
     /**
@@ -93,7 +110,11 @@ class X509CertificateRule implements AdditionalDataHolder, BackedModel, Parsable
      * @return X509CertificateRuleType|null
     */
     public function getX509CertificateRuleType(): ?X509CertificateRuleType {
-        return $this->getBackingStore()->get('x509CertificateRuleType');
+        $val = $this->getBackingStore()->get('x509CertificateRuleType');
+        if (is_null($val) || $val instanceof X509CertificateRuleType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'x509CertificateRuleType'");
     }
 
     /**

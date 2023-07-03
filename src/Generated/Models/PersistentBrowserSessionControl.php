@@ -27,7 +27,7 @@ class PersistentBrowserSessionControl extends ConditionalAccessSessionControl im
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -41,7 +41,11 @@ class PersistentBrowserSessionControl extends ConditionalAccessSessionControl im
      * @return PersistentBrowserSessionMode|null
     */
     public function getMode(): ?PersistentBrowserSessionMode {
-        return $this->getBackingStore()->get('mode');
+        $val = $this->getBackingStore()->get('mode');
+        if (is_null($val) || $val instanceof PersistentBrowserSessionMode) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'mode'");
     }
 
     /**

@@ -9,6 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class ConditionalAccessGrantControls implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -39,7 +40,12 @@ class ConditionalAccessGrantControls implements AdditionalDataHolder, BackedMode
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -47,7 +53,11 @@ class ConditionalAccessGrantControls implements AdditionalDataHolder, BackedMode
      * @return AuthenticationStrengthPolicy|null
     */
     public function getAuthenticationStrength(): ?AuthenticationStrengthPolicy {
-        return $this->getBackingStore()->get('authenticationStrength');
+        $val = $this->getBackingStore()->get('authenticationStrength');
+        if (is_null($val) || $val instanceof AuthenticationStrengthPolicy) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'authenticationStrength'");
     }
 
     /**
@@ -63,7 +73,13 @@ class ConditionalAccessGrantControls implements AdditionalDataHolder, BackedMode
      * @return array<ConditionalAccessGrantControl>|null
     */
     public function getBuiltInControls(): ?array {
-        return $this->getBackingStore()->get('builtInControls');
+        $val = $this->getBackingStore()->get('builtInControls');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ConditionalAccessGrantControl::class);
+            /** @var array<ConditionalAccessGrantControl>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'builtInControls'");
     }
 
     /**
@@ -71,22 +87,42 @@ class ConditionalAccessGrantControls implements AdditionalDataHolder, BackedMode
      * @return array<string>|null
     */
     public function getCustomAuthenticationFactors(): ?array {
-        return $this->getBackingStore()->get('customAuthenticationFactors');
+        $val = $this->getBackingStore()->get('customAuthenticationFactors');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'customAuthenticationFactors'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
             'authenticationStrength' => fn(ParseNode $n) => $o->setAuthenticationStrength($n->getObjectValue([AuthenticationStrengthPolicy::class, 'createFromDiscriminatorValue'])),
             'builtInControls' => fn(ParseNode $n) => $o->setBuiltInControls($n->getCollectionOfEnumValues(ConditionalAccessGrantControl::class)),
-            'customAuthenticationFactors' => fn(ParseNode $n) => $o->setCustomAuthenticationFactors($n->getCollectionOfPrimitiveValues()),
+            'customAuthenticationFactors' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setCustomAuthenticationFactors($val);
+            },
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'operator' => fn(ParseNode $n) => $o->setOperator($n->getStringValue()),
-            'termsOfUse' => fn(ParseNode $n) => $o->setTermsOfUse($n->getCollectionOfPrimitiveValues()),
+            'termsOfUse' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setTermsOfUse($val);
+            },
         ];
     }
 
@@ -95,7 +131,11 @@ class ConditionalAccessGrantControls implements AdditionalDataHolder, BackedMode
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -103,7 +143,11 @@ class ConditionalAccessGrantControls implements AdditionalDataHolder, BackedMode
      * @return string|null
     */
     public function getOperator(): ?string {
-        return $this->getBackingStore()->get('operator');
+        $val = $this->getBackingStore()->get('operator');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'operator'");
     }
 
     /**
@@ -111,7 +155,13 @@ class ConditionalAccessGrantControls implements AdditionalDataHolder, BackedMode
      * @return array<string>|null
     */
     public function getTermsOfUse(): ?array {
-        return $this->getBackingStore()->get('termsOfUse');
+        $val = $this->getBackingStore()->get('termsOfUse');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'termsOfUse'");
     }
 
     /**

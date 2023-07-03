@@ -41,7 +41,12 @@ class TransferPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -54,7 +59,7 @@ class TransferPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -69,7 +74,11 @@ class TransferPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
      * @return ParticipantInfo|null
     */
     public function getTransferee(): ?ParticipantInfo {
-        return $this->getBackingStore()->get('transferee');
+        $val = $this->getBackingStore()->get('transferee');
+        if (is_null($val) || $val instanceof ParticipantInfo) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'transferee'");
     }
 
     /**
@@ -77,7 +86,11 @@ class TransferPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
      * @return InvitationParticipantInfo|null
     */
     public function getTransferTarget(): ?InvitationParticipantInfo {
-        return $this->getBackingStore()->get('transferTarget');
+        $val = $this->getBackingStore()->get('transferTarget');
+        if (is_null($val) || $val instanceof InvitationParticipantInfo) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'transferTarget'");
     }
 
     /**

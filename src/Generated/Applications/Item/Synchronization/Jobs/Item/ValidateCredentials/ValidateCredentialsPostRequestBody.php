@@ -10,6 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class ValidateCredentialsPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -40,7 +41,12 @@ class ValidateCredentialsPostRequestBody implements AdditionalDataHolder, Backed
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -48,7 +54,11 @@ class ValidateCredentialsPostRequestBody implements AdditionalDataHolder, Backed
      * @return string|null
     */
     public function getApplicationIdentifier(): ?string {
-        return $this->getBackingStore()->get('applicationIdentifier');
+        $val = $this->getBackingStore()->get('applicationIdentifier');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'applicationIdentifier'");
     }
 
     /**
@@ -64,12 +74,18 @@ class ValidateCredentialsPostRequestBody implements AdditionalDataHolder, Backed
      * @return array<SynchronizationSecretKeyStringValuePair>|null
     */
     public function getCredentials(): ?array {
-        return $this->getBackingStore()->get('credentials');
+        $val = $this->getBackingStore()->get('credentials');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, SynchronizationSecretKeyStringValuePair::class);
+            /** @var array<SynchronizationSecretKeyStringValuePair>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'credentials'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -86,7 +102,11 @@ class ValidateCredentialsPostRequestBody implements AdditionalDataHolder, Backed
      * @return string|null
     */
     public function getTemplateId(): ?string {
-        return $this->getBackingStore()->get('templateId');
+        $val = $this->getBackingStore()->get('templateId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'templateId'");
     }
 
     /**
@@ -94,7 +114,11 @@ class ValidateCredentialsPostRequestBody implements AdditionalDataHolder, Backed
      * @return bool|null
     */
     public function getUseSavedCredentials(): ?bool {
-        return $this->getBackingStore()->get('useSavedCredentials');
+        $val = $this->getBackingStore()->get('useSavedCredentials');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'useSavedCredentials'");
     }
 
     /**

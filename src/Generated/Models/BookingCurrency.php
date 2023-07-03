@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class BookingCurrency extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new BookingCurrency and sets the default values.
+     * Instantiates a new bookingCurrency and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -26,7 +26,7 @@ class BookingCurrency extends Entity implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -40,7 +40,11 @@ class BookingCurrency extends Entity implements Parsable
      * @return string|null
     */
     public function getSymbol(): ?string {
-        return $this->getBackingStore()->get('symbol');
+        $val = $this->getBackingStore()->get('symbol');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'symbol'");
     }
 
     /**

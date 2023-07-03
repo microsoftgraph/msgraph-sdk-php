@@ -40,7 +40,12 @@ class RandBetweenPostRequestBody implements AdditionalDataHolder, BackedModel, P
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -56,12 +61,16 @@ class RandBetweenPostRequestBody implements AdditionalDataHolder, BackedModel, P
      * @return Json|null
     */
     public function getBottom(): ?Json {
-        return $this->getBackingStore()->get('bottom');
+        $val = $this->getBackingStore()->get('bottom');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'bottom'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -76,7 +85,11 @@ class RandBetweenPostRequestBody implements AdditionalDataHolder, BackedModel, P
      * @return Json|null
     */
     public function getTop(): ?Json {
-        return $this->getBackingStore()->get('top');
+        $val = $this->getBackingStore()->get('top');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'top'");
     }
 
     /**

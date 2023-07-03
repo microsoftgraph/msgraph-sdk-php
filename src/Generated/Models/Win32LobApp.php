@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class Win32LobApp extends MobileLobApp implements Parsable 
 {
@@ -30,12 +31,16 @@ class Win32LobApp extends MobileLobApp implements Parsable
      * @return WindowsArchitecture|null
     */
     public function getApplicableArchitectures(): ?WindowsArchitecture {
-        return $this->getBackingStore()->get('applicableArchitectures');
+        $val = $this->getBackingStore()->get('applicableArchitectures');
+        if (is_null($val) || $val instanceof WindowsArchitecture) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'applicableArchitectures'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -61,7 +66,11 @@ class Win32LobApp extends MobileLobApp implements Parsable
      * @return string|null
     */
     public function getInstallCommandLine(): ?string {
-        return $this->getBackingStore()->get('installCommandLine');
+        $val = $this->getBackingStore()->get('installCommandLine');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'installCommandLine'");
     }
 
     /**
@@ -69,7 +78,11 @@ class Win32LobApp extends MobileLobApp implements Parsable
      * @return Win32LobAppInstallExperience|null
     */
     public function getInstallExperience(): ?Win32LobAppInstallExperience {
-        return $this->getBackingStore()->get('installExperience');
+        $val = $this->getBackingStore()->get('installExperience');
+        if (is_null($val) || $val instanceof Win32LobAppInstallExperience) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'installExperience'");
     }
 
     /**
@@ -77,7 +90,11 @@ class Win32LobApp extends MobileLobApp implements Parsable
      * @return int|null
     */
     public function getMinimumCpuSpeedInMHz(): ?int {
-        return $this->getBackingStore()->get('minimumCpuSpeedInMHz');
+        $val = $this->getBackingStore()->get('minimumCpuSpeedInMHz');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'minimumCpuSpeedInMHz'");
     }
 
     /**
@@ -85,7 +102,11 @@ class Win32LobApp extends MobileLobApp implements Parsable
      * @return int|null
     */
     public function getMinimumFreeDiskSpaceInMB(): ?int {
-        return $this->getBackingStore()->get('minimumFreeDiskSpaceInMB');
+        $val = $this->getBackingStore()->get('minimumFreeDiskSpaceInMB');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'minimumFreeDiskSpaceInMB'");
     }
 
     /**
@@ -93,7 +114,11 @@ class Win32LobApp extends MobileLobApp implements Parsable
      * @return int|null
     */
     public function getMinimumMemoryInMB(): ?int {
-        return $this->getBackingStore()->get('minimumMemoryInMB');
+        $val = $this->getBackingStore()->get('minimumMemoryInMB');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'minimumMemoryInMB'");
     }
 
     /**
@@ -101,7 +126,11 @@ class Win32LobApp extends MobileLobApp implements Parsable
      * @return int|null
     */
     public function getMinimumNumberOfProcessors(): ?int {
-        return $this->getBackingStore()->get('minimumNumberOfProcessors');
+        $val = $this->getBackingStore()->get('minimumNumberOfProcessors');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'minimumNumberOfProcessors'");
     }
 
     /**
@@ -109,7 +138,11 @@ class Win32LobApp extends MobileLobApp implements Parsable
      * @return string|null
     */
     public function getMinimumSupportedWindowsRelease(): ?string {
-        return $this->getBackingStore()->get('minimumSupportedWindowsRelease');
+        $val = $this->getBackingStore()->get('minimumSupportedWindowsRelease');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'minimumSupportedWindowsRelease'");
     }
 
     /**
@@ -117,7 +150,11 @@ class Win32LobApp extends MobileLobApp implements Parsable
      * @return Win32LobAppMsiInformation|null
     */
     public function getMsiInformation(): ?Win32LobAppMsiInformation {
-        return $this->getBackingStore()->get('msiInformation');
+        $val = $this->getBackingStore()->get('msiInformation');
+        if (is_null($val) || $val instanceof Win32LobAppMsiInformation) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'msiInformation'");
     }
 
     /**
@@ -125,7 +162,13 @@ class Win32LobApp extends MobileLobApp implements Parsable
      * @return array<Win32LobAppReturnCode>|null
     */
     public function getReturnCodes(): ?array {
-        return $this->getBackingStore()->get('returnCodes');
+        $val = $this->getBackingStore()->get('returnCodes');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Win32LobAppReturnCode::class);
+            /** @var array<Win32LobAppReturnCode>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'returnCodes'");
     }
 
     /**
@@ -133,7 +176,13 @@ class Win32LobApp extends MobileLobApp implements Parsable
      * @return array<Win32LobAppRule>|null
     */
     public function getRules(): ?array {
-        return $this->getBackingStore()->get('rules');
+        $val = $this->getBackingStore()->get('rules');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Win32LobAppRule::class);
+            /** @var array<Win32LobAppRule>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'rules'");
     }
 
     /**
@@ -141,7 +190,11 @@ class Win32LobApp extends MobileLobApp implements Parsable
      * @return string|null
     */
     public function getSetupFilePath(): ?string {
-        return $this->getBackingStore()->get('setupFilePath');
+        $val = $this->getBackingStore()->get('setupFilePath');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'setupFilePath'");
     }
 
     /**
@@ -149,7 +202,11 @@ class Win32LobApp extends MobileLobApp implements Parsable
      * @return string|null
     */
     public function getUninstallCommandLine(): ?string {
-        return $this->getBackingStore()->get('uninstallCommandLine');
+        $val = $this->getBackingStore()->get('uninstallCommandLine');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'uninstallCommandLine'");
     }
 
     /**

@@ -47,7 +47,12 @@ class StandardTimeZoneOffset implements AdditionalDataHolder, BackedModel, Parsa
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -63,7 +68,11 @@ class StandardTimeZoneOffset implements AdditionalDataHolder, BackedModel, Parsa
      * @return int|null
     */
     public function getDayOccurrence(): ?int {
-        return $this->getBackingStore()->get('dayOccurrence');
+        $val = $this->getBackingStore()->get('dayOccurrence');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'dayOccurrence'");
     }
 
     /**
@@ -71,12 +80,16 @@ class StandardTimeZoneOffset implements AdditionalDataHolder, BackedModel, Parsa
      * @return DayOfWeek|null
     */
     public function getDayOfWeek(): ?DayOfWeek {
-        return $this->getBackingStore()->get('dayOfWeek');
+        $val = $this->getBackingStore()->get('dayOfWeek');
+        if (is_null($val) || $val instanceof DayOfWeek) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'dayOfWeek'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -95,7 +108,11 @@ class StandardTimeZoneOffset implements AdditionalDataHolder, BackedModel, Parsa
      * @return int|null
     */
     public function getMonth(): ?int {
-        return $this->getBackingStore()->get('month');
+        $val = $this->getBackingStore()->get('month');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'month'");
     }
 
     /**
@@ -103,7 +120,11 @@ class StandardTimeZoneOffset implements AdditionalDataHolder, BackedModel, Parsa
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -111,7 +132,11 @@ class StandardTimeZoneOffset implements AdditionalDataHolder, BackedModel, Parsa
      * @return Time|null
     */
     public function getTime(): ?Time {
-        return $this->getBackingStore()->get('time');
+        $val = $this->getBackingStore()->get('time');
+        if (is_null($val) || $val instanceof Time) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'time'");
     }
 
     /**
@@ -119,7 +144,11 @@ class StandardTimeZoneOffset implements AdditionalDataHolder, BackedModel, Parsa
      * @return int|null
     */
     public function getYear(): ?int {
-        return $this->getBackingStore()->get('year');
+        $val = $this->getBackingStore()->get('year');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'year'");
     }
 
     /**

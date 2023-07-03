@@ -27,7 +27,7 @@ class Windows10EnterpriseModernAppManagementConfiguration extends DeviceConfigur
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -41,7 +41,11 @@ class Windows10EnterpriseModernAppManagementConfiguration extends DeviceConfigur
      * @return bool|null
     */
     public function getUninstallBuiltInApps(): ?bool {
-        return $this->getBackingStore()->get('uninstallBuiltInApps');
+        $val = $this->getBackingStore()->get('uninstallBuiltInApps');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'uninstallBuiltInApps'");
     }
 
     /**

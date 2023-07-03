@@ -29,12 +29,16 @@ class EducationAssignmentResource extends Entity implements Parsable
      * @return bool|null
     */
     public function getDistributeForStudentWork(): ?bool {
-        return $this->getBackingStore()->get('distributeForStudentWork');
+        $val = $this->getBackingStore()->get('distributeForStudentWork');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'distributeForStudentWork'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -49,7 +53,11 @@ class EducationAssignmentResource extends Entity implements Parsable
      * @return EducationResource|null
     */
     public function getResource(): ?EducationResource {
-        return $this->getBackingStore()->get('resource');
+        $val = $this->getBackingStore()->get('resource');
+        if (is_null($val) || $val instanceof EducationResource) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resource'");
     }
 
     /**

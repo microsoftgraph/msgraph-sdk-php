@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class UserTeamwork extends Entity implements Parsable 
 {
@@ -29,12 +30,18 @@ class UserTeamwork extends Entity implements Parsable
      * @return array<AssociatedTeamInfo>|null
     */
     public function getAssociatedTeams(): ?array {
-        return $this->getBackingStore()->get('associatedTeams');
+        $val = $this->getBackingStore()->get('associatedTeams');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AssociatedTeamInfo::class);
+            /** @var array<AssociatedTeamInfo>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'associatedTeams'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -49,7 +56,13 @@ class UserTeamwork extends Entity implements Parsable
      * @return array<UserScopeTeamsAppInstallation>|null
     */
     public function getInstalledApps(): ?array {
-        return $this->getBackingStore()->get('installedApps');
+        $val = $this->getBackingStore()->get('installedApps');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, UserScopeTeamsAppInstallation::class);
+            /** @var array<UserScopeTeamsAppInstallation>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'installedApps'");
     }
 
     /**

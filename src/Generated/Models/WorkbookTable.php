@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class WorkbookTable extends Entity implements Parsable 
 {
@@ -29,12 +30,18 @@ class WorkbookTable extends Entity implements Parsable
      * @return array<WorkbookTableColumn>|null
     */
     public function getColumns(): ?array {
-        return $this->getBackingStore()->get('columns');
+        $val = $this->getBackingStore()->get('columns');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, WorkbookTableColumn::class);
+            /** @var array<WorkbookTableColumn>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'columns'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -61,7 +68,11 @@ class WorkbookTable extends Entity implements Parsable
      * @return bool|null
     */
     public function getHighlightFirstColumn(): ?bool {
-        return $this->getBackingStore()->get('highlightFirstColumn');
+        $val = $this->getBackingStore()->get('highlightFirstColumn');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'highlightFirstColumn'");
     }
 
     /**
@@ -69,7 +80,11 @@ class WorkbookTable extends Entity implements Parsable
      * @return bool|null
     */
     public function getHighlightLastColumn(): ?bool {
-        return $this->getBackingStore()->get('highlightLastColumn');
+        $val = $this->getBackingStore()->get('highlightLastColumn');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'highlightLastColumn'");
     }
 
     /**
@@ -77,7 +92,11 @@ class WorkbookTable extends Entity implements Parsable
      * @return string|null
     */
     public function getLegacyId(): ?string {
-        return $this->getBackingStore()->get('legacyId');
+        $val = $this->getBackingStore()->get('legacyId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'legacyId'");
     }
 
     /**
@@ -85,7 +104,11 @@ class WorkbookTable extends Entity implements Parsable
      * @return string|null
     */
     public function getName(): ?string {
-        return $this->getBackingStore()->get('name');
+        $val = $this->getBackingStore()->get('name');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'name'");
     }
 
     /**
@@ -93,7 +116,13 @@ class WorkbookTable extends Entity implements Parsable
      * @return array<WorkbookTableRow>|null
     */
     public function getRows(): ?array {
-        return $this->getBackingStore()->get('rows');
+        $val = $this->getBackingStore()->get('rows');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, WorkbookTableRow::class);
+            /** @var array<WorkbookTableRow>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'rows'");
     }
 
     /**
@@ -101,7 +130,11 @@ class WorkbookTable extends Entity implements Parsable
      * @return bool|null
     */
     public function getShowBandedColumns(): ?bool {
-        return $this->getBackingStore()->get('showBandedColumns');
+        $val = $this->getBackingStore()->get('showBandedColumns');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'showBandedColumns'");
     }
 
     /**
@@ -109,7 +142,11 @@ class WorkbookTable extends Entity implements Parsable
      * @return bool|null
     */
     public function getShowBandedRows(): ?bool {
-        return $this->getBackingStore()->get('showBandedRows');
+        $val = $this->getBackingStore()->get('showBandedRows');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'showBandedRows'");
     }
 
     /**
@@ -117,7 +154,11 @@ class WorkbookTable extends Entity implements Parsable
      * @return bool|null
     */
     public function getShowFilterButton(): ?bool {
-        return $this->getBackingStore()->get('showFilterButton');
+        $val = $this->getBackingStore()->get('showFilterButton');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'showFilterButton'");
     }
 
     /**
@@ -125,7 +166,11 @@ class WorkbookTable extends Entity implements Parsable
      * @return bool|null
     */
     public function getShowHeaders(): ?bool {
-        return $this->getBackingStore()->get('showHeaders');
+        $val = $this->getBackingStore()->get('showHeaders');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'showHeaders'");
     }
 
     /**
@@ -133,7 +178,11 @@ class WorkbookTable extends Entity implements Parsable
      * @return bool|null
     */
     public function getShowTotals(): ?bool {
-        return $this->getBackingStore()->get('showTotals');
+        $val = $this->getBackingStore()->get('showTotals');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'showTotals'");
     }
 
     /**
@@ -141,7 +190,11 @@ class WorkbookTable extends Entity implements Parsable
      * @return WorkbookTableSort|null
     */
     public function getSort(): ?WorkbookTableSort {
-        return $this->getBackingStore()->get('sort');
+        $val = $this->getBackingStore()->get('sort');
+        if (is_null($val) || $val instanceof WorkbookTableSort) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sort'");
     }
 
     /**
@@ -149,7 +202,11 @@ class WorkbookTable extends Entity implements Parsable
      * @return string|null
     */
     public function getStyle(): ?string {
-        return $this->getBackingStore()->get('style');
+        $val = $this->getBackingStore()->get('style');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'style'");
     }
 
     /**
@@ -157,7 +214,11 @@ class WorkbookTable extends Entity implements Parsable
      * @return WorkbookWorksheet|null
     */
     public function getWorksheet(): ?WorkbookWorksheet {
-        return $this->getBackingStore()->get('worksheet');
+        $val = $this->getBackingStore()->get('worksheet');
+        if (is_null($val) || $val instanceof WorkbookWorksheet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'worksheet'");
     }
 
     /**

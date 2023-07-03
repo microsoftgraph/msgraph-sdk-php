@@ -39,7 +39,12 @@ class InformationalUrl implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -52,7 +57,7 @@ class InformationalUrl implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -71,7 +76,11 @@ class InformationalUrl implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getLogoUrl(): ?string {
-        return $this->getBackingStore()->get('logoUrl');
+        $val = $this->getBackingStore()->get('logoUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'logoUrl'");
     }
 
     /**
@@ -79,7 +88,11 @@ class InformationalUrl implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getMarketingUrl(): ?string {
-        return $this->getBackingStore()->get('marketingUrl');
+        $val = $this->getBackingStore()->get('marketingUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'marketingUrl'");
     }
 
     /**
@@ -87,7 +100,11 @@ class InformationalUrl implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -95,7 +112,11 @@ class InformationalUrl implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getPrivacyStatementUrl(): ?string {
-        return $this->getBackingStore()->get('privacyStatementUrl');
+        $val = $this->getBackingStore()->get('privacyStatementUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'privacyStatementUrl'");
     }
 
     /**
@@ -103,7 +124,11 @@ class InformationalUrl implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getSupportUrl(): ?string {
-        return $this->getBackingStore()->get('supportUrl');
+        $val = $this->getBackingStore()->get('supportUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'supportUrl'");
     }
 
     /**
@@ -111,7 +136,11 @@ class InformationalUrl implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getTermsOfServiceUrl(): ?string {
-        return $this->getBackingStore()->get('termsOfServiceUrl');
+        $val = $this->getBackingStore()->get('termsOfServiceUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'termsOfServiceUrl'");
     }
 
     /**

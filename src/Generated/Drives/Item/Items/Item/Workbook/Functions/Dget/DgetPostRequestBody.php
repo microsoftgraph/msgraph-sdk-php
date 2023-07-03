@@ -40,7 +40,12 @@ class DgetPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -56,7 +61,11 @@ class DgetPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
      * @return Json|null
     */
     public function getCriteria(): ?Json {
-        return $this->getBackingStore()->get('criteria');
+        $val = $this->getBackingStore()->get('criteria');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'criteria'");
     }
 
     /**
@@ -64,7 +73,11 @@ class DgetPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
      * @return Json|null
     */
     public function getDatabase(): ?Json {
-        return $this->getBackingStore()->get('database');
+        $val = $this->getBackingStore()->get('database');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'database'");
     }
 
     /**
@@ -72,12 +85,16 @@ class DgetPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
      * @return Json|null
     */
     public function getField(): ?Json {
-        return $this->getBackingStore()->get('field');
+        $val = $this->getBackingStore()->get('field');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'field'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;

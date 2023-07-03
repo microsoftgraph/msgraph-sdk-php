@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class WorkbookChart extends Entity implements Parsable 
 {
@@ -29,7 +30,11 @@ class WorkbookChart extends Entity implements Parsable
      * @return WorkbookChartAxes|null
     */
     public function getAxes(): ?WorkbookChartAxes {
-        return $this->getBackingStore()->get('axes');
+        $val = $this->getBackingStore()->get('axes');
+        if (is_null($val) || $val instanceof WorkbookChartAxes) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'axes'");
     }
 
     /**
@@ -37,12 +42,16 @@ class WorkbookChart extends Entity implements Parsable
      * @return WorkbookChartDataLabels|null
     */
     public function getDataLabels(): ?WorkbookChartDataLabels {
-        return $this->getBackingStore()->get('dataLabels');
+        $val = $this->getBackingStore()->get('dataLabels');
+        if (is_null($val) || $val instanceof WorkbookChartDataLabels) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'dataLabels'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -67,7 +76,11 @@ class WorkbookChart extends Entity implements Parsable
      * @return WorkbookChartAreaFormat|null
     */
     public function getFormat(): ?WorkbookChartAreaFormat {
-        return $this->getBackingStore()->get('format');
+        $val = $this->getBackingStore()->get('format');
+        if (is_null($val) || $val instanceof WorkbookChartAreaFormat) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'format'");
     }
 
     /**
@@ -75,7 +88,11 @@ class WorkbookChart extends Entity implements Parsable
      * @return float|null
     */
     public function getHeight(): ?float {
-        return $this->getBackingStore()->get('height');
+        $val = $this->getBackingStore()->get('height');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'height'");
     }
 
     /**
@@ -83,7 +100,11 @@ class WorkbookChart extends Entity implements Parsable
      * @return float|null
     */
     public function getLeft(): ?float {
-        return $this->getBackingStore()->get('left');
+        $val = $this->getBackingStore()->get('left');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'left'");
     }
 
     /**
@@ -91,7 +112,11 @@ class WorkbookChart extends Entity implements Parsable
      * @return WorkbookChartLegend|null
     */
     public function getLegend(): ?WorkbookChartLegend {
-        return $this->getBackingStore()->get('legend');
+        $val = $this->getBackingStore()->get('legend');
+        if (is_null($val) || $val instanceof WorkbookChartLegend) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'legend'");
     }
 
     /**
@@ -99,7 +124,11 @@ class WorkbookChart extends Entity implements Parsable
      * @return string|null
     */
     public function getName(): ?string {
-        return $this->getBackingStore()->get('name');
+        $val = $this->getBackingStore()->get('name');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'name'");
     }
 
     /**
@@ -107,7 +136,13 @@ class WorkbookChart extends Entity implements Parsable
      * @return array<WorkbookChartSeries>|null
     */
     public function getSeries(): ?array {
-        return $this->getBackingStore()->get('series');
+        $val = $this->getBackingStore()->get('series');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, WorkbookChartSeries::class);
+            /** @var array<WorkbookChartSeries>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'series'");
     }
 
     /**
@@ -115,7 +150,11 @@ class WorkbookChart extends Entity implements Parsable
      * @return WorkbookChartTitle|null
     */
     public function getTitle(): ?WorkbookChartTitle {
-        return $this->getBackingStore()->get('title');
+        $val = $this->getBackingStore()->get('title');
+        if (is_null($val) || $val instanceof WorkbookChartTitle) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'title'");
     }
 
     /**
@@ -123,7 +162,11 @@ class WorkbookChart extends Entity implements Parsable
      * @return float|null
     */
     public function getTop(): ?float {
-        return $this->getBackingStore()->get('top');
+        $val = $this->getBackingStore()->get('top');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'top'");
     }
 
     /**
@@ -131,7 +174,11 @@ class WorkbookChart extends Entity implements Parsable
      * @return float|null
     */
     public function getWidth(): ?float {
-        return $this->getBackingStore()->get('width');
+        $val = $this->getBackingStore()->get('width');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'width'");
     }
 
     /**
@@ -139,7 +186,11 @@ class WorkbookChart extends Entity implements Parsable
      * @return WorkbookWorksheet|null
     */
     public function getWorksheet(): ?WorkbookWorksheet {
-        return $this->getBackingStore()->get('worksheet');
+        $val = $this->getBackingStore()->get('worksheet');
+        if (is_null($val) || $val instanceof WorkbookWorksheet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'worksheet'");
     }
 
     /**

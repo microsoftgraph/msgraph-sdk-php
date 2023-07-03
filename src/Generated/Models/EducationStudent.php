@@ -40,7 +40,12 @@ class EducationStudent implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -56,7 +61,11 @@ class EducationStudent implements AdditionalDataHolder, BackedModel, Parsable
      * @return Date|null
     */
     public function getBirthDate(): ?Date {
-        return $this->getBackingStore()->get('birthDate');
+        $val = $this->getBackingStore()->get('birthDate');
+        if (is_null($val) || $val instanceof Date) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'birthDate'");
     }
 
     /**
@@ -64,12 +73,16 @@ class EducationStudent implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getExternalId(): ?string {
-        return $this->getBackingStore()->get('externalId');
+        $val = $this->getBackingStore()->get('externalId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'externalId'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -89,7 +102,11 @@ class EducationStudent implements AdditionalDataHolder, BackedModel, Parsable
      * @return EducationGender|null
     */
     public function getGender(): ?EducationGender {
-        return $this->getBackingStore()->get('gender');
+        $val = $this->getBackingStore()->get('gender');
+        if (is_null($val) || $val instanceof EducationGender) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'gender'");
     }
 
     /**
@@ -97,7 +114,11 @@ class EducationStudent implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getGrade(): ?string {
-        return $this->getBackingStore()->get('grade');
+        $val = $this->getBackingStore()->get('grade');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'grade'");
     }
 
     /**
@@ -105,7 +126,11 @@ class EducationStudent implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getGraduationYear(): ?string {
-        return $this->getBackingStore()->get('graduationYear');
+        $val = $this->getBackingStore()->get('graduationYear');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'graduationYear'");
     }
 
     /**
@@ -113,7 +138,11 @@ class EducationStudent implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -121,7 +150,11 @@ class EducationStudent implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getStudentNumber(): ?string {
-        return $this->getBackingStore()->get('studentNumber');
+        $val = $this->getBackingStore()->get('studentNumber');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'studentNumber'");
     }
 
     /**

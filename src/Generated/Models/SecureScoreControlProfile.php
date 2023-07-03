@@ -6,6 +6,7 @@ use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class SecureScoreControlProfile extends Entity implements Parsable 
 {
@@ -30,7 +31,11 @@ class SecureScoreControlProfile extends Entity implements Parsable
      * @return string|null
     */
     public function getActionType(): ?string {
-        return $this->getBackingStore()->get('actionType');
+        $val = $this->getBackingStore()->get('actionType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'actionType'");
     }
 
     /**
@@ -38,7 +43,11 @@ class SecureScoreControlProfile extends Entity implements Parsable
      * @return string|null
     */
     public function getActionUrl(): ?string {
-        return $this->getBackingStore()->get('actionUrl');
+        $val = $this->getBackingStore()->get('actionUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'actionUrl'");
     }
 
     /**
@@ -46,7 +55,11 @@ class SecureScoreControlProfile extends Entity implements Parsable
      * @return string|null
     */
     public function getAzureTenantId(): ?string {
-        return $this->getBackingStore()->get('azureTenantId');
+        $val = $this->getBackingStore()->get('azureTenantId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'azureTenantId'");
     }
 
     /**
@@ -54,7 +67,13 @@ class SecureScoreControlProfile extends Entity implements Parsable
      * @return array<ComplianceInformation>|null
     */
     public function getComplianceInformation(): ?array {
-        return $this->getBackingStore()->get('complianceInformation');
+        $val = $this->getBackingStore()->get('complianceInformation');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ComplianceInformation::class);
+            /** @var array<ComplianceInformation>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'complianceInformation'");
     }
 
     /**
@@ -62,7 +81,11 @@ class SecureScoreControlProfile extends Entity implements Parsable
      * @return string|null
     */
     public function getControlCategory(): ?string {
-        return $this->getBackingStore()->get('controlCategory');
+        $val = $this->getBackingStore()->get('controlCategory');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'controlCategory'");
     }
 
     /**
@@ -70,7 +93,13 @@ class SecureScoreControlProfile extends Entity implements Parsable
      * @return array<SecureScoreControlStateUpdate>|null
     */
     public function getControlStateUpdates(): ?array {
-        return $this->getBackingStore()->get('controlStateUpdates');
+        $val = $this->getBackingStore()->get('controlStateUpdates');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, SecureScoreControlStateUpdate::class);
+            /** @var array<SecureScoreControlStateUpdate>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'controlStateUpdates'");
     }
 
     /**
@@ -78,12 +107,16 @@ class SecureScoreControlProfile extends Entity implements Parsable
      * @return bool|null
     */
     public function getDeprecated(): ?bool {
-        return $this->getBackingStore()->get('deprecated');
+        $val = $this->getBackingStore()->get('deprecated');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deprecated'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -102,7 +135,14 @@ class SecureScoreControlProfile extends Entity implements Parsable
             'remediation' => fn(ParseNode $n) => $o->setRemediation($n->getStringValue()),
             'remediationImpact' => fn(ParseNode $n) => $o->setRemediationImpact($n->getStringValue()),
             'service' => fn(ParseNode $n) => $o->setService($n->getStringValue()),
-            'threats' => fn(ParseNode $n) => $o->setThreats($n->getCollectionOfPrimitiveValues()),
+            'threats' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setThreats($val);
+            },
             'tier' => fn(ParseNode $n) => $o->setTier($n->getStringValue()),
             'title' => fn(ParseNode $n) => $o->setTitle($n->getStringValue()),
             'userImpact' => fn(ParseNode $n) => $o->setUserImpact($n->getStringValue()),
@@ -115,7 +155,11 @@ class SecureScoreControlProfile extends Entity implements Parsable
      * @return string|null
     */
     public function getImplementationCost(): ?string {
-        return $this->getBackingStore()->get('implementationCost');
+        $val = $this->getBackingStore()->get('implementationCost');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'implementationCost'");
     }
 
     /**
@@ -123,7 +167,11 @@ class SecureScoreControlProfile extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('lastModifiedDateTime');
+        $val = $this->getBackingStore()->get('lastModifiedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastModifiedDateTime'");
     }
 
     /**
@@ -131,7 +179,11 @@ class SecureScoreControlProfile extends Entity implements Parsable
      * @return float|null
     */
     public function getMaxScore(): ?float {
-        return $this->getBackingStore()->get('maxScore');
+        $val = $this->getBackingStore()->get('maxScore');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'maxScore'");
     }
 
     /**
@@ -139,7 +191,11 @@ class SecureScoreControlProfile extends Entity implements Parsable
      * @return int|null
     */
     public function getRank(): ?int {
-        return $this->getBackingStore()->get('rank');
+        $val = $this->getBackingStore()->get('rank');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'rank'");
     }
 
     /**
@@ -147,7 +203,11 @@ class SecureScoreControlProfile extends Entity implements Parsable
      * @return string|null
     */
     public function getRemediation(): ?string {
-        return $this->getBackingStore()->get('remediation');
+        $val = $this->getBackingStore()->get('remediation');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'remediation'");
     }
 
     /**
@@ -155,7 +215,11 @@ class SecureScoreControlProfile extends Entity implements Parsable
      * @return string|null
     */
     public function getRemediationImpact(): ?string {
-        return $this->getBackingStore()->get('remediationImpact');
+        $val = $this->getBackingStore()->get('remediationImpact');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'remediationImpact'");
     }
 
     /**
@@ -163,7 +227,11 @@ class SecureScoreControlProfile extends Entity implements Parsable
      * @return string|null
     */
     public function getService(): ?string {
-        return $this->getBackingStore()->get('service');
+        $val = $this->getBackingStore()->get('service');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'service'");
     }
 
     /**
@@ -171,7 +239,13 @@ class SecureScoreControlProfile extends Entity implements Parsable
      * @return array<string>|null
     */
     public function getThreats(): ?array {
-        return $this->getBackingStore()->get('threats');
+        $val = $this->getBackingStore()->get('threats');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'threats'");
     }
 
     /**
@@ -179,7 +253,11 @@ class SecureScoreControlProfile extends Entity implements Parsable
      * @return string|null
     */
     public function getTier(): ?string {
-        return $this->getBackingStore()->get('tier');
+        $val = $this->getBackingStore()->get('tier');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'tier'");
     }
 
     /**
@@ -187,7 +265,11 @@ class SecureScoreControlProfile extends Entity implements Parsable
      * @return string|null
     */
     public function getTitle(): ?string {
-        return $this->getBackingStore()->get('title');
+        $val = $this->getBackingStore()->get('title');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'title'");
     }
 
     /**
@@ -195,7 +277,11 @@ class SecureScoreControlProfile extends Entity implements Parsable
      * @return string|null
     */
     public function getUserImpact(): ?string {
-        return $this->getBackingStore()->get('userImpact');
+        $val = $this->getBackingStore()->get('userImpact');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userImpact'");
     }
 
     /**
@@ -203,7 +289,11 @@ class SecureScoreControlProfile extends Entity implements Parsable
      * @return SecurityVendorInformation|null
     */
     public function getVendorInformation(): ?SecurityVendorInformation {
-        return $this->getBackingStore()->get('vendorInformation');
+        $val = $this->getBackingStore()->get('vendorInformation');
+        if (is_null($val) || $val instanceof SecurityVendorInformation) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'vendorInformation'");
     }
 
     /**

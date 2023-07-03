@@ -40,7 +40,12 @@ class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -56,7 +61,11 @@ class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getCreatedBy(): ?string {
-        return $this->getBackingStore()->get('createdBy');
+        $val = $this->getBackingStore()->get('createdBy');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdBy'");
     }
 
     /**
@@ -64,7 +73,11 @@ class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable
      * @return IdentitySet|null
     */
     public function getCreatedByIdentity(): ?IdentitySet {
-        return $this->getBackingStore()->get('createdByIdentity');
+        $val = $this->getBackingStore()->get('createdByIdentity');
+        if (is_null($val) || $val instanceof IdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdByIdentity'");
     }
 
     /**
@@ -72,12 +85,16 @@ class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable
      * @return DateTime|null
     */
     public function getCreatedTime(): ?DateTime {
-        return $this->getBackingStore()->get('createdTime');
+        $val = $this->getBackingStore()->get('createdTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdTime'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -106,7 +123,11 @@ class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getId(): ?string {
-        return $this->getBackingStore()->get('id');
+        $val = $this->getBackingStore()->get('id');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'id'");
     }
 
     /**
@@ -114,7 +135,11 @@ class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getIsDefault(): ?bool {
-        return $this->getBackingStore()->get('isDefault');
+        $val = $this->getBackingStore()->get('isDefault');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isDefault'");
     }
 
     /**
@@ -122,7 +147,11 @@ class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getIsShared(): ?bool {
-        return $this->getBackingStore()->get('isShared');
+        $val = $this->getBackingStore()->get('isShared');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isShared'");
     }
 
     /**
@@ -130,7 +159,11 @@ class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getLastModifiedBy(): ?string {
-        return $this->getBackingStore()->get('lastModifiedBy');
+        $val = $this->getBackingStore()->get('lastModifiedBy');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastModifiedBy'");
     }
 
     /**
@@ -138,7 +171,11 @@ class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable
      * @return IdentitySet|null
     */
     public function getLastModifiedByIdentity(): ?IdentitySet {
-        return $this->getBackingStore()->get('lastModifiedByIdentity');
+        $val = $this->getBackingStore()->get('lastModifiedByIdentity');
+        if (is_null($val) || $val instanceof IdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastModifiedByIdentity'");
     }
 
     /**
@@ -146,7 +183,11 @@ class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable
      * @return DateTime|null
     */
     public function getLastModifiedTime(): ?DateTime {
-        return $this->getBackingStore()->get('lastModifiedTime');
+        $val = $this->getBackingStore()->get('lastModifiedTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastModifiedTime'");
     }
 
     /**
@@ -154,7 +195,11 @@ class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable
      * @return NotebookLinks|null
     */
     public function getLinks(): ?NotebookLinks {
-        return $this->getBackingStore()->get('links');
+        $val = $this->getBackingStore()->get('links');
+        if (is_null($val) || $val instanceof NotebookLinks) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'links'");
     }
 
     /**
@@ -162,7 +207,11 @@ class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getName(): ?string {
-        return $this->getBackingStore()->get('name');
+        $val = $this->getBackingStore()->get('name');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'name'");
     }
 
     /**
@@ -170,7 +219,11 @@ class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -178,7 +231,11 @@ class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getSectionGroupsUrl(): ?string {
-        return $this->getBackingStore()->get('sectionGroupsUrl');
+        $val = $this->getBackingStore()->get('sectionGroupsUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sectionGroupsUrl'");
     }
 
     /**
@@ -186,7 +243,11 @@ class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getSectionsUrl(): ?string {
-        return $this->getBackingStore()->get('sectionsUrl');
+        $val = $this->getBackingStore()->get('sectionsUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sectionsUrl'");
     }
 
     /**
@@ -194,7 +255,11 @@ class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getSelf(): ?string {
-        return $this->getBackingStore()->get('escapedSelf');
+        $val = $this->getBackingStore()->get('escapedSelf');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'escapedSelf'");
     }
 
     /**
@@ -202,7 +267,11 @@ class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable
      * @return OnenoteUserRole|null
     */
     public function getUserRole(): ?OnenoteUserRole {
-        return $this->getBackingStore()->get('userRole');
+        $val = $this->getBackingStore()->get('userRole');
+        if (is_null($val) || $val instanceof OnenoteUserRole) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userRole'");
     }
 
     /**

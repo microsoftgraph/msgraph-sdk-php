@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class AuthenticationMethodConfiguration extends Entity implements Parsable 
 {
@@ -43,12 +44,18 @@ class AuthenticationMethodConfiguration extends Entity implements Parsable
      * @return array<ExcludeTarget>|null
     */
     public function getExcludeTargets(): ?array {
-        return $this->getBackingStore()->get('excludeTargets');
+        $val = $this->getBackingStore()->get('excludeTargets');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ExcludeTarget::class);
+            /** @var array<ExcludeTarget>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'excludeTargets'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -63,7 +70,11 @@ class AuthenticationMethodConfiguration extends Entity implements Parsable
      * @return AuthenticationMethodState|null
     */
     public function getState(): ?AuthenticationMethodState {
-        return $this->getBackingStore()->get('state');
+        $val = $this->getBackingStore()->get('state');
+        if (is_null($val) || $val instanceof AuthenticationMethodState) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'state'");
     }
 
     /**

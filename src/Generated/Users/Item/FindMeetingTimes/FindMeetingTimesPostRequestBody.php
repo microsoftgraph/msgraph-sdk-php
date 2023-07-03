@@ -13,6 +13,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -43,7 +44,12 @@ class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, BackedMod
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -51,7 +57,13 @@ class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, BackedMod
      * @return array<AttendeeBase>|null
     */
     public function getAttendees(): ?array {
-        return $this->getBackingStore()->get('attendees');
+        $val = $this->getBackingStore()->get('attendees');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AttendeeBase::class);
+            /** @var array<AttendeeBase>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'attendees'");
     }
 
     /**
@@ -64,7 +76,7 @@ class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, BackedMod
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -85,7 +97,11 @@ class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, BackedMod
      * @return bool|null
     */
     public function getIsOrganizerOptional(): ?bool {
-        return $this->getBackingStore()->get('isOrganizerOptional');
+        $val = $this->getBackingStore()->get('isOrganizerOptional');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isOrganizerOptional'");
     }
 
     /**
@@ -93,7 +109,11 @@ class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, BackedMod
      * @return LocationConstraint|null
     */
     public function getLocationConstraint(): ?LocationConstraint {
-        return $this->getBackingStore()->get('locationConstraint');
+        $val = $this->getBackingStore()->get('locationConstraint');
+        if (is_null($val) || $val instanceof LocationConstraint) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'locationConstraint'");
     }
 
     /**
@@ -101,7 +121,11 @@ class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, BackedMod
      * @return int|null
     */
     public function getMaxCandidates(): ?int {
-        return $this->getBackingStore()->get('maxCandidates');
+        $val = $this->getBackingStore()->get('maxCandidates');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'maxCandidates'");
     }
 
     /**
@@ -109,7 +133,11 @@ class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, BackedMod
      * @return DateInterval|null
     */
     public function getMeetingDuration(): ?DateInterval {
-        return $this->getBackingStore()->get('meetingDuration');
+        $val = $this->getBackingStore()->get('meetingDuration');
+        if (is_null($val) || $val instanceof DateInterval) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'meetingDuration'");
     }
 
     /**
@@ -117,7 +145,11 @@ class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, BackedMod
      * @return float|null
     */
     public function getMinimumAttendeePercentage(): ?float {
-        return $this->getBackingStore()->get('minimumAttendeePercentage');
+        $val = $this->getBackingStore()->get('minimumAttendeePercentage');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'minimumAttendeePercentage'");
     }
 
     /**
@@ -125,7 +157,11 @@ class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, BackedMod
      * @return bool|null
     */
     public function getReturnSuggestionReasons(): ?bool {
-        return $this->getBackingStore()->get('returnSuggestionReasons');
+        $val = $this->getBackingStore()->get('returnSuggestionReasons');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'returnSuggestionReasons'");
     }
 
     /**
@@ -133,7 +169,11 @@ class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, BackedMod
      * @return TimeConstraint|null
     */
     public function getTimeConstraint(): ?TimeConstraint {
-        return $this->getBackingStore()->get('timeConstraint');
+        $val = $this->getBackingStore()->get('timeConstraint');
+        if (is_null($val) || $val instanceof TimeConstraint) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'timeConstraint'");
     }
 
     /**

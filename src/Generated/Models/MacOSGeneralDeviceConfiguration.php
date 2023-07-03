@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class MacOSGeneralDeviceConfiguration extends DeviceConfiguration implements Parsable 
 {
@@ -30,7 +31,11 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration implements Par
      * @return AppListType|null
     */
     public function getCompliantAppListType(): ?AppListType {
-        return $this->getBackingStore()->get('compliantAppListType');
+        $val = $this->getBackingStore()->get('compliantAppListType');
+        if (is_null($val) || $val instanceof AppListType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'compliantAppListType'");
     }
 
     /**
@@ -38,7 +43,13 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration implements Par
      * @return array<AppListItem>|null
     */
     public function getCompliantAppsList(): ?array {
-        return $this->getBackingStore()->get('compliantAppsList');
+        $val = $this->getBackingStore()->get('compliantAppsList');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AppListItem::class);
+            /** @var array<AppListItem>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'compliantAppsList'");
     }
 
     /**
@@ -46,19 +57,32 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration implements Par
      * @return array<string>|null
     */
     public function getEmailInDomainSuffixes(): ?array {
-        return $this->getBackingStore()->get('emailInDomainSuffixes');
+        $val = $this->getBackingStore()->get('emailInDomainSuffixes');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'emailInDomainSuffixes'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'compliantAppListType' => fn(ParseNode $n) => $o->setCompliantAppListType($n->getEnumValue(AppListType::class)),
             'compliantAppsList' => fn(ParseNode $n) => $o->setCompliantAppsList($n->getCollectionOfObjectValues([AppListItem::class, 'createFromDiscriminatorValue'])),
-            'emailInDomainSuffixes' => fn(ParseNode $n) => $o->setEmailInDomainSuffixes($n->getCollectionOfPrimitiveValues()),
+            'emailInDomainSuffixes' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setEmailInDomainSuffixes($val);
+            },
             'passwordBlockSimple' => fn(ParseNode $n) => $o->setPasswordBlockSimple($n->getBooleanValue()),
             'passwordExpirationDays' => fn(ParseNode $n) => $o->setPasswordExpirationDays($n->getIntegerValue()),
             'passwordMinimumCharacterSetCount' => fn(ParseNode $n) => $o->setPasswordMinimumCharacterSetCount($n->getIntegerValue()),
@@ -76,7 +100,11 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration implements Par
      * @return bool|null
     */
     public function getPasswordBlockSimple(): ?bool {
-        return $this->getBackingStore()->get('passwordBlockSimple');
+        $val = $this->getBackingStore()->get('passwordBlockSimple');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'passwordBlockSimple'");
     }
 
     /**
@@ -84,7 +112,11 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration implements Par
      * @return int|null
     */
     public function getPasswordExpirationDays(): ?int {
-        return $this->getBackingStore()->get('passwordExpirationDays');
+        $val = $this->getBackingStore()->get('passwordExpirationDays');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'passwordExpirationDays'");
     }
 
     /**
@@ -92,7 +124,11 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration implements Par
      * @return int|null
     */
     public function getPasswordMinimumCharacterSetCount(): ?int {
-        return $this->getBackingStore()->get('passwordMinimumCharacterSetCount');
+        $val = $this->getBackingStore()->get('passwordMinimumCharacterSetCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'passwordMinimumCharacterSetCount'");
     }
 
     /**
@@ -100,7 +136,11 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration implements Par
      * @return int|null
     */
     public function getPasswordMinimumLength(): ?int {
-        return $this->getBackingStore()->get('passwordMinimumLength');
+        $val = $this->getBackingStore()->get('passwordMinimumLength');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'passwordMinimumLength'");
     }
 
     /**
@@ -108,7 +148,11 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration implements Par
      * @return int|null
     */
     public function getPasswordMinutesOfInactivityBeforeLock(): ?int {
-        return $this->getBackingStore()->get('passwordMinutesOfInactivityBeforeLock');
+        $val = $this->getBackingStore()->get('passwordMinutesOfInactivityBeforeLock');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'passwordMinutesOfInactivityBeforeLock'");
     }
 
     /**
@@ -116,7 +160,11 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration implements Par
      * @return int|null
     */
     public function getPasswordMinutesOfInactivityBeforeScreenTimeout(): ?int {
-        return $this->getBackingStore()->get('passwordMinutesOfInactivityBeforeScreenTimeout');
+        $val = $this->getBackingStore()->get('passwordMinutesOfInactivityBeforeScreenTimeout');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'passwordMinutesOfInactivityBeforeScreenTimeout'");
     }
 
     /**
@@ -124,7 +172,11 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration implements Par
      * @return int|null
     */
     public function getPasswordPreviousPasswordBlockCount(): ?int {
-        return $this->getBackingStore()->get('passwordPreviousPasswordBlockCount');
+        $val = $this->getBackingStore()->get('passwordPreviousPasswordBlockCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'passwordPreviousPasswordBlockCount'");
     }
 
     /**
@@ -132,7 +184,11 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration implements Par
      * @return bool|null
     */
     public function getPasswordRequired(): ?bool {
-        return $this->getBackingStore()->get('passwordRequired');
+        $val = $this->getBackingStore()->get('passwordRequired');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'passwordRequired'");
     }
 
     /**
@@ -140,7 +196,11 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration implements Par
      * @return RequiredPasswordType|null
     */
     public function getPasswordRequiredType(): ?RequiredPasswordType {
-        return $this->getBackingStore()->get('passwordRequiredType');
+        $val = $this->getBackingStore()->get('passwordRequiredType');
+        if (is_null($val) || $val instanceof RequiredPasswordType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'passwordRequiredType'");
     }
 
     /**

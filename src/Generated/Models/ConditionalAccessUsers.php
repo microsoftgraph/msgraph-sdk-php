@@ -9,6 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class ConditionalAccessUsers implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -39,7 +40,12 @@ class ConditionalAccessUsers implements AdditionalDataHolder, BackedModel, Parsa
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -55,7 +61,13 @@ class ConditionalAccessUsers implements AdditionalDataHolder, BackedModel, Parsa
      * @return array<string>|null
     */
     public function getExcludeGroups(): ?array {
-        return $this->getBackingStore()->get('excludeGroups');
+        $val = $this->getBackingStore()->get('excludeGroups');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'excludeGroups'");
     }
 
     /**
@@ -63,7 +75,11 @@ class ConditionalAccessUsers implements AdditionalDataHolder, BackedModel, Parsa
      * @return ConditionalAccessGuestsOrExternalUsers|null
     */
     public function getExcludeGuestsOrExternalUsers(): ?ConditionalAccessGuestsOrExternalUsers {
-        return $this->getBackingStore()->get('excludeGuestsOrExternalUsers');
+        $val = $this->getBackingStore()->get('excludeGuestsOrExternalUsers');
+        if (is_null($val) || $val instanceof ConditionalAccessGuestsOrExternalUsers) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'excludeGuestsOrExternalUsers'");
     }
 
     /**
@@ -71,7 +87,13 @@ class ConditionalAccessUsers implements AdditionalDataHolder, BackedModel, Parsa
      * @return array<string>|null
     */
     public function getExcludeRoles(): ?array {
-        return $this->getBackingStore()->get('excludeRoles');
+        $val = $this->getBackingStore()->get('excludeRoles');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'excludeRoles'");
     }
 
     /**
@@ -79,24 +101,72 @@ class ConditionalAccessUsers implements AdditionalDataHolder, BackedModel, Parsa
      * @return array<string>|null
     */
     public function getExcludeUsers(): ?array {
-        return $this->getBackingStore()->get('excludeUsers');
+        $val = $this->getBackingStore()->get('excludeUsers');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'excludeUsers'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'excludeGroups' => fn(ParseNode $n) => $o->setExcludeGroups($n->getCollectionOfPrimitiveValues()),
+            'excludeGroups' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setExcludeGroups($val);
+            },
             'excludeGuestsOrExternalUsers' => fn(ParseNode $n) => $o->setExcludeGuestsOrExternalUsers($n->getObjectValue([ConditionalAccessGuestsOrExternalUsers::class, 'createFromDiscriminatorValue'])),
-            'excludeRoles' => fn(ParseNode $n) => $o->setExcludeRoles($n->getCollectionOfPrimitiveValues()),
-            'excludeUsers' => fn(ParseNode $n) => $o->setExcludeUsers($n->getCollectionOfPrimitiveValues()),
-            'includeGroups' => fn(ParseNode $n) => $o->setIncludeGroups($n->getCollectionOfPrimitiveValues()),
+            'excludeRoles' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setExcludeRoles($val);
+            },
+            'excludeUsers' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setExcludeUsers($val);
+            },
+            'includeGroups' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setIncludeGroups($val);
+            },
             'includeGuestsOrExternalUsers' => fn(ParseNode $n) => $o->setIncludeGuestsOrExternalUsers($n->getObjectValue([ConditionalAccessGuestsOrExternalUsers::class, 'createFromDiscriminatorValue'])),
-            'includeRoles' => fn(ParseNode $n) => $o->setIncludeRoles($n->getCollectionOfPrimitiveValues()),
-            'includeUsers' => fn(ParseNode $n) => $o->setIncludeUsers($n->getCollectionOfPrimitiveValues()),
+            'includeRoles' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setIncludeRoles($val);
+            },
+            'includeUsers' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setIncludeUsers($val);
+            },
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
@@ -106,7 +176,13 @@ class ConditionalAccessUsers implements AdditionalDataHolder, BackedModel, Parsa
      * @return array<string>|null
     */
     public function getIncludeGroups(): ?array {
-        return $this->getBackingStore()->get('includeGroups');
+        $val = $this->getBackingStore()->get('includeGroups');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'includeGroups'");
     }
 
     /**
@@ -114,7 +190,11 @@ class ConditionalAccessUsers implements AdditionalDataHolder, BackedModel, Parsa
      * @return ConditionalAccessGuestsOrExternalUsers|null
     */
     public function getIncludeGuestsOrExternalUsers(): ?ConditionalAccessGuestsOrExternalUsers {
-        return $this->getBackingStore()->get('includeGuestsOrExternalUsers');
+        $val = $this->getBackingStore()->get('includeGuestsOrExternalUsers');
+        if (is_null($val) || $val instanceof ConditionalAccessGuestsOrExternalUsers) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'includeGuestsOrExternalUsers'");
     }
 
     /**
@@ -122,7 +202,13 @@ class ConditionalAccessUsers implements AdditionalDataHolder, BackedModel, Parsa
      * @return array<string>|null
     */
     public function getIncludeRoles(): ?array {
-        return $this->getBackingStore()->get('includeRoles');
+        $val = $this->getBackingStore()->get('includeRoles');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'includeRoles'");
     }
 
     /**
@@ -130,7 +216,13 @@ class ConditionalAccessUsers implements AdditionalDataHolder, BackedModel, Parsa
      * @return array<string>|null
     */
     public function getIncludeUsers(): ?array {
-        return $this->getBackingStore()->get('includeUsers');
+        $val = $this->getBackingStore()->get('includeUsers');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'includeUsers'");
     }
 
     /**
@@ -138,7 +230,11 @@ class ConditionalAccessUsers implements AdditionalDataHolder, BackedModel, Parsa
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**

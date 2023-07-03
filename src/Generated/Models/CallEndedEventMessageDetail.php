@@ -6,6 +6,7 @@ use DateInterval;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class CallEndedEventMessageDetail extends EventMessageDetail implements Parsable 
 {
@@ -31,7 +32,11 @@ class CallEndedEventMessageDetail extends EventMessageDetail implements Parsable
      * @return DateInterval|null
     */
     public function getCallDuration(): ?DateInterval {
-        return $this->getBackingStore()->get('callDuration');
+        $val = $this->getBackingStore()->get('callDuration');
+        if (is_null($val) || $val instanceof DateInterval) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'callDuration'");
     }
 
     /**
@@ -39,7 +44,11 @@ class CallEndedEventMessageDetail extends EventMessageDetail implements Parsable
      * @return TeamworkCallEventType|null
     */
     public function getCallEventType(): ?TeamworkCallEventType {
-        return $this->getBackingStore()->get('callEventType');
+        $val = $this->getBackingStore()->get('callEventType');
+        if (is_null($val) || $val instanceof TeamworkCallEventType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'callEventType'");
     }
 
     /**
@@ -47,7 +56,11 @@ class CallEndedEventMessageDetail extends EventMessageDetail implements Parsable
      * @return string|null
     */
     public function getCallId(): ?string {
-        return $this->getBackingStore()->get('callId');
+        $val = $this->getBackingStore()->get('callId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'callId'");
     }
 
     /**
@@ -55,12 +68,18 @@ class CallEndedEventMessageDetail extends EventMessageDetail implements Parsable
      * @return array<CallParticipantInfo>|null
     */
     public function getCallParticipants(): ?array {
-        return $this->getBackingStore()->get('callParticipants');
+        $val = $this->getBackingStore()->get('callParticipants');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, CallParticipantInfo::class);
+            /** @var array<CallParticipantInfo>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'callParticipants'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -78,7 +97,11 @@ class CallEndedEventMessageDetail extends EventMessageDetail implements Parsable
      * @return IdentitySet|null
     */
     public function getInitiator(): ?IdentitySet {
-        return $this->getBackingStore()->get('initiator');
+        $val = $this->getBackingStore()->get('initiator');
+        if (is_null($val) || $val instanceof IdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'initiator'");
     }
 
     /**

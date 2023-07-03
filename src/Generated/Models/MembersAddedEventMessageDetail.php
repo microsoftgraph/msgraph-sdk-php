@@ -6,6 +6,7 @@ use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class MembersAddedEventMessageDetail extends EventMessageDetail implements Parsable 
 {
@@ -28,7 +29,7 @@ class MembersAddedEventMessageDetail extends EventMessageDetail implements Parsa
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -44,7 +45,11 @@ class MembersAddedEventMessageDetail extends EventMessageDetail implements Parsa
      * @return IdentitySet|null
     */
     public function getInitiator(): ?IdentitySet {
-        return $this->getBackingStore()->get('initiator');
+        $val = $this->getBackingStore()->get('initiator');
+        if (is_null($val) || $val instanceof IdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'initiator'");
     }
 
     /**
@@ -52,7 +57,13 @@ class MembersAddedEventMessageDetail extends EventMessageDetail implements Parsa
      * @return array<TeamworkUserIdentity>|null
     */
     public function getMembers(): ?array {
-        return $this->getBackingStore()->get('members');
+        $val = $this->getBackingStore()->get('members');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, TeamworkUserIdentity::class);
+            /** @var array<TeamworkUserIdentity>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'members'");
     }
 
     /**
@@ -60,7 +71,11 @@ class MembersAddedEventMessageDetail extends EventMessageDetail implements Parsa
      * @return DateTime|null
     */
     public function getVisibleHistoryStartDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('visibleHistoryStartDateTime');
+        $val = $this->getBackingStore()->get('visibleHistoryStartDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'visibleHistoryStartDateTime'");
     }
 
     /**

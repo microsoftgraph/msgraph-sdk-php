@@ -40,7 +40,12 @@ class Shared implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -53,7 +58,7 @@ class Shared implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -71,7 +76,11 @@ class Shared implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -79,7 +88,11 @@ class Shared implements AdditionalDataHolder, BackedModel, Parsable
      * @return IdentitySet|null
     */
     public function getOwner(): ?IdentitySet {
-        return $this->getBackingStore()->get('owner');
+        $val = $this->getBackingStore()->get('owner');
+        if (is_null($val) || $val instanceof IdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'owner'");
     }
 
     /**
@@ -87,7 +100,11 @@ class Shared implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getScope(): ?string {
-        return $this->getBackingStore()->get('scope');
+        $val = $this->getBackingStore()->get('scope');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'scope'");
     }
 
     /**
@@ -95,7 +112,11 @@ class Shared implements AdditionalDataHolder, BackedModel, Parsable
      * @return IdentitySet|null
     */
     public function getSharedBy(): ?IdentitySet {
-        return $this->getBackingStore()->get('sharedBy');
+        $val = $this->getBackingStore()->get('sharedBy');
+        if (is_null($val) || $val instanceof IdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sharedBy'");
     }
 
     /**
@@ -103,7 +124,11 @@ class Shared implements AdditionalDataHolder, BackedModel, Parsable
      * @return DateTime|null
     */
     public function getSharedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('sharedDateTime');
+        $val = $this->getBackingStore()->get('sharedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sharedDateTime'");
     }
 
     /**

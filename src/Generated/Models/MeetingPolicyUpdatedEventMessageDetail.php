@@ -27,7 +27,7 @@ class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail implemen
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -43,7 +43,11 @@ class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail implemen
      * @return IdentitySet|null
     */
     public function getInitiator(): ?IdentitySet {
-        return $this->getBackingStore()->get('initiator');
+        $val = $this->getBackingStore()->get('initiator');
+        if (is_null($val) || $val instanceof IdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'initiator'");
     }
 
     /**
@@ -51,7 +55,11 @@ class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail implemen
      * @return bool|null
     */
     public function getMeetingChatEnabled(): ?bool {
-        return $this->getBackingStore()->get('meetingChatEnabled');
+        $val = $this->getBackingStore()->get('meetingChatEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'meetingChatEnabled'");
     }
 
     /**
@@ -59,7 +67,11 @@ class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail implemen
      * @return string|null
     */
     public function getMeetingChatId(): ?string {
-        return $this->getBackingStore()->get('meetingChatId');
+        $val = $this->getBackingStore()->get('meetingChatId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'meetingChatId'");
     }
 
     /**

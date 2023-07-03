@@ -27,7 +27,7 @@ class OrganizerMeetingInfo extends MeetingInfo implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -41,7 +41,11 @@ class OrganizerMeetingInfo extends MeetingInfo implements Parsable
      * @return IdentitySet|null
     */
     public function getOrganizer(): ?IdentitySet {
-        return $this->getBackingStore()->get('organizer');
+        $val = $this->getBackingStore()->get('organizer');
+        if (is_null($val) || $val instanceof IdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'organizer'");
     }
 
     /**

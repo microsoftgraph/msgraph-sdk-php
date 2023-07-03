@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable 
 {
@@ -30,7 +31,11 @@ class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable
      * @return ServiceHealthClassificationType|null
     */
     public function getClassification(): ?ServiceHealthClassificationType {
-        return $this->getBackingStore()->get('classification');
+        $val = $this->getBackingStore()->get('classification');
+        if (is_null($val) || $val instanceof ServiceHealthClassificationType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'classification'");
     }
 
     /**
@@ -38,7 +43,11 @@ class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable
      * @return string|null
     */
     public function getFeature(): ?string {
-        return $this->getBackingStore()->get('feature');
+        $val = $this->getBackingStore()->get('feature');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'feature'");
     }
 
     /**
@@ -46,12 +55,16 @@ class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable
      * @return string|null
     */
     public function getFeatureGroup(): ?string {
-        return $this->getBackingStore()->get('featureGroup');
+        $val = $this->getBackingStore()->get('featureGroup');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'featureGroup'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -73,7 +86,11 @@ class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable
      * @return string|null
     */
     public function getImpactDescription(): ?string {
-        return $this->getBackingStore()->get('impactDescription');
+        $val = $this->getBackingStore()->get('impactDescription');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'impactDescription'");
     }
 
     /**
@@ -81,7 +98,11 @@ class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable
      * @return bool|null
     */
     public function getIsResolved(): ?bool {
-        return $this->getBackingStore()->get('isResolved');
+        $val = $this->getBackingStore()->get('isResolved');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isResolved'");
     }
 
     /**
@@ -89,7 +110,11 @@ class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable
      * @return ServiceHealthOrigin|null
     */
     public function getOrigin(): ?ServiceHealthOrigin {
-        return $this->getBackingStore()->get('origin');
+        $val = $this->getBackingStore()->get('origin');
+        if (is_null($val) || $val instanceof ServiceHealthOrigin) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'origin'");
     }
 
     /**
@@ -97,7 +122,13 @@ class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable
      * @return array<ServiceHealthIssuePost>|null
     */
     public function getPosts(): ?array {
-        return $this->getBackingStore()->get('posts');
+        $val = $this->getBackingStore()->get('posts');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ServiceHealthIssuePost::class);
+            /** @var array<ServiceHealthIssuePost>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'posts'");
     }
 
     /**
@@ -105,7 +136,11 @@ class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable
      * @return string|null
     */
     public function getService(): ?string {
-        return $this->getBackingStore()->get('service');
+        $val = $this->getBackingStore()->get('service');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'service'");
     }
 
     /**
@@ -113,7 +148,11 @@ class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable
      * @return ServiceHealthStatus|null
     */
     public function getStatus(): ?ServiceHealthStatus {
-        return $this->getBackingStore()->get('status');
+        $val = $this->getBackingStore()->get('status');
+        if (is_null($val) || $val instanceof ServiceHealthStatus) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
     }
 
     /**

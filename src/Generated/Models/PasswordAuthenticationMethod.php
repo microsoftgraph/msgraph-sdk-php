@@ -31,12 +31,16 @@ class PasswordAuthenticationMethod extends AuthenticationMethod implements Parsa
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('createdDateTime');
+        $val = $this->getBackingStore()->get('createdDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdDateTime'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -51,7 +55,11 @@ class PasswordAuthenticationMethod extends AuthenticationMethod implements Parsa
      * @return string|null
     */
     public function getPassword(): ?string {
-        return $this->getBackingStore()->get('password');
+        $val = $this->getBackingStore()->get('password');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'password'");
     }
 
     /**

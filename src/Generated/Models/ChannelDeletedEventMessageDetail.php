@@ -30,7 +30,11 @@ class ChannelDeletedEventMessageDetail extends EventMessageDetail implements Par
      * @return string|null
     */
     public function getChannelDisplayName(): ?string {
-        return $this->getBackingStore()->get('channelDisplayName');
+        $val = $this->getBackingStore()->get('channelDisplayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'channelDisplayName'");
     }
 
     /**
@@ -38,12 +42,16 @@ class ChannelDeletedEventMessageDetail extends EventMessageDetail implements Par
      * @return string|null
     */
     public function getChannelId(): ?string {
-        return $this->getBackingStore()->get('channelId');
+        $val = $this->getBackingStore()->get('channelId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'channelId'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -59,7 +67,11 @@ class ChannelDeletedEventMessageDetail extends EventMessageDetail implements Par
      * @return IdentitySet|null
     */
     public function getInitiator(): ?IdentitySet {
-        return $this->getBackingStore()->get('initiator');
+        $val = $this->getBackingStore()->get('initiator');
+        if (is_null($val) || $val instanceof IdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'initiator'");
     }
 
     /**

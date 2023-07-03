@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class Directory extends Entity implements Parsable 
 {
@@ -29,7 +30,13 @@ class Directory extends Entity implements Parsable
      * @return array<AdministrativeUnit>|null
     */
     public function getAdministrativeUnits(): ?array {
-        return $this->getBackingStore()->get('administrativeUnits');
+        $val = $this->getBackingStore()->get('administrativeUnits');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AdministrativeUnit::class);
+            /** @var array<AdministrativeUnit>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'administrativeUnits'");
     }
 
     /**
@@ -37,7 +44,13 @@ class Directory extends Entity implements Parsable
      * @return array<AttributeSet>|null
     */
     public function getAttributeSets(): ?array {
-        return $this->getBackingStore()->get('attributeSets');
+        $val = $this->getBackingStore()->get('attributeSets');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AttributeSet::class);
+            /** @var array<AttributeSet>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'attributeSets'");
     }
 
     /**
@@ -45,7 +58,13 @@ class Directory extends Entity implements Parsable
      * @return array<CustomSecurityAttributeDefinition>|null
     */
     public function getCustomSecurityAttributeDefinitions(): ?array {
-        return $this->getBackingStore()->get('customSecurityAttributeDefinitions');
+        $val = $this->getBackingStore()->get('customSecurityAttributeDefinitions');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, CustomSecurityAttributeDefinition::class);
+            /** @var array<CustomSecurityAttributeDefinition>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'customSecurityAttributeDefinitions'");
     }
 
     /**
@@ -53,7 +72,13 @@ class Directory extends Entity implements Parsable
      * @return array<DirectoryObject>|null
     */
     public function getDeletedItems(): ?array {
-        return $this->getBackingStore()->get('deletedItems');
+        $val = $this->getBackingStore()->get('deletedItems');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, DirectoryObject::class);
+            /** @var array<DirectoryObject>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deletedItems'");
     }
 
     /**
@@ -61,12 +86,18 @@ class Directory extends Entity implements Parsable
      * @return array<IdentityProviderBase>|null
     */
     public function getFederationConfigurations(): ?array {
-        return $this->getBackingStore()->get('federationConfigurations');
+        $val = $this->getBackingStore()->get('federationConfigurations');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, IdentityProviderBase::class);
+            /** @var array<IdentityProviderBase>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'federationConfigurations'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -85,7 +116,13 @@ class Directory extends Entity implements Parsable
      * @return array<OnPremisesDirectorySynchronization>|null
     */
     public function getOnPremisesSynchronization(): ?array {
-        return $this->getBackingStore()->get('onPremisesSynchronization');
+        $val = $this->getBackingStore()->get('onPremisesSynchronization');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, OnPremisesDirectorySynchronization::class);
+            /** @var array<OnPremisesDirectorySynchronization>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'onPremisesSynchronization'");
     }
 
     /**

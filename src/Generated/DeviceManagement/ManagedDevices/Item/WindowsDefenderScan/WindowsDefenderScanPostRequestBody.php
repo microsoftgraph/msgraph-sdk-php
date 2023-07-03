@@ -39,7 +39,12 @@ class WindowsDefenderScanPostRequestBody implements AdditionalDataHolder, Backed
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -52,7 +57,7 @@ class WindowsDefenderScanPostRequestBody implements AdditionalDataHolder, Backed
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -66,7 +71,11 @@ class WindowsDefenderScanPostRequestBody implements AdditionalDataHolder, Backed
      * @return bool|null
     */
     public function getQuickScan(): ?bool {
-        return $this->getBackingStore()->get('quickScan');
+        $val = $this->getBackingStore()->get('quickScan');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'quickScan'");
     }
 
     /**

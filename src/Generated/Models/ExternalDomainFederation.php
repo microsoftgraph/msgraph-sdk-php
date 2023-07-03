@@ -30,7 +30,11 @@ class ExternalDomainFederation extends IdentitySource implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
@@ -38,12 +42,16 @@ class ExternalDomainFederation extends IdentitySource implements Parsable
      * @return string|null
     */
     public function getDomainName(): ?string {
-        return $this->getBackingStore()->get('domainName');
+        $val = $this->getBackingStore()->get('domainName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'domainName'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -59,7 +67,11 @@ class ExternalDomainFederation extends IdentitySource implements Parsable
      * @return string|null
     */
     public function getIssuerUri(): ?string {
-        return $this->getBackingStore()->get('issuerUri');
+        $val = $this->getBackingStore()->get('issuerUri');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'issuerUri'");
     }
 
     /**

@@ -7,6 +7,7 @@ use Microsoft\Graph\Generated\Models\KeyValuePair;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class Task extends Entity implements Parsable 
 {
@@ -31,7 +32,13 @@ class Task extends Entity implements Parsable
      * @return array<KeyValuePair>|null
     */
     public function getArguments(): ?array {
-        return $this->getBackingStore()->get('arguments');
+        $val = $this->getBackingStore()->get('arguments');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, KeyValuePair::class);
+            /** @var array<KeyValuePair>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'arguments'");
     }
 
     /**
@@ -39,7 +46,11 @@ class Task extends Entity implements Parsable
      * @return LifecycleTaskCategory|null
     */
     public function getCategory(): ?LifecycleTaskCategory {
-        return $this->getBackingStore()->get('category');
+        $val = $this->getBackingStore()->get('category');
+        if (is_null($val) || $val instanceof LifecycleTaskCategory) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'category'");
     }
 
     /**
@@ -47,7 +58,11 @@ class Task extends Entity implements Parsable
      * @return bool|null
     */
     public function getContinueOnError(): ?bool {
-        return $this->getBackingStore()->get('continueOnError');
+        $val = $this->getBackingStore()->get('continueOnError');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'continueOnError'");
     }
 
     /**
@@ -55,7 +70,11 @@ class Task extends Entity implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->getBackingStore()->get('description');
+        $val = $this->getBackingStore()->get('description');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'description'");
     }
 
     /**
@@ -63,7 +82,11 @@ class Task extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
@@ -71,12 +94,16 @@ class Task extends Entity implements Parsable
      * @return int|null
     */
     public function getExecutionSequence(): ?int {
-        return $this->getBackingStore()->get('executionSequence');
+        $val = $this->getBackingStore()->get('executionSequence');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'executionSequence'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -98,7 +125,11 @@ class Task extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsEnabled(): ?bool {
-        return $this->getBackingStore()->get('isEnabled');
+        $val = $this->getBackingStore()->get('isEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isEnabled'");
     }
 
     /**
@@ -106,7 +137,11 @@ class Task extends Entity implements Parsable
      * @return string|null
     */
     public function getTaskDefinitionId(): ?string {
-        return $this->getBackingStore()->get('taskDefinitionId');
+        $val = $this->getBackingStore()->get('taskDefinitionId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'taskDefinitionId'");
     }
 
     /**
@@ -114,7 +149,13 @@ class Task extends Entity implements Parsable
      * @return array<TaskProcessingResult>|null
     */
     public function getTaskProcessingResults(): ?array {
-        return $this->getBackingStore()->get('taskProcessingResults');
+        $val = $this->getBackingStore()->get('taskProcessingResults');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, TaskProcessingResult::class);
+            /** @var array<TaskProcessingResult>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'taskProcessingResults'");
     }
 
     /**

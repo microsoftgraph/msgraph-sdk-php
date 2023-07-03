@@ -9,6 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class ParseExpressionResponse implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -39,7 +40,12 @@ class ParseExpressionResponse implements AdditionalDataHolder, BackedModel, Pars
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -55,7 +61,11 @@ class ParseExpressionResponse implements AdditionalDataHolder, BackedModel, Pars
      * @return PublicError|null
     */
     public function getError(): ?PublicError {
-        return $this->getBackingStore()->get('error');
+        $val = $this->getBackingStore()->get('error');
+        if (is_null($val) || $val instanceof PublicError) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'error'");
     }
 
     /**
@@ -63,7 +73,13 @@ class ParseExpressionResponse implements AdditionalDataHolder, BackedModel, Pars
      * @return array<string>|null
     */
     public function getEvaluationResult(): ?array {
-        return $this->getBackingStore()->get('evaluationResult');
+        $val = $this->getBackingStore()->get('evaluationResult');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'evaluationResult'");
     }
 
     /**
@@ -71,18 +87,29 @@ class ParseExpressionResponse implements AdditionalDataHolder, BackedModel, Pars
      * @return bool|null
     */
     public function getEvaluationSucceeded(): ?bool {
-        return $this->getBackingStore()->get('evaluationSucceeded');
+        $val = $this->getBackingStore()->get('evaluationSucceeded');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'evaluationSucceeded'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
             'error' => fn(ParseNode $n) => $o->setError($n->getObjectValue([PublicError::class, 'createFromDiscriminatorValue'])),
-            'evaluationResult' => fn(ParseNode $n) => $o->setEvaluationResult($n->getCollectionOfPrimitiveValues()),
+            'evaluationResult' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setEvaluationResult($val);
+            },
             'evaluationSucceeded' => fn(ParseNode $n) => $o->setEvaluationSucceeded($n->getBooleanValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'parsedExpression' => fn(ParseNode $n) => $o->setParsedExpression($n->getObjectValue([AttributeMappingSource::class, 'createFromDiscriminatorValue'])),
@@ -95,7 +122,11 @@ class ParseExpressionResponse implements AdditionalDataHolder, BackedModel, Pars
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -103,7 +134,11 @@ class ParseExpressionResponse implements AdditionalDataHolder, BackedModel, Pars
      * @return AttributeMappingSource|null
     */
     public function getParsedExpression(): ?AttributeMappingSource {
-        return $this->getBackingStore()->get('parsedExpression');
+        $val = $this->getBackingStore()->get('parsedExpression');
+        if (is_null($val) || $val instanceof AttributeMappingSource) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'parsedExpression'");
     }
 
     /**
@@ -111,7 +146,11 @@ class ParseExpressionResponse implements AdditionalDataHolder, BackedModel, Pars
      * @return bool|null
     */
     public function getParsingSucceeded(): ?bool {
-        return $this->getBackingStore()->get('parsingSucceeded');
+        $val = $this->getBackingStore()->get('parsingSucceeded');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'parsingSucceeded'");
     }
 
     /**

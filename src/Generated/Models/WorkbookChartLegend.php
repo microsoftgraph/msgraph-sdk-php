@@ -26,7 +26,7 @@ class WorkbookChartLegend extends Entity implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -43,7 +43,11 @@ class WorkbookChartLegend extends Entity implements Parsable
      * @return WorkbookChartLegendFormat|null
     */
     public function getFormat(): ?WorkbookChartLegendFormat {
-        return $this->getBackingStore()->get('format');
+        $val = $this->getBackingStore()->get('format');
+        if (is_null($val) || $val instanceof WorkbookChartLegendFormat) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'format'");
     }
 
     /**
@@ -51,7 +55,11 @@ class WorkbookChartLegend extends Entity implements Parsable
      * @return bool|null
     */
     public function getOverlay(): ?bool {
-        return $this->getBackingStore()->get('overlay');
+        $val = $this->getBackingStore()->get('overlay');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'overlay'");
     }
 
     /**
@@ -59,7 +67,11 @@ class WorkbookChartLegend extends Entity implements Parsable
      * @return string|null
     */
     public function getPosition(): ?string {
-        return $this->getBackingStore()->get('position');
+        $val = $this->getBackingStore()->get('position');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'position'");
     }
 
     /**
@@ -67,7 +79,11 @@ class WorkbookChartLegend extends Entity implements Parsable
      * @return bool|null
     */
     public function getVisible(): ?bool {
-        return $this->getBackingStore()->get('visible');
+        $val = $this->getBackingStore()->get('visible');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'visible'");
     }
 
     /**

@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class Synchronization extends Entity implements Parsable 
 {
@@ -26,7 +27,7 @@ class Synchronization extends Entity implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -42,7 +43,13 @@ class Synchronization extends Entity implements Parsable
      * @return array<SynchronizationJob>|null
     */
     public function getJobs(): ?array {
-        return $this->getBackingStore()->get('jobs');
+        $val = $this->getBackingStore()->get('jobs');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, SynchronizationJob::class);
+            /** @var array<SynchronizationJob>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'jobs'");
     }
 
     /**
@@ -50,7 +57,13 @@ class Synchronization extends Entity implements Parsable
      * @return array<SynchronizationSecretKeyStringValuePair>|null
     */
     public function getSecrets(): ?array {
-        return $this->getBackingStore()->get('secrets');
+        $val = $this->getBackingStore()->get('secrets');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, SynchronizationSecretKeyStringValuePair::class);
+            /** @var array<SynchronizationSecretKeyStringValuePair>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'secrets'");
     }
 
     /**
@@ -58,7 +71,13 @@ class Synchronization extends Entity implements Parsable
      * @return array<SynchronizationTemplate>|null
     */
     public function getTemplates(): ?array {
-        return $this->getBackingStore()->get('templates');
+        $val = $this->getBackingStore()->get('templates');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, SynchronizationTemplate::class);
+            /** @var array<SynchronizationTemplate>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'templates'");
     }
 
     /**

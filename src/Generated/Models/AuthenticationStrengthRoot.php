@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class AuthenticationStrengthRoot extends Entity implements Parsable 
 {
@@ -29,7 +30,13 @@ class AuthenticationStrengthRoot extends Entity implements Parsable
      * @return array<AuthenticationMethodModeDetail>|null
     */
     public function getAuthenticationMethodModes(): ?array {
-        return $this->getBackingStore()->get('authenticationMethodModes');
+        $val = $this->getBackingStore()->get('authenticationMethodModes');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AuthenticationMethodModeDetail::class);
+            /** @var array<AuthenticationMethodModeDetail>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'authenticationMethodModes'");
     }
 
     /**
@@ -37,12 +44,18 @@ class AuthenticationStrengthRoot extends Entity implements Parsable
      * @return array<AuthenticationMethodModes>|null
     */
     public function getCombinations(): ?array {
-        return $this->getBackingStore()->get('combinations');
+        $val = $this->getBackingStore()->get('combinations');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AuthenticationMethodModes::class);
+            /** @var array<AuthenticationMethodModes>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'combinations'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -58,7 +71,13 @@ class AuthenticationStrengthRoot extends Entity implements Parsable
      * @return array<AuthenticationStrengthPolicy>|null
     */
     public function getPolicies(): ?array {
-        return $this->getBackingStore()->get('policies');
+        $val = $this->getBackingStore()->get('policies');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AuthenticationStrengthPolicy::class);
+            /** @var array<AuthenticationStrengthPolicy>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'policies'");
     }
 
     /**

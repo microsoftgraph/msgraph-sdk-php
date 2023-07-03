@@ -30,12 +30,16 @@ class DaylightTimeZoneOffset extends StandardTimeZoneOffset implements Parsable
      * @return int|null
     */
     public function getDaylightBias(): ?int {
-        return $this->getBackingStore()->get('daylightBias');
+        $val = $this->getBackingStore()->get('daylightBias');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'daylightBias'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;

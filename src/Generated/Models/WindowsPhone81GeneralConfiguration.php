@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements Parsable 
 {
@@ -30,7 +31,11 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
      * @return bool|null
     */
     public function getApplyOnlyToWindowsPhone81(): ?bool {
-        return $this->getBackingStore()->get('applyOnlyToWindowsPhone81');
+        $val = $this->getBackingStore()->get('applyOnlyToWindowsPhone81');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'applyOnlyToWindowsPhone81'");
     }
 
     /**
@@ -38,7 +43,11 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
      * @return bool|null
     */
     public function getAppsBlockCopyPaste(): ?bool {
-        return $this->getBackingStore()->get('appsBlockCopyPaste');
+        $val = $this->getBackingStore()->get('appsBlockCopyPaste');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'appsBlockCopyPaste'");
     }
 
     /**
@@ -46,7 +55,11 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
      * @return bool|null
     */
     public function getBluetoothBlocked(): ?bool {
-        return $this->getBackingStore()->get('bluetoothBlocked');
+        $val = $this->getBackingStore()->get('bluetoothBlocked');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'bluetoothBlocked'");
     }
 
     /**
@@ -54,7 +67,11 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
      * @return bool|null
     */
     public function getCameraBlocked(): ?bool {
-        return $this->getBackingStore()->get('cameraBlocked');
+        $val = $this->getBackingStore()->get('cameraBlocked');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'cameraBlocked'");
     }
 
     /**
@@ -62,7 +79,11 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
      * @return bool|null
     */
     public function getCellularBlockWifiTethering(): ?bool {
-        return $this->getBackingStore()->get('cellularBlockWifiTethering');
+        $val = $this->getBackingStore()->get('cellularBlockWifiTethering');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'cellularBlockWifiTethering'");
     }
 
     /**
@@ -70,7 +91,11 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
      * @return AppListType|null
     */
     public function getCompliantAppListType(): ?AppListType {
-        return $this->getBackingStore()->get('compliantAppListType');
+        $val = $this->getBackingStore()->get('compliantAppListType');
+        if (is_null($val) || $val instanceof AppListType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'compliantAppListType'");
     }
 
     /**
@@ -78,7 +103,13 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
      * @return array<AppListItem>|null
     */
     public function getCompliantAppsList(): ?array {
-        return $this->getBackingStore()->get('compliantAppsList');
+        $val = $this->getBackingStore()->get('compliantAppsList');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AppListItem::class);
+            /** @var array<AppListItem>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'compliantAppsList'");
     }
 
     /**
@@ -86,7 +117,11 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
      * @return bool|null
     */
     public function getDiagnosticDataBlockSubmission(): ?bool {
-        return $this->getBackingStore()->get('diagnosticDataBlockSubmission');
+        $val = $this->getBackingStore()->get('diagnosticDataBlockSubmission');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'diagnosticDataBlockSubmission'");
     }
 
     /**
@@ -94,12 +129,16 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
      * @return bool|null
     */
     public function getEmailBlockAddingAccounts(): ?bool {
-        return $this->getBackingStore()->get('emailBlockAddingAccounts');
+        $val = $this->getBackingStore()->get('emailBlockAddingAccounts');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'emailBlockAddingAccounts'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -141,7 +180,11 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
      * @return bool|null
     */
     public function getLocationServicesBlocked(): ?bool {
-        return $this->getBackingStore()->get('locationServicesBlocked');
+        $val = $this->getBackingStore()->get('locationServicesBlocked');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'locationServicesBlocked'");
     }
 
     /**
@@ -149,7 +192,11 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
      * @return bool|null
     */
     public function getMicrosoftAccountBlocked(): ?bool {
-        return $this->getBackingStore()->get('microsoftAccountBlocked');
+        $val = $this->getBackingStore()->get('microsoftAccountBlocked');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'microsoftAccountBlocked'");
     }
 
     /**
@@ -157,7 +204,11 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
      * @return bool|null
     */
     public function getNfcBlocked(): ?bool {
-        return $this->getBackingStore()->get('nfcBlocked');
+        $val = $this->getBackingStore()->get('nfcBlocked');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'nfcBlocked'");
     }
 
     /**
@@ -165,7 +216,11 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
      * @return bool|null
     */
     public function getPasswordBlockSimple(): ?bool {
-        return $this->getBackingStore()->get('passwordBlockSimple');
+        $val = $this->getBackingStore()->get('passwordBlockSimple');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'passwordBlockSimple'");
     }
 
     /**
@@ -173,7 +228,11 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
      * @return int|null
     */
     public function getPasswordExpirationDays(): ?int {
-        return $this->getBackingStore()->get('passwordExpirationDays');
+        $val = $this->getBackingStore()->get('passwordExpirationDays');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'passwordExpirationDays'");
     }
 
     /**
@@ -181,7 +240,11 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
      * @return int|null
     */
     public function getPasswordMinimumCharacterSetCount(): ?int {
-        return $this->getBackingStore()->get('passwordMinimumCharacterSetCount');
+        $val = $this->getBackingStore()->get('passwordMinimumCharacterSetCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'passwordMinimumCharacterSetCount'");
     }
 
     /**
@@ -189,7 +252,11 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
      * @return int|null
     */
     public function getPasswordMinimumLength(): ?int {
-        return $this->getBackingStore()->get('passwordMinimumLength');
+        $val = $this->getBackingStore()->get('passwordMinimumLength');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'passwordMinimumLength'");
     }
 
     /**
@@ -197,7 +264,11 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
      * @return int|null
     */
     public function getPasswordMinutesOfInactivityBeforeScreenTimeout(): ?int {
-        return $this->getBackingStore()->get('passwordMinutesOfInactivityBeforeScreenTimeout');
+        $val = $this->getBackingStore()->get('passwordMinutesOfInactivityBeforeScreenTimeout');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'passwordMinutesOfInactivityBeforeScreenTimeout'");
     }
 
     /**
@@ -205,7 +276,11 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
      * @return int|null
     */
     public function getPasswordPreviousPasswordBlockCount(): ?int {
-        return $this->getBackingStore()->get('passwordPreviousPasswordBlockCount');
+        $val = $this->getBackingStore()->get('passwordPreviousPasswordBlockCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'passwordPreviousPasswordBlockCount'");
     }
 
     /**
@@ -213,7 +288,11 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
      * @return bool|null
     */
     public function getPasswordRequired(): ?bool {
-        return $this->getBackingStore()->get('passwordRequired');
+        $val = $this->getBackingStore()->get('passwordRequired');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'passwordRequired'");
     }
 
     /**
@@ -221,7 +300,11 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
      * @return RequiredPasswordType|null
     */
     public function getPasswordRequiredType(): ?RequiredPasswordType {
-        return $this->getBackingStore()->get('passwordRequiredType');
+        $val = $this->getBackingStore()->get('passwordRequiredType');
+        if (is_null($val) || $val instanceof RequiredPasswordType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'passwordRequiredType'");
     }
 
     /**
@@ -229,7 +312,11 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
      * @return int|null
     */
     public function getPasswordSignInFailureCountBeforeFactoryReset(): ?int {
-        return $this->getBackingStore()->get('passwordSignInFailureCountBeforeFactoryReset');
+        $val = $this->getBackingStore()->get('passwordSignInFailureCountBeforeFactoryReset');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'passwordSignInFailureCountBeforeFactoryReset'");
     }
 
     /**
@@ -237,7 +324,11 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
      * @return bool|null
     */
     public function getScreenCaptureBlocked(): ?bool {
-        return $this->getBackingStore()->get('screenCaptureBlocked');
+        $val = $this->getBackingStore()->get('screenCaptureBlocked');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'screenCaptureBlocked'");
     }
 
     /**
@@ -245,7 +336,11 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
      * @return bool|null
     */
     public function getStorageBlockRemovableStorage(): ?bool {
-        return $this->getBackingStore()->get('storageBlockRemovableStorage');
+        $val = $this->getBackingStore()->get('storageBlockRemovableStorage');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'storageBlockRemovableStorage'");
     }
 
     /**
@@ -253,7 +348,11 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
      * @return bool|null
     */
     public function getStorageRequireEncryption(): ?bool {
-        return $this->getBackingStore()->get('storageRequireEncryption');
+        $val = $this->getBackingStore()->get('storageRequireEncryption');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'storageRequireEncryption'");
     }
 
     /**
@@ -261,7 +360,11 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
      * @return bool|null
     */
     public function getWebBrowserBlocked(): ?bool {
-        return $this->getBackingStore()->get('webBrowserBlocked');
+        $val = $this->getBackingStore()->get('webBrowserBlocked');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'webBrowserBlocked'");
     }
 
     /**
@@ -269,7 +372,11 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
      * @return bool|null
     */
     public function getWifiBlockAutomaticConnectHotspots(): ?bool {
-        return $this->getBackingStore()->get('wifiBlockAutomaticConnectHotspots');
+        $val = $this->getBackingStore()->get('wifiBlockAutomaticConnectHotspots');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'wifiBlockAutomaticConnectHotspots'");
     }
 
     /**
@@ -277,7 +384,11 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
      * @return bool|null
     */
     public function getWifiBlocked(): ?bool {
-        return $this->getBackingStore()->get('wifiBlocked');
+        $val = $this->getBackingStore()->get('wifiBlocked');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'wifiBlocked'");
     }
 
     /**
@@ -285,7 +396,11 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
      * @return bool|null
     */
     public function getWifiBlockHotspotReporting(): ?bool {
-        return $this->getBackingStore()->get('wifiBlockHotspotReporting');
+        $val = $this->getBackingStore()->get('wifiBlockHotspotReporting');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'wifiBlockHotspotReporting'");
     }
 
     /**
@@ -293,7 +408,11 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
      * @return bool|null
     */
     public function getWindowsStoreBlocked(): ?bool {
-        return $this->getBackingStore()->get('windowsStoreBlocked');
+        $val = $this->getBackingStore()->get('windowsStoreBlocked');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'windowsStoreBlocked'");
     }
 
     /**

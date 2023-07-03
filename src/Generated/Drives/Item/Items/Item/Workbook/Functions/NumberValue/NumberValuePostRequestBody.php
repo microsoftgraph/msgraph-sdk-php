@@ -40,7 +40,12 @@ class NumberValuePostRequestBody implements AdditionalDataHolder, BackedModel, P
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -56,12 +61,16 @@ class NumberValuePostRequestBody implements AdditionalDataHolder, BackedModel, P
      * @return Json|null
     */
     public function getDecimalSeparator(): ?Json {
-        return $this->getBackingStore()->get('decimalSeparator');
+        $val = $this->getBackingStore()->get('decimalSeparator');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'decimalSeparator'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -77,7 +86,11 @@ class NumberValuePostRequestBody implements AdditionalDataHolder, BackedModel, P
      * @return Json|null
     */
     public function getGroupSeparator(): ?Json {
-        return $this->getBackingStore()->get('groupSeparator');
+        $val = $this->getBackingStore()->get('groupSeparator');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'groupSeparator'");
     }
 
     /**
@@ -85,7 +98,11 @@ class NumberValuePostRequestBody implements AdditionalDataHolder, BackedModel, P
      * @return Json|null
     */
     public function getText(): ?Json {
-        return $this->getBackingStore()->get('text');
+        $val = $this->getBackingStore()->get('text');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'text'");
     }
 
     /**

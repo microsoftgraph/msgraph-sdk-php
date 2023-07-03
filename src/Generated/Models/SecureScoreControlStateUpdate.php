@@ -40,7 +40,12 @@ class SecureScoreControlStateUpdate implements AdditionalDataHolder, BackedModel
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -48,7 +53,11 @@ class SecureScoreControlStateUpdate implements AdditionalDataHolder, BackedModel
      * @return string|null
     */
     public function getAssignedTo(): ?string {
-        return $this->getBackingStore()->get('assignedTo');
+        $val = $this->getBackingStore()->get('assignedTo');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'assignedTo'");
     }
 
     /**
@@ -64,12 +73,16 @@ class SecureScoreControlStateUpdate implements AdditionalDataHolder, BackedModel
      * @return string|null
     */
     public function getComment(): ?string {
-        return $this->getBackingStore()->get('comment');
+        $val = $this->getBackingStore()->get('comment');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'comment'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -88,7 +101,11 @@ class SecureScoreControlStateUpdate implements AdditionalDataHolder, BackedModel
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -96,7 +113,11 @@ class SecureScoreControlStateUpdate implements AdditionalDataHolder, BackedModel
      * @return string|null
     */
     public function getState(): ?string {
-        return $this->getBackingStore()->get('state');
+        $val = $this->getBackingStore()->get('state');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'state'");
     }
 
     /**
@@ -104,7 +125,11 @@ class SecureScoreControlStateUpdate implements AdditionalDataHolder, BackedModel
      * @return string|null
     */
     public function getUpdatedBy(): ?string {
-        return $this->getBackingStore()->get('updatedBy');
+        $val = $this->getBackingStore()->get('updatedBy');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'updatedBy'");
     }
 
     /**
@@ -112,7 +137,11 @@ class SecureScoreControlStateUpdate implements AdditionalDataHolder, BackedModel
      * @return DateTime|null
     */
     public function getUpdatedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('updatedDateTime');
+        $val = $this->getBackingStore()->get('updatedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'updatedDateTime'");
     }
 
     /**

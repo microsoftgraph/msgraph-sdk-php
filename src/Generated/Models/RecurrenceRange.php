@@ -40,7 +40,12 @@ class RecurrenceRange implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -56,12 +61,16 @@ class RecurrenceRange implements AdditionalDataHolder, BackedModel, Parsable
      * @return Date|null
     */
     public function getEndDate(): ?Date {
-        return $this->getBackingStore()->get('endDate');
+        $val = $this->getBackingStore()->get('endDate');
+        if (is_null($val) || $val instanceof Date) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'endDate'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -80,7 +89,11 @@ class RecurrenceRange implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getNumberOfOccurrences(): ?int {
-        return $this->getBackingStore()->get('numberOfOccurrences');
+        $val = $this->getBackingStore()->get('numberOfOccurrences');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'numberOfOccurrences'");
     }
 
     /**
@@ -88,7 +101,11 @@ class RecurrenceRange implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -96,7 +113,11 @@ class RecurrenceRange implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getRecurrenceTimeZone(): ?string {
-        return $this->getBackingStore()->get('recurrenceTimeZone');
+        $val = $this->getBackingStore()->get('recurrenceTimeZone');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'recurrenceTimeZone'");
     }
 
     /**
@@ -104,7 +125,11 @@ class RecurrenceRange implements AdditionalDataHolder, BackedModel, Parsable
      * @return Date|null
     */
     public function getStartDate(): ?Date {
-        return $this->getBackingStore()->get('startDate');
+        $val = $this->getBackingStore()->get('startDate');
+        if (is_null($val) || $val instanceof Date) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'startDate'");
     }
 
     /**
@@ -112,7 +137,11 @@ class RecurrenceRange implements AdditionalDataHolder, BackedModel, Parsable
      * @return RecurrenceRangeType|null
     */
     public function getType(): ?RecurrenceRangeType {
-        return $this->getBackingStore()->get('type');
+        $val = $this->getBackingStore()->get('type');
+        if (is_null($val) || $val instanceof RecurrenceRangeType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'type'");
     }
 
     /**

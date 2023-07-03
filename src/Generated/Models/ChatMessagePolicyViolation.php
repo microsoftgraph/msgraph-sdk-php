@@ -39,7 +39,12 @@ class ChatMessagePolicyViolation implements AdditionalDataHolder, BackedModel, P
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -55,12 +60,16 @@ class ChatMessagePolicyViolation implements AdditionalDataHolder, BackedModel, P
      * @return ChatMessagePolicyViolationDlpActionTypes|null
     */
     public function getDlpAction(): ?ChatMessagePolicyViolationDlpActionTypes {
-        return $this->getBackingStore()->get('dlpAction');
+        $val = $this->getBackingStore()->get('dlpAction');
+        if (is_null($val) || $val instanceof ChatMessagePolicyViolationDlpActionTypes) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'dlpAction'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -79,7 +88,11 @@ class ChatMessagePolicyViolation implements AdditionalDataHolder, BackedModel, P
      * @return string|null
     */
     public function getJustificationText(): ?string {
-        return $this->getBackingStore()->get('justificationText');
+        $val = $this->getBackingStore()->get('justificationText');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'justificationText'");
     }
 
     /**
@@ -87,7 +100,11 @@ class ChatMessagePolicyViolation implements AdditionalDataHolder, BackedModel, P
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -95,7 +112,11 @@ class ChatMessagePolicyViolation implements AdditionalDataHolder, BackedModel, P
      * @return ChatMessagePolicyViolationPolicyTip|null
     */
     public function getPolicyTip(): ?ChatMessagePolicyViolationPolicyTip {
-        return $this->getBackingStore()->get('policyTip');
+        $val = $this->getBackingStore()->get('policyTip');
+        if (is_null($val) || $val instanceof ChatMessagePolicyViolationPolicyTip) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'policyTip'");
     }
 
     /**
@@ -103,7 +124,11 @@ class ChatMessagePolicyViolation implements AdditionalDataHolder, BackedModel, P
      * @return ChatMessagePolicyViolationUserActionTypes|null
     */
     public function getUserAction(): ?ChatMessagePolicyViolationUserActionTypes {
-        return $this->getBackingStore()->get('userAction');
+        $val = $this->getBackingStore()->get('userAction');
+        if (is_null($val) || $val instanceof ChatMessagePolicyViolationUserActionTypes) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userAction'");
     }
 
     /**
@@ -111,7 +136,11 @@ class ChatMessagePolicyViolation implements AdditionalDataHolder, BackedModel, P
      * @return ChatMessagePolicyViolationVerdictDetailsTypes|null
     */
     public function getVerdictDetails(): ?ChatMessagePolicyViolationVerdictDetailsTypes {
-        return $this->getBackingStore()->get('verdictDetails');
+        $val = $this->getBackingStore()->get('verdictDetails');
+        if (is_null($val) || $val instanceof ChatMessagePolicyViolationVerdictDetailsTypes) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'verdictDetails'");
     }
 
     /**

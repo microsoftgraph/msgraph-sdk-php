@@ -43,7 +43,12 @@ class MobileAppInstallTimeSettings implements AdditionalDataHolder, BackedModel,
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -59,12 +64,16 @@ class MobileAppInstallTimeSettings implements AdditionalDataHolder, BackedModel,
      * @return DateTime|null
     */
     public function getDeadlineDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('deadlineDateTime');
+        $val = $this->getBackingStore()->get('deadlineDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deadlineDateTime'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -81,7 +90,11 @@ class MobileAppInstallTimeSettings implements AdditionalDataHolder, BackedModel,
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -89,7 +102,11 @@ class MobileAppInstallTimeSettings implements AdditionalDataHolder, BackedModel,
      * @return DateTime|null
     */
     public function getStartDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('startDateTime');
+        $val = $this->getBackingStore()->get('startDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'startDateTime'");
     }
 
     /**
@@ -97,7 +114,11 @@ class MobileAppInstallTimeSettings implements AdditionalDataHolder, BackedModel,
      * @return bool|null
     */
     public function getUseLocalTime(): ?bool {
-        return $this->getBackingStore()->get('useLocalTime');
+        $val = $this->getBackingStore()->get('useLocalTime');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'useLocalTime'");
     }
 
     /**

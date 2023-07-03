@@ -8,6 +8,7 @@ use Microsoft\Graph\Generated\Models\IdentitySet;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class RetentionEvent extends Entity implements Parsable 
 {
@@ -32,7 +33,11 @@ class RetentionEvent extends Entity implements Parsable
      * @return IdentitySet|null
     */
     public function getCreatedBy(): ?IdentitySet {
-        return $this->getBackingStore()->get('createdBy');
+        $val = $this->getBackingStore()->get('createdBy');
+        if (is_null($val) || $val instanceof IdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdBy'");
     }
 
     /**
@@ -40,7 +45,11 @@ class RetentionEvent extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('createdDateTime');
+        $val = $this->getBackingStore()->get('createdDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdDateTime'");
     }
 
     /**
@@ -48,7 +57,11 @@ class RetentionEvent extends Entity implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->getBackingStore()->get('description');
+        $val = $this->getBackingStore()->get('description');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'description'");
     }
 
     /**
@@ -56,7 +69,11 @@ class RetentionEvent extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
@@ -64,7 +81,13 @@ class RetentionEvent extends Entity implements Parsable
      * @return array<EventPropagationResult>|null
     */
     public function getEventPropagationResults(): ?array {
-        return $this->getBackingStore()->get('eventPropagationResults');
+        $val = $this->getBackingStore()->get('eventPropagationResults');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, EventPropagationResult::class);
+            /** @var array<EventPropagationResult>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'eventPropagationResults'");
     }
 
     /**
@@ -72,7 +95,13 @@ class RetentionEvent extends Entity implements Parsable
      * @return array<EventQuery>|null
     */
     public function getEventQueries(): ?array {
-        return $this->getBackingStore()->get('eventQueries');
+        $val = $this->getBackingStore()->get('eventQueries');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, EventQuery::class);
+            /** @var array<EventQuery>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'eventQueries'");
     }
 
     /**
@@ -80,7 +109,11 @@ class RetentionEvent extends Entity implements Parsable
      * @return RetentionEventStatus|null
     */
     public function getEventStatus(): ?RetentionEventStatus {
-        return $this->getBackingStore()->get('eventStatus');
+        $val = $this->getBackingStore()->get('eventStatus');
+        if (is_null($val) || $val instanceof RetentionEventStatus) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'eventStatus'");
     }
 
     /**
@@ -88,12 +121,16 @@ class RetentionEvent extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getEventTriggerDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('eventTriggerDateTime');
+        $val = $this->getBackingStore()->get('eventTriggerDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'eventTriggerDateTime'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -118,7 +155,11 @@ class RetentionEvent extends Entity implements Parsable
      * @return IdentitySet|null
     */
     public function getLastModifiedBy(): ?IdentitySet {
-        return $this->getBackingStore()->get('lastModifiedBy');
+        $val = $this->getBackingStore()->get('lastModifiedBy');
+        if (is_null($val) || $val instanceof IdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastModifiedBy'");
     }
 
     /**
@@ -126,7 +167,11 @@ class RetentionEvent extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('lastModifiedDateTime');
+        $val = $this->getBackingStore()->get('lastModifiedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastModifiedDateTime'");
     }
 
     /**
@@ -134,7 +179,11 @@ class RetentionEvent extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastStatusUpdateDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('lastStatusUpdateDateTime');
+        $val = $this->getBackingStore()->get('lastStatusUpdateDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastStatusUpdateDateTime'");
     }
 
     /**
@@ -142,7 +191,11 @@ class RetentionEvent extends Entity implements Parsable
      * @return RetentionEventType|null
     */
     public function getRetentionEventType(): ?RetentionEventType {
-        return $this->getBackingStore()->get('retentionEventType');
+        $val = $this->getBackingStore()->get('retentionEventType');
+        if (is_null($val) || $val instanceof RetentionEventType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'retentionEventType'");
     }
 
     /**

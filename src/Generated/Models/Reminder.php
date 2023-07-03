@@ -39,7 +39,12 @@ class Reminder implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -55,7 +60,11 @@ class Reminder implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getChangeKey(): ?string {
-        return $this->getBackingStore()->get('changeKey');
+        $val = $this->getBackingStore()->get('changeKey');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'changeKey'");
     }
 
     /**
@@ -63,7 +72,11 @@ class Reminder implements AdditionalDataHolder, BackedModel, Parsable
      * @return DateTimeTimeZone|null
     */
     public function getEventEndTime(): ?DateTimeTimeZone {
-        return $this->getBackingStore()->get('eventEndTime');
+        $val = $this->getBackingStore()->get('eventEndTime');
+        if (is_null($val) || $val instanceof DateTimeTimeZone) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'eventEndTime'");
     }
 
     /**
@@ -71,7 +84,11 @@ class Reminder implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getEventId(): ?string {
-        return $this->getBackingStore()->get('eventId');
+        $val = $this->getBackingStore()->get('eventId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'eventId'");
     }
 
     /**
@@ -79,7 +96,11 @@ class Reminder implements AdditionalDataHolder, BackedModel, Parsable
      * @return Location|null
     */
     public function getEventLocation(): ?Location {
-        return $this->getBackingStore()->get('eventLocation');
+        $val = $this->getBackingStore()->get('eventLocation');
+        if (is_null($val) || $val instanceof Location) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'eventLocation'");
     }
 
     /**
@@ -87,7 +108,11 @@ class Reminder implements AdditionalDataHolder, BackedModel, Parsable
      * @return DateTimeTimeZone|null
     */
     public function getEventStartTime(): ?DateTimeTimeZone {
-        return $this->getBackingStore()->get('eventStartTime');
+        $val = $this->getBackingStore()->get('eventStartTime');
+        if (is_null($val) || $val instanceof DateTimeTimeZone) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'eventStartTime'");
     }
 
     /**
@@ -95,7 +120,11 @@ class Reminder implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getEventSubject(): ?string {
-        return $this->getBackingStore()->get('eventSubject');
+        $val = $this->getBackingStore()->get('eventSubject');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'eventSubject'");
     }
 
     /**
@@ -103,12 +132,16 @@ class Reminder implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getEventWebLink(): ?string {
-        return $this->getBackingStore()->get('eventWebLink');
+        $val = $this->getBackingStore()->get('eventWebLink');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'eventWebLink'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -130,7 +163,11 @@ class Reminder implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -138,7 +175,11 @@ class Reminder implements AdditionalDataHolder, BackedModel, Parsable
      * @return DateTimeTimeZone|null
     */
     public function getReminderFireTime(): ?DateTimeTimeZone {
-        return $this->getBackingStore()->get('reminderFireTime');
+        $val = $this->getBackingStore()->get('reminderFireTime');
+        if (is_null($val) || $val instanceof DateTimeTimeZone) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'reminderFireTime'");
     }
 
     /**

@@ -40,7 +40,12 @@ class RedirectPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -56,7 +61,11 @@ class RedirectPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
      * @return PrintJobConfiguration|null
     */
     public function getConfiguration(): ?PrintJobConfiguration {
-        return $this->getBackingStore()->get('configuration');
+        $val = $this->getBackingStore()->get('configuration');
+        if (is_null($val) || $val instanceof PrintJobConfiguration) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'configuration'");
     }
 
     /**
@@ -64,12 +73,16 @@ class RedirectPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
      * @return string|null
     */
     public function getDestinationPrinterId(): ?string {
-        return $this->getBackingStore()->get('destinationPrinterId');
+        $val = $this->getBackingStore()->get('destinationPrinterId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'destinationPrinterId'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;

@@ -30,7 +30,11 @@ class EntitlementManagementSettings extends Entity implements Parsable
      * @return DateInterval|null
     */
     public function getDurationUntilExternalUserDeletedAfterBlocked(): ?DateInterval {
-        return $this->getBackingStore()->get('durationUntilExternalUserDeletedAfterBlocked');
+        $val = $this->getBackingStore()->get('durationUntilExternalUserDeletedAfterBlocked');
+        if (is_null($val) || $val instanceof DateInterval) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'durationUntilExternalUserDeletedAfterBlocked'");
     }
 
     /**
@@ -38,12 +42,16 @@ class EntitlementManagementSettings extends Entity implements Parsable
      * @return AccessPackageExternalUserLifecycleAction|null
     */
     public function getExternalUserLifecycleAction(): ?AccessPackageExternalUserLifecycleAction {
-        return $this->getBackingStore()->get('externalUserLifecycleAction');
+        $val = $this->getBackingStore()->get('externalUserLifecycleAction');
+        if (is_null($val) || $val instanceof AccessPackageExternalUserLifecycleAction) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'externalUserLifecycleAction'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;

@@ -39,7 +39,12 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Backed
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -47,7 +52,11 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Backed
      * @return bool|null
     */
     public function getAllowAutoFilter(): ?bool {
-        return $this->getBackingStore()->get('allowAutoFilter');
+        $val = $this->getBackingStore()->get('allowAutoFilter');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowAutoFilter'");
     }
 
     /**
@@ -55,7 +64,11 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Backed
      * @return bool|null
     */
     public function getAllowDeleteColumns(): ?bool {
-        return $this->getBackingStore()->get('allowDeleteColumns');
+        $val = $this->getBackingStore()->get('allowDeleteColumns');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowDeleteColumns'");
     }
 
     /**
@@ -63,7 +76,11 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Backed
      * @return bool|null
     */
     public function getAllowDeleteRows(): ?bool {
-        return $this->getBackingStore()->get('allowDeleteRows');
+        $val = $this->getBackingStore()->get('allowDeleteRows');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowDeleteRows'");
     }
 
     /**
@@ -71,7 +88,11 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Backed
      * @return bool|null
     */
     public function getAllowFormatCells(): ?bool {
-        return $this->getBackingStore()->get('allowFormatCells');
+        $val = $this->getBackingStore()->get('allowFormatCells');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowFormatCells'");
     }
 
     /**
@@ -79,7 +100,11 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Backed
      * @return bool|null
     */
     public function getAllowFormatColumns(): ?bool {
-        return $this->getBackingStore()->get('allowFormatColumns');
+        $val = $this->getBackingStore()->get('allowFormatColumns');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowFormatColumns'");
     }
 
     /**
@@ -87,7 +112,11 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Backed
      * @return bool|null
     */
     public function getAllowFormatRows(): ?bool {
-        return $this->getBackingStore()->get('allowFormatRows');
+        $val = $this->getBackingStore()->get('allowFormatRows');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowFormatRows'");
     }
 
     /**
@@ -95,7 +124,11 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Backed
      * @return bool|null
     */
     public function getAllowInsertColumns(): ?bool {
-        return $this->getBackingStore()->get('allowInsertColumns');
+        $val = $this->getBackingStore()->get('allowInsertColumns');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowInsertColumns'");
     }
 
     /**
@@ -103,7 +136,11 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Backed
      * @return bool|null
     */
     public function getAllowInsertHyperlinks(): ?bool {
-        return $this->getBackingStore()->get('allowInsertHyperlinks');
+        $val = $this->getBackingStore()->get('allowInsertHyperlinks');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowInsertHyperlinks'");
     }
 
     /**
@@ -111,7 +148,11 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Backed
      * @return bool|null
     */
     public function getAllowInsertRows(): ?bool {
-        return $this->getBackingStore()->get('allowInsertRows');
+        $val = $this->getBackingStore()->get('allowInsertRows');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowInsertRows'");
     }
 
     /**
@@ -119,7 +160,11 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Backed
      * @return bool|null
     */
     public function getAllowPivotTables(): ?bool {
-        return $this->getBackingStore()->get('allowPivotTables');
+        $val = $this->getBackingStore()->get('allowPivotTables');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowPivotTables'");
     }
 
     /**
@@ -127,7 +172,11 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Backed
      * @return bool|null
     */
     public function getAllowSort(): ?bool {
-        return $this->getBackingStore()->get('allowSort');
+        $val = $this->getBackingStore()->get('allowSort');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowSort'");
     }
 
     /**
@@ -140,7 +189,7 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Backed
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -165,7 +214,11 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Backed
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**

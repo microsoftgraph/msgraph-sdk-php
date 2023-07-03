@@ -30,12 +30,16 @@ class ChatMembersNotificationRecipient extends TeamworkNotificationRecipient imp
      * @return string|null
     */
     public function getChatId(): ?string {
-        return $this->getBackingStore()->get('chatId');
+        $val = $this->getBackingStore()->get('chatId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'chatId'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;

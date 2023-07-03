@@ -29,7 +29,11 @@ class UnifiedRbacResourceAction extends Entity implements Parsable
      * @return string|null
     */
     public function getActionVerb(): ?string {
-        return $this->getBackingStore()->get('actionVerb');
+        $val = $this->getBackingStore()->get('actionVerb');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'actionVerb'");
     }
 
     /**
@@ -37,7 +41,11 @@ class UnifiedRbacResourceAction extends Entity implements Parsable
      * @return string|null
     */
     public function getAuthenticationContextId(): ?string {
-        return $this->getBackingStore()->get('authenticationContextId');
+        $val = $this->getBackingStore()->get('authenticationContextId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'authenticationContextId'");
     }
 
     /**
@@ -45,12 +53,16 @@ class UnifiedRbacResourceAction extends Entity implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->getBackingStore()->get('description');
+        $val = $this->getBackingStore()->get('description');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'description'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -69,7 +81,11 @@ class UnifiedRbacResourceAction extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsAuthenticationContextSettable(): ?bool {
-        return $this->getBackingStore()->get('isAuthenticationContextSettable');
+        $val = $this->getBackingStore()->get('isAuthenticationContextSettable');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isAuthenticationContextSettable'");
     }
 
     /**
@@ -77,7 +93,11 @@ class UnifiedRbacResourceAction extends Entity implements Parsable
      * @return string|null
     */
     public function getName(): ?string {
-        return $this->getBackingStore()->get('name');
+        $val = $this->getBackingStore()->get('name');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'name'");
     }
 
     /**
@@ -85,7 +105,11 @@ class UnifiedRbacResourceAction extends Entity implements Parsable
      * @return string|null
     */
     public function getResourceScopeId(): ?string {
-        return $this->getBackingStore()->get('resourceScopeId');
+        $val = $this->getBackingStore()->get('resourceScopeId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resourceScopeId'");
     }
 
     /**

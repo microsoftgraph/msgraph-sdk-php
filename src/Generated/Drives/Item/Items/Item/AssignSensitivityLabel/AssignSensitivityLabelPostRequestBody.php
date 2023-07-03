@@ -40,7 +40,12 @@ class AssignSensitivityLabelPostRequestBody implements AdditionalDataHolder, Bac
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -48,7 +53,11 @@ class AssignSensitivityLabelPostRequestBody implements AdditionalDataHolder, Bac
      * @return SensitivityLabelAssignmentMethod|null
     */
     public function getAssignmentMethod(): ?SensitivityLabelAssignmentMethod {
-        return $this->getBackingStore()->get('assignmentMethod');
+        $val = $this->getBackingStore()->get('assignmentMethod');
+        if (is_null($val) || $val instanceof SensitivityLabelAssignmentMethod) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'assignmentMethod'");
     }
 
     /**
@@ -61,7 +70,7 @@ class AssignSensitivityLabelPostRequestBody implements AdditionalDataHolder, Bac
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -77,7 +86,11 @@ class AssignSensitivityLabelPostRequestBody implements AdditionalDataHolder, Bac
      * @return string|null
     */
     public function getJustificationText(): ?string {
-        return $this->getBackingStore()->get('justificationText');
+        $val = $this->getBackingStore()->get('justificationText');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'justificationText'");
     }
 
     /**
@@ -85,7 +98,11 @@ class AssignSensitivityLabelPostRequestBody implements AdditionalDataHolder, Bac
      * @return string|null
     */
     public function getSensitivityLabelId(): ?string {
-        return $this->getBackingStore()->get('sensitivityLabelId');
+        $val = $this->getBackingStore()->get('sensitivityLabelId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sensitivityLabelId'");
     }
 
     /**

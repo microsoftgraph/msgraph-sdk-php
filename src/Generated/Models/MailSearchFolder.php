@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class MailSearchFolder extends MailFolder implements Parsable 
 {
@@ -27,7 +28,7 @@ class MailSearchFolder extends MailFolder implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -35,7 +36,14 @@ class MailSearchFolder extends MailFolder implements Parsable
             'filterQuery' => fn(ParseNode $n) => $o->setFilterQuery($n->getStringValue()),
             'includeNestedFolders' => fn(ParseNode $n) => $o->setIncludeNestedFolders($n->getBooleanValue()),
             'isSupported' => fn(ParseNode $n) => $o->setIsSupported($n->getBooleanValue()),
-            'sourceFolderIds' => fn(ParseNode $n) => $o->setSourceFolderIds($n->getCollectionOfPrimitiveValues()),
+            'sourceFolderIds' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setSourceFolderIds($val);
+            },
         ]);
     }
 
@@ -44,7 +52,11 @@ class MailSearchFolder extends MailFolder implements Parsable
      * @return string|null
     */
     public function getFilterQuery(): ?string {
-        return $this->getBackingStore()->get('filterQuery');
+        $val = $this->getBackingStore()->get('filterQuery');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'filterQuery'");
     }
 
     /**
@@ -52,7 +64,11 @@ class MailSearchFolder extends MailFolder implements Parsable
      * @return bool|null
     */
     public function getIncludeNestedFolders(): ?bool {
-        return $this->getBackingStore()->get('includeNestedFolders');
+        $val = $this->getBackingStore()->get('includeNestedFolders');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'includeNestedFolders'");
     }
 
     /**
@@ -60,7 +76,11 @@ class MailSearchFolder extends MailFolder implements Parsable
      * @return bool|null
     */
     public function getIsSupported(): ?bool {
-        return $this->getBackingStore()->get('isSupported');
+        $val = $this->getBackingStore()->get('isSupported');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isSupported'");
     }
 
     /**
@@ -68,7 +88,13 @@ class MailSearchFolder extends MailFolder implements Parsable
      * @return array<string>|null
     */
     public function getSourceFolderIds(): ?array {
-        return $this->getBackingStore()->get('sourceFolderIds');
+        $val = $this->getBackingStore()->get('sourceFolderIds');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sourceFolderIds'");
     }
 
     /**

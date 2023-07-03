@@ -27,7 +27,7 @@ class EducationAssignmentPointsGrade extends EducationAssignmentGrade implements
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -41,7 +41,11 @@ class EducationAssignmentPointsGrade extends EducationAssignmentGrade implements
      * @return float|null
     */
     public function getPoints(): ?float {
-        return $this->getBackingStore()->get('points');
+        $val = $this->getBackingStore()->get('points');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'points'");
     }
 
     /**

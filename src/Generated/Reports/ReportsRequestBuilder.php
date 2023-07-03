@@ -8,6 +8,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\ReportRoot;
+use Microsoft\Graph\Generated\Reports\AuthenticationMethods\AuthenticationMethodsRequestBuilder;
 use Microsoft\Graph\Generated\Reports\DailyPrintUsageByPrinter\DailyPrintUsageByPrinterRequestBuilder;
 use Microsoft\Graph\Generated\Reports\DailyPrintUsageByUser\DailyPrintUsageByUserRequestBuilder;
 use Microsoft\Graph\Generated\Reports\DeviceConfigurationDeviceActivity\DeviceConfigurationDeviceActivityRequestBuilder;
@@ -125,6 +126,13 @@ use Microsoft\Kiota\Abstractions\Types\Date;
 */
 class ReportsRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to manage the authenticationMethods property of the microsoft.graph.reportRoot entity.
+    */
+    public function authenticationMethods(): AuthenticationMethodsRequestBuilder {
+        return new AuthenticationMethodsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Provides operations to manage the dailyPrintUsageByPrinter property of the microsoft.graph.reportRoot entity.
     */

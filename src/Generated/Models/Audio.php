@@ -39,7 +39,12 @@ class Audio implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -47,7 +52,11 @@ class Audio implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getAlbum(): ?string {
-        return $this->getBackingStore()->get('album');
+        $val = $this->getBackingStore()->get('album');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'album'");
     }
 
     /**
@@ -55,7 +64,11 @@ class Audio implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getAlbumArtist(): ?string {
-        return $this->getBackingStore()->get('albumArtist');
+        $val = $this->getBackingStore()->get('albumArtist');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'albumArtist'");
     }
 
     /**
@@ -63,7 +76,11 @@ class Audio implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getArtist(): ?string {
-        return $this->getBackingStore()->get('artist');
+        $val = $this->getBackingStore()->get('artist');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'artist'");
     }
 
     /**
@@ -79,7 +96,11 @@ class Audio implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getBitrate(): ?int {
-        return $this->getBackingStore()->get('bitrate');
+        $val = $this->getBackingStore()->get('bitrate');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'bitrate'");
     }
 
     /**
@@ -87,7 +108,11 @@ class Audio implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getComposers(): ?string {
-        return $this->getBackingStore()->get('composers');
+        $val = $this->getBackingStore()->get('composers');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'composers'");
     }
 
     /**
@@ -95,7 +120,11 @@ class Audio implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getCopyright(): ?string {
-        return $this->getBackingStore()->get('copyright');
+        $val = $this->getBackingStore()->get('copyright');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'copyright'");
     }
 
     /**
@@ -103,7 +132,11 @@ class Audio implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getDisc(): ?int {
-        return $this->getBackingStore()->get('disc');
+        $val = $this->getBackingStore()->get('disc');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'disc'");
     }
 
     /**
@@ -111,7 +144,11 @@ class Audio implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getDiscCount(): ?int {
-        return $this->getBackingStore()->get('discCount');
+        $val = $this->getBackingStore()->get('discCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'discCount'");
     }
 
     /**
@@ -119,12 +156,16 @@ class Audio implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getDuration(): ?int {
-        return $this->getBackingStore()->get('duration');
+        $val = $this->getBackingStore()->get('duration');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'duration'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -154,7 +195,11 @@ class Audio implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getGenre(): ?string {
-        return $this->getBackingStore()->get('genre');
+        $val = $this->getBackingStore()->get('genre');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'genre'");
     }
 
     /**
@@ -162,7 +207,11 @@ class Audio implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getHasDrm(): ?bool {
-        return $this->getBackingStore()->get('hasDrm');
+        $val = $this->getBackingStore()->get('hasDrm');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'hasDrm'");
     }
 
     /**
@@ -170,7 +219,11 @@ class Audio implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getIsVariableBitrate(): ?bool {
-        return $this->getBackingStore()->get('isVariableBitrate');
+        $val = $this->getBackingStore()->get('isVariableBitrate');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isVariableBitrate'");
     }
 
     /**
@@ -178,7 +231,11 @@ class Audio implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -186,7 +243,11 @@ class Audio implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getTitle(): ?string {
-        return $this->getBackingStore()->get('title');
+        $val = $this->getBackingStore()->get('title');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'title'");
     }
 
     /**
@@ -194,7 +255,11 @@ class Audio implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getTrack(): ?int {
-        return $this->getBackingStore()->get('track');
+        $val = $this->getBackingStore()->get('track');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'track'");
     }
 
     /**
@@ -202,7 +267,11 @@ class Audio implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getTrackCount(): ?int {
-        return $this->getBackingStore()->get('trackCount');
+        $val = $this->getBackingStore()->get('trackCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'trackCount'");
     }
 
     /**
@@ -210,7 +279,11 @@ class Audio implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getYear(): ?int {
-        return $this->getBackingStore()->get('year');
+        $val = $this->getBackingStore()->get('year');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'year'");
     }
 
     /**

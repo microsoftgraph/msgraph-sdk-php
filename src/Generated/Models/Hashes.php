@@ -39,7 +39,12 @@ class Hashes implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -55,12 +60,16 @@ class Hashes implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getCrc32Hash(): ?string {
-        return $this->getBackingStore()->get('crc32Hash');
+        $val = $this->getBackingStore()->get('crc32Hash');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'crc32Hash'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -78,7 +87,11 @@ class Hashes implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -86,7 +99,11 @@ class Hashes implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getQuickXorHash(): ?string {
-        return $this->getBackingStore()->get('quickXorHash');
+        $val = $this->getBackingStore()->get('quickXorHash');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'quickXorHash'");
     }
 
     /**
@@ -94,7 +111,11 @@ class Hashes implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getSha1Hash(): ?string {
-        return $this->getBackingStore()->get('sha1Hash');
+        $val = $this->getBackingStore()->get('sha1Hash');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sha1Hash'");
     }
 
     /**
@@ -102,7 +123,11 @@ class Hashes implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getSha256Hash(): ?string {
-        return $this->getBackingStore()->get('sha256Hash');
+        $val = $this->getBackingStore()->get('sha256Hash');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sha256Hash'");
     }
 
     /**

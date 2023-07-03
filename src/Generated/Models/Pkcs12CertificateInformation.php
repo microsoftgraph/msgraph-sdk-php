@@ -39,7 +39,12 @@ class Pkcs12CertificateInformation implements AdditionalDataHolder, BackedModel,
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -52,7 +57,7 @@ class Pkcs12CertificateInformation implements AdditionalDataHolder, BackedModel,
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -70,7 +75,11 @@ class Pkcs12CertificateInformation implements AdditionalDataHolder, BackedModel,
      * @return bool|null
     */
     public function getIsActive(): ?bool {
-        return $this->getBackingStore()->get('isActive');
+        $val = $this->getBackingStore()->get('isActive');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isActive'");
     }
 
     /**
@@ -78,7 +87,11 @@ class Pkcs12CertificateInformation implements AdditionalDataHolder, BackedModel,
      * @return int|null
     */
     public function getNotAfter(): ?int {
-        return $this->getBackingStore()->get('notAfter');
+        $val = $this->getBackingStore()->get('notAfter');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'notAfter'");
     }
 
     /**
@@ -86,7 +99,11 @@ class Pkcs12CertificateInformation implements AdditionalDataHolder, BackedModel,
      * @return int|null
     */
     public function getNotBefore(): ?int {
-        return $this->getBackingStore()->get('notBefore');
+        $val = $this->getBackingStore()->get('notBefore');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'notBefore'");
     }
 
     /**
@@ -94,7 +111,11 @@ class Pkcs12CertificateInformation implements AdditionalDataHolder, BackedModel,
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -102,7 +123,11 @@ class Pkcs12CertificateInformation implements AdditionalDataHolder, BackedModel,
      * @return string|null
     */
     public function getThumbprint(): ?string {
-        return $this->getBackingStore()->get('thumbprint');
+        $val = $this->getBackingStore()->get('thumbprint');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'thumbprint'");
     }
 
     /**

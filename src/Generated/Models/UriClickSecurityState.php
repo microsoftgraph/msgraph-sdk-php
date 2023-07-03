@@ -40,7 +40,12 @@ class UriClickSecurityState implements AdditionalDataHolder, BackedModel, Parsab
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -56,7 +61,11 @@ class UriClickSecurityState implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getClickAction(): ?string {
-        return $this->getBackingStore()->get('clickAction');
+        $val = $this->getBackingStore()->get('clickAction');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'clickAction'");
     }
 
     /**
@@ -64,12 +73,16 @@ class UriClickSecurityState implements AdditionalDataHolder, BackedModel, Parsab
      * @return DateTime|null
     */
     public function getClickDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('clickDateTime');
+        $val = $this->getBackingStore()->get('clickDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'clickDateTime'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -89,7 +102,11 @@ class UriClickSecurityState implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getId(): ?string {
-        return $this->getBackingStore()->get('id');
+        $val = $this->getBackingStore()->get('id');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'id'");
     }
 
     /**
@@ -97,7 +114,11 @@ class UriClickSecurityState implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -105,7 +126,11 @@ class UriClickSecurityState implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getSourceId(): ?string {
-        return $this->getBackingStore()->get('sourceId');
+        $val = $this->getBackingStore()->get('sourceId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sourceId'");
     }
 
     /**
@@ -113,7 +138,11 @@ class UriClickSecurityState implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getUriDomain(): ?string {
-        return $this->getBackingStore()->get('uriDomain');
+        $val = $this->getBackingStore()->get('uriDomain');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'uriDomain'");
     }
 
     /**
@@ -121,7 +150,11 @@ class UriClickSecurityState implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getVerdict(): ?string {
-        return $this->getBackingStore()->get('verdict');
+        $val = $this->getBackingStore()->get('verdict');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'verdict'");
     }
 
     /**

@@ -10,6 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class SynchronizationStatus implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -40,7 +41,12 @@ class SynchronizationStatus implements AdditionalDataHolder, BackedModel, Parsab
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -56,7 +62,11 @@ class SynchronizationStatus implements AdditionalDataHolder, BackedModel, Parsab
      * @return SynchronizationStatusCode|null
     */
     public function getCode(): ?SynchronizationStatusCode {
-        return $this->getBackingStore()->get('code');
+        $val = $this->getBackingStore()->get('code');
+        if (is_null($val) || $val instanceof SynchronizationStatusCode) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'code'");
     }
 
     /**
@@ -64,7 +74,11 @@ class SynchronizationStatus implements AdditionalDataHolder, BackedModel, Parsab
      * @return int|null
     */
     public function getCountSuccessiveCompleteFailures(): ?int {
-        return $this->getBackingStore()->get('countSuccessiveCompleteFailures');
+        $val = $this->getBackingStore()->get('countSuccessiveCompleteFailures');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'countSuccessiveCompleteFailures'");
     }
 
     /**
@@ -72,12 +86,16 @@ class SynchronizationStatus implements AdditionalDataHolder, BackedModel, Parsab
      * @return bool|null
     */
     public function getEscrowsPruned(): ?bool {
-        return $this->getBackingStore()->get('escrowsPruned');
+        $val = $this->getBackingStore()->get('escrowsPruned');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'escrowsPruned'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -103,7 +121,11 @@ class SynchronizationStatus implements AdditionalDataHolder, BackedModel, Parsab
      * @return SynchronizationTaskExecution|null
     */
     public function getLastExecution(): ?SynchronizationTaskExecution {
-        return $this->getBackingStore()->get('lastExecution');
+        $val = $this->getBackingStore()->get('lastExecution');
+        if (is_null($val) || $val instanceof SynchronizationTaskExecution) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastExecution'");
     }
 
     /**
@@ -111,7 +133,11 @@ class SynchronizationStatus implements AdditionalDataHolder, BackedModel, Parsab
      * @return SynchronizationTaskExecution|null
     */
     public function getLastSuccessfulExecution(): ?SynchronizationTaskExecution {
-        return $this->getBackingStore()->get('lastSuccessfulExecution');
+        $val = $this->getBackingStore()->get('lastSuccessfulExecution');
+        if (is_null($val) || $val instanceof SynchronizationTaskExecution) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastSuccessfulExecution'");
     }
 
     /**
@@ -119,7 +145,11 @@ class SynchronizationStatus implements AdditionalDataHolder, BackedModel, Parsab
      * @return SynchronizationTaskExecution|null
     */
     public function getLastSuccessfulExecutionWithExports(): ?SynchronizationTaskExecution {
-        return $this->getBackingStore()->get('lastSuccessfulExecutionWithExports');
+        $val = $this->getBackingStore()->get('lastSuccessfulExecutionWithExports');
+        if (is_null($val) || $val instanceof SynchronizationTaskExecution) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastSuccessfulExecutionWithExports'");
     }
 
     /**
@@ -127,7 +157,11 @@ class SynchronizationStatus implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -135,7 +169,13 @@ class SynchronizationStatus implements AdditionalDataHolder, BackedModel, Parsab
      * @return array<SynchronizationProgress>|null
     */
     public function getProgress(): ?array {
-        return $this->getBackingStore()->get('progress');
+        $val = $this->getBackingStore()->get('progress');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, SynchronizationProgress::class);
+            /** @var array<SynchronizationProgress>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'progress'");
     }
 
     /**
@@ -143,7 +183,11 @@ class SynchronizationStatus implements AdditionalDataHolder, BackedModel, Parsab
      * @return SynchronizationQuarantine|null
     */
     public function getQuarantine(): ?SynchronizationQuarantine {
-        return $this->getBackingStore()->get('quarantine');
+        $val = $this->getBackingStore()->get('quarantine');
+        if (is_null($val) || $val instanceof SynchronizationQuarantine) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'quarantine'");
     }
 
     /**
@@ -151,7 +195,11 @@ class SynchronizationStatus implements AdditionalDataHolder, BackedModel, Parsab
      * @return DateTime|null
     */
     public function getSteadyStateFirstAchievedTime(): ?DateTime {
-        return $this->getBackingStore()->get('steadyStateFirstAchievedTime');
+        $val = $this->getBackingStore()->get('steadyStateFirstAchievedTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'steadyStateFirstAchievedTime'");
     }
 
     /**
@@ -159,7 +207,11 @@ class SynchronizationStatus implements AdditionalDataHolder, BackedModel, Parsab
      * @return DateTime|null
     */
     public function getSteadyStateLastAchievedTime(): ?DateTime {
-        return $this->getBackingStore()->get('steadyStateLastAchievedTime');
+        $val = $this->getBackingStore()->get('steadyStateLastAchievedTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'steadyStateLastAchievedTime'");
     }
 
     /**
@@ -167,7 +219,13 @@ class SynchronizationStatus implements AdditionalDataHolder, BackedModel, Parsab
      * @return array<StringKeyLongValuePair>|null
     */
     public function getSynchronizedEntryCountByType(): ?array {
-        return $this->getBackingStore()->get('synchronizedEntryCountByType');
+        $val = $this->getBackingStore()->get('synchronizedEntryCountByType');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, StringKeyLongValuePair::class);
+            /** @var array<StringKeyLongValuePair>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'synchronizedEntryCountByType'");
     }
 
     /**
@@ -175,7 +233,11 @@ class SynchronizationStatus implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getTroubleshootingUrl(): ?string {
-        return $this->getBackingStore()->get('troubleshootingUrl');
+        $val = $this->getBackingStore()->get('troubleshootingUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'troubleshootingUrl'");
     }
 
     /**

@@ -42,7 +42,12 @@ class Win32LobAppMsiInformation implements AdditionalDataHolder, BackedModel, Pa
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -55,7 +60,7 @@ class Win32LobAppMsiInformation implements AdditionalDataHolder, BackedModel, Pa
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -76,7 +81,11 @@ class Win32LobAppMsiInformation implements AdditionalDataHolder, BackedModel, Pa
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -84,7 +93,11 @@ class Win32LobAppMsiInformation implements AdditionalDataHolder, BackedModel, Pa
      * @return Win32LobAppMsiPackageType|null
     */
     public function getPackageType(): ?Win32LobAppMsiPackageType {
-        return $this->getBackingStore()->get('packageType');
+        $val = $this->getBackingStore()->get('packageType');
+        if (is_null($val) || $val instanceof Win32LobAppMsiPackageType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'packageType'");
     }
 
     /**
@@ -92,7 +105,11 @@ class Win32LobAppMsiInformation implements AdditionalDataHolder, BackedModel, Pa
      * @return string|null
     */
     public function getProductCode(): ?string {
-        return $this->getBackingStore()->get('productCode');
+        $val = $this->getBackingStore()->get('productCode');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'productCode'");
     }
 
     /**
@@ -100,7 +117,11 @@ class Win32LobAppMsiInformation implements AdditionalDataHolder, BackedModel, Pa
      * @return string|null
     */
     public function getProductName(): ?string {
-        return $this->getBackingStore()->get('productName');
+        $val = $this->getBackingStore()->get('productName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'productName'");
     }
 
     /**
@@ -108,7 +129,11 @@ class Win32LobAppMsiInformation implements AdditionalDataHolder, BackedModel, Pa
      * @return string|null
     */
     public function getProductVersion(): ?string {
-        return $this->getBackingStore()->get('productVersion');
+        $val = $this->getBackingStore()->get('productVersion');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'productVersion'");
     }
 
     /**
@@ -116,7 +141,11 @@ class Win32LobAppMsiInformation implements AdditionalDataHolder, BackedModel, Pa
      * @return string|null
     */
     public function getPublisher(): ?string {
-        return $this->getBackingStore()->get('publisher');
+        $val = $this->getBackingStore()->get('publisher');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'publisher'");
     }
 
     /**
@@ -124,7 +153,11 @@ class Win32LobAppMsiInformation implements AdditionalDataHolder, BackedModel, Pa
      * @return bool|null
     */
     public function getRequiresReboot(): ?bool {
-        return $this->getBackingStore()->get('requiresReboot');
+        $val = $this->getBackingStore()->get('requiresReboot');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'requiresReboot'");
     }
 
     /**
@@ -132,7 +165,11 @@ class Win32LobAppMsiInformation implements AdditionalDataHolder, BackedModel, Pa
      * @return string|null
     */
     public function getUpgradeCode(): ?string {
-        return $this->getBackingStore()->get('upgradeCode');
+        $val = $this->getBackingStore()->get('upgradeCode');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'upgradeCode'");
     }
 
     /**

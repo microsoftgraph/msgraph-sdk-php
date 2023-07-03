@@ -13,6 +13,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class SendActivityNotificationToRecipientsPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -43,7 +44,11 @@ class SendActivityNotificationToRecipientsPostRequestBody implements AdditionalD
      * @return string|null
     */
     public function getActivityType(): ?string {
-        return $this->getBackingStore()->get('activityType');
+        $val = $this->getBackingStore()->get('activityType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'activityType'");
     }
 
     /**
@@ -51,7 +56,12 @@ class SendActivityNotificationToRecipientsPostRequestBody implements AdditionalD
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -67,12 +77,16 @@ class SendActivityNotificationToRecipientsPostRequestBody implements AdditionalD
      * @return int|null
     */
     public function getChainId(): ?int {
-        return $this->getBackingStore()->get('chainId');
+        $val = $this->getBackingStore()->get('chainId');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'chainId'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -92,7 +106,11 @@ class SendActivityNotificationToRecipientsPostRequestBody implements AdditionalD
      * @return ItemBody|null
     */
     public function getPreviewText(): ?ItemBody {
-        return $this->getBackingStore()->get('previewText');
+        $val = $this->getBackingStore()->get('previewText');
+        if (is_null($val) || $val instanceof ItemBody) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'previewText'");
     }
 
     /**
@@ -100,7 +118,13 @@ class SendActivityNotificationToRecipientsPostRequestBody implements AdditionalD
      * @return array<TeamworkNotificationRecipient>|null
     */
     public function getRecipients(): ?array {
-        return $this->getBackingStore()->get('recipients');
+        $val = $this->getBackingStore()->get('recipients');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, TeamworkNotificationRecipient::class);
+            /** @var array<TeamworkNotificationRecipient>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'recipients'");
     }
 
     /**
@@ -108,7 +132,11 @@ class SendActivityNotificationToRecipientsPostRequestBody implements AdditionalD
      * @return string|null
     */
     public function getTeamsAppId(): ?string {
-        return $this->getBackingStore()->get('teamsAppId');
+        $val = $this->getBackingStore()->get('teamsAppId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'teamsAppId'");
     }
 
     /**
@@ -116,7 +144,13 @@ class SendActivityNotificationToRecipientsPostRequestBody implements AdditionalD
      * @return array<KeyValuePair>|null
     */
     public function getTemplateParameters(): ?array {
-        return $this->getBackingStore()->get('templateParameters');
+        $val = $this->getBackingStore()->get('templateParameters');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, KeyValuePair::class);
+            /** @var array<KeyValuePair>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'templateParameters'");
     }
 
     /**
@@ -124,7 +158,11 @@ class SendActivityNotificationToRecipientsPostRequestBody implements AdditionalD
      * @return TeamworkActivityTopic|null
     */
     public function getTopic(): ?TeamworkActivityTopic {
-        return $this->getBackingStore()->get('topic');
+        $val = $this->getBackingStore()->get('topic');
+        if (is_null($val) || $val instanceof TeamworkActivityTopic) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'topic'");
     }
 
     /**

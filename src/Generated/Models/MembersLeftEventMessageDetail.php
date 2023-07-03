@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class MembersLeftEventMessageDetail extends EventMessageDetail implements Parsable 
 {
@@ -27,7 +28,7 @@ class MembersLeftEventMessageDetail extends EventMessageDetail implements Parsab
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -42,7 +43,11 @@ class MembersLeftEventMessageDetail extends EventMessageDetail implements Parsab
      * @return IdentitySet|null
     */
     public function getInitiator(): ?IdentitySet {
-        return $this->getBackingStore()->get('initiator');
+        $val = $this->getBackingStore()->get('initiator');
+        if (is_null($val) || $val instanceof IdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'initiator'");
     }
 
     /**
@@ -50,7 +55,13 @@ class MembersLeftEventMessageDetail extends EventMessageDetail implements Parsab
      * @return array<TeamworkUserIdentity>|null
     */
     public function getMembers(): ?array {
-        return $this->getBackingStore()->get('members');
+        $val = $this->getBackingStore()->get('members');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, TeamworkUserIdentity::class);
+            /** @var array<TeamworkUserIdentity>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'members'");
     }
 
     /**

@@ -7,6 +7,7 @@ use Microsoft\Graph\Generated\Models\Entity;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class Session extends Entity implements Parsable 
 {
@@ -31,7 +32,11 @@ class Session extends Entity implements Parsable
      * @return Endpoint|null
     */
     public function getCallee(): ?Endpoint {
-        return $this->getBackingStore()->get('callee');
+        $val = $this->getBackingStore()->get('callee');
+        if (is_null($val) || $val instanceof Endpoint) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'callee'");
     }
 
     /**
@@ -39,7 +44,11 @@ class Session extends Entity implements Parsable
      * @return Endpoint|null
     */
     public function getCaller(): ?Endpoint {
-        return $this->getBackingStore()->get('caller');
+        $val = $this->getBackingStore()->get('caller');
+        if (is_null($val) || $val instanceof Endpoint) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'caller'");
     }
 
     /**
@@ -47,7 +56,11 @@ class Session extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getEndDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('endDateTime');
+        $val = $this->getBackingStore()->get('endDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'endDateTime'");
     }
 
     /**
@@ -55,12 +68,16 @@ class Session extends Entity implements Parsable
      * @return FailureInfo|null
     */
     public function getFailureInfo(): ?FailureInfo {
-        return $this->getBackingStore()->get('failureInfo');
+        $val = $this->getBackingStore()->get('failureInfo');
+        if (is_null($val) || $val instanceof FailureInfo) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'failureInfo'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -81,7 +98,11 @@ class Session extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsTest(): ?bool {
-        return $this->getBackingStore()->get('isTest');
+        $val = $this->getBackingStore()->get('isTest');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isTest'");
     }
 
     /**
@@ -89,7 +110,13 @@ class Session extends Entity implements Parsable
      * @return array<Modality>|null
     */
     public function getModalities(): ?array {
-        return $this->getBackingStore()->get('modalities');
+        $val = $this->getBackingStore()->get('modalities');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Modality::class);
+            /** @var array<Modality>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'modalities'");
     }
 
     /**
@@ -97,7 +124,13 @@ class Session extends Entity implements Parsable
      * @return array<Segment>|null
     */
     public function getSegments(): ?array {
-        return $this->getBackingStore()->get('segments');
+        $val = $this->getBackingStore()->get('segments');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Segment::class);
+            /** @var array<Segment>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'segments'");
     }
 
     /**
@@ -105,7 +138,11 @@ class Session extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getStartDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('startDateTime');
+        $val = $this->getBackingStore()->get('startDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'startDateTime'");
     }
 
     /**

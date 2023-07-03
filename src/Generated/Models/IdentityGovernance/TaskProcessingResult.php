@@ -32,7 +32,11 @@ class TaskProcessingResult extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCompletedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('completedDateTime');
+        $val = $this->getBackingStore()->get('completedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'completedDateTime'");
     }
 
     /**
@@ -40,7 +44,11 @@ class TaskProcessingResult extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('createdDateTime');
+        $val = $this->getBackingStore()->get('createdDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdDateTime'");
     }
 
     /**
@@ -48,12 +56,16 @@ class TaskProcessingResult extends Entity implements Parsable
      * @return string|null
     */
     public function getFailureReason(): ?string {
-        return $this->getBackingStore()->get('failureReason');
+        $val = $this->getBackingStore()->get('failureReason');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'failureReason'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -73,7 +85,11 @@ class TaskProcessingResult extends Entity implements Parsable
      * @return LifecycleWorkflowProcessingStatus|null
     */
     public function getProcessingStatus(): ?LifecycleWorkflowProcessingStatus {
-        return $this->getBackingStore()->get('processingStatus');
+        $val = $this->getBackingStore()->get('processingStatus');
+        if (is_null($val) || $val instanceof LifecycleWorkflowProcessingStatus) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'processingStatus'");
     }
 
     /**
@@ -81,7 +97,11 @@ class TaskProcessingResult extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getStartedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('startedDateTime');
+        $val = $this->getBackingStore()->get('startedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'startedDateTime'");
     }
 
     /**
@@ -89,7 +109,11 @@ class TaskProcessingResult extends Entity implements Parsable
      * @return User|null
     */
     public function getSubject(): ?User {
-        return $this->getBackingStore()->get('subject');
+        $val = $this->getBackingStore()->get('subject');
+        if (is_null($val) || $val instanceof User) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'subject'");
     }
 
     /**
@@ -97,7 +121,11 @@ class TaskProcessingResult extends Entity implements Parsable
      * @return Task|null
     */
     public function getTask(): ?Task {
-        return $this->getBackingStore()->get('task');
+        $val = $this->getBackingStore()->get('task');
+        if (is_null($val) || $val instanceof Task) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'task'");
     }
 
     /**

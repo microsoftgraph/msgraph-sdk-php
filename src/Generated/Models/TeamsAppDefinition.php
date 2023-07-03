@@ -26,11 +26,27 @@ class TeamsAppDefinition extends Entity implements Parsable
     }
 
     /**
+     * Gets the authorization property value. The authorization property
+     * @return TeamsAppAuthorization|null
+    */
+    public function getAuthorization(): ?TeamsAppAuthorization {
+        $val = $this->getBackingStore()->get('authorization');
+        if (is_null($val) || $val instanceof TeamsAppAuthorization) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'authorization'");
+    }
+
+    /**
      * Gets the bot property value. The details of the bot specified in the Teams app manifest.
      * @return TeamworkBot|null
     */
     public function getBot(): ?TeamworkBot {
-        return $this->getBackingStore()->get('bot');
+        $val = $this->getBackingStore()->get('bot');
+        if (is_null($val) || $val instanceof TeamworkBot) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'bot'");
     }
 
     /**
@@ -38,7 +54,11 @@ class TeamsAppDefinition extends Entity implements Parsable
      * @return IdentitySet|null
     */
     public function getCreatedBy(): ?IdentitySet {
-        return $this->getBackingStore()->get('createdBy');
+        $val = $this->getBackingStore()->get('createdBy');
+        if (is_null($val) || $val instanceof IdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdBy'");
     }
 
     /**
@@ -46,7 +66,11 @@ class TeamsAppDefinition extends Entity implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->getBackingStore()->get('description');
+        $val = $this->getBackingStore()->get('description');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'description'");
     }
 
     /**
@@ -54,16 +78,21 @@ class TeamsAppDefinition extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'authorization' => fn(ParseNode $n) => $o->setAuthorization($n->getObjectValue([TeamsAppAuthorization::class, 'createFromDiscriminatorValue'])),
             'bot' => fn(ParseNode $n) => $o->setBot($n->getObjectValue([TeamworkBot::class, 'createFromDiscriminatorValue'])),
             'createdBy' => fn(ParseNode $n) => $o->setCreatedBy($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
             'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
@@ -81,7 +110,11 @@ class TeamsAppDefinition extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('lastModifiedDateTime');
+        $val = $this->getBackingStore()->get('lastModifiedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastModifiedDateTime'");
     }
 
     /**
@@ -89,7 +122,11 @@ class TeamsAppDefinition extends Entity implements Parsable
      * @return TeamsAppPublishingState|null
     */
     public function getPublishingState(): ?TeamsAppPublishingState {
-        return $this->getBackingStore()->get('publishingState');
+        $val = $this->getBackingStore()->get('publishingState');
+        if (is_null($val) || $val instanceof TeamsAppPublishingState) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'publishingState'");
     }
 
     /**
@@ -97,7 +134,11 @@ class TeamsAppDefinition extends Entity implements Parsable
      * @return string|null
     */
     public function getShortDescription(): ?string {
-        return $this->getBackingStore()->get('shortDescription');
+        $val = $this->getBackingStore()->get('shortDescription');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'shortDescription'");
     }
 
     /**
@@ -105,7 +146,11 @@ class TeamsAppDefinition extends Entity implements Parsable
      * @return string|null
     */
     public function getTeamsAppId(): ?string {
-        return $this->getBackingStore()->get('teamsAppId');
+        $val = $this->getBackingStore()->get('teamsAppId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'teamsAppId'");
     }
 
     /**
@@ -113,7 +158,11 @@ class TeamsAppDefinition extends Entity implements Parsable
      * @return string|null
     */
     public function getVersion(): ?string {
-        return $this->getBackingStore()->get('version');
+        $val = $this->getBackingStore()->get('version');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'version'");
     }
 
     /**
@@ -122,6 +171,7 @@ class TeamsAppDefinition extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeObjectValue('authorization', $this->getAuthorization());
         $writer->writeObjectValue('bot', $this->getBot());
         $writer->writeObjectValue('createdBy', $this->getCreatedBy());
         $writer->writeStringValue('description', $this->getDescription());
@@ -131,6 +181,14 @@ class TeamsAppDefinition extends Entity implements Parsable
         $writer->writeStringValue('shortDescription', $this->getShortDescription());
         $writer->writeStringValue('teamsAppId', $this->getTeamsAppId());
         $writer->writeStringValue('version', $this->getVersion());
+    }
+
+    /**
+     * Sets the authorization property value. The authorization property
+     * @param TeamsAppAuthorization|null $value Value to set for the authorization property.
+    */
+    public function setAuthorization(?TeamsAppAuthorization $value): void {
+        $this->getBackingStore()->set('authorization', $value);
     }
 
     /**

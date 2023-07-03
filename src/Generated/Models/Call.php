@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class Call extends Entity implements Parsable 
 {
@@ -29,7 +30,13 @@ class Call extends Entity implements Parsable
      * @return array<AudioRoutingGroup>|null
     */
     public function getAudioRoutingGroups(): ?array {
-        return $this->getBackingStore()->get('audioRoutingGroups');
+        $val = $this->getBackingStore()->get('audioRoutingGroups');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AudioRoutingGroup::class);
+            /** @var array<AudioRoutingGroup>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'audioRoutingGroups'");
     }
 
     /**
@@ -37,7 +44,11 @@ class Call extends Entity implements Parsable
      * @return string|null
     */
     public function getCallbackUri(): ?string {
-        return $this->getBackingStore()->get('callbackUri');
+        $val = $this->getBackingStore()->get('callbackUri');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'callbackUri'");
     }
 
     /**
@@ -45,7 +56,11 @@ class Call extends Entity implements Parsable
      * @return string|null
     */
     public function getCallChainId(): ?string {
-        return $this->getBackingStore()->get('callChainId');
+        $val = $this->getBackingStore()->get('callChainId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'callChainId'");
     }
 
     /**
@@ -53,7 +68,11 @@ class Call extends Entity implements Parsable
      * @return CallOptions|null
     */
     public function getCallOptions(): ?CallOptions {
-        return $this->getBackingStore()->get('callOptions');
+        $val = $this->getBackingStore()->get('callOptions');
+        if (is_null($val) || $val instanceof CallOptions) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'callOptions'");
     }
 
     /**
@@ -61,7 +80,13 @@ class Call extends Entity implements Parsable
      * @return array<CallRoute>|null
     */
     public function getCallRoutes(): ?array {
-        return $this->getBackingStore()->get('callRoutes');
+        $val = $this->getBackingStore()->get('callRoutes');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, CallRoute::class);
+            /** @var array<CallRoute>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'callRoutes'");
     }
 
     /**
@@ -69,7 +94,11 @@ class Call extends Entity implements Parsable
      * @return ChatInfo|null
     */
     public function getChatInfo(): ?ChatInfo {
-        return $this->getBackingStore()->get('chatInfo');
+        $val = $this->getBackingStore()->get('chatInfo');
+        if (is_null($val) || $val instanceof ChatInfo) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'chatInfo'");
     }
 
     /**
@@ -77,7 +106,13 @@ class Call extends Entity implements Parsable
      * @return array<ContentSharingSession>|null
     */
     public function getContentSharingSessions(): ?array {
-        return $this->getBackingStore()->get('contentSharingSessions');
+        $val = $this->getBackingStore()->get('contentSharingSessions');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ContentSharingSession::class);
+            /** @var array<ContentSharingSession>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'contentSharingSessions'");
     }
 
     /**
@@ -85,12 +120,16 @@ class Call extends Entity implements Parsable
      * @return CallDirection|null
     */
     public function getDirection(): ?CallDirection {
-        return $this->getBackingStore()->get('direction');
+        $val = $this->getBackingStore()->get('direction');
+        if (is_null($val) || $val instanceof CallDirection) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'direction'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -127,7 +166,11 @@ class Call extends Entity implements Parsable
      * @return IncomingContext|null
     */
     public function getIncomingContext(): ?IncomingContext {
-        return $this->getBackingStore()->get('incomingContext');
+        $val = $this->getBackingStore()->get('incomingContext');
+        if (is_null($val) || $val instanceof IncomingContext) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'incomingContext'");
     }
 
     /**
@@ -135,7 +178,11 @@ class Call extends Entity implements Parsable
      * @return MediaConfig|null
     */
     public function getMediaConfig(): ?MediaConfig {
-        return $this->getBackingStore()->get('mediaConfig');
+        $val = $this->getBackingStore()->get('mediaConfig');
+        if (is_null($val) || $val instanceof MediaConfig) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'mediaConfig'");
     }
 
     /**
@@ -143,7 +190,11 @@ class Call extends Entity implements Parsable
      * @return CallMediaState|null
     */
     public function getMediaState(): ?CallMediaState {
-        return $this->getBackingStore()->get('mediaState');
+        $val = $this->getBackingStore()->get('mediaState');
+        if (is_null($val) || $val instanceof CallMediaState) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'mediaState'");
     }
 
     /**
@@ -151,7 +202,11 @@ class Call extends Entity implements Parsable
      * @return MeetingInfo|null
     */
     public function getMeetingInfo(): ?MeetingInfo {
-        return $this->getBackingStore()->get('meetingInfo');
+        $val = $this->getBackingStore()->get('meetingInfo');
+        if (is_null($val) || $val instanceof MeetingInfo) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'meetingInfo'");
     }
 
     /**
@@ -159,7 +214,11 @@ class Call extends Entity implements Parsable
      * @return string|null
     */
     public function getMyParticipantId(): ?string {
-        return $this->getBackingStore()->get('myParticipantId');
+        $val = $this->getBackingStore()->get('myParticipantId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'myParticipantId'");
     }
 
     /**
@@ -167,7 +226,13 @@ class Call extends Entity implements Parsable
      * @return array<CommsOperation>|null
     */
     public function getOperations(): ?array {
-        return $this->getBackingStore()->get('operations');
+        $val = $this->getBackingStore()->get('operations');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, CommsOperation::class);
+            /** @var array<CommsOperation>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'operations'");
     }
 
     /**
@@ -175,7 +240,13 @@ class Call extends Entity implements Parsable
      * @return array<Participant>|null
     */
     public function getParticipants(): ?array {
-        return $this->getBackingStore()->get('participants');
+        $val = $this->getBackingStore()->get('participants');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Participant::class);
+            /** @var array<Participant>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'participants'");
     }
 
     /**
@@ -183,7 +254,13 @@ class Call extends Entity implements Parsable
      * @return array<Modality>|null
     */
     public function getRequestedModalities(): ?array {
-        return $this->getBackingStore()->get('requestedModalities');
+        $val = $this->getBackingStore()->get('requestedModalities');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Modality::class);
+            /** @var array<Modality>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'requestedModalities'");
     }
 
     /**
@@ -191,7 +268,11 @@ class Call extends Entity implements Parsable
      * @return ResultInfo|null
     */
     public function getResultInfo(): ?ResultInfo {
-        return $this->getBackingStore()->get('resultInfo');
+        $val = $this->getBackingStore()->get('resultInfo');
+        if (is_null($val) || $val instanceof ResultInfo) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resultInfo'");
     }
 
     /**
@@ -199,7 +280,11 @@ class Call extends Entity implements Parsable
      * @return ParticipantInfo|null
     */
     public function getSource(): ?ParticipantInfo {
-        return $this->getBackingStore()->get('source');
+        $val = $this->getBackingStore()->get('source');
+        if (is_null($val) || $val instanceof ParticipantInfo) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'source'");
     }
 
     /**
@@ -207,7 +292,11 @@ class Call extends Entity implements Parsable
      * @return CallState|null
     */
     public function getState(): ?CallState {
-        return $this->getBackingStore()->get('state');
+        $val = $this->getBackingStore()->get('state');
+        if (is_null($val) || $val instanceof CallState) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'state'");
     }
 
     /**
@@ -215,7 +304,11 @@ class Call extends Entity implements Parsable
      * @return string|null
     */
     public function getSubject(): ?string {
-        return $this->getBackingStore()->get('subject');
+        $val = $this->getBackingStore()->get('subject');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'subject'");
     }
 
     /**
@@ -223,7 +316,13 @@ class Call extends Entity implements Parsable
      * @return array<InvitationParticipantInfo>|null
     */
     public function getTargets(): ?array {
-        return $this->getBackingStore()->get('targets');
+        $val = $this->getBackingStore()->get('targets');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, InvitationParticipantInfo::class);
+            /** @var array<InvitationParticipantInfo>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'targets'");
     }
 
     /**
@@ -231,7 +330,11 @@ class Call extends Entity implements Parsable
      * @return string|null
     */
     public function getTenantId(): ?string {
-        return $this->getBackingStore()->get('tenantId');
+        $val = $this->getBackingStore()->get('tenantId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'tenantId'");
     }
 
     /**
@@ -239,7 +342,11 @@ class Call extends Entity implements Parsable
      * @return ToneInfo|null
     */
     public function getToneInfo(): ?ToneInfo {
-        return $this->getBackingStore()->get('toneInfo');
+        $val = $this->getBackingStore()->get('toneInfo');
+        if (is_null($val) || $val instanceof ToneInfo) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'toneInfo'");
     }
 
     /**
@@ -247,7 +354,11 @@ class Call extends Entity implements Parsable
      * @return CallTranscriptionInfo|null
     */
     public function getTranscription(): ?CallTranscriptionInfo {
-        return $this->getBackingStore()->get('transcription');
+        $val = $this->getBackingStore()->get('transcription');
+        if (is_null($val) || $val instanceof CallTranscriptionInfo) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'transcription'");
     }
 
     /**

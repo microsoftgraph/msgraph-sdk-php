@@ -30,7 +30,11 @@ class Win32LobAppRegistryRule extends Win32LobAppRule implements Parsable
      * @return bool|null
     */
     public function getCheck32BitOn64System(): ?bool {
-        return $this->getBackingStore()->get('check32BitOn64System');
+        $val = $this->getBackingStore()->get('check32BitOn64System');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'check32BitOn64System'");
     }
 
     /**
@@ -38,12 +42,16 @@ class Win32LobAppRegistryRule extends Win32LobAppRule implements Parsable
      * @return string|null
     */
     public function getComparisonValue(): ?string {
-        return $this->getBackingStore()->get('comparisonValue');
+        $val = $this->getBackingStore()->get('comparisonValue');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'comparisonValue'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -62,7 +70,11 @@ class Win32LobAppRegistryRule extends Win32LobAppRule implements Parsable
      * @return string|null
     */
     public function getKeyPath(): ?string {
-        return $this->getBackingStore()->get('keyPath');
+        $val = $this->getBackingStore()->get('keyPath');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'keyPath'");
     }
 
     /**
@@ -70,7 +82,11 @@ class Win32LobAppRegistryRule extends Win32LobAppRule implements Parsable
      * @return Win32LobAppRegistryRuleOperationType|null
     */
     public function getOperationType(): ?Win32LobAppRegistryRuleOperationType {
-        return $this->getBackingStore()->get('operationType');
+        $val = $this->getBackingStore()->get('operationType');
+        if (is_null($val) || $val instanceof Win32LobAppRegistryRuleOperationType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'operationType'");
     }
 
     /**
@@ -78,7 +94,11 @@ class Win32LobAppRegistryRule extends Win32LobAppRule implements Parsable
      * @return Win32LobAppRuleOperator|null
     */
     public function getOperator(): ?Win32LobAppRuleOperator {
-        return $this->getBackingStore()->get('operator');
+        $val = $this->getBackingStore()->get('operator');
+        if (is_null($val) || $val instanceof Win32LobAppRuleOperator) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'operator'");
     }
 
     /**
@@ -86,7 +106,11 @@ class Win32LobAppRegistryRule extends Win32LobAppRule implements Parsable
      * @return string|null
     */
     public function getValueName(): ?string {
-        return $this->getBackingStore()->get('valueName');
+        $val = $this->getBackingStore()->get('valueName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'valueName'");
     }
 
     /**

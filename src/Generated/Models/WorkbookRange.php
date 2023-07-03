@@ -29,7 +29,11 @@ class WorkbookRange extends Entity implements Parsable
      * @return string|null
     */
     public function getAddress(): ?string {
-        return $this->getBackingStore()->get('address');
+        $val = $this->getBackingStore()->get('address');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'address'");
     }
 
     /**
@@ -37,7 +41,11 @@ class WorkbookRange extends Entity implements Parsable
      * @return string|null
     */
     public function getAddressLocal(): ?string {
-        return $this->getBackingStore()->get('addressLocal');
+        $val = $this->getBackingStore()->get('addressLocal');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'addressLocal'");
     }
 
     /**
@@ -45,7 +53,11 @@ class WorkbookRange extends Entity implements Parsable
      * @return int|null
     */
     public function getCellCount(): ?int {
-        return $this->getBackingStore()->get('cellCount');
+        $val = $this->getBackingStore()->get('cellCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'cellCount'");
     }
 
     /**
@@ -53,7 +65,11 @@ class WorkbookRange extends Entity implements Parsable
      * @return int|null
     */
     public function getColumnCount(): ?int {
-        return $this->getBackingStore()->get('columnCount');
+        $val = $this->getBackingStore()->get('columnCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'columnCount'");
     }
 
     /**
@@ -61,7 +77,11 @@ class WorkbookRange extends Entity implements Parsable
      * @return bool|null
     */
     public function getColumnHidden(): ?bool {
-        return $this->getBackingStore()->get('columnHidden');
+        $val = $this->getBackingStore()->get('columnHidden');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'columnHidden'");
     }
 
     /**
@@ -69,12 +89,16 @@ class WorkbookRange extends Entity implements Parsable
      * @return int|null
     */
     public function getColumnIndex(): ?int {
-        return $this->getBackingStore()->get('columnIndex');
+        $val = $this->getBackingStore()->get('columnIndex');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'columnIndex'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -107,7 +131,11 @@ class WorkbookRange extends Entity implements Parsable
      * @return WorkbookRangeFormat|null
     */
     public function getFormat(): ?WorkbookRangeFormat {
-        return $this->getBackingStore()->get('format');
+        $val = $this->getBackingStore()->get('format');
+        if (is_null($val) || $val instanceof WorkbookRangeFormat) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'format'");
     }
 
     /**
@@ -115,7 +143,11 @@ class WorkbookRange extends Entity implements Parsable
      * @return Json|null
     */
     public function getFormulas(): ?Json {
-        return $this->getBackingStore()->get('formulas');
+        $val = $this->getBackingStore()->get('formulas');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'formulas'");
     }
 
     /**
@@ -123,7 +155,11 @@ class WorkbookRange extends Entity implements Parsable
      * @return Json|null
     */
     public function getFormulasLocal(): ?Json {
-        return $this->getBackingStore()->get('formulasLocal');
+        $val = $this->getBackingStore()->get('formulasLocal');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'formulasLocal'");
     }
 
     /**
@@ -131,7 +167,11 @@ class WorkbookRange extends Entity implements Parsable
      * @return Json|null
     */
     public function getFormulasR1C1(): ?Json {
-        return $this->getBackingStore()->get('formulasR1C1');
+        $val = $this->getBackingStore()->get('formulasR1C1');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'formulasR1C1'");
     }
 
     /**
@@ -139,7 +179,11 @@ class WorkbookRange extends Entity implements Parsable
      * @return bool|null
     */
     public function getHidden(): ?bool {
-        return $this->getBackingStore()->get('hidden');
+        $val = $this->getBackingStore()->get('hidden');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'hidden'");
     }
 
     /**
@@ -147,7 +191,11 @@ class WorkbookRange extends Entity implements Parsable
      * @return Json|null
     */
     public function getNumberFormat(): ?Json {
-        return $this->getBackingStore()->get('numberFormat');
+        $val = $this->getBackingStore()->get('numberFormat');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'numberFormat'");
     }
 
     /**
@@ -155,7 +203,11 @@ class WorkbookRange extends Entity implements Parsable
      * @return int|null
     */
     public function getRowCount(): ?int {
-        return $this->getBackingStore()->get('rowCount');
+        $val = $this->getBackingStore()->get('rowCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'rowCount'");
     }
 
     /**
@@ -163,7 +215,11 @@ class WorkbookRange extends Entity implements Parsable
      * @return bool|null
     */
     public function getRowHidden(): ?bool {
-        return $this->getBackingStore()->get('rowHidden');
+        $val = $this->getBackingStore()->get('rowHidden');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'rowHidden'");
     }
 
     /**
@@ -171,7 +227,11 @@ class WorkbookRange extends Entity implements Parsable
      * @return int|null
     */
     public function getRowIndex(): ?int {
-        return $this->getBackingStore()->get('rowIndex');
+        $val = $this->getBackingStore()->get('rowIndex');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'rowIndex'");
     }
 
     /**
@@ -179,7 +239,11 @@ class WorkbookRange extends Entity implements Parsable
      * @return WorkbookRangeSort|null
     */
     public function getSort(): ?WorkbookRangeSort {
-        return $this->getBackingStore()->get('sort');
+        $val = $this->getBackingStore()->get('sort');
+        if (is_null($val) || $val instanceof WorkbookRangeSort) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sort'");
     }
 
     /**
@@ -187,7 +251,11 @@ class WorkbookRange extends Entity implements Parsable
      * @return Json|null
     */
     public function getText(): ?Json {
-        return $this->getBackingStore()->get('text');
+        $val = $this->getBackingStore()->get('text');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'text'");
     }
 
     /**
@@ -195,7 +263,11 @@ class WorkbookRange extends Entity implements Parsable
      * @return Json|null
     */
     public function getValues(): ?Json {
-        return $this->getBackingStore()->get('values');
+        $val = $this->getBackingStore()->get('values');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'values'");
     }
 
     /**
@@ -203,7 +275,11 @@ class WorkbookRange extends Entity implements Parsable
      * @return Json|null
     */
     public function getValueTypes(): ?Json {
-        return $this->getBackingStore()->get('valueTypes');
+        $val = $this->getBackingStore()->get('valueTypes');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'valueTypes'");
     }
 
     /**
@@ -211,7 +287,11 @@ class WorkbookRange extends Entity implements Parsable
      * @return WorkbookWorksheet|null
     */
     public function getWorksheet(): ?WorkbookWorksheet {
-        return $this->getBackingStore()->get('worksheet');
+        $val = $this->getBackingStore()->get('worksheet');
+        if (is_null($val) || $val instanceof WorkbookWorksheet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'worksheet'");
     }
 
     /**

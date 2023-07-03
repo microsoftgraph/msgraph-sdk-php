@@ -6,6 +6,7 @@ use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class AccessReviewStage extends Entity implements Parsable 
 {
@@ -30,7 +31,13 @@ class AccessReviewStage extends Entity implements Parsable
      * @return array<AccessReviewInstanceDecisionItem>|null
     */
     public function getDecisions(): ?array {
-        return $this->getBackingStore()->get('decisions');
+        $val = $this->getBackingStore()->get('decisions');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AccessReviewInstanceDecisionItem::class);
+            /** @var array<AccessReviewInstanceDecisionItem>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'decisions'");
     }
 
     /**
@@ -38,7 +45,11 @@ class AccessReviewStage extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getEndDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('endDateTime');
+        $val = $this->getBackingStore()->get('endDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'endDateTime'");
     }
 
     /**
@@ -46,12 +57,18 @@ class AccessReviewStage extends Entity implements Parsable
      * @return array<AccessReviewReviewerScope>|null
     */
     public function getFallbackReviewers(): ?array {
-        return $this->getBackingStore()->get('fallbackReviewers');
+        $val = $this->getBackingStore()->get('fallbackReviewers');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AccessReviewReviewerScope::class);
+            /** @var array<AccessReviewReviewerScope>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'fallbackReviewers'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -70,7 +87,13 @@ class AccessReviewStage extends Entity implements Parsable
      * @return array<AccessReviewReviewerScope>|null
     */
     public function getReviewers(): ?array {
-        return $this->getBackingStore()->get('reviewers');
+        $val = $this->getBackingStore()->get('reviewers');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AccessReviewReviewerScope::class);
+            /** @var array<AccessReviewReviewerScope>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'reviewers'");
     }
 
     /**
@@ -78,7 +101,11 @@ class AccessReviewStage extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getStartDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('startDateTime');
+        $val = $this->getBackingStore()->get('startDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'startDateTime'");
     }
 
     /**
@@ -86,7 +113,11 @@ class AccessReviewStage extends Entity implements Parsable
      * @return string|null
     */
     public function getStatus(): ?string {
-        return $this->getBackingStore()->get('status');
+        $val = $this->getBackingStore()->get('status');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
     }
 
     /**

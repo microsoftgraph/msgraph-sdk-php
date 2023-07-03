@@ -39,7 +39,12 @@ class AuthenticationMethodFeatureConfiguration implements AdditionalDataHolder, 
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -55,12 +60,16 @@ class AuthenticationMethodFeatureConfiguration implements AdditionalDataHolder, 
      * @return FeatureTarget|null
     */
     public function getExcludeTarget(): ?FeatureTarget {
-        return $this->getBackingStore()->get('excludeTarget');
+        $val = $this->getBackingStore()->get('excludeTarget');
+        if (is_null($val) || $val instanceof FeatureTarget) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'excludeTarget'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -77,7 +86,11 @@ class AuthenticationMethodFeatureConfiguration implements AdditionalDataHolder, 
      * @return FeatureTarget|null
     */
     public function getIncludeTarget(): ?FeatureTarget {
-        return $this->getBackingStore()->get('includeTarget');
+        $val = $this->getBackingStore()->get('includeTarget');
+        if (is_null($val) || $val instanceof FeatureTarget) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'includeTarget'");
     }
 
     /**
@@ -85,7 +98,11 @@ class AuthenticationMethodFeatureConfiguration implements AdditionalDataHolder, 
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -93,7 +110,11 @@ class AuthenticationMethodFeatureConfiguration implements AdditionalDataHolder, 
      * @return AdvancedConfigState|null
     */
     public function getState(): ?AdvancedConfigState {
-        return $this->getBackingStore()->get('state');
+        $val = $this->getBackingStore()->get('state');
+        if (is_null($val) || $val instanceof AdvancedConfigState) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'state'");
     }
 
     /**

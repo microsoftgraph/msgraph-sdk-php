@@ -42,7 +42,12 @@ class IosMinimumOperatingSystem implements AdditionalDataHolder, BackedModel, Pa
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -55,7 +60,7 @@ class IosMinimumOperatingSystem implements AdditionalDataHolder, BackedModel, Pa
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -77,7 +82,11 @@ class IosMinimumOperatingSystem implements AdditionalDataHolder, BackedModel, Pa
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -85,7 +94,11 @@ class IosMinimumOperatingSystem implements AdditionalDataHolder, BackedModel, Pa
      * @return bool|null
     */
     public function getV100(): ?bool {
-        return $this->getBackingStore()->get('v10_0');
+        $val = $this->getBackingStore()->get('v10_0');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'v10_0'");
     }
 
     /**
@@ -93,7 +106,11 @@ class IosMinimumOperatingSystem implements AdditionalDataHolder, BackedModel, Pa
      * @return bool|null
     */
     public function getV110(): ?bool {
-        return $this->getBackingStore()->get('v11_0');
+        $val = $this->getBackingStore()->get('v11_0');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'v11_0'");
     }
 
     /**
@@ -101,7 +118,11 @@ class IosMinimumOperatingSystem implements AdditionalDataHolder, BackedModel, Pa
      * @return bool|null
     */
     public function getV120(): ?bool {
-        return $this->getBackingStore()->get('v12_0');
+        $val = $this->getBackingStore()->get('v12_0');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'v12_0'");
     }
 
     /**
@@ -109,7 +130,11 @@ class IosMinimumOperatingSystem implements AdditionalDataHolder, BackedModel, Pa
      * @return bool|null
     */
     public function getV130(): ?bool {
-        return $this->getBackingStore()->get('v13_0');
+        $val = $this->getBackingStore()->get('v13_0');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'v13_0'");
     }
 
     /**
@@ -117,7 +142,11 @@ class IosMinimumOperatingSystem implements AdditionalDataHolder, BackedModel, Pa
      * @return bool|null
     */
     public function getV140(): ?bool {
-        return $this->getBackingStore()->get('v14_0');
+        $val = $this->getBackingStore()->get('v14_0');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'v14_0'");
     }
 
     /**
@@ -125,7 +154,11 @@ class IosMinimumOperatingSystem implements AdditionalDataHolder, BackedModel, Pa
      * @return bool|null
     */
     public function getV150(): ?bool {
-        return $this->getBackingStore()->get('v15_0');
+        $val = $this->getBackingStore()->get('v15_0');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'v15_0'");
     }
 
     /**
@@ -133,7 +166,11 @@ class IosMinimumOperatingSystem implements AdditionalDataHolder, BackedModel, Pa
      * @return bool|null
     */
     public function getV80(): ?bool {
-        return $this->getBackingStore()->get('v8_0');
+        $val = $this->getBackingStore()->get('v8_0');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'v8_0'");
     }
 
     /**
@@ -141,7 +178,11 @@ class IosMinimumOperatingSystem implements AdditionalDataHolder, BackedModel, Pa
      * @return bool|null
     */
     public function getV90(): ?bool {
-        return $this->getBackingStore()->get('v9_0');
+        $val = $this->getBackingStore()->get('v9_0');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'v9_0'");
     }
 
     /**

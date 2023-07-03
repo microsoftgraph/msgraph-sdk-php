@@ -8,6 +8,7 @@ use Microsoft\Graph\Generated\Models\KeyValue;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class Term extends Entity implements Parsable 
 {
@@ -32,7 +33,13 @@ class Term extends Entity implements Parsable
      * @return array<Term>|null
     */
     public function getChildren(): ?array {
-        return $this->getBackingStore()->get('children');
+        $val = $this->getBackingStore()->get('children');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Term::class);
+            /** @var array<Term>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'children'");
     }
 
     /**
@@ -40,7 +47,11 @@ class Term extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('createdDateTime');
+        $val = $this->getBackingStore()->get('createdDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdDateTime'");
     }
 
     /**
@@ -48,12 +59,18 @@ class Term extends Entity implements Parsable
      * @return array<LocalizedDescription>|null
     */
     public function getDescriptions(): ?array {
-        return $this->getBackingStore()->get('descriptions');
+        $val = $this->getBackingStore()->get('descriptions');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, LocalizedDescription::class);
+            /** @var array<LocalizedDescription>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'descriptions'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -74,7 +91,13 @@ class Term extends Entity implements Parsable
      * @return array<LocalizedLabel>|null
     */
     public function getLabels(): ?array {
-        return $this->getBackingStore()->get('labels');
+        $val = $this->getBackingStore()->get('labels');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, LocalizedLabel::class);
+            /** @var array<LocalizedLabel>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'labels'");
     }
 
     /**
@@ -82,7 +105,11 @@ class Term extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('lastModifiedDateTime');
+        $val = $this->getBackingStore()->get('lastModifiedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastModifiedDateTime'");
     }
 
     /**
@@ -90,7 +117,13 @@ class Term extends Entity implements Parsable
      * @return array<KeyValue>|null
     */
     public function getProperties(): ?array {
-        return $this->getBackingStore()->get('properties');
+        $val = $this->getBackingStore()->get('properties');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, KeyValue::class);
+            /** @var array<KeyValue>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'properties'");
     }
 
     /**
@@ -98,7 +131,13 @@ class Term extends Entity implements Parsable
      * @return array<Relation>|null
     */
     public function getRelations(): ?array {
-        return $this->getBackingStore()->get('relations');
+        $val = $this->getBackingStore()->get('relations');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Relation::class);
+            /** @var array<Relation>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'relations'");
     }
 
     /**
@@ -106,7 +145,11 @@ class Term extends Entity implements Parsable
      * @return Set|null
     */
     public function getSet(): ?Set {
-        return $this->getBackingStore()->get('set');
+        $val = $this->getBackingStore()->get('set');
+        if (is_null($val) || $val instanceof Set) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'set'");
     }
 
     /**

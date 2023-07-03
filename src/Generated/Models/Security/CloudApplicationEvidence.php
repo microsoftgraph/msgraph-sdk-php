@@ -29,7 +29,11 @@ class CloudApplicationEvidence extends AlertEvidence implements Parsable
      * @return int|null
     */
     public function getAppId(): ?int {
-        return $this->getBackingStore()->get('appId');
+        $val = $this->getBackingStore()->get('appId');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'appId'");
     }
 
     /**
@@ -37,12 +41,16 @@ class CloudApplicationEvidence extends AlertEvidence implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -60,7 +68,11 @@ class CloudApplicationEvidence extends AlertEvidence implements Parsable
      * @return int|null
     */
     public function getInstanceId(): ?int {
-        return $this->getBackingStore()->get('instanceId');
+        $val = $this->getBackingStore()->get('instanceId');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'instanceId'");
     }
 
     /**
@@ -68,7 +80,11 @@ class CloudApplicationEvidence extends AlertEvidence implements Parsable
      * @return string|null
     */
     public function getInstanceName(): ?string {
-        return $this->getBackingStore()->get('instanceName');
+        $val = $this->getBackingStore()->get('instanceName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'instanceName'");
     }
 
     /**
@@ -76,7 +92,11 @@ class CloudApplicationEvidence extends AlertEvidence implements Parsable
      * @return int|null
     */
     public function getSaasAppId(): ?int {
-        return $this->getBackingStore()->get('saasAppId');
+        $val = $this->getBackingStore()->get('saasAppId');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'saasAppId'");
     }
 
     /**

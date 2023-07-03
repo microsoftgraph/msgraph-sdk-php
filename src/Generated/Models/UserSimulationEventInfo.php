@@ -19,7 +19,7 @@ class UserSimulationEventInfo implements AdditionalDataHolder, BackedModel, Pars
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new UserSimulationEventInfo and sets the default values.
+     * Instantiates a new userSimulationEventInfo and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
@@ -40,7 +40,12 @@ class UserSimulationEventInfo implements AdditionalDataHolder, BackedModel, Pars
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -56,7 +61,11 @@ class UserSimulationEventInfo implements AdditionalDataHolder, BackedModel, Pars
      * @return string|null
     */
     public function getBrowser(): ?string {
-        return $this->getBackingStore()->get('browser');
+        $val = $this->getBackingStore()->get('browser');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'browser'");
     }
 
     /**
@@ -64,7 +73,11 @@ class UserSimulationEventInfo implements AdditionalDataHolder, BackedModel, Pars
      * @return DateTime|null
     */
     public function getEventDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('eventDateTime');
+        $val = $this->getBackingStore()->get('eventDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'eventDateTime'");
     }
 
     /**
@@ -72,12 +85,16 @@ class UserSimulationEventInfo implements AdditionalDataHolder, BackedModel, Pars
      * @return string|null
     */
     public function getEventName(): ?string {
-        return $this->getBackingStore()->get('eventName');
+        $val = $this->getBackingStore()->get('eventName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'eventName'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -96,7 +113,11 @@ class UserSimulationEventInfo implements AdditionalDataHolder, BackedModel, Pars
      * @return string|null
     */
     public function getIpAddress(): ?string {
-        return $this->getBackingStore()->get('ipAddress');
+        $val = $this->getBackingStore()->get('ipAddress');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'ipAddress'");
     }
 
     /**
@@ -104,7 +125,11 @@ class UserSimulationEventInfo implements AdditionalDataHolder, BackedModel, Pars
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -112,7 +137,11 @@ class UserSimulationEventInfo implements AdditionalDataHolder, BackedModel, Pars
      * @return string|null
     */
     public function getOsPlatformDeviceDetails(): ?string {
-        return $this->getBackingStore()->get('osPlatformDeviceDetails');
+        $val = $this->getBackingStore()->get('osPlatformDeviceDetails');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'osPlatformDeviceDetails'");
     }
 
     /**

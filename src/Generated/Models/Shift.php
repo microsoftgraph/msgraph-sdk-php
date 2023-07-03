@@ -30,12 +30,16 @@ class Shift extends ChangeTrackedEntity implements Parsable
      * @return ShiftItem|null
     */
     public function getDraftShift(): ?ShiftItem {
-        return $this->getBackingStore()->get('draftShift');
+        $val = $this->getBackingStore()->get('draftShift');
+        if (is_null($val) || $val instanceof ShiftItem) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'draftShift'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -52,7 +56,11 @@ class Shift extends ChangeTrackedEntity implements Parsable
      * @return string|null
     */
     public function getSchedulingGroupId(): ?string {
-        return $this->getBackingStore()->get('schedulingGroupId');
+        $val = $this->getBackingStore()->get('schedulingGroupId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'schedulingGroupId'");
     }
 
     /**
@@ -60,7 +68,11 @@ class Shift extends ChangeTrackedEntity implements Parsable
      * @return ShiftItem|null
     */
     public function getSharedShift(): ?ShiftItem {
-        return $this->getBackingStore()->get('sharedShift');
+        $val = $this->getBackingStore()->get('sharedShift');
+        if (is_null($val) || $val instanceof ShiftItem) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sharedShift'");
     }
 
     /**
@@ -68,7 +80,11 @@ class Shift extends ChangeTrackedEntity implements Parsable
      * @return string|null
     */
     public function getUserId(): ?string {
-        return $this->getBackingStore()->get('userId');
+        $val = $this->getBackingStore()->get('userId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userId'");
     }
 
     /**

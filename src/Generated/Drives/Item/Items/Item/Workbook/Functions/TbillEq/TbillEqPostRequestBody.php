@@ -40,7 +40,12 @@ class TbillEqPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -56,12 +61,16 @@ class TbillEqPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
      * @return Json|null
     */
     public function getDiscount(): ?Json {
-        return $this->getBackingStore()->get('discount');
+        $val = $this->getBackingStore()->get('discount');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'discount'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -77,7 +86,11 @@ class TbillEqPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
      * @return Json|null
     */
     public function getMaturity(): ?Json {
-        return $this->getBackingStore()->get('maturity');
+        $val = $this->getBackingStore()->get('maturity');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'maturity'");
     }
 
     /**
@@ -85,7 +98,11 @@ class TbillEqPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
      * @return Json|null
     */
     public function getSettlement(): ?Json {
-        return $this->getBackingStore()->get('settlement');
+        $val = $this->getBackingStore()->get('settlement');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'settlement'");
     }
 
     /**

@@ -27,7 +27,7 @@ class TeamsAppInstalledEventMessageDetail extends EventMessageDetail implements 
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -43,7 +43,11 @@ class TeamsAppInstalledEventMessageDetail extends EventMessageDetail implements 
      * @return IdentitySet|null
     */
     public function getInitiator(): ?IdentitySet {
-        return $this->getBackingStore()->get('initiator');
+        $val = $this->getBackingStore()->get('initiator');
+        if (is_null($val) || $val instanceof IdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'initiator'");
     }
 
     /**
@@ -51,7 +55,11 @@ class TeamsAppInstalledEventMessageDetail extends EventMessageDetail implements 
      * @return string|null
     */
     public function getTeamsAppDisplayName(): ?string {
-        return $this->getBackingStore()->get('teamsAppDisplayName');
+        $val = $this->getBackingStore()->get('teamsAppDisplayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'teamsAppDisplayName'");
     }
 
     /**
@@ -59,7 +67,11 @@ class TeamsAppInstalledEventMessageDetail extends EventMessageDetail implements 
      * @return string|null
     */
     public function getTeamsAppId(): ?string {
-        return $this->getBackingStore()->get('teamsAppId');
+        $val = $this->getBackingStore()->get('teamsAppId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'teamsAppId'");
     }
 
     /**

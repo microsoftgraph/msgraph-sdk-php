@@ -31,7 +31,11 @@ class EnterpriseCodeSigningCertificate extends Entity implements Parsable
      * @return StreamInterface|null
     */
     public function getContent(): ?StreamInterface {
-        return $this->getBackingStore()->get('content');
+        $val = $this->getBackingStore()->get('content');
+        if (is_null($val) || $val instanceof StreamInterface) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'content'");
     }
 
     /**
@@ -39,12 +43,16 @@ class EnterpriseCodeSigningCertificate extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getExpirationDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('expirationDateTime');
+        $val = $this->getBackingStore()->get('expirationDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'expirationDateTime'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -65,7 +73,11 @@ class EnterpriseCodeSigningCertificate extends Entity implements Parsable
      * @return string|null
     */
     public function getIssuer(): ?string {
-        return $this->getBackingStore()->get('issuer');
+        $val = $this->getBackingStore()->get('issuer');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'issuer'");
     }
 
     /**
@@ -73,7 +85,11 @@ class EnterpriseCodeSigningCertificate extends Entity implements Parsable
      * @return string|null
     */
     public function getIssuerName(): ?string {
-        return $this->getBackingStore()->get('issuerName');
+        $val = $this->getBackingStore()->get('issuerName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'issuerName'");
     }
 
     /**
@@ -81,7 +97,11 @@ class EnterpriseCodeSigningCertificate extends Entity implements Parsable
      * @return CertificateStatus|null
     */
     public function getStatus(): ?CertificateStatus {
-        return $this->getBackingStore()->get('status');
+        $val = $this->getBackingStore()->get('status');
+        if (is_null($val) || $val instanceof CertificateStatus) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
     }
 
     /**
@@ -89,7 +109,11 @@ class EnterpriseCodeSigningCertificate extends Entity implements Parsable
      * @return string|null
     */
     public function getSubject(): ?string {
-        return $this->getBackingStore()->get('subject');
+        $val = $this->getBackingStore()->get('subject');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'subject'");
     }
 
     /**
@@ -97,7 +121,11 @@ class EnterpriseCodeSigningCertificate extends Entity implements Parsable
      * @return string|null
     */
     public function getSubjectName(): ?string {
-        return $this->getBackingStore()->get('subjectName');
+        $val = $this->getBackingStore()->get('subjectName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'subjectName'");
     }
 
     /**
@@ -105,7 +133,11 @@ class EnterpriseCodeSigningCertificate extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getUploadDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('uploadDateTime');
+        $val = $this->getBackingStore()->get('uploadDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'uploadDateTime'");
     }
 
     /**

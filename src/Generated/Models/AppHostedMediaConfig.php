@@ -30,12 +30,16 @@ class AppHostedMediaConfig extends MediaConfig implements Parsable
      * @return string|null
     */
     public function getBlob(): ?string {
-        return $this->getBackingStore()->get('blob');
+        $val = $this->getBackingStore()->get('blob');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'blob'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;

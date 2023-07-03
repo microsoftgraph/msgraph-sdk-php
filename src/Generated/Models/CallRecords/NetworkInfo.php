@@ -9,6 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -39,7 +40,12 @@ class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -55,7 +61,11 @@ class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return float|null
     */
     public function getBandwidthLowEventRatio(): ?float {
-        return $this->getBackingStore()->get('bandwidthLowEventRatio');
+        $val = $this->getBackingStore()->get('bandwidthLowEventRatio');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'bandwidthLowEventRatio'");
     }
 
     /**
@@ -63,7 +73,11 @@ class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getBasicServiceSetIdentifier(): ?string {
-        return $this->getBackingStore()->get('basicServiceSetIdentifier');
+        $val = $this->getBackingStore()->get('basicServiceSetIdentifier');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'basicServiceSetIdentifier'");
     }
 
     /**
@@ -71,7 +85,11 @@ class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return NetworkConnectionType|null
     */
     public function getConnectionType(): ?NetworkConnectionType {
-        return $this->getBackingStore()->get('connectionType');
+        $val = $this->getBackingStore()->get('connectionType');
+        if (is_null($val) || $val instanceof NetworkConnectionType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'connectionType'");
     }
 
     /**
@@ -79,7 +97,11 @@ class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return float|null
     */
     public function getDelayEventRatio(): ?float {
-        return $this->getBackingStore()->get('delayEventRatio');
+        $val = $this->getBackingStore()->get('delayEventRatio');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'delayEventRatio'");
     }
 
     /**
@@ -87,12 +109,16 @@ class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getDnsSuffix(): ?string {
-        return $this->getBackingStore()->get('dnsSuffix');
+        $val = $this->getBackingStore()->get('dnsSuffix');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'dnsSuffix'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -132,7 +158,11 @@ class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getIpAddress(): ?string {
-        return $this->getBackingStore()->get('ipAddress');
+        $val = $this->getBackingStore()->get('ipAddress');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'ipAddress'");
     }
 
     /**
@@ -140,7 +170,11 @@ class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getLinkSpeed(): ?int {
-        return $this->getBackingStore()->get('linkSpeed');
+        $val = $this->getBackingStore()->get('linkSpeed');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'linkSpeed'");
     }
 
     /**
@@ -148,7 +182,11 @@ class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getMacAddress(): ?string {
-        return $this->getBackingStore()->get('macAddress');
+        $val = $this->getBackingStore()->get('macAddress');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'macAddress'");
     }
 
     /**
@@ -156,7 +194,11 @@ class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return NetworkTransportProtocol|null
     */
     public function getNetworkTransportProtocol(): ?NetworkTransportProtocol {
-        return $this->getBackingStore()->get('networkTransportProtocol');
+        $val = $this->getBackingStore()->get('networkTransportProtocol');
+        if (is_null($val) || $val instanceof NetworkTransportProtocol) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'networkTransportProtocol'");
     }
 
     /**
@@ -164,7 +206,11 @@ class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -172,7 +218,11 @@ class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getPort(): ?int {
-        return $this->getBackingStore()->get('port');
+        $val = $this->getBackingStore()->get('port');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'port'");
     }
 
     /**
@@ -180,7 +230,11 @@ class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return float|null
     */
     public function getReceivedQualityEventRatio(): ?float {
-        return $this->getBackingStore()->get('receivedQualityEventRatio');
+        $val = $this->getBackingStore()->get('receivedQualityEventRatio');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'receivedQualityEventRatio'");
     }
 
     /**
@@ -188,7 +242,11 @@ class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getReflexiveIPAddress(): ?string {
-        return $this->getBackingStore()->get('reflexiveIPAddress');
+        $val = $this->getBackingStore()->get('reflexiveIPAddress');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'reflexiveIPAddress'");
     }
 
     /**
@@ -196,7 +254,11 @@ class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getRelayIPAddress(): ?string {
-        return $this->getBackingStore()->get('relayIPAddress');
+        $val = $this->getBackingStore()->get('relayIPAddress');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'relayIPAddress'");
     }
 
     /**
@@ -204,7 +266,11 @@ class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getRelayPort(): ?int {
-        return $this->getBackingStore()->get('relayPort');
+        $val = $this->getBackingStore()->get('relayPort');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'relayPort'");
     }
 
     /**
@@ -212,7 +278,11 @@ class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return float|null
     */
     public function getSentQualityEventRatio(): ?float {
-        return $this->getBackingStore()->get('sentQualityEventRatio');
+        $val = $this->getBackingStore()->get('sentQualityEventRatio');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sentQualityEventRatio'");
     }
 
     /**
@@ -220,7 +290,11 @@ class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getSubnet(): ?string {
-        return $this->getBackingStore()->get('subnet');
+        $val = $this->getBackingStore()->get('subnet');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'subnet'");
     }
 
     /**
@@ -228,7 +302,13 @@ class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<TraceRouteHop>|null
     */
     public function getTraceRouteHops(): ?array {
-        return $this->getBackingStore()->get('traceRouteHops');
+        $val = $this->getBackingStore()->get('traceRouteHops');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, TraceRouteHop::class);
+            /** @var array<TraceRouteHop>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'traceRouteHops'");
     }
 
     /**
@@ -236,7 +316,11 @@ class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return WifiBand|null
     */
     public function getWifiBand(): ?WifiBand {
-        return $this->getBackingStore()->get('wifiBand');
+        $val = $this->getBackingStore()->get('wifiBand');
+        if (is_null($val) || $val instanceof WifiBand) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'wifiBand'");
     }
 
     /**
@@ -244,7 +328,11 @@ class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getWifiBatteryCharge(): ?int {
-        return $this->getBackingStore()->get('wifiBatteryCharge');
+        $val = $this->getBackingStore()->get('wifiBatteryCharge');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'wifiBatteryCharge'");
     }
 
     /**
@@ -252,7 +340,11 @@ class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getWifiChannel(): ?int {
-        return $this->getBackingStore()->get('wifiChannel');
+        $val = $this->getBackingStore()->get('wifiChannel');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'wifiChannel'");
     }
 
     /**
@@ -260,7 +352,11 @@ class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getWifiMicrosoftDriver(): ?string {
-        return $this->getBackingStore()->get('wifiMicrosoftDriver');
+        $val = $this->getBackingStore()->get('wifiMicrosoftDriver');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'wifiMicrosoftDriver'");
     }
 
     /**
@@ -268,7 +364,11 @@ class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getWifiMicrosoftDriverVersion(): ?string {
-        return $this->getBackingStore()->get('wifiMicrosoftDriverVersion');
+        $val = $this->getBackingStore()->get('wifiMicrosoftDriverVersion');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'wifiMicrosoftDriverVersion'");
     }
 
     /**
@@ -276,7 +376,11 @@ class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return WifiRadioType|null
     */
     public function getWifiRadioType(): ?WifiRadioType {
-        return $this->getBackingStore()->get('wifiRadioType');
+        $val = $this->getBackingStore()->get('wifiRadioType');
+        if (is_null($val) || $val instanceof WifiRadioType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'wifiRadioType'");
     }
 
     /**
@@ -284,7 +388,11 @@ class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getWifiSignalStrength(): ?int {
-        return $this->getBackingStore()->get('wifiSignalStrength');
+        $val = $this->getBackingStore()->get('wifiSignalStrength');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'wifiSignalStrength'");
     }
 
     /**
@@ -292,7 +400,11 @@ class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getWifiVendorDriver(): ?string {
-        return $this->getBackingStore()->get('wifiVendorDriver');
+        $val = $this->getBackingStore()->get('wifiVendorDriver');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'wifiVendorDriver'");
     }
 
     /**
@@ -300,7 +412,11 @@ class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getWifiVendorDriverVersion(): ?string {
-        return $this->getBackingStore()->get('wifiVendorDriverVersion');
+        $val = $this->getBackingStore()->get('wifiVendorDriverVersion');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'wifiVendorDriverVersion'");
     }
 
     /**

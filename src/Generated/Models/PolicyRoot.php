@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class PolicyRoot extends Entity implements Parsable 
 {
@@ -29,7 +30,13 @@ class PolicyRoot extends Entity implements Parsable
      * @return array<ActivityBasedTimeoutPolicy>|null
     */
     public function getActivityBasedTimeoutPolicies(): ?array {
-        return $this->getBackingStore()->get('activityBasedTimeoutPolicies');
+        $val = $this->getBackingStore()->get('activityBasedTimeoutPolicies');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ActivityBasedTimeoutPolicy::class);
+            /** @var array<ActivityBasedTimeoutPolicy>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'activityBasedTimeoutPolicies'");
     }
 
     /**
@@ -37,7 +44,11 @@ class PolicyRoot extends Entity implements Parsable
      * @return AdminConsentRequestPolicy|null
     */
     public function getAdminConsentRequestPolicy(): ?AdminConsentRequestPolicy {
-        return $this->getBackingStore()->get('adminConsentRequestPolicy');
+        $val = $this->getBackingStore()->get('adminConsentRequestPolicy');
+        if (is_null($val) || $val instanceof AdminConsentRequestPolicy) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'adminConsentRequestPolicy'");
     }
 
     /**
@@ -45,7 +56,13 @@ class PolicyRoot extends Entity implements Parsable
      * @return array<AppManagementPolicy>|null
     */
     public function getAppManagementPolicies(): ?array {
-        return $this->getBackingStore()->get('appManagementPolicies');
+        $val = $this->getBackingStore()->get('appManagementPolicies');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AppManagementPolicy::class);
+            /** @var array<AppManagementPolicy>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'appManagementPolicies'");
     }
 
     /**
@@ -53,7 +70,11 @@ class PolicyRoot extends Entity implements Parsable
      * @return AuthenticationFlowsPolicy|null
     */
     public function getAuthenticationFlowsPolicy(): ?AuthenticationFlowsPolicy {
-        return $this->getBackingStore()->get('authenticationFlowsPolicy');
+        $val = $this->getBackingStore()->get('authenticationFlowsPolicy');
+        if (is_null($val) || $val instanceof AuthenticationFlowsPolicy) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'authenticationFlowsPolicy'");
     }
 
     /**
@@ -61,7 +82,11 @@ class PolicyRoot extends Entity implements Parsable
      * @return AuthenticationMethodsPolicy|null
     */
     public function getAuthenticationMethodsPolicy(): ?AuthenticationMethodsPolicy {
-        return $this->getBackingStore()->get('authenticationMethodsPolicy');
+        $val = $this->getBackingStore()->get('authenticationMethodsPolicy');
+        if (is_null($val) || $val instanceof AuthenticationMethodsPolicy) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'authenticationMethodsPolicy'");
     }
 
     /**
@@ -69,7 +94,13 @@ class PolicyRoot extends Entity implements Parsable
      * @return array<AuthenticationStrengthPolicy>|null
     */
     public function getAuthenticationStrengthPolicies(): ?array {
-        return $this->getBackingStore()->get('authenticationStrengthPolicies');
+        $val = $this->getBackingStore()->get('authenticationStrengthPolicies');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AuthenticationStrengthPolicy::class);
+            /** @var array<AuthenticationStrengthPolicy>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'authenticationStrengthPolicies'");
     }
 
     /**
@@ -77,7 +108,11 @@ class PolicyRoot extends Entity implements Parsable
      * @return AuthorizationPolicy|null
     */
     public function getAuthorizationPolicy(): ?AuthorizationPolicy {
-        return $this->getBackingStore()->get('authorizationPolicy');
+        $val = $this->getBackingStore()->get('authorizationPolicy');
+        if (is_null($val) || $val instanceof AuthorizationPolicy) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'authorizationPolicy'");
     }
 
     /**
@@ -85,7 +120,13 @@ class PolicyRoot extends Entity implements Parsable
      * @return array<ClaimsMappingPolicy>|null
     */
     public function getClaimsMappingPolicies(): ?array {
-        return $this->getBackingStore()->get('claimsMappingPolicies');
+        $val = $this->getBackingStore()->get('claimsMappingPolicies');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ClaimsMappingPolicy::class);
+            /** @var array<ClaimsMappingPolicy>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'claimsMappingPolicies'");
     }
 
     /**
@@ -93,7 +134,13 @@ class PolicyRoot extends Entity implements Parsable
      * @return array<ConditionalAccessPolicy>|null
     */
     public function getConditionalAccessPolicies(): ?array {
-        return $this->getBackingStore()->get('conditionalAccessPolicies');
+        $val = $this->getBackingStore()->get('conditionalAccessPolicies');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ConditionalAccessPolicy::class);
+            /** @var array<ConditionalAccessPolicy>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'conditionalAccessPolicies'");
     }
 
     /**
@@ -101,7 +148,11 @@ class PolicyRoot extends Entity implements Parsable
      * @return CrossTenantAccessPolicy|null
     */
     public function getCrossTenantAccessPolicy(): ?CrossTenantAccessPolicy {
-        return $this->getBackingStore()->get('crossTenantAccessPolicy');
+        $val = $this->getBackingStore()->get('crossTenantAccessPolicy');
+        if (is_null($val) || $val instanceof CrossTenantAccessPolicy) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'crossTenantAccessPolicy'");
     }
 
     /**
@@ -109,7 +160,11 @@ class PolicyRoot extends Entity implements Parsable
      * @return TenantAppManagementPolicy|null
     */
     public function getDefaultAppManagementPolicy(): ?TenantAppManagementPolicy {
-        return $this->getBackingStore()->get('defaultAppManagementPolicy');
+        $val = $this->getBackingStore()->get('defaultAppManagementPolicy');
+        if (is_null($val) || $val instanceof TenantAppManagementPolicy) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'defaultAppManagementPolicy'");
     }
 
     /**
@@ -117,12 +172,18 @@ class PolicyRoot extends Entity implements Parsable
      * @return array<FeatureRolloutPolicy>|null
     */
     public function getFeatureRolloutPolicies(): ?array {
-        return $this->getBackingStore()->get('featureRolloutPolicies');
+        $val = $this->getBackingStore()->get('featureRolloutPolicies');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, FeatureRolloutPolicy::class);
+            /** @var array<FeatureRolloutPolicy>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'featureRolloutPolicies'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -154,7 +215,13 @@ class PolicyRoot extends Entity implements Parsable
      * @return array<HomeRealmDiscoveryPolicy>|null
     */
     public function getHomeRealmDiscoveryPolicies(): ?array {
-        return $this->getBackingStore()->get('homeRealmDiscoveryPolicies');
+        $val = $this->getBackingStore()->get('homeRealmDiscoveryPolicies');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, HomeRealmDiscoveryPolicy::class);
+            /** @var array<HomeRealmDiscoveryPolicy>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'homeRealmDiscoveryPolicies'");
     }
 
     /**
@@ -162,7 +229,11 @@ class PolicyRoot extends Entity implements Parsable
      * @return IdentitySecurityDefaultsEnforcementPolicy|null
     */
     public function getIdentitySecurityDefaultsEnforcementPolicy(): ?IdentitySecurityDefaultsEnforcementPolicy {
-        return $this->getBackingStore()->get('identitySecurityDefaultsEnforcementPolicy');
+        $val = $this->getBackingStore()->get('identitySecurityDefaultsEnforcementPolicy');
+        if (is_null($val) || $val instanceof IdentitySecurityDefaultsEnforcementPolicy) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'identitySecurityDefaultsEnforcementPolicy'");
     }
 
     /**
@@ -170,7 +241,13 @@ class PolicyRoot extends Entity implements Parsable
      * @return array<PermissionGrantPolicy>|null
     */
     public function getPermissionGrantPolicies(): ?array {
-        return $this->getBackingStore()->get('permissionGrantPolicies');
+        $val = $this->getBackingStore()->get('permissionGrantPolicies');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, PermissionGrantPolicy::class);
+            /** @var array<PermissionGrantPolicy>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'permissionGrantPolicies'");
     }
 
     /**
@@ -178,7 +255,13 @@ class PolicyRoot extends Entity implements Parsable
      * @return array<UnifiedRoleManagementPolicy>|null
     */
     public function getRoleManagementPolicies(): ?array {
-        return $this->getBackingStore()->get('roleManagementPolicies');
+        $val = $this->getBackingStore()->get('roleManagementPolicies');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, UnifiedRoleManagementPolicy::class);
+            /** @var array<UnifiedRoleManagementPolicy>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'roleManagementPolicies'");
     }
 
     /**
@@ -186,7 +269,13 @@ class PolicyRoot extends Entity implements Parsable
      * @return array<UnifiedRoleManagementPolicyAssignment>|null
     */
     public function getRoleManagementPolicyAssignments(): ?array {
-        return $this->getBackingStore()->get('roleManagementPolicyAssignments');
+        $val = $this->getBackingStore()->get('roleManagementPolicyAssignments');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, UnifiedRoleManagementPolicyAssignment::class);
+            /** @var array<UnifiedRoleManagementPolicyAssignment>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'roleManagementPolicyAssignments'");
     }
 
     /**
@@ -194,7 +283,13 @@ class PolicyRoot extends Entity implements Parsable
      * @return array<TokenIssuancePolicy>|null
     */
     public function getTokenIssuancePolicies(): ?array {
-        return $this->getBackingStore()->get('tokenIssuancePolicies');
+        $val = $this->getBackingStore()->get('tokenIssuancePolicies');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, TokenIssuancePolicy::class);
+            /** @var array<TokenIssuancePolicy>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'tokenIssuancePolicies'");
     }
 
     /**
@@ -202,7 +297,13 @@ class PolicyRoot extends Entity implements Parsable
      * @return array<TokenLifetimePolicy>|null
     */
     public function getTokenLifetimePolicies(): ?array {
-        return $this->getBackingStore()->get('tokenLifetimePolicies');
+        $val = $this->getBackingStore()->get('tokenLifetimePolicies');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, TokenLifetimePolicy::class);
+            /** @var array<TokenLifetimePolicy>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'tokenLifetimePolicies'");
     }
 
     /**

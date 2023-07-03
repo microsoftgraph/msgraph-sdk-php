@@ -29,12 +29,16 @@ class ParticipantJoiningNotification extends Entity implements Parsable
      * @return Call|null
     */
     public function getCall(): ?Call {
-        return $this->getBackingStore()->get('call');
+        $val = $this->getBackingStore()->get('call');
+        if (is_null($val) || $val instanceof Call) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'call'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;

@@ -39,7 +39,12 @@ class TextColumn implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -47,7 +52,11 @@ class TextColumn implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getAllowMultipleLines(): ?bool {
-        return $this->getBackingStore()->get('allowMultipleLines');
+        $val = $this->getBackingStore()->get('allowMultipleLines');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowMultipleLines'");
     }
 
     /**
@@ -55,7 +64,11 @@ class TextColumn implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getAppendChangesToExistingText(): ?bool {
-        return $this->getBackingStore()->get('appendChangesToExistingText');
+        $val = $this->getBackingStore()->get('appendChangesToExistingText');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'appendChangesToExistingText'");
     }
 
     /**
@@ -68,7 +81,7 @@ class TextColumn implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -87,7 +100,11 @@ class TextColumn implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getLinesForEditing(): ?int {
-        return $this->getBackingStore()->get('linesForEditing');
+        $val = $this->getBackingStore()->get('linesForEditing');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'linesForEditing'");
     }
 
     /**
@@ -95,7 +112,11 @@ class TextColumn implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getMaxLength(): ?int {
-        return $this->getBackingStore()->get('maxLength');
+        $val = $this->getBackingStore()->get('maxLength');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'maxLength'");
     }
 
     /**
@@ -103,7 +124,11 @@ class TextColumn implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -111,7 +136,11 @@ class TextColumn implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getTextType(): ?string {
-        return $this->getBackingStore()->get('textType');
+        $val = $this->getBackingStore()->get('textType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'textType'");
     }
 
     /**

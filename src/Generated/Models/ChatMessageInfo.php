@@ -30,7 +30,11 @@ class ChatMessageInfo extends Entity implements Parsable
      * @return ItemBody|null
     */
     public function getBody(): ?ItemBody {
-        return $this->getBackingStore()->get('body');
+        $val = $this->getBackingStore()->get('body');
+        if (is_null($val) || $val instanceof ItemBody) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'body'");
     }
 
     /**
@@ -38,7 +42,11 @@ class ChatMessageInfo extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('createdDateTime');
+        $val = $this->getBackingStore()->get('createdDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdDateTime'");
     }
 
     /**
@@ -46,12 +54,16 @@ class ChatMessageInfo extends Entity implements Parsable
      * @return EventMessageDetail|null
     */
     public function getEventDetail(): ?EventMessageDetail {
-        return $this->getBackingStore()->get('eventDetail');
+        $val = $this->getBackingStore()->get('eventDetail');
+        if (is_null($val) || $val instanceof EventMessageDetail) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'eventDetail'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -70,7 +82,11 @@ class ChatMessageInfo extends Entity implements Parsable
      * @return ChatMessageFromIdentitySet|null
     */
     public function getFrom(): ?ChatMessageFromIdentitySet {
-        return $this->getBackingStore()->get('from');
+        $val = $this->getBackingStore()->get('from');
+        if (is_null($val) || $val instanceof ChatMessageFromIdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'from'");
     }
 
     /**
@@ -78,7 +94,11 @@ class ChatMessageInfo extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsDeleted(): ?bool {
-        return $this->getBackingStore()->get('isDeleted');
+        $val = $this->getBackingStore()->get('isDeleted');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isDeleted'");
     }
 
     /**
@@ -86,7 +106,11 @@ class ChatMessageInfo extends Entity implements Parsable
      * @return ChatMessageType|null
     */
     public function getMessageType(): ?ChatMessageType {
-        return $this->getBackingStore()->get('messageType');
+        $val = $this->getBackingStore()->get('messageType');
+        if (is_null($val) || $val instanceof ChatMessageType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'messageType'");
     }
 
     /**

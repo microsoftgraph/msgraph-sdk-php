@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DirectoryObjectPartnerReference extends DirectoryObject implements Parsable 
 {
     /**
-     * Instantiates a new DirectoryObjectPartnerReference and sets the default values.
+     * Instantiates a new directoryObjectPartnerReference and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -30,7 +30,11 @@ class DirectoryObjectPartnerReference extends DirectoryObject implements Parsabl
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->getBackingStore()->get('description');
+        $val = $this->getBackingStore()->get('description');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'description'");
     }
 
     /**
@@ -38,7 +42,11 @@ class DirectoryObjectPartnerReference extends DirectoryObject implements Parsabl
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
@@ -46,12 +54,16 @@ class DirectoryObjectPartnerReference extends DirectoryObject implements Parsabl
      * @return string|null
     */
     public function getExternalPartnerTenantId(): ?string {
-        return $this->getBackingStore()->get('externalPartnerTenantId');
+        $val = $this->getBackingStore()->get('externalPartnerTenantId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'externalPartnerTenantId'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -68,7 +80,11 @@ class DirectoryObjectPartnerReference extends DirectoryObject implements Parsabl
      * @return string|null
     */
     public function getObjectType(): ?string {
-        return $this->getBackingStore()->get('objectType');
+        $val = $this->getBackingStore()->get('objectType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'objectType'");
     }
 
     /**

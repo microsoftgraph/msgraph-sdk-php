@@ -30,7 +30,11 @@ class CustomTimeZone extends TimeZoneBase implements Parsable
      * @return int|null
     */
     public function getBias(): ?int {
-        return $this->getBackingStore()->get('bias');
+        $val = $this->getBackingStore()->get('bias');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'bias'");
     }
 
     /**
@@ -38,12 +42,16 @@ class CustomTimeZone extends TimeZoneBase implements Parsable
      * @return DaylightTimeZoneOffset|null
     */
     public function getDaylightOffset(): ?DaylightTimeZoneOffset {
-        return $this->getBackingStore()->get('daylightOffset');
+        $val = $this->getBackingStore()->get('daylightOffset');
+        if (is_null($val) || $val instanceof DaylightTimeZoneOffset) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'daylightOffset'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -59,7 +67,11 @@ class CustomTimeZone extends TimeZoneBase implements Parsable
      * @return StandardTimeZoneOffset|null
     */
     public function getStandardOffset(): ?StandardTimeZoneOffset {
-        return $this->getBackingStore()->get('standardOffset');
+        $val = $this->getBackingStore()->get('standardOffset');
+        if (is_null($val) || $val instanceof StandardTimeZoneOffset) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'standardOffset'");
     }
 
     /**

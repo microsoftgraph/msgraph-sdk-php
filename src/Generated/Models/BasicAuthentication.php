@@ -27,7 +27,7 @@ class BasicAuthentication extends ApiAuthenticationConfigurationBase implements 
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -42,7 +42,11 @@ class BasicAuthentication extends ApiAuthenticationConfigurationBase implements 
      * @return string|null
     */
     public function getPassword(): ?string {
-        return $this->getBackingStore()->get('password');
+        $val = $this->getBackingStore()->get('password');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'password'");
     }
 
     /**
@@ -50,7 +54,11 @@ class BasicAuthentication extends ApiAuthenticationConfigurationBase implements 
      * @return string|null
     */
     public function getUsername(): ?string {
-        return $this->getBackingStore()->get('username');
+        $val = $this->getBackingStore()->get('username');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'username'");
     }
 
     /**

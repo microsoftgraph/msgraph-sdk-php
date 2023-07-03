@@ -6,6 +6,7 @@ use Microsoft\Graph\Generated\Models\Entity;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class CasesRoot extends Entity implements Parsable 
 {
@@ -30,12 +31,18 @@ class CasesRoot extends Entity implements Parsable
      * @return array<EdiscoveryCase>|null
     */
     public function getEdiscoveryCases(): ?array {
-        return $this->getBackingStore()->get('ediscoveryCases');
+        $val = $this->getBackingStore()->get('ediscoveryCases');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, EdiscoveryCase::class);
+            /** @var array<EdiscoveryCase>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'ediscoveryCases'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;

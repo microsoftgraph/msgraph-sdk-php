@@ -40,7 +40,12 @@ class ReplyPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -53,7 +58,7 @@ class ReplyPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -67,7 +72,11 @@ class ReplyPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
      * @return Post|null
     */
     public function getPost(): ?Post {
-        return $this->getBackingStore()->get('post');
+        $val = $this->getBackingStore()->get('post');
+        if (is_null($val) || $val instanceof Post) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'post'");
     }
 
     /**

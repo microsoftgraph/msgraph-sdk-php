@@ -39,7 +39,12 @@ class RoleManagement implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -55,7 +60,11 @@ class RoleManagement implements AdditionalDataHolder, BackedModel, Parsable
      * @return RbacApplication|null
     */
     public function getDirectory(): ?RbacApplication {
-        return $this->getBackingStore()->get('directory');
+        $val = $this->getBackingStore()->get('directory');
+        if (is_null($val) || $val instanceof RbacApplication) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'directory'");
     }
 
     /**
@@ -63,12 +72,16 @@ class RoleManagement implements AdditionalDataHolder, BackedModel, Parsable
      * @return RbacApplication|null
     */
     public function getEntitlementManagement(): ?RbacApplication {
-        return $this->getBackingStore()->get('entitlementManagement');
+        $val = $this->getBackingStore()->get('entitlementManagement');
+        if (is_null($val) || $val instanceof RbacApplication) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'entitlementManagement'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -84,7 +97,11 @@ class RoleManagement implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**

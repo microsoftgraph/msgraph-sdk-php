@@ -7,11 +7,12 @@ use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class DelegatedAdminRelationship extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new delegatedAdminRelationship and sets the default values.
+     * Instantiates a new DelegatedAdminRelationship and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -31,7 +32,13 @@ class DelegatedAdminRelationship extends Entity implements Parsable
      * @return array<DelegatedAdminAccessAssignment>|null
     */
     public function getAccessAssignments(): ?array {
-        return $this->getBackingStore()->get('accessAssignments');
+        $val = $this->getBackingStore()->get('accessAssignments');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, DelegatedAdminAccessAssignment::class);
+            /** @var array<DelegatedAdminAccessAssignment>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'accessAssignments'");
     }
 
     /**
@@ -39,7 +46,11 @@ class DelegatedAdminRelationship extends Entity implements Parsable
      * @return DelegatedAdminAccessDetails|null
     */
     public function getAccessDetails(): ?DelegatedAdminAccessDetails {
-        return $this->getBackingStore()->get('accessDetails');
+        $val = $this->getBackingStore()->get('accessDetails');
+        if (is_null($val) || $val instanceof DelegatedAdminAccessDetails) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'accessDetails'");
     }
 
     /**
@@ -47,7 +58,11 @@ class DelegatedAdminRelationship extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getActivatedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('activatedDateTime');
+        $val = $this->getBackingStore()->get('activatedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'activatedDateTime'");
     }
 
     /**
@@ -55,7 +70,11 @@ class DelegatedAdminRelationship extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('createdDateTime');
+        $val = $this->getBackingStore()->get('createdDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdDateTime'");
     }
 
     /**
@@ -63,7 +82,11 @@ class DelegatedAdminRelationship extends Entity implements Parsable
      * @return DelegatedAdminRelationshipCustomerParticipant|null
     */
     public function getCustomer(): ?DelegatedAdminRelationshipCustomerParticipant {
-        return $this->getBackingStore()->get('customer');
+        $val = $this->getBackingStore()->get('customer');
+        if (is_null($val) || $val instanceof DelegatedAdminRelationshipCustomerParticipant) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'customer'");
     }
 
     /**
@@ -71,7 +94,11 @@ class DelegatedAdminRelationship extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
@@ -79,7 +106,11 @@ class DelegatedAdminRelationship extends Entity implements Parsable
      * @return DateInterval|null
     */
     public function getDuration(): ?DateInterval {
-        return $this->getBackingStore()->get('duration');
+        $val = $this->getBackingStore()->get('duration');
+        if (is_null($val) || $val instanceof DateInterval) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'duration'");
     }
 
     /**
@@ -87,12 +118,16 @@ class DelegatedAdminRelationship extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getEndDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('endDateTime');
+        $val = $this->getBackingStore()->get('endDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'endDateTime'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -117,7 +152,11 @@ class DelegatedAdminRelationship extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('lastModifiedDateTime');
+        $val = $this->getBackingStore()->get('lastModifiedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastModifiedDateTime'");
     }
 
     /**
@@ -125,7 +164,13 @@ class DelegatedAdminRelationship extends Entity implements Parsable
      * @return array<DelegatedAdminRelationshipOperation>|null
     */
     public function getOperations(): ?array {
-        return $this->getBackingStore()->get('operations');
+        $val = $this->getBackingStore()->get('operations');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, DelegatedAdminRelationshipOperation::class);
+            /** @var array<DelegatedAdminRelationshipOperation>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'operations'");
     }
 
     /**
@@ -133,7 +178,13 @@ class DelegatedAdminRelationship extends Entity implements Parsable
      * @return array<DelegatedAdminRelationshipRequest>|null
     */
     public function getRequests(): ?array {
-        return $this->getBackingStore()->get('requests');
+        $val = $this->getBackingStore()->get('requests');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, DelegatedAdminRelationshipRequest::class);
+            /** @var array<DelegatedAdminRelationshipRequest>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'requests'");
     }
 
     /**
@@ -141,7 +192,11 @@ class DelegatedAdminRelationship extends Entity implements Parsable
      * @return DelegatedAdminRelationshipStatus|null
     */
     public function getStatus(): ?DelegatedAdminRelationshipStatus {
-        return $this->getBackingStore()->get('status');
+        $val = $this->getBackingStore()->get('status');
+        if (is_null($val) || $val instanceof DelegatedAdminRelationshipStatus) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
     }
 
     /**

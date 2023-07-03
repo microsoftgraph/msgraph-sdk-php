@@ -39,7 +39,12 @@ class AttributeMappingParameterSchema implements AdditionalDataHolder, BackedMod
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -47,7 +52,11 @@ class AttributeMappingParameterSchema implements AdditionalDataHolder, BackedMod
      * @return bool|null
     */
     public function getAllowMultipleOccurrences(): ?bool {
-        return $this->getBackingStore()->get('allowMultipleOccurrences');
+        $val = $this->getBackingStore()->get('allowMultipleOccurrences');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowMultipleOccurrences'");
     }
 
     /**
@@ -60,7 +69,7 @@ class AttributeMappingParameterSchema implements AdditionalDataHolder, BackedMod
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -78,7 +87,11 @@ class AttributeMappingParameterSchema implements AdditionalDataHolder, BackedMod
      * @return string|null
     */
     public function getName(): ?string {
-        return $this->getBackingStore()->get('name');
+        $val = $this->getBackingStore()->get('name');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'name'");
     }
 
     /**
@@ -86,7 +99,11 @@ class AttributeMappingParameterSchema implements AdditionalDataHolder, BackedMod
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -94,7 +111,11 @@ class AttributeMappingParameterSchema implements AdditionalDataHolder, BackedMod
      * @return bool|null
     */
     public function getRequired(): ?bool {
-        return $this->getBackingStore()->get('required');
+        $val = $this->getBackingStore()->get('required');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'required'");
     }
 
     /**
@@ -102,7 +123,11 @@ class AttributeMappingParameterSchema implements AdditionalDataHolder, BackedMod
      * @return AttributeType|null
     */
     public function getType(): ?AttributeType {
-        return $this->getBackingStore()->get('type');
+        $val = $this->getBackingStore()->get('type');
+        if (is_null($val) || $val instanceof AttributeType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'type'");
     }
 
     /**

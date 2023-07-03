@@ -6,6 +6,7 @@ use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class AccessReviewHistoryDefinition extends Entity implements Parsable 
 {
@@ -30,7 +31,11 @@ class AccessReviewHistoryDefinition extends Entity implements Parsable
      * @return UserIdentity|null
     */
     public function getCreatedBy(): ?UserIdentity {
-        return $this->getBackingStore()->get('createdBy');
+        $val = $this->getBackingStore()->get('createdBy');
+        if (is_null($val) || $val instanceof UserIdentity) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdBy'");
     }
 
     /**
@@ -38,7 +43,11 @@ class AccessReviewHistoryDefinition extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('createdDateTime');
+        $val = $this->getBackingStore()->get('createdDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdDateTime'");
     }
 
     /**
@@ -46,7 +55,13 @@ class AccessReviewHistoryDefinition extends Entity implements Parsable
      * @return array<AccessReviewHistoryDecisionFilter>|null
     */
     public function getDecisions(): ?array {
-        return $this->getBackingStore()->get('decisions');
+        $val = $this->getBackingStore()->get('decisions');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AccessReviewHistoryDecisionFilter::class);
+            /** @var array<AccessReviewHistoryDecisionFilter>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'decisions'");
     }
 
     /**
@@ -54,12 +69,16 @@ class AccessReviewHistoryDefinition extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -82,7 +101,13 @@ class AccessReviewHistoryDefinition extends Entity implements Parsable
      * @return array<AccessReviewHistoryInstance>|null
     */
     public function getInstances(): ?array {
-        return $this->getBackingStore()->get('instances');
+        $val = $this->getBackingStore()->get('instances');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AccessReviewHistoryInstance::class);
+            /** @var array<AccessReviewHistoryInstance>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'instances'");
     }
 
     /**
@@ -90,7 +115,11 @@ class AccessReviewHistoryDefinition extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getReviewHistoryPeriodEndDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('reviewHistoryPeriodEndDateTime');
+        $val = $this->getBackingStore()->get('reviewHistoryPeriodEndDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'reviewHistoryPeriodEndDateTime'");
     }
 
     /**
@@ -98,7 +127,11 @@ class AccessReviewHistoryDefinition extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getReviewHistoryPeriodStartDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('reviewHistoryPeriodStartDateTime');
+        $val = $this->getBackingStore()->get('reviewHistoryPeriodStartDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'reviewHistoryPeriodStartDateTime'");
     }
 
     /**
@@ -106,7 +139,11 @@ class AccessReviewHistoryDefinition extends Entity implements Parsable
      * @return AccessReviewHistoryScheduleSettings|null
     */
     public function getScheduleSettings(): ?AccessReviewHistoryScheduleSettings {
-        return $this->getBackingStore()->get('scheduleSettings');
+        $val = $this->getBackingStore()->get('scheduleSettings');
+        if (is_null($val) || $val instanceof AccessReviewHistoryScheduleSettings) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'scheduleSettings'");
     }
 
     /**
@@ -114,7 +151,13 @@ class AccessReviewHistoryDefinition extends Entity implements Parsable
      * @return array<AccessReviewScope>|null
     */
     public function getScopes(): ?array {
-        return $this->getBackingStore()->get('scopes');
+        $val = $this->getBackingStore()->get('scopes');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AccessReviewScope::class);
+            /** @var array<AccessReviewScope>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'scopes'");
     }
 
     /**
@@ -122,7 +165,11 @@ class AccessReviewHistoryDefinition extends Entity implements Parsable
      * @return AccessReviewHistoryStatus|null
     */
     public function getStatus(): ?AccessReviewHistoryStatus {
-        return $this->getBackingStore()->get('status');
+        $val = $this->getBackingStore()->get('status');
+        if (is_null($val) || $val instanceof AccessReviewHistoryStatus) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
     }
 
     /**

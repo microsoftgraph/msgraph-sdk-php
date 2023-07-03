@@ -6,6 +6,7 @@ use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class AccessPackageAssignmentRequest extends Entity implements Parsable 
 {
@@ -30,7 +31,11 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
      * @return AccessPackage|null
     */
     public function getAccessPackage(): ?AccessPackage {
-        return $this->getBackingStore()->get('accessPackage');
+        $val = $this->getBackingStore()->get('accessPackage');
+        if (is_null($val) || $val instanceof AccessPackage) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'accessPackage'");
     }
 
     /**
@@ -38,7 +43,13 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
      * @return array<AccessPackageAnswer>|null
     */
     public function getAnswers(): ?array {
-        return $this->getBackingStore()->get('answers');
+        $val = $this->getBackingStore()->get('answers');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AccessPackageAnswer::class);
+            /** @var array<AccessPackageAnswer>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'answers'");
     }
 
     /**
@@ -46,7 +57,11 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
      * @return AccessPackageAssignment|null
     */
     public function getAssignment(): ?AccessPackageAssignment {
-        return $this->getBackingStore()->get('assignment');
+        $val = $this->getBackingStore()->get('assignment');
+        if (is_null($val) || $val instanceof AccessPackageAssignment) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'assignment'");
     }
 
     /**
@@ -54,7 +69,11 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCompletedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('completedDateTime');
+        $val = $this->getBackingStore()->get('completedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'completedDateTime'");
     }
 
     /**
@@ -62,12 +81,16 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('createdDateTime');
+        $val = $this->getBackingStore()->get('createdDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdDateTime'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -90,7 +113,11 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
      * @return AccessPackageSubject|null
     */
     public function getRequestor(): ?AccessPackageSubject {
-        return $this->getBackingStore()->get('requestor');
+        $val = $this->getBackingStore()->get('requestor');
+        if (is_null($val) || $val instanceof AccessPackageSubject) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'requestor'");
     }
 
     /**
@@ -98,7 +125,11 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
      * @return AccessPackageRequestType|null
     */
     public function getRequestType(): ?AccessPackageRequestType {
-        return $this->getBackingStore()->get('requestType');
+        $val = $this->getBackingStore()->get('requestType');
+        if (is_null($val) || $val instanceof AccessPackageRequestType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'requestType'");
     }
 
     /**
@@ -106,7 +137,11 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
      * @return EntitlementManagementSchedule|null
     */
     public function getSchedule(): ?EntitlementManagementSchedule {
-        return $this->getBackingStore()->get('schedule');
+        $val = $this->getBackingStore()->get('schedule');
+        if (is_null($val) || $val instanceof EntitlementManagementSchedule) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'schedule'");
     }
 
     /**
@@ -114,7 +149,11 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
      * @return AccessPackageRequestState|null
     */
     public function getState(): ?AccessPackageRequestState {
-        return $this->getBackingStore()->get('state');
+        $val = $this->getBackingStore()->get('state');
+        if (is_null($val) || $val instanceof AccessPackageRequestState) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'state'");
     }
 
     /**
@@ -122,7 +161,11 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
      * @return string|null
     */
     public function getStatus(): ?string {
-        return $this->getBackingStore()->get('status');
+        $val = $this->getBackingStore()->get('status');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
     }
 
     /**

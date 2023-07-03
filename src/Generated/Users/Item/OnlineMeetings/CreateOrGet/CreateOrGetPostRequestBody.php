@@ -42,7 +42,12 @@ class CreateOrGetPostRequestBody implements AdditionalDataHolder, BackedModel, P
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -58,7 +63,11 @@ class CreateOrGetPostRequestBody implements AdditionalDataHolder, BackedModel, P
      * @return ChatInfo|null
     */
     public function getChatInfo(): ?ChatInfo {
-        return $this->getBackingStore()->get('chatInfo');
+        $val = $this->getBackingStore()->get('chatInfo');
+        if (is_null($val) || $val instanceof ChatInfo) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'chatInfo'");
     }
 
     /**
@@ -66,7 +75,11 @@ class CreateOrGetPostRequestBody implements AdditionalDataHolder, BackedModel, P
      * @return DateTime|null
     */
     public function getEndDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('endDateTime');
+        $val = $this->getBackingStore()->get('endDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'endDateTime'");
     }
 
     /**
@@ -74,12 +87,16 @@ class CreateOrGetPostRequestBody implements AdditionalDataHolder, BackedModel, P
      * @return string|null
     */
     public function getExternalId(): ?string {
-        return $this->getBackingStore()->get('externalId');
+        $val = $this->getBackingStore()->get('externalId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'externalId'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -98,7 +115,11 @@ class CreateOrGetPostRequestBody implements AdditionalDataHolder, BackedModel, P
      * @return MeetingParticipants|null
     */
     public function getParticipants(): ?MeetingParticipants {
-        return $this->getBackingStore()->get('participants');
+        $val = $this->getBackingStore()->get('participants');
+        if (is_null($val) || $val instanceof MeetingParticipants) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'participants'");
     }
 
     /**
@@ -106,7 +127,11 @@ class CreateOrGetPostRequestBody implements AdditionalDataHolder, BackedModel, P
      * @return DateTime|null
     */
     public function getStartDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('startDateTime');
+        $val = $this->getBackingStore()->get('startDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'startDateTime'");
     }
 
     /**
@@ -114,7 +139,11 @@ class CreateOrGetPostRequestBody implements AdditionalDataHolder, BackedModel, P
      * @return string|null
     */
     public function getSubject(): ?string {
-        return $this->getBackingStore()->get('subject');
+        $val = $this->getBackingStore()->get('subject');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'subject'");
     }
 
     /**

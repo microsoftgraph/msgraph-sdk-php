@@ -30,12 +30,16 @@ class ProvisionedIdentity extends Identity implements Parsable
      * @return DetailsInfo|null
     */
     public function getDetails(): ?DetailsInfo {
-        return $this->getBackingStore()->get('details');
+        $val = $this->getBackingStore()->get('details');
+        if (is_null($val) || $val instanceof DetailsInfo) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'details'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -50,7 +54,11 @@ class ProvisionedIdentity extends Identity implements Parsable
      * @return string|null
     */
     public function getIdentityType(): ?string {
-        return $this->getBackingStore()->get('identityType');
+        $val = $this->getBackingStore()->get('identityType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'identityType'");
     }
 
     /**

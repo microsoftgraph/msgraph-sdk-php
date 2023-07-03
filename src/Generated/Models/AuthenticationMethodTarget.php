@@ -34,7 +34,7 @@ class AuthenticationMethodTarget extends Entity implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -49,7 +49,11 @@ class AuthenticationMethodTarget extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsRegistrationRequired(): ?bool {
-        return $this->getBackingStore()->get('isRegistrationRequired');
+        $val = $this->getBackingStore()->get('isRegistrationRequired');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isRegistrationRequired'");
     }
 
     /**
@@ -57,7 +61,11 @@ class AuthenticationMethodTarget extends Entity implements Parsable
      * @return AuthenticationMethodTargetType|null
     */
     public function getTargetType(): ?AuthenticationMethodTargetType {
-        return $this->getBackingStore()->get('targetType');
+        $val = $this->getBackingStore()->get('targetType');
+        if (is_null($val) || $val instanceof AuthenticationMethodTargetType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'targetType'");
     }
 
     /**

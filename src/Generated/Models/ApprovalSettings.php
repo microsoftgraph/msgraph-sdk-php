@@ -9,6 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class ApprovalSettings implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -39,7 +40,12 @@ class ApprovalSettings implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -47,7 +53,11 @@ class ApprovalSettings implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getApprovalMode(): ?string {
-        return $this->getBackingStore()->get('approvalMode');
+        $val = $this->getBackingStore()->get('approvalMode');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'approvalMode'");
     }
 
     /**
@@ -55,7 +65,13 @@ class ApprovalSettings implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<UnifiedApprovalStage>|null
     */
     public function getApprovalStages(): ?array {
-        return $this->getBackingStore()->get('approvalStages');
+        $val = $this->getBackingStore()->get('approvalStages');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, UnifiedApprovalStage::class);
+            /** @var array<UnifiedApprovalStage>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'approvalStages'");
     }
 
     /**
@@ -68,7 +84,7 @@ class ApprovalSettings implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -87,7 +103,11 @@ class ApprovalSettings implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getIsApprovalRequired(): ?bool {
-        return $this->getBackingStore()->get('isApprovalRequired');
+        $val = $this->getBackingStore()->get('isApprovalRequired');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isApprovalRequired'");
     }
 
     /**
@@ -95,7 +115,11 @@ class ApprovalSettings implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getIsApprovalRequiredForExtension(): ?bool {
-        return $this->getBackingStore()->get('isApprovalRequiredForExtension');
+        $val = $this->getBackingStore()->get('isApprovalRequiredForExtension');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isApprovalRequiredForExtension'");
     }
 
     /**
@@ -103,7 +127,11 @@ class ApprovalSettings implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getIsRequestorJustificationRequired(): ?bool {
-        return $this->getBackingStore()->get('isRequestorJustificationRequired');
+        $val = $this->getBackingStore()->get('isRequestorJustificationRequired');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isRequestorJustificationRequired'");
     }
 
     /**
@@ -111,7 +139,11 @@ class ApprovalSettings implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**

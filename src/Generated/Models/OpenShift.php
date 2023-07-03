@@ -30,12 +30,16 @@ class OpenShift extends ChangeTrackedEntity implements Parsable
      * @return OpenShiftItem|null
     */
     public function getDraftOpenShift(): ?OpenShiftItem {
-        return $this->getBackingStore()->get('draftOpenShift');
+        $val = $this->getBackingStore()->get('draftOpenShift');
+        if (is_null($val) || $val instanceof OpenShiftItem) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'draftOpenShift'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -51,7 +55,11 @@ class OpenShift extends ChangeTrackedEntity implements Parsable
      * @return string|null
     */
     public function getSchedulingGroupId(): ?string {
-        return $this->getBackingStore()->get('schedulingGroupId');
+        $val = $this->getBackingStore()->get('schedulingGroupId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'schedulingGroupId'");
     }
 
     /**
@@ -59,7 +67,11 @@ class OpenShift extends ChangeTrackedEntity implements Parsable
      * @return OpenShiftItem|null
     */
     public function getSharedOpenShift(): ?OpenShiftItem {
-        return $this->getBackingStore()->get('sharedOpenShift');
+        $val = $this->getBackingStore()->get('sharedOpenShift');
+        if (is_null($val) || $val instanceof OpenShiftItem) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sharedOpenShift'");
     }
 
     /**

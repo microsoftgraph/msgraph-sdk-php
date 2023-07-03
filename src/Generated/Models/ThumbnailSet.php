@@ -26,7 +26,7 @@ class ThumbnailSet extends Entity implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -43,7 +43,11 @@ class ThumbnailSet extends Entity implements Parsable
      * @return Thumbnail|null
     */
     public function getLarge(): ?Thumbnail {
-        return $this->getBackingStore()->get('large');
+        $val = $this->getBackingStore()->get('large');
+        if (is_null($val) || $val instanceof Thumbnail) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'large'");
     }
 
     /**
@@ -51,7 +55,11 @@ class ThumbnailSet extends Entity implements Parsable
      * @return Thumbnail|null
     */
     public function getMedium(): ?Thumbnail {
-        return $this->getBackingStore()->get('medium');
+        $val = $this->getBackingStore()->get('medium');
+        if (is_null($val) || $val instanceof Thumbnail) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'medium'");
     }
 
     /**
@@ -59,7 +67,11 @@ class ThumbnailSet extends Entity implements Parsable
      * @return Thumbnail|null
     */
     public function getSmall(): ?Thumbnail {
-        return $this->getBackingStore()->get('small');
+        $val = $this->getBackingStore()->get('small');
+        if (is_null($val) || $val instanceof Thumbnail) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'small'");
     }
 
     /**
@@ -67,7 +79,11 @@ class ThumbnailSet extends Entity implements Parsable
      * @return Thumbnail|null
     */
     public function getSource(): ?Thumbnail {
-        return $this->getBackingStore()->get('source');
+        $val = $this->getBackingStore()->get('source');
+        if (is_null($val) || $val instanceof Thumbnail) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'source'");
     }
 
     /**

@@ -39,7 +39,12 @@ class BroadcastMeetingSettings implements AdditionalDataHolder, BackedModel, Par
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -47,7 +52,11 @@ class BroadcastMeetingSettings implements AdditionalDataHolder, BackedModel, Par
      * @return BroadcastMeetingAudience|null
     */
     public function getAllowedAudience(): ?BroadcastMeetingAudience {
-        return $this->getBackingStore()->get('allowedAudience');
+        $val = $this->getBackingStore()->get('allowedAudience');
+        if (is_null($val) || $val instanceof BroadcastMeetingAudience) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowedAudience'");
     }
 
     /**
@@ -63,12 +72,16 @@ class BroadcastMeetingSettings implements AdditionalDataHolder, BackedModel, Par
      * @return BroadcastMeetingCaptionSettings|null
     */
     public function getCaptions(): ?BroadcastMeetingCaptionSettings {
-        return $this->getBackingStore()->get('captions');
+        $val = $this->getBackingStore()->get('captions');
+        if (is_null($val) || $val instanceof BroadcastMeetingCaptionSettings) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'captions'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -88,7 +101,11 @@ class BroadcastMeetingSettings implements AdditionalDataHolder, BackedModel, Par
      * @return bool|null
     */
     public function getIsAttendeeReportEnabled(): ?bool {
-        return $this->getBackingStore()->get('isAttendeeReportEnabled');
+        $val = $this->getBackingStore()->get('isAttendeeReportEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isAttendeeReportEnabled'");
     }
 
     /**
@@ -96,7 +113,11 @@ class BroadcastMeetingSettings implements AdditionalDataHolder, BackedModel, Par
      * @return bool|null
     */
     public function getIsQuestionAndAnswerEnabled(): ?bool {
-        return $this->getBackingStore()->get('isQuestionAndAnswerEnabled');
+        $val = $this->getBackingStore()->get('isQuestionAndAnswerEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isQuestionAndAnswerEnabled'");
     }
 
     /**
@@ -104,7 +125,11 @@ class BroadcastMeetingSettings implements AdditionalDataHolder, BackedModel, Par
      * @return bool|null
     */
     public function getIsRecordingEnabled(): ?bool {
-        return $this->getBackingStore()->get('isRecordingEnabled');
+        $val = $this->getBackingStore()->get('isRecordingEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isRecordingEnabled'");
     }
 
     /**
@@ -112,7 +137,11 @@ class BroadcastMeetingSettings implements AdditionalDataHolder, BackedModel, Par
      * @return bool|null
     */
     public function getIsVideoOnDemandEnabled(): ?bool {
-        return $this->getBackingStore()->get('isVideoOnDemandEnabled');
+        $val = $this->getBackingStore()->get('isVideoOnDemandEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isVideoOnDemandEnabled'");
     }
 
     /**
@@ -120,7 +149,11 @@ class BroadcastMeetingSettings implements AdditionalDataHolder, BackedModel, Par
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**

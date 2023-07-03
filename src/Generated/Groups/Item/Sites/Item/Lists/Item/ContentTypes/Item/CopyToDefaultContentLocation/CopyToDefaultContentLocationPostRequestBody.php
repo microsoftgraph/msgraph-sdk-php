@@ -40,7 +40,12 @@ class CopyToDefaultContentLocationPostRequestBody implements AdditionalDataHolde
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -56,12 +61,16 @@ class CopyToDefaultContentLocationPostRequestBody implements AdditionalDataHolde
      * @return string|null
     */
     public function getDestinationFileName(): ?string {
-        return $this->getBackingStore()->get('destinationFileName');
+        $val = $this->getBackingStore()->get('destinationFileName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'destinationFileName'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -76,7 +85,11 @@ class CopyToDefaultContentLocationPostRequestBody implements AdditionalDataHolde
      * @return ItemReference|null
     */
     public function getSourceFile(): ?ItemReference {
-        return $this->getBackingStore()->get('sourceFile');
+        $val = $this->getBackingStore()->get('sourceFile');
+        if (is_null($val) || $val instanceof ItemReference) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sourceFile'");
     }
 
     /**

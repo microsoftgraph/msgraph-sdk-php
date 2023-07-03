@@ -26,7 +26,7 @@ class WorkbookChartDataLabelFormat extends Entity implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -41,7 +41,11 @@ class WorkbookChartDataLabelFormat extends Entity implements Parsable
      * @return WorkbookChartFill|null
     */
     public function getFill(): ?WorkbookChartFill {
-        return $this->getBackingStore()->get('fill');
+        $val = $this->getBackingStore()->get('fill');
+        if (is_null($val) || $val instanceof WorkbookChartFill) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'fill'");
     }
 
     /**
@@ -49,7 +53,11 @@ class WorkbookChartDataLabelFormat extends Entity implements Parsable
      * @return WorkbookChartFont|null
     */
     public function getFont(): ?WorkbookChartFont {
-        return $this->getBackingStore()->get('font');
+        $val = $this->getBackingStore()->get('font');
+        if (is_null($val) || $val instanceof WorkbookChartFont) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'font'");
     }
 
     /**

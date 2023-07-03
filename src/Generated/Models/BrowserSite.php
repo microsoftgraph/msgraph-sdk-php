@@ -6,6 +6,7 @@ use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 /**
  * Singleton entity which is used to specify IE mode site metadata
@@ -33,7 +34,11 @@ class BrowserSite extends Entity implements Parsable
      * @return bool|null
     */
     public function getAllowRedirect(): ?bool {
-        return $this->getBackingStore()->get('allowRedirect');
+        $val = $this->getBackingStore()->get('allowRedirect');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowRedirect'");
     }
 
     /**
@@ -41,7 +46,11 @@ class BrowserSite extends Entity implements Parsable
      * @return string|null
     */
     public function getComment(): ?string {
-        return $this->getBackingStore()->get('comment');
+        $val = $this->getBackingStore()->get('comment');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'comment'");
     }
 
     /**
@@ -49,7 +58,11 @@ class BrowserSite extends Entity implements Parsable
      * @return BrowserSiteCompatibilityMode|null
     */
     public function getCompatibilityMode(): ?BrowserSiteCompatibilityMode {
-        return $this->getBackingStore()->get('compatibilityMode');
+        $val = $this->getBackingStore()->get('compatibilityMode');
+        if (is_null($val) || $val instanceof BrowserSiteCompatibilityMode) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'compatibilityMode'");
     }
 
     /**
@@ -57,7 +70,11 @@ class BrowserSite extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('createdDateTime');
+        $val = $this->getBackingStore()->get('createdDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdDateTime'");
     }
 
     /**
@@ -65,12 +82,16 @@ class BrowserSite extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getDeletedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('deletedDateTime');
+        $val = $this->getBackingStore()->get('deletedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deletedDateTime'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -95,7 +116,13 @@ class BrowserSite extends Entity implements Parsable
      * @return array<BrowserSiteHistory>|null
     */
     public function getHistory(): ?array {
-        return $this->getBackingStore()->get('history');
+        $val = $this->getBackingStore()->get('history');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, BrowserSiteHistory::class);
+            /** @var array<BrowserSiteHistory>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'history'");
     }
 
     /**
@@ -103,7 +130,11 @@ class BrowserSite extends Entity implements Parsable
      * @return IdentitySet|null
     */
     public function getLastModifiedBy(): ?IdentitySet {
-        return $this->getBackingStore()->get('lastModifiedBy');
+        $val = $this->getBackingStore()->get('lastModifiedBy');
+        if (is_null($val) || $val instanceof IdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastModifiedBy'");
     }
 
     /**
@@ -111,7 +142,11 @@ class BrowserSite extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('lastModifiedDateTime');
+        $val = $this->getBackingStore()->get('lastModifiedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastModifiedDateTime'");
     }
 
     /**
@@ -119,7 +154,11 @@ class BrowserSite extends Entity implements Parsable
      * @return BrowserSiteMergeType|null
     */
     public function getMergeType(): ?BrowserSiteMergeType {
-        return $this->getBackingStore()->get('mergeType');
+        $val = $this->getBackingStore()->get('mergeType');
+        if (is_null($val) || $val instanceof BrowserSiteMergeType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'mergeType'");
     }
 
     /**
@@ -127,7 +166,11 @@ class BrowserSite extends Entity implements Parsable
      * @return BrowserSiteStatus|null
     */
     public function getStatus(): ?BrowserSiteStatus {
-        return $this->getBackingStore()->get('status');
+        $val = $this->getBackingStore()->get('status');
+        if (is_null($val) || $val instanceof BrowserSiteStatus) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
     }
 
     /**
@@ -135,7 +178,11 @@ class BrowserSite extends Entity implements Parsable
      * @return BrowserSiteTargetEnvironment|null
     */
     public function getTargetEnvironment(): ?BrowserSiteTargetEnvironment {
-        return $this->getBackingStore()->get('targetEnvironment');
+        $val = $this->getBackingStore()->get('targetEnvironment');
+        if (is_null($val) || $val instanceof BrowserSiteTargetEnvironment) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'targetEnvironment'");
     }
 
     /**
@@ -143,7 +190,11 @@ class BrowserSite extends Entity implements Parsable
      * @return string|null
     */
     public function getWebUrl(): ?string {
-        return $this->getBackingStore()->get('webUrl');
+        $val = $this->getBackingStore()->get('webUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'webUrl'");
     }
 
     /**

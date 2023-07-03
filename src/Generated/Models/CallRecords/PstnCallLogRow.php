@@ -40,7 +40,12 @@ class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -56,7 +61,11 @@ class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable
      * @return PstnCallDurationSource|null
     */
     public function getCallDurationSource(): ?PstnCallDurationSource {
-        return $this->getBackingStore()->get('callDurationSource');
+        $val = $this->getBackingStore()->get('callDurationSource');
+        if (is_null($val) || $val instanceof PstnCallDurationSource) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'callDurationSource'");
     }
 
     /**
@@ -64,7 +73,11 @@ class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getCalleeNumber(): ?string {
-        return $this->getBackingStore()->get('calleeNumber');
+        $val = $this->getBackingStore()->get('calleeNumber');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'calleeNumber'");
     }
 
     /**
@@ -72,7 +85,11 @@ class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getCallerNumber(): ?string {
-        return $this->getBackingStore()->get('callerNumber');
+        $val = $this->getBackingStore()->get('callerNumber');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'callerNumber'");
     }
 
     /**
@@ -80,7 +97,11 @@ class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getCallId(): ?string {
-        return $this->getBackingStore()->get('callId');
+        $val = $this->getBackingStore()->get('callId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'callId'");
     }
 
     /**
@@ -88,7 +109,11 @@ class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getCallType(): ?string {
-        return $this->getBackingStore()->get('callType');
+        $val = $this->getBackingStore()->get('callType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'callType'");
     }
 
     /**
@@ -96,7 +121,11 @@ class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getCharge(): ?string {
-        return $this->getBackingStore()->get('charge');
+        $val = $this->getBackingStore()->get('charge');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'charge'");
     }
 
     /**
@@ -104,7 +133,11 @@ class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getConferenceId(): ?string {
-        return $this->getBackingStore()->get('conferenceId');
+        $val = $this->getBackingStore()->get('conferenceId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'conferenceId'");
     }
 
     /**
@@ -112,7 +145,11 @@ class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getConnectionCharge(): ?string {
-        return $this->getBackingStore()->get('connectionCharge');
+        $val = $this->getBackingStore()->get('connectionCharge');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'connectionCharge'");
     }
 
     /**
@@ -120,7 +157,11 @@ class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getCurrency(): ?string {
-        return $this->getBackingStore()->get('currency');
+        $val = $this->getBackingStore()->get('currency');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'currency'");
     }
 
     /**
@@ -128,7 +169,11 @@ class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getDestinationContext(): ?string {
-        return $this->getBackingStore()->get('destinationContext');
+        $val = $this->getBackingStore()->get('destinationContext');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'destinationContext'");
     }
 
     /**
@@ -136,7 +181,11 @@ class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getDestinationName(): ?string {
-        return $this->getBackingStore()->get('destinationName');
+        $val = $this->getBackingStore()->get('destinationName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'destinationName'");
     }
 
     /**
@@ -144,7 +193,11 @@ class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getDuration(): ?int {
-        return $this->getBackingStore()->get('duration');
+        $val = $this->getBackingStore()->get('duration');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'duration'");
     }
 
     /**
@@ -152,12 +205,16 @@ class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable
      * @return DateTime|null
     */
     public function getEndDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('endDateTime');
+        $val = $this->getBackingStore()->get('endDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'endDateTime'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -194,7 +251,11 @@ class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getId(): ?string {
-        return $this->getBackingStore()->get('id');
+        $val = $this->getBackingStore()->get('id');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'id'");
     }
 
     /**
@@ -202,7 +263,11 @@ class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getInventoryType(): ?string {
-        return $this->getBackingStore()->get('inventoryType');
+        $val = $this->getBackingStore()->get('inventoryType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'inventoryType'");
     }
 
     /**
@@ -210,7 +275,11 @@ class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getLicenseCapability(): ?string {
-        return $this->getBackingStore()->get('licenseCapability');
+        $val = $this->getBackingStore()->get('licenseCapability');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'licenseCapability'");
     }
 
     /**
@@ -218,7 +287,11 @@ class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -226,7 +299,11 @@ class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOperator(): ?string {
-        return $this->getBackingStore()->get('operator');
+        $val = $this->getBackingStore()->get('operator');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'operator'");
     }
 
     /**
@@ -234,7 +311,11 @@ class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable
      * @return DateTime|null
     */
     public function getStartDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('startDateTime');
+        $val = $this->getBackingStore()->get('startDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'startDateTime'");
     }
 
     /**
@@ -242,7 +323,11 @@ class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getTenantCountryCode(): ?string {
-        return $this->getBackingStore()->get('tenantCountryCode');
+        $val = $this->getBackingStore()->get('tenantCountryCode');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'tenantCountryCode'");
     }
 
     /**
@@ -250,7 +335,11 @@ class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getUsageCountryCode(): ?string {
-        return $this->getBackingStore()->get('usageCountryCode');
+        $val = $this->getBackingStore()->get('usageCountryCode');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'usageCountryCode'");
     }
 
     /**
@@ -258,7 +347,11 @@ class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getUserDisplayName(): ?string {
-        return $this->getBackingStore()->get('userDisplayName');
+        $val = $this->getBackingStore()->get('userDisplayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userDisplayName'");
     }
 
     /**
@@ -266,7 +359,11 @@ class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getUserId(): ?string {
-        return $this->getBackingStore()->get('userId');
+        $val = $this->getBackingStore()->get('userId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userId'");
     }
 
     /**
@@ -274,7 +371,11 @@ class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getUserPrincipalName(): ?string {
-        return $this->getBackingStore()->get('userPrincipalName');
+        $val = $this->getBackingStore()->get('userPrincipalName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userPrincipalName'");
     }
 
     /**

@@ -30,12 +30,16 @@ class SignInFrequencySessionControl extends ConditionalAccessSessionControl impl
      * @return SignInFrequencyAuthenticationType|null
     */
     public function getAuthenticationType(): ?SignInFrequencyAuthenticationType {
-        return $this->getBackingStore()->get('authenticationType');
+        $val = $this->getBackingStore()->get('authenticationType');
+        if (is_null($val) || $val instanceof SignInFrequencyAuthenticationType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'authenticationType'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -52,7 +56,11 @@ class SignInFrequencySessionControl extends ConditionalAccessSessionControl impl
      * @return SignInFrequencyInterval|null
     */
     public function getFrequencyInterval(): ?SignInFrequencyInterval {
-        return $this->getBackingStore()->get('frequencyInterval');
+        $val = $this->getBackingStore()->get('frequencyInterval');
+        if (is_null($val) || $val instanceof SignInFrequencyInterval) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'frequencyInterval'");
     }
 
     /**
@@ -60,7 +68,11 @@ class SignInFrequencySessionControl extends ConditionalAccessSessionControl impl
      * @return SigninFrequencyType|null
     */
     public function getType(): ?SigninFrequencyType {
-        return $this->getBackingStore()->get('type');
+        $val = $this->getBackingStore()->get('type');
+        if (is_null($val) || $val instanceof SigninFrequencyType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'type'");
     }
 
     /**
@@ -68,7 +80,11 @@ class SignInFrequencySessionControl extends ConditionalAccessSessionControl impl
      * @return int|null
     */
     public function getValue(): ?int {
-        return $this->getBackingStore()->get('value');
+        $val = $this->getBackingStore()->get('value');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'value'");
     }
 
     /**

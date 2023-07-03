@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SkypeUserConversationMember extends ConversationMember implements Parsable 
 {
     /**
-     * Instantiates a new SkypeUserConversationMember and sets the default values.
+     * Instantiates a new skypeUserConversationMember and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -27,7 +27,7 @@ class SkypeUserConversationMember extends ConversationMember implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -41,7 +41,11 @@ class SkypeUserConversationMember extends ConversationMember implements Parsable
      * @return string|null
     */
     public function getSkypeId(): ?string {
-        return $this->getBackingStore()->get('skypeId');
+        $val = $this->getBackingStore()->get('skypeId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'skypeId'");
     }
 
     /**

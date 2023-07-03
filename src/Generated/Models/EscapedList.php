@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class EscapedList extends BaseItem implements Parsable 
 {
@@ -30,7 +31,13 @@ class EscapedList extends BaseItem implements Parsable
      * @return array<ColumnDefinition>|null
     */
     public function getColumns(): ?array {
-        return $this->getBackingStore()->get('columns');
+        $val = $this->getBackingStore()->get('columns');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ColumnDefinition::class);
+            /** @var array<ColumnDefinition>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'columns'");
     }
 
     /**
@@ -38,7 +45,13 @@ class EscapedList extends BaseItem implements Parsable
      * @return array<ContentType>|null
     */
     public function getContentTypes(): ?array {
-        return $this->getBackingStore()->get('contentTypes');
+        $val = $this->getBackingStore()->get('contentTypes');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ContentType::class);
+            /** @var array<ContentType>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'contentTypes'");
     }
 
     /**
@@ -46,7 +59,11 @@ class EscapedList extends BaseItem implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
@@ -54,12 +71,16 @@ class EscapedList extends BaseItem implements Parsable
      * @return Drive|null
     */
     public function getDrive(): ?Drive {
-        return $this->getBackingStore()->get('drive');
+        $val = $this->getBackingStore()->get('drive');
+        if (is_null($val) || $val instanceof Drive) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'drive'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -82,7 +103,13 @@ class EscapedList extends BaseItem implements Parsable
      * @return array<ListItem>|null
     */
     public function getItems(): ?array {
-        return $this->getBackingStore()->get('items');
+        $val = $this->getBackingStore()->get('items');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ListItem::class);
+            /** @var array<ListItem>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'items'");
     }
 
     /**
@@ -90,7 +117,11 @@ class EscapedList extends BaseItem implements Parsable
      * @return ListInfo|null
     */
     public function getList(): ?ListInfo {
-        return $this->getBackingStore()->get('escapedList');
+        $val = $this->getBackingStore()->get('escapedList');
+        if (is_null($val) || $val instanceof ListInfo) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'escapedList'");
     }
 
     /**
@@ -98,7 +129,13 @@ class EscapedList extends BaseItem implements Parsable
      * @return array<RichLongRunningOperation>|null
     */
     public function getOperations(): ?array {
-        return $this->getBackingStore()->get('operations');
+        $val = $this->getBackingStore()->get('operations');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, RichLongRunningOperation::class);
+            /** @var array<RichLongRunningOperation>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'operations'");
     }
 
     /**
@@ -106,7 +143,11 @@ class EscapedList extends BaseItem implements Parsable
      * @return SharepointIds|null
     */
     public function getSharepointIds(): ?SharepointIds {
-        return $this->getBackingStore()->get('sharepointIds');
+        $val = $this->getBackingStore()->get('sharepointIds');
+        if (is_null($val) || $val instanceof SharepointIds) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sharepointIds'");
     }
 
     /**
@@ -114,7 +155,13 @@ class EscapedList extends BaseItem implements Parsable
      * @return array<Subscription>|null
     */
     public function getSubscriptions(): ?array {
-        return $this->getBackingStore()->get('subscriptions');
+        $val = $this->getBackingStore()->get('subscriptions');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Subscription::class);
+            /** @var array<Subscription>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'subscriptions'");
     }
 
     /**
@@ -122,7 +169,11 @@ class EscapedList extends BaseItem implements Parsable
      * @return SystemFacet|null
     */
     public function getSystem(): ?SystemFacet {
-        return $this->getBackingStore()->get('system');
+        $val = $this->getBackingStore()->get('system');
+        if (is_null($val) || $val instanceof SystemFacet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'system'");
     }
 
     /**

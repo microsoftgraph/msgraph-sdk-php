@@ -6,6 +6,7 @@ use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class DeviceEvidence extends AlertEvidence implements Parsable 
 {
@@ -30,7 +31,11 @@ class DeviceEvidence extends AlertEvidence implements Parsable
      * @return string|null
     */
     public function getAzureAdDeviceId(): ?string {
-        return $this->getBackingStore()->get('azureAdDeviceId');
+        $val = $this->getBackingStore()->get('azureAdDeviceId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'azureAdDeviceId'");
     }
 
     /**
@@ -38,7 +43,11 @@ class DeviceEvidence extends AlertEvidence implements Parsable
      * @return DefenderAvStatus|null
     */
     public function getDefenderAvStatus(): ?DefenderAvStatus {
-        return $this->getBackingStore()->get('defenderAvStatus');
+        $val = $this->getBackingStore()->get('defenderAvStatus');
+        if (is_null($val) || $val instanceof DefenderAvStatus) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'defenderAvStatus'");
     }
 
     /**
@@ -46,12 +55,16 @@ class DeviceEvidence extends AlertEvidence implements Parsable
      * @return string|null
     */
     public function getDeviceDnsName(): ?string {
-        return $this->getBackingStore()->get('deviceDnsName');
+        $val = $this->getBackingStore()->get('deviceDnsName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deviceDnsName'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -61,7 +74,14 @@ class DeviceEvidence extends AlertEvidence implements Parsable
             'deviceDnsName' => fn(ParseNode $n) => $o->setDeviceDnsName($n->getStringValue()),
             'firstSeenDateTime' => fn(ParseNode $n) => $o->setFirstSeenDateTime($n->getDateTimeValue()),
             'healthStatus' => fn(ParseNode $n) => $o->setHealthStatus($n->getEnumValue(DeviceHealthStatus::class)),
-            'ipInterfaces' => fn(ParseNode $n) => $o->setIpInterfaces($n->getCollectionOfPrimitiveValues()),
+            'ipInterfaces' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setIpInterfaces($val);
+            },
             'loggedOnUsers' => fn(ParseNode $n) => $o->setLoggedOnUsers($n->getCollectionOfObjectValues([LoggedOnUser::class, 'createFromDiscriminatorValue'])),
             'mdeDeviceId' => fn(ParseNode $n) => $o->setMdeDeviceId($n->getStringValue()),
             'onboardingStatus' => fn(ParseNode $n) => $o->setOnboardingStatus($n->getEnumValue(OnboardingStatus::class)),
@@ -80,7 +100,11 @@ class DeviceEvidence extends AlertEvidence implements Parsable
      * @return DateTime|null
     */
     public function getFirstSeenDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('firstSeenDateTime');
+        $val = $this->getBackingStore()->get('firstSeenDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'firstSeenDateTime'");
     }
 
     /**
@@ -88,7 +112,11 @@ class DeviceEvidence extends AlertEvidence implements Parsable
      * @return DeviceHealthStatus|null
     */
     public function getHealthStatus(): ?DeviceHealthStatus {
-        return $this->getBackingStore()->get('healthStatus');
+        $val = $this->getBackingStore()->get('healthStatus');
+        if (is_null($val) || $val instanceof DeviceHealthStatus) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'healthStatus'");
     }
 
     /**
@@ -96,7 +124,13 @@ class DeviceEvidence extends AlertEvidence implements Parsable
      * @return array<string>|null
     */
     public function getIpInterfaces(): ?array {
-        return $this->getBackingStore()->get('ipInterfaces');
+        $val = $this->getBackingStore()->get('ipInterfaces');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'ipInterfaces'");
     }
 
     /**
@@ -104,7 +138,13 @@ class DeviceEvidence extends AlertEvidence implements Parsable
      * @return array<LoggedOnUser>|null
     */
     public function getLoggedOnUsers(): ?array {
-        return $this->getBackingStore()->get('loggedOnUsers');
+        $val = $this->getBackingStore()->get('loggedOnUsers');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, LoggedOnUser::class);
+            /** @var array<LoggedOnUser>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'loggedOnUsers'");
     }
 
     /**
@@ -112,7 +152,11 @@ class DeviceEvidence extends AlertEvidence implements Parsable
      * @return string|null
     */
     public function getMdeDeviceId(): ?string {
-        return $this->getBackingStore()->get('mdeDeviceId');
+        $val = $this->getBackingStore()->get('mdeDeviceId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'mdeDeviceId'");
     }
 
     /**
@@ -120,7 +164,11 @@ class DeviceEvidence extends AlertEvidence implements Parsable
      * @return OnboardingStatus|null
     */
     public function getOnboardingStatus(): ?OnboardingStatus {
-        return $this->getBackingStore()->get('onboardingStatus');
+        $val = $this->getBackingStore()->get('onboardingStatus');
+        if (is_null($val) || $val instanceof OnboardingStatus) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'onboardingStatus'");
     }
 
     /**
@@ -128,7 +176,11 @@ class DeviceEvidence extends AlertEvidence implements Parsable
      * @return int|null
     */
     public function getOsBuild(): ?int {
-        return $this->getBackingStore()->get('osBuild');
+        $val = $this->getBackingStore()->get('osBuild');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'osBuild'");
     }
 
     /**
@@ -136,7 +188,11 @@ class DeviceEvidence extends AlertEvidence implements Parsable
      * @return string|null
     */
     public function getOsPlatform(): ?string {
-        return $this->getBackingStore()->get('osPlatform');
+        $val = $this->getBackingStore()->get('osPlatform');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'osPlatform'");
     }
 
     /**
@@ -144,7 +200,11 @@ class DeviceEvidence extends AlertEvidence implements Parsable
      * @return int|null
     */
     public function getRbacGroupId(): ?int {
-        return $this->getBackingStore()->get('rbacGroupId');
+        $val = $this->getBackingStore()->get('rbacGroupId');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'rbacGroupId'");
     }
 
     /**
@@ -152,7 +212,11 @@ class DeviceEvidence extends AlertEvidence implements Parsable
      * @return string|null
     */
     public function getRbacGroupName(): ?string {
-        return $this->getBackingStore()->get('rbacGroupName');
+        $val = $this->getBackingStore()->get('rbacGroupName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'rbacGroupName'");
     }
 
     /**
@@ -160,7 +224,11 @@ class DeviceEvidence extends AlertEvidence implements Parsable
      * @return DeviceRiskScore|null
     */
     public function getRiskScore(): ?DeviceRiskScore {
-        return $this->getBackingStore()->get('riskScore');
+        $val = $this->getBackingStore()->get('riskScore');
+        if (is_null($val) || $val instanceof DeviceRiskScore) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'riskScore'");
     }
 
     /**
@@ -168,7 +236,11 @@ class DeviceEvidence extends AlertEvidence implements Parsable
      * @return string|null
     */
     public function getVersion(): ?string {
-        return $this->getBackingStore()->get('version');
+        $val = $this->getBackingStore()->get('version');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'version'");
     }
 
     /**
@@ -176,7 +248,11 @@ class DeviceEvidence extends AlertEvidence implements Parsable
      * @return VmMetadata|null
     */
     public function getVmMetadata(): ?VmMetadata {
-        return $this->getBackingStore()->get('vmMetadata');
+        $val = $this->getBackingStore()->get('vmMetadata');
+        if (is_null($val) || $val instanceof VmMetadata) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'vmMetadata'");
     }
 
     /**

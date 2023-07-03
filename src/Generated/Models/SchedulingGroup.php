@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class SchedulingGroup extends ChangeTrackedEntity implements Parsable 
 {
@@ -30,19 +31,30 @@ class SchedulingGroup extends ChangeTrackedEntity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'isActive' => fn(ParseNode $n) => $o->setIsActive($n->getBooleanValue()),
-            'userIds' => fn(ParseNode $n) => $o->setUserIds($n->getCollectionOfPrimitiveValues()),
+            'userIds' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setUserIds($val);
+            },
         ]);
     }
 
@@ -51,7 +63,11 @@ class SchedulingGroup extends ChangeTrackedEntity implements Parsable
      * @return bool|null
     */
     public function getIsActive(): ?bool {
-        return $this->getBackingStore()->get('isActive');
+        $val = $this->getBackingStore()->get('isActive');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isActive'");
     }
 
     /**
@@ -59,7 +75,13 @@ class SchedulingGroup extends ChangeTrackedEntity implements Parsable
      * @return array<string>|null
     */
     public function getUserIds(): ?array {
-        return $this->getBackingStore()->get('userIds');
+        $val = $this->getBackingStore()->get('userIds');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userIds'");
     }
 
     /**

@@ -30,7 +30,11 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy implements Parsab
      * @return bool|null
     */
     public function getBitLockerEnabled(): ?bool {
-        return $this->getBackingStore()->get('bitLockerEnabled');
+        $val = $this->getBackingStore()->get('bitLockerEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'bitLockerEnabled'");
     }
 
     /**
@@ -38,7 +42,11 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy implements Parsab
      * @return bool|null
     */
     public function getCodeIntegrityEnabled(): ?bool {
-        return $this->getBackingStore()->get('codeIntegrityEnabled');
+        $val = $this->getBackingStore()->get('codeIntegrityEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'codeIntegrityEnabled'");
     }
 
     /**
@@ -46,12 +54,16 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy implements Parsab
      * @return bool|null
     */
     public function getEarlyLaunchAntiMalwareDriverEnabled(): ?bool {
-        return $this->getBackingStore()->get('earlyLaunchAntiMalwareDriverEnabled');
+        $val = $this->getBackingStore()->get('earlyLaunchAntiMalwareDriverEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'earlyLaunchAntiMalwareDriverEnabled'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -83,7 +95,11 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy implements Parsab
      * @return string|null
     */
     public function getMobileOsMaximumVersion(): ?string {
-        return $this->getBackingStore()->get('mobileOsMaximumVersion');
+        $val = $this->getBackingStore()->get('mobileOsMaximumVersion');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'mobileOsMaximumVersion'");
     }
 
     /**
@@ -91,7 +107,11 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy implements Parsab
      * @return string|null
     */
     public function getMobileOsMinimumVersion(): ?string {
-        return $this->getBackingStore()->get('mobileOsMinimumVersion');
+        $val = $this->getBackingStore()->get('mobileOsMinimumVersion');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'mobileOsMinimumVersion'");
     }
 
     /**
@@ -99,7 +119,11 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy implements Parsab
      * @return string|null
     */
     public function getOsMaximumVersion(): ?string {
-        return $this->getBackingStore()->get('osMaximumVersion');
+        $val = $this->getBackingStore()->get('osMaximumVersion');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'osMaximumVersion'");
     }
 
     /**
@@ -107,7 +131,11 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy implements Parsab
      * @return string|null
     */
     public function getOsMinimumVersion(): ?string {
-        return $this->getBackingStore()->get('osMinimumVersion');
+        $val = $this->getBackingStore()->get('osMinimumVersion');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'osMinimumVersion'");
     }
 
     /**
@@ -115,7 +143,11 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy implements Parsab
      * @return bool|null
     */
     public function getPasswordBlockSimple(): ?bool {
-        return $this->getBackingStore()->get('passwordBlockSimple');
+        $val = $this->getBackingStore()->get('passwordBlockSimple');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'passwordBlockSimple'");
     }
 
     /**
@@ -123,7 +155,11 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy implements Parsab
      * @return int|null
     */
     public function getPasswordExpirationDays(): ?int {
-        return $this->getBackingStore()->get('passwordExpirationDays');
+        $val = $this->getBackingStore()->get('passwordExpirationDays');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'passwordExpirationDays'");
     }
 
     /**
@@ -131,7 +167,11 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy implements Parsab
      * @return int|null
     */
     public function getPasswordMinimumCharacterSetCount(): ?int {
-        return $this->getBackingStore()->get('passwordMinimumCharacterSetCount');
+        $val = $this->getBackingStore()->get('passwordMinimumCharacterSetCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'passwordMinimumCharacterSetCount'");
     }
 
     /**
@@ -139,7 +179,11 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy implements Parsab
      * @return int|null
     */
     public function getPasswordMinimumLength(): ?int {
-        return $this->getBackingStore()->get('passwordMinimumLength');
+        $val = $this->getBackingStore()->get('passwordMinimumLength');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'passwordMinimumLength'");
     }
 
     /**
@@ -147,7 +191,11 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy implements Parsab
      * @return int|null
     */
     public function getPasswordMinutesOfInactivityBeforeLock(): ?int {
-        return $this->getBackingStore()->get('passwordMinutesOfInactivityBeforeLock');
+        $val = $this->getBackingStore()->get('passwordMinutesOfInactivityBeforeLock');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'passwordMinutesOfInactivityBeforeLock'");
     }
 
     /**
@@ -155,7 +203,11 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy implements Parsab
      * @return int|null
     */
     public function getPasswordPreviousPasswordBlockCount(): ?int {
-        return $this->getBackingStore()->get('passwordPreviousPasswordBlockCount');
+        $val = $this->getBackingStore()->get('passwordPreviousPasswordBlockCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'passwordPreviousPasswordBlockCount'");
     }
 
     /**
@@ -163,7 +215,11 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy implements Parsab
      * @return bool|null
     */
     public function getPasswordRequired(): ?bool {
-        return $this->getBackingStore()->get('passwordRequired');
+        $val = $this->getBackingStore()->get('passwordRequired');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'passwordRequired'");
     }
 
     /**
@@ -171,7 +227,11 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy implements Parsab
      * @return bool|null
     */
     public function getPasswordRequiredToUnlockFromIdle(): ?bool {
-        return $this->getBackingStore()->get('passwordRequiredToUnlockFromIdle');
+        $val = $this->getBackingStore()->get('passwordRequiredToUnlockFromIdle');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'passwordRequiredToUnlockFromIdle'");
     }
 
     /**
@@ -179,7 +239,11 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy implements Parsab
      * @return RequiredPasswordType|null
     */
     public function getPasswordRequiredType(): ?RequiredPasswordType {
-        return $this->getBackingStore()->get('passwordRequiredType');
+        $val = $this->getBackingStore()->get('passwordRequiredType');
+        if (is_null($val) || $val instanceof RequiredPasswordType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'passwordRequiredType'");
     }
 
     /**
@@ -187,7 +251,11 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy implements Parsab
      * @return bool|null
     */
     public function getRequireHealthyDeviceReport(): ?bool {
-        return $this->getBackingStore()->get('requireHealthyDeviceReport');
+        $val = $this->getBackingStore()->get('requireHealthyDeviceReport');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'requireHealthyDeviceReport'");
     }
 
     /**
@@ -195,7 +263,11 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy implements Parsab
      * @return bool|null
     */
     public function getSecureBootEnabled(): ?bool {
-        return $this->getBackingStore()->get('secureBootEnabled');
+        $val = $this->getBackingStore()->get('secureBootEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'secureBootEnabled'");
     }
 
     /**
@@ -203,7 +275,11 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy implements Parsab
      * @return bool|null
     */
     public function getStorageRequireEncryption(): ?bool {
-        return $this->getBackingStore()->get('storageRequireEncryption');
+        $val = $this->getBackingStore()->get('storageRequireEncryption');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'storageRequireEncryption'");
     }
 
     /**

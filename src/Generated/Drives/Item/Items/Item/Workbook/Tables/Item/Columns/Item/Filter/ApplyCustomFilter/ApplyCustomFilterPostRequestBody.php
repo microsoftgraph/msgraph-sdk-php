@@ -39,7 +39,12 @@ class ApplyCustomFilterPostRequestBody implements AdditionalDataHolder, BackedMo
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -55,7 +60,11 @@ class ApplyCustomFilterPostRequestBody implements AdditionalDataHolder, BackedMo
      * @return string|null
     */
     public function getCriteria1(): ?string {
-        return $this->getBackingStore()->get('criteria1');
+        $val = $this->getBackingStore()->get('criteria1');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'criteria1'");
     }
 
     /**
@@ -63,12 +72,16 @@ class ApplyCustomFilterPostRequestBody implements AdditionalDataHolder, BackedMo
      * @return string|null
     */
     public function getCriteria2(): ?string {
-        return $this->getBackingStore()->get('criteria2');
+        $val = $this->getBackingStore()->get('criteria2');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'criteria2'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -84,7 +97,11 @@ class ApplyCustomFilterPostRequestBody implements AdditionalDataHolder, BackedMo
      * @return string|null
     */
     public function getOper(): ?string {
-        return $this->getBackingStore()->get('oper');
+        $val = $this->getBackingStore()->get('oper');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'oper'");
     }
 
     /**

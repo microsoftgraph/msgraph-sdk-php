@@ -39,7 +39,12 @@ class PreviewPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -52,7 +57,7 @@ class PreviewPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -67,7 +72,11 @@ class PreviewPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
      * @return string|null
     */
     public function getPage(): ?string {
-        return $this->getBackingStore()->get('page');
+        $val = $this->getBackingStore()->get('page');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'page'");
     }
 
     /**
@@ -75,7 +84,11 @@ class PreviewPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
      * @return float|null
     */
     public function getZoom(): ?float {
-        return $this->getBackingStore()->get('zoom');
+        $val = $this->getBackingStore()->get('zoom');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'zoom'");
     }
 
     /**

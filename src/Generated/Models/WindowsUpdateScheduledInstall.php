@@ -28,7 +28,7 @@ class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleType imp
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -43,7 +43,11 @@ class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleType imp
      * @return WeeklySchedule|null
     */
     public function getScheduledInstallDay(): ?WeeklySchedule {
-        return $this->getBackingStore()->get('scheduledInstallDay');
+        $val = $this->getBackingStore()->get('scheduledInstallDay');
+        if (is_null($val) || $val instanceof WeeklySchedule) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'scheduledInstallDay'");
     }
 
     /**
@@ -51,7 +55,11 @@ class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleType imp
      * @return Time|null
     */
     public function getScheduledInstallTime(): ?Time {
-        return $this->getBackingStore()->get('scheduledInstallTime');
+        $val = $this->getBackingStore()->get('scheduledInstallTime');
+        if (is_null($val) || $val instanceof Time) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'scheduledInstallTime'");
     }
 
     /**

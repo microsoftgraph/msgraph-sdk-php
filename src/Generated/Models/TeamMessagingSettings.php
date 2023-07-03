@@ -39,7 +39,12 @@ class TeamMessagingSettings implements AdditionalDataHolder, BackedModel, Parsab
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -47,7 +52,11 @@ class TeamMessagingSettings implements AdditionalDataHolder, BackedModel, Parsab
      * @return bool|null
     */
     public function getAllowChannelMentions(): ?bool {
-        return $this->getBackingStore()->get('allowChannelMentions');
+        $val = $this->getBackingStore()->get('allowChannelMentions');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowChannelMentions'");
     }
 
     /**
@@ -55,7 +64,11 @@ class TeamMessagingSettings implements AdditionalDataHolder, BackedModel, Parsab
      * @return bool|null
     */
     public function getAllowOwnerDeleteMessages(): ?bool {
-        return $this->getBackingStore()->get('allowOwnerDeleteMessages');
+        $val = $this->getBackingStore()->get('allowOwnerDeleteMessages');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowOwnerDeleteMessages'");
     }
 
     /**
@@ -63,7 +76,11 @@ class TeamMessagingSettings implements AdditionalDataHolder, BackedModel, Parsab
      * @return bool|null
     */
     public function getAllowTeamMentions(): ?bool {
-        return $this->getBackingStore()->get('allowTeamMentions');
+        $val = $this->getBackingStore()->get('allowTeamMentions');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowTeamMentions'");
     }
 
     /**
@@ -71,7 +88,11 @@ class TeamMessagingSettings implements AdditionalDataHolder, BackedModel, Parsab
      * @return bool|null
     */
     public function getAllowUserDeleteMessages(): ?bool {
-        return $this->getBackingStore()->get('allowUserDeleteMessages');
+        $val = $this->getBackingStore()->get('allowUserDeleteMessages');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowUserDeleteMessages'");
     }
 
     /**
@@ -79,7 +100,11 @@ class TeamMessagingSettings implements AdditionalDataHolder, BackedModel, Parsab
      * @return bool|null
     */
     public function getAllowUserEditMessages(): ?bool {
-        return $this->getBackingStore()->get('allowUserEditMessages');
+        $val = $this->getBackingStore()->get('allowUserEditMessages');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowUserEditMessages'");
     }
 
     /**
@@ -92,7 +117,7 @@ class TeamMessagingSettings implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -111,7 +136,11 @@ class TeamMessagingSettings implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**

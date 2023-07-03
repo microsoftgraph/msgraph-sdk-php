@@ -40,7 +40,12 @@ class AverageIfPostRequestBody implements AdditionalDataHolder, BackedModel, Par
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -48,7 +53,11 @@ class AverageIfPostRequestBody implements AdditionalDataHolder, BackedModel, Par
      * @return Json|null
     */
     public function getAverageRange(): ?Json {
-        return $this->getBackingStore()->get('averageRange');
+        $val = $this->getBackingStore()->get('averageRange');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'averageRange'");
     }
 
     /**
@@ -64,12 +73,16 @@ class AverageIfPostRequestBody implements AdditionalDataHolder, BackedModel, Par
      * @return Json|null
     */
     public function getCriteria(): ?Json {
-        return $this->getBackingStore()->get('criteria');
+        $val = $this->getBackingStore()->get('criteria');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'criteria'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -85,7 +98,11 @@ class AverageIfPostRequestBody implements AdditionalDataHolder, BackedModel, Par
      * @return Json|null
     */
     public function getRange(): ?Json {
-        return $this->getBackingStore()->get('range');
+        $val = $this->getBackingStore()->get('range');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'range'");
     }
 
     /**

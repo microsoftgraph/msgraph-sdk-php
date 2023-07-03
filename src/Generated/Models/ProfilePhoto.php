@@ -26,7 +26,7 @@ class ProfilePhoto extends Entity implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -41,7 +41,11 @@ class ProfilePhoto extends Entity implements Parsable
      * @return int|null
     */
     public function getHeight(): ?int {
-        return $this->getBackingStore()->get('height');
+        $val = $this->getBackingStore()->get('height');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'height'");
     }
 
     /**
@@ -49,7 +53,11 @@ class ProfilePhoto extends Entity implements Parsable
      * @return int|null
     */
     public function getWidth(): ?int {
-        return $this->getBackingStore()->get('width');
+        $val = $this->getBackingStore()->get('width');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'width'");
     }
 
     /**

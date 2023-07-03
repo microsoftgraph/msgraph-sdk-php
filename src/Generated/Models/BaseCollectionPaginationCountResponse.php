@@ -39,7 +39,12 @@ class BaseCollectionPaginationCountResponse implements AdditionalDataHolder, Bac
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -52,7 +57,7 @@ class BaseCollectionPaginationCountResponse implements AdditionalDataHolder, Bac
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -67,7 +72,11 @@ class BaseCollectionPaginationCountResponse implements AdditionalDataHolder, Bac
      * @return int|null
     */
     public function getOdataCount(): ?int {
-        return $this->getBackingStore()->get('odataCount');
+        $val = $this->getBackingStore()->get('odataCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataCount'");
     }
 
     /**
@@ -75,7 +84,11 @@ class BaseCollectionPaginationCountResponse implements AdditionalDataHolder, Bac
      * @return string|null
     */
     public function getOdataNextLink(): ?string {
-        return $this->getBackingStore()->get('odataNextLink');
+        $val = $this->getBackingStore()->get('odataNextLink');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataNextLink'");
     }
 
     /**

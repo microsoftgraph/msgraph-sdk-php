@@ -9,6 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class AttributeDefinition implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -39,7 +40,12 @@ class AttributeDefinition implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -47,7 +53,11 @@ class AttributeDefinition implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getAnchor(): ?bool {
-        return $this->getBackingStore()->get('anchor');
+        $val = $this->getBackingStore()->get('anchor');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'anchor'");
     }
 
     /**
@@ -55,7 +65,13 @@ class AttributeDefinition implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<StringKeyStringValuePair>|null
     */
     public function getApiExpressions(): ?array {
-        return $this->getBackingStore()->get('apiExpressions');
+        $val = $this->getBackingStore()->get('apiExpressions');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, StringKeyStringValuePair::class);
+            /** @var array<StringKeyStringValuePair>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'apiExpressions'");
     }
 
     /**
@@ -71,7 +87,11 @@ class AttributeDefinition implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getCaseExact(): ?bool {
-        return $this->getBackingStore()->get('caseExact');
+        $val = $this->getBackingStore()->get('caseExact');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'caseExact'");
     }
 
     /**
@@ -79,12 +99,16 @@ class AttributeDefinition implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getDefaultValue(): ?string {
-        return $this->getBackingStore()->get('defaultValue');
+        $val = $this->getBackingStore()->get('defaultValue');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'defaultValue'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -110,7 +134,11 @@ class AttributeDefinition implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getFlowNullValues(): ?bool {
-        return $this->getBackingStore()->get('flowNullValues');
+        $val = $this->getBackingStore()->get('flowNullValues');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'flowNullValues'");
     }
 
     /**
@@ -118,7 +146,13 @@ class AttributeDefinition implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<AttributeDefinitionMetadataEntry>|null
     */
     public function getMetadata(): ?array {
-        return $this->getBackingStore()->get('metadata');
+        $val = $this->getBackingStore()->get('metadata');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AttributeDefinitionMetadataEntry::class);
+            /** @var array<AttributeDefinitionMetadataEntry>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'metadata'");
     }
 
     /**
@@ -126,7 +160,11 @@ class AttributeDefinition implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getMultivalued(): ?bool {
-        return $this->getBackingStore()->get('multivalued');
+        $val = $this->getBackingStore()->get('multivalued');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'multivalued'");
     }
 
     /**
@@ -134,7 +172,11 @@ class AttributeDefinition implements AdditionalDataHolder, BackedModel, Parsable
      * @return Mutability|null
     */
     public function getMutability(): ?Mutability {
-        return $this->getBackingStore()->get('mutability');
+        $val = $this->getBackingStore()->get('mutability');
+        if (is_null($val) || $val instanceof Mutability) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'mutability'");
     }
 
     /**
@@ -142,7 +184,11 @@ class AttributeDefinition implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getName(): ?string {
-        return $this->getBackingStore()->get('name');
+        $val = $this->getBackingStore()->get('name');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'name'");
     }
 
     /**
@@ -150,7 +196,11 @@ class AttributeDefinition implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -158,7 +208,13 @@ class AttributeDefinition implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<ReferencedObject>|null
     */
     public function getReferencedObjects(): ?array {
-        return $this->getBackingStore()->get('referencedObjects');
+        $val = $this->getBackingStore()->get('referencedObjects');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ReferencedObject::class);
+            /** @var array<ReferencedObject>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'referencedObjects'");
     }
 
     /**
@@ -166,7 +222,11 @@ class AttributeDefinition implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getRequired(): ?bool {
-        return $this->getBackingStore()->get('required');
+        $val = $this->getBackingStore()->get('required');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'required'");
     }
 
     /**
@@ -174,7 +234,11 @@ class AttributeDefinition implements AdditionalDataHolder, BackedModel, Parsable
      * @return AttributeType|null
     */
     public function getType(): ?AttributeType {
-        return $this->getBackingStore()->get('type');
+        $val = $this->getBackingStore()->get('type');
+        if (is_null($val) || $val instanceof AttributeType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'type'");
     }
 
     /**

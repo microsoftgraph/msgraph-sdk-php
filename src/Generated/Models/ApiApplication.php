@@ -9,6 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class ApiApplication implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -39,7 +40,11 @@ class ApiApplication implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getAcceptMappedClaims(): ?bool {
-        return $this->getBackingStore()->get('acceptMappedClaims');
+        $val = $this->getBackingStore()->get('acceptMappedClaims');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'acceptMappedClaims'");
     }
 
     /**
@@ -47,7 +52,12 @@ class ApiApplication implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -60,13 +70,20 @@ class ApiApplication implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
             'acceptMappedClaims' => fn(ParseNode $n) => $o->setAcceptMappedClaims($n->getBooleanValue()),
-            'knownClientApplications' => fn(ParseNode $n) => $o->setKnownClientApplications($n->getCollectionOfPrimitiveValues()),
+            'knownClientApplications' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setKnownClientApplications($val);
+            },
             'oauth2PermissionScopes' => fn(ParseNode $n) => $o->setOauth2PermissionScopes($n->getCollectionOfObjectValues([PermissionScope::class, 'createFromDiscriminatorValue'])),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'preAuthorizedApplications' => fn(ParseNode $n) => $o->setPreAuthorizedApplications($n->getCollectionOfObjectValues([PreAuthorizedApplication::class, 'createFromDiscriminatorValue'])),
@@ -79,7 +96,13 @@ class ApiApplication implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string>|null
     */
     public function getKnownClientApplications(): ?array {
-        return $this->getBackingStore()->get('knownClientApplications');
+        $val = $this->getBackingStore()->get('knownClientApplications');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'knownClientApplications'");
     }
 
     /**
@@ -87,7 +110,13 @@ class ApiApplication implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<PermissionScope>|null
     */
     public function getOauth2PermissionScopes(): ?array {
-        return $this->getBackingStore()->get('oauth2PermissionScopes');
+        $val = $this->getBackingStore()->get('oauth2PermissionScopes');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, PermissionScope::class);
+            /** @var array<PermissionScope>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'oauth2PermissionScopes'");
     }
 
     /**
@@ -95,7 +124,11 @@ class ApiApplication implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -103,7 +136,13 @@ class ApiApplication implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<PreAuthorizedApplication>|null
     */
     public function getPreAuthorizedApplications(): ?array {
-        return $this->getBackingStore()->get('preAuthorizedApplications');
+        $val = $this->getBackingStore()->get('preAuthorizedApplications');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, PreAuthorizedApplication::class);
+            /** @var array<PreAuthorizedApplication>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'preAuthorizedApplications'");
     }
 
     /**
@@ -111,7 +150,11 @@ class ApiApplication implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getRequestedAccessTokenVersion(): ?int {
-        return $this->getBackingStore()->get('requestedAccessTokenVersion');
+        $val = $this->getBackingStore()->get('requestedAccessTokenVersion');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'requestedAccessTokenVersion'");
     }
 
     /**

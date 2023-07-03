@@ -29,12 +29,16 @@ class RiskyServicePrincipalHistoryItem extends RiskyServicePrincipal implements 
      * @return RiskServicePrincipalActivity|null
     */
     public function getActivity(): ?RiskServicePrincipalActivity {
-        return $this->getBackingStore()->get('activity');
+        $val = $this->getBackingStore()->get('activity');
+        if (is_null($val) || $val instanceof RiskServicePrincipalActivity) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'activity'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -49,7 +53,11 @@ class RiskyServicePrincipalHistoryItem extends RiskyServicePrincipal implements 
      * @return string|null
     */
     public function getInitiatedBy(): ?string {
-        return $this->getBackingStore()->get('initiatedBy');
+        $val = $this->getBackingStore()->get('initiatedBy');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'initiatedBy'");
     }
 
     /**

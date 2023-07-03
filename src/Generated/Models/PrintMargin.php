@@ -39,7 +39,12 @@ class PrintMargin implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -55,12 +60,16 @@ class PrintMargin implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getBottom(): ?int {
-        return $this->getBackingStore()->get('bottom');
+        $val = $this->getBackingStore()->get('bottom');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'bottom'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -78,7 +87,11 @@ class PrintMargin implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getLeft(): ?int {
-        return $this->getBackingStore()->get('left');
+        $val = $this->getBackingStore()->get('left');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'left'");
     }
 
     /**
@@ -86,7 +99,11 @@ class PrintMargin implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -94,7 +111,11 @@ class PrintMargin implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getRight(): ?int {
-        return $this->getBackingStore()->get('right');
+        $val = $this->getBackingStore()->get('right');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'right'");
     }
 
     /**
@@ -102,7 +123,11 @@ class PrintMargin implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getTop(): ?int {
-        return $this->getBackingStore()->get('top');
+        $val = $this->getBackingStore()->get('top');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'top'");
     }
 
     /**

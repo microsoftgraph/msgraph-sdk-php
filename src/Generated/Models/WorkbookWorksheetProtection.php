@@ -26,7 +26,7 @@ class WorkbookWorksheetProtection extends Entity implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -41,7 +41,11 @@ class WorkbookWorksheetProtection extends Entity implements Parsable
      * @return WorkbookWorksheetProtectionOptions|null
     */
     public function getOptions(): ?WorkbookWorksheetProtectionOptions {
-        return $this->getBackingStore()->get('options');
+        $val = $this->getBackingStore()->get('options');
+        if (is_null($val) || $val instanceof WorkbookWorksheetProtectionOptions) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'options'");
     }
 
     /**
@@ -49,7 +53,11 @@ class WorkbookWorksheetProtection extends Entity implements Parsable
      * @return bool|null
     */
     public function getProtected(): ?bool {
-        return $this->getBackingStore()->get('escapedProtected');
+        $val = $this->getBackingStore()->get('escapedProtected');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'escapedProtected'");
     }
 
     /**

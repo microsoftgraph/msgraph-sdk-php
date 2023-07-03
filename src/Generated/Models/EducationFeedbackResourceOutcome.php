@@ -30,12 +30,16 @@ class EducationFeedbackResourceOutcome extends EducationOutcome implements Parsa
      * @return EducationResource|null
     */
     public function getFeedbackResource(): ?EducationResource {
-        return $this->getBackingStore()->get('feedbackResource');
+        $val = $this->getBackingStore()->get('feedbackResource');
+        if (is_null($val) || $val instanceof EducationResource) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'feedbackResource'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -50,7 +54,11 @@ class EducationFeedbackResourceOutcome extends EducationOutcome implements Parsa
      * @return EducationFeedbackResourceOutcomeStatus|null
     */
     public function getResourceStatus(): ?EducationFeedbackResourceOutcomeStatus {
-        return $this->getBackingStore()->get('resourceStatus');
+        $val = $this->getBackingStore()->get('resourceStatus');
+        if (is_null($val) || $val instanceof EducationFeedbackResourceOutcomeStatus) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resourceStatus'");
     }
 
     /**

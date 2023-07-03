@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class ExtensionProperty extends DirectoryObject implements Parsable 
 {
@@ -30,7 +31,11 @@ class ExtensionProperty extends DirectoryObject implements Parsable
      * @return string|null
     */
     public function getAppDisplayName(): ?string {
-        return $this->getBackingStore()->get('appDisplayName');
+        $val = $this->getBackingStore()->get('appDisplayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'appDisplayName'");
     }
 
     /**
@@ -38,12 +43,16 @@ class ExtensionProperty extends DirectoryObject implements Parsable
      * @return string|null
     */
     public function getDataType(): ?string {
-        return $this->getBackingStore()->get('dataType');
+        $val = $this->getBackingStore()->get('dataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'dataType'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -52,7 +61,14 @@ class ExtensionProperty extends DirectoryObject implements Parsable
             'dataType' => fn(ParseNode $n) => $o->setDataType($n->getStringValue()),
             'isSyncedFromOnPremises' => fn(ParseNode $n) => $o->setIsSyncedFromOnPremises($n->getBooleanValue()),
             'name' => fn(ParseNode $n) => $o->setName($n->getStringValue()),
-            'targetObjects' => fn(ParseNode $n) => $o->setTargetObjects($n->getCollectionOfPrimitiveValues()),
+            'targetObjects' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setTargetObjects($val);
+            },
         ]);
     }
 
@@ -61,7 +77,11 @@ class ExtensionProperty extends DirectoryObject implements Parsable
      * @return bool|null
     */
     public function getIsSyncedFromOnPremises(): ?bool {
-        return $this->getBackingStore()->get('isSyncedFromOnPremises');
+        $val = $this->getBackingStore()->get('isSyncedFromOnPremises');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isSyncedFromOnPremises'");
     }
 
     /**
@@ -69,7 +89,11 @@ class ExtensionProperty extends DirectoryObject implements Parsable
      * @return string|null
     */
     public function getName(): ?string {
-        return $this->getBackingStore()->get('name');
+        $val = $this->getBackingStore()->get('name');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'name'");
     }
 
     /**
@@ -77,7 +101,13 @@ class ExtensionProperty extends DirectoryObject implements Parsable
      * @return array<string>|null
     */
     public function getTargetObjects(): ?array {
-        return $this->getBackingStore()->get('targetObjects');
+        $val = $this->getBackingStore()->get('targetObjects');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'targetObjects'");
     }
 
     /**

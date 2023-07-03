@@ -34,7 +34,11 @@ class CustomTaskExtension extends CustomCalloutExtension implements Parsable
      * @return CustomExtensionCallbackConfiguration|null
     */
     public function getCallbackConfiguration(): ?CustomExtensionCallbackConfiguration {
-        return $this->getBackingStore()->get('callbackConfiguration');
+        $val = $this->getBackingStore()->get('callbackConfiguration');
+        if (is_null($val) || $val instanceof CustomExtensionCallbackConfiguration) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'callbackConfiguration'");
     }
 
     /**
@@ -42,7 +46,11 @@ class CustomTaskExtension extends CustomCalloutExtension implements Parsable
      * @return User|null
     */
     public function getCreatedBy(): ?User {
-        return $this->getBackingStore()->get('createdBy');
+        $val = $this->getBackingStore()->get('createdBy');
+        if (is_null($val) || $val instanceof User) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdBy'");
     }
 
     /**
@@ -50,12 +58,16 @@ class CustomTaskExtension extends CustomCalloutExtension implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('createdDateTime');
+        $val = $this->getBackingStore()->get('createdDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdDateTime'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -73,7 +85,11 @@ class CustomTaskExtension extends CustomCalloutExtension implements Parsable
      * @return User|null
     */
     public function getLastModifiedBy(): ?User {
-        return $this->getBackingStore()->get('lastModifiedBy');
+        $val = $this->getBackingStore()->get('lastModifiedBy');
+        if (is_null($val) || $val instanceof User) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastModifiedBy'");
     }
 
     /**
@@ -81,7 +97,11 @@ class CustomTaskExtension extends CustomCalloutExtension implements Parsable
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('lastModifiedDateTime');
+        $val = $this->getBackingStore()->get('lastModifiedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastModifiedDateTime'");
     }
 
     /**

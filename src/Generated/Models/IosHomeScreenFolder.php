@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class IosHomeScreenFolder extends IosHomeScreenItem implements Parsable 
 {
@@ -27,7 +28,7 @@ class IosHomeScreenFolder extends IosHomeScreenItem implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -41,7 +42,13 @@ class IosHomeScreenFolder extends IosHomeScreenItem implements Parsable
      * @return array<IosHomeScreenFolderPage>|null
     */
     public function getPages(): ?array {
-        return $this->getBackingStore()->get('pages');
+        $val = $this->getBackingStore()->get('pages');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, IosHomeScreenFolderPage::class);
+            /** @var array<IosHomeScreenFolderPage>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'pages'");
     }
 
     /**

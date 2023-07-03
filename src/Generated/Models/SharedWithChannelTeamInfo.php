@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class SharedWithChannelTeamInfo extends TeamInfo implements Parsable 
 {
@@ -29,12 +30,18 @@ class SharedWithChannelTeamInfo extends TeamInfo implements Parsable
      * @return array<ConversationMember>|null
     */
     public function getAllowedMembers(): ?array {
-        return $this->getBackingStore()->get('allowedMembers');
+        $val = $this->getBackingStore()->get('allowedMembers');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ConversationMember::class);
+            /** @var array<ConversationMember>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowedMembers'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -49,7 +56,11 @@ class SharedWithChannelTeamInfo extends TeamInfo implements Parsable
      * @return bool|null
     */
     public function getIsHostTeam(): ?bool {
-        return $this->getBackingStore()->get('isHostTeam');
+        $val = $this->getBackingStore()->get('isHostTeam');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isHostTeam'");
     }
 
     /**

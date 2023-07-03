@@ -9,6 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class SynchronizationRule implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -39,7 +40,12 @@ class SynchronizationRule implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -55,7 +61,11 @@ class SynchronizationRule implements AdditionalDataHolder, BackedModel, Parsable
      * @return ContainerFilter|null
     */
     public function getContainerFilter(): ?ContainerFilter {
-        return $this->getBackingStore()->get('containerFilter');
+        $val = $this->getBackingStore()->get('containerFilter');
+        if (is_null($val) || $val instanceof ContainerFilter) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'containerFilter'");
     }
 
     /**
@@ -63,12 +73,16 @@ class SynchronizationRule implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getEditable(): ?bool {
-        return $this->getBackingStore()->get('editable');
+        $val = $this->getBackingStore()->get('editable');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'editable'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -92,7 +106,11 @@ class SynchronizationRule implements AdditionalDataHolder, BackedModel, Parsable
      * @return GroupFilter|null
     */
     public function getGroupFilter(): ?GroupFilter {
-        return $this->getBackingStore()->get('groupFilter');
+        $val = $this->getBackingStore()->get('groupFilter');
+        if (is_null($val) || $val instanceof GroupFilter) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'groupFilter'");
     }
 
     /**
@@ -100,7 +118,11 @@ class SynchronizationRule implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getId(): ?string {
-        return $this->getBackingStore()->get('id');
+        $val = $this->getBackingStore()->get('id');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'id'");
     }
 
     /**
@@ -108,7 +130,13 @@ class SynchronizationRule implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<StringKeyStringValuePair>|null
     */
     public function getMetadata(): ?array {
-        return $this->getBackingStore()->get('metadata');
+        $val = $this->getBackingStore()->get('metadata');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, StringKeyStringValuePair::class);
+            /** @var array<StringKeyStringValuePair>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'metadata'");
     }
 
     /**
@@ -116,7 +144,11 @@ class SynchronizationRule implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getName(): ?string {
-        return $this->getBackingStore()->get('name');
+        $val = $this->getBackingStore()->get('name');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'name'");
     }
 
     /**
@@ -124,7 +156,13 @@ class SynchronizationRule implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<ObjectMapping>|null
     */
     public function getObjectMappings(): ?array {
-        return $this->getBackingStore()->get('objectMappings');
+        $val = $this->getBackingStore()->get('objectMappings');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ObjectMapping::class);
+            /** @var array<ObjectMapping>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'objectMappings'");
     }
 
     /**
@@ -132,7 +170,11 @@ class SynchronizationRule implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -140,7 +182,11 @@ class SynchronizationRule implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getPriority(): ?int {
-        return $this->getBackingStore()->get('priority');
+        $val = $this->getBackingStore()->get('priority');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'priority'");
     }
 
     /**
@@ -148,7 +194,11 @@ class SynchronizationRule implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getSourceDirectoryName(): ?string {
-        return $this->getBackingStore()->get('sourceDirectoryName');
+        $val = $this->getBackingStore()->get('sourceDirectoryName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sourceDirectoryName'");
     }
 
     /**
@@ -156,7 +206,11 @@ class SynchronizationRule implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getTargetDirectoryName(): ?string {
-        return $this->getBackingStore()->get('targetDirectoryName');
+        $val = $this->getBackingStore()->get('targetDirectoryName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'targetDirectoryName'");
     }
 
     /**

@@ -39,7 +39,12 @@ class CopyNotebookPostRequestBody implements AdditionalDataHolder, BackedModel, 
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -52,7 +57,7 @@ class CopyNotebookPostRequestBody implements AdditionalDataHolder, BackedModel, 
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -70,7 +75,11 @@ class CopyNotebookPostRequestBody implements AdditionalDataHolder, BackedModel, 
      * @return string|null
     */
     public function getGroupId(): ?string {
-        return $this->getBackingStore()->get('groupId');
+        $val = $this->getBackingStore()->get('groupId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'groupId'");
     }
 
     /**
@@ -78,7 +87,11 @@ class CopyNotebookPostRequestBody implements AdditionalDataHolder, BackedModel, 
      * @return string|null
     */
     public function getNotebookFolder(): ?string {
-        return $this->getBackingStore()->get('notebookFolder');
+        $val = $this->getBackingStore()->get('notebookFolder');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'notebookFolder'");
     }
 
     /**
@@ -86,7 +99,11 @@ class CopyNotebookPostRequestBody implements AdditionalDataHolder, BackedModel, 
      * @return string|null
     */
     public function getRenameAs(): ?string {
-        return $this->getBackingStore()->get('renameAs');
+        $val = $this->getBackingStore()->get('renameAs');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'renameAs'");
     }
 
     /**
@@ -94,7 +111,11 @@ class CopyNotebookPostRequestBody implements AdditionalDataHolder, BackedModel, 
      * @return string|null
     */
     public function getSiteCollectionId(): ?string {
-        return $this->getBackingStore()->get('siteCollectionId');
+        $val = $this->getBackingStore()->get('siteCollectionId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'siteCollectionId'");
     }
 
     /**
@@ -102,7 +123,11 @@ class CopyNotebookPostRequestBody implements AdditionalDataHolder, BackedModel, 
      * @return string|null
     */
     public function getSiteId(): ?string {
-        return $this->getBackingStore()->get('siteId');
+        $val = $this->getBackingStore()->get('siteId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'siteId'");
     }
 
     /**

@@ -40,7 +40,12 @@ class PdurationPostRequestBody implements AdditionalDataHolder, BackedModel, Par
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -53,7 +58,7 @@ class PdurationPostRequestBody implements AdditionalDataHolder, BackedModel, Par
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -69,7 +74,11 @@ class PdurationPostRequestBody implements AdditionalDataHolder, BackedModel, Par
      * @return Json|null
     */
     public function getFv(): ?Json {
-        return $this->getBackingStore()->get('fv');
+        $val = $this->getBackingStore()->get('fv');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'fv'");
     }
 
     /**
@@ -77,7 +86,11 @@ class PdurationPostRequestBody implements AdditionalDataHolder, BackedModel, Par
      * @return Json|null
     */
     public function getPv(): ?Json {
-        return $this->getBackingStore()->get('pv');
+        $val = $this->getBackingStore()->get('pv');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'pv'");
     }
 
     /**
@@ -85,7 +98,11 @@ class PdurationPostRequestBody implements AdditionalDataHolder, BackedModel, Par
      * @return Json|null
     */
     public function getRate(): ?Json {
-        return $this->getBackingStore()->get('rate');
+        $val = $this->getBackingStore()->get('rate');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'rate'");
     }
 
     /**

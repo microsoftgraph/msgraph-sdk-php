@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class LicenseDetails extends Entity implements Parsable 
 {
@@ -26,7 +27,7 @@ class LicenseDetails extends Entity implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -42,7 +43,13 @@ class LicenseDetails extends Entity implements Parsable
      * @return array<ServicePlanInfo>|null
     */
     public function getServicePlans(): ?array {
-        return $this->getBackingStore()->get('servicePlans');
+        $val = $this->getBackingStore()->get('servicePlans');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ServicePlanInfo::class);
+            /** @var array<ServicePlanInfo>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'servicePlans'");
     }
 
     /**
@@ -50,7 +57,11 @@ class LicenseDetails extends Entity implements Parsable
      * @return string|null
     */
     public function getSkuId(): ?string {
-        return $this->getBackingStore()->get('skuId');
+        $val = $this->getBackingStore()->get('skuId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'skuId'");
     }
 
     /**
@@ -58,7 +69,11 @@ class LicenseDetails extends Entity implements Parsable
      * @return string|null
     */
     public function getSkuPartNumber(): ?string {
-        return $this->getBackingStore()->get('skuPartNumber');
+        $val = $this->getBackingStore()->get('skuPartNumber');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'skuPartNumber'");
     }
 
     /**

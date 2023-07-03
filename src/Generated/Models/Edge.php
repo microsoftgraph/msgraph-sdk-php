@@ -26,7 +26,7 @@ class Edge extends Entity implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -40,7 +40,11 @@ class Edge extends Entity implements Parsable
      * @return InternetExplorerMode|null
     */
     public function getInternetExplorerMode(): ?InternetExplorerMode {
-        return $this->getBackingStore()->get('internetExplorerMode');
+        $val = $this->getBackingStore()->get('internetExplorerMode');
+        if (is_null($val) || $val instanceof InternetExplorerMode) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'internetExplorerMode'");
     }
 
     /**

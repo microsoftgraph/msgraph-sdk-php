@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class IdentityUserFlowAttributeAssignment extends Entity implements Parsable 
 {
@@ -29,12 +30,16 @@ class IdentityUserFlowAttributeAssignment extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -53,7 +58,11 @@ class IdentityUserFlowAttributeAssignment extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsOptional(): ?bool {
-        return $this->getBackingStore()->get('isOptional');
+        $val = $this->getBackingStore()->get('isOptional');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isOptional'");
     }
 
     /**
@@ -61,7 +70,11 @@ class IdentityUserFlowAttributeAssignment extends Entity implements Parsable
      * @return bool|null
     */
     public function getRequiresVerification(): ?bool {
-        return $this->getBackingStore()->get('requiresVerification');
+        $val = $this->getBackingStore()->get('requiresVerification');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'requiresVerification'");
     }
 
     /**
@@ -69,7 +82,11 @@ class IdentityUserFlowAttributeAssignment extends Entity implements Parsable
      * @return IdentityUserFlowAttribute|null
     */
     public function getUserAttribute(): ?IdentityUserFlowAttribute {
-        return $this->getBackingStore()->get('userAttribute');
+        $val = $this->getBackingStore()->get('userAttribute');
+        if (is_null($val) || $val instanceof IdentityUserFlowAttribute) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userAttribute'");
     }
 
     /**
@@ -77,7 +94,13 @@ class IdentityUserFlowAttributeAssignment extends Entity implements Parsable
      * @return array<UserAttributeValuesItem>|null
     */
     public function getUserAttributeValues(): ?array {
-        return $this->getBackingStore()->get('userAttributeValues');
+        $val = $this->getBackingStore()->get('userAttributeValues');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, UserAttributeValuesItem::class);
+            /** @var array<UserAttributeValuesItem>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userAttributeValues'");
     }
 
     /**
@@ -85,7 +108,11 @@ class IdentityUserFlowAttributeAssignment extends Entity implements Parsable
      * @return IdentityUserFlowAttributeInputType|null
     */
     public function getUserInputType(): ?IdentityUserFlowAttributeInputType {
-        return $this->getBackingStore()->get('userInputType');
+        $val = $this->getBackingStore()->get('userInputType');
+        if (is_null($val) || $val instanceof IdentityUserFlowAttributeInputType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userInputType'");
     }
 
     /**

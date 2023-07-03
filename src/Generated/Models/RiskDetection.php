@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class RiskDetection extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new RiskDetection and sets the default values.
+     * Instantiates a new riskDetection and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -30,7 +30,11 @@ class RiskDetection extends Entity implements Parsable
      * @return ActivityType|null
     */
     public function getActivity(): ?ActivityType {
-        return $this->getBackingStore()->get('activity');
+        $val = $this->getBackingStore()->get('activity');
+        if (is_null($val) || $val instanceof ActivityType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'activity'");
     }
 
     /**
@@ -38,7 +42,11 @@ class RiskDetection extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getActivityDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('activityDateTime');
+        $val = $this->getBackingStore()->get('activityDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'activityDateTime'");
     }
 
     /**
@@ -46,7 +54,11 @@ class RiskDetection extends Entity implements Parsable
      * @return string|null
     */
     public function getAdditionalInfo(): ?string {
-        return $this->getBackingStore()->get('additionalInfo');
+        $val = $this->getBackingStore()->get('additionalInfo');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalInfo'");
     }
 
     /**
@@ -54,7 +66,11 @@ class RiskDetection extends Entity implements Parsable
      * @return string|null
     */
     public function getCorrelationId(): ?string {
-        return $this->getBackingStore()->get('correlationId');
+        $val = $this->getBackingStore()->get('correlationId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'correlationId'");
     }
 
     /**
@@ -62,7 +78,11 @@ class RiskDetection extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getDetectedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('detectedDateTime');
+        $val = $this->getBackingStore()->get('detectedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'detectedDateTime'");
     }
 
     /**
@@ -70,12 +90,16 @@ class RiskDetection extends Entity implements Parsable
      * @return RiskDetectionTimingType|null
     */
     public function getDetectionTimingType(): ?RiskDetectionTimingType {
-        return $this->getBackingStore()->get('detectionTimingType');
+        $val = $this->getBackingStore()->get('detectionTimingType');
+        if (is_null($val) || $val instanceof RiskDetectionTimingType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'detectionTimingType'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -107,7 +131,11 @@ class RiskDetection extends Entity implements Parsable
      * @return string|null
     */
     public function getIpAddress(): ?string {
-        return $this->getBackingStore()->get('ipAddress');
+        $val = $this->getBackingStore()->get('ipAddress');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'ipAddress'");
     }
 
     /**
@@ -115,7 +143,11 @@ class RiskDetection extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastUpdatedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('lastUpdatedDateTime');
+        $val = $this->getBackingStore()->get('lastUpdatedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastUpdatedDateTime'");
     }
 
     /**
@@ -123,7 +155,11 @@ class RiskDetection extends Entity implements Parsable
      * @return SignInLocation|null
     */
     public function getLocation(): ?SignInLocation {
-        return $this->getBackingStore()->get('location');
+        $val = $this->getBackingStore()->get('location');
+        if (is_null($val) || $val instanceof SignInLocation) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'location'");
     }
 
     /**
@@ -131,7 +167,11 @@ class RiskDetection extends Entity implements Parsable
      * @return string|null
     */
     public function getRequestId(): ?string {
-        return $this->getBackingStore()->get('requestId');
+        $val = $this->getBackingStore()->get('requestId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'requestId'");
     }
 
     /**
@@ -139,7 +179,11 @@ class RiskDetection extends Entity implements Parsable
      * @return RiskDetail|null
     */
     public function getRiskDetail(): ?RiskDetail {
-        return $this->getBackingStore()->get('riskDetail');
+        $val = $this->getBackingStore()->get('riskDetail');
+        if (is_null($val) || $val instanceof RiskDetail) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'riskDetail'");
     }
 
     /**
@@ -147,7 +191,11 @@ class RiskDetection extends Entity implements Parsable
      * @return string|null
     */
     public function getRiskEventType(): ?string {
-        return $this->getBackingStore()->get('riskEventType');
+        $val = $this->getBackingStore()->get('riskEventType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'riskEventType'");
     }
 
     /**
@@ -155,7 +203,11 @@ class RiskDetection extends Entity implements Parsable
      * @return RiskLevel|null
     */
     public function getRiskLevel(): ?RiskLevel {
-        return $this->getBackingStore()->get('riskLevel');
+        $val = $this->getBackingStore()->get('riskLevel');
+        if (is_null($val) || $val instanceof RiskLevel) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'riskLevel'");
     }
 
     /**
@@ -163,7 +215,11 @@ class RiskDetection extends Entity implements Parsable
      * @return RiskState|null
     */
     public function getRiskState(): ?RiskState {
-        return $this->getBackingStore()->get('riskState');
+        $val = $this->getBackingStore()->get('riskState');
+        if (is_null($val) || $val instanceof RiskState) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'riskState'");
     }
 
     /**
@@ -171,7 +227,11 @@ class RiskDetection extends Entity implements Parsable
      * @return string|null
     */
     public function getSource(): ?string {
-        return $this->getBackingStore()->get('source');
+        $val = $this->getBackingStore()->get('source');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'source'");
     }
 
     /**
@@ -179,7 +239,11 @@ class RiskDetection extends Entity implements Parsable
      * @return TokenIssuerType|null
     */
     public function getTokenIssuerType(): ?TokenIssuerType {
-        return $this->getBackingStore()->get('tokenIssuerType');
+        $val = $this->getBackingStore()->get('tokenIssuerType');
+        if (is_null($val) || $val instanceof TokenIssuerType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'tokenIssuerType'");
     }
 
     /**
@@ -187,7 +251,11 @@ class RiskDetection extends Entity implements Parsable
      * @return string|null
     */
     public function getUserDisplayName(): ?string {
-        return $this->getBackingStore()->get('userDisplayName');
+        $val = $this->getBackingStore()->get('userDisplayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userDisplayName'");
     }
 
     /**
@@ -195,7 +263,11 @@ class RiskDetection extends Entity implements Parsable
      * @return string|null
     */
     public function getUserId(): ?string {
-        return $this->getBackingStore()->get('userId');
+        $val = $this->getBackingStore()->get('userId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userId'");
     }
 
     /**
@@ -203,7 +275,11 @@ class RiskDetection extends Entity implements Parsable
      * @return string|null
     */
     public function getUserPrincipalName(): ?string {
-        return $this->getBackingStore()->get('userPrincipalName');
+        $val = $this->getBackingStore()->get('userPrincipalName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userPrincipalName'");
     }
 
     /**

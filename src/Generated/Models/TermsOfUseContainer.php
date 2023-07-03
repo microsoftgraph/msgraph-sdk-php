@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class TermsOfUseContainer extends Entity implements Parsable 
 {
@@ -29,7 +30,13 @@ class TermsOfUseContainer extends Entity implements Parsable
      * @return array<AgreementAcceptance>|null
     */
     public function getAgreementAcceptances(): ?array {
-        return $this->getBackingStore()->get('agreementAcceptances');
+        $val = $this->getBackingStore()->get('agreementAcceptances');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AgreementAcceptance::class);
+            /** @var array<AgreementAcceptance>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'agreementAcceptances'");
     }
 
     /**
@@ -37,12 +44,18 @@ class TermsOfUseContainer extends Entity implements Parsable
      * @return array<Agreement>|null
     */
     public function getAgreements(): ?array {
-        return $this->getBackingStore()->get('agreements');
+        $val = $this->getBackingStore()->get('agreements');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Agreement::class);
+            /** @var array<Agreement>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'agreements'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;

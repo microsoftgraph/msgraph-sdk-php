@@ -27,7 +27,7 @@ class EducationAssignmentPointsGradeType extends EducationAssignmentGradeType im
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -41,7 +41,11 @@ class EducationAssignmentPointsGradeType extends EducationAssignmentGradeType im
      * @return float|null
     */
     public function getMaxPoints(): ?float {
-        return $this->getBackingStore()->get('maxPoints');
+        $val = $this->getBackingStore()->get('maxPoints');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'maxPoints'");
     }
 
     /**

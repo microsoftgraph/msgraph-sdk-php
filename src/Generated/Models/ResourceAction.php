@@ -9,6 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 /**
  * Set of allowed and not allowed actions for a resource.
@@ -42,7 +43,12 @@ class ResourceAction implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -50,7 +56,13 @@ class ResourceAction implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string>|null
     */
     public function getAllowedResourceActions(): ?array {
-        return $this->getBackingStore()->get('allowedResourceActions');
+        $val = $this->getBackingStore()->get('allowedResourceActions');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowedResourceActions'");
     }
 
     /**
@@ -63,13 +75,27 @@ class ResourceAction implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'allowedResourceActions' => fn(ParseNode $n) => $o->setAllowedResourceActions($n->getCollectionOfPrimitiveValues()),
-            'notAllowedResourceActions' => fn(ParseNode $n) => $o->setNotAllowedResourceActions($n->getCollectionOfPrimitiveValues()),
+            'allowedResourceActions' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setAllowedResourceActions($val);
+            },
+            'notAllowedResourceActions' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setNotAllowedResourceActions($val);
+            },
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
@@ -79,7 +105,13 @@ class ResourceAction implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string>|null
     */
     public function getNotAllowedResourceActions(): ?array {
-        return $this->getBackingStore()->get('notAllowedResourceActions');
+        $val = $this->getBackingStore()->get('notAllowedResourceActions');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'notAllowedResourceActions'");
     }
 
     /**
@@ -87,7 +119,11 @@ class ResourceAction implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**

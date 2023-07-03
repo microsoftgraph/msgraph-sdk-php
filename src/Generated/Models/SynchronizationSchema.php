@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class SynchronizationSchema extends Entity implements Parsable 
 {
@@ -29,12 +30,18 @@ class SynchronizationSchema extends Entity implements Parsable
      * @return array<DirectoryDefinition>|null
     */
     public function getDirectories(): ?array {
-        return $this->getBackingStore()->get('directories');
+        $val = $this->getBackingStore()->get('directories');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, DirectoryDefinition::class);
+            /** @var array<DirectoryDefinition>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'directories'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -50,7 +57,13 @@ class SynchronizationSchema extends Entity implements Parsable
      * @return array<SynchronizationRule>|null
     */
     public function getSynchronizationRules(): ?array {
-        return $this->getBackingStore()->get('synchronizationRules');
+        $val = $this->getBackingStore()->get('synchronizationRules');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, SynchronizationRule::class);
+            /** @var array<SynchronizationRule>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'synchronizationRules'");
     }
 
     /**
@@ -58,7 +71,11 @@ class SynchronizationSchema extends Entity implements Parsable
      * @return string|null
     */
     public function getVersion(): ?string {
-        return $this->getBackingStore()->get('version');
+        $val = $this->getBackingStore()->get('version');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'version'");
     }
 
     /**

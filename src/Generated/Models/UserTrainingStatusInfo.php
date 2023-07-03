@@ -40,7 +40,12 @@ class UserTrainingStatusInfo implements AdditionalDataHolder, BackedModel, Parsa
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -48,7 +53,11 @@ class UserTrainingStatusInfo implements AdditionalDataHolder, BackedModel, Parsa
      * @return DateTime|null
     */
     public function getAssignedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('assignedDateTime');
+        $val = $this->getBackingStore()->get('assignedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'assignedDateTime'");
     }
 
     /**
@@ -64,7 +73,11 @@ class UserTrainingStatusInfo implements AdditionalDataHolder, BackedModel, Parsa
      * @return DateTime|null
     */
     public function getCompletionDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('completionDateTime');
+        $val = $this->getBackingStore()->get('completionDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'completionDateTime'");
     }
 
     /**
@@ -72,12 +85,16 @@ class UserTrainingStatusInfo implements AdditionalDataHolder, BackedModel, Parsa
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -95,7 +112,11 @@ class UserTrainingStatusInfo implements AdditionalDataHolder, BackedModel, Parsa
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -103,7 +124,11 @@ class UserTrainingStatusInfo implements AdditionalDataHolder, BackedModel, Parsa
      * @return TrainingStatus|null
     */
     public function getTrainingStatus(): ?TrainingStatus {
-        return $this->getBackingStore()->get('trainingStatus');
+        $val = $this->getBackingStore()->get('trainingStatus');
+        if (is_null($val) || $val instanceof TrainingStatus) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'trainingStatus'");
     }
 
     /**

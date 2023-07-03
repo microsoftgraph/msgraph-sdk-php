@@ -12,6 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class AnswerPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -42,7 +43,13 @@ class AnswerPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
      * @return array<Modality>|null
     */
     public function getAcceptedModalities(): ?array {
-        return $this->getBackingStore()->get('acceptedModalities');
+        $val = $this->getBackingStore()->get('acceptedModalities');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Modality::class);
+            /** @var array<Modality>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'acceptedModalities'");
     }
 
     /**
@@ -50,7 +57,12 @@ class AnswerPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -66,7 +78,11 @@ class AnswerPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getCallbackUri(): ?string {
-        return $this->getBackingStore()->get('callbackUri');
+        $val = $this->getBackingStore()->get('callbackUri');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'callbackUri'");
     }
 
     /**
@@ -74,12 +90,16 @@ class AnswerPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
      * @return IncomingCallOptions|null
     */
     public function getCallOptions(): ?IncomingCallOptions {
-        return $this->getBackingStore()->get('callOptions');
+        $val = $this->getBackingStore()->get('callOptions');
+        if (is_null($val) || $val instanceof IncomingCallOptions) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'callOptions'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -97,7 +117,11 @@ class AnswerPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
      * @return MediaConfig|null
     */
     public function getMediaConfig(): ?MediaConfig {
-        return $this->getBackingStore()->get('mediaConfig');
+        $val = $this->getBackingStore()->get('mediaConfig');
+        if (is_null($val) || $val instanceof MediaConfig) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'mediaConfig'");
     }
 
     /**
@@ -105,7 +129,11 @@ class AnswerPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
      * @return int|null
     */
     public function getParticipantCapacity(): ?int {
-        return $this->getBackingStore()->get('participantCapacity');
+        $val = $this->getBackingStore()->get('participantCapacity');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'participantCapacity'");
     }
 
     /**

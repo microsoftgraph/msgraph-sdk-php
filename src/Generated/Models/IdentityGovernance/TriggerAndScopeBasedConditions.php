@@ -28,7 +28,7 @@ class TriggerAndScopeBasedConditions extends WorkflowExecutionConditions impleme
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -43,7 +43,11 @@ class TriggerAndScopeBasedConditions extends WorkflowExecutionConditions impleme
      * @return SubjectSet|null
     */
     public function getScope(): ?SubjectSet {
-        return $this->getBackingStore()->get('scope');
+        $val = $this->getBackingStore()->get('scope');
+        if (is_null($val) || $val instanceof SubjectSet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'scope'");
     }
 
     /**
@@ -51,7 +55,11 @@ class TriggerAndScopeBasedConditions extends WorkflowExecutionConditions impleme
      * @return WorkflowExecutionTrigger|null
     */
     public function getTrigger(): ?WorkflowExecutionTrigger {
-        return $this->getBackingStore()->get('trigger');
+        $val = $this->getBackingStore()->get('trigger');
+        if (is_null($val) || $val instanceof WorkflowExecutionTrigger) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'trigger'");
     }
 
     /**

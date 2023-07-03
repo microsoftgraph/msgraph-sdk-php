@@ -27,7 +27,7 @@ class Trending extends Entity implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -45,7 +45,11 @@ class Trending extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('lastModifiedDateTime');
+        $val = $this->getBackingStore()->get('lastModifiedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastModifiedDateTime'");
     }
 
     /**
@@ -53,7 +57,11 @@ class Trending extends Entity implements Parsable
      * @return Entity|null
     */
     public function getResource(): ?Entity {
-        return $this->getBackingStore()->get('resource');
+        $val = $this->getBackingStore()->get('resource');
+        if (is_null($val) || $val instanceof Entity) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resource'");
     }
 
     /**
@@ -61,7 +69,11 @@ class Trending extends Entity implements Parsable
      * @return ResourceReference|null
     */
     public function getResourceReference(): ?ResourceReference {
-        return $this->getBackingStore()->get('resourceReference');
+        $val = $this->getBackingStore()->get('resourceReference');
+        if (is_null($val) || $val instanceof ResourceReference) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resourceReference'");
     }
 
     /**
@@ -69,7 +81,11 @@ class Trending extends Entity implements Parsable
      * @return ResourceVisualization|null
     */
     public function getResourceVisualization(): ?ResourceVisualization {
-        return $this->getBackingStore()->get('resourceVisualization');
+        $val = $this->getBackingStore()->get('resourceVisualization');
+        if (is_null($val) || $val instanceof ResourceVisualization) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resourceVisualization'");
     }
 
     /**
@@ -77,7 +93,11 @@ class Trending extends Entity implements Parsable
      * @return float|null
     */
     public function getWeight(): ?float {
-        return $this->getBackingStore()->get('weight');
+        $val = $this->getBackingStore()->get('weight');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'weight'");
     }
 
     /**

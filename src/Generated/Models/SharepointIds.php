@@ -39,7 +39,12 @@ class SharepointIds implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -52,7 +57,7 @@ class SharepointIds implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -73,7 +78,11 @@ class SharepointIds implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getListId(): ?string {
-        return $this->getBackingStore()->get('listId');
+        $val = $this->getBackingStore()->get('listId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'listId'");
     }
 
     /**
@@ -81,7 +90,11 @@ class SharepointIds implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getListItemId(): ?string {
-        return $this->getBackingStore()->get('listItemId');
+        $val = $this->getBackingStore()->get('listItemId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'listItemId'");
     }
 
     /**
@@ -89,7 +102,11 @@ class SharepointIds implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getListItemUniqueId(): ?string {
-        return $this->getBackingStore()->get('listItemUniqueId');
+        $val = $this->getBackingStore()->get('listItemUniqueId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'listItemUniqueId'");
     }
 
     /**
@@ -97,7 +114,11 @@ class SharepointIds implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -105,7 +126,11 @@ class SharepointIds implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getSiteId(): ?string {
-        return $this->getBackingStore()->get('siteId');
+        $val = $this->getBackingStore()->get('siteId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'siteId'");
     }
 
     /**
@@ -113,7 +138,11 @@ class SharepointIds implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getSiteUrl(): ?string {
-        return $this->getBackingStore()->get('siteUrl');
+        $val = $this->getBackingStore()->get('siteUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'siteUrl'");
     }
 
     /**
@@ -121,7 +150,11 @@ class SharepointIds implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getTenantId(): ?string {
-        return $this->getBackingStore()->get('tenantId');
+        $val = $this->getBackingStore()->get('tenantId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'tenantId'");
     }
 
     /**
@@ -129,7 +162,11 @@ class SharepointIds implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getWebId(): ?string {
-        return $this->getBackingStore()->get('webId');
+        $val = $this->getBackingStore()->get('webId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'webId'");
     }
 
     /**

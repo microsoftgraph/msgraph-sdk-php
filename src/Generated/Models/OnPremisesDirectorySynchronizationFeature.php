@@ -39,7 +39,12 @@ class OnPremisesDirectorySynchronizationFeature implements AdditionalDataHolder,
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -55,7 +60,11 @@ class OnPremisesDirectorySynchronizationFeature implements AdditionalDataHolder,
      * @return bool|null
     */
     public function getBlockCloudObjectTakeoverThroughHardMatchEnabled(): ?bool {
-        return $this->getBackingStore()->get('blockCloudObjectTakeoverThroughHardMatchEnabled');
+        $val = $this->getBackingStore()->get('blockCloudObjectTakeoverThroughHardMatchEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'blockCloudObjectTakeoverThroughHardMatchEnabled'");
     }
 
     /**
@@ -63,7 +72,11 @@ class OnPremisesDirectorySynchronizationFeature implements AdditionalDataHolder,
      * @return bool|null
     */
     public function getBlockSoftMatchEnabled(): ?bool {
-        return $this->getBackingStore()->get('blockSoftMatchEnabled');
+        $val = $this->getBackingStore()->get('blockSoftMatchEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'blockSoftMatchEnabled'");
     }
 
     /**
@@ -71,7 +84,11 @@ class OnPremisesDirectorySynchronizationFeature implements AdditionalDataHolder,
      * @return bool|null
     */
     public function getBypassDirSyncOverridesEnabled(): ?bool {
-        return $this->getBackingStore()->get('bypassDirSyncOverridesEnabled');
+        $val = $this->getBackingStore()->get('bypassDirSyncOverridesEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'bypassDirSyncOverridesEnabled'");
     }
 
     /**
@@ -79,7 +96,11 @@ class OnPremisesDirectorySynchronizationFeature implements AdditionalDataHolder,
      * @return bool|null
     */
     public function getCloudPasswordPolicyForPasswordSyncedUsersEnabled(): ?bool {
-        return $this->getBackingStore()->get('cloudPasswordPolicyForPasswordSyncedUsersEnabled');
+        $val = $this->getBackingStore()->get('cloudPasswordPolicyForPasswordSyncedUsersEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'cloudPasswordPolicyForPasswordSyncedUsersEnabled'");
     }
 
     /**
@@ -87,7 +108,11 @@ class OnPremisesDirectorySynchronizationFeature implements AdditionalDataHolder,
      * @return bool|null
     */
     public function getConcurrentCredentialUpdateEnabled(): ?bool {
-        return $this->getBackingStore()->get('concurrentCredentialUpdateEnabled');
+        $val = $this->getBackingStore()->get('concurrentCredentialUpdateEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'concurrentCredentialUpdateEnabled'");
     }
 
     /**
@@ -95,7 +120,11 @@ class OnPremisesDirectorySynchronizationFeature implements AdditionalDataHolder,
      * @return bool|null
     */
     public function getConcurrentOrgIdProvisioningEnabled(): ?bool {
-        return $this->getBackingStore()->get('concurrentOrgIdProvisioningEnabled');
+        $val = $this->getBackingStore()->get('concurrentOrgIdProvisioningEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'concurrentOrgIdProvisioningEnabled'");
     }
 
     /**
@@ -103,7 +132,11 @@ class OnPremisesDirectorySynchronizationFeature implements AdditionalDataHolder,
      * @return bool|null
     */
     public function getDeviceWritebackEnabled(): ?bool {
-        return $this->getBackingStore()->get('deviceWritebackEnabled');
+        $val = $this->getBackingStore()->get('deviceWritebackEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deviceWritebackEnabled'");
     }
 
     /**
@@ -111,12 +144,16 @@ class OnPremisesDirectorySynchronizationFeature implements AdditionalDataHolder,
      * @return bool|null
     */
     public function getDirectoryExtensionsEnabled(): ?bool {
-        return $this->getBackingStore()->get('directoryExtensionsEnabled');
+        $val = $this->getBackingStore()->get('directoryExtensionsEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'directoryExtensionsEnabled'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -149,7 +186,11 @@ class OnPremisesDirectorySynchronizationFeature implements AdditionalDataHolder,
      * @return bool|null
     */
     public function getFopeConflictResolutionEnabled(): ?bool {
-        return $this->getBackingStore()->get('fopeConflictResolutionEnabled');
+        $val = $this->getBackingStore()->get('fopeConflictResolutionEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'fopeConflictResolutionEnabled'");
     }
 
     /**
@@ -157,7 +198,11 @@ class OnPremisesDirectorySynchronizationFeature implements AdditionalDataHolder,
      * @return bool|null
     */
     public function getGroupWriteBackEnabled(): ?bool {
-        return $this->getBackingStore()->get('groupWriteBackEnabled');
+        $val = $this->getBackingStore()->get('groupWriteBackEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'groupWriteBackEnabled'");
     }
 
     /**
@@ -165,7 +210,11 @@ class OnPremisesDirectorySynchronizationFeature implements AdditionalDataHolder,
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -173,7 +222,11 @@ class OnPremisesDirectorySynchronizationFeature implements AdditionalDataHolder,
      * @return bool|null
     */
     public function getPasswordSyncEnabled(): ?bool {
-        return $this->getBackingStore()->get('passwordSyncEnabled');
+        $val = $this->getBackingStore()->get('passwordSyncEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'passwordSyncEnabled'");
     }
 
     /**
@@ -181,7 +234,11 @@ class OnPremisesDirectorySynchronizationFeature implements AdditionalDataHolder,
      * @return bool|null
     */
     public function getPasswordWritebackEnabled(): ?bool {
-        return $this->getBackingStore()->get('passwordWritebackEnabled');
+        $val = $this->getBackingStore()->get('passwordWritebackEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'passwordWritebackEnabled'");
     }
 
     /**
@@ -189,7 +246,11 @@ class OnPremisesDirectorySynchronizationFeature implements AdditionalDataHolder,
      * @return bool|null
     */
     public function getQuarantineUponProxyAddressesConflictEnabled(): ?bool {
-        return $this->getBackingStore()->get('quarantineUponProxyAddressesConflictEnabled');
+        $val = $this->getBackingStore()->get('quarantineUponProxyAddressesConflictEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'quarantineUponProxyAddressesConflictEnabled'");
     }
 
     /**
@@ -197,7 +258,11 @@ class OnPremisesDirectorySynchronizationFeature implements AdditionalDataHolder,
      * @return bool|null
     */
     public function getQuarantineUponUpnConflictEnabled(): ?bool {
-        return $this->getBackingStore()->get('quarantineUponUpnConflictEnabled');
+        $val = $this->getBackingStore()->get('quarantineUponUpnConflictEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'quarantineUponUpnConflictEnabled'");
     }
 
     /**
@@ -205,7 +270,11 @@ class OnPremisesDirectorySynchronizationFeature implements AdditionalDataHolder,
      * @return bool|null
     */
     public function getSoftMatchOnUpnEnabled(): ?bool {
-        return $this->getBackingStore()->get('softMatchOnUpnEnabled');
+        $val = $this->getBackingStore()->get('softMatchOnUpnEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'softMatchOnUpnEnabled'");
     }
 
     /**
@@ -213,7 +282,11 @@ class OnPremisesDirectorySynchronizationFeature implements AdditionalDataHolder,
      * @return bool|null
     */
     public function getSynchronizeUpnForManagedUsersEnabled(): ?bool {
-        return $this->getBackingStore()->get('synchronizeUpnForManagedUsersEnabled');
+        $val = $this->getBackingStore()->get('synchronizeUpnForManagedUsersEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'synchronizeUpnForManagedUsersEnabled'");
     }
 
     /**
@@ -221,7 +294,11 @@ class OnPremisesDirectorySynchronizationFeature implements AdditionalDataHolder,
      * @return bool|null
     */
     public function getUnifiedGroupWritebackEnabled(): ?bool {
-        return $this->getBackingStore()->get('unifiedGroupWritebackEnabled');
+        $val = $this->getBackingStore()->get('unifiedGroupWritebackEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'unifiedGroupWritebackEnabled'");
     }
 
     /**
@@ -229,7 +306,11 @@ class OnPremisesDirectorySynchronizationFeature implements AdditionalDataHolder,
      * @return bool|null
     */
     public function getUserForcePasswordChangeOnLogonEnabled(): ?bool {
-        return $this->getBackingStore()->get('userForcePasswordChangeOnLogonEnabled');
+        $val = $this->getBackingStore()->get('userForcePasswordChangeOnLogonEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userForcePasswordChangeOnLogonEnabled'");
     }
 
     /**
@@ -237,7 +318,11 @@ class OnPremisesDirectorySynchronizationFeature implements AdditionalDataHolder,
      * @return bool|null
     */
     public function getUserWritebackEnabled(): ?bool {
-        return $this->getBackingStore()->get('userWritebackEnabled');
+        $val = $this->getBackingStore()->get('userWritebackEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userWritebackEnabled'");
     }
 
     /**

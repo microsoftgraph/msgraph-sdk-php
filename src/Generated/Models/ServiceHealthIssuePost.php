@@ -40,7 +40,12 @@ class ServiceHealthIssuePost implements AdditionalDataHolder, BackedModel, Parsa
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -56,7 +61,11 @@ class ServiceHealthIssuePost implements AdditionalDataHolder, BackedModel, Parsa
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('createdDateTime');
+        $val = $this->getBackingStore()->get('createdDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdDateTime'");
     }
 
     /**
@@ -64,12 +73,16 @@ class ServiceHealthIssuePost implements AdditionalDataHolder, BackedModel, Parsa
      * @return ItemBody|null
     */
     public function getDescription(): ?ItemBody {
-        return $this->getBackingStore()->get('description');
+        $val = $this->getBackingStore()->get('description');
+        if (is_null($val) || $val instanceof ItemBody) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'description'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -86,7 +99,11 @@ class ServiceHealthIssuePost implements AdditionalDataHolder, BackedModel, Parsa
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -94,7 +111,11 @@ class ServiceHealthIssuePost implements AdditionalDataHolder, BackedModel, Parsa
      * @return PostType|null
     */
     public function getPostType(): ?PostType {
-        return $this->getBackingStore()->get('postType');
+        $val = $this->getBackingStore()->get('postType');
+        if (is_null($val) || $val instanceof PostType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'postType'");
     }
 
     /**

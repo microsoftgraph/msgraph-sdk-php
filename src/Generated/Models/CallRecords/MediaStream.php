@@ -41,7 +41,12 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -49,7 +54,11 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
      * @return AudioCodec|null
     */
     public function getAudioCodec(): ?AudioCodec {
-        return $this->getBackingStore()->get('audioCodec');
+        $val = $this->getBackingStore()->get('audioCodec');
+        if (is_null($val) || $val instanceof AudioCodec) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'audioCodec'");
     }
 
     /**
@@ -57,7 +66,11 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
      * @return float|null
     */
     public function getAverageAudioDegradation(): ?float {
-        return $this->getBackingStore()->get('averageAudioDegradation');
+        $val = $this->getBackingStore()->get('averageAudioDegradation');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'averageAudioDegradation'");
     }
 
     /**
@@ -65,7 +78,11 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
      * @return DateInterval|null
     */
     public function getAverageAudioNetworkJitter(): ?DateInterval {
-        return $this->getBackingStore()->get('averageAudioNetworkJitter');
+        $val = $this->getBackingStore()->get('averageAudioNetworkJitter');
+        if (is_null($val) || $val instanceof DateInterval) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'averageAudioNetworkJitter'");
     }
 
     /**
@@ -73,7 +90,11 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getAverageBandwidthEstimate(): ?int {
-        return $this->getBackingStore()->get('averageBandwidthEstimate');
+        $val = $this->getBackingStore()->get('averageBandwidthEstimate');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'averageBandwidthEstimate'");
     }
 
     /**
@@ -81,7 +102,11 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
      * @return DateInterval|null
     */
     public function getAverageFreezeDuration(): ?DateInterval {
-        return $this->getBackingStore()->get('averageFreezeDuration');
+        $val = $this->getBackingStore()->get('averageFreezeDuration');
+        if (is_null($val) || $val instanceof DateInterval) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'averageFreezeDuration'");
     }
 
     /**
@@ -89,7 +114,11 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
      * @return DateInterval|null
     */
     public function getAverageJitter(): ?DateInterval {
-        return $this->getBackingStore()->get('averageJitter');
+        $val = $this->getBackingStore()->get('averageJitter');
+        if (is_null($val) || $val instanceof DateInterval) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'averageJitter'");
     }
 
     /**
@@ -97,7 +126,11 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
      * @return float|null
     */
     public function getAveragePacketLossRate(): ?float {
-        return $this->getBackingStore()->get('averagePacketLossRate');
+        $val = $this->getBackingStore()->get('averagePacketLossRate');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'averagePacketLossRate'");
     }
 
     /**
@@ -105,7 +138,11 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
      * @return float|null
     */
     public function getAverageRatioOfConcealedSamples(): ?float {
-        return $this->getBackingStore()->get('averageRatioOfConcealedSamples');
+        $val = $this->getBackingStore()->get('averageRatioOfConcealedSamples');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'averageRatioOfConcealedSamples'");
     }
 
     /**
@@ -113,7 +150,11 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
      * @return float|null
     */
     public function getAverageReceivedFrameRate(): ?float {
-        return $this->getBackingStore()->get('averageReceivedFrameRate');
+        $val = $this->getBackingStore()->get('averageReceivedFrameRate');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'averageReceivedFrameRate'");
     }
 
     /**
@@ -121,7 +162,11 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
      * @return DateInterval|null
     */
     public function getAverageRoundTripTime(): ?DateInterval {
-        return $this->getBackingStore()->get('averageRoundTripTime');
+        $val = $this->getBackingStore()->get('averageRoundTripTime');
+        if (is_null($val) || $val instanceof DateInterval) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'averageRoundTripTime'");
     }
 
     /**
@@ -129,7 +174,11 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
      * @return float|null
     */
     public function getAverageVideoFrameLossPercentage(): ?float {
-        return $this->getBackingStore()->get('averageVideoFrameLossPercentage');
+        $val = $this->getBackingStore()->get('averageVideoFrameLossPercentage');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'averageVideoFrameLossPercentage'");
     }
 
     /**
@@ -137,7 +186,11 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
      * @return float|null
     */
     public function getAverageVideoFrameRate(): ?float {
-        return $this->getBackingStore()->get('averageVideoFrameRate');
+        $val = $this->getBackingStore()->get('averageVideoFrameRate');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'averageVideoFrameRate'");
     }
 
     /**
@@ -145,7 +198,11 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
      * @return float|null
     */
     public function getAverageVideoPacketLossRate(): ?float {
-        return $this->getBackingStore()->get('averageVideoPacketLossRate');
+        $val = $this->getBackingStore()->get('averageVideoPacketLossRate');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'averageVideoPacketLossRate'");
     }
 
     /**
@@ -161,12 +218,16 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
      * @return DateTime|null
     */
     public function getEndDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('endDateTime');
+        $val = $this->getBackingStore()->get('endDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'endDateTime'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -210,7 +271,11 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getIsAudioForwardErrorCorrectionUsed(): ?bool {
-        return $this->getBackingStore()->get('isAudioForwardErrorCorrectionUsed');
+        $val = $this->getBackingStore()->get('isAudioForwardErrorCorrectionUsed');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isAudioForwardErrorCorrectionUsed'");
     }
 
     /**
@@ -218,7 +283,11 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
      * @return float|null
     */
     public function getLowFrameRateRatio(): ?float {
-        return $this->getBackingStore()->get('lowFrameRateRatio');
+        $val = $this->getBackingStore()->get('lowFrameRateRatio');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lowFrameRateRatio'");
     }
 
     /**
@@ -226,7 +295,11 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
      * @return float|null
     */
     public function getLowVideoProcessingCapabilityRatio(): ?float {
-        return $this->getBackingStore()->get('lowVideoProcessingCapabilityRatio');
+        $val = $this->getBackingStore()->get('lowVideoProcessingCapabilityRatio');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lowVideoProcessingCapabilityRatio'");
     }
 
     /**
@@ -234,7 +307,11 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
      * @return DateInterval|null
     */
     public function getMaxAudioNetworkJitter(): ?DateInterval {
-        return $this->getBackingStore()->get('maxAudioNetworkJitter');
+        $val = $this->getBackingStore()->get('maxAudioNetworkJitter');
+        if (is_null($val) || $val instanceof DateInterval) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'maxAudioNetworkJitter'");
     }
 
     /**
@@ -242,7 +319,11 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
      * @return DateInterval|null
     */
     public function getMaxJitter(): ?DateInterval {
-        return $this->getBackingStore()->get('maxJitter');
+        $val = $this->getBackingStore()->get('maxJitter');
+        if (is_null($val) || $val instanceof DateInterval) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'maxJitter'");
     }
 
     /**
@@ -250,7 +331,11 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
      * @return float|null
     */
     public function getMaxPacketLossRate(): ?float {
-        return $this->getBackingStore()->get('maxPacketLossRate');
+        $val = $this->getBackingStore()->get('maxPacketLossRate');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'maxPacketLossRate'");
     }
 
     /**
@@ -258,7 +343,11 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
      * @return float|null
     */
     public function getMaxRatioOfConcealedSamples(): ?float {
-        return $this->getBackingStore()->get('maxRatioOfConcealedSamples');
+        $val = $this->getBackingStore()->get('maxRatioOfConcealedSamples');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'maxRatioOfConcealedSamples'");
     }
 
     /**
@@ -266,7 +355,11 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
      * @return DateInterval|null
     */
     public function getMaxRoundTripTime(): ?DateInterval {
-        return $this->getBackingStore()->get('maxRoundTripTime');
+        $val = $this->getBackingStore()->get('maxRoundTripTime');
+        if (is_null($val) || $val instanceof DateInterval) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'maxRoundTripTime'");
     }
 
     /**
@@ -274,7 +367,11 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -282,7 +379,11 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getPacketUtilization(): ?int {
-        return $this->getBackingStore()->get('packetUtilization');
+        $val = $this->getBackingStore()->get('packetUtilization');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'packetUtilization'");
     }
 
     /**
@@ -290,7 +391,11 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
      * @return float|null
     */
     public function getPostForwardErrorCorrectionPacketLossRate(): ?float {
-        return $this->getBackingStore()->get('postForwardErrorCorrectionPacketLossRate');
+        $val = $this->getBackingStore()->get('postForwardErrorCorrectionPacketLossRate');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'postForwardErrorCorrectionPacketLossRate'");
     }
 
     /**
@@ -298,7 +403,11 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
      * @return DateInterval|null
     */
     public function getRmsFreezeDuration(): ?DateInterval {
-        return $this->getBackingStore()->get('rmsFreezeDuration');
+        $val = $this->getBackingStore()->get('rmsFreezeDuration');
+        if (is_null($val) || $val instanceof DateInterval) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'rmsFreezeDuration'");
     }
 
     /**
@@ -306,7 +415,11 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
      * @return DateTime|null
     */
     public function getStartDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('startDateTime');
+        $val = $this->getBackingStore()->get('startDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'startDateTime'");
     }
 
     /**
@@ -314,7 +427,11 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
      * @return MediaStreamDirection|null
     */
     public function getStreamDirection(): ?MediaStreamDirection {
-        return $this->getBackingStore()->get('streamDirection');
+        $val = $this->getBackingStore()->get('streamDirection');
+        if (is_null($val) || $val instanceof MediaStreamDirection) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'streamDirection'");
     }
 
     /**
@@ -322,7 +439,11 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getStreamId(): ?string {
-        return $this->getBackingStore()->get('streamId');
+        $val = $this->getBackingStore()->get('streamId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'streamId'");
     }
 
     /**
@@ -330,7 +451,11 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
      * @return VideoCodec|null
     */
     public function getVideoCodec(): ?VideoCodec {
-        return $this->getBackingStore()->get('videoCodec');
+        $val = $this->getBackingStore()->get('videoCodec');
+        if (is_null($val) || $val instanceof VideoCodec) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'videoCodec'");
     }
 
     /**
@@ -338,7 +463,11 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getWasMediaBypassed(): ?bool {
-        return $this->getBackingStore()->get('wasMediaBypassed');
+        $val = $this->getBackingStore()->get('wasMediaBypassed');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'wasMediaBypassed'");
     }
 
     /**

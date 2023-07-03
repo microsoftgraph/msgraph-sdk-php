@@ -29,7 +29,11 @@ class TeamsTab extends Entity implements Parsable
      * @return TeamsTabConfiguration|null
     */
     public function getConfiguration(): ?TeamsTabConfiguration {
-        return $this->getBackingStore()->get('configuration');
+        $val = $this->getBackingStore()->get('configuration');
+        if (is_null($val) || $val instanceof TeamsTabConfiguration) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'configuration'");
     }
 
     /**
@@ -37,12 +41,16 @@ class TeamsTab extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -59,7 +67,11 @@ class TeamsTab extends Entity implements Parsable
      * @return TeamsApp|null
     */
     public function getTeamsApp(): ?TeamsApp {
-        return $this->getBackingStore()->get('teamsApp');
+        $val = $this->getBackingStore()->get('teamsApp');
+        if (is_null($val) || $val instanceof TeamsApp) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'teamsApp'");
     }
 
     /**
@@ -67,7 +79,11 @@ class TeamsTab extends Entity implements Parsable
      * @return string|null
     */
     public function getWebUrl(): ?string {
-        return $this->getBackingStore()->get('webUrl');
+        $val = $this->getBackingStore()->get('webUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'webUrl'");
     }
 
     /**

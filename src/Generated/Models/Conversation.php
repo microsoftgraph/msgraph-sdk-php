@@ -6,6 +6,7 @@ use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class Conversation extends Entity implements Parsable 
 {
@@ -27,7 +28,7 @@ class Conversation extends Entity implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -37,7 +38,14 @@ class Conversation extends Entity implements Parsable
             'preview' => fn(ParseNode $n) => $o->setPreview($n->getStringValue()),
             'threads' => fn(ParseNode $n) => $o->setThreads($n->getCollectionOfObjectValues([ConversationThread::class, 'createFromDiscriminatorValue'])),
             'topic' => fn(ParseNode $n) => $o->setTopic($n->getStringValue()),
-            'uniqueSenders' => fn(ParseNode $n) => $o->setUniqueSenders($n->getCollectionOfPrimitiveValues()),
+            'uniqueSenders' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setUniqueSenders($val);
+            },
         ]);
     }
 
@@ -46,7 +54,11 @@ class Conversation extends Entity implements Parsable
      * @return bool|null
     */
     public function getHasAttachments(): ?bool {
-        return $this->getBackingStore()->get('hasAttachments');
+        $val = $this->getBackingStore()->get('hasAttachments');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'hasAttachments'");
     }
 
     /**
@@ -54,7 +66,11 @@ class Conversation extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastDeliveredDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('lastDeliveredDateTime');
+        $val = $this->getBackingStore()->get('lastDeliveredDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastDeliveredDateTime'");
     }
 
     /**
@@ -62,7 +78,11 @@ class Conversation extends Entity implements Parsable
      * @return string|null
     */
     public function getPreview(): ?string {
-        return $this->getBackingStore()->get('preview');
+        $val = $this->getBackingStore()->get('preview');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'preview'");
     }
 
     /**
@@ -70,7 +90,13 @@ class Conversation extends Entity implements Parsable
      * @return array<ConversationThread>|null
     */
     public function getThreads(): ?array {
-        return $this->getBackingStore()->get('threads');
+        $val = $this->getBackingStore()->get('threads');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ConversationThread::class);
+            /** @var array<ConversationThread>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'threads'");
     }
 
     /**
@@ -78,7 +104,11 @@ class Conversation extends Entity implements Parsable
      * @return string|null
     */
     public function getTopic(): ?string {
-        return $this->getBackingStore()->get('topic');
+        $val = $this->getBackingStore()->get('topic');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'topic'");
     }
 
     /**
@@ -86,7 +116,13 @@ class Conversation extends Entity implements Parsable
      * @return array<string>|null
     */
     public function getUniqueSenders(): ?array {
-        return $this->getBackingStore()->get('uniqueSenders');
+        $val = $this->getBackingStore()->get('uniqueSenders');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'uniqueSenders'");
     }
 
     /**

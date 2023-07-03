@@ -30,12 +30,16 @@ class TimeOff extends ChangeTrackedEntity implements Parsable
      * @return TimeOffItem|null
     */
     public function getDraftTimeOff(): ?TimeOffItem {
-        return $this->getBackingStore()->get('draftTimeOff');
+        $val = $this->getBackingStore()->get('draftTimeOff');
+        if (is_null($val) || $val instanceof TimeOffItem) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'draftTimeOff'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -51,7 +55,11 @@ class TimeOff extends ChangeTrackedEntity implements Parsable
      * @return TimeOffItem|null
     */
     public function getSharedTimeOff(): ?TimeOffItem {
-        return $this->getBackingStore()->get('sharedTimeOff');
+        $val = $this->getBackingStore()->get('sharedTimeOff');
+        if (is_null($val) || $val instanceof TimeOffItem) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sharedTimeOff'");
     }
 
     /**
@@ -59,7 +67,11 @@ class TimeOff extends ChangeTrackedEntity implements Parsable
      * @return string|null
     */
     public function getUserId(): ?string {
-        return $this->getBackingStore()->get('userId');
+        $val = $this->getBackingStore()->get('userId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userId'");
     }
 
     /**

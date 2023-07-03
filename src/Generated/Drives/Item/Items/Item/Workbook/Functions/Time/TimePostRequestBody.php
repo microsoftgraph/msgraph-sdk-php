@@ -40,7 +40,12 @@ class TimePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -53,7 +58,7 @@ class TimePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -69,7 +74,11 @@ class TimePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
      * @return Json|null
     */
     public function getHour(): ?Json {
-        return $this->getBackingStore()->get('hour');
+        $val = $this->getBackingStore()->get('hour');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'hour'");
     }
 
     /**
@@ -77,7 +86,11 @@ class TimePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
      * @return Json|null
     */
     public function getMinute(): ?Json {
-        return $this->getBackingStore()->get('minute');
+        $val = $this->getBackingStore()->get('minute');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'minute'");
     }
 
     /**
@@ -85,7 +98,11 @@ class TimePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
      * @return Json|null
     */
     public function getSecond(): ?Json {
-        return $this->getBackingStore()->get('second');
+        $val = $this->getBackingStore()->get('second');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'second'");
     }
 
     /**

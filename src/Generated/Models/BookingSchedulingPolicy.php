@@ -43,7 +43,12 @@ class BookingSchedulingPolicy implements AdditionalDataHolder, BackedModel, Pars
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -51,7 +56,11 @@ class BookingSchedulingPolicy implements AdditionalDataHolder, BackedModel, Pars
      * @return bool|null
     */
     public function getAllowStaffSelection(): ?bool {
-        return $this->getBackingStore()->get('allowStaffSelection');
+        $val = $this->getBackingStore()->get('allowStaffSelection');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowStaffSelection'");
     }
 
     /**
@@ -64,7 +73,7 @@ class BookingSchedulingPolicy implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -83,7 +92,11 @@ class BookingSchedulingPolicy implements AdditionalDataHolder, BackedModel, Pars
      * @return DateInterval|null
     */
     public function getMaximumAdvance(): ?DateInterval {
-        return $this->getBackingStore()->get('maximumAdvance');
+        $val = $this->getBackingStore()->get('maximumAdvance');
+        if (is_null($val) || $val instanceof DateInterval) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'maximumAdvance'");
     }
 
     /**
@@ -91,7 +104,11 @@ class BookingSchedulingPolicy implements AdditionalDataHolder, BackedModel, Pars
      * @return DateInterval|null
     */
     public function getMinimumLeadTime(): ?DateInterval {
-        return $this->getBackingStore()->get('minimumLeadTime');
+        $val = $this->getBackingStore()->get('minimumLeadTime');
+        if (is_null($val) || $val instanceof DateInterval) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'minimumLeadTime'");
     }
 
     /**
@@ -99,7 +116,11 @@ class BookingSchedulingPolicy implements AdditionalDataHolder, BackedModel, Pars
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -107,7 +128,11 @@ class BookingSchedulingPolicy implements AdditionalDataHolder, BackedModel, Pars
      * @return bool|null
     */
     public function getSendConfirmationsToOwner(): ?bool {
-        return $this->getBackingStore()->get('sendConfirmationsToOwner');
+        $val = $this->getBackingStore()->get('sendConfirmationsToOwner');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sendConfirmationsToOwner'");
     }
 
     /**
@@ -115,7 +140,11 @@ class BookingSchedulingPolicy implements AdditionalDataHolder, BackedModel, Pars
      * @return DateInterval|null
     */
     public function getTimeSlotInterval(): ?DateInterval {
-        return $this->getBackingStore()->get('timeSlotInterval');
+        $val = $this->getBackingStore()->get('timeSlotInterval');
+        if (is_null($val) || $val instanceof DateInterval) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'timeSlotInterval'");
     }
 
     /**

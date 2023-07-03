@@ -42,7 +42,12 @@ class ConfigurationManagerClientEnabledFeatures implements AdditionalDataHolder,
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -58,7 +63,11 @@ class ConfigurationManagerClientEnabledFeatures implements AdditionalDataHolder,
      * @return bool|null
     */
     public function getCompliancePolicy(): ?bool {
-        return $this->getBackingStore()->get('compliancePolicy');
+        $val = $this->getBackingStore()->get('compliancePolicy');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'compliancePolicy'");
     }
 
     /**
@@ -66,12 +75,16 @@ class ConfigurationManagerClientEnabledFeatures implements AdditionalDataHolder,
      * @return bool|null
     */
     public function getDeviceConfiguration(): ?bool {
-        return $this->getBackingStore()->get('deviceConfiguration');
+        $val = $this->getBackingStore()->get('deviceConfiguration');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deviceConfiguration'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -91,7 +104,11 @@ class ConfigurationManagerClientEnabledFeatures implements AdditionalDataHolder,
      * @return bool|null
     */
     public function getInventory(): ?bool {
-        return $this->getBackingStore()->get('inventory');
+        $val = $this->getBackingStore()->get('inventory');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'inventory'");
     }
 
     /**
@@ -99,7 +116,11 @@ class ConfigurationManagerClientEnabledFeatures implements AdditionalDataHolder,
      * @return bool|null
     */
     public function getModernApps(): ?bool {
-        return $this->getBackingStore()->get('modernApps');
+        $val = $this->getBackingStore()->get('modernApps');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'modernApps'");
     }
 
     /**
@@ -107,7 +128,11 @@ class ConfigurationManagerClientEnabledFeatures implements AdditionalDataHolder,
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -115,7 +140,11 @@ class ConfigurationManagerClientEnabledFeatures implements AdditionalDataHolder,
      * @return bool|null
     */
     public function getResourceAccess(): ?bool {
-        return $this->getBackingStore()->get('resourceAccess');
+        $val = $this->getBackingStore()->get('resourceAccess');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resourceAccess'");
     }
 
     /**
@@ -123,7 +152,11 @@ class ConfigurationManagerClientEnabledFeatures implements AdditionalDataHolder,
      * @return bool|null
     */
     public function getWindowsUpdateForBusiness(): ?bool {
-        return $this->getBackingStore()->get('windowsUpdateForBusiness');
+        $val = $this->getBackingStore()->get('windowsUpdateForBusiness');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'windowsUpdateForBusiness'");
     }
 
     /**

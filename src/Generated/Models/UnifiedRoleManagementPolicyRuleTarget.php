@@ -9,6 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -39,7 +40,12 @@ class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHolder, Bac
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -55,7 +61,11 @@ class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHolder, Bac
      * @return string|null
     */
     public function getCaller(): ?string {
-        return $this->getBackingStore()->get('caller');
+        $val = $this->getBackingStore()->get('caller');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'caller'");
     }
 
     /**
@@ -63,19 +73,39 @@ class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHolder, Bac
      * @return array<string>|null
     */
     public function getEnforcedSettings(): ?array {
-        return $this->getBackingStore()->get('enforcedSettings');
+        $val = $this->getBackingStore()->get('enforcedSettings');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'enforcedSettings'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
             'caller' => fn(ParseNode $n) => $o->setCaller($n->getStringValue()),
-            'enforcedSettings' => fn(ParseNode $n) => $o->setEnforcedSettings($n->getCollectionOfPrimitiveValues()),
-            'inheritableSettings' => fn(ParseNode $n) => $o->setInheritableSettings($n->getCollectionOfPrimitiveValues()),
+            'enforcedSettings' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setEnforcedSettings($val);
+            },
+            'inheritableSettings' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setInheritableSettings($val);
+            },
             'level' => fn(ParseNode $n) => $o->setLevel($n->getStringValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'operations' => fn(ParseNode $n) => $o->setOperations($n->getCollectionOfEnumValues(UnifiedRoleManagementPolicyRuleTargetOperations::class)),
@@ -88,7 +118,13 @@ class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHolder, Bac
      * @return array<string>|null
     */
     public function getInheritableSettings(): ?array {
-        return $this->getBackingStore()->get('inheritableSettings');
+        $val = $this->getBackingStore()->get('inheritableSettings');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'inheritableSettings'");
     }
 
     /**
@@ -96,7 +132,11 @@ class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHolder, Bac
      * @return string|null
     */
     public function getLevel(): ?string {
-        return $this->getBackingStore()->get('level');
+        $val = $this->getBackingStore()->get('level');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'level'");
     }
 
     /**
@@ -104,7 +144,11 @@ class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHolder, Bac
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -112,7 +156,13 @@ class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHolder, Bac
      * @return array<UnifiedRoleManagementPolicyRuleTargetOperations>|null
     */
     public function getOperations(): ?array {
-        return $this->getBackingStore()->get('operations');
+        $val = $this->getBackingStore()->get('operations');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, UnifiedRoleManagementPolicyRuleTargetOperations::class);
+            /** @var array<UnifiedRoleManagementPolicyRuleTargetOperations>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'operations'");
     }
 
     /**
@@ -120,7 +170,13 @@ class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHolder, Bac
      * @return array<DirectoryObject>|null
     */
     public function getTargetObjects(): ?array {
-        return $this->getBackingStore()->get('targetObjects');
+        $val = $this->getBackingStore()->get('targetObjects');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, DirectoryObject::class);
+            /** @var array<DirectoryObject>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'targetObjects'");
     }
 
     /**

@@ -29,12 +29,16 @@ class GroupLifecyclePolicy extends Entity implements Parsable
      * @return string|null
     */
     public function getAlternateNotificationEmails(): ?string {
-        return $this->getBackingStore()->get('alternateNotificationEmails');
+        $val = $this->getBackingStore()->get('alternateNotificationEmails');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'alternateNotificationEmails'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -50,7 +54,11 @@ class GroupLifecyclePolicy extends Entity implements Parsable
      * @return int|null
     */
     public function getGroupLifetimeInDays(): ?int {
-        return $this->getBackingStore()->get('groupLifetimeInDays');
+        $val = $this->getBackingStore()->get('groupLifetimeInDays');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'groupLifetimeInDays'");
     }
 
     /**
@@ -58,7 +66,11 @@ class GroupLifecyclePolicy extends Entity implements Parsable
      * @return string|null
     */
     public function getManagedGroupTypes(): ?string {
-        return $this->getBackingStore()->get('managedGroupTypes');
+        $val = $this->getBackingStore()->get('managedGroupTypes');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'managedGroupTypes'");
     }
 
     /**

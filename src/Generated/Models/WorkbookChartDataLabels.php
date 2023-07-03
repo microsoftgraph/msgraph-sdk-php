@@ -26,7 +26,7 @@ class WorkbookChartDataLabels extends Entity implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -48,7 +48,11 @@ class WorkbookChartDataLabels extends Entity implements Parsable
      * @return WorkbookChartDataLabelFormat|null
     */
     public function getFormat(): ?WorkbookChartDataLabelFormat {
-        return $this->getBackingStore()->get('format');
+        $val = $this->getBackingStore()->get('format');
+        if (is_null($val) || $val instanceof WorkbookChartDataLabelFormat) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'format'");
     }
 
     /**
@@ -56,7 +60,11 @@ class WorkbookChartDataLabels extends Entity implements Parsable
      * @return string|null
     */
     public function getPosition(): ?string {
-        return $this->getBackingStore()->get('position');
+        $val = $this->getBackingStore()->get('position');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'position'");
     }
 
     /**
@@ -64,7 +72,11 @@ class WorkbookChartDataLabels extends Entity implements Parsable
      * @return string|null
     */
     public function getSeparator(): ?string {
-        return $this->getBackingStore()->get('separator');
+        $val = $this->getBackingStore()->get('separator');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'separator'");
     }
 
     /**
@@ -72,7 +84,11 @@ class WorkbookChartDataLabels extends Entity implements Parsable
      * @return bool|null
     */
     public function getShowBubbleSize(): ?bool {
-        return $this->getBackingStore()->get('showBubbleSize');
+        $val = $this->getBackingStore()->get('showBubbleSize');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'showBubbleSize'");
     }
 
     /**
@@ -80,7 +96,11 @@ class WorkbookChartDataLabels extends Entity implements Parsable
      * @return bool|null
     */
     public function getShowCategoryName(): ?bool {
-        return $this->getBackingStore()->get('showCategoryName');
+        $val = $this->getBackingStore()->get('showCategoryName');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'showCategoryName'");
     }
 
     /**
@@ -88,7 +108,11 @@ class WorkbookChartDataLabels extends Entity implements Parsable
      * @return bool|null
     */
     public function getShowLegendKey(): ?bool {
-        return $this->getBackingStore()->get('showLegendKey');
+        $val = $this->getBackingStore()->get('showLegendKey');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'showLegendKey'");
     }
 
     /**
@@ -96,7 +120,11 @@ class WorkbookChartDataLabels extends Entity implements Parsable
      * @return bool|null
     */
     public function getShowPercentage(): ?bool {
-        return $this->getBackingStore()->get('showPercentage');
+        $val = $this->getBackingStore()->get('showPercentage');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'showPercentage'");
     }
 
     /**
@@ -104,7 +132,11 @@ class WorkbookChartDataLabels extends Entity implements Parsable
      * @return bool|null
     */
     public function getShowSeriesName(): ?bool {
-        return $this->getBackingStore()->get('showSeriesName');
+        $val = $this->getBackingStore()->get('showSeriesName');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'showSeriesName'");
     }
 
     /**
@@ -112,7 +144,11 @@ class WorkbookChartDataLabels extends Entity implements Parsable
      * @return bool|null
     */
     public function getShowValue(): ?bool {
-        return $this->getBackingStore()->get('showValue');
+        $val = $this->getBackingStore()->get('showValue');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'showValue'");
     }
 
     /**

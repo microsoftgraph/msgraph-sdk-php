@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DelegatedAdminAccessAssignment extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new delegatedAdminAccessAssignment and sets the default values.
+     * Instantiates a new DelegatedAdminAccessAssignment and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -30,7 +30,11 @@ class DelegatedAdminAccessAssignment extends Entity implements Parsable
      * @return DelegatedAdminAccessContainer|null
     */
     public function getAccessContainer(): ?DelegatedAdminAccessContainer {
-        return $this->getBackingStore()->get('accessContainer');
+        $val = $this->getBackingStore()->get('accessContainer');
+        if (is_null($val) || $val instanceof DelegatedAdminAccessContainer) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'accessContainer'");
     }
 
     /**
@@ -38,7 +42,11 @@ class DelegatedAdminAccessAssignment extends Entity implements Parsable
      * @return DelegatedAdminAccessDetails|null
     */
     public function getAccessDetails(): ?DelegatedAdminAccessDetails {
-        return $this->getBackingStore()->get('accessDetails');
+        $val = $this->getBackingStore()->get('accessDetails');
+        if (is_null($val) || $val instanceof DelegatedAdminAccessDetails) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'accessDetails'");
     }
 
     /**
@@ -46,12 +54,16 @@ class DelegatedAdminAccessAssignment extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('createdDateTime');
+        $val = $this->getBackingStore()->get('createdDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdDateTime'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -69,7 +81,11 @@ class DelegatedAdminAccessAssignment extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('lastModifiedDateTime');
+        $val = $this->getBackingStore()->get('lastModifiedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastModifiedDateTime'");
     }
 
     /**
@@ -77,7 +93,11 @@ class DelegatedAdminAccessAssignment extends Entity implements Parsable
      * @return DelegatedAdminAccessAssignmentStatus|null
     */
     public function getStatus(): ?DelegatedAdminAccessAssignmentStatus {
-        return $this->getBackingStore()->get('status');
+        $val = $this->getBackingStore()->get('status');
+        if (is_null($val) || $val instanceof DelegatedAdminAccessAssignmentStatus) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
     }
 
     /**

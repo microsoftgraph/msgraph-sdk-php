@@ -6,6 +6,7 @@ use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class Printer extends PrinterBase implements Parsable 
 {
@@ -31,12 +32,18 @@ class Printer extends PrinterBase implements Parsable
      * @return array<PrintConnector>|null
     */
     public function getConnectors(): ?array {
-        return $this->getBackingStore()->get('connectors');
+        $val = $this->getBackingStore()->get('connectors');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, PrintConnector::class);
+            /** @var array<PrintConnector>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'connectors'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -56,7 +63,11 @@ class Printer extends PrinterBase implements Parsable
      * @return bool|null
     */
     public function getHasPhysicalDevice(): ?bool {
-        return $this->getBackingStore()->get('hasPhysicalDevice');
+        $val = $this->getBackingStore()->get('hasPhysicalDevice');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'hasPhysicalDevice'");
     }
 
     /**
@@ -64,7 +75,11 @@ class Printer extends PrinterBase implements Parsable
      * @return bool|null
     */
     public function getIsShared(): ?bool {
-        return $this->getBackingStore()->get('isShared');
+        $val = $this->getBackingStore()->get('isShared');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isShared'");
     }
 
     /**
@@ -72,7 +87,11 @@ class Printer extends PrinterBase implements Parsable
      * @return DateTime|null
     */
     public function getLastSeenDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('lastSeenDateTime');
+        $val = $this->getBackingStore()->get('lastSeenDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastSeenDateTime'");
     }
 
     /**
@@ -80,7 +99,11 @@ class Printer extends PrinterBase implements Parsable
      * @return DateTime|null
     */
     public function getRegisteredDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('registeredDateTime');
+        $val = $this->getBackingStore()->get('registeredDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'registeredDateTime'");
     }
 
     /**
@@ -88,7 +111,13 @@ class Printer extends PrinterBase implements Parsable
      * @return array<PrinterShare>|null
     */
     public function getShares(): ?array {
-        return $this->getBackingStore()->get('shares');
+        $val = $this->getBackingStore()->get('shares');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, PrinterShare::class);
+            /** @var array<PrinterShare>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'shares'");
     }
 
     /**
@@ -96,7 +125,13 @@ class Printer extends PrinterBase implements Parsable
      * @return array<PrintTaskTrigger>|null
     */
     public function getTaskTriggers(): ?array {
-        return $this->getBackingStore()->get('taskTriggers');
+        $val = $this->getBackingStore()->get('taskTriggers');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, PrintTaskTrigger::class);
+            /** @var array<PrintTaskTrigger>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'taskTriggers'");
     }
 
     /**

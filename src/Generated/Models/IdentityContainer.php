@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class IdentityContainer extends Entity implements Parsable 
 {
@@ -29,7 +30,13 @@ class IdentityContainer extends Entity implements Parsable
      * @return array<IdentityApiConnector>|null
     */
     public function getApiConnectors(): ?array {
-        return $this->getBackingStore()->get('apiConnectors');
+        $val = $this->getBackingStore()->get('apiConnectors');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, IdentityApiConnector::class);
+            /** @var array<IdentityApiConnector>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'apiConnectors'");
     }
 
     /**
@@ -37,7 +44,13 @@ class IdentityContainer extends Entity implements Parsable
      * @return array<B2xIdentityUserFlow>|null
     */
     public function getB2xUserFlows(): ?array {
-        return $this->getBackingStore()->get('b2xUserFlows');
+        $val = $this->getBackingStore()->get('b2xUserFlows');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, B2xIdentityUserFlow::class);
+            /** @var array<B2xIdentityUserFlow>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'b2xUserFlows'");
     }
 
     /**
@@ -45,12 +58,16 @@ class IdentityContainer extends Entity implements Parsable
      * @return ConditionalAccessRoot|null
     */
     public function getConditionalAccess(): ?ConditionalAccessRoot {
-        return $this->getBackingStore()->get('conditionalAccess');
+        $val = $this->getBackingStore()->get('conditionalAccess');
+        if (is_null($val) || $val instanceof ConditionalAccessRoot) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'conditionalAccess'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -68,7 +85,13 @@ class IdentityContainer extends Entity implements Parsable
      * @return array<IdentityProviderBase>|null
     */
     public function getIdentityProviders(): ?array {
-        return $this->getBackingStore()->get('identityProviders');
+        $val = $this->getBackingStore()->get('identityProviders');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, IdentityProviderBase::class);
+            /** @var array<IdentityProviderBase>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'identityProviders'");
     }
 
     /**
@@ -76,7 +99,13 @@ class IdentityContainer extends Entity implements Parsable
      * @return array<IdentityUserFlowAttribute>|null
     */
     public function getUserFlowAttributes(): ?array {
-        return $this->getBackingStore()->get('userFlowAttributes');
+        $val = $this->getBackingStore()->get('userFlowAttributes');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, IdentityUserFlowAttribute::class);
+            /** @var array<IdentityUserFlowAttribute>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userFlowAttributes'");
     }
 
     /**

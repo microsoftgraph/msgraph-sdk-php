@@ -9,6 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class OptionalClaims implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -39,7 +40,13 @@ class OptionalClaims implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<OptionalClaim>|null
     */
     public function getAccessToken(): ?array {
-        return $this->getBackingStore()->get('accessToken');
+        $val = $this->getBackingStore()->get('accessToken');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, OptionalClaim::class);
+            /** @var array<OptionalClaim>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'accessToken'");
     }
 
     /**
@@ -47,7 +54,12 @@ class OptionalClaims implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -60,7 +72,7 @@ class OptionalClaims implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -77,7 +89,13 @@ class OptionalClaims implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<OptionalClaim>|null
     */
     public function getIdToken(): ?array {
-        return $this->getBackingStore()->get('idToken');
+        $val = $this->getBackingStore()->get('idToken');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, OptionalClaim::class);
+            /** @var array<OptionalClaim>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'idToken'");
     }
 
     /**
@@ -85,7 +103,11 @@ class OptionalClaims implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -93,7 +115,13 @@ class OptionalClaims implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<OptionalClaim>|null
     */
     public function getSaml2Token(): ?array {
-        return $this->getBackingStore()->get('saml2Token');
+        $val = $this->getBackingStore()->get('saml2Token');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, OptionalClaim::class);
+            /** @var array<OptionalClaim>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'saml2Token'");
     }
 
     /**

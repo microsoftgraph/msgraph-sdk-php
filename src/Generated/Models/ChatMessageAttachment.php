@@ -39,7 +39,12 @@ class ChatMessageAttachment implements AdditionalDataHolder, BackedModel, Parsab
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -55,7 +60,11 @@ class ChatMessageAttachment implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getContent(): ?string {
-        return $this->getBackingStore()->get('content');
+        $val = $this->getBackingStore()->get('content');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'content'");
     }
 
     /**
@@ -63,7 +72,11 @@ class ChatMessageAttachment implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getContentType(): ?string {
-        return $this->getBackingStore()->get('contentType');
+        $val = $this->getBackingStore()->get('contentType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'contentType'");
     }
 
     /**
@@ -71,12 +84,16 @@ class ChatMessageAttachment implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getContentUrl(): ?string {
-        return $this->getBackingStore()->get('contentUrl');
+        $val = $this->getBackingStore()->get('contentUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'contentUrl'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -97,7 +114,11 @@ class ChatMessageAttachment implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getId(): ?string {
-        return $this->getBackingStore()->get('id');
+        $val = $this->getBackingStore()->get('id');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'id'");
     }
 
     /**
@@ -105,7 +126,11 @@ class ChatMessageAttachment implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getName(): ?string {
-        return $this->getBackingStore()->get('name');
+        $val = $this->getBackingStore()->get('name');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'name'");
     }
 
     /**
@@ -113,7 +138,11 @@ class ChatMessageAttachment implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -121,7 +150,11 @@ class ChatMessageAttachment implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getTeamsAppId(): ?string {
-        return $this->getBackingStore()->get('teamsAppId');
+        $val = $this->getBackingStore()->get('teamsAppId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'teamsAppId'");
     }
 
     /**
@@ -129,7 +162,11 @@ class ChatMessageAttachment implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getThumbnailUrl(): ?string {
-        return $this->getBackingStore()->get('thumbnailUrl');
+        $val = $this->getBackingStore()->get('thumbnailUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'thumbnailUrl'");
     }
 
     /**

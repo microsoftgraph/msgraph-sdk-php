@@ -27,7 +27,7 @@ class JoinMeetingIdMeetingInfo extends MeetingInfo implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -42,7 +42,11 @@ class JoinMeetingIdMeetingInfo extends MeetingInfo implements Parsable
      * @return string|null
     */
     public function getJoinMeetingId(): ?string {
-        return $this->getBackingStore()->get('joinMeetingId');
+        $val = $this->getBackingStore()->get('joinMeetingId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'joinMeetingId'");
     }
 
     /**
@@ -50,7 +54,11 @@ class JoinMeetingIdMeetingInfo extends MeetingInfo implements Parsable
      * @return string|null
     */
     public function getPasscode(): ?string {
-        return $this->getBackingStore()->get('passcode');
+        $val = $this->getBackingStore()->get('passcode');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'passcode'");
     }
 
     /**

@@ -41,7 +41,12 @@ class ParseExpressionPostRequestBody implements AdditionalDataHolder, BackedMode
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -57,12 +62,16 @@ class ParseExpressionPostRequestBody implements AdditionalDataHolder, BackedMode
      * @return string|null
     */
     public function getExpression(): ?string {
-        return $this->getBackingStore()->get('expression');
+        $val = $this->getBackingStore()->get('expression');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'expression'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -78,7 +87,11 @@ class ParseExpressionPostRequestBody implements AdditionalDataHolder, BackedMode
      * @return AttributeDefinition|null
     */
     public function getTargetAttributeDefinition(): ?AttributeDefinition {
-        return $this->getBackingStore()->get('targetAttributeDefinition');
+        $val = $this->getBackingStore()->get('targetAttributeDefinition');
+        if (is_null($val) || $val instanceof AttributeDefinition) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'targetAttributeDefinition'");
     }
 
     /**
@@ -86,7 +99,11 @@ class ParseExpressionPostRequestBody implements AdditionalDataHolder, BackedMode
      * @return ExpressionInputObject|null
     */
     public function getTestInputObject(): ?ExpressionInputObject {
-        return $this->getBackingStore()->get('testInputObject');
+        $val = $this->getBackingStore()->get('testInputObject');
+        if (is_null($val) || $val instanceof ExpressionInputObject) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'testInputObject'");
     }
 
     /**

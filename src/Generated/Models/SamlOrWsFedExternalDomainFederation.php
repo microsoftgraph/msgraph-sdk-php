@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class SamlOrWsFedExternalDomainFederation extends SamlOrWsFedProvider implements Parsable 
 {
@@ -30,12 +31,18 @@ class SamlOrWsFedExternalDomainFederation extends SamlOrWsFedProvider implements
      * @return array<ExternalDomainName>|null
     */
     public function getDomains(): ?array {
-        return $this->getBackingStore()->get('domains');
+        $val = $this->getBackingStore()->get('domains');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ExternalDomainName::class);
+            /** @var array<ExternalDomainName>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'domains'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;

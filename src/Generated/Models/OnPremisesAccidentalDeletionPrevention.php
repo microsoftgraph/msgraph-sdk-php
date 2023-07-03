@@ -39,7 +39,12 @@ class OnPremisesAccidentalDeletionPrevention implements AdditionalDataHolder, Ba
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -47,7 +52,11 @@ class OnPremisesAccidentalDeletionPrevention implements AdditionalDataHolder, Ba
      * @return int|null
     */
     public function getAlertThreshold(): ?int {
-        return $this->getBackingStore()->get('alertThreshold');
+        $val = $this->getBackingStore()->get('alertThreshold');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'alertThreshold'");
     }
 
     /**
@@ -60,7 +69,7 @@ class OnPremisesAccidentalDeletionPrevention implements AdditionalDataHolder, Ba
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -76,7 +85,11 @@ class OnPremisesAccidentalDeletionPrevention implements AdditionalDataHolder, Ba
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -84,7 +97,11 @@ class OnPremisesAccidentalDeletionPrevention implements AdditionalDataHolder, Ba
      * @return OnPremisesDirectorySynchronizationDeletionPreventionType|null
     */
     public function getSynchronizationPreventionType(): ?OnPremisesDirectorySynchronizationDeletionPreventionType {
-        return $this->getBackingStore()->get('synchronizationPreventionType');
+        $val = $this->getBackingStore()->get('synchronizationPreventionType');
+        if (is_null($val) || $val instanceof OnPremisesDirectorySynchronizationDeletionPreventionType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'synchronizationPreventionType'");
     }
 
     /**

@@ -26,7 +26,7 @@ class RegistryKeyEvidence extends AlertEvidence implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -41,7 +41,11 @@ class RegistryKeyEvidence extends AlertEvidence implements Parsable
      * @return string|null
     */
     public function getRegistryHive(): ?string {
-        return $this->getBackingStore()->get('registryHive');
+        $val = $this->getBackingStore()->get('registryHive');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'registryHive'");
     }
 
     /**
@@ -49,7 +53,11 @@ class RegistryKeyEvidence extends AlertEvidence implements Parsable
      * @return string|null
     */
     public function getRegistryKey(): ?string {
-        return $this->getBackingStore()->get('registryKey');
+        $val = $this->getBackingStore()->get('registryKey');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'registryKey'");
     }
 
     /**

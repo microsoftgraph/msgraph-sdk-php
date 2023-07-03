@@ -40,7 +40,12 @@ class ResponseStatus implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -53,7 +58,7 @@ class ResponseStatus implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -69,7 +74,11 @@ class ResponseStatus implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -77,7 +86,11 @@ class ResponseStatus implements AdditionalDataHolder, BackedModel, Parsable
      * @return ResponseType|null
     */
     public function getResponse(): ?ResponseType {
-        return $this->getBackingStore()->get('response');
+        $val = $this->getBackingStore()->get('response');
+        if (is_null($val) || $val instanceof ResponseType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'response'");
     }
 
     /**
@@ -85,7 +98,11 @@ class ResponseStatus implements AdditionalDataHolder, BackedModel, Parsable
      * @return DateTime|null
     */
     public function getTime(): ?DateTime {
-        return $this->getBackingStore()->get('time');
+        $val = $this->getBackingStore()->get('time');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'time'");
     }
 
     /**

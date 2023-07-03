@@ -30,12 +30,16 @@ class MacOSMicrosoftEdgeApp extends MobileApp implements Parsable
      * @return MicrosoftEdgeChannel|null
     */
     public function getChannel(): ?MicrosoftEdgeChannel {
-        return $this->getBackingStore()->get('channel');
+        $val = $this->getBackingStore()->get('channel');
+        if (is_null($val) || $val instanceof MicrosoftEdgeChannel) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'channel'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;

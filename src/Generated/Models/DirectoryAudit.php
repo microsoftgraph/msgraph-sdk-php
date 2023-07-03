@@ -6,6 +6,7 @@ use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class DirectoryAudit extends Entity implements Parsable 
 {
@@ -30,7 +31,11 @@ class DirectoryAudit extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getActivityDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('activityDateTime');
+        $val = $this->getBackingStore()->get('activityDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'activityDateTime'");
     }
 
     /**
@@ -38,7 +43,11 @@ class DirectoryAudit extends Entity implements Parsable
      * @return string|null
     */
     public function getActivityDisplayName(): ?string {
-        return $this->getBackingStore()->get('activityDisplayName');
+        $val = $this->getBackingStore()->get('activityDisplayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'activityDisplayName'");
     }
 
     /**
@@ -46,7 +55,13 @@ class DirectoryAudit extends Entity implements Parsable
      * @return array<KeyValue>|null
     */
     public function getAdditionalDetails(): ?array {
-        return $this->getBackingStore()->get('additionalDetails');
+        $val = $this->getBackingStore()->get('additionalDetails');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, KeyValue::class);
+            /** @var array<KeyValue>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalDetails'");
     }
 
     /**
@@ -54,7 +69,11 @@ class DirectoryAudit extends Entity implements Parsable
      * @return string|null
     */
     public function getCategory(): ?string {
-        return $this->getBackingStore()->get('category');
+        $val = $this->getBackingStore()->get('category');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'category'");
     }
 
     /**
@@ -62,12 +81,16 @@ class DirectoryAudit extends Entity implements Parsable
      * @return string|null
     */
     public function getCorrelationId(): ?string {
-        return $this->getBackingStore()->get('correlationId');
+        $val = $this->getBackingStore()->get('correlationId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'correlationId'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -91,7 +114,11 @@ class DirectoryAudit extends Entity implements Parsable
      * @return AuditActivityInitiator|null
     */
     public function getInitiatedBy(): ?AuditActivityInitiator {
-        return $this->getBackingStore()->get('initiatedBy');
+        $val = $this->getBackingStore()->get('initiatedBy');
+        if (is_null($val) || $val instanceof AuditActivityInitiator) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'initiatedBy'");
     }
 
     /**
@@ -99,7 +126,11 @@ class DirectoryAudit extends Entity implements Parsable
      * @return string|null
     */
     public function getLoggedByService(): ?string {
-        return $this->getBackingStore()->get('loggedByService');
+        $val = $this->getBackingStore()->get('loggedByService');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'loggedByService'");
     }
 
     /**
@@ -107,7 +138,11 @@ class DirectoryAudit extends Entity implements Parsable
      * @return string|null
     */
     public function getOperationType(): ?string {
-        return $this->getBackingStore()->get('operationType');
+        $val = $this->getBackingStore()->get('operationType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'operationType'");
     }
 
     /**
@@ -115,7 +150,11 @@ class DirectoryAudit extends Entity implements Parsable
      * @return OperationResult|null
     */
     public function getResult(): ?OperationResult {
-        return $this->getBackingStore()->get('result');
+        $val = $this->getBackingStore()->get('result');
+        if (is_null($val) || $val instanceof OperationResult) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'result'");
     }
 
     /**
@@ -123,7 +162,11 @@ class DirectoryAudit extends Entity implements Parsable
      * @return string|null
     */
     public function getResultReason(): ?string {
-        return $this->getBackingStore()->get('resultReason');
+        $val = $this->getBackingStore()->get('resultReason');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resultReason'");
     }
 
     /**
@@ -131,7 +174,13 @@ class DirectoryAudit extends Entity implements Parsable
      * @return array<TargetResource>|null
     */
     public function getTargetResources(): ?array {
-        return $this->getBackingStore()->get('targetResources');
+        $val = $this->getBackingStore()->get('targetResources');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, TargetResource::class);
+            /** @var array<TargetResource>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'targetResources'");
     }
 
     /**

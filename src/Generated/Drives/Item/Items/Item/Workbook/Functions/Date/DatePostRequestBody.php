@@ -40,7 +40,12 @@ class DatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -56,12 +61,16 @@ class DatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
      * @return Json|null
     */
     public function getDay(): ?Json {
-        return $this->getBackingStore()->get('day');
+        $val = $this->getBackingStore()->get('day');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'day'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -77,7 +86,11 @@ class DatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
      * @return Json|null
     */
     public function getMonth(): ?Json {
-        return $this->getBackingStore()->get('month');
+        $val = $this->getBackingStore()->get('month');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'month'");
     }
 
     /**
@@ -85,7 +98,11 @@ class DatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
      * @return Json|null
     */
     public function getYear(): ?Json {
-        return $this->getBackingStore()->get('year');
+        $val = $this->getBackingStore()->get('year');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'year'");
     }
 
     /**

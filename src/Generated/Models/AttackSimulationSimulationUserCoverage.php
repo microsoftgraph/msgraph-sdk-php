@@ -40,7 +40,12 @@ class AttackSimulationSimulationUserCoverage implements AdditionalDataHolder, Ba
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -48,7 +53,11 @@ class AttackSimulationSimulationUserCoverage implements AdditionalDataHolder, Ba
      * @return AttackSimulationUser|null
     */
     public function getAttackSimulationUser(): ?AttackSimulationUser {
-        return $this->getBackingStore()->get('attackSimulationUser');
+        $val = $this->getBackingStore()->get('attackSimulationUser');
+        if (is_null($val) || $val instanceof AttackSimulationUser) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'attackSimulationUser'");
     }
 
     /**
@@ -64,7 +73,11 @@ class AttackSimulationSimulationUserCoverage implements AdditionalDataHolder, Ba
      * @return int|null
     */
     public function getClickCount(): ?int {
-        return $this->getBackingStore()->get('clickCount');
+        $val = $this->getBackingStore()->get('clickCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'clickCount'");
     }
 
     /**
@@ -72,12 +85,16 @@ class AttackSimulationSimulationUserCoverage implements AdditionalDataHolder, Ba
      * @return int|null
     */
     public function getCompromisedCount(): ?int {
-        return $this->getBackingStore()->get('compromisedCount');
+        $val = $this->getBackingStore()->get('compromisedCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'compromisedCount'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -96,7 +113,11 @@ class AttackSimulationSimulationUserCoverage implements AdditionalDataHolder, Ba
      * @return DateTime|null
     */
     public function getLatestSimulationDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('latestSimulationDateTime');
+        $val = $this->getBackingStore()->get('latestSimulationDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'latestSimulationDateTime'");
     }
 
     /**
@@ -104,7 +125,11 @@ class AttackSimulationSimulationUserCoverage implements AdditionalDataHolder, Ba
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -112,7 +137,11 @@ class AttackSimulationSimulationUserCoverage implements AdditionalDataHolder, Ba
      * @return int|null
     */
     public function getSimulationCount(): ?int {
-        return $this->getBackingStore()->get('simulationCount');
+        $val = $this->getBackingStore()->get('simulationCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'simulationCount'");
     }
 
     /**

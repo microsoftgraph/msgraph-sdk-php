@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class PermissionGrantConditionSet extends Entity implements Parsable 
 {
@@ -29,7 +30,13 @@ class PermissionGrantConditionSet extends Entity implements Parsable
      * @return array<string>|null
     */
     public function getClientApplicationIds(): ?array {
-        return $this->getBackingStore()->get('clientApplicationIds');
+        $val = $this->getBackingStore()->get('clientApplicationIds');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'clientApplicationIds'");
     }
 
     /**
@@ -37,7 +44,13 @@ class PermissionGrantConditionSet extends Entity implements Parsable
      * @return array<string>|null
     */
     public function getClientApplicationPublisherIds(): ?array {
-        return $this->getBackingStore()->get('clientApplicationPublisherIds');
+        $val = $this->getBackingStore()->get('clientApplicationPublisherIds');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'clientApplicationPublisherIds'");
     }
 
     /**
@@ -45,7 +58,11 @@ class PermissionGrantConditionSet extends Entity implements Parsable
      * @return bool|null
     */
     public function getClientApplicationsFromVerifiedPublisherOnly(): ?bool {
-        return $this->getBackingStore()->get('clientApplicationsFromVerifiedPublisherOnly');
+        $val = $this->getBackingStore()->get('clientApplicationsFromVerifiedPublisherOnly');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'clientApplicationsFromVerifiedPublisherOnly'");
     }
 
     /**
@@ -53,22 +70,56 @@ class PermissionGrantConditionSet extends Entity implements Parsable
      * @return array<string>|null
     */
     public function getClientApplicationTenantIds(): ?array {
-        return $this->getBackingStore()->get('clientApplicationTenantIds');
+        $val = $this->getBackingStore()->get('clientApplicationTenantIds');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'clientApplicationTenantIds'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'clientApplicationIds' => fn(ParseNode $n) => $o->setClientApplicationIds($n->getCollectionOfPrimitiveValues()),
-            'clientApplicationPublisherIds' => fn(ParseNode $n) => $o->setClientApplicationPublisherIds($n->getCollectionOfPrimitiveValues()),
+            'clientApplicationIds' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setClientApplicationIds($val);
+            },
+            'clientApplicationPublisherIds' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setClientApplicationPublisherIds($val);
+            },
             'clientApplicationsFromVerifiedPublisherOnly' => fn(ParseNode $n) => $o->setClientApplicationsFromVerifiedPublisherOnly($n->getBooleanValue()),
-            'clientApplicationTenantIds' => fn(ParseNode $n) => $o->setClientApplicationTenantIds($n->getCollectionOfPrimitiveValues()),
+            'clientApplicationTenantIds' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setClientApplicationTenantIds($val);
+            },
             'permissionClassification' => fn(ParseNode $n) => $o->setPermissionClassification($n->getStringValue()),
-            'permissions' => fn(ParseNode $n) => $o->setPermissions($n->getCollectionOfPrimitiveValues()),
+            'permissions' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setPermissions($val);
+            },
             'permissionType' => fn(ParseNode $n) => $o->setPermissionType($n->getEnumValue(PermissionType::class)),
             'resourceApplication' => fn(ParseNode $n) => $o->setResourceApplication($n->getStringValue()),
         ]);
@@ -79,7 +130,11 @@ class PermissionGrantConditionSet extends Entity implements Parsable
      * @return string|null
     */
     public function getPermissionClassification(): ?string {
-        return $this->getBackingStore()->get('permissionClassification');
+        $val = $this->getBackingStore()->get('permissionClassification');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'permissionClassification'");
     }
 
     /**
@@ -87,7 +142,13 @@ class PermissionGrantConditionSet extends Entity implements Parsable
      * @return array<string>|null
     */
     public function getPermissions(): ?array {
-        return $this->getBackingStore()->get('permissions');
+        $val = $this->getBackingStore()->get('permissions');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'permissions'");
     }
 
     /**
@@ -95,7 +156,11 @@ class PermissionGrantConditionSet extends Entity implements Parsable
      * @return PermissionType|null
     */
     public function getPermissionType(): ?PermissionType {
-        return $this->getBackingStore()->get('permissionType');
+        $val = $this->getBackingStore()->get('permissionType');
+        if (is_null($val) || $val instanceof PermissionType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'permissionType'");
     }
 
     /**
@@ -103,7 +168,11 @@ class PermissionGrantConditionSet extends Entity implements Parsable
      * @return string|null
     */
     public function getResourceApplication(): ?string {
-        return $this->getBackingStore()->get('resourceApplication');
+        $val = $this->getBackingStore()->get('resourceApplication');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resourceApplication'");
     }
 
     /**

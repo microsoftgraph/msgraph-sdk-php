@@ -6,6 +6,7 @@ use Microsoft\Graph\Generated\Models\Entity;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class Schema extends Entity implements Parsable 
 {
@@ -30,12 +31,16 @@ class Schema extends Entity implements Parsable
      * @return string|null
     */
     public function getBaseType(): ?string {
-        return $this->getBackingStore()->get('baseType');
+        $val = $this->getBackingStore()->get('baseType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'baseType'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -50,7 +55,13 @@ class Schema extends Entity implements Parsable
      * @return array<Property>|null
     */
     public function getProperties(): ?array {
-        return $this->getBackingStore()->get('properties');
+        $val = $this->getBackingStore()->get('properties');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Property::class);
+            /** @var array<Property>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'properties'");
     }
 
     /**

@@ -39,7 +39,12 @@ class LoginPageTextVisibilitySettings implements AdditionalDataHolder, BackedMod
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -52,7 +57,7 @@ class LoginPageTextVisibilitySettings implements AdditionalDataHolder, BackedMod
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -72,7 +77,11 @@ class LoginPageTextVisibilitySettings implements AdditionalDataHolder, BackedMod
      * @return bool|null
     */
     public function getHideAccountResetCredentials(): ?bool {
-        return $this->getBackingStore()->get('hideAccountResetCredentials');
+        $val = $this->getBackingStore()->get('hideAccountResetCredentials');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'hideAccountResetCredentials'");
     }
 
     /**
@@ -80,7 +89,11 @@ class LoginPageTextVisibilitySettings implements AdditionalDataHolder, BackedMod
      * @return bool|null
     */
     public function getHideCannotAccessYourAccount(): ?bool {
-        return $this->getBackingStore()->get('hideCannotAccessYourAccount');
+        $val = $this->getBackingStore()->get('hideCannotAccessYourAccount');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'hideCannotAccessYourAccount'");
     }
 
     /**
@@ -88,7 +101,11 @@ class LoginPageTextVisibilitySettings implements AdditionalDataHolder, BackedMod
      * @return bool|null
     */
     public function getHideForgotMyPassword(): ?bool {
-        return $this->getBackingStore()->get('hideForgotMyPassword');
+        $val = $this->getBackingStore()->get('hideForgotMyPassword');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'hideForgotMyPassword'");
     }
 
     /**
@@ -96,7 +113,11 @@ class LoginPageTextVisibilitySettings implements AdditionalDataHolder, BackedMod
      * @return bool|null
     */
     public function getHidePrivacyAndCookies(): ?bool {
-        return $this->getBackingStore()->get('hidePrivacyAndCookies');
+        $val = $this->getBackingStore()->get('hidePrivacyAndCookies');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'hidePrivacyAndCookies'");
     }
 
     /**
@@ -104,7 +125,11 @@ class LoginPageTextVisibilitySettings implements AdditionalDataHolder, BackedMod
      * @return bool|null
     */
     public function getHideResetItNow(): ?bool {
-        return $this->getBackingStore()->get('hideResetItNow');
+        $val = $this->getBackingStore()->get('hideResetItNow');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'hideResetItNow'");
     }
 
     /**
@@ -112,7 +137,11 @@ class LoginPageTextVisibilitySettings implements AdditionalDataHolder, BackedMod
      * @return bool|null
     */
     public function getHideTermsOfUse(): ?bool {
-        return $this->getBackingStore()->get('hideTermsOfUse');
+        $val = $this->getBackingStore()->get('hideTermsOfUse');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'hideTermsOfUse'");
     }
 
     /**
@@ -120,7 +149,11 @@ class LoginPageTextVisibilitySettings implements AdditionalDataHolder, BackedMod
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**

@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class AuditLogRoot extends Entity implements Parsable 
 {
@@ -29,12 +30,18 @@ class AuditLogRoot extends Entity implements Parsable
      * @return array<DirectoryAudit>|null
     */
     public function getDirectoryAudits(): ?array {
-        return $this->getBackingStore()->get('directoryAudits');
+        $val = $this->getBackingStore()->get('directoryAudits');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, DirectoryAudit::class);
+            /** @var array<DirectoryAudit>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'directoryAudits'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -50,7 +57,13 @@ class AuditLogRoot extends Entity implements Parsable
      * @return array<ProvisioningObjectSummary>|null
     */
     public function getProvisioning(): ?array {
-        return $this->getBackingStore()->get('provisioning');
+        $val = $this->getBackingStore()->get('provisioning');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ProvisioningObjectSummary::class);
+            /** @var array<ProvisioningObjectSummary>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'provisioning'");
     }
 
     /**
@@ -58,7 +71,13 @@ class AuditLogRoot extends Entity implements Parsable
      * @return array<SignIn>|null
     */
     public function getSignIns(): ?array {
-        return $this->getBackingStore()->get('signIns');
+        $val = $this->getBackingStore()->get('signIns');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, SignIn::class);
+            /** @var array<SignIn>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'signIns'");
     }
 
     /**

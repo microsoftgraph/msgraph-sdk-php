@@ -10,6 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class ApplyPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -40,7 +41,12 @@ class ApplyPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -53,7 +59,7 @@ class ApplyPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -69,7 +75,13 @@ class ApplyPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
      * @return array<WorkbookSortField>|null
     */
     public function getFields(): ?array {
-        return $this->getBackingStore()->get('fields');
+        $val = $this->getBackingStore()->get('fields');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, WorkbookSortField::class);
+            /** @var array<WorkbookSortField>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'fields'");
     }
 
     /**
@@ -77,7 +89,11 @@ class ApplyPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
      * @return bool|null
     */
     public function getMatchCase(): ?bool {
-        return $this->getBackingStore()->get('matchCase');
+        $val = $this->getBackingStore()->get('matchCase');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'matchCase'");
     }
 
     /**
@@ -85,7 +101,11 @@ class ApplyPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
      * @return string|null
     */
     public function getMethod(): ?string {
-        return $this->getBackingStore()->get('method');
+        $val = $this->getBackingStore()->get('method');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'method'");
     }
 
     /**

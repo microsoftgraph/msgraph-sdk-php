@@ -155,7 +155,7 @@ class DeviceAppManagementRequestBuilder extends BaseRequestBuilder
      * Read properties and relationships of the deviceAppManagement object.
      * @param DeviceAppManagementRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-books-deviceappmanagement-get?view=graph-rest-1.0 Find more info here
+     * @link https://docs.microsoft.com/graph/api/intune-unlock-deviceappmanagement-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DeviceAppManagementRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -175,7 +175,7 @@ class DeviceAppManagementRequestBuilder extends BaseRequestBuilder
      * @param DeviceAppManagement $body The request body
      * @param DeviceAppManagementRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-unlock-deviceappmanagement-update?view=graph-rest-1.0 Find more info here
+     * @link https://docs.microsoft.com/graph/api/intune-books-deviceappmanagement-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(DeviceAppManagement $body, ?DeviceAppManagementRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

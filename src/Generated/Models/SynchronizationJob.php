@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class SynchronizationJob extends Entity implements Parsable 
 {
@@ -26,7 +27,7 @@ class SynchronizationJob extends Entity implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -44,7 +45,11 @@ class SynchronizationJob extends Entity implements Parsable
      * @return SynchronizationSchedule|null
     */
     public function getSchedule(): ?SynchronizationSchedule {
-        return $this->getBackingStore()->get('schedule');
+        $val = $this->getBackingStore()->get('schedule');
+        if (is_null($val) || $val instanceof SynchronizationSchedule) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'schedule'");
     }
 
     /**
@@ -52,7 +57,11 @@ class SynchronizationJob extends Entity implements Parsable
      * @return SynchronizationSchema|null
     */
     public function getSchema(): ?SynchronizationSchema {
-        return $this->getBackingStore()->get('schema');
+        $val = $this->getBackingStore()->get('schema');
+        if (is_null($val) || $val instanceof SynchronizationSchema) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'schema'");
     }
 
     /**
@@ -60,7 +69,11 @@ class SynchronizationJob extends Entity implements Parsable
      * @return SynchronizationStatus|null
     */
     public function getStatus(): ?SynchronizationStatus {
-        return $this->getBackingStore()->get('status');
+        $val = $this->getBackingStore()->get('status');
+        if (is_null($val) || $val instanceof SynchronizationStatus) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
     }
 
     /**
@@ -68,7 +81,13 @@ class SynchronizationJob extends Entity implements Parsable
      * @return array<KeyValuePair>|null
     */
     public function getSynchronizationJobSettings(): ?array {
-        return $this->getBackingStore()->get('synchronizationJobSettings');
+        $val = $this->getBackingStore()->get('synchronizationJobSettings');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, KeyValuePair::class);
+            /** @var array<KeyValuePair>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'synchronizationJobSettings'");
     }
 
     /**
@@ -76,7 +95,11 @@ class SynchronizationJob extends Entity implements Parsable
      * @return string|null
     */
     public function getTemplateId(): ?string {
-        return $this->getBackingStore()->get('templateId');
+        $val = $this->getBackingStore()->get('templateId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'templateId'");
     }
 
     /**

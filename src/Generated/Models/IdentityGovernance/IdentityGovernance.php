@@ -43,7 +43,11 @@ class IdentityGovernance implements AdditionalDataHolder, BackedModel, Parsable
      * @return AccessReviewSet|null
     */
     public function getAccessReviews(): ?AccessReviewSet {
-        return $this->getBackingStore()->get('accessReviews');
+        $val = $this->getBackingStore()->get('accessReviews');
+        if (is_null($val) || $val instanceof AccessReviewSet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'accessReviews'");
     }
 
     /**
@@ -51,7 +55,12 @@ class IdentityGovernance implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -59,7 +68,11 @@ class IdentityGovernance implements AdditionalDataHolder, BackedModel, Parsable
      * @return AppConsentApprovalRoute|null
     */
     public function getAppConsent(): ?AppConsentApprovalRoute {
-        return $this->getBackingStore()->get('appConsent');
+        $val = $this->getBackingStore()->get('appConsent');
+        if (is_null($val) || $val instanceof AppConsentApprovalRoute) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'appConsent'");
     }
 
     /**
@@ -75,12 +88,16 @@ class IdentityGovernance implements AdditionalDataHolder, BackedModel, Parsable
      * @return EntitlementManagement|null
     */
     public function getEntitlementManagement(): ?EntitlementManagement {
-        return $this->getBackingStore()->get('entitlementManagement');
+        $val = $this->getBackingStore()->get('entitlementManagement');
+        if (is_null($val) || $val instanceof EntitlementManagement) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'entitlementManagement'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -99,7 +116,11 @@ class IdentityGovernance implements AdditionalDataHolder, BackedModel, Parsable
      * @return LifecycleWorkflowsContainer|null
     */
     public function getLifecycleWorkflows(): ?LifecycleWorkflowsContainer {
-        return $this->getBackingStore()->get('lifecycleWorkflows');
+        $val = $this->getBackingStore()->get('lifecycleWorkflows');
+        if (is_null($val) || $val instanceof LifecycleWorkflowsContainer) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lifecycleWorkflows'");
     }
 
     /**
@@ -107,7 +128,11 @@ class IdentityGovernance implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -115,7 +140,11 @@ class IdentityGovernance implements AdditionalDataHolder, BackedModel, Parsable
      * @return TermsOfUseContainer|null
     */
     public function getTermsOfUse(): ?TermsOfUseContainer {
-        return $this->getBackingStore()->get('termsOfUse');
+        $val = $this->getBackingStore()->get('termsOfUse');
+        if (is_null($val) || $val instanceof TermsOfUseContainer) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'termsOfUse'");
     }
 
     /**

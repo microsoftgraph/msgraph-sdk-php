@@ -40,7 +40,12 @@ class LookupPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -53,7 +58,7 @@ class LookupPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -69,7 +74,11 @@ class LookupPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
      * @return Json|null
     */
     public function getLookupValue(): ?Json {
-        return $this->getBackingStore()->get('lookupValue');
+        $val = $this->getBackingStore()->get('lookupValue');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lookupValue'");
     }
 
     /**
@@ -77,7 +86,11 @@ class LookupPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
      * @return Json|null
     */
     public function getLookupVector(): ?Json {
-        return $this->getBackingStore()->get('lookupVector');
+        $val = $this->getBackingStore()->get('lookupVector');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lookupVector'");
     }
 
     /**
@@ -85,7 +98,11 @@ class LookupPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
      * @return Json|null
     */
     public function getResultVector(): ?Json {
-        return $this->getBackingStore()->get('resultVector');
+        $val = $this->getBackingStore()->get('resultVector');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resultVector'");
     }
 
     /**

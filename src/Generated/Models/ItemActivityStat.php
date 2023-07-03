@@ -6,6 +6,7 @@ use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class ItemActivityStat extends Entity implements Parsable 
 {
@@ -30,7 +31,11 @@ class ItemActivityStat extends Entity implements Parsable
      * @return ItemActionStat|null
     */
     public function getAccess(): ?ItemActionStat {
-        return $this->getBackingStore()->get('access');
+        $val = $this->getBackingStore()->get('access');
+        if (is_null($val) || $val instanceof ItemActionStat) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'access'");
     }
 
     /**
@@ -38,7 +43,13 @@ class ItemActivityStat extends Entity implements Parsable
      * @return array<ItemActivity>|null
     */
     public function getActivities(): ?array {
-        return $this->getBackingStore()->get('activities');
+        $val = $this->getBackingStore()->get('activities');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ItemActivity::class);
+            /** @var array<ItemActivity>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'activities'");
     }
 
     /**
@@ -46,7 +57,11 @@ class ItemActivityStat extends Entity implements Parsable
      * @return ItemActionStat|null
     */
     public function getCreate(): ?ItemActionStat {
-        return $this->getBackingStore()->get('create');
+        $val = $this->getBackingStore()->get('create');
+        if (is_null($val) || $val instanceof ItemActionStat) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'create'");
     }
 
     /**
@@ -54,7 +69,11 @@ class ItemActivityStat extends Entity implements Parsable
      * @return ItemActionStat|null
     */
     public function getDelete(): ?ItemActionStat {
-        return $this->getBackingStore()->get('delete');
+        $val = $this->getBackingStore()->get('delete');
+        if (is_null($val) || $val instanceof ItemActionStat) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'delete'");
     }
 
     /**
@@ -62,7 +81,11 @@ class ItemActivityStat extends Entity implements Parsable
      * @return ItemActionStat|null
     */
     public function getEdit(): ?ItemActionStat {
-        return $this->getBackingStore()->get('edit');
+        $val = $this->getBackingStore()->get('edit');
+        if (is_null($val) || $val instanceof ItemActionStat) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'edit'");
     }
 
     /**
@@ -70,12 +93,16 @@ class ItemActivityStat extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getEndDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('endDateTime');
+        $val = $this->getBackingStore()->get('endDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'endDateTime'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -98,7 +125,11 @@ class ItemActivityStat extends Entity implements Parsable
      * @return IncompleteData|null
     */
     public function getIncompleteData(): ?IncompleteData {
-        return $this->getBackingStore()->get('incompleteData');
+        $val = $this->getBackingStore()->get('incompleteData');
+        if (is_null($val) || $val instanceof IncompleteData) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'incompleteData'");
     }
 
     /**
@@ -106,7 +137,11 @@ class ItemActivityStat extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsTrending(): ?bool {
-        return $this->getBackingStore()->get('isTrending');
+        $val = $this->getBackingStore()->get('isTrending');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isTrending'");
     }
 
     /**
@@ -114,7 +149,11 @@ class ItemActivityStat extends Entity implements Parsable
      * @return ItemActionStat|null
     */
     public function getMove(): ?ItemActionStat {
-        return $this->getBackingStore()->get('move');
+        $val = $this->getBackingStore()->get('move');
+        if (is_null($val) || $val instanceof ItemActionStat) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'move'");
     }
 
     /**
@@ -122,7 +161,11 @@ class ItemActivityStat extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getStartDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('startDateTime');
+        $val = $this->getBackingStore()->get('startDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'startDateTime'");
     }
 
     /**

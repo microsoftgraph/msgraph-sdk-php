@@ -9,6 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class OnlineMeetingInfo implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -39,7 +40,12 @@ class OnlineMeetingInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -55,12 +61,16 @@ class OnlineMeetingInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getConferenceId(): ?string {
-        return $this->getBackingStore()->get('conferenceId');
+        $val = $this->getBackingStore()->get('conferenceId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'conferenceId'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -70,7 +80,14 @@ class OnlineMeetingInfo implements AdditionalDataHolder, BackedModel, Parsable
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'phones' => fn(ParseNode $n) => $o->setPhones($n->getCollectionOfObjectValues([Phone::class, 'createFromDiscriminatorValue'])),
             'quickDial' => fn(ParseNode $n) => $o->setQuickDial($n->getStringValue()),
-            'tollFreeNumbers' => fn(ParseNode $n) => $o->setTollFreeNumbers($n->getCollectionOfPrimitiveValues()),
+            'tollFreeNumbers' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setTollFreeNumbers($val);
+            },
             'tollNumber' => fn(ParseNode $n) => $o->setTollNumber($n->getStringValue()),
         ];
     }
@@ -80,7 +97,11 @@ class OnlineMeetingInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getJoinUrl(): ?string {
-        return $this->getBackingStore()->get('joinUrl');
+        $val = $this->getBackingStore()->get('joinUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'joinUrl'");
     }
 
     /**
@@ -88,7 +109,11 @@ class OnlineMeetingInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -96,7 +121,13 @@ class OnlineMeetingInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<Phone>|null
     */
     public function getPhones(): ?array {
-        return $this->getBackingStore()->get('phones');
+        $val = $this->getBackingStore()->get('phones');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Phone::class);
+            /** @var array<Phone>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'phones'");
     }
 
     /**
@@ -104,7 +135,11 @@ class OnlineMeetingInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getQuickDial(): ?string {
-        return $this->getBackingStore()->get('quickDial');
+        $val = $this->getBackingStore()->get('quickDial');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'quickDial'");
     }
 
     /**
@@ -112,7 +147,13 @@ class OnlineMeetingInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string>|null
     */
     public function getTollFreeNumbers(): ?array {
-        return $this->getBackingStore()->get('tollFreeNumbers');
+        $val = $this->getBackingStore()->get('tollFreeNumbers');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'tollFreeNumbers'");
     }
 
     /**
@@ -120,7 +161,11 @@ class OnlineMeetingInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getTollNumber(): ?string {
-        return $this->getBackingStore()->get('tollNumber');
+        $val = $this->getBackingStore()->get('tollNumber');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'tollNumber'");
     }
 
     /**

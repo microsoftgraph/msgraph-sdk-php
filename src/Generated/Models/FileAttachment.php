@@ -31,7 +31,11 @@ class FileAttachment extends Attachment implements Parsable
      * @return StreamInterface|null
     */
     public function getContentBytes(): ?StreamInterface {
-        return $this->getBackingStore()->get('contentBytes');
+        $val = $this->getBackingStore()->get('contentBytes');
+        if (is_null($val) || $val instanceof StreamInterface) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'contentBytes'");
     }
 
     /**
@@ -39,7 +43,11 @@ class FileAttachment extends Attachment implements Parsable
      * @return string|null
     */
     public function getContentId(): ?string {
-        return $this->getBackingStore()->get('contentId');
+        $val = $this->getBackingStore()->get('contentId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'contentId'");
     }
 
     /**
@@ -47,12 +55,16 @@ class FileAttachment extends Attachment implements Parsable
      * @return string|null
     */
     public function getContentLocation(): ?string {
-        return $this->getBackingStore()->get('contentLocation');
+        $val = $this->getBackingStore()->get('contentLocation');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'contentLocation'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;

@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends AuthenticationMethodConfiguration implements Parsable 
 {
@@ -30,12 +31,16 @@ class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends Authentica
      * @return MicrosoftAuthenticatorFeatureSettings|null
     */
     public function getFeatureSettings(): ?MicrosoftAuthenticatorFeatureSettings {
-        return $this->getBackingStore()->get('featureSettings');
+        $val = $this->getBackingStore()->get('featureSettings');
+        if (is_null($val) || $val instanceof MicrosoftAuthenticatorFeatureSettings) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'featureSettings'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -51,7 +56,13 @@ class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends Authentica
      * @return array<MicrosoftAuthenticatorAuthenticationMethodTarget>|null
     */
     public function getIncludeTargets(): ?array {
-        return $this->getBackingStore()->get('includeTargets');
+        $val = $this->getBackingStore()->get('includeTargets');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, MicrosoftAuthenticatorAuthenticationMethodTarget::class);
+            /** @var array<MicrosoftAuthenticatorAuthenticationMethodTarget>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'includeTargets'");
     }
 
     /**
@@ -59,7 +70,11 @@ class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends Authentica
      * @return bool|null
     */
     public function getIsSoftwareOathEnabled(): ?bool {
-        return $this->getBackingStore()->get('isSoftwareOathEnabled');
+        $val = $this->getBackingStore()->get('isSoftwareOathEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isSoftwareOathEnabled'");
     }
 
     /**

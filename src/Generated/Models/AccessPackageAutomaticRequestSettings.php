@@ -40,7 +40,12 @@ class AccessPackageAutomaticRequestSettings implements AdditionalDataHolder, Bac
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -53,7 +58,7 @@ class AccessPackageAutomaticRequestSettings implements AdditionalDataHolder, Bac
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -66,11 +71,15 @@ class AccessPackageAutomaticRequestSettings implements AdditionalDataHolder, Bac
     }
 
     /**
-     * Gets the gracePeriodBeforeAccessRemoval property value. The gracePeriodBeforeAccessRemoval property
+     * Gets the gracePeriodBeforeAccessRemoval property value. The duration for which access must be retained before the target's access is revoked once they leave the allowed target scope.
      * @return DateInterval|null
     */
     public function getGracePeriodBeforeAccessRemoval(): ?DateInterval {
-        return $this->getBackingStore()->get('gracePeriodBeforeAccessRemoval');
+        $val = $this->getBackingStore()->get('gracePeriodBeforeAccessRemoval');
+        if (is_null($val) || $val instanceof DateInterval) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'gracePeriodBeforeAccessRemoval'");
     }
 
     /**
@@ -78,15 +87,23 @@ class AccessPackageAutomaticRequestSettings implements AdditionalDataHolder, Bac
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
-     * Gets the removeAccessWhenTargetLeavesAllowedTargets property value. The removeAccessWhenTargetLeavesAllowedTargets property
+     * Gets the removeAccessWhenTargetLeavesAllowedTargets property value. Indicates whether automatic assignment must be removed for targets who move out of the allowed target scope.
      * @return bool|null
     */
     public function getRemoveAccessWhenTargetLeavesAllowedTargets(): ?bool {
-        return $this->getBackingStore()->get('removeAccessWhenTargetLeavesAllowedTargets');
+        $val = $this->getBackingStore()->get('removeAccessWhenTargetLeavesAllowedTargets');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'removeAccessWhenTargetLeavesAllowedTargets'");
     }
 
     /**
@@ -94,7 +111,11 @@ class AccessPackageAutomaticRequestSettings implements AdditionalDataHolder, Bac
      * @return bool|null
     */
     public function getRequestAccessForAllowedTargets(): ?bool {
-        return $this->getBackingStore()->get('requestAccessForAllowedTargets');
+        $val = $this->getBackingStore()->get('requestAccessForAllowedTargets');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'requestAccessForAllowedTargets'");
     }
 
     /**
@@ -126,7 +147,7 @@ class AccessPackageAutomaticRequestSettings implements AdditionalDataHolder, Bac
     }
 
     /**
-     * Sets the gracePeriodBeforeAccessRemoval property value. The gracePeriodBeforeAccessRemoval property
+     * Sets the gracePeriodBeforeAccessRemoval property value. The duration for which access must be retained before the target's access is revoked once they leave the allowed target scope.
      * @param DateInterval|null $value Value to set for the gracePeriodBeforeAccessRemoval property.
     */
     public function setGracePeriodBeforeAccessRemoval(?DateInterval $value): void {
@@ -142,7 +163,7 @@ class AccessPackageAutomaticRequestSettings implements AdditionalDataHolder, Bac
     }
 
     /**
-     * Sets the removeAccessWhenTargetLeavesAllowedTargets property value. The removeAccessWhenTargetLeavesAllowedTargets property
+     * Sets the removeAccessWhenTargetLeavesAllowedTargets property value. Indicates whether automatic assignment must be removed for targets who move out of the allowed target scope.
      * @param bool|null $value Value to set for the removeAccessWhenTargetLeavesAllowedTargets property.
     */
     public function setRemoveAccessWhenTargetLeavesAllowedTargets(?bool $value): void {

@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class AccessPackageQuestion extends Entity implements Parsable 
 {
@@ -34,7 +35,7 @@ class AccessPackageQuestion extends Entity implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -52,7 +53,11 @@ class AccessPackageQuestion extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsAnswerEditable(): ?bool {
-        return $this->getBackingStore()->get('isAnswerEditable');
+        $val = $this->getBackingStore()->get('isAnswerEditable');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isAnswerEditable'");
     }
 
     /**
@@ -60,7 +65,11 @@ class AccessPackageQuestion extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsRequired(): ?bool {
-        return $this->getBackingStore()->get('isRequired');
+        $val = $this->getBackingStore()->get('isRequired');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isRequired'");
     }
 
     /**
@@ -68,7 +77,13 @@ class AccessPackageQuestion extends Entity implements Parsable
      * @return array<AccessPackageLocalizedText>|null
     */
     public function getLocalizations(): ?array {
-        return $this->getBackingStore()->get('localizations');
+        $val = $this->getBackingStore()->get('localizations');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AccessPackageLocalizedText::class);
+            /** @var array<AccessPackageLocalizedText>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'localizations'");
     }
 
     /**
@@ -76,7 +91,11 @@ class AccessPackageQuestion extends Entity implements Parsable
      * @return int|null
     */
     public function getSequence(): ?int {
-        return $this->getBackingStore()->get('sequence');
+        $val = $this->getBackingStore()->get('sequence');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sequence'");
     }
 
     /**
@@ -84,7 +103,11 @@ class AccessPackageQuestion extends Entity implements Parsable
      * @return string|null
     */
     public function getText(): ?string {
-        return $this->getBackingStore()->get('text');
+        $val = $this->getBackingStore()->get('text');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'text'");
     }
 
     /**

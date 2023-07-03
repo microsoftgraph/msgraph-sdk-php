@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class WindowsInformationProtection extends ManagedAppPolicy implements Parsable 
 {
@@ -38,7 +39,13 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
      * @return array<TargetedManagedAppPolicyAssignment>|null
     */
     public function getAssignments(): ?array {
-        return $this->getBackingStore()->get('assignments');
+        $val = $this->getBackingStore()->get('assignments');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, TargetedManagedAppPolicyAssignment::class);
+            /** @var array<TargetedManagedAppPolicyAssignment>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'assignments'");
     }
 
     /**
@@ -46,7 +53,11 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
      * @return bool|null
     */
     public function getAzureRightsManagementServicesAllowed(): ?bool {
-        return $this->getBackingStore()->get('azureRightsManagementServicesAllowed');
+        $val = $this->getBackingStore()->get('azureRightsManagementServicesAllowed');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'azureRightsManagementServicesAllowed'");
     }
 
     /**
@@ -54,7 +65,11 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
      * @return WindowsInformationProtectionDataRecoveryCertificate|null
     */
     public function getDataRecoveryCertificate(): ?WindowsInformationProtectionDataRecoveryCertificate {
-        return $this->getBackingStore()->get('dataRecoveryCertificate');
+        $val = $this->getBackingStore()->get('dataRecoveryCertificate');
+        if (is_null($val) || $val instanceof WindowsInformationProtectionDataRecoveryCertificate) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'dataRecoveryCertificate'");
     }
 
     /**
@@ -62,7 +77,11 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
      * @return WindowsInformationProtectionEnforcementLevel|null
     */
     public function getEnforcementLevel(): ?WindowsInformationProtectionEnforcementLevel {
-        return $this->getBackingStore()->get('enforcementLevel');
+        $val = $this->getBackingStore()->get('enforcementLevel');
+        if (is_null($val) || $val instanceof WindowsInformationProtectionEnforcementLevel) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'enforcementLevel'");
     }
 
     /**
@@ -70,7 +89,11 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
      * @return string|null
     */
     public function getEnterpriseDomain(): ?string {
-        return $this->getBackingStore()->get('enterpriseDomain');
+        $val = $this->getBackingStore()->get('enterpriseDomain');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'enterpriseDomain'");
     }
 
     /**
@@ -78,7 +101,13 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
      * @return array<WindowsInformationProtectionResourceCollection>|null
     */
     public function getEnterpriseInternalProxyServers(): ?array {
-        return $this->getBackingStore()->get('enterpriseInternalProxyServers');
+        $val = $this->getBackingStore()->get('enterpriseInternalProxyServers');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, WindowsInformationProtectionResourceCollection::class);
+            /** @var array<WindowsInformationProtectionResourceCollection>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'enterpriseInternalProxyServers'");
     }
 
     /**
@@ -86,7 +115,13 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
      * @return array<WindowsInformationProtectionIPRangeCollection>|null
     */
     public function getEnterpriseIPRanges(): ?array {
-        return $this->getBackingStore()->get('enterpriseIPRanges');
+        $val = $this->getBackingStore()->get('enterpriseIPRanges');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, WindowsInformationProtectionIPRangeCollection::class);
+            /** @var array<WindowsInformationProtectionIPRangeCollection>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'enterpriseIPRanges'");
     }
 
     /**
@@ -94,7 +129,11 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
      * @return bool|null
     */
     public function getEnterpriseIPRangesAreAuthoritative(): ?bool {
-        return $this->getBackingStore()->get('enterpriseIPRangesAreAuthoritative');
+        $val = $this->getBackingStore()->get('enterpriseIPRangesAreAuthoritative');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'enterpriseIPRangesAreAuthoritative'");
     }
 
     /**
@@ -102,7 +141,13 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
      * @return array<WindowsInformationProtectionResourceCollection>|null
     */
     public function getEnterpriseNetworkDomainNames(): ?array {
-        return $this->getBackingStore()->get('enterpriseNetworkDomainNames');
+        $val = $this->getBackingStore()->get('enterpriseNetworkDomainNames');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, WindowsInformationProtectionResourceCollection::class);
+            /** @var array<WindowsInformationProtectionResourceCollection>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'enterpriseNetworkDomainNames'");
     }
 
     /**
@@ -110,7 +155,13 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
      * @return array<WindowsInformationProtectionResourceCollection>|null
     */
     public function getEnterpriseProtectedDomainNames(): ?array {
-        return $this->getBackingStore()->get('enterpriseProtectedDomainNames');
+        $val = $this->getBackingStore()->get('enterpriseProtectedDomainNames');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, WindowsInformationProtectionResourceCollection::class);
+            /** @var array<WindowsInformationProtectionResourceCollection>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'enterpriseProtectedDomainNames'");
     }
 
     /**
@@ -118,7 +169,13 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
      * @return array<WindowsInformationProtectionProxiedDomainCollection>|null
     */
     public function getEnterpriseProxiedDomains(): ?array {
-        return $this->getBackingStore()->get('enterpriseProxiedDomains');
+        $val = $this->getBackingStore()->get('enterpriseProxiedDomains');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, WindowsInformationProtectionProxiedDomainCollection::class);
+            /** @var array<WindowsInformationProtectionProxiedDomainCollection>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'enterpriseProxiedDomains'");
     }
 
     /**
@@ -126,7 +183,13 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
      * @return array<WindowsInformationProtectionResourceCollection>|null
     */
     public function getEnterpriseProxyServers(): ?array {
-        return $this->getBackingStore()->get('enterpriseProxyServers');
+        $val = $this->getBackingStore()->get('enterpriseProxyServers');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, WindowsInformationProtectionResourceCollection::class);
+            /** @var array<WindowsInformationProtectionResourceCollection>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'enterpriseProxyServers'");
     }
 
     /**
@@ -134,7 +197,11 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
      * @return bool|null
     */
     public function getEnterpriseProxyServersAreAuthoritative(): ?bool {
-        return $this->getBackingStore()->get('enterpriseProxyServersAreAuthoritative');
+        $val = $this->getBackingStore()->get('enterpriseProxyServersAreAuthoritative');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'enterpriseProxyServersAreAuthoritative'");
     }
 
     /**
@@ -142,7 +209,13 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
      * @return array<WindowsInformationProtectionAppLockerFile>|null
     */
     public function getExemptAppLockerFiles(): ?array {
-        return $this->getBackingStore()->get('exemptAppLockerFiles');
+        $val = $this->getBackingStore()->get('exemptAppLockerFiles');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, WindowsInformationProtectionAppLockerFile::class);
+            /** @var array<WindowsInformationProtectionAppLockerFile>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'exemptAppLockerFiles'");
     }
 
     /**
@@ -150,12 +223,18 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
      * @return array<WindowsInformationProtectionApp>|null
     */
     public function getExemptApps(): ?array {
-        return $this->getBackingStore()->get('exemptApps');
+        $val = $this->getBackingStore()->get('exemptApps');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, WindowsInformationProtectionApp::class);
+            /** @var array<WindowsInformationProtectionApp>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'exemptApps'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -193,7 +272,11 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
      * @return bool|null
     */
     public function getIconsVisible(): ?bool {
-        return $this->getBackingStore()->get('iconsVisible');
+        $val = $this->getBackingStore()->get('iconsVisible');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'iconsVisible'");
     }
 
     /**
@@ -201,7 +284,11 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
      * @return bool|null
     */
     public function getIndexingEncryptedStoresOrItemsBlocked(): ?bool {
-        return $this->getBackingStore()->get('indexingEncryptedStoresOrItemsBlocked');
+        $val = $this->getBackingStore()->get('indexingEncryptedStoresOrItemsBlocked');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'indexingEncryptedStoresOrItemsBlocked'");
     }
 
     /**
@@ -209,7 +296,11 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
      * @return bool|null
     */
     public function getIsAssigned(): ?bool {
-        return $this->getBackingStore()->get('isAssigned');
+        $val = $this->getBackingStore()->get('isAssigned');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isAssigned'");
     }
 
     /**
@@ -217,7 +308,13 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
      * @return array<WindowsInformationProtectionResourceCollection>|null
     */
     public function getNeutralDomainResources(): ?array {
-        return $this->getBackingStore()->get('neutralDomainResources');
+        $val = $this->getBackingStore()->get('neutralDomainResources');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, WindowsInformationProtectionResourceCollection::class);
+            /** @var array<WindowsInformationProtectionResourceCollection>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'neutralDomainResources'");
     }
 
     /**
@@ -225,7 +322,13 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
      * @return array<WindowsInformationProtectionAppLockerFile>|null
     */
     public function getProtectedAppLockerFiles(): ?array {
-        return $this->getBackingStore()->get('protectedAppLockerFiles');
+        $val = $this->getBackingStore()->get('protectedAppLockerFiles');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, WindowsInformationProtectionAppLockerFile::class);
+            /** @var array<WindowsInformationProtectionAppLockerFile>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'protectedAppLockerFiles'");
     }
 
     /**
@@ -233,7 +336,13 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
      * @return array<WindowsInformationProtectionApp>|null
     */
     public function getProtectedApps(): ?array {
-        return $this->getBackingStore()->get('protectedApps');
+        $val = $this->getBackingStore()->get('protectedApps');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, WindowsInformationProtectionApp::class);
+            /** @var array<WindowsInformationProtectionApp>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'protectedApps'");
     }
 
     /**
@@ -241,7 +350,11 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
      * @return bool|null
     */
     public function getProtectionUnderLockConfigRequired(): ?bool {
-        return $this->getBackingStore()->get('protectionUnderLockConfigRequired');
+        $val = $this->getBackingStore()->get('protectionUnderLockConfigRequired');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'protectionUnderLockConfigRequired'");
     }
 
     /**
@@ -249,7 +362,11 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
      * @return bool|null
     */
     public function getRevokeOnUnenrollDisabled(): ?bool {
-        return $this->getBackingStore()->get('revokeOnUnenrollDisabled');
+        $val = $this->getBackingStore()->get('revokeOnUnenrollDisabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'revokeOnUnenrollDisabled'");
     }
 
     /**
@@ -257,7 +374,11 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
      * @return string|null
     */
     public function getRightsManagementServicesTemplateId(): ?string {
-        return $this->getBackingStore()->get('rightsManagementServicesTemplateId');
+        $val = $this->getBackingStore()->get('rightsManagementServicesTemplateId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'rightsManagementServicesTemplateId'");
     }
 
     /**
@@ -265,7 +386,13 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
      * @return array<WindowsInformationProtectionResourceCollection>|null
     */
     public function getSmbAutoEncryptedFileExtensions(): ?array {
-        return $this->getBackingStore()->get('smbAutoEncryptedFileExtensions');
+        $val = $this->getBackingStore()->get('smbAutoEncryptedFileExtensions');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, WindowsInformationProtectionResourceCollection::class);
+            /** @var array<WindowsInformationProtectionResourceCollection>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'smbAutoEncryptedFileExtensions'");
     }
 
     /**

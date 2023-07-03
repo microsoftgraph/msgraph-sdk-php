@@ -30,12 +30,16 @@ class EducationFeedbackOutcome extends EducationOutcome implements Parsable
      * @return EducationFeedback|null
     */
     public function getFeedback(): ?EducationFeedback {
-        return $this->getBackingStore()->get('feedback');
+        $val = $this->getBackingStore()->get('feedback');
+        if (is_null($val) || $val instanceof EducationFeedback) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'feedback'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -50,7 +54,11 @@ class EducationFeedbackOutcome extends EducationOutcome implements Parsable
      * @return EducationFeedback|null
     */
     public function getPublishedFeedback(): ?EducationFeedback {
-        return $this->getBackingStore()->get('publishedFeedback');
+        $val = $this->getBackingStore()->get('publishedFeedback');
+        if (is_null($val) || $val instanceof EducationFeedback) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'publishedFeedback'");
     }
 
     /**

@@ -6,6 +6,7 @@ use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class AnalyzedMessageEvidence extends AlertEvidence implements Parsable 
 {
@@ -30,7 +31,11 @@ class AnalyzedMessageEvidence extends AlertEvidence implements Parsable
      * @return string|null
     */
     public function getAntiSpamDirection(): ?string {
-        return $this->getBackingStore()->get('antiSpamDirection');
+        $val = $this->getBackingStore()->get('antiSpamDirection');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'antiSpamDirection'");
     }
 
     /**
@@ -38,7 +43,11 @@ class AnalyzedMessageEvidence extends AlertEvidence implements Parsable
      * @return int|null
     */
     public function getAttachmentsCount(): ?int {
-        return $this->getBackingStore()->get('attachmentsCount');
+        $val = $this->getBackingStore()->get('attachmentsCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'attachmentsCount'");
     }
 
     /**
@@ -46,7 +55,11 @@ class AnalyzedMessageEvidence extends AlertEvidence implements Parsable
      * @return string|null
     */
     public function getDeliveryAction(): ?string {
-        return $this->getBackingStore()->get('deliveryAction');
+        $val = $this->getBackingStore()->get('deliveryAction');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deliveryAction'");
     }
 
     /**
@@ -54,12 +67,16 @@ class AnalyzedMessageEvidence extends AlertEvidence implements Parsable
      * @return string|null
     */
     public function getDeliveryLocation(): ?string {
-        return $this->getBackingStore()->get('deliveryLocation');
+        $val = $this->getBackingStore()->get('deliveryLocation');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deliveryLocation'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -77,10 +94,31 @@ class AnalyzedMessageEvidence extends AlertEvidence implements Parsable
             'recipientEmailAddress' => fn(ParseNode $n) => $o->setRecipientEmailAddress($n->getStringValue()),
             'senderIp' => fn(ParseNode $n) => $o->setSenderIp($n->getStringValue()),
             'subject' => fn(ParseNode $n) => $o->setSubject($n->getStringValue()),
-            'threatDetectionMethods' => fn(ParseNode $n) => $o->setThreatDetectionMethods($n->getCollectionOfPrimitiveValues()),
-            'threats' => fn(ParseNode $n) => $o->setThreats($n->getCollectionOfPrimitiveValues()),
+            'threatDetectionMethods' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setThreatDetectionMethods($val);
+            },
+            'threats' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setThreats($val);
+            },
             'urlCount' => fn(ParseNode $n) => $o->setUrlCount($n->getIntegerValue()),
-            'urls' => fn(ParseNode $n) => $o->setUrls($n->getCollectionOfPrimitiveValues()),
+            'urls' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setUrls($val);
+            },
             'urn' => fn(ParseNode $n) => $o->setUrn($n->getStringValue()),
         ]);
     }
@@ -90,7 +128,11 @@ class AnalyzedMessageEvidence extends AlertEvidence implements Parsable
      * @return string|null
     */
     public function getInternetMessageId(): ?string {
-        return $this->getBackingStore()->get('internetMessageId');
+        $val = $this->getBackingStore()->get('internetMessageId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'internetMessageId'");
     }
 
     /**
@@ -98,7 +140,11 @@ class AnalyzedMessageEvidence extends AlertEvidence implements Parsable
      * @return string|null
     */
     public function getLanguage(): ?string {
-        return $this->getBackingStore()->get('language');
+        $val = $this->getBackingStore()->get('language');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'language'");
     }
 
     /**
@@ -106,7 +152,11 @@ class AnalyzedMessageEvidence extends AlertEvidence implements Parsable
      * @return string|null
     */
     public function getNetworkMessageId(): ?string {
-        return $this->getBackingStore()->get('networkMessageId');
+        $val = $this->getBackingStore()->get('networkMessageId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'networkMessageId'");
     }
 
     /**
@@ -114,7 +164,11 @@ class AnalyzedMessageEvidence extends AlertEvidence implements Parsable
      * @return EmailSender|null
     */
     public function getP1Sender(): ?EmailSender {
-        return $this->getBackingStore()->get('p1Sender');
+        $val = $this->getBackingStore()->get('p1Sender');
+        if (is_null($val) || $val instanceof EmailSender) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'p1Sender'");
     }
 
     /**
@@ -122,7 +176,11 @@ class AnalyzedMessageEvidence extends AlertEvidence implements Parsable
      * @return EmailSender|null
     */
     public function getP2Sender(): ?EmailSender {
-        return $this->getBackingStore()->get('p2Sender');
+        $val = $this->getBackingStore()->get('p2Sender');
+        if (is_null($val) || $val instanceof EmailSender) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'p2Sender'");
     }
 
     /**
@@ -130,7 +188,11 @@ class AnalyzedMessageEvidence extends AlertEvidence implements Parsable
      * @return DateTime|null
     */
     public function getReceivedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('receivedDateTime');
+        $val = $this->getBackingStore()->get('receivedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'receivedDateTime'");
     }
 
     /**
@@ -138,7 +200,11 @@ class AnalyzedMessageEvidence extends AlertEvidence implements Parsable
      * @return string|null
     */
     public function getRecipientEmailAddress(): ?string {
-        return $this->getBackingStore()->get('recipientEmailAddress');
+        $val = $this->getBackingStore()->get('recipientEmailAddress');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'recipientEmailAddress'");
     }
 
     /**
@@ -146,7 +212,11 @@ class AnalyzedMessageEvidence extends AlertEvidence implements Parsable
      * @return string|null
     */
     public function getSenderIp(): ?string {
-        return $this->getBackingStore()->get('senderIp');
+        $val = $this->getBackingStore()->get('senderIp');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'senderIp'");
     }
 
     /**
@@ -154,7 +224,11 @@ class AnalyzedMessageEvidence extends AlertEvidence implements Parsable
      * @return string|null
     */
     public function getSubject(): ?string {
-        return $this->getBackingStore()->get('subject');
+        $val = $this->getBackingStore()->get('subject');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'subject'");
     }
 
     /**
@@ -162,7 +236,13 @@ class AnalyzedMessageEvidence extends AlertEvidence implements Parsable
      * @return array<string>|null
     */
     public function getThreatDetectionMethods(): ?array {
-        return $this->getBackingStore()->get('threatDetectionMethods');
+        $val = $this->getBackingStore()->get('threatDetectionMethods');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'threatDetectionMethods'");
     }
 
     /**
@@ -170,7 +250,13 @@ class AnalyzedMessageEvidence extends AlertEvidence implements Parsable
      * @return array<string>|null
     */
     public function getThreats(): ?array {
-        return $this->getBackingStore()->get('threats');
+        $val = $this->getBackingStore()->get('threats');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'threats'");
     }
 
     /**
@@ -178,7 +264,11 @@ class AnalyzedMessageEvidence extends AlertEvidence implements Parsable
      * @return int|null
     */
     public function getUrlCount(): ?int {
-        return $this->getBackingStore()->get('urlCount');
+        $val = $this->getBackingStore()->get('urlCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'urlCount'");
     }
 
     /**
@@ -186,7 +276,13 @@ class AnalyzedMessageEvidence extends AlertEvidence implements Parsable
      * @return array<string>|null
     */
     public function getUrls(): ?array {
-        return $this->getBackingStore()->get('urls');
+        $val = $this->getBackingStore()->get('urls');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'urls'");
     }
 
     /**
@@ -194,7 +290,11 @@ class AnalyzedMessageEvidence extends AlertEvidence implements Parsable
      * @return string|null
     */
     public function getUrn(): ?string {
-        return $this->getBackingStore()->get('urn');
+        $val = $this->getBackingStore()->get('urn');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'urn'");
     }
 
     /**

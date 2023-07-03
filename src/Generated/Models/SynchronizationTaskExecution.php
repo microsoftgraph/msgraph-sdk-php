@@ -40,7 +40,11 @@ class SynchronizationTaskExecution implements AdditionalDataHolder, BackedModel,
      * @return string|null
     */
     public function getActivityIdentifier(): ?string {
-        return $this->getBackingStore()->get('activityIdentifier');
+        $val = $this->getBackingStore()->get('activityIdentifier');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'activityIdentifier'");
     }
 
     /**
@@ -48,7 +52,12 @@ class SynchronizationTaskExecution implements AdditionalDataHolder, BackedModel,
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -64,7 +73,11 @@ class SynchronizationTaskExecution implements AdditionalDataHolder, BackedModel,
      * @return int|null
     */
     public function getCountEntitled(): ?int {
-        return $this->getBackingStore()->get('countEntitled');
+        $val = $this->getBackingStore()->get('countEntitled');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'countEntitled'");
     }
 
     /**
@@ -72,7 +85,11 @@ class SynchronizationTaskExecution implements AdditionalDataHolder, BackedModel,
      * @return int|null
     */
     public function getCountEntitledForProvisioning(): ?int {
-        return $this->getBackingStore()->get('countEntitledForProvisioning');
+        $val = $this->getBackingStore()->get('countEntitledForProvisioning');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'countEntitledForProvisioning'");
     }
 
     /**
@@ -80,7 +97,11 @@ class SynchronizationTaskExecution implements AdditionalDataHolder, BackedModel,
      * @return int|null
     */
     public function getCountEscrowed(): ?int {
-        return $this->getBackingStore()->get('countEscrowed');
+        $val = $this->getBackingStore()->get('countEscrowed');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'countEscrowed'");
     }
 
     /**
@@ -88,7 +109,11 @@ class SynchronizationTaskExecution implements AdditionalDataHolder, BackedModel,
      * @return int|null
     */
     public function getCountEscrowedRaw(): ?int {
-        return $this->getBackingStore()->get('countEscrowedRaw');
+        $val = $this->getBackingStore()->get('countEscrowedRaw');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'countEscrowedRaw'");
     }
 
     /**
@@ -96,7 +121,11 @@ class SynchronizationTaskExecution implements AdditionalDataHolder, BackedModel,
      * @return int|null
     */
     public function getCountExported(): ?int {
-        return $this->getBackingStore()->get('countExported');
+        $val = $this->getBackingStore()->get('countExported');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'countExported'");
     }
 
     /**
@@ -104,7 +133,11 @@ class SynchronizationTaskExecution implements AdditionalDataHolder, BackedModel,
      * @return int|null
     */
     public function getCountExports(): ?int {
-        return $this->getBackingStore()->get('countExports');
+        $val = $this->getBackingStore()->get('countExports');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'countExports'");
     }
 
     /**
@@ -112,7 +145,11 @@ class SynchronizationTaskExecution implements AdditionalDataHolder, BackedModel,
      * @return int|null
     */
     public function getCountImported(): ?int {
-        return $this->getBackingStore()->get('countImported');
+        $val = $this->getBackingStore()->get('countImported');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'countImported'");
     }
 
     /**
@@ -120,7 +157,11 @@ class SynchronizationTaskExecution implements AdditionalDataHolder, BackedModel,
      * @return int|null
     */
     public function getCountImportedDeltas(): ?int {
-        return $this->getBackingStore()->get('countImportedDeltas');
+        $val = $this->getBackingStore()->get('countImportedDeltas');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'countImportedDeltas'");
     }
 
     /**
@@ -128,7 +169,11 @@ class SynchronizationTaskExecution implements AdditionalDataHolder, BackedModel,
      * @return int|null
     */
     public function getCountImportedReferenceDeltas(): ?int {
-        return $this->getBackingStore()->get('countImportedReferenceDeltas');
+        $val = $this->getBackingStore()->get('countImportedReferenceDeltas');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'countImportedReferenceDeltas'");
     }
 
     /**
@@ -136,12 +181,16 @@ class SynchronizationTaskExecution implements AdditionalDataHolder, BackedModel,
      * @return SynchronizationError|null
     */
     public function getError(): ?SynchronizationError {
-        return $this->getBackingStore()->get('error');
+        $val = $this->getBackingStore()->get('error');
+        if (is_null($val) || $val instanceof SynchronizationError) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'error'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -169,7 +218,11 @@ class SynchronizationTaskExecution implements AdditionalDataHolder, BackedModel,
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -177,7 +230,11 @@ class SynchronizationTaskExecution implements AdditionalDataHolder, BackedModel,
      * @return SynchronizationTaskExecutionResult|null
     */
     public function getState(): ?SynchronizationTaskExecutionResult {
-        return $this->getBackingStore()->get('state');
+        $val = $this->getBackingStore()->get('state');
+        if (is_null($val) || $val instanceof SynchronizationTaskExecutionResult) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'state'");
     }
 
     /**
@@ -185,7 +242,11 @@ class SynchronizationTaskExecution implements AdditionalDataHolder, BackedModel,
      * @return DateTime|null
     */
     public function getTimeBegan(): ?DateTime {
-        return $this->getBackingStore()->get('timeBegan');
+        $val = $this->getBackingStore()->get('timeBegan');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'timeBegan'");
     }
 
     /**
@@ -193,7 +254,11 @@ class SynchronizationTaskExecution implements AdditionalDataHolder, BackedModel,
      * @return DateTime|null
     */
     public function getTimeEnded(): ?DateTime {
-        return $this->getBackingStore()->get('timeEnded');
+        $val = $this->getBackingStore()->get('timeEnded');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'timeEnded'");
     }
 
     /**

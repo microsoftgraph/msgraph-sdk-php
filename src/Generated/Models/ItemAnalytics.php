@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class ItemAnalytics extends Entity implements Parsable 
 {
@@ -29,12 +30,16 @@ class ItemAnalytics extends Entity implements Parsable
      * @return ItemActivityStat|null
     */
     public function getAllTime(): ?ItemActivityStat {
-        return $this->getBackingStore()->get('allTime');
+        $val = $this->getBackingStore()->get('allTime');
+        if (is_null($val) || $val instanceof ItemActivityStat) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allTime'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -50,7 +55,13 @@ class ItemAnalytics extends Entity implements Parsable
      * @return array<ItemActivityStat>|null
     */
     public function getItemActivityStats(): ?array {
-        return $this->getBackingStore()->get('itemActivityStats');
+        $val = $this->getBackingStore()->get('itemActivityStats');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ItemActivityStat::class);
+            /** @var array<ItemActivityStat>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'itemActivityStats'");
     }
 
     /**
@@ -58,7 +69,11 @@ class ItemAnalytics extends Entity implements Parsable
      * @return ItemActivityStat|null
     */
     public function getLastSevenDays(): ?ItemActivityStat {
-        return $this->getBackingStore()->get('lastSevenDays');
+        $val = $this->getBackingStore()->get('lastSevenDays');
+        if (is_null($val) || $val instanceof ItemActivityStat) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastSevenDays'");
     }
 
     /**

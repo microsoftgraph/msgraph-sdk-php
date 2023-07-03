@@ -33,12 +33,16 @@ class RemoteAssistancePartner extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -55,7 +59,11 @@ class RemoteAssistancePartner extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastConnectionDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('lastConnectionDateTime');
+        $val = $this->getBackingStore()->get('lastConnectionDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastConnectionDateTime'");
     }
 
     /**
@@ -63,7 +71,11 @@ class RemoteAssistancePartner extends Entity implements Parsable
      * @return RemoteAssistanceOnboardingStatus|null
     */
     public function getOnboardingStatus(): ?RemoteAssistanceOnboardingStatus {
-        return $this->getBackingStore()->get('onboardingStatus');
+        $val = $this->getBackingStore()->get('onboardingStatus');
+        if (is_null($val) || $val instanceof RemoteAssistanceOnboardingStatus) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'onboardingStatus'");
     }
 
     /**
@@ -71,7 +83,11 @@ class RemoteAssistancePartner extends Entity implements Parsable
      * @return string|null
     */
     public function getOnboardingUrl(): ?string {
-        return $this->getBackingStore()->get('onboardingUrl');
+        $val = $this->getBackingStore()->get('onboardingUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'onboardingUrl'");
     }
 
     /**

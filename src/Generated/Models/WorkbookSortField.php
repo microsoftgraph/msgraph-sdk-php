@@ -39,7 +39,12 @@ class WorkbookSortField implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -47,7 +52,11 @@ class WorkbookSortField implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getAscending(): ?bool {
-        return $this->getBackingStore()->get('ascending');
+        $val = $this->getBackingStore()->get('ascending');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'ascending'");
     }
 
     /**
@@ -63,7 +72,11 @@ class WorkbookSortField implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getColor(): ?string {
-        return $this->getBackingStore()->get('color');
+        $val = $this->getBackingStore()->get('color');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'color'");
     }
 
     /**
@@ -71,12 +84,16 @@ class WorkbookSortField implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getDataOption(): ?string {
-        return $this->getBackingStore()->get('dataOption');
+        $val = $this->getBackingStore()->get('dataOption');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'dataOption'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -96,7 +113,11 @@ class WorkbookSortField implements AdditionalDataHolder, BackedModel, Parsable
      * @return WorkbookIcon|null
     */
     public function getIcon(): ?WorkbookIcon {
-        return $this->getBackingStore()->get('icon');
+        $val = $this->getBackingStore()->get('icon');
+        if (is_null($val) || $val instanceof WorkbookIcon) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'icon'");
     }
 
     /**
@@ -104,7 +125,11 @@ class WorkbookSortField implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getKey(): ?int {
-        return $this->getBackingStore()->get('key');
+        $val = $this->getBackingStore()->get('key');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'key'");
     }
 
     /**
@@ -112,7 +137,11 @@ class WorkbookSortField implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -120,7 +149,11 @@ class WorkbookSortField implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getSortOn(): ?string {
-        return $this->getBackingStore()->get('sortOn');
+        $val = $this->getBackingStore()->get('sortOn');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sortOn'");
     }
 
     /**

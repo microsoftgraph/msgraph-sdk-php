@@ -30,12 +30,16 @@ class TimeOffReason extends ChangeTrackedEntity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -51,7 +55,11 @@ class TimeOffReason extends ChangeTrackedEntity implements Parsable
      * @return TimeOffReasonIconType|null
     */
     public function getIconType(): ?TimeOffReasonIconType {
-        return $this->getBackingStore()->get('iconType');
+        $val = $this->getBackingStore()->get('iconType');
+        if (is_null($val) || $val instanceof TimeOffReasonIconType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'iconType'");
     }
 
     /**
@@ -59,7 +67,11 @@ class TimeOffReason extends ChangeTrackedEntity implements Parsable
      * @return bool|null
     */
     public function getIsActive(): ?bool {
-        return $this->getBackingStore()->get('isActive');
+        $val = $this->getBackingStore()->get('isActive');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isActive'");
     }
 
     /**

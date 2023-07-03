@@ -29,12 +29,16 @@ class RichLongRunningOperation extends LongRunningOperation implements Parsable
      * @return PublicError|null
     */
     public function getError(): ?PublicError {
-        return $this->getBackingStore()->get('error');
+        $val = $this->getBackingStore()->get('error');
+        if (is_null($val) || $val instanceof PublicError) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'error'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -51,7 +55,11 @@ class RichLongRunningOperation extends LongRunningOperation implements Parsable
      * @return int|null
     */
     public function getPercentageComplete(): ?int {
-        return $this->getBackingStore()->get('percentageComplete');
+        $val = $this->getBackingStore()->get('percentageComplete');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'percentageComplete'");
     }
 
     /**
@@ -59,7 +67,11 @@ class RichLongRunningOperation extends LongRunningOperation implements Parsable
      * @return string|null
     */
     public function getResourceId(): ?string {
-        return $this->getBackingStore()->get('resourceId');
+        $val = $this->getBackingStore()->get('resourceId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resourceId'");
     }
 
     /**
@@ -67,7 +79,11 @@ class RichLongRunningOperation extends LongRunningOperation implements Parsable
      * @return string|null
     */
     public function getType(): ?string {
-        return $this->getBackingStore()->get('type');
+        $val = $this->getBackingStore()->get('type');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'type'");
     }
 
     /**

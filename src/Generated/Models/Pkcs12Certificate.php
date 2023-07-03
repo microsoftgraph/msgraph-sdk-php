@@ -27,7 +27,7 @@ class Pkcs12Certificate extends ApiAuthenticationConfigurationBase implements Pa
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -42,7 +42,11 @@ class Pkcs12Certificate extends ApiAuthenticationConfigurationBase implements Pa
      * @return string|null
     */
     public function getPassword(): ?string {
-        return $this->getBackingStore()->get('password');
+        $val = $this->getBackingStore()->get('password');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'password'");
     }
 
     /**
@@ -50,7 +54,11 @@ class Pkcs12Certificate extends ApiAuthenticationConfigurationBase implements Pa
      * @return string|null
     */
     public function getPkcs12Value(): ?string {
-        return $this->getBackingStore()->get('pkcs12Value');
+        $val = $this->getBackingStore()->get('pkcs12Value');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'pkcs12Value'");
     }
 
     /**

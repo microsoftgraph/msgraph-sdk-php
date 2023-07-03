@@ -30,12 +30,16 @@ class PrinterCreateOperation extends PrintOperation implements Parsable
      * @return string|null
     */
     public function getCertificate(): ?string {
-        return $this->getBackingStore()->get('certificate');
+        $val = $this->getBackingStore()->get('certificate');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'certificate'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -50,7 +54,11 @@ class PrinterCreateOperation extends PrintOperation implements Parsable
      * @return Printer|null
     */
     public function getPrinter(): ?Printer {
-        return $this->getBackingStore()->get('printer');
+        $val = $this->getBackingStore()->get('printer');
+        if (is_null($val) || $val instanceof Printer) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'printer'");
     }
 
     /**

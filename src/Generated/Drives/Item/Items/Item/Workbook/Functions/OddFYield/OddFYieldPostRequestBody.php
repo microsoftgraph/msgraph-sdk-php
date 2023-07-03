@@ -40,7 +40,12 @@ class OddFYieldPostRequestBody implements AdditionalDataHolder, BackedModel, Par
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -56,12 +61,16 @@ class OddFYieldPostRequestBody implements AdditionalDataHolder, BackedModel, Par
      * @return Json|null
     */
     public function getBasis(): ?Json {
-        return $this->getBackingStore()->get('basis');
+        $val = $this->getBackingStore()->get('basis');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'basis'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -83,7 +92,11 @@ class OddFYieldPostRequestBody implements AdditionalDataHolder, BackedModel, Par
      * @return Json|null
     */
     public function getFirstCoupon(): ?Json {
-        return $this->getBackingStore()->get('firstCoupon');
+        $val = $this->getBackingStore()->get('firstCoupon');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'firstCoupon'");
     }
 
     /**
@@ -91,7 +104,11 @@ class OddFYieldPostRequestBody implements AdditionalDataHolder, BackedModel, Par
      * @return Json|null
     */
     public function getFrequency(): ?Json {
-        return $this->getBackingStore()->get('frequency');
+        $val = $this->getBackingStore()->get('frequency');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'frequency'");
     }
 
     /**
@@ -99,7 +116,11 @@ class OddFYieldPostRequestBody implements AdditionalDataHolder, BackedModel, Par
      * @return Json|null
     */
     public function getIssue(): ?Json {
-        return $this->getBackingStore()->get('issue');
+        $val = $this->getBackingStore()->get('issue');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'issue'");
     }
 
     /**
@@ -107,7 +128,11 @@ class OddFYieldPostRequestBody implements AdditionalDataHolder, BackedModel, Par
      * @return Json|null
     */
     public function getMaturity(): ?Json {
-        return $this->getBackingStore()->get('maturity');
+        $val = $this->getBackingStore()->get('maturity');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'maturity'");
     }
 
     /**
@@ -115,7 +140,11 @@ class OddFYieldPostRequestBody implements AdditionalDataHolder, BackedModel, Par
      * @return Json|null
     */
     public function getPr(): ?Json {
-        return $this->getBackingStore()->get('pr');
+        $val = $this->getBackingStore()->get('pr');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'pr'");
     }
 
     /**
@@ -123,7 +152,11 @@ class OddFYieldPostRequestBody implements AdditionalDataHolder, BackedModel, Par
      * @return Json|null
     */
     public function getRate(): ?Json {
-        return $this->getBackingStore()->get('rate');
+        $val = $this->getBackingStore()->get('rate');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'rate'");
     }
 
     /**
@@ -131,7 +164,11 @@ class OddFYieldPostRequestBody implements AdditionalDataHolder, BackedModel, Par
      * @return Json|null
     */
     public function getRedemption(): ?Json {
-        return $this->getBackingStore()->get('redemption');
+        $val = $this->getBackingStore()->get('redemption');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'redemption'");
     }
 
     /**
@@ -139,7 +176,11 @@ class OddFYieldPostRequestBody implements AdditionalDataHolder, BackedModel, Par
      * @return Json|null
     */
     public function getSettlement(): ?Json {
-        return $this->getBackingStore()->get('settlement');
+        $val = $this->getBackingStore()->get('settlement');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'settlement'");
     }
 
     /**

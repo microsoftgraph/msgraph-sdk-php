@@ -10,6 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class PropertyRule implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -19,7 +20,7 @@ class PropertyRule implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new propertyRule and sets the default values.
+     * Instantiates a new PropertyRule and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
@@ -40,7 +41,12 @@ class PropertyRule implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -53,7 +59,7 @@ class PropertyRule implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -61,7 +67,14 @@ class PropertyRule implements AdditionalDataHolder, BackedModel, Parsable
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'operation' => fn(ParseNode $n) => $o->setOperation($n->getEnumValue(RuleOperation::class)),
             'property' => fn(ParseNode $n) => $o->setProperty($n->getStringValue()),
-            'values' => fn(ParseNode $n) => $o->setValues($n->getCollectionOfPrimitiveValues()),
+            'values' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setValues($val);
+            },
             'valuesJoinedBy' => fn(ParseNode $n) => $o->setValuesJoinedBy($n->getEnumValue(BinaryOperator::class)),
         ];
     }
@@ -71,7 +84,11 @@ class PropertyRule implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -79,7 +96,11 @@ class PropertyRule implements AdditionalDataHolder, BackedModel, Parsable
      * @return RuleOperation|null
     */
     public function getOperation(): ?RuleOperation {
-        return $this->getBackingStore()->get('operation');
+        $val = $this->getBackingStore()->get('operation');
+        if (is_null($val) || $val instanceof RuleOperation) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'operation'");
     }
 
     /**
@@ -87,7 +108,11 @@ class PropertyRule implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getProperty(): ?string {
-        return $this->getBackingStore()->get('property');
+        $val = $this->getBackingStore()->get('property');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'property'");
     }
 
     /**
@@ -95,7 +120,13 @@ class PropertyRule implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string>|null
     */
     public function getValues(): ?array {
-        return $this->getBackingStore()->get('values');
+        $val = $this->getBackingStore()->get('values');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'values'");
     }
 
     /**
@@ -103,7 +134,11 @@ class PropertyRule implements AdditionalDataHolder, BackedModel, Parsable
      * @return BinaryOperator|null
     */
     public function getValuesJoinedBy(): ?BinaryOperator {
-        return $this->getBackingStore()->get('valuesJoinedBy');
+        $val = $this->getBackingStore()->get('valuesJoinedBy');
+        if (is_null($val) || $val instanceof BinaryOperator) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'valuesJoinedBy'");
     }
 
     /**

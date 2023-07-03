@@ -39,7 +39,12 @@ class Bundle implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -47,7 +52,11 @@ class Bundle implements AdditionalDataHolder, BackedModel, Parsable
      * @return Album|null
     */
     public function getAlbum(): ?Album {
-        return $this->getBackingStore()->get('album');
+        $val = $this->getBackingStore()->get('album');
+        if (is_null($val) || $val instanceof Album) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'album'");
     }
 
     /**
@@ -63,12 +72,16 @@ class Bundle implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getChildCount(): ?int {
-        return $this->getBackingStore()->get('childCount');
+        $val = $this->getBackingStore()->get('childCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'childCount'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -84,7 +97,11 @@ class Bundle implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**

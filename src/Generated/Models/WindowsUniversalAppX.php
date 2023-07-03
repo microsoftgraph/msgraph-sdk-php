@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class WindowsUniversalAppX extends MobileLobApp implements Parsable 
 {
@@ -30,7 +31,11 @@ class WindowsUniversalAppX extends MobileLobApp implements Parsable
      * @return WindowsArchitecture|null
     */
     public function getApplicableArchitectures(): ?WindowsArchitecture {
-        return $this->getBackingStore()->get('applicableArchitectures');
+        $val = $this->getBackingStore()->get('applicableArchitectures');
+        if (is_null($val) || $val instanceof WindowsArchitecture) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'applicableArchitectures'");
     }
 
     /**
@@ -38,7 +43,11 @@ class WindowsUniversalAppX extends MobileLobApp implements Parsable
      * @return WindowsDeviceType|null
     */
     public function getApplicableDeviceTypes(): ?WindowsDeviceType {
-        return $this->getBackingStore()->get('applicableDeviceTypes');
+        $val = $this->getBackingStore()->get('applicableDeviceTypes');
+        if (is_null($val) || $val instanceof WindowsDeviceType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'applicableDeviceTypes'");
     }
 
     /**
@@ -46,12 +55,18 @@ class WindowsUniversalAppX extends MobileLobApp implements Parsable
      * @return array<MobileContainedApp>|null
     */
     public function getCommittedContainedApps(): ?array {
-        return $this->getBackingStore()->get('committedContainedApps');
+        $val = $this->getBackingStore()->get('committedContainedApps');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, MobileContainedApp::class);
+            /** @var array<MobileContainedApp>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'committedContainedApps'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -73,7 +88,11 @@ class WindowsUniversalAppX extends MobileLobApp implements Parsable
      * @return string|null
     */
     public function getIdentityName(): ?string {
-        return $this->getBackingStore()->get('identityName');
+        $val = $this->getBackingStore()->get('identityName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'identityName'");
     }
 
     /**
@@ -81,7 +100,11 @@ class WindowsUniversalAppX extends MobileLobApp implements Parsable
      * @return string|null
     */
     public function getIdentityPublisherHash(): ?string {
-        return $this->getBackingStore()->get('identityPublisherHash');
+        $val = $this->getBackingStore()->get('identityPublisherHash');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'identityPublisherHash'");
     }
 
     /**
@@ -89,7 +112,11 @@ class WindowsUniversalAppX extends MobileLobApp implements Parsable
      * @return string|null
     */
     public function getIdentityResourceIdentifier(): ?string {
-        return $this->getBackingStore()->get('identityResourceIdentifier');
+        $val = $this->getBackingStore()->get('identityResourceIdentifier');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'identityResourceIdentifier'");
     }
 
     /**
@@ -97,7 +124,11 @@ class WindowsUniversalAppX extends MobileLobApp implements Parsable
      * @return string|null
     */
     public function getIdentityVersion(): ?string {
-        return $this->getBackingStore()->get('identityVersion');
+        $val = $this->getBackingStore()->get('identityVersion');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'identityVersion'");
     }
 
     /**
@@ -105,7 +136,11 @@ class WindowsUniversalAppX extends MobileLobApp implements Parsable
      * @return bool|null
     */
     public function getIsBundle(): ?bool {
-        return $this->getBackingStore()->get('isBundle');
+        $val = $this->getBackingStore()->get('isBundle');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isBundle'");
     }
 
     /**
@@ -113,7 +148,11 @@ class WindowsUniversalAppX extends MobileLobApp implements Parsable
      * @return WindowsMinimumOperatingSystem|null
     */
     public function getMinimumSupportedOperatingSystem(): ?WindowsMinimumOperatingSystem {
-        return $this->getBackingStore()->get('minimumSupportedOperatingSystem');
+        $val = $this->getBackingStore()->get('minimumSupportedOperatingSystem');
+        if (is_null($val) || $val instanceof WindowsMinimumOperatingSystem) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'minimumSupportedOperatingSystem'");
     }
 
     /**

@@ -9,6 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class LocationConstraint implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -39,7 +40,12 @@ class LocationConstraint implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -52,7 +58,7 @@ class LocationConstraint implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -69,7 +75,11 @@ class LocationConstraint implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getIsRequired(): ?bool {
-        return $this->getBackingStore()->get('isRequired');
+        $val = $this->getBackingStore()->get('isRequired');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isRequired'");
     }
 
     /**
@@ -77,7 +87,13 @@ class LocationConstraint implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<LocationConstraintItem>|null
     */
     public function getLocations(): ?array {
-        return $this->getBackingStore()->get('locations');
+        $val = $this->getBackingStore()->get('locations');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, LocationConstraintItem::class);
+            /** @var array<LocationConstraintItem>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'locations'");
     }
 
     /**
@@ -85,7 +101,11 @@ class LocationConstraint implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -93,7 +113,11 @@ class LocationConstraint implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getSuggestLocation(): ?bool {
-        return $this->getBackingStore()->get('suggestLocation');
+        $val = $this->getBackingStore()->get('suggestLocation');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'suggestLocation'");
     }
 
     /**

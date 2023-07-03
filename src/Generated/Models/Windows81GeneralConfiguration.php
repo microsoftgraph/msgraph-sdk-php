@@ -30,7 +30,11 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getAccountsBlockAddingNonMicrosoftAccountEmail(): ?bool {
-        return $this->getBackingStore()->get('accountsBlockAddingNonMicrosoftAccountEmail');
+        $val = $this->getBackingStore()->get('accountsBlockAddingNonMicrosoftAccountEmail');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'accountsBlockAddingNonMicrosoftAccountEmail'");
     }
 
     /**
@@ -38,7 +42,11 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getApplyOnlyToWindows81(): ?bool {
-        return $this->getBackingStore()->get('applyOnlyToWindows81');
+        $val = $this->getBackingStore()->get('applyOnlyToWindows81');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'applyOnlyToWindows81'");
     }
 
     /**
@@ -46,7 +54,11 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getBrowserBlockAutofill(): ?bool {
-        return $this->getBackingStore()->get('browserBlockAutofill');
+        $val = $this->getBackingStore()->get('browserBlockAutofill');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'browserBlockAutofill'");
     }
 
     /**
@@ -54,7 +66,11 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getBrowserBlockAutomaticDetectionOfIntranetSites(): ?bool {
-        return $this->getBackingStore()->get('browserBlockAutomaticDetectionOfIntranetSites');
+        $val = $this->getBackingStore()->get('browserBlockAutomaticDetectionOfIntranetSites');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'browserBlockAutomaticDetectionOfIntranetSites'");
     }
 
     /**
@@ -62,7 +78,11 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getBrowserBlockEnterpriseModeAccess(): ?bool {
-        return $this->getBackingStore()->get('browserBlockEnterpriseModeAccess');
+        $val = $this->getBackingStore()->get('browserBlockEnterpriseModeAccess');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'browserBlockEnterpriseModeAccess'");
     }
 
     /**
@@ -70,7 +90,11 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getBrowserBlockJavaScript(): ?bool {
-        return $this->getBackingStore()->get('browserBlockJavaScript');
+        $val = $this->getBackingStore()->get('browserBlockJavaScript');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'browserBlockJavaScript'");
     }
 
     /**
@@ -78,7 +102,11 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getBrowserBlockPlugins(): ?bool {
-        return $this->getBackingStore()->get('browserBlockPlugins');
+        $val = $this->getBackingStore()->get('browserBlockPlugins');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'browserBlockPlugins'");
     }
 
     /**
@@ -86,7 +114,11 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getBrowserBlockPopups(): ?bool {
-        return $this->getBackingStore()->get('browserBlockPopups');
+        $val = $this->getBackingStore()->get('browserBlockPopups');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'browserBlockPopups'");
     }
 
     /**
@@ -94,7 +126,11 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getBrowserBlockSendingDoNotTrackHeader(): ?bool {
-        return $this->getBackingStore()->get('browserBlockSendingDoNotTrackHeader');
+        $val = $this->getBackingStore()->get('browserBlockSendingDoNotTrackHeader');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'browserBlockSendingDoNotTrackHeader'");
     }
 
     /**
@@ -102,7 +138,11 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getBrowserBlockSingleWordEntryOnIntranetSites(): ?bool {
-        return $this->getBackingStore()->get('browserBlockSingleWordEntryOnIntranetSites');
+        $val = $this->getBackingStore()->get('browserBlockSingleWordEntryOnIntranetSites');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'browserBlockSingleWordEntryOnIntranetSites'");
     }
 
     /**
@@ -110,7 +150,11 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return string|null
     */
     public function getBrowserEnterpriseModeSiteListLocation(): ?string {
-        return $this->getBackingStore()->get('browserEnterpriseModeSiteListLocation');
+        $val = $this->getBackingStore()->get('browserEnterpriseModeSiteListLocation');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'browserEnterpriseModeSiteListLocation'");
     }
 
     /**
@@ -118,7 +162,11 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return InternetSiteSecurityLevel|null
     */
     public function getBrowserInternetSecurityLevel(): ?InternetSiteSecurityLevel {
-        return $this->getBackingStore()->get('browserInternetSecurityLevel');
+        $val = $this->getBackingStore()->get('browserInternetSecurityLevel');
+        if (is_null($val) || $val instanceof InternetSiteSecurityLevel) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'browserInternetSecurityLevel'");
     }
 
     /**
@@ -126,7 +174,11 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return SiteSecurityLevel|null
     */
     public function getBrowserIntranetSecurityLevel(): ?SiteSecurityLevel {
-        return $this->getBackingStore()->get('browserIntranetSecurityLevel');
+        $val = $this->getBackingStore()->get('browserIntranetSecurityLevel');
+        if (is_null($val) || $val instanceof SiteSecurityLevel) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'browserIntranetSecurityLevel'");
     }
 
     /**
@@ -134,7 +186,11 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return string|null
     */
     public function getBrowserLoggingReportLocation(): ?string {
-        return $this->getBackingStore()->get('browserLoggingReportLocation');
+        $val = $this->getBackingStore()->get('browserLoggingReportLocation');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'browserLoggingReportLocation'");
     }
 
     /**
@@ -142,7 +198,11 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getBrowserRequireFirewall(): ?bool {
-        return $this->getBackingStore()->get('browserRequireFirewall');
+        $val = $this->getBackingStore()->get('browserRequireFirewall');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'browserRequireFirewall'");
     }
 
     /**
@@ -150,7 +210,11 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getBrowserRequireFraudWarning(): ?bool {
-        return $this->getBackingStore()->get('browserRequireFraudWarning');
+        $val = $this->getBackingStore()->get('browserRequireFraudWarning');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'browserRequireFraudWarning'");
     }
 
     /**
@@ -158,7 +222,11 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getBrowserRequireHighSecurityForRestrictedSites(): ?bool {
-        return $this->getBackingStore()->get('browserRequireHighSecurityForRestrictedSites');
+        $val = $this->getBackingStore()->get('browserRequireHighSecurityForRestrictedSites');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'browserRequireHighSecurityForRestrictedSites'");
     }
 
     /**
@@ -166,7 +234,11 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getBrowserRequireSmartScreen(): ?bool {
-        return $this->getBackingStore()->get('browserRequireSmartScreen');
+        $val = $this->getBackingStore()->get('browserRequireSmartScreen');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'browserRequireSmartScreen'");
     }
 
     /**
@@ -174,7 +246,11 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return SiteSecurityLevel|null
     */
     public function getBrowserTrustedSitesSecurityLevel(): ?SiteSecurityLevel {
-        return $this->getBackingStore()->get('browserTrustedSitesSecurityLevel');
+        $val = $this->getBackingStore()->get('browserTrustedSitesSecurityLevel');
+        if (is_null($val) || $val instanceof SiteSecurityLevel) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'browserTrustedSitesSecurityLevel'");
     }
 
     /**
@@ -182,7 +258,11 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getCellularBlockDataRoaming(): ?bool {
-        return $this->getBackingStore()->get('cellularBlockDataRoaming');
+        $val = $this->getBackingStore()->get('cellularBlockDataRoaming');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'cellularBlockDataRoaming'");
     }
 
     /**
@@ -190,12 +270,16 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getDiagnosticsBlockDataSubmission(): ?bool {
-        return $this->getBackingStore()->get('diagnosticsBlockDataSubmission');
+        $val = $this->getBackingStore()->get('diagnosticsBlockDataSubmission');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'diagnosticsBlockDataSubmission'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -241,7 +325,11 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getPasswordBlockPicturePasswordAndPin(): ?bool {
-        return $this->getBackingStore()->get('passwordBlockPicturePasswordAndPin');
+        $val = $this->getBackingStore()->get('passwordBlockPicturePasswordAndPin');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'passwordBlockPicturePasswordAndPin'");
     }
 
     /**
@@ -249,7 +337,11 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return int|null
     */
     public function getPasswordExpirationDays(): ?int {
-        return $this->getBackingStore()->get('passwordExpirationDays');
+        $val = $this->getBackingStore()->get('passwordExpirationDays');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'passwordExpirationDays'");
     }
 
     /**
@@ -257,7 +349,11 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return int|null
     */
     public function getPasswordMinimumCharacterSetCount(): ?int {
-        return $this->getBackingStore()->get('passwordMinimumCharacterSetCount');
+        $val = $this->getBackingStore()->get('passwordMinimumCharacterSetCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'passwordMinimumCharacterSetCount'");
     }
 
     /**
@@ -265,7 +361,11 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return int|null
     */
     public function getPasswordMinimumLength(): ?int {
-        return $this->getBackingStore()->get('passwordMinimumLength');
+        $val = $this->getBackingStore()->get('passwordMinimumLength');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'passwordMinimumLength'");
     }
 
     /**
@@ -273,7 +373,11 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return int|null
     */
     public function getPasswordMinutesOfInactivityBeforeScreenTimeout(): ?int {
-        return $this->getBackingStore()->get('passwordMinutesOfInactivityBeforeScreenTimeout');
+        $val = $this->getBackingStore()->get('passwordMinutesOfInactivityBeforeScreenTimeout');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'passwordMinutesOfInactivityBeforeScreenTimeout'");
     }
 
     /**
@@ -281,7 +385,11 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return int|null
     */
     public function getPasswordPreviousPasswordBlockCount(): ?int {
-        return $this->getBackingStore()->get('passwordPreviousPasswordBlockCount');
+        $val = $this->getBackingStore()->get('passwordPreviousPasswordBlockCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'passwordPreviousPasswordBlockCount'");
     }
 
     /**
@@ -289,7 +397,11 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return RequiredPasswordType|null
     */
     public function getPasswordRequiredType(): ?RequiredPasswordType {
-        return $this->getBackingStore()->get('passwordRequiredType');
+        $val = $this->getBackingStore()->get('passwordRequiredType');
+        if (is_null($val) || $val instanceof RequiredPasswordType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'passwordRequiredType'");
     }
 
     /**
@@ -297,7 +409,11 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return int|null
     */
     public function getPasswordSignInFailureCountBeforeFactoryReset(): ?int {
-        return $this->getBackingStore()->get('passwordSignInFailureCountBeforeFactoryReset');
+        $val = $this->getBackingStore()->get('passwordSignInFailureCountBeforeFactoryReset');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'passwordSignInFailureCountBeforeFactoryReset'");
     }
 
     /**
@@ -305,7 +421,11 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getStorageRequireDeviceEncryption(): ?bool {
-        return $this->getBackingStore()->get('storageRequireDeviceEncryption');
+        $val = $this->getBackingStore()->get('storageRequireDeviceEncryption');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'storageRequireDeviceEncryption'");
     }
 
     /**
@@ -313,7 +433,11 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getUpdatesRequireAutomaticUpdates(): ?bool {
-        return $this->getBackingStore()->get('updatesRequireAutomaticUpdates');
+        $val = $this->getBackingStore()->get('updatesRequireAutomaticUpdates');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'updatesRequireAutomaticUpdates'");
     }
 
     /**
@@ -321,7 +445,11 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return WindowsUserAccountControlSettings|null
     */
     public function getUserAccountControlSettings(): ?WindowsUserAccountControlSettings {
-        return $this->getBackingStore()->get('userAccountControlSettings');
+        $val = $this->getBackingStore()->get('userAccountControlSettings');
+        if (is_null($val) || $val instanceof WindowsUserAccountControlSettings) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userAccountControlSettings'");
     }
 
     /**
@@ -329,7 +457,11 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return string|null
     */
     public function getWorkFoldersUrl(): ?string {
-        return $this->getBackingStore()->get('workFoldersUrl');
+        $val = $this->getBackingStore()->get('workFoldersUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'workFoldersUrl'");
     }
 
     /**

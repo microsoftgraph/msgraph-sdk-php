@@ -34,7 +34,7 @@ class GovernanceInsight extends Entity implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -44,11 +44,15 @@ class GovernanceInsight extends Entity implements Parsable
     }
 
     /**
-     * Gets the insightCreatedDateTime property value. The insightCreatedDateTime property
+     * Gets the insightCreatedDateTime property value. Indicates when the insight was created.
      * @return DateTime|null
     */
     public function getInsightCreatedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('insightCreatedDateTime');
+        $val = $this->getBackingStore()->get('insightCreatedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'insightCreatedDateTime'");
     }
 
     /**
@@ -61,7 +65,7 @@ class GovernanceInsight extends Entity implements Parsable
     }
 
     /**
-     * Sets the insightCreatedDateTime property value. The insightCreatedDateTime property
+     * Sets the insightCreatedDateTime property value. Indicates when the insight was created.
      * @param DateTime|null $value Value to set for the insightCreatedDateTime property.
     */
     public function setInsightCreatedDateTime(?DateTime $value): void {

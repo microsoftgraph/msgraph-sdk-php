@@ -28,7 +28,7 @@ class CustomTaskExtensionCallbackData extends CustomExtensionData implements Par
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -42,7 +42,11 @@ class CustomTaskExtensionCallbackData extends CustomExtensionData implements Par
      * @return CustomTaskExtensionOperationStatus|null
     */
     public function getOperationStatus(): ?CustomTaskExtensionOperationStatus {
-        return $this->getBackingStore()->get('operationStatus');
+        $val = $this->getBackingStore()->get('operationStatus');
+        if (is_null($val) || $val instanceof CustomTaskExtensionOperationStatus) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'operationStatus'");
     }
 
     /**

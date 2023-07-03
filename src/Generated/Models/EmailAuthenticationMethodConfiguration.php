@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class EmailAuthenticationMethodConfiguration extends AuthenticationMethodConfiguration implements Parsable 
 {
@@ -30,12 +31,16 @@ class EmailAuthenticationMethodConfiguration extends AuthenticationMethodConfigu
      * @return ExternalEmailOtpState|null
     */
     public function getAllowExternalIdToUseEmailOtp(): ?ExternalEmailOtpState {
-        return $this->getBackingStore()->get('allowExternalIdToUseEmailOtp');
+        $val = $this->getBackingStore()->get('allowExternalIdToUseEmailOtp');
+        if (is_null($val) || $val instanceof ExternalEmailOtpState) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowExternalIdToUseEmailOtp'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -50,7 +55,13 @@ class EmailAuthenticationMethodConfiguration extends AuthenticationMethodConfigu
      * @return array<AuthenticationMethodTarget>|null
     */
     public function getIncludeTargets(): ?array {
-        return $this->getBackingStore()->get('includeTargets');
+        $val = $this->getBackingStore()->get('includeTargets');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AuthenticationMethodTarget::class);
+            /** @var array<AuthenticationMethodTarget>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'includeTargets'");
     }
 
     /**

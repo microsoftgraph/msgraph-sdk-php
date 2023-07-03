@@ -28,7 +28,7 @@ class UnifiedGroupSource extends DataSource implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -43,7 +43,11 @@ class UnifiedGroupSource extends DataSource implements Parsable
      * @return Group|null
     */
     public function getGroup(): ?Group {
-        return $this->getBackingStore()->get('group');
+        $val = $this->getBackingStore()->get('group');
+        if (is_null($val) || $val instanceof Group) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'group'");
     }
 
     /**
@@ -51,7 +55,11 @@ class UnifiedGroupSource extends DataSource implements Parsable
      * @return SourceType|null
     */
     public function getIncludedSources(): ?SourceType {
-        return $this->getBackingStore()->get('includedSources');
+        $val = $this->getBackingStore()->get('includedSources');
+        if (is_null($val) || $val instanceof SourceType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'includedSources'");
     }
 
     /**

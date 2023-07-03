@@ -39,7 +39,12 @@ class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHolder, Bac
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -47,7 +52,11 @@ class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHolder, Bac
      * @return string|null
     */
     public function getAddressableUserName(): ?string {
-        return $this->getBackingStore()->get('addressableUserName');
+        $val = $this->getBackingStore()->get('addressableUserName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'addressableUserName'");
     }
 
     /**
@@ -63,12 +72,16 @@ class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHolder, Bac
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -85,7 +98,11 @@ class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHolder, Bac
      * @return string|null
     */
     public function getGroupTag(): ?string {
-        return $this->getBackingStore()->get('groupTag');
+        $val = $this->getBackingStore()->get('groupTag');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'groupTag'");
     }
 
     /**
@@ -93,7 +110,11 @@ class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHolder, Bac
      * @return string|null
     */
     public function getUserPrincipalName(): ?string {
-        return $this->getBackingStore()->get('userPrincipalName');
+        $val = $this->getBackingStore()->get('userPrincipalName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userPrincipalName'");
     }
 
     /**

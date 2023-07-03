@@ -29,12 +29,16 @@ class LocateDeviceActionResult extends DeviceActionResult implements Parsable
      * @return DeviceGeoLocation|null
     */
     public function getDeviceLocation(): ?DeviceGeoLocation {
-        return $this->getBackingStore()->get('deviceLocation');
+        $val = $this->getBackingStore()->get('deviceLocation');
+        if (is_null($val) || $val instanceof DeviceGeoLocation) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deviceLocation'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;

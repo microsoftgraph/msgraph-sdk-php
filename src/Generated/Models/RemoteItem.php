@@ -40,7 +40,12 @@ class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -56,7 +61,11 @@ class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable
      * @return IdentitySet|null
     */
     public function getCreatedBy(): ?IdentitySet {
-        return $this->getBackingStore()->get('createdBy');
+        $val = $this->getBackingStore()->get('createdBy');
+        if (is_null($val) || $val instanceof IdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdBy'");
     }
 
     /**
@@ -64,12 +73,16 @@ class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('createdDateTime');
+        $val = $this->getBackingStore()->get('createdDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdDateTime'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -102,7 +115,11 @@ class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable
      * @return File|null
     */
     public function getFile(): ?File {
-        return $this->getBackingStore()->get('file');
+        $val = $this->getBackingStore()->get('file');
+        if (is_null($val) || $val instanceof File) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'file'");
     }
 
     /**
@@ -110,7 +127,11 @@ class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable
      * @return FileSystemInfo|null
     */
     public function getFileSystemInfo(): ?FileSystemInfo {
-        return $this->getBackingStore()->get('fileSystemInfo');
+        $val = $this->getBackingStore()->get('fileSystemInfo');
+        if (is_null($val) || $val instanceof FileSystemInfo) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'fileSystemInfo'");
     }
 
     /**
@@ -118,7 +139,11 @@ class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable
      * @return Folder|null
     */
     public function getFolder(): ?Folder {
-        return $this->getBackingStore()->get('folder');
+        $val = $this->getBackingStore()->get('folder');
+        if (is_null($val) || $val instanceof Folder) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'folder'");
     }
 
     /**
@@ -126,7 +151,11 @@ class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getId(): ?string {
-        return $this->getBackingStore()->get('id');
+        $val = $this->getBackingStore()->get('id');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'id'");
     }
 
     /**
@@ -134,7 +163,11 @@ class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable
      * @return Image|null
     */
     public function getImage(): ?Image {
-        return $this->getBackingStore()->get('image');
+        $val = $this->getBackingStore()->get('image');
+        if (is_null($val) || $val instanceof Image) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'image'");
     }
 
     /**
@@ -142,7 +175,11 @@ class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable
      * @return IdentitySet|null
     */
     public function getLastModifiedBy(): ?IdentitySet {
-        return $this->getBackingStore()->get('lastModifiedBy');
+        $val = $this->getBackingStore()->get('lastModifiedBy');
+        if (is_null($val) || $val instanceof IdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastModifiedBy'");
     }
 
     /**
@@ -150,7 +187,11 @@ class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('lastModifiedDateTime');
+        $val = $this->getBackingStore()->get('lastModifiedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastModifiedDateTime'");
     }
 
     /**
@@ -158,7 +199,11 @@ class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getName(): ?string {
-        return $this->getBackingStore()->get('name');
+        $val = $this->getBackingStore()->get('name');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'name'");
     }
 
     /**
@@ -166,7 +211,11 @@ class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -174,7 +223,11 @@ class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable
      * @return Package|null
     */
     public function getPackage(): ?Package {
-        return $this->getBackingStore()->get('package');
+        $val = $this->getBackingStore()->get('package');
+        if (is_null($val) || $val instanceof Package) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'package'");
     }
 
     /**
@@ -182,7 +235,11 @@ class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable
      * @return ItemReference|null
     */
     public function getParentReference(): ?ItemReference {
-        return $this->getBackingStore()->get('parentReference');
+        $val = $this->getBackingStore()->get('parentReference');
+        if (is_null($val) || $val instanceof ItemReference) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'parentReference'");
     }
 
     /**
@@ -190,7 +247,11 @@ class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable
      * @return Shared|null
     */
     public function getShared(): ?Shared {
-        return $this->getBackingStore()->get('shared');
+        $val = $this->getBackingStore()->get('shared');
+        if (is_null($val) || $val instanceof Shared) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'shared'");
     }
 
     /**
@@ -198,7 +259,11 @@ class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable
      * @return SharepointIds|null
     */
     public function getSharepointIds(): ?SharepointIds {
-        return $this->getBackingStore()->get('sharepointIds');
+        $val = $this->getBackingStore()->get('sharepointIds');
+        if (is_null($val) || $val instanceof SharepointIds) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sharepointIds'");
     }
 
     /**
@@ -206,7 +271,11 @@ class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getSize(): ?int {
-        return $this->getBackingStore()->get('size');
+        $val = $this->getBackingStore()->get('size');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'size'");
     }
 
     /**
@@ -214,7 +283,11 @@ class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable
      * @return SpecialFolder|null
     */
     public function getSpecialFolder(): ?SpecialFolder {
-        return $this->getBackingStore()->get('specialFolder');
+        $val = $this->getBackingStore()->get('specialFolder');
+        if (is_null($val) || $val instanceof SpecialFolder) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'specialFolder'");
     }
 
     /**
@@ -222,7 +295,11 @@ class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable
      * @return Video|null
     */
     public function getVideo(): ?Video {
-        return $this->getBackingStore()->get('video');
+        $val = $this->getBackingStore()->get('video');
+        if (is_null($val) || $val instanceof Video) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'video'");
     }
 
     /**
@@ -230,7 +307,11 @@ class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getWebDavUrl(): ?string {
-        return $this->getBackingStore()->get('webDavUrl');
+        $val = $this->getBackingStore()->get('webDavUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'webDavUrl'");
     }
 
     /**
@@ -238,7 +319,11 @@ class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getWebUrl(): ?string {
-        return $this->getBackingStore()->get('webUrl');
+        $val = $this->getBackingStore()->get('webUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'webUrl'");
     }
 
     /**

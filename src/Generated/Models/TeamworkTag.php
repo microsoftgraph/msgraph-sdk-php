@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class TeamworkTag extends Entity implements Parsable 
 {
@@ -29,7 +30,11 @@ class TeamworkTag extends Entity implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->getBackingStore()->get('description');
+        $val = $this->getBackingStore()->get('description');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'description'");
     }
 
     /**
@@ -37,12 +42,16 @@ class TeamworkTag extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -61,7 +70,11 @@ class TeamworkTag extends Entity implements Parsable
      * @return int|null
     */
     public function getMemberCount(): ?int {
-        return $this->getBackingStore()->get('memberCount');
+        $val = $this->getBackingStore()->get('memberCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'memberCount'");
     }
 
     /**
@@ -69,7 +82,13 @@ class TeamworkTag extends Entity implements Parsable
      * @return array<TeamworkTagMember>|null
     */
     public function getMembers(): ?array {
-        return $this->getBackingStore()->get('members');
+        $val = $this->getBackingStore()->get('members');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, TeamworkTagMember::class);
+            /** @var array<TeamworkTagMember>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'members'");
     }
 
     /**
@@ -77,7 +96,11 @@ class TeamworkTag extends Entity implements Parsable
      * @return TeamworkTagType|null
     */
     public function getTagType(): ?TeamworkTagType {
-        return $this->getBackingStore()->get('tagType');
+        $val = $this->getBackingStore()->get('tagType');
+        if (is_null($val) || $val instanceof TeamworkTagType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'tagType'");
     }
 
     /**
@@ -85,7 +108,11 @@ class TeamworkTag extends Entity implements Parsable
      * @return string|null
     */
     public function getTeamId(): ?string {
-        return $this->getBackingStore()->get('teamId');
+        $val = $this->getBackingStore()->get('teamId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'teamId'");
     }
 
     /**

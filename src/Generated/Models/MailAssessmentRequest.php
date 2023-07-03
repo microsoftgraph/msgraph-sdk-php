@@ -30,12 +30,16 @@ class MailAssessmentRequest extends ThreatAssessmentRequest implements Parsable
      * @return MailDestinationRoutingReason|null
     */
     public function getDestinationRoutingReason(): ?MailDestinationRoutingReason {
-        return $this->getBackingStore()->get('destinationRoutingReason');
+        $val = $this->getBackingStore()->get('destinationRoutingReason');
+        if (is_null($val) || $val instanceof MailDestinationRoutingReason) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'destinationRoutingReason'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -51,7 +55,11 @@ class MailAssessmentRequest extends ThreatAssessmentRequest implements Parsable
      * @return string|null
     */
     public function getMessageUri(): ?string {
-        return $this->getBackingStore()->get('messageUri');
+        $val = $this->getBackingStore()->get('messageUri');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'messageUri'");
     }
 
     /**
@@ -59,7 +67,11 @@ class MailAssessmentRequest extends ThreatAssessmentRequest implements Parsable
      * @return string|null
     */
     public function getRecipientEmail(): ?string {
-        return $this->getBackingStore()->get('recipientEmail');
+        $val = $this->getBackingStore()->get('recipientEmail');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'recipientEmail'");
     }
 
     /**

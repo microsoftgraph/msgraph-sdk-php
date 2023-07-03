@@ -6,6 +6,7 @@ use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 use Psr\Http\Message\StreamInterface;
 
 class OnlineMeeting extends Entity implements Parsable 
@@ -31,7 +32,11 @@ class OnlineMeeting extends Entity implements Parsable
      * @return bool|null
     */
     public function getAllowAttendeeToEnableCamera(): ?bool {
-        return $this->getBackingStore()->get('allowAttendeeToEnableCamera');
+        $val = $this->getBackingStore()->get('allowAttendeeToEnableCamera');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowAttendeeToEnableCamera'");
     }
 
     /**
@@ -39,7 +44,11 @@ class OnlineMeeting extends Entity implements Parsable
      * @return bool|null
     */
     public function getAllowAttendeeToEnableMic(): ?bool {
-        return $this->getBackingStore()->get('allowAttendeeToEnableMic');
+        $val = $this->getBackingStore()->get('allowAttendeeToEnableMic');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowAttendeeToEnableMic'");
     }
 
     /**
@@ -47,7 +56,11 @@ class OnlineMeeting extends Entity implements Parsable
      * @return OnlineMeetingPresenters|null
     */
     public function getAllowedPresenters(): ?OnlineMeetingPresenters {
-        return $this->getBackingStore()->get('allowedPresenters');
+        $val = $this->getBackingStore()->get('allowedPresenters');
+        if (is_null($val) || $val instanceof OnlineMeetingPresenters) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowedPresenters'");
     }
 
     /**
@@ -55,7 +68,11 @@ class OnlineMeeting extends Entity implements Parsable
      * @return MeetingChatMode|null
     */
     public function getAllowMeetingChat(): ?MeetingChatMode {
-        return $this->getBackingStore()->get('allowMeetingChat');
+        $val = $this->getBackingStore()->get('allowMeetingChat');
+        if (is_null($val) || $val instanceof MeetingChatMode) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowMeetingChat'");
     }
 
     /**
@@ -63,7 +80,11 @@ class OnlineMeeting extends Entity implements Parsable
      * @return bool|null
     */
     public function getAllowTeamworkReactions(): ?bool {
-        return $this->getBackingStore()->get('allowTeamworkReactions');
+        $val = $this->getBackingStore()->get('allowTeamworkReactions');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowTeamworkReactions'");
     }
 
     /**
@@ -71,7 +92,13 @@ class OnlineMeeting extends Entity implements Parsable
      * @return array<MeetingAttendanceReport>|null
     */
     public function getAttendanceReports(): ?array {
-        return $this->getBackingStore()->get('attendanceReports');
+        $val = $this->getBackingStore()->get('attendanceReports');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, MeetingAttendanceReport::class);
+            /** @var array<MeetingAttendanceReport>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'attendanceReports'");
     }
 
     /**
@@ -79,7 +106,11 @@ class OnlineMeeting extends Entity implements Parsable
      * @return StreamInterface|null
     */
     public function getAttendeeReport(): ?StreamInterface {
-        return $this->getBackingStore()->get('attendeeReport');
+        $val = $this->getBackingStore()->get('attendeeReport');
+        if (is_null($val) || $val instanceof StreamInterface) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'attendeeReport'");
     }
 
     /**
@@ -87,7 +118,11 @@ class OnlineMeeting extends Entity implements Parsable
      * @return AudioConferencing|null
     */
     public function getAudioConferencing(): ?AudioConferencing {
-        return $this->getBackingStore()->get('audioConferencing');
+        $val = $this->getBackingStore()->get('audioConferencing');
+        if (is_null($val) || $val instanceof AudioConferencing) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'audioConferencing'");
     }
 
     /**
@@ -95,7 +130,11 @@ class OnlineMeeting extends Entity implements Parsable
      * @return BroadcastMeetingSettings|null
     */
     public function getBroadcastSettings(): ?BroadcastMeetingSettings {
-        return $this->getBackingStore()->get('broadcastSettings');
+        $val = $this->getBackingStore()->get('broadcastSettings');
+        if (is_null($val) || $val instanceof BroadcastMeetingSettings) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'broadcastSettings'");
     }
 
     /**
@@ -103,7 +142,11 @@ class OnlineMeeting extends Entity implements Parsable
      * @return ChatInfo|null
     */
     public function getChatInfo(): ?ChatInfo {
-        return $this->getBackingStore()->get('chatInfo');
+        $val = $this->getBackingStore()->get('chatInfo');
+        if (is_null($val) || $val instanceof ChatInfo) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'chatInfo'");
     }
 
     /**
@@ -111,7 +154,11 @@ class OnlineMeeting extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreationDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('creationDateTime');
+        $val = $this->getBackingStore()->get('creationDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'creationDateTime'");
     }
 
     /**
@@ -119,7 +166,11 @@ class OnlineMeeting extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getEndDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('endDateTime');
+        $val = $this->getBackingStore()->get('endDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'endDateTime'");
     }
 
     /**
@@ -127,12 +178,16 @@ class OnlineMeeting extends Entity implements Parsable
      * @return string|null
     */
     public function getExternalId(): ?string {
-        return $this->getBackingStore()->get('externalId');
+        $val = $this->getBackingStore()->get('externalId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'externalId'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -170,7 +225,11 @@ class OnlineMeeting extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsBroadcast(): ?bool {
-        return $this->getBackingStore()->get('isBroadcast');
+        $val = $this->getBackingStore()->get('isBroadcast');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isBroadcast'");
     }
 
     /**
@@ -178,7 +237,11 @@ class OnlineMeeting extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsEntryExitAnnounced(): ?bool {
-        return $this->getBackingStore()->get('isEntryExitAnnounced');
+        $val = $this->getBackingStore()->get('isEntryExitAnnounced');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isEntryExitAnnounced'");
     }
 
     /**
@@ -186,7 +249,11 @@ class OnlineMeeting extends Entity implements Parsable
      * @return ItemBody|null
     */
     public function getJoinInformation(): ?ItemBody {
-        return $this->getBackingStore()->get('joinInformation');
+        $val = $this->getBackingStore()->get('joinInformation');
+        if (is_null($val) || $val instanceof ItemBody) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'joinInformation'");
     }
 
     /**
@@ -194,7 +261,11 @@ class OnlineMeeting extends Entity implements Parsable
      * @return JoinMeetingIdSettings|null
     */
     public function getJoinMeetingIdSettings(): ?JoinMeetingIdSettings {
-        return $this->getBackingStore()->get('joinMeetingIdSettings');
+        $val = $this->getBackingStore()->get('joinMeetingIdSettings');
+        if (is_null($val) || $val instanceof JoinMeetingIdSettings) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'joinMeetingIdSettings'");
     }
 
     /**
@@ -202,7 +273,11 @@ class OnlineMeeting extends Entity implements Parsable
      * @return string|null
     */
     public function getJoinWebUrl(): ?string {
-        return $this->getBackingStore()->get('joinWebUrl');
+        $val = $this->getBackingStore()->get('joinWebUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'joinWebUrl'");
     }
 
     /**
@@ -210,7 +285,11 @@ class OnlineMeeting extends Entity implements Parsable
      * @return LobbyBypassSettings|null
     */
     public function getLobbyBypassSettings(): ?LobbyBypassSettings {
-        return $this->getBackingStore()->get('lobbyBypassSettings');
+        $val = $this->getBackingStore()->get('lobbyBypassSettings');
+        if (is_null($val) || $val instanceof LobbyBypassSettings) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lobbyBypassSettings'");
     }
 
     /**
@@ -218,7 +297,11 @@ class OnlineMeeting extends Entity implements Parsable
      * @return MeetingParticipants|null
     */
     public function getParticipants(): ?MeetingParticipants {
-        return $this->getBackingStore()->get('participants');
+        $val = $this->getBackingStore()->get('participants');
+        if (is_null($val) || $val instanceof MeetingParticipants) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'participants'");
     }
 
     /**
@@ -226,7 +309,11 @@ class OnlineMeeting extends Entity implements Parsable
      * @return bool|null
     */
     public function getRecordAutomatically(): ?bool {
-        return $this->getBackingStore()->get('recordAutomatically');
+        $val = $this->getBackingStore()->get('recordAutomatically');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'recordAutomatically'");
     }
 
     /**
@@ -234,7 +321,11 @@ class OnlineMeeting extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getStartDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('startDateTime');
+        $val = $this->getBackingStore()->get('startDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'startDateTime'");
     }
 
     /**
@@ -242,7 +333,11 @@ class OnlineMeeting extends Entity implements Parsable
      * @return string|null
     */
     public function getSubject(): ?string {
-        return $this->getBackingStore()->get('subject');
+        $val = $this->getBackingStore()->get('subject');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'subject'");
     }
 
     /**
@@ -250,7 +345,11 @@ class OnlineMeeting extends Entity implements Parsable
      * @return string|null
     */
     public function getVideoTeleconferenceId(): ?string {
-        return $this->getBackingStore()->get('videoTeleconferenceId');
+        $val = $this->getBackingStore()->get('videoTeleconferenceId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'videoTeleconferenceId'");
     }
 
     /**
@@ -258,7 +357,11 @@ class OnlineMeeting extends Entity implements Parsable
      * @return WatermarkProtectionValues|null
     */
     public function getWatermarkProtection(): ?WatermarkProtectionValues {
-        return $this->getBackingStore()->get('watermarkProtection');
+        $val = $this->getBackingStore()->get('watermarkProtection');
+        if (is_null($val) || $val instanceof WatermarkProtectionValues) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'watermarkProtection'");
     }
 
     /**

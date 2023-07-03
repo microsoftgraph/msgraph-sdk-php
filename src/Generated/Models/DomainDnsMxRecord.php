@@ -26,7 +26,7 @@ class DomainDnsMxRecord extends DomainDnsRecord implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -41,7 +41,11 @@ class DomainDnsMxRecord extends DomainDnsRecord implements Parsable
      * @return string|null
     */
     public function getMailExchange(): ?string {
-        return $this->getBackingStore()->get('mailExchange');
+        $val = $this->getBackingStore()->get('mailExchange');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'mailExchange'");
     }
 
     /**
@@ -49,7 +53,11 @@ class DomainDnsMxRecord extends DomainDnsRecord implements Parsable
      * @return int|null
     */
     public function getPreference(): ?int {
-        return $this->getBackingStore()->get('preference');
+        $val = $this->getBackingStore()->get('preference');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'preference'");
     }
 
     /**

@@ -9,6 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 /**
  * Network Usage Rules allow enterprises to specify how managed apps use networks, such as cellular data networks.
@@ -42,7 +43,12 @@ class IosNetworkUsageRule implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -58,7 +64,11 @@ class IosNetworkUsageRule implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getCellularDataBlocked(): ?bool {
-        return $this->getBackingStore()->get('cellularDataBlocked');
+        $val = $this->getBackingStore()->get('cellularDataBlocked');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'cellularDataBlocked'");
     }
 
     /**
@@ -66,12 +76,16 @@ class IosNetworkUsageRule implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getCellularDataBlockWhenRoaming(): ?bool {
-        return $this->getBackingStore()->get('cellularDataBlockWhenRoaming');
+        $val = $this->getBackingStore()->get('cellularDataBlockWhenRoaming');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'cellularDataBlockWhenRoaming'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -88,7 +102,13 @@ class IosNetworkUsageRule implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<AppListItem>|null
     */
     public function getManagedApps(): ?array {
-        return $this->getBackingStore()->get('managedApps');
+        $val = $this->getBackingStore()->get('managedApps');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AppListItem::class);
+            /** @var array<AppListItem>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'managedApps'");
     }
 
     /**
@@ -96,7 +116,11 @@ class IosNetworkUsageRule implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**

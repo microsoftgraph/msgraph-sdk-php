@@ -27,7 +27,7 @@ class WorkflowVersion extends WorkflowBase implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -41,7 +41,11 @@ class WorkflowVersion extends WorkflowBase implements Parsable
      * @return int|null
     */
     public function getVersionNumber(): ?int {
-        return $this->getBackingStore()->get('versionNumber');
+        $val = $this->getBackingStore()->get('versionNumber');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'versionNumber'");
     }
 
     /**

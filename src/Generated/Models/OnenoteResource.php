@@ -31,7 +31,11 @@ class OnenoteResource extends OnenoteEntityBaseModel implements Parsable
      * @return StreamInterface|null
     */
     public function getContent(): ?StreamInterface {
-        return $this->getBackingStore()->get('content');
+        $val = $this->getBackingStore()->get('content');
+        if (is_null($val) || $val instanceof StreamInterface) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'content'");
     }
 
     /**
@@ -39,12 +43,16 @@ class OnenoteResource extends OnenoteEntityBaseModel implements Parsable
      * @return string|null
     */
     public function getContentUrl(): ?string {
-        return $this->getBackingStore()->get('contentUrl');
+        $val = $this->getBackingStore()->get('contentUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'contentUrl'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;

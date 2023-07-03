@@ -32,7 +32,11 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
      * @return bool|null
     */
     public function getAllowWindows11Upgrade(): ?bool {
-        return $this->getBackingStore()->get('allowWindows11Upgrade');
+        $val = $this->getBackingStore()->get('allowWindows11Upgrade');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowWindows11Upgrade'");
     }
 
     /**
@@ -40,7 +44,11 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
      * @return AutomaticUpdateMode|null
     */
     public function getAutomaticUpdateMode(): ?AutomaticUpdateMode {
-        return $this->getBackingStore()->get('automaticUpdateMode');
+        $val = $this->getBackingStore()->get('automaticUpdateMode');
+        if (is_null($val) || $val instanceof AutomaticUpdateMode) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'automaticUpdateMode'");
     }
 
     /**
@@ -48,7 +56,11 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
      * @return AutoRestartNotificationDismissalMethod|null
     */
     public function getAutoRestartNotificationDismissal(): ?AutoRestartNotificationDismissalMethod {
-        return $this->getBackingStore()->get('autoRestartNotificationDismissal');
+        $val = $this->getBackingStore()->get('autoRestartNotificationDismissal');
+        if (is_null($val) || $val instanceof AutoRestartNotificationDismissalMethod) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'autoRestartNotificationDismissal'");
     }
 
     /**
@@ -56,7 +68,11 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
      * @return WindowsUpdateType|null
     */
     public function getBusinessReadyUpdatesOnly(): ?WindowsUpdateType {
-        return $this->getBackingStore()->get('businessReadyUpdatesOnly');
+        $val = $this->getBackingStore()->get('businessReadyUpdatesOnly');
+        if (is_null($val) || $val instanceof WindowsUpdateType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'businessReadyUpdatesOnly'");
     }
 
     /**
@@ -64,7 +80,11 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
      * @return int|null
     */
     public function getDeadlineForFeatureUpdatesInDays(): ?int {
-        return $this->getBackingStore()->get('deadlineForFeatureUpdatesInDays');
+        $val = $this->getBackingStore()->get('deadlineForFeatureUpdatesInDays');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deadlineForFeatureUpdatesInDays'");
     }
 
     /**
@@ -72,7 +92,11 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
      * @return int|null
     */
     public function getDeadlineForQualityUpdatesInDays(): ?int {
-        return $this->getBackingStore()->get('deadlineForQualityUpdatesInDays');
+        $val = $this->getBackingStore()->get('deadlineForQualityUpdatesInDays');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deadlineForQualityUpdatesInDays'");
     }
 
     /**
@@ -80,7 +104,11 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
      * @return int|null
     */
     public function getDeadlineGracePeriodInDays(): ?int {
-        return $this->getBackingStore()->get('deadlineGracePeriodInDays');
+        $val = $this->getBackingStore()->get('deadlineGracePeriodInDays');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deadlineGracePeriodInDays'");
     }
 
     /**
@@ -88,7 +116,11 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
      * @return WindowsDeliveryOptimizationMode|null
     */
     public function getDeliveryOptimizationMode(): ?WindowsDeliveryOptimizationMode {
-        return $this->getBackingStore()->get('deliveryOptimizationMode');
+        $val = $this->getBackingStore()->get('deliveryOptimizationMode');
+        if (is_null($val) || $val instanceof WindowsDeliveryOptimizationMode) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deliveryOptimizationMode'");
     }
 
     /**
@@ -96,7 +128,11 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
      * @return bool|null
     */
     public function getDriversExcluded(): ?bool {
-        return $this->getBackingStore()->get('driversExcluded');
+        $val = $this->getBackingStore()->get('driversExcluded');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'driversExcluded'");
     }
 
     /**
@@ -104,7 +140,11 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
      * @return int|null
     */
     public function getEngagedRestartDeadlineInDays(): ?int {
-        return $this->getBackingStore()->get('engagedRestartDeadlineInDays');
+        $val = $this->getBackingStore()->get('engagedRestartDeadlineInDays');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'engagedRestartDeadlineInDays'");
     }
 
     /**
@@ -112,7 +152,11 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
      * @return int|null
     */
     public function getEngagedRestartSnoozeScheduleInDays(): ?int {
-        return $this->getBackingStore()->get('engagedRestartSnoozeScheduleInDays');
+        $val = $this->getBackingStore()->get('engagedRestartSnoozeScheduleInDays');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'engagedRestartSnoozeScheduleInDays'");
     }
 
     /**
@@ -120,7 +164,11 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
      * @return int|null
     */
     public function getEngagedRestartTransitionScheduleInDays(): ?int {
-        return $this->getBackingStore()->get('engagedRestartTransitionScheduleInDays');
+        $val = $this->getBackingStore()->get('engagedRestartTransitionScheduleInDays');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'engagedRestartTransitionScheduleInDays'");
     }
 
     /**
@@ -128,7 +176,11 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
      * @return int|null
     */
     public function getFeatureUpdatesDeferralPeriodInDays(): ?int {
-        return $this->getBackingStore()->get('featureUpdatesDeferralPeriodInDays');
+        $val = $this->getBackingStore()->get('featureUpdatesDeferralPeriodInDays');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'featureUpdatesDeferralPeriodInDays'");
     }
 
     /**
@@ -136,7 +188,11 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
      * @return bool|null
     */
     public function getFeatureUpdatesPaused(): ?bool {
-        return $this->getBackingStore()->get('featureUpdatesPaused');
+        $val = $this->getBackingStore()->get('featureUpdatesPaused');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'featureUpdatesPaused'");
     }
 
     /**
@@ -144,7 +200,11 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
      * @return DateTime|null
     */
     public function getFeatureUpdatesPauseExpiryDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('featureUpdatesPauseExpiryDateTime');
+        $val = $this->getBackingStore()->get('featureUpdatesPauseExpiryDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'featureUpdatesPauseExpiryDateTime'");
     }
 
     /**
@@ -152,7 +212,11 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
      * @return Date|null
     */
     public function getFeatureUpdatesPauseStartDate(): ?Date {
-        return $this->getBackingStore()->get('featureUpdatesPauseStartDate');
+        $val = $this->getBackingStore()->get('featureUpdatesPauseStartDate');
+        if (is_null($val) || $val instanceof Date) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'featureUpdatesPauseStartDate'");
     }
 
     /**
@@ -160,7 +224,11 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
      * @return DateTime|null
     */
     public function getFeatureUpdatesRollbackStartDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('featureUpdatesRollbackStartDateTime');
+        $val = $this->getBackingStore()->get('featureUpdatesRollbackStartDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'featureUpdatesRollbackStartDateTime'");
     }
 
     /**
@@ -168,7 +236,11 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
      * @return int|null
     */
     public function getFeatureUpdatesRollbackWindowInDays(): ?int {
-        return $this->getBackingStore()->get('featureUpdatesRollbackWindowInDays');
+        $val = $this->getBackingStore()->get('featureUpdatesRollbackWindowInDays');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'featureUpdatesRollbackWindowInDays'");
     }
 
     /**
@@ -176,12 +248,16 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
      * @return bool|null
     */
     public function getFeatureUpdatesWillBeRolledBack(): ?bool {
-        return $this->getBackingStore()->get('featureUpdatesWillBeRolledBack');
+        $val = $this->getBackingStore()->get('featureUpdatesWillBeRolledBack');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'featureUpdatesWillBeRolledBack'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -230,7 +306,11 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
      * @return WindowsUpdateInstallScheduleType|null
     */
     public function getInstallationSchedule(): ?WindowsUpdateInstallScheduleType {
-        return $this->getBackingStore()->get('installationSchedule');
+        $val = $this->getBackingStore()->get('installationSchedule');
+        if (is_null($val) || $val instanceof WindowsUpdateInstallScheduleType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'installationSchedule'");
     }
 
     /**
@@ -238,7 +318,11 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
      * @return bool|null
     */
     public function getMicrosoftUpdateServiceAllowed(): ?bool {
-        return $this->getBackingStore()->get('microsoftUpdateServiceAllowed');
+        $val = $this->getBackingStore()->get('microsoftUpdateServiceAllowed');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'microsoftUpdateServiceAllowed'");
     }
 
     /**
@@ -246,7 +330,11 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
      * @return bool|null
     */
     public function getPostponeRebootUntilAfterDeadline(): ?bool {
-        return $this->getBackingStore()->get('postponeRebootUntilAfterDeadline');
+        $val = $this->getBackingStore()->get('postponeRebootUntilAfterDeadline');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'postponeRebootUntilAfterDeadline'");
     }
 
     /**
@@ -254,7 +342,11 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
      * @return PrereleaseFeatures|null
     */
     public function getPrereleaseFeatures(): ?PrereleaseFeatures {
-        return $this->getBackingStore()->get('prereleaseFeatures');
+        $val = $this->getBackingStore()->get('prereleaseFeatures');
+        if (is_null($val) || $val instanceof PrereleaseFeatures) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'prereleaseFeatures'");
     }
 
     /**
@@ -262,7 +354,11 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
      * @return int|null
     */
     public function getQualityUpdatesDeferralPeriodInDays(): ?int {
-        return $this->getBackingStore()->get('qualityUpdatesDeferralPeriodInDays');
+        $val = $this->getBackingStore()->get('qualityUpdatesDeferralPeriodInDays');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'qualityUpdatesDeferralPeriodInDays'");
     }
 
     /**
@@ -270,7 +366,11 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
      * @return bool|null
     */
     public function getQualityUpdatesPaused(): ?bool {
-        return $this->getBackingStore()->get('qualityUpdatesPaused');
+        $val = $this->getBackingStore()->get('qualityUpdatesPaused');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'qualityUpdatesPaused'");
     }
 
     /**
@@ -278,7 +378,11 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
      * @return DateTime|null
     */
     public function getQualityUpdatesPauseExpiryDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('qualityUpdatesPauseExpiryDateTime');
+        $val = $this->getBackingStore()->get('qualityUpdatesPauseExpiryDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'qualityUpdatesPauseExpiryDateTime'");
     }
 
     /**
@@ -286,7 +390,11 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
      * @return Date|null
     */
     public function getQualityUpdatesPauseStartDate(): ?Date {
-        return $this->getBackingStore()->get('qualityUpdatesPauseStartDate');
+        $val = $this->getBackingStore()->get('qualityUpdatesPauseStartDate');
+        if (is_null($val) || $val instanceof Date) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'qualityUpdatesPauseStartDate'");
     }
 
     /**
@@ -294,7 +402,11 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
      * @return DateTime|null
     */
     public function getQualityUpdatesRollbackStartDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('qualityUpdatesRollbackStartDateTime');
+        $val = $this->getBackingStore()->get('qualityUpdatesRollbackStartDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'qualityUpdatesRollbackStartDateTime'");
     }
 
     /**
@@ -302,7 +414,11 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
      * @return bool|null
     */
     public function getQualityUpdatesWillBeRolledBack(): ?bool {
-        return $this->getBackingStore()->get('qualityUpdatesWillBeRolledBack');
+        $val = $this->getBackingStore()->get('qualityUpdatesWillBeRolledBack');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'qualityUpdatesWillBeRolledBack'");
     }
 
     /**
@@ -310,7 +426,11 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
      * @return int|null
     */
     public function getScheduleImminentRestartWarningInMinutes(): ?int {
-        return $this->getBackingStore()->get('scheduleImminentRestartWarningInMinutes');
+        $val = $this->getBackingStore()->get('scheduleImminentRestartWarningInMinutes');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'scheduleImminentRestartWarningInMinutes'");
     }
 
     /**
@@ -318,7 +438,11 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
      * @return int|null
     */
     public function getScheduleRestartWarningInHours(): ?int {
-        return $this->getBackingStore()->get('scheduleRestartWarningInHours');
+        $val = $this->getBackingStore()->get('scheduleRestartWarningInHours');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'scheduleRestartWarningInHours'");
     }
 
     /**
@@ -326,7 +450,11 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
      * @return bool|null
     */
     public function getSkipChecksBeforeRestart(): ?bool {
-        return $this->getBackingStore()->get('skipChecksBeforeRestart');
+        $val = $this->getBackingStore()->get('skipChecksBeforeRestart');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'skipChecksBeforeRestart'");
     }
 
     /**
@@ -334,7 +462,11 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
      * @return WindowsUpdateNotificationDisplayOption|null
     */
     public function getUpdateNotificationLevel(): ?WindowsUpdateNotificationDisplayOption {
-        return $this->getBackingStore()->get('updateNotificationLevel');
+        $val = $this->getBackingStore()->get('updateNotificationLevel');
+        if (is_null($val) || $val instanceof WindowsUpdateNotificationDisplayOption) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'updateNotificationLevel'");
     }
 
     /**
@@ -342,7 +474,11 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
      * @return WindowsUpdateForBusinessUpdateWeeks|null
     */
     public function getUpdateWeeks(): ?WindowsUpdateForBusinessUpdateWeeks {
-        return $this->getBackingStore()->get('updateWeeks');
+        $val = $this->getBackingStore()->get('updateWeeks');
+        if (is_null($val) || $val instanceof WindowsUpdateForBusinessUpdateWeeks) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'updateWeeks'");
     }
 
     /**
@@ -350,7 +486,11 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
      * @return Enablement|null
     */
     public function getUserPauseAccess(): ?Enablement {
-        return $this->getBackingStore()->get('userPauseAccess');
+        $val = $this->getBackingStore()->get('userPauseAccess');
+        if (is_null($val) || $val instanceof Enablement) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userPauseAccess'");
     }
 
     /**
@@ -358,7 +498,11 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
      * @return Enablement|null
     */
     public function getUserWindowsUpdateScanAccess(): ?Enablement {
-        return $this->getBackingStore()->get('userWindowsUpdateScanAccess');
+        $val = $this->getBackingStore()->get('userWindowsUpdateScanAccess');
+        if (is_null($val) || $val instanceof Enablement) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userWindowsUpdateScanAccess'");
     }
 
     /**

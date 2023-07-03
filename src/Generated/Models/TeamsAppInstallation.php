@@ -32,12 +32,25 @@ class TeamsAppInstallation extends Entity implements Parsable
     }
 
     /**
+     * Gets the consentedPermissionSet property value. The consentedPermissionSet property
+     * @return TeamsAppPermissionSet|null
+    */
+    public function getConsentedPermissionSet(): ?TeamsAppPermissionSet {
+        $val = $this->getBackingStore()->get('consentedPermissionSet');
+        if (is_null($val) || $val instanceof TeamsAppPermissionSet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'consentedPermissionSet'");
+    }
+
+    /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'consentedPermissionSet' => fn(ParseNode $n) => $o->setConsentedPermissionSet($n->getObjectValue([TeamsAppPermissionSet::class, 'createFromDiscriminatorValue'])),
             'teamsApp' => fn(ParseNode $n) => $o->setTeamsApp($n->getObjectValue([TeamsApp::class, 'createFromDiscriminatorValue'])),
             'teamsAppDefinition' => fn(ParseNode $n) => $o->setTeamsAppDefinition($n->getObjectValue([TeamsAppDefinition::class, 'createFromDiscriminatorValue'])),
         ]);
@@ -48,7 +61,11 @@ class TeamsAppInstallation extends Entity implements Parsable
      * @return TeamsApp|null
     */
     public function getTeamsApp(): ?TeamsApp {
-        return $this->getBackingStore()->get('teamsApp');
+        $val = $this->getBackingStore()->get('teamsApp');
+        if (is_null($val) || $val instanceof TeamsApp) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'teamsApp'");
     }
 
     /**
@@ -56,7 +73,11 @@ class TeamsAppInstallation extends Entity implements Parsable
      * @return TeamsAppDefinition|null
     */
     public function getTeamsAppDefinition(): ?TeamsAppDefinition {
-        return $this->getBackingStore()->get('teamsAppDefinition');
+        $val = $this->getBackingStore()->get('teamsAppDefinition');
+        if (is_null($val) || $val instanceof TeamsAppDefinition) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'teamsAppDefinition'");
     }
 
     /**
@@ -65,8 +86,17 @@ class TeamsAppInstallation extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeObjectValue('consentedPermissionSet', $this->getConsentedPermissionSet());
         $writer->writeObjectValue('teamsApp', $this->getTeamsApp());
         $writer->writeObjectValue('teamsAppDefinition', $this->getTeamsAppDefinition());
+    }
+
+    /**
+     * Sets the consentedPermissionSet property value. The consentedPermissionSet property
+     * @param TeamsAppPermissionSet|null $value Value to set for the consentedPermissionSet property.
+    */
+    public function setConsentedPermissionSet(?TeamsAppPermissionSet $value): void {
+        $this->getBackingStore()->set('consentedPermissionSet', $value);
     }
 
     /**

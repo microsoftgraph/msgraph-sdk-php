@@ -38,7 +38,11 @@ class EventMessage extends Message implements Parsable
      * @return DateTimeTimeZone|null
     */
     public function getEndDateTime(): ?DateTimeTimeZone {
-        return $this->getBackingStore()->get('endDateTime');
+        $val = $this->getBackingStore()->get('endDateTime');
+        if (is_null($val) || $val instanceof DateTimeTimeZone) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'endDateTime'");
     }
 
     /**
@@ -46,12 +50,16 @@ class EventMessage extends Message implements Parsable
      * @return Event|null
     */
     public function getEvent(): ?Event {
-        return $this->getBackingStore()->get('event');
+        $val = $this->getBackingStore()->get('event');
+        if (is_null($val) || $val instanceof Event) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'event'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -74,7 +82,11 @@ class EventMessage extends Message implements Parsable
      * @return bool|null
     */
     public function getIsAllDay(): ?bool {
-        return $this->getBackingStore()->get('isAllDay');
+        $val = $this->getBackingStore()->get('isAllDay');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isAllDay'");
     }
 
     /**
@@ -82,7 +94,11 @@ class EventMessage extends Message implements Parsable
      * @return bool|null
     */
     public function getIsDelegated(): ?bool {
-        return $this->getBackingStore()->get('isDelegated');
+        $val = $this->getBackingStore()->get('isDelegated');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isDelegated'");
     }
 
     /**
@@ -90,7 +106,11 @@ class EventMessage extends Message implements Parsable
      * @return bool|null
     */
     public function getIsOutOfDate(): ?bool {
-        return $this->getBackingStore()->get('isOutOfDate');
+        $val = $this->getBackingStore()->get('isOutOfDate');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isOutOfDate'");
     }
 
     /**
@@ -98,7 +118,11 @@ class EventMessage extends Message implements Parsable
      * @return Location|null
     */
     public function getLocation(): ?Location {
-        return $this->getBackingStore()->get('location');
+        $val = $this->getBackingStore()->get('location');
+        if (is_null($val) || $val instanceof Location) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'location'");
     }
 
     /**
@@ -106,7 +130,11 @@ class EventMessage extends Message implements Parsable
      * @return MeetingMessageType|null
     */
     public function getMeetingMessageType(): ?MeetingMessageType {
-        return $this->getBackingStore()->get('meetingMessageType');
+        $val = $this->getBackingStore()->get('meetingMessageType');
+        if (is_null($val) || $val instanceof MeetingMessageType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'meetingMessageType'");
     }
 
     /**
@@ -114,7 +142,11 @@ class EventMessage extends Message implements Parsable
      * @return PatternedRecurrence|null
     */
     public function getRecurrence(): ?PatternedRecurrence {
-        return $this->getBackingStore()->get('recurrence');
+        $val = $this->getBackingStore()->get('recurrence');
+        if (is_null($val) || $val instanceof PatternedRecurrence) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'recurrence'");
     }
 
     /**
@@ -122,7 +154,11 @@ class EventMessage extends Message implements Parsable
      * @return DateTimeTimeZone|null
     */
     public function getStartDateTime(): ?DateTimeTimeZone {
-        return $this->getBackingStore()->get('startDateTime');
+        $val = $this->getBackingStore()->get('startDateTime');
+        if (is_null($val) || $val instanceof DateTimeTimeZone) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'startDateTime'");
     }
 
     /**
@@ -130,7 +166,11 @@ class EventMessage extends Message implements Parsable
      * @return EventType|null
     */
     public function getType(): ?EventType {
-        return $this->getBackingStore()->get('type');
+        $val = $this->getBackingStore()->get('type');
+        if (is_null($val) || $val instanceof EventType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'type'");
     }
 
     /**

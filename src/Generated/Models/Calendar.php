@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class Calendar extends Entity implements Parsable 
 {
@@ -29,7 +30,13 @@ class Calendar extends Entity implements Parsable
      * @return array<OnlineMeetingProviderType>|null
     */
     public function getAllowedOnlineMeetingProviders(): ?array {
-        return $this->getBackingStore()->get('allowedOnlineMeetingProviders');
+        $val = $this->getBackingStore()->get('allowedOnlineMeetingProviders');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, OnlineMeetingProviderType::class);
+            /** @var array<OnlineMeetingProviderType>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowedOnlineMeetingProviders'");
     }
 
     /**
@@ -37,7 +44,13 @@ class Calendar extends Entity implements Parsable
      * @return array<CalendarPermission>|null
     */
     public function getCalendarPermissions(): ?array {
-        return $this->getBackingStore()->get('calendarPermissions');
+        $val = $this->getBackingStore()->get('calendarPermissions');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, CalendarPermission::class);
+            /** @var array<CalendarPermission>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'calendarPermissions'");
     }
 
     /**
@@ -45,7 +58,13 @@ class Calendar extends Entity implements Parsable
      * @return array<Event>|null
     */
     public function getCalendarView(): ?array {
-        return $this->getBackingStore()->get('calendarView');
+        $val = $this->getBackingStore()->get('calendarView');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Event::class);
+            /** @var array<Event>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'calendarView'");
     }
 
     /**
@@ -53,7 +72,11 @@ class Calendar extends Entity implements Parsable
      * @return bool|null
     */
     public function getCanEdit(): ?bool {
-        return $this->getBackingStore()->get('canEdit');
+        $val = $this->getBackingStore()->get('canEdit');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'canEdit'");
     }
 
     /**
@@ -61,7 +84,11 @@ class Calendar extends Entity implements Parsable
      * @return bool|null
     */
     public function getCanShare(): ?bool {
-        return $this->getBackingStore()->get('canShare');
+        $val = $this->getBackingStore()->get('canShare');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'canShare'");
     }
 
     /**
@@ -69,7 +96,11 @@ class Calendar extends Entity implements Parsable
      * @return bool|null
     */
     public function getCanViewPrivateItems(): ?bool {
-        return $this->getBackingStore()->get('canViewPrivateItems');
+        $val = $this->getBackingStore()->get('canViewPrivateItems');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'canViewPrivateItems'");
     }
 
     /**
@@ -77,7 +108,11 @@ class Calendar extends Entity implements Parsable
      * @return string|null
     */
     public function getChangeKey(): ?string {
-        return $this->getBackingStore()->get('changeKey');
+        $val = $this->getBackingStore()->get('changeKey');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'changeKey'");
     }
 
     /**
@@ -85,7 +120,11 @@ class Calendar extends Entity implements Parsable
      * @return CalendarColor|null
     */
     public function getColor(): ?CalendarColor {
-        return $this->getBackingStore()->get('color');
+        $val = $this->getBackingStore()->get('color');
+        if (is_null($val) || $val instanceof CalendarColor) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'color'");
     }
 
     /**
@@ -93,7 +132,11 @@ class Calendar extends Entity implements Parsable
      * @return OnlineMeetingProviderType|null
     */
     public function getDefaultOnlineMeetingProvider(): ?OnlineMeetingProviderType {
-        return $this->getBackingStore()->get('defaultOnlineMeetingProvider');
+        $val = $this->getBackingStore()->get('defaultOnlineMeetingProvider');
+        if (is_null($val) || $val instanceof OnlineMeetingProviderType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'defaultOnlineMeetingProvider'");
     }
 
     /**
@@ -101,12 +144,18 @@ class Calendar extends Entity implements Parsable
      * @return array<Event>|null
     */
     public function getEvents(): ?array {
-        return $this->getBackingStore()->get('events');
+        $val = $this->getBackingStore()->get('events');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Event::class);
+            /** @var array<Event>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'events'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -137,7 +186,11 @@ class Calendar extends Entity implements Parsable
      * @return string|null
     */
     public function getHexColor(): ?string {
-        return $this->getBackingStore()->get('hexColor');
+        $val = $this->getBackingStore()->get('hexColor');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'hexColor'");
     }
 
     /**
@@ -145,7 +198,11 @@ class Calendar extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsDefaultCalendar(): ?bool {
-        return $this->getBackingStore()->get('isDefaultCalendar');
+        $val = $this->getBackingStore()->get('isDefaultCalendar');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isDefaultCalendar'");
     }
 
     /**
@@ -153,7 +210,11 @@ class Calendar extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsRemovable(): ?bool {
-        return $this->getBackingStore()->get('isRemovable');
+        $val = $this->getBackingStore()->get('isRemovable');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isRemovable'");
     }
 
     /**
@@ -161,7 +222,11 @@ class Calendar extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsTallyingResponses(): ?bool {
-        return $this->getBackingStore()->get('isTallyingResponses');
+        $val = $this->getBackingStore()->get('isTallyingResponses');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isTallyingResponses'");
     }
 
     /**
@@ -169,7 +234,13 @@ class Calendar extends Entity implements Parsable
      * @return array<MultiValueLegacyExtendedProperty>|null
     */
     public function getMultiValueExtendedProperties(): ?array {
-        return $this->getBackingStore()->get('multiValueExtendedProperties');
+        $val = $this->getBackingStore()->get('multiValueExtendedProperties');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, MultiValueLegacyExtendedProperty::class);
+            /** @var array<MultiValueLegacyExtendedProperty>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'multiValueExtendedProperties'");
     }
 
     /**
@@ -177,7 +248,11 @@ class Calendar extends Entity implements Parsable
      * @return string|null
     */
     public function getName(): ?string {
-        return $this->getBackingStore()->get('name');
+        $val = $this->getBackingStore()->get('name');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'name'");
     }
 
     /**
@@ -185,7 +260,11 @@ class Calendar extends Entity implements Parsable
      * @return EmailAddress|null
     */
     public function getOwner(): ?EmailAddress {
-        return $this->getBackingStore()->get('owner');
+        $val = $this->getBackingStore()->get('owner');
+        if (is_null($val) || $val instanceof EmailAddress) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'owner'");
     }
 
     /**
@@ -193,7 +272,13 @@ class Calendar extends Entity implements Parsable
      * @return array<SingleValueLegacyExtendedProperty>|null
     */
     public function getSingleValueExtendedProperties(): ?array {
-        return $this->getBackingStore()->get('singleValueExtendedProperties');
+        $val = $this->getBackingStore()->get('singleValueExtendedProperties');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, SingleValueLegacyExtendedProperty::class);
+            /** @var array<SingleValueLegacyExtendedProperty>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'singleValueExtendedProperties'");
     }
 
     /**

@@ -5,11 +5,12 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class AdministrativeUnit extends DirectoryObject implements Parsable 
 {
     /**
-     * Instantiates a new administrativeUnit and sets the default values.
+     * Instantiates a new AdministrativeUnit and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -30,7 +31,11 @@ class AdministrativeUnit extends DirectoryObject implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->getBackingStore()->get('description');
+        $val = $this->getBackingStore()->get('description');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'description'");
     }
 
     /**
@@ -38,7 +43,11 @@ class AdministrativeUnit extends DirectoryObject implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
@@ -46,12 +55,18 @@ class AdministrativeUnit extends DirectoryObject implements Parsable
      * @return array<Extension>|null
     */
     public function getExtensions(): ?array {
-        return $this->getBackingStore()->get('extensions');
+        $val = $this->getBackingStore()->get('extensions');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Extension::class);
+            /** @var array<Extension>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'extensions'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -70,7 +85,13 @@ class AdministrativeUnit extends DirectoryObject implements Parsable
      * @return array<DirectoryObject>|null
     */
     public function getMembers(): ?array {
-        return $this->getBackingStore()->get('members');
+        $val = $this->getBackingStore()->get('members');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, DirectoryObject::class);
+            /** @var array<DirectoryObject>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'members'");
     }
 
     /**
@@ -78,7 +99,13 @@ class AdministrativeUnit extends DirectoryObject implements Parsable
      * @return array<ScopedRoleMembership>|null
     */
     public function getScopedRoleMembers(): ?array {
-        return $this->getBackingStore()->get('scopedRoleMembers');
+        $val = $this->getBackingStore()->get('scopedRoleMembers');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ScopedRoleMembership::class);
+            /** @var array<ScopedRoleMembership>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'scopedRoleMembers'");
     }
 
     /**
@@ -86,7 +113,11 @@ class AdministrativeUnit extends DirectoryObject implements Parsable
      * @return string|null
     */
     public function getVisibility(): ?string {
-        return $this->getBackingStore()->get('visibility');
+        $val = $this->getBackingStore()->get('visibility');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'visibility'");
     }
 
     /**

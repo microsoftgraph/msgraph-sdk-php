@@ -39,7 +39,12 @@ class TeamFunSettings implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -47,7 +52,11 @@ class TeamFunSettings implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getAllowCustomMemes(): ?bool {
-        return $this->getBackingStore()->get('allowCustomMemes');
+        $val = $this->getBackingStore()->get('allowCustomMemes');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowCustomMemes'");
     }
 
     /**
@@ -55,7 +64,11 @@ class TeamFunSettings implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getAllowGiphy(): ?bool {
-        return $this->getBackingStore()->get('allowGiphy');
+        $val = $this->getBackingStore()->get('allowGiphy');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowGiphy'");
     }
 
     /**
@@ -63,7 +76,11 @@ class TeamFunSettings implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getAllowStickersAndMemes(): ?bool {
-        return $this->getBackingStore()->get('allowStickersAndMemes');
+        $val = $this->getBackingStore()->get('allowStickersAndMemes');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowStickersAndMemes'");
     }
 
     /**
@@ -76,7 +93,7 @@ class TeamFunSettings implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -94,7 +111,11 @@ class TeamFunSettings implements AdditionalDataHolder, BackedModel, Parsable
      * @return GiphyRatingType|null
     */
     public function getGiphyContentRating(): ?GiphyRatingType {
-        return $this->getBackingStore()->get('giphyContentRating');
+        $val = $this->getBackingStore()->get('giphyContentRating');
+        if (is_null($val) || $val instanceof GiphyRatingType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'giphyContentRating'");
     }
 
     /**
@@ -102,7 +123,11 @@ class TeamFunSettings implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**

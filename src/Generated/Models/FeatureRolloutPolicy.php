@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class FeatureRolloutPolicy extends Entity implements Parsable 
 {
@@ -29,7 +30,13 @@ class FeatureRolloutPolicy extends Entity implements Parsable
      * @return array<DirectoryObject>|null
     */
     public function getAppliesTo(): ?array {
-        return $this->getBackingStore()->get('appliesTo');
+        $val = $this->getBackingStore()->get('appliesTo');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, DirectoryObject::class);
+            /** @var array<DirectoryObject>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'appliesTo'");
     }
 
     /**
@@ -37,7 +44,11 @@ class FeatureRolloutPolicy extends Entity implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->getBackingStore()->get('description');
+        $val = $this->getBackingStore()->get('description');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'description'");
     }
 
     /**
@@ -45,7 +56,11 @@ class FeatureRolloutPolicy extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
@@ -53,12 +68,16 @@ class FeatureRolloutPolicy extends Entity implements Parsable
      * @return StagedFeatureName|null
     */
     public function getFeature(): ?StagedFeatureName {
-        return $this->getBackingStore()->get('feature');
+        $val = $this->getBackingStore()->get('feature');
+        if (is_null($val) || $val instanceof StagedFeatureName) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'feature'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -77,7 +96,11 @@ class FeatureRolloutPolicy extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsAppliedToOrganization(): ?bool {
-        return $this->getBackingStore()->get('isAppliedToOrganization');
+        $val = $this->getBackingStore()->get('isAppliedToOrganization');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isAppliedToOrganization'");
     }
 
     /**
@@ -85,7 +108,11 @@ class FeatureRolloutPolicy extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsEnabled(): ?bool {
-        return $this->getBackingStore()->get('isEnabled');
+        $val = $this->getBackingStore()->get('isEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isEnabled'");
     }
 
     /**

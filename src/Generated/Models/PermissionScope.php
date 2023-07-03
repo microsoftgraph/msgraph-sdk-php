@@ -39,7 +39,12 @@ class PermissionScope implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -47,7 +52,11 @@ class PermissionScope implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getAdminConsentDescription(): ?string {
-        return $this->getBackingStore()->get('adminConsentDescription');
+        $val = $this->getBackingStore()->get('adminConsentDescription');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'adminConsentDescription'");
     }
 
     /**
@@ -55,7 +64,11 @@ class PermissionScope implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getAdminConsentDisplayName(): ?string {
-        return $this->getBackingStore()->get('adminConsentDisplayName');
+        $val = $this->getBackingStore()->get('adminConsentDisplayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'adminConsentDisplayName'");
     }
 
     /**
@@ -68,7 +81,7 @@ class PermissionScope implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -91,7 +104,11 @@ class PermissionScope implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getId(): ?string {
-        return $this->getBackingStore()->get('id');
+        $val = $this->getBackingStore()->get('id');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'id'");
     }
 
     /**
@@ -99,7 +116,11 @@ class PermissionScope implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getIsEnabled(): ?bool {
-        return $this->getBackingStore()->get('isEnabled');
+        $val = $this->getBackingStore()->get('isEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isEnabled'");
     }
 
     /**
@@ -107,7 +128,11 @@ class PermissionScope implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -115,7 +140,11 @@ class PermissionScope implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOrigin(): ?string {
-        return $this->getBackingStore()->get('origin');
+        $val = $this->getBackingStore()->get('origin');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'origin'");
     }
 
     /**
@@ -123,7 +152,11 @@ class PermissionScope implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getType(): ?string {
-        return $this->getBackingStore()->get('type');
+        $val = $this->getBackingStore()->get('type');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'type'");
     }
 
     /**
@@ -131,7 +164,11 @@ class PermissionScope implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getUserConsentDescription(): ?string {
-        return $this->getBackingStore()->get('userConsentDescription');
+        $val = $this->getBackingStore()->get('userConsentDescription');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userConsentDescription'");
     }
 
     /**
@@ -139,7 +176,11 @@ class PermissionScope implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getUserConsentDisplayName(): ?string {
-        return $this->getBackingStore()->get('userConsentDisplayName');
+        $val = $this->getBackingStore()->get('userConsentDisplayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userConsentDisplayName'");
     }
 
     /**
@@ -147,7 +188,11 @@ class PermissionScope implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getValue(): ?string {
-        return $this->getBackingStore()->get('value');
+        $val = $this->getBackingStore()->get('value');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'value'");
     }
 
     /**

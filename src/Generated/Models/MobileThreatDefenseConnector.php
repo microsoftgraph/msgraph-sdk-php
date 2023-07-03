@@ -33,7 +33,11 @@ class MobileThreatDefenseConnector extends Entity implements Parsable
      * @return bool|null
     */
     public function getAllowPartnerToCollectIOSApplicationMetadata(): ?bool {
-        return $this->getBackingStore()->get('allowPartnerToCollectIOSApplicationMetadata');
+        $val = $this->getBackingStore()->get('allowPartnerToCollectIOSApplicationMetadata');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowPartnerToCollectIOSApplicationMetadata'");
     }
 
     /**
@@ -41,7 +45,11 @@ class MobileThreatDefenseConnector extends Entity implements Parsable
      * @return bool|null
     */
     public function getAllowPartnerToCollectIOSPersonalApplicationMetadata(): ?bool {
-        return $this->getBackingStore()->get('allowPartnerToCollectIOSPersonalApplicationMetadata');
+        $val = $this->getBackingStore()->get('allowPartnerToCollectIOSPersonalApplicationMetadata');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowPartnerToCollectIOSPersonalApplicationMetadata'");
     }
 
     /**
@@ -49,7 +57,11 @@ class MobileThreatDefenseConnector extends Entity implements Parsable
      * @return bool|null
     */
     public function getAndroidDeviceBlockedOnMissingPartnerData(): ?bool {
-        return $this->getBackingStore()->get('androidDeviceBlockedOnMissingPartnerData');
+        $val = $this->getBackingStore()->get('androidDeviceBlockedOnMissingPartnerData');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'androidDeviceBlockedOnMissingPartnerData'");
     }
 
     /**
@@ -57,7 +69,11 @@ class MobileThreatDefenseConnector extends Entity implements Parsable
      * @return bool|null
     */
     public function getAndroidEnabled(): ?bool {
-        return $this->getBackingStore()->get('androidEnabled');
+        $val = $this->getBackingStore()->get('androidEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'androidEnabled'");
     }
 
     /**
@@ -65,12 +81,16 @@ class MobileThreatDefenseConnector extends Entity implements Parsable
      * @return bool|null
     */
     public function getAndroidMobileApplicationManagementEnabled(): ?bool {
-        return $this->getBackingStore()->get('androidMobileApplicationManagementEnabled');
+        $val = $this->getBackingStore()->get('androidMobileApplicationManagementEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'androidMobileApplicationManagementEnabled'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -98,7 +118,11 @@ class MobileThreatDefenseConnector extends Entity implements Parsable
      * @return bool|null
     */
     public function getIosDeviceBlockedOnMissingPartnerData(): ?bool {
-        return $this->getBackingStore()->get('iosDeviceBlockedOnMissingPartnerData');
+        $val = $this->getBackingStore()->get('iosDeviceBlockedOnMissingPartnerData');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'iosDeviceBlockedOnMissingPartnerData'");
     }
 
     /**
@@ -106,7 +130,11 @@ class MobileThreatDefenseConnector extends Entity implements Parsable
      * @return bool|null
     */
     public function getIosEnabled(): ?bool {
-        return $this->getBackingStore()->get('iosEnabled');
+        $val = $this->getBackingStore()->get('iosEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'iosEnabled'");
     }
 
     /**
@@ -114,7 +142,11 @@ class MobileThreatDefenseConnector extends Entity implements Parsable
      * @return bool|null
     */
     public function getIosMobileApplicationManagementEnabled(): ?bool {
-        return $this->getBackingStore()->get('iosMobileApplicationManagementEnabled');
+        $val = $this->getBackingStore()->get('iosMobileApplicationManagementEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'iosMobileApplicationManagementEnabled'");
     }
 
     /**
@@ -122,7 +154,11 @@ class MobileThreatDefenseConnector extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastHeartbeatDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('lastHeartbeatDateTime');
+        $val = $this->getBackingStore()->get('lastHeartbeatDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastHeartbeatDateTime'");
     }
 
     /**
@@ -130,7 +166,11 @@ class MobileThreatDefenseConnector extends Entity implements Parsable
      * @return bool|null
     */
     public function getMicrosoftDefenderForEndpointAttachEnabled(): ?bool {
-        return $this->getBackingStore()->get('microsoftDefenderForEndpointAttachEnabled');
+        $val = $this->getBackingStore()->get('microsoftDefenderForEndpointAttachEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'microsoftDefenderForEndpointAttachEnabled'");
     }
 
     /**
@@ -138,7 +178,11 @@ class MobileThreatDefenseConnector extends Entity implements Parsable
      * @return MobileThreatPartnerTenantState|null
     */
     public function getPartnerState(): ?MobileThreatPartnerTenantState {
-        return $this->getBackingStore()->get('partnerState');
+        $val = $this->getBackingStore()->get('partnerState');
+        if (is_null($val) || $val instanceof MobileThreatPartnerTenantState) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'partnerState'");
     }
 
     /**
@@ -146,7 +190,11 @@ class MobileThreatDefenseConnector extends Entity implements Parsable
      * @return int|null
     */
     public function getPartnerUnresponsivenessThresholdInDays(): ?int {
-        return $this->getBackingStore()->get('partnerUnresponsivenessThresholdInDays');
+        $val = $this->getBackingStore()->get('partnerUnresponsivenessThresholdInDays');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'partnerUnresponsivenessThresholdInDays'");
     }
 
     /**
@@ -154,7 +202,11 @@ class MobileThreatDefenseConnector extends Entity implements Parsable
      * @return bool|null
     */
     public function getPartnerUnsupportedOsVersionBlocked(): ?bool {
-        return $this->getBackingStore()->get('partnerUnsupportedOsVersionBlocked');
+        $val = $this->getBackingStore()->get('partnerUnsupportedOsVersionBlocked');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'partnerUnsupportedOsVersionBlocked'");
     }
 
     /**
@@ -162,7 +214,11 @@ class MobileThreatDefenseConnector extends Entity implements Parsable
      * @return bool|null
     */
     public function getWindowsDeviceBlockedOnMissingPartnerData(): ?bool {
-        return $this->getBackingStore()->get('windowsDeviceBlockedOnMissingPartnerData');
+        $val = $this->getBackingStore()->get('windowsDeviceBlockedOnMissingPartnerData');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'windowsDeviceBlockedOnMissingPartnerData'");
     }
 
     /**
@@ -170,7 +226,11 @@ class MobileThreatDefenseConnector extends Entity implements Parsable
      * @return bool|null
     */
     public function getWindowsEnabled(): ?bool {
-        return $this->getBackingStore()->get('windowsEnabled');
+        $val = $this->getBackingStore()->get('windowsEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'windowsEnabled'");
     }
 
     /**

@@ -31,7 +31,11 @@ class CallRecordingEventMessageDetail extends EventMessageDetail implements Pars
      * @return string|null
     */
     public function getCallId(): ?string {
-        return $this->getBackingStore()->get('callId');
+        $val = $this->getBackingStore()->get('callId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'callId'");
     }
 
     /**
@@ -39,7 +43,11 @@ class CallRecordingEventMessageDetail extends EventMessageDetail implements Pars
      * @return string|null
     */
     public function getCallRecordingDisplayName(): ?string {
-        return $this->getBackingStore()->get('callRecordingDisplayName');
+        $val = $this->getBackingStore()->get('callRecordingDisplayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'callRecordingDisplayName'");
     }
 
     /**
@@ -47,7 +55,11 @@ class CallRecordingEventMessageDetail extends EventMessageDetail implements Pars
      * @return DateInterval|null
     */
     public function getCallRecordingDuration(): ?DateInterval {
-        return $this->getBackingStore()->get('callRecordingDuration');
+        $val = $this->getBackingStore()->get('callRecordingDuration');
+        if (is_null($val) || $val instanceof DateInterval) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'callRecordingDuration'");
     }
 
     /**
@@ -55,7 +67,11 @@ class CallRecordingEventMessageDetail extends EventMessageDetail implements Pars
      * @return CallRecordingStatus|null
     */
     public function getCallRecordingStatus(): ?CallRecordingStatus {
-        return $this->getBackingStore()->get('callRecordingStatus');
+        $val = $this->getBackingStore()->get('callRecordingStatus');
+        if (is_null($val) || $val instanceof CallRecordingStatus) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'callRecordingStatus'");
     }
 
     /**
@@ -63,12 +79,16 @@ class CallRecordingEventMessageDetail extends EventMessageDetail implements Pars
      * @return string|null
     */
     public function getCallRecordingUrl(): ?string {
-        return $this->getBackingStore()->get('callRecordingUrl');
+        $val = $this->getBackingStore()->get('callRecordingUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'callRecordingUrl'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -88,7 +108,11 @@ class CallRecordingEventMessageDetail extends EventMessageDetail implements Pars
      * @return IdentitySet|null
     */
     public function getInitiator(): ?IdentitySet {
-        return $this->getBackingStore()->get('initiator');
+        $val = $this->getBackingStore()->get('initiator');
+        if (is_null($val) || $val instanceof IdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'initiator'");
     }
 
     /**
@@ -96,7 +120,11 @@ class CallRecordingEventMessageDetail extends EventMessageDetail implements Pars
      * @return IdentitySet|null
     */
     public function getMeetingOrganizer(): ?IdentitySet {
-        return $this->getBackingStore()->get('meetingOrganizer');
+        $val = $this->getBackingStore()->get('meetingOrganizer');
+        if (is_null($val) || $val instanceof IdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'meetingOrganizer'");
     }
 
     /**

@@ -26,7 +26,7 @@ class WorkbookChartPoint extends Entity implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -41,7 +41,11 @@ class WorkbookChartPoint extends Entity implements Parsable
      * @return WorkbookChartPointFormat|null
     */
     public function getFormat(): ?WorkbookChartPointFormat {
-        return $this->getBackingStore()->get('format');
+        $val = $this->getBackingStore()->get('format');
+        if (is_null($val) || $val instanceof WorkbookChartPointFormat) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'format'");
     }
 
     /**
@@ -49,7 +53,11 @@ class WorkbookChartPoint extends Entity implements Parsable
      * @return Json|null
     */
     public function getValue(): ?Json {
-        return $this->getBackingStore()->get('value');
+        $val = $this->getBackingStore()->get('value');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'value'");
     }
 
     /**

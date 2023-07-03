@@ -40,7 +40,12 @@ class AmorDegrcPostRequestBody implements AdditionalDataHolder, BackedModel, Par
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -56,7 +61,11 @@ class AmorDegrcPostRequestBody implements AdditionalDataHolder, BackedModel, Par
      * @return Json|null
     */
     public function getBasis(): ?Json {
-        return $this->getBackingStore()->get('basis');
+        $val = $this->getBackingStore()->get('basis');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'basis'");
     }
 
     /**
@@ -64,7 +73,11 @@ class AmorDegrcPostRequestBody implements AdditionalDataHolder, BackedModel, Par
      * @return Json|null
     */
     public function getCost(): ?Json {
-        return $this->getBackingStore()->get('cost');
+        $val = $this->getBackingStore()->get('cost');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'cost'");
     }
 
     /**
@@ -72,12 +85,16 @@ class AmorDegrcPostRequestBody implements AdditionalDataHolder, BackedModel, Par
      * @return Json|null
     */
     public function getDatePurchased(): ?Json {
-        return $this->getBackingStore()->get('datePurchased');
+        $val = $this->getBackingStore()->get('datePurchased');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'datePurchased'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -97,7 +114,11 @@ class AmorDegrcPostRequestBody implements AdditionalDataHolder, BackedModel, Par
      * @return Json|null
     */
     public function getFirstPeriod(): ?Json {
-        return $this->getBackingStore()->get('firstPeriod');
+        $val = $this->getBackingStore()->get('firstPeriod');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'firstPeriod'");
     }
 
     /**
@@ -105,7 +126,11 @@ class AmorDegrcPostRequestBody implements AdditionalDataHolder, BackedModel, Par
      * @return Json|null
     */
     public function getPeriod(): ?Json {
-        return $this->getBackingStore()->get('period');
+        $val = $this->getBackingStore()->get('period');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'period'");
     }
 
     /**
@@ -113,7 +138,11 @@ class AmorDegrcPostRequestBody implements AdditionalDataHolder, BackedModel, Par
      * @return Json|null
     */
     public function getRate(): ?Json {
-        return $this->getBackingStore()->get('rate');
+        $val = $this->getBackingStore()->get('rate');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'rate'");
     }
 
     /**
@@ -121,7 +150,11 @@ class AmorDegrcPostRequestBody implements AdditionalDataHolder, BackedModel, Par
      * @return Json|null
     */
     public function getSalvage(): ?Json {
-        return $this->getBackingStore()->get('salvage');
+        $val = $this->getBackingStore()->get('salvage');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'salvage'");
     }
 
     /**

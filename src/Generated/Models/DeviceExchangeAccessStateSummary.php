@@ -42,7 +42,12 @@ class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, BackedMo
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -50,7 +55,11 @@ class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, BackedMo
      * @return int|null
     */
     public function getAllowedDeviceCount(): ?int {
-        return $this->getBackingStore()->get('allowedDeviceCount');
+        $val = $this->getBackingStore()->get('allowedDeviceCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowedDeviceCount'");
     }
 
     /**
@@ -66,12 +75,16 @@ class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, BackedMo
      * @return int|null
     */
     public function getBlockedDeviceCount(): ?int {
-        return $this->getBackingStore()->get('blockedDeviceCount');
+        $val = $this->getBackingStore()->get('blockedDeviceCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'blockedDeviceCount'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -90,7 +103,11 @@ class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, BackedMo
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -98,7 +115,11 @@ class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, BackedMo
      * @return int|null
     */
     public function getQuarantinedDeviceCount(): ?int {
-        return $this->getBackingStore()->get('quarantinedDeviceCount');
+        $val = $this->getBackingStore()->get('quarantinedDeviceCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'quarantinedDeviceCount'");
     }
 
     /**
@@ -106,7 +127,11 @@ class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, BackedMo
      * @return int|null
     */
     public function getUnavailableDeviceCount(): ?int {
-        return $this->getBackingStore()->get('unavailableDeviceCount');
+        $val = $this->getBackingStore()->get('unavailableDeviceCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'unavailableDeviceCount'");
     }
 
     /**
@@ -114,7 +139,11 @@ class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, BackedMo
      * @return int|null
     */
     public function getUnknownDeviceCount(): ?int {
-        return $this->getBackingStore()->get('unknownDeviceCount');
+        $val = $this->getBackingStore()->get('unknownDeviceCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'unknownDeviceCount'");
     }
 
     /**

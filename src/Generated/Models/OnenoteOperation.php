@@ -29,12 +29,16 @@ class OnenoteOperation extends Operation implements Parsable
      * @return OnenoteOperationError|null
     */
     public function getError(): ?OnenoteOperationError {
-        return $this->getBackingStore()->get('error');
+        $val = $this->getBackingStore()->get('error');
+        if (is_null($val) || $val instanceof OnenoteOperationError) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'error'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -51,7 +55,11 @@ class OnenoteOperation extends Operation implements Parsable
      * @return string|null
     */
     public function getPercentComplete(): ?string {
-        return $this->getBackingStore()->get('percentComplete');
+        $val = $this->getBackingStore()->get('percentComplete');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'percentComplete'");
     }
 
     /**
@@ -59,7 +67,11 @@ class OnenoteOperation extends Operation implements Parsable
      * @return string|null
     */
     public function getResourceId(): ?string {
-        return $this->getBackingStore()->get('resourceId');
+        $val = $this->getBackingStore()->get('resourceId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resourceId'");
     }
 
     /**
@@ -67,7 +79,11 @@ class OnenoteOperation extends Operation implements Parsable
      * @return string|null
     */
     public function getResourceLocation(): ?string {
-        return $this->getBackingStore()->get('resourceLocation');
+        $val = $this->getBackingStore()->get('resourceLocation');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resourceLocation'");
     }
 
     /**

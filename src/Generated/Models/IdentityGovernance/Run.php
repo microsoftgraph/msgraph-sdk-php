@@ -7,6 +7,7 @@ use Microsoft\Graph\Generated\Models\Entity;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class Run extends Entity implements Parsable 
 {
@@ -31,7 +32,11 @@ class Run extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCompletedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('completedDateTime');
+        $val = $this->getBackingStore()->get('completedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'completedDateTime'");
     }
 
     /**
@@ -39,7 +44,11 @@ class Run extends Entity implements Parsable
      * @return int|null
     */
     public function getFailedTasksCount(): ?int {
-        return $this->getBackingStore()->get('failedTasksCount');
+        $val = $this->getBackingStore()->get('failedTasksCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'failedTasksCount'");
     }
 
     /**
@@ -47,12 +56,16 @@ class Run extends Entity implements Parsable
      * @return int|null
     */
     public function getFailedUsersCount(): ?int {
-        return $this->getBackingStore()->get('failedUsersCount');
+        $val = $this->getBackingStore()->get('failedUsersCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'failedUsersCount'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -79,7 +92,11 @@ class Run extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastUpdatedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('lastUpdatedDateTime');
+        $val = $this->getBackingStore()->get('lastUpdatedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastUpdatedDateTime'");
     }
 
     /**
@@ -87,7 +104,11 @@ class Run extends Entity implements Parsable
      * @return LifecycleWorkflowProcessingStatus|null
     */
     public function getProcessingStatus(): ?LifecycleWorkflowProcessingStatus {
-        return $this->getBackingStore()->get('processingStatus');
+        $val = $this->getBackingStore()->get('processingStatus');
+        if (is_null($val) || $val instanceof LifecycleWorkflowProcessingStatus) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'processingStatus'");
     }
 
     /**
@@ -95,7 +116,11 @@ class Run extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getScheduledDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('scheduledDateTime');
+        $val = $this->getBackingStore()->get('scheduledDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'scheduledDateTime'");
     }
 
     /**
@@ -103,7 +128,11 @@ class Run extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getStartedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('startedDateTime');
+        $val = $this->getBackingStore()->get('startedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'startedDateTime'");
     }
 
     /**
@@ -111,7 +140,11 @@ class Run extends Entity implements Parsable
      * @return int|null
     */
     public function getSuccessfulUsersCount(): ?int {
-        return $this->getBackingStore()->get('successfulUsersCount');
+        $val = $this->getBackingStore()->get('successfulUsersCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'successfulUsersCount'");
     }
 
     /**
@@ -119,7 +152,13 @@ class Run extends Entity implements Parsable
      * @return array<TaskProcessingResult>|null
     */
     public function getTaskProcessingResults(): ?array {
-        return $this->getBackingStore()->get('taskProcessingResults');
+        $val = $this->getBackingStore()->get('taskProcessingResults');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, TaskProcessingResult::class);
+            /** @var array<TaskProcessingResult>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'taskProcessingResults'");
     }
 
     /**
@@ -127,7 +166,11 @@ class Run extends Entity implements Parsable
      * @return int|null
     */
     public function getTotalTasksCount(): ?int {
-        return $this->getBackingStore()->get('totalTasksCount');
+        $val = $this->getBackingStore()->get('totalTasksCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'totalTasksCount'");
     }
 
     /**
@@ -135,7 +178,11 @@ class Run extends Entity implements Parsable
      * @return int|null
     */
     public function getTotalUnprocessedTasksCount(): ?int {
-        return $this->getBackingStore()->get('totalUnprocessedTasksCount');
+        $val = $this->getBackingStore()->get('totalUnprocessedTasksCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'totalUnprocessedTasksCount'");
     }
 
     /**
@@ -143,7 +190,11 @@ class Run extends Entity implements Parsable
      * @return int|null
     */
     public function getTotalUsersCount(): ?int {
-        return $this->getBackingStore()->get('totalUsersCount');
+        $val = $this->getBackingStore()->get('totalUsersCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'totalUsersCount'");
     }
 
     /**
@@ -151,7 +202,13 @@ class Run extends Entity implements Parsable
      * @return array<UserProcessingResult>|null
     */
     public function getUserProcessingResults(): ?array {
-        return $this->getBackingStore()->get('userProcessingResults');
+        $val = $this->getBackingStore()->get('userProcessingResults');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, UserProcessingResult::class);
+            /** @var array<UserProcessingResult>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userProcessingResults'");
     }
 
     /**
@@ -159,7 +216,11 @@ class Run extends Entity implements Parsable
      * @return WorkflowExecutionType|null
     */
     public function getWorkflowExecutionType(): ?WorkflowExecutionType {
-        return $this->getBackingStore()->get('workflowExecutionType');
+        $val = $this->getBackingStore()->get('workflowExecutionType');
+        if (is_null($val) || $val instanceof WorkflowExecutionType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'workflowExecutionType'");
     }
 
     /**

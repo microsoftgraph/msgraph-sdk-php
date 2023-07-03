@@ -9,6 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class AccessReviewStageSettings implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -39,7 +40,12 @@ class AccessReviewStageSettings implements AdditionalDataHolder, BackedModel, Pa
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -55,7 +61,13 @@ class AccessReviewStageSettings implements AdditionalDataHolder, BackedModel, Pa
      * @return array<string>|null
     */
     public function getDecisionsThatWillMoveToNextStage(): ?array {
-        return $this->getBackingStore()->get('decisionsThatWillMoveToNextStage');
+        $val = $this->getBackingStore()->get('decisionsThatWillMoveToNextStage');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'decisionsThatWillMoveToNextStage'");
     }
 
     /**
@@ -63,7 +75,13 @@ class AccessReviewStageSettings implements AdditionalDataHolder, BackedModel, Pa
      * @return array<string>|null
     */
     public function getDependsOn(): ?array {
-        return $this->getBackingStore()->get('dependsOn');
+        $val = $this->getBackingStore()->get('dependsOn');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'dependsOn'");
     }
 
     /**
@@ -71,7 +89,11 @@ class AccessReviewStageSettings implements AdditionalDataHolder, BackedModel, Pa
      * @return int|null
     */
     public function getDurationInDays(): ?int {
-        return $this->getBackingStore()->get('durationInDays');
+        $val = $this->getBackingStore()->get('durationInDays');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'durationInDays'");
     }
 
     /**
@@ -79,18 +101,38 @@ class AccessReviewStageSettings implements AdditionalDataHolder, BackedModel, Pa
      * @return array<AccessReviewReviewerScope>|null
     */
     public function getFallbackReviewers(): ?array {
-        return $this->getBackingStore()->get('fallbackReviewers');
+        $val = $this->getBackingStore()->get('fallbackReviewers');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AccessReviewReviewerScope::class);
+            /** @var array<AccessReviewReviewerScope>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'fallbackReviewers'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'decisionsThatWillMoveToNextStage' => fn(ParseNode $n) => $o->setDecisionsThatWillMoveToNextStage($n->getCollectionOfPrimitiveValues()),
-            'dependsOn' => fn(ParseNode $n) => $o->setDependsOn($n->getCollectionOfPrimitiveValues()),
+            'decisionsThatWillMoveToNextStage' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setDecisionsThatWillMoveToNextStage($val);
+            },
+            'dependsOn' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setDependsOn($val);
+            },
             'durationInDays' => fn(ParseNode $n) => $o->setDurationInDays($n->getIntegerValue()),
             'fallbackReviewers' => fn(ParseNode $n) => $o->setFallbackReviewers($n->getCollectionOfObjectValues([AccessReviewReviewerScope::class, 'createFromDiscriminatorValue'])),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
@@ -106,7 +148,11 @@ class AccessReviewStageSettings implements AdditionalDataHolder, BackedModel, Pa
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -114,7 +160,13 @@ class AccessReviewStageSettings implements AdditionalDataHolder, BackedModel, Pa
      * @return array<AccessReviewRecommendationInsightSetting>|null
     */
     public function getRecommendationInsightSettings(): ?array {
-        return $this->getBackingStore()->get('recommendationInsightSettings');
+        $val = $this->getBackingStore()->get('recommendationInsightSettings');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AccessReviewRecommendationInsightSetting::class);
+            /** @var array<AccessReviewRecommendationInsightSetting>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'recommendationInsightSettings'");
     }
 
     /**
@@ -122,7 +174,11 @@ class AccessReviewStageSettings implements AdditionalDataHolder, BackedModel, Pa
      * @return bool|null
     */
     public function getRecommendationsEnabled(): ?bool {
-        return $this->getBackingStore()->get('recommendationsEnabled');
+        $val = $this->getBackingStore()->get('recommendationsEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'recommendationsEnabled'");
     }
 
     /**
@@ -130,7 +186,13 @@ class AccessReviewStageSettings implements AdditionalDataHolder, BackedModel, Pa
      * @return array<AccessReviewReviewerScope>|null
     */
     public function getReviewers(): ?array {
-        return $this->getBackingStore()->get('reviewers');
+        $val = $this->getBackingStore()->get('reviewers');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AccessReviewReviewerScope::class);
+            /** @var array<AccessReviewReviewerScope>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'reviewers'");
     }
 
     /**
@@ -138,7 +200,11 @@ class AccessReviewStageSettings implements AdditionalDataHolder, BackedModel, Pa
      * @return string|null
     */
     public function getStageId(): ?string {
-        return $this->getBackingStore()->get('stageId');
+        $val = $this->getBackingStore()->get('stageId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'stageId'");
     }
 
     /**

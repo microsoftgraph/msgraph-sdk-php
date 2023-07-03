@@ -35,7 +35,7 @@ class ExternalActivity extends Entity implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -51,7 +51,11 @@ class ExternalActivity extends Entity implements Parsable
      * @return Identity|null
     */
     public function getPerformedBy(): ?Identity {
-        return $this->getBackingStore()->get('performedBy');
+        $val = $this->getBackingStore()->get('performedBy');
+        if (is_null($val) || $val instanceof Identity) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'performedBy'");
     }
 
     /**
@@ -59,7 +63,11 @@ class ExternalActivity extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getStartDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('startDateTime');
+        $val = $this->getBackingStore()->get('startDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'startDateTime'");
     }
 
     /**
@@ -67,7 +75,11 @@ class ExternalActivity extends Entity implements Parsable
      * @return ExternalActivityType|null
     */
     public function getType(): ?ExternalActivityType {
-        return $this->getBackingStore()->get('type');
+        $val = $this->getBackingStore()->get('type');
+        if (is_null($val) || $val instanceof ExternalActivityType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'type'");
     }
 
     /**

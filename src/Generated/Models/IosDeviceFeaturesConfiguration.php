@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBase implements Parsable 
 {
@@ -30,12 +31,16 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
      * @return string|null
     */
     public function getAssetTagTemplate(): ?string {
-        return $this->getBackingStore()->get('assetTagTemplate');
+        $val = $this->getBackingStore()->get('assetTagTemplate');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'assetTagTemplate'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -53,7 +58,13 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
      * @return array<IosHomeScreenItem>|null
     */
     public function getHomeScreenDockIcons(): ?array {
-        return $this->getBackingStore()->get('homeScreenDockIcons');
+        $val = $this->getBackingStore()->get('homeScreenDockIcons');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, IosHomeScreenItem::class);
+            /** @var array<IosHomeScreenItem>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'homeScreenDockIcons'");
     }
 
     /**
@@ -61,7 +72,13 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
      * @return array<IosHomeScreenPage>|null
     */
     public function getHomeScreenPages(): ?array {
-        return $this->getBackingStore()->get('homeScreenPages');
+        $val = $this->getBackingStore()->get('homeScreenPages');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, IosHomeScreenPage::class);
+            /** @var array<IosHomeScreenPage>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'homeScreenPages'");
     }
 
     /**
@@ -69,7 +86,11 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
      * @return string|null
     */
     public function getLockScreenFootnote(): ?string {
-        return $this->getBackingStore()->get('lockScreenFootnote');
+        $val = $this->getBackingStore()->get('lockScreenFootnote');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lockScreenFootnote'");
     }
 
     /**
@@ -77,7 +98,13 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
      * @return array<IosNotificationSettings>|null
     */
     public function getNotificationSettings(): ?array {
-        return $this->getBackingStore()->get('notificationSettings');
+        $val = $this->getBackingStore()->get('notificationSettings');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, IosNotificationSettings::class);
+            /** @var array<IosNotificationSettings>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'notificationSettings'");
     }
 
     /**

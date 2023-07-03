@@ -40,7 +40,12 @@ class NegBinom_DistPostRequestBody implements AdditionalDataHolder, BackedModel,
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -56,12 +61,16 @@ class NegBinom_DistPostRequestBody implements AdditionalDataHolder, BackedModel,
      * @return Json|null
     */
     public function getCumulative(): ?Json {
-        return $this->getBackingStore()->get('cumulative');
+        $val = $this->getBackingStore()->get('cumulative');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'cumulative'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -78,7 +87,11 @@ class NegBinom_DistPostRequestBody implements AdditionalDataHolder, BackedModel,
      * @return Json|null
     */
     public function getNumberF(): ?Json {
-        return $this->getBackingStore()->get('numberF');
+        $val = $this->getBackingStore()->get('numberF');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'numberF'");
     }
 
     /**
@@ -86,7 +99,11 @@ class NegBinom_DistPostRequestBody implements AdditionalDataHolder, BackedModel,
      * @return Json|null
     */
     public function getNumberS(): ?Json {
-        return $this->getBackingStore()->get('numberS');
+        $val = $this->getBackingStore()->get('numberS');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'numberS'");
     }
 
     /**
@@ -94,7 +111,11 @@ class NegBinom_DistPostRequestBody implements AdditionalDataHolder, BackedModel,
      * @return Json|null
     */
     public function getProbabilityS(): ?Json {
-        return $this->getBackingStore()->get('probabilityS');
+        $val = $this->getBackingStore()->get('probabilityS');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'probabilityS'");
     }
 
     /**

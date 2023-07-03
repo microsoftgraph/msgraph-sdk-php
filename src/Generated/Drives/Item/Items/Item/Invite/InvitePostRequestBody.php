@@ -10,6 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class InvitePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -40,7 +41,12 @@ class InvitePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -56,12 +62,16 @@ class InvitePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getExpirationDateTime(): ?string {
-        return $this->getBackingStore()->get('expirationDateTime');
+        $val = $this->getBackingStore()->get('expirationDateTime');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'expirationDateTime'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -72,7 +82,14 @@ class InvitePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
             'recipients' => fn(ParseNode $n) => $o->setRecipients($n->getCollectionOfObjectValues([DriveRecipient::class, 'createFromDiscriminatorValue'])),
             'requireSignIn' => fn(ParseNode $n) => $o->setRequireSignIn($n->getBooleanValue()),
             'retainInheritedPermissions' => fn(ParseNode $n) => $o->setRetainInheritedPermissions($n->getBooleanValue()),
-            'roles' => fn(ParseNode $n) => $o->setRoles($n->getCollectionOfPrimitiveValues()),
+            'roles' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setRoles($val);
+            },
             'sendInvitation' => fn(ParseNode $n) => $o->setSendInvitation($n->getBooleanValue()),
         ];
     }
@@ -82,7 +99,11 @@ class InvitePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getMessage(): ?string {
-        return $this->getBackingStore()->get('message');
+        $val = $this->getBackingStore()->get('message');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'message'");
     }
 
     /**
@@ -90,7 +111,11 @@ class InvitePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getPassword(): ?string {
-        return $this->getBackingStore()->get('password');
+        $val = $this->getBackingStore()->get('password');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'password'");
     }
 
     /**
@@ -98,7 +123,13 @@ class InvitePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
      * @return array<DriveRecipient>|null
     */
     public function getRecipients(): ?array {
-        return $this->getBackingStore()->get('recipients');
+        $val = $this->getBackingStore()->get('recipients');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, DriveRecipient::class);
+            /** @var array<DriveRecipient>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'recipients'");
     }
 
     /**
@@ -106,7 +137,11 @@ class InvitePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
      * @return bool|null
     */
     public function getRequireSignIn(): ?bool {
-        return $this->getBackingStore()->get('requireSignIn');
+        $val = $this->getBackingStore()->get('requireSignIn');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'requireSignIn'");
     }
 
     /**
@@ -114,7 +149,11 @@ class InvitePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
      * @return bool|null
     */
     public function getRetainInheritedPermissions(): ?bool {
-        return $this->getBackingStore()->get('retainInheritedPermissions');
+        $val = $this->getBackingStore()->get('retainInheritedPermissions');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'retainInheritedPermissions'");
     }
 
     /**
@@ -122,7 +161,13 @@ class InvitePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
      * @return array<string>|null
     */
     public function getRoles(): ?array {
-        return $this->getBackingStore()->get('roles');
+        $val = $this->getBackingStore()->get('roles');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'roles'");
     }
 
     /**
@@ -130,7 +175,11 @@ class InvitePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
      * @return bool|null
     */
     public function getSendInvitation(): ?bool {
-        return $this->getBackingStore()->get('sendInvitation');
+        $val = $this->getBackingStore()->get('sendInvitation');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sendInvitation'");
     }
 
     /**

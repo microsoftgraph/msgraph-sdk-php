@@ -30,12 +30,16 @@ class IPv6CidrRange extends IpRange implements Parsable
      * @return string|null
     */
     public function getCidrAddress(): ?string {
-        return $this->getBackingStore()->get('cidrAddress');
+        $val = $this->getBackingStore()->get('cidrAddress');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'cidrAddress'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;

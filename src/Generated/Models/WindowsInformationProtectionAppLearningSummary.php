@@ -32,7 +32,11 @@ class WindowsInformationProtectionAppLearningSummary extends Entity implements P
      * @return string|null
     */
     public function getApplicationName(): ?string {
-        return $this->getBackingStore()->get('applicationName');
+        $val = $this->getBackingStore()->get('applicationName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'applicationName'");
     }
 
     /**
@@ -40,7 +44,11 @@ class WindowsInformationProtectionAppLearningSummary extends Entity implements P
      * @return ApplicationType|null
     */
     public function getApplicationType(): ?ApplicationType {
-        return $this->getBackingStore()->get('applicationType');
+        $val = $this->getBackingStore()->get('applicationType');
+        if (is_null($val) || $val instanceof ApplicationType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'applicationType'");
     }
 
     /**
@@ -48,12 +56,16 @@ class WindowsInformationProtectionAppLearningSummary extends Entity implements P
      * @return int|null
     */
     public function getDeviceCount(): ?int {
-        return $this->getBackingStore()->get('deviceCount');
+        $val = $this->getBackingStore()->get('deviceCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deviceCount'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;

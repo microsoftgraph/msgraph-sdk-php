@@ -39,7 +39,12 @@ class FileDetails implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -52,7 +57,7 @@ class FileDetails implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -74,7 +79,11 @@ class FileDetails implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getFileName(): ?string {
-        return $this->getBackingStore()->get('fileName');
+        $val = $this->getBackingStore()->get('fileName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'fileName'");
     }
 
     /**
@@ -82,7 +91,11 @@ class FileDetails implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getFilePath(): ?string {
-        return $this->getBackingStore()->get('filePath');
+        $val = $this->getBackingStore()->get('filePath');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'filePath'");
     }
 
     /**
@@ -90,7 +103,11 @@ class FileDetails implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getFilePublisher(): ?string {
-        return $this->getBackingStore()->get('filePublisher');
+        $val = $this->getBackingStore()->get('filePublisher');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'filePublisher'");
     }
 
     /**
@@ -98,7 +115,11 @@ class FileDetails implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getFileSize(): ?int {
-        return $this->getBackingStore()->get('fileSize');
+        $val = $this->getBackingStore()->get('fileSize');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'fileSize'");
     }
 
     /**
@@ -106,7 +127,11 @@ class FileDetails implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getIssuer(): ?string {
-        return $this->getBackingStore()->get('issuer');
+        $val = $this->getBackingStore()->get('issuer');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'issuer'");
     }
 
     /**
@@ -114,7 +139,11 @@ class FileDetails implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -122,7 +151,11 @@ class FileDetails implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getSha1(): ?string {
-        return $this->getBackingStore()->get('sha1');
+        $val = $this->getBackingStore()->get('sha1');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sha1'");
     }
 
     /**
@@ -130,7 +163,11 @@ class FileDetails implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getSha256(): ?string {
-        return $this->getBackingStore()->get('sha256');
+        $val = $this->getBackingStore()->get('sha256');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sha256'");
     }
 
     /**
@@ -138,7 +175,11 @@ class FileDetails implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getSigner(): ?string {
-        return $this->getBackingStore()->get('signer');
+        $val = $this->getBackingStore()->get('signer');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'signer'");
     }
 
     /**

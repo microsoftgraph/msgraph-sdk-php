@@ -30,7 +30,11 @@ class TeamsAsyncOperation extends Entity implements Parsable
      * @return int|null
     */
     public function getAttemptsCount(): ?int {
-        return $this->getBackingStore()->get('attemptsCount');
+        $val = $this->getBackingStore()->get('attemptsCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'attemptsCount'");
     }
 
     /**
@@ -38,7 +42,11 @@ class TeamsAsyncOperation extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('createdDateTime');
+        $val = $this->getBackingStore()->get('createdDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdDateTime'");
     }
 
     /**
@@ -46,12 +54,16 @@ class TeamsAsyncOperation extends Entity implements Parsable
      * @return OperationError|null
     */
     public function getError(): ?OperationError {
-        return $this->getBackingStore()->get('error');
+        $val = $this->getBackingStore()->get('error');
+        if (is_null($val) || $val instanceof OperationError) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'error'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -72,7 +84,11 @@ class TeamsAsyncOperation extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastActionDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('lastActionDateTime');
+        $val = $this->getBackingStore()->get('lastActionDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastActionDateTime'");
     }
 
     /**
@@ -80,7 +96,11 @@ class TeamsAsyncOperation extends Entity implements Parsable
      * @return TeamsAsyncOperationType|null
     */
     public function getOperationType(): ?TeamsAsyncOperationType {
-        return $this->getBackingStore()->get('operationType');
+        $val = $this->getBackingStore()->get('operationType');
+        if (is_null($val) || $val instanceof TeamsAsyncOperationType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'operationType'");
     }
 
     /**
@@ -88,7 +108,11 @@ class TeamsAsyncOperation extends Entity implements Parsable
      * @return TeamsAsyncOperationStatus|null
     */
     public function getStatus(): ?TeamsAsyncOperationStatus {
-        return $this->getBackingStore()->get('status');
+        $val = $this->getBackingStore()->get('status');
+        if (is_null($val) || $val instanceof TeamsAsyncOperationStatus) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
     }
 
     /**
@@ -96,7 +120,11 @@ class TeamsAsyncOperation extends Entity implements Parsable
      * @return string|null
     */
     public function getTargetResourceId(): ?string {
-        return $this->getBackingStore()->get('targetResourceId');
+        $val = $this->getBackingStore()->get('targetResourceId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'targetResourceId'");
     }
 
     /**
@@ -104,7 +132,11 @@ class TeamsAsyncOperation extends Entity implements Parsable
      * @return string|null
     */
     public function getTargetResourceLocation(): ?string {
-        return $this->getBackingStore()->get('targetResourceLocation');
+        $val = $this->getBackingStore()->get('targetResourceLocation');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'targetResourceLocation'");
     }
 
     /**

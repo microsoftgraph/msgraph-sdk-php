@@ -27,7 +27,7 @@ class AccessPackageTextInputQuestion extends AccessPackageQuestion implements Pa
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -42,7 +42,11 @@ class AccessPackageTextInputQuestion extends AccessPackageQuestion implements Pa
      * @return bool|null
     */
     public function getIsSingleLineQuestion(): ?bool {
-        return $this->getBackingStore()->get('isSingleLineQuestion');
+        $val = $this->getBackingStore()->get('isSingleLineQuestion');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isSingleLineQuestion'");
     }
 
     /**
@@ -50,7 +54,11 @@ class AccessPackageTextInputQuestion extends AccessPackageQuestion implements Pa
      * @return string|null
     */
     public function getRegexPattern(): ?string {
-        return $this->getBackingStore()->get('regexPattern');
+        $val = $this->getBackingStore()->get('regexPattern');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'regexPattern'");
     }
 
     /**

@@ -39,7 +39,12 @@ class AcceptPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -55,12 +60,16 @@ class AcceptPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getComment(): ?string {
-        return $this->getBackingStore()->get('comment');
+        $val = $this->getBackingStore()->get('comment');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'comment'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -75,7 +84,11 @@ class AcceptPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
      * @return bool|null
     */
     public function getSendResponse(): ?bool {
-        return $this->getBackingStore()->get('sendResponse');
+        $val = $this->getBackingStore()->get('sendResponse');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sendResponse'");
     }
 
     /**

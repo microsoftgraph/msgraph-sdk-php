@@ -6,6 +6,7 @@ use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class ManagedAppPolicyDeploymentSummary extends Entity implements Parsable 
 {
@@ -30,7 +31,11 @@ class ManagedAppPolicyDeploymentSummary extends Entity implements Parsable
      * @return int|null
     */
     public function getConfigurationDeployedUserCount(): ?int {
-        return $this->getBackingStore()->get('configurationDeployedUserCount');
+        $val = $this->getBackingStore()->get('configurationDeployedUserCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'configurationDeployedUserCount'");
     }
 
     /**
@@ -38,7 +43,13 @@ class ManagedAppPolicyDeploymentSummary extends Entity implements Parsable
      * @return array<ManagedAppPolicyDeploymentSummaryPerApp>|null
     */
     public function getConfigurationDeploymentSummaryPerApp(): ?array {
-        return $this->getBackingStore()->get('configurationDeploymentSummaryPerApp');
+        $val = $this->getBackingStore()->get('configurationDeploymentSummaryPerApp');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ManagedAppPolicyDeploymentSummaryPerApp::class);
+            /** @var array<ManagedAppPolicyDeploymentSummaryPerApp>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'configurationDeploymentSummaryPerApp'");
     }
 
     /**
@@ -46,12 +57,16 @@ class ManagedAppPolicyDeploymentSummary extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -69,7 +84,11 @@ class ManagedAppPolicyDeploymentSummary extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastRefreshTime(): ?DateTime {
-        return $this->getBackingStore()->get('lastRefreshTime');
+        $val = $this->getBackingStore()->get('lastRefreshTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastRefreshTime'");
     }
 
     /**
@@ -77,7 +96,11 @@ class ManagedAppPolicyDeploymentSummary extends Entity implements Parsable
      * @return string|null
     */
     public function getVersion(): ?string {
-        return $this->getBackingStore()->get('version');
+        $val = $this->getBackingStore()->get('version');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'version'");
     }
 
     /**

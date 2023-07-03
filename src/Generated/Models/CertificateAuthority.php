@@ -40,7 +40,12 @@ class CertificateAuthority implements AdditionalDataHolder, BackedModel, Parsabl
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -56,7 +61,11 @@ class CertificateAuthority implements AdditionalDataHolder, BackedModel, Parsabl
      * @return StreamInterface|null
     */
     public function getCertificate(): ?StreamInterface {
-        return $this->getBackingStore()->get('certificate');
+        $val = $this->getBackingStore()->get('certificate');
+        if (is_null($val) || $val instanceof StreamInterface) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'certificate'");
     }
 
     /**
@@ -64,7 +73,11 @@ class CertificateAuthority implements AdditionalDataHolder, BackedModel, Parsabl
      * @return string|null
     */
     public function getCertificateRevocationListUrl(): ?string {
-        return $this->getBackingStore()->get('certificateRevocationListUrl');
+        $val = $this->getBackingStore()->get('certificateRevocationListUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'certificateRevocationListUrl'");
     }
 
     /**
@@ -72,12 +85,16 @@ class CertificateAuthority implements AdditionalDataHolder, BackedModel, Parsabl
      * @return string|null
     */
     public function getDeltaCertificateRevocationListUrl(): ?string {
-        return $this->getBackingStore()->get('deltaCertificateRevocationListUrl');
+        $val = $this->getBackingStore()->get('deltaCertificateRevocationListUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deltaCertificateRevocationListUrl'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -97,7 +114,11 @@ class CertificateAuthority implements AdditionalDataHolder, BackedModel, Parsabl
      * @return bool|null
     */
     public function getIsRootAuthority(): ?bool {
-        return $this->getBackingStore()->get('isRootAuthority');
+        $val = $this->getBackingStore()->get('isRootAuthority');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isRootAuthority'");
     }
 
     /**
@@ -105,7 +126,11 @@ class CertificateAuthority implements AdditionalDataHolder, BackedModel, Parsabl
      * @return string|null
     */
     public function getIssuer(): ?string {
-        return $this->getBackingStore()->get('issuer');
+        $val = $this->getBackingStore()->get('issuer');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'issuer'");
     }
 
     /**
@@ -113,7 +138,11 @@ class CertificateAuthority implements AdditionalDataHolder, BackedModel, Parsabl
      * @return string|null
     */
     public function getIssuerSki(): ?string {
-        return $this->getBackingStore()->get('issuerSki');
+        $val = $this->getBackingStore()->get('issuerSki');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'issuerSki'");
     }
 
     /**
@@ -121,7 +150,11 @@ class CertificateAuthority implements AdditionalDataHolder, BackedModel, Parsabl
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**

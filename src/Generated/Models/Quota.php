@@ -39,7 +39,12 @@ class Quota implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -55,12 +60,16 @@ class Quota implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getDeleted(): ?int {
-        return $this->getBackingStore()->get('deleted');
+        $val = $this->getBackingStore()->get('deleted');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deleted'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -80,7 +89,11 @@ class Quota implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -88,7 +101,11 @@ class Quota implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getRemaining(): ?int {
-        return $this->getBackingStore()->get('remaining');
+        $val = $this->getBackingStore()->get('remaining');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'remaining'");
     }
 
     /**
@@ -96,7 +113,11 @@ class Quota implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getState(): ?string {
-        return $this->getBackingStore()->get('state');
+        $val = $this->getBackingStore()->get('state');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'state'");
     }
 
     /**
@@ -104,7 +125,11 @@ class Quota implements AdditionalDataHolder, BackedModel, Parsable
      * @return StoragePlanInformation|null
     */
     public function getStoragePlanInformation(): ?StoragePlanInformation {
-        return $this->getBackingStore()->get('storagePlanInformation');
+        $val = $this->getBackingStore()->get('storagePlanInformation');
+        if (is_null($val) || $val instanceof StoragePlanInformation) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'storagePlanInformation'");
     }
 
     /**
@@ -112,7 +137,11 @@ class Quota implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getTotal(): ?int {
-        return $this->getBackingStore()->get('total');
+        $val = $this->getBackingStore()->get('total');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'total'");
     }
 
     /**
@@ -120,7 +149,11 @@ class Quota implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getUsed(): ?int {
-        return $this->getBackingStore()->get('used');
+        $val = $this->getBackingStore()->get('used');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'used'");
     }
 
     /**

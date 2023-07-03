@@ -10,6 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -63,7 +64,12 @@ class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -79,7 +85,11 @@ class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('createdDateTime');
+        $val = $this->getBackingStore()->get('createdDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdDateTime'");
     }
 
     /**
@@ -87,23 +97,43 @@ class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string>|null
     */
     public function getDetailedRoles(): ?array {
-        return $this->getBackingStore()->get('detailedRoles');
+        $val = $this->getBackingStore()->get('detailedRoles');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'detailedRoles'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
-            'detailedRoles' => fn(ParseNode $n) => $o->setDetailedRoles($n->getCollectionOfPrimitiveValues()),
+            'detailedRoles' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setDetailedRoles($val);
+            },
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'remediationStatus' => fn(ParseNode $n) => $o->setRemediationStatus($n->getEnumValue(EvidenceRemediationStatus::class)),
             'remediationStatusDetails' => fn(ParseNode $n) => $o->setRemediationStatusDetails($n->getStringValue()),
             'roles' => fn(ParseNode $n) => $o->setRoles($n->getCollectionOfEnumValues(EvidenceRole::class)),
-            'tags' => fn(ParseNode $n) => $o->setTags($n->getCollectionOfPrimitiveValues()),
+            'tags' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setTags($val);
+            },
             'verdict' => fn(ParseNode $n) => $o->setVerdict($n->getEnumValue(EvidenceVerdict::class)),
         ];
     }
@@ -113,7 +143,11 @@ class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -121,7 +155,11 @@ class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsable
      * @return EvidenceRemediationStatus|null
     */
     public function getRemediationStatus(): ?EvidenceRemediationStatus {
-        return $this->getBackingStore()->get('remediationStatus');
+        $val = $this->getBackingStore()->get('remediationStatus');
+        if (is_null($val) || $val instanceof EvidenceRemediationStatus) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'remediationStatus'");
     }
 
     /**
@@ -129,7 +167,11 @@ class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getRemediationStatusDetails(): ?string {
-        return $this->getBackingStore()->get('remediationStatusDetails');
+        $val = $this->getBackingStore()->get('remediationStatusDetails');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'remediationStatusDetails'");
     }
 
     /**
@@ -137,7 +179,13 @@ class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<EvidenceRole>|null
     */
     public function getRoles(): ?array {
-        return $this->getBackingStore()->get('roles');
+        $val = $this->getBackingStore()->get('roles');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, EvidenceRole::class);
+            /** @var array<EvidenceRole>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'roles'");
     }
 
     /**
@@ -145,7 +193,13 @@ class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string>|null
     */
     public function getTags(): ?array {
-        return $this->getBackingStore()->get('tags');
+        $val = $this->getBackingStore()->get('tags');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'tags'");
     }
 
     /**
@@ -153,7 +207,11 @@ class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsable
      * @return EvidenceVerdict|null
     */
     public function getVerdict(): ?EvidenceVerdict {
-        return $this->getBackingStore()->get('verdict');
+        $val = $this->getBackingStore()->get('verdict');
+        if (is_null($val) || $val instanceof EvidenceVerdict) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'verdict'");
     }
 
     /**

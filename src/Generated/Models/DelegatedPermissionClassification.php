@@ -29,12 +29,16 @@ class DelegatedPermissionClassification extends Entity implements Parsable
      * @return PermissionClassificationType|null
     */
     public function getClassification(): ?PermissionClassificationType {
-        return $this->getBackingStore()->get('classification');
+        $val = $this->getBackingStore()->get('classification');
+        if (is_null($val) || $val instanceof PermissionClassificationType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'classification'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -50,7 +54,11 @@ class DelegatedPermissionClassification extends Entity implements Parsable
      * @return string|null
     */
     public function getPermissionId(): ?string {
-        return $this->getBackingStore()->get('permissionId');
+        $val = $this->getBackingStore()->get('permissionId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'permissionId'");
     }
 
     /**
@@ -58,7 +66,11 @@ class DelegatedPermissionClassification extends Entity implements Parsable
      * @return string|null
     */
     public function getPermissionName(): ?string {
-        return $this->getBackingStore()->get('permissionName');
+        $val = $this->getBackingStore()->get('permissionName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'permissionName'");
     }
 
     /**

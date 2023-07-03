@@ -40,7 +40,12 @@ class CreateNewVersionPostRequestBody implements AdditionalDataHolder, BackedMod
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -53,7 +58,7 @@ class CreateNewVersionPostRequestBody implements AdditionalDataHolder, BackedMod
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -67,7 +72,11 @@ class CreateNewVersionPostRequestBody implements AdditionalDataHolder, BackedMod
      * @return Workflow|null
     */
     public function getWorkflow(): ?Workflow {
-        return $this->getBackingStore()->get('workflow');
+        $val = $this->getBackingStore()->get('workflow');
+        if (is_null($val) || $val instanceof Workflow) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'workflow'");
     }
 
     /**

@@ -29,12 +29,16 @@ class SecurityGroupEvidence extends AlertEvidence implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -49,7 +53,11 @@ class SecurityGroupEvidence extends AlertEvidence implements Parsable
      * @return string|null
     */
     public function getSecurityGroupId(): ?string {
-        return $this->getBackingStore()->get('securityGroupId');
+        $val = $this->getBackingStore()->get('securityGroupId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'securityGroupId'");
     }
 
     /**

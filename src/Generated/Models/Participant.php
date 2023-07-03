@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class Participant extends Entity implements Parsable 
 {
@@ -26,7 +27,7 @@ class Participant extends Entity implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -46,7 +47,11 @@ class Participant extends Entity implements Parsable
      * @return ParticipantInfo|null
     */
     public function getInfo(): ?ParticipantInfo {
-        return $this->getBackingStore()->get('info');
+        $val = $this->getBackingStore()->get('info');
+        if (is_null($val) || $val instanceof ParticipantInfo) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'info'");
     }
 
     /**
@@ -54,7 +59,11 @@ class Participant extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsInLobby(): ?bool {
-        return $this->getBackingStore()->get('isInLobby');
+        $val = $this->getBackingStore()->get('isInLobby');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isInLobby'");
     }
 
     /**
@@ -62,7 +71,11 @@ class Participant extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsMuted(): ?bool {
-        return $this->getBackingStore()->get('isMuted');
+        $val = $this->getBackingStore()->get('isMuted');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isMuted'");
     }
 
     /**
@@ -70,7 +83,13 @@ class Participant extends Entity implements Parsable
      * @return array<MediaStream>|null
     */
     public function getMediaStreams(): ?array {
-        return $this->getBackingStore()->get('mediaStreams');
+        $val = $this->getBackingStore()->get('mediaStreams');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, MediaStream::class);
+            /** @var array<MediaStream>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'mediaStreams'");
     }
 
     /**
@@ -78,7 +97,11 @@ class Participant extends Entity implements Parsable
      * @return string|null
     */
     public function getMetadata(): ?string {
-        return $this->getBackingStore()->get('metadata');
+        $val = $this->getBackingStore()->get('metadata');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'metadata'");
     }
 
     /**
@@ -86,7 +109,11 @@ class Participant extends Entity implements Parsable
      * @return RecordingInfo|null
     */
     public function getRecordingInfo(): ?RecordingInfo {
-        return $this->getBackingStore()->get('recordingInfo');
+        $val = $this->getBackingStore()->get('recordingInfo');
+        if (is_null($val) || $val instanceof RecordingInfo) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'recordingInfo'");
     }
 
     /**
@@ -94,7 +121,11 @@ class Participant extends Entity implements Parsable
      * @return OnlineMeetingRestricted|null
     */
     public function getRestrictedExperience(): ?OnlineMeetingRestricted {
-        return $this->getBackingStore()->get('restrictedExperience');
+        $val = $this->getBackingStore()->get('restrictedExperience');
+        if (is_null($val) || $val instanceof OnlineMeetingRestricted) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'restrictedExperience'");
     }
 
     /**

@@ -31,7 +31,11 @@ class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallScheduleType i
      * @return Time|null
     */
     public function getActiveHoursEnd(): ?Time {
-        return $this->getBackingStore()->get('activeHoursEnd');
+        $val = $this->getBackingStore()->get('activeHoursEnd');
+        if (is_null($val) || $val instanceof Time) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'activeHoursEnd'");
     }
 
     /**
@@ -39,12 +43,16 @@ class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallScheduleType i
      * @return Time|null
     */
     public function getActiveHoursStart(): ?Time {
-        return $this->getBackingStore()->get('activeHoursStart');
+        $val = $this->getBackingStore()->get('activeHoursStart');
+        if (is_null($val) || $val instanceof Time) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'activeHoursStart'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;

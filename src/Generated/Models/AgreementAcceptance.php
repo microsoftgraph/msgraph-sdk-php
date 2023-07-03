@@ -30,7 +30,11 @@ class AgreementAcceptance extends Entity implements Parsable
      * @return string|null
     */
     public function getAgreementFileId(): ?string {
-        return $this->getBackingStore()->get('agreementFileId');
+        $val = $this->getBackingStore()->get('agreementFileId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'agreementFileId'");
     }
 
     /**
@@ -38,7 +42,11 @@ class AgreementAcceptance extends Entity implements Parsable
      * @return string|null
     */
     public function getAgreementId(): ?string {
-        return $this->getBackingStore()->get('agreementId');
+        $val = $this->getBackingStore()->get('agreementId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'agreementId'");
     }
 
     /**
@@ -46,7 +54,11 @@ class AgreementAcceptance extends Entity implements Parsable
      * @return string|null
     */
     public function getDeviceDisplayName(): ?string {
-        return $this->getBackingStore()->get('deviceDisplayName');
+        $val = $this->getBackingStore()->get('deviceDisplayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deviceDisplayName'");
     }
 
     /**
@@ -54,7 +66,11 @@ class AgreementAcceptance extends Entity implements Parsable
      * @return string|null
     */
     public function getDeviceId(): ?string {
-        return $this->getBackingStore()->get('deviceId');
+        $val = $this->getBackingStore()->get('deviceId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deviceId'");
     }
 
     /**
@@ -62,7 +78,11 @@ class AgreementAcceptance extends Entity implements Parsable
      * @return string|null
     */
     public function getDeviceOSType(): ?string {
-        return $this->getBackingStore()->get('deviceOSType');
+        $val = $this->getBackingStore()->get('deviceOSType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deviceOSType'");
     }
 
     /**
@@ -70,7 +90,11 @@ class AgreementAcceptance extends Entity implements Parsable
      * @return string|null
     */
     public function getDeviceOSVersion(): ?string {
-        return $this->getBackingStore()->get('deviceOSVersion');
+        $val = $this->getBackingStore()->get('deviceOSVersion');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deviceOSVersion'");
     }
 
     /**
@@ -78,12 +102,16 @@ class AgreementAcceptance extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getExpirationDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('expirationDateTime');
+        $val = $this->getBackingStore()->get('expirationDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'expirationDateTime'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -109,7 +137,11 @@ class AgreementAcceptance extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getRecordedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('recordedDateTime');
+        $val = $this->getBackingStore()->get('recordedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'recordedDateTime'");
     }
 
     /**
@@ -117,7 +149,11 @@ class AgreementAcceptance extends Entity implements Parsable
      * @return AgreementAcceptanceState|null
     */
     public function getState(): ?AgreementAcceptanceState {
-        return $this->getBackingStore()->get('state');
+        $val = $this->getBackingStore()->get('state');
+        if (is_null($val) || $val instanceof AgreementAcceptanceState) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'state'");
     }
 
     /**
@@ -125,7 +161,11 @@ class AgreementAcceptance extends Entity implements Parsable
      * @return string|null
     */
     public function getUserDisplayName(): ?string {
-        return $this->getBackingStore()->get('userDisplayName');
+        $val = $this->getBackingStore()->get('userDisplayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userDisplayName'");
     }
 
     /**
@@ -133,7 +173,11 @@ class AgreementAcceptance extends Entity implements Parsable
      * @return string|null
     */
     public function getUserEmail(): ?string {
-        return $this->getBackingStore()->get('userEmail');
+        $val = $this->getBackingStore()->get('userEmail');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userEmail'");
     }
 
     /**
@@ -141,7 +185,11 @@ class AgreementAcceptance extends Entity implements Parsable
      * @return string|null
     */
     public function getUserId(): ?string {
-        return $this->getBackingStore()->get('userId');
+        $val = $this->getBackingStore()->get('userId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userId'");
     }
 
     /**
@@ -149,7 +197,11 @@ class AgreementAcceptance extends Entity implements Parsable
      * @return string|null
     */
     public function getUserPrincipalName(): ?string {
-        return $this->getBackingStore()->get('userPrincipalName');
+        $val = $this->getBackingStore()->get('userPrincipalName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userPrincipalName'");
     }
 
     /**

@@ -34,7 +34,7 @@ class GroupAssignmentTarget extends DeviceAndAppManagementAssignmentTarget imple
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -48,7 +48,11 @@ class GroupAssignmentTarget extends DeviceAndAppManagementAssignmentTarget imple
      * @return string|null
     */
     public function getGroupId(): ?string {
-        return $this->getBackingStore()->get('groupId');
+        $val = $this->getBackingStore()->get('groupId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'groupId'");
     }
 
     /**

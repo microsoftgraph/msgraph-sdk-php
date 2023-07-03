@@ -33,7 +33,11 @@ class DeviceComplianceSettingState extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getComplianceGracePeriodExpirationDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('complianceGracePeriodExpirationDateTime');
+        $val = $this->getBackingStore()->get('complianceGracePeriodExpirationDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'complianceGracePeriodExpirationDateTime'");
     }
 
     /**
@@ -41,7 +45,11 @@ class DeviceComplianceSettingState extends Entity implements Parsable
      * @return string|null
     */
     public function getDeviceId(): ?string {
-        return $this->getBackingStore()->get('deviceId');
+        $val = $this->getBackingStore()->get('deviceId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deviceId'");
     }
 
     /**
@@ -49,7 +57,11 @@ class DeviceComplianceSettingState extends Entity implements Parsable
      * @return string|null
     */
     public function getDeviceModel(): ?string {
-        return $this->getBackingStore()->get('deviceModel');
+        $val = $this->getBackingStore()->get('deviceModel');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deviceModel'");
     }
 
     /**
@@ -57,12 +69,16 @@ class DeviceComplianceSettingState extends Entity implements Parsable
      * @return string|null
     */
     public function getDeviceName(): ?string {
-        return $this->getBackingStore()->get('deviceName');
+        $val = $this->getBackingStore()->get('deviceName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deviceName'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -86,7 +102,11 @@ class DeviceComplianceSettingState extends Entity implements Parsable
      * @return string|null
     */
     public function getSetting(): ?string {
-        return $this->getBackingStore()->get('setting');
+        $val = $this->getBackingStore()->get('setting');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'setting'");
     }
 
     /**
@@ -94,7 +114,11 @@ class DeviceComplianceSettingState extends Entity implements Parsable
      * @return string|null
     */
     public function getSettingName(): ?string {
-        return $this->getBackingStore()->get('settingName');
+        $val = $this->getBackingStore()->get('settingName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'settingName'");
     }
 
     /**
@@ -102,7 +126,11 @@ class DeviceComplianceSettingState extends Entity implements Parsable
      * @return ComplianceStatus|null
     */
     public function getState(): ?ComplianceStatus {
-        return $this->getBackingStore()->get('state');
+        $val = $this->getBackingStore()->get('state');
+        if (is_null($val) || $val instanceof ComplianceStatus) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'state'");
     }
 
     /**
@@ -110,7 +138,11 @@ class DeviceComplianceSettingState extends Entity implements Parsable
      * @return string|null
     */
     public function getUserEmail(): ?string {
-        return $this->getBackingStore()->get('userEmail');
+        $val = $this->getBackingStore()->get('userEmail');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userEmail'");
     }
 
     /**
@@ -118,7 +150,11 @@ class DeviceComplianceSettingState extends Entity implements Parsable
      * @return string|null
     */
     public function getUserId(): ?string {
-        return $this->getBackingStore()->get('userId');
+        $val = $this->getBackingStore()->get('userId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userId'");
     }
 
     /**
@@ -126,7 +162,11 @@ class DeviceComplianceSettingState extends Entity implements Parsable
      * @return string|null
     */
     public function getUserName(): ?string {
-        return $this->getBackingStore()->get('userName');
+        $val = $this->getBackingStore()->get('userName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userName'");
     }
 
     /**
@@ -134,7 +174,11 @@ class DeviceComplianceSettingState extends Entity implements Parsable
      * @return string|null
     */
     public function getUserPrincipalName(): ?string {
-        return $this->getBackingStore()->get('userPrincipalName');
+        $val = $this->getBackingStore()->get('userPrincipalName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userPrincipalName'");
     }
 
     /**

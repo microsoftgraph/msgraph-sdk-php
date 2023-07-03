@@ -40,7 +40,12 @@ class SynchronizationProgress implements AdditionalDataHolder, BackedModel, Pars
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -56,12 +61,16 @@ class SynchronizationProgress implements AdditionalDataHolder, BackedModel, Pars
      * @return int|null
     */
     public function getCompletedUnits(): ?int {
-        return $this->getBackingStore()->get('completedUnits');
+        $val = $this->getBackingStore()->get('completedUnits');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'completedUnits'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -79,7 +88,11 @@ class SynchronizationProgress implements AdditionalDataHolder, BackedModel, Pars
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -87,7 +100,11 @@ class SynchronizationProgress implements AdditionalDataHolder, BackedModel, Pars
      * @return DateTime|null
     */
     public function getProgressObservationDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('progressObservationDateTime');
+        $val = $this->getBackingStore()->get('progressObservationDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'progressObservationDateTime'");
     }
 
     /**
@@ -95,7 +112,11 @@ class SynchronizationProgress implements AdditionalDataHolder, BackedModel, Pars
      * @return int|null
     */
     public function getTotalUnits(): ?int {
-        return $this->getBackingStore()->get('totalUnits');
+        $val = $this->getBackingStore()->get('totalUnits');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'totalUnits'");
     }
 
     /**
@@ -103,7 +124,11 @@ class SynchronizationProgress implements AdditionalDataHolder, BackedModel, Pars
      * @return string|null
     */
     public function getUnits(): ?string {
-        return $this->getBackingStore()->get('units');
+        $val = $this->getBackingStore()->get('units');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'units'");
     }
 
     /**

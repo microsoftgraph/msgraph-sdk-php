@@ -9,6 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class UpdateAllowedCombinationsResult implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -39,7 +40,12 @@ class UpdateAllowedCombinationsResult implements AdditionalDataHolder, BackedMod
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -47,7 +53,11 @@ class UpdateAllowedCombinationsResult implements AdditionalDataHolder, BackedMod
      * @return string|null
     */
     public function getAdditionalInformation(): ?string {
-        return $this->getBackingStore()->get('additionalInformation');
+        $val = $this->getBackingStore()->get('additionalInformation');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalInformation'");
     }
 
     /**
@@ -63,7 +73,13 @@ class UpdateAllowedCombinationsResult implements AdditionalDataHolder, BackedMod
      * @return array<string>|null
     */
     public function getConditionalAccessReferences(): ?array {
-        return $this->getBackingStore()->get('conditionalAccessReferences');
+        $val = $this->getBackingStore()->get('conditionalAccessReferences');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'conditionalAccessReferences'");
     }
 
     /**
@@ -71,18 +87,31 @@ class UpdateAllowedCombinationsResult implements AdditionalDataHolder, BackedMod
      * @return array<AuthenticationMethodModes>|null
     */
     public function getCurrentCombinations(): ?array {
-        return $this->getBackingStore()->get('currentCombinations');
+        $val = $this->getBackingStore()->get('currentCombinations');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AuthenticationMethodModes::class);
+            /** @var array<AuthenticationMethodModes>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'currentCombinations'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
             'additionalInformation' => fn(ParseNode $n) => $o->setAdditionalInformation($n->getStringValue()),
-            'conditionalAccessReferences' => fn(ParseNode $n) => $o->setConditionalAccessReferences($n->getCollectionOfPrimitiveValues()),
+            'conditionalAccessReferences' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setConditionalAccessReferences($val);
+            },
             'currentCombinations' => fn(ParseNode $n) => $o->setCurrentCombinations($n->getCollectionOfEnumValues(AuthenticationMethodModes::class)),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'previousCombinations' => fn(ParseNode $n) => $o->setPreviousCombinations($n->getCollectionOfEnumValues(AuthenticationMethodModes::class)),
@@ -94,7 +123,11 @@ class UpdateAllowedCombinationsResult implements AdditionalDataHolder, BackedMod
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -102,7 +135,13 @@ class UpdateAllowedCombinationsResult implements AdditionalDataHolder, BackedMod
      * @return array<AuthenticationMethodModes>|null
     */
     public function getPreviousCombinations(): ?array {
-        return $this->getBackingStore()->get('previousCombinations');
+        $val = $this->getBackingStore()->get('previousCombinations');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AuthenticationMethodModes::class);
+            /** @var array<AuthenticationMethodModes>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'previousCombinations'");
     }
 
     /**

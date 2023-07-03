@@ -39,7 +39,12 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, BackedModel
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -55,7 +60,11 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, BackedModel
      * @return string|null
     */
     public function getExtensionAttribute1(): ?string {
-        return $this->getBackingStore()->get('extensionAttribute1');
+        $val = $this->getBackingStore()->get('extensionAttribute1');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'extensionAttribute1'");
     }
 
     /**
@@ -63,7 +72,11 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, BackedModel
      * @return string|null
     */
     public function getExtensionAttribute10(): ?string {
-        return $this->getBackingStore()->get('extensionAttribute10');
+        $val = $this->getBackingStore()->get('extensionAttribute10');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'extensionAttribute10'");
     }
 
     /**
@@ -71,7 +84,11 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, BackedModel
      * @return string|null
     */
     public function getExtensionAttribute11(): ?string {
-        return $this->getBackingStore()->get('extensionAttribute11');
+        $val = $this->getBackingStore()->get('extensionAttribute11');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'extensionAttribute11'");
     }
 
     /**
@@ -79,7 +96,11 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, BackedModel
      * @return string|null
     */
     public function getExtensionAttribute12(): ?string {
-        return $this->getBackingStore()->get('extensionAttribute12');
+        $val = $this->getBackingStore()->get('extensionAttribute12');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'extensionAttribute12'");
     }
 
     /**
@@ -87,7 +108,11 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, BackedModel
      * @return string|null
     */
     public function getExtensionAttribute13(): ?string {
-        return $this->getBackingStore()->get('extensionAttribute13');
+        $val = $this->getBackingStore()->get('extensionAttribute13');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'extensionAttribute13'");
     }
 
     /**
@@ -95,7 +120,11 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, BackedModel
      * @return string|null
     */
     public function getExtensionAttribute14(): ?string {
-        return $this->getBackingStore()->get('extensionAttribute14');
+        $val = $this->getBackingStore()->get('extensionAttribute14');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'extensionAttribute14'");
     }
 
     /**
@@ -103,7 +132,11 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, BackedModel
      * @return string|null
     */
     public function getExtensionAttribute15(): ?string {
-        return $this->getBackingStore()->get('extensionAttribute15');
+        $val = $this->getBackingStore()->get('extensionAttribute15');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'extensionAttribute15'");
     }
 
     /**
@@ -111,7 +144,11 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, BackedModel
      * @return string|null
     */
     public function getExtensionAttribute2(): ?string {
-        return $this->getBackingStore()->get('extensionAttribute2');
+        $val = $this->getBackingStore()->get('extensionAttribute2');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'extensionAttribute2'");
     }
 
     /**
@@ -119,7 +156,11 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, BackedModel
      * @return string|null
     */
     public function getExtensionAttribute3(): ?string {
-        return $this->getBackingStore()->get('extensionAttribute3');
+        $val = $this->getBackingStore()->get('extensionAttribute3');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'extensionAttribute3'");
     }
 
     /**
@@ -127,7 +168,11 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, BackedModel
      * @return string|null
     */
     public function getExtensionAttribute4(): ?string {
-        return $this->getBackingStore()->get('extensionAttribute4');
+        $val = $this->getBackingStore()->get('extensionAttribute4');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'extensionAttribute4'");
     }
 
     /**
@@ -135,7 +180,11 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, BackedModel
      * @return string|null
     */
     public function getExtensionAttribute5(): ?string {
-        return $this->getBackingStore()->get('extensionAttribute5');
+        $val = $this->getBackingStore()->get('extensionAttribute5');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'extensionAttribute5'");
     }
 
     /**
@@ -143,7 +192,11 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, BackedModel
      * @return string|null
     */
     public function getExtensionAttribute6(): ?string {
-        return $this->getBackingStore()->get('extensionAttribute6');
+        $val = $this->getBackingStore()->get('extensionAttribute6');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'extensionAttribute6'");
     }
 
     /**
@@ -151,7 +204,11 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, BackedModel
      * @return string|null
     */
     public function getExtensionAttribute7(): ?string {
-        return $this->getBackingStore()->get('extensionAttribute7');
+        $val = $this->getBackingStore()->get('extensionAttribute7');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'extensionAttribute7'");
     }
 
     /**
@@ -159,7 +216,11 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, BackedModel
      * @return string|null
     */
     public function getExtensionAttribute8(): ?string {
-        return $this->getBackingStore()->get('extensionAttribute8');
+        $val = $this->getBackingStore()->get('extensionAttribute8');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'extensionAttribute8'");
     }
 
     /**
@@ -167,12 +228,16 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, BackedModel
      * @return string|null
     */
     public function getExtensionAttribute9(): ?string {
-        return $this->getBackingStore()->get('extensionAttribute9');
+        $val = $this->getBackingStore()->get('extensionAttribute9');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'extensionAttribute9'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -201,7 +266,11 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, BackedModel
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**

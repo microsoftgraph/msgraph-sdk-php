@@ -40,7 +40,12 @@ class Binom_InvPostRequestBody implements AdditionalDataHolder, BackedModel, Par
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -48,7 +53,11 @@ class Binom_InvPostRequestBody implements AdditionalDataHolder, BackedModel, Par
      * @return Json|null
     */
     public function getAlpha(): ?Json {
-        return $this->getBackingStore()->get('alpha');
+        $val = $this->getBackingStore()->get('alpha');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'alpha'");
     }
 
     /**
@@ -61,7 +70,7 @@ class Binom_InvPostRequestBody implements AdditionalDataHolder, BackedModel, Par
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -77,7 +86,11 @@ class Binom_InvPostRequestBody implements AdditionalDataHolder, BackedModel, Par
      * @return Json|null
     */
     public function getProbabilityS(): ?Json {
-        return $this->getBackingStore()->get('probabilityS');
+        $val = $this->getBackingStore()->get('probabilityS');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'probabilityS'");
     }
 
     /**
@@ -85,7 +98,11 @@ class Binom_InvPostRequestBody implements AdditionalDataHolder, BackedModel, Par
      * @return Json|null
     */
     public function getTrials(): ?Json {
-        return $this->getBackingStore()->get('trials');
+        $val = $this->getBackingStore()->get('trials');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'trials'");
     }
 
     /**

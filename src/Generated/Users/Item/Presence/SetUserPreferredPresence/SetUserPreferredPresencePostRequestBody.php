@@ -40,7 +40,11 @@ class SetUserPreferredPresencePostRequestBody implements AdditionalDataHolder, B
      * @return string|null
     */
     public function getActivity(): ?string {
-        return $this->getBackingStore()->get('activity');
+        $val = $this->getBackingStore()->get('activity');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'activity'");
     }
 
     /**
@@ -48,7 +52,12 @@ class SetUserPreferredPresencePostRequestBody implements AdditionalDataHolder, B
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -56,7 +65,11 @@ class SetUserPreferredPresencePostRequestBody implements AdditionalDataHolder, B
      * @return string|null
     */
     public function getAvailability(): ?string {
-        return $this->getBackingStore()->get('availability');
+        $val = $this->getBackingStore()->get('availability');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'availability'");
     }
 
     /**
@@ -72,12 +85,16 @@ class SetUserPreferredPresencePostRequestBody implements AdditionalDataHolder, B
      * @return DateInterval|null
     */
     public function getExpirationDuration(): ?DateInterval {
-        return $this->getBackingStore()->get('expirationDuration');
+        $val = $this->getBackingStore()->get('expirationDuration');
+        if (is_null($val) || $val instanceof DateInterval) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'expirationDuration'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;

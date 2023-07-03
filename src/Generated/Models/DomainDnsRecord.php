@@ -37,7 +37,7 @@ class DomainDnsRecord extends Entity implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -55,7 +55,11 @@ class DomainDnsRecord extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsOptional(): ?bool {
-        return $this->getBackingStore()->get('isOptional');
+        $val = $this->getBackingStore()->get('isOptional');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isOptional'");
     }
 
     /**
@@ -63,7 +67,11 @@ class DomainDnsRecord extends Entity implements Parsable
      * @return string|null
     */
     public function getLabel(): ?string {
-        return $this->getBackingStore()->get('label');
+        $val = $this->getBackingStore()->get('label');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'label'");
     }
 
     /**
@@ -71,7 +79,11 @@ class DomainDnsRecord extends Entity implements Parsable
      * @return string|null
     */
     public function getRecordType(): ?string {
-        return $this->getBackingStore()->get('recordType');
+        $val = $this->getBackingStore()->get('recordType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'recordType'");
     }
 
     /**
@@ -79,7 +91,11 @@ class DomainDnsRecord extends Entity implements Parsable
      * @return string|null
     */
     public function getSupportedService(): ?string {
-        return $this->getBackingStore()->get('supportedService');
+        $val = $this->getBackingStore()->get('supportedService');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'supportedService'");
     }
 
     /**
@@ -87,7 +103,11 @@ class DomainDnsRecord extends Entity implements Parsable
      * @return int|null
     */
     public function getTtl(): ?int {
-        return $this->getBackingStore()->get('ttl');
+        $val = $this->getBackingStore()->get('ttl');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'ttl'");
     }
 
     /**

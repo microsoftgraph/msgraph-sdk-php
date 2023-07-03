@@ -30,12 +30,16 @@ class Endpoint extends DirectoryObject implements Parsable
      * @return string|null
     */
     public function getCapability(): ?string {
-        return $this->getBackingStore()->get('capability');
+        $val = $this->getBackingStore()->get('capability');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'capability'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -53,7 +57,11 @@ class Endpoint extends DirectoryObject implements Parsable
      * @return string|null
     */
     public function getProviderId(): ?string {
-        return $this->getBackingStore()->get('providerId');
+        $val = $this->getBackingStore()->get('providerId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'providerId'");
     }
 
     /**
@@ -61,7 +69,11 @@ class Endpoint extends DirectoryObject implements Parsable
      * @return string|null
     */
     public function getProviderName(): ?string {
-        return $this->getBackingStore()->get('providerName');
+        $val = $this->getBackingStore()->get('providerName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'providerName'");
     }
 
     /**
@@ -69,7 +81,11 @@ class Endpoint extends DirectoryObject implements Parsable
      * @return string|null
     */
     public function getProviderResourceId(): ?string {
-        return $this->getBackingStore()->get('providerResourceId');
+        $val = $this->getBackingStore()->get('providerResourceId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'providerResourceId'");
     }
 
     /**
@@ -77,7 +93,11 @@ class Endpoint extends DirectoryObject implements Parsable
      * @return string|null
     */
     public function getUri(): ?string {
-        return $this->getBackingStore()->get('uri');
+        $val = $this->getBackingStore()->get('uri');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'uri'");
     }
 
     /**

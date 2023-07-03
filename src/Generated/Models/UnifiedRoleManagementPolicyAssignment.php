@@ -26,7 +26,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -44,7 +44,11 @@ class UnifiedRoleManagementPolicyAssignment extends Entity implements Parsable
      * @return UnifiedRoleManagementPolicy|null
     */
     public function getPolicy(): ?UnifiedRoleManagementPolicy {
-        return $this->getBackingStore()->get('policy');
+        $val = $this->getBackingStore()->get('policy');
+        if (is_null($val) || $val instanceof UnifiedRoleManagementPolicy) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'policy'");
     }
 
     /**
@@ -52,7 +56,11 @@ class UnifiedRoleManagementPolicyAssignment extends Entity implements Parsable
      * @return string|null
     */
     public function getPolicyId(): ?string {
-        return $this->getBackingStore()->get('policyId');
+        $val = $this->getBackingStore()->get('policyId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'policyId'");
     }
 
     /**
@@ -60,7 +68,11 @@ class UnifiedRoleManagementPolicyAssignment extends Entity implements Parsable
      * @return string|null
     */
     public function getRoleDefinitionId(): ?string {
-        return $this->getBackingStore()->get('roleDefinitionId');
+        $val = $this->getBackingStore()->get('roleDefinitionId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'roleDefinitionId'");
     }
 
     /**
@@ -68,7 +80,11 @@ class UnifiedRoleManagementPolicyAssignment extends Entity implements Parsable
      * @return string|null
     */
     public function getScopeId(): ?string {
-        return $this->getBackingStore()->get('scopeId');
+        $val = $this->getBackingStore()->get('scopeId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'scopeId'");
     }
 
     /**
@@ -76,7 +92,11 @@ class UnifiedRoleManagementPolicyAssignment extends Entity implements Parsable
      * @return string|null
     */
     public function getScopeType(): ?string {
-        return $this->getBackingStore()->get('scopeType');
+        $val = $this->getBackingStore()->get('scopeType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'scopeType'");
     }
 
     /**

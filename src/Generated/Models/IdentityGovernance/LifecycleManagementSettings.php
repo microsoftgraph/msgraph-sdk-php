@@ -31,12 +31,16 @@ class LifecycleManagementSettings extends Entity implements Parsable
      * @return EmailSettings|null
     */
     public function getEmailSettings(): ?EmailSettings {
-        return $this->getBackingStore()->get('emailSettings');
+        $val = $this->getBackingStore()->get('emailSettings');
+        if (is_null($val) || $val instanceof EmailSettings) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'emailSettings'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -51,7 +55,11 @@ class LifecycleManagementSettings extends Entity implements Parsable
      * @return int|null
     */
     public function getWorkflowScheduleIntervalInHours(): ?int {
-        return $this->getBackingStore()->get('workflowScheduleIntervalInHours');
+        $val = $this->getBackingStore()->get('workflowScheduleIntervalInHours');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'workflowScheduleIntervalInHours'");
     }
 
     /**

@@ -42,7 +42,12 @@ class Win32LobAppRestartSettings implements AdditionalDataHolder, BackedModel, P
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -58,12 +63,16 @@ class Win32LobAppRestartSettings implements AdditionalDataHolder, BackedModel, P
      * @return int|null
     */
     public function getCountdownDisplayBeforeRestartInMinutes(): ?int {
-        return $this->getBackingStore()->get('countdownDisplayBeforeRestartInMinutes');
+        $val = $this->getBackingStore()->get('countdownDisplayBeforeRestartInMinutes');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'countdownDisplayBeforeRestartInMinutes'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -80,7 +89,11 @@ class Win32LobAppRestartSettings implements AdditionalDataHolder, BackedModel, P
      * @return int|null
     */
     public function getGracePeriodInMinutes(): ?int {
-        return $this->getBackingStore()->get('gracePeriodInMinutes');
+        $val = $this->getBackingStore()->get('gracePeriodInMinutes');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'gracePeriodInMinutes'");
     }
 
     /**
@@ -88,7 +101,11 @@ class Win32LobAppRestartSettings implements AdditionalDataHolder, BackedModel, P
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -96,7 +113,11 @@ class Win32LobAppRestartSettings implements AdditionalDataHolder, BackedModel, P
      * @return int|null
     */
     public function getRestartNotificationSnoozeDurationInMinutes(): ?int {
-        return $this->getBackingStore()->get('restartNotificationSnoozeDurationInMinutes');
+        $val = $this->getBackingStore()->get('restartNotificationSnoozeDurationInMinutes');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'restartNotificationSnoozeDurationInMinutes'");
     }
 
     /**

@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class TargetedManagedAppConfiguration extends ManagedAppConfiguration implements Parsable 
 {
@@ -30,7 +31,13 @@ class TargetedManagedAppConfiguration extends ManagedAppConfiguration implements
      * @return array<ManagedMobileApp>|null
     */
     public function getApps(): ?array {
-        return $this->getBackingStore()->get('apps');
+        $val = $this->getBackingStore()->get('apps');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ManagedMobileApp::class);
+            /** @var array<ManagedMobileApp>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'apps'");
     }
 
     /**
@@ -38,7 +45,13 @@ class TargetedManagedAppConfiguration extends ManagedAppConfiguration implements
      * @return array<TargetedManagedAppPolicyAssignment>|null
     */
     public function getAssignments(): ?array {
-        return $this->getBackingStore()->get('assignments');
+        $val = $this->getBackingStore()->get('assignments');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, TargetedManagedAppPolicyAssignment::class);
+            /** @var array<TargetedManagedAppPolicyAssignment>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'assignments'");
     }
 
     /**
@@ -46,7 +59,11 @@ class TargetedManagedAppConfiguration extends ManagedAppConfiguration implements
      * @return int|null
     */
     public function getDeployedAppCount(): ?int {
-        return $this->getBackingStore()->get('deployedAppCount');
+        $val = $this->getBackingStore()->get('deployedAppCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deployedAppCount'");
     }
 
     /**
@@ -54,12 +71,16 @@ class TargetedManagedAppConfiguration extends ManagedAppConfiguration implements
      * @return ManagedAppPolicyDeploymentSummary|null
     */
     public function getDeploymentSummary(): ?ManagedAppPolicyDeploymentSummary {
-        return $this->getBackingStore()->get('deploymentSummary');
+        $val = $this->getBackingStore()->get('deploymentSummary');
+        if (is_null($val) || $val instanceof ManagedAppPolicyDeploymentSummary) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deploymentSummary'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -77,7 +98,11 @@ class TargetedManagedAppConfiguration extends ManagedAppConfiguration implements
      * @return bool|null
     */
     public function getIsAssigned(): ?bool {
-        return $this->getBackingStore()->get('isAssigned');
+        $val = $this->getBackingStore()->get('isAssigned');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isAssigned'");
     }
 
     /**

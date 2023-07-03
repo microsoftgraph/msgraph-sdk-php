@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class Workbook extends Entity implements Parsable 
 {
@@ -29,7 +30,11 @@ class Workbook extends Entity implements Parsable
      * @return WorkbookApplication|null
     */
     public function getApplication(): ?WorkbookApplication {
-        return $this->getBackingStore()->get('application');
+        $val = $this->getBackingStore()->get('application');
+        if (is_null($val) || $val instanceof WorkbookApplication) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'application'");
     }
 
     /**
@@ -37,12 +42,18 @@ class Workbook extends Entity implements Parsable
      * @return array<WorkbookComment>|null
     */
     public function getComments(): ?array {
-        return $this->getBackingStore()->get('comments');
+        $val = $this->getBackingStore()->get('comments');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, WorkbookComment::class);
+            /** @var array<WorkbookComment>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'comments'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -62,7 +73,11 @@ class Workbook extends Entity implements Parsable
      * @return WorkbookFunctions|null
     */
     public function getFunctions(): ?WorkbookFunctions {
-        return $this->getBackingStore()->get('functions');
+        $val = $this->getBackingStore()->get('functions');
+        if (is_null($val) || $val instanceof WorkbookFunctions) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'functions'");
     }
 
     /**
@@ -70,7 +85,13 @@ class Workbook extends Entity implements Parsable
      * @return array<WorkbookNamedItem>|null
     */
     public function getNames(): ?array {
-        return $this->getBackingStore()->get('names');
+        $val = $this->getBackingStore()->get('names');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, WorkbookNamedItem::class);
+            /** @var array<WorkbookNamedItem>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'names'");
     }
 
     /**
@@ -78,7 +99,13 @@ class Workbook extends Entity implements Parsable
      * @return array<WorkbookOperation>|null
     */
     public function getOperations(): ?array {
-        return $this->getBackingStore()->get('operations');
+        $val = $this->getBackingStore()->get('operations');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, WorkbookOperation::class);
+            /** @var array<WorkbookOperation>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'operations'");
     }
 
     /**
@@ -86,7 +113,13 @@ class Workbook extends Entity implements Parsable
      * @return array<WorkbookTable>|null
     */
     public function getTables(): ?array {
-        return $this->getBackingStore()->get('tables');
+        $val = $this->getBackingStore()->get('tables');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, WorkbookTable::class);
+            /** @var array<WorkbookTable>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'tables'");
     }
 
     /**
@@ -94,7 +127,13 @@ class Workbook extends Entity implements Parsable
      * @return array<WorkbookWorksheet>|null
     */
     public function getWorksheets(): ?array {
-        return $this->getBackingStore()->get('worksheets');
+        $val = $this->getBackingStore()->get('worksheets');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, WorkbookWorksheet::class);
+            /** @var array<WorkbookWorksheet>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'worksheets'");
     }
 
     /**

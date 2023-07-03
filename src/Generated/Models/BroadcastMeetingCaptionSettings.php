@@ -9,6 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -39,7 +40,12 @@ class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, BackedMod
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -52,7 +58,7 @@ class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, BackedMod
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -60,7 +66,14 @@ class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, BackedMod
             'isCaptionEnabled' => fn(ParseNode $n) => $o->setIsCaptionEnabled($n->getBooleanValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'spokenLanguage' => fn(ParseNode $n) => $o->setSpokenLanguage($n->getStringValue()),
-            'translationLanguages' => fn(ParseNode $n) => $o->setTranslationLanguages($n->getCollectionOfPrimitiveValues()),
+            'translationLanguages' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setTranslationLanguages($val);
+            },
         ];
     }
 
@@ -69,7 +82,11 @@ class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, BackedMod
      * @return bool|null
     */
     public function getIsCaptionEnabled(): ?bool {
-        return $this->getBackingStore()->get('isCaptionEnabled');
+        $val = $this->getBackingStore()->get('isCaptionEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isCaptionEnabled'");
     }
 
     /**
@@ -77,7 +94,11 @@ class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, BackedMod
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -85,7 +106,11 @@ class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, BackedMod
      * @return string|null
     */
     public function getSpokenLanguage(): ?string {
-        return $this->getBackingStore()->get('spokenLanguage');
+        $val = $this->getBackingStore()->get('spokenLanguage');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'spokenLanguage'");
     }
 
     /**
@@ -93,7 +118,13 @@ class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, BackedMod
      * @return array<string>|null
     */
     public function getTranslationLanguages(): ?array {
-        return $this->getBackingStore()->get('translationLanguages');
+        $val = $this->getBackingStore()->get('translationLanguages');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'translationLanguages'");
     }
 
     /**

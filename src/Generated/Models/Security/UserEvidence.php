@@ -26,7 +26,7 @@ class UserEvidence extends AlertEvidence implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -40,7 +40,11 @@ class UserEvidence extends AlertEvidence implements Parsable
      * @return UserAccount|null
     */
     public function getUserAccount(): ?UserAccount {
-        return $this->getBackingStore()->get('userAccount');
+        $val = $this->getBackingStore()->get('userAccount');
+        if (is_null($val) || $val instanceof UserAccount) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userAccount'");
     }
 
     /**

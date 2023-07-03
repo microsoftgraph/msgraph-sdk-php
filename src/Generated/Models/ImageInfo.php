@@ -39,7 +39,11 @@ class ImageInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getAddImageQuery(): ?bool {
-        return $this->getBackingStore()->get('addImageQuery');
+        $val = $this->getBackingStore()->get('addImageQuery');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'addImageQuery'");
     }
 
     /**
@@ -47,7 +51,12 @@ class ImageInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -55,7 +64,11 @@ class ImageInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getAlternateText(): ?string {
-        return $this->getBackingStore()->get('alternateText');
+        $val = $this->getBackingStore()->get('alternateText');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'alternateText'");
     }
 
     /**
@@ -63,7 +76,11 @@ class ImageInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getAlternativeText(): ?string {
-        return $this->getBackingStore()->get('alternativeText');
+        $val = $this->getBackingStore()->get('alternativeText');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'alternativeText'");
     }
 
     /**
@@ -76,7 +93,7 @@ class ImageInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -94,7 +111,11 @@ class ImageInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getIconUrl(): ?string {
-        return $this->getBackingStore()->get('iconUrl');
+        $val = $this->getBackingStore()->get('iconUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'iconUrl'");
     }
 
     /**
@@ -102,7 +123,11 @@ class ImageInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
