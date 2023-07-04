@@ -34,4 +34,5 @@ class AuthenticationMethodFeature extends Enum
     const SSPR_CAPABLE = "ssprCapable";
     const PASSWORDLESS_CAPABLE = "passwordlessCapable";
     const MFA_CAPABLE = "mfaCapable";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

@@ -202,6 +202,118 @@ class PstnCallLogRow extends \Beta\Microsoft\Graph\Model\Entity
          return $this;
     }
     /**
+    * Gets the clientLocalIpV4Address
+    * Local IPv4 of the client that is retrieved from the operating system of the client.
+    *
+    * @return string|null The clientLocalIpV4Address
+    */
+    public function getClientLocalIpV4Address()
+    {
+        if (array_key_exists("clientLocalIpV4Address", $this->_propDict)) {
+            return $this->_propDict["clientLocalIpV4Address"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the clientLocalIpV4Address
+    * Local IPv4 of the client that is retrieved from the operating system of the client.
+    *
+    * @param string $val The value of the clientLocalIpV4Address
+    *
+    * @return PstnCallLogRow
+    */
+    public function setClientLocalIpV4Address($val)
+    {
+        $this->_propDict["clientLocalIpV4Address"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the clientLocalIpV6Address
+    * Local IPv6 of the client that is retrieved from the operating system of the client.
+    *
+    * @return string|null The clientLocalIpV6Address
+    */
+    public function getClientLocalIpV6Address()
+    {
+        if (array_key_exists("clientLocalIpV6Address", $this->_propDict)) {
+            return $this->_propDict["clientLocalIpV6Address"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the clientLocalIpV6Address
+    * Local IPv6 of the client that is retrieved from the operating system of the client.
+    *
+    * @param string $val The value of the clientLocalIpV6Address
+    *
+    * @return PstnCallLogRow
+    */
+    public function setClientLocalIpV6Address($val)
+    {
+        $this->_propDict["clientLocalIpV6Address"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the clientPublicIpV4Address
+    * Public IPv4 of the client that can be used to determine the location of the client.
+    *
+    * @return string|null The clientPublicIpV4Address
+    */
+    public function getClientPublicIpV4Address()
+    {
+        if (array_key_exists("clientPublicIpV4Address", $this->_propDict)) {
+            return $this->_propDict["clientPublicIpV4Address"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the clientPublicIpV4Address
+    * Public IPv4 of the client that can be used to determine the location of the client.
+    *
+    * @param string $val The value of the clientPublicIpV4Address
+    *
+    * @return PstnCallLogRow
+    */
+    public function setClientPublicIpV4Address($val)
+    {
+        $this->_propDict["clientPublicIpV4Address"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the clientPublicIpV6Address
+    * Public IPv6 of the client that can be used to determine the location of the client.
+    *
+    * @return string|null The clientPublicIpV6Address
+    */
+    public function getClientPublicIpV6Address()
+    {
+        if (array_key_exists("clientPublicIpV6Address", $this->_propDict)) {
+            return $this->_propDict["clientPublicIpV6Address"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the clientPublicIpV6Address
+    * Public IPv6 of the client that can be used to determine the location of the client.
+    *
+    * @param string $val The value of the clientPublicIpV6Address
+    *
+    * @return PstnCallLogRow
+    */
+    public function setClientPublicIpV6Address($val)
+    {
+        $this->_propDict["clientPublicIpV6Address"] = $val;
+        return $this;
+    }
+    /**
     * Gets the conferenceId
     * ID of the audio conference.
     *

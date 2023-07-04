@@ -33,4 +33,5 @@ class PrintColorMode extends Enum
     const GRAYSCALE = "grayscale";
     const COLOR = "color";
     const AUTO = "auto";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

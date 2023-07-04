@@ -25,6 +25,7 @@ class CloudPcResizeValidationResult extends Entity
 {
     /**
     * Gets the cloudPcId
+    * The cloudPC id that corresponds to its unique identifier.
     *
     * @return string|null The cloudPcId
     */
@@ -39,6 +40,7 @@ class CloudPcResizeValidationResult extends Entity
 
     /**
     * Sets the cloudPcId
+    * The cloudPC id that corresponds to its unique identifier.
     *
     * @param string $val The value of the cloudPcId
     *
@@ -52,6 +54,7 @@ class CloudPcResizeValidationResult extends Entity
 
     /**
     * Gets the validationResult
+    * Describes a list of the validation result for the Cloud PC resize action. The possible values are: success, cloudPcNotFound, operationCnflict, operationNotSupported, targetLicenseHasAssigned, internalServerError, and unknownFutureValue.
     *
     * @return CloudPcResizeValidationCode|null The validationResult
     */
@@ -70,6 +73,7 @@ class CloudPcResizeValidationResult extends Entity
 
     /**
     * Sets the validationResult
+    * Describes a list of the validation result for the Cloud PC resize action. The possible values are: success, cloudPcNotFound, operationCnflict, operationNotSupported, targetLicenseHasAssigned, internalServerError, and unknownFutureValue.
     *
     * @param CloudPcResizeValidationCode $val The value to assign to the validationResult
     *

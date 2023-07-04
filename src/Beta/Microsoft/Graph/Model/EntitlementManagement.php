@@ -418,6 +418,7 @@ class EntitlementManagement extends Entity
 
      /**
      * Gets the subjects
+    * Represents the subjects within entitlement management.
      *
      * @return array|null The subjects
      */
@@ -432,6 +433,7 @@ class EntitlementManagement extends Entity
 
     /**
     * Sets the subjects
+    * Represents the subjects within entitlement management.
     *
     * @param AccessPackageSubject[] $val The subjects
     *

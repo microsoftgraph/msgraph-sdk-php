@@ -306,6 +306,37 @@ class Simulation extends Entity
     }
 
     /**
+    * Gets the endUserNotificationSetting
+    *
+    * @return EndUserNotificationSetting|null The endUserNotificationSetting
+    */
+    public function getEndUserNotificationSetting()
+    {
+        if (array_key_exists("endUserNotificationSetting", $this->_propDict)) {
+            if (is_a($this->_propDict["endUserNotificationSetting"], "\Beta\Microsoft\Graph\Model\EndUserNotificationSetting") || is_null($this->_propDict["endUserNotificationSetting"])) {
+                return $this->_propDict["endUserNotificationSetting"];
+            } else {
+                $this->_propDict["endUserNotificationSetting"] = new EndUserNotificationSetting($this->_propDict["endUserNotificationSetting"]);
+                return $this->_propDict["endUserNotificationSetting"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the endUserNotificationSetting
+    *
+    * @param EndUserNotificationSetting $val The endUserNotificationSetting
+    *
+    * @return Simulation
+    */
+    public function setEndUserNotificationSetting($val)
+    {
+        $this->_propDict["endUserNotificationSetting"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the excludedAccountTarget
     * Users excluded from the simulation.
     *
@@ -500,6 +531,37 @@ class Simulation extends Entity
     }
 
     /**
+    * Gets the oAuthConsentAppDetail
+    *
+    * @return OAuthConsentAppDetail|null The oAuthConsentAppDetail
+    */
+    public function getOAuthConsentAppDetail()
+    {
+        if (array_key_exists("oAuthConsentAppDetail", $this->_propDict)) {
+            if (is_a($this->_propDict["oAuthConsentAppDetail"], "\Beta\Microsoft\Graph\Model\OAuthConsentAppDetail") || is_null($this->_propDict["oAuthConsentAppDetail"])) {
+                return $this->_propDict["oAuthConsentAppDetail"];
+            } else {
+                $this->_propDict["oAuthConsentAppDetail"] = new OAuthConsentAppDetail($this->_propDict["oAuthConsentAppDetail"]);
+                return $this->_propDict["oAuthConsentAppDetail"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the oAuthConsentAppDetail
+    *
+    * @param OAuthConsentAppDetail $val The oAuthConsentAppDetail
+    *
+    * @return Simulation
+    */
+    public function setOAuthConsentAppDetail($val)
+    {
+        $this->_propDict["oAuthConsentAppDetail"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the payloadDeliveryPlatform
     * Method of delivery of the phishing payload used in the attack simulation and training campaign. Possible values are: unknown, sms, email, teams, unknownFutureValue.
     *
@@ -595,6 +657,99 @@ class Simulation extends Entity
     public function setStatus($val)
     {
         $this->_propDict["status"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the trainingSetting
+    *
+    * @return TrainingSetting|null The trainingSetting
+    */
+    public function getTrainingSetting()
+    {
+        if (array_key_exists("trainingSetting", $this->_propDict)) {
+            if (is_a($this->_propDict["trainingSetting"], "\Beta\Microsoft\Graph\Model\TrainingSetting") || is_null($this->_propDict["trainingSetting"])) {
+                return $this->_propDict["trainingSetting"];
+            } else {
+                $this->_propDict["trainingSetting"] = new TrainingSetting($this->_propDict["trainingSetting"]);
+                return $this->_propDict["trainingSetting"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the trainingSetting
+    *
+    * @param TrainingSetting $val The trainingSetting
+    *
+    * @return Simulation
+    */
+    public function setTrainingSetting($val)
+    {
+        $this->_propDict["trainingSetting"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the landingPage
+    *
+    * @return LandingPage|null The landingPage
+    */
+    public function getLandingPage()
+    {
+        if (array_key_exists("landingPage", $this->_propDict)) {
+            if (is_a($this->_propDict["landingPage"], "\Beta\Microsoft\Graph\Model\LandingPage") || is_null($this->_propDict["landingPage"])) {
+                return $this->_propDict["landingPage"];
+            } else {
+                $this->_propDict["landingPage"] = new LandingPage($this->_propDict["landingPage"]);
+                return $this->_propDict["landingPage"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the landingPage
+    *
+    * @param LandingPage $val The landingPage
+    *
+    * @return Simulation
+    */
+    public function setLandingPage($val)
+    {
+        $this->_propDict["landingPage"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the loginPage
+    *
+    * @return LoginPage|null The loginPage
+    */
+    public function getLoginPage()
+    {
+        if (array_key_exists("loginPage", $this->_propDict)) {
+            if (is_a($this->_propDict["loginPage"], "\Beta\Microsoft\Graph\Model\LoginPage") || is_null($this->_propDict["loginPage"])) {
+                return $this->_propDict["loginPage"];
+            } else {
+                $this->_propDict["loginPage"] = new LoginPage($this->_propDict["loginPage"]);
+                return $this->_propDict["loginPage"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the loginPage
+    *
+    * @param LoginPage $val The loginPage
+    *
+    * @return Simulation
+    */
+    public function setLoginPage($val)
+    {
+        $this->_propDict["loginPage"] = $val;
         return $this;
     }
 

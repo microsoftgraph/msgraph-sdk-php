@@ -36,4 +36,5 @@ class SimulationAttackTechnique extends Enum
     const LINK_IN_ATTACHMENT = "linkInAttachment";
     const LINK_TO_MALWARE_FILE = "linkToMalwareFile";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
+    const O_AUTH_CONSENT_GRANT = "oAuthConsentGrant";
 }

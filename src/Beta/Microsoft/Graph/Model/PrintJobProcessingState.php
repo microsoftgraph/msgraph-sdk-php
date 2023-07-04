@@ -37,4 +37,5 @@ class PrintJobProcessingState extends Enum
     const COMPLETED = "completed";
     const CANCELED = "canceled";
     const ABORTED = "aborted";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }
