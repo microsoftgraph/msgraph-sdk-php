@@ -17,7 +17,6 @@ use Microsoft\Kiota\Abstractions\RequestAdapter;
  * Class BatchRequestBuilder
  *
  * Send requests to Graph's /$batch endpoint
- *
  * @package Microsoft\Graph
  * @copyright 2023 Microsoft Corporation
  * @license https://opensource.org/licenses/MIT MIT License
