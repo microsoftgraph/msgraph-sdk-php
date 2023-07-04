@@ -18,7 +18,7 @@ class X509CertificateRule implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new x509CertificateRule and sets the default values.
+     * Instantiates a new X509CertificateRule and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

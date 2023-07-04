@@ -6,6 +6,7 @@ use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class AccessReviewInstanceDecisionItem extends Entity implements Parsable 
 {
@@ -97,6 +98,7 @@ class AccessReviewInstanceDecisionItem extends Entity implements Parsable
             'appliedDateTime' => fn(ParseNode $n) => $o->setAppliedDateTime($n->getDateTimeValue()),
             'applyResult' => fn(ParseNode $n) => $o->setApplyResult($n->getStringValue()),
             'decision' => fn(ParseNode $n) => $o->setDecision($n->getStringValue()),
+            'insights' => fn(ParseNode $n) => $o->setInsights($n->getCollectionOfObjectValues([GovernanceInsight::class, 'createFromDiscriminatorValue'])),
             'justification' => fn(ParseNode $n) => $o->setJustification($n->getStringValue()),
             'principal' => fn(ParseNode $n) => $o->setPrincipal($n->getObjectValue([Identity::class, 'createFromDiscriminatorValue'])),
             'principalLink' => fn(ParseNode $n) => $o->setPrincipalLink($n->getStringValue()),
@@ -106,6 +108,20 @@ class AccessReviewInstanceDecisionItem extends Entity implements Parsable
             'reviewedBy' => fn(ParseNode $n) => $o->setReviewedBy($n->getObjectValue([UserIdentity::class, 'createFromDiscriminatorValue'])),
             'reviewedDateTime' => fn(ParseNode $n) => $o->setReviewedDateTime($n->getDateTimeValue()),
         ]);
+    }
+
+    /**
+     * Gets the insights property value. Insights are recommendations to reviewers on whether to approve or deny a decision. There can be multiple insights associated with an accessReviewInstanceDecisionItem.
+     * @return array<GovernanceInsight>|null
+    */
+    public function getInsights(): ?array {
+        $val = $this->getBackingStore()->get('insights');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, GovernanceInsight::class);
+            /** @var array<GovernanceInsight>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'insights'");
     }
 
     /**
@@ -215,6 +231,7 @@ class AccessReviewInstanceDecisionItem extends Entity implements Parsable
         $writer->writeDateTimeValue('appliedDateTime', $this->getAppliedDateTime());
         $writer->writeStringValue('applyResult', $this->getApplyResult());
         $writer->writeStringValue('decision', $this->getDecision());
+        $writer->writeCollectionOfObjectValues('insights', $this->getInsights());
         $writer->writeStringValue('justification', $this->getJustification());
         $writer->writeObjectValue('principal', $this->getPrincipal());
         $writer->writeStringValue('principalLink', $this->getPrincipalLink());
@@ -263,6 +280,14 @@ class AccessReviewInstanceDecisionItem extends Entity implements Parsable
     */
     public function setDecision(?string $value): void {
         $this->getBackingStore()->set('decision', $value);
+    }
+
+    /**
+     * Sets the insights property value. Insights are recommendations to reviewers on whether to approve or deny a decision. There can be multiple insights associated with an accessReviewInstanceDecisionItem.
+     * @param array<GovernanceInsight>|null $value Value to set for the insights property.
+    */
+    public function setInsights(?array $value): void {
+        $this->getBackingStore()->set('insights', $value);
     }
 
     /**

@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 /**
- * An abstract class containing the base properties for Intune mobile apps.
+ * An abstract class containing the base properties for Intune mobile apps. Note: Listing mobile apps with `$expand=assignments` has been deprecated. Instead get the list of apps without the `$expand` query on `assignments`. Then, perform the expansion on individual applications.
 */
 class MobileApp extends Entity implements Parsable 
 {
@@ -37,6 +37,7 @@ class MobileApp extends Entity implements Parsable
                 case '#microsoft.graph.iosStoreApp': return new IosStoreApp();
                 case '#microsoft.graph.iosVppApp': return new IosVppApp();
                 case '#microsoft.graph.macOSLobApp': return new MacOSLobApp();
+                case '#microsoft.graph.macOSMicrosoftDefenderApp': return new MacOSMicrosoftDefenderApp();
                 case '#microsoft.graph.macOSMicrosoftEdgeApp': return new MacOSMicrosoftEdgeApp();
                 case '#microsoft.graph.macOSOfficeSuiteApp': return new MacOSOfficeSuiteApp();
                 case '#microsoft.graph.managedAndroidLobApp': return new ManagedAndroidLobApp();

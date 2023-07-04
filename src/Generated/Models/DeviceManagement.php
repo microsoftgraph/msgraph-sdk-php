@@ -200,6 +200,18 @@ class DeviceManagement extends Entity implements Parsable
     }
 
     /**
+     * Gets the deviceProtectionOverview property value. Device protection overview.
+     * @return DeviceProtectionOverview|null
+    */
+    public function getDeviceProtectionOverview(): ?DeviceProtectionOverview {
+        $val = $this->getBackingStore()->get('deviceProtectionOverview');
+        if (is_null($val) || $val instanceof DeviceProtectionOverview) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deviceProtectionOverview'");
+    }
+
+    /**
      * Gets the exchangeConnectors property value. The list of Exchange Connectors configured by the tenant.
      * @return array<DeviceManagementExchangeConnector>|null
     */
@@ -233,6 +245,7 @@ class DeviceManagement extends Entity implements Parsable
             'deviceConfigurations' => fn(ParseNode $n) => $o->setDeviceConfigurations($n->getCollectionOfObjectValues([DeviceConfiguration::class, 'createFromDiscriminatorValue'])),
             'deviceEnrollmentConfigurations' => fn(ParseNode $n) => $o->setDeviceEnrollmentConfigurations($n->getCollectionOfObjectValues([DeviceEnrollmentConfiguration::class, 'createFromDiscriminatorValue'])),
             'deviceManagementPartners' => fn(ParseNode $n) => $o->setDeviceManagementPartners($n->getCollectionOfObjectValues([DeviceManagementPartner::class, 'createFromDiscriminatorValue'])),
+            'deviceProtectionOverview' => fn(ParseNode $n) => $o->setDeviceProtectionOverview($n->getObjectValue([DeviceProtectionOverview::class, 'createFromDiscriminatorValue'])),
             'exchangeConnectors' => fn(ParseNode $n) => $o->setExchangeConnectors($n->getCollectionOfObjectValues([DeviceManagementExchangeConnector::class, 'createFromDiscriminatorValue'])),
             'importedWindowsAutopilotDeviceIdentities' => fn(ParseNode $n) => $o->setImportedWindowsAutopilotDeviceIdentities($n->getCollectionOfObjectValues([ImportedWindowsAutopilotDeviceIdentity::class, 'createFromDiscriminatorValue'])),
             'intuneAccountId' => fn(ParseNode $n) => $o->setIntuneAccountId($n->getStringValue()),
@@ -240,6 +253,7 @@ class DeviceManagement extends Entity implements Parsable
             'iosUpdateStatuses' => fn(ParseNode $n) => $o->setIosUpdateStatuses($n->getCollectionOfObjectValues([IosUpdateDeviceStatus::class, 'createFromDiscriminatorValue'])),
             'managedDeviceOverview' => fn(ParseNode $n) => $o->setManagedDeviceOverview($n->getObjectValue([ManagedDeviceOverview::class, 'createFromDiscriminatorValue'])),
             'managedDevices' => fn(ParseNode $n) => $o->setManagedDevices($n->getCollectionOfObjectValues([ManagedDevice::class, 'createFromDiscriminatorValue'])),
+            'mobileAppTroubleshootingEvents' => fn(ParseNode $n) => $o->setMobileAppTroubleshootingEvents($n->getCollectionOfObjectValues([MobileAppTroubleshootingEvent::class, 'createFromDiscriminatorValue'])),
             'mobileThreatDefenseConnectors' => fn(ParseNode $n) => $o->setMobileThreatDefenseConnectors($n->getCollectionOfObjectValues([MobileThreatDefenseConnector::class, 'createFromDiscriminatorValue'])),
             'notificationMessageTemplates' => fn(ParseNode $n) => $o->setNotificationMessageTemplates($n->getCollectionOfObjectValues([NotificationMessageTemplate::class, 'createFromDiscriminatorValue'])),
             'remoteAssistancePartners' => fn(ParseNode $n) => $o->setRemoteAssistancePartners($n->getCollectionOfObjectValues([RemoteAssistancePartner::class, 'createFromDiscriminatorValue'])),
@@ -253,9 +267,34 @@ class DeviceManagement extends Entity implements Parsable
             'telecomExpenseManagementPartners' => fn(ParseNode $n) => $o->setTelecomExpenseManagementPartners($n->getCollectionOfObjectValues([TelecomExpenseManagementPartner::class, 'createFromDiscriminatorValue'])),
             'termsAndConditions' => fn(ParseNode $n) => $o->setTermsAndConditions($n->getCollectionOfObjectValues([TermsAndConditions::class, 'createFromDiscriminatorValue'])),
             'troubleshootingEvents' => fn(ParseNode $n) => $o->setTroubleshootingEvents($n->getCollectionOfObjectValues([DeviceManagementTroubleshootingEvent::class, 'createFromDiscriminatorValue'])),
+            'userExperienceAnalyticsAppHealthApplicationPerformance' => fn(ParseNode $n) => $o->setUserExperienceAnalyticsAppHealthApplicationPerformance($n->getCollectionOfObjectValues([UserExperienceAnalyticsAppHealthApplicationPerformance::class, 'createFromDiscriminatorValue'])),
+            'userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails' => fn(ParseNode $n) => $o->setUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails($n->getCollectionOfObjectValues([UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails::class, 'createFromDiscriminatorValue'])),
+            'userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId' => fn(ParseNode $n) => $o->setUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId($n->getCollectionOfObjectValues([UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId::class, 'createFromDiscriminatorValue'])),
+            'userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion' => fn(ParseNode $n) => $o->setUserExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion($n->getCollectionOfObjectValues([UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion::class, 'createFromDiscriminatorValue'])),
+            'userExperienceAnalyticsAppHealthDeviceModelPerformance' => fn(ParseNode $n) => $o->setUserExperienceAnalyticsAppHealthDeviceModelPerformance($n->getCollectionOfObjectValues([UserExperienceAnalyticsAppHealthDeviceModelPerformance::class, 'createFromDiscriminatorValue'])),
+            'userExperienceAnalyticsAppHealthDevicePerformance' => fn(ParseNode $n) => $o->setUserExperienceAnalyticsAppHealthDevicePerformance($n->getCollectionOfObjectValues([UserExperienceAnalyticsAppHealthDevicePerformance::class, 'createFromDiscriminatorValue'])),
+            'userExperienceAnalyticsAppHealthDevicePerformanceDetails' => fn(ParseNode $n) => $o->setUserExperienceAnalyticsAppHealthDevicePerformanceDetails($n->getCollectionOfObjectValues([UserExperienceAnalyticsAppHealthDevicePerformanceDetails::class, 'createFromDiscriminatorValue'])),
+            'userExperienceAnalyticsAppHealthOSVersionPerformance' => fn(ParseNode $n) => $o->setUserExperienceAnalyticsAppHealthOSVersionPerformance($n->getCollectionOfObjectValues([UserExperienceAnalyticsAppHealthOSVersionPerformance::class, 'createFromDiscriminatorValue'])),
+            'userExperienceAnalyticsAppHealthOverview' => fn(ParseNode $n) => $o->setUserExperienceAnalyticsAppHealthOverview($n->getObjectValue([UserExperienceAnalyticsCategory::class, 'createFromDiscriminatorValue'])),
+            'userExperienceAnalyticsBaselines' => fn(ParseNode $n) => $o->setUserExperienceAnalyticsBaselines($n->getCollectionOfObjectValues([UserExperienceAnalyticsBaseline::class, 'createFromDiscriminatorValue'])),
+            'userExperienceAnalyticsCategories' => fn(ParseNode $n) => $o->setUserExperienceAnalyticsCategories($n->getCollectionOfObjectValues([UserExperienceAnalyticsCategory::class, 'createFromDiscriminatorValue'])),
+            'userExperienceAnalyticsDevicePerformance' => fn(ParseNode $n) => $o->setUserExperienceAnalyticsDevicePerformance($n->getCollectionOfObjectValues([UserExperienceAnalyticsDevicePerformance::class, 'createFromDiscriminatorValue'])),
+            'userExperienceAnalyticsDeviceScores' => fn(ParseNode $n) => $o->setUserExperienceAnalyticsDeviceScores($n->getCollectionOfObjectValues([UserExperienceAnalyticsDeviceScores::class, 'createFromDiscriminatorValue'])),
+            'userExperienceAnalyticsDeviceStartupHistory' => fn(ParseNode $n) => $o->setUserExperienceAnalyticsDeviceStartupHistory($n->getCollectionOfObjectValues([UserExperienceAnalyticsDeviceStartupHistory::class, 'createFromDiscriminatorValue'])),
+            'userExperienceAnalyticsDeviceStartupProcesses' => fn(ParseNode $n) => $o->setUserExperienceAnalyticsDeviceStartupProcesses($n->getCollectionOfObjectValues([UserExperienceAnalyticsDeviceStartupProcess::class, 'createFromDiscriminatorValue'])),
+            'userExperienceAnalyticsMetricHistory' => fn(ParseNode $n) => $o->setUserExperienceAnalyticsMetricHistory($n->getCollectionOfObjectValues([UserExperienceAnalyticsMetricHistory::class, 'createFromDiscriminatorValue'])),
+            'userExperienceAnalyticsModelScores' => fn(ParseNode $n) => $o->setUserExperienceAnalyticsModelScores($n->getCollectionOfObjectValues([UserExperienceAnalyticsModelScores::class, 'createFromDiscriminatorValue'])),
+            'userExperienceAnalyticsOverview' => fn(ParseNode $n) => $o->setUserExperienceAnalyticsOverview($n->getObjectValue([UserExperienceAnalyticsOverview::class, 'createFromDiscriminatorValue'])),
+            'userExperienceAnalyticsScoreHistory' => fn(ParseNode $n) => $o->setUserExperienceAnalyticsScoreHistory($n->getCollectionOfObjectValues([UserExperienceAnalyticsScoreHistory::class, 'createFromDiscriminatorValue'])),
+            'userExperienceAnalyticsSettings' => fn(ParseNode $n) => $o->setUserExperienceAnalyticsSettings($n->getObjectValue([UserExperienceAnalyticsSettings::class, 'createFromDiscriminatorValue'])),
+            'userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric' => fn(ParseNode $n) => $o->setUserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric($n->getObjectValue([UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric::class, 'createFromDiscriminatorValue'])),
+            'userExperienceAnalyticsWorkFromAnywhereMetrics' => fn(ParseNode $n) => $o->setUserExperienceAnalyticsWorkFromAnywhereMetrics($n->getCollectionOfObjectValues([UserExperienceAnalyticsWorkFromAnywhereMetric::class, 'createFromDiscriminatorValue'])),
+            'userExperienceAnalyticsWorkFromAnywhereModelPerformance' => fn(ParseNode $n) => $o->setUserExperienceAnalyticsWorkFromAnywhereModelPerformance($n->getCollectionOfObjectValues([UserExperienceAnalyticsWorkFromAnywhereModelPerformance::class, 'createFromDiscriminatorValue'])),
             'windowsAutopilotDeviceIdentities' => fn(ParseNode $n) => $o->setWindowsAutopilotDeviceIdentities($n->getCollectionOfObjectValues([WindowsAutopilotDeviceIdentity::class, 'createFromDiscriminatorValue'])),
             'windowsInformationProtectionAppLearningSummaries' => fn(ParseNode $n) => $o->setWindowsInformationProtectionAppLearningSummaries($n->getCollectionOfObjectValues([WindowsInformationProtectionAppLearningSummary::class, 'createFromDiscriminatorValue'])),
             'windowsInformationProtectionNetworkLearningSummaries' => fn(ParseNode $n) => $o->setWindowsInformationProtectionNetworkLearningSummaries($n->getCollectionOfObjectValues([WindowsInformationProtectionNetworkLearningSummary::class, 'createFromDiscriminatorValue'])),
+            'windowsMalwareInformation' => fn(ParseNode $n) => $o->setWindowsMalwareInformation($n->getCollectionOfObjectValues([WindowsMalwareInformation::class, 'createFromDiscriminatorValue'])),
+            'windowsMalwareOverview' => fn(ParseNode $n) => $o->setWindowsMalwareOverview($n->getObjectValue([WindowsMalwareOverview::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -335,6 +374,20 @@ class DeviceManagement extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'managedDevices'");
+    }
+
+    /**
+     * Gets the mobileAppTroubleshootingEvents property value. The collection property of MobileAppTroubleshootingEvent.
+     * @return array<MobileAppTroubleshootingEvent>|null
+    */
+    public function getMobileAppTroubleshootingEvents(): ?array {
+        $val = $this->getBackingStore()->get('mobileAppTroubleshootingEvents');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, MobileAppTroubleshootingEvent::class);
+            /** @var array<MobileAppTroubleshootingEvent>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'mobileAppTroubleshootingEvents'");
     }
 
     /**
@@ -512,6 +565,320 @@ class DeviceManagement extends Entity implements Parsable
     }
 
     /**
+     * Gets the userExperienceAnalyticsAppHealthApplicationPerformance property value. User experience analytics appHealth Application Performance
+     * @return array<UserExperienceAnalyticsAppHealthApplicationPerformance>|null
+    */
+    public function getUserExperienceAnalyticsAppHealthApplicationPerformance(): ?array {
+        $val = $this->getBackingStore()->get('userExperienceAnalyticsAppHealthApplicationPerformance');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, UserExperienceAnalyticsAppHealthApplicationPerformance::class);
+            /** @var array<UserExperienceAnalyticsAppHealthApplicationPerformance>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userExperienceAnalyticsAppHealthApplicationPerformance'");
+    }
+
+    /**
+     * Gets the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails property value. User experience analytics appHealth Application Performance by App Version details
+     * @return array<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails>|null
+    */
+    public function getUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails(): ?array {
+        $val = $this->getBackingStore()->get('userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails::class);
+            /** @var array<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails'");
+    }
+
+    /**
+     * Gets the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId property value. User experience analytics appHealth Application Performance by App Version Device Id
+     * @return array<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId>|null
+    */
+    public function getUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId(): ?array {
+        $val = $this->getBackingStore()->get('userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId::class);
+            /** @var array<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId'");
+    }
+
+    /**
+     * Gets the userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion property value. User experience analytics appHealth Application Performance by OS Version
+     * @return array<UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion>|null
+    */
+    public function getUserExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion(): ?array {
+        $val = $this->getBackingStore()->get('userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion::class);
+            /** @var array<UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion'");
+    }
+
+    /**
+     * Gets the userExperienceAnalyticsAppHealthDeviceModelPerformance property value. User experience analytics appHealth Model Performance
+     * @return array<UserExperienceAnalyticsAppHealthDeviceModelPerformance>|null
+    */
+    public function getUserExperienceAnalyticsAppHealthDeviceModelPerformance(): ?array {
+        $val = $this->getBackingStore()->get('userExperienceAnalyticsAppHealthDeviceModelPerformance');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, UserExperienceAnalyticsAppHealthDeviceModelPerformance::class);
+            /** @var array<UserExperienceAnalyticsAppHealthDeviceModelPerformance>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userExperienceAnalyticsAppHealthDeviceModelPerformance'");
+    }
+
+    /**
+     * Gets the userExperienceAnalyticsAppHealthDevicePerformance property value. User experience analytics appHealth Device Performance
+     * @return array<UserExperienceAnalyticsAppHealthDevicePerformance>|null
+    */
+    public function getUserExperienceAnalyticsAppHealthDevicePerformance(): ?array {
+        $val = $this->getBackingStore()->get('userExperienceAnalyticsAppHealthDevicePerformance');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, UserExperienceAnalyticsAppHealthDevicePerformance::class);
+            /** @var array<UserExperienceAnalyticsAppHealthDevicePerformance>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userExperienceAnalyticsAppHealthDevicePerformance'");
+    }
+
+    /**
+     * Gets the userExperienceAnalyticsAppHealthDevicePerformanceDetails property value. User experience analytics device performance details
+     * @return array<UserExperienceAnalyticsAppHealthDevicePerformanceDetails>|null
+    */
+    public function getUserExperienceAnalyticsAppHealthDevicePerformanceDetails(): ?array {
+        $val = $this->getBackingStore()->get('userExperienceAnalyticsAppHealthDevicePerformanceDetails');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, UserExperienceAnalyticsAppHealthDevicePerformanceDetails::class);
+            /** @var array<UserExperienceAnalyticsAppHealthDevicePerformanceDetails>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userExperienceAnalyticsAppHealthDevicePerformanceDetails'");
+    }
+
+    /**
+     * Gets the userExperienceAnalyticsAppHealthOSVersionPerformance property value. User experience analytics appHealth OS version Performance
+     * @return array<UserExperienceAnalyticsAppHealthOSVersionPerformance>|null
+    */
+    public function getUserExperienceAnalyticsAppHealthOSVersionPerformance(): ?array {
+        $val = $this->getBackingStore()->get('userExperienceAnalyticsAppHealthOSVersionPerformance');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, UserExperienceAnalyticsAppHealthOSVersionPerformance::class);
+            /** @var array<UserExperienceAnalyticsAppHealthOSVersionPerformance>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userExperienceAnalyticsAppHealthOSVersionPerformance'");
+    }
+
+    /**
+     * Gets the userExperienceAnalyticsAppHealthOverview property value. User experience analytics appHealth overview
+     * @return UserExperienceAnalyticsCategory|null
+    */
+    public function getUserExperienceAnalyticsAppHealthOverview(): ?UserExperienceAnalyticsCategory {
+        $val = $this->getBackingStore()->get('userExperienceAnalyticsAppHealthOverview');
+        if (is_null($val) || $val instanceof UserExperienceAnalyticsCategory) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userExperienceAnalyticsAppHealthOverview'");
+    }
+
+    /**
+     * Gets the userExperienceAnalyticsBaselines property value. User experience analytics baselines
+     * @return array<UserExperienceAnalyticsBaseline>|null
+    */
+    public function getUserExperienceAnalyticsBaselines(): ?array {
+        $val = $this->getBackingStore()->get('userExperienceAnalyticsBaselines');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, UserExperienceAnalyticsBaseline::class);
+            /** @var array<UserExperienceAnalyticsBaseline>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userExperienceAnalyticsBaselines'");
+    }
+
+    /**
+     * Gets the userExperienceAnalyticsCategories property value. User experience analytics categories
+     * @return array<UserExperienceAnalyticsCategory>|null
+    */
+    public function getUserExperienceAnalyticsCategories(): ?array {
+        $val = $this->getBackingStore()->get('userExperienceAnalyticsCategories');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, UserExperienceAnalyticsCategory::class);
+            /** @var array<UserExperienceAnalyticsCategory>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userExperienceAnalyticsCategories'");
+    }
+
+    /**
+     * Gets the userExperienceAnalyticsDevicePerformance property value. User experience analytics device performance
+     * @return array<UserExperienceAnalyticsDevicePerformance>|null
+    */
+    public function getUserExperienceAnalyticsDevicePerformance(): ?array {
+        $val = $this->getBackingStore()->get('userExperienceAnalyticsDevicePerformance');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, UserExperienceAnalyticsDevicePerformance::class);
+            /** @var array<UserExperienceAnalyticsDevicePerformance>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userExperienceAnalyticsDevicePerformance'");
+    }
+
+    /**
+     * Gets the userExperienceAnalyticsDeviceScores property value. User experience analytics device scores
+     * @return array<UserExperienceAnalyticsDeviceScores>|null
+    */
+    public function getUserExperienceAnalyticsDeviceScores(): ?array {
+        $val = $this->getBackingStore()->get('userExperienceAnalyticsDeviceScores');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, UserExperienceAnalyticsDeviceScores::class);
+            /** @var array<UserExperienceAnalyticsDeviceScores>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userExperienceAnalyticsDeviceScores'");
+    }
+
+    /**
+     * Gets the userExperienceAnalyticsDeviceStartupHistory property value. User experience analytics device Startup History
+     * @return array<UserExperienceAnalyticsDeviceStartupHistory>|null
+    */
+    public function getUserExperienceAnalyticsDeviceStartupHistory(): ?array {
+        $val = $this->getBackingStore()->get('userExperienceAnalyticsDeviceStartupHistory');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, UserExperienceAnalyticsDeviceStartupHistory::class);
+            /** @var array<UserExperienceAnalyticsDeviceStartupHistory>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userExperienceAnalyticsDeviceStartupHistory'");
+    }
+
+    /**
+     * Gets the userExperienceAnalyticsDeviceStartupProcesses property value. User experience analytics device Startup Processes
+     * @return array<UserExperienceAnalyticsDeviceStartupProcess>|null
+    */
+    public function getUserExperienceAnalyticsDeviceStartupProcesses(): ?array {
+        $val = $this->getBackingStore()->get('userExperienceAnalyticsDeviceStartupProcesses');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, UserExperienceAnalyticsDeviceStartupProcess::class);
+            /** @var array<UserExperienceAnalyticsDeviceStartupProcess>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userExperienceAnalyticsDeviceStartupProcesses'");
+    }
+
+    /**
+     * Gets the userExperienceAnalyticsMetricHistory property value. User experience analytics metric history
+     * @return array<UserExperienceAnalyticsMetricHistory>|null
+    */
+    public function getUserExperienceAnalyticsMetricHistory(): ?array {
+        $val = $this->getBackingStore()->get('userExperienceAnalyticsMetricHistory');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, UserExperienceAnalyticsMetricHistory::class);
+            /** @var array<UserExperienceAnalyticsMetricHistory>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userExperienceAnalyticsMetricHistory'");
+    }
+
+    /**
+     * Gets the userExperienceAnalyticsModelScores property value. User experience analytics model scores
+     * @return array<UserExperienceAnalyticsModelScores>|null
+    */
+    public function getUserExperienceAnalyticsModelScores(): ?array {
+        $val = $this->getBackingStore()->get('userExperienceAnalyticsModelScores');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, UserExperienceAnalyticsModelScores::class);
+            /** @var array<UserExperienceAnalyticsModelScores>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userExperienceAnalyticsModelScores'");
+    }
+
+    /**
+     * Gets the userExperienceAnalyticsOverview property value. User experience analytics overview
+     * @return UserExperienceAnalyticsOverview|null
+    */
+    public function getUserExperienceAnalyticsOverview(): ?UserExperienceAnalyticsOverview {
+        $val = $this->getBackingStore()->get('userExperienceAnalyticsOverview');
+        if (is_null($val) || $val instanceof UserExperienceAnalyticsOverview) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userExperienceAnalyticsOverview'");
+    }
+
+    /**
+     * Gets the userExperienceAnalyticsScoreHistory property value. User experience analytics device Startup Score History
+     * @return array<UserExperienceAnalyticsScoreHistory>|null
+    */
+    public function getUserExperienceAnalyticsScoreHistory(): ?array {
+        $val = $this->getBackingStore()->get('userExperienceAnalyticsScoreHistory');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, UserExperienceAnalyticsScoreHistory::class);
+            /** @var array<UserExperienceAnalyticsScoreHistory>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userExperienceAnalyticsScoreHistory'");
+    }
+
+    /**
+     * Gets the userExperienceAnalyticsSettings property value. User experience analytics device settings
+     * @return UserExperienceAnalyticsSettings|null
+    */
+    public function getUserExperienceAnalyticsSettings(): ?UserExperienceAnalyticsSettings {
+        $val = $this->getBackingStore()->get('userExperienceAnalyticsSettings');
+        if (is_null($val) || $val instanceof UserExperienceAnalyticsSettings) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userExperienceAnalyticsSettings'");
+    }
+
+    /**
+     * Gets the userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric property value. User experience analytics work from anywhere hardware readiness metrics.
+     * @return UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric|null
+    */
+    public function getUserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric(): ?UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric {
+        $val = $this->getBackingStore()->get('userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric');
+        if (is_null($val) || $val instanceof UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric'");
+    }
+
+    /**
+     * Gets the userExperienceAnalyticsWorkFromAnywhereMetrics property value. User experience analytics work from anywhere metrics.
+     * @return array<UserExperienceAnalyticsWorkFromAnywhereMetric>|null
+    */
+    public function getUserExperienceAnalyticsWorkFromAnywhereMetrics(): ?array {
+        $val = $this->getBackingStore()->get('userExperienceAnalyticsWorkFromAnywhereMetrics');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, UserExperienceAnalyticsWorkFromAnywhereMetric::class);
+            /** @var array<UserExperienceAnalyticsWorkFromAnywhereMetric>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userExperienceAnalyticsWorkFromAnywhereMetrics'");
+    }
+
+    /**
+     * Gets the userExperienceAnalyticsWorkFromAnywhereModelPerformance property value. The user experience analytics work from anywhere model performance
+     * @return array<UserExperienceAnalyticsWorkFromAnywhereModelPerformance>|null
+    */
+    public function getUserExperienceAnalyticsWorkFromAnywhereModelPerformance(): ?array {
+        $val = $this->getBackingStore()->get('userExperienceAnalyticsWorkFromAnywhereModelPerformance');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, UserExperienceAnalyticsWorkFromAnywhereModelPerformance::class);
+            /** @var array<UserExperienceAnalyticsWorkFromAnywhereModelPerformance>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userExperienceAnalyticsWorkFromAnywhereModelPerformance'");
+    }
+
+    /**
      * Gets the windowsAutopilotDeviceIdentities property value. The Windows autopilot device identities contained collection.
      * @return array<WindowsAutopilotDeviceIdentity>|null
     */
@@ -554,6 +921,32 @@ class DeviceManagement extends Entity implements Parsable
     }
 
     /**
+     * Gets the windowsMalwareInformation property value. The list of affected malware in the tenant.
+     * @return array<WindowsMalwareInformation>|null
+    */
+    public function getWindowsMalwareInformation(): ?array {
+        $val = $this->getBackingStore()->get('windowsMalwareInformation');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, WindowsMalwareInformation::class);
+            /** @var array<WindowsMalwareInformation>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'windowsMalwareInformation'");
+    }
+
+    /**
+     * Gets the windowsMalwareOverview property value. Malware overview for windows devices.
+     * @return WindowsMalwareOverview|null
+    */
+    public function getWindowsMalwareOverview(): ?WindowsMalwareOverview {
+        $val = $this->getBackingStore()->get('windowsMalwareOverview');
+        if (is_null($val) || $val instanceof WindowsMalwareOverview) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'windowsMalwareOverview'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -572,6 +965,7 @@ class DeviceManagement extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('deviceConfigurations', $this->getDeviceConfigurations());
         $writer->writeCollectionOfObjectValues('deviceEnrollmentConfigurations', $this->getDeviceEnrollmentConfigurations());
         $writer->writeCollectionOfObjectValues('deviceManagementPartners', $this->getDeviceManagementPartners());
+        $writer->writeObjectValue('deviceProtectionOverview', $this->getDeviceProtectionOverview());
         $writer->writeCollectionOfObjectValues('exchangeConnectors', $this->getExchangeConnectors());
         $writer->writeCollectionOfObjectValues('importedWindowsAutopilotDeviceIdentities', $this->getImportedWindowsAutopilotDeviceIdentities());
         $writer->writeStringValue('intuneAccountId', $this->getIntuneAccountId());
@@ -579,6 +973,7 @@ class DeviceManagement extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('iosUpdateStatuses', $this->getIosUpdateStatuses());
         $writer->writeObjectValue('managedDeviceOverview', $this->getManagedDeviceOverview());
         $writer->writeCollectionOfObjectValues('managedDevices', $this->getManagedDevices());
+        $writer->writeCollectionOfObjectValues('mobileAppTroubleshootingEvents', $this->getMobileAppTroubleshootingEvents());
         $writer->writeCollectionOfObjectValues('mobileThreatDefenseConnectors', $this->getMobileThreatDefenseConnectors());
         $writer->writeCollectionOfObjectValues('notificationMessageTemplates', $this->getNotificationMessageTemplates());
         $writer->writeCollectionOfObjectValues('remoteAssistancePartners', $this->getRemoteAssistancePartners());
@@ -592,9 +987,34 @@ class DeviceManagement extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('telecomExpenseManagementPartners', $this->getTelecomExpenseManagementPartners());
         $writer->writeCollectionOfObjectValues('termsAndConditions', $this->getTermsAndConditions());
         $writer->writeCollectionOfObjectValues('troubleshootingEvents', $this->getTroubleshootingEvents());
+        $writer->writeCollectionOfObjectValues('userExperienceAnalyticsAppHealthApplicationPerformance', $this->getUserExperienceAnalyticsAppHealthApplicationPerformance());
+        $writer->writeCollectionOfObjectValues('userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails', $this->getUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails());
+        $writer->writeCollectionOfObjectValues('userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId', $this->getUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId());
+        $writer->writeCollectionOfObjectValues('userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion', $this->getUserExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion());
+        $writer->writeCollectionOfObjectValues('userExperienceAnalyticsAppHealthDeviceModelPerformance', $this->getUserExperienceAnalyticsAppHealthDeviceModelPerformance());
+        $writer->writeCollectionOfObjectValues('userExperienceAnalyticsAppHealthDevicePerformance', $this->getUserExperienceAnalyticsAppHealthDevicePerformance());
+        $writer->writeCollectionOfObjectValues('userExperienceAnalyticsAppHealthDevicePerformanceDetails', $this->getUserExperienceAnalyticsAppHealthDevicePerformanceDetails());
+        $writer->writeCollectionOfObjectValues('userExperienceAnalyticsAppHealthOSVersionPerformance', $this->getUserExperienceAnalyticsAppHealthOSVersionPerformance());
+        $writer->writeObjectValue('userExperienceAnalyticsAppHealthOverview', $this->getUserExperienceAnalyticsAppHealthOverview());
+        $writer->writeCollectionOfObjectValues('userExperienceAnalyticsBaselines', $this->getUserExperienceAnalyticsBaselines());
+        $writer->writeCollectionOfObjectValues('userExperienceAnalyticsCategories', $this->getUserExperienceAnalyticsCategories());
+        $writer->writeCollectionOfObjectValues('userExperienceAnalyticsDevicePerformance', $this->getUserExperienceAnalyticsDevicePerformance());
+        $writer->writeCollectionOfObjectValues('userExperienceAnalyticsDeviceScores', $this->getUserExperienceAnalyticsDeviceScores());
+        $writer->writeCollectionOfObjectValues('userExperienceAnalyticsDeviceStartupHistory', $this->getUserExperienceAnalyticsDeviceStartupHistory());
+        $writer->writeCollectionOfObjectValues('userExperienceAnalyticsDeviceStartupProcesses', $this->getUserExperienceAnalyticsDeviceStartupProcesses());
+        $writer->writeCollectionOfObjectValues('userExperienceAnalyticsMetricHistory', $this->getUserExperienceAnalyticsMetricHistory());
+        $writer->writeCollectionOfObjectValues('userExperienceAnalyticsModelScores', $this->getUserExperienceAnalyticsModelScores());
+        $writer->writeObjectValue('userExperienceAnalyticsOverview', $this->getUserExperienceAnalyticsOverview());
+        $writer->writeCollectionOfObjectValues('userExperienceAnalyticsScoreHistory', $this->getUserExperienceAnalyticsScoreHistory());
+        $writer->writeObjectValue('userExperienceAnalyticsSettings', $this->getUserExperienceAnalyticsSettings());
+        $writer->writeObjectValue('userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric', $this->getUserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric());
+        $writer->writeCollectionOfObjectValues('userExperienceAnalyticsWorkFromAnywhereMetrics', $this->getUserExperienceAnalyticsWorkFromAnywhereMetrics());
+        $writer->writeCollectionOfObjectValues('userExperienceAnalyticsWorkFromAnywhereModelPerformance', $this->getUserExperienceAnalyticsWorkFromAnywhereModelPerformance());
         $writer->writeCollectionOfObjectValues('windowsAutopilotDeviceIdentities', $this->getWindowsAutopilotDeviceIdentities());
         $writer->writeCollectionOfObjectValues('windowsInformationProtectionAppLearningSummaries', $this->getWindowsInformationProtectionAppLearningSummaries());
         $writer->writeCollectionOfObjectValues('windowsInformationProtectionNetworkLearningSummaries', $this->getWindowsInformationProtectionNetworkLearningSummaries());
+        $writer->writeCollectionOfObjectValues('windowsMalwareInformation', $this->getWindowsMalwareInformation());
+        $writer->writeObjectValue('windowsMalwareOverview', $this->getWindowsMalwareOverview());
     }
 
     /**
@@ -702,6 +1122,14 @@ class DeviceManagement extends Entity implements Parsable
     }
 
     /**
+     * Sets the deviceProtectionOverview property value. Device protection overview.
+     * @param DeviceProtectionOverview|null $value Value to set for the deviceProtectionOverview property.
+    */
+    public function setDeviceProtectionOverview(?DeviceProtectionOverview $value): void {
+        $this->getBackingStore()->set('deviceProtectionOverview', $value);
+    }
+
+    /**
      * Sets the exchangeConnectors property value. The list of Exchange Connectors configured by the tenant.
      * @param array<DeviceManagementExchangeConnector>|null $value Value to set for the exchangeConnectors property.
     */
@@ -755,6 +1183,14 @@ class DeviceManagement extends Entity implements Parsable
     */
     public function setManagedDevices(?array $value): void {
         $this->getBackingStore()->set('managedDevices', $value);
+    }
+
+    /**
+     * Sets the mobileAppTroubleshootingEvents property value. The collection property of MobileAppTroubleshootingEvent.
+     * @param array<MobileAppTroubleshootingEvent>|null $value Value to set for the mobileAppTroubleshootingEvents property.
+    */
+    public function setMobileAppTroubleshootingEvents(?array $value): void {
+        $this->getBackingStore()->set('mobileAppTroubleshootingEvents', $value);
     }
 
     /**
@@ -862,6 +1298,190 @@ class DeviceManagement extends Entity implements Parsable
     }
 
     /**
+     * Sets the userExperienceAnalyticsAppHealthApplicationPerformance property value. User experience analytics appHealth Application Performance
+     * @param array<UserExperienceAnalyticsAppHealthApplicationPerformance>|null $value Value to set for the userExperienceAnalyticsAppHealthApplicationPerformance property.
+    */
+    public function setUserExperienceAnalyticsAppHealthApplicationPerformance(?array $value): void {
+        $this->getBackingStore()->set('userExperienceAnalyticsAppHealthApplicationPerformance', $value);
+    }
+
+    /**
+     * Sets the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails property value. User experience analytics appHealth Application Performance by App Version details
+     * @param array<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails>|null $value Value to set for the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails property.
+    */
+    public function setUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails(?array $value): void {
+        $this->getBackingStore()->set('userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails', $value);
+    }
+
+    /**
+     * Sets the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId property value. User experience analytics appHealth Application Performance by App Version Device Id
+     * @param array<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId>|null $value Value to set for the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId property.
+    */
+    public function setUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId(?array $value): void {
+        $this->getBackingStore()->set('userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId', $value);
+    }
+
+    /**
+     * Sets the userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion property value. User experience analytics appHealth Application Performance by OS Version
+     * @param array<UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion>|null $value Value to set for the userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion property.
+    */
+    public function setUserExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion(?array $value): void {
+        $this->getBackingStore()->set('userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion', $value);
+    }
+
+    /**
+     * Sets the userExperienceAnalyticsAppHealthDeviceModelPerformance property value. User experience analytics appHealth Model Performance
+     * @param array<UserExperienceAnalyticsAppHealthDeviceModelPerformance>|null $value Value to set for the userExperienceAnalyticsAppHealthDeviceModelPerformance property.
+    */
+    public function setUserExperienceAnalyticsAppHealthDeviceModelPerformance(?array $value): void {
+        $this->getBackingStore()->set('userExperienceAnalyticsAppHealthDeviceModelPerformance', $value);
+    }
+
+    /**
+     * Sets the userExperienceAnalyticsAppHealthDevicePerformance property value. User experience analytics appHealth Device Performance
+     * @param array<UserExperienceAnalyticsAppHealthDevicePerformance>|null $value Value to set for the userExperienceAnalyticsAppHealthDevicePerformance property.
+    */
+    public function setUserExperienceAnalyticsAppHealthDevicePerformance(?array $value): void {
+        $this->getBackingStore()->set('userExperienceAnalyticsAppHealthDevicePerformance', $value);
+    }
+
+    /**
+     * Sets the userExperienceAnalyticsAppHealthDevicePerformanceDetails property value. User experience analytics device performance details
+     * @param array<UserExperienceAnalyticsAppHealthDevicePerformanceDetails>|null $value Value to set for the userExperienceAnalyticsAppHealthDevicePerformanceDetails property.
+    */
+    public function setUserExperienceAnalyticsAppHealthDevicePerformanceDetails(?array $value): void {
+        $this->getBackingStore()->set('userExperienceAnalyticsAppHealthDevicePerformanceDetails', $value);
+    }
+
+    /**
+     * Sets the userExperienceAnalyticsAppHealthOSVersionPerformance property value. User experience analytics appHealth OS version Performance
+     * @param array<UserExperienceAnalyticsAppHealthOSVersionPerformance>|null $value Value to set for the userExperienceAnalyticsAppHealthOSVersionPerformance property.
+    */
+    public function setUserExperienceAnalyticsAppHealthOSVersionPerformance(?array $value): void {
+        $this->getBackingStore()->set('userExperienceAnalyticsAppHealthOSVersionPerformance', $value);
+    }
+
+    /**
+     * Sets the userExperienceAnalyticsAppHealthOverview property value. User experience analytics appHealth overview
+     * @param UserExperienceAnalyticsCategory|null $value Value to set for the userExperienceAnalyticsAppHealthOverview property.
+    */
+    public function setUserExperienceAnalyticsAppHealthOverview(?UserExperienceAnalyticsCategory $value): void {
+        $this->getBackingStore()->set('userExperienceAnalyticsAppHealthOverview', $value);
+    }
+
+    /**
+     * Sets the userExperienceAnalyticsBaselines property value. User experience analytics baselines
+     * @param array<UserExperienceAnalyticsBaseline>|null $value Value to set for the userExperienceAnalyticsBaselines property.
+    */
+    public function setUserExperienceAnalyticsBaselines(?array $value): void {
+        $this->getBackingStore()->set('userExperienceAnalyticsBaselines', $value);
+    }
+
+    /**
+     * Sets the userExperienceAnalyticsCategories property value. User experience analytics categories
+     * @param array<UserExperienceAnalyticsCategory>|null $value Value to set for the userExperienceAnalyticsCategories property.
+    */
+    public function setUserExperienceAnalyticsCategories(?array $value): void {
+        $this->getBackingStore()->set('userExperienceAnalyticsCategories', $value);
+    }
+
+    /**
+     * Sets the userExperienceAnalyticsDevicePerformance property value. User experience analytics device performance
+     * @param array<UserExperienceAnalyticsDevicePerformance>|null $value Value to set for the userExperienceAnalyticsDevicePerformance property.
+    */
+    public function setUserExperienceAnalyticsDevicePerformance(?array $value): void {
+        $this->getBackingStore()->set('userExperienceAnalyticsDevicePerformance', $value);
+    }
+
+    /**
+     * Sets the userExperienceAnalyticsDeviceScores property value. User experience analytics device scores
+     * @param array<UserExperienceAnalyticsDeviceScores>|null $value Value to set for the userExperienceAnalyticsDeviceScores property.
+    */
+    public function setUserExperienceAnalyticsDeviceScores(?array $value): void {
+        $this->getBackingStore()->set('userExperienceAnalyticsDeviceScores', $value);
+    }
+
+    /**
+     * Sets the userExperienceAnalyticsDeviceStartupHistory property value. User experience analytics device Startup History
+     * @param array<UserExperienceAnalyticsDeviceStartupHistory>|null $value Value to set for the userExperienceAnalyticsDeviceStartupHistory property.
+    */
+    public function setUserExperienceAnalyticsDeviceStartupHistory(?array $value): void {
+        $this->getBackingStore()->set('userExperienceAnalyticsDeviceStartupHistory', $value);
+    }
+
+    /**
+     * Sets the userExperienceAnalyticsDeviceStartupProcesses property value. User experience analytics device Startup Processes
+     * @param array<UserExperienceAnalyticsDeviceStartupProcess>|null $value Value to set for the userExperienceAnalyticsDeviceStartupProcesses property.
+    */
+    public function setUserExperienceAnalyticsDeviceStartupProcesses(?array $value): void {
+        $this->getBackingStore()->set('userExperienceAnalyticsDeviceStartupProcesses', $value);
+    }
+
+    /**
+     * Sets the userExperienceAnalyticsMetricHistory property value. User experience analytics metric history
+     * @param array<UserExperienceAnalyticsMetricHistory>|null $value Value to set for the userExperienceAnalyticsMetricHistory property.
+    */
+    public function setUserExperienceAnalyticsMetricHistory(?array $value): void {
+        $this->getBackingStore()->set('userExperienceAnalyticsMetricHistory', $value);
+    }
+
+    /**
+     * Sets the userExperienceAnalyticsModelScores property value. User experience analytics model scores
+     * @param array<UserExperienceAnalyticsModelScores>|null $value Value to set for the userExperienceAnalyticsModelScores property.
+    */
+    public function setUserExperienceAnalyticsModelScores(?array $value): void {
+        $this->getBackingStore()->set('userExperienceAnalyticsModelScores', $value);
+    }
+
+    /**
+     * Sets the userExperienceAnalyticsOverview property value. User experience analytics overview
+     * @param UserExperienceAnalyticsOverview|null $value Value to set for the userExperienceAnalyticsOverview property.
+    */
+    public function setUserExperienceAnalyticsOverview(?UserExperienceAnalyticsOverview $value): void {
+        $this->getBackingStore()->set('userExperienceAnalyticsOverview', $value);
+    }
+
+    /**
+     * Sets the userExperienceAnalyticsScoreHistory property value. User experience analytics device Startup Score History
+     * @param array<UserExperienceAnalyticsScoreHistory>|null $value Value to set for the userExperienceAnalyticsScoreHistory property.
+    */
+    public function setUserExperienceAnalyticsScoreHistory(?array $value): void {
+        $this->getBackingStore()->set('userExperienceAnalyticsScoreHistory', $value);
+    }
+
+    /**
+     * Sets the userExperienceAnalyticsSettings property value. User experience analytics device settings
+     * @param UserExperienceAnalyticsSettings|null $value Value to set for the userExperienceAnalyticsSettings property.
+    */
+    public function setUserExperienceAnalyticsSettings(?UserExperienceAnalyticsSettings $value): void {
+        $this->getBackingStore()->set('userExperienceAnalyticsSettings', $value);
+    }
+
+    /**
+     * Sets the userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric property value. User experience analytics work from anywhere hardware readiness metrics.
+     * @param UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric|null $value Value to set for the userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric property.
+    */
+    public function setUserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric(?UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric $value): void {
+        $this->getBackingStore()->set('userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric', $value);
+    }
+
+    /**
+     * Sets the userExperienceAnalyticsWorkFromAnywhereMetrics property value. User experience analytics work from anywhere metrics.
+     * @param array<UserExperienceAnalyticsWorkFromAnywhereMetric>|null $value Value to set for the userExperienceAnalyticsWorkFromAnywhereMetrics property.
+    */
+    public function setUserExperienceAnalyticsWorkFromAnywhereMetrics(?array $value): void {
+        $this->getBackingStore()->set('userExperienceAnalyticsWorkFromAnywhereMetrics', $value);
+    }
+
+    /**
+     * Sets the userExperienceAnalyticsWorkFromAnywhereModelPerformance property value. The user experience analytics work from anywhere model performance
+     * @param array<UserExperienceAnalyticsWorkFromAnywhereModelPerformance>|null $value Value to set for the userExperienceAnalyticsWorkFromAnywhereModelPerformance property.
+    */
+    public function setUserExperienceAnalyticsWorkFromAnywhereModelPerformance(?array $value): void {
+        $this->getBackingStore()->set('userExperienceAnalyticsWorkFromAnywhereModelPerformance', $value);
+    }
+
+    /**
      * Sets the windowsAutopilotDeviceIdentities property value. The Windows autopilot device identities contained collection.
      * @param array<WindowsAutopilotDeviceIdentity>|null $value Value to set for the windowsAutopilotDeviceIdentities property.
     */
@@ -883,6 +1503,22 @@ class DeviceManagement extends Entity implements Parsable
     */
     public function setWindowsInformationProtectionNetworkLearningSummaries(?array $value): void {
         $this->getBackingStore()->set('windowsInformationProtectionNetworkLearningSummaries', $value);
+    }
+
+    /**
+     * Sets the windowsMalwareInformation property value. The list of affected malware in the tenant.
+     * @param array<WindowsMalwareInformation>|null $value Value to set for the windowsMalwareInformation property.
+    */
+    public function setWindowsMalwareInformation(?array $value): void {
+        $this->getBackingStore()->set('windowsMalwareInformation', $value);
+    }
+
+    /**
+     * Sets the windowsMalwareOverview property value. Malware overview for windows devices.
+     * @param WindowsMalwareOverview|null $value Value to set for the windowsMalwareOverview property.
+    */
+    public function setWindowsMalwareOverview(?WindowsMalwareOverview $value): void {
+        $this->getBackingStore()->set('windowsMalwareOverview', $value);
     }
 
 }

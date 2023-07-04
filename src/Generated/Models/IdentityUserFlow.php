@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class IdentityUserFlow extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new identityUserFlow and sets the default values.
+     * Instantiates a new IdentityUserFlow and sets the default values.
     */
     public function __construct() {
         parent::__construct();

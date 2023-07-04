@@ -31,10 +31,11 @@ class QueryRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action query
+     * Runs the query specified in the request body. Search results are provided in the response.
      * @param QueryPostRequestBody $body The request body
      * @param QueryRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/search-query?view=graph-rest-1.0 Find more info here
     */
     public function post(QueryPostRequestBody $body, ?QueryRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -50,7 +51,7 @@ class QueryRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action query
+     * Runs the query specified in the request body. Search results are provided in the response.
      * @param QueryPostRequestBody $body The request body
      * @param QueryRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\EmployeeExperience\LearningProviders\Item\LearningContents\LearningContentsRequestBuilder;
+use Microsoft\Graph\Generated\EmployeeExperience\LearningProviders\Item\LearningCourseActivities\LearningCourseActivitiesRequestBuilder;
 use Microsoft\Graph\Generated\Models\LearningProvider;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -23,6 +24,13 @@ class LearningProviderItemRequestBuilder extends BaseRequestBuilder
     */
     public function learningContents(): LearningContentsRequestBuilder {
         return new LearningContentsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the learningCourseActivities property of the microsoft.graph.learningProvider entity.
+    */
+    public function learningCourseActivities(): LearningCourseActivitiesRequestBuilder {
+        return new LearningCourseActivitiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

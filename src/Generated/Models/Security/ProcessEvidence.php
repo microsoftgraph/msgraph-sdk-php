@@ -82,7 +82,7 @@ class ProcessEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the parentProcessCreationDateTime property value. Date and time when the parent of the process was created.
+     * Gets the parentProcessCreationDateTime property value. Date and time when the parent of the process was created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return DateTime|null
     */
     public function getParentProcessCreationDateTime(): ?DateTime {
@@ -130,7 +130,7 @@ class ProcessEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the processCreationDateTime property value. Date and time the process was created.
+     * Gets the processCreationDateTime property value. Date and time when the process was created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return DateTime|null
     */
     public function getProcessCreationDateTime(): ?DateTime {
@@ -208,7 +208,7 @@ class ProcessEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the parentProcessCreationDateTime property value. Date and time when the parent of the process was created.
+     * Sets the parentProcessCreationDateTime property value. Date and time when the parent of the process was created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param DateTime|null $value Value to set for the parentProcessCreationDateTime property.
     */
     public function setParentProcessCreationDateTime(?DateTime $value): void {
@@ -240,7 +240,7 @@ class ProcessEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the processCreationDateTime property value. Date and time the process was created.
+     * Sets the processCreationDateTime property value. Date and time when the process was created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param DateTime|null $value Value to set for the processCreationDateTime property.
     */
     public function setProcessCreationDateTime(?DateTime $value): void {

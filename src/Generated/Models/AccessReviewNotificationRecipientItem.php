@@ -18,7 +18,7 @@ class AccessReviewNotificationRecipientItem implements AdditionalDataHolder, Bac
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new AccessReviewNotificationRecipientItem and sets the default values.
+     * Instantiates a new accessReviewNotificationRecipientItem and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
