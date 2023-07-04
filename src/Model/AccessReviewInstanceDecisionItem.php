@@ -425,4 +425,34 @@ class AccessReviewInstanceDecisionItem extends Entity
         return $this;
     }
 
+
+     /**
+     * Gets the insights
+    * Insights are recommendations to reviewers on whether to approve or deny a decision. There can be multiple insights associated with an accessReviewInstanceDecisionItem.
+     *
+     * @return array|null The insights
+     */
+    public function getInsights()
+    {
+        if (array_key_exists("insights", $this->_propDict)) {
+           return $this->_propDict["insights"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the insights
+    * Insights are recommendations to reviewers on whether to approve or deny a decision. There can be multiple insights associated with an accessReviewInstanceDecisionItem.
+    *
+    * @param GovernanceInsight[] $val The insights
+    *
+    * @return AccessReviewInstanceDecisionItem
+    */
+    public function setInsights($val)
+    {
+        $this->_propDict["insights"] = $val;
+        return $this;
+    }
+
 }
