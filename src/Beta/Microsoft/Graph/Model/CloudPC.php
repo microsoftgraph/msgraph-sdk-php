@@ -461,6 +461,7 @@ class CloudPC extends Entity
 
     /**
     * Gets the powerState
+    * The power state of a Cloud PC. The possible values are: running, poweredOff and unknown. This property only supports shift work Cloud PCs.
     *
     * @return CloudPcPowerState|null The powerState
     */
@@ -479,6 +480,7 @@ class CloudPC extends Entity
 
     /**
     * Sets the powerState
+    * The power state of a Cloud PC. The possible values are: running, poweredOff and unknown. This property only supports shift work Cloud PCs.
     *
     * @param CloudPcPowerState $val The powerState
     *
@@ -674,7 +676,7 @@ class CloudPC extends Entity
 
     /**
     * Gets the status
-    * The status of the Cloud PC. The possible values are: notProvisioned, provisioning, provisioned, inGracePeriod, deprovisioning, failed, provisionedWithWarnings, resizing, pendingProvision, restoring, and unknownFutureValue. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: movingRegion.
+    * The status of the Cloud PC. Possible values are: notProvisioned, provisioning, provisioned, upgrading, inGracePeriod, deprovisioning, failed, restoring.
     *
     * @return CloudPcStatus|null The status
     */
@@ -693,7 +695,7 @@ class CloudPC extends Entity
 
     /**
     * Sets the status
-    * The status of the Cloud PC. The possible values are: notProvisioned, provisioning, provisioned, inGracePeriod, deprovisioning, failed, provisionedWithWarnings, resizing, pendingProvision, restoring, and unknownFutureValue. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: movingRegion.
+    * The status of the Cloud PC. Possible values are: notProvisioned, provisioning, provisioned, upgrading, inGracePeriod, deprovisioning, failed, restoring.
     *
     * @param CloudPcStatus $val The status
     *

@@ -3665,4 +3665,35 @@ class User extends DirectoryObject
         return $this;
     }
 
+    /**
+    * Gets the employeeExperience
+    *
+    * @return EmployeeExperienceUser|null The employeeExperience
+    */
+    public function getEmployeeExperience()
+    {
+        if (array_key_exists("employeeExperience", $this->_propDict)) {
+            if (is_a($this->_propDict["employeeExperience"], "\Microsoft\Graph\Model\EmployeeExperienceUser") || is_null($this->_propDict["employeeExperience"])) {
+                return $this->_propDict["employeeExperience"];
+            } else {
+                $this->_propDict["employeeExperience"] = new EmployeeExperienceUser($this->_propDict["employeeExperience"]);
+                return $this->_propDict["employeeExperience"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the employeeExperience
+    *
+    * @param EmployeeExperienceUser $val The employeeExperience
+    *
+    * @return User
+    */
+    public function setEmployeeExperience($val)
+    {
+        $this->_propDict["employeeExperience"] = $val;
+        return $this;
+    }
+
 }

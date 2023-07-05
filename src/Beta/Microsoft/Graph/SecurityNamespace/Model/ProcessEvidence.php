@@ -26,7 +26,7 @@ class ProcessEvidence extends AlertEvidence
 
     /**
     * Gets the detectionStatus
-    * The status of the detection.The possible values are: detected, blocked, prevented, unknownFutureValue.
+    * The status of the detection. The possible values are: detected, blocked, prevented, unknownFutureValue.
     *
     * @return DetectionStatus|null The detectionStatus
     */
@@ -45,7 +45,7 @@ class ProcessEvidence extends AlertEvidence
 
     /**
     * Sets the detectionStatus
-    * The status of the detection.The possible values are: detected, blocked, prevented, unknownFutureValue.
+    * The status of the detection. The possible values are: detected, blocked, prevented, unknownFutureValue.
     *
     * @param DetectionStatus $val The value to assign to the detectionStatus
     *
@@ -120,7 +120,7 @@ class ProcessEvidence extends AlertEvidence
 
     /**
     * Gets the parentProcessCreationDateTime
-    * Date and time when the parent of the process was created.
+    * Date and time when the parent of the process was created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The parentProcessCreationDateTime
     */
@@ -139,7 +139,7 @@ class ProcessEvidence extends AlertEvidence
 
     /**
     * Sets the parentProcessCreationDateTime
-    * Date and time when the parent of the process was created.
+    * Date and time when the parent of the process was created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The value to assign to the parentProcessCreationDateTime
     *
@@ -242,7 +242,7 @@ class ProcessEvidence extends AlertEvidence
 
     /**
     * Gets the processCreationDateTime
-    * Date and time the process was created.
+    * Date and time when the process was created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The processCreationDateTime
     */
@@ -261,7 +261,7 @@ class ProcessEvidence extends AlertEvidence
 
     /**
     * Sets the processCreationDateTime
-    * Date and time the process was created.
+    * Date and time when the process was created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The value to assign to the processCreationDateTime
     *

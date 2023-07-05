@@ -141,6 +141,35 @@ class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile
     }
 
     /**
+    * Gets the autoAdvanceSetupEnabled
+    * Indicates if Setup Assistant will automatically advance through its screen
+    *
+    * @return bool|null The autoAdvanceSetupEnabled
+    */
+    public function getAutoAdvanceSetupEnabled()
+    {
+        if (array_key_exists("autoAdvanceSetupEnabled", $this->_propDict)) {
+            return $this->_propDict["autoAdvanceSetupEnabled"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the autoAdvanceSetupEnabled
+    * Indicates if Setup Assistant will automatically advance through its screen
+    *
+    * @param bool $val The autoAdvanceSetupEnabled
+    *
+    * @return DepMacOSEnrollmentProfile
+    */
+    public function setAutoAdvanceSetupEnabled($val)
+    {
+        $this->_propDict["autoAdvanceSetupEnabled"] = boolval($val);
+        return $this;
+    }
+
+    /**
     * Gets the autoUnlockWithWatchDisabled
     * Indicates if UnlockWithWatch screen is disabled
     *

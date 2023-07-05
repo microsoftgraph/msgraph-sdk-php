@@ -33,4 +33,5 @@ class PrintOrientation extends Enum
     const LANDSCAPE = "landscape";
     const REVERSE_LANDSCAPE = "reverseLandscape";
     const REVERSE_PORTRAIT = "reversePortrait";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

@@ -228,6 +228,35 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     }
 
     /**
+    * Gets the enrollmentTimeAzureAdGroupIds
+    * EnrollmentTimeAzureAdGroupIds contains list of enrollment time Azure Group Ids to be associated with profile
+    *
+    * @return array|null The enrollmentTimeAzureAdGroupIds
+    */
+    public function getEnrollmentTimeAzureAdGroupIds()
+    {
+        if (array_key_exists("enrollmentTimeAzureAdGroupIds", $this->_propDict)) {
+            return $this->_propDict["enrollmentTimeAzureAdGroupIds"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the enrollmentTimeAzureAdGroupIds
+    * EnrollmentTimeAzureAdGroupIds contains list of enrollment time Azure Group Ids to be associated with profile
+    *
+    * @param string[] $val The enrollmentTimeAzureAdGroupIds
+    *
+    * @return DepEnrollmentBaseProfile
+    */
+    public function setEnrollmentTimeAzureAdGroupIds($val)
+    {
+        $this->_propDict["enrollmentTimeAzureAdGroupIds"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the isDefault
     * Indicates if this is the default profile
     *

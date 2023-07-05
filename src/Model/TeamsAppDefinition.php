@@ -25,6 +25,37 @@ namespace Microsoft\Graph\Model;
 class TeamsAppDefinition extends Entity
 {
     /**
+    * Gets the authorization
+    *
+    * @return TeamsAppAuthorization|null The authorization
+    */
+    public function getAuthorization()
+    {
+        if (array_key_exists("authorization", $this->_propDict)) {
+            if (is_a($this->_propDict["authorization"], "\Microsoft\Graph\Model\TeamsAppAuthorization") || is_null($this->_propDict["authorization"])) {
+                return $this->_propDict["authorization"];
+            } else {
+                $this->_propDict["authorization"] = new TeamsAppAuthorization($this->_propDict["authorization"]);
+                return $this->_propDict["authorization"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the authorization
+    *
+    * @param TeamsAppAuthorization $val The authorization
+    *
+    * @return TeamsAppDefinition
+    */
+    public function setAuthorization($val)
+    {
+        $this->_propDict["authorization"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the createdBy
     *
     * @return IdentitySet|null The createdBy

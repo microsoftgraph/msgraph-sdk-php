@@ -47,4 +47,5 @@ class ManagedDeviceRemoteAction extends Enum
     const COLLECT_DIAGNOSTICS = "collectDiagnostics";
     const INITIATE_MOBILE_DEVICE_MANAGEMENT_KEY_RECOVERY = "initiateMobileDeviceManagementKeyRecovery";
     const INITIATE_ON_DEMAND_PROACTIVE_REMEDIATION = "initiateOnDemandProactiveRemediation";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

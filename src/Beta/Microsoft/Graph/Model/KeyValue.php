@@ -25,7 +25,7 @@ class KeyValue extends Entity
 {
     /**
     * Gets the key
-    * Contains the name of the field that a value is associated with.
+    * Key.
     *
     * @return string|null The key
     */
@@ -40,7 +40,7 @@ class KeyValue extends Entity
 
     /**
     * Sets the key
-    * Contains the name of the field that a value is associated with.
+    * Key.
     *
     * @param string $val The value of the key
     *
@@ -53,7 +53,7 @@ class KeyValue extends Entity
     }
     /**
     * Gets the value
-    * Contains the corresponding value for the specified key.
+    * Value.
     *
     * @return string|null The value
     */
@@ -68,7 +68,7 @@ class KeyValue extends Entity
 
     /**
     * Sets the value
-    * Contains the corresponding value for the specified key.
+    * Value.
     *
     * @param string $val The value of the value
     *
