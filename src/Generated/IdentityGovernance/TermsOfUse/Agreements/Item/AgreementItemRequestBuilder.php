@@ -75,10 +75,10 @@ class AgreementItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of an agreement object.
+     * Retrieve all localized files related to an agreement.
      * @param AgreementItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/agreement-get?view=graph-rest-1.0 Find more info here
+     * @link https://docs.microsoft.com/graph/api/agreement-list-files?view=graph-rest-1.0 Find more info here
     */
     public function get(?AgreementItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -131,7 +131,7 @@ class AgreementItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of an agreement object.
+     * Retrieve all localized files related to an agreement.
      * @param AgreementItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

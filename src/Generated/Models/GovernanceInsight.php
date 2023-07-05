@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class GovernanceInsight extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new GovernanceInsight and sets the default values.
+     * Instantiates a new governanceInsight and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -26,6 +26,7 @@ class GovernanceInsight extends Entity implements Parsable
         if ($mappingValueNode !== null) {
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
+                case '#microsoft.graph.membershipOutlierInsight': return new MembershipOutlierInsight();
                 case '#microsoft.graph.userSignInInsight': return new UserSignInInsight();
             }
         }

@@ -6,10 +6,13 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * The user experience analytics device performance entity contains device boot performance details.
+*/
 class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new UserExperienceAnalyticsDevicePerformance and sets the default values.
+     * Instantiates a new userExperienceAnalyticsDevicePerformance and sets the default values.
     */
     public function __construct() {
         parent::__construct();

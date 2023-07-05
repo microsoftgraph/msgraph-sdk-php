@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class User extends DirectoryObject implements Parsable 
 {
     /**
-     * Instantiates a new user and sets the default values.
+     * Instantiates a new User and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -456,6 +456,18 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
+     * Gets the employeeExperience property value. The employeeExperience property
+     * @return EmployeeExperienceUser|null
+    */
+    public function getEmployeeExperience(): ?EmployeeExperienceUser {
+        $val = $this->getBackingStore()->get('employeeExperience');
+        if (is_null($val) || $val instanceof EmployeeExperienceUser) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'employeeExperience'");
+    }
+
+    /**
      * Gets the employeeHireDate property value. The date and time when the user was hired or will start work in case of a future hire. Returned only on $select. Supports $filter (eq, ne, not , ge, le, in).
      * @return DateTime|null
     */
@@ -626,6 +638,7 @@ class User extends DirectoryObject implements Parsable
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'drive' => fn(ParseNode $n) => $o->setDrive($n->getObjectValue([Drive::class, 'createFromDiscriminatorValue'])),
             'drives' => fn(ParseNode $n) => $o->setDrives($n->getCollectionOfObjectValues([Drive::class, 'createFromDiscriminatorValue'])),
+            'employeeExperience' => fn(ParseNode $n) => $o->setEmployeeExperience($n->getObjectValue([EmployeeExperienceUser::class, 'createFromDiscriminatorValue'])),
             'employeeHireDate' => fn(ParseNode $n) => $o->setEmployeeHireDate($n->getDateTimeValue()),
             'employeeId' => fn(ParseNode $n) => $o->setEmployeeId($n->getStringValue()),
             'employeeLeaveDateTime' => fn(ParseNode $n) => $o->setEmployeeLeaveDateTime($n->getDateTimeValue()),
@@ -1806,6 +1819,7 @@ class User extends DirectoryObject implements Parsable
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeObjectValue('drive', $this->getDrive());
         $writer->writeCollectionOfObjectValues('drives', $this->getDrives());
+        $writer->writeObjectValue('employeeExperience', $this->getEmployeeExperience());
         $writer->writeDateTimeValue('employeeHireDate', $this->getEmployeeHireDate());
         $writer->writeStringValue('employeeId', $this->getEmployeeId());
         $writer->writeDateTimeValue('employeeLeaveDateTime', $this->getEmployeeLeaveDateTime());
@@ -2158,6 +2172,14 @@ class User extends DirectoryObject implements Parsable
     */
     public function setDrives(?array $value): void {
         $this->getBackingStore()->set('drives', $value);
+    }
+
+    /**
+     * Sets the employeeExperience property value. The employeeExperience property
+     * @param EmployeeExperienceUser|null $value Value to set for the employeeExperience property.
+    */
+    public function setEmployeeExperience(?EmployeeExperienceUser $value): void {
+        $this->getBackingStore()->set('employeeExperience', $value);
     }
 
     /**

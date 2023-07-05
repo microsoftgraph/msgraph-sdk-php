@@ -18,7 +18,7 @@ class CalendarSharingMessageAction implements AdditionalDataHolder, BackedModel,
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new CalendarSharingMessageAction and sets the default values.
+     * Instantiates a new calendarSharingMessageAction and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\EmployeeExperience;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
+use Microsoft\Graph\Generated\EmployeeExperience\LearningCourseActivities\LearningCourseActivitiesRequestBuilder;
 use Microsoft\Graph\Generated\EmployeeExperience\LearningProviders\LearningProvidersRequestBuilder;
 use Microsoft\Graph\Generated\Models\EmployeeExperience;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -18,6 +19,13 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class EmployeeExperienceRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to manage the learningCourseActivities property of the microsoft.graph.employeeExperience entity.
+    */
+    public function learningCourseActivities(): LearningCourseActivitiesRequestBuilder {
+        return new LearningCourseActivitiesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Provides operations to manage the learningProviders property of the microsoft.graph.employeeExperience entity.
     */

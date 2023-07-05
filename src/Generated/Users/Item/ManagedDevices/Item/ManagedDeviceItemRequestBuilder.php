@@ -15,6 +15,7 @@ use Microsoft\Graph\Generated\Users\Item\ManagedDevices\Item\DeviceCompliancePol
 use Microsoft\Graph\Generated\Users\Item\ManagedDevices\Item\DeviceConfigurationStates\DeviceConfigurationStatesRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\ManagedDevices\Item\DisableLostMode\DisableLostModeRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\ManagedDevices\Item\LocateDevice\LocateDeviceRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\ManagedDevices\Item\LogCollectionRequests\LogCollectionRequestsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\ManagedDevices\Item\LogoutSharedAppleDeviceActiveUser\LogoutSharedAppleDeviceActiveUserRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\ManagedDevices\Item\RebootNow\RebootNowRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\ManagedDevices\Item\RecoverPasscode\RecoverPasscodeRequestBuilder;
@@ -28,6 +29,7 @@ use Microsoft\Graph\Generated\Users\Item\ManagedDevices\Item\UpdateWindowsDevice
 use Microsoft\Graph\Generated\Users\Item\ManagedDevices\Item\Users\UsersRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\ManagedDevices\Item\WindowsDefenderScan\WindowsDefenderScanRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\ManagedDevices\Item\WindowsDefenderUpdateSignatures\WindowsDefenderUpdateSignaturesRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\ManagedDevices\Item\WindowsProtectionState\WindowsProtectionStateRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\ManagedDevices\Item\Wipe\WipeRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -93,6 +95,13 @@ class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder
     */
     public function locateDevice(): LocateDeviceRequestBuilder {
         return new LocateDeviceRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the logCollectionRequests property of the microsoft.graph.managedDevice entity.
+    */
+    public function logCollectionRequests(): LogCollectionRequestsRequestBuilder {
+        return new LogCollectionRequestsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -184,6 +193,13 @@ class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder
     */
     public function windowsDefenderUpdateSignatures(): WindowsDefenderUpdateSignaturesRequestBuilder {
         return new WindowsDefenderUpdateSignaturesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the windowsProtectionState property of the microsoft.graph.managedDevice entity.
+    */
+    public function windowsProtectionState(): WindowsProtectionStateRequestBuilder {
+        return new WindowsProtectionStateRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
+use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\Decisions\Item\Insights\InsightsRequestBuilder;
 use Microsoft\Graph\Generated\Models\AccessReviewInstanceDecisionItem;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -17,6 +18,13 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class AccessReviewInstanceDecisionItemItemRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to manage the insights property of the microsoft.graph.accessReviewInstanceDecisionItem entity.
+    */
+    public function insights(): InsightsRequestBuilder {
+        return new InsightsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Instantiates a new AccessReviewInstanceDecisionItemItemRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

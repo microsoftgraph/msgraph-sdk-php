@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class CustomSecurityAttributeDefinition extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new CustomSecurityAttributeDefinition and sets the default values.
+     * Instantiates a new customSecurityAttributeDefinition and sets the default values.
     */
     public function __construct() {
         parent::__construct();

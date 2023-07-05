@@ -34,6 +34,30 @@ class PrintUsage extends Entity implements Parsable
     }
 
     /**
+     * Gets the blackAndWhitePageCount property value. The blackAndWhitePageCount property
+     * @return int|null
+    */
+    public function getBlackAndWhitePageCount(): ?int {
+        $val = $this->getBackingStore()->get('blackAndWhitePageCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'blackAndWhitePageCount'");
+    }
+
+    /**
+     * Gets the colorPageCount property value. The colorPageCount property
+     * @return int|null
+    */
+    public function getColorPageCount(): ?int {
+        $val = $this->getBackingStore()->get('colorPageCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'colorPageCount'");
+    }
+
+    /**
      * Gets the completedBlackAndWhiteJobCount property value. The completedBlackAndWhiteJobCount property
      * @return int|null
     */
@@ -58,15 +82,46 @@ class PrintUsage extends Entity implements Parsable
     }
 
     /**
+     * Gets the completedJobCount property value. The completedJobCount property
+     * @return int|null
+    */
+    public function getCompletedJobCount(): ?int {
+        $val = $this->getBackingStore()->get('completedJobCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'completedJobCount'");
+    }
+
+    /**
+     * Gets the doubleSidedSheetCount property value. The doubleSidedSheetCount property
+     * @return int|null
+    */
+    public function getDoubleSidedSheetCount(): ?int {
+        $val = $this->getBackingStore()->get('doubleSidedSheetCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'doubleSidedSheetCount'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'blackAndWhitePageCount' => fn(ParseNode $n) => $o->setBlackAndWhitePageCount($n->getIntegerValue()),
+            'colorPageCount' => fn(ParseNode $n) => $o->setColorPageCount($n->getIntegerValue()),
             'completedBlackAndWhiteJobCount' => fn(ParseNode $n) => $o->setCompletedBlackAndWhiteJobCount($n->getIntegerValue()),
             'completedColorJobCount' => fn(ParseNode $n) => $o->setCompletedColorJobCount($n->getIntegerValue()),
+            'completedJobCount' => fn(ParseNode $n) => $o->setCompletedJobCount($n->getIntegerValue()),
+            'doubleSidedSheetCount' => fn(ParseNode $n) => $o->setDoubleSidedSheetCount($n->getIntegerValue()),
             'incompleteJobCount' => fn(ParseNode $n) => $o->setIncompleteJobCount($n->getIntegerValue()),
+            'mediaSheetCount' => fn(ParseNode $n) => $o->setMediaSheetCount($n->getIntegerValue()),
+            'pageCount' => fn(ParseNode $n) => $o->setPageCount($n->getIntegerValue()),
+            'singleSidedSheetCount' => fn(ParseNode $n) => $o->setSingleSidedSheetCount($n->getIntegerValue()),
             'usageDate' => fn(ParseNode $n) => $o->setUsageDate($n->getDateValue()),
         ]);
     }
@@ -81,6 +136,42 @@ class PrintUsage extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'incompleteJobCount'");
+    }
+
+    /**
+     * Gets the mediaSheetCount property value. The mediaSheetCount property
+     * @return int|null
+    */
+    public function getMediaSheetCount(): ?int {
+        $val = $this->getBackingStore()->get('mediaSheetCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'mediaSheetCount'");
+    }
+
+    /**
+     * Gets the pageCount property value. The pageCount property
+     * @return int|null
+    */
+    public function getPageCount(): ?int {
+        $val = $this->getBackingStore()->get('pageCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'pageCount'");
+    }
+
+    /**
+     * Gets the singleSidedSheetCount property value. The singleSidedSheetCount property
+     * @return int|null
+    */
+    public function getSingleSidedSheetCount(): ?int {
+        $val = $this->getBackingStore()->get('singleSidedSheetCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'singleSidedSheetCount'");
     }
 
     /**
@@ -101,10 +192,33 @@ class PrintUsage extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeIntegerValue('blackAndWhitePageCount', $this->getBlackAndWhitePageCount());
+        $writer->writeIntegerValue('colorPageCount', $this->getColorPageCount());
         $writer->writeIntegerValue('completedBlackAndWhiteJobCount', $this->getCompletedBlackAndWhiteJobCount());
         $writer->writeIntegerValue('completedColorJobCount', $this->getCompletedColorJobCount());
+        $writer->writeIntegerValue('completedJobCount', $this->getCompletedJobCount());
+        $writer->writeIntegerValue('doubleSidedSheetCount', $this->getDoubleSidedSheetCount());
         $writer->writeIntegerValue('incompleteJobCount', $this->getIncompleteJobCount());
+        $writer->writeIntegerValue('mediaSheetCount', $this->getMediaSheetCount());
+        $writer->writeIntegerValue('pageCount', $this->getPageCount());
+        $writer->writeIntegerValue('singleSidedSheetCount', $this->getSingleSidedSheetCount());
         $writer->writeDateValue('usageDate', $this->getUsageDate());
+    }
+
+    /**
+     * Sets the blackAndWhitePageCount property value. The blackAndWhitePageCount property
+     * @param int|null $value Value to set for the blackAndWhitePageCount property.
+    */
+    public function setBlackAndWhitePageCount(?int $value): void {
+        $this->getBackingStore()->set('blackAndWhitePageCount', $value);
+    }
+
+    /**
+     * Sets the colorPageCount property value. The colorPageCount property
+     * @param int|null $value Value to set for the colorPageCount property.
+    */
+    public function setColorPageCount(?int $value): void {
+        $this->getBackingStore()->set('colorPageCount', $value);
     }
 
     /**
@@ -124,11 +238,51 @@ class PrintUsage extends Entity implements Parsable
     }
 
     /**
+     * Sets the completedJobCount property value. The completedJobCount property
+     * @param int|null $value Value to set for the completedJobCount property.
+    */
+    public function setCompletedJobCount(?int $value): void {
+        $this->getBackingStore()->set('completedJobCount', $value);
+    }
+
+    /**
+     * Sets the doubleSidedSheetCount property value. The doubleSidedSheetCount property
+     * @param int|null $value Value to set for the doubleSidedSheetCount property.
+    */
+    public function setDoubleSidedSheetCount(?int $value): void {
+        $this->getBackingStore()->set('doubleSidedSheetCount', $value);
+    }
+
+    /**
      * Sets the incompleteJobCount property value. The incompleteJobCount property
      * @param int|null $value Value to set for the incompleteJobCount property.
     */
     public function setIncompleteJobCount(?int $value): void {
         $this->getBackingStore()->set('incompleteJobCount', $value);
+    }
+
+    /**
+     * Sets the mediaSheetCount property value. The mediaSheetCount property
+     * @param int|null $value Value to set for the mediaSheetCount property.
+    */
+    public function setMediaSheetCount(?int $value): void {
+        $this->getBackingStore()->set('mediaSheetCount', $value);
+    }
+
+    /**
+     * Sets the pageCount property value. The pageCount property
+     * @param int|null $value Value to set for the pageCount property.
+    */
+    public function setPageCount(?int $value): void {
+        $this->getBackingStore()->set('pageCount', $value);
+    }
+
+    /**
+     * Sets the singleSidedSheetCount property value. The singleSidedSheetCount property
+     * @param int|null $value Value to set for the singleSidedSheetCount property.
+    */
+    public function setSingleSidedSheetCount(?int $value): void {
+        $this->getBackingStore()->set('singleSidedSheetCount', $value);
     }
 
     /**

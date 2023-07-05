@@ -374,6 +374,7 @@ class ManagedDevice extends Entity implements Parsable
             'isSupervised' => fn(ParseNode $n) => $o->setIsSupervised($n->getBooleanValue()),
             'jailBroken' => fn(ParseNode $n) => $o->setJailBroken($n->getStringValue()),
             'lastSyncDateTime' => fn(ParseNode $n) => $o->setLastSyncDateTime($n->getDateTimeValue()),
+            'logCollectionRequests' => fn(ParseNode $n) => $o->setLogCollectionRequests($n->getCollectionOfObjectValues([DeviceLogCollectionResponse::class, 'createFromDiscriminatorValue'])),
             'managedDeviceName' => fn(ParseNode $n) => $o->setManagedDeviceName($n->getStringValue()),
             'managedDeviceOwnerType' => fn(ParseNode $n) => $o->setManagedDeviceOwnerType($n->getEnumValue(ManagedDeviceOwnerType::class)),
             'managementAgent' => fn(ParseNode $n) => $o->setManagementAgent($n->getEnumValue(ManagementAgentType::class)),
@@ -399,6 +400,7 @@ class ManagedDevice extends Entity implements Parsable
             'userPrincipalName' => fn(ParseNode $n) => $o->setUserPrincipalName($n->getStringValue()),
             'users' => fn(ParseNode $n) => $o->setUsers($n->getCollectionOfObjectValues([User::class, 'createFromDiscriminatorValue'])),
             'wiFiMacAddress' => fn(ParseNode $n) => $o->setWiFiMacAddress($n->getStringValue()),
+            'windowsProtectionState' => fn(ParseNode $n) => $o->setWindowsProtectionState($n->getObjectValue([WindowsProtectionState::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -484,6 +486,20 @@ class ManagedDevice extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'lastSyncDateTime'");
+    }
+
+    /**
+     * Gets the logCollectionRequests property value. List of log collection requests
+     * @return array<DeviceLogCollectionResponse>|null
+    */
+    public function getLogCollectionRequests(): ?array {
+        $val = $this->getBackingStore()->get('logCollectionRequests');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, DeviceLogCollectionResponse::class);
+            /** @var array<DeviceLogCollectionResponse>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'logCollectionRequests'");
     }
 
     /**
@@ -789,6 +805,18 @@ class ManagedDevice extends Entity implements Parsable
     }
 
     /**
+     * Gets the windowsProtectionState property value. The device protection status. This property is read-only.
+     * @return WindowsProtectionState|null
+    */
+    public function getWindowsProtectionState(): ?WindowsProtectionState {
+        $val = $this->getBackingStore()->get('windowsProtectionState');
+        if (is_null($val) || $val instanceof WindowsProtectionState) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'windowsProtectionState'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -802,12 +830,14 @@ class ManagedDevice extends Entity implements Parsable
         $writer->writeEnumValue('deviceRegistrationState', $this->getDeviceRegistrationState());
         $writer->writeEnumValue('exchangeAccessState', $this->getExchangeAccessState());
         $writer->writeEnumValue('exchangeAccessStateReason', $this->getExchangeAccessStateReason());
+        $writer->writeCollectionOfObjectValues('logCollectionRequests', $this->getLogCollectionRequests());
         $writer->writeStringValue('managedDeviceName', $this->getManagedDeviceName());
         $writer->writeEnumValue('managedDeviceOwnerType', $this->getManagedDeviceOwnerType());
         $writer->writeEnumValue('managementAgent', $this->getManagementAgent());
         $writer->writeStringValue('notes', $this->getNotes());
         $writer->writeEnumValue('partnerReportedThreatState', $this->getPartnerReportedThreatState());
         $writer->writeCollectionOfObjectValues('users', $this->getUsers());
+        $writer->writeObjectValue('windowsProtectionState', $this->getWindowsProtectionState());
     }
 
     /**
@@ -1067,6 +1097,14 @@ class ManagedDevice extends Entity implements Parsable
     }
 
     /**
+     * Sets the logCollectionRequests property value. List of log collection requests
+     * @param array<DeviceLogCollectionResponse>|null $value Value to set for the logCollectionRequests property.
+    */
+    public function setLogCollectionRequests(?array $value): void {
+        $this->getBackingStore()->set('logCollectionRequests', $value);
+    }
+
+    /**
      * Sets the managedDeviceName property value. Automatically generated name to identify a device. Can be overwritten to a user friendly name.
      * @param string|null $value Value to set for the managedDeviceName property.
     */
@@ -1264,6 +1302,14 @@ class ManagedDevice extends Entity implements Parsable
     */
     public function setWiFiMacAddress(?string $value): void {
         $this->getBackingStore()->set('wiFiMacAddress', $value);
+    }
+
+    /**
+     * Sets the windowsProtectionState property value. The device protection status. This property is read-only.
+     * @param WindowsProtectionState|null $value Value to set for the windowsProtectionState property.
+    */
+    public function setWindowsProtectionState(?WindowsProtectionState $value): void {
+        $this->getBackingStore()->set('windowsProtectionState', $value);
     }
 
 }

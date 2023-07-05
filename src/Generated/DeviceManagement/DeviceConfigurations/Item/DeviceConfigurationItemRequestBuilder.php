@@ -89,10 +89,10 @@ class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a windowsPhone81GeneralConfiguration.
+     * Deletes a editionUpgradeConfiguration.
      * @param DeviceConfigurationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-deviceconfig-windowsphone81generalconfiguration-delete?view=graph-rest-1.0 Find more info here
+     * @link https://docs.microsoft.com/graph/api/intune-deviceconfig-editionupgradeconfiguration-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?DeviceConfigurationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -108,10 +108,10 @@ class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the iosDeviceFeaturesConfiguration object.
+     * Read properties and relationships of the androidGeneralDeviceConfiguration object.
      * @param DeviceConfigurationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-deviceconfig-iosdevicefeaturesconfiguration-get?view=graph-rest-1.0 Find more info here
+     * @link https://docs.microsoft.com/graph/api/intune-deviceconfig-androidgeneraldeviceconfiguration-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DeviceConfigurationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -136,11 +136,11 @@ class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a windows10TeamGeneralConfiguration object.
+     * Update the properties of a sharedPCConfiguration object.
      * @param DeviceConfiguration $body The request body
      * @param DeviceConfigurationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-deviceconfig-windows10teamgeneralconfiguration-update?view=graph-rest-1.0 Find more info here
+     * @link https://docs.microsoft.com/graph/api/intune-deviceconfig-sharedpcconfiguration-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(DeviceConfiguration $body, ?DeviceConfigurationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -156,7 +156,7 @@ class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a windowsPhone81GeneralConfiguration.
+     * Deletes a editionUpgradeConfiguration.
      * @param DeviceConfigurationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -173,7 +173,7 @@ class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the iosDeviceFeaturesConfiguration object.
+     * Read properties and relationships of the androidGeneralDeviceConfiguration object.
      * @param DeviceConfigurationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -194,7 +194,7 @@ class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a windows10TeamGeneralConfiguration object.
+     * Update the properties of a sharedPCConfiguration object.
      * @param DeviceConfiguration $body The request body
      * @param DeviceConfigurationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

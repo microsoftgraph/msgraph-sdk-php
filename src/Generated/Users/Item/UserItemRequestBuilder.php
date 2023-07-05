@@ -27,6 +27,7 @@ use Microsoft\Graph\Generated\Users\Item\DeviceManagementTroubleshootingEvents\D
 use Microsoft\Graph\Generated\Users\Item\DirectReports\DirectReportsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Drive\DriveRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Drives\DrivesRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\EmployeeExperience\EmployeeExperienceRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Events\EventsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\ExportDeviceAndAppManagementData\ExportDeviceAndAppManagementDataRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\ExportDeviceAndAppManagementDataWithSkipWithTop\ExportDeviceAndAppManagementDataWithSkipWithTopRequestBuilder;
@@ -224,6 +225,13 @@ class UserItemRequestBuilder extends BaseRequestBuilder
     */
     public function drives(): DrivesRequestBuilder {
         return new DrivesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the employeeExperience property of the microsoft.graph.user entity.
+    */
+    public function employeeExperience(): EmployeeExperienceRequestBuilder {
+        return new EmployeeExperienceRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -618,11 +626,11 @@ class UserItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a user object. Not all properties can be updated by Member or Guest users with their default permissions without Administrator roles. Compare member and guest default permissions to see properties they can manage.
+     * Update the properties of a user object.
      * @param User $body The request body
      * @param UserItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/user-update?view=graph-rest-1.0 Find more info here
+     * @link https://docs.microsoft.com/graph/api/intune-mam-user-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(User $body, ?UserItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -686,7 +694,7 @@ class UserItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a user object. Not all properties can be updated by Member or Guest users with their default permissions without Administrator roles. Compare member and guest default permissions to see properties they can manage.
+     * Update the properties of a user object.
      * @param User $body The request body
      * @param UserItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
