@@ -26,6 +26,7 @@ class AccessPackageAutomaticRequestSettings extends Entity
 
     /**
     * Gets the gracePeriodBeforeAccessRemoval
+    * The duration for which access must be retained before the target's access is revoked once they leave the allowed target scope.
     *
     * @return \DateInterval|null The gracePeriodBeforeAccessRemoval
     */
@@ -44,6 +45,7 @@ class AccessPackageAutomaticRequestSettings extends Entity
 
     /**
     * Sets the gracePeriodBeforeAccessRemoval
+    * The duration for which access must be retained before the target's access is revoked once they leave the allowed target scope.
     *
     * @param \DateInterval $val The value to assign to the gracePeriodBeforeAccessRemoval
     *
@@ -56,6 +58,7 @@ class AccessPackageAutomaticRequestSettings extends Entity
     }
     /**
     * Gets the removeAccessWhenTargetLeavesAllowedTargets
+    * Indicates whether automatic assignment must be removed for targets who move out of the allowed target scope.
     *
     * @return bool|null The removeAccessWhenTargetLeavesAllowedTargets
     */
@@ -70,6 +73,7 @@ class AccessPackageAutomaticRequestSettings extends Entity
 
     /**
     * Sets the removeAccessWhenTargetLeavesAllowedTargets
+    * Indicates whether automatic assignment must be removed for targets who move out of the allowed target scope.
     *
     * @param bool $val The value of the removeAccessWhenTargetLeavesAllowedTargets
     *

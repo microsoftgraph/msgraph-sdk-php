@@ -1721,6 +1721,36 @@ class ManagedDevice extends Entity
 
 
      /**
+     * Gets the logCollectionRequests
+    * List of log collection requests
+     *
+     * @return array|null The logCollectionRequests
+     */
+    public function getLogCollectionRequests()
+    {
+        if (array_key_exists("logCollectionRequests", $this->_propDict)) {
+           return $this->_propDict["logCollectionRequests"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the logCollectionRequests
+    * List of log collection requests
+    *
+    * @param DeviceLogCollectionResponse[] $val The logCollectionRequests
+    *
+    * @return ManagedDevice
+    */
+    public function setLogCollectionRequests($val)
+    {
+        $this->_propDict["logCollectionRequests"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the users
     * The primary users associated with the managed device.
      *
@@ -1746,6 +1776,39 @@ class ManagedDevice extends Entity
     public function setUsers($val)
     {
         $this->_propDict["users"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the windowsProtectionState
+    * The device protection status. This property is read-only.
+    *
+    * @return WindowsProtectionState|null The windowsProtectionState
+    */
+    public function getWindowsProtectionState()
+    {
+        if (array_key_exists("windowsProtectionState", $this->_propDict)) {
+            if (is_a($this->_propDict["windowsProtectionState"], "\Microsoft\Graph\Model\WindowsProtectionState") || is_null($this->_propDict["windowsProtectionState"])) {
+                return $this->_propDict["windowsProtectionState"];
+            } else {
+                $this->_propDict["windowsProtectionState"] = new WindowsProtectionState($this->_propDict["windowsProtectionState"]);
+                return $this->_propDict["windowsProtectionState"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the windowsProtectionState
+    * The device protection status. This property is read-only.
+    *
+    * @param WindowsProtectionState $val The windowsProtectionState
+    *
+    * @return ManagedDevice
+    */
+    public function setWindowsProtectionState($val)
+    {
+        $this->_propDict["windowsProtectionState"] = $val;
         return $this;
     }
 

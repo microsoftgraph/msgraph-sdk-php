@@ -35,6 +35,62 @@ class IosStoreAppAssignmentSettings extends MobileAppAssignmentSettings
     }
 
     /**
+    * Gets the isRemovable
+    * When TRUE, indicates that the app can be uninstalled by the user. When FALSE, indicates that the app cannot be uninstalled by the user. By default, this property is set to null which internally is treated as TRUE.
+    *
+    * @return bool|null The isRemovable
+    */
+    public function getIsRemovable()
+    {
+        if (array_key_exists("isRemovable", $this->_propDict)) {
+            return $this->_propDict["isRemovable"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isRemovable
+    * When TRUE, indicates that the app can be uninstalled by the user. When FALSE, indicates that the app cannot be uninstalled by the user. By default, this property is set to null which internally is treated as TRUE.
+    *
+    * @param bool $val The value of the isRemovable
+    *
+    * @return IosStoreAppAssignmentSettings
+    */
+    public function setIsRemovable($val)
+    {
+        $this->_propDict["isRemovable"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the uninstallOnDeviceRemoval
+    * When TRUE, indicates that the app should be uninstalled when the device is removed from Intune. When FALSE, indicates that the app will not be uninstalled when the device is removed from Intune. By default, property is set to null which internally is treated as TRUE.
+    *
+    * @return bool|null The uninstallOnDeviceRemoval
+    */
+    public function getUninstallOnDeviceRemoval()
+    {
+        if (array_key_exists("uninstallOnDeviceRemoval", $this->_propDict)) {
+            return $this->_propDict["uninstallOnDeviceRemoval"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the uninstallOnDeviceRemoval
+    * When TRUE, indicates that the app should be uninstalled when the device is removed from Intune. When FALSE, indicates that the app will not be uninstalled when the device is removed from Intune. By default, property is set to null which internally is treated as TRUE.
+    *
+    * @param bool $val The value of the uninstallOnDeviceRemoval
+    *
+    * @return IosStoreAppAssignmentSettings
+    */
+    public function setUninstallOnDeviceRemoval($val)
+    {
+        $this->_propDict["uninstallOnDeviceRemoval"] = $val;
+        return $this;
+    }
+    /**
     * Gets the vpnConfigurationId
     * The VPN Configuration Id to apply for this app.
     *

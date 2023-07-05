@@ -26,6 +26,7 @@ class UserSignInInsight extends GovernanceInsight
 {
     /**
     * Gets the lastSignInDateTime
+    * Indicates when the user last signed in.
     *
     * @return \DateTime|null The lastSignInDateTime
     */
@@ -44,6 +45,7 @@ class UserSignInInsight extends GovernanceInsight
 
     /**
     * Sets the lastSignInDateTime
+    * Indicates when the user last signed in.
     *
     * @param \DateTime $val The lastSignInDateTime
     *

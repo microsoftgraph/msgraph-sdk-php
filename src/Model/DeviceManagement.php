@@ -120,6 +120,39 @@ class DeviceManagement extends Entity
     }
 
     /**
+    * Gets the deviceProtectionOverview
+    * Device protection overview.
+    *
+    * @return DeviceProtectionOverview|null The deviceProtectionOverview
+    */
+    public function getDeviceProtectionOverview()
+    {
+        if (array_key_exists("deviceProtectionOverview", $this->_propDict)) {
+            if (is_a($this->_propDict["deviceProtectionOverview"], "\Microsoft\Graph\Model\DeviceProtectionOverview") || is_null($this->_propDict["deviceProtectionOverview"])) {
+                return $this->_propDict["deviceProtectionOverview"];
+            } else {
+                $this->_propDict["deviceProtectionOverview"] = new DeviceProtectionOverview($this->_propDict["deviceProtectionOverview"]);
+                return $this->_propDict["deviceProtectionOverview"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the deviceProtectionOverview
+    * Device protection overview.
+    *
+    * @param DeviceProtectionOverview $val The deviceProtectionOverview
+    *
+    * @return DeviceManagement
+    */
+    public function setDeviceProtectionOverview($val)
+    {
+        $this->_propDict["deviceProtectionOverview"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the subscriptionState
     * Tenant mobile device management subscription state. Possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
     *
@@ -149,6 +182,72 @@ class DeviceManagement extends Entity
     public function setSubscriptionState($val)
     {
         $this->_propDict["subscriptionState"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the userExperienceAnalyticsSettings
+    * User experience analytics device settings
+    *
+    * @return UserExperienceAnalyticsSettings|null The userExperienceAnalyticsSettings
+    */
+    public function getUserExperienceAnalyticsSettings()
+    {
+        if (array_key_exists("userExperienceAnalyticsSettings", $this->_propDict)) {
+            if (is_a($this->_propDict["userExperienceAnalyticsSettings"], "\Microsoft\Graph\Model\UserExperienceAnalyticsSettings") || is_null($this->_propDict["userExperienceAnalyticsSettings"])) {
+                return $this->_propDict["userExperienceAnalyticsSettings"];
+            } else {
+                $this->_propDict["userExperienceAnalyticsSettings"] = new UserExperienceAnalyticsSettings($this->_propDict["userExperienceAnalyticsSettings"]);
+                return $this->_propDict["userExperienceAnalyticsSettings"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the userExperienceAnalyticsSettings
+    * User experience analytics device settings
+    *
+    * @param UserExperienceAnalyticsSettings $val The userExperienceAnalyticsSettings
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsSettings($val)
+    {
+        $this->_propDict["userExperienceAnalyticsSettings"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the windowsMalwareOverview
+    * Malware overview for windows devices.
+    *
+    * @return WindowsMalwareOverview|null The windowsMalwareOverview
+    */
+    public function getWindowsMalwareOverview()
+    {
+        if (array_key_exists("windowsMalwareOverview", $this->_propDict)) {
+            if (is_a($this->_propDict["windowsMalwareOverview"], "\Microsoft\Graph\Model\WindowsMalwareOverview") || is_null($this->_propDict["windowsMalwareOverview"])) {
+                return $this->_propDict["windowsMalwareOverview"];
+            } else {
+                $this->_propDict["windowsMalwareOverview"] = new WindowsMalwareOverview($this->_propDict["windowsMalwareOverview"]);
+                return $this->_propDict["windowsMalwareOverview"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the windowsMalwareOverview
+    * Malware overview for windows devices.
+    *
+    * @param WindowsMalwareOverview $val The windowsMalwareOverview
+    *
+    * @return DeviceManagement
+    */
+    public function setWindowsMalwareOverview($val)
+    {
+        $this->_propDict["windowsMalwareOverview"] = $val;
         return $this;
     }
 
@@ -767,6 +866,735 @@ class DeviceManagement extends Entity
     public function setManagedDevices($val)
     {
         $this->_propDict["managedDevices"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the mobileAppTroubleshootingEvents
+    * The collection property of MobileAppTroubleshootingEvent.
+     *
+     * @return array|null The mobileAppTroubleshootingEvents
+     */
+    public function getMobileAppTroubleshootingEvents()
+    {
+        if (array_key_exists("mobileAppTroubleshootingEvents", $this->_propDict)) {
+           return $this->_propDict["mobileAppTroubleshootingEvents"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the mobileAppTroubleshootingEvents
+    * The collection property of MobileAppTroubleshootingEvent.
+    *
+    * @param MobileAppTroubleshootingEvent[] $val The mobileAppTroubleshootingEvents
+    *
+    * @return DeviceManagement
+    */
+    public function setMobileAppTroubleshootingEvents($val)
+    {
+        $this->_propDict["mobileAppTroubleshootingEvents"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the userExperienceAnalyticsAppHealthApplicationPerformance
+    * User experience analytics appHealth Application Performance
+     *
+     * @return array|null The userExperienceAnalyticsAppHealthApplicationPerformance
+     */
+    public function getUserExperienceAnalyticsAppHealthApplicationPerformance()
+    {
+        if (array_key_exists("userExperienceAnalyticsAppHealthApplicationPerformance", $this->_propDict)) {
+           return $this->_propDict["userExperienceAnalyticsAppHealthApplicationPerformance"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the userExperienceAnalyticsAppHealthApplicationPerformance
+    * User experience analytics appHealth Application Performance
+    *
+    * @param UserExperienceAnalyticsAppHealthApplicationPerformance[] $val The userExperienceAnalyticsAppHealthApplicationPerformance
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsAppHealthApplicationPerformance($val)
+    {
+        $this->_propDict["userExperienceAnalyticsAppHealthApplicationPerformance"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails
+    * User experience analytics appHealth Application Performance by App Version details
+     *
+     * @return array|null The userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails
+     */
+    public function getUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails()
+    {
+        if (array_key_exists("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails", $this->_propDict)) {
+           return $this->_propDict["userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails
+    * User experience analytics appHealth Application Performance by App Version details
+    *
+    * @param UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails[] $val The userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails($val)
+    {
+        $this->_propDict["userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId
+    * User experience analytics appHealth Application Performance by App Version Device Id
+     *
+     * @return array|null The userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId
+     */
+    public function getUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId()
+    {
+        if (array_key_exists("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId", $this->_propDict)) {
+           return $this->_propDict["userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId
+    * User experience analytics appHealth Application Performance by App Version Device Id
+    *
+    * @param UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId[] $val The userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId($val)
+    {
+        $this->_propDict["userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion
+    * User experience analytics appHealth Application Performance by OS Version
+     *
+     * @return array|null The userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion
+     */
+    public function getUserExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion()
+    {
+        if (array_key_exists("userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion", $this->_propDict)) {
+           return $this->_propDict["userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion
+    * User experience analytics appHealth Application Performance by OS Version
+    *
+    * @param UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion[] $val The userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion($val)
+    {
+        $this->_propDict["userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the userExperienceAnalyticsAppHealthDeviceModelPerformance
+    * User experience analytics appHealth Model Performance
+     *
+     * @return array|null The userExperienceAnalyticsAppHealthDeviceModelPerformance
+     */
+    public function getUserExperienceAnalyticsAppHealthDeviceModelPerformance()
+    {
+        if (array_key_exists("userExperienceAnalyticsAppHealthDeviceModelPerformance", $this->_propDict)) {
+           return $this->_propDict["userExperienceAnalyticsAppHealthDeviceModelPerformance"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the userExperienceAnalyticsAppHealthDeviceModelPerformance
+    * User experience analytics appHealth Model Performance
+    *
+    * @param UserExperienceAnalyticsAppHealthDeviceModelPerformance[] $val The userExperienceAnalyticsAppHealthDeviceModelPerformance
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsAppHealthDeviceModelPerformance($val)
+    {
+        $this->_propDict["userExperienceAnalyticsAppHealthDeviceModelPerformance"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the userExperienceAnalyticsAppHealthDevicePerformance
+    * User experience analytics appHealth Device Performance
+     *
+     * @return array|null The userExperienceAnalyticsAppHealthDevicePerformance
+     */
+    public function getUserExperienceAnalyticsAppHealthDevicePerformance()
+    {
+        if (array_key_exists("userExperienceAnalyticsAppHealthDevicePerformance", $this->_propDict)) {
+           return $this->_propDict["userExperienceAnalyticsAppHealthDevicePerformance"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the userExperienceAnalyticsAppHealthDevicePerformance
+    * User experience analytics appHealth Device Performance
+    *
+    * @param UserExperienceAnalyticsAppHealthDevicePerformance[] $val The userExperienceAnalyticsAppHealthDevicePerformance
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsAppHealthDevicePerformance($val)
+    {
+        $this->_propDict["userExperienceAnalyticsAppHealthDevicePerformance"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the userExperienceAnalyticsAppHealthDevicePerformanceDetails
+    * User experience analytics device performance details
+     *
+     * @return array|null The userExperienceAnalyticsAppHealthDevicePerformanceDetails
+     */
+    public function getUserExperienceAnalyticsAppHealthDevicePerformanceDetails()
+    {
+        if (array_key_exists("userExperienceAnalyticsAppHealthDevicePerformanceDetails", $this->_propDict)) {
+           return $this->_propDict["userExperienceAnalyticsAppHealthDevicePerformanceDetails"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the userExperienceAnalyticsAppHealthDevicePerformanceDetails
+    * User experience analytics device performance details
+    *
+    * @param UserExperienceAnalyticsAppHealthDevicePerformanceDetails[] $val The userExperienceAnalyticsAppHealthDevicePerformanceDetails
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsAppHealthDevicePerformanceDetails($val)
+    {
+        $this->_propDict["userExperienceAnalyticsAppHealthDevicePerformanceDetails"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the userExperienceAnalyticsAppHealthOSVersionPerformance
+    * User experience analytics appHealth OS version Performance
+     *
+     * @return array|null The userExperienceAnalyticsAppHealthOSVersionPerformance
+     */
+    public function getUserExperienceAnalyticsAppHealthOSVersionPerformance()
+    {
+        if (array_key_exists("userExperienceAnalyticsAppHealthOSVersionPerformance", $this->_propDict)) {
+           return $this->_propDict["userExperienceAnalyticsAppHealthOSVersionPerformance"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the userExperienceAnalyticsAppHealthOSVersionPerformance
+    * User experience analytics appHealth OS version Performance
+    *
+    * @param UserExperienceAnalyticsAppHealthOSVersionPerformance[] $val The userExperienceAnalyticsAppHealthOSVersionPerformance
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsAppHealthOSVersionPerformance($val)
+    {
+        $this->_propDict["userExperienceAnalyticsAppHealthOSVersionPerformance"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the userExperienceAnalyticsAppHealthOverview
+    * User experience analytics appHealth overview
+    *
+    * @return UserExperienceAnalyticsCategory|null The userExperienceAnalyticsAppHealthOverview
+    */
+    public function getUserExperienceAnalyticsAppHealthOverview()
+    {
+        if (array_key_exists("userExperienceAnalyticsAppHealthOverview", $this->_propDict)) {
+            if (is_a($this->_propDict["userExperienceAnalyticsAppHealthOverview"], "\Microsoft\Graph\Model\UserExperienceAnalyticsCategory") || is_null($this->_propDict["userExperienceAnalyticsAppHealthOverview"])) {
+                return $this->_propDict["userExperienceAnalyticsAppHealthOverview"];
+            } else {
+                $this->_propDict["userExperienceAnalyticsAppHealthOverview"] = new UserExperienceAnalyticsCategory($this->_propDict["userExperienceAnalyticsAppHealthOverview"]);
+                return $this->_propDict["userExperienceAnalyticsAppHealthOverview"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the userExperienceAnalyticsAppHealthOverview
+    * User experience analytics appHealth overview
+    *
+    * @param UserExperienceAnalyticsCategory $val The userExperienceAnalyticsAppHealthOverview
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsAppHealthOverview($val)
+    {
+        $this->_propDict["userExperienceAnalyticsAppHealthOverview"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the userExperienceAnalyticsBaselines
+    * User experience analytics baselines
+     *
+     * @return array|null The userExperienceAnalyticsBaselines
+     */
+    public function getUserExperienceAnalyticsBaselines()
+    {
+        if (array_key_exists("userExperienceAnalyticsBaselines", $this->_propDict)) {
+           return $this->_propDict["userExperienceAnalyticsBaselines"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the userExperienceAnalyticsBaselines
+    * User experience analytics baselines
+    *
+    * @param UserExperienceAnalyticsBaseline[] $val The userExperienceAnalyticsBaselines
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsBaselines($val)
+    {
+        $this->_propDict["userExperienceAnalyticsBaselines"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the userExperienceAnalyticsCategories
+    * User experience analytics categories
+     *
+     * @return array|null The userExperienceAnalyticsCategories
+     */
+    public function getUserExperienceAnalyticsCategories()
+    {
+        if (array_key_exists("userExperienceAnalyticsCategories", $this->_propDict)) {
+           return $this->_propDict["userExperienceAnalyticsCategories"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the userExperienceAnalyticsCategories
+    * User experience analytics categories
+    *
+    * @param UserExperienceAnalyticsCategory[] $val The userExperienceAnalyticsCategories
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsCategories($val)
+    {
+        $this->_propDict["userExperienceAnalyticsCategories"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the userExperienceAnalyticsDevicePerformance
+    * User experience analytics device performance
+     *
+     * @return array|null The userExperienceAnalyticsDevicePerformance
+     */
+    public function getUserExperienceAnalyticsDevicePerformance()
+    {
+        if (array_key_exists("userExperienceAnalyticsDevicePerformance", $this->_propDict)) {
+           return $this->_propDict["userExperienceAnalyticsDevicePerformance"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the userExperienceAnalyticsDevicePerformance
+    * User experience analytics device performance
+    *
+    * @param UserExperienceAnalyticsDevicePerformance[] $val The userExperienceAnalyticsDevicePerformance
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsDevicePerformance($val)
+    {
+        $this->_propDict["userExperienceAnalyticsDevicePerformance"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the userExperienceAnalyticsDeviceScores
+    * User experience analytics device scores
+     *
+     * @return array|null The userExperienceAnalyticsDeviceScores
+     */
+    public function getUserExperienceAnalyticsDeviceScores()
+    {
+        if (array_key_exists("userExperienceAnalyticsDeviceScores", $this->_propDict)) {
+           return $this->_propDict["userExperienceAnalyticsDeviceScores"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the userExperienceAnalyticsDeviceScores
+    * User experience analytics device scores
+    *
+    * @param UserExperienceAnalyticsDeviceScores[] $val The userExperienceAnalyticsDeviceScores
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsDeviceScores($val)
+    {
+        $this->_propDict["userExperienceAnalyticsDeviceScores"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the userExperienceAnalyticsDeviceStartupHistory
+    * User experience analytics device Startup History
+     *
+     * @return array|null The userExperienceAnalyticsDeviceStartupHistory
+     */
+    public function getUserExperienceAnalyticsDeviceStartupHistory()
+    {
+        if (array_key_exists("userExperienceAnalyticsDeviceStartupHistory", $this->_propDict)) {
+           return $this->_propDict["userExperienceAnalyticsDeviceStartupHistory"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the userExperienceAnalyticsDeviceStartupHistory
+    * User experience analytics device Startup History
+    *
+    * @param UserExperienceAnalyticsDeviceStartupHistory[] $val The userExperienceAnalyticsDeviceStartupHistory
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsDeviceStartupHistory($val)
+    {
+        $this->_propDict["userExperienceAnalyticsDeviceStartupHistory"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the userExperienceAnalyticsDeviceStartupProcesses
+    * User experience analytics device Startup Processes
+     *
+     * @return array|null The userExperienceAnalyticsDeviceStartupProcesses
+     */
+    public function getUserExperienceAnalyticsDeviceStartupProcesses()
+    {
+        if (array_key_exists("userExperienceAnalyticsDeviceStartupProcesses", $this->_propDict)) {
+           return $this->_propDict["userExperienceAnalyticsDeviceStartupProcesses"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the userExperienceAnalyticsDeviceStartupProcesses
+    * User experience analytics device Startup Processes
+    *
+    * @param UserExperienceAnalyticsDeviceStartupProcess[] $val The userExperienceAnalyticsDeviceStartupProcesses
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsDeviceStartupProcesses($val)
+    {
+        $this->_propDict["userExperienceAnalyticsDeviceStartupProcesses"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the userExperienceAnalyticsMetricHistory
+    * User experience analytics metric history
+     *
+     * @return array|null The userExperienceAnalyticsMetricHistory
+     */
+    public function getUserExperienceAnalyticsMetricHistory()
+    {
+        if (array_key_exists("userExperienceAnalyticsMetricHistory", $this->_propDict)) {
+           return $this->_propDict["userExperienceAnalyticsMetricHistory"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the userExperienceAnalyticsMetricHistory
+    * User experience analytics metric history
+    *
+    * @param UserExperienceAnalyticsMetricHistory[] $val The userExperienceAnalyticsMetricHistory
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsMetricHistory($val)
+    {
+        $this->_propDict["userExperienceAnalyticsMetricHistory"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the userExperienceAnalyticsModelScores
+    * User experience analytics model scores
+     *
+     * @return array|null The userExperienceAnalyticsModelScores
+     */
+    public function getUserExperienceAnalyticsModelScores()
+    {
+        if (array_key_exists("userExperienceAnalyticsModelScores", $this->_propDict)) {
+           return $this->_propDict["userExperienceAnalyticsModelScores"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the userExperienceAnalyticsModelScores
+    * User experience analytics model scores
+    *
+    * @param UserExperienceAnalyticsModelScores[] $val The userExperienceAnalyticsModelScores
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsModelScores($val)
+    {
+        $this->_propDict["userExperienceAnalyticsModelScores"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the userExperienceAnalyticsOverview
+    * User experience analytics overview
+    *
+    * @return UserExperienceAnalyticsOverview|null The userExperienceAnalyticsOverview
+    */
+    public function getUserExperienceAnalyticsOverview()
+    {
+        if (array_key_exists("userExperienceAnalyticsOverview", $this->_propDict)) {
+            if (is_a($this->_propDict["userExperienceAnalyticsOverview"], "\Microsoft\Graph\Model\UserExperienceAnalyticsOverview") || is_null($this->_propDict["userExperienceAnalyticsOverview"])) {
+                return $this->_propDict["userExperienceAnalyticsOverview"];
+            } else {
+                $this->_propDict["userExperienceAnalyticsOverview"] = new UserExperienceAnalyticsOverview($this->_propDict["userExperienceAnalyticsOverview"]);
+                return $this->_propDict["userExperienceAnalyticsOverview"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the userExperienceAnalyticsOverview
+    * User experience analytics overview
+    *
+    * @param UserExperienceAnalyticsOverview $val The userExperienceAnalyticsOverview
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsOverview($val)
+    {
+        $this->_propDict["userExperienceAnalyticsOverview"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the userExperienceAnalyticsScoreHistory
+    * User experience analytics device Startup Score History
+     *
+     * @return array|null The userExperienceAnalyticsScoreHistory
+     */
+    public function getUserExperienceAnalyticsScoreHistory()
+    {
+        if (array_key_exists("userExperienceAnalyticsScoreHistory", $this->_propDict)) {
+           return $this->_propDict["userExperienceAnalyticsScoreHistory"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the userExperienceAnalyticsScoreHistory
+    * User experience analytics device Startup Score History
+    *
+    * @param UserExperienceAnalyticsScoreHistory[] $val The userExperienceAnalyticsScoreHistory
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsScoreHistory($val)
+    {
+        $this->_propDict["userExperienceAnalyticsScoreHistory"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric
+    * User experience analytics work from anywhere hardware readiness metrics.
+    *
+    * @return UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric|null The userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric
+    */
+    public function getUserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric()
+    {
+        if (array_key_exists("userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric", $this->_propDict)) {
+            if (is_a($this->_propDict["userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric"], "\Microsoft\Graph\Model\UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric") || is_null($this->_propDict["userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric"])) {
+                return $this->_propDict["userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric"];
+            } else {
+                $this->_propDict["userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric"] = new UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric($this->_propDict["userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric"]);
+                return $this->_propDict["userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric
+    * User experience analytics work from anywhere hardware readiness metrics.
+    *
+    * @param UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric $val The userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric($val)
+    {
+        $this->_propDict["userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the userExperienceAnalyticsWorkFromAnywhereMetrics
+    * User experience analytics work from anywhere metrics.
+     *
+     * @return array|null The userExperienceAnalyticsWorkFromAnywhereMetrics
+     */
+    public function getUserExperienceAnalyticsWorkFromAnywhereMetrics()
+    {
+        if (array_key_exists("userExperienceAnalyticsWorkFromAnywhereMetrics", $this->_propDict)) {
+           return $this->_propDict["userExperienceAnalyticsWorkFromAnywhereMetrics"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the userExperienceAnalyticsWorkFromAnywhereMetrics
+    * User experience analytics work from anywhere metrics.
+    *
+    * @param UserExperienceAnalyticsWorkFromAnywhereMetric[] $val The userExperienceAnalyticsWorkFromAnywhereMetrics
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsWorkFromAnywhereMetrics($val)
+    {
+        $this->_propDict["userExperienceAnalyticsWorkFromAnywhereMetrics"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the userExperienceAnalyticsWorkFromAnywhereModelPerformance
+    * The user experience analytics work from anywhere model performance
+     *
+     * @return array|null The userExperienceAnalyticsWorkFromAnywhereModelPerformance
+     */
+    public function getUserExperienceAnalyticsWorkFromAnywhereModelPerformance()
+    {
+        if (array_key_exists("userExperienceAnalyticsWorkFromAnywhereModelPerformance", $this->_propDict)) {
+           return $this->_propDict["userExperienceAnalyticsWorkFromAnywhereModelPerformance"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the userExperienceAnalyticsWorkFromAnywhereModelPerformance
+    * The user experience analytics work from anywhere model performance
+    *
+    * @param UserExperienceAnalyticsWorkFromAnywhereModelPerformance[] $val The userExperienceAnalyticsWorkFromAnywhereModelPerformance
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsWorkFromAnywhereModelPerformance($val)
+    {
+        $this->_propDict["userExperienceAnalyticsWorkFromAnywhereModelPerformance"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the windowsMalwareInformation
+    * The list of affected malware in the tenant.
+     *
+     * @return array|null The windowsMalwareInformation
+     */
+    public function getWindowsMalwareInformation()
+    {
+        if (array_key_exists("windowsMalwareInformation", $this->_propDict)) {
+           return $this->_propDict["windowsMalwareInformation"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the windowsMalwareInformation
+    * The list of affected malware in the tenant.
+    *
+    * @param WindowsMalwareInformation[] $val The windowsMalwareInformation
+    *
+    * @return DeviceManagement
+    */
+    public function setWindowsMalwareInformation($val)
+    {
+        $this->_propDict["windowsMalwareInformation"] = $val;
         return $this;
     }
 
