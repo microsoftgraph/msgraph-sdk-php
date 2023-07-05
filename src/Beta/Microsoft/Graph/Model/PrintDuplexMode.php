@@ -32,4 +32,5 @@ class PrintDuplexMode extends Enum
     const FLIP_ON_LONG_EDGE = "flipOnLongEdge";
     const FLIP_ON_SHORT_EDGE = "flipOnShortEdge";
     const ONE_SIDED = "oneSided";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

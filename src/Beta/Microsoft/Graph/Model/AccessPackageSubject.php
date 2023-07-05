@@ -26,6 +26,7 @@ class AccessPackageSubject extends Entity
 {
     /**
     * Gets the altSecId
+    * Not Supported.
     *
     * @return string|null The altSecId
     */
@@ -40,6 +41,7 @@ class AccessPackageSubject extends Entity
 
     /**
     * Sets the altSecId
+    * Not Supported.
     *
     * @param string $val The altSecId
     *
@@ -140,7 +142,7 @@ class AccessPackageSubject extends Entity
 
     /**
     * Gets the objectId
-    * The object identifier of the subject. null if the subject is not yet a user in the tenant.
+    * The object identifier of the subject. null if the subject is not yet a user in the tenant. Alternate key.
     *
     * @return string|null The objectId
     */
@@ -155,7 +157,7 @@ class AccessPackageSubject extends Entity
 
     /**
     * Sets the objectId
-    * The object identifier of the subject. null if the subject is not yet a user in the tenant.
+    * The object identifier of the subject. null if the subject is not yet a user in the tenant. Alternate key.
     *
     * @param string $val The objectId
     *
@@ -225,6 +227,7 @@ class AccessPackageSubject extends Entity
 
     /**
     * Gets the subjectLifecycle
+    * The lifecycle of the subject user, if a guest. The possible values are: notDefined, notGoverned, governed, unknownFutureValue.
     *
     * @return AccessPackageSubjectLifecycle|null The subjectLifecycle
     */
@@ -243,6 +246,7 @@ class AccessPackageSubject extends Entity
 
     /**
     * Sets the subjectLifecycle
+    * The lifecycle of the subject user, if a guest. The possible values are: notDefined, notGoverned, governed, unknownFutureValue.
     *
     * @param AccessPackageSubjectLifecycle $val The subjectLifecycle
     *

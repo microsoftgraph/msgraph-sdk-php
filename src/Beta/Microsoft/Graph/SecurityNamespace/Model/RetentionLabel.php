@@ -466,10 +466,43 @@ class RetentionLabel extends \Beta\Microsoft\Graph\Model\Entity
         return $this;
     }
 
+    /**
+    * Gets the descriptors
+    * Represents out-of-the-box values that provide more options to improve the manageability and organization of the content you need to label.
+    *
+    * @return FilePlanDescriptor|null The descriptors
+    */
+    public function getDescriptors()
+    {
+        if (array_key_exists("descriptors", $this->_propDict)) {
+            if (is_a($this->_propDict["descriptors"], "\Beta\Microsoft\Graph\SecurityNamespace\Model\FilePlanDescriptor") || is_null($this->_propDict["descriptors"])) {
+                return $this->_propDict["descriptors"];
+            } else {
+                $this->_propDict["descriptors"] = new FilePlanDescriptor($this->_propDict["descriptors"]);
+                return $this->_propDict["descriptors"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the descriptors
+    * Represents out-of-the-box values that provide more options to improve the manageability and organization of the content you need to label.
+    *
+    * @param FilePlanDescriptor $val The descriptors
+    *
+    * @return RetentionLabel
+    */
+    public function setDescriptors($val)
+    {
+        $this->_propDict["descriptors"] = $val;
+        return $this;
+    }
+
 
      /**
      * Gets the dispositionReviewStages
-    * Review stages during which reviewers are notified to determine whether a document must be deleted or retained.
+    * When action at the end of retention is chosen as 'dispositionReview', dispositionReviewStages specifies a sequential set of stages with at least one reviewer in each stage.
      *
      * @return array|null The dispositionReviewStages
      */
@@ -484,7 +517,7 @@ class RetentionLabel extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the dispositionReviewStages
-    * Review stages during which reviewers are notified to determine whether a document must be deleted or retained.
+    * When action at the end of retention is chosen as 'dispositionReview', dispositionReviewStages specifies a sequential set of stages with at least one reviewer in each stage.
     *
     * @param DispositionReviewStage[] $val The dispositionReviewStages
     *
@@ -498,6 +531,7 @@ class RetentionLabel extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the retentionEventType
+    * Represents the type associated with a retention event.
     *
     * @return RetentionEventType|null The retentionEventType
     */
@@ -516,6 +550,7 @@ class RetentionLabel extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the retentionEventType
+    * Represents the type associated with a retention event.
     *
     * @param RetentionEventType $val The retentionEventType
     *

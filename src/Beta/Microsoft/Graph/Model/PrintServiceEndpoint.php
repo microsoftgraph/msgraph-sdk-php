@@ -54,6 +54,33 @@ class PrintServiceEndpoint extends Entity
     }
 
     /**
+    * Gets the name
+    *
+    * @return string|null The name
+    */
+    public function getName()
+    {
+        if (array_key_exists("name", $this->_propDict)) {
+            return $this->_propDict["name"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the name
+    *
+    * @param string $val The name
+    *
+    * @return PrintServiceEndpoint
+    */
+    public function setName($val)
+    {
+        $this->_propDict["name"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the uri
     * The URI that can be used to access the service.
     *

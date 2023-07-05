@@ -319,6 +319,33 @@ class CredentialUserRegistrationsSummary extends \Beta\Microsoft\Graph\Model\Ent
     }
 
     /**
+    * Gets the tenantLicenseType
+    *
+    * @return string|null The tenantLicenseType
+    */
+    public function getTenantLicenseType()
+    {
+        if (array_key_exists("tenantLicenseType", $this->_propDict)) {
+            return $this->_propDict["tenantLicenseType"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the tenantLicenseType
+    *
+    * @param string $val The tenantLicenseType
+    *
+    * @return CredentialUserRegistrationsSummary
+    */
+    public function setTenantLicenseType($val)
+    {
+        $this->_propDict["tenantLicenseType"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the totalUserCount
     * The total number of users in the given managed tenant. Optional. Read-only.
     *

@@ -36,4 +36,5 @@ class ProtocolType extends Enum
     const SAML20 = "saml20";
     const DEVICE_CODE = "deviceCode";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
+    const AUTHENTICATION_TRANSFER = "authenticationTransfer";
 }

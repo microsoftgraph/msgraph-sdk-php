@@ -379,6 +379,39 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
         return $this;
     }
 
+    /**
+    * Gets the appActionIfSamsungKnoxAttestationRequired
+    * Defines the behavior of a managed app when Samsung Knox Attestation is required. Possible values are null, warn, block &amp; wipe. If the admin does not set this action, the default is null, which indicates this setting is not configured.
+    *
+    * @return ManagedAppRemediationAction|null The appActionIfSamsungKnoxAttestationRequired
+    */
+    public function getAppActionIfSamsungKnoxAttestationRequired()
+    {
+        if (array_key_exists("appActionIfSamsungKnoxAttestationRequired", $this->_propDict)) {
+            if (is_a($this->_propDict["appActionIfSamsungKnoxAttestationRequired"], "\Beta\Microsoft\Graph\Model\ManagedAppRemediationAction") || is_null($this->_propDict["appActionIfSamsungKnoxAttestationRequired"])) {
+                return $this->_propDict["appActionIfSamsungKnoxAttestationRequired"];
+            } else {
+                $this->_propDict["appActionIfSamsungKnoxAttestationRequired"] = new ManagedAppRemediationAction($this->_propDict["appActionIfSamsungKnoxAttestationRequired"]);
+                return $this->_propDict["appActionIfSamsungKnoxAttestationRequired"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the appActionIfSamsungKnoxAttestationRequired
+    * Defines the behavior of a managed app when Samsung Knox Attestation is required. Possible values are null, warn, block &amp; wipe. If the admin does not set this action, the default is null, which indicates this setting is not configured.
+    *
+    * @param ManagedAppRemediationAction $val The appActionIfSamsungKnoxAttestationRequired
+    *
+    * @return AndroidManagedAppProtection
+    */
+    public function setAppActionIfSamsungKnoxAttestationRequired($val)
+    {
+        $this->_propDict["appActionIfSamsungKnoxAttestationRequired"] = $val;
+        return $this;
+    }
+
 
      /**
      * Gets the approvedKeyboards

@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* JobHistorySummaryType File
+* SubCategory File
 * PHP version 7
 *
 * @category  Library
@@ -11,12 +11,9 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Model;
-
-use Microsoft\Graph\Core\Enum;
-
+namespace Beta\Microsoft\Graph\SecurityNamespace\Model;
 /**
-* JobHistorySummaryType class
+* SubCategory class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,12 +21,6 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class JobHistorySummaryType extends Enum
+class SubCategory extends FilePlanDescriptorBase
 {
-    /**
-    * The Enum JobHistorySummaryType
-    */
-    const PRINTER = "printer";
-    const USER = "user";
-    const GROUP = "group";
 }

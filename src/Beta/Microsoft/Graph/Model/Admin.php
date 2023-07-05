@@ -186,6 +186,130 @@ class Admin implements \JsonSerializable
     }
 
     /**
+    * Gets the appsAndServices
+    *
+    * @return AdminAppsAndServices|null The appsAndServices
+    */
+    public function getAppsAndServices()
+    {
+        if (array_key_exists("appsAndServices", $this->_propDict)) {
+            if (is_a($this->_propDict["appsAndServices"], "\Beta\Microsoft\Graph\Model\AdminAppsAndServices") || is_null($this->_propDict["appsAndServices"])) {
+                return $this->_propDict["appsAndServices"];
+            } else {
+                $this->_propDict["appsAndServices"] = new AdminAppsAndServices($this->_propDict["appsAndServices"]);
+                return $this->_propDict["appsAndServices"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the appsAndServices
+    *
+    * @param AdminAppsAndServices $val The appsAndServices
+    *
+    * @return Admin
+    */
+    public function setAppsAndServices($val)
+    {
+        $this->_propDict["appsAndServices"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the dynamics
+    *
+    * @return AdminDynamics|null The dynamics
+    */
+    public function getDynamics()
+    {
+        if (array_key_exists("dynamics", $this->_propDict)) {
+            if (is_a($this->_propDict["dynamics"], "\Beta\Microsoft\Graph\Model\AdminDynamics") || is_null($this->_propDict["dynamics"])) {
+                return $this->_propDict["dynamics"];
+            } else {
+                $this->_propDict["dynamics"] = new AdminDynamics($this->_propDict["dynamics"]);
+                return $this->_propDict["dynamics"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the dynamics
+    *
+    * @param AdminDynamics $val The dynamics
+    *
+    * @return Admin
+    */
+    public function setDynamics($val)
+    {
+        $this->_propDict["dynamics"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the forms
+    *
+    * @return AdminForms|null The forms
+    */
+    public function getForms()
+    {
+        if (array_key_exists("forms", $this->_propDict)) {
+            if (is_a($this->_propDict["forms"], "\Beta\Microsoft\Graph\Model\AdminForms") || is_null($this->_propDict["forms"])) {
+                return $this->_propDict["forms"];
+            } else {
+                $this->_propDict["forms"] = new AdminForms($this->_propDict["forms"]);
+                return $this->_propDict["forms"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the forms
+    *
+    * @param AdminForms $val The forms
+    *
+    * @return Admin
+    */
+    public function setForms($val)
+    {
+        $this->_propDict["forms"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the todo
+    *
+    * @return AdminTodo|null The todo
+    */
+    public function getTodo()
+    {
+        if (array_key_exists("todo", $this->_propDict)) {
+            if (is_a($this->_propDict["todo"], "\Beta\Microsoft\Graph\Model\AdminTodo") || is_null($this->_propDict["todo"])) {
+                return $this->_propDict["todo"];
+            } else {
+                $this->_propDict["todo"] = new AdminTodo($this->_propDict["todo"]);
+                return $this->_propDict["todo"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the todo
+    *
+    * @param AdminTodo $val The todo
+    *
+    * @return Admin
+    */
+    public function setTodo($val)
+    {
+        $this->_propDict["todo"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the windows
     * A container for all Windows administrator functionalities. Read-only.
     *

@@ -300,6 +300,7 @@ class OnlineMeeting extends Entity
 
      /**
      * Gets the anonymizeIdentityForRoles
+    * Specifies whose identity will be anonymized in the meeting. Possible values are: attendee. The attendee value cannot be removed through a PATCH operation once added.
      *
      * @return array|null The anonymizeIdentityForRoles
      */
@@ -314,6 +315,7 @@ class OnlineMeeting extends Entity
 
     /**
     * Sets the anonymizeIdentityForRoles
+    * Specifies whose identity will be anonymized in the meeting. Possible values are: attendee. The attendee value cannot be removed through a PATCH operation once added.
     *
     * @param OnlineMeetingRole[] $val The anonymizeIdentityForRoles
     *
