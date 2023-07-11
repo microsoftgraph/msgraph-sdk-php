@@ -25,6 +25,7 @@ class CustomerVoiceSettings extends Entity
 {
     /**
     * Gets the isInOrgFormsPhishingScanEnabled
+    * Controls whether phishing protection is run on forms created by users, blocking the creation of forms if common phishing questions are detected.
     *
     * @return bool|null The isInOrgFormsPhishingScanEnabled
     */
@@ -39,6 +40,7 @@ class CustomerVoiceSettings extends Entity
 
     /**
     * Sets the isInOrgFormsPhishingScanEnabled
+    * Controls whether phishing protection is run on forms created by users, blocking the creation of forms if common phishing questions are detected.
     *
     * @param bool $val The value of the isInOrgFormsPhishingScanEnabled
     *
@@ -51,6 +53,7 @@ class CustomerVoiceSettings extends Entity
     }
     /**
     * Gets the isRecordIdentityByDefaultEnabled
+    * Controls whether the names of users who fill out forms are recorded.
     *
     * @return bool|null The isRecordIdentityByDefaultEnabled
     */
@@ -65,6 +68,7 @@ class CustomerVoiceSettings extends Entity
 
     /**
     * Sets the isRecordIdentityByDefaultEnabled
+    * Controls whether the names of users who fill out forms are recorded.
     *
     * @param bool $val The value of the isRecordIdentityByDefaultEnabled
     *
@@ -77,6 +81,7 @@ class CustomerVoiceSettings extends Entity
     }
     /**
     * Gets the isRestrictedSurveyAccessEnabled
+    * Controls whether only users inside your organization can submit a response.
     *
     * @return bool|null The isRestrictedSurveyAccessEnabled
     */
@@ -91,6 +96,7 @@ class CustomerVoiceSettings extends Entity
 
     /**
     * Sets the isRestrictedSurveyAccessEnabled
+    * Controls whether only users inside your organization can submit a response.
     *
     * @param bool $val The value of the isRestrictedSurveyAccessEnabled
     *

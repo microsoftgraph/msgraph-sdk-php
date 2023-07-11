@@ -26,6 +26,7 @@ class ConditionalAccessPolicy extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the createdDateTime
+    * Indicates the date and time the conditional access policy was created.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -44,6 +45,7 @@ class ConditionalAccessPolicy extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the createdDateTime
+    * Indicates the date and time the conditional access policy was created.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -57,6 +59,7 @@ class ConditionalAccessPolicy extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the description
+    * Provides a summary of the conditional access policy.
     *
     * @return string|null The description
     */
@@ -71,6 +74,7 @@ class ConditionalAccessPolicy extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the description
+    * Provides a summary of the conditional access policy.
     *
     * @param string $val The description
     *
@@ -84,6 +88,7 @@ class ConditionalAccessPolicy extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the displayName
+    * Represents the human-readable name or title assigned to the conditional access policy.
     *
     * @return string|null The displayName
     */
@@ -98,6 +103,7 @@ class ConditionalAccessPolicy extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the displayName
+    * Represents the human-readable name or title assigned to the conditional access policy.
     *
     * @param string $val The displayName
     *
@@ -111,6 +117,7 @@ class ConditionalAccessPolicy extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the modifiedDateTime
+    * Indicates the date and time when the conditional access policy was last modified.
     *
     * @return \DateTime|null The modifiedDateTime
     */
@@ -129,6 +136,7 @@ class ConditionalAccessPolicy extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the modifiedDateTime
+    * Indicates the date and time when the conditional access policy was last modified.
     *
     * @param \DateTime $val The modifiedDateTime
     *

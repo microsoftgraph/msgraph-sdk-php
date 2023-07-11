@@ -25,6 +25,7 @@ class DestinationSummary extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the count
+    * Count of the aggregation.
     *
     * @return int|null The count
     */
@@ -39,6 +40,7 @@ class DestinationSummary extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the count
+    * Count of the aggregation.
     *
     * @param int $val The value of the count
     *
@@ -51,6 +53,7 @@ class DestinationSummary extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the destination
+    * Destination FQDN or IP address.
     *
     * @return string|null The destination
     */
@@ -65,6 +68,7 @@ class DestinationSummary extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the destination
+    * Destination FQDN or IP address.
     *
     * @param string $val The value of the destination
     *

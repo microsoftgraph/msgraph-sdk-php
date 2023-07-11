@@ -26,6 +26,7 @@ class AdminDynamics extends Entity
 {
     /**
     * Gets the customerVoice
+    * Company-wide settings for Microsoft Dynamics 365 Customer Voice.
     *
     * @return CustomerVoiceSettings|null The customerVoice
     */
@@ -44,6 +45,7 @@ class AdminDynamics extends Entity
 
     /**
     * Sets the customerVoice
+    * Company-wide settings for Microsoft Dynamics 365 Customer Voice.
     *
     * @param CustomerVoiceSettings $val The customerVoice
     *

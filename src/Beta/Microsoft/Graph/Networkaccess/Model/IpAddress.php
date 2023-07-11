@@ -36,6 +36,7 @@ class IpAddress extends RuleDestination
 
     /**
     * Gets the value
+    * Defines the IP address used in a destination for a rule.
     *
     * @return string|null The value
     */
@@ -50,6 +51,7 @@ class IpAddress extends RuleDestination
 
     /**
     * Sets the value
+    * Defines the IP address used in a destination for a rule.
     *
     * @param string $val The value of the value
     *

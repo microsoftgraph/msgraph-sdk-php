@@ -26,6 +26,7 @@ class EnrichedAuditLogsSettings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the status
+    * Define the current status of the enrichment feature for a particular workload. The possible values are: enabled, disabled, unknownFutureValue.
     *
     * @return Status|null The status
     */
@@ -44,6 +45,7 @@ class EnrichedAuditLogsSettings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the status
+    * Define the current status of the enrichment feature for a particular workload. The possible values are: enabled, disabled, unknownFutureValue.
     *
     * @param Status $val The value to assign to the status
     *

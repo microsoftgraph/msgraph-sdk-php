@@ -26,6 +26,7 @@ class AdminAppsAndServices extends Entity
 {
     /**
     * Gets the settings
+    * Company-wide settings for apps and services.
     *
     * @return AppsAndServicesSettings|null The settings
     */
@@ -44,6 +45,7 @@ class AdminAppsAndServices extends Entity
 
     /**
     * Sets the settings
+    * Company-wide settings for apps and services.
     *
     * @param AppsAndServicesSettings $val The settings
     *

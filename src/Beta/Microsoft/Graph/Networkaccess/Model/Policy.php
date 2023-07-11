@@ -26,6 +26,7 @@ class Policy extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the description
+    * Description.
     *
     * @return string|null The description
     */
@@ -40,6 +41,7 @@ class Policy extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the description
+    * Description.
     *
     * @param string $val The description
     *
@@ -53,6 +55,7 @@ class Policy extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the name
+    * Policy name.
     *
     * @return string|null The name
     */
@@ -67,6 +70,7 @@ class Policy extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the name
+    * Policy name.
     *
     * @param string $val The name
     *
@@ -80,6 +84,7 @@ class Policy extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the version
+    * Version.
     *
     * @return string|null The version
     */
@@ -94,6 +99,7 @@ class Policy extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the version
+    * Version.
     *
     * @param string $val The version
     *
@@ -108,6 +114,7 @@ class Policy extends \Beta\Microsoft\Graph\Model\Entity
 
      /**
      * Gets the policyRules
+    * Represents the definition of the policy ruleset that makes up the core definition of a policy.
      *
      * @return array|null The policyRules
      */
@@ -122,6 +129,7 @@ class Policy extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the policyRules
+    * Represents the definition of the policy ruleset that makes up the core definition of a policy.
     *
     * @param PolicyRule[] $val The policyRules
     *

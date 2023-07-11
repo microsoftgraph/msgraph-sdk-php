@@ -57,6 +57,7 @@ class NetworkAccessTraffic implements \JsonSerializable
 
     /**
     * Gets the agentVersion
+    * Represents the version of the Global Secure Access client agent software. Supports $filter (eq) and $orderby.
     *
     * @return string|null The agentVersion
     */
@@ -71,6 +72,7 @@ class NetworkAccessTraffic implements \JsonSerializable
 
     /**
     * Sets the agentVersion
+    * Represents the version of the Global Secure Access client agent software. Supports $filter (eq) and $orderby.
     *
     * @param string $val The agentVersion
     *
@@ -84,6 +86,7 @@ class NetworkAccessTraffic implements \JsonSerializable
 
     /**
     * Gets the connectionId
+    * Represents a unique identifier assigned to a connection. Supports $filter (eq) and $orderby.
     *
     * @return string|null The connectionId
     */
@@ -98,6 +101,7 @@ class NetworkAccessTraffic implements \JsonSerializable
 
     /**
     * Sets the connectionId
+    * Represents a unique identifier assigned to a connection. Supports $filter (eq) and $orderby.
     *
     * @param string $val The connectionId
     *
@@ -111,6 +115,7 @@ class NetworkAccessTraffic implements \JsonSerializable
 
     /**
     * Gets the createdDateTime
+    * Represents the date and time when a network access traffic log entry was created. Supports $filter (eq) and $orderby.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -129,6 +134,7 @@ class NetworkAccessTraffic implements \JsonSerializable
 
     /**
     * Sets the createdDateTime
+    * Represents the date and time when a network access traffic log entry was created. Supports $filter (eq) and $orderby.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -142,6 +148,7 @@ class NetworkAccessTraffic implements \JsonSerializable
 
     /**
     * Gets the destinationFQDN
+    * Represents the Fully Qualified Domain Name (FQDN) of the destination host or server in a network communication. Supports $filter (eq) and $orderby.
     *
     * @return string|null The destinationFQDN
     */
@@ -156,6 +163,7 @@ class NetworkAccessTraffic implements \JsonSerializable
 
     /**
     * Sets the destinationFQDN
+    * Represents the Fully Qualified Domain Name (FQDN) of the destination host or server in a network communication. Supports $filter (eq) and $orderby.
     *
     * @param string $val The destinationFQDN
     *
@@ -169,6 +177,7 @@ class NetworkAccessTraffic implements \JsonSerializable
 
     /**
     * Gets the destinationIp
+    * Represents the IP address of the destination host or server in a network communication. Supports $filter (eq) and $orderby.
     *
     * @return string|null The destinationIp
     */
@@ -183,6 +192,7 @@ class NetworkAccessTraffic implements \JsonSerializable
 
     /**
     * Sets the destinationIp
+    * Represents the IP address of the destination host or server in a network communication. Supports $filter (eq) and $orderby.
     *
     * @param string $val The destinationIp
     *
@@ -196,6 +206,7 @@ class NetworkAccessTraffic implements \JsonSerializable
 
     /**
     * Gets the destinationPort
+    * Represents the network port number on the destination host or server in a network communication. Supports $filter (eq) and $orderby.
     *
     * @return int|null The destinationPort
     */
@@ -210,6 +221,7 @@ class NetworkAccessTraffic implements \JsonSerializable
 
     /**
     * Sets the destinationPort
+    * Represents the network port number on the destination host or server in a network communication. Supports $filter (eq) and $orderby.
     *
     * @param int $val The destinationPort
     *
@@ -223,6 +235,7 @@ class NetworkAccessTraffic implements \JsonSerializable
 
     /**
     * Gets the deviceCategory
+    * Represents the category classification of a device within a network infrastructure. The possible values are: client, branch, unknownFutureValue. Supports $filter (eq) and $orderby.
     *
     * @return DeviceCategory|null The deviceCategory
     */
@@ -241,6 +254,7 @@ class NetworkAccessTraffic implements \JsonSerializable
 
     /**
     * Sets the deviceCategory
+    * Represents the category classification of a device within a network infrastructure. The possible values are: client, branch, unknownFutureValue. Supports $filter (eq) and $orderby.
     *
     * @param DeviceCategory $val The deviceCategory
     *
@@ -254,6 +268,7 @@ class NetworkAccessTraffic implements \JsonSerializable
 
     /**
     * Gets the deviceId
+    * Represents a unique identifier assigned to a device within a network infrastructure. Supports $filter (eq) and $orderby.
     *
     * @return string|null The deviceId
     */
@@ -268,6 +283,7 @@ class NetworkAccessTraffic implements \JsonSerializable
 
     /**
     * Sets the deviceId
+    * Represents a unique identifier assigned to a device within a network infrastructure. Supports $filter (eq) and $orderby.
     *
     * @param string $val The deviceId
     *
@@ -281,6 +297,7 @@ class NetworkAccessTraffic implements \JsonSerializable
 
     /**
     * Gets the deviceOperatingSystem
+    * Represents the operating system installed on a device within a network infrastructure. Supports $filter (eq) and $orderby.
     *
     * @return string|null The deviceOperatingSystem
     */
@@ -295,6 +312,7 @@ class NetworkAccessTraffic implements \JsonSerializable
 
     /**
     * Sets the deviceOperatingSystem
+    * Represents the operating system installed on a device within a network infrastructure. Supports $filter (eq) and $orderby.
     *
     * @param string $val The deviceOperatingSystem
     *
@@ -308,6 +326,7 @@ class NetworkAccessTraffic implements \JsonSerializable
 
     /**
     * Gets the deviceOperatingSystemVersion
+    * Represents the version or release number of the operating system installed on a device within a network infrastructure. Supports $filter (eq) and $orderby.
     *
     * @return string|null The deviceOperatingSystemVersion
     */
@@ -322,6 +341,7 @@ class NetworkAccessTraffic implements \JsonSerializable
 
     /**
     * Sets the deviceOperatingSystemVersion
+    * Represents the version or release number of the operating system installed on a device within a network infrastructure. Supports $filter (eq) and $orderby.
     *
     * @param string $val The deviceOperatingSystemVersion
     *
@@ -335,6 +355,7 @@ class NetworkAccessTraffic implements \JsonSerializable
 
     /**
     * Gets the headers
+    * Represents the headers included in a network request or response. Supports $filter (eq) and $orderby.
     *
     * @return Headers|null The headers
     */
@@ -353,6 +374,7 @@ class NetworkAccessTraffic implements \JsonSerializable
 
     /**
     * Sets the headers
+    * Represents the headers included in a network request or response. Supports $filter (eq) and $orderby.
     *
     * @param Headers $val The headers
     *
@@ -366,6 +388,7 @@ class NetworkAccessTraffic implements \JsonSerializable
 
     /**
     * Gets the networkProtocol
+    * Represents the networking protocol used for communication.The possible values are: ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII, unknownFutureValue. Supports $filter (eq) and $orderby.
     *
     * @return NetworkingProtocol|null The networkProtocol
     */
@@ -384,6 +407,7 @@ class NetworkAccessTraffic implements \JsonSerializable
 
     /**
     * Sets the networkProtocol
+    * Represents the networking protocol used for communication.The possible values are: ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII, unknownFutureValue. Supports $filter (eq) and $orderby.
     *
     * @param NetworkingProtocol $val The networkProtocol
     *
@@ -397,6 +421,7 @@ class NetworkAccessTraffic implements \JsonSerializable
 
     /**
     * Gets the policyId
+    * Represents a unique identifier assigned to a policy. Supports $filter (eq) and $orderby.
     *
     * @return string|null The policyId
     */
@@ -411,6 +436,7 @@ class NetworkAccessTraffic implements \JsonSerializable
 
     /**
     * Sets the policyId
+    * Represents a unique identifier assigned to a policy. Supports $filter (eq) and $orderby.
     *
     * @param string $val The policyId
     *
@@ -424,6 +450,7 @@ class NetworkAccessTraffic implements \JsonSerializable
 
     /**
     * Gets the policyRuleId
+    * Represents a unique identifier assigned to a policy rule. Supports $filter (eq) and $orderby.
     *
     * @return string|null The policyRuleId
     */
@@ -438,6 +465,7 @@ class NetworkAccessTraffic implements \JsonSerializable
 
     /**
     * Sets the policyRuleId
+    * Represents a unique identifier assigned to a policy rule. Supports $filter (eq) and $orderby.
     *
     * @param string $val The policyRuleId
     *
@@ -451,6 +479,7 @@ class NetworkAccessTraffic implements \JsonSerializable
 
     /**
     * Gets the receivedBytes
+    * Represents the total number of bytes received in a network communication or data transfer. Supports $filter (eq) and $orderby.
     *
     * @return int|null The receivedBytes
     */
@@ -465,6 +494,7 @@ class NetworkAccessTraffic implements \JsonSerializable
 
     /**
     * Sets the receivedBytes
+    * Represents the total number of bytes received in a network communication or data transfer. Supports $filter (eq) and $orderby.
     *
     * @param int $val The receivedBytes
     *
@@ -478,6 +508,7 @@ class NetworkAccessTraffic implements \JsonSerializable
 
     /**
     * Gets the sentBytes
+    * Represents the total number of bytes sent in a network communication or data transfer. Supports $filter (eq) and $orderby.
     *
     * @return int|null The sentBytes
     */
@@ -492,6 +523,7 @@ class NetworkAccessTraffic implements \JsonSerializable
 
     /**
     * Sets the sentBytes
+    * Represents the total number of bytes sent in a network communication or data transfer. Supports $filter (eq) and $orderby.
     *
     * @param int $val The sentBytes
     *
@@ -505,6 +537,7 @@ class NetworkAccessTraffic implements \JsonSerializable
 
     /**
     * Gets the sessionId
+    * Represents a unique identifier assigned to a session or connection within a network infrastructure. Supports $filter (eq) and $orderby.
     *
     * @return string|null The sessionId
     */
@@ -519,6 +552,7 @@ class NetworkAccessTraffic implements \JsonSerializable
 
     /**
     * Sets the sessionId
+    * Represents a unique identifier assigned to a session or connection within a network infrastructure. Supports $filter (eq) and $orderby.
     *
     * @param string $val The sessionId
     *
@@ -532,6 +566,7 @@ class NetworkAccessTraffic implements \JsonSerializable
 
     /**
     * Gets the sourceIp
+    * Represents the source IP address in a network communication. Supports $filter (eq) and $orderby.
     *
     * @return string|null The sourceIp
     */
@@ -546,6 +581,7 @@ class NetworkAccessTraffic implements \JsonSerializable
 
     /**
     * Sets the sourceIp
+    * Represents the source IP address in a network communication. Supports $filter (eq) and $orderby.
     *
     * @param string $val The sourceIp
     *
@@ -559,6 +595,7 @@ class NetworkAccessTraffic implements \JsonSerializable
 
     /**
     * Gets the sourcePort
+    * Represents the network port number on the source host or device in a network communication. Supports $filter (eq) and $orderby.
     *
     * @return int|null The sourcePort
     */
@@ -573,6 +610,7 @@ class NetworkAccessTraffic implements \JsonSerializable
 
     /**
     * Sets the sourcePort
+    * Represents the network port number on the source host or device in a network communication. Supports $filter (eq) and $orderby.
     *
     * @param int $val The sourcePort
     *
@@ -586,6 +624,7 @@ class NetworkAccessTraffic implements \JsonSerializable
 
     /**
     * Gets the tenantId
+    * Represents a unique identifier assigned to a tenant within a network infrastructure. Supports $filter (eq) and $orderby.
     *
     * @return string|null The tenantId
     */
@@ -600,6 +639,7 @@ class NetworkAccessTraffic implements \JsonSerializable
 
     /**
     * Sets the tenantId
+    * Represents a unique identifier assigned to a tenant within a network infrastructure. Supports $filter (eq) and $orderby.
     *
     * @param string $val The tenantId
     *
@@ -613,6 +653,7 @@ class NetworkAccessTraffic implements \JsonSerializable
 
     /**
     * Gets the trafficType
+    * Represents the type or category of network traffic.The possible values are: internet, private, microsoft365, all, unknownFutureValue. Supports $filter (eq) and $orderby.
     *
     * @return TrafficType|null The trafficType
     */
@@ -631,6 +672,7 @@ class NetworkAccessTraffic implements \JsonSerializable
 
     /**
     * Sets the trafficType
+    * Represents the type or category of network traffic.The possible values are: internet, private, microsoft365, all, unknownFutureValue. Supports $filter (eq) and $orderby.
     *
     * @param TrafficType $val The trafficType
     *
@@ -644,6 +686,7 @@ class NetworkAccessTraffic implements \JsonSerializable
 
     /**
     * Gets the transactionId
+    * Represents a unique identifier assigned to a specific transaction or operation. Key. Supports $filter (eq) and $orderby.
     *
     * @return string|null The transactionId
     */
@@ -658,6 +701,7 @@ class NetworkAccessTraffic implements \JsonSerializable
 
     /**
     * Sets the transactionId
+    * Represents a unique identifier assigned to a specific transaction or operation. Key. Supports $filter (eq) and $orderby.
     *
     * @param string $val The transactionId
     *
@@ -671,6 +715,7 @@ class NetworkAccessTraffic implements \JsonSerializable
 
     /**
     * Gets the transportProtocol
+    * Represents the transport protocol used for communication.The possible values are: ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII, unknownFutureValue. Supports $filter (eq) and $orderby.
     *
     * @return NetworkingProtocol|null The transportProtocol
     */
@@ -689,6 +734,7 @@ class NetworkAccessTraffic implements \JsonSerializable
 
     /**
     * Sets the transportProtocol
+    * Represents the transport protocol used for communication.The possible values are: ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII, unknownFutureValue. Supports $filter (eq) and $orderby.
     *
     * @param NetworkingProtocol $val The transportProtocol
     *
@@ -702,6 +748,7 @@ class NetworkAccessTraffic implements \JsonSerializable
 
     /**
     * Gets the userId
+    * Represents a unique identifier assigned to a user. Supports $filter (eq) and $orderby.
     *
     * @return string|null The userId
     */
@@ -716,6 +763,7 @@ class NetworkAccessTraffic implements \JsonSerializable
 
     /**
     * Sets the userId
+    * Represents a unique identifier assigned to a user. Supports $filter (eq) and $orderby.
     *
     * @param string $val The userId
     *
@@ -729,6 +777,7 @@ class NetworkAccessTraffic implements \JsonSerializable
 
     /**
     * Gets the userPrincipalName
+    * Represents the user principal name (UPN) associated with a user. Supports $filter (eq) and $orderby.
     *
     * @return string|null The userPrincipalName
     */
@@ -743,6 +792,7 @@ class NetworkAccessTraffic implements \JsonSerializable
 
     /**
     * Sets the userPrincipalName
+    * Represents the user principal name (UPN) associated with a user. Supports $filter (eq) and $orderby.
     *
     * @param string $val The userPrincipalName
     *

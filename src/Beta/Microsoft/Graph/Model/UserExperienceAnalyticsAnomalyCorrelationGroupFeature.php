@@ -26,7 +26,7 @@ class UserExperienceAnalyticsAnomalyCorrelationGroupFeature extends Entity
 
     /**
     * Gets the deviceFeatureType
-    * The type of device feature. Possible values are: manufacturer, model, osVersion, application or driver
+    * The type of device feature. Possible values are: manufacturer, model, osVersion, application or driver. Possible values are: manufacturer, model, osVersion, application, driver, unknownFutureValue.
     *
     * @return UserExperienceAnalyticsAnomalyDeviceFeatureType|null The deviceFeatureType
     */
@@ -45,7 +45,7 @@ class UserExperienceAnalyticsAnomalyCorrelationGroupFeature extends Entity
 
     /**
     * Sets the deviceFeatureType
-    * The type of device feature. Possible values are: manufacturer, model, osVersion, application or driver
+    * The type of device feature. Possible values are: manufacturer, model, osVersion, application or driver. Possible values are: manufacturer, model, osVersion, application, driver, unknownFutureValue.
     *
     * @param UserExperienceAnalyticsAnomalyDeviceFeatureType $val The value to assign to the deviceFeatureType
     *

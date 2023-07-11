@@ -25,6 +25,7 @@ class EntitiesSummary extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the deviceCount
+    * Count of unique devices that were seen.
     *
     * @return int|null The deviceCount
     */
@@ -39,6 +40,7 @@ class EntitiesSummary extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the deviceCount
+    * Count of unique devices that were seen.
     *
     * @param int $val The value of the deviceCount
     *
@@ -52,6 +54,7 @@ class EntitiesSummary extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the trafficType
+    * Traffic classification. The possible values are: internet, private, microsoft365, all, unknownFutureValue.
     *
     * @return TrafficType|null The trafficType
     */
@@ -70,6 +73,7 @@ class EntitiesSummary extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the trafficType
+    * Traffic classification. The possible values are: internet, private, microsoft365, all, unknownFutureValue.
     *
     * @param TrafficType $val The value to assign to the trafficType
     *
@@ -82,6 +86,7 @@ class EntitiesSummary extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the userCount
+    * Count of unique Azure Active Directoy users that were seen.
     *
     * @return int|null The userCount
     */
@@ -96,6 +101,7 @@ class EntitiesSummary extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the userCount
+    * Count of unique Azure Active Directoy users that were seen.
     *
     * @param int $val The value of the userCount
     *
@@ -108,6 +114,7 @@ class EntitiesSummary extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the workloadCount
+    * Count of unique target workloads or hosts that were seen.
     *
     * @return int|null The workloadCount
     */
@@ -122,6 +129,7 @@ class EntitiesSummary extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the workloadCount
+    * Count of unique target workloads or hosts that were seen.
     *
     * @param int $val The value of the workloadCount
     *

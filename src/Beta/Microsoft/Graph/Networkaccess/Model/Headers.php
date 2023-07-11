@@ -25,6 +25,7 @@ class Headers extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the origin
+    * Represents the origin or source from which the request is being made.
     *
     * @return string|null The origin
     */
@@ -39,6 +40,7 @@ class Headers extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the origin
+    * Represents the origin or source from which the request is being made.
     *
     * @param string $val The value of the origin
     *
@@ -51,6 +53,7 @@ class Headers extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the referrer
+    * Represents the referring URL or the URL of the web page that the current request originates from.
     *
     * @return string|null The referrer
     */
@@ -65,6 +68,7 @@ class Headers extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the referrer
+    * Represents the referring URL or the URL of the web page that the current request originates from.
     *
     * @param string $val The value of the referrer
     *
@@ -77,6 +81,7 @@ class Headers extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the xForwardedFor
+    * Represents the information about the client original IP address when the request passes through one or more proxy servers or load balancers.
     *
     * @return string|null The xForwardedFor
     */
@@ -91,6 +96,7 @@ class Headers extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the xForwardedFor
+    * Represents the information about the client original IP address when the request passes through one or more proxy servers or load balancers.
     *
     * @param string $val The value of the xForwardedFor
     *

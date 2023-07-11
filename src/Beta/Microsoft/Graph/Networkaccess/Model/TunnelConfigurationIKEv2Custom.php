@@ -37,6 +37,7 @@ class TunnelConfigurationIKEv2Custom extends TunnelConfiguration
 
     /**
     * Gets the dhGroup
+    * Specifies the DH group identifier for IPSec SA negotiation. The possible values are: dhGroup14, dhGroup24, dhGroup2048, ecp256, ecp384.
     *
     * @return DhGroup|null The dhGroup
     */
@@ -55,6 +56,7 @@ class TunnelConfigurationIKEv2Custom extends TunnelConfiguration
 
     /**
     * Sets the dhGroup
+    * Specifies the DH group identifier for IPSec SA negotiation. The possible values are: dhGroup14, dhGroup24, dhGroup2048, ecp256, ecp384.
     *
     * @param DhGroup $val The value to assign to the dhGroup
     *
@@ -68,6 +70,7 @@ class TunnelConfigurationIKEv2Custom extends TunnelConfiguration
 
     /**
     * Gets the ikeEncryption
+    * Specifies the IKE encryption protocol. The possible values are: aes128, aes192, aes256, gcmAes128, gcmAes256.
     *
     * @return IkeEncryption|null The ikeEncryption
     */
@@ -86,6 +89,7 @@ class TunnelConfigurationIKEv2Custom extends TunnelConfiguration
 
     /**
     * Sets the ikeEncryption
+    * Specifies the IKE encryption protocol. The possible values are: aes128, aes192, aes256, gcmAes128, gcmAes256.
     *
     * @param IkeEncryption $val The value to assign to the ikeEncryption
     *
@@ -99,6 +103,7 @@ class TunnelConfigurationIKEv2Custom extends TunnelConfiguration
 
     /**
     * Gets the ikeIntegrity
+    * Specifies the integration properties of the IKE protocol. The possible values are: sha256, sha384, gcmAes128, gcmAes256.
     *
     * @return IkeIntegrity|null The ikeIntegrity
     */
@@ -117,6 +122,7 @@ class TunnelConfigurationIKEv2Custom extends TunnelConfiguration
 
     /**
     * Sets the ikeIntegrity
+    * Specifies the integration properties of the IKE protocol. The possible values are: sha256, sha384, gcmAes128, gcmAes256.
     *
     * @param IkeIntegrity $val The value to assign to the ikeIntegrity
     *
@@ -130,6 +136,7 @@ class TunnelConfigurationIKEv2Custom extends TunnelConfiguration
 
     /**
     * Gets the ipSecEncryption
+    * Specifies the encryption protocol used for the IPSec tunnel. The possible values are: none, gcmAes128, gcmAes192, gcmAes256.
     *
     * @return IpSecEncryption|null The ipSecEncryption
     */
@@ -148,6 +155,7 @@ class TunnelConfigurationIKEv2Custom extends TunnelConfiguration
 
     /**
     * Sets the ipSecEncryption
+    * Specifies the encryption protocol used for the IPSec tunnel. The possible values are: none, gcmAes128, gcmAes192, gcmAes256.
     *
     * @param IpSecEncryption $val The value to assign to the ipSecEncryption
     *
@@ -161,6 +169,7 @@ class TunnelConfigurationIKEv2Custom extends TunnelConfiguration
 
     /**
     * Gets the ipSecIntegrity
+    * Specifies the integrity properties of the IPSec protocol. The possible values are: gcmAes128, gcmAes192, gcmAes256, sha256.
     *
     * @return IpSecIntegrity|null The ipSecIntegrity
     */
@@ -179,6 +188,7 @@ class TunnelConfigurationIKEv2Custom extends TunnelConfiguration
 
     /**
     * Sets the ipSecIntegrity
+    * Specifies the integrity properties of the IPSec protocol. The possible values are: gcmAes128, gcmAes192, gcmAes256, sha256.
     *
     * @param IpSecIntegrity $val The value to assign to the ipSecIntegrity
     *
@@ -192,6 +202,7 @@ class TunnelConfigurationIKEv2Custom extends TunnelConfiguration
 
     /**
     * Gets the pfsGroup
+    * Specifies the Phase 2 DH group identifier for IPSec SA negotiation. The possible values are: none, pfs1, pfs2, pfs14, pfs24, pfs2048, pfsmm, ecp256, ecp384.
     *
     * @return PfsGroup|null The pfsGroup
     */
@@ -210,6 +221,7 @@ class TunnelConfigurationIKEv2Custom extends TunnelConfiguration
 
     /**
     * Sets the pfsGroup
+    * Specifies the Phase 2 DH group identifier for IPSec SA negotiation. The possible values are: none, pfs1, pfs2, pfs14, pfs24, pfs2048, pfsmm, ecp256, ecp384.
     *
     * @param PfsGroup $val The value to assign to the pfsGroup
     *
@@ -222,6 +234,7 @@ class TunnelConfigurationIKEv2Custom extends TunnelConfiguration
     }
     /**
     * Gets the saLifeTimeSeconds
+    * a standard specifiying Security Association lifetime with recommended values from an RFC standard.
     *
     * @return int|null The saLifeTimeSeconds
     */
@@ -236,6 +249,7 @@ class TunnelConfigurationIKEv2Custom extends TunnelConfiguration
 
     /**
     * Sets the saLifeTimeSeconds
+    * a standard specifiying Security Association lifetime with recommended values from an RFC standard.
     *
     * @param int $val The value of the saLifeTimeSeconds
     *

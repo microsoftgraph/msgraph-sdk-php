@@ -25,6 +25,7 @@ class CrossTenantSummary extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the authTransactionCount
+    * Total numbers of authentication sessions in the time frame between startDateTime and endDateTime.
     *
     * @return int|null The authTransactionCount
     */
@@ -39,6 +40,7 @@ class CrossTenantSummary extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the authTransactionCount
+    * Total numbers of authentication sessions in the time frame between startDateTime and endDateTime.
     *
     * @param int $val The value of the authTransactionCount
     *
@@ -51,6 +53,7 @@ class CrossTenantSummary extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the deviceCount
+    * Count of unique devices that performed cross-tenant access, in the time frame between startDateTime and endDateTime.
     *
     * @return int|null The deviceCount
     */
@@ -65,6 +68,7 @@ class CrossTenantSummary extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the deviceCount
+    * Count of unique devices that performed cross-tenant access, in the time frame between startDateTime and endDateTime.
     *
     * @param int $val The value of the deviceCount
     *
@@ -77,6 +81,7 @@ class CrossTenantSummary extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the newTenantCount
+    * Count of unique tenants that were accessed in the time frame between endDateTime to discoveryPivotDateTime, but haven't been accessed in the time frame between discoveryPivotDateTime to startDateTime.
     *
     * @return int|null The newTenantCount
     */
@@ -91,6 +96,7 @@ class CrossTenantSummary extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the newTenantCount
+    * Count of unique tenants that were accessed in the time frame between endDateTime to discoveryPivotDateTime, but haven't been accessed in the time frame between discoveryPivotDateTime to startDateTime.
     *
     * @param int $val The value of the newTenantCount
     *
@@ -103,6 +109,7 @@ class CrossTenantSummary extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the tenantCount
+    * Count of unique tenants that were accessed, that are different from the device's home tenant, in the time frame between startDateTime and endDateTime.
     *
     * @return int|null The tenantCount
     */
@@ -117,6 +124,7 @@ class CrossTenantSummary extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the tenantCount
+    * Count of unique tenants that were accessed, that are different from the device's home tenant, in the time frame between startDateTime and endDateTime.
     *
     * @param int $val The value of the tenantCount
     *
@@ -129,6 +137,7 @@ class CrossTenantSummary extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the userCount
+    * Count of unique users that performed cross-tenant access, in the time frame between startDateTime and endDateTime.
     *
     * @return int|null The userCount
     */
@@ -143,6 +152,7 @@ class CrossTenantSummary extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the userCount
+    * Count of unique users that performed cross-tenant access, in the time frame between startDateTime and endDateTime.
     *
     * @param int $val The value of the userCount
     *

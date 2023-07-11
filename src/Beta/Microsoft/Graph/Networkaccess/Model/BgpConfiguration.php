@@ -25,6 +25,7 @@ class BgpConfiguration extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the asn
+    * Specifies the ASN of the BGP.
     *
     * @return int|null The asn
     */
@@ -39,6 +40,7 @@ class BgpConfiguration extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the asn
+    * Specifies the ASN of the BGP.
     *
     * @param int $val The value of the asn
     *
@@ -77,6 +79,7 @@ class BgpConfiguration extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the localIpAddress
+    * Specifies the BGP IP address of peer (Microsoft, in this case).
     *
     * @return string|null The localIpAddress
     */
@@ -91,6 +94,7 @@ class BgpConfiguration extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the localIpAddress
+    * Specifies the BGP IP address of peer (Microsoft, in this case).
     *
     * @param string $val The value of the localIpAddress
     *
@@ -103,6 +107,7 @@ class BgpConfiguration extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the peerIpAddress
+    * Specifies the BGP IP address of customer's on-premise VPN router configuration.
     *
     * @return string|null The peerIpAddress
     */
@@ -117,6 +122,7 @@ class BgpConfiguration extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the peerIpAddress
+    * Specifies the BGP IP address of customer's on-premise VPN router configuration.
     *
     * @param string $val The value of the peerIpAddress
     *
