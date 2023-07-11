@@ -25,6 +25,7 @@ class UserRegistrationMethodCount extends Entity
 {
     /**
     * Gets the authenticationMethod
+    * Name of the authentication method.
     *
     * @return string|null The authenticationMethod
     */
@@ -39,6 +40,7 @@ class UserRegistrationMethodCount extends Entity
 
     /**
     * Sets the authenticationMethod
+    * Name of the authentication method.
     *
     * @param string $val The value of the authenticationMethod
     *
@@ -51,6 +53,7 @@ class UserRegistrationMethodCount extends Entity
     }
     /**
     * Gets the userCount
+    * Number of users registered.
     *
     * @return int|null The userCount
     */
@@ -65,6 +68,7 @@ class UserRegistrationMethodCount extends Entity
 
     /**
     * Sets the userCount
+    * Number of users registered.
     *
     * @param int $val The value of the userCount
     *

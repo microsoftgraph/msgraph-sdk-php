@@ -241,7 +241,7 @@ class DeviceLogCollectionResponse extends Entity
 
     /**
     * Gets the status
-    * Indicates the status for the app log collection request if it is pending, completed or failed, Default is pending.
+    * Indicates the status for the app log collection request if it is pending, completed or failed, Default is pending. Possible values are: pending, completed, failed, unknownFutureValue.
     *
     * @return AppLogUploadState|null The status
     */
@@ -260,7 +260,7 @@ class DeviceLogCollectionResponse extends Entity
 
     /**
     * Sets the status
-    * Indicates the status for the app log collection request if it is pending, completed or failed, Default is pending.
+    * Indicates the status for the app log collection request if it is pending, completed or failed, Default is pending. Possible values are: pending, completed, failed, unknownFutureValue.
     *
     * @param AppLogUploadState $val The status
     *

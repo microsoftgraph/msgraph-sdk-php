@@ -26,6 +26,7 @@ class UserRegistrationFeatureCount extends Entity
 
     /**
     * Gets the feature
+    * Number of users registered or capable for multi-factor authentication, self-service password reset, and passwordless authentication. Possible values are: ssprRegistered, ssprEnabled, ssprCapable, passwordlessCapable, mfaCapable, unknownFutureValue.
     *
     * @return AuthenticationMethodFeature|null The feature
     */
@@ -44,6 +45,7 @@ class UserRegistrationFeatureCount extends Entity
 
     /**
     * Sets the feature
+    * Number of users registered or capable for multi-factor authentication, self-service password reset, and passwordless authentication. Possible values are: ssprRegistered, ssprEnabled, ssprCapable, passwordlessCapable, mfaCapable, unknownFutureValue.
     *
     * @param AuthenticationMethodFeature $val The value to assign to the feature
     *
@@ -56,6 +58,7 @@ class UserRegistrationFeatureCount extends Entity
     }
     /**
     * Gets the userCount
+    * Number of users.
     *
     * @return int|null The userCount
     */
@@ -70,6 +73,7 @@ class UserRegistrationFeatureCount extends Entity
 
     /**
     * Sets the userCount
+    * Number of users.
     *
     * @param int $val The value of the userCount
     *

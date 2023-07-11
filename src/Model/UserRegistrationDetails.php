@@ -26,6 +26,7 @@ class UserRegistrationDetails extends Entity
 {
     /**
     * Gets the isAdmin
+    * Indicates whether the user has an admin role in the tenant. This value can be used to check the authentication methods that privileged accounts are registered for and capable of.
     *
     * @return bool|null The isAdmin
     */
@@ -40,6 +41,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Sets the isAdmin
+    * Indicates whether the user has an admin role in the tenant. This value can be used to check the authentication methods that privileged accounts are registered for and capable of.
     *
     * @param bool $val The isAdmin
     *
@@ -53,6 +55,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Gets the isMfaCapable
+    * Indicates whether the user has registered a strong authentication method for multi-factor authentication. The method must be allowed by the authentication methods policy. Supports $filter (eq).
     *
     * @return bool|null The isMfaCapable
     */
@@ -67,6 +70,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Sets the isMfaCapable
+    * Indicates whether the user has registered a strong authentication method for multi-factor authentication. The method must be allowed by the authentication methods policy. Supports $filter (eq).
     *
     * @param bool $val The isMfaCapable
     *
@@ -80,6 +84,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Gets the isMfaRegistered
+    * Indicates whether the user has registered a strong authentication method for multi-factor authentication. The method may not necessarily be allowed by the authentication methods policy. Supports $filter (eq).
     *
     * @return bool|null The isMfaRegistered
     */
@@ -94,6 +99,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Sets the isMfaRegistered
+    * Indicates whether the user has registered a strong authentication method for multi-factor authentication. The method may not necessarily be allowed by the authentication methods policy. Supports $filter (eq).
     *
     * @param bool $val The isMfaRegistered
     *
@@ -107,6 +113,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Gets the isPasswordlessCapable
+    * Indicates whether the user has registered a passwordless strong authentication method (including FIDO2, Windows Hello for Business, and Microsoft Authenticator (Passwordless)) that is allowed by the authentication methods policy. Supports $filter (eq).
     *
     * @return bool|null The isPasswordlessCapable
     */
@@ -121,6 +128,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Sets the isPasswordlessCapable
+    * Indicates whether the user has registered a passwordless strong authentication method (including FIDO2, Windows Hello for Business, and Microsoft Authenticator (Passwordless)) that is allowed by the authentication methods policy. Supports $filter (eq).
     *
     * @param bool $val The isPasswordlessCapable
     *
@@ -134,6 +142,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Gets the isSsprCapable
+    * Indicates whether the user has registered the required number of authentication methods for self-service password reset and the user is allowed to perform self-service password reset by policy. Supports $filter (eq).
     *
     * @return bool|null The isSsprCapable
     */
@@ -148,6 +157,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Sets the isSsprCapable
+    * Indicates whether the user has registered the required number of authentication methods for self-service password reset and the user is allowed to perform self-service password reset by policy. Supports $filter (eq).
     *
     * @param bool $val The isSsprCapable
     *
@@ -161,6 +171,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Gets the isSsprEnabled
+    * Indicates whether the user is allowed to perform self-service password reset by policy. The user may not necessarily have registered the required number of authentication methods for self-service password reset. Supports $filter (eq).
     *
     * @return bool|null The isSsprEnabled
     */
@@ -175,6 +186,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Sets the isSsprEnabled
+    * Indicates whether the user is allowed to perform self-service password reset by policy. The user may not necessarily have registered the required number of authentication methods for self-service password reset. Supports $filter (eq).
     *
     * @param bool $val The isSsprEnabled
     *
@@ -188,6 +200,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Gets the isSsprRegistered
+    * Indicates whether the user has registered the required number of authentication methods for self-service password reset. The user may not necessarily be allowed to perform self-service password reset by policy. Supports $filter (eq).
     *
     * @return bool|null The isSsprRegistered
     */
@@ -202,6 +215,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Sets the isSsprRegistered
+    * Indicates whether the user has registered the required number of authentication methods for self-service password reset. The user may not necessarily be allowed to perform self-service password reset by policy. Supports $filter (eq).
     *
     * @param bool $val The isSsprRegistered
     *
@@ -215,6 +229,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Gets the isSystemPreferredAuthenticationMethodEnabled
+    * Indicates whether system preferred authentication method is enabled. If enabled, the system dynamically determines the most secure authentication method among the methods registered by the user. Supports $filter (eq).
     *
     * @return bool|null The isSystemPreferredAuthenticationMethodEnabled
     */
@@ -229,6 +244,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Sets the isSystemPreferredAuthenticationMethodEnabled
+    * Indicates whether system preferred authentication method is enabled. If enabled, the system dynamically determines the most secure authentication method among the methods registered by the user. Supports $filter (eq).
     *
     * @param bool $val The isSystemPreferredAuthenticationMethodEnabled
     *
@@ -242,6 +258,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Gets the lastUpdatedDateTime
+    * The date and time (UTC) when the record was last updated. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The lastUpdatedDateTime
     */
@@ -260,6 +277,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Sets the lastUpdatedDateTime
+    * The date and time (UTC) when the record was last updated. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The lastUpdatedDateTime
     *
@@ -273,6 +291,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Gets the methodsRegistered
+    * Collection of authentication methods registered, such as mobilePhone, email, fido2. Supports $filter (any with eq).
     *
     * @return array|null The methodsRegistered
     */
@@ -287,6 +306,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Sets the methodsRegistered
+    * Collection of authentication methods registered, such as mobilePhone, email, fido2. Supports $filter (any with eq).
     *
     * @param string[] $val The methodsRegistered
     *
@@ -300,6 +320,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Gets the systemPreferredAuthenticationMethods
+    * Collection of authentication methods that the system determined to be the most secure authentication methods among the registered methods for second factor authentication. Possible values are: push, oath, voiceMobile, voiceAlternateMobile, voiceOffice, sms, none, unknownFutureValue. Supports $filter (any with eq).
     *
     * @return array|null The systemPreferredAuthenticationMethods
     */
@@ -314,6 +335,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Sets the systemPreferredAuthenticationMethods
+    * Collection of authentication methods that the system determined to be the most secure authentication methods among the registered methods for second factor authentication. Possible values are: push, oath, voiceMobile, voiceAlternateMobile, voiceOffice, sms, none, unknownFutureValue. Supports $filter (any with eq).
     *
     * @param string[] $val The systemPreferredAuthenticationMethods
     *
@@ -327,6 +349,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Gets the userDisplayName
+    * The user display name, such as Adele Vance. Supports $filter (eq, startsWith) and $orderBy.
     *
     * @return string|null The userDisplayName
     */
@@ -341,6 +364,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Sets the userDisplayName
+    * The user display name, such as Adele Vance. Supports $filter (eq, startsWith) and $orderBy.
     *
     * @param string $val The userDisplayName
     *
@@ -354,6 +378,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Gets the userPreferredMethodForSecondaryAuthentication
+    * The method the user selected as the default second-factor for performing multi-factor authentication. Possible values are: push, oath, voiceMobile, voiceAlternateMobile, voiceOffice, sms, none, unknownFutureValue. This property is used as preferred MFA method when isSystemPreferredAuthenticationMethodEnabled is false. Supports $filter (any with eq).
     *
     * @return UserDefaultAuthenticationMethod|null The userPreferredMethodForSecondaryAuthentication
     */
@@ -372,6 +397,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Sets the userPreferredMethodForSecondaryAuthentication
+    * The method the user selected as the default second-factor for performing multi-factor authentication. Possible values are: push, oath, voiceMobile, voiceAlternateMobile, voiceOffice, sms, none, unknownFutureValue. This property is used as preferred MFA method when isSystemPreferredAuthenticationMethodEnabled is false. Supports $filter (any with eq).
     *
     * @param UserDefaultAuthenticationMethod $val The userPreferredMethodForSecondaryAuthentication
     *
@@ -385,6 +411,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Gets the userPrincipalName
+    * The user principal name, such as AdeleV@contoso.com. Supports $filter (eq, startsWith) and $orderBy.
     *
     * @return string|null The userPrincipalName
     */
@@ -399,6 +426,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Sets the userPrincipalName
+    * The user principal name, such as AdeleV@contoso.com. Supports $filter (eq, startsWith) and $orderBy.
     *
     * @param string $val The userPrincipalName
     *
@@ -412,6 +440,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Gets the userType
+    * Identifies whether the user is a member or guest in the tenant. The possible values are: member, guest, unknownFutureValue.
     *
     * @return SignInUserType|null The userType
     */
@@ -430,6 +459,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Sets the userType
+    * Identifies whether the user is a member or guest in the tenant. The possible values are: member, guest, unknownFutureValue.
     *
     * @param SignInUserType $val The userType
     *

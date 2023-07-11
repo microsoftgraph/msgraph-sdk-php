@@ -345,7 +345,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
 
     /**
     * Gets the healthStatus
-    * The health state of the user experience analytics work from anywhere device. Possible values are: unknown, insufficientData, needsAttention, meetingGoals. Unknown by default. Supports: $select, $OrderBy. Read-only.
+    * The health state of the user experience analytics work from anywhere device. Possible values are: unknown, insufficientData, needsAttention, meetingGoals. Unknown by default. Supports: $select, $OrderBy. Read-only. Possible values are: unknown, insufficientData, needsAttention, meetingGoals, unknownFutureValue.
     *
     * @return UserExperienceAnalyticsHealthState|null The healthStatus
     */
@@ -364,7 +364,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
 
     /**
     * Sets the healthStatus
-    * The health state of the user experience analytics work from anywhere device. Possible values are: unknown, insufficientData, needsAttention, meetingGoals. Unknown by default. Supports: $select, $OrderBy. Read-only.
+    * The health state of the user experience analytics work from anywhere device. Possible values are: unknown, insufficientData, needsAttention, meetingGoals. Unknown by default. Supports: $select, $OrderBy. Read-only. Possible values are: unknown, insufficientData, needsAttention, meetingGoals, unknownFutureValue.
     *
     * @param UserExperienceAnalyticsHealthState $val The healthStatus
     *
@@ -929,7 +929,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
 
     /**
     * Gets the upgradeEligibility
-    * The windows upgrade eligibility status of device. Possible values are: upgraded, unknown, notCapable, capable. Unknown by default. Supports: $select, $OrderBy. Read-only.
+    * The windows upgrade eligibility status of device. Possible values are: upgraded, unknown, notCapable, capable. Unknown by default. Supports: $select, $OrderBy. Read-only. Possible values are: upgraded, unknown, notCapable, capable, unknownFutureValue.
     *
     * @return OperatingSystemUpgradeEligibility|null The upgradeEligibility
     */
@@ -948,7 +948,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
 
     /**
     * Sets the upgradeEligibility
-    * The windows upgrade eligibility status of device. Possible values are: upgraded, unknown, notCapable, capable. Unknown by default. Supports: $select, $OrderBy. Read-only.
+    * The windows upgrade eligibility status of device. Possible values are: upgraded, unknown, notCapable, capable. Unknown by default. Supports: $select, $OrderBy. Read-only. Possible values are: upgraded, unknown, notCapable, capable, unknownFutureValue.
     *
     * @param OperatingSystemUpgradeEligibility $val The upgradeEligibility
     *

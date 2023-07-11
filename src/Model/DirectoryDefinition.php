@@ -26,6 +26,7 @@ class DirectoryDefinition extends Entity
 {
     /**
     * Gets the discoverabilities
+    * Read-only value indicating what type of discovery the app supports. The possible values are: None, AttributeNames, AttributeDataTypes, AttributeReadOnly, ReferenceAttributes, UnknownFutureValue. This is a multi-valued object.
     *
     * @return DirectoryDefinitionDiscoverabilities|null The discoverabilities
     */
@@ -44,6 +45,7 @@ class DirectoryDefinition extends Entity
 
     /**
     * Sets the discoverabilities
+    * Read-only value indicating what type of discovery the app supports. The possible values are: None, AttributeNames, AttributeDataTypes, AttributeReadOnly, ReferenceAttributes, UnknownFutureValue. This is a multi-valued object.
     *
     * @param DirectoryDefinitionDiscoverabilities $val The discoverabilities
     *
@@ -57,6 +59,7 @@ class DirectoryDefinition extends Entity
 
     /**
     * Gets the discoveryDateTime
+    * Represents the discovery date and time using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The discoveryDateTime
     */
@@ -75,6 +78,7 @@ class DirectoryDefinition extends Entity
 
     /**
     * Sets the discoveryDateTime
+    * Represents the discovery date and time using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The discoveryDateTime
     *
@@ -88,6 +92,7 @@ class DirectoryDefinition extends Entity
 
     /**
     * Gets the name
+    * Name of the directory. Must be unique within the synchronization schema. Not nullable.
     *
     * @return string|null The name
     */
@@ -102,6 +107,7 @@ class DirectoryDefinition extends Entity
 
     /**
     * Sets the name
+    * Name of the directory. Must be unique within the synchronization schema. Not nullable.
     *
     * @param string $val The name
     *
@@ -116,6 +122,7 @@ class DirectoryDefinition extends Entity
 
      /**
      * Gets the objects
+    * Collection of objects supported by the directory.
      *
      * @return array|null The objects
      */
@@ -130,6 +137,7 @@ class DirectoryDefinition extends Entity
 
     /**
     * Sets the objects
+    * Collection of objects supported by the directory.
     *
     * @param ObjectDefinition[] $val The objects
     *
@@ -143,6 +151,7 @@ class DirectoryDefinition extends Entity
 
     /**
     * Gets the readOnly
+    * Whether this object is read-only.
     *
     * @return bool|null The readOnly
     */
@@ -157,6 +166,7 @@ class DirectoryDefinition extends Entity
 
     /**
     * Sets the readOnly
+    * Whether this object is read-only.
     *
     * @param bool $val The readOnly
     *
@@ -170,6 +180,7 @@ class DirectoryDefinition extends Entity
 
     /**
     * Gets the version
+    * Read only value that indicates version discovered. null if discovery has not yet occurred.
     *
     * @return string|null The version
     */
@@ -184,6 +195,7 @@ class DirectoryDefinition extends Entity
 
     /**
     * Sets the version
+    * Read only value that indicates version discovered. null if discovery has not yet occurred.
     *
     * @param string $val The version
     *
