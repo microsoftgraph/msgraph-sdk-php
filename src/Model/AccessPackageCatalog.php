@@ -273,4 +273,116 @@ class AccessPackageCatalog extends Entity
         return $this;
     }
 
+
+     /**
+     * Gets the customWorkflowExtensions
+     *
+     * @return array|null The customWorkflowExtensions
+     */
+    public function getCustomWorkflowExtensions()
+    {
+        if (array_key_exists("customWorkflowExtensions", $this->_propDict)) {
+           return $this->_propDict["customWorkflowExtensions"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the customWorkflowExtensions
+    *
+    * @param CustomCalloutExtension[] $val The customWorkflowExtensions
+    *
+    * @return AccessPackageCatalog
+    */
+    public function setCustomWorkflowExtensions($val)
+    {
+        $this->_propDict["customWorkflowExtensions"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the resourceRoles
+     *
+     * @return array|null The resourceRoles
+     */
+    public function getResourceRoles()
+    {
+        if (array_key_exists("resourceRoles", $this->_propDict)) {
+           return $this->_propDict["resourceRoles"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the resourceRoles
+    *
+    * @param AccessPackageResourceRole[] $val The resourceRoles
+    *
+    * @return AccessPackageCatalog
+    */
+    public function setResourceRoles($val)
+    {
+        $this->_propDict["resourceRoles"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the resources
+     *
+     * @return array|null The resources
+     */
+    public function getResources()
+    {
+        if (array_key_exists("resources", $this->_propDict)) {
+           return $this->_propDict["resources"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the resources
+    *
+    * @param AccessPackageResource[] $val The resources
+    *
+    * @return AccessPackageCatalog
+    */
+    public function setResources($val)
+    {
+        $this->_propDict["resources"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the resourceScopes
+     *
+     * @return array|null The resourceScopes
+     */
+    public function getResourceScopes()
+    {
+        if (array_key_exists("resourceScopes", $this->_propDict)) {
+           return $this->_propDict["resourceScopes"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the resourceScopes
+    *
+    * @param AccessPackageResourceScope[] $val The resourceScopes
+    *
+    * @return AccessPackageCatalog
+    */
+    public function setResourceScopes($val)
+    {
+        $this->_propDict["resourceScopes"] = $val;
+        return $this;
+    }
+
 }

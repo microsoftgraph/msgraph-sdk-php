@@ -316,7 +316,7 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity
 
     /**
     * Gets the restartCategory
-    * OS restart category. Possible values are: unknown, restartWithUpdate, restartWithoutUpdate, blueScreen, shutdownWithUpdate, shutdownWithoutUpdate, longPowerButtonPress, bootError, update. Unknown by default. Supports: $select, $OrderBy. Read-only.
+    * OS restart category. Possible values are: unknown, restartWithUpdate, restartWithoutUpdate, blueScreen, shutdownWithUpdate, shutdownWithoutUpdate, longPowerButtonPress, bootError, update. Unknown by default. Supports: $select, $OrderBy. Read-only. Possible values are: unknown, restartWithUpdate, restartWithoutUpdate, blueScreen, shutdownWithUpdate, shutdownWithoutUpdate, longPowerButtonPress, bootError, update, unknownFutureValue.
     *
     * @return UserExperienceAnalyticsOperatingSystemRestartCategory|null The restartCategory
     */
@@ -335,7 +335,7 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity
 
     /**
     * Sets the restartCategory
-    * OS restart category. Possible values are: unknown, restartWithUpdate, restartWithoutUpdate, blueScreen, shutdownWithUpdate, shutdownWithoutUpdate, longPowerButtonPress, bootError, update. Unknown by default. Supports: $select, $OrderBy. Read-only.
+    * OS restart category. Possible values are: unknown, restartWithUpdate, restartWithoutUpdate, blueScreen, shutdownWithUpdate, shutdownWithoutUpdate, longPowerButtonPress, bootError, update. Unknown by default. Supports: $select, $OrderBy. Read-only. Possible values are: unknown, restartWithUpdate, restartWithoutUpdate, blueScreen, shutdownWithUpdate, shutdownWithoutUpdate, longPowerButtonPress, bootError, update, unknownFutureValue.
     *
     * @param UserExperienceAnalyticsOperatingSystemRestartCategory $val The restartCategory
     *

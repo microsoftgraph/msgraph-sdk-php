@@ -26,6 +26,7 @@ class ObjectMappingMetadataEntry extends Entity
 
     /**
     * Gets the key
+    * Possible values are: EscrowBehavior, DisableMonitoringForChanges, OriginalJoiningProperty, Disposition, IsCustomerDefined, ExcludeFromReporting, Unsynchronized.
     *
     * @return ObjectMappingMetadata|null The key
     */
@@ -44,6 +45,7 @@ class ObjectMappingMetadataEntry extends Entity
 
     /**
     * Sets the key
+    * Possible values are: EscrowBehavior, DisableMonitoringForChanges, OriginalJoiningProperty, Disposition, IsCustomerDefined, ExcludeFromReporting, Unsynchronized.
     *
     * @param ObjectMappingMetadata $val The value to assign to the key
     *
@@ -56,6 +58,7 @@ class ObjectMappingMetadataEntry extends Entity
     }
     /**
     * Gets the value
+    * Value of the metadata property.
     *
     * @return string|null The value
     */
@@ -70,6 +73,7 @@ class ObjectMappingMetadataEntry extends Entity
 
     /**
     * Sets the value
+    * Value of the metadata property.
     *
     * @param string $val The value of the value
     *

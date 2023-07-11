@@ -26,6 +26,7 @@ class TeamsAppResourceSpecificPermission extends Entity
 
     /**
     * Gets the permissionType
+    * The type of resource-specific permission.
     *
     * @return TeamsAppResourceSpecificPermissionType|null The permissionType
     */
@@ -44,6 +45,7 @@ class TeamsAppResourceSpecificPermission extends Entity
 
     /**
     * Sets the permissionType
+    * The type of resource-specific permission.
     *
     * @param TeamsAppResourceSpecificPermissionType $val The value to assign to the permissionType
     *
@@ -56,6 +58,7 @@ class TeamsAppResourceSpecificPermission extends Entity
     }
     /**
     * Gets the permissionValue
+    * The name of the resource-specific permission.
     *
     * @return string|null The permissionValue
     */
@@ -70,6 +73,7 @@ class TeamsAppResourceSpecificPermission extends Entity
 
     /**
     * Sets the permissionValue
+    * The name of the resource-specific permission.
     *
     * @param string $val The value of the permissionValue
     *

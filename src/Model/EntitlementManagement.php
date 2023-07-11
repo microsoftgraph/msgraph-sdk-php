@@ -234,6 +234,118 @@ class EntitlementManagement extends Entity
         return $this;
     }
 
+
+     /**
+     * Gets the resourceEnvironments
+     *
+     * @return array|null The resourceEnvironments
+     */
+    public function getResourceEnvironments()
+    {
+        if (array_key_exists("resourceEnvironments", $this->_propDict)) {
+           return $this->_propDict["resourceEnvironments"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the resourceEnvironments
+    *
+    * @param AccessPackageResourceEnvironment[] $val The resourceEnvironments
+    *
+    * @return EntitlementManagement
+    */
+    public function setResourceEnvironments($val)
+    {
+        $this->_propDict["resourceEnvironments"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the resourceRequests
+     *
+     * @return array|null The resourceRequests
+     */
+    public function getResourceRequests()
+    {
+        if (array_key_exists("resourceRequests", $this->_propDict)) {
+           return $this->_propDict["resourceRequests"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the resourceRequests
+    *
+    * @param AccessPackageResourceRequest[] $val The resourceRequests
+    *
+    * @return EntitlementManagement
+    */
+    public function setResourceRequests($val)
+    {
+        $this->_propDict["resourceRequests"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the resourceRoleScopes
+     *
+     * @return array|null The resourceRoleScopes
+     */
+    public function getResourceRoleScopes()
+    {
+        if (array_key_exists("resourceRoleScopes", $this->_propDict)) {
+           return $this->_propDict["resourceRoleScopes"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the resourceRoleScopes
+    *
+    * @param AccessPackageResourceRoleScope[] $val The resourceRoleScopes
+    *
+    * @return EntitlementManagement
+    */
+    public function setResourceRoleScopes($val)
+    {
+        $this->_propDict["resourceRoleScopes"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the resources
+     *
+     * @return array|null The resources
+     */
+    public function getResources()
+    {
+        if (array_key_exists("resources", $this->_propDict)) {
+           return $this->_propDict["resources"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the resources
+    *
+    * @param AccessPackageResource[] $val The resources
+    *
+    * @return EntitlementManagement
+    */
+    public function setResources($val)
+    {
+        $this->_propDict["resources"] = $val;
+        return $this;
+    }
+
     /**
     * Gets the settings
     * The settings that control the behavior of Azure AD entitlement management.

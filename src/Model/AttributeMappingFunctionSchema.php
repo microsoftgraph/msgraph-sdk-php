@@ -27,6 +27,7 @@ class AttributeMappingFunctionSchema extends Entity
 
      /**
      * Gets the parameters
+    * Collection of function parameters.
      *
      * @return array|null The parameters
      */
@@ -41,6 +42,7 @@ class AttributeMappingFunctionSchema extends Entity
 
     /**
     * Sets the parameters
+    * Collection of function parameters.
     *
     * @param AttributeMappingParameterSchema[] $val The parameters
     *

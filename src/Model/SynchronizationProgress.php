@@ -25,6 +25,7 @@ class SynchronizationProgress extends Entity
 {
     /**
     * Gets the completedUnits
+    * The numerator of a progress ratio; the number of units of changes already processed.
     *
     * @return int|null The completedUnits
     */
@@ -39,6 +40,7 @@ class SynchronizationProgress extends Entity
 
     /**
     * Sets the completedUnits
+    * The numerator of a progress ratio; the number of units of changes already processed.
     *
     * @param int $val The value of the completedUnits
     *
@@ -52,6 +54,7 @@ class SynchronizationProgress extends Entity
 
     /**
     * Gets the progressObservationDateTime
+    * The time of a progress observation as an offset in minutes from UTC.
     *
     * @return \DateTime|null The progressObservationDateTime
     */
@@ -70,6 +73,7 @@ class SynchronizationProgress extends Entity
 
     /**
     * Sets the progressObservationDateTime
+    * The time of a progress observation as an offset in minutes from UTC.
     *
     * @param \DateTime $val The value to assign to the progressObservationDateTime
     *
@@ -82,6 +86,7 @@ class SynchronizationProgress extends Entity
     }
     /**
     * Gets the totalUnits
+    * The denominator of a progress ratio; a number of units of changes to be processed to accomplish synchronization.
     *
     * @return int|null The totalUnits
     */
@@ -96,6 +101,7 @@ class SynchronizationProgress extends Entity
 
     /**
     * Sets the totalUnits
+    * The denominator of a progress ratio; a number of units of changes to be processed to accomplish synchronization.
     *
     * @param int $val The value of the totalUnits
     *
@@ -108,6 +114,7 @@ class SynchronizationProgress extends Entity
     }
     /**
     * Gets the units
+    * An optional description of the units.
     *
     * @return string|null The units
     */
@@ -122,6 +129,7 @@ class SynchronizationProgress extends Entity
 
     /**
     * Sets the units
+    * An optional description of the units.
     *
     * @param string $val The value of the units
     *

@@ -26,6 +26,7 @@ class TeamsAppAuthorization extends Entity
 
     /**
     * Gets the requiredPermissionSet
+    * Set of permissions required by the teamsApp.
     *
     * @return TeamsAppPermissionSet|null The requiredPermissionSet
     */
@@ -44,6 +45,7 @@ class TeamsAppAuthorization extends Entity
 
     /**
     * Sets the requiredPermissionSet
+    * Set of permissions required by the teamsApp.
     *
     * @param TeamsAppPermissionSet $val The value to assign to the requiredPermissionSet
     *
