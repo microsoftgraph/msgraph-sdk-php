@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class OnenoteOperation extends Operation implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new onenoteOperation and sets the default values.
     */
     public function __construct() {
@@ -98,7 +93,6 @@ class OnenoteOperation extends Operation implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeObjectValue('error', $this->getError());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('percentComplete', $this->getPercentComplete());
         $writer->writeStringValue('resourceId', $this->getResourceId());
         $writer->writeStringValue('resourceLocation', $this->getResourceLocation());

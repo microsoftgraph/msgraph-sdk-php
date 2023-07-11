@@ -9,6 +9,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class RichLongRunningOperation extends LongRunningOperation implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new richLongRunningOperation and sets the default values.
     */
     public function __construct() {
@@ -93,6 +98,7 @@ class RichLongRunningOperation extends LongRunningOperation implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeObjectValue('error', $this->getError());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeIntegerValue('percentageComplete', $this->getPercentageComplete());
         $writer->writeStringValue('resourceId', $this->getResourceId());
         $writer->writeStringValue('type', $this->getType());

@@ -7,7 +7,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 /**
- * Abstract class to contain properties used to assign a mobile app to a group.
+ * Contains properties used when assigning a Windows Universal AppX mobile app to a group.
 */
 class WindowsUniversalAppXAppAssignmentSettings extends MobileAppAssignmentSettings implements Parsable 
 {

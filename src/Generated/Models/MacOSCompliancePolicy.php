@@ -12,11 +12,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new macOSCompliancePolicy and sets the default values.
     */
     public function __construct() {
@@ -275,7 +270,6 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Parsable
         $writer->writeBooleanValue('firewallBlockAllIncoming', $this->getFirewallBlockAllIncoming());
         $writer->writeBooleanValue('firewallEnabled', $this->getFirewallEnabled());
         $writer->writeBooleanValue('firewallEnableStealthMode', $this->getFirewallEnableStealthMode());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('osMaximumVersion', $this->getOsMaximumVersion());
         $writer->writeStringValue('osMinimumVersion', $this->getOsMinimumVersion());
         $writer->writeBooleanValue('passwordBlockSimple', $this->getPasswordBlockSimple());

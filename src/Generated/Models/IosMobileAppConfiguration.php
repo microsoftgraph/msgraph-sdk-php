@@ -14,6 +14,11 @@ use Psr\Http\Message\StreamInterface;
 class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfiguration implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new iosMobileAppConfiguration and sets the default values.
     */
     public function __construct() {
@@ -75,6 +80,7 @@ class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfiguration impl
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeBinaryContent('encodedSettingXml', $this->getEncodedSettingXml());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfObjectValues('settings', $this->getSettings());
     }
 

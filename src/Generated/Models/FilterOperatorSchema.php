@@ -10,6 +10,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class FilterOperatorSchema extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new filterOperatorSchema and sets the default values.
     */
     public function __construct() {
@@ -46,7 +51,6 @@ class FilterOperatorSchema extends Entity implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'arity' => fn(ParseNode $n) => $o->setArity($n->getEnumValue(ScopeOperatorType::class)),
             'multivaluedComparisonType' => fn(ParseNode $n) => $o->setMultivaluedComparisonType($n->getEnumValue(ScopeOperatorMultiValuedComparisonType::class)),
-            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'supportedAttributeTypes' => fn(ParseNode $n) => $o->setSupportedAttributeTypes($n->getCollectionOfEnumValues(AttributeType::class)),
         ]);
     }
@@ -61,18 +65,6 @@ class FilterOperatorSchema extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'multivaluedComparisonType'");
-    }
-
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return string|null
-    */
-    public function getOdataType(): ?string {
-        $val = $this->getBackingStore()->get('odataType');
-        if (is_null($val) || is_string($val)) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -115,14 +107,6 @@ class FilterOperatorSchema extends Entity implements Parsable
     */
     public function setMultivaluedComparisonType(?ScopeOperatorMultiValuedComparisonType $value): void {
         $this->getBackingStore()->set('multivaluedComparisonType', $value);
-    }
-
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param string|null $value Value to set for the OdataType property.
-    */
-    public function setOdataType(?string $value): void {
-        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

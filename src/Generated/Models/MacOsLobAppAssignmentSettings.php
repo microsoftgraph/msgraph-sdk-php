@@ -7,10 +7,15 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 /**
- * Abstract class to contain properties used to assign a mobile app to a group.
+ * Contains properties used to assign a macOS LOB app to a group.
 */
 class MacOsLobAppAssignmentSettings extends MobileAppAssignmentSettings implements Parsable 
 {
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
     /**
      * Instantiates a new macOsLobAppAssignmentSettings and sets the default values.
     */
@@ -35,21 +40,8 @@ class MacOsLobAppAssignmentSettings extends MobileAppAssignmentSettings implemen
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'uninstallOnDeviceRemoval' => fn(ParseNode $n) => $o->setUninstallOnDeviceRemoval($n->getBooleanValue()),
         ]);
-    }
-
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return string|null
-    */
-    public function getOdataType(): ?string {
-        $val = $this->getBackingStore()->get('odataType');
-        if (is_null($val) || is_string($val)) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -72,14 +64,6 @@ class MacOsLobAppAssignmentSettings extends MobileAppAssignmentSettings implemen
         parent::serialize($writer);
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeBooleanValue('uninstallOnDeviceRemoval', $this->getUninstallOnDeviceRemoval());
-    }
-
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param string|null $value Value to set for the OdataType property.
-    */
-    public function setOdataType(?string $value): void {
-        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

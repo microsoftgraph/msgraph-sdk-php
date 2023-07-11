@@ -12,6 +12,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new userExperienceAnalyticsDevicePerformance and sets the default values.
     */
     public function __construct() {
@@ -158,7 +163,6 @@ class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsabl
             'manufacturer' => fn(ParseNode $n) => $o->setManufacturer($n->getStringValue()),
             'model' => fn(ParseNode $n) => $o->setModel($n->getStringValue()),
             'modelStartupPerformanceScore' => fn(ParseNode $n) => $o->setModelStartupPerformanceScore($n->getFloatValue()),
-            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'operatingSystemVersion' => fn(ParseNode $n) => $o->setOperatingSystemVersion($n->getStringValue()),
             'responsiveDesktopTimeInMs' => fn(ParseNode $n) => $o->setResponsiveDesktopTimeInMs($n->getIntegerValue()),
             'restartCount' => fn(ParseNode $n) => $o->setRestartCount($n->getIntegerValue()),
@@ -248,18 +252,6 @@ class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsabl
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'modelStartupPerformanceScore'");
-    }
-
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return string|null
-    */
-    public function getOdataType(): ?string {
-        $val = $this->getBackingStore()->get('odataType');
-        if (is_null($val) || is_string($val)) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -465,14 +457,6 @@ class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsabl
     */
     public function setModelStartupPerformanceScore(?float $value): void {
         $this->getBackingStore()->set('modelStartupPerformanceScore', $value);
-    }
-
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param string|null $value Value to set for the OdataType property.
-    */
-    public function setOdataType(?string $value): void {
-        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

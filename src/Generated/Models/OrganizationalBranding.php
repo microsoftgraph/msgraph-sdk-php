@@ -10,6 +10,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class OrganizationalBranding extends OrganizationalBrandingProperties implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new organizationalBranding and sets the default values.
     */
     public function __construct() {
@@ -58,6 +63,7 @@ class OrganizationalBranding extends OrganizationalBrandingProperties implements
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('localizations', $this->getLocalizations());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

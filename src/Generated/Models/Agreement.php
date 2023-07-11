@@ -11,11 +11,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Agreement extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new agreement and sets the default values.
     */
     public function __construct() {
@@ -70,6 +65,7 @@ class Agreement extends Entity implements Parsable
             'files' => fn(ParseNode $n) => $o->setFiles($n->getCollectionOfObjectValues([AgreementFileLocalization::class, 'createFromDiscriminatorValue'])),
             'isPerDeviceAcceptanceRequired' => fn(ParseNode $n) => $o->setIsPerDeviceAcceptanceRequired($n->getBooleanValue()),
             'isViewingBeforeAcceptanceRequired' => fn(ParseNode $n) => $o->setIsViewingBeforeAcceptanceRequired($n->getBooleanValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'termsExpiration' => fn(ParseNode $n) => $o->setTermsExpiration($n->getObjectValue([TermsExpiration::class, 'createFromDiscriminatorValue'])),
             'userReacceptRequiredFrequency' => fn(ParseNode $n) => $o->setUserReacceptRequiredFrequency($n->getDateIntervalValue()),
         ]);
@@ -123,6 +119,18 @@ class Agreement extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'isViewingBeforeAcceptanceRequired'");
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -212,6 +220,14 @@ class Agreement extends Entity implements Parsable
     */
     public function setIsViewingBeforeAcceptanceRequired(?bool $value): void {
         $this->getBackingStore()->set('isViewingBeforeAcceptanceRequired', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

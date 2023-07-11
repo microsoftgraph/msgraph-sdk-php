@@ -9,6 +9,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new unifiedRoleEligibilitySchedule and sets the default values.
     */
     public function __construct() {
@@ -32,7 +37,6 @@ class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase implements 
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'memberType' => fn(ParseNode $n) => $o->setMemberType($n->getStringValue()),
-            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'scheduleInfo' => fn(ParseNode $n) => $o->setScheduleInfo($n->getObjectValue([RequestSchedule::class, 'createFromDiscriminatorValue'])),
         ]);
     }
@@ -47,18 +51,6 @@ class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase implements 
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'memberType'");
-    }
-
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return string|null
-    */
-    public function getOdataType(): ?string {
-        $val = $this->getBackingStore()->get('odataType');
-        if (is_null($val) || is_string($val)) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -90,14 +82,6 @@ class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase implements 
     */
     public function setMemberType(?string $value): void {
         $this->getBackingStore()->set('memberType', $value);
-    }
-
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param string|null $value Value to set for the OdataType property.
-    */
-    public function setOdataType(?string $value): void {
-        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

@@ -9,6 +9,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DirectoryObjectPartnerReference extends DirectoryObject implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new directoryObjectPartnerReference and sets the default values.
     */
     public function __construct() {
@@ -97,6 +102,7 @@ class DirectoryObjectPartnerReference extends DirectoryObject implements Parsabl
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeStringValue('externalPartnerTenantId', $this->getExternalPartnerTenantId());
         $writer->writeStringValue('objectType', $this->getObjectType());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

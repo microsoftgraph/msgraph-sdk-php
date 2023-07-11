@@ -9,6 +9,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class BasicAuthentication extends ApiAuthenticationConfigurationBase implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new basicAuthentication and sets the default values.
     */
     public function __construct() {
@@ -32,22 +37,9 @@ class BasicAuthentication extends ApiAuthenticationConfigurationBase implements 
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'password' => fn(ParseNode $n) => $o->setPassword($n->getStringValue()),
             'username' => fn(ParseNode $n) => $o->setUsername($n->getStringValue()),
         ]);
-    }
-
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return string|null
-    */
-    public function getOdataType(): ?string {
-        $val = $this->getBackingStore()->get('odataType');
-        if (is_null($val) || is_string($val)) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -83,14 +75,6 @@ class BasicAuthentication extends ApiAuthenticationConfigurationBase implements 
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('password', $this->getPassword());
         $writer->writeStringValue('username', $this->getUsername());
-    }
-
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param string|null $value Value to set for the OdataType property.
-    */
-    public function setOdataType(?string $value): void {
-        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

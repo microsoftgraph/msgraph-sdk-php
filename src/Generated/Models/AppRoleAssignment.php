@@ -10,6 +10,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AppRoleAssignment extends DirectoryObject implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new appRoleAssignment and sets the default values.
     */
     public function __construct() {
@@ -135,6 +140,7 @@ class AppRoleAssignment extends DirectoryObject implements Parsable
         parent::serialize($writer);
         $writer->writeStringValue('appRoleId', $this->getAppRoleId());
         $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('principalDisplayName', $this->getPrincipalDisplayName());
         $writer->writeStringValue('principalId', $this->getPrincipalId());
         $writer->writeStringValue('principalType', $this->getPrincipalType());

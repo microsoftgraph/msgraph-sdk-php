@@ -8,7 +8,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 /**
- * Represents an item on the iOS Home Screen
+ * A folder containing pages of apps and web clips on the Home Screen.
 */
 class IosHomeScreenFolder extends IosHomeScreenItem implements Parsable 
 {

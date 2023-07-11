@@ -10,6 +10,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class SharedWithChannelTeamInfo extends TeamInfo implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new sharedWithChannelTeamInfo and sets the default values.
     */
     public function __construct() {
@@ -71,6 +76,7 @@ class SharedWithChannelTeamInfo extends TeamInfo implements Parsable
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('allowedMembers', $this->getAllowedMembers());
         $writer->writeBooleanValue('isHostTeam', $this->getIsHostTeam());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

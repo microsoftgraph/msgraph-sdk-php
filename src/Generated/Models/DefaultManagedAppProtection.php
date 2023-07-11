@@ -13,11 +13,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class DefaultManagedAppProtection extends ManagedAppProtection implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new defaultManagedAppProtection and sets the default values.
     */
     public function __construct() {
@@ -221,7 +216,6 @@ class DefaultManagedAppProtection extends ManagedAppProtection implements Parsab
         $writer->writeStringValue('minimumRequiredPatchVersion', $this->getMinimumRequiredPatchVersion());
         $writer->writeStringValue('minimumRequiredSdkVersion', $this->getMinimumRequiredSdkVersion());
         $writer->writeStringValue('minimumWarningPatchVersion', $this->getMinimumWarningPatchVersion());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeBooleanValue('screenCaptureBlocked', $this->getScreenCaptureBlocked());
     }
 

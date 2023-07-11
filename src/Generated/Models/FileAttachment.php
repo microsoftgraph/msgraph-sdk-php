@@ -10,11 +10,6 @@ use Psr\Http\Message\StreamInterface;
 class FileAttachment extends Attachment implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new fileAttachment and sets the default values.
     */
     public function __construct() {
@@ -89,7 +84,6 @@ class FileAttachment extends Attachment implements Parsable
         $writer->writeBinaryContent('contentBytes', $this->getContentBytes());
         $writer->writeStringValue('contentId', $this->getContentId());
         $writer->writeStringValue('contentLocation', $this->getContentLocation());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

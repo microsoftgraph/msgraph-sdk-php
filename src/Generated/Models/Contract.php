@@ -9,6 +9,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Contract extends DirectoryObject implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new contract and sets the default values.
     */
     public function __construct() {
@@ -97,6 +102,7 @@ class Contract extends DirectoryObject implements Parsable
         $writer->writeStringValue('customerId', $this->getCustomerId());
         $writer->writeStringValue('defaultDomainName', $this->getDefaultDomainName());
         $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

@@ -7,7 +7,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 /**
- * App for Windows information protection
+ * Desktop App for Windows information protection
 */
 class WindowsInformationProtectionDesktopApp extends WindowsInformationProtectionApp implements Parsable 
 {

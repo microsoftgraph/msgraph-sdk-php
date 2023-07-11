@@ -7,7 +7,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 /**
- * The identifier for a mobile app.
+ * The identifier for an Android app.
 */
 class AndroidMobileAppIdentifier extends MobileAppIdentifier implements Parsable 
 {

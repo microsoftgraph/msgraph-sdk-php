@@ -11,6 +11,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class User extends DirectoryObject implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new user and sets the default values.
     */
     public function __construct() {
@@ -1858,6 +1863,7 @@ class User extends DirectoryObject implements Parsable
         $writer->writeStringValue('mobilePhone', $this->getMobilePhone());
         $writer->writeStringValue('mySite', $this->getMySite());
         $writer->writeCollectionOfObjectValues('oauth2PermissionGrants', $this->getOauth2PermissionGrants());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('officeLocation', $this->getOfficeLocation());
         $writer->writeObjectValue('onenote', $this->getOnenote());
         $writer->writeCollectionOfObjectValues('onlineMeetings', $this->getOnlineMeetings());

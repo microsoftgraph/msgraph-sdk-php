@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class X509CertificateAuthenticationMethodConfiguration extends AuthenticationMethodConfiguration implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new x509CertificateAuthenticationMethodConfiguration and sets the default values.
     */
     public function __construct() {
@@ -93,7 +88,6 @@ class X509CertificateAuthenticationMethodConfiguration extends AuthenticationMet
         $writer->writeObjectValue('authenticationModeConfiguration', $this->getAuthenticationModeConfiguration());
         $writer->writeCollectionOfObjectValues('certificateUserBindings', $this->getCertificateUserBindings());
         $writer->writeCollectionOfObjectValues('includeTargets', $this->getIncludeTargets());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

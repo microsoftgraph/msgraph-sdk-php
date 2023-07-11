@@ -7,7 +7,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 /**
- * A base complex type to store the detection or requirement rule data for a Win32 LOB app.
+ * A complex type to store the PowerShell script rule data for a Win32 LOB app.
 */
 class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements Parsable 
 {

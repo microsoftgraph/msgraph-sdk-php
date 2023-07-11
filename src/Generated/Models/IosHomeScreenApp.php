@@ -7,7 +7,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 /**
- * Represents an item on the iOS Home Screen
+ * Represents an icon for an app on the Home Screen
 */
 class IosHomeScreenApp extends IosHomeScreenItem implements Parsable 
 {

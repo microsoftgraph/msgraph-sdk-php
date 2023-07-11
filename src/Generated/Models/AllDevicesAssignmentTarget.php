@@ -7,7 +7,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 /**
- * Base type for assignment targets.
+ * Represents an assignment to all managed devices in the tenant.
 */
 class AllDevicesAssignmentTarget extends DeviceAndAppManagementAssignmentTarget implements Parsable 
 {

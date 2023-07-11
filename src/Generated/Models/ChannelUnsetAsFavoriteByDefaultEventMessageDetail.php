@@ -9,6 +9,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ChannelUnsetAsFavoriteByDefaultEventMessageDetail extends EventMessageDetail implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new channelUnsetAsFavoriteByDefaultEventMessageDetail and sets the default values.
     */
     public function __construct() {
@@ -46,7 +51,6 @@ class ChannelUnsetAsFavoriteByDefaultEventMessageDetail extends EventMessageDeta
         return array_merge(parent::getFieldDeserializers(), [
             'channelId' => fn(ParseNode $n) => $o->setChannelId($n->getStringValue()),
             'initiator' => fn(ParseNode $n) => $o->setInitiator($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
-            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ]);
     }
 
@@ -60,18 +64,6 @@ class ChannelUnsetAsFavoriteByDefaultEventMessageDetail extends EventMessageDeta
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'initiator'");
-    }
-
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return string|null
-    */
-    public function getOdataType(): ?string {
-        $val = $this->getBackingStore()->get('odataType');
-        if (is_null($val) || is_string($val)) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -99,14 +91,6 @@ class ChannelUnsetAsFavoriteByDefaultEventMessageDetail extends EventMessageDeta
     */
     public function setInitiator(?IdentitySet $value): void {
         $this->getBackingStore()->set('initiator', $value);
-    }
-
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param string|null $value Value to set for the OdataType property.
-    */
-    public function setOdataType(?string $value): void {
-        $this->getBackingStore()->set('odataType', $value);
     }
 
 }

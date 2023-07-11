@@ -7,7 +7,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 /**
- * Abstract class to contain properties used to assign a mobile app to a group.
+ * Contains properties used to assign an Microsoft Store for Business mobile app to a group.
 */
 class MicrosoftStoreForBusinessAppAssignmentSettings extends MobileAppAssignmentSettings implements Parsable 
 {

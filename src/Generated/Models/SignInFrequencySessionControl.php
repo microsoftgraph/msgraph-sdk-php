@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SignInFrequencySessionControl extends ConditionalAccessSessionControl implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new signInFrequencySessionControl and sets the default values.
     */
     public function __construct() {
@@ -51,6 +46,7 @@ class SignInFrequencySessionControl extends ConditionalAccessSessionControl impl
         return array_merge(parent::getFieldDeserializers(), [
             'authenticationType' => fn(ParseNode $n) => $o->setAuthenticationType($n->getEnumValue(SignInFrequencyAuthenticationType::class)),
             'frequencyInterval' => fn(ParseNode $n) => $o->setFrequencyInterval($n->getEnumValue(SignInFrequencyInterval::class)),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'type' => fn(ParseNode $n) => $o->setType($n->getEnumValue(SigninFrequencyType::class)),
             'value' => fn(ParseNode $n) => $o->setValue($n->getIntegerValue()),
         ]);
@@ -66,6 +62,18 @@ class SignInFrequencySessionControl extends ConditionalAccessSessionControl impl
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'frequencyInterval'");
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -119,6 +127,14 @@ class SignInFrequencySessionControl extends ConditionalAccessSessionControl impl
     */
     public function setFrequencyInterval(?SignInFrequencyInterval $value): void {
         $this->getBackingStore()->set('frequencyInterval', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

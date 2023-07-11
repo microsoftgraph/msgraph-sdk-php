@@ -9,6 +9,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class RiskyServicePrincipalHistoryItem extends RiskyServicePrincipal implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new riskyServicePrincipalHistoryItem and sets the default values.
     */
     public function __construct() {
@@ -68,6 +73,7 @@ class RiskyServicePrincipalHistoryItem extends RiskyServicePrincipal implements 
         parent::serialize($writer);
         $writer->writeObjectValue('activity', $this->getActivity());
         $writer->writeStringValue('initiatedBy', $this->getInitiatedBy());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

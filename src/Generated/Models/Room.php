@@ -10,6 +10,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Room extends Place implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new room and sets the default values.
     */
     public function __construct() {
@@ -231,6 +236,7 @@ class Room extends Place implements Parsable
         $writer->writeBooleanValue('isWheelChairAccessible', $this->getIsWheelChairAccessible());
         $writer->writeStringValue('label', $this->getLabel());
         $writer->writeStringValue('nickname', $this->getNickname());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfPrimitiveValues('tags', $this->getTags());
         $writer->writeStringValue('videoDeviceName', $this->getVideoDeviceName());
     }

@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class BuiltInIdentityProvider extends IdentityProviderBase implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new builtInIdentityProvider and sets the default values.
     */
     public function __construct() {
@@ -60,7 +55,6 @@ class BuiltInIdentityProvider extends IdentityProviderBase implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeStringValue('identityProviderType', $this->getIdentityProviderType());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

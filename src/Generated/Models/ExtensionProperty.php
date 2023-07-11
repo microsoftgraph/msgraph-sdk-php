@@ -10,6 +10,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class ExtensionProperty extends DirectoryObject implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new extensionProperty and sets the default values.
     */
     public function __construct() {
@@ -120,6 +125,7 @@ class ExtensionProperty extends DirectoryObject implements Parsable
         $writer->writeStringValue('dataType', $this->getDataType());
         $writer->writeBooleanValue('isSyncedFromOnPremises', $this->getIsSyncedFromOnPremises());
         $writer->writeStringValue('name', $this->getName());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfPrimitiveValues('targetObjects', $this->getTargetObjects());
     }
 

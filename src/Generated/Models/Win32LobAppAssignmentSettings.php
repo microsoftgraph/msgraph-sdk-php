@@ -7,15 +7,10 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 /**
- * Abstract class to contain properties used to assign a mobile app to a group.
+ * Contains properties used to assign an Win32 LOB mobile app to a group.
 */
 class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings implements Parsable 
 {
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
     /**
      * Instantiates a new win32LobAppAssignmentSettings and sets the default values.
     */
@@ -55,6 +50,7 @@ class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings implemen
             'deliveryOptimizationPriority' => fn(ParseNode $n) => $o->setDeliveryOptimizationPriority($n->getEnumValue(Win32LobAppDeliveryOptimizationPriority::class)),
             'installTimeSettings' => fn(ParseNode $n) => $o->setInstallTimeSettings($n->getObjectValue([MobileAppInstallTimeSettings::class, 'createFromDiscriminatorValue'])),
             'notifications' => fn(ParseNode $n) => $o->setNotifications($n->getEnumValue(Win32LobAppNotification::class)),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'restartSettings' => fn(ParseNode $n) => $o->setRestartSettings($n->getObjectValue([Win32LobAppRestartSettings::class, 'createFromDiscriminatorValue'])),
         ]);
     }
@@ -81,6 +77,18 @@ class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings implemen
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'notifications'");
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -130,6 +138,14 @@ class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings implemen
     */
     public function setNotifications(?Win32LobAppNotification $value): void {
         $this->getBackingStore()->set('notifications', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

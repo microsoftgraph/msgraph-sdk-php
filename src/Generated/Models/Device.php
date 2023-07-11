@@ -11,6 +11,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Device extends DirectoryObject implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new device and sets the default values.
     */
     public function __construct() {
@@ -453,6 +458,7 @@ class Device extends DirectoryObject implements Parsable
         $writer->writeBooleanValue('isManaged', $this->getIsManaged());
         $writer->writeStringValue('mdmAppId', $this->getMdmAppId());
         $writer->writeCollectionOfObjectValues('memberOf', $this->getMemberOf());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeDateTimeValue('onPremisesLastSyncDateTime', $this->getOnPremisesLastSyncDateTime());
         $writer->writeBooleanValue('onPremisesSyncEnabled', $this->getOnPremisesSyncEnabled());
         $writer->writeStringValue('operatingSystem', $this->getOperatingSystem());
