@@ -11,6 +11,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class ThreatIntelligence extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new threatIntelligence and sets the default values.
     */
     public function __construct() {
@@ -200,6 +205,7 @@ class ThreatIntelligence extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('hostTrackers', $this->getHostTrackers());
         $writer->writeCollectionOfObjectValues('intelligenceProfileIndicators', $this->getIntelligenceProfileIndicators());
         $writer->writeCollectionOfObjectValues('intelProfiles', $this->getIntelProfiles());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfObjectValues('passiveDnsRecords', $this->getPassiveDnsRecords());
         $writer->writeCollectionOfObjectValues('vulnerabilities', $this->getVulnerabilities());
     }

@@ -12,6 +12,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UserExperienceAnalyticsModelScores extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new userExperienceAnalyticsModelScores and sets the default values.
     */
     public function __construct() {
@@ -167,6 +172,7 @@ class UserExperienceAnalyticsModelScores extends Entity implements Parsable
         $writer->writeStringValue('manufacturer', $this->getManufacturer());
         $writer->writeStringValue('model', $this->getModel());
         $writer->writeIntegerValue('modelDeviceCount', $this->getModelDeviceCount());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeFloatValue('startupPerformanceScore', $this->getStartupPerformanceScore());
         $writer->writeFloatValue('workFromAnywhereScore', $this->getWorkFromAnywhereScore());
     }

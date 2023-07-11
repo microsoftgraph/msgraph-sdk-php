@@ -40,10 +40,9 @@ class TermsAndConditionsAcceptanceStatusItemRequestBuilder extends BaseRequestBu
     }
 
     /**
-     * Deletes a termsAndConditionsAcceptanceStatus.
+     * Delete navigation property acceptanceStatuses for deviceManagement
      * @param TermsAndConditionsAcceptanceStatusItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-companyterms-termsandconditionsacceptancestatus-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?TermsAndConditionsAcceptanceStatusItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -59,10 +58,9 @@ class TermsAndConditionsAcceptanceStatusItemRequestBuilder extends BaseRequestBu
     }
 
     /**
-     * Read properties and relationships of the termsAndConditionsAcceptanceStatus object.
+     * The list of acceptance statuses for this T&C policy.
      * @param TermsAndConditionsAcceptanceStatusItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-companyterms-termsandconditionsacceptancestatus-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?TermsAndConditionsAcceptanceStatusItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -78,11 +76,10 @@ class TermsAndConditionsAcceptanceStatusItemRequestBuilder extends BaseRequestBu
     }
 
     /**
-     * Update the properties of a termsAndConditionsAcceptanceStatus object.
+     * Update the navigation property acceptanceStatuses in deviceManagement
      * @param TermsAndConditionsAcceptanceStatus $body The request body
      * @param TermsAndConditionsAcceptanceStatusItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-companyterms-termsandconditionsacceptancestatus-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(TermsAndConditionsAcceptanceStatus $body, ?TermsAndConditionsAcceptanceStatusItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -98,7 +95,7 @@ class TermsAndConditionsAcceptanceStatusItemRequestBuilder extends BaseRequestBu
     }
 
     /**
-     * Deletes a termsAndConditionsAcceptanceStatus.
+     * Delete navigation property acceptanceStatuses for deviceManagement
      * @param TermsAndConditionsAcceptanceStatusItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -115,7 +112,7 @@ class TermsAndConditionsAcceptanceStatusItemRequestBuilder extends BaseRequestBu
     }
 
     /**
-     * Read properties and relationships of the termsAndConditionsAcceptanceStatus object.
+     * The list of acceptance statuses for this T&C policy.
      * @param TermsAndConditionsAcceptanceStatusItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -136,7 +133,7 @@ class TermsAndConditionsAcceptanceStatusItemRequestBuilder extends BaseRequestBu
     }
 
     /**
-     * Update the properties of a termsAndConditionsAcceptanceStatus object.
+     * Update the navigation property acceptanceStatuses in deviceManagement
      * @param TermsAndConditionsAcceptanceStatus $body The request body
      * @param TermsAndConditionsAcceptanceStatusItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

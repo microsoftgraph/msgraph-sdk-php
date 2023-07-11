@@ -61,6 +61,7 @@ class UnifiedRoleDefinition extends Entity implements Parsable
             'inheritsPermissionsFrom' => fn(ParseNode $n) => $o->setInheritsPermissionsFrom($n->getCollectionOfObjectValues([UnifiedRoleDefinition::class, 'createFromDiscriminatorValue'])),
             'isBuiltIn' => fn(ParseNode $n) => $o->setIsBuiltIn($n->getBooleanValue()),
             'isEnabled' => fn(ParseNode $n) => $o->setIsEnabled($n->getBooleanValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'resourceScopes' => function (ParseNode $n) {
                 $val = $n->getCollectionOfPrimitiveValues();
                 if (is_array($val)) {
@@ -111,6 +112,18 @@ class UnifiedRoleDefinition extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'isEnabled'");
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -176,6 +189,7 @@ class UnifiedRoleDefinition extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('inheritsPermissionsFrom', $this->getInheritsPermissionsFrom());
         $writer->writeBooleanValue('isBuiltIn', $this->getIsBuiltIn());
         $writer->writeBooleanValue('isEnabled', $this->getIsEnabled());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfPrimitiveValues('resourceScopes', $this->getResourceScopes());
         $writer->writeCollectionOfObjectValues('rolePermissions', $this->getRolePermissions());
         $writer->writeStringValue('templateId', $this->getTemplateId());
@@ -220,6 +234,14 @@ class UnifiedRoleDefinition extends Entity implements Parsable
     */
     public function setIsEnabled(?bool $value): void {
         $this->getBackingStore()->set('isEnabled', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

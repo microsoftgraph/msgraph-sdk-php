@@ -10,6 +10,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class WorkbookComment extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new workbookComment and sets the default values.
     */
     public function __construct() {
@@ -84,6 +89,7 @@ class WorkbookComment extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeStringValue('content', $this->getContent());
         $writer->writeStringValue('contentType', $this->getContentType());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfObjectValues('replies', $this->getReplies());
     }
 

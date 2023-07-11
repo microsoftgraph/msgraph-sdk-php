@@ -50,6 +50,7 @@ class WindowsInformationProtectionAppLockerFile extends Entity implements Parsab
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'file' => fn(ParseNode $n) => $o->setFile($n->getBinaryContent()),
             'fileHash' => fn(ParseNode $n) => $o->setFileHash($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'version' => fn(ParseNode $n) => $o->setVersion($n->getStringValue()),
         ]);
     }
@@ -79,6 +80,18 @@ class WindowsInformationProtectionAppLockerFile extends Entity implements Parsab
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
+    }
+
+    /**
      * Gets the version property value. Version of the entity.
      * @return string|null
     */
@@ -99,6 +112,7 @@ class WindowsInformationProtectionAppLockerFile extends Entity implements Parsab
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeBinaryContent('file', $this->getFile());
         $writer->writeStringValue('fileHash', $this->getFileHash());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('version', $this->getVersion());
     }
 
@@ -124,6 +138,14 @@ class WindowsInformationProtectionAppLockerFile extends Entity implements Parsab
     */
     public function setFileHash(?string $value): void {
         $this->getBackingStore()->set('fileHash', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

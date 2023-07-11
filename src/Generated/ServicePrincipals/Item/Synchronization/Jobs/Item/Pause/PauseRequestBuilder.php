@@ -31,9 +31,10 @@ class PauseRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action pause
+     * Temporarily stop a running synchronization job. All the progress, including job state, is persisted, and the job will continue from where it left off when a start call is made.
      * @param PauseRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/synchronization-synchronizationjob-pause?view=graph-rest-1.0 Find more info here
     */
     public function post(?PauseRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);
@@ -49,7 +50,7 @@ class PauseRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action pause
+     * Temporarily stop a running synchronization job. All the progress, including job state, is persisted, and the job will continue from where it left off when a start call is made.
      * @param PauseRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

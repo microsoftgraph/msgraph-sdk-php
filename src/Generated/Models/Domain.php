@@ -10,7 +10,12 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Domain extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new Domain and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new domain and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -290,6 +295,7 @@ class Domain extends Entity implements Parsable
         $writer->writeBooleanValue('isVerified', $this->getIsVerified());
         $writer->writeStringValue('manufacturer', $this->getManufacturer());
         $writer->writeStringValue('model', $this->getModel());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeIntegerValue('passwordNotificationWindowInDays', $this->getPasswordNotificationWindowInDays());
         $writer->writeIntegerValue('passwordValidityPeriodInDays', $this->getPasswordValidityPeriodInDays());
         $writer->writeCollectionOfObjectValues('serviceConfigurationRecords', $this->getServiceConfigurationRecords());

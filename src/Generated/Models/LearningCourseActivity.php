@@ -10,6 +10,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class LearningCourseActivity extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new learningCourseActivity and sets the default values.
     */
     public function __construct() {
@@ -146,6 +151,7 @@ class LearningCourseActivity extends Entity implements Parsable
         $writer->writeStringValue('learnerUserId', $this->getLearnerUserId());
         $writer->writeStringValue('learningContentId', $this->getLearningContentId());
         $writer->writeStringValue('learningProviderId', $this->getLearningProviderId());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeEnumValue('status', $this->getStatus());
     }
 

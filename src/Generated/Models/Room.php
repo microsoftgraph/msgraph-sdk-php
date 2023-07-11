@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Room extends Place implements Parsable 
 {
     /**
-     * Instantiates a new Room and sets the default values.
+     * Instantiates a new room and sets the default values.
     */
     public function __construct() {
         parent::__construct();

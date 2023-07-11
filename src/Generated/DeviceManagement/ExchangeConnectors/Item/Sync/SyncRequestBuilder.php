@@ -31,11 +31,10 @@ class SyncRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Not yet documented
+     * Invoke action sync
      * @param SyncPostRequestBody $body The request body
      * @param SyncRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-onboarding-devicemanagementexchangeconnector-sync?view=graph-rest-1.0 Find more info here
     */
     public function post(SyncPostRequestBody $body, ?SyncRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -51,7 +50,7 @@ class SyncRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Not yet documented
+     * Invoke action sync
      * @param SyncPostRequestBody $body The request body
      * @param SyncRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

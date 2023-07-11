@@ -19,7 +19,7 @@ class UserSimulationEventInfo implements AdditionalDataHolder, BackedModel, Pars
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new UserSimulationEventInfo and sets the default values.
+     * Instantiates a new userSimulationEventInfo and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

@@ -14,6 +14,11 @@ use Psr\Http\Message\StreamInterface;
 class MobileAppContentFile extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new mobileAppContentFile and sets the default values.
     */
     public function __construct() {
@@ -168,6 +173,7 @@ class MobileAppContentFile extends Entity implements Parsable
         $writer->writeBooleanValue('isCommitted', $this->getIsCommitted());
         $writer->writeBinaryContent('manifest', $this->getManifest());
         $writer->writeStringValue('name', $this->getName());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeIntegerValue('size', $this->getSize());
         $writer->writeIntegerValue('sizeEncrypted', $this->getSizeEncrypted());
         $writer->writeEnumValue('uploadState', $this->getUploadState());

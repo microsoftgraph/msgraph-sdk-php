@@ -69,7 +69,7 @@ class ObjectDefinitionMetadataEntry implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Gets the key property value. The key property
+     * Gets the key property value. Possible values are: PropertyNameAccountEnabled, PropertyNameSoftDeleted, IsSoftDeletionSupported, IsSynchronizeAllSupported, ConnectorDataStorageRequired, Extensions, LinkTypeName.
      * @return ObjectDefinitionMetadata|null
     */
     public function getKey(): ?ObjectDefinitionMetadata {
@@ -93,7 +93,7 @@ class ObjectDefinitionMetadataEntry implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Gets the value property value. The value property
+     * Gets the value property value. Value of the metadata property.
      * @return string|null
     */
     public function getValue(): ?string {
@@ -132,7 +132,7 @@ class ObjectDefinitionMetadataEntry implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Sets the key property value. The key property
+     * Sets the key property value. Possible values are: PropertyNameAccountEnabled, PropertyNameSoftDeleted, IsSoftDeletionSupported, IsSynchronizeAllSupported, ConnectorDataStorageRequired, Extensions, LinkTypeName.
      * @param ObjectDefinitionMetadata|null $value Value to set for the key property.
     */
     public function setKey(?ObjectDefinitionMetadata $value): void {
@@ -148,7 +148,7 @@ class ObjectDefinitionMetadataEntry implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Sets the value property value. The value property
+     * Sets the value property value. Value of the metadata property.
      * @param string|null $value Value to set for the value property.
     */
     public function setValue(?string $value): void {

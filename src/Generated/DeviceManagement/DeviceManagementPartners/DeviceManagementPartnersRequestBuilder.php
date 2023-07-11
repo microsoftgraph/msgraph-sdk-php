@@ -53,10 +53,9 @@ class DeviceManagementPartnersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the deviceManagementPartner objects.
+     * The list of Device Management Partners configured by the tenant.
      * @param DeviceManagementPartnersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-onboarding-devicemanagementpartner-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?DeviceManagementPartnersRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -72,11 +71,10 @@ class DeviceManagementPartnersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new deviceManagementPartner object.
+     * Create new navigation property to deviceManagementPartners for deviceManagement
      * @param DeviceManagementPartner $body The request body
      * @param DeviceManagementPartnersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-onboarding-devicemanagementpartner-create?view=graph-rest-1.0 Find more info here
     */
     public function post(DeviceManagementPartner $body, ?DeviceManagementPartnersRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -92,7 +90,7 @@ class DeviceManagementPartnersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the deviceManagementPartner objects.
+     * The list of Device Management Partners configured by the tenant.
      * @param DeviceManagementPartnersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +111,7 @@ class DeviceManagementPartnersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new deviceManagementPartner object.
+     * Create new navigation property to deviceManagementPartners for deviceManagement
      * @param DeviceManagementPartner $body The request body
      * @param DeviceManagementPartnersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

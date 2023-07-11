@@ -6,10 +6,18 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * Microsoft Store for Business Apps. This class does not support Create, Delete, or Update.
+*/
 class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
 {
     /**
-     * Instantiates a new MicrosoftStoreForBusinessApp and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new microsoftStoreForBusinessApp and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -107,6 +115,7 @@ class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeEnumValue('licenseType', $this->getLicenseType());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('packageIdentityName', $this->getPackageIdentityName());
         $writer->writeStringValue('productKey', $this->getProductKey());
         $writer->writeIntegerValue('totalLicenseCount', $this->getTotalLicenseCount());

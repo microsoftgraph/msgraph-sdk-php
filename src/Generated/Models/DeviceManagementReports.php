@@ -7,8 +7,16 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
+/**
+ * Singleton entity that acts as a container for all reports functionality.
+*/
 class DeviceManagementReports extends Entity implements Parsable 
 {
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
     /**
      * Instantiates a new deviceManagementReports and sets the default values.
     */
@@ -57,6 +65,7 @@ class DeviceManagementReports extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('exportJobs', $this->getExportJobs());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

@@ -53,10 +53,9 @@ class DeviceStatusesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the managedDeviceMobileAppConfigurationDeviceStatus objects.
+     * List of ManagedDeviceMobileAppConfigurationDeviceStatus.
      * @param DeviceStatusesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationdevicestatus-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?DeviceStatusesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -72,11 +71,10 @@ class DeviceStatusesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new managedDeviceMobileAppConfigurationDeviceStatus object.
+     * Create new navigation property to deviceStatuses for deviceAppManagement
      * @param ManagedDeviceMobileAppConfigurationDeviceStatus $body The request body
      * @param DeviceStatusesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationdevicestatus-create?view=graph-rest-1.0 Find more info here
     */
     public function post(ManagedDeviceMobileAppConfigurationDeviceStatus $body, ?DeviceStatusesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -92,7 +90,7 @@ class DeviceStatusesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the managedDeviceMobileAppConfigurationDeviceStatus objects.
+     * List of ManagedDeviceMobileAppConfigurationDeviceStatus.
      * @param DeviceStatusesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +111,7 @@ class DeviceStatusesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new managedDeviceMobileAppConfigurationDeviceStatus object.
+     * Create new navigation property to deviceStatuses for deviceAppManagement
      * @param ManagedDeviceMobileAppConfigurationDeviceStatus $body The request body
      * @param DeviceStatusesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

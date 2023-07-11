@@ -7,10 +7,13 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
+/**
+ * A class containing the properties for iOS Vpp eBook.
+*/
 class IosVppEBook extends ManagedEBook implements Parsable 
 {
     /**
-     * Instantiates a new IosVppEBook and sets the default values.
+     * Instantiates a new iosVppEBook and sets the default values.
     */
     public function __construct() {
         parent::__construct();

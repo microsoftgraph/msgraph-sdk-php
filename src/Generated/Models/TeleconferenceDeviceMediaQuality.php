@@ -19,7 +19,7 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new TeleconferenceDeviceMediaQuality and sets the default values.
+     * Instantiates a new teleconferenceDeviceMediaQuality and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

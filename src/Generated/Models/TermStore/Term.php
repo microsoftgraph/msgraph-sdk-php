@@ -13,6 +13,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Term extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new term and sets the default values.
     */
     public function __construct() {
@@ -163,6 +168,7 @@ class Term extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('descriptions', $this->getDescriptions());
         $writer->writeCollectionOfObjectValues('labels', $this->getLabels());
         $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfObjectValues('properties', $this->getProperties());
         $writer->writeCollectionOfObjectValues('relations', $this->getRelations());
         $writer->writeObjectValue('set', $this->getSet());

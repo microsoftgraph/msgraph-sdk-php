@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\ServicePrincipals\Item\Synchronization\Jobs\
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get directories from servicePrincipals
+ * Contains the collection of directories and all of their objects.
 */
 class DirectoriesRequestBuilderGetQueryParameters 
 {

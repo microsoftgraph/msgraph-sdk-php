@@ -12,6 +12,11 @@ use Psr\Http\Message\StreamInterface;
 class AttachmentSession extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new attachmentSession and sets the default values.
     */
     public function __construct() {
@@ -94,6 +99,7 @@ class AttachmentSession extends Entity implements Parsable
         $writer->writeBinaryContent('content', $this->getContent());
         $writer->writeDateTimeValue('expirationDateTime', $this->getExpirationDateTime());
         $writer->writeCollectionOfPrimitiveValues('nextExpectedRanges', $this->getNextExpectedRanges());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

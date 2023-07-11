@@ -9,7 +9,12 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Invitation extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new Invitation and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new invitation and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -177,6 +182,7 @@ class Invitation extends Entity implements Parsable
         $writer->writeStringValue('invitedUserType', $this->getInvitedUserType());
         $writer->writeStringValue('inviteRedeemUrl', $this->getInviteRedeemUrl());
         $writer->writeStringValue('inviteRedirectUrl', $this->getInviteRedirectUrl());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeBooleanValue('resetRedemption', $this->getResetRedemption());
         $writer->writeBooleanValue('sendInvitationMessage', $this->getSendInvitationMessage());
         $writer->writeStringValue('status', $this->getStatus());

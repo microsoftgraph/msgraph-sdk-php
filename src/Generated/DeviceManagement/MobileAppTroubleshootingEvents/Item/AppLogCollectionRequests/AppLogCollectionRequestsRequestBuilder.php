@@ -53,10 +53,9 @@ class AppLogCollectionRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the appLogCollectionRequest objects.
+     * Indicates collection of App Log Upload Request.
      * @param AppLogCollectionRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-devices-applogcollectionrequest-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?AppLogCollectionRequestsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -72,11 +71,10 @@ class AppLogCollectionRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new appLogCollectionRequest object.
+     * Create new navigation property to appLogCollectionRequests for deviceManagement
      * @param AppLogCollectionRequest $body The request body
      * @param AppLogCollectionRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-devices-applogcollectionrequest-create?view=graph-rest-1.0 Find more info here
     */
     public function post(AppLogCollectionRequest $body, ?AppLogCollectionRequestsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -92,7 +90,7 @@ class AppLogCollectionRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the appLogCollectionRequest objects.
+     * Indicates collection of App Log Upload Request.
      * @param AppLogCollectionRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +111,7 @@ class AppLogCollectionRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new appLogCollectionRequest object.
+     * Create new navigation property to appLogCollectionRequests for deviceManagement
      * @param AppLogCollectionRequest $body The request body
      * @param AppLogCollectionRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

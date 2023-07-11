@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ExternalActivityResult extends ExternalActivity implements Parsable 
 {
     /**
-     * Instantiates a new ExternalActivityResult and sets the default values.
+     * Instantiates a new externalActivityResult and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -9,7 +9,12 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ListItemVersion extends BaseItemVersion implements Parsable 
 {
     /**
-     * Instantiates a new ListItemVersion and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new listItemVersion and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -62,6 +67,7 @@ class ListItemVersion extends BaseItemVersion implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeObjectValue('fields', $this->getFields());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

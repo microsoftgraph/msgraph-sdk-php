@@ -49,7 +49,7 @@ class AttributeDefinition implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the anchor property value. The anchor property
+     * Gets the anchor property value. true if the attribute should be used as the anchor for the object. Anchor attributes must have a unique value identifying an object, and must be immutable. Default is false. One, and only one, of the object's attributes must be designated as the anchor to support synchronization.
      * @return bool|null
     */
     public function getAnchor(): ?bool {
@@ -83,7 +83,7 @@ class AttributeDefinition implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the caseExact property value. The caseExact property
+     * Gets the caseExact property value. true if value of this attribute should be treated as case-sensitive. This setting affects how the synchronization engine detects changes for the attribute.
      * @return bool|null
     */
     public function getCaseExact(): ?bool {
@@ -130,7 +130,7 @@ class AttributeDefinition implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the flowNullValues property value. The flowNullValues property
+     * Gets the flowNullValues property value. 'true' to allow null values for attributes.
      * @return bool|null
     */
     public function getFlowNullValues(): ?bool {
@@ -142,7 +142,7 @@ class AttributeDefinition implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the metadata property value. The metadata property
+     * Gets the metadata property value. Metadata for the given object.
      * @return array<AttributeDefinitionMetadataEntry>|null
     */
     public function getMetadata(): ?array {
@@ -156,7 +156,7 @@ class AttributeDefinition implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the multivalued property value. The multivalued property
+     * Gets the multivalued property value. true if an attribute can have multiple values. Default is false.
      * @return bool|null
     */
     public function getMultivalued(): ?bool {
@@ -180,7 +180,7 @@ class AttributeDefinition implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. Name of the attribute. Must be unique within the object definition. Not nullable.
      * @return string|null
     */
     public function getName(): ?string {
@@ -204,7 +204,7 @@ class AttributeDefinition implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the referencedObjects property value. The referencedObjects property
+     * Gets the referencedObjects property value. For attributes with reference type, lists referenced objects (for example, the manager attribute would list User as the referenced object).
      * @return array<ReferencedObject>|null
     */
     public function getReferencedObjects(): ?array {
@@ -218,7 +218,7 @@ class AttributeDefinition implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the required property value. The required property
+     * Gets the required property value. true if attribute is required. Object can not be created if any of the required attributes are missing. If during synchronization, the required attribute has no value, the default value will be used. If default the value was not set, synchronization will record an error.
      * @return bool|null
     */
     public function getRequired(): ?bool {
@@ -271,7 +271,7 @@ class AttributeDefinition implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the anchor property value. The anchor property
+     * Sets the anchor property value. true if the attribute should be used as the anchor for the object. Anchor attributes must have a unique value identifying an object, and must be immutable. Default is false. One, and only one, of the object's attributes must be designated as the anchor to support synchronization.
      * @param bool|null $value Value to set for the anchor property.
     */
     public function setAnchor(?bool $value): void {
@@ -295,7 +295,7 @@ class AttributeDefinition implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the caseExact property value. The caseExact property
+     * Sets the caseExact property value. true if value of this attribute should be treated as case-sensitive. This setting affects how the synchronization engine detects changes for the attribute.
      * @param bool|null $value Value to set for the caseExact property.
     */
     public function setCaseExact(?bool $value): void {
@@ -311,7 +311,7 @@ class AttributeDefinition implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the flowNullValues property value. The flowNullValues property
+     * Sets the flowNullValues property value. 'true' to allow null values for attributes.
      * @param bool|null $value Value to set for the flowNullValues property.
     */
     public function setFlowNullValues(?bool $value): void {
@@ -319,7 +319,7 @@ class AttributeDefinition implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the metadata property value. The metadata property
+     * Sets the metadata property value. Metadata for the given object.
      * @param array<AttributeDefinitionMetadataEntry>|null $value Value to set for the metadata property.
     */
     public function setMetadata(?array $value): void {
@@ -327,7 +327,7 @@ class AttributeDefinition implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the multivalued property value. The multivalued property
+     * Sets the multivalued property value. true if an attribute can have multiple values. Default is false.
      * @param bool|null $value Value to set for the multivalued property.
     */
     public function setMultivalued(?bool $value): void {
@@ -343,7 +343,7 @@ class AttributeDefinition implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. Name of the attribute. Must be unique within the object definition. Not nullable.
      * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
@@ -359,7 +359,7 @@ class AttributeDefinition implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the referencedObjects property value. The referencedObjects property
+     * Sets the referencedObjects property value. For attributes with reference type, lists referenced objects (for example, the manager attribute would list User as the referenced object).
      * @param array<ReferencedObject>|null $value Value to set for the referencedObjects property.
     */
     public function setReferencedObjects(?array $value): void {
@@ -367,7 +367,7 @@ class AttributeDefinition implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the required property value. The required property
+     * Sets the required property value. true if attribute is required. Object can not be created if any of the required attributes are missing. If during synchronization, the required attribute has no value, the default value will be used. If default the value was not set, synchronization will record an error.
      * @param bool|null $value Value to set for the required property.
     */
     public function setRequired(?bool $value): void {

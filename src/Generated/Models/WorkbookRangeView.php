@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class WorkbookRangeView extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new WorkbookRangeView and sets the default values.
+     * Instantiates a new workbookRangeView and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -63,6 +63,7 @@ class WorkbookRangeView extends Entity implements Parsable
             'formulasR1C1' => fn(ParseNode $n) => $o->setFormulasR1C1($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
             'index' => fn(ParseNode $n) => $o->setIndex($n->getIntegerValue()),
             'numberFormat' => fn(ParseNode $n) => $o->setNumberFormat($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'rowCount' => fn(ParseNode $n) => $o->setRowCount($n->getIntegerValue()),
             'rows' => fn(ParseNode $n) => $o->setRows($n->getCollectionOfObjectValues([WorkbookRangeView::class, 'createFromDiscriminatorValue'])),
             'text' => fn(ParseNode $n) => $o->setText($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
@@ -129,6 +130,18 @@ class WorkbookRangeView extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'numberFormat'");
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -206,6 +219,7 @@ class WorkbookRangeView extends Entity implements Parsable
         $writer->writeObjectValue('formulasR1C1', $this->getFormulasR1C1());
         $writer->writeIntegerValue('index', $this->getIndex());
         $writer->writeObjectValue('numberFormat', $this->getNumberFormat());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeIntegerValue('rowCount', $this->getRowCount());
         $writer->writeCollectionOfObjectValues('rows', $this->getRows());
         $writer->writeObjectValue('text', $this->getText());
@@ -267,6 +281,14 @@ class WorkbookRangeView extends Entity implements Parsable
     */
     public function setNumberFormat(?Json $value): void {
         $this->getBackingStore()->set('numberFormat', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

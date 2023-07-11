@@ -53,7 +53,7 @@ class DirectoriesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get directories from applications
+     * Contains the collection of directories and all of their objects.
      * @param DirectoriesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -90,7 +90,7 @@ class DirectoriesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get directories from applications
+     * Contains the collection of directories and all of their objects.
      * @param DirectoriesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

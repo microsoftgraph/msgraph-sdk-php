@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class CallRecordCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new CallRecordCollectionResponse and sets the default values.
+     * Instantiates a new callRecordCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EdiscoveryPurgeDataOperation extends CaseOperation implements Parsable 
 {
     /**
-     * Instantiates a new EdiscoveryPurgeDataOperation and sets the default values.
+     * Instantiates a new ediscoveryPurgeDataOperation and sets the default values.
     */
     public function __construct() {
         parent::__construct();

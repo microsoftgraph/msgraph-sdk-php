@@ -9,6 +9,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class OAuth2PermissionGrant extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new oAuth2PermissionGrant and sets the default values.
     */
     public function __construct() {
@@ -107,6 +112,7 @@ class OAuth2PermissionGrant extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeStringValue('clientId', $this->getClientId());
         $writer->writeStringValue('consentType', $this->getConsentType());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('principalId', $this->getPrincipalId());
         $writer->writeStringValue('resourceId', $this->getResourceId());
         $writer->writeStringValue('scope', $this->getScope());

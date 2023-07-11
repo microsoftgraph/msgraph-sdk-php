@@ -10,6 +10,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TeamsAppDefinition extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new teamsAppDefinition and sets the default values.
     */
     public function __construct() {
@@ -26,7 +31,7 @@ class TeamsAppDefinition extends Entity implements Parsable
     }
 
     /**
-     * Gets the authorization property value. The authorization property
+     * Gets the authorization property value. Authorization requirements specified in the Teams app manifest.
      * @return TeamsAppAuthorization|null
     */
     public function getAuthorization(): ?TeamsAppAuthorization {
@@ -177,6 +182,7 @@ class TeamsAppDefinition extends Entity implements Parsable
         $writer->writeStringValue('description', $this->getDescription());
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeEnumValue('publishingState', $this->getPublishingState());
         $writer->writeStringValue('shortDescription', $this->getShortDescription());
         $writer->writeStringValue('teamsAppId', $this->getTeamsAppId());
@@ -184,7 +190,7 @@ class TeamsAppDefinition extends Entity implements Parsable
     }
 
     /**
-     * Sets the authorization property value. The authorization property
+     * Sets the authorization property value. Authorization requirements specified in the Teams app manifest.
      * @param TeamsAppAuthorization|null $value Value to set for the authorization property.
     */
     public function setAuthorization(?TeamsAppAuthorization $value): void {

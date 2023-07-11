@@ -11,6 +11,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class BrowserSharedCookie extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new browserSharedCookie and sets the default values.
     */
     public function __construct() {
@@ -209,6 +214,7 @@ class BrowserSharedCookie extends Entity implements Parsable
         $writer->writeStringValue('hostOrDomain', $this->getHostOrDomain());
         $writer->writeObjectValue('lastModifiedBy', $this->getLastModifiedBy());
         $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('path', $this->getPath());
         $writer->writeEnumValue('sourceEnvironment', $this->getSourceEnvironment());
         $writer->writeEnumValue('status', $this->getStatus());

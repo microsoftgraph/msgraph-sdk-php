@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SharePointIdentitySet extends IdentitySet implements Parsable 
 {
     /**
-     * Instantiates a new SharePointIdentitySet and sets the default values.
+     * Instantiates a new sharePointIdentitySet and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -33,6 +33,7 @@ class SharePointIdentitySet extends IdentitySet implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'group' => fn(ParseNode $n) => $o->setGroup($n->getObjectValue([Identity::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'siteGroup' => fn(ParseNode $n) => $o->setSiteGroup($n->getObjectValue([SharePointIdentity::class, 'createFromDiscriminatorValue'])),
             'siteUser' => fn(ParseNode $n) => $o->setSiteUser($n->getObjectValue([SharePointIdentity::class, 'createFromDiscriminatorValue'])),
         ]);
@@ -48,6 +49,18 @@ class SharePointIdentitySet extends IdentitySet implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'group'");
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -81,6 +94,7 @@ class SharePointIdentitySet extends IdentitySet implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeObjectValue('group', $this->getGroup());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('siteGroup', $this->getSiteGroup());
         $writer->writeObjectValue('siteUser', $this->getSiteUser());
     }
@@ -91,6 +105,14 @@ class SharePointIdentitySet extends IdentitySet implements Parsable
     */
     public function setGroup(?Identity $value): void {
         $this->getBackingStore()->set('group', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ActivityBasedTimeoutPolicy extends StsPolicy implements Parsable 
 {
     /**
-     * Instantiates a new ActivityBasedTimeoutPolicy and sets the default values.
+     * Instantiates a new activityBasedTimeoutPolicy and sets the default values.
     */
     public function __construct() {
         parent::__construct();

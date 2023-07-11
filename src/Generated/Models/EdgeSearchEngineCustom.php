@@ -6,10 +6,13 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * Allows IT admins to set a default search engine for MDM-Controlled devices. Users can override this and change their default search engine provided the AllowSearchEngineCustomization policy is not set.
+*/
 class EdgeSearchEngineCustom extends EdgeSearchEngineBase implements Parsable 
 {
     /**
-     * Instantiates a new EdgeSearchEngineCustom and sets the default values.
+     * Instantiates a new edgeSearchEngineCustom and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -45,7 +48,20 @@ class EdgeSearchEngineCustom extends EdgeSearchEngineBase implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'edgeSearchEngineOpenSearchXmlUrl' => fn(ParseNode $n) => $o->setEdgeSearchEngineOpenSearchXmlUrl($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ]);
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -55,6 +71,7 @@ class EdgeSearchEngineCustom extends EdgeSearchEngineBase implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeStringValue('edgeSearchEngineOpenSearchXmlUrl', $this->getEdgeSearchEngineOpenSearchXmlUrl());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**
@@ -63,6 +80,14 @@ class EdgeSearchEngineCustom extends EdgeSearchEngineBase implements Parsable
     */
     public function setEdgeSearchEngineOpenSearchXmlUrl(?string $value): void {
         $this->getBackingStore()->set('edgeSearchEngineOpenSearchXmlUrl', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
 }

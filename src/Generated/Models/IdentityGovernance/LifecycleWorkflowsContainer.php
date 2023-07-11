@@ -12,7 +12,12 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class LifecycleWorkflowsContainer extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new LifecycleWorkflowsContainer and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new lifecycleWorkflowsContainer and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -131,6 +136,7 @@ class LifecycleWorkflowsContainer extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('customTaskExtensions', $this->getCustomTaskExtensions());
         $writer->writeObjectValue('deletedItems', $this->getDeletedItems());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('settings', $this->getSettings());
         $writer->writeCollectionOfObjectValues('taskDefinitions', $this->getTaskDefinitions());
         $writer->writeCollectionOfObjectValues('workflows', $this->getWorkflows());

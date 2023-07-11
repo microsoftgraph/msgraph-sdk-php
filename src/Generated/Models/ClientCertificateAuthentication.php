@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class ClientCertificateAuthentication extends ApiAuthenticationConfigurationBase implements Parsable 
 {
     /**
-     * Instantiates a new ClientCertificateAuthentication and sets the default values.
+     * Instantiates a new clientCertificateAuthentication and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -48,7 +48,20 @@ class ClientCertificateAuthentication extends ApiAuthenticationConfigurationBase
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'certificateList' => fn(ParseNode $n) => $o->setCertificateList($n->getCollectionOfObjectValues([Pkcs12CertificateInformation::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ]);
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -58,6 +71,7 @@ class ClientCertificateAuthentication extends ApiAuthenticationConfigurationBase
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('certificateList', $this->getCertificateList());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**
@@ -66,6 +80,14 @@ class ClientCertificateAuthentication extends ApiAuthenticationConfigurationBase
     */
     public function setCertificateList(?array $value): void {
         $this->getBackingStore()->set('certificateList', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
 }

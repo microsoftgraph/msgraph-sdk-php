@@ -9,7 +9,12 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UnifiedRoleEligibilityScheduleRequest extends Request implements Parsable 
 {
     /**
-     * Instantiates a new UnifiedRoleEligibilityScheduleRequest and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new unifiedRoleEligibilityScheduleRequest and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -242,6 +247,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request implements Parsable
         $writer->writeStringValue('directoryScopeId', $this->getDirectoryScopeId());
         $writer->writeBooleanValue('isValidationOnly', $this->getIsValidationOnly());
         $writer->writeStringValue('justification', $this->getJustification());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('principal', $this->getPrincipal());
         $writer->writeStringValue('principalId', $this->getPrincipalId());
         $writer->writeObjectValue('roleDefinition', $this->getRoleDefinition());

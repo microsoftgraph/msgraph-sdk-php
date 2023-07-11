@@ -7,10 +7,13 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Types\Time;
 
+/**
+ * This topic provides descriptions of the declared methods, properties and relationships exposed by the windows10TeamGeneralConfiguration resource.
+*/
 class Windows10TeamGeneralConfiguration extends DeviceConfiguration implements Parsable 
 {
     /**
-     * Instantiates a new Windows10TeamGeneralConfiguration and sets the default values.
+     * Instantiates a new windows10TeamGeneralConfiguration and sets the default values.
     */
     public function __construct() {
         parent::__construct();

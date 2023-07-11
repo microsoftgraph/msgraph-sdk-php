@@ -62,10 +62,9 @@ class AuditEventsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the auditEvent objects.
+     * The Audit Events
      * @param AuditEventsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-auditing-auditevent-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?AuditEventsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -90,11 +89,10 @@ class AuditEventsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new auditEvent object.
+     * Create new navigation property to auditEvents for deviceManagement
      * @param AuditEvent $body The request body
      * @param AuditEventsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-auditing-auditevent-create?view=graph-rest-1.0 Find more info here
     */
     public function post(AuditEvent $body, ?AuditEventsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -110,7 +108,7 @@ class AuditEventsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the auditEvent objects.
+     * The Audit Events
      * @param AuditEventsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -131,7 +129,7 @@ class AuditEventsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new auditEvent object.
+     * Create new navigation property to auditEvents for deviceManagement
      * @param AuditEvent $body The request body
      * @param AuditEventsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

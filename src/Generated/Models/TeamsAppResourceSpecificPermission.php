@@ -81,7 +81,7 @@ class TeamsAppResourceSpecificPermission implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Gets the permissionType property value. The permissionType property
+     * Gets the permissionType property value. The type of resource-specific permission.
      * @return TeamsAppResourceSpecificPermissionType|null
     */
     public function getPermissionType(): ?TeamsAppResourceSpecificPermissionType {
@@ -93,7 +93,7 @@ class TeamsAppResourceSpecificPermission implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Gets the permissionValue property value. The permissionValue property
+     * Gets the permissionValue property value. The name of the resource-specific permission.
      * @return string|null
     */
     public function getPermissionValue(): ?string {
@@ -140,7 +140,7 @@ class TeamsAppResourceSpecificPermission implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Sets the permissionType property value. The permissionType property
+     * Sets the permissionType property value. The type of resource-specific permission.
      * @param TeamsAppResourceSpecificPermissionType|null $value Value to set for the permissionType property.
     */
     public function setPermissionType(?TeamsAppResourceSpecificPermissionType $value): void {
@@ -148,7 +148,7 @@ class TeamsAppResourceSpecificPermission implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Sets the permissionValue property value. The permissionValue property
+     * Sets the permissionValue property value. The name of the resource-specific permission.
      * @param string|null $value Value to set for the permissionValue property.
     */
     public function setPermissionValue(?string $value): void {

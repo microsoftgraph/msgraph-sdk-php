@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class OrgContact extends DirectoryObject implements Parsable 
 {
     /**
-     * Instantiates a new OrgContact and sets the default values.
+     * Instantiates a new orgContact and sets the default values.
     */
     public function __construct() {
         parent::__construct();

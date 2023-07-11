@@ -31,11 +31,10 @@ class AssignRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Not yet documented
+     * Invoke action assign
      * @param AssignPostRequestBody $body The request body
      * @param AssignRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-deviceconfig-devicecompliancepolicy-assign?view=graph-rest-1.0 Find more info here
     */
     public function post(AssignPostRequestBody $body, ?AssignRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -51,7 +50,7 @@ class AssignRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Not yet documented
+     * Invoke action assign
      * @param AssignPostRequestBody $body The request body
      * @param AssignRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

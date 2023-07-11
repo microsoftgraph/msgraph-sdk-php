@@ -53,10 +53,9 @@ class UserStateSummaryRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the userInstallStateSummary objects.
+     * The list of installation states for this eBook.
      * @param UserStateSummaryRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-books-userinstallstatesummary-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?UserStateSummaryRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -72,11 +71,10 @@ class UserStateSummaryRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new userInstallStateSummary object.
+     * Create new navigation property to userStateSummary for deviceAppManagement
      * @param UserInstallStateSummary $body The request body
      * @param UserStateSummaryRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-books-userinstallstatesummary-create?view=graph-rest-1.0 Find more info here
     */
     public function post(UserInstallStateSummary $body, ?UserStateSummaryRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -92,7 +90,7 @@ class UserStateSummaryRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the userInstallStateSummary objects.
+     * The list of installation states for this eBook.
      * @param UserStateSummaryRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +111,7 @@ class UserStateSummaryRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new userInstallStateSummary object.
+     * Create new navigation property to userStateSummary for deviceAppManagement
      * @param UserInstallStateSummary $body The request body
      * @param UserStateSummaryRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

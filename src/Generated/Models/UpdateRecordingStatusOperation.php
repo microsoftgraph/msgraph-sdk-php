@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UpdateRecordingStatusOperation extends CommsOperation implements Parsable 
 {
     /**
-     * Instantiates a new UpdateRecordingStatusOperation and sets the default values.
+     * Instantiates a new updateRecordingStatusOperation and sets the default values.
     */
     public function __construct() {
         parent::__construct();

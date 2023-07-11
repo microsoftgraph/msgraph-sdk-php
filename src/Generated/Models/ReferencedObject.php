@@ -81,7 +81,7 @@ class ReferencedObject implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the referencedObjectName property value. The referencedObjectName property
+     * Gets the referencedObjectName property value. Name of the referenced object. Must match one of the objects in the directory definition.
      * @return string|null
     */
     public function getReferencedObjectName(): ?string {
@@ -93,7 +93,7 @@ class ReferencedObject implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the referencedProperty property value. The referencedProperty property
+     * Gets the referencedProperty property value. Currently not supported. Name of the property in the referenced object, the value for which is used as the reference.
      * @return string|null
     */
     public function getReferencedProperty(): ?string {
@@ -140,7 +140,7 @@ class ReferencedObject implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the referencedObjectName property value. The referencedObjectName property
+     * Sets the referencedObjectName property value. Name of the referenced object. Must match one of the objects in the directory definition.
      * @param string|null $value Value to set for the referencedObjectName property.
     */
     public function setReferencedObjectName(?string $value): void {
@@ -148,7 +148,7 @@ class ReferencedObject implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the referencedProperty property value. The referencedProperty property
+     * Sets the referencedProperty property value. Currently not supported. Name of the property in the referenced object, the value for which is used as the reference.
      * @param string|null $value Value to set for the referencedProperty property.
     */
     public function setReferencedProperty(?string $value): void {

@@ -13,6 +13,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class DetectedApp extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new detectedApp and sets the default values.
     */
     public function __construct() {
@@ -140,6 +145,7 @@ class DetectedApp extends Entity implements Parsable
         $writer->writeIntegerValue('deviceCount', $this->getDeviceCount());
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeCollectionOfObjectValues('managedDevices', $this->getManagedDevices());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeEnumValue('platform', $this->getPlatform());
         $writer->writeStringValue('publisher', $this->getPublisher());
         $writer->writeIntegerValue('sizeInByte', $this->getSizeInByte());

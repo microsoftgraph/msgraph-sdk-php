@@ -7,10 +7,13 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
+/**
+ * Contains properties and inherited properties for Win32 apps.
+*/
 class Win32LobApp extends MobileLobApp implements Parsable 
 {
     /**
-     * Instantiates a new Win32LobApp and sets the default values.
+     * Instantiates a new win32LobApp and sets the default values.
     */
     public function __construct() {
         parent::__construct();

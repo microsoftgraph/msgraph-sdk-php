@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class ConditionalAccessPolicyCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new ConditionalAccessPolicyCollectionResponse and sets the default values.
+     * Instantiates a new conditionalAccessPolicyCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

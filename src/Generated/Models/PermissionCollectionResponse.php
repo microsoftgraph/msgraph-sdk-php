@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class PermissionCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new PermissionCollectionResponse and sets the default values.
+     * Instantiates a new permissionCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

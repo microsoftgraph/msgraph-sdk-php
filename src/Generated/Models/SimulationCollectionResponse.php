@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class SimulationCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new SimulationCollectionResponse and sets the default values.
+     * Instantiates a new simulationCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

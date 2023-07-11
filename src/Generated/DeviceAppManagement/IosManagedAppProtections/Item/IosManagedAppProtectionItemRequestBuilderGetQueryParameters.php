@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceAppManagement\IosManagedAppProtections
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read properties and relationships of the iosManagedAppProtection object.
+ * iOS managed app policies.
 */
 class IosManagedAppProtectionItemRequestBuilderGetQueryParameters 
 {

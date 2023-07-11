@@ -6,6 +6,10 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Catalogs\Item\AccessPackages\AccessPackagesRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Catalogs\Item\CustomWorkflowExtensions\CustomWorkflowExtensionsRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Catalogs\Item\ResourceRoles\ResourceRolesRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Catalogs\Item\Resources\ResourcesRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Catalogs\Item\ResourceScopes\ResourceScopesRequestBuilder;
 use Microsoft\Graph\Generated\Models\AccessPackageCatalog;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -23,6 +27,34 @@ class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder
     */
     public function accessPackages(): AccessPackagesRequestBuilder {
         return new AccessPackagesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the customWorkflowExtensions property of the microsoft.graph.accessPackageCatalog entity.
+    */
+    public function customWorkflowExtensions(): CustomWorkflowExtensionsRequestBuilder {
+        return new CustomWorkflowExtensionsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the resourceRoles property of the microsoft.graph.accessPackageCatalog entity.
+    */
+    public function resourceRoles(): ResourceRolesRequestBuilder {
+        return new ResourceRolesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the resources property of the microsoft.graph.accessPackageCatalog entity.
+    */
+    public function resources(): ResourcesRequestBuilder {
+        return new ResourcesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the resourceScopes property of the microsoft.graph.accessPackageCatalog entity.
+    */
+    public function resourceScopes(): ResourceScopesRequestBuilder {
+        return new ResourceScopesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

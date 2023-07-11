@@ -6,10 +6,13 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * A base complex type to store the detection or requirement rule data for a Win32 LOB app.
+*/
 class Win32LobAppProductCodeRule extends Win32LobAppRule implements Parsable 
 {
     /**
-     * Instantiates a new Win32LobAppProductCodeRule and sets the default values.
+     * Instantiates a new win32LobAppProductCodeRule and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -32,10 +35,23 @@ class Win32LobAppProductCodeRule extends Win32LobAppRule implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'productCode' => fn(ParseNode $n) => $o->setProductCode($n->getStringValue()),
             'productVersion' => fn(ParseNode $n) => $o->setProductVersion($n->getStringValue()),
             'productVersionOperator' => fn(ParseNode $n) => $o->setProductVersionOperator($n->getEnumValue(Win32LobAppRuleOperator::class)),
         ]);
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -80,9 +96,18 @@ class Win32LobAppProductCodeRule extends Win32LobAppRule implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('productCode', $this->getProductCode());
         $writer->writeStringValue('productVersion', $this->getProductVersion());
         $writer->writeEnumValue('productVersionOperator', $this->getProductVersionOperator());
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class AuthenticationStrengthPolicy extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new AuthenticationStrengthPolicy and sets the default values.
+     * Instantiates a new authenticationStrengthPolicy and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -103,6 +103,7 @@ class AuthenticationStrengthPolicy extends Entity implements Parsable
             'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'modifiedDateTime' => fn(ParseNode $n) => $o->setModifiedDateTime($n->getDateTimeValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'policyType' => fn(ParseNode $n) => $o->setPolicyType($n->getEnumValue(AuthenticationStrengthPolicyType::class)),
             'requirementsSatisfied' => fn(ParseNode $n) => $o->setRequirementsSatisfied($n->getEnumValue(AuthenticationStrengthRequirements::class)),
         ]);
@@ -118,6 +119,18 @@ class AuthenticationStrengthPolicy extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'modifiedDateTime'");
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -156,6 +169,7 @@ class AuthenticationStrengthPolicy extends Entity implements Parsable
         $writer->writeStringValue('description', $this->getDescription());
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeDateTimeValue('modifiedDateTime', $this->getModifiedDateTime());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeEnumValue('policyType', $this->getPolicyType());
         $writer->writeEnumValue('requirementsSatisfied', $this->getRequirementsSatisfied());
     }
@@ -206,6 +220,14 @@ class AuthenticationStrengthPolicy extends Entity implements Parsable
     */
     public function setModifiedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('modifiedDateTime', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

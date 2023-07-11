@@ -82,9 +82,10 @@ class SchemaRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get schema from servicePrincipals
+     * Retrieve the schema for a given synchronization job or template.
      * @param SchemaRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/synchronization-synchronizationschema-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?SchemaRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -100,10 +101,11 @@ class SchemaRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property schema in servicePrincipals
+     * Update the synchronization schema for a given job or template. This method fully replaces the current schema with the one provided in the request. To update the schema of a template, make the call on the application object. You must be the owner of the application.
      * @param SynchronizationSchema $body The request body
      * @param SchemaRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/synchronization-synchronizationschema-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(SynchronizationSchema $body, ?SchemaRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -136,7 +138,7 @@ class SchemaRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get schema from servicePrincipals
+     * Retrieve the schema for a given synchronization job or template.
      * @param SchemaRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -157,7 +159,7 @@ class SchemaRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property schema in servicePrincipals
+     * Update the synchronization schema for a given job or template. This method fully replaces the current schema with the one provided in the request. To update the schema of a template, make the call on the application object. You must be the owner of the application.
      * @param SynchronizationSchema $body The request body
      * @param SchemaRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

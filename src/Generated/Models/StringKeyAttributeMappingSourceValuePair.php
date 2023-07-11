@@ -69,7 +69,7 @@ class StringKeyAttributeMappingSourceValuePair implements AdditionalDataHolder, 
     }
 
     /**
-     * Gets the key property value. The key property
+     * Gets the key property value. The name of the parameter.
      * @return string|null
     */
     public function getKey(): ?string {
@@ -93,7 +93,7 @@ class StringKeyAttributeMappingSourceValuePair implements AdditionalDataHolder, 
     }
 
     /**
-     * Gets the value property value. The value property
+     * Gets the value property value. The value of the parameter.
      * @return AttributeMappingSource|null
     */
     public function getValue(): ?AttributeMappingSource {
@@ -132,7 +132,7 @@ class StringKeyAttributeMappingSourceValuePair implements AdditionalDataHolder, 
     }
 
     /**
-     * Sets the key property value. The key property
+     * Sets the key property value. The name of the parameter.
      * @param string|null $value Value to set for the key property.
     */
     public function setKey(?string $value): void {
@@ -148,7 +148,7 @@ class StringKeyAttributeMappingSourceValuePair implements AdditionalDataHolder, 
     }
 
     /**
-     * Sets the value property value. The value property
+     * Sets the value property value. The value of the parameter.
      * @param AttributeMappingSource|null $value Value to set for the value property.
     */
     public function setValue(?AttributeMappingSource $value): void {

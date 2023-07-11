@@ -9,6 +9,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookChartLegend extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new workbookChartLegend and sets the default values.
     */
     public function __construct() {
@@ -93,6 +98,7 @@ class WorkbookChartLegend extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeObjectValue('format', $this->getFormat());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeBooleanValue('overlay', $this->getOverlay());
         $writer->writeStringValue('position', $this->getPosition());
         $writer->writeBooleanValue('visible', $this->getVisible());

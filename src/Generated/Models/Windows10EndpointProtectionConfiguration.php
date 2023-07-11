@@ -8,10 +8,13 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 use Psr\Http\Message\StreamInterface;
 
+/**
+ * This topic provides descriptions of the declared methods, properties and relationships exposed by the Windows10EndpointProtectionConfiguration resource.
+*/
 class Windows10EndpointProtectionConfiguration extends DeviceConfiguration implements Parsable 
 {
     /**
-     * Instantiates a new Windows10EndpointProtectionConfiguration and sets the default values.
+     * Instantiates a new windows10EndpointProtectionConfiguration and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -10,7 +10,12 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class ShiftItem extends ScheduleEntity implements Parsable 
 {
     /**
-     * Instantiates a new ShiftItem and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new shiftItem and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -92,6 +97,7 @@ class ShiftItem extends ScheduleEntity implements Parsable
         $writer->writeCollectionOfObjectValues('activities', $this->getActivities());
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeStringValue('notes', $this->getNotes());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

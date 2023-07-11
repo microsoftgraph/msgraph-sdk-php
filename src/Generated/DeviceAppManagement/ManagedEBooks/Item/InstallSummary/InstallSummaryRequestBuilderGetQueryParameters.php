@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\Insta
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read properties and relationships of the eBookInstallSummary object.
+ * Mobile App Install Summary.
 */
 class InstallSummaryRequestBuilderGetQueryParameters 
 {

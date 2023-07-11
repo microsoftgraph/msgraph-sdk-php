@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class AppManagementPolicy extends PolicyBase implements Parsable 
 {
     /**
-     * Instantiates a new AppManagementPolicy and sets the default values.
+     * Instantiates a new appManagementPolicy and sets the default values.
     */
     public function __construct() {
         parent::__construct();

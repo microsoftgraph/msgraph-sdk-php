@@ -10,7 +10,12 @@ use Microsoft\Kiota\Abstractions\Types\Date;
 class PrintUsage extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new PrintUsage and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new printUsage and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -200,6 +205,7 @@ class PrintUsage extends Entity implements Parsable
         $writer->writeIntegerValue('doubleSidedSheetCount', $this->getDoubleSidedSheetCount());
         $writer->writeIntegerValue('incompleteJobCount', $this->getIncompleteJobCount());
         $writer->writeIntegerValue('mediaSheetCount', $this->getMediaSheetCount());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeIntegerValue('pageCount', $this->getPageCount());
         $writer->writeIntegerValue('singleSidedSheetCount', $this->getSingleSidedSheetCount());
         $writer->writeDateValue('usageDate', $this->getUsageDate());

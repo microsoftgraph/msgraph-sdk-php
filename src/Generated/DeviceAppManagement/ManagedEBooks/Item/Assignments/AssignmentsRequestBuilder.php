@@ -53,10 +53,9 @@ class AssignmentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the managedEBookAssignment objects.
+     * The list of assignments for this eBook.
      * @param AssignmentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-books-managedebookassignment-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?AssignmentsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -72,11 +71,10 @@ class AssignmentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new iosVppEBookAssignment object.
+     * Create new navigation property to assignments for deviceAppManagement
      * @param ManagedEBookAssignment $body The request body
      * @param AssignmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-books-iosvppebookassignment-create?view=graph-rest-1.0 Find more info here
     */
     public function post(ManagedEBookAssignment $body, ?AssignmentsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -92,7 +90,7 @@ class AssignmentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the managedEBookAssignment objects.
+     * The list of assignments for this eBook.
      * @param AssignmentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +111,7 @@ class AssignmentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new iosVppEBookAssignment object.
+     * Create new navigation property to assignments for deviceAppManagement
      * @param ManagedEBookAssignment $body The request body
      * @param AssignmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

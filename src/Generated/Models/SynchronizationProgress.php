@@ -57,7 +57,7 @@ class SynchronizationProgress implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the completedUnits property value. The completedUnits property
+     * Gets the completedUnits property value. The numerator of a progress ratio; the number of units of changes already processed.
      * @return int|null
     */
     public function getCompletedUnits(): ?int {
@@ -96,7 +96,7 @@ class SynchronizationProgress implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the progressObservationDateTime property value. The progressObservationDateTime property
+     * Gets the progressObservationDateTime property value. The time of a progress observation as an offset in minutes from UTC.
      * @return DateTime|null
     */
     public function getProgressObservationDateTime(): ?DateTime {
@@ -108,7 +108,7 @@ class SynchronizationProgress implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the totalUnits property value. The totalUnits property
+     * Gets the totalUnits property value. The denominator of a progress ratio; a number of units of changes to be processed to accomplish synchronization.
      * @return int|null
     */
     public function getTotalUnits(): ?int {
@@ -120,7 +120,7 @@ class SynchronizationProgress implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the units property value. The units property
+     * Gets the units property value. An optional description of the units.
      * @return string|null
     */
     public function getUnits(): ?string {
@@ -161,7 +161,7 @@ class SynchronizationProgress implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the completedUnits property value. The completedUnits property
+     * Sets the completedUnits property value. The numerator of a progress ratio; the number of units of changes already processed.
      * @param int|null $value Value to set for the completedUnits property.
     */
     public function setCompletedUnits(?int $value): void {
@@ -177,7 +177,7 @@ class SynchronizationProgress implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the progressObservationDateTime property value. The progressObservationDateTime property
+     * Sets the progressObservationDateTime property value. The time of a progress observation as an offset in minutes from UTC.
      * @param DateTime|null $value Value to set for the progressObservationDateTime property.
     */
     public function setProgressObservationDateTime(?DateTime $value): void {
@@ -185,7 +185,7 @@ class SynchronizationProgress implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the totalUnits property value. The totalUnits property
+     * Sets the totalUnits property value. The denominator of a progress ratio; a number of units of changes to be processed to accomplish synchronization.
      * @param int|null $value Value to set for the totalUnits property.
     */
     public function setTotalUnits(?int $value): void {
@@ -193,7 +193,7 @@ class SynchronizationProgress implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the units property value. The units property
+     * Sets the units property value. An optional description of the units.
      * @param string|null $value Value to set for the units property.
     */
     public function setUnits(?string $value): void {

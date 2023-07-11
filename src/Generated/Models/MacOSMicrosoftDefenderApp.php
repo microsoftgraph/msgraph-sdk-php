@@ -6,10 +6,18 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * Contains properties and inherited properties for the macOS Microsoft Defender App.
+*/
 class MacOSMicrosoftDefenderApp extends MobileApp implements Parsable 
 {
     /**
-     * Instantiates a new MacOSMicrosoftDefenderApp and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new macOSMicrosoftDefenderApp and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -41,6 +49,7 @@ class MacOSMicrosoftDefenderApp extends MobileApp implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
 }

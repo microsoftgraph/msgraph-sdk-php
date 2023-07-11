@@ -10,6 +10,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class BaseItem extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new baseItem and sets the default values.
     */
     public function __construct() {
@@ -205,6 +210,7 @@ class BaseItem extends Entity implements Parsable
         $writer->writeObjectValue('lastModifiedByUser', $this->getLastModifiedByUser());
         $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
         $writer->writeStringValue('name', $this->getName());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('parentReference', $this->getParentReference());
         $writer->writeStringValue('webUrl', $this->getWebUrl());
     }

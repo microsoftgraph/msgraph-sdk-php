@@ -12,7 +12,12 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class DelegatedAdminRelationship extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new DelegatedAdminRelationship and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new delegatedAdminRelationship and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -214,6 +219,7 @@ class DelegatedAdminRelationship extends Entity implements Parsable
         $writer->writeDateIntervalValue('duration', $this->getDuration());
         $writer->writeDateTimeValue('endDateTime', $this->getEndDateTime());
         $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfObjectValues('operations', $this->getOperations());
         $writer->writeCollectionOfObjectValues('requests', $this->getRequests());
         $writer->writeEnumValue('status', $this->getStatus());

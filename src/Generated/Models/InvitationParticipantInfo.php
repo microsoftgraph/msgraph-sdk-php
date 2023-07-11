@@ -18,7 +18,7 @@ class InvitationParticipantInfo implements AdditionalDataHolder, BackedModel, Pa
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new InvitationParticipantInfo and sets the default values.
+     * Instantiates a new invitationParticipantInfo and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

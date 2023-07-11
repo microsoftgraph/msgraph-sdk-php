@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class SharedWithChannelTeamInfoCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new SharedWithChannelTeamInfoCollectionResponse and sets the default values.
+     * Instantiates a new sharedWithChannelTeamInfoCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

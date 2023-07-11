@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class RoleDefinitionCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new RoleDefinitionCollectionResponse and sets the default values.
+     * Instantiates a new roleDefinitionCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

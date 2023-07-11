@@ -10,7 +10,12 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class EmailAuthenticationMethodConfiguration extends AuthenticationMethodConfiguration implements Parsable 
 {
     /**
-     * Instantiates a new EmailAuthenticationMethodConfiguration and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new emailAuthenticationMethodConfiguration and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -72,6 +77,7 @@ class EmailAuthenticationMethodConfiguration extends AuthenticationMethodConfigu
         parent::serialize($writer);
         $writer->writeEnumValue('allowExternalIdToUseEmailOtp', $this->getAllowExternalIdToUseEmailOtp());
         $writer->writeCollectionOfObjectValues('includeTargets', $this->getIncludeTargets());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

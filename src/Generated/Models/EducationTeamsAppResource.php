@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EducationTeamsAppResource extends EducationResource implements Parsable 
 {
     /**
-     * Instantiates a new EducationTeamsAppResource and sets the default values.
+     * Instantiates a new educationTeamsAppResource and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -58,9 +58,22 @@ class EducationTeamsAppResource extends EducationResource implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'appIconWebUrl' => fn(ParseNode $n) => $o->setAppIconWebUrl($n->getStringValue()),
             'appId' => fn(ParseNode $n) => $o->setAppId($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'teamsEmbeddedContentUrl' => fn(ParseNode $n) => $o->setTeamsEmbeddedContentUrl($n->getStringValue()),
             'webUrl' => fn(ParseNode $n) => $o->setWebUrl($n->getStringValue()),
         ]);
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -95,6 +108,7 @@ class EducationTeamsAppResource extends EducationResource implements Parsable
         parent::serialize($writer);
         $writer->writeStringValue('appIconWebUrl', $this->getAppIconWebUrl());
         $writer->writeStringValue('appId', $this->getAppId());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('teamsEmbeddedContentUrl', $this->getTeamsEmbeddedContentUrl());
         $writer->writeStringValue('webUrl', $this->getWebUrl());
     }
@@ -113,6 +127,14 @@ class EducationTeamsAppResource extends EducationResource implements Parsable
     */
     public function setAppId(?string $value): void {
         $this->getBackingStore()->set('appId', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

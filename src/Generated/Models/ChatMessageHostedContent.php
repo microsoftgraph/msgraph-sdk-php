@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ChatMessageHostedContent extends TeamworkHostedContent implements Parsable 
 {
     /**
-     * Instantiates a new ChatMessageHostedContent and sets the default values.
+     * Instantiates a new chatMessageHostedContent and sets the default values.
     */
     public function __construct() {
         parent::__construct();

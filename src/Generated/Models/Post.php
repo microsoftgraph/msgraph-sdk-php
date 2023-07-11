@@ -11,7 +11,12 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Post extends OutlookItem implements Parsable 
 {
     /**
-     * Instantiates a new Post and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new post and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -232,6 +237,7 @@ class Post extends OutlookItem implements Parsable
         $writer->writeObjectValue('inReplyTo', $this->getInReplyTo());
         $writer->writeCollectionOfObjectValues('multiValueExtendedProperties', $this->getMultiValueExtendedProperties());
         $writer->writeCollectionOfObjectValues('newParticipants', $this->getNewParticipants());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeDateTimeValue('receivedDateTime', $this->getReceivedDateTime());
         $writer->writeObjectValue('sender', $this->getSender());
         $writer->writeCollectionOfObjectValues('singleValueExtendedProperties', $this->getSingleValueExtendedProperties());

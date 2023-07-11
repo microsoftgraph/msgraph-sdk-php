@@ -10,7 +10,12 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Directory extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new Directory and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new directory and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -136,6 +141,7 @@ class Directory extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('customSecurityAttributeDefinitions', $this->getCustomSecurityAttributeDefinitions());
         $writer->writeCollectionOfObjectValues('deletedItems', $this->getDeletedItems());
         $writer->writeCollectionOfObjectValues('federationConfigurations', $this->getFederationConfigurations());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfObjectValues('onPremisesSynchronization', $this->getOnPremisesSynchronization());
     }
 

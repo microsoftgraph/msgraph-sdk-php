@@ -9,7 +9,12 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TeamsAppUpgradedEventMessageDetail extends EventMessageDetail implements Parsable 
 {
     /**
-     * Instantiates a new TeamsAppUpgradedEventMessageDetail and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new teamsAppUpgradedEventMessageDetail and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -81,6 +86,7 @@ class TeamsAppUpgradedEventMessageDetail extends EventMessageDetail implements P
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeObjectValue('initiator', $this->getInitiator());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('teamsAppDisplayName', $this->getTeamsAppDisplayName());
         $writer->writeStringValue('teamsAppId', $this->getTeamsAppId());
     }

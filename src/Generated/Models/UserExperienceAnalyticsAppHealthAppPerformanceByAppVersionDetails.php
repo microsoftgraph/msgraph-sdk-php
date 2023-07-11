@@ -114,6 +114,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails extends 
             'deviceCountWithCrashes' => fn(ParseNode $n) => $o->setDeviceCountWithCrashes($n->getIntegerValue()),
             'isLatestUsedVersion' => fn(ParseNode $n) => $o->setIsLatestUsedVersion($n->getBooleanValue()),
             'isMostUsedVersion' => fn(ParseNode $n) => $o->setIsMostUsedVersion($n->getBooleanValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ]);
     }
 
@@ -142,6 +143,18 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails extends 
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -155,6 +168,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails extends 
         $writer->writeIntegerValue('deviceCountWithCrashes', $this->getDeviceCountWithCrashes());
         $writer->writeBooleanValue('isLatestUsedVersion', $this->getIsLatestUsedVersion());
         $writer->writeBooleanValue('isMostUsedVersion', $this->getIsMostUsedVersion());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**
@@ -219,6 +233,14 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails extends 
     */
     public function setIsMostUsedVersion(?bool $value): void {
         $this->getBackingStore()->set('isMostUsedVersion', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
 }

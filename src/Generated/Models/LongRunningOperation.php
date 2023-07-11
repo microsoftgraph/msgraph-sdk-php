@@ -10,6 +10,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class LongRunningOperation extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new longRunningOperation and sets the default values.
     */
     public function __construct() {
@@ -115,6 +120,7 @@ class LongRunningOperation extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
         $writer->writeDateTimeValue('lastActionDateTime', $this->getLastActionDateTime());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('resourceLocation', $this->getResourceLocation());
         $writer->writeEnumValue('status', $this->getStatus());
         $writer->writeStringValue('statusDetail', $this->getStatusDetail());

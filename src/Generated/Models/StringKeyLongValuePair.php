@@ -69,7 +69,7 @@ class StringKeyLongValuePair implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the key property value. The key property
+     * Gets the key property value. The mapping of the user type from the source system to the target system. For example:User to User - For Azure AD to Azure AD synchronization worker to user - For Workday to Azure AD synchronization.
      * @return string|null
     */
     public function getKey(): ?string {
@@ -93,7 +93,7 @@ class StringKeyLongValuePair implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the value property value. The value property
+     * Gets the value property value. Total number of synchronized objects.
      * @return int|null
     */
     public function getValue(): ?int {
@@ -132,7 +132,7 @@ class StringKeyLongValuePair implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the key property value. The key property
+     * Sets the key property value. The mapping of the user type from the source system to the target system. For example:User to User - For Azure AD to Azure AD synchronization worker to user - For Workday to Azure AD synchronization.
      * @param string|null $value Value to set for the key property.
     */
     public function setKey(?string $value): void {
@@ -148,7 +148,7 @@ class StringKeyLongValuePair implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the value property value. The value property
+     * Sets the value property value. Total number of synchronized objects.
      * @param int|null $value Value to set for the value property.
     */
     public function setValue(?int $value): void {

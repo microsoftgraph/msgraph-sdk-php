@@ -6,10 +6,13 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * A class that represents a contained app of a WindowsUniversalAppX app.
+*/
 class WindowsUniversalAppXContainedApp extends MobileContainedApp implements Parsable 
 {
     /**
-     * Instantiates a new WindowsUniversalAppXContainedApp and sets the default values.
+     * Instantiates a new windowsUniversalAppXContainedApp and sets the default values.
     */
     public function __construct() {
         parent::__construct();

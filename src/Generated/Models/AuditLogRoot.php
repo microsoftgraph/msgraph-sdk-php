@@ -10,7 +10,12 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class AuditLogRoot extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new AuditLogRoot and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new auditLogRoot and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -87,6 +92,7 @@ class AuditLogRoot extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('directoryAudits', $this->getDirectoryAudits());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfObjectValues('provisioning', $this->getProvisioning());
         $writer->writeCollectionOfObjectValues('signIns', $this->getSignIns());
     }

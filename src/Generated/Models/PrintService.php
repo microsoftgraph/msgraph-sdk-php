@@ -10,6 +10,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class PrintService extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new printService and sets the default values.
     */
     public function __construct() {
@@ -57,6 +62,7 @@ class PrintService extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('endpoints', $this->getEndpoints());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

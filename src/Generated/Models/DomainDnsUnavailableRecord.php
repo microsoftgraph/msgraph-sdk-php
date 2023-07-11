@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DomainDnsUnavailableRecord extends DomainDnsRecord implements Parsable 
 {
     /**
-     * Instantiates a new DomainDnsUnavailableRecord and sets the default values.
+     * Instantiates a new domainDnsUnavailableRecord and sets the default values.
     */
     public function __construct() {
         parent::__construct();

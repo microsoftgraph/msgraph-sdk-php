@@ -10,6 +10,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class FederatedIdentityCredential extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new federatedIdentityCredential and sets the default values.
     */
     public function __construct() {
@@ -119,6 +124,7 @@ class FederatedIdentityCredential extends Entity implements Parsable
         $writer->writeStringValue('description', $this->getDescription());
         $writer->writeStringValue('issuer', $this->getIssuer());
         $writer->writeStringValue('name', $this->getName());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('subject', $this->getSubject());
     }
 

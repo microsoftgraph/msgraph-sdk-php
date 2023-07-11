@@ -10,7 +10,12 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class CallRecordingEventMessageDetail extends EventMessageDetail implements Parsable 
 {
     /**
-     * Instantiates a new CallRecordingEventMessageDetail and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new callRecordingEventMessageDetail and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -140,6 +145,7 @@ class CallRecordingEventMessageDetail extends EventMessageDetail implements Pars
         $writer->writeStringValue('callRecordingUrl', $this->getCallRecordingUrl());
         $writer->writeObjectValue('initiator', $this->getInitiator());
         $writer->writeObjectValue('meetingOrganizer', $this->getMeetingOrganizer());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

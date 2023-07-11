@@ -56,10 +56,9 @@ class AndroidManagedAppProtectionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a androidManagedAppProtection.
+     * Delete navigation property androidManagedAppProtections for deviceAppManagement
      * @param AndroidManagedAppProtectionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-mam-androidmanagedappprotection-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?AndroidManagedAppProtectionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -75,10 +74,9 @@ class AndroidManagedAppProtectionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the androidManagedAppProtection object.
+     * Android managed app policies.
      * @param AndroidManagedAppProtectionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-mam-androidmanagedappprotection-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?AndroidManagedAppProtectionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -94,11 +92,10 @@ class AndroidManagedAppProtectionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a androidManagedAppProtection object.
+     * Update the navigation property androidManagedAppProtections in deviceAppManagement
      * @param AndroidManagedAppProtection $body The request body
      * @param AndroidManagedAppProtectionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-mam-androidmanagedappprotection-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(AndroidManagedAppProtection $body, ?AndroidManagedAppProtectionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -114,7 +111,7 @@ class AndroidManagedAppProtectionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a androidManagedAppProtection.
+     * Delete navigation property androidManagedAppProtections for deviceAppManagement
      * @param AndroidManagedAppProtectionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -131,7 +128,7 @@ class AndroidManagedAppProtectionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the androidManagedAppProtection object.
+     * Android managed app policies.
      * @param AndroidManagedAppProtectionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -152,7 +149,7 @@ class AndroidManagedAppProtectionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a androidManagedAppProtection object.
+     * Update the navigation property androidManagedAppProtections in deviceAppManagement
      * @param AndroidManagedAppProtection $body The request body
      * @param AndroidManagedAppProtectionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

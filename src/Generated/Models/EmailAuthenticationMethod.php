@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EmailAuthenticationMethod extends AuthenticationMethod implements Parsable 
 {
     /**
-     * Instantiates a new EmailAuthenticationMethod and sets the default values.
+     * Instantiates a new emailAuthenticationMethod and sets the default values.
     */
     public function __construct() {
         parent::__construct();

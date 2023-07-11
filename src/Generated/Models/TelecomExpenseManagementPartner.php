@@ -13,6 +13,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TelecomExpenseManagementPartner extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new telecomExpenseManagementPartner and sets the default values.
     */
     public function __construct() {
@@ -113,6 +118,7 @@ class TelecomExpenseManagementPartner extends Entity implements Parsable
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeBooleanValue('enabled', $this->getEnabled());
         $writer->writeDateTimeValue('lastConnectionDateTime', $this->getLastConnectionDateTime());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('url', $this->getUrl());
     }
 

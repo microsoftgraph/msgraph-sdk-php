@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class AgreementFileVersionCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new AgreementFileVersionCollectionResponse and sets the default values.
+     * Instantiates a new agreementFileVersionCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -9,7 +9,12 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class IpEvidence extends AlertEvidence implements Parsable 
 {
     /**
-     * Instantiates a new IpEvidence and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new ipEvidence and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -68,6 +73,7 @@ class IpEvidence extends AlertEvidence implements Parsable
         parent::serialize($writer);
         $writer->writeStringValue('countryLetterCode', $this->getCountryLetterCode());
         $writer->writeStringValue('ipAddress', $this->getIpAddress());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

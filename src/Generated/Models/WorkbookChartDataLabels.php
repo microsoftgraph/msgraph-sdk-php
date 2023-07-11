@@ -9,6 +9,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookChartDataLabels extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new workbookChartDataLabels and sets the default values.
     */
     public function __construct() {
@@ -158,6 +163,7 @@ class WorkbookChartDataLabels extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeObjectValue('format', $this->getFormat());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('position', $this->getPosition());
         $writer->writeStringValue('separator', $this->getSeparator());
         $writer->writeBooleanValue('showBubbleSize', $this->getShowBubbleSize());

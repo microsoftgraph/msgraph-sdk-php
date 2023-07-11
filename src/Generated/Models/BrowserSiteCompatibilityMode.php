@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Enum;
 
 class BrowserSiteCompatibilityMode extends Enum {
-    public const ESCAPED_DEFAULT = 'default';
+    public const DEFAULT = 'default';
     public const INTERNET_EXPLORER8_ENTERPRISE = 'internetExplorer8Enterprise';
     public const INTERNET_EXPLORER7_ENTERPRISE = 'internetExplorer7Enterprise';
     public const INTERNET_EXPLORER11 = 'internetExplorer11';

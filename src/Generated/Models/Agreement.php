@@ -11,6 +11,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Agreement extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new agreement and sets the default values.
     */
     public function __construct() {
@@ -156,6 +161,7 @@ class Agreement extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('files', $this->getFiles());
         $writer->writeBooleanValue('isPerDeviceAcceptanceRequired', $this->getIsPerDeviceAcceptanceRequired());
         $writer->writeBooleanValue('isViewingBeforeAcceptanceRequired', $this->getIsViewingBeforeAcceptanceRequired());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('termsExpiration', $this->getTermsExpiration());
         $writer->writeDateIntervalValue('userReacceptRequiredFrequency', $this->getUserReacceptRequiredFrequency());
     }

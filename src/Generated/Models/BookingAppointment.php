@@ -8,10 +8,18 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
+/**
+ * Represents a booked appointment of a service by a customer in a business.
+*/
 class BookingAppointment extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new BookingAppointment and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new bookingAppointment and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -375,6 +383,7 @@ class BookingAppointment extends Entity implements Parsable
         $writer->writeBooleanValue('isLocationOnline', $this->getIsLocationOnline());
         $writer->writeStringValue('joinWebUrl', $this->getJoinWebUrl());
         $writer->writeIntegerValue('maximumAttendeesCount', $this->getMaximumAttendeesCount());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeBooleanValue('optOutOfCustomerEmail', $this->getOptOutOfCustomerEmail());
         $writer->writeDateIntervalValue('postBuffer', $this->getPostBuffer());
         $writer->writeDateIntervalValue('preBuffer', $this->getPreBuffer());

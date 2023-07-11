@@ -8,6 +8,7 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Security\EdiscoveryReviewSet;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\ReviewSets\Item\MicrosoftGraphSecurityAddToReviewSet\MicrosoftGraphSecurityAddToReviewSetRequestBuilder;
+use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\ReviewSets\Item\MicrosoftGraphSecurityExport\MicrosoftGraphSecurityExportRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\ReviewSets\Item\Queries\QueriesRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -24,6 +25,13 @@ class EdiscoveryReviewSetItemRequestBuilder extends BaseRequestBuilder
     */
     public function microsoftGraphSecurityAddToReviewSet(): MicrosoftGraphSecurityAddToReviewSetRequestBuilder {
         return new MicrosoftGraphSecurityAddToReviewSetRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the export method.
+    */
+    public function microsoftGraphSecurityExport(): MicrosoftGraphSecurityExportRequestBuilder {
+        return new MicrosoftGraphSecurityExportRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

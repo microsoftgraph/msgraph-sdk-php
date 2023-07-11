@@ -32,10 +32,9 @@ class ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder extends BaseReque
     }
 
     /**
-     * Deletes a importedWindowsAutopilotDeviceIdentity.
+     * Delete navigation property importedWindowsAutopilotDeviceIdentities for deviceManagement
      * @param ImportedWindowsAutopilotDeviceIdentityItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-enrollment-importedwindowsautopilotdeviceidentity-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?ImportedWindowsAutopilotDeviceIdentityItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -51,10 +50,9 @@ class ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder extends BaseReque
     }
 
     /**
-     * Read properties and relationships of the importedWindowsAutopilotDeviceIdentity object.
+     * Collection of imported Windows autopilot devices.
      * @param ImportedWindowsAutopilotDeviceIdentityItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-enrollment-importedwindowsautopilotdeviceidentity-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ImportedWindowsAutopilotDeviceIdentityItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -89,7 +87,7 @@ class ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder extends BaseReque
     }
 
     /**
-     * Deletes a importedWindowsAutopilotDeviceIdentity.
+     * Delete navigation property importedWindowsAutopilotDeviceIdentities for deviceManagement
      * @param ImportedWindowsAutopilotDeviceIdentityItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -106,7 +104,7 @@ class ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder extends BaseReque
     }
 
     /**
-     * Read properties and relationships of the importedWindowsAutopilotDeviceIdentity object.
+     * Collection of imported Windows autopilot devices.
      * @param ImportedWindowsAutopilotDeviceIdentityItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

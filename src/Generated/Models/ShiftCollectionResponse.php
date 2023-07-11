@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class ShiftCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new ShiftCollectionResponse and sets the default values.
+     * Instantiates a new shiftCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

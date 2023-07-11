@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Applications\Item\Synchronization;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get synchronization from applications
+ * Represents the capability for Azure Active Directory (Azure AD) identity synchronization through the Microsoft Graph API.
 */
 class SynchronizationRequestBuilderGetQueryParameters 
 {

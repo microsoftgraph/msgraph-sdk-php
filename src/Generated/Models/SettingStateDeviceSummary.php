@@ -12,6 +12,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SettingStateDeviceSummary extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new settingStateDeviceSummary and sets the default values.
     */
     public function __construct() {
@@ -166,6 +171,7 @@ class SettingStateDeviceSummary extends Entity implements Parsable
         $writer->writeStringValue('instancePath', $this->getInstancePath());
         $writer->writeIntegerValue('nonCompliantDeviceCount', $this->getNonCompliantDeviceCount());
         $writer->writeIntegerValue('notApplicableDeviceCount', $this->getNotApplicableDeviceCount());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeIntegerValue('remediatedDeviceCount', $this->getRemediatedDeviceCount());
         $writer->writeStringValue('settingName', $this->getSettingName());
         $writer->writeIntegerValue('unknownDeviceCount', $this->getUnknownDeviceCount());

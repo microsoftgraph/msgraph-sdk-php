@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class OpenShiftChangeRequest extends ScheduleChangeRequest implements Parsable 
 {
     /**
-     * Instantiates a new OpenShiftChangeRequest and sets the default values.
+     * Instantiates a new openShiftChangeRequest and sets the default values.
     */
     public function __construct() {
         parent::__construct();

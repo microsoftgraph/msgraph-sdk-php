@@ -154,6 +154,7 @@ class MobileApp extends Entity implements Parsable
             'largeIcon' => fn(ParseNode $n) => $o->setLargeIcon($n->getObjectValue([MimeContent::class, 'createFromDiscriminatorValue'])),
             'lastModifiedDateTime' => fn(ParseNode $n) => $o->setLastModifiedDateTime($n->getDateTimeValue()),
             'notes' => fn(ParseNode $n) => $o->setNotes($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'owner' => fn(ParseNode $n) => $o->setOwner($n->getStringValue()),
             'privacyInformationUrl' => fn(ParseNode $n) => $o->setPrivacyInformationUrl($n->getStringValue()),
             'publisher' => fn(ParseNode $n) => $o->setPublisher($n->getStringValue()),
@@ -222,6 +223,18 @@ class MobileApp extends Entity implements Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
+    }
+
+    /**
      * Gets the owner property value. The owner of the app.
      * @return string|null
     */
@@ -286,6 +299,7 @@ class MobileApp extends Entity implements Parsable
         $writer->writeObjectValue('largeIcon', $this->getLargeIcon());
         $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
         $writer->writeStringValue('notes', $this->getNotes());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('owner', $this->getOwner());
         $writer->writeStringValue('privacyInformationUrl', $this->getPrivacyInformationUrl());
         $writer->writeStringValue('publisher', $this->getPublisher());
@@ -378,6 +392,14 @@ class MobileApp extends Entity implements Parsable
     */
     public function setNotes(?string $value): void {
         $this->getBackingStore()->set('notes', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

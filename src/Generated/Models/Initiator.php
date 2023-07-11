@@ -9,7 +9,12 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Initiator extends Identity implements Parsable 
 {
     /**
-     * Instantiates a new Initiator and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new initiator and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -55,6 +60,7 @@ class Initiator extends Identity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeEnumValue('initiatorType', $this->getInitiatorType());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

@@ -32,10 +32,9 @@ class DeviceConfigurationUserStatusItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a deviceConfigurationUserStatus.
+     * Delete navigation property userStatuses for deviceManagement
      * @param DeviceConfigurationUserStatusItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationuserstatus-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?DeviceConfigurationUserStatusItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -51,10 +50,9 @@ class DeviceConfigurationUserStatusItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the deviceConfigurationUserStatus object.
+     * Device configuration installation status by user.
      * @param DeviceConfigurationUserStatusItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationuserstatus-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DeviceConfigurationUserStatusItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -70,11 +68,10 @@ class DeviceConfigurationUserStatusItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a deviceConfigurationUserStatus object.
+     * Update the navigation property userStatuses in deviceManagement
      * @param DeviceConfigurationUserStatus $body The request body
      * @param DeviceConfigurationUserStatusItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationuserstatus-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(DeviceConfigurationUserStatus $body, ?DeviceConfigurationUserStatusItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -90,7 +87,7 @@ class DeviceConfigurationUserStatusItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a deviceConfigurationUserStatus.
+     * Delete navigation property userStatuses for deviceManagement
      * @param DeviceConfigurationUserStatusItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -107,7 +104,7 @@ class DeviceConfigurationUserStatusItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the deviceConfigurationUserStatus object.
+     * Device configuration installation status by user.
      * @param DeviceConfigurationUserStatusItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -128,7 +125,7 @@ class DeviceConfigurationUserStatusItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a deviceConfigurationUserStatus object.
+     * Update the navigation property userStatuses in deviceManagement
      * @param DeviceConfigurationUserStatus $body The request body
      * @param DeviceConfigurationUserStatusItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

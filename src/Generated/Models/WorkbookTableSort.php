@@ -10,6 +10,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class WorkbookTableSort extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new workbookTableSort and sets the default values.
     */
     public function __construct() {
@@ -85,6 +90,7 @@ class WorkbookTableSort extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('fields', $this->getFields());
         $writer->writeBooleanValue('matchCase', $this->getMatchCase());
         $writer->writeStringValue('method', $this->getMethod());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

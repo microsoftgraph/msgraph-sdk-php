@@ -10,6 +10,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class AccessPackageQuestion extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new accessPackageQuestion and sets the default values.
     */
     public function __construct() {
@@ -119,6 +124,7 @@ class AccessPackageQuestion extends Entity implements Parsable
         $writer->writeBooleanValue('isAnswerEditable', $this->getIsAnswerEditable());
         $writer->writeBooleanValue('isRequired', $this->getIsRequired());
         $writer->writeCollectionOfObjectValues('localizations', $this->getLocalizations());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeIntegerValue('sequence', $this->getSequence());
         $writer->writeStringValue('text', $this->getText());
     }

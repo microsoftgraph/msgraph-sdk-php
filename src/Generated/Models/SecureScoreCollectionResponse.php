@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class SecureScoreCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new SecureScoreCollectionResponse and sets the default values.
+     * Instantiates a new secureScoreCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

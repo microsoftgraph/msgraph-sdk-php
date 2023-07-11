@@ -10,6 +10,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class SynchronizationJob extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new synchronizationJob and sets the default values.
     */
     public function __construct() {
@@ -41,7 +46,7 @@ class SynchronizationJob extends Entity implements Parsable
     }
 
     /**
-     * Gets the schedule property value. The schedule property
+     * Gets the schedule property value. Schedule used to run the job. Read-only.
      * @return SynchronizationSchedule|null
     */
     public function getSchedule(): ?SynchronizationSchedule {
@@ -53,7 +58,7 @@ class SynchronizationJob extends Entity implements Parsable
     }
 
     /**
-     * Gets the schema property value. The schema property
+     * Gets the schema property value. The synchronization schema configured for the job.
      * @return SynchronizationSchema|null
     */
     public function getSchema(): ?SynchronizationSchema {
@@ -65,7 +70,7 @@ class SynchronizationJob extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. The status property
+     * Gets the status property value. Status of the job, which includes when the job was last run, current job state, and errors.
      * @return SynchronizationStatus|null
     */
     public function getStatus(): ?SynchronizationStatus {
@@ -77,7 +82,7 @@ class SynchronizationJob extends Entity implements Parsable
     }
 
     /**
-     * Gets the synchronizationJobSettings property value. The synchronizationJobSettings property
+     * Gets the synchronizationJobSettings property value. Settings associated with the job. Some settings are inherited from the template.
      * @return array<KeyValuePair>|null
     */
     public function getSynchronizationJobSettings(): ?array {
@@ -91,7 +96,7 @@ class SynchronizationJob extends Entity implements Parsable
     }
 
     /**
-     * Gets the templateId property value. The templateId property
+     * Gets the templateId property value. Identifier of the synchronization template this job is based on.
      * @return string|null
     */
     public function getTemplateId(): ?string {
@@ -108,6 +113,7 @@ class SynchronizationJob extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('schedule', $this->getSchedule());
         $writer->writeObjectValue('schema', $this->getSchema());
         $writer->writeObjectValue('status', $this->getStatus());
@@ -116,7 +122,7 @@ class SynchronizationJob extends Entity implements Parsable
     }
 
     /**
-     * Sets the schedule property value. The schedule property
+     * Sets the schedule property value. Schedule used to run the job. Read-only.
      * @param SynchronizationSchedule|null $value Value to set for the schedule property.
     */
     public function setSchedule(?SynchronizationSchedule $value): void {
@@ -124,7 +130,7 @@ class SynchronizationJob extends Entity implements Parsable
     }
 
     /**
-     * Sets the schema property value. The schema property
+     * Sets the schema property value. The synchronization schema configured for the job.
      * @param SynchronizationSchema|null $value Value to set for the schema property.
     */
     public function setSchema(?SynchronizationSchema $value): void {
@@ -132,7 +138,7 @@ class SynchronizationJob extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. The status property
+     * Sets the status property value. Status of the job, which includes when the job was last run, current job state, and errors.
      * @param SynchronizationStatus|null $value Value to set for the status property.
     */
     public function setStatus(?SynchronizationStatus $value): void {
@@ -140,7 +146,7 @@ class SynchronizationJob extends Entity implements Parsable
     }
 
     /**
-     * Sets the synchronizationJobSettings property value. The synchronizationJobSettings property
+     * Sets the synchronizationJobSettings property value. Settings associated with the job. Some settings are inherited from the template.
      * @param array<KeyValuePair>|null $value Value to set for the synchronizationJobSettings property.
     */
     public function setSynchronizationJobSettings(?array $value): void {
@@ -148,7 +154,7 @@ class SynchronizationJob extends Entity implements Parsable
     }
 
     /**
-     * Sets the templateId property value. The templateId property
+     * Sets the templateId property value. Identifier of the synchronization template this job is based on.
      * @param string|null $value Value to set for the templateId property.
     */
     public function setTemplateId(?string $value): void {

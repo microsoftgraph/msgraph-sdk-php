@@ -15,7 +15,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Security extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new Security and sets the default values.
+     * Instantiates a new security and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -94,6 +94,7 @@ class Security extends Entity implements Parsable
             'attackSimulation' => fn(ParseNode $n) => $o->setAttackSimulation($n->getObjectValue([AttackSimulationRoot::class, 'createFromDiscriminatorValue'])),
             'cases' => fn(ParseNode $n) => $o->setCases($n->getObjectValue([CasesRoot::class, 'createFromDiscriminatorValue'])),
             'incidents' => fn(ParseNode $n) => $o->setIncidents($n->getCollectionOfObjectValues([Incident::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'secureScoreControlProfiles' => fn(ParseNode $n) => $o->setSecureScoreControlProfiles($n->getCollectionOfObjectValues([SecureScoreControlProfile::class, 'createFromDiscriminatorValue'])),
             'secureScores' => fn(ParseNode $n) => $o->setSecureScores($n->getCollectionOfObjectValues([SecureScore::class, 'createFromDiscriminatorValue'])),
             'threatIntelligence' => fn(ParseNode $n) => $o->setThreatIntelligence($n->getObjectValue([ThreatIntelligence::class, 'createFromDiscriminatorValue'])),
@@ -114,6 +115,18 @@ class Security extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'incidents'");
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -191,6 +204,7 @@ class Security extends Entity implements Parsable
         $writer->writeObjectValue('attackSimulation', $this->getAttackSimulation());
         $writer->writeObjectValue('cases', $this->getCases());
         $writer->writeCollectionOfObjectValues('incidents', $this->getIncidents());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfObjectValues('secureScoreControlProfiles', $this->getSecureScoreControlProfiles());
         $writer->writeCollectionOfObjectValues('secureScores', $this->getSecureScores());
         $writer->writeObjectValue('threatIntelligence', $this->getThreatIntelligence());
@@ -236,6 +250,14 @@ class Security extends Entity implements Parsable
     */
     public function setIncidents(?array $value): void {
         $this->getBackingStore()->set('incidents', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

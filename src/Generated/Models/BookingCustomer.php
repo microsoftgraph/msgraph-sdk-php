@@ -7,10 +7,18 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
+/**
+ * Represents a customer of the business.
+*/
 class BookingCustomer extends BookingCustomerBase implements Parsable 
 {
     /**
-     * Instantiates a new BookingCustomer and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new bookingCustomer and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -101,6 +109,7 @@ class BookingCustomer extends BookingCustomerBase implements Parsable
         $writer->writeCollectionOfObjectValues('addresses', $this->getAddresses());
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeStringValue('emailAddress', $this->getEmailAddress());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfObjectValues('phones', $this->getPhones());
     }
 

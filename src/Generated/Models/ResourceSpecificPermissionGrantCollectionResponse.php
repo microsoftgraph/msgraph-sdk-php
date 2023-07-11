@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class ResourceSpecificPermissionGrantCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new ResourceSpecificPermissionGrantCollectionResponse and sets the default values.
+     * Instantiates a new resourceSpecificPermissionGrantCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

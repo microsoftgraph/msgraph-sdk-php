@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\Users;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List properties and relationships of the user objects.
+ * The primary users associated with the managed device.
 */
 class UsersRequestBuilderGetQueryParameters 
 {

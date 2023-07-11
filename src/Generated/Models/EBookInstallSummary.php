@@ -6,8 +6,16 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * Contains properties for the installation summary of a book for a device.
+*/
 class EBookInstallSummary extends Entity implements Parsable 
 {
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
     /**
      * Instantiates a new eBookInstallSummary and sets the default values.
     */
@@ -124,6 +132,7 @@ class EBookInstallSummary extends Entity implements Parsable
         $writer->writeIntegerValue('installedUserCount', $this->getInstalledUserCount());
         $writer->writeIntegerValue('notInstalledDeviceCount', $this->getNotInstalledDeviceCount());
         $writer->writeIntegerValue('notInstalledUserCount', $this->getNotInstalledUserCount());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

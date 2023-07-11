@@ -19,7 +19,7 @@ class EmployeeExperience implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new EmployeeExperience and sets the default values.
+     * Instantiates a new employeeExperience and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

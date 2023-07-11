@@ -53,10 +53,9 @@ class ScheduledActionConfigurationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the deviceComplianceActionItem objects.
+     * The list of scheduled action configurations for this compliance policy. Compliance policy must have one and only one block scheduled action.
      * @param ScheduledActionConfigurationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-deviceconfig-devicecomplianceactionitem-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?ScheduledActionConfigurationsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -72,11 +71,10 @@ class ScheduledActionConfigurationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new deviceComplianceActionItem object.
+     * Create new navigation property to scheduledActionConfigurations for deviceManagement
      * @param DeviceComplianceActionItem $body The request body
      * @param ScheduledActionConfigurationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-deviceconfig-devicecomplianceactionitem-create?view=graph-rest-1.0 Find more info here
     */
     public function post(DeviceComplianceActionItem $body, ?ScheduledActionConfigurationsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -92,7 +90,7 @@ class ScheduledActionConfigurationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the deviceComplianceActionItem objects.
+     * The list of scheduled action configurations for this compliance policy. Compliance policy must have one and only one block scheduled action.
      * @param ScheduledActionConfigurationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +111,7 @@ class ScheduledActionConfigurationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new deviceComplianceActionItem object.
+     * Create new navigation property to scheduledActionConfigurations for deviceManagement
      * @param DeviceComplianceActionItem $body The request body
      * @param ScheduledActionConfigurationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

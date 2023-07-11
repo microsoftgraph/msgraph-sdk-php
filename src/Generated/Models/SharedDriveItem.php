@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class SharedDriveItem extends BaseItem implements Parsable 
 {
     /**
-     * Instantiates a new SharedDriveItem and sets the default values.
+     * Instantiates a new sharedDriveItem and sets the default values.
     */
     public function __construct() {
         parent::__construct();

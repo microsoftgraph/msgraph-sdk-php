@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Organization extends DirectoryObject implements Parsable 
 {
     /**
-     * Instantiates a new Organization and sets the default values.
+     * Instantiates a new organization and sets the default values.
     */
     public function __construct() {
         parent::__construct();

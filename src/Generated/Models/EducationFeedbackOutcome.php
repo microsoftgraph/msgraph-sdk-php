@@ -9,7 +9,12 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EducationFeedbackOutcome extends EducationOutcome implements Parsable 
 {
     /**
-     * Instantiates a new EducationFeedbackOutcome and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new educationFeedbackOutcome and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -68,6 +73,7 @@ class EducationFeedbackOutcome extends EducationOutcome implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeObjectValue('feedback', $this->getFeedback());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('publishedFeedback', $this->getPublishedFeedback());
     }
 

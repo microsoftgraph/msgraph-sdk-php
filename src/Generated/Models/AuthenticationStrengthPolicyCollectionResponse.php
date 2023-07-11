@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class AuthenticationStrengthPolicyCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new AuthenticationStrengthPolicyCollectionResponse and sets the default values.
+     * Instantiates a new authenticationStrengthPolicyCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

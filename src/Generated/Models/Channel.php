@@ -90,6 +90,7 @@ class Channel extends Entity implements Parsable
             'members' => fn(ParseNode $n) => $o->setMembers($n->getCollectionOfObjectValues([ConversationMember::class, 'createFromDiscriminatorValue'])),
             'membershipType' => fn(ParseNode $n) => $o->setMembershipType($n->getEnumValue(ChannelMembershipType::class)),
             'messages' => fn(ParseNode $n) => $o->setMessages($n->getCollectionOfObjectValues([ChatMessage::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'sharedWithTeams' => fn(ParseNode $n) => $o->setSharedWithTeams($n->getCollectionOfObjectValues([SharedWithChannelTeamInfo::class, 'createFromDiscriminatorValue'])),
             'tabs' => fn(ParseNode $n) => $o->setTabs($n->getCollectionOfObjectValues([TeamsTab::class, 'createFromDiscriminatorValue'])),
             'tenantId' => fn(ParseNode $n) => $o->setTenantId($n->getStringValue()),
@@ -162,6 +163,18 @@ class Channel extends Entity implements Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
+    }
+
+    /**
      * Gets the sharedWithTeams property value. A collection of teams with which a channel is shared.
      * @return array<SharedWithChannelTeamInfo>|null
     */
@@ -228,6 +241,7 @@ class Channel extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('members', $this->getMembers());
         $writer->writeEnumValue('membershipType', $this->getMembershipType());
         $writer->writeCollectionOfObjectValues('messages', $this->getMessages());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfObjectValues('sharedWithTeams', $this->getSharedWithTeams());
         $writer->writeCollectionOfObjectValues('tabs', $this->getTabs());
         $writer->writeStringValue('tenantId', $this->getTenantId());
@@ -304,6 +318,14 @@ class Channel extends Entity implements Parsable
     */
     public function setMessages(?array $value): void {
         $this->getBackingStore()->set('messages', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

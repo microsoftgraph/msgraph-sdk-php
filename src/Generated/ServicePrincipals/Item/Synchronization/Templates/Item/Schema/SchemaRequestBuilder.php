@@ -82,7 +82,7 @@ class SchemaRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get schema from servicePrincipals
+     * Default synchronization schema for the jobs based on this template.
      * @param SchemaRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -136,7 +136,7 @@ class SchemaRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get schema from servicePrincipals
+     * Default synchronization schema for the jobs based on this template.
      * @param SchemaRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

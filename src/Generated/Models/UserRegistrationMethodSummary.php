@@ -19,7 +19,7 @@ class UserRegistrationMethodSummary implements AdditionalDataHolder, BackedModel
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new UserRegistrationMethodSummary and sets the default values.
+     * Instantiates a new userRegistrationMethodSummary and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
@@ -84,7 +84,7 @@ class UserRegistrationMethodSummary implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Gets the totalUserCount property value. The totalUserCount property
+     * Gets the totalUserCount property value. Total number of users in the tenant.
      * @return int|null
     */
     public function getTotalUserCount(): ?int {
@@ -96,7 +96,7 @@ class UserRegistrationMethodSummary implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Gets the userRegistrationMethodCounts property value. The userRegistrationMethodCounts property
+     * Gets the userRegistrationMethodCounts property value. Number of users registered for each authentication method.
      * @return array<UserRegistrationMethodCount>|null
     */
     public function getUserRegistrationMethodCounts(): ?array {
@@ -110,7 +110,7 @@ class UserRegistrationMethodSummary implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Gets the userRoles property value. The userRoles property
+     * Gets the userRoles property value. The role type of the user. Possible values are: all, privilegedAdmin, admin, user, unknownFutureValue.
      * @return IncludedUserRoles|null
     */
     public function getUserRoles(): ?IncludedUserRoles {
@@ -122,7 +122,7 @@ class UserRegistrationMethodSummary implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Gets the userTypes property value. The userTypes property
+     * Gets the userTypes property value. User type. Possible values are: all, member, guest, unknownFutureValue.
      * @return IncludedUserTypes|null
     */
     public function getUserTypes(): ?IncludedUserTypes {
@@ -171,7 +171,7 @@ class UserRegistrationMethodSummary implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Sets the totalUserCount property value. The totalUserCount property
+     * Sets the totalUserCount property value. Total number of users in the tenant.
      * @param int|null $value Value to set for the totalUserCount property.
     */
     public function setTotalUserCount(?int $value): void {
@@ -179,7 +179,7 @@ class UserRegistrationMethodSummary implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Sets the userRegistrationMethodCounts property value. The userRegistrationMethodCounts property
+     * Sets the userRegistrationMethodCounts property value. Number of users registered for each authentication method.
      * @param array<UserRegistrationMethodCount>|null $value Value to set for the userRegistrationMethodCounts property.
     */
     public function setUserRegistrationMethodCounts(?array $value): void {
@@ -187,7 +187,7 @@ class UserRegistrationMethodSummary implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Sets the userRoles property value. The userRoles property
+     * Sets the userRoles property value. The role type of the user. Possible values are: all, privilegedAdmin, admin, user, unknownFutureValue.
      * @param IncludedUserRoles|null $value Value to set for the userRoles property.
     */
     public function setUserRoles(?IncludedUserRoles $value): void {
@@ -195,7 +195,7 @@ class UserRegistrationMethodSummary implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Sets the userTypes property value. The userTypes property
+     * Sets the userTypes property value. User type. Possible values are: all, member, guest, unknownFutureValue.
      * @param IncludedUserTypes|null $value Value to set for the userTypes property.
     */
     public function setUserTypes(?IncludedUserTypes $value): void {

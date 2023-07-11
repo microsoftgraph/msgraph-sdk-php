@@ -9,7 +9,12 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SkypeForBusinessUserConversationMember extends ConversationMember implements Parsable 
 {
     /**
-     * Instantiates a new SkypeForBusinessUserConversationMember and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new skypeForBusinessUserConversationMember and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -67,6 +72,7 @@ class SkypeForBusinessUserConversationMember extends ConversationMember implemen
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('tenantId', $this->getTenantId());
         $writer->writeStringValue('userId', $this->getUserId());
     }

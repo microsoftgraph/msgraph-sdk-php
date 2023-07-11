@@ -7,10 +7,18 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
+/**
+ * Represents an item on the iOS Home Screen
+*/
 class IosHomeScreenFolder extends IosHomeScreenItem implements Parsable 
 {
     /**
-     * Instantiates a new IosHomeScreenFolder and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new iosHomeScreenFolder and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -57,6 +65,7 @@ class IosHomeScreenFolder extends IosHomeScreenItem implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfObjectValues('pages', $this->getPages());
     }
 

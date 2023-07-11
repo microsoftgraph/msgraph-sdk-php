@@ -13,6 +13,11 @@ use Psr\Http\Message\StreamInterface;
 class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new importedWindowsAutopilotDeviceIdentity and sets the default values.
     */
     public function __construct() {
@@ -139,6 +144,7 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Parsable
         $writer->writeStringValue('groupTag', $this->getGroupTag());
         $writer->writeBinaryContent('hardwareIdentifier', $this->getHardwareIdentifier());
         $writer->writeStringValue('importId', $this->getImportId());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('productKey', $this->getProductKey());
         $writer->writeStringValue('serialNumber', $this->getSerialNumber());
         $writer->writeObjectValue('state', $this->getState());

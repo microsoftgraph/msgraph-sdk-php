@@ -8,10 +8,13 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Types\Time;
 use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
+/**
+ * IOS Update Configuration, allows you to configure time window within week to install iOS updates
+*/
 class IosUpdateConfiguration extends DeviceConfiguration implements Parsable 
 {
     /**
-     * Instantiates a new IosUpdateConfiguration and sets the default values.
+     * Instantiates a new iosUpdateConfiguration and sets the default values.
     */
     public function __construct() {
         parent::__construct();

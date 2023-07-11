@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookFormatProtection extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new WorkbookFormatProtection and sets the default values.
+     * Instantiates a new workbookFormatProtection and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -33,6 +33,7 @@ class WorkbookFormatProtection extends Entity implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'formulaHidden' => fn(ParseNode $n) => $o->setFormulaHidden($n->getBooleanValue()),
             'locked' => fn(ParseNode $n) => $o->setLocked($n->getBooleanValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ]);
     }
 
@@ -61,6 +62,18 @@ class WorkbookFormatProtection extends Entity implements Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -68,6 +81,7 @@ class WorkbookFormatProtection extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeBooleanValue('formulaHidden', $this->getFormulaHidden());
         $writer->writeBooleanValue('locked', $this->getLocked());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**
@@ -84,6 +98,14 @@ class WorkbookFormatProtection extends Entity implements Parsable
     */
     public function setLocked(?bool $value): void {
         $this->getBackingStore()->set('locked', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
 }

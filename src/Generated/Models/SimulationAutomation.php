@@ -11,6 +11,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class SimulationAutomation extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new simulationAutomation and sets the default values.
     */
     public function __construct() {
@@ -182,6 +187,7 @@ class SimulationAutomation extends Entity implements Parsable
         $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
         $writer->writeDateTimeValue('lastRunDateTime', $this->getLastRunDateTime());
         $writer->writeDateTimeValue('nextRunDateTime', $this->getNextRunDateTime());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfObjectValues('runs', $this->getRuns());
         $writer->writeEnumValue('status', $this->getStatus());
     }

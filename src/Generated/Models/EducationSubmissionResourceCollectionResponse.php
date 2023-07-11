@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class EducationSubmissionResourceCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new EducationSubmissionResourceCollectionResponse and sets the default values.
+     * Instantiates a new educationSubmissionResourceCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

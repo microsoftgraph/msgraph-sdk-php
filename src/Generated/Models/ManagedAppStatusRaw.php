@@ -6,10 +6,13 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * Represents an un-typed status report about organizations app protection and configuration.
+*/
 class ManagedAppStatusRaw extends ManagedAppStatus implements Parsable 
 {
     /**
-     * Instantiates a new ManagedAppStatusRaw and sets the default values.
+     * Instantiates a new managedAppStatusRaw and sets the default values.
     */
     public function __construct() {
         parent::__construct();

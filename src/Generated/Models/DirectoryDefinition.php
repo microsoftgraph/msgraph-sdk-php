@@ -39,7 +39,7 @@ class DirectoryDefinition extends Entity implements Parsable
     }
 
     /**
-     * Gets the discoveryDateTime property value. The discoveryDateTime property
+     * Gets the discoveryDateTime property value. Represents the discovery date and time using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return DateTime|null
     */
     public function getDiscoveryDateTime(): ?DateTime {
@@ -61,13 +61,14 @@ class DirectoryDefinition extends Entity implements Parsable
             'discoveryDateTime' => fn(ParseNode $n) => $o->setDiscoveryDateTime($n->getDateTimeValue()),
             'name' => fn(ParseNode $n) => $o->setName($n->getStringValue()),
             'objects' => fn(ParseNode $n) => $o->setObjects($n->getCollectionOfObjectValues([ObjectDefinition::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'readOnly' => fn(ParseNode $n) => $o->setReadOnly($n->getBooleanValue()),
             'version' => fn(ParseNode $n) => $o->setVersion($n->getStringValue()),
         ]);
     }
 
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. Name of the directory. Must be unique within the synchronization schema. Not nullable.
      * @return string|null
     */
     public function getName(): ?string {
@@ -79,7 +80,7 @@ class DirectoryDefinition extends Entity implements Parsable
     }
 
     /**
-     * Gets the objects property value. The objects property
+     * Gets the objects property value. Collection of objects supported by the directory.
      * @return array<ObjectDefinition>|null
     */
     public function getObjects(): ?array {
@@ -93,7 +94,19 @@ class DirectoryDefinition extends Entity implements Parsable
     }
 
     /**
-     * Gets the readOnly property value. The readOnly property
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
+    }
+
+    /**
+     * Gets the readOnly property value. Whether this object is read-only.
      * @return bool|null
     */
     public function getReadOnly(): ?bool {
@@ -105,7 +118,7 @@ class DirectoryDefinition extends Entity implements Parsable
     }
 
     /**
-     * Gets the version property value. The version property
+     * Gets the version property value. Read only value that indicates version discovered. null if discovery has not yet occurred.
      * @return string|null
     */
     public function getVersion(): ?string {
@@ -126,6 +139,7 @@ class DirectoryDefinition extends Entity implements Parsable
         $writer->writeDateTimeValue('discoveryDateTime', $this->getDiscoveryDateTime());
         $writer->writeStringValue('name', $this->getName());
         $writer->writeCollectionOfObjectValues('objects', $this->getObjects());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeBooleanValue('readOnly', $this->getReadOnly());
         $writer->writeStringValue('version', $this->getVersion());
     }
@@ -139,7 +153,7 @@ class DirectoryDefinition extends Entity implements Parsable
     }
 
     /**
-     * Sets the discoveryDateTime property value. The discoveryDateTime property
+     * Sets the discoveryDateTime property value. Represents the discovery date and time using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param DateTime|null $value Value to set for the discoveryDateTime property.
     */
     public function setDiscoveryDateTime(?DateTime $value): void {
@@ -147,7 +161,7 @@ class DirectoryDefinition extends Entity implements Parsable
     }
 
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. Name of the directory. Must be unique within the synchronization schema. Not nullable.
      * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
@@ -155,7 +169,7 @@ class DirectoryDefinition extends Entity implements Parsable
     }
 
     /**
-     * Sets the objects property value. The objects property
+     * Sets the objects property value. Collection of objects supported by the directory.
      * @param array<ObjectDefinition>|null $value Value to set for the objects property.
     */
     public function setObjects(?array $value): void {
@@ -163,7 +177,15 @@ class DirectoryDefinition extends Entity implements Parsable
     }
 
     /**
-     * Sets the readOnly property value. The readOnly property
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
+    }
+
+    /**
+     * Sets the readOnly property value. Whether this object is read-only.
      * @param bool|null $value Value to set for the readOnly property.
     */
     public function setReadOnly(?bool $value): void {
@@ -171,7 +193,7 @@ class DirectoryDefinition extends Entity implements Parsable
     }
 
     /**
-     * Sets the version property value. The version property
+     * Sets the version property value. Read only value that indicates version discovered. null if discovery has not yet occurred.
      * @param string|null $value Value to set for the version property.
     */
     public function setVersion(?string $value): void {

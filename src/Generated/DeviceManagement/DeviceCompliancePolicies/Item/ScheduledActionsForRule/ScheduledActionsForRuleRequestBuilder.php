@@ -53,10 +53,9 @@ class ScheduledActionsForRuleRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the deviceComplianceScheduledActionForRule objects.
+     * The list of scheduled action per rule for this compliance policy. This is a required property when creating any individual per-platform compliance policies.
      * @param ScheduledActionsForRuleRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-deviceconfig-devicecompliancescheduledactionforrule-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?ScheduledActionsForRuleRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -72,11 +71,10 @@ class ScheduledActionsForRuleRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new deviceComplianceScheduledActionForRule object.
+     * Create new navigation property to scheduledActionsForRule for deviceManagement
      * @param DeviceComplianceScheduledActionForRule $body The request body
      * @param ScheduledActionsForRuleRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-deviceconfig-devicecompliancescheduledactionforrule-create?view=graph-rest-1.0 Find more info here
     */
     public function post(DeviceComplianceScheduledActionForRule $body, ?ScheduledActionsForRuleRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -92,7 +90,7 @@ class ScheduledActionsForRuleRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the deviceComplianceScheduledActionForRule objects.
+     * The list of scheduled action per rule for this compliance policy. This is a required property when creating any individual per-platform compliance policies.
      * @param ScheduledActionsForRuleRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +111,7 @@ class ScheduledActionsForRuleRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new deviceComplianceScheduledActionForRule object.
+     * Create new navigation property to scheduledActionsForRule for deviceManagement
      * @param DeviceComplianceScheduledActionForRule $body The request body
      * @param ScheduledActionsForRuleRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

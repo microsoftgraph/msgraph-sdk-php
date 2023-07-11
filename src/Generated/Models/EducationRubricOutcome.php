@@ -10,7 +10,12 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class EducationRubricOutcome extends EducationOutcome implements Parsable 
 {
     /**
-     * Instantiates a new EducationRubricOutcome and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new educationRubricOutcome and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -102,6 +107,7 @@ class EducationRubricOutcome extends EducationOutcome implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfObjectValues('publishedRubricQualityFeedback', $this->getPublishedRubricQualityFeedback());
         $writer->writeCollectionOfObjectValues('publishedRubricQualitySelectedLevels', $this->getPublishedRubricQualitySelectedLevels());
         $writer->writeCollectionOfObjectValues('rubricQualityFeedback', $this->getRubricQualityFeedback());

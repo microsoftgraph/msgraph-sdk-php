@@ -6,10 +6,13 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * Abstract class to contain properties used to assign a mobile app to a group.
+*/
 class IosStoreAppAssignmentSettings extends MobileAppAssignmentSettings implements Parsable 
 {
     /**
-     * Instantiates a new IosStoreAppAssignmentSettings and sets the default values.
+     * Instantiates a new iosStoreAppAssignmentSettings and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -33,6 +36,7 @@ class IosStoreAppAssignmentSettings extends MobileAppAssignmentSettings implemen
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'isRemovable' => fn(ParseNode $n) => $o->setIsRemovable($n->getBooleanValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'uninstallOnDeviceRemoval' => fn(ParseNode $n) => $o->setUninstallOnDeviceRemoval($n->getBooleanValue()),
             'vpnConfigurationId' => fn(ParseNode $n) => $o->setVpnConfigurationId($n->getStringValue()),
         ]);
@@ -51,6 +55,18 @@ class IosStoreAppAssignmentSettings extends MobileAppAssignmentSettings implemen
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
+    }
+
+    /**
      * Gets the uninstallOnDeviceRemoval property value. When TRUE, indicates that the app should be uninstalled when the device is removed from Intune. When FALSE, indicates that the app will not be uninstalled when the device is removed from Intune. By default, property is set to null which internally is treated as TRUE.
      * @return bool|null
     */
@@ -63,7 +79,7 @@ class IosStoreAppAssignmentSettings extends MobileAppAssignmentSettings implemen
     }
 
     /**
-     * Gets the vpnConfigurationId property value. The VPN Configuration Id to apply for this app.
+     * Gets the vpnConfigurationId property value. This is the unique identifier (Id) of the VPN Configuration to apply to the app.
      * @return string|null
     */
     public function getVpnConfigurationId(): ?string {
@@ -81,6 +97,7 @@ class IosStoreAppAssignmentSettings extends MobileAppAssignmentSettings implemen
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeBooleanValue('isRemovable', $this->getIsRemovable());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeBooleanValue('uninstallOnDeviceRemoval', $this->getUninstallOnDeviceRemoval());
         $writer->writeStringValue('vpnConfigurationId', $this->getVpnConfigurationId());
     }
@@ -94,6 +111,14 @@ class IosStoreAppAssignmentSettings extends MobileAppAssignmentSettings implemen
     }
 
     /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
+    }
+
+    /**
      * Sets the uninstallOnDeviceRemoval property value. When TRUE, indicates that the app should be uninstalled when the device is removed from Intune. When FALSE, indicates that the app will not be uninstalled when the device is removed from Intune. By default, property is set to null which internally is treated as TRUE.
      * @param bool|null $value Value to set for the uninstallOnDeviceRemoval property.
     */
@@ -102,7 +127,7 @@ class IosStoreAppAssignmentSettings extends MobileAppAssignmentSettings implemen
     }
 
     /**
-     * Sets the vpnConfigurationId property value. The VPN Configuration Id to apply for this app.
+     * Sets the vpnConfigurationId property value. This is the unique identifier (Id) of the VPN Configuration to apply to the app.
      * @param string|null $value Value to set for the vpnConfigurationId property.
     */
     public function setVpnConfigurationId(?string $value): void {

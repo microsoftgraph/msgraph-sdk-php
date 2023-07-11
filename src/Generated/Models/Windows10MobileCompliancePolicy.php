@@ -6,10 +6,18 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * This class contains compliance settings for Windows 10 Mobile.
+*/
 class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy implements Parsable 
 {
     /**
-     * Instantiates a new Windows10MobileCompliancePolicy and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new windows10MobileCompliancePolicy and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -252,6 +260,7 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy implements 
         $writer->writeBooleanValue('bitLockerEnabled', $this->getBitLockerEnabled());
         $writer->writeBooleanValue('codeIntegrityEnabled', $this->getCodeIntegrityEnabled());
         $writer->writeBooleanValue('earlyLaunchAntiMalwareDriverEnabled', $this->getEarlyLaunchAntiMalwareDriverEnabled());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('osMaximumVersion', $this->getOsMaximumVersion());
         $writer->writeStringValue('osMinimumVersion', $this->getOsMinimumVersion());
         $writer->writeBooleanValue('passwordBlockSimple', $this->getPasswordBlockSimple());

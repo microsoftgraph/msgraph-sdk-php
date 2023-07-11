@@ -88,7 +88,7 @@ class FilterOperand implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the values property value. The values property
+     * Gets the values property value. Collection of values.
      * @return array<string>|null
     */
     public function getValues(): ?array {
@@ -136,7 +136,7 @@ class FilterOperand implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the values property value. The values property
+     * Sets the values property value. Collection of values.
      * @param array<string>|null $value Value to set for the values property.
     */
     public function setValues(?array $value): void {

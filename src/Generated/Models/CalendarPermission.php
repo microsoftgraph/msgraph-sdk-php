@@ -10,6 +10,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class CalendarPermission extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new calendarPermission and sets the default values.
     */
     public function __construct() {
@@ -112,6 +117,7 @@ class CalendarPermission extends Entity implements Parsable
         $writer->writeObjectValue('emailAddress', $this->getEmailAddress());
         $writer->writeBooleanValue('isInsideOrganization', $this->getIsInsideOrganization());
         $writer->writeBooleanValue('isRemovable', $this->getIsRemovable());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeEnumValue('role', $this->getRole());
     }
 

@@ -11,6 +11,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Team extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new team and sets the default values.
     */
     public function __construct() {
@@ -423,6 +428,7 @@ class Team extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('members', $this->getMembers());
         $writer->writeObjectValue('memberSettings', $this->getMemberSettings());
         $writer->writeObjectValue('messagingSettings', $this->getMessagingSettings());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfObjectValues('operations', $this->getOperations());
         $writer->writeObjectValue('photo', $this->getPhoto());
         $writer->writeObjectValue('primaryChannel', $this->getPrimaryChannel());

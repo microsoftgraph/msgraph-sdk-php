@@ -52,6 +52,7 @@ class DeviceManagementPartner extends Entity implements Parsable
             'groupsRequiringPartnerEnrollment' => fn(ParseNode $n) => $o->setGroupsRequiringPartnerEnrollment($n->getCollectionOfObjectValues([DeviceManagementPartnerAssignment::class, 'createFromDiscriminatorValue'])),
             'isConfigured' => fn(ParseNode $n) => $o->setIsConfigured($n->getBooleanValue()),
             'lastHeartbeatDateTime' => fn(ParseNode $n) => $o->setLastHeartbeatDateTime($n->getDateTimeValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'partnerAppType' => fn(ParseNode $n) => $o->setPartnerAppType($n->getEnumValue(DeviceManagementPartnerAppType::class)),
             'partnerState' => fn(ParseNode $n) => $o->setPartnerState($n->getEnumValue(DeviceManagementPartnerTenantState::class)),
             'singleTenantAppId' => fn(ParseNode $n) => $o->setSingleTenantAppId($n->getStringValue()),
@@ -96,6 +97,18 @@ class DeviceManagementPartner extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'lastHeartbeatDateTime'");
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -168,6 +181,7 @@ class DeviceManagementPartner extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('groupsRequiringPartnerEnrollment', $this->getGroupsRequiringPartnerEnrollment());
         $writer->writeBooleanValue('isConfigured', $this->getIsConfigured());
         $writer->writeDateTimeValue('lastHeartbeatDateTime', $this->getLastHeartbeatDateTime());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeEnumValue('partnerAppType', $this->getPartnerAppType());
         $writer->writeEnumValue('partnerState', $this->getPartnerState());
         $writer->writeStringValue('singleTenantAppId', $this->getSingleTenantAppId());
@@ -205,6 +219,14 @@ class DeviceManagementPartner extends Entity implements Parsable
     */
     public function setLastHeartbeatDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastHeartbeatDateTime', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

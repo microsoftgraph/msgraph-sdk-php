@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class BookingServiceCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new BookingServiceCollectionResponse and sets the default values.
+     * Instantiates a new bookingServiceCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

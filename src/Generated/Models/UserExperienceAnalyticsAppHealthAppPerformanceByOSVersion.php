@@ -12,6 +12,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new userExperienceAnalyticsAppHealthAppPerformanceByOSVersion and sets the default values.
     */
     public function __construct() {
@@ -167,6 +172,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends Entity i
         $writer->writeStringValue('appPublisher', $this->getAppPublisher());
         $writer->writeIntegerValue('appUsageDuration', $this->getAppUsageDuration());
         $writer->writeIntegerValue('meanTimeToFailureInMinutes', $this->getMeanTimeToFailureInMinutes());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('osBuildNumber', $this->getOsBuildNumber());
         $writer->writeStringValue('osVersion', $this->getOsVersion());
     }

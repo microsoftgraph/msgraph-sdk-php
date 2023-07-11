@@ -9,7 +9,12 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SingleUser extends SubjectSet implements Parsable 
 {
     /**
-     * Instantiates a new SingleUser and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new singleUser and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -68,6 +73,7 @@ class SingleUser extends SubjectSet implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeStringValue('description', $this->getDescription());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('userId', $this->getUserId());
     }
 

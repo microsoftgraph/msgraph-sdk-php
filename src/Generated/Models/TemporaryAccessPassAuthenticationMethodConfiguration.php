@@ -10,7 +10,12 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class TemporaryAccessPassAuthenticationMethodConfiguration extends AuthenticationMethodConfiguration implements Parsable 
 {
     /**
-     * Instantiates a new TemporaryAccessPassAuthenticationMethodConfiguration and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new temporaryAccessPassAuthenticationMethodConfiguration and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -128,6 +133,7 @@ class TemporaryAccessPassAuthenticationMethodConfiguration extends Authenticatio
         $writer->writeBooleanValue('isUsableOnce', $this->getIsUsableOnce());
         $writer->writeIntegerValue('maximumLifetimeInMinutes', $this->getMaximumLifetimeInMinutes());
         $writer->writeIntegerValue('minimumLifetimeInMinutes', $this->getMinimumLifetimeInMinutes());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

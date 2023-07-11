@@ -10,6 +10,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ChecklistItem extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new checklistItem and sets the default values.
     */
     public function __construct() {
@@ -97,6 +102,7 @@ class ChecklistItem extends Entity implements Parsable
         $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeBooleanValue('isChecked', $this->getIsChecked());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

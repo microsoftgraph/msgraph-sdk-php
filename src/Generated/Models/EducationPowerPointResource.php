@@ -9,7 +9,12 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EducationPowerPointResource extends EducationResource implements Parsable 
 {
     /**
-     * Instantiates a new EducationPowerPointResource and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new educationPowerPointResource and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -55,6 +60,7 @@ class EducationPowerPointResource extends EducationResource implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeStringValue('fileUrl', $this->getFileUrl());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

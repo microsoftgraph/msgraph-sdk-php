@@ -9,6 +9,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class IdentityUserFlowAttribute extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new identityUserFlowAttribute and sets the default values.
     */
     public function __construct() {
@@ -103,6 +108,7 @@ class IdentityUserFlowAttribute extends Entity implements Parsable
         $writer->writeEnumValue('dataType', $this->getDataType());
         $writer->writeStringValue('description', $this->getDescription());
         $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeEnumValue('userFlowAttributeType', $this->getUserFlowAttributeType());
     }
 

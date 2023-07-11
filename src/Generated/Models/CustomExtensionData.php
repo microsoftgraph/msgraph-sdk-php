@@ -3,6 +3,7 @@
 namespace Microsoft\Graph\Generated\Models;
 
 use Microsoft\Graph\Generated\Models\IdentityGovernance\CustomTaskExtensionCallbackData;
+use Microsoft\Graph\Generated\Models\IdentityGovernance\CustomTaskExtensionCalloutData;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -36,7 +37,9 @@ class CustomExtensionData implements AdditionalDataHolder, BackedModel, Parsable
         if ($mappingValueNode !== null) {
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
+                case '#microsoft.graph.accessPackageAssignmentRequestCallbackData': return new AccessPackageAssignmentRequestCallbackData();
                 case '#microsoft.graph.identityGovernance.customTaskExtensionCallbackData': return new CustomTaskExtensionCallbackData();
+                case '#microsoft.graph.identityGovernance.customTaskExtensionCalloutData': return new CustomTaskExtensionCalloutData();
             }
         }
         return new CustomExtensionData();

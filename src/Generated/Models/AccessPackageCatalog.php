@@ -11,6 +11,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class AccessPackageCatalog extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new accessPackageCatalog and sets the default values.
     */
     public function __construct() {
@@ -65,6 +70,20 @@ class AccessPackageCatalog extends Entity implements Parsable
     }
 
     /**
+     * Gets the customWorkflowExtensions property value. The customWorkflowExtensions property
+     * @return array<CustomCalloutExtension>|null
+    */
+    public function getCustomWorkflowExtensions(): ?array {
+        $val = $this->getBackingStore()->get('customWorkflowExtensions');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, CustomCalloutExtension::class);
+            /** @var array<CustomCalloutExtension>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'customWorkflowExtensions'");
+    }
+
+    /**
      * Gets the description property value. The description of the access package catalog.
      * @return string|null
     */
@@ -98,10 +117,14 @@ class AccessPackageCatalog extends Entity implements Parsable
             'accessPackages' => fn(ParseNode $n) => $o->setAccessPackages($n->getCollectionOfObjectValues([AccessPackage::class, 'createFromDiscriminatorValue'])),
             'catalogType' => fn(ParseNode $n) => $o->setCatalogType($n->getEnumValue(AccessPackageCatalogType::class)),
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
+            'customWorkflowExtensions' => fn(ParseNode $n) => $o->setCustomWorkflowExtensions($n->getCollectionOfObjectValues([CustomCalloutExtension::class, 'createFromDiscriminatorValue'])),
             'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'isExternallyVisible' => fn(ParseNode $n) => $o->setIsExternallyVisible($n->getBooleanValue()),
             'modifiedDateTime' => fn(ParseNode $n) => $o->setModifiedDateTime($n->getDateTimeValue()),
+            'resourceRoles' => fn(ParseNode $n) => $o->setResourceRoles($n->getCollectionOfObjectValues([AccessPackageResourceRole::class, 'createFromDiscriminatorValue'])),
+            'resources' => fn(ParseNode $n) => $o->setResources($n->getCollectionOfObjectValues([AccessPackageResource::class, 'createFromDiscriminatorValue'])),
+            'resourceScopes' => fn(ParseNode $n) => $o->setResourceScopes($n->getCollectionOfObjectValues([AccessPackageResourceScope::class, 'createFromDiscriminatorValue'])),
             'state' => fn(ParseNode $n) => $o->setState($n->getEnumValue(AccessPackageCatalogState::class)),
         ]);
     }
@@ -131,6 +154,48 @@ class AccessPackageCatalog extends Entity implements Parsable
     }
 
     /**
+     * Gets the resourceRoles property value. The resourceRoles property
+     * @return array<AccessPackageResourceRole>|null
+    */
+    public function getResourceRoles(): ?array {
+        $val = $this->getBackingStore()->get('resourceRoles');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AccessPackageResourceRole::class);
+            /** @var array<AccessPackageResourceRole>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resourceRoles'");
+    }
+
+    /**
+     * Gets the resources property value. The resources property
+     * @return array<AccessPackageResource>|null
+    */
+    public function getResources(): ?array {
+        $val = $this->getBackingStore()->get('resources');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AccessPackageResource::class);
+            /** @var array<AccessPackageResource>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resources'");
+    }
+
+    /**
+     * Gets the resourceScopes property value. The resourceScopes property
+     * @return array<AccessPackageResourceScope>|null
+    */
+    public function getResourceScopes(): ?array {
+        $val = $this->getBackingStore()->get('resourceScopes');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AccessPackageResourceScope::class);
+            /** @var array<AccessPackageResourceScope>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resourceScopes'");
+    }
+
+    /**
      * Gets the state property value. Has the value published if the access packages are available for management. The possible values are: unpublished, published, unknownFutureValue.
      * @return AccessPackageCatalogState|null
     */
@@ -151,10 +216,15 @@ class AccessPackageCatalog extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('accessPackages', $this->getAccessPackages());
         $writer->writeEnumValue('catalogType', $this->getCatalogType());
         $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
+        $writer->writeCollectionOfObjectValues('customWorkflowExtensions', $this->getCustomWorkflowExtensions());
         $writer->writeStringValue('description', $this->getDescription());
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeBooleanValue('isExternallyVisible', $this->getIsExternallyVisible());
         $writer->writeDateTimeValue('modifiedDateTime', $this->getModifiedDateTime());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeCollectionOfObjectValues('resourceRoles', $this->getResourceRoles());
+        $writer->writeCollectionOfObjectValues('resources', $this->getResources());
+        $writer->writeCollectionOfObjectValues('resourceScopes', $this->getResourceScopes());
         $writer->writeEnumValue('state', $this->getState());
     }
 
@@ -180,6 +250,14 @@ class AccessPackageCatalog extends Entity implements Parsable
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
+    }
+
+    /**
+     * Sets the customWorkflowExtensions property value. The customWorkflowExtensions property
+     * @param array<CustomCalloutExtension>|null $value Value to set for the customWorkflowExtensions property.
+    */
+    public function setCustomWorkflowExtensions(?array $value): void {
+        $this->getBackingStore()->set('customWorkflowExtensions', $value);
     }
 
     /**
@@ -212,6 +290,30 @@ class AccessPackageCatalog extends Entity implements Parsable
     */
     public function setModifiedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('modifiedDateTime', $value);
+    }
+
+    /**
+     * Sets the resourceRoles property value. The resourceRoles property
+     * @param array<AccessPackageResourceRole>|null $value Value to set for the resourceRoles property.
+    */
+    public function setResourceRoles(?array $value): void {
+        $this->getBackingStore()->set('resourceRoles', $value);
+    }
+
+    /**
+     * Sets the resources property value. The resources property
+     * @param array<AccessPackageResource>|null $value Value to set for the resources property.
+    */
+    public function setResources(?array $value): void {
+        $this->getBackingStore()->set('resources', $value);
+    }
+
+    /**
+     * Sets the resourceScopes property value. The resourceScopes property
+     * @param array<AccessPackageResourceScope>|null $value Value to set for the resourceScopes property.
+    */
+    public function setResourceScopes(?array $value): void {
+        $this->getBackingStore()->set('resourceScopes', $value);
     }
 
     /**

@@ -18,7 +18,7 @@ class BookingCustomerInformationBase implements AdditionalDataHolder, BackedMode
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new BookingCustomerInformationBase and sets the default values.
+     * Instantiates a new bookingCustomerInformationBase and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

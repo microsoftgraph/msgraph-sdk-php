@@ -11,6 +11,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class ItemActivityStat extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new itemActivityStat and sets the default values.
     */
     public function __construct() {
@@ -183,6 +188,7 @@ class ItemActivityStat extends Entity implements Parsable
         $writer->writeObjectValue('incompleteData', $this->getIncompleteData());
         $writer->writeBooleanValue('isTrending', $this->getIsTrending());
         $writer->writeObjectValue('move', $this->getMove());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeDateTimeValue('startDateTime', $this->getStartDateTime());
     }
 

@@ -56,7 +56,7 @@ class AttributeMapping implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the defaultValue property value. The defaultValue property
+     * Gets the defaultValue property value. Default value to be used in case the source property was evaluated to null. Optional.
      * @return string|null
     */
     public function getDefaultValue(): ?string {
@@ -68,7 +68,7 @@ class AttributeMapping implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the exportMissingReferences property value. The exportMissingReferences property
+     * Gets the exportMissingReferences property value. For internal use only.
      * @return bool|null
     */
     public function getExportMissingReferences(): ?bool {
@@ -122,7 +122,7 @@ class AttributeMapping implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the matchingPriority property value. The matchingPriority property
+     * Gets the matchingPriority property value. If higher than 0, this attribute will be used to perform an initial match of the objects between source and target directories. The synchronization engine will try to find the matching object using attribute with lowest value of matching priority first. If not found, the attribute with the next matching priority will be used, and so on a until match is found or no more matching attributes are left. Only attributes that are expected to have unique values, such as email, should be used as matching attributes.
      * @return int|null
     */
     public function getMatchingPriority(): ?int {
@@ -146,7 +146,7 @@ class AttributeMapping implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the source property value. The source property
+     * Gets the source property value. Defines how a value should be extracted (or transformed) from the source object.
      * @return AttributeMappingSource|null
     */
     public function getSource(): ?AttributeMappingSource {
@@ -158,7 +158,7 @@ class AttributeMapping implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the targetAttributeName property value. The targetAttributeName property
+     * Gets the targetAttributeName property value. Name of the attribute on the target object.
      * @return string|null
     */
     public function getTargetAttributeName(): ?string {
@@ -202,7 +202,7 @@ class AttributeMapping implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the defaultValue property value. The defaultValue property
+     * Sets the defaultValue property value. Default value to be used in case the source property was evaluated to null. Optional.
      * @param string|null $value Value to set for the defaultValue property.
     */
     public function setDefaultValue(?string $value): void {
@@ -210,7 +210,7 @@ class AttributeMapping implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the exportMissingReferences property value. The exportMissingReferences property
+     * Sets the exportMissingReferences property value. For internal use only.
      * @param bool|null $value Value to set for the exportMissingReferences property.
     */
     public function setExportMissingReferences(?bool $value): void {
@@ -234,7 +234,7 @@ class AttributeMapping implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the matchingPriority property value. The matchingPriority property
+     * Sets the matchingPriority property value. If higher than 0, this attribute will be used to perform an initial match of the objects between source and target directories. The synchronization engine will try to find the matching object using attribute with lowest value of matching priority first. If not found, the attribute with the next matching priority will be used, and so on a until match is found or no more matching attributes are left. Only attributes that are expected to have unique values, such as email, should be used as matching attributes.
      * @param int|null $value Value to set for the matchingPriority property.
     */
     public function setMatchingPriority(?int $value): void {
@@ -250,7 +250,7 @@ class AttributeMapping implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the source property value. The source property
+     * Sets the source property value. Defines how a value should be extracted (or transformed) from the source object.
      * @param AttributeMappingSource|null $value Value to set for the source property.
     */
     public function setSource(?AttributeMappingSource $value): void {
@@ -258,7 +258,7 @@ class AttributeMapping implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the targetAttributeName property value. The targetAttributeName property
+     * Sets the targetAttributeName property value. Name of the attribute on the target object.
      * @param string|null $value Value to set for the targetAttributeName property.
     */
     public function setTargetAttributeName(?string $value): void {

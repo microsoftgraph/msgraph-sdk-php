@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class AuthenticationMethodsRoot extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new AuthenticationMethodsRoot and sets the default values.
+     * Instantiates a new authenticationMethodsRoot and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -32,12 +32,25 @@ class AuthenticationMethodsRoot extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'userRegistrationDetails' => fn(ParseNode $n) => $o->setUserRegistrationDetails($n->getCollectionOfObjectValues([UserRegistrationDetails::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
     /**
-     * Gets the userRegistrationDetails property value. The userRegistrationDetails property
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
+    }
+
+    /**
+     * Gets the userRegistrationDetails property value. Represents the state of a user's authentication methods, including which methods are registered and which features the user is registered and capable of (such as multi-factor authentication, self-service password reset, and passwordless authentication).
      * @return array<UserRegistrationDetails>|null
     */
     public function getUserRegistrationDetails(): ?array {
@@ -56,11 +69,20 @@ class AuthenticationMethodsRoot extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfObjectValues('userRegistrationDetails', $this->getUserRegistrationDetails());
     }
 
     /**
-     * Sets the userRegistrationDetails property value. The userRegistrationDetails property
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
+    }
+
+    /**
+     * Sets the userRegistrationDetails property value. Represents the state of a user's authentication methods, including which methods are registered and which features the user is registered and capable of (such as multi-factor authentication, self-service password reset, and passwordless authentication).
      * @param array<UserRegistrationDetails>|null $value Value to set for the userRegistrationDetails property.
     */
     public function setUserRegistrationDetails(?array $value): void {

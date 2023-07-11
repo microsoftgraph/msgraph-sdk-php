@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class OAuth2PermissionGrantCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new OAuth2PermissionGrantCollectionResponse and sets the default values.
+     * Instantiates a new oAuth2PermissionGrantCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

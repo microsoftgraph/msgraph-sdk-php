@@ -77,6 +77,7 @@ class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Entity imp
             'manufacturer' => fn(ParseNode $n) => $o->setManufacturer($n->getStringValue()),
             'model' => fn(ParseNode $n) => $o->setModel($n->getStringValue()),
             'modelDeviceCount' => fn(ParseNode $n) => $o->setModelDeviceCount($n->getIntegerValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'windowsScore' => fn(ParseNode $n) => $o->setWindowsScore($n->getFloatValue()),
             'workFromAnywhereScore' => fn(ParseNode $n) => $o->setWorkFromAnywhereScore($n->getFloatValue()),
         ]);
@@ -131,6 +132,18 @@ class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Entity imp
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
+    }
+
+    /**
      * Gets the windowsScore property value. The window score of the device model. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @return float|null
     */
@@ -167,6 +180,7 @@ class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Entity imp
         $writer->writeStringValue('manufacturer', $this->getManufacturer());
         $writer->writeStringValue('model', $this->getModel());
         $writer->writeIntegerValue('modelDeviceCount', $this->getModelDeviceCount());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeFloatValue('windowsScore', $this->getWindowsScore());
         $writer->writeFloatValue('workFromAnywhereScore', $this->getWorkFromAnywhereScore());
     }
@@ -225,6 +239,14 @@ class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Entity imp
     */
     public function setModelDeviceCount(?int $value): void {
         $this->getBackingStore()->set('modelDeviceCount', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

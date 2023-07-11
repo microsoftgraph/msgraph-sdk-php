@@ -30,7 +30,7 @@ class ManagedDevice extends Entity implements Parsable
     }
 
     /**
-     * Gets the activationLockBypassCode property value. The code that allows the Activation Lock on managed device to be bypassed. Default, is Null (Non-Default property) for this property when returned as part of managedDevice entity in LIST call. Individual GET call with select query options is needed to retrieve actual values. Supports: $select. $Search is not supported. Read-only. This property is read-only.
+     * Gets the activationLockBypassCode property value. The code that allows the Activation Lock on managed device to be bypassed. Default, is Null (Non-Default property) for this property when returned as part of managedDevice entity in LIST call. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
      * @return string|null
     */
     public function getActivationLockBypassCode(): ?string {
@@ -140,7 +140,7 @@ class ManagedDevice extends Entity implements Parsable
     }
 
     /**
-     * Gets the deviceCategoryDisplayName property value. Device category display name. This property is read-only.
+     * Gets the deviceCategoryDisplayName property value. Device category display name. Default is an empty string. Supports $filter operator 'eq' and 'or'. This property is read-only.
      * @return string|null
     */
     public function getDeviceCategoryDisplayName(): ?string {
@@ -276,7 +276,7 @@ class ManagedDevice extends Entity implements Parsable
     }
 
     /**
-     * Gets the enrolledDateTime property value. Enrollment time of the device. This property is read-only.
+     * Gets the enrolledDateTime property value. Enrollment time of the device. Supports $filter operator 'lt' and 'gt'. This property is read-only.
      * @return DateTime|null
     */
     public function getEnrolledDateTime(): ?DateTime {
@@ -383,6 +383,7 @@ class ManagedDevice extends Entity implements Parsable
             'meid' => fn(ParseNode $n) => $o->setMeid($n->getStringValue()),
             'model' => fn(ParseNode $n) => $o->setModel($n->getStringValue()),
             'notes' => fn(ParseNode $n) => $o->setNotes($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'operatingSystem' => fn(ParseNode $n) => $o->setOperatingSystem($n->getStringValue()),
             'osVersion' => fn(ParseNode $n) => $o->setOsVersion($n->getStringValue()),
             'partnerReportedThreatState' => fn(ParseNode $n) => $o->setPartnerReportedThreatState($n->getEnumValue(ManagedDevicePartnerReportedHealthState::class)),
@@ -417,7 +418,7 @@ class ManagedDevice extends Entity implements Parsable
     }
 
     /**
-     * Gets the iccid property value. Integrated Circuit Card Identifier, it is A SIM card's unique identification number. Return default value null in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
+     * Gets the iccid property value. Integrated Circuit Card Identifier, it is A SIM card's unique identification number. Default is an empty string. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
      * @return string|null
     */
     public function getIccid(): ?string {
@@ -465,7 +466,7 @@ class ManagedDevice extends Entity implements Parsable
     }
 
     /**
-     * Gets the jailBroken property value. whether the device is jail broken or rooted. This property is read-only.
+     * Gets the jailBroken property value. Whether the device is jail broken or rooted. Default is an empty string. Supports $filter operator 'eq' and 'or'. This property is read-only.
      * @return string|null
     */
     public function getJailBroken(): ?string {
@@ -477,7 +478,7 @@ class ManagedDevice extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastSyncDateTime property value. The date and time that the device last completed a successful sync with Intune. This property is read-only.
+     * Gets the lastSyncDateTime property value. The date and time that the device last completed a successful sync with Intune. Supports $filter operator 'lt' and 'gt'. This property is read-only.
      * @return DateTime|null
     */
     public function getLastSyncDateTime(): ?DateTime {
@@ -587,7 +588,7 @@ class ManagedDevice extends Entity implements Parsable
     }
 
     /**
-     * Gets the notes property value. Notes on the device created by IT Admin. Return default value null in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select.  $Search is not supported.
+     * Gets the notes property value. Notes on the device created by IT Admin. Default is null. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. $Search is not supported.
      * @return string|null
     */
     public function getNotes(): ?string {
@@ -596,6 +597,18 @@ class ManagedDevice extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'notes'");
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -647,7 +660,7 @@ class ManagedDevice extends Entity implements Parsable
     }
 
     /**
-     * Gets the physicalMemoryInBytes property value. Total Memory in Bytes. Return default value 0 in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. Default value is 0. Read-only. This property is read-only.
+     * Gets the physicalMemoryInBytes property value. Total Memory in Bytes. Default is 0. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. Read-only. This property is read-only.
      * @return int|null
     */
     public function getPhysicalMemoryInBytes(): ?int {
@@ -671,7 +684,7 @@ class ManagedDevice extends Entity implements Parsable
     }
 
     /**
-     * Gets the remoteAssistanceSessionUrl property value. Url that allows a Remote Assistance session to be established with the device. This property is read-only.
+     * Gets the remoteAssistanceSessionUrl property value. Url that allows a Remote Assistance session to be established with the device. Default is an empty string. To retrieve actual values GET call needs to be made, with device id and included in select parameter. This property is read-only.
      * @return string|null
     */
     public function getRemoteAssistanceSessionUrl(): ?string {
@@ -731,7 +744,7 @@ class ManagedDevice extends Entity implements Parsable
     }
 
     /**
-     * Gets the udid property value. Unique Device Identifier for iOS and macOS devices. Return default value null in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
+     * Gets the udid property value. Unique Device Identifier for iOS and macOS devices. Default is an empty string. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
      * @return string|null
     */
     public function getUdid(): ?string {
@@ -835,13 +848,14 @@ class ManagedDevice extends Entity implements Parsable
         $writer->writeEnumValue('managedDeviceOwnerType', $this->getManagedDeviceOwnerType());
         $writer->writeEnumValue('managementAgent', $this->getManagementAgent());
         $writer->writeStringValue('notes', $this->getNotes());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeEnumValue('partnerReportedThreatState', $this->getPartnerReportedThreatState());
         $writer->writeCollectionOfObjectValues('users', $this->getUsers());
         $writer->writeObjectValue('windowsProtectionState', $this->getWindowsProtectionState());
     }
 
     /**
-     * Sets the activationLockBypassCode property value. The code that allows the Activation Lock on managed device to be bypassed. Default, is Null (Non-Default property) for this property when returned as part of managedDevice entity in LIST call. Individual GET call with select query options is needed to retrieve actual values. Supports: $select. $Search is not supported. Read-only. This property is read-only.
+     * Sets the activationLockBypassCode property value. The code that allows the Activation Lock on managed device to be bypassed. Default, is Null (Non-Default property) for this property when returned as part of managedDevice entity in LIST call. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
      * @param string|null $value Value to set for the activationLockBypassCode property.
     */
     public function setActivationLockBypassCode(?string $value): void {
@@ -913,7 +927,7 @@ class ManagedDevice extends Entity implements Parsable
     }
 
     /**
-     * Sets the deviceCategoryDisplayName property value. Device category display name. This property is read-only.
+     * Sets the deviceCategoryDisplayName property value. Device category display name. Default is an empty string. Supports $filter operator 'eq' and 'or'. This property is read-only.
      * @param string|null $value Value to set for the deviceCategoryDisplayName property.
     */
     public function setDeviceCategoryDisplayName(?string $value): void {
@@ -1001,7 +1015,7 @@ class ManagedDevice extends Entity implements Parsable
     }
 
     /**
-     * Sets the enrolledDateTime property value. Enrollment time of the device. This property is read-only.
+     * Sets the enrolledDateTime property value. Enrollment time of the device. Supports $filter operator 'lt' and 'gt'. This property is read-only.
      * @param DateTime|null $value Value to set for the enrolledDateTime property.
     */
     public function setEnrolledDateTime(?DateTime $value): void {
@@ -1049,7 +1063,7 @@ class ManagedDevice extends Entity implements Parsable
     }
 
     /**
-     * Sets the iccid property value. Integrated Circuit Card Identifier, it is A SIM card's unique identification number. Return default value null in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
+     * Sets the iccid property value. Integrated Circuit Card Identifier, it is A SIM card's unique identification number. Default is an empty string. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
      * @param string|null $value Value to set for the iccid property.
     */
     public function setIccid(?string $value): void {
@@ -1081,7 +1095,7 @@ class ManagedDevice extends Entity implements Parsable
     }
 
     /**
-     * Sets the jailBroken property value. whether the device is jail broken or rooted. This property is read-only.
+     * Sets the jailBroken property value. Whether the device is jail broken or rooted. Default is an empty string. Supports $filter operator 'eq' and 'or'. This property is read-only.
      * @param string|null $value Value to set for the jailBroken property.
     */
     public function setJailBroken(?string $value): void {
@@ -1089,7 +1103,7 @@ class ManagedDevice extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastSyncDateTime property value. The date and time that the device last completed a successful sync with Intune. This property is read-only.
+     * Sets the lastSyncDateTime property value. The date and time that the device last completed a successful sync with Intune. Supports $filter operator 'lt' and 'gt'. This property is read-only.
      * @param DateTime|null $value Value to set for the lastSyncDateTime property.
     */
     public function setLastSyncDateTime(?DateTime $value): void {
@@ -1161,11 +1175,19 @@ class ManagedDevice extends Entity implements Parsable
     }
 
     /**
-     * Sets the notes property value. Notes on the device created by IT Admin. Return default value null in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select.  $Search is not supported.
+     * Sets the notes property value. Notes on the device created by IT Admin. Default is null. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. $Search is not supported.
      * @param string|null $value Value to set for the notes property.
     */
     public function setNotes(?string $value): void {
         $this->getBackingStore()->set('notes', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
@@ -1201,7 +1223,7 @@ class ManagedDevice extends Entity implements Parsable
     }
 
     /**
-     * Sets the physicalMemoryInBytes property value. Total Memory in Bytes. Return default value 0 in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. Default value is 0. Read-only. This property is read-only.
+     * Sets the physicalMemoryInBytes property value. Total Memory in Bytes. Default is 0. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. Read-only. This property is read-only.
      * @param int|null $value Value to set for the physicalMemoryInBytes property.
     */
     public function setPhysicalMemoryInBytes(?int $value): void {
@@ -1217,7 +1239,7 @@ class ManagedDevice extends Entity implements Parsable
     }
 
     /**
-     * Sets the remoteAssistanceSessionUrl property value. Url that allows a Remote Assistance session to be established with the device. This property is read-only.
+     * Sets the remoteAssistanceSessionUrl property value. Url that allows a Remote Assistance session to be established with the device. Default is an empty string. To retrieve actual values GET call needs to be made, with device id and included in select parameter. This property is read-only.
      * @param string|null $value Value to set for the remoteAssistanceSessionUrl property.
     */
     public function setRemoteAssistanceSessionUrl(?string $value): void {
@@ -1257,7 +1279,7 @@ class ManagedDevice extends Entity implements Parsable
     }
 
     /**
-     * Sets the udid property value. Unique Device Identifier for iOS and macOS devices. Return default value null in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
+     * Sets the udid property value. Unique Device Identifier for iOS and macOS devices. Default is an empty string. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
      * @param string|null $value Value to set for the udid property.
     */
     public function setUdid(?string $value): void {

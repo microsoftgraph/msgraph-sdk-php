@@ -19,7 +19,7 @@ class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new ReportRoot and sets the default values.
+     * Instantiates a new reportRoot and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
@@ -49,7 +49,7 @@ class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the authenticationMethods property value. The authenticationMethods property
+     * Gets the authenticationMethods property value. Container for navigation properties for Azure AD authentication methods resources.
      * @return AuthenticationMethodsRoot|null
     */
     public function getAuthenticationMethods(): ?AuthenticationMethodsRoot {
@@ -69,7 +69,7 @@ class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the dailyPrintUsageByPrinter property value. The dailyPrintUsageByPrinter property
+     * Gets the dailyPrintUsageByPrinter property value. Retrieve a list of daily print usage summaries, grouped by printer.
      * @return array<PrintUsageByPrinter>|null
     */
     public function getDailyPrintUsageByPrinter(): ?array {
@@ -83,7 +83,7 @@ class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the dailyPrintUsageByUser property value. The dailyPrintUsageByUser property
+     * Gets the dailyPrintUsageByUser property value. Retrieve a list of daily print usage summaries, grouped by user.
      * @return array<PrintUsageByUser>|null
     */
     public function getDailyPrintUsageByUser(): ?array {
@@ -114,7 +114,7 @@ class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the monthlyPrintUsageByPrinter property value. The monthlyPrintUsageByPrinter property
+     * Gets the monthlyPrintUsageByPrinter property value. Retrieve a list of monthly print usage summaries, grouped by printer.
      * @return array<PrintUsageByPrinter>|null
     */
     public function getMonthlyPrintUsageByPrinter(): ?array {
@@ -128,7 +128,7 @@ class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the monthlyPrintUsageByUser property value. The monthlyPrintUsageByUser property
+     * Gets the monthlyPrintUsageByUser property value. Retrieve a list of monthly print usage summaries, grouped by user.
      * @return array<PrintUsageByUser>|null
     */
     public function getMonthlyPrintUsageByUser(): ?array {
@@ -154,7 +154,7 @@ class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the security property value. The security property
+     * Gets the security property value. Represents an abstract type that contains resources for attack simulation and training reports.
      * @return SecurityReportsRoot|null
     */
     public function getSecurity(): ?SecurityReportsRoot {
@@ -189,7 +189,7 @@ class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the authenticationMethods property value. The authenticationMethods property
+     * Sets the authenticationMethods property value. Container for navigation properties for Azure AD authentication methods resources.
      * @param AuthenticationMethodsRoot|null $value Value to set for the authenticationMethods property.
     */
     public function setAuthenticationMethods(?AuthenticationMethodsRoot $value): void {
@@ -205,7 +205,7 @@ class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the dailyPrintUsageByPrinter property value. The dailyPrintUsageByPrinter property
+     * Sets the dailyPrintUsageByPrinter property value. Retrieve a list of daily print usage summaries, grouped by printer.
      * @param array<PrintUsageByPrinter>|null $value Value to set for the dailyPrintUsageByPrinter property.
     */
     public function setDailyPrintUsageByPrinter(?array $value): void {
@@ -213,7 +213,7 @@ class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the dailyPrintUsageByUser property value. The dailyPrintUsageByUser property
+     * Sets the dailyPrintUsageByUser property value. Retrieve a list of daily print usage summaries, grouped by user.
      * @param array<PrintUsageByUser>|null $value Value to set for the dailyPrintUsageByUser property.
     */
     public function setDailyPrintUsageByUser(?array $value): void {
@@ -221,7 +221,7 @@ class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the monthlyPrintUsageByPrinter property value. The monthlyPrintUsageByPrinter property
+     * Sets the monthlyPrintUsageByPrinter property value. Retrieve a list of monthly print usage summaries, grouped by printer.
      * @param array<PrintUsageByPrinter>|null $value Value to set for the monthlyPrintUsageByPrinter property.
     */
     public function setMonthlyPrintUsageByPrinter(?array $value): void {
@@ -229,7 +229,7 @@ class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the monthlyPrintUsageByUser property value. The monthlyPrintUsageByUser property
+     * Sets the monthlyPrintUsageByUser property value. Retrieve a list of monthly print usage summaries, grouped by user.
      * @param array<PrintUsageByUser>|null $value Value to set for the monthlyPrintUsageByUser property.
     */
     public function setMonthlyPrintUsageByUser(?array $value): void {
@@ -245,7 +245,7 @@ class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the security property value. The security property
+     * Sets the security property value. Represents an abstract type that contains resources for attack simulation and training reports.
      * @param SecurityReportsRoot|null $value Value to set for the security property.
     */
     public function setSecurity(?SecurityReportsRoot $value): void {

@@ -9,7 +9,12 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ProvisionedIdentity extends Identity implements Parsable 
 {
     /**
-     * Instantiates a new ProvisionedIdentity and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new provisionedIdentity and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -69,6 +74,7 @@ class ProvisionedIdentity extends Identity implements Parsable
         parent::serialize($writer);
         $writer->writeObjectValue('details', $this->getDetails());
         $writer->writeStringValue('identityType', $this->getIdentityType());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

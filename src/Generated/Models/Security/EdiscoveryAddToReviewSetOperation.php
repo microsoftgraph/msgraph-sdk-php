@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EdiscoveryAddToReviewSetOperation extends CaseOperation implements Parsable 
 {
     /**
-     * Instantiates a new EdiscoveryAddToReviewSetOperation and sets the default values.
+     * Instantiates a new ediscoveryAddToReviewSetOperation and sets the default values.
     */
     public function __construct() {
         parent::__construct();

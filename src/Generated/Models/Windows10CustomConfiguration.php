@@ -7,10 +7,13 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
+/**
+ * This topic provides descriptions of the declared methods, properties and relationships exposed by the windows10CustomConfiguration resource.
+*/
 class Windows10CustomConfiguration extends DeviceConfiguration implements Parsable 
 {
     /**
-     * Instantiates a new Windows10CustomConfiguration and sets the default values.
+     * Instantiates a new windows10CustomConfiguration and sets the default values.
     */
     public function __construct() {
         parent::__construct();

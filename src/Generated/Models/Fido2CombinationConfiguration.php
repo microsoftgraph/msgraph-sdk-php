@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Fido2CombinationConfiguration extends AuthenticationCombinationConfiguration implements Parsable 
 {
     /**
-     * Instantiates a new Fido2CombinationConfiguration and sets the default values.
+     * Instantiates a new fido2CombinationConfiguration and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class TaskProcessingResultCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new TaskProcessingResultCollectionResponse and sets the default values.
+     * Instantiates a new taskProcessingResultCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

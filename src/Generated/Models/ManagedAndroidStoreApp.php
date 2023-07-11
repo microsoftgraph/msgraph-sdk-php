@@ -6,10 +6,13 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * Contains properties and inherited properties for Android store apps that you can manage with an Intune app protection policy.
+*/
 class ManagedAndroidStoreApp extends ManagedApp implements Parsable 
 {
     /**
-     * Instantiates a new ManagedAndroidStoreApp and sets the default values.
+     * Instantiates a new managedAndroidStoreApp and sets the default values.
     */
     public function __construct() {
         parent::__construct();

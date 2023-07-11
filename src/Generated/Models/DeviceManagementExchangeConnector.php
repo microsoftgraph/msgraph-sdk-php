@@ -13,6 +13,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DeviceManagementExchangeConnector extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new deviceManagementExchangeConnector and sets the default values.
     */
     public function __construct() {
@@ -166,6 +171,7 @@ class DeviceManagementExchangeConnector extends Entity implements Parsable
         $writer->writeEnumValue('exchangeConnectorType', $this->getExchangeConnectorType());
         $writer->writeStringValue('exchangeOrganization', $this->getExchangeOrganization());
         $writer->writeDateTimeValue('lastSyncDateTime', $this->getLastSyncDateTime());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('primarySmtpAddress', $this->getPrimarySmtpAddress());
         $writer->writeStringValue('serverName', $this->getServerName());
         $writer->writeEnumValue('status', $this->getStatus());

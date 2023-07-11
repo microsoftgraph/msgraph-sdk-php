@@ -31,10 +31,11 @@ class ValidateCredentialsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action validateCredentials
+     * Validate that the credentials are valid in the tenant.
      * @param ValidateCredentialsPostRequestBody $body The request body
      * @param ValidateCredentialsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/synchronization-synchronizationjob-validatecredentials?view=graph-rest-1.0 Find more info here
     */
     public function post(ValidateCredentialsPostRequestBody $body, ?ValidateCredentialsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -50,7 +51,7 @@ class ValidateCredentialsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action validateCredentials
+     * Validate that the credentials are valid in the tenant.
      * @param ValidateCredentialsPostRequestBody $body The request body
      * @param ValidateCredentialsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

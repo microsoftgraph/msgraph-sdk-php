@@ -19,7 +19,7 @@ class InformationProtection implements AdditionalDataHolder, BackedModel, Parsab
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new InformationProtection and sets the default values.
+     * Instantiates a new informationProtection and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

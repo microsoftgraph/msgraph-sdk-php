@@ -10,7 +10,12 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class AttributeMappingFunctionSchema extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new AttributeMappingFunctionSchema and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new attributeMappingFunctionSchema and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -37,7 +42,7 @@ class AttributeMappingFunctionSchema extends Entity implements Parsable
     }
 
     /**
-     * Gets the parameters property value. The parameters property
+     * Gets the parameters property value. Collection of function parameters.
      * @return array<AttributeMappingParameterSchema>|null
     */
     public function getParameters(): ?array {
@@ -56,11 +61,12 @@ class AttributeMappingFunctionSchema extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfObjectValues('parameters', $this->getParameters());
     }
 
     /**
-     * Sets the parameters property value. The parameters property
+     * Sets the parameters property value. Collection of function parameters.
      * @param array<AttributeMappingParameterSchema>|null $value Value to set for the parameters property.
     */
     public function setParameters(?array $value): void {

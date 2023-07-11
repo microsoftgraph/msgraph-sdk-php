@@ -14,6 +14,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class AuditEvent extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new auditEvent and sets the default values.
     */
     public function __construct() {
@@ -200,6 +205,7 @@ class AuditEvent extends Entity implements Parsable
         $writer->writeStringValue('componentName', $this->getComponentName());
         $writer->writeStringValue('correlationId', $this->getCorrelationId());
         $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfObjectValues('resources', $this->getResources());
     }
 

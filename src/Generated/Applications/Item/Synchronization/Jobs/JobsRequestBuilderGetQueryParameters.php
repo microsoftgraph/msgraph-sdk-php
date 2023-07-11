@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Applications\Item\Synchronization\Jobs;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get jobs from applications
+ * List existing jobs for a given application instance (service principal).
 */
 class JobsRequestBuilderGetQueryParameters 
 {

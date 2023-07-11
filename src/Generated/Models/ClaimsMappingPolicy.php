@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ClaimsMappingPolicy extends StsPolicy implements Parsable 
 {
     /**
-     * Instantiates a new ClaimsMappingPolicy and sets the default values.
+     * Instantiates a new claimsMappingPolicy and sets the default values.
     */
     public function __construct() {
         parent::__construct();

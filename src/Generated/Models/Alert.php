@@ -11,6 +11,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Alert extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new alert and sets the default values.
     */
     public function __construct() {
@@ -660,6 +665,7 @@ class Alert extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('malwareStates', $this->getMalwareStates());
         $writer->writeCollectionOfObjectValues('messageSecurityStates', $this->getMessageSecurityStates());
         $writer->writeCollectionOfObjectValues('networkConnections', $this->getNetworkConnections());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfObjectValues('processes', $this->getProcesses());
         $writer->writeCollectionOfPrimitiveValues('recommendedActions', $this->getRecommendedActions());
         $writer->writeCollectionOfObjectValues('registryKeyStates', $this->getRegistryKeyStates());

@@ -50,10 +50,9 @@ class DeviceCompliancePolicyDeviceStateSummaryRequestBuilder extends BaseRequest
     }
 
     /**
-     * Read properties and relationships of the deviceCompliancePolicyDeviceStateSummary object.
+     * The device compliance state summary for this account.
      * @param DeviceCompliancePolicyDeviceStateSummaryRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-deviceconfig-devicecompliancepolicydevicestatesummary-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DeviceCompliancePolicyDeviceStateSummaryRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -69,11 +68,10 @@ class DeviceCompliancePolicyDeviceStateSummaryRequestBuilder extends BaseRequest
     }
 
     /**
-     * Update the properties of a deviceCompliancePolicyDeviceStateSummary object.
+     * Update the navigation property deviceCompliancePolicyDeviceStateSummary in deviceManagement
      * @param DeviceCompliancePolicyDeviceStateSummary $body The request body
      * @param DeviceCompliancePolicyDeviceStateSummaryRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-deviceconfig-devicecompliancepolicydevicestatesummary-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(DeviceCompliancePolicyDeviceStateSummary $body, ?DeviceCompliancePolicyDeviceStateSummaryRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -106,7 +104,7 @@ class DeviceCompliancePolicyDeviceStateSummaryRequestBuilder extends BaseRequest
     }
 
     /**
-     * Read properties and relationships of the deviceCompliancePolicyDeviceStateSummary object.
+     * The device compliance state summary for this account.
      * @param DeviceCompliancePolicyDeviceStateSummaryRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -127,7 +125,7 @@ class DeviceCompliancePolicyDeviceStateSummaryRequestBuilder extends BaseRequest
     }
 
     /**
-     * Update the properties of a deviceCompliancePolicyDeviceStateSummary object.
+     * Update the navigation property deviceCompliancePolicyDeviceStateSummary in deviceManagement
      * @param DeviceCompliancePolicyDeviceStateSummary $body The request body
      * @param DeviceCompliancePolicyDeviceStateSummaryRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

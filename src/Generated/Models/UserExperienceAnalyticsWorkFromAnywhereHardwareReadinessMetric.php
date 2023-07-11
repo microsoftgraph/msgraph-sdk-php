@@ -6,6 +6,9 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * The user experience analytics hardware readiness entity contains account level information about hardware blockers for windows upgrade.
+*/
 class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric extends Entity implements Parsable 
 {
     /**
@@ -31,6 +34,7 @@ class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric extends Ent
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'osCheckFailedPercentage' => fn(ParseNode $n) => $o->setOsCheckFailedPercentage($n->getFloatValue()),
             'processor64BitCheckFailedPercentage' => fn(ParseNode $n) => $o->setProcessor64BitCheckFailedPercentage($n->getFloatValue()),
             'processorCoreCountCheckFailedPercentage' => fn(ParseNode $n) => $o->setProcessorCoreCountCheckFailedPercentage($n->getFloatValue()),
@@ -43,6 +47,18 @@ class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric extends Ent
             'tpmCheckFailedPercentage' => fn(ParseNode $n) => $o->setTpmCheckFailedPercentage($n->getFloatValue()),
             'upgradeEligibleDeviceCount' => fn(ParseNode $n) => $o->setUpgradeEligibleDeviceCount($n->getIntegerValue()),
         ]);
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -183,6 +199,7 @@ class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric extends Ent
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeFloatValue('osCheckFailedPercentage', $this->getOsCheckFailedPercentage());
         $writer->writeFloatValue('processor64BitCheckFailedPercentage', $this->getProcessor64BitCheckFailedPercentage());
         $writer->writeFloatValue('processorCoreCountCheckFailedPercentage', $this->getProcessorCoreCountCheckFailedPercentage());
@@ -194,6 +211,14 @@ class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric extends Ent
         $writer->writeIntegerValue('totalDeviceCount', $this->getTotalDeviceCount());
         $writer->writeFloatValue('tpmCheckFailedPercentage', $this->getTpmCheckFailedPercentage());
         $writer->writeIntegerValue('upgradeEligibleDeviceCount', $this->getUpgradeEligibleDeviceCount());
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

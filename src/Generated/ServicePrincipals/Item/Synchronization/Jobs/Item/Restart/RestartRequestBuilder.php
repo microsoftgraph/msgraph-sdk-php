@@ -31,10 +31,11 @@ class RestartRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action restart
+     * Restart a stopped synchronization job, forcing it to reprocess all the objects in the directory. Optionally clears existing the synchronization state and previous errors.
      * @param RestartPostRequestBody $body The request body
      * @param RestartRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/synchronization-synchronizationjob-restart?view=graph-rest-1.0 Find more info here
     */
     public function post(RestartPostRequestBody $body, ?RestartRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -50,7 +51,7 @@ class RestartRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action restart
+     * Restart a stopped synchronization job, forcing it to reprocess all the objects in the directory. Optionally clears existing the synchronization state and previous errors.
      * @param RestartPostRequestBody $body The request body
      * @param RestartRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

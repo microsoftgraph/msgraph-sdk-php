@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class WorkflowCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new WorkflowCollectionResponse and sets the default values.
+     * Instantiates a new workflowCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

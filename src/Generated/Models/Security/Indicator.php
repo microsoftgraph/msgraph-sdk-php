@@ -10,6 +10,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Indicator extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new indicator and sets the default values.
     */
     public function __construct() {
@@ -76,6 +81,7 @@ class Indicator extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeObjectValue('artifact', $this->getArtifact());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeEnumValue('source', $this->getSource());
     }
 

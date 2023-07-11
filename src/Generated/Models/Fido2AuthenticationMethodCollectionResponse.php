@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Fido2AuthenticationMethodCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new Fido2AuthenticationMethodCollectionResponse and sets the default values.
+     * Instantiates a new fido2AuthenticationMethodCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

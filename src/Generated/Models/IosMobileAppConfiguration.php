@@ -8,10 +8,13 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 use Psr\Http\Message\StreamInterface;
 
+/**
+ * Contains properties, inherited properties and actions for iOS mobile app configurations.
+*/
 class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfiguration implements Parsable 
 {
     /**
-     * Instantiates a new IosMobileAppConfiguration and sets the default values.
+     * Instantiates a new iosMobileAppConfiguration and sets the default values.
     */
     public function __construct() {
         parent::__construct();

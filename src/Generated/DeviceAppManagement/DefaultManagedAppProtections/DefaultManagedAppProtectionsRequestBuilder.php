@@ -53,10 +53,9 @@ class DefaultManagedAppProtectionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the defaultManagedAppProtection objects.
+     * Default managed app policies.
      * @param DefaultManagedAppProtectionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-mam-defaultmanagedappprotection-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?DefaultManagedAppProtectionsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -72,11 +71,10 @@ class DefaultManagedAppProtectionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new defaultManagedAppProtection object.
+     * Create new navigation property to defaultManagedAppProtections for deviceAppManagement
      * @param DefaultManagedAppProtection $body The request body
      * @param DefaultManagedAppProtectionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-mam-defaultmanagedappprotection-create?view=graph-rest-1.0 Find more info here
     */
     public function post(DefaultManagedAppProtection $body, ?DefaultManagedAppProtectionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -92,7 +90,7 @@ class DefaultManagedAppProtectionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the defaultManagedAppProtection objects.
+     * Default managed app policies.
      * @param DefaultManagedAppProtectionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +111,7 @@ class DefaultManagedAppProtectionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new defaultManagedAppProtection object.
+     * Create new navigation property to defaultManagedAppProtections for deviceAppManagement
      * @param DefaultManagedAppProtection $body The request body
      * @param DefaultManagedAppProtectionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

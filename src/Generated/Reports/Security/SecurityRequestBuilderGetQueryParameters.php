@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Reports\Security;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get security from reports
+ * Represents an abstract type that contains resources for attack simulation and training reports.
 */
 class SecurityRequestBuilderGetQueryParameters 
 {

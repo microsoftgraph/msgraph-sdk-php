@@ -10,6 +10,11 @@ use Psr\Http\Message\StreamInterface;
 class TeamworkHostedContent extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new teamworkHostedContent and sets the default values.
     */
     public function __construct() {
@@ -76,6 +81,7 @@ class TeamworkHostedContent extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeBinaryContent('contentBytes', $this->getContentBytes());
         $writer->writeStringValue('contentType', $this->getContentType());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

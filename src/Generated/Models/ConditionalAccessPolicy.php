@@ -10,6 +10,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ConditionalAccessPolicy extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new conditionalAccessPolicy and sets the default values.
     */
     public function __construct() {
@@ -151,6 +156,7 @@ class ConditionalAccessPolicy extends Entity implements Parsable
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeObjectValue('grantControls', $this->getGrantControls());
         $writer->writeDateTimeValue('modifiedDateTime', $this->getModifiedDateTime());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('sessionControls', $this->getSessionControls());
         $writer->writeEnumValue('state', $this->getState());
     }

@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TokenIssuancePolicy extends StsPolicy implements Parsable 
 {
     /**
-     * Instantiates a new TokenIssuancePolicy and sets the default values.
+     * Instantiates a new tokenIssuancePolicy and sets the default values.
     */
     public function __construct() {
         parent::__construct();

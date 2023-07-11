@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TenantAppManagementPolicy extends PolicyBase implements Parsable 
 {
     /**
-     * Instantiates a new TenantAppManagementPolicy and sets the default values.
+     * Instantiates a new tenantAppManagementPolicy and sets the default values.
     */
     public function __construct() {
         parent::__construct();

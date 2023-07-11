@@ -6,10 +6,18 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * This class contains compliance settings for Android.
+*/
 class AndroidCompliancePolicy extends DeviceCompliancePolicy implements Parsable 
 {
     /**
-     * Instantiates a new AndroidCompliancePolicy and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new androidCompliancePolicy and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -317,6 +325,7 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy implements Parsable
         $writer->writeBooleanValue('deviceThreatProtectionEnabled', $this->getDeviceThreatProtectionEnabled());
         $writer->writeEnumValue('deviceThreatProtectionRequiredSecurityLevel', $this->getDeviceThreatProtectionRequiredSecurityLevel());
         $writer->writeStringValue('minAndroidSecurityPatchLevel', $this->getMinAndroidSecurityPatchLevel());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('osMaximumVersion', $this->getOsMaximumVersion());
         $writer->writeStringValue('osMinimumVersion', $this->getOsMinimumVersion());
         $writer->writeIntegerValue('passwordExpirationDays', $this->getPasswordExpirationDays());

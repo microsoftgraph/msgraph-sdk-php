@@ -7,10 +7,18 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * Contains properties and inherited properties for iOS Volume-Purchased Program (VPP) Apps.
+*/
 class IosVppApp extends MobileApp implements Parsable 
 {
     /**
-     * Instantiates a new IosVppApp and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new iosVppApp and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -176,6 +184,7 @@ class IosVppApp extends MobileApp implements Parsable
         $writer->writeStringValue('appStoreUrl', $this->getAppStoreUrl());
         $writer->writeStringValue('bundleId', $this->getBundleId());
         $writer->writeObjectValue('licensingType', $this->getLicensingType());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeDateTimeValue('releaseDateTime', $this->getReleaseDateTime());
         $writer->writeIntegerValue('totalLicenseCount', $this->getTotalLicenseCount());
         $writer->writeIntegerValue('usedLicenseCount', $this->getUsedLicenseCount());

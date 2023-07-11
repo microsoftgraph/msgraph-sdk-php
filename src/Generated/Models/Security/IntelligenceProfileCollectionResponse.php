@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class IntelligenceProfileCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new IntelligenceProfileCollectionResponse and sets the default values.
+     * Instantiates a new intelligenceProfileCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

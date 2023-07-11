@@ -9,7 +9,12 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DomainIdentitySource extends IdentitySource implements Parsable 
 {
     /**
-     * Instantiates a new DomainIdentitySource and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new domainIdentitySource and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -69,6 +74,7 @@ class DomainIdentitySource extends IdentitySource implements Parsable
         parent::serialize($writer);
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeStringValue('domainName', $this->getDomainName());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

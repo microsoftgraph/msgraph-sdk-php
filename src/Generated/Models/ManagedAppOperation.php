@@ -13,6 +13,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ManagedAppOperation extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new managedAppOperation and sets the default values.
     */
     public function __construct() {
@@ -98,6 +103,7 @@ class ManagedAppOperation extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('state', $this->getState());
         $writer->writeStringValue('version', $this->getVersion());
     }

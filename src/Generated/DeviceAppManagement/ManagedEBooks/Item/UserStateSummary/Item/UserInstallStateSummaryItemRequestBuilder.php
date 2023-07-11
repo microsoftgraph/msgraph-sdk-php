@@ -40,10 +40,9 @@ class UserInstallStateSummaryItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a userInstallStateSummary.
+     * Delete navigation property userStateSummary for deviceAppManagement
      * @param UserInstallStateSummaryItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-books-userinstallstatesummary-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?UserInstallStateSummaryItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -59,10 +58,9 @@ class UserInstallStateSummaryItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the userInstallStateSummary object.
+     * The list of installation states for this eBook.
      * @param UserInstallStateSummaryItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-books-userinstallstatesummary-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?UserInstallStateSummaryItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -78,11 +76,10 @@ class UserInstallStateSummaryItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a userInstallStateSummary object.
+     * Update the navigation property userStateSummary in deviceAppManagement
      * @param UserInstallStateSummary $body The request body
      * @param UserInstallStateSummaryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-books-userinstallstatesummary-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(UserInstallStateSummary $body, ?UserInstallStateSummaryItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -98,7 +95,7 @@ class UserInstallStateSummaryItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a userInstallStateSummary.
+     * Delete navigation property userStateSummary for deviceAppManagement
      * @param UserInstallStateSummaryItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -115,7 +112,7 @@ class UserInstallStateSummaryItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the userInstallStateSummary object.
+     * The list of installation states for this eBook.
      * @param UserInstallStateSummaryItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -136,7 +133,7 @@ class UserInstallStateSummaryItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a userInstallStateSummary object.
+     * Update the navigation property userStateSummary in deviceAppManagement
      * @param UserInstallStateSummary $body The request body
      * @param UserInstallStateSummaryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

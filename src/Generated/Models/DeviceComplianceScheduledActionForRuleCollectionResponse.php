@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class DeviceComplianceScheduledActionForRuleCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new DeviceComplianceScheduledActionForRuleCollectionResponse and sets the default values.
+     * Instantiates a new deviceComplianceScheduledActionForRuleCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

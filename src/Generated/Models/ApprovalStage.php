@@ -10,6 +10,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ApprovalStage extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new approvalStage and sets the default values.
     */
     public function __construct() {
@@ -135,6 +140,7 @@ class ApprovalStage extends Entity implements Parsable
         $writer->writeBooleanValue('assignedToMe', $this->getAssignedToMe());
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeStringValue('justification', $this->getJustification());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('reviewedBy', $this->getReviewedBy());
         $writer->writeDateTimeValue('reviewedDateTime', $this->getReviewedDateTime());
         $writer->writeStringValue('reviewResult', $this->getReviewResult());

@@ -57,7 +57,7 @@ class ParseExpressionResponse implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the error property value. The error property
+     * Gets the error property value. Error details, if expression evaluation resulted in an error.
      * @return PublicError|null
     */
     public function getError(): ?PublicError {
@@ -69,7 +69,7 @@ class ParseExpressionResponse implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the evaluationResult property value. The evaluationResult property
+     * Gets the evaluationResult property value. A collection of values produced by the evaluation of the expression.
      * @return array<string>|null
     */
     public function getEvaluationResult(): ?array {
@@ -83,7 +83,7 @@ class ParseExpressionResponse implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the evaluationSucceeded property value. The evaluationSucceeded property
+     * Gets the evaluationSucceeded property value. true if the evaluation was successful.
      * @return bool|null
     */
     public function getEvaluationSucceeded(): ?bool {
@@ -130,7 +130,7 @@ class ParseExpressionResponse implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the parsedExpression property value. The parsedExpression property
+     * Gets the parsedExpression property value. An attributeMappingSource object representing the parsed expression.
      * @return AttributeMappingSource|null
     */
     public function getParsedExpression(): ?AttributeMappingSource {
@@ -142,7 +142,7 @@ class ParseExpressionResponse implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the parsingSucceeded property value. The parsingSucceeded property
+     * Gets the parsingSucceeded property value. true if the expression was parsed successfully.
      * @return bool|null
     */
     public function getParsingSucceeded(): ?bool {
@@ -184,7 +184,7 @@ class ParseExpressionResponse implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the error property value. The error property
+     * Sets the error property value. Error details, if expression evaluation resulted in an error.
      * @param PublicError|null $value Value to set for the error property.
     */
     public function setError(?PublicError $value): void {
@@ -192,7 +192,7 @@ class ParseExpressionResponse implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the evaluationResult property value. The evaluationResult property
+     * Sets the evaluationResult property value. A collection of values produced by the evaluation of the expression.
      * @param array<string>|null $value Value to set for the evaluationResult property.
     */
     public function setEvaluationResult(?array $value): void {
@@ -200,7 +200,7 @@ class ParseExpressionResponse implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the evaluationSucceeded property value. The evaluationSucceeded property
+     * Sets the evaluationSucceeded property value. true if the evaluation was successful.
      * @param bool|null $value Value to set for the evaluationSucceeded property.
     */
     public function setEvaluationSucceeded(?bool $value): void {
@@ -216,7 +216,7 @@ class ParseExpressionResponse implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the parsedExpression property value. The parsedExpression property
+     * Sets the parsedExpression property value. An attributeMappingSource object representing the parsed expression.
      * @param AttributeMappingSource|null $value Value to set for the parsedExpression property.
     */
     public function setParsedExpression(?AttributeMappingSource $value): void {
@@ -224,7 +224,7 @@ class ParseExpressionResponse implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the parsingSucceeded property value. The parsingSucceeded property
+     * Sets the parsingSucceeded property value. true if the expression was parsed successfully.
      * @param bool|null $value Value to set for the parsingSucceeded property.
     */
     public function setParsingSucceeded(?bool $value): void {

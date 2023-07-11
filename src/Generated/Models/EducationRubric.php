@@ -11,6 +11,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class EducationRubric extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new educationRubric and sets the default values.
     */
     public function __construct() {
@@ -167,6 +172,7 @@ class EducationRubric extends Entity implements Parsable
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeObjectValue('grading', $this->getGrading());
         $writer->writeCollectionOfObjectValues('levels', $this->getLevels());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfObjectValues('qualities', $this->getQualities());
     }
 

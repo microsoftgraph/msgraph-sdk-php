@@ -89,10 +89,9 @@ class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a editionUpgradeConfiguration.
+     * Delete navigation property deviceConfigurations for deviceManagement
      * @param DeviceConfigurationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-deviceconfig-editionupgradeconfiguration-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?DeviceConfigurationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -108,10 +107,9 @@ class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the androidGeneralDeviceConfiguration object.
+     * The device configurations.
      * @param DeviceConfigurationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-deviceconfig-androidgeneraldeviceconfiguration-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DeviceConfigurationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -136,11 +134,10 @@ class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a sharedPCConfiguration object.
+     * Update the navigation property deviceConfigurations in deviceManagement
      * @param DeviceConfiguration $body The request body
      * @param DeviceConfigurationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-deviceconfig-sharedpcconfiguration-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(DeviceConfiguration $body, ?DeviceConfigurationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -156,7 +153,7 @@ class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a editionUpgradeConfiguration.
+     * Delete navigation property deviceConfigurations for deviceManagement
      * @param DeviceConfigurationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -173,7 +170,7 @@ class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the androidGeneralDeviceConfiguration object.
+     * The device configurations.
      * @param DeviceConfigurationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -194,7 +191,7 @@ class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a sharedPCConfiguration object.
+     * Update the navigation property deviceConfigurations in deviceManagement
      * @param DeviceConfiguration $body The request body
      * @param DeviceConfigurationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

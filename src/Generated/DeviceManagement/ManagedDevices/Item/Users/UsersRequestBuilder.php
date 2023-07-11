@@ -32,10 +32,9 @@ class UsersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the user objects.
+     * The primary users associated with the managed device.
      * @param UsersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-devices-user-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?UsersRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -51,7 +50,7 @@ class UsersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the user objects.
+     * The primary users associated with the managed device.
      * @param UsersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

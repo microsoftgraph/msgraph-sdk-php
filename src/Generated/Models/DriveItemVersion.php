@@ -10,7 +10,12 @@ use Psr\Http\Message\StreamInterface;
 class DriveItemVersion extends BaseItemVersion implements Parsable 
 {
     /**
-     * Instantiates a new DriveItemVersion and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new driveItemVersion and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -69,6 +74,7 @@ class DriveItemVersion extends BaseItemVersion implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeBinaryContent('content', $this->getContent());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeIntegerValue('size', $this->getSize());
     }
 

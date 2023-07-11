@@ -9,7 +9,12 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AppleManagedIdentityProvider extends IdentityProviderBase implements Parsable 
 {
     /**
-     * Instantiates a new AppleManagedIdentityProvider and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new appleManagedIdentityProvider and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -96,6 +101,7 @@ class AppleManagedIdentityProvider extends IdentityProviderBase implements Parsa
         $writer->writeStringValue('certificateData', $this->getCertificateData());
         $writer->writeStringValue('developerId', $this->getDeveloperId());
         $writer->writeStringValue('keyId', $this->getKeyId());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('serviceId', $this->getServiceId());
     }
 

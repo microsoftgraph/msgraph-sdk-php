@@ -74,7 +74,7 @@ class SecurityRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get security from reports
+     * Represents an abstract type that contains resources for attack simulation and training reports.
      * @param SecurityRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -128,7 +128,7 @@ class SecurityRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get security from reports
+     * Represents an abstract type that contains resources for attack simulation and training reports.
      * @param SecurityRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

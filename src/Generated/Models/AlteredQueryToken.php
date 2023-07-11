@@ -18,7 +18,7 @@ class AlteredQueryToken implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new AlteredQueryToken and sets the default values.
+     * Instantiates a new alteredQueryToken and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

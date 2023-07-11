@@ -10,6 +10,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DelegatedAdminRelationshipRequest extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new delegatedAdminRelationshipRequest and sets the default values.
     */
     public function __construct() {
@@ -96,6 +101,7 @@ class DelegatedAdminRelationshipRequest extends Entity implements Parsable
         $writer->writeEnumValue('action', $this->getAction());
         $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
         $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeEnumValue('status', $this->getStatus());
     }
 

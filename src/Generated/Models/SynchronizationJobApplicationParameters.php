@@ -82,7 +82,7 @@ class SynchronizationJobApplicationParameters implements AdditionalDataHolder, B
     }
 
     /**
-     * Gets the ruleId property value. The ruleId property
+     * Gets the ruleId property value. The identifier of the synchronizationRule to be applied. This rule ID is defined in the schema for a given synchronization job or template.
      * @return string|null
     */
     public function getRuleId(): ?string {
@@ -94,7 +94,7 @@ class SynchronizationJobApplicationParameters implements AdditionalDataHolder, B
     }
 
     /**
-     * Gets the subjects property value. The subjects property
+     * Gets the subjects property value. The identifiers of one or more objects to which a synchronizationJob is to be applied.
      * @return array<SynchronizationJobSubject>|null
     */
     public function getSubjects(): ?array {
@@ -143,7 +143,7 @@ class SynchronizationJobApplicationParameters implements AdditionalDataHolder, B
     }
 
     /**
-     * Sets the ruleId property value. The ruleId property
+     * Sets the ruleId property value. The identifier of the synchronizationRule to be applied. This rule ID is defined in the schema for a given synchronization job or template.
      * @param string|null $value Value to set for the ruleId property.
     */
     public function setRuleId(?string $value): void {
@@ -151,7 +151,7 @@ class SynchronizationJobApplicationParameters implements AdditionalDataHolder, B
     }
 
     /**
-     * Sets the subjects property value. The subjects property
+     * Sets the subjects property value. The identifiers of one or more objects to which a synchronizationJob is to be applied.
      * @param array<SynchronizationJobSubject>|null $value Value to set for the subjects property.
     */
     public function setSubjects(?array $value): void {

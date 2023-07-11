@@ -48,7 +48,7 @@ class AttributeMappingParameterSchema implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Gets the allowMultipleOccurrences property value. The allowMultipleOccurrences property
+     * Gets the allowMultipleOccurrences property value. The given parameter can be provided multiple times (for example, multiple input strings in the Concatenate(string,string,...) function).
      * @return bool|null
     */
     public function getAllowMultipleOccurrences(): ?bool {
@@ -83,7 +83,7 @@ class AttributeMappingParameterSchema implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. Parameter name.
      * @return string|null
     */
     public function getName(): ?string {
@@ -107,7 +107,7 @@ class AttributeMappingParameterSchema implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Gets the required property value. The required property
+     * Gets the required property value. true if the parameter is required; otherwise false.
      * @return bool|null
     */
     public function getRequired(): ?bool {
@@ -152,7 +152,7 @@ class AttributeMappingParameterSchema implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Sets the allowMultipleOccurrences property value. The allowMultipleOccurrences property
+     * Sets the allowMultipleOccurrences property value. The given parameter can be provided multiple times (for example, multiple input strings in the Concatenate(string,string,...) function).
      * @param bool|null $value Value to set for the allowMultipleOccurrences property.
     */
     public function setAllowMultipleOccurrences(?bool $value): void {
@@ -168,7 +168,7 @@ class AttributeMappingParameterSchema implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. Parameter name.
      * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
@@ -184,7 +184,7 @@ class AttributeMappingParameterSchema implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Sets the required property value. The required property
+     * Sets the required property value. true if the parameter is required; otherwise false.
      * @param bool|null $value Value to set for the required property.
     */
     public function setRequired(?bool $value): void {

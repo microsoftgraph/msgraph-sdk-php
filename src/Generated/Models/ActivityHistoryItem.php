@@ -10,6 +10,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ActivityHistoryItem extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new activityHistoryItem and sets the default values.
     */
     public function __construct() {
@@ -164,6 +169,7 @@ class ActivityHistoryItem extends Entity implements Parsable
         $writer->writeDateTimeValue('expirationDateTime', $this->getExpirationDateTime());
         $writer->writeDateTimeValue('lastActiveDateTime', $this->getLastActiveDateTime());
         $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeDateTimeValue('startedDateTime', $this->getStartedDateTime());
         $writer->writeEnumValue('status', $this->getStatus());
         $writer->writeStringValue('userTimezone', $this->getUserTimezone());
