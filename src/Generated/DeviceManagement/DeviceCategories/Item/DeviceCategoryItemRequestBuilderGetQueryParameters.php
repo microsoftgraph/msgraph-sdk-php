@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\DeviceCategories\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read properties and relationships of the deviceCategory object.
+ * The list of device categories with the tenant.
 */
 class DeviceCategoryItemRequestBuilderGetQueryParameters 
 {

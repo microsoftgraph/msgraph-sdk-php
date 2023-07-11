@@ -12,7 +12,7 @@ use Psr\Http\Message\StreamInterface;
 class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable 
 {
     /**
-     * Instantiates a new ServiceUpdateMessage and sets the default values.
+     * Instantiates a new serviceUpdateMessage and sets the default values.
     */
     public function __construct() {
         parent::__construct();

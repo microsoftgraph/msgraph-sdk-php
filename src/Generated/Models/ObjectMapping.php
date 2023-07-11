@@ -49,7 +49,7 @@ class ObjectMapping implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the attributeMappings property value. The attributeMappings property
+     * Gets the attributeMappings property value. Attribute mappings define which attributes to map from the source object into the target object and how they should flow. A number of functions are available to support the transformation of the original source values.
      * @return array<AttributeMapping>|null
     */
     public function getAttributeMappings(): ?array {
@@ -71,7 +71,7 @@ class ObjectMapping implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the enabled property value. The enabled property
+     * Gets the enabled property value. When true, this object mapping will be processed during synchronization. When false, this object mapping will be skipped.
      * @return bool|null
     */
     public function getEnabled(): ?bool {
@@ -114,7 +114,7 @@ class ObjectMapping implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the metadata property value. The metadata property
+     * Gets the metadata property value. Additional extension properties. Unless mentioned explicitly, metadata values should not be changed.
      * @return array<ObjectMappingMetadataEntry>|null
     */
     public function getMetadata(): ?array {
@@ -128,7 +128,7 @@ class ObjectMapping implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. Human-friendly name of the object mapping.
      * @return string|null
     */
     public function getName(): ?string {
@@ -152,7 +152,7 @@ class ObjectMapping implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the scope property value. The scope property
+     * Gets the scope property value. Defines a filter to be used when deciding whether a given object should be provisioned. For example, you might want to only provision users that are located in the US.
      * @return Filter|null
     */
     public function getScope(): ?Filter {
@@ -164,7 +164,7 @@ class ObjectMapping implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the sourceObjectName property value. The sourceObjectName property
+     * Gets the sourceObjectName property value. Name of the object in the source directory. Must match the object name from the source directory definition.
      * @return string|null
     */
     public function getSourceObjectName(): ?string {
@@ -176,7 +176,7 @@ class ObjectMapping implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the targetObjectName property value. The targetObjectName property
+     * Gets the targetObjectName property value. Name of the object in target directory. Must match the object name from the target directory definition.
      * @return string|null
     */
     public function getTargetObjectName(): ?string {
@@ -213,7 +213,7 @@ class ObjectMapping implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the attributeMappings property value. The attributeMappings property
+     * Sets the attributeMappings property value. Attribute mappings define which attributes to map from the source object into the target object and how they should flow. A number of functions are available to support the transformation of the original source values.
      * @param array<AttributeMapping>|null $value Value to set for the attributeMappings property.
     */
     public function setAttributeMappings(?array $value): void {
@@ -229,7 +229,7 @@ class ObjectMapping implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the enabled property value. The enabled property
+     * Sets the enabled property value. When true, this object mapping will be processed during synchronization. When false, this object mapping will be skipped.
      * @param bool|null $value Value to set for the enabled property.
     */
     public function setEnabled(?bool $value): void {
@@ -245,7 +245,7 @@ class ObjectMapping implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the metadata property value. The metadata property
+     * Sets the metadata property value. Additional extension properties. Unless mentioned explicitly, metadata values should not be changed.
      * @param array<ObjectMappingMetadataEntry>|null $value Value to set for the metadata property.
     */
     public function setMetadata(?array $value): void {
@@ -253,7 +253,7 @@ class ObjectMapping implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. Human-friendly name of the object mapping.
      * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
@@ -269,7 +269,7 @@ class ObjectMapping implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the scope property value. The scope property
+     * Sets the scope property value. Defines a filter to be used when deciding whether a given object should be provisioned. For example, you might want to only provision users that are located in the US.
      * @param Filter|null $value Value to set for the scope property.
     */
     public function setScope(?Filter $value): void {
@@ -277,7 +277,7 @@ class ObjectMapping implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the sourceObjectName property value. The sourceObjectName property
+     * Sets the sourceObjectName property value. Name of the object in the source directory. Must match the object name from the source directory definition.
      * @param string|null $value Value to set for the sourceObjectName property.
     */
     public function setSourceObjectName(?string $value): void {
@@ -285,7 +285,7 @@ class ObjectMapping implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the targetObjectName property value. The targetObjectName property
+     * Sets the targetObjectName property value. Name of the object in target directory. Must match the object name from the target directory definition.
      * @param string|null $value Value to set for the targetObjectName property.
     */
     public function setTargetObjectName(?string $value): void {

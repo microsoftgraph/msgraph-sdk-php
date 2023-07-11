@@ -57,7 +57,7 @@ class FilterGroup implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the clauses property value. The clauses property
+     * Gets the clauses property value. Filter clauses (conditions) of this group. All clauses in a group must be satisfied in order for the filter group to evaluate to true.
      * @return array<FilterClause>|null
     */
     public function getClauses(): ?array {
@@ -84,7 +84,7 @@ class FilterGroup implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. Human-readable name of the filter group.
      * @return string|null
     */
     public function getName(): ?string {
@@ -135,7 +135,7 @@ class FilterGroup implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the clauses property value. The clauses property
+     * Sets the clauses property value. Filter clauses (conditions) of this group. All clauses in a group must be satisfied in order for the filter group to evaluate to true.
      * @param array<FilterClause>|null $value Value to set for the clauses property.
     */
     public function setClauses(?array $value): void {
@@ -143,7 +143,7 @@ class FilterGroup implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. Human-readable name of the filter group.
      * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {

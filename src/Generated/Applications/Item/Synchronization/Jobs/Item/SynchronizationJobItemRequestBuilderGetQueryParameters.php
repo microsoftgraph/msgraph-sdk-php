@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Applications\Item\Synchronization\Jobs\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get jobs from applications
+ * Retrieve the existing synchronization job and its properties.
 */
 class SynchronizationJobItemRequestBuilderGetQueryParameters 
 {

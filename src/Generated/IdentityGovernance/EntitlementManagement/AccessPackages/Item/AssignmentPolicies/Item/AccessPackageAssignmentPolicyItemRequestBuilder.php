@@ -7,6 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AccessPackages\Item\AssignmentPolicies\Item\AccessPackage\AccessPackageRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AccessPackages\Item\AssignmentPolicies\Item\Catalog\CatalogRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AccessPackages\Item\AssignmentPolicies\Item\CustomExtensionStageSettings\CustomExtensionStageSettingsRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AccessPackages\Item\AssignmentPolicies\Item\Questions\QuestionsRequestBuilder;
 use Microsoft\Graph\Generated\Models\AccessPackageAssignmentPolicy;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -32,6 +33,13 @@ class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequestBuilder
     */
     public function catalog(): CatalogRequestBuilder {
         return new CatalogRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the customExtensionStageSettings property of the microsoft.graph.accessPackageAssignmentPolicy entity.
+    */
+    public function customExtensionStageSettings(): CustomExtensionStageSettingsRequestBuilder {
+        return new CustomExtensionStageSettingsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

@@ -58,7 +58,7 @@ class SynchronizationSchedule implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the expiration property value. The expiration property
+     * Gets the expiration property value. Date and time when this job will expire. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return DateTime|null
     */
     public function getExpiration(): ?DateTime {
@@ -84,7 +84,7 @@ class SynchronizationSchedule implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the interval property value. The interval property
+     * Gets the interval property value. The interval between synchronization iterations. The value is represented in ISO 8601 format for durations. For example, PT1M represents a period of 1 month.
      * @return DateInterval|null
     */
     public function getInterval(): ?DateInterval {
@@ -148,7 +148,7 @@ class SynchronizationSchedule implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the expiration property value. The expiration property
+     * Sets the expiration property value. Date and time when this job will expire. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param DateTime|null $value Value to set for the expiration property.
     */
     public function setExpiration(?DateTime $value): void {
@@ -156,7 +156,7 @@ class SynchronizationSchedule implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the interval property value. The interval property
+     * Sets the interval property value. The interval between synchronization iterations. The value is represented in ISO 8601 format for durations. For example, PT1M represents a period of 1 month.
      * @param DateInterval|null $value Value to set for the interval property.
     */
     public function setInterval(?DateInterval $value): void {

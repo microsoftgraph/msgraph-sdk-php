@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\DirectoryObjectCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\ServicePrincipals\Item\MemberOf\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\ServicePrincipals\Item\MemberOf\GraphAdministrativeUnit\GraphAdministrativeUnitRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\MemberOf\GraphDirectoryRole\GraphDirectoryRoleRequestBuilder;
 use Microsoft\Graph\Generated\ServicePrincipals\Item\MemberOf\GraphGroup\GraphGroupRequestBuilder;
 use Microsoft\Graph\Generated\ServicePrincipals\Item\MemberOf\Item\DirectoryObjectItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -33,6 +34,13 @@ class MemberOfRequestBuilder extends BaseRequestBuilder
     */
     public function graphAdministrativeUnit(): GraphAdministrativeUnitRequestBuilder {
         return new GraphAdministrativeUnitRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Casts the previous resource to directoryRole.
+    */
+    public function graphDirectoryRole(): GraphDirectoryRoleRequestBuilder {
+        return new GraphDirectoryRoleRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

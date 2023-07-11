@@ -11,6 +11,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class AccessPackage extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new accessPackage and sets the default values.
     */
     public function __construct() {
@@ -119,6 +124,7 @@ class AccessPackage extends Entity implements Parsable
             'incompatibleGroups' => fn(ParseNode $n) => $o->setIncompatibleGroups($n->getCollectionOfObjectValues([Group::class, 'createFromDiscriminatorValue'])),
             'isHidden' => fn(ParseNode $n) => $o->setIsHidden($n->getBooleanValue()),
             'modifiedDateTime' => fn(ParseNode $n) => $o->setModifiedDateTime($n->getDateTimeValue()),
+            'resourceRoleScopes' => fn(ParseNode $n) => $o->setResourceRoleScopes($n->getCollectionOfObjectValues([AccessPackageResourceRoleScope::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -175,6 +181,20 @@ class AccessPackage extends Entity implements Parsable
     }
 
     /**
+     * Gets the resourceRoleScopes property value. The resourceRoleScopes property
+     * @return array<AccessPackageResourceRoleScope>|null
+    */
+    public function getResourceRoleScopes(): ?array {
+        $val = $this->getBackingStore()->get('resourceRoleScopes');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AccessPackageResourceRoleScope::class);
+            /** @var array<AccessPackageResourceRoleScope>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resourceRoleScopes'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -190,6 +210,8 @@ class AccessPackage extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('incompatibleGroups', $this->getIncompatibleGroups());
         $writer->writeBooleanValue('isHidden', $this->getIsHidden());
         $writer->writeDateTimeValue('modifiedDateTime', $this->getModifiedDateTime());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeCollectionOfObjectValues('resourceRoleScopes', $this->getResourceRoleScopes());
     }
 
     /**
@@ -270,6 +292,14 @@ class AccessPackage extends Entity implements Parsable
     */
     public function setModifiedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('modifiedDateTime', $value);
+    }
+
+    /**
+     * Sets the resourceRoleScopes property value. The resourceRoleScopes property
+     * @param array<AccessPackageResourceRoleScope>|null $value Value to set for the resourceRoleScopes property.
+    */
+    public function setResourceRoleScopes(?array $value): void {
+        $this->getBackingStore()->set('resourceRoleScopes', $value);
     }
 
 }

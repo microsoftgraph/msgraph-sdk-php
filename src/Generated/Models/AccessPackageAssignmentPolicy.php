@@ -11,6 +11,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class AccessPackageAssignmentPolicy extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new accessPackageAssignmentPolicy and sets the default values.
     */
     public function __construct() {
@@ -87,6 +92,20 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
     }
 
     /**
+     * Gets the customExtensionStageSettings property value. The customExtensionStageSettings property
+     * @return array<CustomExtensionStageSetting>|null
+    */
+    public function getCustomExtensionStageSettings(): ?array {
+        $val = $this->getBackingStore()->get('customExtensionStageSettings');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, CustomExtensionStageSetting::class);
+            /** @var array<CustomExtensionStageSetting>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'customExtensionStageSettings'");
+    }
+
+    /**
      * Gets the description property value. The description of the policy.
      * @return string|null
     */
@@ -134,6 +153,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
             'automaticRequestSettings' => fn(ParseNode $n) => $o->setAutomaticRequestSettings($n->getObjectValue([AccessPackageAutomaticRequestSettings::class, 'createFromDiscriminatorValue'])),
             'catalog' => fn(ParseNode $n) => $o->setCatalog($n->getObjectValue([AccessPackageCatalog::class, 'createFromDiscriminatorValue'])),
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
+            'customExtensionStageSettings' => fn(ParseNode $n) => $o->setCustomExtensionStageSettings($n->getCollectionOfObjectValues([CustomExtensionStageSetting::class, 'createFromDiscriminatorValue'])),
             'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'expiration' => fn(ParseNode $n) => $o->setExpiration($n->getObjectValue([ExpirationPattern::class, 'createFromDiscriminatorValue'])),
@@ -233,10 +253,12 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
         $writer->writeObjectValue('automaticRequestSettings', $this->getAutomaticRequestSettings());
         $writer->writeObjectValue('catalog', $this->getCatalog());
         $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
+        $writer->writeCollectionOfObjectValues('customExtensionStageSettings', $this->getCustomExtensionStageSettings());
         $writer->writeStringValue('description', $this->getDescription());
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeObjectValue('expiration', $this->getExpiration());
         $writer->writeDateTimeValue('modifiedDateTime', $this->getModifiedDateTime());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfObjectValues('questions', $this->getQuestions());
         $writer->writeObjectValue('requestApprovalSettings', $this->getRequestApprovalSettings());
         $writer->writeObjectValue('requestorSettings', $this->getRequestorSettings());
@@ -282,6 +304,14 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
+    }
+
+    /**
+     * Sets the customExtensionStageSettings property value. The customExtensionStageSettings property
+     * @param array<CustomExtensionStageSetting>|null $value Value to set for the customExtensionStageSettings property.
+    */
+    public function setCustomExtensionStageSettings(?array $value): void {
+        $this->getBackingStore()->set('customExtensionStageSettings', $value);
     }
 
     /**

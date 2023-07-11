@@ -11,7 +11,12 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class ServicePrincipalRiskDetection extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new ServicePrincipalRiskDetection and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new servicePrincipalRiskDetection and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -322,6 +327,7 @@ class ServicePrincipalRiskDetection extends Entity implements Parsable
         $writer->writeCollectionOfPrimitiveValues('keyIds', $this->getKeyIds());
         $writer->writeDateTimeValue('lastUpdatedDateTime', $this->getLastUpdatedDateTime());
         $writer->writeObjectValue('location', $this->getLocation());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('requestId', $this->getRequestId());
         $writer->writeEnumValue('riskDetail', $this->getRiskDetail());
         $writer->writeStringValue('riskEventType', $this->getRiskEventType());

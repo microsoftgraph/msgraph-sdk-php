@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class BookingAppointmentCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new BookingAppointmentCollectionResponse and sets the default values.
+     * Instantiates a new bookingAppointmentCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

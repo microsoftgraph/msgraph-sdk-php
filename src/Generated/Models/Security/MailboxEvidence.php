@@ -9,7 +9,12 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class MailboxEvidence extends AlertEvidence implements Parsable 
 {
     /**
-     * Instantiates a new MailboxEvidence and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new mailboxEvidence and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -80,6 +85,7 @@ class MailboxEvidence extends AlertEvidence implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('primaryAddress', $this->getPrimaryAddress());
         $writer->writeObjectValue('userAccount', $this->getUserAccount());
     }

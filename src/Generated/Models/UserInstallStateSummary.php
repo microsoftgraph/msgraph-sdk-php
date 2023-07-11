@@ -13,6 +13,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class UserInstallStateSummary extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new userInstallStateSummary and sets the default values.
     */
     public function __construct() {
@@ -115,6 +120,7 @@ class UserInstallStateSummary extends Entity implements Parsable
         $writer->writeIntegerValue('failedDeviceCount', $this->getFailedDeviceCount());
         $writer->writeIntegerValue('installedDeviceCount', $this->getInstalledDeviceCount());
         $writer->writeIntegerValue('notInstalledDeviceCount', $this->getNotInstalledDeviceCount());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('userName', $this->getUserName());
     }
 

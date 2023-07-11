@@ -76,7 +76,7 @@ class AuthenticationMethodsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get authenticationMethods from reports
+     * Container for navigation properties for Azure AD authentication methods resources.
      * @param AuthenticationMethodsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -130,7 +130,7 @@ class AuthenticationMethodsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get authenticationMethods from reports
+     * Container for navigation properties for Azure AD authentication methods resources.
      * @param AuthenticationMethodsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

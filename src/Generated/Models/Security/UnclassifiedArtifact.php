@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UnclassifiedArtifact extends Artifact implements Parsable 
 {
     /**
-     * Instantiates a new UnclassifiedArtifact and sets the default values.
+     * Instantiates a new unclassifiedArtifact and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -10,6 +10,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class SynchronizationTemplate extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new synchronizationTemplate and sets the default values.
     */
     public function __construct() {
@@ -26,7 +31,7 @@ class SynchronizationTemplate extends Entity implements Parsable
     }
 
     /**
-     * Gets the applicationId property value. The applicationId property
+     * Gets the applicationId property value. Identifier of the application this template belongs to.
      * @return string|null
     */
     public function getApplicationId(): ?string {
@@ -38,7 +43,7 @@ class SynchronizationTemplate extends Entity implements Parsable
     }
 
     /**
-     * Gets the default property value. The default property
+     * Gets the default property value. true if this template is recommended to be the default for the application.
      * @return bool|null
     */
     public function getDefault(): ?bool {
@@ -50,7 +55,7 @@ class SynchronizationTemplate extends Entity implements Parsable
     }
 
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. Description of the template.
      * @return string|null
     */
     public function getDescription(): ?string {
@@ -62,7 +67,7 @@ class SynchronizationTemplate extends Entity implements Parsable
     }
 
     /**
-     * Gets the discoverable property value. The discoverable property
+     * Gets the discoverable property value. true if this template should appear in the collection of templates available for the application instance (service principal).
      * @return bool|null
     */
     public function getDiscoverable(): ?bool {
@@ -74,7 +79,7 @@ class SynchronizationTemplate extends Entity implements Parsable
     }
 
     /**
-     * Gets the factoryTag property value. The factoryTag property
+     * Gets the factoryTag property value. One of the well-known factory tags supported by the synchronization engine. The factoryTag tells the synchronization engine which implementation to use when processing jobs based on this template.
      * @return string|null
     */
     public function getFactoryTag(): ?string {
@@ -103,7 +108,7 @@ class SynchronizationTemplate extends Entity implements Parsable
     }
 
     /**
-     * Gets the metadata property value. The metadata property
+     * Gets the metadata property value. Additional extension properties. Unless mentioned explicitly, metadata values should not be changed.
      * @return array<SynchronizationMetadataEntry>|null
     */
     public function getMetadata(): ?array {
@@ -117,7 +122,7 @@ class SynchronizationTemplate extends Entity implements Parsable
     }
 
     /**
-     * Gets the schema property value. The schema property
+     * Gets the schema property value. Default synchronization schema for the jobs based on this template.
      * @return SynchronizationSchema|null
     */
     public function getSchema(): ?SynchronizationSchema {
@@ -140,11 +145,12 @@ class SynchronizationTemplate extends Entity implements Parsable
         $writer->writeBooleanValue('default', $this->getDefault());
         $writer->writeStringValue('factoryTag', $this->getFactoryTag());
         $writer->writeCollectionOfObjectValues('metadata', $this->getMetadata());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('schema', $this->getSchema());
     }
 
     /**
-     * Sets the applicationId property value. The applicationId property
+     * Sets the applicationId property value. Identifier of the application this template belongs to.
      * @param string|null $value Value to set for the applicationId property.
     */
     public function setApplicationId(?string $value): void {
@@ -152,7 +158,7 @@ class SynchronizationTemplate extends Entity implements Parsable
     }
 
     /**
-     * Sets the default property value. The default property
+     * Sets the default property value. true if this template is recommended to be the default for the application.
      * @param bool|null $value Value to set for the EscapedDefault property.
     */
     public function setDefault(?bool $value): void {
@@ -160,7 +166,7 @@ class SynchronizationTemplate extends Entity implements Parsable
     }
 
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. Description of the template.
      * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
@@ -168,7 +174,7 @@ class SynchronizationTemplate extends Entity implements Parsable
     }
 
     /**
-     * Sets the discoverable property value. The discoverable property
+     * Sets the discoverable property value. true if this template should appear in the collection of templates available for the application instance (service principal).
      * @param bool|null $value Value to set for the discoverable property.
     */
     public function setDiscoverable(?bool $value): void {
@@ -176,7 +182,7 @@ class SynchronizationTemplate extends Entity implements Parsable
     }
 
     /**
-     * Sets the factoryTag property value. The factoryTag property
+     * Sets the factoryTag property value. One of the well-known factory tags supported by the synchronization engine. The factoryTag tells the synchronization engine which implementation to use when processing jobs based on this template.
      * @param string|null $value Value to set for the factoryTag property.
     */
     public function setFactoryTag(?string $value): void {
@@ -184,7 +190,7 @@ class SynchronizationTemplate extends Entity implements Parsable
     }
 
     /**
-     * Sets the metadata property value. The metadata property
+     * Sets the metadata property value. Additional extension properties. Unless mentioned explicitly, metadata values should not be changed.
      * @param array<SynchronizationMetadataEntry>|null $value Value to set for the metadata property.
     */
     public function setMetadata(?array $value): void {
@@ -192,7 +198,7 @@ class SynchronizationTemplate extends Entity implements Parsable
     }
 
     /**
-     * Sets the schema property value. The schema property
+     * Sets the schema property value. Default synchronization schema for the jobs based on this template.
      * @param SynchronizationSchema|null $value Value to set for the schema property.
     */
     public function setSchema(?SynchronizationSchema $value): void {

@@ -32,10 +32,9 @@ class SettingStateDeviceSummaryItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a settingStateDeviceSummary.
+     * Delete navigation property deviceSettingStateSummaries for deviceManagement
      * @param SettingStateDeviceSummaryItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-deviceconfig-settingstatedevicesummary-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?SettingStateDeviceSummaryItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -51,10 +50,9 @@ class SettingStateDeviceSummaryItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the settingStateDeviceSummary object.
+     * Device Configuration Setting State Device Summary
      * @param SettingStateDeviceSummaryItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-deviceconfig-settingstatedevicesummary-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?SettingStateDeviceSummaryItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -70,11 +68,10 @@ class SettingStateDeviceSummaryItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a settingStateDeviceSummary object.
+     * Update the navigation property deviceSettingStateSummaries in deviceManagement
      * @param SettingStateDeviceSummary $body The request body
      * @param SettingStateDeviceSummaryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-deviceconfig-settingstatedevicesummary-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(SettingStateDeviceSummary $body, ?SettingStateDeviceSummaryItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -90,7 +87,7 @@ class SettingStateDeviceSummaryItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a settingStateDeviceSummary.
+     * Delete navigation property deviceSettingStateSummaries for deviceManagement
      * @param SettingStateDeviceSummaryItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -107,7 +104,7 @@ class SettingStateDeviceSummaryItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the settingStateDeviceSummary object.
+     * Device Configuration Setting State Device Summary
      * @param SettingStateDeviceSummaryItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -128,7 +125,7 @@ class SettingStateDeviceSummaryItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a settingStateDeviceSummary object.
+     * Update the navigation property deviceSettingStateSummaries in deviceManagement
      * @param SettingStateDeviceSummary $body The request body
      * @param SettingStateDeviceSummaryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

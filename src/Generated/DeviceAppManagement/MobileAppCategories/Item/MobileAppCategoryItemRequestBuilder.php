@@ -32,10 +32,9 @@ class MobileAppCategoryItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a mobileAppCategory.
+     * Delete navigation property mobileAppCategories for deviceAppManagement
      * @param MobileAppCategoryItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-apps-mobileappcategory-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?MobileAppCategoryItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -51,10 +50,9 @@ class MobileAppCategoryItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the mobileAppCategory object.
+     * The mobile app categories.
      * @param MobileAppCategoryItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-apps-mobileappcategory-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?MobileAppCategoryItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -70,11 +68,10 @@ class MobileAppCategoryItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a mobileAppCategory object.
+     * Update the navigation property mobileAppCategories in deviceAppManagement
      * @param MobileAppCategory $body The request body
      * @param MobileAppCategoryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-apps-mobileappcategory-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(MobileAppCategory $body, ?MobileAppCategoryItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -90,7 +87,7 @@ class MobileAppCategoryItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a mobileAppCategory.
+     * Delete navigation property mobileAppCategories for deviceAppManagement
      * @param MobileAppCategoryItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -107,7 +104,7 @@ class MobileAppCategoryItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the mobileAppCategory object.
+     * The mobile app categories.
      * @param MobileAppCategoryItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -128,7 +125,7 @@ class MobileAppCategoryItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a mobileAppCategory object.
+     * Update the navigation property mobileAppCategories in deviceAppManagement
      * @param MobileAppCategory $body The request body
      * @param MobileAppCategoryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

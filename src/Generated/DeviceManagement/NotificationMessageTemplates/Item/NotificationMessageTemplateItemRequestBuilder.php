@@ -48,10 +48,9 @@ class NotificationMessageTemplateItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a notificationMessageTemplate.
+     * Delete navigation property notificationMessageTemplates for deviceManagement
      * @param NotificationMessageTemplateItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-notification-notificationmessagetemplate-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?NotificationMessageTemplateItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -67,10 +66,9 @@ class NotificationMessageTemplateItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the notificationMessageTemplate object.
+     * The Notification Message Templates.
      * @param NotificationMessageTemplateItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-notification-notificationmessagetemplate-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?NotificationMessageTemplateItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -86,11 +84,10 @@ class NotificationMessageTemplateItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a notificationMessageTemplate object.
+     * Update the navigation property notificationMessageTemplates in deviceManagement
      * @param NotificationMessageTemplate $body The request body
      * @param NotificationMessageTemplateItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-notification-notificationmessagetemplate-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(NotificationMessageTemplate $body, ?NotificationMessageTemplateItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -106,7 +103,7 @@ class NotificationMessageTemplateItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a notificationMessageTemplate.
+     * Delete navigation property notificationMessageTemplates for deviceManagement
      * @param NotificationMessageTemplateItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -123,7 +120,7 @@ class NotificationMessageTemplateItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the notificationMessageTemplate object.
+     * The Notification Message Templates.
      * @param NotificationMessageTemplateItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -144,7 +141,7 @@ class NotificationMessageTemplateItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a notificationMessageTemplate object.
+     * Update the navigation property notificationMessageTemplates in deviceManagement
      * @param NotificationMessageTemplate $body The request body
      * @param NotificationMessageTemplateItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

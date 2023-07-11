@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class UserRegistrationDetailsCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new UserRegistrationDetailsCollectionResponse and sets the default values.
+     * Instantiates a new userRegistrationDetailsCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

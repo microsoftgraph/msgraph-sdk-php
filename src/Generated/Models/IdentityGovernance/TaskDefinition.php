@@ -11,6 +11,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class TaskDefinition extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new taskDefinition and sets the default values.
     */
     public function __construct() {
@@ -126,6 +131,7 @@ class TaskDefinition extends Entity implements Parsable
         $writer->writeBooleanValue('continueOnError', $this->getContinueOnError());
         $writer->writeStringValue('description', $this->getDescription());
         $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfObjectValues('parameters', $this->getParameters());
         $writer->writeIntegerValue('version', $this->getVersion());
     }

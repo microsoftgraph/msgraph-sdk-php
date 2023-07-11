@@ -6,10 +6,18 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * Abstract class that contains properties and inherited properties for apps that you can manage with an Intune app protection policy.
+*/
 class ManagedApp extends MobileApp implements Parsable 
 {
     /**
-     * Instantiates a new ManagedApp and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new managedApp and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -79,6 +87,7 @@ class ManagedApp extends MobileApp implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeEnumValue('appAvailability', $this->getAppAvailability());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('version', $this->getVersion());
     }
 

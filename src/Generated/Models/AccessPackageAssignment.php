@@ -6,9 +6,15 @@ use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class AccessPackageAssignment extends Entity implements Parsable 
 {
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
     /**
      * Instantiates a new accessPackageAssignment and sets the default values.
     */
@@ -50,6 +56,20 @@ class AccessPackageAssignment extends Entity implements Parsable
     }
 
     /**
+     * Gets the customExtensionCalloutInstances property value. The customExtensionCalloutInstances property
+     * @return array<CustomExtensionCalloutInstance>|null
+    */
+    public function getCustomExtensionCalloutInstances(): ?array {
+        $val = $this->getBackingStore()->get('customExtensionCalloutInstances');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, CustomExtensionCalloutInstance::class);
+            /** @var array<CustomExtensionCalloutInstance>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'customExtensionCalloutInstances'");
+    }
+
+    /**
      * Gets the expiredDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @return DateTime|null
     */
@@ -70,6 +90,7 @@ class AccessPackageAssignment extends Entity implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'accessPackage' => fn(ParseNode $n) => $o->setAccessPackage($n->getObjectValue([AccessPackage::class, 'createFromDiscriminatorValue'])),
             'assignmentPolicy' => fn(ParseNode $n) => $o->setAssignmentPolicy($n->getObjectValue([AccessPackageAssignmentPolicy::class, 'createFromDiscriminatorValue'])),
+            'customExtensionCalloutInstances' => fn(ParseNode $n) => $o->setCustomExtensionCalloutInstances($n->getCollectionOfObjectValues([CustomExtensionCalloutInstance::class, 'createFromDiscriminatorValue'])),
             'expiredDateTime' => fn(ParseNode $n) => $o->setExpiredDateTime($n->getDateTimeValue()),
             'schedule' => fn(ParseNode $n) => $o->setSchedule($n->getObjectValue([EntitlementManagementSchedule::class, 'createFromDiscriminatorValue'])),
             'state' => fn(ParseNode $n) => $o->setState($n->getEnumValue(AccessPackageAssignmentState::class)),
@@ -134,7 +155,9 @@ class AccessPackageAssignment extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeObjectValue('accessPackage', $this->getAccessPackage());
         $writer->writeObjectValue('assignmentPolicy', $this->getAssignmentPolicy());
+        $writer->writeCollectionOfObjectValues('customExtensionCalloutInstances', $this->getCustomExtensionCalloutInstances());
         $writer->writeDateTimeValue('expiredDateTime', $this->getExpiredDateTime());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('schedule', $this->getSchedule());
         $writer->writeEnumValue('state', $this->getState());
         $writer->writeStringValue('status', $this->getStatus());
@@ -155,6 +178,14 @@ class AccessPackageAssignment extends Entity implements Parsable
     */
     public function setAssignmentPolicy(?AccessPackageAssignmentPolicy $value): void {
         $this->getBackingStore()->set('assignmentPolicy', $value);
+    }
+
+    /**
+     * Sets the customExtensionCalloutInstances property value. The customExtensionCalloutInstances property
+     * @param array<CustomExtensionCalloutInstance>|null $value Value to set for the customExtensionCalloutInstances property.
+    */
+    public function setCustomExtensionCalloutInstances(?array $value): void {
+        $this->getBackingStore()->set('customExtensionCalloutInstances', $value);
     }
 
     /**

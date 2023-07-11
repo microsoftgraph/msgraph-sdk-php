@@ -10,6 +10,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Workbook extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new workbook and sets the default values.
     */
     public function __construct() {
@@ -146,6 +151,7 @@ class Workbook extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('comments', $this->getComments());
         $writer->writeObjectValue('functions', $this->getFunctions());
         $writer->writeCollectionOfObjectValues('names', $this->getNames());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfObjectValues('operations', $this->getOperations());
         $writer->writeCollectionOfObjectValues('tables', $this->getTables());
         $writer->writeCollectionOfObjectValues('worksheets', $this->getWorksheets());

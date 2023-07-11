@@ -7,10 +7,13 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
+/**
+ * iOS Device Features Configuration Profile.
+*/
 class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBase implements Parsable 
 {
     /**
-     * Instantiates a new IosDeviceFeaturesConfiguration and sets the default values.
+     * Instantiates a new iosDeviceFeaturesConfiguration and sets the default values.
     */
     public function __construct() {
         parent::__construct();

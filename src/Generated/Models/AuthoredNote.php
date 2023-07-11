@@ -10,6 +10,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AuthoredNote extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new authoredNote and sets the default values.
     */
     public function __construct() {
@@ -83,6 +88,7 @@ class AuthoredNote extends Entity implements Parsable
         $writer->writeObjectValue('author', $this->getAuthor());
         $writer->writeObjectValue('content', $this->getContent());
         $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

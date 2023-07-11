@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Fido2AuthenticationMethod extends AuthenticationMethod implements Parsable 
 {
     /**
-     * Instantiates a new Fido2AuthenticationMethod and sets the default values.
+     * Instantiates a new fido2AuthenticationMethod and sets the default values.
     */
     public function __construct() {
         parent::__construct();

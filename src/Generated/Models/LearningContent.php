@@ -12,6 +12,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class LearningContent extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new learningContent and sets the default values.
     */
     public function __construct() {
@@ -318,6 +323,7 @@ class LearningContent extends Entity implements Parsable
         $writer->writeStringValue('languageTag', $this->getLanguageTag());
         $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
         $writer->writeIntegerValue('numberOfPages', $this->getNumberOfPages());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfPrimitiveValues('skillTags', $this->getSkillTags());
         $writer->writeStringValue('sourceName', $this->getSourceName());
         $writer->writeStringValue('thumbnailWebUrl', $this->getThumbnailWebUrl());

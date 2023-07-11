@@ -9,6 +9,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookApplication extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new workbookApplication and sets the default values.
     */
     public function __construct() {
@@ -54,6 +59,7 @@ class WorkbookApplication extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeStringValue('calculationMode', $this->getCalculationMode());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

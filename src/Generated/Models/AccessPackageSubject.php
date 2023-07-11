@@ -9,6 +9,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AccessPackageSubject extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new accessPackageSubject and sets the default values.
     */
     public function __construct() {
@@ -135,6 +140,7 @@ class AccessPackageSubject extends Entity implements Parsable
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeStringValue('email', $this->getEmail());
         $writer->writeStringValue('objectId', $this->getObjectId());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('onPremisesSecurityIdentifier', $this->getOnPremisesSecurityIdentifier());
         $writer->writeStringValue('principalName', $this->getPrincipalName());
         $writer->writeEnumValue('subjectType', $this->getSubjectType());

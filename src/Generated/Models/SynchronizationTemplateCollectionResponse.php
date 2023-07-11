@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class SynchronizationTemplateCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new SynchronizationTemplateCollectionResponse and sets the default values.
+     * Instantiates a new synchronizationTemplateCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

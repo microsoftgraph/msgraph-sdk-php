@@ -10,7 +10,12 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class ServiceAnnouncement extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new ServiceAnnouncement and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new serviceAnnouncement and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -89,6 +94,7 @@ class ServiceAnnouncement extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('healthOverviews', $this->getHealthOverviews());
         $writer->writeCollectionOfObjectValues('issues', $this->getIssues());
         $writer->writeCollectionOfObjectValues('messages', $this->getMessages());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

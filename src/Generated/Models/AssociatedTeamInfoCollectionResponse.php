@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class AssociatedTeamInfoCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new AssociatedTeamInfoCollectionResponse and sets the default values.
+     * Instantiates a new associatedTeamInfoCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

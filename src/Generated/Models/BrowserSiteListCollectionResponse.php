@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class BrowserSiteListCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new BrowserSiteListCollectionResponse and sets the default values.
+     * Instantiates a new browserSiteListCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

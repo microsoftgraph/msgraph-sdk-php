@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable 
 {
     /**
-     * Instantiates a new ServiceHealthIssue and sets the default values.
+     * Instantiates a new serviceHealthIssue and sets the default values.
     */
     public function __construct() {
         parent::__construct();

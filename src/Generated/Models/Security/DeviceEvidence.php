@@ -11,7 +11,12 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class DeviceEvidence extends AlertEvidence implements Parsable 
 {
     /**
-     * Instantiates a new DeviceEvidence and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new deviceEvidence and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -269,6 +274,7 @@ class DeviceEvidence extends AlertEvidence implements Parsable
         $writer->writeCollectionOfPrimitiveValues('ipInterfaces', $this->getIpInterfaces());
         $writer->writeCollectionOfObjectValues('loggedOnUsers', $this->getLoggedOnUsers());
         $writer->writeStringValue('mdeDeviceId', $this->getMdeDeviceId());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeEnumValue('onboardingStatus', $this->getOnboardingStatus());
         $writer->writeIntegerValue('osBuild', $this->getOsBuild());
         $writer->writeStringValue('osPlatform', $this->getOsPlatform());

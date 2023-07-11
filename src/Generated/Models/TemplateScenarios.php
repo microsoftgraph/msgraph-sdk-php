@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Enum;
 
 class TemplateScenarios extends Enum {
-    public const ESCAPED_NEW = 'new';
+    public const NEW = 'new';
     public const SECURE_FOUNDATION = 'secureFoundation';
     public const ZERO_TRUST = 'zeroTrust';
     public const REMOTE_WORK = 'remoteWork';

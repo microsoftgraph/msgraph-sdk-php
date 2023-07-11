@@ -18,7 +18,7 @@ class OnPremisesDirectorySynchronizationFeature implements AdditionalDataHolder,
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new OnPremisesDirectorySynchronizationFeature and sets the default values.
+     * Instantiates a new onPremisesDirectorySynchronizationFeature and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

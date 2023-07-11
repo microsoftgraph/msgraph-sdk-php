@@ -14,6 +14,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class ManagedEBook extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new managedEBook and sets the default values.
     */
     public function __construct() {
@@ -236,6 +241,7 @@ class ManagedEBook extends Entity implements Parsable
         $writer->writeObjectValue('installSummary', $this->getInstallSummary());
         $writer->writeObjectValue('largeCover', $this->getLargeCover());
         $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('privacyInformationUrl', $this->getPrivacyInformationUrl());
         $writer->writeDateTimeValue('publishedDateTime', $this->getPublishedDateTime());
         $writer->writeStringValue('publisher', $this->getPublisher());

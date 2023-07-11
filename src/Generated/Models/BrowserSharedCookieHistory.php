@@ -19,7 +19,7 @@ class BrowserSharedCookieHistory implements AdditionalDataHolder, BackedModel, P
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new BrowserSharedCookieHistory and sets the default values.
+     * Instantiates a new browserSharedCookieHistory and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

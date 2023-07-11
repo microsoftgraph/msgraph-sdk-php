@@ -10,7 +10,12 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class MessagePinnedEventMessageDetail extends EventMessageDetail implements Parsable 
 {
     /**
-     * Instantiates a new MessagePinnedEventMessageDetail and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new messagePinnedEventMessageDetail and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -70,6 +75,7 @@ class MessagePinnedEventMessageDetail extends EventMessageDetail implements Pars
         parent::serialize($writer);
         $writer->writeDateTimeValue('eventDateTime', $this->getEventDateTime());
         $writer->writeObjectValue('initiator', $this->getInitiator());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

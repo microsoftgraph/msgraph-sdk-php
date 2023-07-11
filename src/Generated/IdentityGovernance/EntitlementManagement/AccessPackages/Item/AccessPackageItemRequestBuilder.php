@@ -11,6 +11,7 @@ use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AccessPac
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AccessPackages\Item\GetApplicablePolicyRequirements\GetApplicablePolicyRequirementsRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AccessPackages\Item\IncompatibleAccessPackages\IncompatibleAccessPackagesRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AccessPackages\Item\IncompatibleGroups\IncompatibleGroupsRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AccessPackages\Item\ResourceRoleScopes\ResourceRoleScopesRequestBuilder;
 use Microsoft\Graph\Generated\Models\AccessPackage;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -63,6 +64,13 @@ class AccessPackageItemRequestBuilder extends BaseRequestBuilder
     */
     public function incompatibleGroups(): IncompatibleGroupsRequestBuilder {
         return new IncompatibleGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the resourceRoleScopes property of the microsoft.graph.accessPackage entity.
+    */
+    public function resourceRoleScopes(): ResourceRoleScopesRequestBuilder {
+        return new ResourceRoleScopesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

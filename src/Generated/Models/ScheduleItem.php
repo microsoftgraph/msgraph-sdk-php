@@ -18,7 +18,7 @@ class ScheduleItem implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new ScheduleItem and sets the default values.
+     * Instantiates a new scheduleItem and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

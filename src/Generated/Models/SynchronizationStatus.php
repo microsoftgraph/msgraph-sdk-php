@@ -70,7 +70,7 @@ class SynchronizationStatus implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the countSuccessiveCompleteFailures property value. The countSuccessiveCompleteFailures property
+     * Gets the countSuccessiveCompleteFailures property value. Number of consecutive times this job failed.
      * @return int|null
     */
     public function getCountSuccessiveCompleteFailures(): ?int {
@@ -82,7 +82,7 @@ class SynchronizationStatus implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the escrowsPruned property value. The escrowsPruned property
+     * Gets the escrowsPruned property value. true if the job's escrows (object-level errors) were pruned during initial synchronization. Escrows can be pruned if during the initial synchronization, you reach the threshold of errors that would normally put the job in quarantine. Instead of going into quarantine, the synchronization process clears the job's errors and continues until the initial synchronization is completed. When the initial synchronization is completed, the job will pause and wait for the customer to clean up the errors.
      * @return bool|null
     */
     public function getEscrowsPruned(): ?bool {
@@ -117,7 +117,7 @@ class SynchronizationStatus implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the lastExecution property value. The lastExecution property
+     * Gets the lastExecution property value. Details of the last execution of the job.
      * @return SynchronizationTaskExecution|null
     */
     public function getLastExecution(): ?SynchronizationTaskExecution {
@@ -129,7 +129,7 @@ class SynchronizationStatus implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the lastSuccessfulExecution property value. The lastSuccessfulExecution property
+     * Gets the lastSuccessfulExecution property value. Details of the last execution of this job, which didn't have any errors.
      * @return SynchronizationTaskExecution|null
     */
     public function getLastSuccessfulExecution(): ?SynchronizationTaskExecution {
@@ -141,7 +141,7 @@ class SynchronizationStatus implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the lastSuccessfulExecutionWithExports property value. The lastSuccessfulExecutionWithExports property
+     * Gets the lastSuccessfulExecutionWithExports property value. Details of the last execution of the job, which exported objects into the target directory.
      * @return SynchronizationTaskExecution|null
     */
     public function getLastSuccessfulExecutionWithExports(): ?SynchronizationTaskExecution {
@@ -165,7 +165,7 @@ class SynchronizationStatus implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the progress property value. The progress property
+     * Gets the progress property value. Details of the progress of a job toward completion.
      * @return array<SynchronizationProgress>|null
     */
     public function getProgress(): ?array {
@@ -179,7 +179,7 @@ class SynchronizationStatus implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the quarantine property value. The quarantine property
+     * Gets the quarantine property value. If job is in quarantine, quarantine details.
      * @return SynchronizationQuarantine|null
     */
     public function getQuarantine(): ?SynchronizationQuarantine {
@@ -191,7 +191,7 @@ class SynchronizationStatus implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the steadyStateFirstAchievedTime property value. The steadyStateFirstAchievedTime property
+     * Gets the steadyStateFirstAchievedTime property value. The time when steady state (no more changes to the process) was first achieved. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return DateTime|null
     */
     public function getSteadyStateFirstAchievedTime(): ?DateTime {
@@ -203,7 +203,7 @@ class SynchronizationStatus implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the steadyStateLastAchievedTime property value. The steadyStateLastAchievedTime property
+     * Gets the steadyStateLastAchievedTime property value. The time when steady state (no more changes to the process) was last achieved. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return DateTime|null
     */
     public function getSteadyStateLastAchievedTime(): ?DateTime {
@@ -215,7 +215,7 @@ class SynchronizationStatus implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the synchronizedEntryCountByType property value. The synchronizedEntryCountByType property
+     * Gets the synchronizedEntryCountByType property value. Count of synchronized objects, listed by object type.
      * @return array<StringKeyLongValuePair>|null
     */
     public function getSynchronizedEntryCountByType(): ?array {
@@ -229,7 +229,7 @@ class SynchronizationStatus implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the troubleshootingUrl property value. The troubleshootingUrl property
+     * Gets the troubleshootingUrl property value. In the event of an error, the URL with the troubleshooting steps for the issue.
      * @return string|null
     */
     public function getTroubleshootingUrl(): ?string {
@@ -286,7 +286,7 @@ class SynchronizationStatus implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the countSuccessiveCompleteFailures property value. The countSuccessiveCompleteFailures property
+     * Sets the countSuccessiveCompleteFailures property value. Number of consecutive times this job failed.
      * @param int|null $value Value to set for the countSuccessiveCompleteFailures property.
     */
     public function setCountSuccessiveCompleteFailures(?int $value): void {
@@ -294,7 +294,7 @@ class SynchronizationStatus implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the escrowsPruned property value. The escrowsPruned property
+     * Sets the escrowsPruned property value. true if the job's escrows (object-level errors) were pruned during initial synchronization. Escrows can be pruned if during the initial synchronization, you reach the threshold of errors that would normally put the job in quarantine. Instead of going into quarantine, the synchronization process clears the job's errors and continues until the initial synchronization is completed. When the initial synchronization is completed, the job will pause and wait for the customer to clean up the errors.
      * @param bool|null $value Value to set for the escrowsPruned property.
     */
     public function setEscrowsPruned(?bool $value): void {
@@ -302,7 +302,7 @@ class SynchronizationStatus implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the lastExecution property value. The lastExecution property
+     * Sets the lastExecution property value. Details of the last execution of the job.
      * @param SynchronizationTaskExecution|null $value Value to set for the lastExecution property.
     */
     public function setLastExecution(?SynchronizationTaskExecution $value): void {
@@ -310,7 +310,7 @@ class SynchronizationStatus implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the lastSuccessfulExecution property value. The lastSuccessfulExecution property
+     * Sets the lastSuccessfulExecution property value. Details of the last execution of this job, which didn't have any errors.
      * @param SynchronizationTaskExecution|null $value Value to set for the lastSuccessfulExecution property.
     */
     public function setLastSuccessfulExecution(?SynchronizationTaskExecution $value): void {
@@ -318,7 +318,7 @@ class SynchronizationStatus implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the lastSuccessfulExecutionWithExports property value. The lastSuccessfulExecutionWithExports property
+     * Sets the lastSuccessfulExecutionWithExports property value. Details of the last execution of the job, which exported objects into the target directory.
      * @param SynchronizationTaskExecution|null $value Value to set for the lastSuccessfulExecutionWithExports property.
     */
     public function setLastSuccessfulExecutionWithExports(?SynchronizationTaskExecution $value): void {
@@ -334,7 +334,7 @@ class SynchronizationStatus implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the progress property value. The progress property
+     * Sets the progress property value. Details of the progress of a job toward completion.
      * @param array<SynchronizationProgress>|null $value Value to set for the progress property.
     */
     public function setProgress(?array $value): void {
@@ -342,7 +342,7 @@ class SynchronizationStatus implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the quarantine property value. The quarantine property
+     * Sets the quarantine property value. If job is in quarantine, quarantine details.
      * @param SynchronizationQuarantine|null $value Value to set for the quarantine property.
     */
     public function setQuarantine(?SynchronizationQuarantine $value): void {
@@ -350,7 +350,7 @@ class SynchronizationStatus implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the steadyStateFirstAchievedTime property value. The steadyStateFirstAchievedTime property
+     * Sets the steadyStateFirstAchievedTime property value. The time when steady state (no more changes to the process) was first achieved. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param DateTime|null $value Value to set for the steadyStateFirstAchievedTime property.
     */
     public function setSteadyStateFirstAchievedTime(?DateTime $value): void {
@@ -358,7 +358,7 @@ class SynchronizationStatus implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the steadyStateLastAchievedTime property value. The steadyStateLastAchievedTime property
+     * Sets the steadyStateLastAchievedTime property value. The time when steady state (no more changes to the process) was last achieved. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param DateTime|null $value Value to set for the steadyStateLastAchievedTime property.
     */
     public function setSteadyStateLastAchievedTime(?DateTime $value): void {
@@ -366,7 +366,7 @@ class SynchronizationStatus implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the synchronizedEntryCountByType property value. The synchronizedEntryCountByType property
+     * Sets the synchronizedEntryCountByType property value. Count of synchronized objects, listed by object type.
      * @param array<StringKeyLongValuePair>|null $value Value to set for the synchronizedEntryCountByType property.
     */
     public function setSynchronizedEntryCountByType(?array $value): void {
@@ -374,7 +374,7 @@ class SynchronizationStatus implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the troubleshootingUrl property value. The troubleshootingUrl property
+     * Sets the troubleshootingUrl property value. In the event of an error, the URL with the troubleshooting steps for the issue.
      * @param string|null $value Value to set for the troubleshootingUrl property.
     */
     public function setTroubleshootingUrl(?string $value): void {

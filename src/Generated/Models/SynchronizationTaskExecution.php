@@ -36,7 +36,7 @@ class SynchronizationTaskExecution implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Gets the activityIdentifier property value. The activityIdentifier property
+     * Gets the activityIdentifier property value. Identifier of the job run.
      * @return string|null
     */
     public function getActivityIdentifier(): ?string {
@@ -69,7 +69,7 @@ class SynchronizationTaskExecution implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Gets the countEntitled property value. The countEntitled property
+     * Gets the countEntitled property value. Count of processed entries that were assigned for this application.
      * @return int|null
     */
     public function getCountEntitled(): ?int {
@@ -81,7 +81,7 @@ class SynchronizationTaskExecution implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Gets the countEntitledForProvisioning property value. The countEntitledForProvisioning property
+     * Gets the countEntitledForProvisioning property value. Count of processed entries that were assigned for provisioning.
      * @return int|null
     */
     public function getCountEntitledForProvisioning(): ?int {
@@ -93,7 +93,7 @@ class SynchronizationTaskExecution implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Gets the countEscrowed property value. The countEscrowed property
+     * Gets the countEscrowed property value. Count of entries that were escrowed (errors).
      * @return int|null
     */
     public function getCountEscrowed(): ?int {
@@ -105,7 +105,7 @@ class SynchronizationTaskExecution implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Gets the countEscrowedRaw property value. The countEscrowedRaw property
+     * Gets the countEscrowedRaw property value. Count of entries that were escrowed, including system-generated escrows.
      * @return int|null
     */
     public function getCountEscrowedRaw(): ?int {
@@ -117,7 +117,7 @@ class SynchronizationTaskExecution implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Gets the countExported property value. The countExported property
+     * Gets the countExported property value. Count of exported entries.
      * @return int|null
     */
     public function getCountExported(): ?int {
@@ -129,7 +129,7 @@ class SynchronizationTaskExecution implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Gets the countExports property value. The countExports property
+     * Gets the countExports property value. Count of entries that were expected to be exported.
      * @return int|null
     */
     public function getCountExports(): ?int {
@@ -141,7 +141,7 @@ class SynchronizationTaskExecution implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Gets the countImported property value. The countImported property
+     * Gets the countImported property value. Count of imported entries.
      * @return int|null
     */
     public function getCountImported(): ?int {
@@ -153,7 +153,7 @@ class SynchronizationTaskExecution implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Gets the countImportedDeltas property value. The countImportedDeltas property
+     * Gets the countImportedDeltas property value. Count of imported delta-changes.
      * @return int|null
     */
     public function getCountImportedDeltas(): ?int {
@@ -165,7 +165,7 @@ class SynchronizationTaskExecution implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Gets the countImportedReferenceDeltas property value. The countImportedReferenceDeltas property
+     * Gets the countImportedReferenceDeltas property value. Count of imported delta-changes pertaining to reference changes.
      * @return int|null
     */
     public function getCountImportedReferenceDeltas(): ?int {
@@ -177,7 +177,7 @@ class SynchronizationTaskExecution implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Gets the error property value. The error property
+     * Gets the error property value. If an error was encountered, contains a synchronizationError object with details.
      * @return SynchronizationError|null
     */
     public function getError(): ?SynchronizationError {
@@ -238,7 +238,7 @@ class SynchronizationTaskExecution implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Gets the timeBegan property value. The timeBegan property
+     * Gets the timeBegan property value. Time when this job run began. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return DateTime|null
     */
     public function getTimeBegan(): ?DateTime {
@@ -250,7 +250,7 @@ class SynchronizationTaskExecution implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Gets the timeEnded property value. The timeEnded property
+     * Gets the timeEnded property value. Time when this job run ended. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return DateTime|null
     */
     public function getTimeEnded(): ?DateTime {
@@ -285,7 +285,7 @@ class SynchronizationTaskExecution implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Sets the activityIdentifier property value. The activityIdentifier property
+     * Sets the activityIdentifier property value. Identifier of the job run.
      * @param string|null $value Value to set for the activityIdentifier property.
     */
     public function setActivityIdentifier(?string $value): void {
@@ -309,7 +309,7 @@ class SynchronizationTaskExecution implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Sets the countEntitled property value. The countEntitled property
+     * Sets the countEntitled property value. Count of processed entries that were assigned for this application.
      * @param int|null $value Value to set for the countEntitled property.
     */
     public function setCountEntitled(?int $value): void {
@@ -317,7 +317,7 @@ class SynchronizationTaskExecution implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Sets the countEntitledForProvisioning property value. The countEntitledForProvisioning property
+     * Sets the countEntitledForProvisioning property value. Count of processed entries that were assigned for provisioning.
      * @param int|null $value Value to set for the countEntitledForProvisioning property.
     */
     public function setCountEntitledForProvisioning(?int $value): void {
@@ -325,7 +325,7 @@ class SynchronizationTaskExecution implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Sets the countEscrowed property value. The countEscrowed property
+     * Sets the countEscrowed property value. Count of entries that were escrowed (errors).
      * @param int|null $value Value to set for the countEscrowed property.
     */
     public function setCountEscrowed(?int $value): void {
@@ -333,7 +333,7 @@ class SynchronizationTaskExecution implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Sets the countEscrowedRaw property value. The countEscrowedRaw property
+     * Sets the countEscrowedRaw property value. Count of entries that were escrowed, including system-generated escrows.
      * @param int|null $value Value to set for the countEscrowedRaw property.
     */
     public function setCountEscrowedRaw(?int $value): void {
@@ -341,7 +341,7 @@ class SynchronizationTaskExecution implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Sets the countExported property value. The countExported property
+     * Sets the countExported property value. Count of exported entries.
      * @param int|null $value Value to set for the countExported property.
     */
     public function setCountExported(?int $value): void {
@@ -349,7 +349,7 @@ class SynchronizationTaskExecution implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Sets the countExports property value. The countExports property
+     * Sets the countExports property value. Count of entries that were expected to be exported.
      * @param int|null $value Value to set for the countExports property.
     */
     public function setCountExports(?int $value): void {
@@ -357,7 +357,7 @@ class SynchronizationTaskExecution implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Sets the countImported property value. The countImported property
+     * Sets the countImported property value. Count of imported entries.
      * @param int|null $value Value to set for the countImported property.
     */
     public function setCountImported(?int $value): void {
@@ -365,7 +365,7 @@ class SynchronizationTaskExecution implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Sets the countImportedDeltas property value. The countImportedDeltas property
+     * Sets the countImportedDeltas property value. Count of imported delta-changes.
      * @param int|null $value Value to set for the countImportedDeltas property.
     */
     public function setCountImportedDeltas(?int $value): void {
@@ -373,7 +373,7 @@ class SynchronizationTaskExecution implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Sets the countImportedReferenceDeltas property value. The countImportedReferenceDeltas property
+     * Sets the countImportedReferenceDeltas property value. Count of imported delta-changes pertaining to reference changes.
      * @param int|null $value Value to set for the countImportedReferenceDeltas property.
     */
     public function setCountImportedReferenceDeltas(?int $value): void {
@@ -381,7 +381,7 @@ class SynchronizationTaskExecution implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Sets the error property value. The error property
+     * Sets the error property value. If an error was encountered, contains a synchronizationError object with details.
      * @param SynchronizationError|null $value Value to set for the error property.
     */
     public function setError(?SynchronizationError $value): void {
@@ -405,7 +405,7 @@ class SynchronizationTaskExecution implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Sets the timeBegan property value. The timeBegan property
+     * Sets the timeBegan property value. Time when this job run began. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param DateTime|null $value Value to set for the timeBegan property.
     */
     public function setTimeBegan(?DateTime $value): void {
@@ -413,7 +413,7 @@ class SynchronizationTaskExecution implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Sets the timeEnded property value. The timeEnded property
+     * Sets the timeEnded property value. Time when this job run ended. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param DateTime|null $value Value to set for the timeEnded property.
     */
     public function setTimeEnded(?DateTime $value): void {

@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AssociatedTeamInfo extends TeamInfo implements Parsable 
 {
     /**
-     * Instantiates a new AssociatedTeamInfo and sets the default values.
+     * Instantiates a new associatedTeamInfo and sets the default values.
     */
     public function __construct() {
         parent::__construct();

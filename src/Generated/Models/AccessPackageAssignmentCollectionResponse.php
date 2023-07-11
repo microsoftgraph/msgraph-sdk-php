@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class AccessPackageAssignmentCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new AccessPackageAssignmentCollectionResponse and sets the default values.
+     * Instantiates a new accessPackageAssignmentCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

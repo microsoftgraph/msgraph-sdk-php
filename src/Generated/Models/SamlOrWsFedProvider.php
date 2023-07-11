@@ -9,7 +9,12 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SamlOrWsFedProvider extends IdentityProviderBase implements Parsable 
 {
     /**
-     * Instantiates a new SamlOrWsFedProvider and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new samlOrWsFedProvider and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -116,6 +121,7 @@ class SamlOrWsFedProvider extends IdentityProviderBase implements Parsable
         parent::serialize($writer);
         $writer->writeStringValue('issuerUri', $this->getIssuerUri());
         $writer->writeStringValue('metadataExchangeUri', $this->getMetadataExchangeUri());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('passiveSignInUri', $this->getPassiveSignInUri());
         $writer->writeEnumValue('preferredAuthenticationProtocol', $this->getPreferredAuthenticationProtocol());
         $writer->writeStringValue('signingCertificate', $this->getSigningCertificate());

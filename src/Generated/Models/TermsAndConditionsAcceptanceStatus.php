@@ -13,6 +13,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TermsAndConditionsAcceptanceStatus extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new termsAndConditionsAcceptanceStatus and sets the default values.
     */
     public function __construct() {
@@ -111,6 +116,7 @@ class TermsAndConditionsAcceptanceStatus extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeDateTimeValue('acceptedDateTime', $this->getAcceptedDateTime());
         $writer->writeIntegerValue('acceptedVersion', $this->getAcceptedVersion());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('termsAndConditions', $this->getTermsAndConditions());
         $writer->writeStringValue('userDisplayName', $this->getUserDisplayName());
         $writer->writeStringValue('userPrincipalName', $this->getUserPrincipalName());

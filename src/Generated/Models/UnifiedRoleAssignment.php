@@ -9,6 +9,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UnifiedRoleAssignment extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new unifiedRoleAssignment and sets the default values.
     */
     public function __construct() {
@@ -162,6 +167,7 @@ class UnifiedRoleAssignment extends Entity implements Parsable
         $writer->writeStringValue('condition', $this->getCondition());
         $writer->writeObjectValue('directoryScope', $this->getDirectoryScope());
         $writer->writeStringValue('directoryScopeId', $this->getDirectoryScopeId());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('principal', $this->getPrincipal());
         $writer->writeStringValue('principalId', $this->getPrincipalId());
         $writer->writeObjectValue('roleDefinition', $this->getRoleDefinition());

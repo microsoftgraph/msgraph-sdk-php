@@ -69,7 +69,7 @@ class SynchronizationRule implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the editable property value. The editable property
+     * Gets the editable property value. true if the synchronization rule can be customized; false if this rule is read-only and should not be changed.
      * @return bool|null
     */
     public function getEditable(): ?bool {
@@ -114,7 +114,7 @@ class SynchronizationRule implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the id property value. The id property
+     * Gets the id property value. Synchronization rule identifier. Must be one of the identifiers recognized by the synchronization engine. Supported rule identifiers can be found in the synchronization template returned by the API.
      * @return string|null
     */
     public function getId(): ?string {
@@ -126,7 +126,7 @@ class SynchronizationRule implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the metadata property value. The metadata property
+     * Gets the metadata property value. Additional extension properties. Unless instructed explicitly by the support team, metadata values should not be changed.
      * @return array<StringKeyStringValuePair>|null
     */
     public function getMetadata(): ?array {
@@ -140,7 +140,7 @@ class SynchronizationRule implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. Human-readable name of the synchronization rule. Not nullable.
      * @return string|null
     */
     public function getName(): ?string {
@@ -152,7 +152,7 @@ class SynchronizationRule implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the objectMappings property value. The objectMappings property
+     * Gets the objectMappings property value. Collection of object mappings supported by the rule. Tells the synchronization engine which objects should be synchronized.
      * @return array<ObjectMapping>|null
     */
     public function getObjectMappings(): ?array {
@@ -178,7 +178,7 @@ class SynchronizationRule implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the priority property value. The priority property
+     * Gets the priority property value. Priority relative to other rules in the synchronizationSchema. Rules with the lowest priority number will be processed first.
      * @return int|null
     */
     public function getPriority(): ?int {
@@ -190,7 +190,7 @@ class SynchronizationRule implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the sourceDirectoryName property value. The sourceDirectoryName property
+     * Gets the sourceDirectoryName property value. Name of the source directory. Must match one of the directory definitions in synchronizationSchema.
      * @return string|null
     */
     public function getSourceDirectoryName(): ?string {
@@ -202,7 +202,7 @@ class SynchronizationRule implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the targetDirectoryName property value. The targetDirectoryName property
+     * Gets the targetDirectoryName property value. Name of the target directory. Must match one of the directory definitions in synchronizationSchema.
      * @return string|null
     */
     public function getTargetDirectoryName(): ?string {
@@ -257,7 +257,7 @@ class SynchronizationRule implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the editable property value. The editable property
+     * Sets the editable property value. true if the synchronization rule can be customized; false if this rule is read-only and should not be changed.
      * @param bool|null $value Value to set for the editable property.
     */
     public function setEditable(?bool $value): void {
@@ -273,7 +273,7 @@ class SynchronizationRule implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the id property value. The id property
+     * Sets the id property value. Synchronization rule identifier. Must be one of the identifiers recognized by the synchronization engine. Supported rule identifiers can be found in the synchronization template returned by the API.
      * @param string|null $value Value to set for the id property.
     */
     public function setId(?string $value): void {
@@ -281,7 +281,7 @@ class SynchronizationRule implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the metadata property value. The metadata property
+     * Sets the metadata property value. Additional extension properties. Unless instructed explicitly by the support team, metadata values should not be changed.
      * @param array<StringKeyStringValuePair>|null $value Value to set for the metadata property.
     */
     public function setMetadata(?array $value): void {
@@ -289,7 +289,7 @@ class SynchronizationRule implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. Human-readable name of the synchronization rule. Not nullable.
      * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
@@ -297,7 +297,7 @@ class SynchronizationRule implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the objectMappings property value. The objectMappings property
+     * Sets the objectMappings property value. Collection of object mappings supported by the rule. Tells the synchronization engine which objects should be synchronized.
      * @param array<ObjectMapping>|null $value Value to set for the objectMappings property.
     */
     public function setObjectMappings(?array $value): void {
@@ -313,7 +313,7 @@ class SynchronizationRule implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the priority property value. The priority property
+     * Sets the priority property value. Priority relative to other rules in the synchronizationSchema. Rules with the lowest priority number will be processed first.
      * @param int|null $value Value to set for the priority property.
     */
     public function setPriority(?int $value): void {
@@ -321,7 +321,7 @@ class SynchronizationRule implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the sourceDirectoryName property value. The sourceDirectoryName property
+     * Sets the sourceDirectoryName property value. Name of the source directory. Must match one of the directory definitions in synchronizationSchema.
      * @param string|null $value Value to set for the sourceDirectoryName property.
     */
     public function setSourceDirectoryName(?string $value): void {
@@ -329,7 +329,7 @@ class SynchronizationRule implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the targetDirectoryName property value. The targetDirectoryName property
+     * Sets the targetDirectoryName property value. Name of the target directory. Must match one of the directory definitions in synchronizationSchema.
      * @param string|null $value Value to set for the targetDirectoryName property.
     */
     public function setTargetDirectoryName(?string $value): void {

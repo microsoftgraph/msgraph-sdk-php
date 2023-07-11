@@ -7,10 +7,13 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
+/**
+ * Contains properties and inherited properties for Windows Universal AppX Line Of Business apps.
+*/
 class WindowsUniversalAppX extends MobileLobApp implements Parsable 
 {
     /**
-     * Instantiates a new WindowsUniversalAppX and sets the default values.
+     * Instantiates a new windowsUniversalAppX and sets the default values.
     */
     public function __construct() {
         parent::__construct();

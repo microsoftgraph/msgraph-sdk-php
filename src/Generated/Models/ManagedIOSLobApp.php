@@ -7,10 +7,13 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * Contains properties and inherited properties for Managed iOS Line Of Business apps.
+*/
 class ManagedIOSLobApp extends ManagedMobileLobApp implements Parsable 
 {
     /**
-     * Instantiates a new ManagedIOSLobApp and sets the default values.
+     * Instantiates a new managedIOSLobApp and sets the default values.
     */
     public function __construct() {
         parent::__construct();

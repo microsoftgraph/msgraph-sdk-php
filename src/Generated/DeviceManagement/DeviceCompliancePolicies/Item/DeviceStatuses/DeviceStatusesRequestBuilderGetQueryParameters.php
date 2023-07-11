@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\It
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List properties and relationships of the deviceComplianceDeviceStatus objects.
+ * List of DeviceComplianceDeviceStatus.
 */
 class DeviceStatusesRequestBuilderGetQueryParameters 
 {

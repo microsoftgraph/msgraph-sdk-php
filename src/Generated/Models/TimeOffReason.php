@@ -9,7 +9,12 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TimeOffReason extends ChangeTrackedEntity implements Parsable 
 {
     /**
-     * Instantiates a new TimeOffReason and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new timeOffReason and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -83,6 +88,7 @@ class TimeOffReason extends ChangeTrackedEntity implements Parsable
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeEnumValue('iconType', $this->getIconType());
         $writer->writeBooleanValue('isActive', $this->getIsActive());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

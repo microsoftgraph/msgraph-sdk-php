@@ -6,10 +6,13 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * Policy for Windows information protection without MDM
+*/
 class WindowsInformationProtectionPolicy extends WindowsInformationProtection implements Parsable 
 {
     /**
-     * Instantiates a new WindowsInformationProtectionPolicy and sets the default values.
+     * Instantiates a new windowsInformationProtectionPolicy and sets the default values.
     */
     public function __construct() {
         parent::__construct();

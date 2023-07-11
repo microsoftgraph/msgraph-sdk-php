@@ -102,6 +102,7 @@ class DirectoryAudit extends Entity implements Parsable
             'correlationId' => fn(ParseNode $n) => $o->setCorrelationId($n->getStringValue()),
             'initiatedBy' => fn(ParseNode $n) => $o->setInitiatedBy($n->getObjectValue([AuditActivityInitiator::class, 'createFromDiscriminatorValue'])),
             'loggedByService' => fn(ParseNode $n) => $o->setLoggedByService($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'operationType' => fn(ParseNode $n) => $o->setOperationType($n->getStringValue()),
             'result' => fn(ParseNode $n) => $o->setResult($n->getEnumValue(OperationResult::class)),
             'resultReason' => fn(ParseNode $n) => $o->setResultReason($n->getStringValue()),
@@ -131,6 +132,18 @@ class DirectoryAudit extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'loggedByService'");
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -196,6 +209,7 @@ class DirectoryAudit extends Entity implements Parsable
         $writer->writeStringValue('correlationId', $this->getCorrelationId());
         $writer->writeObjectValue('initiatedBy', $this->getInitiatedBy());
         $writer->writeStringValue('loggedByService', $this->getLoggedByService());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('operationType', $this->getOperationType());
         $writer->writeEnumValue('result', $this->getResult());
         $writer->writeStringValue('resultReason', $this->getResultReason());
@@ -256,6 +270,14 @@ class DirectoryAudit extends Entity implements Parsable
     */
     public function setLoggedByService(?string $value): void {
         $this->getBackingStore()->set('loggedByService', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

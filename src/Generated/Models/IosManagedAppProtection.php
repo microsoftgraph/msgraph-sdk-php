@@ -7,10 +7,13 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
+/**
+ * Policy used to configure detailed management settings targeted to specific security groups and for a specified set of apps on an iOS device
+*/
 class IosManagedAppProtection extends TargetedManagedAppProtection implements Parsable 
 {
     /**
-     * Instantiates a new IosManagedAppProtection and sets the default values.
+     * Instantiates a new iosManagedAppProtection and sets the default values.
     */
     public function __construct() {
         parent::__construct();

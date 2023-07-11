@@ -9,7 +9,12 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class CloudApplicationEvidence extends AlertEvidence implements Parsable 
 {
     /**
-     * Instantiates a new CloudApplicationEvidence and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new cloudApplicationEvidence and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -109,6 +114,7 @@ class CloudApplicationEvidence extends AlertEvidence implements Parsable
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeIntegerValue('instanceId', $this->getInstanceId());
         $writer->writeStringValue('instanceName', $this->getInstanceName());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeIntegerValue('saasAppId', $this->getSaasAppId());
     }
 

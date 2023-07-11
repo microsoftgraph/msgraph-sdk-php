@@ -9,7 +9,12 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ItemAttachment extends Attachment implements Parsable 
 {
     /**
-     * Instantiates a new ItemAttachment and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new itemAttachment and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -55,6 +60,7 @@ class ItemAttachment extends Attachment implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeObjectValue('item', $this->getItem());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

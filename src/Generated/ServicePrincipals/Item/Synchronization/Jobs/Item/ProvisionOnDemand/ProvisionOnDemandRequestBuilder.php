@@ -32,10 +32,11 @@ class ProvisionOnDemandRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action provisionOnDemand
+     * Select a user and provision the account on-demand. The rate limit for this API is 5 requests per 10 seconds. 
      * @param ProvisionOnDemandPostRequestBody $body The request body
      * @param ProvisionOnDemandRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/synchronization-synchronizationjob-provisionondemand?view=graph-rest-1.0 Find more info here
     */
     public function post(ProvisionOnDemandPostRequestBody $body, ?ProvisionOnDemandRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -51,7 +52,7 @@ class ProvisionOnDemandRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action provisionOnDemand
+     * Select a user and provision the account on-demand. The rate limit for this API is 5 requests per 10 seconds. 
      * @param ProvisionOnDemandPostRequestBody $body The request body
      * @param ProvisionOnDemandRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

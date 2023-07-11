@@ -31,10 +31,11 @@ class AcquireAccessTokenRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action acquireAccessToken
+     * Acquire an OAuth access token to authorize the Azure AD provisioning service to provision users into an application.
      * @param AcquireAccessTokenPostRequestBody $body The request body
      * @param AcquireAccessTokenRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/synchronization-synchronization-acquireaccesstoken?view=graph-rest-1.0 Find more info here
     */
     public function post(AcquireAccessTokenPostRequestBody $body, ?AcquireAccessTokenRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -50,7 +51,7 @@ class AcquireAccessTokenRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action acquireAccessToken
+     * Acquire an OAuth access token to authorize the Azure AD provisioning service to provision users into an application.
      * @param AcquireAccessTokenPostRequestBody $body The request body
      * @param AcquireAccessTokenRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

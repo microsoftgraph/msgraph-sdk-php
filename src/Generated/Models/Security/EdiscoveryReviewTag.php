@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class EdiscoveryReviewTag extends Tag implements Parsable 
 {
     /**
-     * Instantiates a new EdiscoveryReviewTag and sets the default values.
+     * Instantiates a new ediscoveryReviewTag and sets the default values.
     */
     public function __construct() {
         parent::__construct();

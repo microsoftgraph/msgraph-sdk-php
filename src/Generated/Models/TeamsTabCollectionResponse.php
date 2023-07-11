@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class TeamsTabCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new TeamsTabCollectionResponse and sets the default values.
+     * Instantiates a new teamsTabCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

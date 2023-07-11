@@ -13,6 +13,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class UserProcessingResult extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new userProcessingResult and sets the default values.
     */
     public function __construct() {
@@ -191,6 +196,7 @@ class UserProcessingResult extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeDateTimeValue('completedDateTime', $this->getCompletedDateTime());
         $writer->writeIntegerValue('failedTasksCount', $this->getFailedTasksCount());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeEnumValue('processingStatus', $this->getProcessingStatus());
         $writer->writeDateTimeValue('scheduledDateTime', $this->getScheduledDateTime());
         $writer->writeDateTimeValue('startedDateTime', $this->getStartedDateTime());

@@ -10,6 +10,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class FeatureRolloutPolicy extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new featureRolloutPolicy and sets the default values.
     */
     public function __construct() {
@@ -127,6 +132,7 @@ class FeatureRolloutPolicy extends Entity implements Parsable
         $writer->writeEnumValue('feature', $this->getFeature());
         $writer->writeBooleanValue('isAppliedToOrganization', $this->getIsAppliedToOrganization());
         $writer->writeBooleanValue('isEnabled', $this->getIsEnabled());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

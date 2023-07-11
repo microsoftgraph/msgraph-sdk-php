@@ -9,6 +9,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EducationOrganization extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new educationOrganization and sets the default values.
     */
     public function __construct() {
@@ -103,6 +108,7 @@ class EducationOrganization extends Entity implements Parsable
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeEnumValue('externalSource', $this->getExternalSource());
         $writer->writeStringValue('externalSourceDetail', $this->getExternalSourceDetail());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

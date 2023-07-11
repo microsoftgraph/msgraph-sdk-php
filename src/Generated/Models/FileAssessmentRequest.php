@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class FileAssessmentRequest extends ThreatAssessmentRequest implements Parsable 
 {
     /**
-     * Instantiates a new FileAssessmentRequest and sets the default values.
+     * Instantiates a new fileAssessmentRequest and sets the default values.
     */
     public function __construct() {
         parent::__construct();

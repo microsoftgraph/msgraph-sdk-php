@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class ThreatAssessmentResultCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new ThreatAssessmentResultCollectionResponse and sets the default values.
+     * Instantiates a new threatAssessmentResultCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

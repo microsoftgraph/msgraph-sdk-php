@@ -32,10 +32,9 @@ class AuditEventItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a auditEvent.
+     * Delete navigation property auditEvents for deviceManagement
      * @param AuditEventItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-auditing-auditevent-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?AuditEventItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -51,10 +50,9 @@ class AuditEventItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the auditEvent object.
+     * The Audit Events
      * @param AuditEventItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-auditing-auditevent-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?AuditEventItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -70,11 +68,10 @@ class AuditEventItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a auditEvent object.
+     * Update the navigation property auditEvents in deviceManagement
      * @param AuditEvent $body The request body
      * @param AuditEventItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-auditing-auditevent-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(AuditEvent $body, ?AuditEventItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -90,7 +87,7 @@ class AuditEventItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a auditEvent.
+     * Delete navigation property auditEvents for deviceManagement
      * @param AuditEventItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -107,7 +104,7 @@ class AuditEventItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the auditEvent object.
+     * The Audit Events
      * @param AuditEventItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -128,7 +125,7 @@ class AuditEventItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a auditEvent object.
+     * Update the navigation property auditEvents in deviceManagement
      * @param AuditEvent $body The request body
      * @param AuditEventItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

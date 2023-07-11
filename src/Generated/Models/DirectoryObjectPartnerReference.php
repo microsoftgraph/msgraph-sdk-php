@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DirectoryObjectPartnerReference extends DirectoryObject implements Parsable 
 {
     /**
-     * Instantiates a new DirectoryObjectPartnerReference and sets the default values.
+     * Instantiates a new directoryObjectPartnerReference and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\Windows
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read properties and relationships of the windowsProtectionState object.
+ * The device protection status. This property is read-only.
 */
 class WindowsProtectionStateRequestBuilderGetQueryParameters 
 {

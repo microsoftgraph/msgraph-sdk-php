@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class TrendingCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new TrendingCollectionResponse and sets the default values.
+     * Instantiates a new trendingCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

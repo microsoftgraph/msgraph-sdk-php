@@ -32,10 +32,9 @@ class DeviceConfigurationAssignmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a deviceConfigurationAssignment.
+     * Delete navigation property assignments for deviceManagement
      * @param DeviceConfigurationAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationassignment-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?DeviceConfigurationAssignmentItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -51,10 +50,9 @@ class DeviceConfigurationAssignmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the deviceConfigurationAssignment object.
+     * The list of assignments for the device configuration profile.
      * @param DeviceConfigurationAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationassignment-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DeviceConfigurationAssignmentItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -70,11 +68,10 @@ class DeviceConfigurationAssignmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a deviceConfigurationAssignment object.
+     * Update the navigation property assignments in deviceManagement
      * @param DeviceConfigurationAssignment $body The request body
      * @param DeviceConfigurationAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationassignment-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(DeviceConfigurationAssignment $body, ?DeviceConfigurationAssignmentItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -90,7 +87,7 @@ class DeviceConfigurationAssignmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a deviceConfigurationAssignment.
+     * Delete navigation property assignments for deviceManagement
      * @param DeviceConfigurationAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -107,7 +104,7 @@ class DeviceConfigurationAssignmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the deviceConfigurationAssignment object.
+     * The list of assignments for the device configuration profile.
      * @param DeviceConfigurationAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -128,7 +125,7 @@ class DeviceConfigurationAssignmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a deviceConfigurationAssignment object.
+     * Update the navigation property assignments in deviceManagement
      * @param DeviceConfigurationAssignment $body The request body
      * @param DeviceConfigurationAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

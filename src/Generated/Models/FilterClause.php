@@ -82,7 +82,7 @@ class FilterClause implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the operatorName property value. The operatorName property
+     * Gets the operatorName property value. Name of the operator to be applied to the source and target operands. Must be one of the supported operators. Supported operators can be discovered.
      * @return string|null
     */
     public function getOperatorName(): ?string {
@@ -94,7 +94,7 @@ class FilterClause implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the sourceOperandName property value. The sourceOperandName property
+     * Gets the sourceOperandName property value. Name of source operand (the operand being tested). The source operand name must match one of the attribute names on the source object.
      * @return string|null
     */
     public function getSourceOperandName(): ?string {
@@ -106,7 +106,7 @@ class FilterClause implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the targetOperand property value. The targetOperand property
+     * Gets the targetOperand property value. Values that the source operand will be tested against.
      * @return FilterOperand|null
     */
     public function getTargetOperand(): ?FilterOperand {
@@ -154,7 +154,7 @@ class FilterClause implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the operatorName property value. The operatorName property
+     * Sets the operatorName property value. Name of the operator to be applied to the source and target operands. Must be one of the supported operators. Supported operators can be discovered.
      * @param string|null $value Value to set for the operatorName property.
     */
     public function setOperatorName(?string $value): void {
@@ -162,7 +162,7 @@ class FilterClause implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the sourceOperandName property value. The sourceOperandName property
+     * Sets the sourceOperandName property value. Name of source operand (the operand being tested). The source operand name must match one of the attribute names on the source object.
      * @param string|null $value Value to set for the sourceOperandName property.
     */
     public function setSourceOperandName(?string $value): void {
@@ -170,7 +170,7 @@ class FilterClause implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the targetOperand property value. The targetOperand property
+     * Sets the targetOperand property value. Values that the source operand will be tested against.
      * @param FilterOperand|null $value Value to set for the targetOperand property.
     */
     public function setTargetOperand(?FilterOperand $value): void {

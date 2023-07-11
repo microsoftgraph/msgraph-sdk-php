@@ -12,6 +12,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Incident extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new incident and sets the default values.
     */
     public function __construct() {
@@ -248,6 +253,7 @@ class Incident extends Entity implements Parsable
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeStringValue('incidentWebUrl', $this->getIncidentWebUrl());
         $writer->writeDateTimeValue('lastUpdateDateTime', $this->getLastUpdateDateTime());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('redirectIncidentId', $this->getRedirectIncidentId());
         $writer->writeEnumValue('severity', $this->getSeverity());
         $writer->writeEnumValue('status', $this->getStatus());

@@ -12,6 +12,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WindowsInformationProtectionAppLearningSummary extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new windowsInformationProtectionAppLearningSummary and sets the default values.
     */
     public function __construct() {
@@ -85,6 +90,7 @@ class WindowsInformationProtectionAppLearningSummary extends Entity implements P
         $writer->writeStringValue('applicationName', $this->getApplicationName());
         $writer->writeEnumValue('applicationType', $this->getApplicationType());
         $writer->writeIntegerValue('deviceCount', $this->getDeviceCount());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

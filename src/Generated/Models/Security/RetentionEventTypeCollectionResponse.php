@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class RetentionEventTypeCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new RetentionEventTypeCollectionResponse and sets the default values.
+     * Instantiates a new retentionEventTypeCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

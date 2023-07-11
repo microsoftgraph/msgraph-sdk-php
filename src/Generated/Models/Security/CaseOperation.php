@@ -13,6 +13,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class CaseOperation extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new caseOperation and sets the default values.
     */
     public function __construct() {
@@ -31,6 +36,7 @@ class CaseOperation extends Entity implements Parsable
             switch ($mappingValue) {
                 case '#microsoft.graph.security.ediscoveryAddToReviewSetOperation': return new EdiscoveryAddToReviewSetOperation();
                 case '#microsoft.graph.security.ediscoveryEstimateOperation': return new EdiscoveryEstimateOperation();
+                case '#microsoft.graph.security.ediscoveryExportOperation': return new EdiscoveryExportOperation();
                 case '#microsoft.graph.security.ediscoveryHoldOperation': return new EdiscoveryHoldOperation();
                 case '#microsoft.graph.security.ediscoveryIndexOperation': return new EdiscoveryIndexOperation();
                 case '#microsoft.graph.security.ediscoveryPurgeDataOperation': return new EdiscoveryPurgeDataOperation();
@@ -151,6 +157,7 @@ class CaseOperation extends Entity implements Parsable
         $writer->writeDateTimeValue('completedDateTime', $this->getCompletedDateTime());
         $writer->writeObjectValue('createdBy', $this->getCreatedBy());
         $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeIntegerValue('percentProgress', $this->getPercentProgress());
         $writer->writeObjectValue('resultInfo', $this->getResultInfo());
         $writer->writeEnumValue('status', $this->getStatus());

@@ -35,7 +35,6 @@ class AssignUserToDeviceRequestBuilder extends BaseRequestBuilder
      * @param AssignUserToDevicePostRequestBody $body The request body
      * @param AssignUserToDeviceRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-enrollment-windowsautopilotdeviceidentity-assignusertodevice?view=graph-rest-1.0 Find more info here
     */
     public function post(AssignUserToDevicePostRequestBody $body, ?AssignUserToDeviceRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

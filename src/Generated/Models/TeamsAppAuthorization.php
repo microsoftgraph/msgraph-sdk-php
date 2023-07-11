@@ -80,7 +80,7 @@ class TeamsAppAuthorization implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the requiredPermissionSet property value. The requiredPermissionSet property
+     * Gets the requiredPermissionSet property value. Set of permissions required by the teamsApp.
      * @return TeamsAppPermissionSet|null
     */
     public function getRequiredPermissionSet(): ?TeamsAppPermissionSet {
@@ -126,7 +126,7 @@ class TeamsAppAuthorization implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the requiredPermissionSet property value. The requiredPermissionSet property
+     * Sets the requiredPermissionSet property value. Set of permissions required by the teamsApp.
      * @param TeamsAppPermissionSet|null $value Value to set for the requiredPermissionSet property.
     */
     public function setRequiredPermissionSet(?TeamsAppPermissionSet $value): void {

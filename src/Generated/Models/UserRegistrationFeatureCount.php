@@ -18,7 +18,7 @@ class UserRegistrationFeatureCount implements AdditionalDataHolder, BackedModel,
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new UserRegistrationFeatureCount and sets the default values.
+     * Instantiates a new userRegistrationFeatureCount and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
@@ -93,7 +93,7 @@ class UserRegistrationFeatureCount implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Gets the userCount property value. The userCount property
+     * Gets the userCount property value. Number of users.
      * @return int|null
     */
     public function getUserCount(): ?int {
@@ -148,7 +148,7 @@ class UserRegistrationFeatureCount implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Sets the userCount property value. The userCount property
+     * Sets the userCount property value. Number of users.
      * @param int|null $value Value to set for the userCount property.
     */
     public function setUserCount(?int $value): void {

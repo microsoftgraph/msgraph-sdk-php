@@ -35,7 +35,6 @@ class DeleteUserFromSharedAppleDeviceRequestBuilder extends BaseRequestBuilder
      * @param DeleteUserFromSharedAppleDevicePostRequestBody $body The request body
      * @param DeleteUserFromSharedAppleDeviceRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-devices-manageddevice-deleteuserfromsharedappledevice?view=graph-rest-1.0 Find more info here
     */
     public function post(DeleteUserFromSharedAppleDevicePostRequestBody $body, ?DeleteUserFromSharedAppleDeviceRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

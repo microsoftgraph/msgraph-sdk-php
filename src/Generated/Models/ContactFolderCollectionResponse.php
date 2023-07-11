@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class ContactFolderCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new ContactFolderCollectionResponse and sets the default values.
+     * Instantiates a new contactFolderCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

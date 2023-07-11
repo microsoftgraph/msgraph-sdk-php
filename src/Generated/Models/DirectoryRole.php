@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class DirectoryRole extends DirectoryObject implements Parsable 
 {
     /**
-     * Instantiates a new DirectoryRole and sets the default values.
+     * Instantiates a new directoryRole and sets the default values.
     */
     public function __construct() {
         parent::__construct();

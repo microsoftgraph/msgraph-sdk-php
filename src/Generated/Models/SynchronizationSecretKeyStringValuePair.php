@@ -93,7 +93,7 @@ class SynchronizationSecretKeyStringValuePair implements AdditionalDataHolder, B
     }
 
     /**
-     * Gets the value property value. The value property
+     * Gets the value property value. The value of the secret.
      * @return string|null
     */
     public function getValue(): ?string {
@@ -148,7 +148,7 @@ class SynchronizationSecretKeyStringValuePair implements AdditionalDataHolder, B
     }
 
     /**
-     * Sets the value property value. The value property
+     * Sets the value property value. The value of the secret.
      * @param string|null $value Value to set for the value property.
     */
     public function setValue(?string $value): void {

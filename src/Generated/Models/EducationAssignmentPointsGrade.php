@@ -9,7 +9,12 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EducationAssignmentPointsGrade extends EducationAssignmentGrade implements Parsable 
 {
     /**
-     * Instantiates a new EducationAssignmentPointsGrade and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new educationAssignmentPointsGrade and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -54,6 +59,7 @@ class EducationAssignmentPointsGrade extends EducationAssignmentGrade implements
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeFloatValue('points', $this->getPoints());
     }
 

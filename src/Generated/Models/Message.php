@@ -12,7 +12,12 @@ use Psr\Http\Message\StreamInterface;
 class Message extends OutlookItem implements Parsable 
 {
     /**
-     * Instantiates a new Message and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new message and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -482,6 +487,7 @@ class Message extends OutlookItem implements Parsable
         $writer->writeBooleanValue('isRead', $this->getIsRead());
         $writer->writeBooleanValue('isReadReceiptRequested', $this->getIsReadReceiptRequested());
         $writer->writeCollectionOfObjectValues('multiValueExtendedProperties', $this->getMultiValueExtendedProperties());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('parentFolderId', $this->getParentFolderId());
         $writer->writeDateTimeValue('receivedDateTime', $this->getReceivedDateTime());
         $writer->writeCollectionOfObjectValues('replyTo', $this->getReplyTo());

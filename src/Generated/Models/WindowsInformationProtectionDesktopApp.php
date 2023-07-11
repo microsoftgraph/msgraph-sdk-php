@@ -6,10 +6,18 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * App for Windows information protection
+*/
 class WindowsInformationProtectionDesktopApp extends WindowsInformationProtectionApp implements Parsable 
 {
     /**
-     * Instantiates a new WindowsInformationProtectionDesktopApp and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new windowsInformationProtectionDesktopApp and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -83,6 +91,7 @@ class WindowsInformationProtectionDesktopApp extends WindowsInformationProtectio
         $writer->writeStringValue('binaryName', $this->getBinaryName());
         $writer->writeStringValue('binaryVersionHigh', $this->getBinaryVersionHigh());
         $writer->writeStringValue('binaryVersionLow', $this->getBinaryVersionLow());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

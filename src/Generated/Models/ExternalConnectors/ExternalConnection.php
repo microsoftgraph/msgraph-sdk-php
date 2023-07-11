@@ -11,7 +11,12 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class ExternalConnection extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new ExternalConnection and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new externalConnection and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -184,6 +189,7 @@ class ExternalConnection extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('groups', $this->getGroups());
         $writer->writeCollectionOfObjectValues('items', $this->getItems());
         $writer->writeStringValue('name', $this->getName());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfObjectValues('operations', $this->getOperations());
         $writer->writeObjectValue('schema', $this->getSchema());
         $writer->writeObjectValue('searchSettings', $this->getSearchSettings());

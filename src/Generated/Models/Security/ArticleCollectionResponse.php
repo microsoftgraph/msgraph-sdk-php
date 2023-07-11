@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class ArticleCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new ArticleCollectionResponse and sets the default values.
+     * Instantiates a new articleCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

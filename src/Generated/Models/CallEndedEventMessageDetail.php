@@ -11,7 +11,12 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class CallEndedEventMessageDetail extends EventMessageDetail implements Parsable 
 {
     /**
-     * Instantiates a new CallEndedEventMessageDetail and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new callEndedEventMessageDetail and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -115,6 +120,7 @@ class CallEndedEventMessageDetail extends EventMessageDetail implements Parsable
         $writer->writeStringValue('callId', $this->getCallId());
         $writer->writeCollectionOfObjectValues('callParticipants', $this->getCallParticipants());
         $writer->writeObjectValue('initiator', $this->getInitiator());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

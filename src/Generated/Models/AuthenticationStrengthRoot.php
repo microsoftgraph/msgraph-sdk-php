@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class AuthenticationStrengthRoot extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new AuthenticationStrengthRoot and sets the default values.
+     * Instantiates a new authenticationStrengthRoot and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -62,8 +62,21 @@ class AuthenticationStrengthRoot extends Entity implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'authenticationMethodModes' => fn(ParseNode $n) => $o->setAuthenticationMethodModes($n->getCollectionOfObjectValues([AuthenticationMethodModeDetail::class, 'createFromDiscriminatorValue'])),
             'combinations' => fn(ParseNode $n) => $o->setCombinations($n->getCollectionOfEnumValues(AuthenticationMethodModes::class)),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'policies' => fn(ParseNode $n) => $o->setPolicies($n->getCollectionOfObjectValues([AuthenticationStrengthPolicy::class, 'createFromDiscriminatorValue'])),
         ]);
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -88,6 +101,7 @@ class AuthenticationStrengthRoot extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('authenticationMethodModes', $this->getAuthenticationMethodModes());
         $writer->writeCollectionOfEnumValues('combinations', $this->getCombinations());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfObjectValues('policies', $this->getPolicies());
     }
 
@@ -105,6 +119,14 @@ class AuthenticationStrengthRoot extends Entity implements Parsable
     */
     public function setCombinations(?array $value): void {
         $this->getBackingStore()->set('combinations', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

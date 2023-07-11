@@ -7,10 +7,13 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
+/**
+ * This topic provides descriptions of the declared methods, properties and relationships exposed by the windowsPhone81GeneralConfiguration resource.
+*/
 class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements Parsable 
 {
     /**
-     * Instantiates a new WindowsPhone81GeneralConfiguration and sets the default values.
+     * Instantiates a new windowsPhone81GeneralConfiguration and sets the default values.
     */
     public function __construct() {
         parent::__construct();

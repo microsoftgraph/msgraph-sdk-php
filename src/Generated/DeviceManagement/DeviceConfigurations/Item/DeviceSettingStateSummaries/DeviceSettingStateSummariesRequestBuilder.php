@@ -53,10 +53,9 @@ class DeviceSettingStateSummariesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the settingStateDeviceSummary objects.
+     * Device Configuration Setting State Device Summary
      * @param DeviceSettingStateSummariesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-deviceconfig-settingstatedevicesummary-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?DeviceSettingStateSummariesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -72,11 +71,10 @@ class DeviceSettingStateSummariesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new settingStateDeviceSummary object.
+     * Create new navigation property to deviceSettingStateSummaries for deviceManagement
      * @param SettingStateDeviceSummary $body The request body
      * @param DeviceSettingStateSummariesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-deviceconfig-settingstatedevicesummary-create?view=graph-rest-1.0 Find more info here
     */
     public function post(SettingStateDeviceSummary $body, ?DeviceSettingStateSummariesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -92,7 +90,7 @@ class DeviceSettingStateSummariesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the settingStateDeviceSummary objects.
+     * Device Configuration Setting State Device Summary
      * @param DeviceSettingStateSummariesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +111,7 @@ class DeviceSettingStateSummariesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new settingStateDeviceSummary object.
+     * Create new navigation property to deviceSettingStateSummaries for deviceManagement
      * @param SettingStateDeviceSummary $body The request body
      * @param DeviceSettingStateSummariesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TimeOffRequest extends ScheduleChangeRequest implements Parsable 
 {
     /**
-     * Instantiates a new TimeOffRequest and sets the default values.
+     * Instantiates a new timeOffRequest and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManagementPolicyRule implements Parsable 
 {
     /**
-     * Instantiates a new UnifiedRoleManagementPolicyExpirationRule and sets the default values.
+     * Instantiates a new unifiedRoleManagementPolicyExpirationRule and sets the default values.
     */
     public function __construct() {
         parent::__construct();

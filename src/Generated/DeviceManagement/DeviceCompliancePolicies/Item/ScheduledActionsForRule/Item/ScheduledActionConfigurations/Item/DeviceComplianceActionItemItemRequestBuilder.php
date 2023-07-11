@@ -32,10 +32,9 @@ class DeviceComplianceActionItemItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a deviceComplianceActionItem.
+     * Delete navigation property scheduledActionConfigurations for deviceManagement
      * @param DeviceComplianceActionItemItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-deviceconfig-devicecomplianceactionitem-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?DeviceComplianceActionItemItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -51,10 +50,9 @@ class DeviceComplianceActionItemItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the deviceComplianceActionItem object.
+     * The list of scheduled action configurations for this compliance policy. Compliance policy must have one and only one block scheduled action.
      * @param DeviceComplianceActionItemItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-deviceconfig-devicecomplianceactionitem-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DeviceComplianceActionItemItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -70,11 +68,10 @@ class DeviceComplianceActionItemItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a deviceComplianceActionItem object.
+     * Update the navigation property scheduledActionConfigurations in deviceManagement
      * @param DeviceComplianceActionItem $body The request body
      * @param DeviceComplianceActionItemItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-deviceconfig-devicecomplianceactionitem-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(DeviceComplianceActionItem $body, ?DeviceComplianceActionItemItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -90,7 +87,7 @@ class DeviceComplianceActionItemItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a deviceComplianceActionItem.
+     * Delete navigation property scheduledActionConfigurations for deviceManagement
      * @param DeviceComplianceActionItemItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -107,7 +104,7 @@ class DeviceComplianceActionItemItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the deviceComplianceActionItem object.
+     * The list of scheduled action configurations for this compliance policy. Compliance policy must have one and only one block scheduled action.
      * @param DeviceComplianceActionItemItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -128,7 +125,7 @@ class DeviceComplianceActionItemItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a deviceComplianceActionItem object.
+     * Update the navigation property scheduledActionConfigurations in deviceManagement
      * @param DeviceComplianceActionItem $body The request body
      * @param DeviceComplianceActionItemItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

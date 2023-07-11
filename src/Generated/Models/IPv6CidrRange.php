@@ -9,7 +9,12 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class IPv6CidrRange extends IpRange implements Parsable 
 {
     /**
-     * Instantiates a new IPv6CidrRange and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new iPv6CidrRange and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -55,6 +60,7 @@ class IPv6CidrRange extends IpRange implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeStringValue('cidrAddress', $this->getCidrAddress());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

@@ -9,6 +9,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TeamsAppInstallation extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new teamsAppInstallation and sets the default values.
     */
     public function __construct() {
@@ -32,7 +37,7 @@ class TeamsAppInstallation extends Entity implements Parsable
     }
 
     /**
-     * Gets the consentedPermissionSet property value. The consentedPermissionSet property
+     * Gets the consentedPermissionSet property value. The set of resource-specific permissions consented to while installing or upgrading the teamsApp.
      * @return TeamsAppPermissionSet|null
     */
     public function getConsentedPermissionSet(): ?TeamsAppPermissionSet {
@@ -87,12 +92,13 @@ class TeamsAppInstallation extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeObjectValue('consentedPermissionSet', $this->getConsentedPermissionSet());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('teamsApp', $this->getTeamsApp());
         $writer->writeObjectValue('teamsAppDefinition', $this->getTeamsAppDefinition());
     }
 
     /**
-     * Sets the consentedPermissionSet property value. The consentedPermissionSet property
+     * Sets the consentedPermissionSet property value. The set of resource-specific permissions consented to while installing or upgrading the teamsApp.
      * @param TeamsAppPermissionSet|null $value Value to set for the consentedPermissionSet property.
     */
     public function setConsentedPermissionSet(?TeamsAppPermissionSet $value): void {

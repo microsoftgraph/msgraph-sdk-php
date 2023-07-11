@@ -9,6 +9,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SoftwareUpdateStatusSummary extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new softwareUpdateStatusSummary and sets the default values.
     */
     public function __construct() {
@@ -246,6 +251,7 @@ class SoftwareUpdateStatusSummary extends Entity implements Parsable
         $writer->writeIntegerValue('nonCompliantUserCount', $this->getNonCompliantUserCount());
         $writer->writeIntegerValue('notApplicableDeviceCount', $this->getNotApplicableDeviceCount());
         $writer->writeIntegerValue('notApplicableUserCount', $this->getNotApplicableUserCount());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeIntegerValue('remediatedDeviceCount', $this->getRemediatedDeviceCount());
         $writer->writeIntegerValue('remediatedUserCount', $this->getRemediatedUserCount());
         $writer->writeIntegerValue('unknownDeviceCount', $this->getUnknownDeviceCount());

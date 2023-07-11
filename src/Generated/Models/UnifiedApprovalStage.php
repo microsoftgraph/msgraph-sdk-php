@@ -19,7 +19,7 @@ class UnifiedApprovalStage implements AdditionalDataHolder, BackedModel, Parsabl
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new UnifiedApprovalStage and sets the default values.
+     * Instantiates a new unifiedApprovalStage and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

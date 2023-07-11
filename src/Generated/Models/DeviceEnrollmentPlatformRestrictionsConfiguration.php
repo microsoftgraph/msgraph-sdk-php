@@ -6,10 +6,18 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * Device Enrollment Configuration that restricts the types of devices a user can enroll
+*/
 class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollmentConfiguration implements Parsable 
 {
     /**
-     * Instantiates a new DeviceEnrollmentPlatformRestrictionsConfiguration and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new deviceEnrollmentPlatformRestrictionsConfiguration and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -109,6 +117,7 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
         $writer->writeObjectValue('androidRestriction', $this->getAndroidRestriction());
         $writer->writeObjectValue('iosRestriction', $this->getIosRestriction());
         $writer->writeObjectValue('macOSRestriction', $this->getMacOSRestriction());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('windowsMobileRestriction', $this->getWindowsMobileRestriction());
         $writer->writeObjectValue('windowsRestriction', $this->getWindowsRestriction());
     }

@@ -19,7 +19,7 @@ class UserRegistrationFeatureSummary implements AdditionalDataHolder, BackedMode
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new UserRegistrationFeatureSummary and sets the default values.
+     * Instantiates a new userRegistrationFeatureSummary and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
@@ -84,7 +84,7 @@ class UserRegistrationFeatureSummary implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Gets the totalUserCount property value. The totalUserCount property
+     * Gets the totalUserCount property value. Total number of users accounts, excluding those that are blocked.
      * @return int|null
     */
     public function getTotalUserCount(): ?int {
@@ -96,7 +96,7 @@ class UserRegistrationFeatureSummary implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Gets the userRegistrationFeatureCounts property value. The userRegistrationFeatureCounts property
+     * Gets the userRegistrationFeatureCounts property value. Number of users registered or capable for multi-factor authentication, self-service password reset, and passwordless authentication.
      * @return array<UserRegistrationFeatureCount>|null
     */
     public function getUserRegistrationFeatureCounts(): ?array {
@@ -110,7 +110,7 @@ class UserRegistrationFeatureSummary implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Gets the userRoles property value. The userRoles property
+     * Gets the userRoles property value. The role type of the user. Possible values are: all, privilegedAdmin, admin, user, unknownFutureValue.
      * @return IncludedUserRoles|null
     */
     public function getUserRoles(): ?IncludedUserRoles {
@@ -122,7 +122,7 @@ class UserRegistrationFeatureSummary implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Gets the userTypes property value. The userTypes property
+     * Gets the userTypes property value. User type. Possible values are: all, member, guest, unknownFutureValue.
      * @return IncludedUserTypes|null
     */
     public function getUserTypes(): ?IncludedUserTypes {
@@ -171,7 +171,7 @@ class UserRegistrationFeatureSummary implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Sets the totalUserCount property value. The totalUserCount property
+     * Sets the totalUserCount property value. Total number of users accounts, excluding those that are blocked.
      * @param int|null $value Value to set for the totalUserCount property.
     */
     public function setTotalUserCount(?int $value): void {
@@ -179,7 +179,7 @@ class UserRegistrationFeatureSummary implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Sets the userRegistrationFeatureCounts property value. The userRegistrationFeatureCounts property
+     * Sets the userRegistrationFeatureCounts property value. Number of users registered or capable for multi-factor authentication, self-service password reset, and passwordless authentication.
      * @param array<UserRegistrationFeatureCount>|null $value Value to set for the userRegistrationFeatureCounts property.
     */
     public function setUserRegistrationFeatureCounts(?array $value): void {
@@ -187,7 +187,7 @@ class UserRegistrationFeatureSummary implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Sets the userRoles property value. The userRoles property
+     * Sets the userRoles property value. The role type of the user. Possible values are: all, privilegedAdmin, admin, user, unknownFutureValue.
      * @param IncludedUserRoles|null $value Value to set for the userRoles property.
     */
     public function setUserRoles(?IncludedUserRoles $value): void {
@@ -195,7 +195,7 @@ class UserRegistrationFeatureSummary implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Sets the userTypes property value. The userTypes property
+     * Sets the userTypes property value. User type. Possible values are: all, member, guest, unknownFutureValue.
      * @param IncludedUserTypes|null $value Value to set for the userTypes property.
     */
     public function setUserTypes(?IncludedUserTypes $value): void {

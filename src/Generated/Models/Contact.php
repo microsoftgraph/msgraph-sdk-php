@@ -11,7 +11,12 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Contact extends OutlookItem implements Parsable 
 {
     /**
-     * Instantiates a new Contact and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new contact and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -592,6 +597,7 @@ class Contact extends OutlookItem implements Parsable
         $writer->writeStringValue('mobilePhone', $this->getMobilePhone());
         $writer->writeCollectionOfObjectValues('multiValueExtendedProperties', $this->getMultiValueExtendedProperties());
         $writer->writeStringValue('nickName', $this->getNickName());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('officeLocation', $this->getOfficeLocation());
         $writer->writeObjectValue('otherAddress', $this->getOtherAddress());
         $writer->writeStringValue('parentFolderId', $this->getParentFolderId());

@@ -11,7 +11,12 @@ use Psr\Http\Message\StreamInterface;
 class EnterpriseCodeSigningCertificate extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new EnterpriseCodeSigningCertificate and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new enterpriseCodeSigningCertificate and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -150,6 +155,7 @@ class EnterpriseCodeSigningCertificate extends Entity implements Parsable
         $writer->writeDateTimeValue('expirationDateTime', $this->getExpirationDateTime());
         $writer->writeStringValue('issuer', $this->getIssuer());
         $writer->writeStringValue('issuerName', $this->getIssuerName());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeEnumValue('status', $this->getStatus());
         $writer->writeStringValue('subject', $this->getSubject());
         $writer->writeStringValue('subjectName', $this->getSubjectName());

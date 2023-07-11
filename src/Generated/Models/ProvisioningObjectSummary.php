@@ -11,6 +11,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class ProvisioningObjectSummary extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new provisioningObjectSummary and sets the default values.
     */
     public function __construct() {
@@ -261,6 +266,7 @@ class ProvisioningObjectSummary extends Entity implements Parsable
         $writer->writeObjectValue('initiatedBy', $this->getInitiatedBy());
         $writer->writeStringValue('jobId', $this->getJobId());
         $writer->writeCollectionOfObjectValues('modifiedProperties', $this->getModifiedProperties());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeEnumValue('provisioningAction', $this->getProvisioningAction());
         $writer->writeObjectValue('provisioningStatusInfo', $this->getProvisioningStatusInfo());
         $writer->writeCollectionOfObjectValues('provisioningSteps', $this->getProvisioningSteps());

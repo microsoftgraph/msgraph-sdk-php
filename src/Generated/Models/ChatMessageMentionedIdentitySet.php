@@ -9,7 +9,12 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ChatMessageMentionedIdentitySet extends IdentitySet implements Parsable 
 {
     /**
-     * Instantiates a new ChatMessageMentionedIdentitySet and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new chatMessageMentionedIdentitySet and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -55,6 +60,7 @@ class ChatMessageMentionedIdentitySet extends IdentitySet implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeObjectValue('conversation', $this->getConversation());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

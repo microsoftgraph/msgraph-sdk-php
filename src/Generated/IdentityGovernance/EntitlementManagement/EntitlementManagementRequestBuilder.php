@@ -12,6 +12,10 @@ use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Assignmen
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Assignments\AssignmentsRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Catalogs\CatalogsRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ConnectedOrganizations\ConnectedOrganizationsRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ResourceEnvironments\ResourceEnvironmentsRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ResourceRequests\ResourceRequestsRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ResourceRoleScopes\ResourceRoleScopesRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Resources\ResourcesRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Settings\SettingsRequestBuilder;
 use Microsoft\Graph\Generated\Models\EntitlementManagement;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -72,6 +76,34 @@ class EntitlementManagementRequestBuilder extends BaseRequestBuilder
     */
     public function connectedOrganizations(): ConnectedOrganizationsRequestBuilder {
         return new ConnectedOrganizationsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the resourceEnvironments property of the microsoft.graph.entitlementManagement entity.
+    */
+    public function resourceEnvironments(): ResourceEnvironmentsRequestBuilder {
+        return new ResourceEnvironmentsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the resourceRequests property of the microsoft.graph.entitlementManagement entity.
+    */
+    public function resourceRequests(): ResourceRequestsRequestBuilder {
+        return new ResourceRequestsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the resourceRoleScopes property of the microsoft.graph.entitlementManagement entity.
+    */
+    public function resourceRoleScopes(): ResourceRoleScopesRequestBuilder {
+        return new ResourceRoleScopesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the resources property of the microsoft.graph.entitlementManagement entity.
+    */
+    public function resources(): ResourcesRequestBuilder {
+        return new ResourcesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

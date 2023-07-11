@@ -10,7 +10,12 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TriggerAndScopeBasedConditions extends WorkflowExecutionConditions implements Parsable 
 {
     /**
-     * Instantiates a new TriggerAndScopeBasedConditions and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new triggerAndScopeBasedConditions and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -68,6 +73,7 @@ class TriggerAndScopeBasedConditions extends WorkflowExecutionConditions impleme
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('scope', $this->getScope());
         $writer->writeObjectValue('trigger', $this->getTrigger());
     }

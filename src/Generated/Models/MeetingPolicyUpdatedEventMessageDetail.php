@@ -9,7 +9,12 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail implements Parsable 
 {
     /**
-     * Instantiates a new MeetingPolicyUpdatedEventMessageDetail and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new meetingPolicyUpdatedEventMessageDetail and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -83,6 +88,7 @@ class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail implemen
         $writer->writeObjectValue('initiator', $this->getInitiator());
         $writer->writeBooleanValue('meetingChatEnabled', $this->getMeetingChatEnabled());
         $writer->writeStringValue('meetingChatId', $this->getMeetingChatId());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

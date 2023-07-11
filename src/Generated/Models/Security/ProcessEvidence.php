@@ -10,7 +10,12 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ProcessEvidence extends AlertEvidence implements Parsable 
 {
     /**
-     * Instantiates a new ProcessEvidence and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new processEvidence and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -174,6 +179,7 @@ class ProcessEvidence extends AlertEvidence implements Parsable
         $writer->writeEnumValue('detectionStatus', $this->getDetectionStatus());
         $writer->writeObjectValue('imageFile', $this->getImageFile());
         $writer->writeStringValue('mdeDeviceId', $this->getMdeDeviceId());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeDateTimeValue('parentProcessCreationDateTime', $this->getParentProcessCreationDateTime());
         $writer->writeIntegerValue('parentProcessId', $this->getParentProcessId());
         $writer->writeObjectValue('parentProcessImageFile', $this->getParentProcessImageFile());

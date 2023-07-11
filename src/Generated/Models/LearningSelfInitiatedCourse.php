@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class LearningSelfInitiatedCourse extends LearningCourseActivity implements Parsable 
 {
     /**
-     * Instantiates a new LearningSelfInitiatedCourse and sets the default values.
+     * Instantiates a new learningSelfInitiatedCourse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

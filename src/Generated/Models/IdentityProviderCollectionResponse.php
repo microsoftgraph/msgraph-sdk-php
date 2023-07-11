@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class IdentityProviderCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new IdentityProviderCollectionResponse and sets the default values.
+     * Instantiates a new identityProviderCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

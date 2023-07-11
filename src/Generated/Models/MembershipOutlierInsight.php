@@ -9,7 +9,12 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class MembershipOutlierInsight extends GovernanceInsight implements Parsable 
 {
     /**
-     * Instantiates a new MembershipOutlierInsight and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new membershipOutlierInsight and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -137,6 +142,7 @@ class MembershipOutlierInsight extends GovernanceInsight implements Parsable
         $writer->writeObjectValue('lastModifiedBy', $this->getLastModifiedBy());
         $writer->writeObjectValue('member', $this->getMember());
         $writer->writeStringValue('memberId', $this->getMemberId());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeEnumValue('outlierContainerType', $this->getOutlierContainerType());
         $writer->writeEnumValue('outlierMemberType', $this->getOutlierMemberType());
     }

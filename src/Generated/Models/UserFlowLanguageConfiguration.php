@@ -10,6 +10,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class UserFlowLanguageConfiguration extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new userFlowLanguageConfiguration and sets the default values.
     */
     public function __construct() {
@@ -100,6 +105,7 @@ class UserFlowLanguageConfiguration extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('defaultPages', $this->getDefaultPages());
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeBooleanValue('isEnabled', $this->getIsEnabled());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfObjectValues('overridesPages', $this->getOverridesPages());
     }
 

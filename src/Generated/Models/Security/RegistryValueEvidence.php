@@ -9,7 +9,12 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class RegistryValueEvidence extends AlertEvidence implements Parsable 
 {
     /**
-     * Instantiates a new RegistryValueEvidence and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new registryValueEvidence and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -119,6 +124,7 @@ class RegistryValueEvidence extends AlertEvidence implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeStringValue('mdeDeviceId', $this->getMdeDeviceId());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('registryHive', $this->getRegistryHive());
         $writer->writeStringValue('registryKey', $this->getRegistryKey());
         $writer->writeStringValue('registryValue', $this->getRegistryValue());

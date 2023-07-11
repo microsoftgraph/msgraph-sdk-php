@@ -81,7 +81,7 @@ class TeamsAppPermissionSet implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the resourceSpecificPermissions property value. The resourceSpecificPermissions property
+     * Gets the resourceSpecificPermissions property value. A collection of resource-specific permissions.
      * @return array<TeamsAppResourceSpecificPermission>|null
     */
     public function getResourceSpecificPermissions(): ?array {
@@ -129,7 +129,7 @@ class TeamsAppPermissionSet implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the resourceSpecificPermissions property value. The resourceSpecificPermissions property
+     * Sets the resourceSpecificPermissions property value. A collection of resource-specific permissions.
      * @param array<TeamsAppResourceSpecificPermission>|null $value Value to set for the resourceSpecificPermissions property.
     */
     public function setResourceSpecificPermissions(?array $value): void {

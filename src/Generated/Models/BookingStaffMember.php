@@ -7,10 +7,13 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
+/**
+ * Represents a staff member who provides services in a business.
+*/
 class BookingStaffMember extends BookingStaffMemberBase implements Parsable 
 {
     /**
-     * Instantiates a new BookingStaffMember and sets the default values.
+     * Instantiates a new bookingStaffMember and sets the default values.
     */
     public function __construct() {
         parent::__construct();

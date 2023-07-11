@@ -6,10 +6,13 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * Windows 10 Edition Upgrade configuration.
+*/
 class EditionUpgradeConfiguration extends DeviceConfiguration implements Parsable 
 {
     /**
-     * Instantiates a new EditionUpgradeConfiguration and sets the default values.
+     * Instantiates a new editionUpgradeConfiguration and sets the default values.
     */
     public function __construct() {
         parent::__construct();

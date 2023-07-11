@@ -8,10 +8,18 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
+/**
+ * Import windows autopilot devices using upload.
+*/
 class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new ImportedWindowsAutopilotDeviceIdentityUpload and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new importedWindowsAutopilotDeviceIdentityUpload and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -85,6 +93,7 @@ class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity implements Par
         parent::serialize($writer);
         $writer->writeDateTimeValue('createdDateTimeUtc', $this->getCreatedDateTimeUtc());
         $writer->writeCollectionOfObjectValues('deviceIdentities', $this->getDeviceIdentities());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeEnumValue('status', $this->getStatus());
     }
 

@@ -18,7 +18,7 @@ class StringKeyObjectValuePair implements AdditionalDataHolder, BackedModel, Par
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new StringKeyObjectValuePair and sets the default values.
+     * Instantiates a new stringKeyObjectValuePair and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
@@ -68,7 +68,7 @@ class StringKeyObjectValuePair implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the key property value. The key property
+     * Gets the key property value. Key.
      * @return string|null
     */
     public function getKey(): ?string {
@@ -118,7 +118,7 @@ class StringKeyObjectValuePair implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the key property value. The key property
+     * Sets the key property value. Key.
      * @param string|null $value Value to set for the key property.
     */
     public function setKey(?string $value): void {

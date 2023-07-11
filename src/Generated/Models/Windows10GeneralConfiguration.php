@@ -9,10 +9,13 @@ use Microsoft\Kiota\Abstractions\Types\Time;
 use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 use Psr\Http\Message\StreamInterface;
 
+/**
+ * This topic provides descriptions of the declared methods, properties and relationships exposed by the windows10GeneralConfiguration resource.
+*/
 class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsable 
 {
     /**
-     * Instantiates a new Windows10GeneralConfiguration and sets the default values.
+     * Instantiates a new windows10GeneralConfiguration and sets the default values.
     */
     public function __construct() {
         parent::__construct();

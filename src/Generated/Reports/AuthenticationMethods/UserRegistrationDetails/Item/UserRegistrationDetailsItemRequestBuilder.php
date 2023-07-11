@@ -50,9 +50,10 @@ class UserRegistrationDetailsItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get userRegistrationDetails from reports
+     * Read the properties and relationships of a userRegistrationDetails object.
      * @param UserRegistrationDetailsItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/userregistrationdetails-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?UserRegistrationDetailsItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -104,7 +105,7 @@ class UserRegistrationDetailsItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get userRegistrationDetails from reports
+     * Read the properties and relationships of a userRegistrationDetails object.
      * @param UserRegistrationDetailsItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

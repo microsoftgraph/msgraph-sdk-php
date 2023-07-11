@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class ChatCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new ChatCollectionResponse and sets the default values.
+     * Instantiates a new chatCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

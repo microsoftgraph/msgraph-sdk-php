@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Reports\AuthenticationMethods\UserRegistrati
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get userRegistrationDetails from reports
+ * Read the properties and relationships of a userRegistrationDetails object.
 */
 class UserRegistrationDetailsItemRequestBuilderGetQueryParameters 
 {

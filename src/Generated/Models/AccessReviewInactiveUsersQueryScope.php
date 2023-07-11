@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AccessReviewInactiveUsersQueryScope extends AccessReviewQueryScope implements Parsable 
 {
     /**
-     * Instantiates a new AccessReviewInactiveUsersQueryScope and sets the default values.
+     * Instantiates a new accessReviewInactiveUsersQueryScope and sets the default values.
     */
     public function __construct() {
         parent::__construct();

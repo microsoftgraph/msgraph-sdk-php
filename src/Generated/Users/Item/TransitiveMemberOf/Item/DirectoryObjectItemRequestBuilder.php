@@ -8,6 +8,7 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\DirectoryObject;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Users\Item\TransitiveMemberOf\Item\GraphAdministrativeUnit\GraphAdministrativeUnitRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\TransitiveMemberOf\Item\GraphDirectoryRole\GraphDirectoryRoleRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\TransitiveMemberOf\Item\GraphGroup\GraphGroupRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -24,6 +25,13 @@ class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder
     */
     public function graphAdministrativeUnit(): GraphAdministrativeUnitRequestBuilder {
         return new GraphAdministrativeUnitRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Casts the previous resource to directoryRole.
+    */
+    public function graphDirectoryRole(): GraphDirectoryRoleRequestBuilder {
+        return new GraphDirectoryRoleRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

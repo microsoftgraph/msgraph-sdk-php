@@ -53,10 +53,9 @@ class LocalizedNotificationMessagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the localizedNotificationMessage objects.
+     * The list of localized messages for this Notification Message Template.
      * @param LocalizedNotificationMessagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-notification-localizednotificationmessage-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?LocalizedNotificationMessagesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -72,11 +71,10 @@ class LocalizedNotificationMessagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new localizedNotificationMessage object.
+     * Create new navigation property to localizedNotificationMessages for deviceManagement
      * @param LocalizedNotificationMessage $body The request body
      * @param LocalizedNotificationMessagesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-notification-localizednotificationmessage-create?view=graph-rest-1.0 Find more info here
     */
     public function post(LocalizedNotificationMessage $body, ?LocalizedNotificationMessagesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -92,7 +90,7 @@ class LocalizedNotificationMessagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the localizedNotificationMessage objects.
+     * The list of localized messages for this Notification Message Template.
      * @param LocalizedNotificationMessagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +111,7 @@ class LocalizedNotificationMessagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new localizedNotificationMessage object.
+     * Create new navigation property to localizedNotificationMessages for deviceManagement
      * @param LocalizedNotificationMessage $body The request body
      * @param LocalizedNotificationMessagesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

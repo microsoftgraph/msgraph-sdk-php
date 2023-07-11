@@ -11,6 +11,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class AccessPackageAssignmentRequest extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new accessPackageAssignmentRequest and sets the default values.
     */
     public function __construct() {
@@ -89,6 +94,20 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
     }
 
     /**
+     * Gets the customExtensionCalloutInstances property value. The customExtensionCalloutInstances property
+     * @return array<CustomExtensionCalloutInstance>|null
+    */
+    public function getCustomExtensionCalloutInstances(): ?array {
+        $val = $this->getBackingStore()->get('customExtensionCalloutInstances');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, CustomExtensionCalloutInstance::class);
+            /** @var array<CustomExtensionCalloutInstance>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'customExtensionCalloutInstances'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
@@ -100,6 +119,7 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
             'assignment' => fn(ParseNode $n) => $o->setAssignment($n->getObjectValue([AccessPackageAssignment::class, 'createFromDiscriminatorValue'])),
             'completedDateTime' => fn(ParseNode $n) => $o->setCompletedDateTime($n->getDateTimeValue()),
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
+            'customExtensionCalloutInstances' => fn(ParseNode $n) => $o->setCustomExtensionCalloutInstances($n->getCollectionOfObjectValues([CustomExtensionCalloutInstance::class, 'createFromDiscriminatorValue'])),
             'requestor' => fn(ParseNode $n) => $o->setRequestor($n->getObjectValue([AccessPackageSubject::class, 'createFromDiscriminatorValue'])),
             'requestType' => fn(ParseNode $n) => $o->setRequestType($n->getEnumValue(AccessPackageRequestType::class)),
             'schedule' => fn(ParseNode $n) => $o->setSchedule($n->getObjectValue([EntitlementManagementSchedule::class, 'createFromDiscriminatorValue'])),
@@ -179,6 +199,8 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
         $writer->writeObjectValue('assignment', $this->getAssignment());
         $writer->writeDateTimeValue('completedDateTime', $this->getCompletedDateTime());
         $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
+        $writer->writeCollectionOfObjectValues('customExtensionCalloutInstances', $this->getCustomExtensionCalloutInstances());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('requestor', $this->getRequestor());
         $writer->writeEnumValue('requestType', $this->getRequestType());
         $writer->writeObjectValue('schedule', $this->getSchedule());
@@ -224,6 +246,14 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
+    }
+
+    /**
+     * Sets the customExtensionCalloutInstances property value. The customExtensionCalloutInstances property
+     * @param array<CustomExtensionCalloutInstance>|null $value Value to set for the customExtensionCalloutInstances property.
+    */
+    public function setCustomExtensionCalloutInstances(?array $value): void {
+        $this->getBackingStore()->set('customExtensionCalloutInstances', $value);
     }
 
     /**

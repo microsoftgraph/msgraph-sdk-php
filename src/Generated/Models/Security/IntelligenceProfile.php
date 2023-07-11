@@ -12,6 +12,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class IntelligenceProfile extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new intelligenceProfile and sets the default values.
     */
     public function __construct() {
@@ -201,6 +206,7 @@ class IntelligenceProfile extends Entity implements Parsable
         $writer->writeDateTimeValue('firstActiveDateTime', $this->getFirstActiveDateTime());
         $writer->writeCollectionOfObjectValues('indicators', $this->getIndicators());
         $writer->writeEnumValue('kind', $this->getKind());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('summary', $this->getSummary());
         $writer->writeCollectionOfPrimitiveValues('targets', $this->getTargets());
         $writer->writeStringValue('title', $this->getTitle());

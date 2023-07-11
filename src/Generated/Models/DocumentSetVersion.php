@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class DocumentSetVersion extends ListItemVersion implements Parsable 
 {
     /**
-     * Instantiates a new DocumentSetVersion and sets the default values.
+     * Instantiates a new documentSetVersion and sets the default values.
     */
     public function __construct() {
         parent::__construct();

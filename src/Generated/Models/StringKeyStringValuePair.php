@@ -69,7 +69,7 @@ class StringKeyStringValuePair implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the key property value. The key property
+     * Gets the key property value. Key.
      * @return string|null
     */
     public function getKey(): ?string {
@@ -93,7 +93,7 @@ class StringKeyStringValuePair implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the value property value. The value property
+     * Gets the value property value. Value.
      * @return string|null
     */
     public function getValue(): ?string {
@@ -132,7 +132,7 @@ class StringKeyStringValuePair implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the key property value. The key property
+     * Sets the key property value. Key.
      * @param string|null $value Value to set for the key property.
     */
     public function setKey(?string $value): void {
@@ -148,7 +148,7 @@ class StringKeyStringValuePair implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the value property value. The value property
+     * Sets the value property value. Value.
      * @param string|null $value Value to set for the value property.
     */
     public function setValue(?string $value): void {

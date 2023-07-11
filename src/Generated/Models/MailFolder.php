@@ -10,6 +10,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class MailFolder extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new mailFolder and sets the default values.
     */
     public function __construct() {
@@ -208,6 +213,7 @@ class MailFolder extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('messageRules', $this->getMessageRules());
         $writer->writeCollectionOfObjectValues('messages', $this->getMessages());
         $writer->writeCollectionOfObjectValues('multiValueExtendedProperties', $this->getMultiValueExtendedProperties());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('parentFolderId', $this->getParentFolderId());
         $writer->writeCollectionOfObjectValues('singleValueExtendedProperties', $this->getSingleValueExtendedProperties());
         $writer->writeIntegerValue('totalItemCount', $this->getTotalItemCount());

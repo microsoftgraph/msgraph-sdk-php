@@ -80,10 +80,9 @@ class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Deletes a iosMobileAppConfiguration.
+     * Delete navigation property mobileAppConfigurations for deviceAppManagement
      * @param ManagedDeviceMobileAppConfigurationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-apps-iosmobileappconfiguration-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?ManagedDeviceMobileAppConfigurationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -99,10 +98,9 @@ class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Read properties and relationships of the managedDeviceMobileAppConfiguration object.
+     * The Managed Device Mobile Application Configurations.
      * @param ManagedDeviceMobileAppConfigurationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfiguration-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ManagedDeviceMobileAppConfigurationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -118,11 +116,10 @@ class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Update the properties of a iosMobileAppConfiguration object.
+     * Update the navigation property mobileAppConfigurations in deviceAppManagement
      * @param ManagedDeviceMobileAppConfiguration $body The request body
      * @param ManagedDeviceMobileAppConfigurationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-apps-iosmobileappconfiguration-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(ManagedDeviceMobileAppConfiguration $body, ?ManagedDeviceMobileAppConfigurationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -138,7 +135,7 @@ class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Deletes a iosMobileAppConfiguration.
+     * Delete navigation property mobileAppConfigurations for deviceAppManagement
      * @param ManagedDeviceMobileAppConfigurationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -155,7 +152,7 @@ class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Read properties and relationships of the managedDeviceMobileAppConfiguration object.
+     * The Managed Device Mobile Application Configurations.
      * @param ManagedDeviceMobileAppConfigurationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -176,7 +173,7 @@ class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Update the properties of a iosMobileAppConfiguration object.
+     * Update the navigation property mobileAppConfigurations in deviceAppManagement
      * @param ManagedDeviceMobileAppConfiguration $body The request body
      * @param ManagedDeviceMobileAppConfigurationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

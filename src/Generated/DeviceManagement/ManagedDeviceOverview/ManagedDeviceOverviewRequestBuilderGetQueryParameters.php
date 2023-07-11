@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\ManagedDeviceOverview;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read properties and relationships of the managedDeviceOverview object.
+ * Device overview
 */
 class ManagedDeviceOverviewRequestBuilderGetQueryParameters 
 {

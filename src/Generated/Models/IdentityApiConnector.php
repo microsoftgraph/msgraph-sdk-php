@@ -9,7 +9,12 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class IdentityApiConnector extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new IdentityApiConnector and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new identityApiConnector and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -81,6 +86,7 @@ class IdentityApiConnector extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeObjectValue('authenticationConfiguration', $this->getAuthenticationConfiguration());
         $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('targetUrl', $this->getTargetUrl());
     }
 

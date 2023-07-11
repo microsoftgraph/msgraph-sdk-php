@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class WorkbookCommentReplyCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new WorkbookCommentReplyCollectionResponse and sets the default values.
+     * Instantiates a new workbookCommentReplyCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

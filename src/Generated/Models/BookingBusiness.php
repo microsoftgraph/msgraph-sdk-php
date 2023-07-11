@@ -7,10 +7,18 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
+/**
+ * Represents a Microsot Bookings Business.
+*/
 class BookingBusiness extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new BookingBusiness and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new bookingBusiness and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -300,6 +308,7 @@ class BookingBusiness extends Entity implements Parsable
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeStringValue('email', $this->getEmail());
         $writer->writeStringValue('languageTag', $this->getLanguageTag());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('phone', $this->getPhone());
         $writer->writeObjectValue('schedulingPolicy', $this->getSchedulingPolicy());
         $writer->writeCollectionOfObjectValues('services', $this->getServices());

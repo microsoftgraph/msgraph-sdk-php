@@ -14,6 +14,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class ManagedAppRegistration extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new managedAppRegistration and sets the default values.
     */
     public function __construct() {
@@ -267,6 +272,7 @@ class ManagedAppRegistration extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('intendedPolicies', $this->getIntendedPolicies());
         $writer->writeDateTimeValue('lastSyncDateTime', $this->getLastSyncDateTime());
         $writer->writeStringValue('managementSdkVersion', $this->getManagementSdkVersion());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfObjectValues('operations', $this->getOperations());
         $writer->writeStringValue('platformVersion', $this->getPlatformVersion());
         $writer->writeStringValue('userId', $this->getUserId());

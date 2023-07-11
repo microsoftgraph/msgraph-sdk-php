@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class PrinterCreateOperation extends PrintOperation implements Parsable 
 {
     /**
-     * Instantiates a new PrinterCreateOperation and sets the default values.
+     * Instantiates a new printerCreateOperation and sets the default values.
     */
     public function __construct() {
         parent::__construct();

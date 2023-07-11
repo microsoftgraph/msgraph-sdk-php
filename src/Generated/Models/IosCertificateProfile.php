@@ -6,10 +6,13 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * Device Configuration.
+*/
 class IosCertificateProfile extends DeviceConfiguration implements Parsable 
 {
     /**
-     * Instantiates a new IosCertificateProfile and sets the default values.
+     * Instantiates a new iosCertificateProfile and sets the default values.
     */
     public function __construct() {
         parent::__construct();

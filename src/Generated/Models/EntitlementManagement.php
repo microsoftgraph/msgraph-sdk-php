@@ -10,7 +10,12 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class EntitlementManagement extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new EntitlementManagement and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new entitlementManagement and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -137,8 +142,68 @@ class EntitlementManagement extends Entity implements Parsable
             'assignments' => fn(ParseNode $n) => $o->setAssignments($n->getCollectionOfObjectValues([AccessPackageAssignment::class, 'createFromDiscriminatorValue'])),
             'catalogs' => fn(ParseNode $n) => $o->setCatalogs($n->getCollectionOfObjectValues([AccessPackageCatalog::class, 'createFromDiscriminatorValue'])),
             'connectedOrganizations' => fn(ParseNode $n) => $o->setConnectedOrganizations($n->getCollectionOfObjectValues([ConnectedOrganization::class, 'createFromDiscriminatorValue'])),
+            'resourceEnvironments' => fn(ParseNode $n) => $o->setResourceEnvironments($n->getCollectionOfObjectValues([AccessPackageResourceEnvironment::class, 'createFromDiscriminatorValue'])),
+            'resourceRequests' => fn(ParseNode $n) => $o->setResourceRequests($n->getCollectionOfObjectValues([AccessPackageResourceRequest::class, 'createFromDiscriminatorValue'])),
+            'resourceRoleScopes' => fn(ParseNode $n) => $o->setResourceRoleScopes($n->getCollectionOfObjectValues([AccessPackageResourceRoleScope::class, 'createFromDiscriminatorValue'])),
+            'resources' => fn(ParseNode $n) => $o->setResources($n->getCollectionOfObjectValues([AccessPackageResource::class, 'createFromDiscriminatorValue'])),
             'settings' => fn(ParseNode $n) => $o->setSettings($n->getObjectValue([EntitlementManagementSettings::class, 'createFromDiscriminatorValue'])),
         ]);
+    }
+
+    /**
+     * Gets the resourceEnvironments property value. The resourceEnvironments property
+     * @return array<AccessPackageResourceEnvironment>|null
+    */
+    public function getResourceEnvironments(): ?array {
+        $val = $this->getBackingStore()->get('resourceEnvironments');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AccessPackageResourceEnvironment::class);
+            /** @var array<AccessPackageResourceEnvironment>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resourceEnvironments'");
+    }
+
+    /**
+     * Gets the resourceRequests property value. The resourceRequests property
+     * @return array<AccessPackageResourceRequest>|null
+    */
+    public function getResourceRequests(): ?array {
+        $val = $this->getBackingStore()->get('resourceRequests');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AccessPackageResourceRequest::class);
+            /** @var array<AccessPackageResourceRequest>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resourceRequests'");
+    }
+
+    /**
+     * Gets the resourceRoleScopes property value. The resourceRoleScopes property
+     * @return array<AccessPackageResourceRoleScope>|null
+    */
+    public function getResourceRoleScopes(): ?array {
+        $val = $this->getBackingStore()->get('resourceRoleScopes');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AccessPackageResourceRoleScope::class);
+            /** @var array<AccessPackageResourceRoleScope>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resourceRoleScopes'");
+    }
+
+    /**
+     * Gets the resources property value. The resources property
+     * @return array<AccessPackageResource>|null
+    */
+    public function getResources(): ?array {
+        $val = $this->getBackingStore()->get('resources');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AccessPackageResource::class);
+            /** @var array<AccessPackageResource>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resources'");
     }
 
     /**
@@ -166,6 +231,11 @@ class EntitlementManagement extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('assignments', $this->getAssignments());
         $writer->writeCollectionOfObjectValues('catalogs', $this->getCatalogs());
         $writer->writeCollectionOfObjectValues('connectedOrganizations', $this->getConnectedOrganizations());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeCollectionOfObjectValues('resourceEnvironments', $this->getResourceEnvironments());
+        $writer->writeCollectionOfObjectValues('resourceRequests', $this->getResourceRequests());
+        $writer->writeCollectionOfObjectValues('resourceRoleScopes', $this->getResourceRoleScopes());
+        $writer->writeCollectionOfObjectValues('resources', $this->getResources());
         $writer->writeObjectValue('settings', $this->getSettings());
     }
 
@@ -223,6 +293,38 @@ class EntitlementManagement extends Entity implements Parsable
     */
     public function setConnectedOrganizations(?array $value): void {
         $this->getBackingStore()->set('connectedOrganizations', $value);
+    }
+
+    /**
+     * Sets the resourceEnvironments property value. The resourceEnvironments property
+     * @param array<AccessPackageResourceEnvironment>|null $value Value to set for the resourceEnvironments property.
+    */
+    public function setResourceEnvironments(?array $value): void {
+        $this->getBackingStore()->set('resourceEnvironments', $value);
+    }
+
+    /**
+     * Sets the resourceRequests property value. The resourceRequests property
+     * @param array<AccessPackageResourceRequest>|null $value Value to set for the resourceRequests property.
+    */
+    public function setResourceRequests(?array $value): void {
+        $this->getBackingStore()->set('resourceRequests', $value);
+    }
+
+    /**
+     * Sets the resourceRoleScopes property value. The resourceRoleScopes property
+     * @param array<AccessPackageResourceRoleScope>|null $value Value to set for the resourceRoleScopes property.
+    */
+    public function setResourceRoleScopes(?array $value): void {
+        $this->getBackingStore()->set('resourceRoleScopes', $value);
+    }
+
+    /**
+     * Sets the resources property value. The resources property
+     * @param array<AccessPackageResource>|null $value Value to set for the resources property.
+    */
+    public function setResources(?array $value): void {
+        $this->getBackingStore()->set('resources', $value);
     }
 
     /**

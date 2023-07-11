@@ -13,6 +13,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class DeviceComplianceActionItem extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new deviceComplianceActionItem and sets the default values.
     */
     public function __construct() {
@@ -109,6 +114,7 @@ class DeviceComplianceActionItem extends Entity implements Parsable
         $writer->writeIntegerValue('gracePeriodHours', $this->getGracePeriodHours());
         $writer->writeCollectionOfPrimitiveValues('notificationMessageCCList', $this->getNotificationMessageCCList());
         $writer->writeStringValue('notificationTemplateId', $this->getNotificationTemplateId());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

@@ -9,6 +9,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookChartAxes extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new workbookChartAxes and sets the default values.
     */
     public function __construct() {
@@ -80,6 +85,7 @@ class WorkbookChartAxes extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeObjectValue('categoryAxis', $this->getCategoryAxis());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('seriesAxis', $this->getSeriesAxis());
         $writer->writeObjectValue('valueAxis', $this->getValueAxis());
     }

@@ -9,6 +9,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class GroupLifecyclePolicy extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new groupLifecyclePolicy and sets the default values.
     */
     public function __construct() {
@@ -82,6 +87,7 @@ class GroupLifecyclePolicy extends Entity implements Parsable
         $writer->writeStringValue('alternateNotificationEmails', $this->getAlternateNotificationEmails());
         $writer->writeIntegerValue('groupLifetimeInDays', $this->getGroupLifetimeInDays());
         $writer->writeStringValue('managedGroupTypes', $this->getManagedGroupTypes());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

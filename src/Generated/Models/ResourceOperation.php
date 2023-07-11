@@ -12,6 +12,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ResourceOperation extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new resourceOperation and sets the default values.
     */
     public function __construct() {
@@ -84,6 +89,7 @@ class ResourceOperation extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeStringValue('actionName', $this->getActionName());
         $writer->writeStringValue('description', $this->getDescription());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('resourceName', $this->getResourceName());
     }
 

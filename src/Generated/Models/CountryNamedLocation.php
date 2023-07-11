@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class CountryNamedLocation extends NamedLocation implements Parsable 
 {
     /**
-     * Instantiates a new CountryNamedLocation and sets the default values.
+     * Instantiates a new countryNamedLocation and sets the default values.
     */
     public function __construct() {
         parent::__construct();

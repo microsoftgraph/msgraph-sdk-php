@@ -83,7 +83,7 @@ class SynchronizationLinkedObjects implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Gets the members property value. The members property
+     * Gets the members property value. All group members that you would like to provision.
      * @return array<SynchronizationJobSubject>|null
     */
     public function getMembers(): ?array {
@@ -159,7 +159,7 @@ class SynchronizationLinkedObjects implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Sets the members property value. The members property
+     * Sets the members property value. All group members that you would like to provision.
      * @param array<SynchronizationJobSubject>|null $value Value to set for the members property.
     */
     public function setMembers(?array $value): void {

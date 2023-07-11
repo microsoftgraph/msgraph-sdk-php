@@ -11,6 +11,11 @@ use Psr\Http\Message\StreamInterface;
 class OrganizationalBrandingProperties extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new organizationalBrandingProperties and sets the default values.
     */
     public function __construct() {
@@ -473,6 +478,7 @@ class OrganizationalBrandingProperties extends Entity implements Parsable
         $writer->writeStringValue('headerLogoRelativeUrl', $this->getHeaderLogoRelativeUrl());
         $writer->writeObjectValue('loginPageLayoutConfiguration', $this->getLoginPageLayoutConfiguration());
         $writer->writeObjectValue('loginPageTextVisibilitySettings', $this->getLoginPageTextVisibilitySettings());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('signInPageText', $this->getSignInPageText());
         $writer->writeBinaryContent('squareLogo', $this->getSquareLogo());
         $writer->writeBinaryContent('squareLogoDark', $this->getSquareLogoDark());

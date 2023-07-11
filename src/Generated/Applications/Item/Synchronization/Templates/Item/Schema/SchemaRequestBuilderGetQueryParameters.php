@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Applications\Item\Synchronization\Templates\
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get schema from applications
+ * Default synchronization schema for the jobs based on this template.
 */
 class SchemaRequestBuilderGetQueryParameters 
 {

@@ -6,10 +6,18 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * Device action result
+*/
 class RemoteLockActionResult extends DeviceActionResult implements Parsable 
 {
     /**
-     * Instantiates a new RemoteLockActionResult and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new remoteLockActionResult and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -53,6 +61,7 @@ class RemoteLockActionResult extends DeviceActionResult implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('unlockPin', $this->getUnlockPin());
     }
 

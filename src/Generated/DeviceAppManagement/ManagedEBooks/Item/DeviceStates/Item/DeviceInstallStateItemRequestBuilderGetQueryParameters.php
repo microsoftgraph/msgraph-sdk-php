@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\Devic
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read properties and relationships of the deviceInstallState object.
+ * The list of installation states for this eBook.
 */
 class DeviceInstallStateItemRequestBuilderGetQueryParameters 
 {

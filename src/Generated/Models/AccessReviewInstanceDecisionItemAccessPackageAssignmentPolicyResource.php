@@ -9,7 +9,12 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource extends AccessReviewInstanceDecisionItemResource implements Parsable 
 {
     /**
-     * Instantiates a new AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
+     * Instantiates a new accessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -69,6 +74,7 @@ class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource exte
         parent::serialize($writer);
         $writer->writeStringValue('accessPackageDisplayName', $this->getAccessPackageDisplayName());
         $writer->writeStringValue('accessPackageId', $this->getAccessPackageId());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

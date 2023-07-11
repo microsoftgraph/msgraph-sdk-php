@@ -57,7 +57,7 @@ class ExpressionInputObject implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the definition property value. The definition property
+     * Gets the definition property value. Definition of the test object.
      * @return ObjectDefinition|null
     */
     public function getDefinition(): ?ObjectDefinition {
@@ -94,7 +94,7 @@ class ExpressionInputObject implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the properties property value. The properties property
+     * Gets the properties property value. Property values of the test object.
      * @return array<StringKeyObjectValuePair>|null
     */
     public function getProperties(): ?array {
@@ -135,7 +135,7 @@ class ExpressionInputObject implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the definition property value. The definition property
+     * Sets the definition property value. Definition of the test object.
      * @param ObjectDefinition|null $value Value to set for the definition property.
     */
     public function setDefinition(?ObjectDefinition $value): void {
@@ -151,7 +151,7 @@ class ExpressionInputObject implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the properties property value. The properties property
+     * Sets the properties property value. Property values of the test object.
      * @param array<StringKeyObjectValuePair>|null $value Value to set for the properties property.
     */
     public function setProperties(?array $value): void {
