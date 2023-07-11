@@ -150,6 +150,39 @@ class SynchronizationJob extends Entity
     }
 
     /**
+    * Gets the bulkUpload
+    * The bulk upload operation for the job.
+    *
+    * @return BulkUpload|null The bulkUpload
+    */
+    public function getBulkUpload()
+    {
+        if (array_key_exists("bulkUpload", $this->_propDict)) {
+            if (is_a($this->_propDict["bulkUpload"], "\Beta\Microsoft\Graph\Model\BulkUpload") || is_null($this->_propDict["bulkUpload"])) {
+                return $this->_propDict["bulkUpload"];
+            } else {
+                $this->_propDict["bulkUpload"] = new BulkUpload($this->_propDict["bulkUpload"]);
+                return $this->_propDict["bulkUpload"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the bulkUpload
+    * The bulk upload operation for the job.
+    *
+    * @param BulkUpload $val The bulkUpload
+    *
+    * @return SynchronizationJob
+    */
+    public function setBulkUpload($val)
+    {
+        $this->_propDict["bulkUpload"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the schema
     * The synchronization schema configured for the job.
     *

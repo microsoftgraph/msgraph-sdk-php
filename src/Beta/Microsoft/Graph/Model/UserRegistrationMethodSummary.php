@@ -87,7 +87,7 @@ class UserRegistrationMethodSummary extends Entity
 
     /**
     * Gets the userRoles
-    * User role type. Possible values are: all, privilegedAdmin, admin, user.
+    * The role type of the user. Possible values are: all, privilegedAdmin, admin, user, unknownFutureValue.
     *
     * @return IncludedUserRoles|null The userRoles
     */
@@ -106,7 +106,7 @@ class UserRegistrationMethodSummary extends Entity
 
     /**
     * Sets the userRoles
-    * User role type. Possible values are: all, privilegedAdmin, admin, user.
+    * The role type of the user. Possible values are: all, privilegedAdmin, admin, user, unknownFutureValue.
     *
     * @param IncludedUserRoles $val The value to assign to the userRoles
     *
@@ -120,7 +120,7 @@ class UserRegistrationMethodSummary extends Entity
 
     /**
     * Gets the userTypes
-    * User type. Possible values are: all, member, guest.
+    * User type. Possible values are: all, member, guest, unknownFutureValue.
     *
     * @return IncludedUserTypes|null The userTypes
     */
@@ -139,7 +139,7 @@ class UserRegistrationMethodSummary extends Entity
 
     /**
     * Sets the userTypes
-    * User type. Possible values are: all, member, guest.
+    * User type. Possible values are: all, member, guest, unknownFutureValue.
     *
     * @param IncludedUserTypes $val The value to assign to the userTypes
     *

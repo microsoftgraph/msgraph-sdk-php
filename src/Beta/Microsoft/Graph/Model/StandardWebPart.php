@@ -59,7 +59,7 @@ class StandardWebPart extends WebPart
 
     /**
     * Gets the webPartType
-    * A Guid which indicates the type of the webParts
+    * A Guid that indicates the webPart type.
     *
     * @return string|null The webPartType
     */
@@ -74,7 +74,7 @@ class StandardWebPart extends WebPart
 
     /**
     * Sets the webPartType
-    * A Guid which indicates the type of the webParts
+    * A Guid that indicates the webPart type.
     *
     * @param string $val The webPartType
     *

@@ -310,6 +310,37 @@ class Admin implements \JsonSerializable
     }
 
     /**
+    * Gets the people
+    *
+    * @return PeopleAdminSettings|null The people
+    */
+    public function getPeople()
+    {
+        if (array_key_exists("people", $this->_propDict)) {
+            if (is_a($this->_propDict["people"], "\Beta\Microsoft\Graph\Model\PeopleAdminSettings") || is_null($this->_propDict["people"])) {
+                return $this->_propDict["people"];
+            } else {
+                $this->_propDict["people"] = new PeopleAdminSettings($this->_propDict["people"]);
+                return $this->_propDict["people"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the people
+    *
+    * @param PeopleAdminSettings $val The people
+    *
+    * @return Admin
+    */
+    public function setPeople($val)
+    {
+        $this->_propDict["people"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the windows
     * A container for all Windows administrator functionalities. Read-only.
     *

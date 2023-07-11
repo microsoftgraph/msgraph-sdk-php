@@ -26,6 +26,7 @@ class RedundancyConfiguration extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the redundancyTier
+    * Specifies the Device link SKU .The possible values are: noRedundancy, zoneRedundancy.
     *
     * @return RedundancyTier|null The redundancyTier
     */
@@ -44,6 +45,7 @@ class RedundancyConfiguration extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the redundancyTier
+    * Specifies the Device link SKU .The possible values are: noRedundancy, zoneRedundancy.
     *
     * @param RedundancyTier $val The value to assign to the redundancyTier
     *
@@ -56,6 +58,7 @@ class RedundancyConfiguration extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the zoneLocalIpAddress
+    * Indicate the specific IP address used for establishing the Border Gateway Protocol (BGP) connection with Microsoft's network.
     *
     * @return string|null The zoneLocalIpAddress
     */
@@ -70,6 +73,7 @@ class RedundancyConfiguration extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the zoneLocalIpAddress
+    * Indicate the specific IP address used for establishing the Border Gateway Protocol (BGP) connection with Microsoft's network.
     *
     * @param string $val The value of the zoneLocalIpAddress
     *

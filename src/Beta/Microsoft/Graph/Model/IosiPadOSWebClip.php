@@ -113,7 +113,7 @@ class IosiPadOSWebClip extends MobileApp
 
     /**
     * Gets the preComposedIconEnabled
-    * Whether or not the icon for the app is precomosed. Defaults to false. If TRUE, prevents SpringBoard from adding "shine" to the icon. If FALSE, SpringBoard can add "shine".
+    * Whether or not the icon for the app is precomosed. Defaults to false. If TRUE, prevents SpringBoard from adding 'shine' to the icon. If FALSE, SpringBoard can add 'shine'.
     *
     * @return bool|null The preComposedIconEnabled
     */
@@ -128,7 +128,7 @@ class IosiPadOSWebClip extends MobileApp
 
     /**
     * Sets the preComposedIconEnabled
-    * Whether or not the icon for the app is precomosed. Defaults to false. If TRUE, prevents SpringBoard from adding "shine" to the icon. If FALSE, SpringBoard can add "shine".
+    * Whether or not the icon for the app is precomosed. Defaults to false. If TRUE, prevents SpringBoard from adding 'shine' to the icon. If FALSE, SpringBoard can add 'shine'.
     *
     * @param bool $val The preComposedIconEnabled
     *

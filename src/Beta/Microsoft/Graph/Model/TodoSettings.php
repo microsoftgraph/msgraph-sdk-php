@@ -25,6 +25,7 @@ class TodoSettings extends Entity
 {
     /**
     * Gets the isExternalJoinEnabled
+    * Controls whether users can join lists from users external to your organization.
     *
     * @return bool|null The isExternalJoinEnabled
     */
@@ -39,6 +40,7 @@ class TodoSettings extends Entity
 
     /**
     * Sets the isExternalJoinEnabled
+    * Controls whether users can join lists from users external to your organization.
     *
     * @param bool $val The value of the isExternalJoinEnabled
     *
@@ -51,6 +53,7 @@ class TodoSettings extends Entity
     }
     /**
     * Gets the isExternalShareEnabled
+    * Controls whether users can share lists with external users.
     *
     * @return bool|null The isExternalShareEnabled
     */
@@ -65,6 +68,7 @@ class TodoSettings extends Entity
 
     /**
     * Sets the isExternalShareEnabled
+    * Controls whether users can share lists with external users.
     *
     * @param bool $val The value of the isExternalShareEnabled
     *
@@ -77,6 +81,7 @@ class TodoSettings extends Entity
     }
     /**
     * Gets the isPushNotificationEnabled
+    * Controls whether push notifications are enabled for your users.
     *
     * @return bool|null The isPushNotificationEnabled
     */
@@ -91,6 +96,7 @@ class TodoSettings extends Entity
 
     /**
     * Sets the isPushNotificationEnabled
+    * Controls whether push notifications are enabled for your users.
     *
     * @param bool $val The value of the isPushNotificationEnabled
     *

@@ -25,6 +25,7 @@ class FormsSettings extends Entity
 {
     /**
     * Gets the isBingImageSearchEnabled
+    * Controls whether users can add images from Bing to forms.
     *
     * @return bool|null The isBingImageSearchEnabled
     */
@@ -39,6 +40,7 @@ class FormsSettings extends Entity
 
     /**
     * Sets the isBingImageSearchEnabled
+    * Controls whether users can add images from Bing to forms.
     *
     * @param bool $val The value of the isBingImageSearchEnabled
     *
@@ -51,6 +53,7 @@ class FormsSettings extends Entity
     }
     /**
     * Gets the isExternalSendFormEnabled
+    * Controls whether users can send a link to a form to an external user.
     *
     * @return bool|null The isExternalSendFormEnabled
     */
@@ -65,6 +68,7 @@ class FormsSettings extends Entity
 
     /**
     * Sets the isExternalSendFormEnabled
+    * Controls whether users can send a link to a form to an external user.
     *
     * @param bool $val The value of the isExternalSendFormEnabled
     *
@@ -77,6 +81,7 @@ class FormsSettings extends Entity
     }
     /**
     * Gets the isExternalShareCollaborationEnabled
+    * Controls whether users can collaborate on a form layout and structure with an external user.
     *
     * @return bool|null The isExternalShareCollaborationEnabled
     */
@@ -91,6 +96,7 @@ class FormsSettings extends Entity
 
     /**
     * Sets the isExternalShareCollaborationEnabled
+    * Controls whether users can collaborate on a form layout and structure with an external user.
     *
     * @param bool $val The value of the isExternalShareCollaborationEnabled
     *
@@ -103,6 +109,7 @@ class FormsSettings extends Entity
     }
     /**
     * Gets the isExternalShareResultEnabled
+    * Controls whether users can share form results with external users.
     *
     * @return bool|null The isExternalShareResultEnabled
     */
@@ -117,6 +124,7 @@ class FormsSettings extends Entity
 
     /**
     * Sets the isExternalShareResultEnabled
+    * Controls whether users can share form results with external users.
     *
     * @param bool $val The value of the isExternalShareResultEnabled
     *
@@ -129,6 +137,7 @@ class FormsSettings extends Entity
     }
     /**
     * Gets the isExternalShareTemplateEnabled
+    * Controls whether users can share form templates with external users.
     *
     * @return bool|null The isExternalShareTemplateEnabled
     */
@@ -143,6 +152,7 @@ class FormsSettings extends Entity
 
     /**
     * Sets the isExternalShareTemplateEnabled
+    * Controls whether users can share form templates with external users.
     *
     * @param bool $val The value of the isExternalShareTemplateEnabled
     *
@@ -155,6 +165,7 @@ class FormsSettings extends Entity
     }
     /**
     * Gets the isInOrgFormsPhishingScanEnabled
+    * Controls whether phishing protection is run on forms created by users, blocking the creation of forms if common phishing questions are detected.
     *
     * @return bool|null The isInOrgFormsPhishingScanEnabled
     */
@@ -169,6 +180,7 @@ class FormsSettings extends Entity
 
     /**
     * Sets the isInOrgFormsPhishingScanEnabled
+    * Controls whether phishing protection is run on forms created by users, blocking the creation of forms if common phishing questions are detected.
     *
     * @param bool $val The value of the isInOrgFormsPhishingScanEnabled
     *
@@ -181,6 +193,7 @@ class FormsSettings extends Entity
     }
     /**
     * Gets the isRecordIdentityByDefaultEnabled
+    * Controls whether the names of users who fill out forms are recorded.
     *
     * @return bool|null The isRecordIdentityByDefaultEnabled
     */
@@ -195,6 +208,7 @@ class FormsSettings extends Entity
 
     /**
     * Sets the isRecordIdentityByDefaultEnabled
+    * Controls whether the names of users who fill out forms are recorded.
     *
     * @param bool $val The value of the isRecordIdentityByDefaultEnabled
     *

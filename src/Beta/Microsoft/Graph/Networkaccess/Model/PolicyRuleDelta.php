@@ -26,6 +26,7 @@ class PolicyRuleDelta extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the action
+    * Required. The possible values are: bypass, forward, unknownFutureValue.
     *
     * @return ForwardingRuleAction|null The action
     */
@@ -44,6 +45,7 @@ class PolicyRuleDelta extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the action
+    * Required. The possible values are: bypass, forward, unknownFutureValue.
     *
     * @param ForwardingRuleAction $val The value to assign to the action
     *
@@ -56,6 +58,7 @@ class PolicyRuleDelta extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the ruleId
+    * The identifier of the policy rule to update.
     *
     * @return string|null The ruleId
     */
@@ -70,6 +73,7 @@ class PolicyRuleDelta extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the ruleId
+    * The identifier of the policy rule to update.
     *
     * @param string $val The value of the ruleId
     *

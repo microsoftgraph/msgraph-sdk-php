@@ -25,6 +25,7 @@ class TransactionSummary extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the blockedCount
+    * Count of transactions that were blocked.
     *
     * @return int|null The blockedCount
     */
@@ -39,6 +40,7 @@ class TransactionSummary extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the blockedCount
+    * Count of transactions that were blocked.
     *
     * @param int $val The value of the blockedCount
     *
@@ -51,6 +53,7 @@ class TransactionSummary extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the totalCount
+    * Count of transactions.
     *
     * @return int|null The totalCount
     */
@@ -65,6 +68,7 @@ class TransactionSummary extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the totalCount
+    * Count of transactions.
     *
     * @param int $val The value of the totalCount
     *
@@ -78,6 +82,7 @@ class TransactionSummary extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the trafficType
+    * Traffic classification. The possible values are: internet, private, microsoft365, all, unknownFutureValue.
     *
     * @return TrafficType|null The trafficType
     */
@@ -96,6 +101,7 @@ class TransactionSummary extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the trafficType
+    * Traffic classification. The possible values are: internet, private, microsoft365, all, unknownFutureValue.
     *
     * @param TrafficType $val The value to assign to the trafficType
     *

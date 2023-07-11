@@ -26,6 +26,7 @@ class ForwardingRule extends PolicyRule
 {
     /**
     * Gets the action
+    * The action to apply to traffic. The possible values are: bypass, forward, unknownFutureValue.
     *
     * @return ForwardingRuleAction|null The action
     */
@@ -44,6 +45,7 @@ class ForwardingRule extends PolicyRule
 
     /**
     * Sets the action
+    * The action to apply to traffic. The possible values are: bypass, forward, unknownFutureValue.
     *
     * @param ForwardingRuleAction $val The action
     *
@@ -58,6 +60,7 @@ class ForwardingRule extends PolicyRule
 
      /**
      * Gets the destinations
+    * Destinations maintain a list of potential destinations and destination types that the user may access within the context of a network filtering policy. This includes IP addresses and fully qualified domain names (FQDNs)/URLs.
      *
      * @return array|null The destinations
      */
@@ -72,6 +75,7 @@ class ForwardingRule extends PolicyRule
 
     /**
     * Sets the destinations
+    * Destinations maintain a list of potential destinations and destination types that the user may access within the context of a network filtering policy. This includes IP addresses and fully qualified domain names (FQDNs)/URLs.
     *
     * @param RuleDestination[] $val The destinations
     *
@@ -85,6 +89,7 @@ class ForwardingRule extends PolicyRule
 
     /**
     * Gets the ruleType
+    * The network destination type used by a URL filtering policy is defined, which can include types such as IP (Internet Protocol) or FQDN (Fully Qualified Domain Name). The possible values are: url, fqdn, ipAddress, ipRange, ipSubnet.
     *
     * @return NetworkDestinationType|null The ruleType
     */
@@ -103,6 +108,7 @@ class ForwardingRule extends PolicyRule
 
     /**
     * Sets the ruleType
+    * The network destination type used by a URL filtering policy is defined, which can include types such as IP (Internet Protocol) or FQDN (Fully Qualified Domain Name). The possible values are: url, fqdn, ipAddress, ipRange, ipSubnet.
     *
     * @param NetworkDestinationType $val The ruleType
     *

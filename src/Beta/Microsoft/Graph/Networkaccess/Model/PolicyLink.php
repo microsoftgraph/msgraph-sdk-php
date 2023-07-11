@@ -26,6 +26,7 @@ class PolicyLink extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the state
+    * Link status. The possible values are: enabled, disabled.
     *
     * @return Status|null The state
     */
@@ -44,6 +45,7 @@ class PolicyLink extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the state
+    * Link status. The possible values are: enabled, disabled.
     *
     * @param Status $val The state
     *
@@ -57,6 +59,7 @@ class PolicyLink extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the version
+    * Version.
     *
     * @return string|null The version
     */
@@ -71,6 +74,7 @@ class PolicyLink extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the version
+    * Version.
     *
     * @param string $val The version
     *
@@ -84,6 +88,7 @@ class PolicyLink extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the policy
+    * Policy.
     *
     * @return Policy|null The policy
     */
@@ -102,6 +107,7 @@ class PolicyLink extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the policy
+    * Policy.
     *
     * @param Policy $val The policy
     *

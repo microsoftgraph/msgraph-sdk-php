@@ -230,7 +230,7 @@ class UserExperienceAnalyticsAnomalyCorrelationGroupOverview extends Entity
 
     /**
     * Gets the correlationGroupPrevalence
-    * The prevalence of the correlation group. Possible values are: high, medium or low.
+    * The prevalence of the correlation group. Possible values are: high, medium or low. Possible values are: high, medium, low, unknownFutureValue.
     *
     * @return UserExperienceAnalyticsAnomalyCorrelationGroupPrevalence|null The correlationGroupPrevalence
     */
@@ -249,7 +249,7 @@ class UserExperienceAnalyticsAnomalyCorrelationGroupOverview extends Entity
 
     /**
     * Sets the correlationGroupPrevalence
-    * The prevalence of the correlation group. Possible values are: high, medium or low.
+    * The prevalence of the correlation group. Possible values are: high, medium or low. Possible values are: high, medium, low, unknownFutureValue.
     *
     * @param UserExperienceAnalyticsAnomalyCorrelationGroupPrevalence $val The correlationGroupPrevalence
     *

@@ -26,6 +26,7 @@ class ConditionalAccessSettings extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the signalingStatus
+    * When SignalingStatus is enabled, the Conditional Access policy includes zero trust network access information.The possible values are: enabled, disabled.
     *
     * @return Status|null The signalingStatus
     */
@@ -44,6 +45,7 @@ class ConditionalAccessSettings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the signalingStatus
+    * When SignalingStatus is enabled, the Conditional Access policy includes zero trust network access information.The possible values are: enabled, disabled.
     *
     * @param Status $val The signalingStatus
     *

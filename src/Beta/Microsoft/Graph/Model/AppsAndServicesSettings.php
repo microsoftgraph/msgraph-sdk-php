@@ -25,6 +25,7 @@ class AppsAndServicesSettings extends Entity
 {
     /**
     * Gets the isAppAndServicesTrialEnabled
+    * Controls whether users can start trial subscriptions for apps and services in your organization.
     *
     * @return bool|null The isAppAndServicesTrialEnabled
     */
@@ -39,6 +40,7 @@ class AppsAndServicesSettings extends Entity
 
     /**
     * Sets the isAppAndServicesTrialEnabled
+    * Controls whether users can start trial subscriptions for apps and services in your organization.
     *
     * @param bool $val The value of the isAppAndServicesTrialEnabled
     *
@@ -51,6 +53,7 @@ class AppsAndServicesSettings extends Entity
     }
     /**
     * Gets the isOfficeStoreEnabled
+    * Controls whether users can access the Microsoft Store.
     *
     * @return bool|null The isOfficeStoreEnabled
     */
@@ -65,6 +68,7 @@ class AppsAndServicesSettings extends Entity
 
     /**
     * Sets the isOfficeStoreEnabled
+    * Controls whether users can access the Microsoft Store.
     *
     * @param bool $val The value of the isOfficeStoreEnabled
     *
