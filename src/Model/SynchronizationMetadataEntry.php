@@ -26,6 +26,7 @@ class SynchronizationMetadataEntry extends Entity
 
     /**
     * Gets the key
+    * Possible values are: GalleryApplicationIdentifier, GalleryApplicationKey, IsOAuthEnabled, IsSynchronizationAgentAssignmentRequired, IsSynchronizationAgentRequired, IsSynchronizationInPreview, OAuthSettings, SynchronizationLearnMoreIbizaFwLink, ConfigurationFields.
     *
     * @return SynchronizationMetadata|null The key
     */
@@ -44,6 +45,7 @@ class SynchronizationMetadataEntry extends Entity
 
     /**
     * Sets the key
+    * Possible values are: GalleryApplicationIdentifier, GalleryApplicationKey, IsOAuthEnabled, IsSynchronizationAgentAssignmentRequired, IsSynchronizationAgentRequired, IsSynchronizationInPreview, OAuthSettings, SynchronizationLearnMoreIbizaFwLink, ConfigurationFields.
     *
     * @param SynchronizationMetadata $val The value to assign to the key
     *
@@ -56,6 +58,7 @@ class SynchronizationMetadataEntry extends Entity
     }
     /**
     * Gets the value
+    * Value of the metadata property.
     *
     * @return string|null The value
     */
@@ -70,6 +73,7 @@ class SynchronizationMetadataEntry extends Entity
 
     /**
     * Sets the value
+    * Value of the metadata property.
     *
     * @param string $val The value of the value
     *

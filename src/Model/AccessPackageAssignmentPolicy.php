@@ -444,6 +444,34 @@ class AccessPackageAssignmentPolicy extends Entity
 
 
      /**
+     * Gets the customExtensionStageSettings
+     *
+     * @return array|null The customExtensionStageSettings
+     */
+    public function getCustomExtensionStageSettings()
+    {
+        if (array_key_exists("customExtensionStageSettings", $this->_propDict)) {
+           return $this->_propDict["customExtensionStageSettings"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the customExtensionStageSettings
+    *
+    * @param CustomExtensionStageSetting[] $val The customExtensionStageSettings
+    *
+    * @return AccessPackageAssignmentPolicy
+    */
+    public function setCustomExtensionStageSettings($val)
+    {
+        $this->_propDict["customExtensionStageSettings"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the questions
     * Questions that are posed to the  requestor.
      *

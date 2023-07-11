@@ -25,6 +25,7 @@ class UserRegistrationFeatureSummary extends Entity
 {
     /**
     * Gets the totalUserCount
+    * Total number of users accounts, excluding those that are blocked.
     *
     * @return int|null The totalUserCount
     */
@@ -39,6 +40,7 @@ class UserRegistrationFeatureSummary extends Entity
 
     /**
     * Sets the totalUserCount
+    * Total number of users accounts, excluding those that are blocked.
     *
     * @param int $val The value of the totalUserCount
     *
@@ -52,6 +54,7 @@ class UserRegistrationFeatureSummary extends Entity
 
     /**
     * Gets the userRegistrationFeatureCounts
+    * Number of users registered or capable for multi-factor authentication, self-service password reset, and passwordless authentication.
     *
     * @return UserRegistrationFeatureCount|null The userRegistrationFeatureCounts
     */
@@ -70,6 +73,7 @@ class UserRegistrationFeatureSummary extends Entity
 
     /**
     * Sets the userRegistrationFeatureCounts
+    * Number of users registered or capable for multi-factor authentication, self-service password reset, and passwordless authentication.
     *
     * @param UserRegistrationFeatureCount $val The value to assign to the userRegistrationFeatureCounts
     *
@@ -83,6 +87,7 @@ class UserRegistrationFeatureSummary extends Entity
 
     /**
     * Gets the userRoles
+    * The role type of the user. Possible values are: all, privilegedAdmin, admin, user, unknownFutureValue.
     *
     * @return IncludedUserRoles|null The userRoles
     */
@@ -101,6 +106,7 @@ class UserRegistrationFeatureSummary extends Entity
 
     /**
     * Sets the userRoles
+    * The role type of the user. Possible values are: all, privilegedAdmin, admin, user, unknownFutureValue.
     *
     * @param IncludedUserRoles $val The value to assign to the userRoles
     *
@@ -114,6 +120,7 @@ class UserRegistrationFeatureSummary extends Entity
 
     /**
     * Gets the userTypes
+    * User type. Possible values are: all, member, guest, unknownFutureValue.
     *
     * @return IncludedUserTypes|null The userTypes
     */
@@ -132,6 +139,7 @@ class UserRegistrationFeatureSummary extends Entity
 
     /**
     * Sets the userTypes
+    * User type. Possible values are: all, member, guest, unknownFutureValue.
     *
     * @param IncludedUserTypes $val The value to assign to the userTypes
     *

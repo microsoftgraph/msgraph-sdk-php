@@ -366,7 +366,7 @@ class Incident extends \Microsoft\Graph\Model\Entity
 
     /**
     * Gets the status
-    * The status of the incident. Possible values are: active, resolved, inProgress, redirected, unknownFutureValue.
+    * The status of the incident. Possible values are: active, resolved, inProgress, redirected, unknownFutureValue, and awaitingAction.
     *
     * @return IncidentStatus|null The status
     */
@@ -385,7 +385,7 @@ class Incident extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the status
-    * The status of the incident. Possible values are: active, resolved, inProgress, redirected, unknownFutureValue.
+    * The status of the incident. Possible values are: active, resolved, inProgress, redirected, unknownFutureValue, and awaitingAction.
     *
     * @param IncidentStatus $val The status
     *

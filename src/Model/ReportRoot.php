@@ -57,6 +57,7 @@ class ReportRoot implements \JsonSerializable
 
     /**
     * Gets the authenticationMethods
+    * Container for navigation properties for Azure AD authentication methods resources.
     *
     * @return AuthenticationMethodsRoot|null The authenticationMethods
     */
@@ -75,6 +76,7 @@ class ReportRoot implements \JsonSerializable
 
     /**
     * Sets the authenticationMethods
+    * Container for navigation properties for Azure AD authentication methods resources.
     *
     * @param AuthenticationMethodsRoot $val The authenticationMethods
     *
@@ -89,6 +91,7 @@ class ReportRoot implements \JsonSerializable
 
      /**
      * Gets the dailyPrintUsageByPrinter
+    * Retrieve a list of daily print usage summaries, grouped by printer.
      *
      * @return array|null The dailyPrintUsageByPrinter
      */
@@ -103,6 +106,7 @@ class ReportRoot implements \JsonSerializable
 
     /**
     * Sets the dailyPrintUsageByPrinter
+    * Retrieve a list of daily print usage summaries, grouped by printer.
     *
     * @param PrintUsageByPrinter[] $val The dailyPrintUsageByPrinter
     *
@@ -117,6 +121,7 @@ class ReportRoot implements \JsonSerializable
 
      /**
      * Gets the dailyPrintUsageByUser
+    * Retrieve a list of daily print usage summaries, grouped by user.
      *
      * @return array|null The dailyPrintUsageByUser
      */
@@ -131,6 +136,7 @@ class ReportRoot implements \JsonSerializable
 
     /**
     * Sets the dailyPrintUsageByUser
+    * Retrieve a list of daily print usage summaries, grouped by user.
     *
     * @param PrintUsageByUser[] $val The dailyPrintUsageByUser
     *
@@ -145,6 +151,7 @@ class ReportRoot implements \JsonSerializable
 
      /**
      * Gets the monthlyPrintUsageByPrinter
+    * Retrieve a list of monthly print usage summaries, grouped by printer.
      *
      * @return array|null The monthlyPrintUsageByPrinter
      */
@@ -159,6 +166,7 @@ class ReportRoot implements \JsonSerializable
 
     /**
     * Sets the monthlyPrintUsageByPrinter
+    * Retrieve a list of monthly print usage summaries, grouped by printer.
     *
     * @param PrintUsageByPrinter[] $val The monthlyPrintUsageByPrinter
     *
@@ -173,6 +181,7 @@ class ReportRoot implements \JsonSerializable
 
      /**
      * Gets the monthlyPrintUsageByUser
+    * Retrieve a list of monthly print usage summaries, grouped by user.
      *
      * @return array|null The monthlyPrintUsageByUser
      */
@@ -187,6 +196,7 @@ class ReportRoot implements \JsonSerializable
 
     /**
     * Sets the monthlyPrintUsageByUser
+    * Retrieve a list of monthly print usage summaries, grouped by user.
     *
     * @param PrintUsageByUser[] $val The monthlyPrintUsageByUser
     *
@@ -200,6 +210,7 @@ class ReportRoot implements \JsonSerializable
 
     /**
     * Gets the security
+    * Represents an abstract type that contains resources for attack simulation and training reports.
     *
     * @return SecurityReportsRoot|null The security
     */
@@ -218,6 +229,7 @@ class ReportRoot implements \JsonSerializable
 
     /**
     * Sets the security
+    * Represents an abstract type that contains resources for attack simulation and training reports.
     *
     * @param SecurityReportsRoot $val The security
     *
