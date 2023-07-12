@@ -27,6 +27,7 @@ class ForwardingProfile extends Profile
 
      /**
      * Gets the associations
+    * Specifies the users, groups, devices, and branch locations whose traffic is associated with the given traffic forwarding profile.
      *
      * @return array|null The associations
      */
@@ -41,6 +42,7 @@ class ForwardingProfile extends Profile
 
     /**
     * Sets the associations
+    * Specifies the users, groups, devices, and branch locations whose traffic is associated with the given traffic forwarding profile.
     *
     * @param Association[] $val The associations
     *
@@ -54,6 +56,7 @@ class ForwardingProfile extends Profile
 
     /**
     * Gets the priority
+    * Profile priority.
     *
     * @return int|null The priority
     */
@@ -68,6 +71,7 @@ class ForwardingProfile extends Profile
 
     /**
     * Sets the priority
+    * Profile priority.
     *
     * @param int $val The priority
     *
@@ -81,6 +85,7 @@ class ForwardingProfile extends Profile
 
     /**
     * Gets the trafficForwardingType
+    * Profile traffic type. The possible values are: m365, internet, private.
     *
     * @return TrafficForwardingType|null The trafficForwardingType
     */
@@ -99,6 +104,7 @@ class ForwardingProfile extends Profile
 
     /**
     * Sets the trafficForwardingType
+    * Profile traffic type. The possible values are: m365, internet, private.
     *
     * @param TrafficForwardingType $val The trafficForwardingType
     *

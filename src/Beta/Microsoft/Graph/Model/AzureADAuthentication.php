@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* Connectivity File
+* AzureADAuthentication File
 * PHP version 7
 *
 * @category  Library
@@ -11,10 +11,10 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Networkaccess\Model;
+namespace Beta\Microsoft\Graph\Model;
 
 /**
-* Connectivity class
+* AzureADAuthentication class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,35 +22,35 @@ namespace Beta\Microsoft\Graph\Networkaccess\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class Connectivity extends \Beta\Microsoft\Graph\Model\Entity
+class AzureADAuthentication extends Entity
 {
 
      /**
-     * Gets the branches
-    * Branch represent locations for connectivity.
+     * Gets the attainments
+    * A list of monthly serviceLevelAgreementAttainment objects.
      *
-     * @return array|null The branches
+     * @return array|null The attainments
      */
-    public function getBranches()
+    public function getAttainments()
     {
-        if (array_key_exists("branches", $this->_propDict)) {
-           return $this->_propDict["branches"];
+        if (array_key_exists("attainments", $this->_propDict)) {
+           return $this->_propDict["attainments"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the branches
-    * Branch represent locations for connectivity.
+    * Sets the attainments
+    * A list of monthly serviceLevelAgreementAttainment objects.
     *
-    * @param BranchSite[] $val The branches
+    * @param ServiceLevelAgreementAttainment[] $val The attainments
     *
-    * @return Connectivity
+    * @return AzureADAuthentication
     */
-    public function setBranches($val)
+    public function setAttainments($val)
     {
-        $this->_propDict["branches"] = $val;
+        $this->_propDict["attainments"] = $val;
         return $this;
     }
 

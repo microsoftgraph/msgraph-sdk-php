@@ -26,6 +26,7 @@ class EnrichedAuditLogs extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the exchange
+    * Exchange Online enriched audit logs settings.
     *
     * @return EnrichedAuditLogsSettings|null The exchange
     */
@@ -44,6 +45,7 @@ class EnrichedAuditLogs extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the exchange
+    * Exchange Online enriched audit logs settings.
     *
     * @param EnrichedAuditLogsSettings $val The exchange
     *
@@ -57,6 +59,7 @@ class EnrichedAuditLogs extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the sharepoint
+    * SharePoint Online enriched audit logs settings.
     *
     * @return EnrichedAuditLogsSettings|null The sharepoint
     */
@@ -75,6 +78,7 @@ class EnrichedAuditLogs extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the sharepoint
+    * SharePoint Online enriched audit logs settings.
     *
     * @param EnrichedAuditLogsSettings $val The sharepoint
     *
@@ -88,6 +92,7 @@ class EnrichedAuditLogs extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the teams
+    * Teams enriched audit logs settings.
     *
     * @return EnrichedAuditLogsSettings|null The teams
     */
@@ -106,6 +111,7 @@ class EnrichedAuditLogs extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the teams
+    * Teams enriched audit logs settings.
     *
     * @param EnrichedAuditLogsSettings $val The teams
     *

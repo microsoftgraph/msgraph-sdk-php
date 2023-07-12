@@ -36,6 +36,7 @@ class IpRange extends RuleDestination
 
     /**
     * Gets the beginAddress
+    * Specifies the starting IP address of the IP range.
     *
     * @return string|null The beginAddress
     */
@@ -50,6 +51,7 @@ class IpRange extends RuleDestination
 
     /**
     * Sets the beginAddress
+    * Specifies the starting IP address of the IP range.
     *
     * @param string $val The value of the beginAddress
     *
@@ -62,6 +64,7 @@ class IpRange extends RuleDestination
     }
     /**
     * Gets the endAddress
+    * Specifies the ending IP address of the IP range.
     *
     * @return string|null The endAddress
     */
@@ -76,6 +79,7 @@ class IpRange extends RuleDestination
 
     /**
     * Sets the endAddress
+    * Specifies the ending IP address of the IP range.
     *
     * @param string $val The value of the endAddress
     *

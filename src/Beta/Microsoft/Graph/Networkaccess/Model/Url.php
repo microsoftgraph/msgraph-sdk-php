@@ -36,6 +36,7 @@ class Url extends RuleDestination
 
     /**
     * Gets the value
+    * URL Address
     *
     * @return string|null The value
     */
@@ -50,6 +51,7 @@ class Url extends RuleDestination
 
     /**
     * Sets the value
+    * URL Address
     *
     * @param string $val The value of the value
     *

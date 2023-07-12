@@ -177,6 +177,39 @@ class ReportRoot extends Entity
         return $this;
     }
 
+    /**
+    * Gets the sla
+    * A placeholder to allow for the desired URL path for SLA.
+    *
+    * @return ServiceLevelAgreementRoot|null The sla
+    */
+    public function getSla()
+    {
+        if (array_key_exists("sla", $this->_propDict)) {
+            if (is_a($this->_propDict["sla"], "\Beta\Microsoft\Graph\Model\ServiceLevelAgreementRoot") || is_null($this->_propDict["sla"])) {
+                return $this->_propDict["sla"];
+            } else {
+                $this->_propDict["sla"] = new ServiceLevelAgreementRoot($this->_propDict["sla"]);
+                return $this->_propDict["sla"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the sla
+    * A placeholder to allow for the desired URL path for SLA.
+    *
+    * @param ServiceLevelAgreementRoot $val The sla
+    *
+    * @return ReportRoot
+    */
+    public function setSla($val)
+    {
+        $this->_propDict["sla"] = $val;
+        return $this;
+    }
+
 
      /**
      * Gets the userCredentialUsageDetails
@@ -238,6 +271,7 @@ class ReportRoot extends Entity
 
      /**
      * Gets the dailyPrintUsageByPrinter
+    * Retrieve a list of daily print usage summaries, grouped by printer.
      *
      * @return array|null The dailyPrintUsageByPrinter
      */
@@ -252,6 +286,7 @@ class ReportRoot extends Entity
 
     /**
     * Sets the dailyPrintUsageByPrinter
+    * Retrieve a list of daily print usage summaries, grouped by printer.
     *
     * @param PrintUsageByPrinter[] $val The dailyPrintUsageByPrinter
     *
@@ -266,6 +301,7 @@ class ReportRoot extends Entity
 
      /**
      * Gets the dailyPrintUsageByUser
+    * Retrieve a list of daily print usage summaries, grouped by user.
      *
      * @return array|null The dailyPrintUsageByUser
      */
@@ -280,6 +316,7 @@ class ReportRoot extends Entity
 
     /**
     * Sets the dailyPrintUsageByUser
+    * Retrieve a list of daily print usage summaries, grouped by user.
     *
     * @param PrintUsageByUser[] $val The dailyPrintUsageByUser
     *
@@ -350,6 +387,7 @@ class ReportRoot extends Entity
 
      /**
      * Gets the monthlyPrintUsageByPrinter
+    * Retrieve a list of monthly print usage summaries, grouped by printer.
      *
      * @return array|null The monthlyPrintUsageByPrinter
      */
@@ -364,6 +402,7 @@ class ReportRoot extends Entity
 
     /**
     * Sets the monthlyPrintUsageByPrinter
+    * Retrieve a list of monthly print usage summaries, grouped by printer.
     *
     * @param PrintUsageByPrinter[] $val The monthlyPrintUsageByPrinter
     *
@@ -378,6 +417,7 @@ class ReportRoot extends Entity
 
      /**
      * Gets the monthlyPrintUsageByUser
+    * Retrieve a list of monthly print usage summaries, grouped by user.
      *
      * @return array|null The monthlyPrintUsageByUser
      */
@@ -392,6 +432,7 @@ class ReportRoot extends Entity
 
     /**
     * Sets the monthlyPrintUsageByUser
+    * Retrieve a list of monthly print usage summaries, grouped by user.
     *
     * @param PrintUsageByUser[] $val The monthlyPrintUsageByUser
     *

@@ -26,6 +26,7 @@ class PolicyRule extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the name
+    * Name.
     *
     * @return string|null The name
     */
@@ -40,6 +41,7 @@ class PolicyRule extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the name
+    * Name.
     *
     * @param string $val The name
     *

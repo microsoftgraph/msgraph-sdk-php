@@ -26,6 +26,7 @@ class DeviceLink extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the bandwidthCapacityInMbps
+    * Determines the maximum allowed Mbps (megabits per second) bandwidth from a branch site. The possible values are:250,500,750,1000.
     *
     * @return BandwidthCapacityInMbps|null The bandwidthCapacityInMbps
     */
@@ -44,6 +45,7 @@ class DeviceLink extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the bandwidthCapacityInMbps
+    * Determines the maximum allowed Mbps (megabits per second) bandwidth from a branch site. The possible values are:250,500,750,1000.
     *
     * @param BandwidthCapacityInMbps $val The bandwidthCapacityInMbps
     *
@@ -57,6 +59,7 @@ class DeviceLink extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the bgpConfiguration
+    * The border gateway protocol specifies the IP address and ASN for directing traffic from a link to the edge.
     *
     * @return BgpConfiguration|null The bgpConfiguration
     */
@@ -75,6 +78,7 @@ class DeviceLink extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the bgpConfiguration
+    * The border gateway protocol specifies the IP address and ASN for directing traffic from a link to the edge.
     *
     * @param BgpConfiguration $val The bgpConfiguration
     *
@@ -88,6 +92,7 @@ class DeviceLink extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the deviceVendor
+    * Specifies the manufacturer of the deviceLink. The possible values are: barracudaNetworks, checkPoint, ciscoMeraki, citrix, fortinet, hpeAruba, netFoundry, nuage, openSystems, paloAltoNetworks, riverbedTechnology, silverPeak, vmWareSdWan, versa, other, unknownFutureValue.
     *
     * @return DeviceVendor|null The deviceVendor
     */
@@ -106,6 +111,7 @@ class DeviceLink extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the deviceVendor
+    * Specifies the manufacturer of the deviceLink. The possible values are: barracudaNetworks, checkPoint, ciscoMeraki, citrix, fortinet, hpeAruba, netFoundry, nuage, openSystems, paloAltoNetworks, riverbedTechnology, silverPeak, vmWareSdWan, versa, other, unknownFutureValue.
     *
     * @param DeviceVendor $val The deviceVendor
     *
@@ -119,6 +125,7 @@ class DeviceLink extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the ipAddress
+    * Specifies the client IPv4 of the link
     *
     * @return string|null The ipAddress
     */
@@ -133,6 +140,7 @@ class DeviceLink extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the ipAddress
+    * Specifies the client IPv4 of the link
     *
     * @param string $val The ipAddress
     *
@@ -146,6 +154,7 @@ class DeviceLink extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the lastModifiedDateTime
+    * last modified time.
     *
     * @return \DateTime|null The lastModifiedDateTime
     */
@@ -164,6 +173,7 @@ class DeviceLink extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the lastModifiedDateTime
+    * last modified time.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -177,6 +187,7 @@ class DeviceLink extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the name
+    * Name.
     *
     * @return string|null The name
     */
@@ -191,6 +202,7 @@ class DeviceLink extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the name
+    * Name.
     *
     * @param string $val The name
     *
@@ -235,6 +247,7 @@ class DeviceLink extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the tunnelConfiguration
+    * The connectivity settings, including the protocol, IPSec policy, and preshared key, are specified for establishing connectivity.
     *
     * @return TunnelConfiguration|null The tunnelConfiguration
     */
@@ -253,6 +266,7 @@ class DeviceLink extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the tunnelConfiguration
+    * The connectivity settings, including the protocol, IPSec policy, and preshared key, are specified for establishing connectivity.
     *
     * @param TunnelConfiguration $val The tunnelConfiguration
     *

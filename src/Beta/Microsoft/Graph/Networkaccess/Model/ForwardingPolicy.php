@@ -26,6 +26,7 @@ class ForwardingPolicy extends Policy
 {
     /**
     * Gets the trafficForwardingType
+    * Traffic type for forwarding policy. The possible values are: m365, internet, private.
     *
     * @return TrafficForwardingType|null The trafficForwardingType
     */
@@ -44,6 +45,7 @@ class ForwardingPolicy extends Policy
 
     /**
     * Sets the trafficForwardingType
+    * Traffic type for forwarding policy. The possible values are: m365, internet, private.
     *
     * @param TrafficForwardingType $val The trafficForwardingType
     *

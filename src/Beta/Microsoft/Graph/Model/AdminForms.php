@@ -26,6 +26,7 @@ class AdminForms extends Entity
 {
     /**
     * Gets the settings
+    * Company-wide settings for Microsoft Forms.
     *
     * @return FormsSettings|null The settings
     */
@@ -44,6 +45,7 @@ class AdminForms extends Entity
 
     /**
     * Sets the settings
+    * Company-wide settings for Microsoft Forms.
     *
     * @param FormsSettings $val The settings
     *

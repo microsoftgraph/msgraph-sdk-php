@@ -87,7 +87,6 @@ class OrganizationSettings extends Entity
 
     /**
     * Gets the pronouns
-    * Represents administrator settings that manage the support of pronouns in an organization.
     *
     * @return PronounsSettings|null The pronouns
     */
@@ -106,7 +105,6 @@ class OrganizationSettings extends Entity
 
     /**
     * Sets the pronouns
-    * Represents administrator settings that manage the support of pronouns in an organization.
     *
     * @param PronounsSettings $val The pronouns
     *

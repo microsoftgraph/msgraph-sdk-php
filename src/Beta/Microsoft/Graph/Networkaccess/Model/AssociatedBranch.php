@@ -36,6 +36,7 @@ class AssociatedBranch extends Association
 
     /**
     * Gets the branchId
+    * Identifier for the branch.
     *
     * @return string|null The branchId
     */
@@ -50,6 +51,7 @@ class AssociatedBranch extends Association
 
     /**
     * Sets the branchId
+    * Identifier for the branch.
     *
     * @param string $val The value of the branchId
     *

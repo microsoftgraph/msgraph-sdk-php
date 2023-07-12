@@ -26,6 +26,7 @@ class Profile extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the description
+    * Description.
     *
     * @return string|null The description
     */
@@ -40,6 +41,7 @@ class Profile extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the description
+    * Description.
     *
     * @param string $val The description
     *
@@ -53,6 +55,7 @@ class Profile extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the lastModifiedDateTime
+    * Profile last modified time.
     *
     * @return \DateTime|null The lastModifiedDateTime
     */
@@ -71,6 +74,7 @@ class Profile extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the lastModifiedDateTime
+    * Profile last modified time.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -84,6 +88,7 @@ class Profile extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the name
+    * Profile name.
     *
     * @return string|null The name
     */
@@ -98,6 +103,7 @@ class Profile extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the name
+    * Profile name.
     *
     * @param string $val The name
     *
@@ -111,6 +117,7 @@ class Profile extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the state
+    * Profile state.The possible values are: enabled, disabled.
     *
     * @return Status|null The state
     */
@@ -129,6 +136,7 @@ class Profile extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the state
+    * Profile state.The possible values are: enabled, disabled.
     *
     * @param Status $val The state
     *
@@ -142,6 +150,7 @@ class Profile extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the version
+    * Profile version.
     *
     * @return string|null The version
     */
@@ -156,6 +165,7 @@ class Profile extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the version
+    * Profile version.
     *
     * @param string $val The version
     *
@@ -170,6 +180,7 @@ class Profile extends \Beta\Microsoft\Graph\Model\Entity
 
      /**
      * Gets the policies
+    * Traffic forwarding policies associated with this profile.
      *
      * @return array|null The policies
      */
@@ -184,6 +195,7 @@ class Profile extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the policies
+    * Traffic forwarding policies associated with this profile.
     *
     * @param PolicyLink[] $val The policies
     *

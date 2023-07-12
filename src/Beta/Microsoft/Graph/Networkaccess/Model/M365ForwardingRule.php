@@ -26,6 +26,7 @@ class M365ForwardingRule extends ForwardingRule
 {
     /**
     * Gets the category
+    * Defines the category of Office 365 traffic used by a forwarding rule for M365 traffic (e.g., optimized traffic)    .The possible values are: default, optimized, allow.
     *
     * @return ForwardingCategory|null The category
     */
@@ -44,6 +45,7 @@ class M365ForwardingRule extends ForwardingRule
 
     /**
     * Sets the category
+    * Defines the category of Office 365 traffic used by a forwarding rule for M365 traffic (e.g., optimized traffic)    .The possible values are: default, optimized, allow.
     *
     * @param ForwardingCategory $val The category
     *
@@ -57,6 +59,7 @@ class M365ForwardingRule extends ForwardingRule
 
     /**
     * Gets the ports
+    * The port(s) used by a forwarding rule for M365 traffic are specified to determine the specific network port(s) through which the Microsoft 365 traffic is directed and forwarded.
     *
     * @return array|null The ports
     */
@@ -71,6 +74,7 @@ class M365ForwardingRule extends ForwardingRule
 
     /**
     * Sets the ports
+    * The port(s) used by a forwarding rule for M365 traffic are specified to determine the specific network port(s) through which the Microsoft 365 traffic is directed and forwarded.
     *
     * @param string[] $val The ports
     *
@@ -84,6 +88,7 @@ class M365ForwardingRule extends ForwardingRule
 
     /**
     * Gets the protocol
+    * Defines the networking protocol type used by a forwarding rule for M365 traffic    .The possible values are: ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII
     *
     * @return NetworkingProtocol|null The protocol
     */
@@ -102,6 +107,7 @@ class M365ForwardingRule extends ForwardingRule
 
     /**
     * Sets the protocol
+    * Defines the networking protocol type used by a forwarding rule for M365 traffic    .The possible values are: ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII
     *
     * @param NetworkingProtocol $val The protocol
     *
