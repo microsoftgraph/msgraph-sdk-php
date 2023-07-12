@@ -400,7 +400,9 @@ Up to 20 individual requests can be batched together to reduce network latency o
 
 The `BatchRequestBuilder` allows you to make requests to the `/$batch` endpoint of the Microsoft Graph API.
 
-- First, we create a `BatchRequestContent` object which is a list of requests to be batched together.
+### 1.  Create a `BatchRequestContent` object
+
+The `BatchRequestContent` object consists of a list of requests to be batched together.
 
 Here we batch 3 requests.
 ```php
@@ -418,7 +420,51 @@ $batchRequestContent = new BatchRequestContent([
 
 ```
 
-An `id` is automatically assigned to each request in the batch.
+You can also add requests to the `BatchRequestContent` via `addPsrRequest()`, `addRequest()` and `addRequestInformation()`
+
+### 2. Send the batch request using the `BatchRequestBuilder`
+
+```php
+use Microsoft\Graph\BatchRequestBuilder;
+use Microsoft\Graph\Core\Requests\BatchResponseItem;
+
+$requestBuilder = new BatchRequestBuilder($graphServiceClient->getRequestAdapter());
+/** @var BatchResponseContent $batchResponse  */
+$batchResponse = $requestBuilder->postAsync($batchRequestContent)->wait();
+
+```
+
+### 3. Get the responses to the batch request items
+
+The responses are by default returned in a `BatchResponseContent` object comprised of various `BatchResponseItem` objects corresponding to the requests made in step 1
+
+An `id` is automatically assigned to each request in the `BatchRequestContent` object.
+
+The assigned `id` can be fetched by calling `getRequests()` on the `BatchRequestContent` object.
+
+The SDK supports getting the response status code, body and headers.
+
+```php
+$batchRequests = $batchRequestContent->getRequests();
+// Uses the auto-generated ID added to the batch request content
+$response1 = $batchResponse->getResponse($batchRequests[0]->getId());
+echo "Response1 status code: {$response1->getStatusCode()}";
+
+```
+
+By default, the body is a `StreamInterface` object.
+However, you can deserialize a `BatchResponseItem` to a `Parsable` (model) implementation
+
+```php
+use Microsoft\Graph\Generated\Models\Message;
+
+$message = $batchResponse->getResponseBody($batchRequests[0]->getId(), Message::class);
+echo "Initial subject: {$message->getSubject()}\n";
+
+// patched message
+$updatedMessage = $batchResponse->getResponseBody($batchRequests[1]->getId(), Message::class);
+echo "Updated subject: {$updatedMessage->getSubject()}\n";
+```
 
 If you would like fine-grained control over each request in the batch, you can initialise `BatchRequestItem` objects and set dependencies betweeen requests etc.
 
@@ -441,44 +487,6 @@ $batchRequestContent = new BatchRequestContent([
     $request1, $request2
 ]);
 
-```
-
-You can also add requests to the `BatchRequestContent` via `addPsrRequest()`, `addRequest()` and `addRequestInformation()`
-
-- The batch request is sent using the `BatchRequestBuilder` as follows:
-
-```php
-use Microsoft\Graph\BatchRequestBuilder;
-use Microsoft\Graph\Core\Requests\BatchResponseItem;
-
-$requestBuilder = new BatchRequestBuilder($graphServiceClient->getRequestAdapter());
-/** @var BatchResponseContent $batchResponse  */
-$batchResponse = $requestBuilder->postAsync($batchRequestContent)->wait();
-
-```
-
-- The responses are by default returned in a `BatchResponseContent` object comprised of various `BatchResponseItem` objects corresponding to the requests made in step 1
-
-The raw response item can be obtained via
-
-```php
-
-$response1 = $batchResponse->getResponse($request1->getId());
-echo "Response1 status code: {$response1->getStatusCode()}";
-
-```
-
-Alternatively, you can deserialize a `BatchResponseItem` to a `Parsable` (model) implementation
-
-```php
-use Microsoft\Graph\Generated\Models\Message;
-
-$message = $batchResponse->getResponseBody($request1->getId(), Message::class);
-echo "Initial subject: {$message->getSubject()}\n";
-
-// patched message
-$updatedMessage = $batchResponse->getResponseBody($request2->getId(), Message::class);
-echo "Updated subject: {$updatedMessage->getSubject()}\n";
 ```
 
 ## Continuous Access Evaluation (CAE)
