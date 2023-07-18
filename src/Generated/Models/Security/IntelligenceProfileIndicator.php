@@ -10,6 +10,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class IntelligenceProfileIndicator extends Indicator implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new intelligenceProfileIndicator and sets the default values.
     */
     public function __construct() {
@@ -70,6 +75,7 @@ class IntelligenceProfileIndicator extends Indicator implements Parsable
         parent::serialize($writer);
         $writer->writeDateTimeValue('firstSeenDateTime', $this->getFirstSeenDateTime());
         $writer->writeDateTimeValue('lastSeenDateTime', $this->getLastSeenDateTime());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

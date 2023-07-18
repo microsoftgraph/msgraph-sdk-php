@@ -36,6 +36,7 @@ class MailSearchFolder extends MailFolder implements Parsable
             'filterQuery' => fn(ParseNode $n) => $o->setFilterQuery($n->getStringValue()),
             'includeNestedFolders' => fn(ParseNode $n) => $o->setIncludeNestedFolders($n->getBooleanValue()),
             'isSupported' => fn(ParseNode $n) => $o->setIsSupported($n->getBooleanValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'sourceFolderIds' => function (ParseNode $n) {
                 $val = $n->getCollectionOfPrimitiveValues();
                 if (is_array($val)) {
@@ -84,6 +85,18 @@ class MailSearchFolder extends MailFolder implements Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
+    }
+
+    /**
      * Gets the sourceFolderIds property value. The mailbox folders that should be mined.
      * @return array<string>|null
     */
@@ -106,6 +119,7 @@ class MailSearchFolder extends MailFolder implements Parsable
         $writer->writeStringValue('filterQuery', $this->getFilterQuery());
         $writer->writeBooleanValue('includeNestedFolders', $this->getIncludeNestedFolders());
         $writer->writeBooleanValue('isSupported', $this->getIsSupported());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfPrimitiveValues('sourceFolderIds', $this->getSourceFolderIds());
     }
 
@@ -131,6 +145,14 @@ class MailSearchFolder extends MailFolder implements Parsable
     */
     public function setIsSupported(?bool $value): void {
         $this->getBackingStore()->set('isSupported', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

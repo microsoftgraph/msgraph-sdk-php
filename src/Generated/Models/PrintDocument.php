@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class PrintDocument extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new printDocument and sets the default values.
     */
     public function __construct() {
@@ -62,8 +57,21 @@ class PrintDocument extends Entity implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'contentType' => fn(ParseNode $n) => $o->setContentType($n->getStringValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'size' => fn(ParseNode $n) => $o->setSize($n->getIntegerValue()),
         ]);
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -104,6 +112,14 @@ class PrintDocument extends Entity implements Parsable
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

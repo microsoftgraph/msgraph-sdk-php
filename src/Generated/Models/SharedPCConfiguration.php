@@ -13,6 +13,11 @@ use Microsoft\Kiota\Abstractions\Types\Time;
 class SharedPCConfiguration extends DeviceConfiguration implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new sharedPCConfiguration and sets the default values.
     */
     public function __construct() {
@@ -213,6 +218,7 @@ class SharedPCConfiguration extends DeviceConfiguration implements Parsable
         $writer->writeStringValue('kioskAppDisplayName', $this->getKioskAppDisplayName());
         $writer->writeStringValue('kioskAppUserModelId', $this->getKioskAppUserModelId());
         $writer->writeTimeValue('maintenanceStartTime', $this->getMaintenanceStartTime());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

@@ -15,6 +15,11 @@ use Psr\Http\Message\StreamInterface;
 class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new windows10GeneralConfiguration and sets the default values.
     */
     public function __construct() {
@@ -2803,6 +2808,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
         $writer->writeBooleanValue('networkProxyDisableAutoDetect', $this->getNetworkProxyDisableAutoDetect());
         $writer->writeObjectValue('networkProxyServer', $this->getNetworkProxyServer());
         $writer->writeBooleanValue('nfcBlocked', $this->getNfcBlocked());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeBooleanValue('oneDriveDisableFileSync', $this->getOneDriveDisableFileSync());
         $writer->writeBooleanValue('passwordBlockSimple', $this->getPasswordBlockSimple());
         $writer->writeIntegerValue('passwordExpirationDays', $this->getPasswordExpirationDays());

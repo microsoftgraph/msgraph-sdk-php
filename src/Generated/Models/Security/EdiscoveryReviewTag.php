@@ -61,8 +61,21 @@ class EdiscoveryReviewTag extends Tag implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'childSelectability' => fn(ParseNode $n) => $o->setChildSelectability($n->getEnumValue(ChildSelectability::class)),
             'childTags' => fn(ParseNode $n) => $o->setChildTags($n->getCollectionOfObjectValues([EdiscoveryReviewTag::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'parent' => fn(ParseNode $n) => $o->setParent($n->getObjectValue([EdiscoveryReviewTag::class, 'createFromDiscriminatorValue'])),
         ]);
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -85,6 +98,7 @@ class EdiscoveryReviewTag extends Tag implements Parsable
         parent::serialize($writer);
         $writer->writeEnumValue('childSelectability', $this->getChildSelectability());
         $writer->writeCollectionOfObjectValues('childTags', $this->getChildTags());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('parent', $this->getParent());
     }
 
@@ -102,6 +116,14 @@ class EdiscoveryReviewTag extends Tag implements Parsable
     */
     public function setChildTags(?array $value): void {
         $this->getBackingStore()->set('childTags', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

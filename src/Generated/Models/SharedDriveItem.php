@@ -10,6 +10,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class SharedDriveItem extends BaseItem implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new sharedDriveItem and sets the default values.
     */
     public function __construct() {
@@ -152,6 +157,7 @@ class SharedDriveItem extends BaseItem implements Parsable
         $writer->writeObjectValue('list', $this->getList());
         $writer->writeCollectionOfObjectValues('items', $this->getItems());
         $writer->writeObjectValue('listItem', $this->getListItem());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('owner', $this->getOwner());
         $writer->writeObjectValue('permission', $this->getPermission());
         $writer->writeObjectValue('root', $this->getRoot());

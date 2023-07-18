@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class OAuth2PermissionGrant extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new oAuth2PermissionGrant and sets the default values.
     */
     public function __construct() {
@@ -62,10 +57,23 @@ class OAuth2PermissionGrant extends Entity implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'clientId' => fn(ParseNode $n) => $o->setClientId($n->getStringValue()),
             'consentType' => fn(ParseNode $n) => $o->setConsentType($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'principalId' => fn(ParseNode $n) => $o->setPrincipalId($n->getStringValue()),
             'resourceId' => fn(ParseNode $n) => $o->setResourceId($n->getStringValue()),
             'scope' => fn(ParseNode $n) => $o->setScope($n->getStringValue()),
         ]);
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -132,6 +140,14 @@ class OAuth2PermissionGrant extends Entity implements Parsable
     */
     public function setConsentType(?string $value): void {
         $this->getBackingStore()->set('consentType', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

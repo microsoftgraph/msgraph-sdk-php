@@ -10,6 +10,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleInstanceBase implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new unifiedRoleEligibilityScheduleInstance and sets the default values.
     */
     public function __construct() {
@@ -95,6 +100,7 @@ class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleInstance
         parent::serialize($writer);
         $writer->writeDateTimeValue('endDateTime', $this->getEndDateTime());
         $writer->writeStringValue('memberType', $this->getMemberType());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('roleEligibilityScheduleId', $this->getRoleEligibilityScheduleId());
         $writer->writeDateTimeValue('startDateTime', $this->getStartDateTime());
     }

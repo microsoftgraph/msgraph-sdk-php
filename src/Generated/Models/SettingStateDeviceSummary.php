@@ -12,11 +12,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SettingStateDeviceSummary extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new settingStateDeviceSummary and sets the default values.
     */
     public function __construct() {
@@ -81,6 +76,7 @@ class SettingStateDeviceSummary extends Entity implements Parsable
             'instancePath' => fn(ParseNode $n) => $o->setInstancePath($n->getStringValue()),
             'nonCompliantDeviceCount' => fn(ParseNode $n) => $o->setNonCompliantDeviceCount($n->getIntegerValue()),
             'notApplicableDeviceCount' => fn(ParseNode $n) => $o->setNotApplicableDeviceCount($n->getIntegerValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'remediatedDeviceCount' => fn(ParseNode $n) => $o->setRemediatedDeviceCount($n->getIntegerValue()),
             'settingName' => fn(ParseNode $n) => $o->setSettingName($n->getStringValue()),
             'unknownDeviceCount' => fn(ParseNode $n) => $o->setUnknownDeviceCount($n->getIntegerValue()),
@@ -121,6 +117,18 @@ class SettingStateDeviceSummary extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'notApplicableDeviceCount'");
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -223,6 +231,14 @@ class SettingStateDeviceSummary extends Entity implements Parsable
     */
     public function setNotApplicableDeviceCount(?int $value): void {
         $this->getBackingStore()->set('notApplicableDeviceCount', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

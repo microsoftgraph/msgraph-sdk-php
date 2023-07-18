@@ -32,10 +32,10 @@ class NamedLocationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a namedLocation object.
+     * Delete a countryNamedLocation object.
      * @param NamedLocationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/namedlocation-delete?view=graph-rest-1.0 Find more info here
+     * @link https://docs.microsoft.com/graph/api/countrynamedlocation-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?NamedLocationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -90,7 +90,7 @@ class NamedLocationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a namedLocation object.
+     * Delete a countryNamedLocation object.
      * @param NamedLocationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -60,6 +60,7 @@ class DirectoryRole extends DirectoryObject implements Parsable
             'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'members' => fn(ParseNode $n) => $o->setMembers($n->getCollectionOfObjectValues([DirectoryObject::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'roleTemplateId' => fn(ParseNode $n) => $o->setRoleTemplateId($n->getStringValue()),
             'scopedMembers' => fn(ParseNode $n) => $o->setScopedMembers($n->getCollectionOfObjectValues([ScopedRoleMembership::class, 'createFromDiscriminatorValue'])),
         ]);
@@ -77,6 +78,18 @@ class DirectoryRole extends DirectoryObject implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'members'");
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -114,6 +127,7 @@ class DirectoryRole extends DirectoryObject implements Parsable
         $writer->writeStringValue('description', $this->getDescription());
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeCollectionOfObjectValues('members', $this->getMembers());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('roleTemplateId', $this->getRoleTemplateId());
         $writer->writeCollectionOfObjectValues('scopedMembers', $this->getScopedMembers());
     }
@@ -140,6 +154,14 @@ class DirectoryRole extends DirectoryObject implements Parsable
     */
     public function setMembers(?array $value): void {
         $this->getBackingStore()->set('members', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

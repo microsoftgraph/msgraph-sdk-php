@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class X509CertificateAuthenticationMethodConfiguration extends AuthenticationMethodConfiguration implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new x509CertificateAuthenticationMethodConfiguration and sets the default values.
     */
     public function __construct() {
@@ -67,6 +62,7 @@ class X509CertificateAuthenticationMethodConfiguration extends AuthenticationMet
             'authenticationModeConfiguration' => fn(ParseNode $n) => $o->setAuthenticationModeConfiguration($n->getObjectValue([X509CertificateAuthenticationModeConfiguration::class, 'createFromDiscriminatorValue'])),
             'certificateUserBindings' => fn(ParseNode $n) => $o->setCertificateUserBindings($n->getCollectionOfObjectValues([X509CertificateUserBinding::class, 'createFromDiscriminatorValue'])),
             'includeTargets' => fn(ParseNode $n) => $o->setIncludeTargets($n->getCollectionOfObjectValues([AuthenticationMethodTarget::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ]);
     }
 
@@ -82,6 +78,18 @@ class X509CertificateAuthenticationMethodConfiguration extends AuthenticationMet
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'includeTargets'");
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -118,6 +126,14 @@ class X509CertificateAuthenticationMethodConfiguration extends AuthenticationMet
     */
     public function setIncludeTargets(?array $value): void {
         $this->getBackingStore()->set('includeTargets', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
 }

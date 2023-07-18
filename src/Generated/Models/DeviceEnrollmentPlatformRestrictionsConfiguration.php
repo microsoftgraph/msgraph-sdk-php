@@ -12,11 +12,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollmentConfiguration implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new deviceEnrollmentPlatformRestrictionsConfiguration and sets the default values.
     */
     public function __construct() {
@@ -55,6 +50,7 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
             'androidRestriction' => fn(ParseNode $n) => $o->setAndroidRestriction($n->getObjectValue([DeviceEnrollmentPlatformRestriction::class, 'createFromDiscriminatorValue'])),
             'iosRestriction' => fn(ParseNode $n) => $o->setIosRestriction($n->getObjectValue([DeviceEnrollmentPlatformRestriction::class, 'createFromDiscriminatorValue'])),
             'macOSRestriction' => fn(ParseNode $n) => $o->setMacOSRestriction($n->getObjectValue([DeviceEnrollmentPlatformRestriction::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'windowsMobileRestriction' => fn(ParseNode $n) => $o->setWindowsMobileRestriction($n->getObjectValue([DeviceEnrollmentPlatformRestriction::class, 'createFromDiscriminatorValue'])),
             'windowsRestriction' => fn(ParseNode $n) => $o->setWindowsRestriction($n->getObjectValue([DeviceEnrollmentPlatformRestriction::class, 'createFromDiscriminatorValue'])),
         ]);
@@ -82,6 +78,18 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'macOSRestriction'");
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -144,6 +152,14 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
     */
     public function setMacOSRestriction(?DeviceEnrollmentPlatformRestriction $value): void {
         $this->getBackingStore()->set('macOSRestriction', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

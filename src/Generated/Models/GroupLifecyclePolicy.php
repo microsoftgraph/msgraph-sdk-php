@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class GroupLifecyclePolicy extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new groupLifecyclePolicy and sets the default values.
     */
     public function __construct() {
@@ -51,6 +46,7 @@ class GroupLifecyclePolicy extends Entity implements Parsable
             'alternateNotificationEmails' => fn(ParseNode $n) => $o->setAlternateNotificationEmails($n->getStringValue()),
             'groupLifetimeInDays' => fn(ParseNode $n) => $o->setGroupLifetimeInDays($n->getIntegerValue()),
             'managedGroupTypes' => fn(ParseNode $n) => $o->setManagedGroupTypes($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ]);
     }
 
@@ -76,6 +72,18 @@ class GroupLifecyclePolicy extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'managedGroupTypes'");
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -112,6 +120,14 @@ class GroupLifecyclePolicy extends Entity implements Parsable
     */
     public function setManagedGroupTypes(?string $value): void {
         $this->getBackingStore()->set('managedGroupTypes', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
 }

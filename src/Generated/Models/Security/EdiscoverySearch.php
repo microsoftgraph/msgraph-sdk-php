@@ -10,6 +10,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class EdiscoverySearch extends Search implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new ediscoverySearch and sets the default values.
     */
     public function __construct() {
@@ -132,6 +137,7 @@ class EdiscoverySearch extends Search implements Parsable
         $writer->writeEnumValue('dataSourceScopes', $this->getDataSourceScopes());
         $writer->writeObjectValue('lastEstimateStatisticsOperation', $this->getLastEstimateStatisticsOperation());
         $writer->writeCollectionOfObjectValues('noncustodialSources', $this->getNoncustodialSources());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

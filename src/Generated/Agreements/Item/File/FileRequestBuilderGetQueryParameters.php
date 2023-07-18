@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Agreements\Item\File;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the details of the default file for an agreement, including the language and version information. The file information is specified through the agreementFile object.
+ * Retrieve the details of an agreement file, including the language and version information. The default file can have multiple versions, each with its own language, that can be retrieved by specifying the **Accept-Language** header.
 */
 class FileRequestBuilderGetQueryParameters 
 {

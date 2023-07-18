@@ -11,11 +11,6 @@ use Psr\Http\Message\StreamInterface;
 class EnterpriseCodeSigningCertificate extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new enterpriseCodeSigningCertificate and sets the default values.
     */
     public function __construct() {
@@ -66,6 +61,7 @@ class EnterpriseCodeSigningCertificate extends Entity implements Parsable
             'expirationDateTime' => fn(ParseNode $n) => $o->setExpirationDateTime($n->getDateTimeValue()),
             'issuer' => fn(ParseNode $n) => $o->setIssuer($n->getStringValue()),
             'issuerName' => fn(ParseNode $n) => $o->setIssuerName($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(CertificateStatus::class)),
             'subject' => fn(ParseNode $n) => $o->setSubject($n->getStringValue()),
             'subjectName' => fn(ParseNode $n) => $o->setSubjectName($n->getStringValue()),
@@ -95,6 +91,18 @@ class EnterpriseCodeSigningCertificate extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'issuerName'");
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -192,6 +200,14 @@ class EnterpriseCodeSigningCertificate extends Entity implements Parsable
     */
     public function setIssuerName(?string $value): void {
         $this->getBackingStore()->set('issuerName', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

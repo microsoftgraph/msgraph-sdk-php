@@ -10,6 +10,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UnifiedGroupSource extends DataSource implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new unifiedGroupSource and sets the default values.
     */
     public function __construct() {
@@ -70,6 +75,7 @@ class UnifiedGroupSource extends DataSource implements Parsable
         parent::serialize($writer);
         $writer->writeObjectValue('group', $this->getGroup());
         $writer->writeEnumValue('includedSources', $this->getIncludedSources());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

@@ -14,6 +14,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class IosUpdateConfiguration extends DeviceConfiguration implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new iosUpdateConfiguration and sets the default values.
     */
     public function __construct() {
@@ -102,6 +107,7 @@ class IosUpdateConfiguration extends DeviceConfiguration implements Parsable
         parent::serialize($writer);
         $writer->writeTimeValue('activeHoursEnd', $this->getActiveHoursEnd());
         $writer->writeTimeValue('activeHoursStart', $this->getActiveHoursStart());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfEnumValues('scheduledInstallDays', $this->getScheduledInstallDays());
         $writer->writeIntegerValue('utcTimeOffsetInMinutes', $this->getUtcTimeOffsetInMinutes());
     }

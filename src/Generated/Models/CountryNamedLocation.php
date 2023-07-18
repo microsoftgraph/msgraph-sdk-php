@@ -68,6 +68,7 @@ class CountryNamedLocation extends NamedLocation implements Parsable
             },
             'countryLookupMethod' => fn(ParseNode $n) => $o->setCountryLookupMethod($n->getEnumValue(CountryLookupMethodType::class)),
             'includeUnknownCountriesAndRegions' => fn(ParseNode $n) => $o->setIncludeUnknownCountriesAndRegions($n->getBooleanValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ]);
     }
 
@@ -84,6 +85,18 @@ class CountryNamedLocation extends NamedLocation implements Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -92,6 +105,7 @@ class CountryNamedLocation extends NamedLocation implements Parsable
         $writer->writeCollectionOfPrimitiveValues('countriesAndRegions', $this->getCountriesAndRegions());
         $writer->writeEnumValue('countryLookupMethod', $this->getCountryLookupMethod());
         $writer->writeBooleanValue('includeUnknownCountriesAndRegions', $this->getIncludeUnknownCountriesAndRegions());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**
@@ -116,6 +130,14 @@ class CountryNamedLocation extends NamedLocation implements Parsable
     */
     public function setIncludeUnknownCountriesAndRegions(?bool $value): void {
         $this->getBackingStore()->set('includeUnknownCountriesAndRegions', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
 }

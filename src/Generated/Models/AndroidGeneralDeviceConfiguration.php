@@ -13,6 +13,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new androidGeneralDeviceConfiguration and sets the default values.
     */
     public function __construct() {
@@ -703,6 +708,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements P
         $writer->writeBooleanValue('kioskModeBlockVolumeButtons', $this->getKioskModeBlockVolumeButtons());
         $writer->writeBooleanValue('locationServicesBlocked', $this->getLocationServicesBlocked());
         $writer->writeBooleanValue('nfcBlocked', $this->getNfcBlocked());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeBooleanValue('passwordBlockFingerprintUnlock', $this->getPasswordBlockFingerprintUnlock());
         $writer->writeBooleanValue('passwordBlockTrustAgents', $this->getPasswordBlockTrustAgents());
         $writer->writeIntegerValue('passwordExpirationDays', $this->getPasswordExpirationDays());

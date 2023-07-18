@@ -12,6 +12,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new androidWorkProfileGeneralDeviceConfiguration and sets the default values.
     */
     public function __construct() {
@@ -486,6 +491,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration i
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeBooleanValue('passwordBlockFingerprintUnlock', $this->getPasswordBlockFingerprintUnlock());
         $writer->writeBooleanValue('passwordBlockTrustAgents', $this->getPasswordBlockTrustAgents());
         $writer->writeIntegerValue('passwordExpirationDays', $this->getPasswordExpirationDays());

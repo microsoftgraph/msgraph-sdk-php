@@ -7,7 +7,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 /**
- * Device action result
+ * Reset passcode action result
 */
 class ResetPasscodeActionResult extends DeviceActionResult implements Parsable 
 {

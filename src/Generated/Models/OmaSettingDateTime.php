@@ -8,7 +8,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 /**
- * OMA Settings definition.
+ * OMA Settings DateTime definition.
 */
 class OmaSettingDateTime extends OmaSetting implements Parsable 
 {

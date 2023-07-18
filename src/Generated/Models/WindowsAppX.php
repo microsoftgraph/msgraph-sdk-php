@@ -12,6 +12,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WindowsAppX extends MobileLobApp implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new windowsAppX and sets the default values.
     */
     public function __construct() {
@@ -142,6 +147,7 @@ class WindowsAppX extends MobileLobApp implements Parsable
         $writer->writeStringValue('identityVersion', $this->getIdentityVersion());
         $writer->writeBooleanValue('isBundle', $this->getIsBundle());
         $writer->writeObjectValue('minimumSupportedOperatingSystem', $this->getMinimumSupportedOperatingSystem());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

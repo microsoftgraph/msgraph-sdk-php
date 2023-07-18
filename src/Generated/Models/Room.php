@@ -116,6 +116,7 @@ class Room extends Place implements Parsable
             'isWheelChairAccessible' => fn(ParseNode $n) => $o->setIsWheelChairAccessible($n->getBooleanValue()),
             'label' => fn(ParseNode $n) => $o->setLabel($n->getStringValue()),
             'nickname' => fn(ParseNode $n) => $o->setNickname($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'tags' => function (ParseNode $n) {
                 $val = $n->getCollectionOfPrimitiveValues();
                 if (is_array($val)) {
@@ -189,6 +190,18 @@ class Room extends Place implements Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
+    }
+
+    /**
      * Gets the tags property value. Specifies additional features of the room, for example, details like the type of view or furniture type.
      * @return array<string>|null
     */
@@ -231,6 +244,7 @@ class Room extends Place implements Parsable
         $writer->writeBooleanValue('isWheelChairAccessible', $this->getIsWheelChairAccessible());
         $writer->writeStringValue('label', $this->getLabel());
         $writer->writeStringValue('nickname', $this->getNickname());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfPrimitiveValues('tags', $this->getTags());
         $writer->writeStringValue('videoDeviceName', $this->getVideoDeviceName());
     }
@@ -321,6 +335,14 @@ class Room extends Place implements Parsable
     */
     public function setNickname(?string $value): void {
         $this->getBackingStore()->set('nickname', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

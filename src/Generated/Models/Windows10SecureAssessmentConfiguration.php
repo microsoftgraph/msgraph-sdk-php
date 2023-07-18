@@ -12,6 +12,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Windows10SecureAssessmentConfiguration extends DeviceConfiguration implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new windows10SecureAssessmentConfiguration and sets the default values.
     */
     public function __construct() {
@@ -114,6 +119,7 @@ class Windows10SecureAssessmentConfiguration extends DeviceConfiguration impleme
         $writer->writeBooleanValue('allowTextSuggestion', $this->getAllowTextSuggestion());
         $writer->writeStringValue('configurationAccount', $this->getConfigurationAccount());
         $writer->writeStringValue('launchUri', $this->getLaunchUri());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

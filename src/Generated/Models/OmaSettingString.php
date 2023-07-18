@@ -7,7 +7,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 /**
- * OMA Settings definition.
+ * OMA Settings String definition.
 */
 class OmaSettingString extends OmaSetting implements Parsable 
 {

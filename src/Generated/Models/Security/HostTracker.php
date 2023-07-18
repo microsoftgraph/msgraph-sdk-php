@@ -10,6 +10,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class HostTracker extends Artifact implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new hostTracker and sets the default values.
     */
     public function __construct() {
@@ -111,6 +116,7 @@ class HostTracker extends Artifact implements Parsable
         $writer->writeObjectValue('host', $this->getHost());
         $writer->writeStringValue('kind', $this->getKind());
         $writer->writeDateTimeValue('lastSeenDateTime', $this->getLastSeenDateTime());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('value', $this->getValue());
     }
 

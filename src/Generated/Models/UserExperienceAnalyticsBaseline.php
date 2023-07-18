@@ -13,11 +13,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new userExperienceAnalyticsBaseline and sets the default values.
     */
     public function __construct() {
@@ -119,6 +114,7 @@ class UserExperienceAnalyticsBaseline extends Entity implements Parsable
             'deviceBootPerformanceMetrics' => fn(ParseNode $n) => $o->setDeviceBootPerformanceMetrics($n->getObjectValue([UserExperienceAnalyticsCategory::class, 'createFromDiscriminatorValue'])),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'isBuiltIn' => fn(ParseNode $n) => $o->setIsBuiltIn($n->getBooleanValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'rebootAnalyticsMetrics' => fn(ParseNode $n) => $o->setRebootAnalyticsMetrics($n->getObjectValue([UserExperienceAnalyticsCategory::class, 'createFromDiscriminatorValue'])),
             'resourcePerformanceMetrics' => fn(ParseNode $n) => $o->setResourcePerformanceMetrics($n->getObjectValue([UserExperienceAnalyticsCategory::class, 'createFromDiscriminatorValue'])),
             'workFromAnywhereMetrics' => fn(ParseNode $n) => $o->setWorkFromAnywhereMetrics($n->getObjectValue([UserExperienceAnalyticsCategory::class, 'createFromDiscriminatorValue'])),
@@ -135,6 +131,18 @@ class UserExperienceAnalyticsBaseline extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'isBuiltIn'");
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -246,6 +254,14 @@ class UserExperienceAnalyticsBaseline extends Entity implements Parsable
     */
     public function setIsBuiltIn(?bool $value): void {
         $this->getBackingStore()->set('isBuiltIn', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

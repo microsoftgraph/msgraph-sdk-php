@@ -51,6 +51,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection im
             'mdmEnrollmentUrl' => fn(ParseNode $n) => $o->setMdmEnrollmentUrl($n->getStringValue()),
             'minutesOfInactivityBeforeDeviceLock' => fn(ParseNode $n) => $o->setMinutesOfInactivityBeforeDeviceLock($n->getIntegerValue()),
             'numberOfPastPinsRemembered' => fn(ParseNode $n) => $o->setNumberOfPastPinsRemembered($n->getIntegerValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'passwordMaximumAttemptCount' => fn(ParseNode $n) => $o->setPasswordMaximumAttemptCount($n->getIntegerValue()),
             'pinExpirationDays' => fn(ParseNode $n) => $o->setPinExpirationDays($n->getIntegerValue()),
             'pinLowercaseLetters' => fn(ParseNode $n) => $o->setPinLowercaseLetters($n->getEnumValue(WindowsInformationProtectionPinCharacterRequirements::class)),
@@ -96,6 +97,18 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection im
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'numberOfPastPinsRemembered'");
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -204,6 +217,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection im
         $writer->writeStringValue('mdmEnrollmentUrl', $this->getMdmEnrollmentUrl());
         $writer->writeIntegerValue('minutesOfInactivityBeforeDeviceLock', $this->getMinutesOfInactivityBeforeDeviceLock());
         $writer->writeIntegerValue('numberOfPastPinsRemembered', $this->getNumberOfPastPinsRemembered());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeIntegerValue('passwordMaximumAttemptCount', $this->getPasswordMaximumAttemptCount());
         $writer->writeIntegerValue('pinExpirationDays', $this->getPinExpirationDays());
         $writer->writeEnumValue('pinLowercaseLetters', $this->getPinLowercaseLetters());
@@ -244,6 +258,14 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection im
     */
     public function setNumberOfPastPinsRemembered(?int $value): void {
         $this->getBackingStore()->set('numberOfPastPinsRemembered', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

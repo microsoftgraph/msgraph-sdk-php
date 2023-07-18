@@ -12,6 +12,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Windows10EnterpriseModernAppManagementConfiguration extends DeviceConfiguration implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new windows10EnterpriseModernAppManagementConfiguration and sets the default values.
     */
     public function __construct() {
@@ -57,6 +62,7 @@ class Windows10EnterpriseModernAppManagementConfiguration extends DeviceConfigur
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeBooleanValue('uninstallBuiltInApps', $this->getUninstallBuiltInApps());
     }
 

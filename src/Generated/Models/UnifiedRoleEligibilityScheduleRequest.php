@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UnifiedRoleEligibilityScheduleRequest extends Request implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new unifiedRoleEligibilityScheduleRequest and sets the default values.
     */
     public function __construct() {
@@ -103,6 +98,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request implements Parsable
             'directoryScopeId' => fn(ParseNode $n) => $o->setDirectoryScopeId($n->getStringValue()),
             'isValidationOnly' => fn(ParseNode $n) => $o->setIsValidationOnly($n->getBooleanValue()),
             'justification' => fn(ParseNode $n) => $o->setJustification($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'principal' => fn(ParseNode $n) => $o->setPrincipal($n->getObjectValue([DirectoryObject::class, 'createFromDiscriminatorValue'])),
             'principalId' => fn(ParseNode $n) => $o->setPrincipalId($n->getStringValue()),
             'roleDefinition' => fn(ParseNode $n) => $o->setRoleDefinition($n->getObjectValue([UnifiedRoleDefinition::class, 'createFromDiscriminatorValue'])),
@@ -136,6 +132,18 @@ class UnifiedRoleEligibilityScheduleRequest extends Request implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'justification'");
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -312,6 +320,14 @@ class UnifiedRoleEligibilityScheduleRequest extends Request implements Parsable
     */
     public function setJustification(?string $value): void {
         $this->getBackingStore()->set('justification', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

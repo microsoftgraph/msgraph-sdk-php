@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AppleManagedIdentityProvider extends IdentityProviderBase implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new appleManagedIdentityProvider and sets the default values.
     */
     public function __construct() {
@@ -64,6 +59,7 @@ class AppleManagedIdentityProvider extends IdentityProviderBase implements Parsa
             'certificateData' => fn(ParseNode $n) => $o->setCertificateData($n->getStringValue()),
             'developerId' => fn(ParseNode $n) => $o->setDeveloperId($n->getStringValue()),
             'keyId' => fn(ParseNode $n) => $o->setKeyId($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'serviceId' => fn(ParseNode $n) => $o->setServiceId($n->getStringValue()),
         ]);
     }
@@ -78,6 +74,18 @@ class AppleManagedIdentityProvider extends IdentityProviderBase implements Parsa
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'keyId'");
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -127,6 +135,14 @@ class AppleManagedIdentityProvider extends IdentityProviderBase implements Parsa
     */
     public function setKeyId(?string $value): void {
         $this->getBackingStore()->set('keyId', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

@@ -88,6 +88,7 @@ class ListItem extends BaseItem implements Parsable
             'documentSetVersions' => fn(ParseNode $n) => $o->setDocumentSetVersions($n->getCollectionOfObjectValues([DocumentSetVersion::class, 'createFromDiscriminatorValue'])),
             'driveItem' => fn(ParseNode $n) => $o->setDriveItem($n->getObjectValue([DriveItem::class, 'createFromDiscriminatorValue'])),
             'fields' => fn(ParseNode $n) => $o->setFields($n->getObjectValue([FieldValueSet::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'sharepointIds' => fn(ParseNode $n) => $o->setSharepointIds($n->getObjectValue([SharepointIds::class, 'createFromDiscriminatorValue'])),
             'versions' => fn(ParseNode $n) => $o->setVersions($n->getCollectionOfObjectValues([ListItemVersion::class, 'createFromDiscriminatorValue'])),
         ]);
@@ -103,6 +104,18 @@ class ListItem extends BaseItem implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'fields'");
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -142,6 +155,7 @@ class ListItem extends BaseItem implements Parsable
         $writer->writeCollectionOfObjectValues('documentSetVersions', $this->getDocumentSetVersions());
         $writer->writeObjectValue('driveItem', $this->getDriveItem());
         $writer->writeObjectValue('fields', $this->getFields());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('sharepointIds', $this->getSharepointIds());
         $writer->writeCollectionOfObjectValues('versions', $this->getVersions());
     }
@@ -184,6 +198,14 @@ class ListItem extends BaseItem implements Parsable
     */
     public function setFields(?FieldValueSet $value): void {
         $this->getBackingStore()->set('fields', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

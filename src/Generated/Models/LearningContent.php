@@ -12,11 +12,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class LearningContent extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new learningContent and sets the default values.
     */
     public function __construct() {
@@ -155,6 +150,7 @@ class LearningContent extends Entity implements Parsable
             'languageTag' => fn(ParseNode $n) => $o->setLanguageTag($n->getStringValue()),
             'lastModifiedDateTime' => fn(ParseNode $n) => $o->setLastModifiedDateTime($n->getDateTimeValue()),
             'numberOfPages' => fn(ParseNode $n) => $o->setNumberOfPages($n->getIntegerValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'skillTags' => function (ParseNode $n) {
                 $val = $n->getCollectionOfPrimitiveValues();
                 if (is_array($val)) {
@@ -251,6 +247,18 @@ class LearningContent extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'numberOfPages'");
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -440,6 +448,14 @@ class LearningContent extends Entity implements Parsable
     */
     public function setNumberOfPages(?int $value): void {
         $this->getBackingStore()->set('numberOfPages', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

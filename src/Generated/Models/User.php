@@ -691,6 +691,7 @@ class User extends DirectoryObject implements Parsable
             'mobilePhone' => fn(ParseNode $n) => $o->setMobilePhone($n->getStringValue()),
             'mySite' => fn(ParseNode $n) => $o->setMySite($n->getStringValue()),
             'oauth2PermissionGrants' => fn(ParseNode $n) => $o->setOauth2PermissionGrants($n->getCollectionOfObjectValues([OAuth2PermissionGrant::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'officeLocation' => fn(ParseNode $n) => $o->setOfficeLocation($n->getStringValue()),
             'onenote' => fn(ParseNode $n) => $o->setOnenote($n->getObjectValue([Onenote::class, 'createFromDiscriminatorValue'])),
             'onlineMeetings' => fn(ParseNode $n) => $o->setOnlineMeetings($n->getCollectionOfObjectValues([OnlineMeeting::class, 'createFromDiscriminatorValue'])),
@@ -1134,6 +1135,18 @@ class User extends DirectoryObject implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'oauth2PermissionGrants'");
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -1858,6 +1871,7 @@ class User extends DirectoryObject implements Parsable
         $writer->writeStringValue('mobilePhone', $this->getMobilePhone());
         $writer->writeStringValue('mySite', $this->getMySite());
         $writer->writeCollectionOfObjectValues('oauth2PermissionGrants', $this->getOauth2PermissionGrants());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('officeLocation', $this->getOfficeLocation());
         $writer->writeObjectValue('onenote', $this->getOnenote());
         $writer->writeCollectionOfObjectValues('onlineMeetings', $this->getOnlineMeetings());
@@ -2476,6 +2490,14 @@ class User extends DirectoryObject implements Parsable
     */
     public function setOauth2PermissionGrants(?array $value): void {
         $this->getBackingStore()->set('oauth2PermissionGrants', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

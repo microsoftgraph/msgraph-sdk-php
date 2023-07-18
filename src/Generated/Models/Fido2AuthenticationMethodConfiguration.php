@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Fido2AuthenticationMethodConfiguration extends AuthenticationMethodConfiguration implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new fido2AuthenticationMethodConfiguration and sets the default values.
     */
     public function __construct() {
@@ -42,6 +37,7 @@ class Fido2AuthenticationMethodConfiguration extends AuthenticationMethodConfigu
             'isAttestationEnforced' => fn(ParseNode $n) => $o->setIsAttestationEnforced($n->getBooleanValue()),
             'isSelfServiceRegistrationAllowed' => fn(ParseNode $n) => $o->setIsSelfServiceRegistrationAllowed($n->getBooleanValue()),
             'keyRestrictions' => fn(ParseNode $n) => $o->setKeyRestrictions($n->getObjectValue([Fido2KeyRestrictions::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ]);
     }
 
@@ -96,6 +92,18 @@ class Fido2AuthenticationMethodConfiguration extends AuthenticationMethodConfigu
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -138,6 +146,14 @@ class Fido2AuthenticationMethodConfiguration extends AuthenticationMethodConfigu
     */
     public function setKeyRestrictions(?Fido2KeyRestrictions $value): void {
         $this->getBackingStore()->set('keyRestrictions', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
 }

@@ -46,6 +46,7 @@ class FileAssessmentRequest extends ThreatAssessmentRequest implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'contentData' => fn(ParseNode $n) => $o->setContentData($n->getStringValue()),
             'fileName' => fn(ParseNode $n) => $o->setFileName($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ]);
     }
 
@@ -62,6 +63,18 @@ class FileAssessmentRequest extends ThreatAssessmentRequest implements Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -69,6 +82,7 @@ class FileAssessmentRequest extends ThreatAssessmentRequest implements Parsable
         parent::serialize($writer);
         $writer->writeStringValue('contentData', $this->getContentData());
         $writer->writeStringValue('fileName', $this->getFileName());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**
@@ -85,6 +99,14 @@ class FileAssessmentRequest extends ThreatAssessmentRequest implements Parsable
     */
     public function setFileName(?string $value): void {
         $this->getBackingStore()->set('fileName', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
 }

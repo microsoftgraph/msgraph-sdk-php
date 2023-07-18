@@ -13,6 +13,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new windowsPhone81GeneralConfiguration and sets the default values.
     */
     public function __construct() {
@@ -435,6 +440,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
         $writer->writeBooleanValue('locationServicesBlocked', $this->getLocationServicesBlocked());
         $writer->writeBooleanValue('microsoftAccountBlocked', $this->getMicrosoftAccountBlocked());
         $writer->writeBooleanValue('nfcBlocked', $this->getNfcBlocked());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeBooleanValue('passwordBlockSimple', $this->getPasswordBlockSimple());
         $writer->writeIntegerValue('passwordExpirationDays', $this->getPasswordExpirationDays());
         $writer->writeIntegerValue('passwordMinimumCharacterSetCount', $this->getPasswordMinimumCharacterSetCount());

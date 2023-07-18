@@ -8,7 +8,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Psr\Http\Message\StreamInterface;
 
 /**
- * OMA Settings definition.
+ * OMA Settings StringXML definition.
 */
 class OmaSettingStringXml extends OmaSetting implements Parsable 
 {

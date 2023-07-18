@@ -13,6 +13,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class IosVppEBook extends ManagedEBook implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new iosVppEBook and sets the default values.
     */
     public function __construct() {
@@ -161,6 +166,7 @@ class IosVppEBook extends ManagedEBook implements Parsable
         $writer->writeStringValue('appleId', $this->getAppleId());
         $writer->writeCollectionOfPrimitiveValues('genres', $this->getGenres());
         $writer->writeStringValue('language', $this->getLanguage());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('seller', $this->getSeller());
         $writer->writeIntegerValue('totalLicenseCount', $this->getTotalLicenseCount());
         $writer->writeIntegerValue('usedLicenseCount', $this->getUsedLicenseCount());

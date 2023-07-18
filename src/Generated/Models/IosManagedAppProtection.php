@@ -13,6 +13,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class IosManagedAppProtection extends TargetedManagedAppProtection implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new iosManagedAppProtection and sets the default values.
     */
     public function __construct() {
@@ -145,6 +150,7 @@ class IosManagedAppProtection extends TargetedManagedAppProtection implements Pa
         $writer->writeObjectValue('deploymentSummary', $this->getDeploymentSummary());
         $writer->writeBooleanValue('faceIdBlocked', $this->getFaceIdBlocked());
         $writer->writeStringValue('minimumRequiredSdkVersion', $this->getMinimumRequiredSdkVersion());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

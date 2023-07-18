@@ -10,6 +10,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class EscapedList extends BaseItem implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new EscapedList and sets the default values.
     */
     public function __construct() {
@@ -188,6 +193,7 @@ class EscapedList extends BaseItem implements Parsable
         $writer->writeObjectValue('drive', $this->getDrive());
         $writer->writeObjectValue('list', $this->getList());
         $writer->writeCollectionOfObjectValues('items', $this->getItems());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfObjectValues('operations', $this->getOperations());
         $writer->writeObjectValue('sharepointIds', $this->getSharepointIds());
         $writer->writeCollectionOfObjectValues('subscriptions', $this->getSubscriptions());

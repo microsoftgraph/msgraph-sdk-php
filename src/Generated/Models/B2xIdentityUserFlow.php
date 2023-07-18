@@ -47,6 +47,7 @@ class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable
             'apiConnectorConfiguration' => fn(ParseNode $n) => $o->setApiConnectorConfiguration($n->getObjectValue([UserFlowApiConnectorConfiguration::class, 'createFromDiscriminatorValue'])),
             'identityProviders' => fn(ParseNode $n) => $o->setIdentityProviders($n->getCollectionOfObjectValues([IdentityProvider::class, 'createFromDiscriminatorValue'])),
             'languages' => fn(ParseNode $n) => $o->setLanguages($n->getCollectionOfObjectValues([UserFlowLanguageConfiguration::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'userAttributeAssignments' => fn(ParseNode $n) => $o->setUserAttributeAssignments($n->getCollectionOfObjectValues([IdentityUserFlowAttributeAssignment::class, 'createFromDiscriminatorValue'])),
             'userFlowIdentityProviders' => fn(ParseNode $n) => $o->setUserFlowIdentityProviders($n->getCollectionOfObjectValues([IdentityProviderBase::class, 'createFromDiscriminatorValue'])),
         ]);
@@ -78,6 +79,18 @@ class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'languages'");
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -117,6 +130,7 @@ class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable
         $writer->writeObjectValue('apiConnectorConfiguration', $this->getApiConnectorConfiguration());
         $writer->writeCollectionOfObjectValues('identityProviders', $this->getIdentityProviders());
         $writer->writeCollectionOfObjectValues('languages', $this->getLanguages());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfObjectValues('userAttributeAssignments', $this->getUserAttributeAssignments());
         $writer->writeCollectionOfObjectValues('userFlowIdentityProviders', $this->getUserFlowIdentityProviders());
     }
@@ -143,6 +157,14 @@ class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable
     */
     public function setLanguages(?array $value): void {
         $this->getBackingStore()->set('languages', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

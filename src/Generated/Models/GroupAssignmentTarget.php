@@ -7,10 +7,15 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 /**
- * Base type for assignment targets.
+ * Represents an assignment to a group.
 */
 class GroupAssignmentTarget extends DeviceAndAppManagementAssignmentTarget implements Parsable 
 {
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
     /**
      * Instantiates a new groupAssignmentTarget and sets the default values.
     */
@@ -43,7 +48,6 @@ class GroupAssignmentTarget extends DeviceAndAppManagementAssignmentTarget imple
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'groupId' => fn(ParseNode $n) => $o->setGroupId($n->getStringValue()),
-            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ]);
     }
 
@@ -57,18 +61,6 @@ class GroupAssignmentTarget extends DeviceAndAppManagementAssignmentTarget imple
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'groupId'");
-    }
-
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return string|null
-    */
-    public function getOdataType(): ?string {
-        $val = $this->getBackingStore()->get('odataType');
-        if (is_null($val) || is_string($val)) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -87,14 +79,6 @@ class GroupAssignmentTarget extends DeviceAndAppManagementAssignmentTarget imple
     */
     public function setGroupId(?string $value): void {
         $this->getBackingStore()->set('groupId', $value);
-    }
-
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param string|null $value Value to set for the OdataType property.
-    */
-    public function setOdataType(?string $value): void {
-        $this->getBackingStore()->set('odataType', $value);
     }
 
 }

@@ -13,11 +13,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class WindowsInformationProtection extends ManagedAppPolicy implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new windowsInformationProtection and sets the default values.
     */
     public function __construct() {
@@ -266,6 +261,7 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
             'indexingEncryptedStoresOrItemsBlocked' => fn(ParseNode $n) => $o->setIndexingEncryptedStoresOrItemsBlocked($n->getBooleanValue()),
             'isAssigned' => fn(ParseNode $n) => $o->setIsAssigned($n->getBooleanValue()),
             'neutralDomainResources' => fn(ParseNode $n) => $o->setNeutralDomainResources($n->getCollectionOfObjectValues([WindowsInformationProtectionResourceCollection::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'protectedAppLockerFiles' => fn(ParseNode $n) => $o->setProtectedAppLockerFiles($n->getCollectionOfObjectValues([WindowsInformationProtectionAppLockerFile::class, 'createFromDiscriminatorValue'])),
             'protectedApps' => fn(ParseNode $n) => $o->setProtectedApps($n->getCollectionOfObjectValues([WindowsInformationProtectionApp::class, 'createFromDiscriminatorValue'])),
             'protectionUnderLockConfigRequired' => fn(ParseNode $n) => $o->setProtectionUnderLockConfigRequired($n->getBooleanValue()),
@@ -323,6 +319,18 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'neutralDomainResources'");
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -587,6 +595,14 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
     */
     public function setNeutralDomainResources(?array $value): void {
         $this->getBackingStore()->set('neutralDomainResources', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

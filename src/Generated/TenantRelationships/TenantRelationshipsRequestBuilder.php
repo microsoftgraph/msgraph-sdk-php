@@ -9,6 +9,8 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\TenantRelationship;
 use Microsoft\Graph\Generated\TenantRelationships\DelegatedAdminCustomers\DelegatedAdminCustomersRequestBuilder;
 use Microsoft\Graph\Generated\TenantRelationships\DelegatedAdminRelationships\DelegatedAdminRelationshipsRequestBuilder;
+use Microsoft\Graph\Generated\TenantRelationships\FindTenantInformationByDomainNameWithDomainName\FindTenantInformationByDomainNameWithDomainNameRequestBuilder;
+use Microsoft\Graph\Generated\TenantRelationships\FindTenantInformationByTenantIdWithTenantId\FindTenantInformationByTenantIdWithTenantIdRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -45,6 +47,24 @@ class TenantRelationshipsRequestBuilder extends BaseRequestBuilder
         } else {
             $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
         }
+    }
+
+    /**
+     * Provides operations to call the findTenantInformationByDomainName method.
+     * @param string $domainName Usage: domainName='{domainName}'
+     * @return FindTenantInformationByDomainNameWithDomainNameRequestBuilder
+    */
+    public function findTenantInformationByDomainNameWithDomainName(string $domainName): FindTenantInformationByDomainNameWithDomainNameRequestBuilder {
+        return new FindTenantInformationByDomainNameWithDomainNameRequestBuilder($this->pathParameters, $this->requestAdapter, $domainName);
+    }
+
+    /**
+     * Provides operations to call the findTenantInformationByTenantId method.
+     * @param string $tenantId Usage: tenantId='{tenantId}'
+     * @return FindTenantInformationByTenantIdWithTenantIdRequestBuilder
+    */
+    public function findTenantInformationByTenantIdWithTenantId(string $tenantId): FindTenantInformationByTenantIdWithTenantIdRequestBuilder {
+        return new FindTenantInformationByTenantIdWithTenantIdRequestBuilder($this->pathParameters, $this->requestAdapter, $tenantId);
     }
 
     /**

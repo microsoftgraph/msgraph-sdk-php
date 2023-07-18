@@ -50,6 +50,7 @@ class TemporaryAccessPassAuthenticationMethod extends AuthenticationMethod imple
             'isUsableOnce' => fn(ParseNode $n) => $o->setIsUsableOnce($n->getBooleanValue()),
             'lifetimeInMinutes' => fn(ParseNode $n) => $o->setLifetimeInMinutes($n->getIntegerValue()),
             'methodUsabilityReason' => fn(ParseNode $n) => $o->setMethodUsabilityReason($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'startDateTime' => fn(ParseNode $n) => $o->setStartDateTime($n->getDateTimeValue()),
             'temporaryAccessPass' => fn(ParseNode $n) => $o->setTemporaryAccessPass($n->getStringValue()),
         ]);
@@ -104,6 +105,18 @@ class TemporaryAccessPassAuthenticationMethod extends AuthenticationMethod imple
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
+    }
+
+    /**
      * Gets the startDateTime property value. The date and time when the Temporary Access Pass becomes available to use and when isUsable is true is enforced.
      * @return DateTime|null
     */
@@ -138,6 +151,7 @@ class TemporaryAccessPassAuthenticationMethod extends AuthenticationMethod imple
         $writer->writeBooleanValue('isUsableOnce', $this->getIsUsableOnce());
         $writer->writeIntegerValue('lifetimeInMinutes', $this->getLifetimeInMinutes());
         $writer->writeStringValue('methodUsabilityReason', $this->getMethodUsabilityReason());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeDateTimeValue('startDateTime', $this->getStartDateTime());
         $writer->writeStringValue('temporaryAccessPass', $this->getTemporaryAccessPass());
     }
@@ -180,6 +194,14 @@ class TemporaryAccessPassAuthenticationMethod extends AuthenticationMethod imple
     */
     public function setMethodUsabilityReason(?string $value): void {
         $this->getBackingStore()->set('methodUsabilityReason', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

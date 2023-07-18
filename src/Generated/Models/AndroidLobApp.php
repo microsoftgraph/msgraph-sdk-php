@@ -12,6 +12,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AndroidLobApp extends MobileLobApp implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new androidLobApp and sets the default values.
     */
     public function __construct() {
@@ -97,6 +102,7 @@ class AndroidLobApp extends MobileLobApp implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeObjectValue('minimumSupportedOperatingSystem', $this->getMinimumSupportedOperatingSystem());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('packageId', $this->getPackageId());
         $writer->writeStringValue('versionCode', $this->getVersionCode());
         $writer->writeStringValue('versionName', $this->getVersionName());

@@ -12,6 +12,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WindowsMobileMSI extends MobileLobApp implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new windowsMobileMSI and sets the default values.
     */
     public function __construct() {
@@ -98,6 +103,7 @@ class WindowsMobileMSI extends MobileLobApp implements Parsable
         parent::serialize($writer);
         $writer->writeStringValue('commandLine', $this->getCommandLine());
         $writer->writeBooleanValue('ignoreVersionDetection', $this->getIgnoreVersionDetection());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('productCode', $this->getProductCode());
         $writer->writeStringValue('productVersion', $this->getProductVersion());
     }

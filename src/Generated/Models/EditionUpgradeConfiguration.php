@@ -12,6 +12,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EditionUpgradeConfiguration extends DeviceConfiguration implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new editionUpgradeConfiguration and sets the default values.
     */
     public function __construct() {
@@ -98,6 +103,7 @@ class EditionUpgradeConfiguration extends DeviceConfiguration implements Parsabl
         parent::serialize($writer);
         $writer->writeStringValue('license', $this->getLicense());
         $writer->writeEnumValue('licenseType', $this->getLicenseType());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('productKey', $this->getProductKey());
         $writer->writeEnumValue('targetEdition', $this->getTargetEdition());
     }

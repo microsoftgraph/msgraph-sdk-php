@@ -10,6 +10,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationMethod implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new windowsHelloForBusinessAuthenticationMethod and sets the default values.
     */
     public function __construct() {
@@ -98,6 +103,7 @@ class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationMethod i
         $writer->writeObjectValue('device', $this->getDevice());
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeEnumValue('keyStrength', $this->getKeyStrength());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

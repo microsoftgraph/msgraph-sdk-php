@@ -57,6 +57,7 @@ class Win32LobApp extends MobileLobApp implements Parsable
             'minimumNumberOfProcessors' => fn(ParseNode $n) => $o->setMinimumNumberOfProcessors($n->getIntegerValue()),
             'minimumSupportedWindowsRelease' => fn(ParseNode $n) => $o->setMinimumSupportedWindowsRelease($n->getStringValue()),
             'msiInformation' => fn(ParseNode $n) => $o->setMsiInformation($n->getObjectValue([Win32LobAppMsiInformation::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'returnCodes' => fn(ParseNode $n) => $o->setReturnCodes($n->getCollectionOfObjectValues([Win32LobAppReturnCode::class, 'createFromDiscriminatorValue'])),
             'rules' => fn(ParseNode $n) => $o->setRules($n->getCollectionOfObjectValues([Win32LobAppRule::class, 'createFromDiscriminatorValue'])),
             'setupFilePath' => fn(ParseNode $n) => $o->setSetupFilePath($n->getStringValue()),
@@ -161,6 +162,18 @@ class Win32LobApp extends MobileLobApp implements Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
+    }
+
+    /**
      * Gets the returnCodes property value. The return codes for post installation behavior.
      * @return array<Win32LobAppReturnCode>|null
     */
@@ -227,6 +240,7 @@ class Win32LobApp extends MobileLobApp implements Parsable
         $writer->writeIntegerValue('minimumNumberOfProcessors', $this->getMinimumNumberOfProcessors());
         $writer->writeStringValue('minimumSupportedWindowsRelease', $this->getMinimumSupportedWindowsRelease());
         $writer->writeObjectValue('msiInformation', $this->getMsiInformation());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfObjectValues('returnCodes', $this->getReturnCodes());
         $writer->writeCollectionOfObjectValues('rules', $this->getRules());
         $writer->writeStringValue('setupFilePath', $this->getSetupFilePath());
@@ -303,6 +317,14 @@ class Win32LobApp extends MobileLobApp implements Parsable
     */
     public function setMsiInformation(?Win32LobAppMsiInformation $value): void {
         $this->getBackingStore()->set('msiInformation', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

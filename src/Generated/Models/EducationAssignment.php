@@ -11,11 +11,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class EducationAssignment extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new educationAssignment and sets the default values.
     */
     public function __construct() {
@@ -240,6 +235,7 @@ class EducationAssignment extends Entity implements Parsable
             'lastModifiedBy' => fn(ParseNode $n) => $o->setLastModifiedBy($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
             'lastModifiedDateTime' => fn(ParseNode $n) => $o->setLastModifiedDateTime($n->getDateTimeValue()),
             'notificationChannelUrl' => fn(ParseNode $n) => $o->setNotificationChannelUrl($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'resources' => fn(ParseNode $n) => $o->setResources($n->getCollectionOfObjectValues([EducationAssignmentResource::class, 'createFromDiscriminatorValue'])),
             'resourcesFolderUrl' => fn(ParseNode $n) => $o->setResourcesFolderUrl($n->getStringValue()),
             'rubric' => fn(ParseNode $n) => $o->setRubric($n->getObjectValue([EducationRubric::class, 'createFromDiscriminatorValue'])),
@@ -307,6 +303,18 @@ class EducationAssignment extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'notificationChannelUrl'");
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -568,6 +576,14 @@ class EducationAssignment extends Entity implements Parsable
     */
     public function setNotificationChannelUrl(?string $value): void {
         $this->getBackingStore()->set('notificationChannelUrl', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

@@ -13,6 +13,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class IosLobApp extends MobileLobApp implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new iosLobApp and sets the default values.
     */
     public function __construct() {
@@ -128,6 +133,7 @@ class IosLobApp extends MobileLobApp implements Parsable
         $writer->writeStringValue('bundleId', $this->getBundleId());
         $writer->writeDateTimeValue('expirationDateTime', $this->getExpirationDateTime());
         $writer->writeObjectValue('minimumSupportedOperatingSystem', $this->getMinimumSupportedOperatingSystem());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('versionNumber', $this->getVersionNumber());
     }
 

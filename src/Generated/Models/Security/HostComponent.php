@@ -50,6 +50,7 @@ class HostComponent extends Artifact implements Parsable
             'host' => fn(ParseNode $n) => $o->setHost($n->getObjectValue([Host::class, 'createFromDiscriminatorValue'])),
             'lastSeenDateTime' => fn(ParseNode $n) => $o->setLastSeenDateTime($n->getDateTimeValue()),
             'name' => fn(ParseNode $n) => $o->setName($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'version' => fn(ParseNode $n) => $o->setVersion($n->getStringValue()),
         ]);
     }
@@ -103,6 +104,18 @@ class HostComponent extends Artifact implements Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
+    }
+
+    /**
      * Gets the version property value. The component version running on the artifact, for example, v8.5. This should not be assumed to be strictly numerical.
      * @return string|null
     */
@@ -125,6 +138,7 @@ class HostComponent extends Artifact implements Parsable
         $writer->writeObjectValue('host', $this->getHost());
         $writer->writeDateTimeValue('lastSeenDateTime', $this->getLastSeenDateTime());
         $writer->writeStringValue('name', $this->getName());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('version', $this->getVersion());
     }
 
@@ -166,6 +180,14 @@ class HostComponent extends Artifact implements Parsable
     */
     public function setName(?string $value): void {
         $this->getBackingStore()->set('name', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

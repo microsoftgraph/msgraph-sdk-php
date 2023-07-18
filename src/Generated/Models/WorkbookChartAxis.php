@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookChartAxis extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new workbookChartAxis and sets the default values.
     */
     public function __construct() {
@@ -43,6 +38,7 @@ class WorkbookChartAxis extends Entity implements Parsable
             'minimum' => fn(ParseNode $n) => $o->setMinimum($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
             'minorGridlines' => fn(ParseNode $n) => $o->setMinorGridlines($n->getObjectValue([WorkbookChartGridlines::class, 'createFromDiscriminatorValue'])),
             'minorUnit' => fn(ParseNode $n) => $o->setMinorUnit($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'title' => fn(ParseNode $n) => $o->setTitle($n->getObjectValue([WorkbookChartAxisTitle::class, 'createFromDiscriminatorValue'])),
         ]);
     }
@@ -132,6 +128,18 @@ class WorkbookChartAxis extends Entity implements Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
+    }
+
+    /**
      * Gets the title property value. Represents the axis title. Read-only.
      * @return WorkbookChartAxisTitle|null
     */
@@ -214,6 +222,14 @@ class WorkbookChartAxis extends Entity implements Parsable
     */
     public function setMinorUnit(?Json $value): void {
         $this->getBackingStore()->set('minorUnit', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

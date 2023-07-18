@@ -12,6 +12,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class MdmWindowsInformationProtectionPolicy extends WindowsInformationProtection implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new mdmWindowsInformationProtectionPolicy and sets the default values.
     */
     public function __construct() {
@@ -44,6 +49,7 @@ class MdmWindowsInformationProtectionPolicy extends WindowsInformationProtection
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
 }

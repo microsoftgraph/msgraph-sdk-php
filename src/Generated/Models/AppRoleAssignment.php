@@ -59,12 +59,25 @@ class AppRoleAssignment extends DirectoryObject implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'appRoleId' => fn(ParseNode $n) => $o->setAppRoleId($n->getStringValue()),
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'principalDisplayName' => fn(ParseNode $n) => $o->setPrincipalDisplayName($n->getStringValue()),
             'principalId' => fn(ParseNode $n) => $o->setPrincipalId($n->getStringValue()),
             'principalType' => fn(ParseNode $n) => $o->setPrincipalType($n->getStringValue()),
             'resourceDisplayName' => fn(ParseNode $n) => $o->setResourceDisplayName($n->getStringValue()),
             'resourceId' => fn(ParseNode $n) => $o->setResourceId($n->getStringValue()),
         ]);
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -135,6 +148,7 @@ class AppRoleAssignment extends DirectoryObject implements Parsable
         parent::serialize($writer);
         $writer->writeStringValue('appRoleId', $this->getAppRoleId());
         $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('principalDisplayName', $this->getPrincipalDisplayName());
         $writer->writeStringValue('principalId', $this->getPrincipalId());
         $writer->writeStringValue('principalType', $this->getPrincipalType());
@@ -156,6 +170,14 @@ class AppRoleAssignment extends DirectoryObject implements Parsable
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

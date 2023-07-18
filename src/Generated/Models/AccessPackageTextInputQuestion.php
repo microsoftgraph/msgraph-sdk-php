@@ -33,6 +33,7 @@ class AccessPackageTextInputQuestion extends AccessPackageQuestion implements Pa
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'isSingleLineQuestion' => fn(ParseNode $n) => $o->setIsSingleLineQuestion($n->getBooleanValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'regexPattern' => fn(ParseNode $n) => $o->setRegexPattern($n->getStringValue()),
         ]);
     }
@@ -47,6 +48,18 @@ class AccessPackageTextInputQuestion extends AccessPackageQuestion implements Pa
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'isSingleLineQuestion'");
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -68,6 +81,7 @@ class AccessPackageTextInputQuestion extends AccessPackageQuestion implements Pa
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeBooleanValue('isSingleLineQuestion', $this->getIsSingleLineQuestion());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('regexPattern', $this->getRegexPattern());
     }
 
@@ -77,6 +91,14 @@ class AccessPackageTextInputQuestion extends AccessPackageQuestion implements Pa
     */
     public function setIsSingleLineQuestion(?bool $value): void {
         $this->getBackingStore()->set('isSingleLineQuestion', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

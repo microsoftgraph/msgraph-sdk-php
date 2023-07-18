@@ -13,6 +13,11 @@ use Psr\Http\Message\StreamInterface;
 class MacOSCustomConfiguration extends DeviceConfiguration implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new macOSCustomConfiguration and sets the default values.
     */
     public function __construct() {
@@ -84,6 +89,7 @@ class MacOSCustomConfiguration extends DeviceConfiguration implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeBinaryContent('payload', $this->getPayload());
         $writer->writeStringValue('payloadFileName', $this->getPayloadFileName());
         $writer->writeStringValue('payloadName', $this->getPayloadName());

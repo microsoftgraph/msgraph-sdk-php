@@ -11,6 +11,11 @@ use Psr\Http\Message\StreamInterface;
 class DriveItem extends BaseItem implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new driveItem and sets the default values.
     */
     public function __construct() {
@@ -483,6 +488,7 @@ class DriveItem extends BaseItem implements Parsable
         $writer->writeObjectValue('listItem', $this->getListItem());
         $writer->writeObjectValue('location', $this->getLocation());
         $writer->writeObjectValue('malware', $this->getMalware());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('package', $this->getPackage());
         $writer->writeObjectValue('pendingOperations', $this->getPendingOperations());
         $writer->writeCollectionOfObjectValues('permissions', $this->getPermissions());

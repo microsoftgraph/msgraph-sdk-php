@@ -11,11 +11,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Schema extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new schema and sets the default values.
     */
     public function __construct() {
@@ -51,8 +46,21 @@ class Schema extends Entity implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'baseType' => fn(ParseNode $n) => $o->setBaseType($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'properties' => fn(ParseNode $n) => $o->setProperties($n->getCollectionOfObjectValues([Property::class, 'createFromDiscriminatorValue'])),
         ]);
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -86,6 +94,14 @@ class Schema extends Entity implements Parsable
     */
     public function setBaseType(?string $value): void {
         $this->getBackingStore()->set('baseType', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

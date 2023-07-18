@@ -12,6 +12,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfiguration implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new windowsDefenderAdvancedThreatProtectionConfiguration and sets the default values.
     */
     public function __construct() {
@@ -72,6 +77,7 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
         parent::serialize($writer);
         $writer->writeBooleanValue('allowSampleSharing', $this->getAllowSampleSharing());
         $writer->writeBooleanValue('enableExpeditedTelemetryReporting', $this->getEnableExpeditedTelemetryReporting());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

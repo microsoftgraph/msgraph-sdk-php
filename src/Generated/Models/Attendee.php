@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Attendee extends AttendeeBase implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new attendee and sets the default values.
     */
     public function __construct() {
@@ -72,7 +67,6 @@ class Attendee extends AttendeeBase implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('proposedNewTime', $this->getProposedNewTime());
         $writer->writeObjectValue('status', $this->getStatus());
     }

@@ -12,11 +12,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new windowsPhone81CompliancePolicy and sets the default values.
     */
     public function __construct() {
@@ -40,6 +35,7 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy implements P
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'osMaximumVersion' => fn(ParseNode $n) => $o->setOsMaximumVersion($n->getStringValue()),
             'osMinimumVersion' => fn(ParseNode $n) => $o->setOsMinimumVersion($n->getStringValue()),
             'passwordBlockSimple' => fn(ParseNode $n) => $o->setPasswordBlockSimple($n->getBooleanValue()),
@@ -52,6 +48,18 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy implements P
             'passwordRequiredType' => fn(ParseNode $n) => $o->setPasswordRequiredType($n->getEnumValue(RequiredPasswordType::class)),
             'storageRequireEncryption' => fn(ParseNode $n) => $o->setStorageRequireEncryption($n->getBooleanValue()),
         ]);
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -204,6 +212,14 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy implements P
         $writer->writeBooleanValue('passwordRequired', $this->getPasswordRequired());
         $writer->writeEnumValue('passwordRequiredType', $this->getPasswordRequiredType());
         $writer->writeBooleanValue('storageRequireEncryption', $this->getStorageRequireEncryption());
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

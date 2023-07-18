@@ -12,11 +12,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class LifecycleWorkflowsContainer extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new lifecycleWorkflowsContainer and sets the default values.
     */
     public function __construct() {
@@ -67,11 +62,24 @@ class LifecycleWorkflowsContainer extends Entity implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'customTaskExtensions' => fn(ParseNode $n) => $o->setCustomTaskExtensions($n->getCollectionOfObjectValues([CustomTaskExtension::class, 'createFromDiscriminatorValue'])),
             'deletedItems' => fn(ParseNode $n) => $o->setDeletedItems($n->getObjectValue([DeletedItemContainer::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'settings' => fn(ParseNode $n) => $o->setSettings($n->getObjectValue([LifecycleManagementSettings::class, 'createFromDiscriminatorValue'])),
             'taskDefinitions' => fn(ParseNode $n) => $o->setTaskDefinitions($n->getCollectionOfObjectValues([TaskDefinition::class, 'createFromDiscriminatorValue'])),
             'workflows' => fn(ParseNode $n) => $o->setWorkflows($n->getCollectionOfObjectValues([Workflow::class, 'createFromDiscriminatorValue'])),
             'workflowTemplates' => fn(ParseNode $n) => $o->setWorkflowTemplates($n->getCollectionOfObjectValues([WorkflowTemplate::class, 'createFromDiscriminatorValue'])),
         ]);
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -157,6 +165,14 @@ class LifecycleWorkflowsContainer extends Entity implements Parsable
     */
     public function setDeletedItems(?DeletedItemContainer $value): void {
         $this->getBackingStore()->set('deletedItems', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

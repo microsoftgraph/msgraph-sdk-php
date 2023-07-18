@@ -11,11 +11,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class AccessReviewInstance extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new accessReviewInstance and sets the default values.
     */
     public function __construct() {
@@ -96,12 +91,25 @@ class AccessReviewInstance extends Entity implements Parsable
             'decisions' => fn(ParseNode $n) => $o->setDecisions($n->getCollectionOfObjectValues([AccessReviewInstanceDecisionItem::class, 'createFromDiscriminatorValue'])),
             'endDateTime' => fn(ParseNode $n) => $o->setEndDateTime($n->getDateTimeValue()),
             'fallbackReviewers' => fn(ParseNode $n) => $o->setFallbackReviewers($n->getCollectionOfObjectValues([AccessReviewReviewerScope::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'reviewers' => fn(ParseNode $n) => $o->setReviewers($n->getCollectionOfObjectValues([AccessReviewReviewerScope::class, 'createFromDiscriminatorValue'])),
             'scope' => fn(ParseNode $n) => $o->setScope($n->getObjectValue([AccessReviewScope::class, 'createFromDiscriminatorValue'])),
             'stages' => fn(ParseNode $n) => $o->setStages($n->getCollectionOfObjectValues([AccessReviewStage::class, 'createFromDiscriminatorValue'])),
             'startDateTime' => fn(ParseNode $n) => $o->setStartDateTime($n->getDateTimeValue()),
             'status' => fn(ParseNode $n) => $o->setStatus($n->getStringValue()),
         ]);
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -216,6 +224,14 @@ class AccessReviewInstance extends Entity implements Parsable
     */
     public function setFallbackReviewers(?array $value): void {
         $this->getBackingStore()->set('fallbackReviewers', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

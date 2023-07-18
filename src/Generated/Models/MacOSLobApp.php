@@ -13,6 +13,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class MacOSLobApp extends MobileLobApp implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new macOSLobApp and sets the default values.
     */
     public function __construct() {
@@ -181,6 +186,7 @@ class MacOSLobApp extends MobileLobApp implements Parsable
         $writer->writeCollectionOfPrimitiveValues('md5Hash', $this->getMd5Hash());
         $writer->writeIntegerValue('md5HashChunkSize', $this->getMd5HashChunkSize());
         $writer->writeObjectValue('minimumSupportedOperatingSystem', $this->getMinimumSupportedOperatingSystem());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('versionNumber', $this->getVersionNumber());
     }
 

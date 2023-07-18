@@ -13,11 +13,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class DeviceComplianceActionItem extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new deviceComplianceActionItem and sets the default values.
     */
     public function __construct() {
@@ -63,6 +58,7 @@ class DeviceComplianceActionItem extends Entity implements Parsable
                 $this->setNotificationMessageCCList($val);
             },
             'notificationTemplateId' => fn(ParseNode $n) => $o->setNotificationTemplateId($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ]);
     }
 
@@ -102,6 +98,18 @@ class DeviceComplianceActionItem extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'notificationTemplateId'");
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -147,6 +155,14 @@ class DeviceComplianceActionItem extends Entity implements Parsable
     */
     public function setNotificationTemplateId(?string $value): void {
         $this->getBackingStore()->set('notificationTemplateId', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
 }

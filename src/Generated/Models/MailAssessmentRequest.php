@@ -46,6 +46,7 @@ class MailAssessmentRequest extends ThreatAssessmentRequest implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'destinationRoutingReason' => fn(ParseNode $n) => $o->setDestinationRoutingReason($n->getEnumValue(MailDestinationRoutingReason::class)),
             'messageUri' => fn(ParseNode $n) => $o->setMessageUri($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'recipientEmail' => fn(ParseNode $n) => $o->setRecipientEmail($n->getStringValue()),
         ]);
     }
@@ -60,6 +61,18 @@ class MailAssessmentRequest extends ThreatAssessmentRequest implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'messageUri'");
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -82,6 +95,7 @@ class MailAssessmentRequest extends ThreatAssessmentRequest implements Parsable
         parent::serialize($writer);
         $writer->writeEnumValue('destinationRoutingReason', $this->getDestinationRoutingReason());
         $writer->writeStringValue('messageUri', $this->getMessageUri());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('recipientEmail', $this->getRecipientEmail());
     }
 
@@ -99,6 +113,14 @@ class MailAssessmentRequest extends ThreatAssessmentRequest implements Parsable
     */
     public function setMessageUri(?string $value): void {
         $this->getBackingStore()->set('messageUri', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

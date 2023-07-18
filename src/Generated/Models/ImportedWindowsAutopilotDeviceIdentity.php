@@ -13,11 +13,6 @@ use Psr\Http\Message\StreamInterface;
 class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new importedWindowsAutopilotDeviceIdentity and sets the default values.
     */
     public function __construct() {
@@ -56,6 +51,7 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Parsable
             'groupTag' => fn(ParseNode $n) => $o->setGroupTag($n->getStringValue()),
             'hardwareIdentifier' => fn(ParseNode $n) => $o->setHardwareIdentifier($n->getBinaryContent()),
             'importId' => fn(ParseNode $n) => $o->setImportId($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'productKey' => fn(ParseNode $n) => $o->setProductKey($n->getStringValue()),
             'serialNumber' => fn(ParseNode $n) => $o->setSerialNumber($n->getStringValue()),
             'state' => fn(ParseNode $n) => $o->setState($n->getObjectValue([ImportedWindowsAutopilotDeviceIdentityState::class, 'createFromDiscriminatorValue'])),
@@ -96,6 +92,18 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'importId'");
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -180,6 +188,14 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Parsable
     */
     public function setImportId(?string $value): void {
         $this->getBackingStore()->set('importId', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

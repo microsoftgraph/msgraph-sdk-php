@@ -49,6 +49,7 @@ class AccessPackageMultipleChoiceQuestion extends AccessPackageQuestion implemen
         return array_merge(parent::getFieldDeserializers(), [
             'choices' => fn(ParseNode $n) => $o->setChoices($n->getCollectionOfObjectValues([AccessPackageAnswerChoice::class, 'createFromDiscriminatorValue'])),
             'isMultipleSelectionAllowed' => fn(ParseNode $n) => $o->setIsMultipleSelectionAllowed($n->getBooleanValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ]);
     }
 
@@ -65,6 +66,18 @@ class AccessPackageMultipleChoiceQuestion extends AccessPackageQuestion implemen
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -72,6 +85,7 @@ class AccessPackageMultipleChoiceQuestion extends AccessPackageQuestion implemen
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('choices', $this->getChoices());
         $writer->writeBooleanValue('isMultipleSelectionAllowed', $this->getIsMultipleSelectionAllowed());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**
@@ -88,6 +102,14 @@ class AccessPackageMultipleChoiceQuestion extends AccessPackageQuestion implemen
     */
     public function setIsMultipleSelectionAllowed(?bool $value): void {
         $this->getBackingStore()->set('isMultipleSelectionAllowed', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
 }

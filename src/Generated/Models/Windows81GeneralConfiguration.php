@@ -12,6 +12,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new windows81GeneralConfiguration and sets the default values.
     */
     public function __construct() {
@@ -493,6 +498,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
         $writer->writeEnumValue('browserTrustedSitesSecurityLevel', $this->getBrowserTrustedSitesSecurityLevel());
         $writer->writeBooleanValue('cellularBlockDataRoaming', $this->getCellularBlockDataRoaming());
         $writer->writeBooleanValue('diagnosticsBlockDataSubmission', $this->getDiagnosticsBlockDataSubmission());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeBooleanValue('passwordBlockPicturePasswordAndPin', $this->getPasswordBlockPicturePasswordAndPin());
         $writer->writeIntegerValue('passwordExpirationDays', $this->getPasswordExpirationDays());
         $writer->writeIntegerValue('passwordMinimumCharacterSetCount', $this->getPasswordMinimumCharacterSetCount());

@@ -9,6 +9,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ResourceSpecificPermissionGrant extends DirectoryObject implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new resourceSpecificPermissionGrant and sets the default values.
     */
     public function __construct() {
@@ -108,6 +113,7 @@ class ResourceSpecificPermissionGrant extends DirectoryObject implements Parsabl
         parent::serialize($writer);
         $writer->writeStringValue('clientAppId', $this->getClientAppId());
         $writer->writeStringValue('clientId', $this->getClientId());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('permission', $this->getPermission());
         $writer->writeStringValue('permissionType', $this->getPermissionType());
         $writer->writeStringValue('resourceAppId', $this->getResourceAppId());

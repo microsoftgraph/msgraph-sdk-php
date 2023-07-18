@@ -13,6 +13,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new iosGeneralDeviceConfiguration and sets the default values.
     */
     public function __construct() {
@@ -1883,6 +1888,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
         $writer->writeBooleanValue('messagesBlocked', $this->getMessagesBlocked());
         $writer->writeCollectionOfObjectValues('networkUsageRules', $this->getNetworkUsageRules());
         $writer->writeBooleanValue('notificationsBlockSettingsModification', $this->getNotificationsBlockSettingsModification());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeBooleanValue('passcodeBlockFingerprintModification', $this->getPasscodeBlockFingerprintModification());
         $writer->writeBooleanValue('passcodeBlockFingerprintUnlock', $this->getPasscodeBlockFingerprintUnlock());
         $writer->writeBooleanValue('passcodeBlockModification', $this->getPasscodeBlockModification());

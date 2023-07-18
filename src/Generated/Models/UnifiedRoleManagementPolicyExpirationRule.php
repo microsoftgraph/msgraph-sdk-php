@@ -10,6 +10,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManagementPolicyRule implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new unifiedRoleManagementPolicyExpirationRule and sets the default values.
     */
     public function __construct() {
@@ -70,6 +75,7 @@ class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManagementPol
         parent::serialize($writer);
         $writer->writeBooleanValue('isExpirationRequired', $this->getIsExpirationRequired());
         $writer->writeDateIntervalValue('maximumDuration', $this->getMaximumDuration());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

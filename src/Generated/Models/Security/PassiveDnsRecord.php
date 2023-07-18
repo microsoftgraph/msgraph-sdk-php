@@ -10,6 +10,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class PassiveDnsRecord extends Artifact implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new passiveDnsRecord and sets the default values.
     */
     public function __construct() {
@@ -124,6 +129,7 @@ class PassiveDnsRecord extends Artifact implements Parsable
         $writer->writeDateTimeValue('collectedDateTime', $this->getCollectedDateTime());
         $writer->writeDateTimeValue('firstSeenDateTime', $this->getFirstSeenDateTime());
         $writer->writeDateTimeValue('lastSeenDateTime', $this->getLastSeenDateTime());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('parentHost', $this->getParentHost());
         $writer->writeStringValue('recordType', $this->getRecordType());
     }

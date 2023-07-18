@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class IdentityProvider extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new identityProvider and sets the default values.
     */
     public function __construct() {
@@ -63,6 +58,7 @@ class IdentityProvider extends Entity implements Parsable
             'clientId' => fn(ParseNode $n) => $o->setClientId($n->getStringValue()),
             'clientSecret' => fn(ParseNode $n) => $o->setClientSecret($n->getStringValue()),
             'name' => fn(ParseNode $n) => $o->setName($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'type' => fn(ParseNode $n) => $o->setType($n->getStringValue()),
         ]);
     }
@@ -77,6 +73,18 @@ class IdentityProvider extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'name'");
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -126,6 +134,14 @@ class IdentityProvider extends Entity implements Parsable
     */
     public function setName(?string $value): void {
         $this->getBackingStore()->set('name', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class TemporaryAccessPassAuthenticationMethodConfiguration extends AuthenticationMethodConfiguration implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new temporaryAccessPassAuthenticationMethodConfiguration and sets the default values.
     */
     public function __construct() {
@@ -68,6 +63,7 @@ class TemporaryAccessPassAuthenticationMethodConfiguration extends Authenticatio
             'isUsableOnce' => fn(ParseNode $n) => $o->setIsUsableOnce($n->getBooleanValue()),
             'maximumLifetimeInMinutes' => fn(ParseNode $n) => $o->setMaximumLifetimeInMinutes($n->getIntegerValue()),
             'minimumLifetimeInMinutes' => fn(ParseNode $n) => $o->setMinimumLifetimeInMinutes($n->getIntegerValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ]);
     }
 
@@ -119,6 +115,18 @@ class TemporaryAccessPassAuthenticationMethodConfiguration extends Authenticatio
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'minimumLifetimeInMinutes'");
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -182,6 +190,14 @@ class TemporaryAccessPassAuthenticationMethodConfiguration extends Authenticatio
     */
     public function setMinimumLifetimeInMinutes(?int $value): void {
         $this->getBackingStore()->set('minimumLifetimeInMinutes', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
 }

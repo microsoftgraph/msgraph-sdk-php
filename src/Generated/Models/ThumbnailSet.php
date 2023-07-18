@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ThumbnailSet extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new thumbnailSet and sets the default values.
     */
     public function __construct() {
@@ -38,6 +33,7 @@ class ThumbnailSet extends Entity implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'large' => fn(ParseNode $n) => $o->setLarge($n->getObjectValue([Thumbnail::class, 'createFromDiscriminatorValue'])),
             'medium' => fn(ParseNode $n) => $o->setMedium($n->getObjectValue([Thumbnail::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'small' => fn(ParseNode $n) => $o->setSmall($n->getObjectValue([Thumbnail::class, 'createFromDiscriminatorValue'])),
             'source' => fn(ParseNode $n) => $o->setSource($n->getObjectValue([Thumbnail::class, 'createFromDiscriminatorValue'])),
         ]);
@@ -65,6 +61,18 @@ class ThumbnailSet extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'medium'");
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -118,6 +126,14 @@ class ThumbnailSet extends Entity implements Parsable
     */
     public function setMedium(?Thumbnail $value): void {
         $this->getBackingStore()->set('medium', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

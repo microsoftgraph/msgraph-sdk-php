@@ -14,6 +14,11 @@ use Microsoft\Kiota\Abstractions\Types\Date;
 class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new windowsUpdateForBusinessConfiguration and sets the default values.
     */
     public function __construct() {
@@ -534,6 +539,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
         $writer->writeBooleanValue('featureUpdatesWillBeRolledBack', $this->getFeatureUpdatesWillBeRolledBack());
         $writer->writeObjectValue('installationSchedule', $this->getInstallationSchedule());
         $writer->writeBooleanValue('microsoftUpdateServiceAllowed', $this->getMicrosoftUpdateServiceAllowed());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeBooleanValue('postponeRebootUntilAfterDeadline', $this->getPostponeRebootUntilAfterDeadline());
         $writer->writeEnumValue('prereleaseFeatures', $this->getPrereleaseFeatures());
         $writer->writeIntegerValue('qualityUpdatesDeferralPeriodInDays', $this->getQualityUpdatesDeferralPeriodInDays());

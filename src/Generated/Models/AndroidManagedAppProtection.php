@@ -13,6 +13,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class AndroidManagedAppProtection extends TargetedManagedAppProtection implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new androidManagedAppProtection and sets the default values.
     */
     public function __construct() {
@@ -186,6 +191,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection implement
         $writer->writeBooleanValue('encryptAppData', $this->getEncryptAppData());
         $writer->writeStringValue('minimumRequiredPatchVersion', $this->getMinimumRequiredPatchVersion());
         $writer->writeStringValue('minimumWarningPatchVersion', $this->getMinimumWarningPatchVersion());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeBooleanValue('screenCaptureBlocked', $this->getScreenCaptureBlocked());
     }
 

@@ -12,11 +12,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WebApp extends MobileApp implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new webApp and sets the default values.
     */
     public function __construct() {
@@ -53,8 +48,21 @@ class WebApp extends MobileApp implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'appUrl' => fn(ParseNode $n) => $o->setAppUrl($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'useManagedBrowser' => fn(ParseNode $n) => $o->setUseManagedBrowser($n->getBooleanValue()),
         ]);
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -86,6 +94,14 @@ class WebApp extends MobileApp implements Parsable
     */
     public function setAppUrl(?string $value): void {
         $this->getBackingStore()->set('appUrl', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

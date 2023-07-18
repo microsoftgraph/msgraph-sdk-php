@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class CalendarPermission extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new calendarPermission and sets the default values.
     */
     public function __construct() {
@@ -67,6 +62,7 @@ class CalendarPermission extends Entity implements Parsable
             'emailAddress' => fn(ParseNode $n) => $o->setEmailAddress($n->getObjectValue([EmailAddress::class, 'createFromDiscriminatorValue'])),
             'isInsideOrganization' => fn(ParseNode $n) => $o->setIsInsideOrganization($n->getBooleanValue()),
             'isRemovable' => fn(ParseNode $n) => $o->setIsRemovable($n->getBooleanValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'role' => fn(ParseNode $n) => $o->setRole($n->getEnumValue(CalendarRoleType::class)),
         ]);
     }
@@ -93,6 +89,18 @@ class CalendarPermission extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'isRemovable'");
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -151,6 +159,14 @@ class CalendarPermission extends Entity implements Parsable
     */
     public function setIsRemovable(?bool $value): void {
         $this->getBackingStore()->set('isRemovable', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

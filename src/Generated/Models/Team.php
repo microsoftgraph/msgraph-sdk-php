@@ -11,11 +11,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Team extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new team and sets the default values.
     */
     public function __construct() {
@@ -130,6 +125,7 @@ class Team extends Entity implements Parsable
             'members' => fn(ParseNode $n) => $o->setMembers($n->getCollectionOfObjectValues([ConversationMember::class, 'createFromDiscriminatorValue'])),
             'memberSettings' => fn(ParseNode $n) => $o->setMemberSettings($n->getObjectValue([TeamMemberSettings::class, 'createFromDiscriminatorValue'])),
             'messagingSettings' => fn(ParseNode $n) => $o->setMessagingSettings($n->getObjectValue([TeamMessagingSettings::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'operations' => fn(ParseNode $n) => $o->setOperations($n->getCollectionOfObjectValues([TeamsAsyncOperation::class, 'createFromDiscriminatorValue'])),
             'photo' => fn(ParseNode $n) => $o->setPhoto($n->getObjectValue([ProfilePhoto::class, 'createFromDiscriminatorValue'])),
             'primaryChannel' => fn(ParseNode $n) => $o->setPrimaryChannel($n->getObjectValue([Channel::class, 'createFromDiscriminatorValue'])),
@@ -268,6 +264,18 @@ class Team extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'messagingSettings'");
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -568,6 +576,14 @@ class Team extends Entity implements Parsable
     */
     public function setMessagingSettings(?TeamMessagingSettings $value): void {
         $this->getBackingStore()->set('messagingSettings', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

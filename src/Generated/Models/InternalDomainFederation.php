@@ -9,6 +9,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class InternalDomainFederation extends SamlOrWsFedProvider implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new internalDomainFederation and sets the default values.
     */
     public function __construct() {
@@ -136,6 +141,7 @@ class InternalDomainFederation extends SamlOrWsFedProvider implements Parsable
         $writer->writeEnumValue('federatedIdpMfaBehavior', $this->getFederatedIdpMfaBehavior());
         $writer->writeBooleanValue('isSignedAuthenticationRequestRequired', $this->getIsSignedAuthenticationRequestRequired());
         $writer->writeStringValue('nextSigningCertificate', $this->getNextSigningCertificate());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeEnumValue('promptLoginBehavior', $this->getPromptLoginBehavior());
         $writer->writeObjectValue('signingCertificateUpdateStatus', $this->getSigningCertificateUpdateStatus());
         $writer->writeStringValue('signOutUri', $this->getSignOutUri());

@@ -11,11 +11,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class ChatMessage extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new chatMessage and sets the default values.
     */
     public function __construct() {
@@ -153,6 +148,7 @@ class ChatMessage extends Entity implements Parsable
             'mentions' => fn(ParseNode $n) => $o->setMentions($n->getCollectionOfObjectValues([ChatMessageMention::class, 'createFromDiscriminatorValue'])),
             'messageHistory' => fn(ParseNode $n) => $o->setMessageHistory($n->getCollectionOfObjectValues([ChatMessageHistoryItem::class, 'createFromDiscriminatorValue'])),
             'messageType' => fn(ParseNode $n) => $o->setMessageType($n->getEnumValue(ChatMessageType::class)),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'policyViolation' => fn(ParseNode $n) => $o->setPolicyViolation($n->getObjectValue([ChatMessagePolicyViolation::class, 'createFromDiscriminatorValue'])),
             'reactions' => fn(ParseNode $n) => $o->setReactions($n->getCollectionOfObjectValues([ChatMessageReaction::class, 'createFromDiscriminatorValue'])),
             'replies' => fn(ParseNode $n) => $o->setReplies($n->getCollectionOfObjectValues([ChatMessage::class, 'createFromDiscriminatorValue'])),
@@ -275,6 +271,18 @@ class ChatMessage extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'messageType'");
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -532,6 +540,14 @@ class ChatMessage extends Entity implements Parsable
     */
     public function setMessageType(?ChatMessageType $value): void {
         $this->getBackingStore()->set('messageType', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

@@ -12,11 +12,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class CustomTaskExtensionCallbackConfiguration extends CustomExtensionCallbackConfiguration implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new customTaskExtensionCallbackConfiguration and sets the default values.
     */
     public function __construct() {
@@ -55,7 +50,20 @@ class CustomTaskExtensionCallbackConfiguration extends CustomExtensionCallbackCo
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'authorizedApps' => fn(ParseNode $n) => $o->setAuthorizedApps($n->getCollectionOfObjectValues([Application::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ]);
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -74,6 +82,14 @@ class CustomTaskExtensionCallbackConfiguration extends CustomExtensionCallbackCo
     */
     public function setAuthorizedApps(?array $value): void {
         $this->getBackingStore()->set('authorizedApps', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
 }

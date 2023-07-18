@@ -128,6 +128,7 @@ class EducationSchool extends EducationOrganization implements Parsable
             'fax' => fn(ParseNode $n) => $o->setFax($n->getStringValue()),
             'highestGrade' => fn(ParseNode $n) => $o->setHighestGrade($n->getStringValue()),
             'lowestGrade' => fn(ParseNode $n) => $o->setLowestGrade($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'phone' => fn(ParseNode $n) => $o->setPhone($n->getStringValue()),
             'principalEmail' => fn(ParseNode $n) => $o->setPrincipalEmail($n->getStringValue()),
             'principalName' => fn(ParseNode $n) => $o->setPrincipalName($n->getStringValue()),
@@ -158,6 +159,18 @@ class EducationSchool extends EducationOrganization implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'lowestGrade'");
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -237,6 +250,7 @@ class EducationSchool extends EducationOrganization implements Parsable
         $writer->writeStringValue('fax', $this->getFax());
         $writer->writeStringValue('highestGrade', $this->getHighestGrade());
         $writer->writeStringValue('lowestGrade', $this->getLowestGrade());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('phone', $this->getPhone());
         $writer->writeStringValue('principalEmail', $this->getPrincipalEmail());
         $writer->writeStringValue('principalName', $this->getPrincipalName());
@@ -314,6 +328,14 @@ class EducationSchool extends EducationOrganization implements Parsable
     */
     public function setLowestGrade(?string $value): void {
         $this->getBackingStore()->set('lowestGrade', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

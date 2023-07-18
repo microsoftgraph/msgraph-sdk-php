@@ -11,11 +11,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class CustomTaskExtensionCalloutData extends CustomExtensionData implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new customTaskExtensionCalloutData and sets the default values.
     */
     public function __construct() {
@@ -39,11 +34,24 @@ class CustomTaskExtensionCalloutData extends CustomExtensionData implements Pars
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'subject' => fn(ParseNode $n) => $o->setSubject($n->getObjectValue([User::class, 'createFromDiscriminatorValue'])),
             'task' => fn(ParseNode $n) => $o->setTask($n->getObjectValue([Task::class, 'createFromDiscriminatorValue'])),
             'taskProcessingresult' => fn(ParseNode $n) => $o->setTaskProcessingresult($n->getObjectValue([TaskProcessingResult::class, 'createFromDiscriminatorValue'])),
             'workflow' => fn(ParseNode $n) => $o->setWorkflow($n->getObjectValue([Workflow::class, 'createFromDiscriminatorValue'])),
         ]);
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -105,6 +113,14 @@ class CustomTaskExtensionCalloutData extends CustomExtensionData implements Pars
         $writer->writeObjectValue('task', $this->getTask());
         $writer->writeObjectValue('taskProcessingresult', $this->getTaskProcessingresult());
         $writer->writeObjectValue('workflow', $this->getWorkflow());
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

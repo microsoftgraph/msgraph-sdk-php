@@ -10,6 +10,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new serviceHealthIssue and sets the default values.
     */
     public function __construct() {
@@ -166,6 +171,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable
         $writer->writeStringValue('featureGroup', $this->getFeatureGroup());
         $writer->writeStringValue('impactDescription', $this->getImpactDescription());
         $writer->writeBooleanValue('isResolved', $this->getIsResolved());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeEnumValue('origin', $this->getOrigin());
         $writer->writeCollectionOfObjectValues('posts', $this->getPosts());
         $writer->writeStringValue('service', $this->getService());

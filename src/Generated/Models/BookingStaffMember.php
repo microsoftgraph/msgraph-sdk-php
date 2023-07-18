@@ -13,6 +13,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class BookingStaffMember extends BookingStaffMemberBase implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new bookingStaffMember and sets the default values.
     */
     public function __construct() {
@@ -155,6 +160,7 @@ class BookingStaffMember extends BookingStaffMemberBase implements Parsable
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeStringValue('emailAddress', $this->getEmailAddress());
         $writer->writeBooleanValue('isEmailNotificationEnabled', $this->getIsEmailNotificationEnabled());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeEnumValue('role', $this->getRole());
         $writer->writeStringValue('timeZone', $this->getTimeZone());
         $writer->writeBooleanValue('useBusinessHours', $this->getUseBusinessHours());

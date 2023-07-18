@@ -44,6 +44,7 @@ class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementP
                 $this->setNotificationRecipients($val);
             },
             'notificationType' => fn(ParseNode $n) => $o->setNotificationType($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'recipientType' => fn(ParseNode $n) => $o->setRecipientType($n->getStringValue()),
         ]);
     }
@@ -99,6 +100,18 @@ class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementP
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
+    }
+
+    /**
      * Gets the recipientType property value. The type of recipient of the notification. The possible values are Requestor, Approver, Admin.
      * @return string|null
     */
@@ -120,6 +133,7 @@ class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementP
         $writer->writeStringValue('notificationLevel', $this->getNotificationLevel());
         $writer->writeCollectionOfPrimitiveValues('notificationRecipients', $this->getNotificationRecipients());
         $writer->writeStringValue('notificationType', $this->getNotificationType());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('recipientType', $this->getRecipientType());
     }
 
@@ -153,6 +167,14 @@ class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementP
     */
     public function setNotificationType(?string $value): void {
         $this->getBackingStore()->set('notificationType', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

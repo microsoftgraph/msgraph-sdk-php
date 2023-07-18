@@ -72,6 +72,7 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
             'assignmentType' => fn(ParseNode $n) => $o->setAssignmentType($n->getStringValue()),
             'endDateTime' => fn(ParseNode $n) => $o->setEndDateTime($n->getDateTimeValue()),
             'memberType' => fn(ParseNode $n) => $o->setMemberType($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'roleAssignmentOriginId' => fn(ParseNode $n) => $o->setRoleAssignmentOriginId($n->getStringValue()),
             'roleAssignmentScheduleId' => fn(ParseNode $n) => $o->setRoleAssignmentScheduleId($n->getStringValue()),
             'startDateTime' => fn(ParseNode $n) => $o->setStartDateTime($n->getDateTimeValue()),
@@ -88,6 +89,18 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'memberType'");
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -136,6 +149,7 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
         $writer->writeStringValue('assignmentType', $this->getAssignmentType());
         $writer->writeDateTimeValue('endDateTime', $this->getEndDateTime());
         $writer->writeStringValue('memberType', $this->getMemberType());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('roleAssignmentOriginId', $this->getRoleAssignmentOriginId());
         $writer->writeStringValue('roleAssignmentScheduleId', $this->getRoleAssignmentScheduleId());
         $writer->writeDateTimeValue('startDateTime', $this->getStartDateTime());
@@ -171,6 +185,14 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
     */
     public function setMemberType(?string $value): void {
         $this->getBackingStore()->set('memberType', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

@@ -11,11 +11,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class ProvisioningObjectSummary extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new provisioningObjectSummary and sets the default values.
     */
     public function __construct() {
@@ -93,6 +88,7 @@ class ProvisioningObjectSummary extends Entity implements Parsable
             'initiatedBy' => fn(ParseNode $n) => $o->setInitiatedBy($n->getObjectValue([Initiator::class, 'createFromDiscriminatorValue'])),
             'jobId' => fn(ParseNode $n) => $o->setJobId($n->getStringValue()),
             'modifiedProperties' => fn(ParseNode $n) => $o->setModifiedProperties($n->getCollectionOfObjectValues([ModifiedProperty::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'provisioningAction' => fn(ParseNode $n) => $o->setProvisioningAction($n->getEnumValue(ProvisioningAction::class)),
             'provisioningStatusInfo' => fn(ParseNode $n) => $o->setProvisioningStatusInfo($n->getObjectValue([ProvisioningStatusInfo::class, 'createFromDiscriminatorValue'])),
             'provisioningSteps' => fn(ParseNode $n) => $o->setProvisioningSteps($n->getCollectionOfObjectValues([ProvisioningStep::class, 'createFromDiscriminatorValue'])),
@@ -141,6 +137,18 @@ class ProvisioningObjectSummary extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'modifiedProperties'");
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -332,6 +340,14 @@ class ProvisioningObjectSummary extends Entity implements Parsable
     */
     public function setModifiedProperties(?array $value): void {
         $this->getBackingStore()->set('modifiedProperties', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

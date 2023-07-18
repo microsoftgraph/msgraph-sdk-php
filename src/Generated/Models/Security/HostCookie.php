@@ -10,6 +10,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class HostCookie extends Artifact implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new hostCookie and sets the default values.
     */
     public function __construct() {
@@ -112,6 +117,7 @@ class HostCookie extends Artifact implements Parsable
         $writer->writeObjectValue('host', $this->getHost());
         $writer->writeDateTimeValue('lastSeenDateTime', $this->getLastSeenDateTime());
         $writer->writeStringValue('name', $this->getName());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

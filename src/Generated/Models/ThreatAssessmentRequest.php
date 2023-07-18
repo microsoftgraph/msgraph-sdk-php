@@ -11,11 +11,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class ThreatAssessmentRequest extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new threatAssessmentRequest and sets the default values.
     */
     public function __construct() {
@@ -113,10 +108,23 @@ class ThreatAssessmentRequest extends Entity implements Parsable
             'createdBy' => fn(ParseNode $n) => $o->setCreatedBy($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'expectedAssessment' => fn(ParseNode $n) => $o->setExpectedAssessment($n->getEnumValue(ThreatExpectedAssessment::class)),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'requestSource' => fn(ParseNode $n) => $o->setRequestSource($n->getEnumValue(ThreatAssessmentRequestSource::class)),
             'results' => fn(ParseNode $n) => $o->setResults($n->getCollectionOfObjectValues([ThreatAssessmentResult::class, 'createFromDiscriminatorValue'])),
             'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(ThreatAssessmentStatus::class)),
         ]);
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -212,6 +220,14 @@ class ThreatAssessmentRequest extends Entity implements Parsable
     */
     public function setExpectedAssessment(?ThreatExpectedAssessment $value): void {
         $this->getBackingStore()->set('expectedAssessment', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

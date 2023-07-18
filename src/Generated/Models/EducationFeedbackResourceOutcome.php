@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EducationFeedbackResourceOutcome extends EducationOutcome implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new educationFeedbackResourceOutcome and sets the default values.
     */
     public function __construct() {
@@ -50,8 +45,21 @@ class EducationFeedbackResourceOutcome extends EducationOutcome implements Parsa
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'feedbackResource' => fn(ParseNode $n) => $o->setFeedbackResource($n->getObjectValue([EducationResource::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'resourceStatus' => fn(ParseNode $n) => $o->setResourceStatus($n->getEnumValue(EducationFeedbackResourceOutcomeStatus::class)),
         ]);
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -83,6 +91,14 @@ class EducationFeedbackResourceOutcome extends EducationOutcome implements Parsa
     */
     public function setFeedbackResource(?EducationResource $value): void {
         $this->getBackingStore()->set('feedbackResource', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

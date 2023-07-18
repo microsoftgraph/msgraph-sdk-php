@@ -11,11 +11,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ExternalActivity extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new externalActivity and sets the default values.
     */
     public function __construct() {
@@ -45,10 +40,23 @@ class ExternalActivity extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'performedBy' => fn(ParseNode $n) => $o->setPerformedBy($n->getObjectValue([Identity::class, 'createFromDiscriminatorValue'])),
             'startDateTime' => fn(ParseNode $n) => $o->setStartDateTime($n->getDateTimeValue()),
             'type' => fn(ParseNode $n) => $o->setType($n->getEnumValue(ExternalActivityType::class)),
         ]);
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -97,6 +105,14 @@ class ExternalActivity extends Entity implements Parsable
         $writer->writeObjectValue('performedBy', $this->getPerformedBy());
         $writer->writeDateTimeValue('startDateTime', $this->getStartDateTime());
         $writer->writeEnumValue('type', $this->getType());
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

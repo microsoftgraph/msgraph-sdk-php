@@ -10,6 +10,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class EdiscoveryExportOperation extends CaseOperation implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new ediscoveryExportOperation and sets the default values.
     */
     public function __construct() {
@@ -138,6 +143,7 @@ class EdiscoveryExportOperation extends CaseOperation implements Parsable
         $writer->writeCollectionOfObjectValues('exportFileMetadata', $this->getExportFileMetadata());
         $writer->writeEnumValue('exportOptions', $this->getExportOptions());
         $writer->writeEnumValue('exportStructure', $this->getExportStructure());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('outputName', $this->getOutputName());
         $writer->writeObjectValue('reviewSet', $this->getReviewSet());
         $writer->writeObjectValue('reviewSetQuery', $this->getReviewSetQuery());

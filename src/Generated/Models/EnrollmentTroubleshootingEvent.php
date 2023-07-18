@@ -12,6 +12,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshootingEvent implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new enrollmentTroubleshootingEvent and sets the default values.
     */
     public function __construct() {
@@ -152,6 +157,7 @@ class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshootingEven
         $writer->writeEnumValue('failureCategory', $this->getFailureCategory());
         $writer->writeStringValue('failureReason', $this->getFailureReason());
         $writer->writeStringValue('managedDeviceIdentifier', $this->getManagedDeviceIdentifier());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('operatingSystem', $this->getOperatingSystem());
         $writer->writeStringValue('osVersion', $this->getOsVersion());
         $writer->writeStringValue('userId', $this->getUserId());

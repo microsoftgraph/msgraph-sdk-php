@@ -9,6 +9,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ConnectedOrganizationMembers extends SubjectSet implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new connectedOrganizationMembers and sets the default values.
     */
     public function __construct() {
@@ -58,20 +63,7 @@ class ConnectedOrganizationMembers extends SubjectSet implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'connectedOrganizationId' => fn(ParseNode $n) => $o->setConnectedOrganizationId($n->getStringValue()),
             'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
-            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ]);
-    }
-
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return string|null
-    */
-    public function getOdataType(): ?string {
-        $val = $this->getBackingStore()->get('odataType');
-        if (is_null($val) || is_string($val)) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -99,14 +91,6 @@ class ConnectedOrganizationMembers extends SubjectSet implements Parsable
     */
     public function setDescription(?string $value): void {
         $this->getBackingStore()->set('description', $value);
-    }
-
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param string|null $value Value to set for the OdataType property.
-    */
-    public function setOdataType(?string $value): void {
-        $this->getBackingStore()->set('odataType', $value);
     }
 
 }

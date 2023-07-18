@@ -14,6 +14,11 @@ use Psr\Http\Message\StreamInterface;
 class Windows10EndpointProtectionConfiguration extends DeviceConfiguration implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new windows10EndpointProtectionConfiguration and sets the default values.
     */
     public function __construct() {
@@ -575,6 +580,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration imple
         $writer->writeObjectValue('firewallProfileDomain', $this->getFirewallProfileDomain());
         $writer->writeObjectValue('firewallProfilePrivate', $this->getFirewallProfilePrivate());
         $writer->writeObjectValue('firewallProfilePublic', $this->getFirewallProfilePublic());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeBooleanValue('smartScreenBlockOverrideForFiles', $this->getSmartScreenBlockOverrideForFiles());
         $writer->writeBooleanValue('smartScreenEnableInShell', $this->getSmartScreenEnableInShell());
     }

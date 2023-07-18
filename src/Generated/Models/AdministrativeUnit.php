@@ -10,6 +10,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class AdministrativeUnit extends DirectoryObject implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new administrativeUnit and sets the default values.
     */
     public function __construct() {
@@ -130,6 +135,7 @@ class AdministrativeUnit extends DirectoryObject implements Parsable
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeCollectionOfObjectValues('extensions', $this->getExtensions());
         $writer->writeCollectionOfObjectValues('members', $this->getMembers());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfObjectValues('scopedRoleMembers', $this->getScopedRoleMembers());
         $writer->writeStringValue('visibility', $this->getVisibility());
     }

@@ -7,7 +7,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 /**
- * Device action result
+ * Lock action result with a pin to unlock
 */
 class RemoteLockActionResult extends DeviceActionResult implements Parsable 
 {

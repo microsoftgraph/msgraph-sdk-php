@@ -9,6 +9,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Endpoint extends DirectoryObject implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new endpoint and sets the default values.
     */
     public function __construct() {
@@ -107,6 +112,7 @@ class Endpoint extends DirectoryObject implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeStringValue('capability', $this->getCapability());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('providerId', $this->getProviderId());
         $writer->writeStringValue('providerName', $this->getProviderName());
         $writer->writeStringValue('providerResourceId', $this->getProviderResourceId());

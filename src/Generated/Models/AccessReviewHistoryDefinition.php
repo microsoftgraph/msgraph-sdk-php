@@ -11,6 +11,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class AccessReviewHistoryDefinition extends Entity implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new accessReviewHistoryDefinition and sets the default values.
     */
     public function __construct() {
@@ -88,7 +93,6 @@ class AccessReviewHistoryDefinition extends Entity implements Parsable
             'decisions' => fn(ParseNode $n) => $o->setDecisions($n->getCollectionOfEnumValues(AccessReviewHistoryDecisionFilter::class)),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'instances' => fn(ParseNode $n) => $o->setInstances($n->getCollectionOfObjectValues([AccessReviewHistoryInstance::class, 'createFromDiscriminatorValue'])),
-            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'reviewHistoryPeriodEndDateTime' => fn(ParseNode $n) => $o->setReviewHistoryPeriodEndDateTime($n->getDateTimeValue()),
             'reviewHistoryPeriodStartDateTime' => fn(ParseNode $n) => $o->setReviewHistoryPeriodStartDateTime($n->getDateTimeValue()),
             'scheduleSettings' => fn(ParseNode $n) => $o->setScheduleSettings($n->getObjectValue([AccessReviewHistoryScheduleSettings::class, 'createFromDiscriminatorValue'])),
@@ -109,18 +113,6 @@ class AccessReviewHistoryDefinition extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'instances'");
-    }
-
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return string|null
-    */
-    public function getOdataType(): ?string {
-        $val = $this->getBackingStore()->get('odataType');
-        if (is_null($val) || is_string($val)) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -242,14 +234,6 @@ class AccessReviewHistoryDefinition extends Entity implements Parsable
     */
     public function setInstances(?array $value): void {
         $this->getBackingStore()->set('instances', $value);
-    }
-
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param string|null $value Value to set for the OdataType property.
-    */
-    public function setOdataType(?string $value): void {
-        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

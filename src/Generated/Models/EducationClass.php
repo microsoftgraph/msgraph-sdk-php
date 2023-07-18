@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class EducationClass extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new educationClass and sets the default values.
     */
     public function __construct() {
@@ -214,6 +209,7 @@ class EducationClass extends Entity implements Parsable
             'group' => fn(ParseNode $n) => $o->setGroup($n->getObjectValue([Group::class, 'createFromDiscriminatorValue'])),
             'mailNickname' => fn(ParseNode $n) => $o->setMailNickname($n->getStringValue()),
             'members' => fn(ParseNode $n) => $o->setMembers($n->getCollectionOfObjectValues([EducationUser::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'schools' => fn(ParseNode $n) => $o->setSchools($n->getCollectionOfObjectValues([EducationSchool::class, 'createFromDiscriminatorValue'])),
             'teachers' => fn(ParseNode $n) => $o->setTeachers($n->getCollectionOfObjectValues([EducationUser::class, 'createFromDiscriminatorValue'])),
             'term' => fn(ParseNode $n) => $o->setTerm($n->getObjectValue([EducationTerm::class, 'createFromDiscriminatorValue'])),
@@ -268,6 +264,18 @@ class EducationClass extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'members'");
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -473,6 +481,14 @@ class EducationClass extends Entity implements Parsable
     */
     public function setMembers(?array $value): void {
         $this->getBackingStore()->set('members', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

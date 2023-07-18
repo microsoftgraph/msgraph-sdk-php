@@ -12,6 +12,11 @@ use Psr\Http\Message\StreamInterface;
 class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new serviceUpdateMessage and sets the default values.
     */
     public function __construct() {
@@ -214,6 +219,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable
         $writer->writeEnumValue('category', $this->getCategory());
         $writer->writeBooleanValue('hasAttachments', $this->getHasAttachments());
         $writer->writeBooleanValue('isMajorChange', $this->getIsMajorChange());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfPrimitiveValues('services', $this->getServices());
         $writer->writeEnumValue('severity', $this->getSeverity());
         $writer->writeCollectionOfPrimitiveValues('tags', $this->getTags());

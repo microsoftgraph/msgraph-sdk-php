@@ -13,11 +13,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TermsAndConditionsAcceptanceStatus extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new termsAndConditionsAcceptanceStatus and sets the default values.
     */
     public function __construct() {
@@ -66,10 +61,23 @@ class TermsAndConditionsAcceptanceStatus extends Entity implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'acceptedDateTime' => fn(ParseNode $n) => $o->setAcceptedDateTime($n->getDateTimeValue()),
             'acceptedVersion' => fn(ParseNode $n) => $o->setAcceptedVersion($n->getIntegerValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'termsAndConditions' => fn(ParseNode $n) => $o->setTermsAndConditions($n->getObjectValue([TermsAndConditions::class, 'createFromDiscriminatorValue'])),
             'userDisplayName' => fn(ParseNode $n) => $o->setUserDisplayName($n->getStringValue()),
             'userPrincipalName' => fn(ParseNode $n) => $o->setUserPrincipalName($n->getStringValue()),
         ]);
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -136,6 +144,14 @@ class TermsAndConditionsAcceptanceStatus extends Entity implements Parsable
     */
     public function setAcceptedVersion(?int $value): void {
         $this->getBackingStore()->set('acceptedVersion', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

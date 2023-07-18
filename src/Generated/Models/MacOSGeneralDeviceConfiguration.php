@@ -13,6 +13,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class MacOSGeneralDeviceConfiguration extends DeviceConfiguration implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new macOSGeneralDeviceConfiguration and sets the default values.
     */
     public function __construct() {
@@ -215,6 +220,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration implements Par
         $writer->writeEnumValue('compliantAppListType', $this->getCompliantAppListType());
         $writer->writeCollectionOfObjectValues('compliantAppsList', $this->getCompliantAppsList());
         $writer->writeCollectionOfPrimitiveValues('emailInDomainSuffixes', $this->getEmailInDomainSuffixes());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeBooleanValue('passwordBlockSimple', $this->getPasswordBlockSimple());
         $writer->writeIntegerValue('passwordExpirationDays', $this->getPasswordExpirationDays());
         $writer->writeIntegerValue('passwordMinimumCharacterSetCount', $this->getPasswordMinimumCharacterSetCount());

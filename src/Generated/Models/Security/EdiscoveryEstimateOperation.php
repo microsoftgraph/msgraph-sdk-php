@@ -9,6 +9,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EdiscoveryEstimateOperation extends CaseOperation implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new ediscoveryEstimateOperation and sets the default values.
     */
     public function __construct() {
@@ -134,6 +139,7 @@ class EdiscoveryEstimateOperation extends CaseOperation implements Parsable
         $writer->writeIntegerValue('indexedItemCount', $this->getIndexedItemCount());
         $writer->writeIntegerValue('indexedItemsSize', $this->getIndexedItemsSize());
         $writer->writeIntegerValue('mailboxCount', $this->getMailboxCount());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('search', $this->getSearch());
         $writer->writeIntegerValue('siteCount', $this->getSiteCount());
         $writer->writeIntegerValue('unindexedItemCount', $this->getUnindexedItemCount());

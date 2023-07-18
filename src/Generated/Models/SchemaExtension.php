@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class SchemaExtension extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new schemaExtension and sets the default values.
     */
     public function __construct() {
@@ -50,6 +45,7 @@ class SchemaExtension extends Entity implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'owner' => fn(ParseNode $n) => $o->setOwner($n->getStringValue()),
             'properties' => fn(ParseNode $n) => $o->setProperties($n->getCollectionOfObjectValues([ExtensionSchemaProperty::class, 'createFromDiscriminatorValue'])),
             'status' => fn(ParseNode $n) => $o->setStatus($n->getStringValue()),
@@ -62,6 +58,18 @@ class SchemaExtension extends Entity implements Parsable
                 $this->setTargetTypes($val);
             },
         ]);
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -136,6 +144,14 @@ class SchemaExtension extends Entity implements Parsable
     */
     public function setDescription(?string $value): void {
         $this->getBackingStore()->set('description', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

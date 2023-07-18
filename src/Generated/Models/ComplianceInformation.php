@@ -57,7 +57,7 @@ class ComplianceInformation implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the certificationControls property value. Collection of the certification controls associated with certification
+     * Gets the certificationControls property value. Collection of the certification controls associated with the certification.
      * @return array<CertificationControl>|null
     */
     public function getCertificationControls(): ?array {
@@ -71,7 +71,7 @@ class ComplianceInformation implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the certificationName property value. Compliance certification name (for example, ISO 27018:2014, GDPR, FedRAMP, NIST 800-171)
+     * Gets the certificationName property value. The name of the compliance certification, for example, ISO 27018:2014, GDPR, FedRAMP, and NIST 800-171.
      * @return string|null
     */
     public function getCertificationName(): ?string {
@@ -135,7 +135,7 @@ class ComplianceInformation implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the certificationControls property value. Collection of the certification controls associated with certification
+     * Sets the certificationControls property value. Collection of the certification controls associated with the certification.
      * @param array<CertificationControl>|null $value Value to set for the certificationControls property.
     */
     public function setCertificationControls(?array $value): void {
@@ -143,7 +143,7 @@ class ComplianceInformation implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the certificationName property value. Compliance certification name (for example, ISO 27018:2014, GDPR, FedRAMP, NIST 800-171)
+     * Sets the certificationName property value. The name of the compliance certification, for example, ISO 27018:2014, GDPR, FedRAMP, and NIST 800-171.
      * @param string|null $value Value to set for the certificationName property.
     */
     public function setCertificationName(?string $value): void {

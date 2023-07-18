@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class EducationRubricOutcome extends EducationOutcome implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new educationRubricOutcome and sets the default values.
     */
     public function __construct() {
@@ -38,11 +33,24 @@ class EducationRubricOutcome extends EducationOutcome implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'publishedRubricQualityFeedback' => fn(ParseNode $n) => $o->setPublishedRubricQualityFeedback($n->getCollectionOfObjectValues([RubricQualityFeedbackModel::class, 'createFromDiscriminatorValue'])),
             'publishedRubricQualitySelectedLevels' => fn(ParseNode $n) => $o->setPublishedRubricQualitySelectedLevels($n->getCollectionOfObjectValues([RubricQualitySelectedColumnModel::class, 'createFromDiscriminatorValue'])),
             'rubricQualityFeedback' => fn(ParseNode $n) => $o->setRubricQualityFeedback($n->getCollectionOfObjectValues([RubricQualityFeedbackModel::class, 'createFromDiscriminatorValue'])),
             'rubricQualitySelectedLevels' => fn(ParseNode $n) => $o->setRubricQualitySelectedLevels($n->getCollectionOfObjectValues([RubricQualitySelectedColumnModel::class, 'createFromDiscriminatorValue'])),
         ]);
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -112,6 +120,14 @@ class EducationRubricOutcome extends EducationOutcome implements Parsable
         $writer->writeCollectionOfObjectValues('publishedRubricQualitySelectedLevels', $this->getPublishedRubricQualitySelectedLevels());
         $writer->writeCollectionOfObjectValues('rubricQualityFeedback', $this->getRubricQualityFeedback());
         $writer->writeCollectionOfObjectValues('rubricQualitySelectedLevels', $this->getRubricQualitySelectedLevels());
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

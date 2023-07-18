@@ -13,6 +13,11 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class WindowsUniversalAppX extends MobileLobApp implements Parsable 
 {
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    public ?string $odataType = null;
+    
+    /**
      * Instantiates a new windowsUniversalAppX and sets the default values.
     */
     public function __construct() {
@@ -173,6 +178,7 @@ class WindowsUniversalAppX extends MobileLobApp implements Parsable
         $writer->writeStringValue('identityVersion', $this->getIdentityVersion());
         $writer->writeBooleanValue('isBundle', $this->getIsBundle());
         $writer->writeObjectValue('minimumSupportedOperatingSystem', $this->getMinimumSupportedOperatingSystem());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**
