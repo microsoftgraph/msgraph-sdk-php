@@ -26,7 +26,6 @@ class SitePage extends BaseItem
 {
     /**
     * Gets the contentType
-    * Inherited from baseItem.
     *
     * @return ContentTypeInfo|null The contentType
     */
@@ -45,7 +44,6 @@ class SitePage extends BaseItem
 
     /**
     * Sets the contentType
-    * Inherited from baseItem.
     *
     * @param ContentTypeInfo $val The contentType
     *
@@ -59,7 +57,6 @@ class SitePage extends BaseItem
 
     /**
     * Gets the pageLayout
-    * The name of the page layout of the page. The possible values are: microsoftReserved, article, home, unknownFutureValue.
     *
     * @return PageLayoutType|null The pageLayout
     */
@@ -78,7 +75,6 @@ class SitePage extends BaseItem
 
     /**
     * Sets the pageLayout
-    * The name of the page layout of the page. The possible values are: microsoftReserved, article, home, unknownFutureValue.
     *
     * @param PageLayoutType $val The pageLayout
     *
@@ -125,7 +121,6 @@ class SitePage extends BaseItem
 
     /**
     * Gets the publishingState
-    * The publishing status and the MM.mm version of the page.
     *
     * @return PublicationFacet|null The publishingState
     */
@@ -144,7 +139,6 @@ class SitePage extends BaseItem
 
     /**
     * Sets the publishingState
-    * The publishing status and the MM.mm version of the page.
     *
     * @param PublicationFacet $val The publishingState
     *
@@ -278,7 +272,6 @@ class SitePage extends BaseItem
 
     /**
     * Gets the title
-    * Title of the sitePage.
     *
     * @return string|null The title
     */
@@ -293,7 +286,6 @@ class SitePage extends BaseItem
 
     /**
     * Sets the title
-    * Title of the sitePage.
     *
     * @param string $val The title
     *
@@ -340,7 +332,7 @@ class SitePage extends BaseItem
 
     /**
     * Gets the canvasLayout
-    * Indicates the layout of the content in a given SharePoint page, including horizontal sections and vertical section
+    * Indicates the layout of the content in a given SharePoint page, including horizontal sections and vertical sections.
     *
     * @return CanvasLayout|null The canvasLayout
     */
@@ -359,7 +351,7 @@ class SitePage extends BaseItem
 
     /**
     * Sets the canvasLayout
-    * Indicates the layout of the content in a given SharePoint page, including horizontal sections and vertical section
+    * Indicates the layout of the content in a given SharePoint page, including horizontal sections and vertical sections.
     *
     * @param CanvasLayout $val The canvasLayout
     *
@@ -374,7 +366,7 @@ class SitePage extends BaseItem
 
      /**
      * Gets the webParts
-    * Collection of webparts on the SharePoint page
+    * Collection of webparts on the SharePoint page.
      *
      * @return array|null The webParts
      */
@@ -389,7 +381,7 @@ class SitePage extends BaseItem
 
     /**
     * Sets the webParts
-    * Collection of webparts on the SharePoint page
+    * Collection of webparts on the SharePoint page.
     *
     * @param WebPart[] $val The webParts
     *

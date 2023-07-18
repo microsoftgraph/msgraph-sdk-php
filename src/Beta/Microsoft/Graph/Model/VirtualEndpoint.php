@@ -207,6 +207,34 @@ class VirtualEndpoint extends Entity
 
 
      /**
+     * Gets the frontLineServicePlans
+     *
+     * @return array|null The frontLineServicePlans
+     */
+    public function getFrontLineServicePlans()
+    {
+        if (array_key_exists("frontLineServicePlans", $this->_propDict)) {
+           return $this->_propDict["frontLineServicePlans"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the frontLineServicePlans
+    *
+    * @param CloudPcFrontLineServicePlan[] $val The frontLineServicePlans
+    *
+    * @return VirtualEndpoint
+    */
+    public function setFrontLineServicePlans($val)
+    {
+        $this->_propDict["frontLineServicePlans"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the galleryImages
     * The gallery image resource on Cloud PC.
      *

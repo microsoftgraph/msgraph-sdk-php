@@ -304,7 +304,7 @@ class UnifiedRoleManagementAlert extends Entity
 
      /**
      * Gets the alertIncidents
-    * Represents the incidents of this alert that have been triggered in Privileged Identity Management (PIM) for Azure AD roles in the tenant. Supports $expand.
+    * Represents the incidents of this type of alert that have been triggered in Privileged Identity Management (PIM) for Azure AD roles in the tenant. Supports $expand.
      *
      * @return array|null The alertIncidents
      */
@@ -319,7 +319,7 @@ class UnifiedRoleManagementAlert extends Entity
 
     /**
     * Sets the alertIncidents
-    * Represents the incidents of this alert that have been triggered in Privileged Identity Management (PIM) for Azure AD roles in the tenant. Supports $expand.
+    * Represents the incidents of this type of alert that have been triggered in Privileged Identity Management (PIM) for Azure AD roles in the tenant. Supports $expand.
     *
     * @param UnifiedRoleManagementAlertIncident[] $val The alertIncidents
     *

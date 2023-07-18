@@ -54,6 +54,37 @@ class CloudPC extends Entity
     }
 
     /**
+    * Gets the connectionSettings
+    *
+    * @return CloudPcConnectionSettings|null The connectionSettings
+    */
+    public function getConnectionSettings()
+    {
+        if (array_key_exists("connectionSettings", $this->_propDict)) {
+            if (is_a($this->_propDict["connectionSettings"], "\Beta\Microsoft\Graph\Model\CloudPcConnectionSettings") || is_null($this->_propDict["connectionSettings"])) {
+                return $this->_propDict["connectionSettings"];
+            } else {
+                $this->_propDict["connectionSettings"] = new CloudPcConnectionSettings($this->_propDict["connectionSettings"]);
+                return $this->_propDict["connectionSettings"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the connectionSettings
+    *
+    * @param CloudPcConnectionSettings $val The connectionSettings
+    *
+    * @return CloudPC
+    */
+    public function setConnectionSettings($val)
+    {
+        $this->_propDict["connectionSettings"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the connectivityResult
     * The connectivity health check result of a Cloud PC, including the updated timestamp and whether the Cloud PC can be connected.
     *
