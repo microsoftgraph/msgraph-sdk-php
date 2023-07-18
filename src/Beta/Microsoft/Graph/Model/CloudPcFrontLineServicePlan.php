@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* Identity File
+* CloudPcFrontLineServicePlan File
 * PHP version 7
 *
 * @category  Library
@@ -12,8 +12,9 @@
 * @link      https://graph.microsoft.com
 */
 namespace Beta\Microsoft\Graph\Model;
+
 /**
-* Identity class
+* CloudPcFrontLineServicePlan class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -21,11 +22,10 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class Identity extends Entity
+class CloudPcFrontLineServicePlan extends Entity
 {
     /**
     * Gets the displayName
-    * The display name of the identity. This property is read-only.
     *
     * @return string|null The displayName
     */
@@ -40,43 +40,69 @@ class Identity extends Entity
 
     /**
     * Sets the displayName
-    * The display name of the identity. This property is read-only.
     *
-    * @param string $val The value of the displayName
+    * @param string $val The displayName
     *
-    * @return Identity
+    * @return CloudPcFrontLineServicePlan
     */
     public function setDisplayName($val)
     {
         $this->_propDict["displayName"] = $val;
         return $this;
     }
+
     /**
-    * Gets the id
-    * The identifier of the identity. This property is read-only.
+    * Gets the totalCount
     *
-    * @return string|null The id
+    * @return int|null The totalCount
     */
-    public function getId()
+    public function getTotalCount()
     {
-        if (array_key_exists("id", $this->_propDict)) {
-            return $this->_propDict["id"];
+        if (array_key_exists("totalCount", $this->_propDict)) {
+            return $this->_propDict["totalCount"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the id
-    * The identifier of the identity. This property is read-only.
+    * Sets the totalCount
     *
-    * @param string $val The value of the id
+    * @param int $val The totalCount
     *
-    * @return Identity
+    * @return CloudPcFrontLineServicePlan
     */
-    public function setId($val)
+    public function setTotalCount($val)
     {
-        $this->_propDict["id"] = $val;
+        $this->_propDict["totalCount"] = intval($val);
         return $this;
     }
+
+    /**
+    * Gets the usedCount
+    *
+    * @return int|null The usedCount
+    */
+    public function getUsedCount()
+    {
+        if (array_key_exists("usedCount", $this->_propDict)) {
+            return $this->_propDict["usedCount"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the usedCount
+    *
+    * @param int $val The usedCount
+    *
+    * @return CloudPcFrontLineServicePlan
+    */
+    public function setUsedCount($val)
+    {
+        $this->_propDict["usedCount"] = intval($val);
+        return $this;
+    }
+
 }
