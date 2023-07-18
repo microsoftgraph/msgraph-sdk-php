@@ -59,7 +59,7 @@ class DirectoryAudit extends Entity
 
     /**
     * Gets the activityDisplayName
-    * Indicates the activity name or the operation name (examples: 'Create User' and 'Add member to group'). For full list, see Azure AD activity list.
+    * Indicates the activity name or the operation name (examples: 'Create User' and 'Add member to group'). For a list of activities logged, refer to Azure AD audit log categories and activities.
     *
     * @return string|null The activityDisplayName
     */
@@ -74,7 +74,7 @@ class DirectoryAudit extends Entity
 
     /**
     * Sets the activityDisplayName
-    * Indicates the activity name or the operation name (examples: 'Create User' and 'Add member to group'). For full list, see Azure AD activity list.
+    * Indicates the activity name or the operation name (examples: 'Create User' and 'Add member to group'). For a list of activities logged, refer to Azure AD audit log categories and activities.
     *
     * @param string $val The activityDisplayName
     *
@@ -118,7 +118,7 @@ class DirectoryAudit extends Entity
 
     /**
     * Gets the category
-    * Indicates which resource category that's targeted by the activity. For example: UserManagement, GroupManagement, ApplicationManagement, RoleManagement.
+    * Indicates which resource category that's targeted by the activity. For example: UserManagement, GroupManagement, ApplicationManagement, RoleManagement. For a list of categories for activities logged, refer to Azure AD audit log categories and activities.
     *
     * @return string|null The category
     */
@@ -133,7 +133,7 @@ class DirectoryAudit extends Entity
 
     /**
     * Sets the category
-    * Indicates which resource category that's targeted by the activity. For example: UserManagement, GroupManagement, ApplicationManagement, RoleManagement.
+    * Indicates which resource category that's targeted by the activity. For example: UserManagement, GroupManagement, ApplicationManagement, RoleManagement. For a list of categories for activities logged, refer to Azure AD audit log categories and activities.
     *
     * @param string $val The category
     *
