@@ -326,4 +326,32 @@ class AccessPackage extends Entity
         return $this;
     }
 
+
+     /**
+     * Gets the resourceRoleScopes
+     *
+     * @return array|null The resourceRoleScopes
+     */
+    public function getResourceRoleScopes()
+    {
+        if (array_key_exists("resourceRoleScopes", $this->_propDict)) {
+           return $this->_propDict["resourceRoleScopes"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the resourceRoleScopes
+    *
+    * @param AccessPackageResourceRoleScope[] $val The resourceRoleScopes
+    *
+    * @return AccessPackage
+    */
+    public function setResourceRoleScopes($val)
+    {
+        $this->_propDict["resourceRoleScopes"] = $val;
+        return $this;
+    }
+
 }

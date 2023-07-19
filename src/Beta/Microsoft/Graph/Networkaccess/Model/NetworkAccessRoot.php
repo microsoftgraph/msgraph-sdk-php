@@ -26,6 +26,7 @@ class NetworkAccessRoot extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the logs
+    * Represnts network connections that are routed through Global Secure Access.
     *
     * @return Logs|null The logs
     */
@@ -44,6 +45,7 @@ class NetworkAccessRoot extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the logs
+    * Represnts network connections that are routed through Global Secure Access.
     *
     * @param Logs $val The logs
     *
@@ -57,6 +59,7 @@ class NetworkAccessRoot extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the reports
+    * Represents the status of the Global Secure Access services for the tenant.
     *
     * @return Reports|null The reports
     */
@@ -75,6 +78,7 @@ class NetworkAccessRoot extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the reports
+    * Represents the status of the Global Secure Access services for the tenant.
     *
     * @param Reports $val The reports
     *
@@ -88,6 +92,7 @@ class NetworkAccessRoot extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the connectivity
+    * Connectivity represents all the connectivity components in Global Secure Access.
     *
     * @return Connectivity|null The connectivity
     */
@@ -106,6 +111,7 @@ class NetworkAccessRoot extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the connectivity
+    * Connectivity represents all the connectivity components in Global Secure Access.
     *
     * @param Connectivity $val The connectivity
     *
@@ -120,6 +126,7 @@ class NetworkAccessRoot extends \Beta\Microsoft\Graph\Model\Entity
 
      /**
      * Gets the forwardingPolicies
+    * A forwarding policy defines the specific traffic that is routed through the Gloval Secure Access Service. It is then added to a forwarding profile.
      *
      * @return array|null The forwardingPolicies
      */
@@ -134,6 +141,7 @@ class NetworkAccessRoot extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the forwardingPolicies
+    * A forwarding policy defines the specific traffic that is routed through the Gloval Secure Access Service. It is then added to a forwarding profile.
     *
     * @param ForwardingPolicy[] $val The forwardingPolicies
     *
@@ -148,6 +156,7 @@ class NetworkAccessRoot extends \Beta\Microsoft\Graph\Model\Entity
 
      /**
      * Gets the forwardingProfiles
+    * A forwarding profile determines which types of traffic are routed through the Global Secure Access services and which ones are skipped. The handling of specific traffic is determined by the forwarding policies that are added to the forwarding profile.
      *
      * @return array|null The forwardingProfiles
      */
@@ -162,6 +171,7 @@ class NetworkAccessRoot extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the forwardingProfiles
+    * A forwarding profile determines which types of traffic are routed through the Global Secure Access services and which ones are skipped. The handling of specific traffic is determined by the forwarding policies that are added to the forwarding profile.
     *
     * @param ForwardingProfile[] $val The forwardingProfiles
     *
@@ -175,6 +185,7 @@ class NetworkAccessRoot extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the settings
+    * Global Secure Access settings.
     *
     * @return Settings|null The settings
     */
@@ -193,6 +204,7 @@ class NetworkAccessRoot extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the settings
+    * Global Secure Access settings.
     *
     * @param Settings $val The settings
     *
@@ -206,6 +218,7 @@ class NetworkAccessRoot extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the tenantStatus
+    * Represents the status of the Global Secure Access services for the tenant.
     *
     * @return TenantStatus|null The tenantStatus
     */
@@ -224,6 +237,7 @@ class NetworkAccessRoot extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the tenantStatus
+    * Represents the status of the Global Secure Access services for the tenant.
     *
     * @param TenantStatus $val The tenantStatus
     *

@@ -26,6 +26,7 @@ class CrossTenantAccessSettings extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the networkPacketTaggingStatus
+    * Determines if a header with the user tenant ID is inserted into the network traffic. .The possible values are: enabled, disabled.
     *
     * @return Status|null The networkPacketTaggingStatus
     */
@@ -44,6 +45,7 @@ class CrossTenantAccessSettings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the networkPacketTaggingStatus
+    * Determines if a header with the user tenant ID is inserted into the network traffic. .The possible values are: enabled, disabled.
     *
     * @param Status $val The networkPacketTaggingStatus
     *

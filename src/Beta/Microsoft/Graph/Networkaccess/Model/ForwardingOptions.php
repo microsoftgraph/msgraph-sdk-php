@@ -26,6 +26,7 @@ class ForwardingOptions extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the skipDnsLookupState
+    * Dns lookup options. The possible values are: enabled, disabled.
     *
     * @return Status|null The skipDnsLookupState
     */
@@ -44,6 +45,7 @@ class ForwardingOptions extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the skipDnsLookupState
+    * Dns lookup options. The possible values are: enabled, disabled.
     *
     * @param Status $val The skipDnsLookupState
     *

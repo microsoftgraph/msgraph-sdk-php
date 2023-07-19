@@ -26,6 +26,7 @@ class ObjectDefinitionMetadataEntry extends Entity
 
     /**
     * Gets the key
+    * Possible values are: PropertyNameAccountEnabled, PropertyNameSoftDeleted, IsSoftDeletionSupported, IsSynchronizeAllSupported, ConnectorDataStorageRequired, Extensions, LinkTypeName.
     *
     * @return ObjectDefinitionMetadata|null The key
     */
@@ -44,6 +45,7 @@ class ObjectDefinitionMetadataEntry extends Entity
 
     /**
     * Sets the key
+    * Possible values are: PropertyNameAccountEnabled, PropertyNameSoftDeleted, IsSoftDeletionSupported, IsSynchronizeAllSupported, ConnectorDataStorageRequired, Extensions, LinkTypeName.
     *
     * @param ObjectDefinitionMetadata $val The value to assign to the key
     *
@@ -56,6 +58,7 @@ class ObjectDefinitionMetadataEntry extends Entity
     }
     /**
     * Gets the value
+    * Value of the metadata property.
     *
     * @return string|null The value
     */
@@ -70,6 +73,7 @@ class ObjectDefinitionMetadataEntry extends Entity
 
     /**
     * Sets the value
+    * Value of the metadata property.
     *
     * @param string $val The value of the value
     *

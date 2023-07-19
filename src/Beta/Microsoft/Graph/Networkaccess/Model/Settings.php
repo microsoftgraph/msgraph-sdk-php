@@ -26,6 +26,7 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the conditionalAccess
+    * Defines whether conditional access settings are enabled for traffic profiles. Each tenant has only one conditional access settings object.
     *
     * @return ConditionalAccessSettings|null The conditionalAccess
     */
@@ -44,6 +45,7 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the conditionalAccess
+    * Defines whether conditional access settings are enabled for traffic profiles. Each tenant has only one conditional access settings object.
     *
     * @param ConditionalAccessSettings $val The conditionalAccess
     *
@@ -57,6 +59,7 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the crossTenantAccess
+    * Defines whether the tenant restrictions cross-tenant access settings are enabled for traffic profiles. Each tenant has only one cross-tenant access settings object.
     *
     * @return CrossTenantAccessSettings|null The crossTenantAccess
     */
@@ -75,6 +78,7 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the crossTenantAccess
+    * Defines whether the tenant restrictions cross-tenant access settings are enabled for traffic profiles. Each tenant has only one cross-tenant access settings object.
     *
     * @param CrossTenantAccessSettings $val The crossTenantAccess
     *

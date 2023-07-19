@@ -26,6 +26,7 @@ class SynchronizationSecretKeyStringValuePair extends Entity
 
     /**
     * Gets the key
+    * Possible values are: None, UserName, Password, SecretToken, AppKey, BaseAddress, ClientIdentifier, ClientSecret, SingleSignOnType, Sandbox, Url, Domain, ConsumerKey, ConsumerSecret, TokenKey, TokenExpiration, Oauth2AccessToken, Oauth2AccessTokenCreationTime, Oauth2RefreshToken, SyncAll, InstanceName, Oauth2ClientId, Oauth2ClientSecret, CompanyId, UpdateKeyOnSoftDelete, SynchronizationSchedule, SystemOfRecord, SandboxName, EnforceDomain, SyncNotificationSettings, SkipOutOfScopeDeletions, Oauth2AuthorizationCode, Oauth2RedirectUri, ApplicationTemplateIdentifier, Oauth2TokenExchangeUri, Oauth2AuthorizationUri, AuthenticationType, Server, PerformInboundEntitlementGrants, HardDeletesEnabled, SyncAgentCompatibilityKey, SyncAgentADContainer, ValidateDomain, TestReferences, ConnectionString.
     *
     * @return SynchronizationSecret|null The key
     */
@@ -44,6 +45,7 @@ class SynchronizationSecretKeyStringValuePair extends Entity
 
     /**
     * Sets the key
+    * Possible values are: None, UserName, Password, SecretToken, AppKey, BaseAddress, ClientIdentifier, ClientSecret, SingleSignOnType, Sandbox, Url, Domain, ConsumerKey, ConsumerSecret, TokenKey, TokenExpiration, Oauth2AccessToken, Oauth2AccessTokenCreationTime, Oauth2RefreshToken, SyncAll, InstanceName, Oauth2ClientId, Oauth2ClientSecret, CompanyId, UpdateKeyOnSoftDelete, SynchronizationSchedule, SystemOfRecord, SandboxName, EnforceDomain, SyncNotificationSettings, SkipOutOfScopeDeletions, Oauth2AuthorizationCode, Oauth2RedirectUri, ApplicationTemplateIdentifier, Oauth2TokenExchangeUri, Oauth2AuthorizationUri, AuthenticationType, Server, PerformInboundEntitlementGrants, HardDeletesEnabled, SyncAgentCompatibilityKey, SyncAgentADContainer, ValidateDomain, TestReferences, ConnectionString.
     *
     * @param SynchronizationSecret $val The value to assign to the key
     *
@@ -56,6 +58,7 @@ class SynchronizationSecretKeyStringValuePair extends Entity
     }
     /**
     * Gets the value
+    * The value of the secret.
     *
     * @return string|null The value
     */
@@ -70,6 +73,7 @@ class SynchronizationSecretKeyStringValuePair extends Entity
 
     /**
     * Sets the value
+    * The value of the secret.
     *
     * @param string $val The value of the value
     *

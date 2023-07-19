@@ -27,6 +27,7 @@ class Logs extends \Beta\Microsoft\Graph\Model\Entity
 
      /**
      * Gets the traffic
+    * Represents a collection of log entries in the network access traffic log.
      *
      * @return array|null The traffic
      */
@@ -41,6 +42,7 @@ class Logs extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the traffic
+    * Represents a collection of log entries in the network access traffic log.
     *
     * @param NetworkAccessTraffic[] $val The traffic
     *

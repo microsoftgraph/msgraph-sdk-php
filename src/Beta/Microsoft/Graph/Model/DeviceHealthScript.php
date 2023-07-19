@@ -151,7 +151,7 @@ class DeviceHealthScript extends Entity
 
     /**
     * Gets the deviceHealthScriptType
-    * DeviceHealthScriptType for the script policy
+    * DeviceHealthScriptType for the script policy. Possible values are: deviceHealthScript, managedInstallerScript.
     *
     * @return DeviceHealthScriptType|null The deviceHealthScriptType
     */
@@ -170,7 +170,7 @@ class DeviceHealthScript extends Entity
 
     /**
     * Sets the deviceHealthScriptType
-    * DeviceHealthScriptType for the script policy
+    * DeviceHealthScriptType for the script policy. Possible values are: deviceHealthScript, managedInstallerScript.
     *
     * @param DeviceHealthScriptType $val The deviceHealthScriptType
     *

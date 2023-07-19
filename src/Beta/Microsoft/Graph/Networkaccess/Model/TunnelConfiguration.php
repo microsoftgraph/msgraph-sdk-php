@@ -25,6 +25,7 @@ class TunnelConfiguration extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the preSharedKey
+    * A key to establish secure connection between the link and VPN tunnel on the edge.
     *
     * @return string|null The preSharedKey
     */
@@ -39,6 +40,7 @@ class TunnelConfiguration extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the preSharedKey
+    * A key to establish secure connection between the link and VPN tunnel on the edge.
     *
     * @param string $val The value of the preSharedKey
     *

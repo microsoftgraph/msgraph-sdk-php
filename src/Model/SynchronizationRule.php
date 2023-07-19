@@ -56,6 +56,7 @@ class SynchronizationRule extends Entity
     }
     /**
     * Gets the editable
+    * true if the synchronization rule can be customized; false if this rule is read-only and should not be changed.
     *
     * @return bool|null The editable
     */
@@ -70,6 +71,7 @@ class SynchronizationRule extends Entity
 
     /**
     * Sets the editable
+    * true if the synchronization rule can be customized; false if this rule is read-only and should not be changed.
     *
     * @param bool $val The value of the editable
     *
@@ -113,6 +115,7 @@ class SynchronizationRule extends Entity
     }
     /**
     * Gets the id
+    * Synchronization rule identifier. Must be one of the identifiers recognized by the synchronization engine. Supported rule identifiers can be found in the synchronization template returned by the API.
     *
     * @return string|null The id
     */
@@ -127,6 +130,7 @@ class SynchronizationRule extends Entity
 
     /**
     * Sets the id
+    * Synchronization rule identifier. Must be one of the identifiers recognized by the synchronization engine. Supported rule identifiers can be found in the synchronization template returned by the API.
     *
     * @param string $val The value of the id
     *
@@ -140,6 +144,7 @@ class SynchronizationRule extends Entity
 
     /**
     * Gets the metadata
+    * Additional extension properties. Unless instructed explicitly by the support team, metadata values should not be changed.
     *
     * @return StringKeyStringValuePair|null The metadata
     */
@@ -158,6 +163,7 @@ class SynchronizationRule extends Entity
 
     /**
     * Sets the metadata
+    * Additional extension properties. Unless instructed explicitly by the support team, metadata values should not be changed.
     *
     * @param StringKeyStringValuePair $val The value to assign to the metadata
     *
@@ -170,6 +176,7 @@ class SynchronizationRule extends Entity
     }
     /**
     * Gets the name
+    * Human-readable name of the synchronization rule. Not nullable.
     *
     * @return string|null The name
     */
@@ -184,6 +191,7 @@ class SynchronizationRule extends Entity
 
     /**
     * Sets the name
+    * Human-readable name of the synchronization rule. Not nullable.
     *
     * @param string $val The value of the name
     *
@@ -197,6 +205,7 @@ class SynchronizationRule extends Entity
 
     /**
     * Gets the objectMappings
+    * Collection of object mappings supported by the rule. Tells the synchronization engine which objects should be synchronized.
     *
     * @return ObjectMapping|null The objectMappings
     */
@@ -215,6 +224,7 @@ class SynchronizationRule extends Entity
 
     /**
     * Sets the objectMappings
+    * Collection of object mappings supported by the rule. Tells the synchronization engine which objects should be synchronized.
     *
     * @param ObjectMapping $val The value to assign to the objectMappings
     *
@@ -227,6 +237,7 @@ class SynchronizationRule extends Entity
     }
     /**
     * Gets the priority
+    * Priority relative to other rules in the synchronizationSchema. Rules with the lowest priority number will be processed first.
     *
     * @return int|null The priority
     */
@@ -241,6 +252,7 @@ class SynchronizationRule extends Entity
 
     /**
     * Sets the priority
+    * Priority relative to other rules in the synchronizationSchema. Rules with the lowest priority number will be processed first.
     *
     * @param int $val The value of the priority
     *
@@ -253,6 +265,7 @@ class SynchronizationRule extends Entity
     }
     /**
     * Gets the sourceDirectoryName
+    * Name of the source directory. Must match one of the directory definitions in synchronizationSchema.
     *
     * @return string|null The sourceDirectoryName
     */
@@ -267,6 +280,7 @@ class SynchronizationRule extends Entity
 
     /**
     * Sets the sourceDirectoryName
+    * Name of the source directory. Must match one of the directory definitions in synchronizationSchema.
     *
     * @param string $val The value of the sourceDirectoryName
     *
@@ -279,6 +293,7 @@ class SynchronizationRule extends Entity
     }
     /**
     * Gets the targetDirectoryName
+    * Name of the target directory. Must match one of the directory definitions in synchronizationSchema.
     *
     * @return string|null The targetDirectoryName
     */
@@ -293,6 +308,7 @@ class SynchronizationRule extends Entity
 
     /**
     * Sets the targetDirectoryName
+    * Name of the target directory. Must match one of the directory definitions in synchronizationSchema.
     *
     * @param string $val The value of the targetDirectoryName
     *

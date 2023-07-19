@@ -26,6 +26,7 @@ class TenantStatus extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the onboardingErrorMessage
+    * Reflects a message to the user in case of an error.
     *
     * @return string|null The onboardingErrorMessage
     */
@@ -40,6 +41,7 @@ class TenantStatus extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the onboardingErrorMessage
+    * Reflects a message to the user in case of an error.
     *
     * @param string $val The onboardingErrorMessage
     *
@@ -53,6 +55,7 @@ class TenantStatus extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the onboardingStatus
+    * Reflects the tenant onboarding status. The possible values are: offboarded, offboardingInProgress, onboardingInProgress, onboarded, onboardingErrorOccurred, offboardingErrorOccurred.
     *
     * @return OnboardingStatus|null The onboardingStatus
     */
@@ -71,6 +74,7 @@ class TenantStatus extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the onboardingStatus
+    * Reflects the tenant onboarding status. The possible values are: offboarded, offboardingInProgress, onboardingInProgress, onboarded, onboardingErrorOccurred, offboardingErrorOccurred.
     *
     * @param OnboardingStatus $val The onboardingStatus
     *

@@ -92,7 +92,7 @@ class IosStoreAppAssignmentSettings extends MobileAppAssignmentSettings
     }
     /**
     * Gets the vpnConfigurationId
-    * The VPN Configuration Id to apply for this app.
+    * This is the unique identifier (Id) of the VPN Configuration to apply to the app.
     *
     * @return string|null The vpnConfigurationId
     */
@@ -107,7 +107,7 @@ class IosStoreAppAssignmentSettings extends MobileAppAssignmentSettings
 
     /**
     * Sets the vpnConfigurationId
-    * The VPN Configuration Id to apply for this app.
+    * This is the unique identifier (Id) of the VPN Configuration to apply to the app.
     *
     * @param string $val The value of the vpnConfigurationId
     *

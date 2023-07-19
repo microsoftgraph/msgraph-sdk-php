@@ -25,6 +25,33 @@ namespace Beta\Microsoft\Graph\Model;
 class CompanySubscription extends Entity
 {
     /**
+    * Gets the commerceSubscriptionId
+    *
+    * @return string|null The commerceSubscriptionId
+    */
+    public function getCommerceSubscriptionId()
+    {
+        if (array_key_exists("commerceSubscriptionId", $this->_propDict)) {
+            return $this->_propDict["commerceSubscriptionId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the commerceSubscriptionId
+    *
+    * @param string $val The commerceSubscriptionId
+    *
+    * @return CompanySubscription
+    */
+    public function setCommerceSubscriptionId($val)
+    {
+        $this->_propDict["commerceSubscriptionId"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the createdDateTime
     *
     * @return \DateTime|null The createdDateTime
@@ -137,6 +164,87 @@ class CompanySubscription extends Entity
     public function setOcpSubscriptionId($val)
     {
         $this->_propDict["ocpSubscriptionId"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the ownerId
+    *
+    * @return string|null The ownerId
+    */
+    public function getOwnerId()
+    {
+        if (array_key_exists("ownerId", $this->_propDict)) {
+            return $this->_propDict["ownerId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the ownerId
+    *
+    * @param string $val The ownerId
+    *
+    * @return CompanySubscription
+    */
+    public function setOwnerId($val)
+    {
+        $this->_propDict["ownerId"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the ownerTenantId
+    *
+    * @return string|null The ownerTenantId
+    */
+    public function getOwnerTenantId()
+    {
+        if (array_key_exists("ownerTenantId", $this->_propDict)) {
+            return $this->_propDict["ownerTenantId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the ownerTenantId
+    *
+    * @param string $val The ownerTenantId
+    *
+    * @return CompanySubscription
+    */
+    public function setOwnerTenantId($val)
+    {
+        $this->_propDict["ownerTenantId"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the ownerType
+    *
+    * @return string|null The ownerType
+    */
+    public function getOwnerType()
+    {
+        if (array_key_exists("ownerType", $this->_propDict)) {
+            return $this->_propDict["ownerType"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the ownerType
+    *
+    * @param string $val The ownerType
+    *
+    * @return CompanySubscription
+    */
+    public function setOwnerType($val)
+    {
+        $this->_propDict["ownerType"] = $val;
         return $this;
     }
 

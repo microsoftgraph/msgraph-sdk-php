@@ -26,6 +26,7 @@ class AdminTodo extends Entity
 {
     /**
     * Gets the settings
+    * Company-wide settings for Microsoft Todo.
     *
     * @return TodoSettings|null The settings
     */
@@ -44,6 +45,7 @@ class AdminTodo extends Entity
 
     /**
     * Sets the settings
+    * Company-wide settings for Microsoft Todo.
     *
     * @param TodoSettings $val The settings
     *

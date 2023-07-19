@@ -1475,6 +1475,7 @@ class ServicePrincipal extends DirectoryObject
 
     /**
     * Gets the synchronization
+    * Represents the capability for Azure Active Directory (Azure AD) identity synchronization through the Microsoft Graph API.
     *
     * @return Synchronization|null The synchronization
     */
@@ -1493,6 +1494,7 @@ class ServicePrincipal extends DirectoryObject
 
     /**
     * Sets the synchronization
+    * Represents the capability for Azure Active Directory (Azure AD) identity synchronization through the Microsoft Graph API.
     *
     * @param Synchronization $val The synchronization
     *

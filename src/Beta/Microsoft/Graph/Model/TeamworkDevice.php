@@ -187,7 +187,7 @@ class TeamworkDevice extends Entity
 
     /**
     * Gets the deviceType
-    * The type of device. The possible values are: unknown, ipPhone, teamsRoom, surfaceHub, collaborationBar, teamsDisplay, touchConsole, lowCostPhone, teamsPanel, sip, unknownFutureValue.
+    * The type of device. The possible values are: unknown, ipPhone, teamsRoom, surfaceHub, collaborationBar, teamsDisplay, touchConsole, lowCostPhone, teamsPanel, sip, sipAnalog, unknownFutureValue.
     *
     * @return TeamworkDeviceType|null The deviceType
     */
@@ -206,7 +206,7 @@ class TeamworkDevice extends Entity
 
     /**
     * Sets the deviceType
-    * The type of device. The possible values are: unknown, ipPhone, teamsRoom, surfaceHub, collaborationBar, teamsDisplay, touchConsole, lowCostPhone, teamsPanel, sip, unknownFutureValue.
+    * The type of device. The possible values are: unknown, ipPhone, teamsRoom, surfaceHub, collaborationBar, teamsDisplay, touchConsole, lowCostPhone, teamsPanel, sip, sipAnalog, unknownFutureValue.
     *
     * @param TeamworkDeviceType $val The deviceType
     *

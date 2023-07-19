@@ -25,6 +25,7 @@ class DeviceUsageSummary extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the activeDeviceCount
+    * The number of distinct device IDs in the time frame between endDateTime and discoveryPivotDateTime.
     *
     * @return int|null The activeDeviceCount
     */
@@ -39,6 +40,7 @@ class DeviceUsageSummary extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the activeDeviceCount
+    * The number of distinct device IDs in the time frame between endDateTime and discoveryPivotDateTime.
     *
     * @param int $val The value of the activeDeviceCount
     *
@@ -51,6 +53,7 @@ class DeviceUsageSummary extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the inactiveDeviceCount
+    * The number of distinct device IDs havn't seen in the time frame between endDateTime and discoveryPivotDateTime but have seen in the time frame between discoveryPivotDateTime and startDateTime.
     *
     * @return int|null The inactiveDeviceCount
     */
@@ -65,6 +68,7 @@ class DeviceUsageSummary extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the inactiveDeviceCount
+    * The number of distinct device IDs havn't seen in the time frame between endDateTime and discoveryPivotDateTime but have seen in the time frame between discoveryPivotDateTime and startDateTime.
     *
     * @param int $val The value of the inactiveDeviceCount
     *
@@ -77,6 +81,7 @@ class DeviceUsageSummary extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the totalDeviceCount
+    * The number of distinct device IDs in the time frame between startDateTime and endDateTime.
     *
     * @return int|null The totalDeviceCount
     */
@@ -91,6 +96,7 @@ class DeviceUsageSummary extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the totalDeviceCount
+    * The number of distinct device IDs in the time frame between startDateTime and endDateTime.
     *
     * @param int $val The value of the totalDeviceCount
     *

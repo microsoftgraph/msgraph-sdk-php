@@ -26,6 +26,7 @@ class SynchronizationJobSubject extends Entity
 
     /**
     * Gets the links
+    * Principals that you would like to provision.
     *
     * @return SynchronizationLinkedObjects|null The links
     */
@@ -44,6 +45,7 @@ class SynchronizationJobSubject extends Entity
 
     /**
     * Sets the links
+    * Principals that you would like to provision.
     *
     * @param SynchronizationLinkedObjects $val The value to assign to the links
     *
@@ -56,6 +58,7 @@ class SynchronizationJobSubject extends Entity
     }
     /**
     * Gets the objectId
+    * The identifier of an object to which a synchronizationJob is to be applied. Can be one of the following: An onPremisesDistinguishedName for synchronization from Active Directory to Azure AD.The user ID for synchronization from Azure AD to a third-party.The Worker ID of the Workday worker for synchronization from Workday to either Active Directory or Azure AD.
     *
     * @return string|null The objectId
     */
@@ -70,6 +73,7 @@ class SynchronizationJobSubject extends Entity
 
     /**
     * Sets the objectId
+    * The identifier of an object to which a synchronizationJob is to be applied. Can be one of the following: An onPremisesDistinguishedName for synchronization from Active Directory to Azure AD.The user ID for synchronization from Azure AD to a third-party.The Worker ID of the Workday worker for synchronization from Workday to either Active Directory or Azure AD.
     *
     * @param string $val The value of the objectId
     *
@@ -82,6 +86,7 @@ class SynchronizationJobSubject extends Entity
     }
     /**
     * Gets the objectTypeName
+    * The type of the object to which a synchronizationJob is to be applied. Can be one of the following: user for synchronizing between Active Directory and Azure AD.User for synchronizing a user between Azure AD and a third-party application. Worker for synchronization a user between Workday and either Active Directory or Azure AD.Group for synchronizing a group between Azure AD and a third-party application.
     *
     * @return string|null The objectTypeName
     */
@@ -96,6 +101,7 @@ class SynchronizationJobSubject extends Entity
 
     /**
     * Sets the objectTypeName
+    * The type of the object to which a synchronizationJob is to be applied. Can be one of the following: user for synchronizing between Active Directory and Azure AD.User for synchronizing a user between Azure AD and a third-party application. Worker for synchronization a user between Workday and either Active Directory or Azure AD.Group for synchronizing a group between Azure AD and a third-party application.
     *
     * @param string $val The value of the objectTypeName
     *
