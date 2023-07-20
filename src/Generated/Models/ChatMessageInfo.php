@@ -74,7 +74,6 @@ class ChatMessageInfo extends Entity implements Parsable
             'from' => fn(ParseNode $n) => $o->setFrom($n->getObjectValue([ChatMessageFromIdentitySet::class, 'createFromDiscriminatorValue'])),
             'isDeleted' => fn(ParseNode $n) => $o->setIsDeleted($n->getBooleanValue()),
             'messageType' => fn(ParseNode $n) => $o->setMessageType($n->getEnumValue(ChatMessageType::class)),
-            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ]);
     }
 
@@ -115,18 +114,6 @@ class ChatMessageInfo extends Entity implements Parsable
     }
 
     /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return string|null
-    */
-    public function getOdataType(): ?string {
-        $val = $this->getBackingStore()->get('odataType');
-        if (is_null($val) || is_string($val)) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
-    }
-
-    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -138,7 +125,6 @@ class ChatMessageInfo extends Entity implements Parsable
         $writer->writeObjectValue('from', $this->getFrom());
         $writer->writeBooleanValue('isDeleted', $this->getIsDeleted());
         $writer->writeEnumValue('messageType', $this->getMessageType());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**
@@ -187,14 +173,6 @@ class ChatMessageInfo extends Entity implements Parsable
     */
     public function setMessageType(?ChatMessageType $value): void {
         $this->getBackingStore()->set('messageType', $value);
-    }
-
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param string|null $value Value to set for the OdataType property.
-    */
-    public function setOdataType(?string $value): void {
-        $this->getBackingStore()->set('odataType', $value);
     }
 
 }

@@ -24,6 +24,7 @@ use Microsoft\Graph\Generated\Drives\Item\Items\Item\GetActivitiesByIntervalWith
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Invite\InviteRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\LastModifiedByUser\LastModifiedByUserRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\ListItem\ListItemRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\PermanentDelete\PermanentDeleteRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Permissions\PermissionsRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Preview\PreviewRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Restore\RestoreRequestBuilder;
@@ -163,6 +164,13 @@ class DriveItemItemRequestBuilder extends BaseRequestBuilder
     */
     public function listItem(): ListItemRequestBuilder {
         return new ListItemRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the permanentDelete method.
+    */
+    public function permanentDelete(): PermanentDeleteRequestBuilder {
+        return new PermanentDeleteRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

@@ -60,7 +60,6 @@ class PrintConnector extends Entity implements Parsable
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'fullyQualifiedDomainName' => fn(ParseNode $n) => $o->setFullyQualifiedDomainName($n->getStringValue()),
             'location' => fn(ParseNode $n) => $o->setLocation($n->getObjectValue([PrinterLocation::class, 'createFromDiscriminatorValue'])),
-            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'operatingSystem' => fn(ParseNode $n) => $o->setOperatingSystem($n->getStringValue()),
             'registeredDateTime' => fn(ParseNode $n) => $o->setRegisteredDateTime($n->getDateTimeValue()),
         ]);
@@ -88,18 +87,6 @@ class PrintConnector extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'location'");
-    }
-
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return string|null
-    */
-    public function getOdataType(): ?string {
-        $val = $this->getBackingStore()->get('odataType');
-        if (is_null($val) || is_string($val)) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -136,7 +123,6 @@ class PrintConnector extends Entity implements Parsable
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeStringValue('fullyQualifiedDomainName', $this->getFullyQualifiedDomainName());
         $writer->writeObjectValue('location', $this->getLocation());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('operatingSystem', $this->getOperatingSystem());
         $writer->writeDateTimeValue('registeredDateTime', $this->getRegisteredDateTime());
     }
@@ -171,14 +157,6 @@ class PrintConnector extends Entity implements Parsable
     */
     public function setLocation(?PrinterLocation $value): void {
         $this->getBackingStore()->set('location', $value);
-    }
-
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param string|null $value Value to set for the OdataType property.
-    */
-    public function setOdataType(?string $value): void {
-        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

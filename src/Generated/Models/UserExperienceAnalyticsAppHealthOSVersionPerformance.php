@@ -48,7 +48,6 @@ class UserExperienceAnalyticsAppHealthOSVersionPerformance extends Entity implem
         return array_merge(parent::getFieldDeserializers(), [
             'activeDeviceCount' => fn(ParseNode $n) => $o->setActiveDeviceCount($n->getIntegerValue()),
             'meanTimeToFailureInMinutes' => fn(ParseNode $n) => $o->setMeanTimeToFailureInMinutes($n->getIntegerValue()),
-            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'osBuildNumber' => fn(ParseNode $n) => $o->setOsBuildNumber($n->getStringValue()),
             'osVersion' => fn(ParseNode $n) => $o->setOsVersion($n->getStringValue()),
             'osVersionAppHealthScore' => fn(ParseNode $n) => $o->setOsVersionAppHealthScore($n->getFloatValue()),
@@ -65,18 +64,6 @@ class UserExperienceAnalyticsAppHealthOSVersionPerformance extends Entity implem
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'meanTimeToFailureInMinutes'");
-    }
-
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return string|null
-    */
-    public function getOdataType(): ?string {
-        $val = $this->getBackingStore()->get('odataType');
-        if (is_null($val) || is_string($val)) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -123,7 +110,6 @@ class UserExperienceAnalyticsAppHealthOSVersionPerformance extends Entity implem
         parent::serialize($writer);
         $writer->writeIntegerValue('activeDeviceCount', $this->getActiveDeviceCount());
         $writer->writeIntegerValue('meanTimeToFailureInMinutes', $this->getMeanTimeToFailureInMinutes());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('osBuildNumber', $this->getOsBuildNumber());
         $writer->writeStringValue('osVersion', $this->getOsVersion());
         $writer->writeFloatValue('osVersionAppHealthScore', $this->getOsVersionAppHealthScore());
@@ -143,14 +129,6 @@ class UserExperienceAnalyticsAppHealthOSVersionPerformance extends Entity implem
     */
     public function setMeanTimeToFailureInMinutes(?int $value): void {
         $this->getBackingStore()->set('meanTimeToFailureInMinutes', $value);
-    }
-
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param string|null $value Value to set for the OdataType property.
-    */
-    public function setOdataType(?string $value): void {
-        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

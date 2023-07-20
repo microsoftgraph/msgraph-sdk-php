@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DelegatedPermissionClassification extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new delegatedPermissionClassification and sets the default values.
     */
     public function __construct() {
@@ -85,7 +80,6 @@ class DelegatedPermissionClassification extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeEnumValue('classification', $this->getClassification());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('permissionId', $this->getPermissionId());
         $writer->writeStringValue('permissionName', $this->getPermissionName());
     }

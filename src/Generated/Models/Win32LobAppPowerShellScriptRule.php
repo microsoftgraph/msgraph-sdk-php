@@ -7,7 +7,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 /**
- * A base complex type to store the detection or requirement rule data for a Win32 LOB app.
+ * A complex type to store the PowerShell script rule data for a Win32 LOB app.
 */
 class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements Parsable 
 {
@@ -74,25 +74,12 @@ class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements Parsabl
             'comparisonValue' => fn(ParseNode $n) => $o->setComparisonValue($n->getStringValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'enforceSignatureCheck' => fn(ParseNode $n) => $o->setEnforceSignatureCheck($n->getBooleanValue()),
-            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'operationType' => fn(ParseNode $n) => $o->setOperationType($n->getEnumValue(Win32LobAppPowerShellScriptRuleOperationType::class)),
             'operator' => fn(ParseNode $n) => $o->setOperator($n->getEnumValue(Win32LobAppRuleOperator::class)),
             'runAs32Bit' => fn(ParseNode $n) => $o->setRunAs32Bit($n->getBooleanValue()),
             'runAsAccount' => fn(ParseNode $n) => $o->setRunAsAccount($n->getEnumValue(RunAsAccountType::class)),
             'scriptContent' => fn(ParseNode $n) => $o->setScriptContent($n->getStringValue()),
         ]);
-    }
-
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return string|null
-    */
-    public function getOdataType(): ?string {
-        $val = $this->getBackingStore()->get('odataType');
-        if (is_null($val) || is_string($val)) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -164,7 +151,6 @@ class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements Parsabl
         $writer->writeStringValue('comparisonValue', $this->getComparisonValue());
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeBooleanValue('enforceSignatureCheck', $this->getEnforceSignatureCheck());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeEnumValue('operationType', $this->getOperationType());
         $writer->writeEnumValue('operator', $this->getOperator());
         $writer->writeBooleanValue('runAs32Bit', $this->getRunAs32Bit());
@@ -194,14 +180,6 @@ class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements Parsabl
     */
     public function setEnforceSignatureCheck(?bool $value): void {
         $this->getBackingStore()->set('enforceSignatureCheck', $value);
-    }
-
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param string|null $value Value to set for the OdataType property.
-    */
-    public function setOdataType(?string $value): void {
-        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

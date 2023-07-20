@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Fido2AuthenticationMethodConfiguration extends AuthenticationMethodConfiguration implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new fido2AuthenticationMethodConfiguration and sets the default values.
     */
     public function __construct() {
@@ -105,7 +100,6 @@ class Fido2AuthenticationMethodConfiguration extends AuthenticationMethodConfigu
         $writer->writeBooleanValue('isAttestationEnforced', $this->getIsAttestationEnforced());
         $writer->writeBooleanValue('isSelfServiceRegistrationAllowed', $this->getIsSelfServiceRegistrationAllowed());
         $writer->writeObjectValue('keyRestrictions', $this->getKeyRestrictions());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

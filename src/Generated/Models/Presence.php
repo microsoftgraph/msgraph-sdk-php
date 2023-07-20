@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Presence extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new presence and sets the default values.
     */
     public function __construct() {
@@ -73,7 +68,6 @@ class Presence extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeStringValue('activity', $this->getActivity());
         $writer->writeStringValue('availability', $this->getAvailability());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

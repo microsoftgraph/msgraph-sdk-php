@@ -13,11 +13,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class VppToken extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new vppToken and sets the default values.
     */
     public function __construct() {
@@ -199,7 +194,6 @@ class VppToken extends Entity implements Parsable
         $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
         $writer->writeDateTimeValue('lastSyncDateTime', $this->getLastSyncDateTime());
         $writer->writeEnumValue('lastSyncStatus', $this->getLastSyncStatus());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('organizationName', $this->getOrganizationName());
         $writer->writeEnumValue('state', $this->getState());
         $writer->writeStringValue('token', $this->getToken());

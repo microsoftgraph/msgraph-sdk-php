@@ -44,7 +44,7 @@ class CrossTenantAccessPolicy extends PolicyBase implements Parsable
      * Gets the default property value. Defines the default configuration for how your organization interacts with external Azure Active Directory organizations.
      * @return CrossTenantAccessPolicyConfigurationDefault|null
     */
-    public function getDefault(): ?CrossTenantAccessPolicyConfigurationDefault {
+    public function getEscapedDefault(): ?CrossTenantAccessPolicyConfigurationDefault {
         $val = $this->getBackingStore()->get('escapedDefault');
         if (is_null($val) || $val instanceof CrossTenantAccessPolicyConfigurationDefault) {
             return $val;
@@ -67,7 +67,7 @@ class CrossTenantAccessPolicy extends PolicyBase implements Parsable
                 /** @var array<string>|null $val */
                 $this->setAllowedCloudEndpoints($val);
             },
-            'default' => fn(ParseNode $n) => $o->setDefault($n->getObjectValue([CrossTenantAccessPolicyConfigurationDefault::class, 'createFromDiscriminatorValue'])),
+            'default' => fn(ParseNode $n) => $o->setEscapedDefault($n->getObjectValue([CrossTenantAccessPolicyConfigurationDefault::class, 'createFromDiscriminatorValue'])),
             'partners' => fn(ParseNode $n) => $o->setPartners($n->getCollectionOfObjectValues([CrossTenantAccessPolicyConfigurationPartner::class, 'createFromDiscriminatorValue'])),
         ]);
     }
@@ -93,7 +93,7 @@ class CrossTenantAccessPolicy extends PolicyBase implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeCollectionOfPrimitiveValues('allowedCloudEndpoints', $this->getAllowedCloudEndpoints());
-        $writer->writeObjectValue('default', $this->getDefault());
+        $writer->writeObjectValue('default', $this->getEscapedDefault());
         $writer->writeCollectionOfObjectValues('partners', $this->getPartners());
     }
 
@@ -107,9 +107,9 @@ class CrossTenantAccessPolicy extends PolicyBase implements Parsable
 
     /**
      * Sets the default property value. Defines the default configuration for how your organization interacts with external Azure Active Directory organizations.
-     * @param CrossTenantAccessPolicyConfigurationDefault|null $value Value to set for the EscapedDefault property.
+     * @param CrossTenantAccessPolicyConfigurationDefault|null $value Value to set for the default property.
     */
-    public function setDefault(?CrossTenantAccessPolicyConfigurationDefault $value): void {
+    public function setEscapedDefault(?CrossTenantAccessPolicyConfigurationDefault $value): void {
         $this->getBackingStore()->set('escapedDefault', $value);
     }
 

@@ -14,11 +14,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class BookingAppointment extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new bookingAppointment and sets the default values.
     */
     public function __construct() {
@@ -383,7 +378,6 @@ class BookingAppointment extends Entity implements Parsable
         $writer->writeBooleanValue('isLocationOnline', $this->getIsLocationOnline());
         $writer->writeStringValue('joinWebUrl', $this->getJoinWebUrl());
         $writer->writeIntegerValue('maximumAttendeesCount', $this->getMaximumAttendeesCount());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeBooleanValue('optOutOfCustomerEmail', $this->getOptOutOfCustomerEmail());
         $writer->writeDateIntervalValue('postBuffer', $this->getPostBuffer());
         $writer->writeDateIntervalValue('preBuffer', $this->getPreBuffer());

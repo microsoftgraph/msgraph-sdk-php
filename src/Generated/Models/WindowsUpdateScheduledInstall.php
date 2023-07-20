@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Types\Time;
 class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleType implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new windowsUpdateScheduledInstall and sets the default values.
     */
     public function __construct() {
@@ -73,7 +68,6 @@ class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleType imp
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeEnumValue('scheduledInstallDay', $this->getScheduledInstallDay());
         $writer->writeTimeValue('scheduledInstallTime', $this->getScheduledInstallTime());
     }

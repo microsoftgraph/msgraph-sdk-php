@@ -13,11 +13,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ManagedDeviceMobileAppConfigurationDeviceSummary extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new managedDeviceMobileAppConfigurationDeviceSummary and sets the default values.
     */
     public function __construct() {
@@ -145,7 +140,6 @@ class ManagedDeviceMobileAppConfigurationDeviceSummary extends Entity implements
         $writer->writeIntegerValue('failedCount', $this->getFailedCount());
         $writer->writeDateTimeValue('lastUpdateDateTime', $this->getLastUpdateDateTime());
         $writer->writeIntegerValue('notApplicableCount', $this->getNotApplicableCount());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeIntegerValue('pendingCount', $this->getPendingCount());
         $writer->writeIntegerValue('successCount', $this->getSuccessCount());
     }

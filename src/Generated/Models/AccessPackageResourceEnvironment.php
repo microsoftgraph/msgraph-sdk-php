@@ -11,11 +11,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class AccessPackageResourceEnvironment extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new accessPackageResourceEnvironment and sets the default values.
     */
     public function __construct() {
@@ -158,7 +153,6 @@ class AccessPackageResourceEnvironment extends Entity implements Parsable
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeBooleanValue('isDefaultEnvironment', $this->getIsDefaultEnvironment());
         $writer->writeDateTimeValue('modifiedDateTime', $this->getModifiedDateTime());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('originId', $this->getOriginId());
         $writer->writeStringValue('originSystem', $this->getOriginSystem());
         $writer->writeCollectionOfObjectValues('resources', $this->getResources());

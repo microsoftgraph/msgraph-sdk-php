@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class SharepointSettings extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new sharepointSettings and sets the default values.
     */
     public function __construct() {
@@ -489,7 +484,6 @@ class SharepointSettings extends Entity implements Parsable
         $writer->writeBooleanValue('isSitesStorageLimitAutomatic', $this->getIsSitesStorageLimitAutomatic());
         $writer->writeBooleanValue('isSyncButtonHiddenOnPersonalSite', $this->getIsSyncButtonHiddenOnPersonalSite());
         $writer->writeBooleanValue('isUnmanagedSyncAppForTenantRestricted', $this->getIsUnmanagedSyncAppForTenantRestricted());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeIntegerValue('personalSiteDefaultStorageLimitInMB', $this->getPersonalSiteDefaultStorageLimitInMB());
         $writer->writeCollectionOfPrimitiveValues('sharingAllowedDomainList', $this->getSharingAllowedDomainList());
         $writer->writeCollectionOfPrimitiveValues('sharingBlockedDomainList', $this->getSharingBlockedDomainList());

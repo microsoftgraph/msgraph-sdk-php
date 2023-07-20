@@ -12,11 +12,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new microsoftStoreForBusinessApp and sets the default values.
     */
     public function __construct() {
@@ -115,7 +110,6 @@ class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeEnumValue('licenseType', $this->getLicenseType());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('packageIdentityName', $this->getPackageIdentityName());
         $writer->writeStringValue('productKey', $this->getProductKey());
         $writer->writeIntegerValue('totalLicenseCount', $this->getTotalLicenseCount());

@@ -11,11 +11,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class AnalyzedMessageEvidence extends AlertEvidence implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new analyzedMessageEvidence and sets the default values.
     */
     public function __construct() {
@@ -315,7 +310,6 @@ class AnalyzedMessageEvidence extends AlertEvidence implements Parsable
         $writer->writeStringValue('internetMessageId', $this->getInternetMessageId());
         $writer->writeStringValue('language', $this->getLanguage());
         $writer->writeStringValue('networkMessageId', $this->getNetworkMessageId());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('p1Sender', $this->getP1Sender());
         $writer->writeObjectValue('p2Sender', $this->getP2Sender());
         $writer->writeDateTimeValue('receivedDateTime', $this->getReceivedDateTime());

@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class EducationClass extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new educationClass and sets the default values.
     */
     public function __construct() {
@@ -333,7 +328,6 @@ class EducationClass extends Entity implements Parsable
         $writer->writeObjectValue('group', $this->getGroup());
         $writer->writeStringValue('mailNickname', $this->getMailNickname());
         $writer->writeCollectionOfObjectValues('members', $this->getMembers());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfObjectValues('schools', $this->getSchools());
         $writer->writeCollectionOfObjectValues('teachers', $this->getTeachers());
         $writer->writeObjectValue('term', $this->getTerm());

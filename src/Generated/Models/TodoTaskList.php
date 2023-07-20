@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class TodoTaskList extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new todoTaskList and sets the default values.
     */
     public function __construct() {
@@ -132,7 +127,6 @@ class TodoTaskList extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('extensions', $this->getExtensions());
         $writer->writeBooleanValue('isOwner', $this->getIsOwner());
         $writer->writeBooleanValue('isShared', $this->getIsShared());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfObjectValues('tasks', $this->getTasks());
         $writer->writeEnumValue('wellknownListName', $this->getWellknownListName());
     }

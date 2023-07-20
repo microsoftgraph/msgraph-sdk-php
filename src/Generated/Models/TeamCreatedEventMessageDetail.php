@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TeamCreatedEventMessageDetail extends EventMessageDetail implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new teamCreatedEventMessageDetail and sets the default values.
     */
     public function __construct() {
@@ -99,7 +94,6 @@ class TeamCreatedEventMessageDetail extends EventMessageDetail implements Parsab
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeObjectValue('initiator', $this->getInitiator());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('teamDescription', $this->getTeamDescription());
         $writer->writeStringValue('teamDisplayName', $this->getTeamDisplayName());
         $writer->writeStringValue('teamId', $this->getTeamId());

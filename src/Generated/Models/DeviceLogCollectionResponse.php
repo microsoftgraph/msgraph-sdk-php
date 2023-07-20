@@ -13,11 +13,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DeviceLogCollectionResponse extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new deviceLogCollectionResponse and sets the default values.
     */
     public function __construct() {
@@ -157,7 +152,6 @@ class DeviceLogCollectionResponse extends Entity implements Parsable
         $writer->writeDateTimeValue('expirationDateTimeUTC', $this->getExpirationDateTimeUTC());
         $writer->writeStringValue('initiatedByUserPrincipalName', $this->getInitiatedByUserPrincipalName());
         $writer->writeStringValue('managedDeviceId', $this->getManagedDeviceId());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeDateTimeValue('receivedDateTimeUTC', $this->getReceivedDateTimeUTC());
         $writer->writeDateTimeValue('requestedDateTimeUTC', $this->getRequestedDateTimeUTC());
         $writer->writeFloatValue('sizeInKB', $this->getSizeInKB());

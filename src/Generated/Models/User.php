@@ -528,6 +528,18 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
+     * Gets the print property value. The print property
+     * @return UserPrint|null
+    */
+    public function getEscapedPrint(): ?UserPrint {
+        $val = $this->getBackingStore()->get('escapedPrint');
+        if (is_null($val) || $val instanceof UserPrint) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'escapedPrint'");
+    }
+
+    /**
      * Gets the events property value. The user's events. Default is to show Events under the Default Calendar. Read-only. Nullable.
      * @return array<Event>|null
     */
@@ -644,7 +656,7 @@ class User extends DirectoryObject implements Parsable
             'employeeLeaveDateTime' => fn(ParseNode $n) => $o->setEmployeeLeaveDateTime($n->getDateTimeValue()),
             'employeeOrgData' => fn(ParseNode $n) => $o->setEmployeeOrgData($n->getObjectValue([EmployeeOrgData::class, 'createFromDiscriminatorValue'])),
             'employeeType' => fn(ParseNode $n) => $o->setEmployeeType($n->getStringValue()),
-            'print' => fn(ParseNode $n) => $o->setPrint($n->getObjectValue([UserPrint::class, 'createFromDiscriminatorValue'])),
+            'print' => fn(ParseNode $n) => $o->setEscapedPrint($n->getObjectValue([UserPrint::class, 'createFromDiscriminatorValue'])),
             'events' => fn(ParseNode $n) => $o->setEvents($n->getCollectionOfObjectValues([Event::class, 'createFromDiscriminatorValue'])),
             'extensions' => fn(ParseNode $n) => $o->setExtensions($n->getCollectionOfObjectValues([Extension::class, 'createFromDiscriminatorValue'])),
             'externalUserState' => fn(ParseNode $n) => $o->setExternalUserState($n->getStringValue()),
@@ -1501,18 +1513,6 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the print property value. The print property
-     * @return UserPrint|null
-    */
-    public function getPrint(): ?UserPrint {
-        $val = $this->getBackingStore()->get('escapedPrint');
-        if (is_null($val) || $val instanceof UserPrint) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'escapedPrint'");
-    }
-
-    /**
      * Gets the provisionedPlans property value. The plans that are provisioned for the user. Read-only. Not nullable. Returned only on $select. Supports $filter (eq, not, ge, le).
      * @return array<ProvisionedPlan>|null
     */
@@ -1825,7 +1825,7 @@ class User extends DirectoryObject implements Parsable
         $writer->writeDateTimeValue('employeeLeaveDateTime', $this->getEmployeeLeaveDateTime());
         $writer->writeObjectValue('employeeOrgData', $this->getEmployeeOrgData());
         $writer->writeStringValue('employeeType', $this->getEmployeeType());
-        $writer->writeObjectValue('print', $this->getPrint());
+        $writer->writeObjectValue('print', $this->getEscapedPrint());
         $writer->writeCollectionOfObjectValues('events', $this->getEvents());
         $writer->writeCollectionOfObjectValues('extensions', $this->getExtensions());
         $writer->writeStringValue('externalUserState', $this->getExternalUserState());
@@ -2220,6 +2220,14 @@ class User extends DirectoryObject implements Parsable
     */
     public function setEmployeeType(?string $value): void {
         $this->getBackingStore()->set('employeeType', $value);
+    }
+
+    /**
+     * Sets the print property value. The print property
+     * @param UserPrint|null $value Value to set for the print property.
+    */
+    public function setEscapedPrint(?UserPrint $value): void {
+        $this->getBackingStore()->set('escapedPrint', $value);
     }
 
     /**
@@ -2708,14 +2716,6 @@ class User extends DirectoryObject implements Parsable
     */
     public function setPresence(?Presence $value): void {
         $this->getBackingStore()->set('presence', $value);
-    }
-
-    /**
-     * Sets the print property value. The print property
-     * @param UserPrint|null $value Value to set for the EscapedPrint property.
-    */
-    public function setPrint(?UserPrint $value): void {
-        $this->getBackingStore()->set('escapedPrint', $value);
     }
 
     /**

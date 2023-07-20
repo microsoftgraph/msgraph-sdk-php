@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class PlannerTask extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new plannerTask and sets the default values.
     */
     public function __construct() {
@@ -387,7 +382,6 @@ class PlannerTask extends Entity implements Parsable
         $writer->writeObjectValue('details', $this->getDetails());
         $writer->writeDateTimeValue('dueDateTime', $this->getDueDateTime());
         $writer->writeBooleanValue('hasDescription', $this->getHasDescription());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('orderHint', $this->getOrderHint());
         $writer->writeIntegerValue('percentComplete', $this->getPercentComplete());
         $writer->writeStringValue('planId', $this->getPlanId());

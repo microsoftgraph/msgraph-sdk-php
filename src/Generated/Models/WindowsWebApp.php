@@ -12,11 +12,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WindowsWebApp extends MobileApp implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new windowsWebApp and sets the default values.
     */
     public function __construct() {
@@ -63,7 +58,6 @@ class WindowsWebApp extends MobileApp implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeStringValue('appUrl', $this->getAppUrl());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

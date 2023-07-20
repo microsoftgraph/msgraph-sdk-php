@@ -13,11 +13,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DeviceManagementTroubleshootingEvent extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new deviceManagementTroubleshootingEvent and sets the default values.
     */
     public function __construct() {
@@ -84,7 +79,6 @@ class DeviceManagementTroubleshootingEvent extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeStringValue('correlationId', $this->getCorrelationId());
         $writer->writeDateTimeValue('eventDateTime', $this->getEventDateTime());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

@@ -11,11 +11,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class PrinterShare extends PrinterBase implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new printerShare and sets the default values.
     */
     public function __construct() {
@@ -134,7 +129,6 @@ class PrinterShare extends PrinterBase implements Parsable
         $writer->writeCollectionOfObjectValues('allowedGroups', $this->getAllowedGroups());
         $writer->writeCollectionOfObjectValues('allowedUsers', $this->getAllowedUsers());
         $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('printer', $this->getPrinter());
         $writer->writeObjectValue('viewPoint', $this->getViewPoint());
     }

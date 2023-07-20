@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SocialIdentityProvider extends IdentityProviderBase implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new socialIdentityProvider and sets the default values.
     */
     public function __construct() {
@@ -88,7 +83,6 @@ class SocialIdentityProvider extends IdentityProviderBase implements Parsable
         $writer->writeStringValue('clientId', $this->getClientId());
         $writer->writeStringValue('clientSecret', $this->getClientSecret());
         $writer->writeStringValue('identityProviderType', $this->getIdentityProviderType());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

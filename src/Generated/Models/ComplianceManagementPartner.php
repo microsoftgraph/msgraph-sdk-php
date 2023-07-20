@@ -14,11 +14,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class ComplianceManagementPartner extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new complianceManagementPartner and sets the default values.
     */
     public function __construct() {
@@ -181,7 +176,6 @@ class ComplianceManagementPartner extends Entity implements Parsable
         $writer->writeDateTimeValue('lastHeartbeatDateTime', $this->getLastHeartbeatDateTime());
         $writer->writeCollectionOfObjectValues('macOsEnrollmentAssignments', $this->getMacOsEnrollmentAssignments());
         $writer->writeBooleanValue('macOsOnboarded', $this->getMacOsOnboarded());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeEnumValue('partnerState', $this->getPartnerState());
     }
 

@@ -14,11 +14,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class DeviceConfiguration extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new deviceConfiguration and sets the default values.
     */
     public function __construct() {
@@ -241,7 +236,6 @@ class DeviceConfiguration extends Entity implements Parsable
         $writer->writeObjectValue('deviceStatusOverview', $this->getDeviceStatusOverview());
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfObjectValues('userStatuses', $this->getUserStatuses());
         $writer->writeObjectValue('userStatusOverview', $this->getUserStatusOverview());
         $writer->writeIntegerValue('version', $this->getVersion());

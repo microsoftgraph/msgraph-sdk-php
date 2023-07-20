@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ThumbnailSet extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new thumbnailSet and sets the default values.
     */
     public function __construct() {
@@ -99,7 +94,6 @@ class ThumbnailSet extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeObjectValue('large', $this->getLarge());
         $writer->writeObjectValue('medium', $this->getMedium());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('small', $this->getSmall());
         $writer->writeObjectValue('source', $this->getSource());
     }

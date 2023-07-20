@@ -11,11 +11,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Event extends OutlookItem implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new event and sets the default values.
     */
     public function __construct() {
@@ -630,7 +625,6 @@ class Event extends OutlookItem implements Parsable
         $writer->writeObjectValue('location', $this->getLocation());
         $writer->writeCollectionOfObjectValues('locations', $this->getLocations());
         $writer->writeCollectionOfObjectValues('multiValueExtendedProperties', $this->getMultiValueExtendedProperties());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('onlineMeeting', $this->getOnlineMeeting());
         $writer->writeEnumValue('onlineMeetingProvider', $this->getOnlineMeetingProvider());
         $writer->writeStringValue('onlineMeetingUrl', $this->getOnlineMeetingUrl());

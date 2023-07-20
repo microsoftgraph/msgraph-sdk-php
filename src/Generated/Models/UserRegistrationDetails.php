@@ -11,11 +11,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class UserRegistrationDetails extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new userRegistrationDetails and sets the default values.
     */
     public function __construct() {
@@ -270,7 +265,6 @@ class UserRegistrationDetails extends Entity implements Parsable
         $writer->writeBooleanValue('isSystemPreferredAuthenticationMethodEnabled', $this->getIsSystemPreferredAuthenticationMethodEnabled());
         $writer->writeDateTimeValue('lastUpdatedDateTime', $this->getLastUpdatedDateTime());
         $writer->writeCollectionOfPrimitiveValues('methodsRegistered', $this->getMethodsRegistered());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfPrimitiveValues('systemPreferredAuthenticationMethods', $this->getSystemPreferredAuthenticationMethods());
         $writer->writeStringValue('userDisplayName', $this->getUserDisplayName());
         $writer->writeEnumValue('userPreferredMethodForSecondaryAuthentication', $this->getUserPreferredMethodForSecondaryAuthentication());

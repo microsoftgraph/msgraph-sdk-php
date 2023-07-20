@@ -12,11 +12,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new windowsPhone81CompliancePolicy and sets the default values.
     */
     public function __construct() {
@@ -192,7 +187,6 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy implements P
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('osMaximumVersion', $this->getOsMaximumVersion());
         $writer->writeStringValue('osMinimumVersion', $this->getOsMinimumVersion());
         $writer->writeBooleanValue('passwordBlockSimple', $this->getPasswordBlockSimple());

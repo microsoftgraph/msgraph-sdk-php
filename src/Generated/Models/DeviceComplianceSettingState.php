@@ -13,11 +13,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DeviceComplianceSettingState extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new deviceComplianceSettingState and sets the default values.
     */
     public function __construct() {
@@ -196,7 +191,6 @@ class DeviceComplianceSettingState extends Entity implements Parsable
         $writer->writeStringValue('deviceId', $this->getDeviceId());
         $writer->writeStringValue('deviceModel', $this->getDeviceModel());
         $writer->writeStringValue('deviceName', $this->getDeviceName());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('setting', $this->getSetting());
         $writer->writeStringValue('settingName', $this->getSettingName());
         $writer->writeEnumValue('state', $this->getState());

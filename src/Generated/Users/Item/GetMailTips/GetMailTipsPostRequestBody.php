@@ -114,7 +114,7 @@ class GetMailTipsPostRequestBody implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the additionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -122,7 +122,7 @@ class GetMailTipsPostRequestBody implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the backingStore property value. Stores model information.
-     * @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the backingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -130,7 +130,7 @@ class GetMailTipsPostRequestBody implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the emailAddresses property value. The EmailAddresses property
-     * @param array<string>|null $value Value to set for the EmailAddresses property.
+     * @param array<string>|null $value Value to set for the emailAddresses property.
     */
     public function setEmailAddresses(?array $value): void {
         $this->getBackingStore()->set('emailAddresses', $value);
@@ -138,7 +138,7 @@ class GetMailTipsPostRequestBody implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the mailTipsOptions property value. The MailTipsOptions property
-     * @param MailTipsType|null $value Value to set for the MailTipsOptions property.
+     * @param MailTipsType|null $value Value to set for the mailTipsOptions property.
     */
     public function setMailTipsOptions(?MailTipsType $value): void {
         $this->getBackingStore()->set('mailTipsOptions', $value);

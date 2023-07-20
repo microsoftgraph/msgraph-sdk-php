@@ -7,15 +7,10 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 /**
- * App for Windows information protection
+ * Store App for Windows information protection
 */
 class WindowsInformationProtectionStoreApp extends WindowsInformationProtectionApp implements Parsable 
 {
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
     /**
      * Instantiates a new windowsInformationProtectionStoreApp and sets the default values.
     */
@@ -49,7 +44,6 @@ class WindowsInformationProtectionStoreApp extends WindowsInformationProtectionA
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
 }

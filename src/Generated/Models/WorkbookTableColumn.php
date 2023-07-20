@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookTableColumn extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new workbookTableColumn and sets the default values.
     */
     public function __construct() {
@@ -100,7 +95,6 @@ class WorkbookTableColumn extends Entity implements Parsable
         $writer->writeObjectValue('filter', $this->getFilter());
         $writer->writeIntegerValue('index', $this->getIndex());
         $writer->writeStringValue('name', $this->getName());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('values', $this->getValues());
     }
 

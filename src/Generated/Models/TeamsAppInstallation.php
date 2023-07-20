@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TeamsAppInstallation extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new teamsAppInstallation and sets the default values.
     */
     public function __construct() {
@@ -92,7 +87,6 @@ class TeamsAppInstallation extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeObjectValue('consentedPermissionSet', $this->getConsentedPermissionSet());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('teamsApp', $this->getTeamsApp());
         $writer->writeObjectValue('teamsAppDefinition', $this->getTeamsAppDefinition());
     }

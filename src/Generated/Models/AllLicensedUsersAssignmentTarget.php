@@ -7,15 +7,10 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 /**
- * Base type for assignment targets.
+ * Represents an assignment to all licensed users in the tenant.
 */
 class AllLicensedUsersAssignmentTarget extends DeviceAndAppManagementAssignmentTarget implements Parsable 
 {
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
     /**
      * Instantiates a new allLicensedUsersAssignmentTarget and sets the default values.
     */
@@ -49,7 +44,6 @@ class AllLicensedUsersAssignmentTarget extends DeviceAndAppManagementAssignmentT
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
 }

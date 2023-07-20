@@ -11,11 +11,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class RiskyServicePrincipal extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new riskyServicePrincipal and sets the default values.
     */
     public function __construct() {
@@ -191,7 +186,6 @@ class RiskyServicePrincipal extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('history', $this->getHistory());
         $writer->writeBooleanValue('isEnabled', $this->getIsEnabled());
         $writer->writeBooleanValue('isProcessing', $this->getIsProcessing());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeEnumValue('riskDetail', $this->getRiskDetail());
         $writer->writeDateTimeValue('riskLastUpdatedDateTime', $this->getRiskLastUpdatedDateTime());
         $writer->writeEnumValue('riskLevel', $this->getRiskLevel());

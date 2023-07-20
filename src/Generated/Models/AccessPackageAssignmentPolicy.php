@@ -11,11 +11,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class AccessPackageAssignmentPolicy extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new accessPackageAssignmentPolicy and sets the default values.
     */
     public function __construct() {
@@ -258,7 +253,6 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeObjectValue('expiration', $this->getExpiration());
         $writer->writeDateTimeValue('modifiedDateTime', $this->getModifiedDateTime());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfObjectValues('questions', $this->getQuestions());
         $writer->writeObjectValue('requestApprovalSettings', $this->getRequestApprovalSettings());
         $writer->writeObjectValue('requestorSettings', $this->getRequestorSettings());

@@ -11,11 +11,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Store extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new store and sets the default values.
     */
     public function __construct() {
@@ -115,7 +110,6 @@ class Store extends Entity implements Parsable
         $writer->writeStringValue('defaultLanguageTag', $this->getDefaultLanguageTag());
         $writer->writeCollectionOfObjectValues('groups', $this->getGroups());
         $writer->writeCollectionOfPrimitiveValues('languageTags', $this->getLanguageTags());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfObjectValues('sets', $this->getSets());
     }
 

@@ -33,7 +33,6 @@ class Synchronization extends Entity implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'jobs' => fn(ParseNode $n) => $o->setJobs($n->getCollectionOfObjectValues([SynchronizationJob::class, 'createFromDiscriminatorValue'])),
-            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'secrets' => fn(ParseNode $n) => $o->setSecrets($n->getCollectionOfObjectValues([SynchronizationSecretKeyStringValuePair::class, 'createFromDiscriminatorValue'])),
             'templates' => fn(ParseNode $n) => $o->setTemplates($n->getCollectionOfObjectValues([SynchronizationTemplate::class, 'createFromDiscriminatorValue'])),
         ]);
@@ -51,18 +50,6 @@ class Synchronization extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'jobs'");
-    }
-
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return string|null
-    */
-    public function getOdataType(): ?string {
-        $val = $this->getBackingStore()->get('odataType');
-        if (is_null($val) || is_string($val)) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -100,7 +87,6 @@ class Synchronization extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('jobs', $this->getJobs());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfObjectValues('secrets', $this->getSecrets());
         $writer->writeCollectionOfObjectValues('templates', $this->getTemplates());
     }
@@ -111,14 +97,6 @@ class Synchronization extends Entity implements Parsable
     */
     public function setJobs(?array $value): void {
         $this->getBackingStore()->set('jobs', $value);
-    }
-
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param string|null $value Value to set for the OdataType property.
-    */
-    public function setOdataType(?string $value): void {
-        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

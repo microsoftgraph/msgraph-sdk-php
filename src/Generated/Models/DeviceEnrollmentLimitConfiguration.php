@@ -12,11 +12,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DeviceEnrollmentLimitConfiguration extends DeviceEnrollmentConfiguration implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new deviceEnrollmentLimitConfiguration and sets the default values.
     */
     public function __construct() {
@@ -63,7 +58,6 @@ class DeviceEnrollmentLimitConfiguration extends DeviceEnrollmentConfiguration i
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeIntegerValue('limit', $this->getLimit());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class FileEvidence extends AlertEvidence implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new fileEvidence and sets the default values.
     */
     public function __construct() {
@@ -87,7 +82,6 @@ class FileEvidence extends AlertEvidence implements Parsable
         $writer->writeEnumValue('detectionStatus', $this->getDetectionStatus());
         $writer->writeObjectValue('fileDetails', $this->getFileDetails());
         $writer->writeStringValue('mdeDeviceId', $this->getMdeDeviceId());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

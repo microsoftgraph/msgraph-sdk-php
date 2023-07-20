@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookNamedItem extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new workbookNamedItem and sets the default values.
     */
     public function __construct() {
@@ -138,7 +133,6 @@ class WorkbookNamedItem extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeStringValue('comment', $this->getComment());
         $writer->writeStringValue('name', $this->getName());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('scope', $this->getScope());
         $writer->writeStringValue('type', $this->getType());
         $writer->writeObjectValue('value', $this->getValue());

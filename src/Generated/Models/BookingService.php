@@ -14,11 +14,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class BookingService extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new bookingService and sets the default values.
     */
     public function __construct() {
@@ -351,7 +346,6 @@ class BookingService extends Entity implements Parsable
         $writer->writeStringValue('languageTag', $this->getLanguageTag());
         $writer->writeIntegerValue('maximumAttendeesCount', $this->getMaximumAttendeesCount());
         $writer->writeStringValue('notes', $this->getNotes());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeDateIntervalValue('postBuffer', $this->getPostBuffer());
         $writer->writeDateIntervalValue('preBuffer', $this->getPreBuffer());
         $writer->writeObjectValue('schedulingPolicy', $this->getSchedulingPolicy());

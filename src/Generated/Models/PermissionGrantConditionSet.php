@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class PermissionGrantConditionSet extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new permissionGrantConditionSet and sets the default values.
     */
     public function __construct() {
@@ -190,7 +185,6 @@ class PermissionGrantConditionSet extends Entity implements Parsable
         $writer->writeCollectionOfPrimitiveValues('clientApplicationPublisherIds', $this->getClientApplicationPublisherIds());
         $writer->writeBooleanValue('clientApplicationsFromVerifiedPublisherOnly', $this->getClientApplicationsFromVerifiedPublisherOnly());
         $writer->writeCollectionOfPrimitiveValues('clientApplicationTenantIds', $this->getClientApplicationTenantIds());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('permissionClassification', $this->getPermissionClassification());
         $writer->writeCollectionOfPrimitiveValues('permissions', $this->getPermissions());
         $writer->writeEnumValue('permissionType', $this->getPermissionType());

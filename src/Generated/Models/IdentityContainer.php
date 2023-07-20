@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class IdentityContainer extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new identityContainer and sets the default values.
     */
     public function __construct() {
@@ -123,7 +118,6 @@ class IdentityContainer extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('b2xUserFlows', $this->getB2xUserFlows());
         $writer->writeObjectValue('conditionalAccess', $this->getConditionalAccess());
         $writer->writeCollectionOfObjectValues('identityProviders', $this->getIdentityProviders());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfObjectValues('userFlowAttributes', $this->getUserFlowAttributes());
     }
 

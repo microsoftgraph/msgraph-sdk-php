@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class MobileAppTroubleshootingEvent extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new mobileAppTroubleshootingEvent and sets the default values.
     */
     public function __construct() {
@@ -62,7 +57,6 @@ class MobileAppTroubleshootingEvent extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('appLogCollectionRequests', $this->getAppLogCollectionRequests());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

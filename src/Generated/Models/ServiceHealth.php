@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class ServiceHealth extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new serviceHealth and sets the default values.
     */
     public function __construct() {
@@ -88,7 +83,6 @@ class ServiceHealth extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('issues', $this->getIssues());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('service', $this->getService());
         $writer->writeEnumValue('status', $this->getStatus());
     }

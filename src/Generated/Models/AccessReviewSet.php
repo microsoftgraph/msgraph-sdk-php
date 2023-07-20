@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class AccessReviewSet extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new accessReviewSet and sets the default values.
     */
     public function __construct() {
@@ -78,7 +73,6 @@ class AccessReviewSet extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('definitions', $this->getDefinitions());
         $writer->writeCollectionOfObjectValues('historyDefinitions', $this->getHistoryDefinitions());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

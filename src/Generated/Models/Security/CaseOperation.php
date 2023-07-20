@@ -13,11 +13,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class CaseOperation extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new caseOperation and sets the default values.
     */
     public function __construct() {
@@ -157,7 +152,6 @@ class CaseOperation extends Entity implements Parsable
         $writer->writeDateTimeValue('completedDateTime', $this->getCompletedDateTime());
         $writer->writeObjectValue('createdBy', $this->getCreatedBy());
         $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeIntegerValue('percentProgress', $this->getPercentProgress());
         $writer->writeObjectValue('resultInfo', $this->getResultInfo());
         $writer->writeEnumValue('status', $this->getStatus());

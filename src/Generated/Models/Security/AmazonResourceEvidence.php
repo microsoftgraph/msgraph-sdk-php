@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AmazonResourceEvidence extends AlertEvidence implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new amazonResourceEvidence and sets the default values.
     */
     public function __construct() {
@@ -99,7 +94,6 @@ class AmazonResourceEvidence extends AlertEvidence implements Parsable
         parent::serialize($writer);
         $writer->writeStringValue('amazonAccountId', $this->getAmazonAccountId());
         $writer->writeStringValue('amazonResourceId', $this->getAmazonResourceId());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('resourceName', $this->getResourceName());
         $writer->writeStringValue('resourceType', $this->getResourceType());
     }

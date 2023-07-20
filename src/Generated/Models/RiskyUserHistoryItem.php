@@ -45,7 +45,6 @@ class RiskyUserHistoryItem extends RiskyUser implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'activity' => fn(ParseNode $n) => $o->setActivity($n->getObjectValue([RiskUserActivity::class, 'createFromDiscriminatorValue'])),
             'initiatedBy' => fn(ParseNode $n) => $o->setInitiatedBy($n->getStringValue()),
-            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'userId' => fn(ParseNode $n) => $o->setUserId($n->getStringValue()),
         ]);
     }
@@ -60,18 +59,6 @@ class RiskyUserHistoryItem extends RiskyUser implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'initiatedBy'");
-    }
-
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return string|null
-    */
-    public function getOdataType(): ?string {
-        $val = $this->getBackingStore()->get('odataType');
-        if (is_null($val) || is_string($val)) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -94,7 +81,6 @@ class RiskyUserHistoryItem extends RiskyUser implements Parsable
         parent::serialize($writer);
         $writer->writeObjectValue('activity', $this->getActivity());
         $writer->writeStringValue('initiatedBy', $this->getInitiatedBy());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('userId', $this->getUserId());
     }
 
@@ -112,14 +98,6 @@ class RiskyUserHistoryItem extends RiskyUser implements Parsable
     */
     public function setInitiatedBy(?string $value): void {
         $this->getBackingStore()->set('initiatedBy', $value);
-    }
-
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param string|null $value Value to set for the OdataType property.
-    */
-    public function setOdataType(?string $value): void {
-        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

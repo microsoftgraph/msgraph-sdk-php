@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AuthenticationFlowsPolicy extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new authenticationFlowsPolicy and sets the default values.
     */
     public function __construct() {
@@ -86,7 +81,6 @@ class AuthenticationFlowsPolicy extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeStringValue('description', $this->getDescription());
         $writer->writeStringValue('displayName', $this->getDisplayName());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('selfServiceSignUp', $this->getSelfServiceSignUp());
     }
 

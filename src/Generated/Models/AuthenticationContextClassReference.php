@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AuthenticationContextClassReference extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new authenticationContextClassReference and sets the default values.
     */
     public function __construct() {
@@ -87,7 +82,6 @@ class AuthenticationContextClassReference extends Entity implements Parsable
         $writer->writeStringValue('description', $this->getDescription());
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeBooleanValue('isAvailable', $this->getIsAvailable());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

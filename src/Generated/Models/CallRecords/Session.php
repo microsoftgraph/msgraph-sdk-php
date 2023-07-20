@@ -12,11 +12,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Session extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new session and sets the default values.
     */
     public function __construct() {
@@ -162,7 +157,6 @@ class Session extends Entity implements Parsable
         $writer->writeObjectValue('failureInfo', $this->getFailureInfo());
         $writer->writeBooleanValue('isTest', $this->getIsTest());
         $writer->writeCollectionOfEnumValues('modalities', $this->getModalities());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfObjectValues('segments', $this->getSegments());
         $writer->writeDateTimeValue('startDateTime', $this->getStartDateTime());
     }

@@ -12,11 +12,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Article extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new article and sets the default values.
     */
     public function __construct() {
@@ -182,7 +177,6 @@ class Article extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('indicators', $this->getIndicators());
         $writer->writeBooleanValue('isFeatured', $this->getIsFeatured());
         $writer->writeDateTimeValue('lastUpdatedDateTime', $this->getLastUpdatedDateTime());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('summary', $this->getSummary());
         $writer->writeCollectionOfPrimitiveValues('tags', $this->getTags());
         $writer->writeStringValue('title', $this->getTitle());

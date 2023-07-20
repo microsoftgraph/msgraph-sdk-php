@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SimulationAutomationRun extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new simulationAutomationRun and sets the default values.
     */
     public function __construct() {
@@ -99,7 +94,6 @@ class SimulationAutomationRun extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeDateTimeValue('endDateTime', $this->getEndDateTime());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('simulationId', $this->getSimulationId());
         $writer->writeDateTimeValue('startDateTime', $this->getStartDateTime());
         $writer->writeEnumValue('status', $this->getStatus());

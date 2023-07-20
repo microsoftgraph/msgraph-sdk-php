@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DomainDnsRecord extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new domainDnsRecord and sets the default values.
     */
     public function __construct() {
@@ -123,7 +118,6 @@ class DomainDnsRecord extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeBooleanValue('isOptional', $this->getIsOptional());
         $writer->writeStringValue('label', $this->getLabel());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('recordType', $this->getRecordType());
         $writer->writeStringValue('supportedService', $this->getSupportedService());
         $writer->writeIntegerValue('ttl', $this->getTtl());

@@ -7,6 +7,7 @@ use Microsoft\Graph\Generated\AgreementAcceptances\AgreementAcceptancesRequestBu
 use Microsoft\Graph\Generated\Agreements\AgreementsRequestBuilder;
 use Microsoft\Graph\Generated\AppCatalogs\AppCatalogsRequestBuilder;
 use Microsoft\Graph\Generated\Applications\ApplicationsRequestBuilder;
+use Microsoft\Graph\Generated\ApplicationsWithAppId\ApplicationsWithAppIdRequestBuilder;
 use Microsoft\Graph\Generated\ApplicationTemplates\ApplicationTemplatesRequestBuilder;
 use Microsoft\Graph\Generated\AuditLogs\AuditLogsRequestBuilder;
 use Microsoft\Graph\Generated\AuthenticationMethodConfigurations\AuthenticationMethodConfigurationsRequestBuilder;
@@ -22,9 +23,11 @@ use Microsoft\Graph\Generated\DataPolicyOperations\DataPolicyOperationsRequestBu
 use Microsoft\Graph\Generated\DeviceAppManagement\DeviceAppManagementRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceManagementRequestBuilder;
 use Microsoft\Graph\Generated\Devices\DevicesRequestBuilder;
+use Microsoft\Graph\Generated\DevicesWithDeviceId\DevicesWithDeviceIdRequestBuilder;
 use Microsoft\Graph\Generated\Directory\DirectoryRequestBuilder;
 use Microsoft\Graph\Generated\DirectoryObjects\DirectoryObjectsRequestBuilder;
 use Microsoft\Graph\Generated\DirectoryRoles\DirectoryRolesRequestBuilder;
+use Microsoft\Graph\Generated\DirectoryRolesWithRoleTemplateId\DirectoryRolesWithRoleTemplateIdRequestBuilder;
 use Microsoft\Graph\Generated\DirectoryRoleTemplates\DirectoryRoleTemplatesRequestBuilder;
 use Microsoft\Graph\Generated\DomainDnsRecords\DomainDnsRecordsRequestBuilder;
 use Microsoft\Graph\Generated\Domains\DomainsRequestBuilder;
@@ -60,6 +63,7 @@ use Microsoft\Graph\Generated\ScopedRoleMemberships\ScopedRoleMembershipsRequest
 use Microsoft\Graph\Generated\Search\SearchRequestBuilder;
 use Microsoft\Graph\Generated\Security\SecurityRequestBuilder;
 use Microsoft\Graph\Generated\ServicePrincipals\ServicePrincipalsRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipalsWithAppId\ServicePrincipalsWithAppIdRequestBuilder;
 use Microsoft\Graph\Generated\Shares\SharesRequestBuilder;
 use Microsoft\Graph\Generated\Sites\SitesRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\SolutionsRequestBuilder;
@@ -562,6 +566,15 @@ class BaseGraphClient extends BaseRequestBuilder
     }
     
     /**
+     * Provides operations to manage the collection of application entities.
+     * @param string $appId Alternate key of application
+     * @return ApplicationsWithAppIdRequestBuilder
+    */
+    public function applicationsWithAppId(string $appId): ApplicationsWithAppIdRequestBuilder {
+        return new ApplicationsWithAppIdRequestBuilder($this->pathParameters, $this->requestAdapter, $appId);
+    }
+
+    /**
      * Instantiates a new BaseGraphClient and sets the default values.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
      * @param BackingStoreFactory|null $backingStore The backing store to use for the models.
@@ -577,6 +590,33 @@ class BaseGraphClient extends BaseRequestBuilder
         }
         $this->pathParameters['baseurl'] = $this->requestAdapter->getBaseUrl();
         $this->requestAdapter->enableBackingStore($backingStore ?? BackingStoreFactorySingleton::getInstance());
+    }
+
+    /**
+     * Provides operations to manage the collection of device entities.
+     * @param string $deviceId Alternate key of device
+     * @return DevicesWithDeviceIdRequestBuilder
+    */
+    public function devicesWithDeviceId(string $deviceId): DevicesWithDeviceIdRequestBuilder {
+        return new DevicesWithDeviceIdRequestBuilder($this->pathParameters, $this->requestAdapter, $deviceId);
+    }
+
+    /**
+     * Provides operations to manage the collection of directoryRole entities.
+     * @param string $roleTemplateId Alternate key of directoryRole
+     * @return DirectoryRolesWithRoleTemplateIdRequestBuilder
+    */
+    public function directoryRolesWithRoleTemplateId(string $roleTemplateId): DirectoryRolesWithRoleTemplateIdRequestBuilder {
+        return new DirectoryRolesWithRoleTemplateIdRequestBuilder($this->pathParameters, $this->requestAdapter, $roleTemplateId);
+    }
+
+    /**
+     * Provides operations to manage the collection of servicePrincipal entities.
+     * @param string $appId Alternate key of servicePrincipal
+     * @return ServicePrincipalsWithAppIdRequestBuilder
+    */
+    public function servicePrincipalsWithAppId(string $appId): ServicePrincipalsWithAppIdRequestBuilder {
+        return new ServicePrincipalsWithAppIdRequestBuilder($this->pathParameters, $this->requestAdapter, $appId);
     }
 
 }

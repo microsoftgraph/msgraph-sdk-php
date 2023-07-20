@@ -12,11 +12,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollmentConfiguration implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new deviceEnrollmentWindowsHelloForBusinessConfiguration and sets the default values.
     */
     public function __construct() {
@@ -206,7 +201,6 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeEnumValue('enhancedBiometricsState', $this->getEnhancedBiometricsState());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeIntegerValue('pinExpirationInDays', $this->getPinExpirationInDays());
         $writer->writeEnumValue('pinLowercaseCharactersUsage', $this->getPinLowercaseCharactersUsage());
         $writer->writeIntegerValue('pinMaximumLength', $this->getPinMaximumLength());

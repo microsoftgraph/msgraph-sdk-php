@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkforceIntegration extends ChangeTrackedEntity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new workforceIntegration and sets the default values.
     */
     public function __construct() {
@@ -128,7 +123,6 @@ class WorkforceIntegration extends ChangeTrackedEntity implements Parsable
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeObjectValue('encryption', $this->getEncryption());
         $writer->writeBooleanValue('isActive', $this->getIsActive());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeEnumValue('supportedEntities', $this->getSupportedEntities());
         $writer->writeStringValue('url', $this->getUrl());
     }

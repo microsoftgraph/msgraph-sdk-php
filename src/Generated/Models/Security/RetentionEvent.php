@@ -13,11 +13,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class RetentionEvent extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new retentionEvent and sets the default values.
     */
     public function __construct() {
@@ -220,7 +215,6 @@ class RetentionEvent extends Entity implements Parsable
         $writer->writeObjectValue('lastModifiedBy', $this->getLastModifiedBy());
         $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
         $writer->writeDateTimeValue('lastStatusUpdateDateTime', $this->getLastStatusUpdateDateTime());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('retentionEventType', $this->getRetentionEventType());
     }
 

@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class WorkbookTable extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new workbookTable and sets the default values.
     */
     public function __construct() {
@@ -237,7 +232,6 @@ class WorkbookTable extends Entity implements Parsable
         $writer->writeBooleanValue('highlightLastColumn', $this->getHighlightLastColumn());
         $writer->writeStringValue('legacyId', $this->getLegacyId());
         $writer->writeStringValue('name', $this->getName());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfObjectValues('rows', $this->getRows());
         $writer->writeBooleanValue('showBandedColumns', $this->getShowBandedColumns());
         $writer->writeBooleanValue('showBandedRows', $this->getShowBandedRows());

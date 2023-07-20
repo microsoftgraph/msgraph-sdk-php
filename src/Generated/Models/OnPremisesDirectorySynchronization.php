@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class OnPremisesDirectorySynchronization extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new onPremisesDirectorySynchronization and sets the default values.
     */
     public function __construct() {
@@ -73,7 +68,6 @@ class OnPremisesDirectorySynchronization extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeObjectValue('configuration', $this->getConfiguration());
         $writer->writeObjectValue('features', $this->getFeatures());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

@@ -47,21 +47,8 @@ class WindowsInformationProtectionNetworkLearningSummary extends Entity implemen
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'deviceCount' => fn(ParseNode $n) => $o->setDeviceCount($n->getIntegerValue()),
-            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'url' => fn(ParseNode $n) => $o->setUrl($n->getStringValue()),
         ]);
-    }
-
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return string|null
-    */
-    public function getOdataType(): ?string {
-        $val = $this->getBackingStore()->get('odataType');
-        if (is_null($val) || is_string($val)) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -83,7 +70,6 @@ class WindowsInformationProtectionNetworkLearningSummary extends Entity implemen
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeIntegerValue('deviceCount', $this->getDeviceCount());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('url', $this->getUrl());
     }
 
@@ -93,14 +79,6 @@ class WindowsInformationProtectionNetworkLearningSummary extends Entity implemen
     */
     public function setDeviceCount(?int $value): void {
         $this->getBackingStore()->set('deviceCount', $value);
-    }
-
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param string|null $value Value to set for the OdataType property.
-    */
-    public function setOdataType(?string $value): void {
-        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

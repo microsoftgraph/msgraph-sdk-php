@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AadUserConversationMember extends ConversationMember implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new aadUserConversationMember and sets the default values.
     */
     public function __construct() {
@@ -99,7 +94,6 @@ class AadUserConversationMember extends ConversationMember implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeStringValue('email', $this->getEmail());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('tenantId', $this->getTenantId());
         $writer->writeObjectValue('user', $this->getUser());
         $writer->writeStringValue('userId', $this->getUserId());

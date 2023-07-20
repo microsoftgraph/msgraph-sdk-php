@@ -14,11 +14,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class BrowserSiteList extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new browserSiteList and sets the default values.
     */
     public function __construct() {
@@ -188,7 +183,6 @@ class BrowserSiteList extends Entity implements Parsable
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeObjectValue('lastModifiedBy', $this->getLastModifiedBy());
         $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('publishedBy', $this->getPublishedBy());
         $writer->writeDateTimeValue('publishedDateTime', $this->getPublishedDateTime());
         $writer->writeStringValue('revision', $this->getRevision());

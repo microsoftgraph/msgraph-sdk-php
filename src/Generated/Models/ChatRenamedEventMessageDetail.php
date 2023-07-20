@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ChatRenamedEventMessageDetail extends EventMessageDetail implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new chatRenamedEventMessageDetail and sets the default values.
     */
     public function __construct() {
@@ -88,7 +83,6 @@ class ChatRenamedEventMessageDetail extends EventMessageDetail implements Parsab
         $writer->writeStringValue('chatDisplayName', $this->getChatDisplayName());
         $writer->writeStringValue('chatId', $this->getChatId());
         $writer->writeObjectValue('initiator', $this->getInitiator());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

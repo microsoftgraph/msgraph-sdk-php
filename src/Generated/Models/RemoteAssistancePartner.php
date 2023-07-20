@@ -49,7 +49,6 @@ class RemoteAssistancePartner extends Entity implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'lastConnectionDateTime' => fn(ParseNode $n) => $o->setLastConnectionDateTime($n->getDateTimeValue()),
-            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'onboardingStatus' => fn(ParseNode $n) => $o->setOnboardingStatus($n->getEnumValue(RemoteAssistanceOnboardingStatus::class)),
             'onboardingUrl' => fn(ParseNode $n) => $o->setOnboardingUrl($n->getStringValue()),
         ]);
@@ -65,18 +64,6 @@ class RemoteAssistancePartner extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'lastConnectionDateTime'");
-    }
-
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return string|null
-    */
-    public function getOdataType(): ?string {
-        $val = $this->getBackingStore()->get('odataType');
-        if (is_null($val) || is_string($val)) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -111,7 +98,6 @@ class RemoteAssistancePartner extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeDateTimeValue('lastConnectionDateTime', $this->getLastConnectionDateTime());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeEnumValue('onboardingStatus', $this->getOnboardingStatus());
         $writer->writeStringValue('onboardingUrl', $this->getOnboardingUrl());
     }
@@ -130,14 +116,6 @@ class RemoteAssistancePartner extends Entity implements Parsable
     */
     public function setLastConnectionDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastConnectionDateTime', $value);
-    }
-
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param string|null $value Value to set for the OdataType property.
-    */
-    public function setOdataType(?string $value): void {
-        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

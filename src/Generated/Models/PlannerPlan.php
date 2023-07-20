@@ -11,11 +11,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class PlannerPlan extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new plannerPlan and sets the default values.
     */
     public function __construct() {
@@ -160,7 +155,6 @@ class PlannerPlan extends Entity implements Parsable
         $writer->writeObjectValue('createdBy', $this->getCreatedBy());
         $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
         $writer->writeObjectValue('details', $this->getDetails());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('owner', $this->getOwner());
         $writer->writeCollectionOfObjectValues('tasks', $this->getTasks());
         $writer->writeStringValue('title', $this->getTitle());

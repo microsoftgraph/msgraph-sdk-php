@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class MailClusterEvidence extends AlertEvidence implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new mailClusterEvidence and sets the default values.
     */
     public function __construct() {
@@ -137,7 +132,6 @@ class MailClusterEvidence extends AlertEvidence implements Parsable
         $writer->writeStringValue('clusterByValue', $this->getClusterByValue());
         $writer->writeIntegerValue('emailCount', $this->getEmailCount());
         $writer->writeCollectionOfPrimitiveValues('networkMessageIds', $this->getNetworkMessageIds());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('query', $this->getQuery());
         $writer->writeStringValue('urn', $this->getUrn());
     }

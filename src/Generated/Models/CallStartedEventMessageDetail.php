@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class CallStartedEventMessageDetail extends EventMessageDetail implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new callStartedEventMessageDetail and sets the default values.
     */
     public function __construct() {
@@ -88,7 +83,6 @@ class CallStartedEventMessageDetail extends EventMessageDetail implements Parsab
         $writer->writeEnumValue('callEventType', $this->getCallEventType());
         $writer->writeStringValue('callId', $this->getCallId());
         $writer->writeObjectValue('initiator', $this->getInitiator());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

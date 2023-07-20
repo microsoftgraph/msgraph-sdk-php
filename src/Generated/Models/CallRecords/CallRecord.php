@@ -13,11 +13,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class CallRecord extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new callRecord and sets the default values.
     */
     public function __construct() {
@@ -189,7 +184,6 @@ class CallRecord extends Entity implements Parsable
         $writer->writeStringValue('joinWebUrl', $this->getJoinWebUrl());
         $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
         $writer->writeCollectionOfEnumValues('modalities', $this->getModalities());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('organizer', $this->getOrganizer());
         $writer->writeCollectionOfObjectValues('participants', $this->getParticipants());
         $writer->writeCollectionOfObjectValues('sessions', $this->getSessions());

@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class LearningProvider extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new learningProvider and sets the default values.
     */
     public function __construct() {
@@ -174,7 +169,6 @@ class LearningProvider extends Entity implements Parsable
         $writer->writeStringValue('loginWebUrl', $this->getLoginWebUrl());
         $writer->writeStringValue('longLogoWebUrlForDarkTheme', $this->getLongLogoWebUrlForDarkTheme());
         $writer->writeStringValue('longLogoWebUrlForLightTheme', $this->getLongLogoWebUrlForLightTheme());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('squareLogoWebUrlForDarkTheme', $this->getSquareLogoWebUrlForDarkTheme());
         $writer->writeStringValue('squareLogoWebUrlForLightTheme', $this->getSquareLogoWebUrlForLightTheme());
     }

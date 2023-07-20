@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AccessReviewInstanceDecisionItemServicePrincipalResource extends AccessReviewInstanceDecisionItemResource implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new accessReviewInstanceDecisionItemServicePrincipalResource and sets the default values.
     */
     public function __construct() {
@@ -60,7 +55,6 @@ class AccessReviewInstanceDecisionItemServicePrincipalResource extends AccessRev
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeStringValue('appId', $this->getAppId());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

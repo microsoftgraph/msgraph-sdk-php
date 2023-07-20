@@ -11,11 +11,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class MeetingAttendanceReport extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new meetingAttendanceReport and sets the default values.
     */
     public function __construct() {
@@ -104,7 +99,6 @@ class MeetingAttendanceReport extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('attendanceRecords', $this->getAttendanceRecords());
         $writer->writeDateTimeValue('meetingEndDateTime', $this->getMeetingEndDateTime());
         $writer->writeDateTimeValue('meetingStartDateTime', $this->getMeetingStartDateTime());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeIntegerValue('totalParticipantCount', $this->getTotalParticipantCount());
     }
 

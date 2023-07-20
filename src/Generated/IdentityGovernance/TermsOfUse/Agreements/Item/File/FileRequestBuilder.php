@@ -58,7 +58,7 @@ class FileRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the details of the default file for an agreement, including the language and version information. The file information is specified through the agreementFile object.
+     * Retrieve the details of an agreement file, including the language and version information. The default file can have multiple versions, each with its own language, that can be retrieved by specifying the **Accept-Language** header.
      * @param FileRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/agreementfile-get?view=graph-rest-1.0 Find more info here
@@ -113,7 +113,7 @@ class FileRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the details of the default file for an agreement, including the language and version information. The file information is specified through the agreementFile object.
+     * Retrieve the details of an agreement file, including the language and version information. The default file can have multiple versions, each with its own language, that can be retrieved by specifying the **Accept-Language** header.
      * @param FileRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

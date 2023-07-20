@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class RemoveAccessApplyAction extends AccessReviewApplyAction implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new removeAccessApplyAction and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,6 @@ class RemoveAccessApplyAction extends AccessReviewApplyAction implements Parsabl
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
 }

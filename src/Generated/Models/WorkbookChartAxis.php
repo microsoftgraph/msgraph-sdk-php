@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookChartAxis extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new workbookChartAxis and sets the default values.
     */
     public function __construct() {
@@ -156,7 +151,6 @@ class WorkbookChartAxis extends Entity implements Parsable
         $writer->writeObjectValue('minimum', $this->getMinimum());
         $writer->writeObjectValue('minorGridlines', $this->getMinorGridlines());
         $writer->writeObjectValue('minorUnit', $this->getMinorUnit());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('title', $this->getTitle());
     }
 

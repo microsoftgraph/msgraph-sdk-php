@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class OnenoteEntityBaseModel extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new onenoteEntityBaseModel and sets the default values.
     */
     public function __construct() {
@@ -43,21 +38,10 @@ class OnenoteEntityBaseModel extends Entity implements Parsable
     }
 
     /**
-     * The deserialization information for the current model
-     * @return array<string, callable(ParseNode): void>
-    */
-    public function getFieldDeserializers(): array {
-        $o = $this;
-        return array_merge(parent::getFieldDeserializers(), [
-            'self' => fn(ParseNode $n) => $o->setSelf($n->getStringValue()),
-        ]);
-    }
-
-    /**
      * Gets the self property value. The endpoint where you can get details about the page. Read-only.
      * @return string|null
     */
-    public function getSelf(): ?string {
+    public function getEscapedSelf(): ?string {
         $val = $this->getBackingStore()->get('escapedSelf');
         if (is_null($val) || is_string($val)) {
             return $val;
@@ -66,20 +50,30 @@ class OnenoteEntityBaseModel extends Entity implements Parsable
     }
 
     /**
+     * The deserialization information for the current model
+     * @return array<string, callable(ParseNode): void>
+    */
+    public function getFieldDeserializers(): array {
+        $o = $this;
+        return array_merge(parent::getFieldDeserializers(), [
+            'self' => fn(ParseNode $n) => $o->setEscapedSelf($n->getStringValue()),
+        ]);
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('self', $this->getSelf());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeStringValue('self', $this->getEscapedSelf());
     }
 
     /**
      * Sets the self property value. The endpoint where you can get details about the page. Read-only.
-     * @param string|null $value Value to set for the EscapedSelf property.
+     * @param string|null $value Value to set for the self property.
     */
-    public function setSelf(?string $value): void {
+    public function setEscapedSelf(?string $value): void {
         $this->getBackingStore()->set('escapedSelf', $value);
     }
 

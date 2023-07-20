@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class CrossTenantAccessPolicyConfigurationDefault extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new crossTenantAccessPolicyConfigurationDefault and sets the default values.
     */
     public function __construct() {
@@ -143,7 +138,6 @@ class CrossTenantAccessPolicyConfigurationDefault extends Entity implements Pars
         $writer->writeObjectValue('b2bDirectConnectOutbound', $this->getB2bDirectConnectOutbound());
         $writer->writeObjectValue('inboundTrust', $this->getInboundTrust());
         $writer->writeBooleanValue('isServiceDefault', $this->getIsServiceDefault());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

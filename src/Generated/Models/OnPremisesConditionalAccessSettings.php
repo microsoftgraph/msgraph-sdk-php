@@ -13,11 +13,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class OnPremisesConditionalAccessSettings extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new onPremisesConditionalAccessSettings and sets the default values.
     */
     public function __construct() {
@@ -122,7 +117,6 @@ class OnPremisesConditionalAccessSettings extends Entity implements Parsable
         $writer->writeBooleanValue('enabled', $this->getEnabled());
         $writer->writeCollectionOfPrimitiveValues('excludedGroups', $this->getExcludedGroups());
         $writer->writeCollectionOfPrimitiveValues('includedGroups', $this->getIncludedGroups());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeBooleanValue('overrideDefaultRule', $this->getOverrideDefaultRule());
     }
 

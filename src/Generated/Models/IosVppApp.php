@@ -13,11 +13,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class IosVppApp extends MobileApp implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new iosVppApp and sets the default values.
     */
     public function __construct() {
@@ -184,7 +179,6 @@ class IosVppApp extends MobileApp implements Parsable
         $writer->writeStringValue('appStoreUrl', $this->getAppStoreUrl());
         $writer->writeStringValue('bundleId', $this->getBundleId());
         $writer->writeObjectValue('licensingType', $this->getLicensingType());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeDateTimeValue('releaseDateTime', $this->getReleaseDateTime());
         $writer->writeIntegerValue('totalLicenseCount', $this->getTotalLicenseCount());
         $writer->writeIntegerValue('usedLicenseCount', $this->getUsedLicenseCount());

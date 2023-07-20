@@ -7,15 +7,10 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 /**
- * OMA Settings definition.
+ * OMA Settings Boolean definition.
 */
 class OmaSettingBoolean extends OmaSetting implements Parsable 
 {
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
     /**
      * Instantiates a new omaSettingBoolean and sets the default values.
     */
@@ -62,7 +57,6 @@ class OmaSettingBoolean extends OmaSetting implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeBooleanValue('value', $this->getValue());
     }
 

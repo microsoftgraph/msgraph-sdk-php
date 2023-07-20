@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookChartPoint extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new workbookChartPoint and sets the default values.
     */
     public function __construct() {
@@ -72,7 +67,6 @@ class WorkbookChartPoint extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeObjectValue('format', $this->getFormat());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('value', $this->getValue());
     }
 

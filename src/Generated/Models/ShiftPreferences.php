@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class ShiftPreferences extends ChangeTrackedEntity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new shiftPreferences and sets the default values.
     */
     public function __construct() {
@@ -63,7 +58,6 @@ class ShiftPreferences extends ChangeTrackedEntity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('availability', $this->getAvailability());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

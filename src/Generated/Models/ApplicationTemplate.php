@@ -82,7 +82,6 @@ class ApplicationTemplate extends Entity implements Parsable
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'homePageUrl' => fn(ParseNode $n) => $o->setHomePageUrl($n->getStringValue()),
             'logoUrl' => fn(ParseNode $n) => $o->setLogoUrl($n->getStringValue()),
-            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'publisher' => fn(ParseNode $n) => $o->setPublisher($n->getStringValue()),
             'supportedProvisioningTypes' => function (ParseNode $n) {
                 $val = $n->getCollectionOfPrimitiveValues();
@@ -125,18 +124,6 @@ class ApplicationTemplate extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'logoUrl'");
-    }
-
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return string|null
-    */
-    public function getOdataType(): ?string {
-        $val = $this->getBackingStore()->get('odataType');
-        if (is_null($val) || is_string($val)) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -190,7 +177,6 @@ class ApplicationTemplate extends Entity implements Parsable
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeStringValue('homePageUrl', $this->getHomePageUrl());
         $writer->writeStringValue('logoUrl', $this->getLogoUrl());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('publisher', $this->getPublisher());
         $writer->writeCollectionOfPrimitiveValues('supportedProvisioningTypes', $this->getSupportedProvisioningTypes());
         $writer->writeCollectionOfPrimitiveValues('supportedSingleSignOnModes', $this->getSupportedSingleSignOnModes());
@@ -234,14 +220,6 @@ class ApplicationTemplate extends Entity implements Parsable
     */
     public function setLogoUrl(?string $value): void {
         $this->getBackingStore()->set('logoUrl', $value);
-    }
-
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param string|null $value Value to set for the OdataType property.
-    */
-    public function setOdataType(?string $value): void {
-        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

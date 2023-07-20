@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class SynchronizationTemplate extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new synchronizationTemplate and sets the default values.
     */
     public function __construct() {
@@ -43,18 +38,6 @@ class SynchronizationTemplate extends Entity implements Parsable
     }
 
     /**
-     * Gets the default property value. true if this template is recommended to be the default for the application.
-     * @return bool|null
-    */
-    public function getDefault(): ?bool {
-        $val = $this->getBackingStore()->get('escapedDefault');
-        if (is_null($val) || is_bool($val)) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'escapedDefault'");
-    }
-
-    /**
      * Gets the description property value. Description of the template.
      * @return string|null
     */
@@ -79,6 +62,18 @@ class SynchronizationTemplate extends Entity implements Parsable
     }
 
     /**
+     * Gets the default property value. true if this template is recommended to be the default for the application.
+     * @return bool|null
+    */
+    public function getEscapedDefault(): ?bool {
+        $val = $this->getBackingStore()->get('escapedDefault');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'escapedDefault'");
+    }
+
+    /**
      * Gets the factoryTag property value. One of the well-known factory tags supported by the synchronization engine. The factoryTag tells the synchronization engine which implementation to use when processing jobs based on this template.
      * @return string|null
     */
@@ -100,7 +95,7 @@ class SynchronizationTemplate extends Entity implements Parsable
             'applicationId' => fn(ParseNode $n) => $o->setApplicationId($n->getStringValue()),
             'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
             'discoverable' => fn(ParseNode $n) => $o->setDiscoverable($n->getBooleanValue()),
-            'default' => fn(ParseNode $n) => $o->setDefault($n->getBooleanValue()),
+            'default' => fn(ParseNode $n) => $o->setEscapedDefault($n->getBooleanValue()),
             'factoryTag' => fn(ParseNode $n) => $o->setFactoryTag($n->getStringValue()),
             'metadata' => fn(ParseNode $n) => $o->setMetadata($n->getCollectionOfObjectValues([SynchronizationMetadataEntry::class, 'createFromDiscriminatorValue'])),
             'schema' => fn(ParseNode $n) => $o->setSchema($n->getObjectValue([SynchronizationSchema::class, 'createFromDiscriminatorValue'])),
@@ -142,10 +137,9 @@ class SynchronizationTemplate extends Entity implements Parsable
         $writer->writeStringValue('applicationId', $this->getApplicationId());
         $writer->writeStringValue('description', $this->getDescription());
         $writer->writeBooleanValue('discoverable', $this->getDiscoverable());
-        $writer->writeBooleanValue('default', $this->getDefault());
+        $writer->writeBooleanValue('default', $this->getEscapedDefault());
         $writer->writeStringValue('factoryTag', $this->getFactoryTag());
         $writer->writeCollectionOfObjectValues('metadata', $this->getMetadata());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('schema', $this->getSchema());
     }
 
@@ -155,14 +149,6 @@ class SynchronizationTemplate extends Entity implements Parsable
     */
     public function setApplicationId(?string $value): void {
         $this->getBackingStore()->set('applicationId', $value);
-    }
-
-    /**
-     * Sets the default property value. true if this template is recommended to be the default for the application.
-     * @param bool|null $value Value to set for the EscapedDefault property.
-    */
-    public function setDefault(?bool $value): void {
-        $this->getBackingStore()->set('escapedDefault', $value);
     }
 
     /**
@@ -179,6 +165,14 @@ class SynchronizationTemplate extends Entity implements Parsable
     */
     public function setDiscoverable(?bool $value): void {
         $this->getBackingStore()->set('discoverable', $value);
+    }
+
+    /**
+     * Sets the default property value. true if this template is recommended to be the default for the application.
+     * @param bool|null $value Value to set for the default property.
+    */
+    public function setEscapedDefault(?bool $value): void {
+        $this->getBackingStore()->set('escapedDefault', $value);
     }
 
     /**

@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Calendar extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new calendar and sets the default values.
     */
     public function __construct() {
@@ -308,7 +303,6 @@ class Calendar extends Entity implements Parsable
         $writer->writeBooleanValue('isTallyingResponses', $this->getIsTallyingResponses());
         $writer->writeCollectionOfObjectValues('multiValueExtendedProperties', $this->getMultiValueExtendedProperties());
         $writer->writeStringValue('name', $this->getName());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('owner', $this->getOwner());
         $writer->writeCollectionOfObjectValues('singleValueExtendedProperties', $this->getSingleValueExtendedProperties());
     }

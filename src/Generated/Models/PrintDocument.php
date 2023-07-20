@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class PrintDocument extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new printDocument and sets the default values.
     */
     public function __construct() {
@@ -86,7 +81,6 @@ class PrintDocument extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeStringValue('contentType', $this->getContentType());
         $writer->writeStringValue('displayName', $this->getDisplayName());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeIntegerValue('size', $this->getSize());
     }
 

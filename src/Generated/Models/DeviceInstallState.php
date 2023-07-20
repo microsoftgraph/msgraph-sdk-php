@@ -13,11 +13,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DeviceInstallState extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new deviceInstallState and sets the default values.
     */
     public function __construct() {
@@ -158,7 +153,6 @@ class DeviceInstallState extends Entity implements Parsable
         $writer->writeStringValue('errorCode', $this->getErrorCode());
         $writer->writeEnumValue('installState', $this->getInstallState());
         $writer->writeDateTimeValue('lastSyncDateTime', $this->getLastSyncDateTime());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('osDescription', $this->getOsDescription());
         $writer->writeStringValue('osVersion', $this->getOsVersion());
         $writer->writeStringValue('userName', $this->getUserName());

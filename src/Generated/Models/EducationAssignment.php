@@ -11,11 +11,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class EducationAssignment extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new educationAssignment and sets the default values.
     */
     public function __construct() {
@@ -404,7 +399,6 @@ class EducationAssignment extends Entity implements Parsable
         $writer->writeObjectValue('grading', $this->getGrading());
         $writer->writeObjectValue('instructions', $this->getInstructions());
         $writer->writeStringValue('notificationChannelUrl', $this->getNotificationChannelUrl());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfObjectValues('resources', $this->getResources());
         $writer->writeObjectValue('rubric', $this->getRubric());
         $writer->writeCollectionOfObjectValues('submissions', $this->getSubmissions());

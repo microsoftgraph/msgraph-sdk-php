@@ -59,7 +59,7 @@ class ContentTypeOrder implements AdditionalDataHolder, BackedModel, Parsable
      * Gets the default property value. Indicates whether this is the default content type
      * @return bool|null
     */
-    public function getDefault(): ?bool {
+    public function getEscapedDefault(): ?bool {
         $val = $this->getBackingStore()->get('escapedDefault');
         if (is_null($val) || is_bool($val)) {
             return $val;
@@ -74,7 +74,7 @@ class ContentTypeOrder implements AdditionalDataHolder, BackedModel, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'default' => fn(ParseNode $n) => $o->setDefault($n->getBooleanValue()),
+            'default' => fn(ParseNode $n) => $o->setEscapedDefault($n->getBooleanValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'position' => fn(ParseNode $n) => $o->setPosition($n->getIntegerValue()),
         ];
@@ -109,7 +109,7 @@ class ContentTypeOrder implements AdditionalDataHolder, BackedModel, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeBooleanValue('default', $this->getDefault());
+        $writer->writeBooleanValue('default', $this->getEscapedDefault());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeIntegerValue('position', $this->getPosition());
         $writer->writeAdditionalData($this->getAdditionalData());
@@ -117,7 +117,7 @@ class ContentTypeOrder implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the additionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -125,7 +125,7 @@ class ContentTypeOrder implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     * @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the backingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -133,15 +133,15 @@ class ContentTypeOrder implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the default property value. Indicates whether this is the default content type
-     * @param bool|null $value Value to set for the EscapedDefault property.
+     * @param bool|null $value Value to set for the default property.
     */
-    public function setDefault(?bool $value): void {
+    public function setEscapedDefault(?bool $value): void {
         $this->getBackingStore()->set('escapedDefault', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the @odata.type property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);

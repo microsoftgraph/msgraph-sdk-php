@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class TermsOfUseContainer extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new termsOfUseContainer and sets the default values.
     */
     public function __construct() {
@@ -78,7 +73,6 @@ class TermsOfUseContainer extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('agreementAcceptances', $this->getAgreementAcceptances());
         $writer->writeCollectionOfObjectValues('agreements', $this->getAgreements());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

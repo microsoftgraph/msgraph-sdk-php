@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends AuthenticationMethodConfiguration implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new microsoftAuthenticatorAuthenticationMethodConfiguration and sets the default values.
     */
     public function __construct() {
@@ -91,7 +86,6 @@ class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends Authentica
         $writer->writeObjectValue('featureSettings', $this->getFeatureSettings());
         $writer->writeCollectionOfObjectValues('includeTargets', $this->getIncludeTargets());
         $writer->writeBooleanValue('isSoftwareOathEnabled', $this->getIsSoftwareOathEnabled());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**
