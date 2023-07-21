@@ -11,11 +11,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Conversation extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new conversation and sets the default values.
     */
     public function __construct() {
@@ -138,7 +133,6 @@ class Conversation extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeBooleanValue('hasAttachments', $this->getHasAttachments());
         $writer->writeDateTimeValue('lastDeliveredDateTime', $this->getLastDeliveredDateTime());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('preview', $this->getPreview());
         $writer->writeCollectionOfObjectValues('threads', $this->getThreads());
         $writer->writeStringValue('topic', $this->getTopic());

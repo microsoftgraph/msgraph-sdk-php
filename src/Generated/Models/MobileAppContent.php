@@ -13,11 +13,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class MobileAppContent extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new mobileAppContent and sets the default values.
     */
     public function __construct() {
@@ -81,7 +76,6 @@ class MobileAppContent extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('containedApps', $this->getContainedApps());
         $writer->writeCollectionOfObjectValues('files', $this->getFiles());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

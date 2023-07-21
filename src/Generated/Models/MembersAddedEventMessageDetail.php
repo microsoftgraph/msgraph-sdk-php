@@ -11,11 +11,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class MembersAddedEventMessageDetail extends EventMessageDetail implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new membersAddedEventMessageDetail and sets the default values.
     */
     public function __construct() {
@@ -91,7 +86,6 @@ class MembersAddedEventMessageDetail extends EventMessageDetail implements Parsa
         parent::serialize($writer);
         $writer->writeObjectValue('initiator', $this->getInitiator());
         $writer->writeCollectionOfObjectValues('members', $this->getMembers());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeDateTimeValue('visibleHistoryStartDateTime', $this->getVisibleHistoryStartDateTime());
     }
 

@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Relation extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new relation and sets the default values.
     */
     public function __construct() {
@@ -99,7 +94,6 @@ class Relation extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeObjectValue('fromTerm', $this->getFromTerm());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeEnumValue('relationship', $this->getRelationship());
         $writer->writeObjectValue('set', $this->getSet());
         $writer->writeObjectValue('toTerm', $this->getToTerm());

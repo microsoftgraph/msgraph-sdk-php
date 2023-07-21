@@ -7,15 +7,10 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 /**
- * Base type for assignment targets.
+ * Represents an assignment to a Configuration Manager Collection.
 */
 class ConfigurationManagerCollectionAssignmentTarget extends DeviceAndAppManagementAssignmentTarget implements Parsable 
 {
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
     /**
      * Instantiates a new configurationManagerCollectionAssignmentTarget and sets the default values.
     */
@@ -63,7 +58,6 @@ class ConfigurationManagerCollectionAssignmentTarget extends DeviceAndAppManagem
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeStringValue('collectionId', $this->getCollectionId());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

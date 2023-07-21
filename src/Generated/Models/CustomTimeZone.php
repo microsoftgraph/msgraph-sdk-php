@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class CustomTimeZone extends TimeZoneBase implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new customTimeZone and sets the default values.
     */
     public function __construct() {
@@ -87,7 +82,6 @@ class CustomTimeZone extends TimeZoneBase implements Parsable
         parent::serialize($writer);
         $writer->writeIntegerValue('bias', $this->getBias());
         $writer->writeObjectValue('daylightOffset', $this->getDaylightOffset());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('standardOffset', $this->getStandardOffset());
     }
 

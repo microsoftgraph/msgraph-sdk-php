@@ -13,11 +13,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class LocalizedNotificationMessage extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new localizedNotificationMessage and sets the default values.
     */
     public function __construct() {
@@ -118,7 +113,6 @@ class LocalizedNotificationMessage extends Entity implements Parsable
         $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
         $writer->writeStringValue('locale', $this->getLocale());
         $writer->writeStringValue('messageTemplate', $this->getMessageTemplate());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('subject', $this->getSubject());
     }
 

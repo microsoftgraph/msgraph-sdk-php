@@ -11,11 +11,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Chat extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new chat and sets the default values.
     */
     public function __construct() {
@@ -246,7 +241,6 @@ class Chat extends Entity implements Parsable
         $writer->writeDateTimeValue('lastUpdatedDateTime', $this->getLastUpdatedDateTime());
         $writer->writeCollectionOfObjectValues('members', $this->getMembers());
         $writer->writeCollectionOfObjectValues('messages', $this->getMessages());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('onlineMeetingInfo', $this->getOnlineMeetingInfo());
         $writer->writeCollectionOfObjectValues('pinnedMessages', $this->getPinnedMessages());
         $writer->writeCollectionOfObjectValues('tabs', $this->getTabs());

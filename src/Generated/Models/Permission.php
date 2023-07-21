@@ -11,11 +11,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Permission extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new permission and sets the default values.
     */
     public function __construct() {
@@ -212,7 +207,6 @@ class Permission extends Entity implements Parsable
         $writer->writeObjectValue('inheritedFrom', $this->getInheritedFrom());
         $writer->writeObjectValue('invitation', $this->getInvitation());
         $writer->writeObjectValue('link', $this->getLink());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfPrimitiveValues('roles', $this->getRoles());
         $writer->writeStringValue('shareId', $this->getShareId());
     }

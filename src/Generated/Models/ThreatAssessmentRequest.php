@@ -11,11 +11,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class ThreatAssessmentRequest extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new threatAssessmentRequest and sets the default values.
     */
     public function __construct() {
@@ -168,7 +163,6 @@ class ThreatAssessmentRequest extends Entity implements Parsable
         $writer->writeObjectValue('createdBy', $this->getCreatedBy());
         $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
         $writer->writeEnumValue('expectedAssessment', $this->getExpectedAssessment());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeEnumValue('requestSource', $this->getRequestSource());
         $writer->writeCollectionOfObjectValues('results', $this->getResults());
         $writer->writeEnumValue('status', $this->getStatus());

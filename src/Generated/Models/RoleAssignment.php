@@ -13,11 +13,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class RoleAssignment extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new roleAssignment and sets the default values.
     */
     public function __construct() {
@@ -119,7 +114,6 @@ class RoleAssignment extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeStringValue('description', $this->getDescription());
         $writer->writeStringValue('displayName', $this->getDisplayName());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfPrimitiveValues('resourceScopes', $this->getResourceScopes());
         $writer->writeObjectValue('roleDefinition', $this->getRoleDefinition());
     }

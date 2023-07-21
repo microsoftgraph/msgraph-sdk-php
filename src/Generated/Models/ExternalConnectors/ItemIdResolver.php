@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ItemIdResolver extends UrlToItemResolverBase implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new itemIdResolver and sets the default values.
     */
     public function __construct() {
@@ -73,7 +68,6 @@ class ItemIdResolver extends UrlToItemResolverBase implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeStringValue('itemId', $this->getItemId());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('urlMatchInfo', $this->getUrlMatchInfo());
     }
 

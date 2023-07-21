@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AccessPackageResourceRequest extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new accessPackageResourceRequest and sets the default values.
     */
     public function __construct() {
@@ -113,7 +108,6 @@ class AccessPackageResourceRequest extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeObjectValue('catalog', $this->getCatalog());
         $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeEnumValue('requestType', $this->getRequestType());
         $writer->writeObjectValue('resource', $this->getResource());
         $writer->writeEnumValue('state', $this->getState());

@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Types\Time;
 class EducationAssignmentDefaults extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new educationAssignmentDefaults and sets the default values.
     */
     public function __construct() {
@@ -102,7 +97,6 @@ class EducationAssignmentDefaults extends Entity implements Parsable
         $writer->writeEnumValue('addToCalendarAction', $this->getAddToCalendarAction());
         $writer->writeTimeValue('dueTime', $this->getDueTime());
         $writer->writeStringValue('notificationChannelUrl', $this->getNotificationChannelUrl());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

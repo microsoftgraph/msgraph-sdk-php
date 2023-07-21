@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class RuleBasedSubjectSet extends SubjectSet implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new ruleBasedSubjectSet and sets the default values.
     */
     public function __construct() {
@@ -60,7 +55,6 @@ class RuleBasedSubjectSet extends SubjectSet implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('rule', $this->getRule());
     }
 

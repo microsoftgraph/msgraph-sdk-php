@@ -13,11 +13,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class WindowsInformationProtection extends ManagedAppPolicy implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new windowsInformationProtection and sets the default values.
     */
     public function __construct() {
@@ -428,7 +423,6 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
         $writer->writeBooleanValue('indexingEncryptedStoresOrItemsBlocked', $this->getIndexingEncryptedStoresOrItemsBlocked());
         $writer->writeBooleanValue('isAssigned', $this->getIsAssigned());
         $writer->writeCollectionOfObjectValues('neutralDomainResources', $this->getNeutralDomainResources());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfObjectValues('protectedAppLockerFiles', $this->getProtectedAppLockerFiles());
         $writer->writeCollectionOfObjectValues('protectedApps', $this->getProtectedApps());
         $writer->writeBooleanValue('protectionUnderLockConfigRequired', $this->getProtectionUnderLockConfigRequired());

@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookRangeBorder extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new workbookRangeBorder and sets the default values.
     */
     public function __construct() {
@@ -98,7 +93,6 @@ class WorkbookRangeBorder extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeStringValue('color', $this->getColor());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('sideIndex', $this->getSideIndex());
         $writer->writeStringValue('style', $this->getStyle());
         $writer->writeStringValue('weight', $this->getWeight());

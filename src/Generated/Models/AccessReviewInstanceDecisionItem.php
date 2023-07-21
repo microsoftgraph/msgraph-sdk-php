@@ -100,7 +100,6 @@ class AccessReviewInstanceDecisionItem extends Entity implements Parsable
             'decision' => fn(ParseNode $n) => $o->setDecision($n->getStringValue()),
             'insights' => fn(ParseNode $n) => $o->setInsights($n->getCollectionOfObjectValues([GovernanceInsight::class, 'createFromDiscriminatorValue'])),
             'justification' => fn(ParseNode $n) => $o->setJustification($n->getStringValue()),
-            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'principal' => fn(ParseNode $n) => $o->setPrincipal($n->getObjectValue([Identity::class, 'createFromDiscriminatorValue'])),
             'principalLink' => fn(ParseNode $n) => $o->setPrincipalLink($n->getStringValue()),
             'recommendation' => fn(ParseNode $n) => $o->setRecommendation($n->getStringValue()),
@@ -135,18 +134,6 @@ class AccessReviewInstanceDecisionItem extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'justification'");
-    }
-
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return string|null
-    */
-    public function getOdataType(): ?string {
-        $val = $this->getBackingStore()->get('odataType');
-        if (is_null($val) || is_string($val)) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -246,7 +233,6 @@ class AccessReviewInstanceDecisionItem extends Entity implements Parsable
         $writer->writeStringValue('decision', $this->getDecision());
         $writer->writeCollectionOfObjectValues('insights', $this->getInsights());
         $writer->writeStringValue('justification', $this->getJustification());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('principal', $this->getPrincipal());
         $writer->writeStringValue('principalLink', $this->getPrincipalLink());
         $writer->writeStringValue('recommendation', $this->getRecommendation());
@@ -310,14 +296,6 @@ class AccessReviewInstanceDecisionItem extends Entity implements Parsable
     */
     public function setJustification(?string $value): void {
         $this->getBackingStore()->set('justification', $value);
-    }
-
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param string|null $value Value to set for the OdataType property.
-    */
-    public function setOdataType(?string $value): void {
-        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class CustomTaskExtensionCallbackData extends CustomExtensionData implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new customTaskExtensionCallbackData and sets the default values.
     */
     public function __construct() {
@@ -60,7 +55,6 @@ class CustomTaskExtensionCallbackData extends CustomExtensionData implements Par
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeEnumValue('operationStatus', $this->getOperationStatus());
     }
 

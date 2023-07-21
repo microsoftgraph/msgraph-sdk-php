@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class GroupMembers extends SubjectSet implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new groupMembers and sets the default values.
     */
     public function __construct() {
@@ -74,7 +69,6 @@ class GroupMembers extends SubjectSet implements Parsable
         parent::serialize($writer);
         $writer->writeStringValue('description', $this->getDescription());
         $writer->writeStringValue('groupId', $this->getGroupId());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

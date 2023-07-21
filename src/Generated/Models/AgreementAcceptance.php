@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AgreementAcceptance extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new agreementAcceptance and sets the default values.
     */
     public function __construct() {
@@ -222,7 +217,6 @@ class AgreementAcceptance extends Entity implements Parsable
         $writer->writeStringValue('deviceOSType', $this->getDeviceOSType());
         $writer->writeStringValue('deviceOSVersion', $this->getDeviceOSVersion());
         $writer->writeDateTimeValue('expirationDateTime', $this->getExpirationDateTime());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeDateTimeValue('recordedDateTime', $this->getRecordedDateTime());
         $writer->writeEnumValue('state', $this->getState());
         $writer->writeStringValue('userDisplayName', $this->getUserDisplayName());

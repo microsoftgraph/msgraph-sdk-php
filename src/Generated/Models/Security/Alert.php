@@ -12,11 +12,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Alert extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new alert and sets the default values.
     */
     public function __construct() {
@@ -443,7 +438,6 @@ class Alert extends Entity implements Parsable
         $writer->writeDateTimeValue('lastActivityDateTime', $this->getLastActivityDateTime());
         $writer->writeDateTimeValue('lastUpdateDateTime', $this->getLastUpdateDateTime());
         $writer->writeCollectionOfPrimitiveValues('mitreTechniques', $this->getMitreTechniques());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('providerAlertId', $this->getProviderAlertId());
         $writer->writeStringValue('recommendedActions', $this->getRecommendedActions());
         $writer->writeDateTimeValue('resolvedDateTime', $this->getResolvedDateTime());

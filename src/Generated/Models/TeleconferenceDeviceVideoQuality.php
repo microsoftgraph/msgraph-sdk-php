@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQuality implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new teleconferenceDeviceVideoQuality and sets the default values.
     */
     public function __construct() {
@@ -109,7 +104,6 @@ class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQuality 
         $writer->writeFloatValue('averageInboundFrameRate', $this->getAverageInboundFrameRate());
         $writer->writeFloatValue('averageOutboundBitRate', $this->getAverageOutboundBitRate());
         $writer->writeFloatValue('averageOutboundFrameRate', $this->getAverageOutboundFrameRate());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

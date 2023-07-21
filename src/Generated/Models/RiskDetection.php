@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class RiskDetection extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new riskDetection and sets the default values.
     */
     public function __construct() {
@@ -302,7 +297,6 @@ class RiskDetection extends Entity implements Parsable
         $writer->writeStringValue('ipAddress', $this->getIpAddress());
         $writer->writeDateTimeValue('lastUpdatedDateTime', $this->getLastUpdatedDateTime());
         $writer->writeObjectValue('location', $this->getLocation());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('requestId', $this->getRequestId());
         $writer->writeEnumValue('riskDetail', $this->getRiskDetail());
         $writer->writeStringValue('riskEventType', $this->getRiskEventType());

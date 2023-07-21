@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ColumnDefinition extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new columnDefinition and sets the default values.
     */
     public function __construct() {
@@ -482,7 +477,6 @@ class ColumnDefinition extends Entity implements Parsable
         $writer->writeObjectValue('lookup', $this->getLookup());
         $writer->writeStringValue('name', $this->getName());
         $writer->writeObjectValue('number', $this->getNumber());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('personOrGroup', $this->getPersonOrGroup());
         $writer->writeBooleanValue('propagateChanges', $this->getPropagateChanges());
         $writer->writeBooleanValue('readOnly', $this->getReadOnly());

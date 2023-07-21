@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Shift extends ChangeTrackedEntity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new shift and sets the default values.
     */
     public function __construct() {
@@ -99,7 +94,6 @@ class Shift extends ChangeTrackedEntity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeObjectValue('draftShift', $this->getDraftShift());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('schedulingGroupId', $this->getSchedulingGroupId());
         $writer->writeObjectValue('sharedShift', $this->getSharedShift());
         $writer->writeStringValue('userId', $this->getUserId());

@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class MembersJoinedEventMessageDetail extends EventMessageDetail implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new membersJoinedEventMessageDetail and sets the default values.
     */
     public function __construct() {
@@ -77,7 +72,6 @@ class MembersJoinedEventMessageDetail extends EventMessageDetail implements Pars
         parent::serialize($writer);
         $writer->writeObjectValue('initiator', $this->getInitiator());
         $writer->writeCollectionOfObjectValues('members', $this->getMembers());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

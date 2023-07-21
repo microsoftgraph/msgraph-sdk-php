@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new scheduleChangeRequest and sets the default values.
     */
     public function __construct() {
@@ -163,7 +158,6 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
         parent::serialize($writer);
         $writer->writeEnumValue('assignedTo', $this->getAssignedTo());
         $writer->writeStringValue('managerActionMessage', $this->getManagerActionMessage());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('senderMessage', $this->getSenderMessage());
         $writer->writeEnumValue('state', $this->getState());
     }

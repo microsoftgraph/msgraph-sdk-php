@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class PrintTaskDefinition extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new printTaskDefinition and sets the default values.
     */
     public function __construct() {
@@ -89,7 +84,6 @@ class PrintTaskDefinition extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeObjectValue('createdBy', $this->getCreatedBy());
         $writer->writeStringValue('displayName', $this->getDisplayName());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfObjectValues('tasks', $this->getTasks());
     }
 

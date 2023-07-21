@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class MessageRule extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new messageRule and sets the default values.
     */
     public function __construct() {
@@ -156,7 +151,6 @@ class MessageRule extends Entity implements Parsable
         $writer->writeBooleanValue('hasError', $this->getHasError());
         $writer->writeBooleanValue('isEnabled', $this->getIsEnabled());
         $writer->writeBooleanValue('isReadOnly', $this->getIsReadOnly());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeIntegerValue('sequence', $this->getSequence());
     }
 

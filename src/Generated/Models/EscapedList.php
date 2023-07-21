@@ -79,6 +79,18 @@ class EscapedList extends BaseItem implements Parsable
     }
 
     /**
+     * Gets the list property value. Provides additional details about the list.
+     * @return ListInfo|null
+    */
+    public function getEscapedList(): ?ListInfo {
+        $val = $this->getBackingStore()->get('escapedList');
+        if (is_null($val) || $val instanceof ListInfo) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'escapedList'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
@@ -89,7 +101,7 @@ class EscapedList extends BaseItem implements Parsable
             'contentTypes' => fn(ParseNode $n) => $o->setContentTypes($n->getCollectionOfObjectValues([ContentType::class, 'createFromDiscriminatorValue'])),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'drive' => fn(ParseNode $n) => $o->setDrive($n->getObjectValue([Drive::class, 'createFromDiscriminatorValue'])),
-            'list' => fn(ParseNode $n) => $o->setList($n->getObjectValue([ListInfo::class, 'createFromDiscriminatorValue'])),
+            'list' => fn(ParseNode $n) => $o->setEscapedList($n->getObjectValue([ListInfo::class, 'createFromDiscriminatorValue'])),
             'items' => fn(ParseNode $n) => $o->setItems($n->getCollectionOfObjectValues([ListItem::class, 'createFromDiscriminatorValue'])),
             'operations' => fn(ParseNode $n) => $o->setOperations($n->getCollectionOfObjectValues([RichLongRunningOperation::class, 'createFromDiscriminatorValue'])),
             'sharepointIds' => fn(ParseNode $n) => $o->setSharepointIds($n->getObjectValue([SharepointIds::class, 'createFromDiscriminatorValue'])),
@@ -110,18 +122,6 @@ class EscapedList extends BaseItem implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'items'");
-    }
-
-    /**
-     * Gets the list property value. Provides additional details about the list.
-     * @return ListInfo|null
-    */
-    public function getList(): ?ListInfo {
-        $val = $this->getBackingStore()->get('escapedList');
-        if (is_null($val) || $val instanceof ListInfo) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'escapedList'");
     }
 
     /**
@@ -186,7 +186,7 @@ class EscapedList extends BaseItem implements Parsable
         $writer->writeCollectionOfObjectValues('contentTypes', $this->getContentTypes());
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeObjectValue('drive', $this->getDrive());
-        $writer->writeObjectValue('list', $this->getList());
+        $writer->writeObjectValue('list', $this->getEscapedList());
         $writer->writeCollectionOfObjectValues('items', $this->getItems());
         $writer->writeCollectionOfObjectValues('operations', $this->getOperations());
         $writer->writeObjectValue('sharepointIds', $this->getSharepointIds());
@@ -227,19 +227,19 @@ class EscapedList extends BaseItem implements Parsable
     }
 
     /**
+     * Sets the list property value. Provides additional details about the list.
+     * @param ListInfo|null $value Value to set for the list property.
+    */
+    public function setEscapedList(?ListInfo $value): void {
+        $this->getBackingStore()->set('escapedList', $value);
+    }
+
+    /**
      * Sets the items property value. All items contained in the list.
      * @param array<ListItem>|null $value Value to set for the items property.
     */
     public function setItems(?array $value): void {
         $this->getBackingStore()->set('items', $value);
-    }
-
-    /**
-     * Sets the list property value. Provides additional details about the list.
-     * @param ListInfo|null $value Value to set for the EscapedList property.
-    */
-    public function setList(?ListInfo $value): void {
-        $this->getBackingStore()->set('escapedList', $value);
     }
 
     /**

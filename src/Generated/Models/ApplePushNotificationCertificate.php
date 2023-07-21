@@ -13,11 +13,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ApplePushNotificationCertificate extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new applePushNotificationCertificate and sets the default values.
     */
     public function __construct() {
@@ -159,7 +154,6 @@ class ApplePushNotificationCertificate extends Entity implements Parsable
         $writer->writeStringValue('certificateUploadStatus', $this->getCertificateUploadStatus());
         $writer->writeDateTimeValue('expirationDateTime', $this->getExpirationDateTime());
         $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('topicIdentifier', $this->getTopicIdentifier());
     }
 

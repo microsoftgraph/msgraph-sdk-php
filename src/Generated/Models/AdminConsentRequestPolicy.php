@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class AdminConsentRequestPolicy extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new adminConsentRequestPolicy and sets the default values.
     */
     public function __construct() {
@@ -128,7 +123,6 @@ class AdminConsentRequestPolicy extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeBooleanValue('isEnabled', $this->getIsEnabled());
         $writer->writeBooleanValue('notifyReviewers', $this->getNotifyReviewers());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeBooleanValue('remindersEnabled', $this->getRemindersEnabled());
         $writer->writeIntegerValue('requestDurationInDays', $this->getRequestDurationInDays());
         $writer->writeCollectionOfObjectValues('reviewers', $this->getReviewers());

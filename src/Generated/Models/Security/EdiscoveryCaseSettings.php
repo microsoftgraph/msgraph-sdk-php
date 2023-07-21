@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EdiscoveryCaseSettings extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new ediscoveryCaseSettings and sets the default values.
     */
     public function __construct() {
@@ -86,7 +81,6 @@ class EdiscoveryCaseSettings extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeObjectValue('ocr', $this->getOcr());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('redundancyDetection', $this->getRedundancyDetection());
         $writer->writeObjectValue('topicModeling', $this->getTopicModeling());
     }

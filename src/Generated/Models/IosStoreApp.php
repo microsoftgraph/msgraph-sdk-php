@@ -12,11 +12,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class IosStoreApp extends MobileApp implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new iosStoreApp and sets the default values.
     */
     public function __construct() {
@@ -105,7 +100,6 @@ class IosStoreApp extends MobileApp implements Parsable
         $writer->writeStringValue('appStoreUrl', $this->getAppStoreUrl());
         $writer->writeStringValue('bundleId', $this->getBundleId());
         $writer->writeObjectValue('minimumSupportedOperatingSystem', $this->getMinimumSupportedOperatingSystem());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

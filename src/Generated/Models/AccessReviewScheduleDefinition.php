@@ -11,11 +11,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class AccessReviewScheduleDefinition extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new accessReviewScheduleDefinition and sets the default values.
     */
     public function __construct() {
@@ -262,7 +257,6 @@ class AccessReviewScheduleDefinition extends Entity implements Parsable
         $writer->writeObjectValue('instanceEnumerationScope', $this->getInstanceEnumerationScope());
         $writer->writeCollectionOfObjectValues('instances', $this->getInstances());
         $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfObjectValues('reviewers', $this->getReviewers());
         $writer->writeObjectValue('scope', $this->getScope());
         $writer->writeObjectValue('settings', $this->getSettings());

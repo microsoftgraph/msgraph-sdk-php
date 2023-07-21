@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class SynchronizationJob extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new synchronizationJob and sets the default values.
     */
     public function __construct() {
@@ -113,7 +108,6 @@ class SynchronizationJob extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('schedule', $this->getSchedule());
         $writer->writeObjectValue('schema', $this->getSchema());
         $writer->writeObjectValue('status', $this->getStatus());

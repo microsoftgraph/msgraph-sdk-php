@@ -11,11 +11,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DataSourceContainer extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new dataSourceContainer and sets the default values.
     */
     public function __construct() {
@@ -137,7 +132,6 @@ class DataSourceContainer extends Entity implements Parsable
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeEnumValue('holdStatus', $this->getHoldStatus());
         $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeDateTimeValue('releasedDateTime', $this->getReleasedDateTime());
         $writer->writeEnumValue('status', $this->getStatus());
     }

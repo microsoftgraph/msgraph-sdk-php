@@ -13,11 +13,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UserExperienceAnalyticsDeviceStartupHistory extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new userExperienceAnalyticsDeviceStartupHistory and sets the default values.
     */
     public function __construct() {
@@ -265,7 +260,6 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity implements Pars
         $writer->writeIntegerValue('groupPolicyLoginTimeInMs', $this->getGroupPolicyLoginTimeInMs());
         $writer->writeBooleanValue('isFeatureUpdate', $this->getIsFeatureUpdate());
         $writer->writeBooleanValue('isFirstLogin', $this->getIsFirstLogin());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('operatingSystemVersion', $this->getOperatingSystemVersion());
         $writer->writeIntegerValue('responsiveDesktopTimeInMs', $this->getResponsiveDesktopTimeInMs());
         $writer->writeEnumValue('restartCategory', $this->getRestartCategory());

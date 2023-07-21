@@ -115,7 +115,6 @@ class WorkbookRange extends Entity implements Parsable
             'formulasR1C1' => fn(ParseNode $n) => $o->setFormulasR1C1($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
             'hidden' => fn(ParseNode $n) => $o->setHidden($n->getBooleanValue()),
             'numberFormat' => fn(ParseNode $n) => $o->setNumberFormat($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'rowCount' => fn(ParseNode $n) => $o->setRowCount($n->getIntegerValue()),
             'rowHidden' => fn(ParseNode $n) => $o->setRowHidden($n->getBooleanValue()),
             'rowIndex' => fn(ParseNode $n) => $o->setRowIndex($n->getIntegerValue()),
@@ -197,18 +196,6 @@ class WorkbookRange extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'numberFormat'");
-    }
-
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return string|null
-    */
-    public function getOdataType(): ?string {
-        $val = $this->getBackingStore()->get('odataType');
-        if (is_null($val) || is_string($val)) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -325,7 +312,6 @@ class WorkbookRange extends Entity implements Parsable
         $writer->writeObjectValue('formulasR1C1', $this->getFormulasR1C1());
         $writer->writeBooleanValue('hidden', $this->getHidden());
         $writer->writeObjectValue('numberFormat', $this->getNumberFormat());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeIntegerValue('rowCount', $this->getRowCount());
         $writer->writeBooleanValue('rowHidden', $this->getRowHidden());
         $writer->writeIntegerValue('rowIndex', $this->getRowIndex());
@@ -430,14 +416,6 @@ class WorkbookRange extends Entity implements Parsable
     */
     public function setNumberFormat(?Json $value): void {
         $this->getBackingStore()->set('numberFormat', $value);
-    }
-
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param string|null $value Value to set for the OdataType property.
-    */
-    public function setOdataType(?string $value): void {
-        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

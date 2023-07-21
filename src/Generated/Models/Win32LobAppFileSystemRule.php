@@ -7,7 +7,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 /**
- * A base complex type to store the detection or requirement rule data for a Win32 LOB app.
+ * A complex type to store file or folder rule data for a Win32 LOB app.
 */
 class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsable 
 {
@@ -62,7 +62,6 @@ class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsable
             'check32BitOn64System' => fn(ParseNode $n) => $o->setCheck32BitOn64System($n->getBooleanValue()),
             'comparisonValue' => fn(ParseNode $n) => $o->setComparisonValue($n->getStringValue()),
             'fileOrFolderName' => fn(ParseNode $n) => $o->setFileOrFolderName($n->getStringValue()),
-            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'operationType' => fn(ParseNode $n) => $o->setOperationType($n->getEnumValue(Win32LobAppFileSystemOperationType::class)),
             'operator' => fn(ParseNode $n) => $o->setOperator($n->getEnumValue(Win32LobAppRuleOperator::class)),
             'path' => fn(ParseNode $n) => $o->setPath($n->getStringValue()),
@@ -79,18 +78,6 @@ class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'fileOrFolderName'");
-    }
-
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return string|null
-    */
-    public function getOdataType(): ?string {
-        $val = $this->getBackingStore()->get('odataType');
-        if (is_null($val) || is_string($val)) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -138,7 +125,6 @@ class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsable
         $writer->writeBooleanValue('check32BitOn64System', $this->getCheck32BitOn64System());
         $writer->writeStringValue('comparisonValue', $this->getComparisonValue());
         $writer->writeStringValue('fileOrFolderName', $this->getFileOrFolderName());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeEnumValue('operationType', $this->getOperationType());
         $writer->writeEnumValue('operator', $this->getOperator());
         $writer->writeStringValue('path', $this->getPath());
@@ -166,14 +152,6 @@ class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsable
     */
     public function setFileOrFolderName(?string $value): void {
         $this->getBackingStore()->set('fileOrFolderName', $value);
-    }
-
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param string|null $value Value to set for the OdataType property.
-    */
-    public function setOdataType(?string $value): void {
-        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

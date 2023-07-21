@@ -13,11 +13,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class TargetedManagedAppProtection extends ManagedAppProtection implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new targetedManagedAppProtection and sets the default values.
     */
     public function __construct() {
@@ -88,7 +83,6 @@ class TargetedManagedAppProtection extends ManagedAppProtection implements Parsa
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('assignments', $this->getAssignments());
         $writer->writeBooleanValue('isAssigned', $this->getIsAssigned());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

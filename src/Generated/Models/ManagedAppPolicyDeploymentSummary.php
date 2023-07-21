@@ -78,7 +78,6 @@ class ManagedAppPolicyDeploymentSummary extends Entity implements Parsable
             'configurationDeploymentSummaryPerApp' => fn(ParseNode $n) => $o->setConfigurationDeploymentSummaryPerApp($n->getCollectionOfObjectValues([ManagedAppPolicyDeploymentSummaryPerApp::class, 'createFromDiscriminatorValue'])),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'lastRefreshTime' => fn(ParseNode $n) => $o->setLastRefreshTime($n->getDateTimeValue()),
-            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'version' => fn(ParseNode $n) => $o->setVersion($n->getStringValue()),
         ]);
     }
@@ -93,18 +92,6 @@ class ManagedAppPolicyDeploymentSummary extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'lastRefreshTime'");
-    }
-
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return string|null
-    */
-    public function getOdataType(): ?string {
-        $val = $this->getBackingStore()->get('odataType');
-        if (is_null($val) || is_string($val)) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -129,7 +116,6 @@ class ManagedAppPolicyDeploymentSummary extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('configurationDeploymentSummaryPerApp', $this->getConfigurationDeploymentSummaryPerApp());
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeDateTimeValue('lastRefreshTime', $this->getLastRefreshTime());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('version', $this->getVersion());
     }
 
@@ -163,14 +149,6 @@ class ManagedAppPolicyDeploymentSummary extends Entity implements Parsable
     */
     public function setLastRefreshTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastRefreshTime', $value);
-    }
-
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param string|null $value Value to set for the OdataType property.
-    */
-    public function setOdataType(?string $value): void {
-        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

@@ -7,15 +7,10 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 /**
- * Abstract class to contain properties used to assign a mobile app to a group.
+ * Contains properties used when assigning a Windows Universal AppX mobile app to a group.
 */
 class WindowsUniversalAppXAppAssignmentSettings extends MobileAppAssignmentSettings implements Parsable 
 {
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
     /**
      * Instantiates a new windowsUniversalAppXAppAssignmentSettings and sets the default values.
     */
@@ -62,7 +57,6 @@ class WindowsUniversalAppXAppAssignmentSettings extends MobileAppAssignmentSetti
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeBooleanValue('useDeviceContext', $this->getUseDeviceContext());
     }
 

@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class ContentType extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new contentType and sets the default values.
     */
     public function __construct() {
@@ -324,7 +319,6 @@ class ContentType extends Entity implements Parsable
         $writer->writeObjectValue('inheritedFrom', $this->getInheritedFrom());
         $writer->writeBooleanValue('isBuiltIn', $this->getIsBuiltIn());
         $writer->writeStringValue('name', $this->getName());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('order', $this->getOrder());
         $writer->writeStringValue('parentId', $this->getParentId());
         $writer->writeBooleanValue('propagateChanges', $this->getPropagateChanges());

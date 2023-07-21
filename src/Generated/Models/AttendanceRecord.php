@@ -61,7 +61,6 @@ class AttendanceRecord extends Entity implements Parsable
             'attendanceIntervals' => fn(ParseNode $n) => $o->setAttendanceIntervals($n->getCollectionOfObjectValues([AttendanceInterval::class, 'createFromDiscriminatorValue'])),
             'emailAddress' => fn(ParseNode $n) => $o->setEmailAddress($n->getStringValue()),
             'identity' => fn(ParseNode $n) => $o->setIdentity($n->getObjectValue([Identity::class, 'createFromDiscriminatorValue'])),
-            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'role' => fn(ParseNode $n) => $o->setRole($n->getStringValue()),
             'totalAttendanceInSeconds' => fn(ParseNode $n) => $o->setTotalAttendanceInSeconds($n->getIntegerValue()),
         ]);
@@ -77,18 +76,6 @@ class AttendanceRecord extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'identity'");
-    }
-
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return string|null
-    */
-    public function getOdataType(): ?string {
-        $val = $this->getBackingStore()->get('odataType');
-        if (is_null($val) || is_string($val)) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -124,7 +111,6 @@ class AttendanceRecord extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('attendanceIntervals', $this->getAttendanceIntervals());
         $writer->writeStringValue('emailAddress', $this->getEmailAddress());
         $writer->writeObjectValue('identity', $this->getIdentity());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('role', $this->getRole());
         $writer->writeIntegerValue('totalAttendanceInSeconds', $this->getTotalAttendanceInSeconds());
     }
@@ -151,14 +137,6 @@ class AttendanceRecord extends Entity implements Parsable
     */
     public function setIdentity(?Identity $value): void {
         $this->getBackingStore()->set('identity', $value);
-    }
-
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param string|null $value Value to set for the OdataType property.
-    */
-    public function setOdataType(?string $value): void {
-        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

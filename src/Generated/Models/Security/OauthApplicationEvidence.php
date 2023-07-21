@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class OauthApplicationEvidence extends AlertEvidence implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new oauthApplicationEvidence and sets the default values.
     */
     public function __construct() {
@@ -100,7 +95,6 @@ class OauthApplicationEvidence extends AlertEvidence implements Parsable
         $writer->writeStringValue('appId', $this->getAppId());
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeStringValue('objectId', $this->getObjectId());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('publisher', $this->getPublisher());
     }
 

@@ -39,6 +39,18 @@ class SharedDriveItem extends BaseItem implements Parsable
     }
 
     /**
+     * Gets the list property value. Used to access the underlying list
+     * @return EscapedList|null
+    */
+    public function getEscapedList(): ?EscapedList {
+        $val = $this->getBackingStore()->get('escapedList');
+        if (is_null($val) || $val instanceof EscapedList) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'escapedList'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
@@ -46,7 +58,7 @@ class SharedDriveItem extends BaseItem implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'driveItem' => fn(ParseNode $n) => $o->setDriveItem($n->getObjectValue([DriveItem::class, 'createFromDiscriminatorValue'])),
-            'list' => fn(ParseNode $n) => $o->setList($n->getObjectValue([EscapedList::class, 'createFromDiscriminatorValue'])),
+            'list' => fn(ParseNode $n) => $o->setEscapedList($n->getObjectValue([EscapedList::class, 'createFromDiscriminatorValue'])),
             'items' => fn(ParseNode $n) => $o->setItems($n->getCollectionOfObjectValues([DriveItem::class, 'createFromDiscriminatorValue'])),
             'listItem' => fn(ParseNode $n) => $o->setListItem($n->getObjectValue([ListItem::class, 'createFromDiscriminatorValue'])),
             'owner' => fn(ParseNode $n) => $o->setOwner($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
@@ -68,18 +80,6 @@ class SharedDriveItem extends BaseItem implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'items'");
-    }
-
-    /**
-     * Gets the list property value. Used to access the underlying list
-     * @return EscapedList|null
-    */
-    public function getList(): ?EscapedList {
-        $val = $this->getBackingStore()->get('escapedList');
-        if (is_null($val) || $val instanceof EscapedList) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'escapedList'");
     }
 
     /**
@@ -149,7 +149,7 @@ class SharedDriveItem extends BaseItem implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeObjectValue('driveItem', $this->getDriveItem());
-        $writer->writeObjectValue('list', $this->getList());
+        $writer->writeObjectValue('list', $this->getEscapedList());
         $writer->writeCollectionOfObjectValues('items', $this->getItems());
         $writer->writeObjectValue('listItem', $this->getListItem());
         $writer->writeObjectValue('owner', $this->getOwner());
@@ -167,19 +167,19 @@ class SharedDriveItem extends BaseItem implements Parsable
     }
 
     /**
+     * Sets the list property value. Used to access the underlying list
+     * @param EscapedList|null $value Value to set for the list property.
+    */
+    public function setEscapedList(?EscapedList $value): void {
+        $this->getBackingStore()->set('escapedList', $value);
+    }
+
+    /**
      * Sets the items property value. All driveItems contained in the sharing root. This collection cannot be enumerated.
      * @param array<DriveItem>|null $value Value to set for the items property.
     */
     public function setItems(?array $value): void {
         $this->getBackingStore()->set('items', $value);
-    }
-
-    /**
-     * Sets the list property value. Used to access the underlying list
-     * @param EscapedList|null $value Value to set for the EscapedList property.
-    */
-    public function setList(?EscapedList $value): void {
-        $this->getBackingStore()->set('escapedList', $value);
     }
 
     /**

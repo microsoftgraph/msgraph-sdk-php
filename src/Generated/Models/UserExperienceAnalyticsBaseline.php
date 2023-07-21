@@ -13,11 +13,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new userExperienceAnalyticsBaseline and sets the default values.
     */
     public function __construct() {
@@ -186,7 +181,6 @@ class UserExperienceAnalyticsBaseline extends Entity implements Parsable
         $writer->writeObjectValue('deviceBootPerformanceMetrics', $this->getDeviceBootPerformanceMetrics());
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeBooleanValue('isBuiltIn', $this->getIsBuiltIn());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('rebootAnalyticsMetrics', $this->getRebootAnalyticsMetrics());
         $writer->writeObjectValue('resourcePerformanceMetrics', $this->getResourcePerformanceMetrics());
         $writer->writeObjectValue('workFromAnywhereMetrics', $this->getWorkFromAnywhereMetrics());

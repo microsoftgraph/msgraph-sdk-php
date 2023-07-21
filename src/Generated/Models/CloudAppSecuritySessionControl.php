@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class CloudAppSecuritySessionControl extends ConditionalAccessSessionControl implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new cloudAppSecuritySessionControl and sets the default values.
     */
     public function __construct() {
@@ -60,7 +55,6 @@ class CloudAppSecuritySessionControl extends ConditionalAccessSessionControl imp
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeEnumValue('cloudAppSecurityType', $this->getCloudAppSecurityType());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

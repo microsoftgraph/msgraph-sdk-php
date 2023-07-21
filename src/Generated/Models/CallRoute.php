@@ -56,29 +56,29 @@ class CallRoute implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
+     * Gets the final property value. The final property
+     * @return IdentitySet|null
+    */
+    public function getEscapedFinal(): ?IdentitySet {
+        $val = $this->getBackingStore()->get('escapedFinal');
+        if (is_null($val) || $val instanceof IdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'escapedFinal'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'final' => fn(ParseNode $n) => $o->setFinal($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
+            'final' => fn(ParseNode $n) => $o->setEscapedFinal($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'original' => fn(ParseNode $n) => $o->setOriginal($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
             'routingType' => fn(ParseNode $n) => $o->setRoutingType($n->getEnumValue(RoutingType::class)),
         ];
-    }
-
-    /**
-     * Gets the final property value. The final property
-     * @return IdentitySet|null
-    */
-    public function getFinal(): ?IdentitySet {
-        $val = $this->getBackingStore()->get('escapedFinal');
-        if (is_null($val) || $val instanceof IdentitySet) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'escapedFinal'");
     }
 
     /**
@@ -122,7 +122,7 @@ class CallRoute implements AdditionalDataHolder, BackedModel, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('final', $this->getFinal());
+        $writer->writeObjectValue('final', $this->getEscapedFinal());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('original', $this->getOriginal());
         $writer->writeEnumValue('routingType', $this->getRoutingType());
@@ -131,7 +131,7 @@ class CallRoute implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the additionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -139,7 +139,7 @@ class CallRoute implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     * @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the backingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -147,15 +147,15 @@ class CallRoute implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the final property value. The final property
-     * @param IdentitySet|null $value Value to set for the EscapedFinal property.
+     * @param IdentitySet|null $value Value to set for the final property.
     */
-    public function setFinal(?IdentitySet $value): void {
+    public function setEscapedFinal(?IdentitySet $value): void {
         $this->getBackingStore()->set('escapedFinal', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the @odata.type property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);

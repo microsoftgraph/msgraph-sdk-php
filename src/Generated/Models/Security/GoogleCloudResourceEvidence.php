@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class GoogleCloudResourceEvidence extends AlertEvidence implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new googleCloudResourceEvidence and sets the default values.
     */
     public function __construct() {
@@ -125,7 +120,6 @@ class GoogleCloudResourceEvidence extends AlertEvidence implements Parsable
         parent::serialize($writer);
         $writer->writeStringValue('location', $this->getLocation());
         $writer->writeEnumValue('locationType', $this->getLocationType());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('projectId', $this->getProjectId());
         $writer->writeIntegerValue('projectNumber', $this->getProjectNumber());
         $writer->writeStringValue('resourceName', $this->getResourceName());

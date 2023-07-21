@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DirectoryObject extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new directoryObject and sets the default values.
     */
     public function __construct() {
@@ -96,7 +91,6 @@ class DirectoryObject extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeDateTimeValue('deletedDateTime', $this->getDeletedDateTime());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

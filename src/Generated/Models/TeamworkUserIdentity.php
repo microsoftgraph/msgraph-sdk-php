@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TeamworkUserIdentity extends Identity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new teamworkUserIdentity and sets the default values.
     */
     public function __construct() {
@@ -59,7 +54,6 @@ class TeamworkUserIdentity extends Identity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeEnumValue('userIdentityType', $this->getUserIdentityType());
     }
 

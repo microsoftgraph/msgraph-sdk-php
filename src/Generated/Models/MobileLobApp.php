@@ -13,11 +13,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class MobileLobApp extends MobileApp implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new mobileLobApp and sets the default values.
     */
     public function __construct() {
@@ -120,7 +115,6 @@ class MobileLobApp extends MobileApp implements Parsable
         $writer->writeStringValue('committedContentVersion', $this->getCommittedContentVersion());
         $writer->writeCollectionOfObjectValues('contentVersions', $this->getContentVersions());
         $writer->writeStringValue('fileName', $this->getFileName());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeIntegerValue('size', $this->getSize());
     }
 

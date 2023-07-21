@@ -14,11 +14,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class BrowserSite extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new browserSite and sets the default values.
     */
     public function __construct() {
@@ -217,7 +212,6 @@ class BrowserSite extends Entity implements Parsable
         $writer->writeObjectValue('lastModifiedBy', $this->getLastModifiedBy());
         $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
         $writer->writeEnumValue('mergeType', $this->getMergeType());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeEnumValue('status', $this->getStatus());
         $writer->writeEnumValue('targetEnvironment', $this->getTargetEnvironment());
         $writer->writeStringValue('webUrl', $this->getWebUrl());

@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookChartLineFormat extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new workbookChartLineFormat and sets the default values.
     */
     public function __construct() {
@@ -59,7 +54,6 @@ class WorkbookChartLineFormat extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeStringValue('color', $this->getColor());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

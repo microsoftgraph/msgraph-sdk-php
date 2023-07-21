@@ -59,7 +59,7 @@ class PersonType implements AdditionalDataHolder, BackedModel, Parsable
      * Gets the class property value. The type of data source, such as Person.
      * @return string|null
     */
-    public function getClass(): ?string {
+    public function getEscapedClass(): ?string {
         $val = $this->getBackingStore()->get('escapedClass');
         if (is_null($val) || is_string($val)) {
             return $val;
@@ -74,7 +74,7 @@ class PersonType implements AdditionalDataHolder, BackedModel, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'class' => fn(ParseNode $n) => $o->setClass($n->getStringValue()),
+            'class' => fn(ParseNode $n) => $o->setEscapedClass($n->getStringValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'subclass' => fn(ParseNode $n) => $o->setSubclass($n->getStringValue()),
         ];
@@ -109,7 +109,7 @@ class PersonType implements AdditionalDataHolder, BackedModel, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('class', $this->getClass());
+        $writer->writeStringValue('class', $this->getEscapedClass());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('subclass', $this->getSubclass());
         $writer->writeAdditionalData($this->getAdditionalData());
@@ -117,7 +117,7 @@ class PersonType implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the additionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -125,7 +125,7 @@ class PersonType implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     * @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the backingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -133,15 +133,15 @@ class PersonType implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the class property value. The type of data source, such as Person.
-     * @param string|null $value Value to set for the EscapedClass property.
+     * @param string|null $value Value to set for the class property.
     */
-    public function setClass(?string $value): void {
+    public function setEscapedClass(?string $value): void {
         $this->getBackingStore()->set('escapedClass', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the @odata.type property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);

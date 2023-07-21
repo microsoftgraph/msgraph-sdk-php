@@ -52,7 +52,6 @@ class DeviceManagementExportJob extends Entity implements Parsable
             'filter' => fn(ParseNode $n) => $o->setFilter($n->getStringValue()),
             'format' => fn(ParseNode $n) => $o->setFormat($n->getEnumValue(DeviceManagementReportFileFormat::class)),
             'localizationType' => fn(ParseNode $n) => $o->setLocalizationType($n->getEnumValue(DeviceManagementExportJobLocalizationType::class)),
-            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'reportName' => fn(ParseNode $n) => $o->setReportName($n->getStringValue()),
             'requestDateTime' => fn(ParseNode $n) => $o->setRequestDateTime($n->getDateTimeValue()),
             'select' => function (ParseNode $n) {
@@ -103,18 +102,6 @@ class DeviceManagementExportJob extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'localizationType'");
-    }
-
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return string|null
-    */
-    public function getOdataType(): ?string {
-        $val = $this->getBackingStore()->get('odataType');
-        if (is_null($val) || is_string($val)) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -201,7 +188,6 @@ class DeviceManagementExportJob extends Entity implements Parsable
         $writer->writeStringValue('filter', $this->getFilter());
         $writer->writeEnumValue('format', $this->getFormat());
         $writer->writeEnumValue('localizationType', $this->getLocalizationType());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('reportName', $this->getReportName());
         $writer->writeDateTimeValue('requestDateTime', $this->getRequestDateTime());
         $writer->writeCollectionOfPrimitiveValues('select', $this->getSelect());
@@ -240,14 +226,6 @@ class DeviceManagementExportJob extends Entity implements Parsable
     */
     public function setLocalizationType(?DeviceManagementExportJobLocalizationType $value): void {
         $this->getBackingStore()->set('localizationType', $value);
-    }
-
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param string|null $value Value to set for the OdataType property.
-    */
-    public function setOdataType(?string $value): void {
-        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

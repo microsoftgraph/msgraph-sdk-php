@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class BitlockerRecoveryKey extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new bitlockerRecoveryKey and sets the default values.
     */
     public function __construct() {
@@ -101,7 +96,6 @@ class BitlockerRecoveryKey extends Entity implements Parsable
         $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
         $writer->writeStringValue('deviceId', $this->getDeviceId());
         $writer->writeStringValue('key', $this->getKey());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeEnumValue('volumeType', $this->getVolumeType());
     }
 

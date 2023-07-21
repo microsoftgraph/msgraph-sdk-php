@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AccessReviewHistoryInstance extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new accessReviewHistoryInstance and sets the default values.
     */
     public function __construct() {
@@ -140,7 +135,6 @@ class AccessReviewHistoryInstance extends Entity implements Parsable
         $writer->writeStringValue('downloadUri', $this->getDownloadUri());
         $writer->writeDateTimeValue('expirationDateTime', $this->getExpirationDateTime());
         $writer->writeDateTimeValue('fulfilledDateTime', $this->getFulfilledDateTime());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeDateTimeValue('reviewHistoryPeriodEndDateTime', $this->getReviewHistoryPeriodEndDateTime());
         $writer->writeDateTimeValue('reviewHistoryPeriodStartDateTime', $this->getReviewHistoryPeriodStartDateTime());
         $writer->writeDateTimeValue('runDateTime', $this->getRunDateTime());

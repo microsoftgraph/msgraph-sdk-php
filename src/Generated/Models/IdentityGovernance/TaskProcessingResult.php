@@ -12,11 +12,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TaskProcessingResult extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new taskProcessingResult and sets the default values.
     */
     public function __construct() {
@@ -142,7 +137,6 @@ class TaskProcessingResult extends Entity implements Parsable
         $writer->writeDateTimeValue('completedDateTime', $this->getCompletedDateTime());
         $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
         $writer->writeStringValue('failureReason', $this->getFailureReason());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeEnumValue('processingStatus', $this->getProcessingStatus());
         $writer->writeDateTimeValue('startedDateTime', $this->getStartedDateTime());
         $writer->writeObjectValue('subject', $this->getSubject());

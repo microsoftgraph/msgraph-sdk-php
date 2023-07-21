@@ -122,7 +122,7 @@ class CreateForwardPostRequestBody implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the additionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -130,7 +130,7 @@ class CreateForwardPostRequestBody implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the backingStore property value. Stores model information.
-     * @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the backingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -138,7 +138,7 @@ class CreateForwardPostRequestBody implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the comment property value. The Comment property
-     * @param string|null $value Value to set for the Comment property.
+     * @param string|null $value Value to set for the comment property.
     */
     public function setComment(?string $value): void {
         $this->getBackingStore()->set('comment', $value);
@@ -146,7 +146,7 @@ class CreateForwardPostRequestBody implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the message property value. The Message property
-     * @param Message|null $value Value to set for the Message property.
+     * @param Message|null $value Value to set for the message property.
     */
     public function setMessage(?Message $value): void {
         $this->getBackingStore()->set('message', $value);
@@ -154,7 +154,7 @@ class CreateForwardPostRequestBody implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the toRecipients property value. The ToRecipients property
-     * @param array<Recipient>|null $value Value to set for the ToRecipients property.
+     * @param array<Recipient>|null $value Value to set for the toRecipients property.
     */
     public function setToRecipients(?array $value): void {
         $this->getBackingStore()->set('toRecipients', $value);

@@ -11,11 +11,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class ExternalItem extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new externalItem and sets the default values.
     */
     public function __construct() {
@@ -106,7 +101,6 @@ class ExternalItem extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('acl', $this->getAcl());
         $writer->writeCollectionOfObjectValues('activities', $this->getActivities());
         $writer->writeObjectValue('content', $this->getContent());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('properties', $this->getProperties());
     }
 

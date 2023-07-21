@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class UserTeamwork extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new userTeamwork and sets the default values.
     */
     public function __construct() {
@@ -78,7 +73,6 @@ class UserTeamwork extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('associatedTeams', $this->getAssociatedTeams());
         $writer->writeCollectionOfObjectValues('installedApps', $this->getInstalledApps());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

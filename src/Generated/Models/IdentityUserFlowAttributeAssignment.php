@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class IdentityUserFlowAttributeAssignment extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new identityUserFlowAttributeAssignment and sets the default values.
     */
     public function __construct() {
@@ -128,7 +123,6 @@ class IdentityUserFlowAttributeAssignment extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeBooleanValue('isOptional', $this->getIsOptional());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeBooleanValue('requiresVerification', $this->getRequiresVerification());
         $writer->writeObjectValue('userAttribute', $this->getUserAttribute());
         $writer->writeCollectionOfObjectValues('userAttributeValues', $this->getUserAttributeValues());

@@ -11,11 +11,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class AccessPackageAssignmentRequest extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new accessPackageAssignmentRequest and sets the default values.
     */
     public function __construct() {
@@ -200,7 +195,6 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
         $writer->writeDateTimeValue('completedDateTime', $this->getCompletedDateTime());
         $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
         $writer->writeCollectionOfObjectValues('customExtensionCalloutInstances', $this->getCustomExtensionCalloutInstances());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('requestor', $this->getRequestor());
         $writer->writeEnumValue('requestType', $this->getRequestType());
         $writer->writeObjectValue('schedule', $this->getSchedule());

@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class VoiceAuthenticationMethodConfiguration extends AuthenticationMethodConfiguration implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new voiceAuthenticationMethodConfiguration and sets the default values.
     */
     public function __construct() {
@@ -77,7 +72,6 @@ class VoiceAuthenticationMethodConfiguration extends AuthenticationMethodConfigu
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('includeTargets', $this->getIncludeTargets());
         $writer->writeBooleanValue('isOfficePhoneAllowed', $this->getIsOfficePhoneAllowed());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

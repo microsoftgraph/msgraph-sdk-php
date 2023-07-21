@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class PrincipalResourceMembershipsScope extends AccessReviewScope implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new principalResourceMembershipsScope and sets the default values.
     */
     public function __construct() {
@@ -77,7 +72,6 @@ class PrincipalResourceMembershipsScope extends AccessReviewScope implements Par
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfObjectValues('principalScopes', $this->getPrincipalScopes());
         $writer->writeCollectionOfObjectValues('resourceScopes', $this->getResourceScopes());
     }

@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class WorkbookRangeFormat extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new workbookRangeFormat and sets the default values.
     */
     public function __construct() {
@@ -170,7 +165,6 @@ class WorkbookRangeFormat extends Entity implements Parsable
         $writer->writeObjectValue('fill', $this->getFill());
         $writer->writeObjectValue('font', $this->getFont());
         $writer->writeStringValue('horizontalAlignment', $this->getHorizontalAlignment());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('protection', $this->getProtection());
         $writer->writeFloatValue('rowHeight', $this->getRowHeight());
         $writer->writeStringValue('verticalAlignment', $this->getVerticalAlignment());

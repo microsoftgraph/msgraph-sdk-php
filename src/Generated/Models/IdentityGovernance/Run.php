@@ -12,11 +12,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Run extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new run and sets the default values.
     */
     public function __construct() {
@@ -238,7 +233,6 @@ class Run extends Entity implements Parsable
         $writer->writeIntegerValue('failedTasksCount', $this->getFailedTasksCount());
         $writer->writeIntegerValue('failedUsersCount', $this->getFailedUsersCount());
         $writer->writeDateTimeValue('lastUpdatedDateTime', $this->getLastUpdatedDateTime());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeEnumValue('processingStatus', $this->getProcessingStatus());
         $writer->writeDateTimeValue('scheduledDateTime', $this->getScheduledDateTime());
         $writer->writeDateTimeValue('startedDateTime', $this->getStartedDateTime());

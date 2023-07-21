@@ -11,11 +11,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class ServiceAnnouncementBase extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new serviceAnnouncementBase and sets the default values.
     */
     public function __construct() {
@@ -125,7 +120,6 @@ class ServiceAnnouncementBase extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('details', $this->getDetails());
         $writer->writeDateTimeValue('endDateTime', $this->getEndDateTime());
         $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeDateTimeValue('startDateTime', $this->getStartDateTime());
         $writer->writeStringValue('title', $this->getTitle());
     }

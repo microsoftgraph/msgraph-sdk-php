@@ -8,15 +8,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Psr\Http\Message\StreamInterface;
 
 /**
- * OMA Settings definition.
+ * OMA Settings StringXML definition.
 */
 class OmaSettingStringXml extends OmaSetting implements Parsable 
 {
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
     /**
      * Instantiates a new omaSettingStringXml and sets the default values.
     */
@@ -77,7 +72,6 @@ class OmaSettingStringXml extends OmaSetting implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeStringValue('fileName', $this->getFileName());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeBinaryContent('value', $this->getValue());
     }
 

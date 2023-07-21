@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class MessageUnpinnedEventMessageDetail extends EventMessageDetail implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new messageUnpinnedEventMessageDetail and sets the default values.
     */
     public function __construct() {
@@ -75,7 +70,6 @@ class MessageUnpinnedEventMessageDetail extends EventMessageDetail implements Pa
         parent::serialize($writer);
         $writer->writeDateTimeValue('eventDateTime', $this->getEventDateTime());
         $writer->writeObjectValue('initiator', $this->getInitiator());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

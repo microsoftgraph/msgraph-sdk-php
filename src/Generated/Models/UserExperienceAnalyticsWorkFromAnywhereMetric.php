@@ -13,11 +13,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class UserExperienceAnalyticsWorkFromAnywhereMetric extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new userExperienceAnalyticsWorkFromAnywhereMetric and sets the default values.
     */
     public function __construct() {
@@ -65,7 +60,6 @@ class UserExperienceAnalyticsWorkFromAnywhereMetric extends Entity implements Pa
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('metricDevices', $this->getMetricDevices());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

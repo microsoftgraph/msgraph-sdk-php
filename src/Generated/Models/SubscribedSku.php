@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class SubscribedSku extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new subscribedSku and sets the default values.
     */
     public function __construct() {
@@ -192,7 +187,6 @@ class SubscribedSku extends Entity implements Parsable
         $writer->writeStringValue('appliesTo', $this->getAppliesTo());
         $writer->writeStringValue('capabilityStatus', $this->getCapabilityStatus());
         $writer->writeIntegerValue('consumedUnits', $this->getConsumedUnits());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('prepaidUnits', $this->getPrepaidUnits());
         $writer->writeCollectionOfObjectValues('servicePlans', $this->getServicePlans());
         $writer->writeStringValue('skuId', $this->getSkuId());

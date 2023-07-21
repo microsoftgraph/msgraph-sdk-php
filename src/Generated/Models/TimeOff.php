@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TimeOff extends ChangeTrackedEntity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new timeOff and sets the default values.
     */
     public function __construct() {
@@ -86,7 +81,6 @@ class TimeOff extends ChangeTrackedEntity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeObjectValue('draftTimeOff', $this->getDraftTimeOff());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('sharedTimeOff', $this->getSharedTimeOff());
         $writer->writeStringValue('userId', $this->getUserId());
     }

@@ -13,11 +13,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Set extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new set and sets the default values.
     */
     public function __construct() {
@@ -167,7 +162,6 @@ class Set extends Entity implements Parsable
         $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
         $writer->writeStringValue('description', $this->getDescription());
         $writer->writeCollectionOfObjectValues('localizedNames', $this->getLocalizedNames());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('parentGroup', $this->getParentGroup());
         $writer->writeCollectionOfObjectValues('properties', $this->getProperties());
         $writer->writeCollectionOfObjectValues('relations', $this->getRelations());

@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class ItemAnalytics extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new itemAnalytics and sets the default values.
     */
     public function __construct() {
@@ -90,7 +85,6 @@ class ItemAnalytics extends Entity implements Parsable
         $writer->writeObjectValue('allTime', $this->getAllTime());
         $writer->writeCollectionOfObjectValues('itemActivityStats', $this->getItemActivityStats());
         $writer->writeObjectValue('lastSevenDays', $this->getLastSevenDays());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

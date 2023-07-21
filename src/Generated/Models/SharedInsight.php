@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class SharedInsight extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new sharedInsight and sets the default values.
     */
     public function __construct() {
@@ -128,7 +123,6 @@ class SharedInsight extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeObjectValue('lastShared', $this->getLastShared());
         $writer->writeObjectValue('lastSharedMethod', $this->getLastSharedMethod());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('resource', $this->getResource());
         $writer->writeCollectionOfObjectValues('sharingHistory', $this->getSharingHistory());
     }

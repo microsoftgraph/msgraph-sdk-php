@@ -11,11 +11,6 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class ConversationThread extends Entity implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new conversationThread and sets the default values.
     */
     public function __construct() {
@@ -183,7 +178,6 @@ class ConversationThread extends Entity implements Parsable
         $writer->writeBooleanValue('hasAttachments', $this->getHasAttachments());
         $writer->writeBooleanValue('isLocked', $this->getIsLocked());
         $writer->writeDateTimeValue('lastDeliveredDateTime', $this->getLastDeliveredDateTime());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfObjectValues('posts', $this->getPosts());
         $writer->writeStringValue('preview', $this->getPreview());
         $writer->writeStringValue('topic', $this->getTopic());

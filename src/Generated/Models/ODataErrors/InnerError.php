@@ -132,7 +132,7 @@ class InnerError implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the additionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -140,7 +140,7 @@ class InnerError implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     * @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the backingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -148,7 +148,7 @@ class InnerError implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the client-request-id property value. Client request Id as sent by the client application.
-     * @param string|null $value Value to set for the clientRequestId property.
+     * @param string|null $value Value to set for the client-request-id property.
     */
     public function setClientRequestId(?string $value): void {
         $this->getBackingStore()->set('clientRequestId', $value);
@@ -156,7 +156,7 @@ class InnerError implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the date property value. Date when the error occured.
-     * @param DateTime|null $value Value to set for the Date property.
+     * @param DateTime|null $value Value to set for the date property.
     */
     public function setDate(?DateTime $value): void {
         $this->getBackingStore()->set('date', $value);
@@ -164,7 +164,7 @@ class InnerError implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the @odata.type property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -172,7 +172,7 @@ class InnerError implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the request-id property value. Request Id as tracked internally by the service
-     * @param string|null $value Value to set for the requestId property.
+     * @param string|null $value Value to set for the request-id property.
     */
     public function setRequestId(?string $value): void {
         $this->getBackingStore()->set('requestId', $value);

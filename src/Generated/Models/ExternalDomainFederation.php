@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ExternalDomainFederation extends IdentitySource implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new externalDomainFederation and sets the default values.
     */
     public function __construct() {
@@ -88,7 +83,6 @@ class ExternalDomainFederation extends IdentitySource implements Parsable
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeStringValue('domainName', $this->getDomainName());
         $writer->writeStringValue('issuerUri', $this->getIssuerUri());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

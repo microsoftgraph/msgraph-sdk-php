@@ -7,15 +7,10 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 /**
- * Represents an item on the iOS Home Screen
+ * Represents an icon for an app on the Home Screen
 */
 class IosHomeScreenApp extends IosHomeScreenItem implements Parsable 
 {
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
     /**
      * Instantiates a new iosHomeScreenApp and sets the default values.
     */
@@ -63,7 +58,6 @@ class IosHomeScreenApp extends IosHomeScreenItem implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeStringValue('bundleID', $this->getBundleID());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
     /**

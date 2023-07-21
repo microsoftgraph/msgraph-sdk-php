@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TeleconferenceDeviceAudioQuality extends TeleconferenceDeviceMediaQuality implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new teleconferenceDeviceAudioQuality and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,6 @@ class TeleconferenceDeviceAudioQuality extends TeleconferenceDeviceMediaQuality 
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
 }

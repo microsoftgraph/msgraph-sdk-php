@@ -383,7 +383,6 @@ class ManagedDevice extends Entity implements Parsable
             'meid' => fn(ParseNode $n) => $o->setMeid($n->getStringValue()),
             'model' => fn(ParseNode $n) => $o->setModel($n->getStringValue()),
             'notes' => fn(ParseNode $n) => $o->setNotes($n->getStringValue()),
-            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'operatingSystem' => fn(ParseNode $n) => $o->setOperatingSystem($n->getStringValue()),
             'osVersion' => fn(ParseNode $n) => $o->setOsVersion($n->getStringValue()),
             'partnerReportedThreatState' => fn(ParseNode $n) => $o->setPartnerReportedThreatState($n->getEnumValue(ManagedDevicePartnerReportedHealthState::class)),
@@ -597,18 +596,6 @@ class ManagedDevice extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'notes'");
-    }
-
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return string|null
-    */
-    public function getOdataType(): ?string {
-        $val = $this->getBackingStore()->get('odataType');
-        if (is_null($val) || is_string($val)) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -848,7 +835,6 @@ class ManagedDevice extends Entity implements Parsable
         $writer->writeEnumValue('managedDeviceOwnerType', $this->getManagedDeviceOwnerType());
         $writer->writeEnumValue('managementAgent', $this->getManagementAgent());
         $writer->writeStringValue('notes', $this->getNotes());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeEnumValue('partnerReportedThreatState', $this->getPartnerReportedThreatState());
         $writer->writeCollectionOfObjectValues('users', $this->getUsers());
         $writer->writeObjectValue('windowsProtectionState', $this->getWindowsProtectionState());
@@ -1180,14 +1166,6 @@ class ManagedDevice extends Entity implements Parsable
     */
     public function setNotes(?string $value): void {
         $this->getBackingStore()->set('notes', $value);
-    }
-
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param string|null $value Value to set for the OdataType property.
-    */
-    public function setOdataType(?string $value): void {
-        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

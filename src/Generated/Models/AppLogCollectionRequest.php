@@ -84,21 +84,8 @@ class AppLogCollectionRequest extends Entity implements Parsable
                 $this->setCustomLogFolders($val);
             },
             'errorMessage' => fn(ParseNode $n) => $o->setErrorMessage($n->getStringValue()),
-            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(AppLogUploadState::class)),
         ]);
-    }
-
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return string|null
-    */
-    public function getOdataType(): ?string {
-        $val = $this->getBackingStore()->get('odataType');
-        if (is_null($val) || is_string($val)) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -122,7 +109,6 @@ class AppLogCollectionRequest extends Entity implements Parsable
         $writer->writeDateTimeValue('completedDateTime', $this->getCompletedDateTime());
         $writer->writeCollectionOfPrimitiveValues('customLogFolders', $this->getCustomLogFolders());
         $writer->writeStringValue('errorMessage', $this->getErrorMessage());
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeEnumValue('status', $this->getStatus());
     }
 
@@ -148,14 +134,6 @@ class AppLogCollectionRequest extends Entity implements Parsable
     */
     public function setErrorMessage(?string $value): void {
         $this->getBackingStore()->set('errorMessage', $value);
-    }
-
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param string|null $value Value to set for the OdataType property.
-    */
-    public function setOdataType(?string $value): void {
-        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

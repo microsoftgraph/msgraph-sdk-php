@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ResultTemplateDictionary extends Dictionary implements Parsable 
 {
     /**
-     * @var string|null $odataType The OdataType property
-    */
-    public ?string $odataType = null;
-    
-    /**
      * Instantiates a new resultTemplateDictionary and sets the default values.
     */
     public function __construct() {
@@ -45,7 +40,6 @@ class ResultTemplateDictionary extends Dictionary implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('@odata.type', $this->getOdataType());
     }
 
 }
