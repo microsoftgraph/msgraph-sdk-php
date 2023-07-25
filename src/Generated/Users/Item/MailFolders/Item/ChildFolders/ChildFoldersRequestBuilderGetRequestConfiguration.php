@@ -31,14 +31,15 @@ class ChildFoldersRequestBuilderGetRequestConfiguration extends BaseRequestConfi
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values
+     * @param string|null $includeHiddenFolders Include Hidden Folders
      * @param array<string>|null $orderby Order items by property values
      * @param array<string>|null $select Select properties to be returned
      * @param int|null $skip Skip the first n items
      * @param int|null $top Show only the first n items
      * @return ChildFoldersRequestBuilderGetQueryParameters
     */
-    public static function createQueryParameters(?bool $count = null, ?array $expand = null, ?string $filter = null, ?array $orderby = null, ?array $select = null, ?int $skip = null, ?int $top = null): ChildFoldersRequestBuilderGetQueryParameters {
-        return new ChildFoldersRequestBuilderGetQueryParameters($count, $expand, $filter, $orderby, $select, $skip, $top);
+    public static function createQueryParameters(?bool $count = null, ?array $expand = null, ?string $filter = null, ?string $includeHiddenFolders = null, ?array $orderby = null, ?array $select = null, ?int $skip = null, ?int $top = null): ChildFoldersRequestBuilderGetQueryParameters {
+        return new ChildFoldersRequestBuilderGetQueryParameters($count, $expand, $filter, $includeHiddenFolders, $orderby, $select, $skip, $top);
     }
 
 }

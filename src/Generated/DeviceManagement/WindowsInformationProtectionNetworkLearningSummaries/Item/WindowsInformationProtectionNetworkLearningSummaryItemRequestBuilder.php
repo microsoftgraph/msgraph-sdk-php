@@ -32,9 +32,10 @@ class WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilder exten
     }
 
     /**
-     * Delete navigation property windowsInformationProtectionNetworkLearningSummaries for deviceManagement
+     * Deletes a windowsInformationProtectionNetworkLearningSummary.
      * @param WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-wip-windowsinformationprotectionnetworklearningsummary-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -50,9 +51,10 @@ class WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilder exten
     }
 
     /**
-     * The windows information protection network learning summaries.
+     * Read properties and relationships of the windowsInformationProtectionNetworkLearningSummary object.
      * @param WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-wip-windowsinformationprotectionnetworklearningsummary-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -68,10 +70,11 @@ class WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilder exten
     }
 
     /**
-     * Update the navigation property windowsInformationProtectionNetworkLearningSummaries in deviceManagement
+     * Update the properties of a windowsInformationProtectionNetworkLearningSummary object.
      * @param WindowsInformationProtectionNetworkLearningSummary $body The request body
      * @param WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-wip-windowsinformationprotectionnetworklearningsummary-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(WindowsInformationProtectionNetworkLearningSummary $body, ?WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -87,7 +90,7 @@ class WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilder exten
     }
 
     /**
-     * Delete navigation property windowsInformationProtectionNetworkLearningSummaries for deviceManagement
+     * Deletes a windowsInformationProtectionNetworkLearningSummary.
      * @param WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +107,7 @@ class WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilder exten
     }
 
     /**
-     * The windows information protection network learning summaries.
+     * Read properties and relationships of the windowsInformationProtectionNetworkLearningSummary object.
      * @param WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -125,7 +128,7 @@ class WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilder exten
     }
 
     /**
-     * Update the navigation property windowsInformationProtectionNetworkLearningSummaries in deviceManagement
+     * Update the properties of a windowsInformationProtectionNetworkLearningSummary object.
      * @param WindowsInformationProtectionNetworkLearningSummary $body The request body
      * @param WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

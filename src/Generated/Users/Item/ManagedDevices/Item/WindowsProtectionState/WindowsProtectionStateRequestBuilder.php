@@ -58,9 +58,10 @@ class WindowsProtectionStateRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The device protection status. This property is read-only.
+     * Read properties and relationships of the windowsProtectionState object.
      * @param WindowsProtectionStateRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-devices-windowsprotectionstate-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?WindowsProtectionStateRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,10 +77,11 @@ class WindowsProtectionStateRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property windowsProtectionState in users
+     * Update the properties of a windowsProtectionState object.
      * @param WindowsProtectionState $body The request body
      * @param WindowsProtectionStateRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-devices-windowsprotectionstate-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(WindowsProtectionState $body, ?WindowsProtectionStateRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -112,7 +114,7 @@ class WindowsProtectionStateRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The device protection status. This property is read-only.
+     * Read properties and relationships of the windowsProtectionState object.
      * @param WindowsProtectionStateRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -133,7 +135,7 @@ class WindowsProtectionStateRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property windowsProtectionState in users
+     * Update the properties of a windowsProtectionState object.
      * @param WindowsProtectionState $body The request body
      * @param WindowsProtectionStateRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

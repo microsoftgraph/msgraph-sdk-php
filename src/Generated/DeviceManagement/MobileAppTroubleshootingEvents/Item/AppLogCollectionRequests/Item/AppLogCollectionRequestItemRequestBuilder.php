@@ -40,9 +40,10 @@ class AppLogCollectionRequestItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property appLogCollectionRequests for deviceManagement
+     * Deletes a appLogCollectionRequest.
      * @param AppLogCollectionRequestItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-devices-applogcollectionrequest-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?AppLogCollectionRequestItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -58,9 +59,10 @@ class AppLogCollectionRequestItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Indicates collection of App Log Upload Request.
+     * Read properties and relationships of the appLogCollectionRequest object.
      * @param AppLogCollectionRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-devices-applogcollectionrequest-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?AppLogCollectionRequestItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,10 +78,11 @@ class AppLogCollectionRequestItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property appLogCollectionRequests in deviceManagement
+     * Update the properties of a appLogCollectionRequest object.
      * @param AppLogCollectionRequest $body The request body
      * @param AppLogCollectionRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-devices-applogcollectionrequest-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(AppLogCollectionRequest $body, ?AppLogCollectionRequestItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -95,7 +98,7 @@ class AppLogCollectionRequestItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property appLogCollectionRequests for deviceManagement
+     * Deletes a appLogCollectionRequest.
      * @param AppLogCollectionRequestItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -112,7 +115,7 @@ class AppLogCollectionRequestItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Indicates collection of App Log Upload Request.
+     * Read properties and relationships of the appLogCollectionRequest object.
      * @param AppLogCollectionRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -133,7 +136,7 @@ class AppLogCollectionRequestItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property appLogCollectionRequests in deviceManagement
+     * Update the properties of a appLogCollectionRequest object.
      * @param AppLogCollectionRequest $body The request body
      * @param AppLogCollectionRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

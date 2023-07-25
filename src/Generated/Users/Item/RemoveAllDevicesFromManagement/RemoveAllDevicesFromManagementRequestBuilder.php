@@ -34,6 +34,7 @@ class RemoveAllDevicesFromManagementRequestBuilder extends BaseRequestBuilder
      * Retire all devices from management for this user
      * @param RemoveAllDevicesFromManagementRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-devices-user-removealldevicesfrommanagement?view=graph-rest-1.0 Find more info here
     */
     public function post(?RemoveAllDevicesFromManagementRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);

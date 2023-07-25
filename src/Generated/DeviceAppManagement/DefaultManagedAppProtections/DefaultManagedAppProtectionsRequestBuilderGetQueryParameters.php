@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceAppManagement\DefaultManagedAppProtect
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Default managed app policies.
+ * List properties and relationships of the defaultManagedAppProtection objects.
 */
 class DefaultManagedAppProtectionsRequestBuilderGetQueryParameters 
 {

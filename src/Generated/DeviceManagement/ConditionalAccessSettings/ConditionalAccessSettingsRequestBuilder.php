@@ -50,9 +50,10 @@ class ConditionalAccessSettingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The Exchange on premises conditional access settings. On premises conditional access will require devices to be both enrolled and compliant for mail access
+     * Read properties and relationships of the onPremisesConditionalAccessSettings object.
      * @param ConditionalAccessSettingsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-onboarding-onpremisesconditionalaccesssettings-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ConditionalAccessSettingsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -68,10 +69,11 @@ class ConditionalAccessSettingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property conditionalAccessSettings in deviceManagement
+     * Update the properties of a onPremisesConditionalAccessSettings object.
      * @param OnPremisesConditionalAccessSettings $body The request body
      * @param ConditionalAccessSettingsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-onboarding-onpremisesconditionalaccesssettings-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(OnPremisesConditionalAccessSettings $body, ?ConditionalAccessSettingsRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -104,7 +106,7 @@ class ConditionalAccessSettingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The Exchange on premises conditional access settings. On premises conditional access will require devices to be both enrolled and compliant for mail access
+     * Read properties and relationships of the onPremisesConditionalAccessSettings object.
      * @param ConditionalAccessSettingsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -125,7 +127,7 @@ class ConditionalAccessSettingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property conditionalAccessSettings in deviceManagement
+     * Update the properties of a onPremisesConditionalAccessSettings object.
      * @param OnPremisesConditionalAccessSettings $body The request body
      * @param ConditionalAccessSettingsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

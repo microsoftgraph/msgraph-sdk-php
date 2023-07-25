@@ -94,6 +94,7 @@ class ConditionalAccessClientApplications implements AdditionalDataHolder, Backe
                 $this->setIncludeServicePrincipals($val);
             },
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'servicePrincipalFilter' => fn(ParseNode $n) => $o->setServicePrincipalFilter($n->getObjectValue([ConditionalAccessFilter::class, 'createFromDiscriminatorValue'])),
         ];
     }
 
@@ -124,6 +125,18 @@ class ConditionalAccessClientApplications implements AdditionalDataHolder, Backe
     }
 
     /**
+     * Gets the servicePrincipalFilter property value. The servicePrincipalFilter property
+     * @return ConditionalAccessFilter|null
+    */
+    public function getServicePrincipalFilter(): ?ConditionalAccessFilter {
+        $val = $this->getBackingStore()->get('servicePrincipalFilter');
+        if (is_null($val) || $val instanceof ConditionalAccessFilter) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'servicePrincipalFilter'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -131,6 +144,7 @@ class ConditionalAccessClientApplications implements AdditionalDataHolder, Backe
         $writer->writeCollectionOfPrimitiveValues('excludeServicePrincipals', $this->getExcludeServicePrincipals());
         $writer->writeCollectionOfPrimitiveValues('includeServicePrincipals', $this->getIncludeServicePrincipals());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeObjectValue('servicePrincipalFilter', $this->getServicePrincipalFilter());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -172,6 +186,14 @@ class ConditionalAccessClientApplications implements AdditionalDataHolder, Backe
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
+    }
+
+    /**
+     * Sets the servicePrincipalFilter property value. The servicePrincipalFilter property
+     * @param ConditionalAccessFilter|null $value Value to set for the servicePrincipalFilter property.
+    */
+    public function setServicePrincipalFilter(?ConditionalAccessFilter $value): void {
+        $this->getBackingStore()->set('servicePrincipalFilter', $value);
     }
 
 }

@@ -49,6 +49,18 @@ class ConditionalAccessApplications implements AdditionalDataHolder, BackedModel
     }
 
     /**
+     * Gets the applicationFilter property value. The applicationFilter property
+     * @return ConditionalAccessFilter|null
+    */
+    public function getApplicationFilter(): ?ConditionalAccessFilter {
+        $val = $this->getBackingStore()->get('applicationFilter');
+        if (is_null($val) || $val instanceof ConditionalAccessFilter) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'applicationFilter'");
+    }
+
+    /**
      * Gets the backingStore property value. Stores model information.
      * @return BackingStore
     */
@@ -77,6 +89,7 @@ class ConditionalAccessApplications implements AdditionalDataHolder, BackedModel
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
+            'applicationFilter' => fn(ParseNode $n) => $o->setApplicationFilter($n->getObjectValue([ConditionalAccessFilter::class, 'createFromDiscriminatorValue'])),
             'excludeApplications' => function (ParseNode $n) {
                 $val = $n->getCollectionOfPrimitiveValues();
                 if (is_array($val)) {
@@ -172,6 +185,7 @@ class ConditionalAccessApplications implements AdditionalDataHolder, BackedModel
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
+        $writer->writeObjectValue('applicationFilter', $this->getApplicationFilter());
         $writer->writeCollectionOfPrimitiveValues('excludeApplications', $this->getExcludeApplications());
         $writer->writeCollectionOfPrimitiveValues('includeApplications', $this->getIncludeApplications());
         $writer->writeCollectionOfPrimitiveValues('includeAuthenticationContextClassReferences', $this->getIncludeAuthenticationContextClassReferences());
@@ -186,6 +200,14 @@ class ConditionalAccessApplications implements AdditionalDataHolder, BackedModel
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the applicationFilter property value. The applicationFilter property
+     * @param ConditionalAccessFilter|null $value Value to set for the applicationFilter property.
+    */
+    public function setApplicationFilter(?ConditionalAccessFilter $value): void {
+        $this->getBackingStore()->set('applicationFilter', $value);
     }
 
     /**

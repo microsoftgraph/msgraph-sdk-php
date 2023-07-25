@@ -53,9 +53,10 @@ class MobileAppTroubleshootingEventsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The collection property of MobileAppTroubleshootingEvent.
+     * List properties and relationships of the mobileAppTroubleshootingEvent objects.
      * @param MobileAppTroubleshootingEventsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-devices-mobileapptroubleshootingevent-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?MobileAppTroubleshootingEventsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -71,10 +72,11 @@ class MobileAppTroubleshootingEventsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to mobileAppTroubleshootingEvents for deviceManagement
+     * Create a new mobileAppTroubleshootingEvent object.
      * @param MobileAppTroubleshootingEvent $body The request body
      * @param MobileAppTroubleshootingEventsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-devices-mobileapptroubleshootingevent-create?view=graph-rest-1.0 Find more info here
     */
     public function post(MobileAppTroubleshootingEvent $body, ?MobileAppTroubleshootingEventsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -90,7 +92,7 @@ class MobileAppTroubleshootingEventsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The collection property of MobileAppTroubleshootingEvent.
+     * List properties and relationships of the mobileAppTroubleshootingEvent objects.
      * @param MobileAppTroubleshootingEventsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -111,7 +113,7 @@ class MobileAppTroubleshootingEventsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to mobileAppTroubleshootingEvents for deviceManagement
+     * Create a new mobileAppTroubleshootingEvent object.
      * @param MobileAppTroubleshootingEvent $body The request body
      * @param MobileAppTroubleshootingEventsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

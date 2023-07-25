@@ -83,7 +83,7 @@ class LicenseUnitsDetail implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the lockedOut property value. The lockedOut property
+     * Gets the lockedOut property value. The number of units that are locked out because the customer cancelled their subscription of the service SKU.
      * @return int|null
     */
     public function getLockedOut(): ?int {
@@ -168,7 +168,7 @@ class LicenseUnitsDetail implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the lockedOut property value. The lockedOut property
+     * Sets the lockedOut property value. The number of units that are locked out because the customer cancelled their subscription of the service SKU.
      * @param int|null $value Value to set for the lockedOut property.
     */
     public function setLockedOut(?int $value): void {

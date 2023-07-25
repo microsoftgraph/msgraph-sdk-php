@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\MobileAppTroubleshootingEve
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Indicates collection of App Log Upload Request.
+ * List properties and relationships of the appLogCollectionRequest objects.
 */
 class AppLogCollectionRequestsRequestBuilderGetQueryParameters 
 {

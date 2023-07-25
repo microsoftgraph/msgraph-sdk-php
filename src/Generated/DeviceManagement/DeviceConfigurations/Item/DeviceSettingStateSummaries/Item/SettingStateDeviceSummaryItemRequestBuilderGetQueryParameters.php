@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\D
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Device Configuration Setting State Device Summary
+ * Read properties and relationships of the settingStateDeviceSummary object.
 */
 class SettingStateDeviceSummaryItemRequestBuilderGetQueryParameters 
 {

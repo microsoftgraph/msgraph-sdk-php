@@ -34,6 +34,7 @@ class LogoutSharedAppleDeviceActiveUserRequestBuilder extends BaseRequestBuilder
      * Logout shared Apple device active user
      * @param LogoutSharedAppleDeviceActiveUserRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-devices-manageddevice-logoutsharedappledeviceactiveuser?view=graph-rest-1.0 Find more info here
     */
     public function post(?LogoutSharedAppleDeviceActiveUserRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);

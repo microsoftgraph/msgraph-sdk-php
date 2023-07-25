@@ -29,11 +29,12 @@ class MailFolderItemRequestBuilderGetRequestConfiguration extends BaseRequestCon
     /**
      * Instantiates a new MailFolderItemRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
+     * @param string|null $includeHiddenFolders Include Hidden Folders
      * @param array<string>|null $select Select properties to be returned
      * @return MailFolderItemRequestBuilderGetQueryParameters
     */
-    public static function createQueryParameters(?array $expand = null, ?array $select = null): MailFolderItemRequestBuilderGetQueryParameters {
-        return new MailFolderItemRequestBuilderGetQueryParameters($expand, $select);
+    public static function createQueryParameters(?array $expand = null, ?string $includeHiddenFolders = null, ?array $select = null): MailFolderItemRequestBuilderGetQueryParameters {
+        return new MailFolderItemRequestBuilderGetQueryParameters($expand, $includeHiddenFolders, $select);
     }
 
 }

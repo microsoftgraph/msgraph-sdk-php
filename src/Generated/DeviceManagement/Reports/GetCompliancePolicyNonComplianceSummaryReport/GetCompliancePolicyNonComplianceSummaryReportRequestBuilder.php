@@ -32,10 +32,11 @@ class GetCompliancePolicyNonComplianceSummaryReportRequestBuilder extends BaseRe
     }
 
     /**
-     * Invoke action getCompliancePolicyNonComplianceSummaryReport
+     * Not yet documented
      * @param GetCompliancePolicyNonComplianceSummaryReportPostRequestBody $body The request body
      * @param GetCompliancePolicyNonComplianceSummaryReportRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-reporting-devicemanagementreports-getcompliancepolicynoncompliancesummaryreport?view=graph-rest-1.0 Find more info here
     */
     public function post(GetCompliancePolicyNonComplianceSummaryReportPostRequestBody $body, ?GetCompliancePolicyNonComplianceSummaryReportRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -51,7 +52,7 @@ class GetCompliancePolicyNonComplianceSummaryReportRequestBuilder extends BaseRe
     }
 
     /**
-     * Invoke action getCompliancePolicyNonComplianceSummaryReport
+     * Not yet documented
      * @param GetCompliancePolicyNonComplianceSummaryReportPostRequestBody $body The request body
      * @param GetCompliancePolicyNonComplianceSummaryReportRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -53,9 +53,10 @@ class DetectedAppsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The list of detected apps associated with a device.
+     * List properties and relationships of the detectedApp objects.
      * @param DetectedAppsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-devices-detectedapp-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?DetectedAppsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -71,10 +72,11 @@ class DetectedAppsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to detectedApps for deviceManagement
+     * Create a new detectedApp object.
      * @param DetectedApp $body The request body
      * @param DetectedAppsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-devices-detectedapp-create?view=graph-rest-1.0 Find more info here
     */
     public function post(DetectedApp $body, ?DetectedAppsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -90,7 +92,7 @@ class DetectedAppsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The list of detected apps associated with a device.
+     * List properties and relationships of the detectedApp objects.
      * @param DetectedAppsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -111,7 +113,7 @@ class DetectedAppsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to detectedApps for deviceManagement
+     * Create a new detectedApp object.
      * @param DetectedApp $body The request body
      * @param DetectedAppsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

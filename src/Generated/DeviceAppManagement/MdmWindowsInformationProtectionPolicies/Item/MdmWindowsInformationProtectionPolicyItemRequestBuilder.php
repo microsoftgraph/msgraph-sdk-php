@@ -56,9 +56,10 @@ class MdmWindowsInformationProtectionPolicyItemRequestBuilder extends BaseReques
     }
 
     /**
-     * Delete navigation property mdmWindowsInformationProtectionPolicies for deviceAppManagement
+     * Deletes a mdmWindowsInformationProtectionPolicy.
      * @param MdmWindowsInformationProtectionPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-mam-mdmwindowsinformationprotectionpolicy-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?MdmWindowsInformationProtectionPolicyItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -74,9 +75,10 @@ class MdmWindowsInformationProtectionPolicyItemRequestBuilder extends BaseReques
     }
 
     /**
-     * Windows information protection for apps running on devices which are MDM enrolled.
+     * Read properties and relationships of the mdmWindowsInformationProtectionPolicy object.
      * @param MdmWindowsInformationProtectionPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-mam-mdmwindowsinformationprotectionpolicy-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?MdmWindowsInformationProtectionPolicyItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -92,10 +94,11 @@ class MdmWindowsInformationProtectionPolicyItemRequestBuilder extends BaseReques
     }
 
     /**
-     * Update the navigation property mdmWindowsInformationProtectionPolicies in deviceAppManagement
+     * Update the properties of a mdmWindowsInformationProtectionPolicy object.
      * @param MdmWindowsInformationProtectionPolicy $body The request body
      * @param MdmWindowsInformationProtectionPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-mam-mdmwindowsinformationprotectionpolicy-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(MdmWindowsInformationProtectionPolicy $body, ?MdmWindowsInformationProtectionPolicyItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -111,7 +114,7 @@ class MdmWindowsInformationProtectionPolicyItemRequestBuilder extends BaseReques
     }
 
     /**
-     * Delete navigation property mdmWindowsInformationProtectionPolicies for deviceAppManagement
+     * Deletes a mdmWindowsInformationProtectionPolicy.
      * @param MdmWindowsInformationProtectionPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -128,7 +131,7 @@ class MdmWindowsInformationProtectionPolicyItemRequestBuilder extends BaseReques
     }
 
     /**
-     * Windows information protection for apps running on devices which are MDM enrolled.
+     * Read properties and relationships of the mdmWindowsInformationProtectionPolicy object.
      * @param MdmWindowsInformationProtectionPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -149,7 +152,7 @@ class MdmWindowsInformationProtectionPolicyItemRequestBuilder extends BaseReques
     }
 
     /**
-     * Update the navigation property mdmWindowsInformationProtectionPolicies in deviceAppManagement
+     * Update the properties of a mdmWindowsInformationProtectionPolicy object.
      * @param MdmWindowsInformationProtectionPolicy $body The request body
      * @param MdmWindowsInformationProtectionPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

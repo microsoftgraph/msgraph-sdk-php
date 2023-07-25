@@ -32,10 +32,11 @@ class GetDevicesWithoutCompliancePolicyReportRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Invoke action getDevicesWithoutCompliancePolicyReport
+     * Not yet documented
      * @param GetDevicesWithoutCompliancePolicyReportPostRequestBody $body The request body
      * @param GetDevicesWithoutCompliancePolicyReportRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-reporting-devicemanagementreports-getdeviceswithoutcompliancepolicyreport?view=graph-rest-1.0 Find more info here
     */
     public function post(GetDevicesWithoutCompliancePolicyReportPostRequestBody $body, ?GetDevicesWithoutCompliancePolicyReportRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -51,7 +52,7 @@ class GetDevicesWithoutCompliancePolicyReportRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Invoke action getDevicesWithoutCompliancePolicyReport
+     * Not yet documented
      * @param GetDevicesWithoutCompliancePolicyReportPostRequestBody $body The request body
      * @param GetDevicesWithoutCompliancePolicyReportRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

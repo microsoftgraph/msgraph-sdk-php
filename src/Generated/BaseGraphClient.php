@@ -48,7 +48,6 @@ use Microsoft\Graph\Generated\IdentityProtection\IdentityProtectionRequestBuilde
 use Microsoft\Graph\Generated\IdentityProviders\IdentityProvidersRequestBuilder;
 use Microsoft\Graph\Generated\InformationProtection\InformationProtectionRequestBuilder;
 use Microsoft\Graph\Generated\Invitations\InvitationsRequestBuilder;
-use Microsoft\Graph\Generated\Localizations\LocalizationsRequestBuilder;
 use Microsoft\Graph\Generated\Oauth2PermissionGrants\Oauth2PermissionGrantsRequestBuilder;
 use Microsoft\Graph\Generated\Organization\OrganizationRequestBuilder;
 use Microsoft\Graph\Generated\PermissionGrants\PermissionGrantsRequestBuilder;
@@ -388,13 +387,6 @@ class BaseGraphClient extends BaseRequestBuilder
     */
     public function invitations(): InvitationsRequestBuilder {
         return new InvitationsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to manage the collection of organizationalBrandingLocalization entities.
-    */
-    public function localizations(): LocalizationsRequestBuilder {
-        return new LocalizationsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

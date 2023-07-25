@@ -31,10 +31,11 @@ class AssignRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action assign
+     * Not yet documented
      * @param AssignPostRequestBody $body The request body
      * @param AssignRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-books-managedebook-assign?view=graph-rest-1.0 Find more info here
     */
     public function post(AssignPostRequestBody $body, ?AssignRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -50,7 +51,7 @@ class AssignRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action assign
+     * Not yet documented
      * @param AssignPostRequestBody $body The request body
      * @param AssignRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
