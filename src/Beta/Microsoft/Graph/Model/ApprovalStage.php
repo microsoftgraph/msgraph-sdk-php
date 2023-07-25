@@ -171,7 +171,7 @@ class ApprovalStage extends Entity
 
     /**
     * Gets the primaryApprovers
-    * The users who will be asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors and externalSponsors. When creating or updating a policy, include at least one userSet in this collection.
+    * The users who will be asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors, externalSponsors and targetUserSponsors. When creating or updating a policy, include at least one userSet in this collection.
     *
     * @return UserSet|null The primaryApprovers
     */
@@ -190,7 +190,7 @@ class ApprovalStage extends Entity
 
     /**
     * Sets the primaryApprovers
-    * The users who will be asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors and externalSponsors. When creating or updating a policy, include at least one userSet in this collection.
+    * The users who will be asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors, externalSponsors and targetUserSponsors. When creating or updating a policy, include at least one userSet in this collection.
     *
     * @param UserSet $val The value to assign to the primaryApprovers
     *

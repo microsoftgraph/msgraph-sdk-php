@@ -322,4 +322,34 @@ class Invitation extends Entity
         return $this;
     }
 
+
+     /**
+     * Gets the invitedUserSponsors
+    * The users or groups who are sponsors of the invited user. Sponsors are users and groups that are responsible for guest users' privileges in the tenant and for keeping the guest users' information and access up to date.
+     *
+     * @return array|null The invitedUserSponsors
+     */
+    public function getInvitedUserSponsors()
+    {
+        if (array_key_exists("invitedUserSponsors", $this->_propDict)) {
+           return $this->_propDict["invitedUserSponsors"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the invitedUserSponsors
+    * The users or groups who are sponsors of the invited user. Sponsors are users and groups that are responsible for guest users' privileges in the tenant and for keeping the guest users' information and access up to date.
+    *
+    * @param DirectoryObject[] $val The invitedUserSponsors
+    *
+    * @return Invitation
+    */
+    public function setInvitedUserSponsors($val)
+    {
+        $this->_propDict["invitedUserSponsors"] = $val;
+        return $this;
+    }
+
 }

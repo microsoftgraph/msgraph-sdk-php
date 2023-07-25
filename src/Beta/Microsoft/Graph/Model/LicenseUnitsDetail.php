@@ -53,6 +53,7 @@ class LicenseUnitsDetail extends Entity
     }
     /**
     * Gets the lockedOut
+    * The number of units that are locked out because the customer cancelled their subscription of the service SKU.
     *
     * @return int|null The lockedOut
     */
@@ -67,6 +68,7 @@ class LicenseUnitsDetail extends Entity
 
     /**
     * Sets the lockedOut
+    * The number of units that are locked out because the customer cancelled their subscription of the service SKU.
     *
     * @param int $val The value of the lockedOut
     *

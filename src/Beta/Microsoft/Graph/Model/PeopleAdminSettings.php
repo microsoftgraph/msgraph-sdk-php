@@ -24,6 +24,34 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class PeopleAdminSettings extends Entity
 {
+
+     /**
+     * Gets the profileCardProperties
+     *
+     * @return array|null The profileCardProperties
+     */
+    public function getProfileCardProperties()
+    {
+        if (array_key_exists("profileCardProperties", $this->_propDict)) {
+           return $this->_propDict["profileCardProperties"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the profileCardProperties
+    *
+    * @param ProfileCardProperty[] $val The profileCardProperties
+    *
+    * @return PeopleAdminSettings
+    */
+    public function setProfileCardProperties($val)
+    {
+        $this->_propDict["profileCardProperties"] = $val;
+        return $this;
+    }
+
     /**
     * Gets the pronouns
     * Represents administrator settings that manage the support of pronouns in an organization.
