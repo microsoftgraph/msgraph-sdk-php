@@ -543,7 +543,7 @@ class Site extends BaseItem
     * Sets the pages
     * The collection of pages in the baseSitePages list in this site.
     *
-    * @param SitePage[] $val The pages
+    * @param BaseSitePage[] $val The pages
     *
     * @return Site
     */
