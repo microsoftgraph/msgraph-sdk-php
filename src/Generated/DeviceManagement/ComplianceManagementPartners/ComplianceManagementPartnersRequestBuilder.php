@@ -53,9 +53,10 @@ class ComplianceManagementPartnersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The list of Compliance Management Partners configured by the tenant.
+     * List properties and relationships of the complianceManagementPartner objects.
      * @param ComplianceManagementPartnersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-onboarding-compliancemanagementpartner-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?ComplianceManagementPartnersRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -71,10 +72,11 @@ class ComplianceManagementPartnersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to complianceManagementPartners for deviceManagement
+     * Create a new complianceManagementPartner object.
      * @param ComplianceManagementPartner $body The request body
      * @param ComplianceManagementPartnersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-onboarding-compliancemanagementpartner-create?view=graph-rest-1.0 Find more info here
     */
     public function post(ComplianceManagementPartner $body, ?ComplianceManagementPartnersRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -90,7 +92,7 @@ class ComplianceManagementPartnersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The list of Compliance Management Partners configured by the tenant.
+     * List properties and relationships of the complianceManagementPartner objects.
      * @param ComplianceManagementPartnersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -111,7 +113,7 @@ class ComplianceManagementPartnersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to complianceManagementPartners for deviceManagement
+     * Create a new complianceManagementPartner object.
      * @param ComplianceManagementPartner $body The request body
      * @param ComplianceManagementPartnersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

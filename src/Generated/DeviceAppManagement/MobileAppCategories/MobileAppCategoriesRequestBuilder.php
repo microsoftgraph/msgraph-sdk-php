@@ -53,9 +53,10 @@ class MobileAppCategoriesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The mobile app categories.
+     * List properties and relationships of the mobileAppCategory objects.
      * @param MobileAppCategoriesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-apps-mobileappcategory-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?MobileAppCategoriesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -71,10 +72,11 @@ class MobileAppCategoriesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to mobileAppCategories for deviceAppManagement
+     * Create a new mobileAppCategory object.
      * @param MobileAppCategory $body The request body
      * @param MobileAppCategoriesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-apps-mobileappcategory-create?view=graph-rest-1.0 Find more info here
     */
     public function post(MobileAppCategory $body, ?MobileAppCategoriesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -90,7 +92,7 @@ class MobileAppCategoriesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The mobile app categories.
+     * List properties and relationships of the mobileAppCategory objects.
      * @param MobileAppCategoriesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -111,7 +113,7 @@ class MobileAppCategoriesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to mobileAppCategories for deviceAppManagement
+     * Create a new mobileAppCategory object.
      * @param MobileAppCategory $body The request body
      * @param MobileAppCategoriesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

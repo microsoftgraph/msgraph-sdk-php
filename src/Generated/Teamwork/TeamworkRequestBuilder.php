@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Teamwork;
 use Microsoft\Graph\Generated\Teamwork\DeletedTeams\DeletedTeamsRequestBuilder;
 use Microsoft\Graph\Generated\Teamwork\SendActivityNotificationToRecipients\SendActivityNotificationToRecipientsRequestBuilder;
+use Microsoft\Graph\Generated\Teamwork\TeamsAppSettings\TeamsAppSettingsRequestBuilder;
 use Microsoft\Graph\Generated\Teamwork\WorkforceIntegrations\WorkforceIntegrationsRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -32,6 +33,13 @@ class TeamworkRequestBuilder extends BaseRequestBuilder
     */
     public function sendActivityNotificationToRecipients(): SendActivityNotificationToRecipientsRequestBuilder {
         return new SendActivityNotificationToRecipientsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the teamsAppSettings property of the microsoft.graph.teamwork entity.
+    */
+    public function teamsAppSettings(): TeamsAppSettingsRequestBuilder {
+        return new TeamsAppSettingsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

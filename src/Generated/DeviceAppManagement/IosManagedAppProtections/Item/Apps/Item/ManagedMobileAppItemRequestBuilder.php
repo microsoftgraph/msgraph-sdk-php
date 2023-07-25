@@ -32,9 +32,10 @@ class ManagedMobileAppItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property apps for deviceAppManagement
+     * Deletes a managedMobileApp.
      * @param ManagedMobileAppItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-mam-managedmobileapp-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?ManagedMobileAppItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -50,9 +51,10 @@ class ManagedMobileAppItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List of apps to which the policy is deployed.
+     * Read properties and relationships of the managedMobileApp object.
      * @param ManagedMobileAppItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-mam-managedmobileapp-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ManagedMobileAppItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -68,10 +70,11 @@ class ManagedMobileAppItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property apps in deviceAppManagement
+     * Update the properties of a managedMobileApp object.
      * @param ManagedMobileApp $body The request body
      * @param ManagedMobileAppItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-mam-managedmobileapp-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(ManagedMobileApp $body, ?ManagedMobileAppItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -87,7 +90,7 @@ class ManagedMobileAppItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property apps for deviceAppManagement
+     * Deletes a managedMobileApp.
      * @param ManagedMobileAppItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +107,7 @@ class ManagedMobileAppItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List of apps to which the policy is deployed.
+     * Read properties and relationships of the managedMobileApp object.
      * @param ManagedMobileAppItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -125,7 +128,7 @@ class ManagedMobileAppItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property apps in deviceAppManagement
+     * Update the properties of a managedMobileApp object.
      * @param ManagedMobileApp $body The request body
      * @param ManagedMobileAppItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

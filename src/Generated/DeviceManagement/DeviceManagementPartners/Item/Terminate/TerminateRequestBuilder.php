@@ -31,9 +31,10 @@ class TerminateRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action terminate
+     * Not yet documented
      * @param TerminateRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-onboarding-devicemanagementpartner-terminate?view=graph-rest-1.0 Find more info here
     */
     public function post(?TerminateRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);
@@ -49,7 +50,7 @@ class TerminateRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action terminate
+     * Not yet documented
      * @param TerminateRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

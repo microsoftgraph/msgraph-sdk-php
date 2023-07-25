@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\NotificationMessageTemplate
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The list of localized messages for this Notification Message Template.
+ * List properties and relationships of the localizedNotificationMessage objects.
 */
 class LocalizedNotificationMessagesRequestBuilderGetQueryParameters 
 {

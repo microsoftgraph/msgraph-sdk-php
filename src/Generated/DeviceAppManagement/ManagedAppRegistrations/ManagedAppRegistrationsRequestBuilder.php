@@ -61,9 +61,10 @@ class ManagedAppRegistrationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The managed app registrations.
+     * List properties and relationships of the iosManagedAppRegistration objects.
      * @param ManagedAppRegistrationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-mam-iosmanagedappregistration-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?ManagedAppRegistrationsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -79,10 +80,11 @@ class ManagedAppRegistrationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to managedAppRegistrations for deviceAppManagement
+     * Create a new androidManagedAppRegistration object.
      * @param ManagedAppRegistration $body The request body
      * @param ManagedAppRegistrationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-mam-androidmanagedappregistration-create?view=graph-rest-1.0 Find more info here
     */
     public function post(ManagedAppRegistration $body, ?ManagedAppRegistrationsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -98,7 +100,7 @@ class ManagedAppRegistrationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The managed app registrations.
+     * List properties and relationships of the iosManagedAppRegistration objects.
      * @param ManagedAppRegistrationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -119,7 +121,7 @@ class ManagedAppRegistrationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to managedAppRegistrations for deviceAppManagement
+     * Create a new androidManagedAppRegistration object.
      * @param ManagedAppRegistration $body The request body
      * @param ManagedAppRegistrationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

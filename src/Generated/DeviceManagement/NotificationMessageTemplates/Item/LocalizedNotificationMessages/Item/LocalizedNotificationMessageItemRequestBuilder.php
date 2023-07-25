@@ -32,9 +32,10 @@ class LocalizedNotificationMessageItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property localizedNotificationMessages for deviceManagement
+     * Deletes a localizedNotificationMessage.
      * @param LocalizedNotificationMessageItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-notification-localizednotificationmessage-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?LocalizedNotificationMessageItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -50,9 +51,10 @@ class LocalizedNotificationMessageItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The list of localized messages for this Notification Message Template.
+     * Read properties and relationships of the localizedNotificationMessage object.
      * @param LocalizedNotificationMessageItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-notification-localizednotificationmessage-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?LocalizedNotificationMessageItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -68,10 +70,11 @@ class LocalizedNotificationMessageItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property localizedNotificationMessages in deviceManagement
+     * Update the properties of a localizedNotificationMessage object.
      * @param LocalizedNotificationMessage $body The request body
      * @param LocalizedNotificationMessageItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-notification-localizednotificationmessage-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(LocalizedNotificationMessage $body, ?LocalizedNotificationMessageItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -87,7 +90,7 @@ class LocalizedNotificationMessageItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property localizedNotificationMessages for deviceManagement
+     * Deletes a localizedNotificationMessage.
      * @param LocalizedNotificationMessageItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +107,7 @@ class LocalizedNotificationMessageItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The list of localized messages for this Notification Message Template.
+     * Read properties and relationships of the localizedNotificationMessage object.
      * @param LocalizedNotificationMessageItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -125,7 +128,7 @@ class LocalizedNotificationMessageItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property localizedNotificationMessages in deviceManagement
+     * Update the properties of a localizedNotificationMessage object.
      * @param LocalizedNotificationMessage $body The request body
      * @param LocalizedNotificationMessageItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

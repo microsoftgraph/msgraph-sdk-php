@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurationDeviceSt
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The device configuration device state summary for this account.
+ * Read properties and relationships of the deviceConfigurationDeviceStateSummary object.
 */
 class DeviceConfigurationDeviceStateSummariesRequestBuilderGetQueryParameters 
 {

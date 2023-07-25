@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\TermsAndConditions\Item\Ass
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The list of assignments for this T&C policy.
+ * Read properties and relationships of the termsAndConditionsAssignment object.
 */
 class TermsAndConditionsAssignmentItemRequestBuilderGetQueryParameters 
 {

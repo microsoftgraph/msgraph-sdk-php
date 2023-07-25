@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\ManagedDevices;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The list of managed devices.
+ * List properties and relationships of the managedDevice objects.
 */
 class ManagedDevicesRequestBuilderGetQueryParameters 
 {

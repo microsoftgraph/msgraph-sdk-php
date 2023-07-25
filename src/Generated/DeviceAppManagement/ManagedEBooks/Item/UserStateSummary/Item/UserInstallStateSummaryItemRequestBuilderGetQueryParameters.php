@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\UserS
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The list of installation states for this eBook.
+ * Read properties and relationships of the userInstallStateSummary object.
 */
 class UserInstallStateSummaryItemRequestBuilderGetQueryParameters 
 {

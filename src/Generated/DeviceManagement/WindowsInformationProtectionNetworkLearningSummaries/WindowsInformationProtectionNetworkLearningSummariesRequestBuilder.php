@@ -53,9 +53,10 @@ class WindowsInformationProtectionNetworkLearningSummariesRequestBuilder extends
     }
 
     /**
-     * The windows information protection network learning summaries.
+     * List properties and relationships of the windowsInformationProtectionNetworkLearningSummary objects.
      * @param WindowsInformationProtectionNetworkLearningSummariesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-wip-windowsinformationprotectionnetworklearningsummary-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?WindowsInformationProtectionNetworkLearningSummariesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -71,10 +72,11 @@ class WindowsInformationProtectionNetworkLearningSummariesRequestBuilder extends
     }
 
     /**
-     * Create new navigation property to windowsInformationProtectionNetworkLearningSummaries for deviceManagement
+     * Create a new windowsInformationProtectionNetworkLearningSummary object.
      * @param WindowsInformationProtectionNetworkLearningSummary $body The request body
      * @param WindowsInformationProtectionNetworkLearningSummariesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-wip-windowsinformationprotectionnetworklearningsummary-create?view=graph-rest-1.0 Find more info here
     */
     public function post(WindowsInformationProtectionNetworkLearningSummary $body, ?WindowsInformationProtectionNetworkLearningSummariesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -90,7 +92,7 @@ class WindowsInformationProtectionNetworkLearningSummariesRequestBuilder extends
     }
 
     /**
-     * The windows information protection network learning summaries.
+     * List properties and relationships of the windowsInformationProtectionNetworkLearningSummary objects.
      * @param WindowsInformationProtectionNetworkLearningSummariesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -111,7 +113,7 @@ class WindowsInformationProtectionNetworkLearningSummariesRequestBuilder extends
     }
 
     /**
-     * Create new navigation property to windowsInformationProtectionNetworkLearningSummaries for deviceManagement
+     * Create a new windowsInformationProtectionNetworkLearningSummary object.
      * @param WindowsInformationProtectionNetworkLearningSummary $body The request body
      * @param WindowsInformationProtectionNetworkLearningSummariesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

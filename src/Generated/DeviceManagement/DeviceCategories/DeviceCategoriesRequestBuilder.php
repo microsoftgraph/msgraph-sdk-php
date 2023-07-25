@@ -53,9 +53,10 @@ class DeviceCategoriesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The list of device categories with the tenant.
+     * List properties and relationships of the deviceCategory objects.
      * @param DeviceCategoriesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-onboarding-devicecategory-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?DeviceCategoriesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -71,10 +72,11 @@ class DeviceCategoriesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to deviceCategories for deviceManagement
+     * Create a new deviceCategory object.
      * @param DeviceCategory $body The request body
      * @param DeviceCategoriesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-onboarding-devicecategory-create?view=graph-rest-1.0 Find more info here
     */
     public function post(DeviceCategory $body, ?DeviceCategoriesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -90,7 +92,7 @@ class DeviceCategoriesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The list of device categories with the tenant.
+     * List properties and relationships of the deviceCategory objects.
      * @param DeviceCategoriesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -111,7 +113,7 @@ class DeviceCategoriesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to deviceCategories for deviceManagement
+     * Create a new deviceCategory object.
      * @param DeviceCategory $body The request body
      * @param DeviceCategoriesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

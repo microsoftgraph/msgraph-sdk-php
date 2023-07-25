@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\DetectedApps\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The list of detected apps associated with a device.
+ * Read properties and relationships of the detectedApp object.
 */
 class DetectedAppItemRequestBuilderGetQueryParameters 
 {
