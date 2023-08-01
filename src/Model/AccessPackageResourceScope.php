@@ -26,6 +26,7 @@ class AccessPackageResourceScope extends Entity
 {
     /**
     * Gets the description
+    * The description of the scope.
     *
     * @return string|null The description
     */
@@ -40,6 +41,7 @@ class AccessPackageResourceScope extends Entity
 
     /**
     * Sets the description
+    * The description of the scope.
     *
     * @param string $val The description
     *
@@ -53,6 +55,7 @@ class AccessPackageResourceScope extends Entity
 
     /**
     * Gets the displayName
+    * The display name of the scope.
     *
     * @return string|null The displayName
     */
@@ -67,6 +70,7 @@ class AccessPackageResourceScope extends Entity
 
     /**
     * Sets the displayName
+    * The display name of the scope.
     *
     * @param string $val The displayName
     *
@@ -80,6 +84,7 @@ class AccessPackageResourceScope extends Entity
 
     /**
     * Gets the isRootScope
+    * True if the scopes are arranged in a hierarchy and this is the top or root scope of the resource.
     *
     * @return bool|null The isRootScope
     */
@@ -94,6 +99,7 @@ class AccessPackageResourceScope extends Entity
 
     /**
     * Sets the isRootScope
+    * True if the scopes are arranged in a hierarchy and this is the top or root scope of the resource.
     *
     * @param bool $val The isRootScope
     *
@@ -107,6 +113,7 @@ class AccessPackageResourceScope extends Entity
 
     /**
     * Gets the originId
+    * The unique identifier for the scope in the resource as defined in the origin system.
     *
     * @return string|null The originId
     */
@@ -121,6 +128,7 @@ class AccessPackageResourceScope extends Entity
 
     /**
     * Sets the originId
+    * The unique identifier for the scope in the resource as defined in the origin system.
     *
     * @param string $val The originId
     *
@@ -134,6 +142,7 @@ class AccessPackageResourceScope extends Entity
 
     /**
     * Gets the originSystem
+    * The origin system for the scope.
     *
     * @return string|null The originSystem
     */
@@ -148,6 +157,7 @@ class AccessPackageResourceScope extends Entity
 
     /**
     * Sets the originSystem
+    * The origin system for the scope.
     *
     * @param string $val The originSystem
     *

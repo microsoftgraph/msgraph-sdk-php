@@ -26,6 +26,7 @@ class AccessPackageResource extends Entity
 {
     /**
     * Gets the createdDateTime
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -44,6 +45,7 @@ class AccessPackageResource extends Entity
 
     /**
     * Sets the createdDateTime
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -57,6 +59,7 @@ class AccessPackageResource extends Entity
 
     /**
     * Gets the description
+    * A description for the resource.
     *
     * @return string|null The description
     */
@@ -71,6 +74,7 @@ class AccessPackageResource extends Entity
 
     /**
     * Sets the description
+    * A description for the resource.
     *
     * @param string $val The description
     *
@@ -84,6 +88,7 @@ class AccessPackageResource extends Entity
 
     /**
     * Gets the displayName
+    * The display name of the resource, such as the application name, group name or site name.
     *
     * @return string|null The displayName
     */
@@ -98,6 +103,7 @@ class AccessPackageResource extends Entity
 
     /**
     * Sets the displayName
+    * The display name of the resource, such as the application name, group name or site name.
     *
     * @param string $val The displayName
     *
@@ -111,6 +117,7 @@ class AccessPackageResource extends Entity
 
     /**
     * Gets the modifiedDateTime
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
     *
     * @return \DateTime|null The modifiedDateTime
     */
@@ -129,6 +136,7 @@ class AccessPackageResource extends Entity
 
     /**
     * Sets the modifiedDateTime
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
     *
     * @param \DateTime $val The modifiedDateTime
     *
@@ -142,6 +150,7 @@ class AccessPackageResource extends Entity
 
     /**
     * Gets the originId
+    * The unique identifier of the resource in the origin system. In the case of an Azure AD group, this is the identifier of the group.
     *
     * @return string|null The originId
     */
@@ -156,6 +165,7 @@ class AccessPackageResource extends Entity
 
     /**
     * Sets the originId
+    * The unique identifier of the resource in the origin system. In the case of an Azure AD group, this is the identifier of the group.
     *
     * @param string $val The originId
     *
@@ -169,6 +179,7 @@ class AccessPackageResource extends Entity
 
     /**
     * Gets the originSystem
+    * The type of the resource in the origin system, such as SharePointOnline, AadApplication or AadGroup.
     *
     * @return string|null The originSystem
     */
@@ -183,6 +194,7 @@ class AccessPackageResource extends Entity
 
     /**
     * Sets the originSystem
+    * The type of the resource in the origin system, such as SharePointOnline, AadApplication or AadGroup.
     *
     * @param string $val The originSystem
     *
@@ -196,6 +208,7 @@ class AccessPackageResource extends Entity
 
     /**
     * Gets the environment
+    * Contains the environment information for the resource. This can be set using either the @odata.bind annotation or the environment's originId.Supports $expand.
     *
     * @return AccessPackageResourceEnvironment|null The environment
     */
@@ -214,6 +227,7 @@ class AccessPackageResource extends Entity
 
     /**
     * Sets the environment
+    * Contains the environment information for the resource. This can be set using either the @odata.bind annotation or the environment's originId.Supports $expand.
     *
     * @param AccessPackageResourceEnvironment $val The environment
     *
@@ -228,6 +242,7 @@ class AccessPackageResource extends Entity
 
      /**
      * Gets the roles
+    * Read-only. Nullable. Supports $expand.
      *
      * @return array|null The roles
      */
@@ -242,6 +257,7 @@ class AccessPackageResource extends Entity
 
     /**
     * Sets the roles
+    * Read-only. Nullable. Supports $expand.
     *
     * @param AccessPackageResourceRole[] $val The roles
     *
@@ -256,6 +272,7 @@ class AccessPackageResource extends Entity
 
      /**
      * Gets the scopes
+    * Read-only. Nullable. Supports $expand.
      *
      * @return array|null The scopes
      */
@@ -270,6 +287,7 @@ class AccessPackageResource extends Entity
 
     /**
     * Sets the scopes
+    * Read-only. Nullable. Supports $expand.
     *
     * @param AccessPackageResourceScope[] $val The scopes
     *

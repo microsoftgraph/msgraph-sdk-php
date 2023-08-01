@@ -267,6 +267,34 @@ class ArchivedPrintJob extends Entity
         $this->_propDict["printerId"] = $val;
         return $this;
     }
+    /**
+    * Gets the printerName
+    * The printer name that the job was queued for. Read-only.
+    *
+    * @return string|null The printerName
+    */
+    public function getPrinterName()
+    {
+        if (array_key_exists("printerName", $this->_propDict)) {
+            return $this->_propDict["printerName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the printerName
+    * The printer name that the job was queued for. Read-only.
+    *
+    * @param string $val The value of the printerName
+    *
+    * @return ArchivedPrintJob
+    */
+    public function setPrinterName($val)
+    {
+        $this->_propDict["printerName"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the processingState

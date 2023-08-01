@@ -51,4 +51,33 @@ class PrintUsageByPrinter extends PrintUsage
         return $this;
     }
 
+    /**
+    * Gets the printerName
+    * The name of the printer represented by these statistics.
+    *
+    * @return string|null The printerName
+    */
+    public function getPrinterName()
+    {
+        if (array_key_exists("printerName", $this->_propDict)) {
+            return $this->_propDict["printerName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the printerName
+    * The name of the printer represented by these statistics.
+    *
+    * @param string $val The printerName
+    *
+    * @return PrintUsageByPrinter
+    */
+    public function setPrinterName($val)
+    {
+        $this->_propDict["printerName"] = $val;
+        return $this;
+    }
+
 }

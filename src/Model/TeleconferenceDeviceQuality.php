@@ -109,7 +109,7 @@ class TeleconferenceDeviceQuality extends Entity
     }
     /**
     * Gets the cloudServiceInstanceName
-    * The Azure deployed cloud service instance name, such as FrontEnd_IN_3.
+    * The Azure deployed cloud service instance name, such as FrontEndIN3.
     *
     * @return string|null The cloudServiceInstanceName
     */
@@ -124,7 +124,7 @@ class TeleconferenceDeviceQuality extends Entity
 
     /**
     * Sets the cloudServiceInstanceName
-    * The Azure deployed cloud service instance name, such as FrontEnd_IN_3.
+    * The Azure deployed cloud service instance name, such as FrontEndIN3.
     *
     * @param string $val The value of the cloudServiceInstanceName
     *

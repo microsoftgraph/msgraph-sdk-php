@@ -332,6 +332,7 @@ class AccessPackageCatalog extends Entity
 
      /**
      * Gets the resources
+    * Access package resources in this catalog.
      *
      * @return array|null The resources
      */
@@ -346,6 +347,7 @@ class AccessPackageCatalog extends Entity
 
     /**
     * Sets the resources
+    * Access package resources in this catalog.
     *
     * @param AccessPackageResource[] $val The resources
     *
