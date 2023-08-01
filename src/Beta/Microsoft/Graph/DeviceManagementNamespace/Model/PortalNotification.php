@@ -143,7 +143,7 @@ class PortalNotification extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the alertRuleTemplate
-    * The associated alert rule template. The possible values are: cloudPcProvisionScenario, cloudPcImageUploadScenario, cloudPcOnPremiseNetworkConnectionCheckScenario, unknownFutureValue.
+    * The associated alert rule template. The possible values are: cloudPcProvisionScenario, cloudPcImageUploadScenario, cloudPcOnPremiseNetworkConnectionCheckScenario, unknownFutureValue, cloudPcInGracePeriodScenario. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: cloudPcInGracePeriodScenario.
     *
     * @return AlertRuleTemplate|null The alertRuleTemplate
     */
@@ -162,7 +162,7 @@ class PortalNotification extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the alertRuleTemplate
-    * The associated alert rule template. The possible values are: cloudPcProvisionScenario, cloudPcImageUploadScenario, cloudPcOnPremiseNetworkConnectionCheckScenario, unknownFutureValue.
+    * The associated alert rule template. The possible values are: cloudPcProvisionScenario, cloudPcImageUploadScenario, cloudPcOnPremiseNetworkConnectionCheckScenario, unknownFutureValue, cloudPcInGracePeriodScenario. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: cloudPcInGracePeriodScenario.
     *
     * @param AlertRuleTemplate $val The value to assign to the alertRuleTemplate
     *

@@ -115,7 +115,7 @@ class IosVpnSecurityAssociationParameters extends Entity
 
     /**
     * Gets the securityIntegrityAlgorithm
-    * Integrity algorithm. Possible values are: sha2_256, sha1_96, sha1_160, sha2_384, sha2_512, md5.
+    * Integrity algorithm. Possible values are: sha2256, sha196, sha1160, sha2384, sha2_512, md5.
     *
     * @return VpnIntegrityAlgorithmType|null The securityIntegrityAlgorithm
     */
@@ -134,7 +134,7 @@ class IosVpnSecurityAssociationParameters extends Entity
 
     /**
     * Sets the securityIntegrityAlgorithm
-    * Integrity algorithm. Possible values are: sha2_256, sha1_96, sha1_160, sha2_384, sha2_512, md5.
+    * Integrity algorithm. Possible values are: sha2256, sha196, sha1160, sha2384, sha2_512, md5.
     *
     * @param VpnIntegrityAlgorithmType $val The value to assign to the securityIntegrityAlgorithm
     *

@@ -24,6 +24,32 @@ namespace Beta\Microsoft\Graph\Model;
 class CustomExtensionClientConfiguration extends Entity
 {
     /**
+    * Gets the maximumRetries
+    *
+    * @return int|null The maximumRetries
+    */
+    public function getMaximumRetries()
+    {
+        if (array_key_exists("maximumRetries", $this->_propDict)) {
+            return $this->_propDict["maximumRetries"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the maximumRetries
+    *
+    * @param int $val The value of the maximumRetries
+    *
+    * @return CustomExtensionClientConfiguration
+    */
+    public function setMaximumRetries($val)
+    {
+        $this->_propDict["maximumRetries"] = $val;
+        return $this;
+    }
+    /**
     * Gets the timeoutInMilliseconds
     * The max duration in milliseconds that Azure AD will wait for a response from the external app before it shuts down the connection. The valid range is between 200 and 2000 milliseconds. Default duration is 1000.
     *

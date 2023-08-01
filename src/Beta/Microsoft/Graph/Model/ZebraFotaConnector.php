@@ -26,7 +26,7 @@ class ZebraFotaConnector extends Entity
 {
     /**
     * Gets the enrollmentAuthorizationUrl
-    * Complete account enrollment authorization URL. This corresponds to verification_uri_complete in the Zebra API documentations.
+    * Complete account enrollment authorization URL. This corresponds to verificationuricomplete in the Zebra API documentations.
     *
     * @return string|null The enrollmentAuthorizationUrl
     */
@@ -41,7 +41,7 @@ class ZebraFotaConnector extends Entity
 
     /**
     * Sets the enrollmentAuthorizationUrl
-    * Complete account enrollment authorization URL. This corresponds to verification_uri_complete in the Zebra API documentations.
+    * Complete account enrollment authorization URL. This corresponds to verificationuricomplete in the Zebra API documentations.
     *
     * @param string $val The enrollmentAuthorizationUrl
     *

@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* SensitivityLabelTarget File
+* WhoisDomainStatus File
 * PHP version 7
 *
 * @category  Library
@@ -11,12 +11,12 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Model;
+namespace Beta\Microsoft\Graph\SecurityNamespace\Model;
 
 use Microsoft\Graph\Core\Enum;
 
 /**
-* SensitivityLabelTarget class
+* WhoisDomainStatus class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,14 +24,15 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class SensitivityLabelTarget extends Enum
+class WhoisDomainStatus extends Enum
 {
     /**
-    * The Enum SensitivityLabelTarget
+    * The Enum WhoisDomainStatus
     */
-    const EMAIL = "email";
-    const SITE = "site";
-    const UNIFIED_GROUP = "unifiedGroup";
-    const TEAMWORK = "teamwork";
+    const CLIENT_DELETE_PROHIBITED = "clientDeleteProhibited";
+    const CLIENT_HOLD = "clientHold";
+    const CLIENT_RENEW_PROHIBITED = "clientRenewProhibited";
+    const CLIENT_TRANSFER_PROHIBITED = "clientTransferProhibited";
+    const CLIENT_UPDATE_PROHIBITED = "clientUpdateProhibited";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

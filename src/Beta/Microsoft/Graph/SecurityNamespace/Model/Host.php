@@ -92,6 +92,34 @@ class Host extends Artifact
 
 
      /**
+     * Gets the childHostPairs
+     *
+     * @return array|null The childHostPairs
+     */
+    public function getChildHostPairs()
+    {
+        if (array_key_exists("childHostPairs", $this->_propDict)) {
+           return $this->_propDict["childHostPairs"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the childHostPairs
+    *
+    * @param HostPair[] $val The childHostPairs
+    *
+    * @return Host
+    */
+    public function setChildHostPairs($val)
+    {
+        $this->_propDict["childHostPairs"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the components
     * The hostComponents that are associated with this host.
      *
@@ -147,6 +175,62 @@ class Host extends Artifact
     public function setCookies($val)
     {
         $this->_propDict["cookies"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the hostPairs
+     *
+     * @return array|null The hostPairs
+     */
+    public function getHostPairs()
+    {
+        if (array_key_exists("hostPairs", $this->_propDict)) {
+           return $this->_propDict["hostPairs"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the hostPairs
+    *
+    * @param HostPair[] $val The hostPairs
+    *
+    * @return Host
+    */
+    public function setHostPairs($val)
+    {
+        $this->_propDict["hostPairs"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the parentHostPairs
+     *
+     * @return array|null The parentHostPairs
+     */
+    public function getParentHostPairs()
+    {
+        if (array_key_exists("parentHostPairs", $this->_propDict)) {
+           return $this->_propDict["parentHostPairs"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the parentHostPairs
+    *
+    * @param HostPair[] $val The parentHostPairs
+    *
+    * @return Host
+    */
+    public function setParentHostPairs($val)
+    {
+        $this->_propDict["parentHostPairs"] = $val;
         return $this;
     }
 
@@ -245,6 +329,34 @@ class Host extends Artifact
 
 
      /**
+     * Gets the sslCertificates
+     *
+     * @return array|null The sslCertificates
+     */
+    public function getSslCertificates()
+    {
+        if (array_key_exists("sslCertificates", $this->_propDict)) {
+           return $this->_propDict["sslCertificates"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the sslCertificates
+    *
+    * @param HostSslCertificate[] $val The sslCertificates
+    *
+    * @return Host
+    */
+    public function setSslCertificates($val)
+    {
+        $this->_propDict["sslCertificates"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the subdomains
     * The subdomains that are associated with this host.
      *
@@ -300,6 +412,37 @@ class Host extends Artifact
     public function setTrackers($val)
     {
         $this->_propDict["trackers"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the whois
+    *
+    * @return WhoisRecord|null The whois
+    */
+    public function getWhois()
+    {
+        if (array_key_exists("whois", $this->_propDict)) {
+            if (is_a($this->_propDict["whois"], "\Beta\Microsoft\Graph\SecurityNamespace\Model\WhoisRecord") || is_null($this->_propDict["whois"])) {
+                return $this->_propDict["whois"];
+            } else {
+                $this->_propDict["whois"] = new WhoisRecord($this->_propDict["whois"]);
+                return $this->_propDict["whois"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the whois
+    *
+    * @param WhoisRecord $val The whois
+    *
+    * @return Host
+    */
+    public function setWhois($val)
+    {
+        $this->_propDict["whois"] = $val;
         return $this;
     }
 

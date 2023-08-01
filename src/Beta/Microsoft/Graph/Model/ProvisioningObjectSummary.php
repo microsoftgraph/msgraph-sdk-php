@@ -53,7 +53,7 @@ class ProvisioningObjectSummary extends Entity
 
     /**
     * Gets the activityDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    * Represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  Supports $filter (eq, gt, lt) and orderby.
     *
     * @return \DateTime|null The activityDateTime
     */
@@ -72,7 +72,7 @@ class ProvisioningObjectSummary extends Entity
 
     /**
     * Sets the activityDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    * Represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  Supports $filter (eq, gt, lt) and orderby.
     *
     * @param \DateTime $val The activityDateTime
     *
@@ -86,7 +86,7 @@ class ProvisioningObjectSummary extends Entity
 
     /**
     * Gets the changeId
-    * Unique ID of this change in this cycle.
+    * Unique ID of this change in this cycle. Supports $filter (eq, contains).
     *
     * @return string|null The changeId
     */
@@ -101,7 +101,7 @@ class ProvisioningObjectSummary extends Entity
 
     /**
     * Sets the changeId
-    * Unique ID of this change in this cycle.
+    * Unique ID of this change in this cycle. Supports $filter (eq, contains).
     *
     * @param string $val The changeId
     *
@@ -115,7 +115,7 @@ class ProvisioningObjectSummary extends Entity
 
     /**
     * Gets the cycleId
-    * Unique ID per job iteration.
+    * Unique ID per job iteration. Supports $filter (eq, contains).
     *
     * @return string|null The cycleId
     */
@@ -130,7 +130,7 @@ class ProvisioningObjectSummary extends Entity
 
     /**
     * Sets the cycleId
-    * Unique ID per job iteration.
+    * Unique ID per job iteration. Supports $filter (eq, contains).
     *
     * @param string $val The cycleId
     *
@@ -144,7 +144,7 @@ class ProvisioningObjectSummary extends Entity
 
     /**
     * Gets the durationInMilliseconds
-    * Indicates how long this provisioning action took to finish. Measured in milliseconds.
+    * Indicates how long this provisioning action took to finish. Measured in milliseconds. Supports $filter (eq, gt, lt).
     *
     * @return int|null The durationInMilliseconds
     */
@@ -159,7 +159,7 @@ class ProvisioningObjectSummary extends Entity
 
     /**
     * Sets the durationInMilliseconds
-    * Indicates how long this provisioning action took to finish. Measured in milliseconds.
+    * Indicates how long this provisioning action took to finish. Measured in milliseconds. Supports $filter (eq, gt, lt).
     *
     * @param int $val The durationInMilliseconds
     *
@@ -173,7 +173,7 @@ class ProvisioningObjectSummary extends Entity
 
     /**
     * Gets the initiatedBy
-    * Details of who initiated this provisioning.
+    * Details of who initiated this provisioning. Supports $filter (eq, contains).
     *
     * @return Initiator|null The initiatedBy
     */
@@ -192,7 +192,7 @@ class ProvisioningObjectSummary extends Entity
 
     /**
     * Sets the initiatedBy
-    * Details of who initiated this provisioning.
+    * Details of who initiated this provisioning. Supports $filter (eq, contains).
     *
     * @param Initiator $val The initiatedBy
     *
@@ -206,7 +206,7 @@ class ProvisioningObjectSummary extends Entity
 
     /**
     * Gets the jobId
-    * The unique ID for the whole provisioning job.
+    * The unique ID for the whole provisioning job. Supports $filter (eq, contains).
     *
     * @return string|null The jobId
     */
@@ -221,7 +221,7 @@ class ProvisioningObjectSummary extends Entity
 
     /**
     * Sets the jobId
-    * The unique ID for the whole provisioning job.
+    * The unique ID for the whole provisioning job. Supports $filter (eq, contains).
     *
     * @param string $val The jobId
     *
@@ -265,7 +265,7 @@ class ProvisioningObjectSummary extends Entity
 
     /**
     * Gets the provisioningAction
-    * Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Azure AD activity list.
+    * Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Azure AD activity list. Supports $filter (eq, contains).
     *
     * @return ProvisioningAction|null The provisioningAction
     */
@@ -284,7 +284,7 @@ class ProvisioningObjectSummary extends Entity
 
     /**
     * Sets the provisioningAction
-    * Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Azure AD activity list.
+    * Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Azure AD activity list. Supports $filter (eq, contains).
     *
     * @param ProvisioningAction $val The provisioningAction
     *
@@ -298,7 +298,7 @@ class ProvisioningObjectSummary extends Entity
 
     /**
     * Gets the provisioningStatusInfo
-    * Details of provisioning status.
+    * Details of provisioning status. Supports $filter (eq, contains) for status.
     *
     * @return ProvisioningStatusInfo|null The provisioningStatusInfo
     */
@@ -317,7 +317,7 @@ class ProvisioningObjectSummary extends Entity
 
     /**
     * Sets the provisioningStatusInfo
-    * Details of provisioning status.
+    * Details of provisioning status. Supports $filter (eq, contains) for status.
     *
     * @param ProvisioningStatusInfo $val The provisioningStatusInfo
     *
@@ -361,7 +361,7 @@ class ProvisioningObjectSummary extends Entity
 
     /**
     * Gets the servicePrincipal
-    * Represents the service principal used for provisioning.
+    * Represents the service principal used for provisioning. Supports $filter (eq) for id and name.
     *
     * @return ProvisioningServicePrincipal|null The servicePrincipal
     */
@@ -380,7 +380,7 @@ class ProvisioningObjectSummary extends Entity
 
     /**
     * Sets the servicePrincipal
-    * Represents the service principal used for provisioning.
+    * Represents the service principal used for provisioning. Supports $filter (eq) for id and name.
     *
     * @param ProvisioningServicePrincipal $val The servicePrincipal
     *
@@ -394,7 +394,7 @@ class ProvisioningObjectSummary extends Entity
 
     /**
     * Gets the sourceIdentity
-    * Details of source object being provisioned.
+    * Details of source object being provisioned. Supports $filter (eq, contains) for identityType, id, and displayName.
     *
     * @return ProvisionedIdentity|null The sourceIdentity
     */
@@ -413,7 +413,7 @@ class ProvisioningObjectSummary extends Entity
 
     /**
     * Sets the sourceIdentity
-    * Details of source object being provisioned.
+    * Details of source object being provisioned. Supports $filter (eq, contains) for identityType, id, and displayName.
     *
     * @param ProvisionedIdentity $val The sourceIdentity
     *
@@ -427,7 +427,7 @@ class ProvisioningObjectSummary extends Entity
 
     /**
     * Gets the sourceSystem
-    * Details of source system of the object being provisioned.
+    * Details of source system of the object being provisioned. Supports $filter (eq, contains) for displayName.
     *
     * @return ProvisioningSystem|null The sourceSystem
     */
@@ -446,7 +446,7 @@ class ProvisioningObjectSummary extends Entity
 
     /**
     * Sets the sourceSystem
-    * Details of source system of the object being provisioned.
+    * Details of source system of the object being provisioned. Supports $filter (eq, contains) for displayName.
     *
     * @param ProvisioningSystem $val The sourceSystem
     *
@@ -491,7 +491,7 @@ class ProvisioningObjectSummary extends Entity
 
     /**
     * Gets the targetIdentity
-    * Details of target object being provisioned.
+    * Details of target object being provisioned. Supports $filter (eq, contains) for identityType, id, and displayName.
     *
     * @return ProvisionedIdentity|null The targetIdentity
     */
@@ -510,7 +510,7 @@ class ProvisioningObjectSummary extends Entity
 
     /**
     * Sets the targetIdentity
-    * Details of target object being provisioned.
+    * Details of target object being provisioned. Supports $filter (eq, contains) for identityType, id, and displayName.
     *
     * @param ProvisionedIdentity $val The targetIdentity
     *
@@ -524,7 +524,7 @@ class ProvisioningObjectSummary extends Entity
 
     /**
     * Gets the targetSystem
-    * Details of target system of the object being provisioned.
+    * Details of target system of the object being provisioned. Supports $filter (eq, contains) for displayName.
     *
     * @return ProvisioningSystem|null The targetSystem
     */
@@ -543,7 +543,7 @@ class ProvisioningObjectSummary extends Entity
 
     /**
     * Sets the targetSystem
-    * Details of target system of the object being provisioned.
+    * Details of target system of the object being provisioned. Supports $filter (eq, contains) for displayName.
     *
     * @param ProvisioningSystem $val The targetSystem
     *
@@ -557,7 +557,7 @@ class ProvisioningObjectSummary extends Entity
 
     /**
     * Gets the tenantId
-    * Unique Azure AD tenant ID.
+    * Unique Azure AD tenant ID. Supports $filter (eq, contains).
     *
     * @return string|null The tenantId
     */
@@ -572,7 +572,7 @@ class ProvisioningObjectSummary extends Entity
 
     /**
     * Sets the tenantId
-    * Unique Azure AD tenant ID.
+    * Unique Azure AD tenant ID. Supports $filter (eq, contains).
     *
     * @param string $val The tenantId
     *

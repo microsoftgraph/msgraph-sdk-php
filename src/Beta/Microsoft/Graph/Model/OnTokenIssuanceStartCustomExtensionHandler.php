@@ -36,6 +36,37 @@ class OnTokenIssuanceStartCustomExtensionHandler extends OnTokenIssuanceStartHan
 
 
     /**
+    * Gets the configuration
+    *
+    * @return CustomExtensionOverwriteConfiguration|null The configuration
+    */
+    public function getConfiguration()
+    {
+        if (array_key_exists("configuration", $this->_propDict)) {
+            if (is_a($this->_propDict["configuration"], "\Beta\Microsoft\Graph\Model\CustomExtensionOverwriteConfiguration") || is_null($this->_propDict["configuration"])) {
+                return $this->_propDict["configuration"];
+            } else {
+                $this->_propDict["configuration"] = new CustomExtensionOverwriteConfiguration($this->_propDict["configuration"]);
+                return $this->_propDict["configuration"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the configuration
+    *
+    * @param CustomExtensionOverwriteConfiguration $val The value to assign to the configuration
+    *
+    * @return OnTokenIssuanceStartCustomExtensionHandler The OnTokenIssuanceStartCustomExtensionHandler
+    */
+    public function setConfiguration($val)
+    {
+        $this->_propDict["configuration"] = $val;
+         return $this;
+    }
+
+    /**
     * Gets the customExtension
     *
     * @return OnTokenIssuanceStartCustomExtension|null The customExtension

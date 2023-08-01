@@ -55,7 +55,7 @@ class IdentityProvider extends Entity
 
     /**
     * Gets the clientSecret
-    * The client secret for the application obtained when registering the application with the identity provider. This is write-only. A read operation will return ****. This is a required field. Required. Not nullable.
+    * The client secret for the application obtained when registering the application with the identity provider. This is write-only. A read operation will return . This is a required field. Required. Not nullable.
     *
     * @return string|null The clientSecret
     */
@@ -70,7 +70,7 @@ class IdentityProvider extends Entity
 
     /**
     * Sets the clientSecret
-    * The client secret for the application obtained when registering the application with the identity provider. This is write-only. A read operation will return ****. This is a required field. Required. Not nullable.
+    * The client secret for the application obtained when registering the application with the identity provider. This is write-only. A read operation will return . This is a required field. Required. Not nullable.
     *
     * @param string $val The clientSecret
     *

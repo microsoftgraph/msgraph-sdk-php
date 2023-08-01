@@ -25,6 +25,7 @@ class IntelligenceProfileCountryOrRegionOfOrigin extends \Beta\Microsoft\Graph\M
 {
     /**
     * Gets the code
+    * A codified representation for this country/region of origin.
     *
     * @return string|null The code
     */
@@ -39,6 +40,7 @@ class IntelligenceProfileCountryOrRegionOfOrigin extends \Beta\Microsoft\Graph\M
 
     /**
     * Sets the code
+    * A codified representation for this country/region of origin.
     *
     * @param string $val The value of the code
     *
@@ -51,6 +53,7 @@ class IntelligenceProfileCountryOrRegionOfOrigin extends \Beta\Microsoft\Graph\M
     }
     /**
     * Gets the label
+    * A display label for this ountry/region of origin.
     *
     * @return string|null The label
     */
@@ -65,6 +68,7 @@ class IntelligenceProfileCountryOrRegionOfOrigin extends \Beta\Microsoft\Graph\M
 
     /**
     * Sets the label
+    * A display label for this ountry/region of origin.
     *
     * @param string $val The value of the label
     *

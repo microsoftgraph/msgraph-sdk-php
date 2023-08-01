@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* SensitivityLabelTarget File
+* EducationModuleStatus File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Beta\Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* SensitivityLabelTarget class
+* EducationModuleStatus class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,14 +24,12 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class SensitivityLabelTarget extends Enum
+class EducationModuleStatus extends Enum
 {
     /**
-    * The Enum SensitivityLabelTarget
+    * The Enum EducationModuleStatus
     */
-    const EMAIL = "email";
-    const SITE = "site";
-    const UNIFIED_GROUP = "unifiedGroup";
-    const TEAMWORK = "teamwork";
+    const DRAFT = "draft";
+    const PUBLISHED = "published";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

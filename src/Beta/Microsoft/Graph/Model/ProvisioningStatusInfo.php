@@ -59,7 +59,7 @@ class ProvisioningStatusInfo extends Entity
 
     /**
     * Gets the status
-    * Possible values are: success, failure, skipped, warning, unknownFutureValue.
+    * Possible values are: success, failure, skipped, warning, unknownFutureValue. Supports $filter (eq, contains).
     *
     * @return ProvisioningResult|null The status
     */
@@ -78,7 +78,7 @@ class ProvisioningStatusInfo extends Entity
 
     /**
     * Sets the status
-    * Possible values are: success, failure, skipped, warning, unknownFutureValue.
+    * Possible values are: success, failure, skipped, warning, unknownFutureValue. Supports $filter (eq, contains).
     *
     * @param ProvisioningResult $val The value to assign to the status
     *
