@@ -93,7 +93,7 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Gets the cloudServiceInstanceName property value. The Azure deployed cloud service instance name, such as FrontEnd_IN_3.
+     * Gets the cloudServiceInstanceName property value. The Azure deployed cloud service instance name, such as FrontEndIN3.
      * @return string|null
     */
     public function getCloudServiceInstanceName(): ?string {
@@ -271,7 +271,7 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Sets the cloudServiceInstanceName property value. The Azure deployed cloud service instance name, such as FrontEnd_IN_3.
+     * Sets the cloudServiceInstanceName property value. The Azure deployed cloud service instance name, such as FrontEndIN3.
      * @param string|null $value Value to set for the cloudServiceInstanceName property.
     */
     public function setCloudServiceInstanceName(?string $value): void {

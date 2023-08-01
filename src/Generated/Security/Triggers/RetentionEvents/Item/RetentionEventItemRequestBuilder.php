@@ -43,7 +43,7 @@ class RetentionEventItemRequestBuilder extends BaseRequestBuilder
      * Delete a retentionEvent object.
      * @param RetentionEventItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/security-retentionevent-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/security-retentionevent-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?RetentionEventItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -62,7 +62,7 @@ class RetentionEventItemRequestBuilder extends BaseRequestBuilder
      * Read the properties and relationships of a retentionEvent object.
      * @param RetentionEventItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/security-retentionevent-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/security-retentionevent-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?RetentionEventItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

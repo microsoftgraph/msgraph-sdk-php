@@ -27,7 +27,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
     }
 
     /**
-     * Gets the accessPackage property value. Access package containing this policy. Read-only.
+     * Gets the accessPackage property value. Access package containing this policy. Read-only.  Supports $expand.
      * @return AccessPackage|null
     */
     public function getAccessPackage(): ?AccessPackage {
@@ -87,7 +87,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
     }
 
     /**
-     * Gets the customExtensionStageSettings property value. The customExtensionStageSettings property
+     * Gets the customExtensionStageSettings property value. The collection of stages when to execute one or more custom access package workflow extensions. Supports $expand.
      * @return array<CustomExtensionStageSetting>|null
     */
     public function getCustomExtensionStageSettings(): ?array {
@@ -261,7 +261,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
     }
 
     /**
-     * Sets the accessPackage property value. Access package containing this policy. Read-only.
+     * Sets the accessPackage property value. Access package containing this policy. Read-only.  Supports $expand.
      * @param AccessPackage|null $value Value to set for the accessPackage property.
     */
     public function setAccessPackage(?AccessPackage $value): void {
@@ -301,7 +301,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
     }
 
     /**
-     * Sets the customExtensionStageSettings property value. The customExtensionStageSettings property
+     * Sets the customExtensionStageSettings property value. The collection of stages when to execute one or more custom access package workflow extensions. Supports $expand.
      * @param array<CustomExtensionStageSetting>|null $value Value to set for the customExtensionStageSettings property.
     */
     public function setCustomExtensionStageSettings(?array $value): void {

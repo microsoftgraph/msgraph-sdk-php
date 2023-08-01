@@ -56,7 +56,7 @@ class OperationsRequestBuilder extends BaseRequestBuilder
      * Get a list of rich long-running operations associated with a site.
      * @param OperationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/site-list-operations?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/site-list-operations?view=graph-rest-1.0 Find more info here
     */
     public function get(?OperationsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

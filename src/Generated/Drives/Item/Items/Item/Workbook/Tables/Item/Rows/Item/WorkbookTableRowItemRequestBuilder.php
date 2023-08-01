@@ -43,7 +43,7 @@ class WorkbookTableRowItemRequestBuilder extends BaseRequestBuilder
      * Deletes the row from the table.
      * @param WorkbookTableRowItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/tablerow-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/tablerow-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?WorkbookTableRowItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -62,7 +62,7 @@ class WorkbookTableRowItemRequestBuilder extends BaseRequestBuilder
      * Retrieve the properties and relationships of tablerow object.
      * @param WorkbookTableRowItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/tablerow-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/tablerow-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?WorkbookTableRowItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -82,7 +82,7 @@ class WorkbookTableRowItemRequestBuilder extends BaseRequestBuilder
      * @param WorkbookTableRow $body The request body
      * @param WorkbookTableRowItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/tablerow-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/tablerow-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(WorkbookTableRow $body, ?WorkbookTableRowItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

@@ -59,7 +59,7 @@ class ParticipantItemRequestBuilder extends BaseRequestBuilder
      * Delete a specific participant in a call. In some situations, it is appropriate for an application to remove a participant from an active call. This action can be done before or after the participant answers the call. When an active caller is removed, they are immediately dropped from the call with no pre- or post-removal notification. When an invited participant is removed, any outstanding add participant request is canceled. 
      * @param ParticipantItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/participant-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/participant-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?ParticipantItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -75,10 +75,10 @@ class ParticipantItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a **participant** object.
+     * Retrieve the properties and relationships of a participant object.
      * @param ParticipantItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/participant-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/participant-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ParticipantItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -130,7 +130,7 @@ class ParticipantItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a **participant** object.
+     * Retrieve the properties and relationships of a participant object.
      * @param ParticipantItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

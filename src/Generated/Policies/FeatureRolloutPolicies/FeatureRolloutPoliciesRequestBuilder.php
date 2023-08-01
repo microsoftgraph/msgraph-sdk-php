@@ -56,7 +56,7 @@ class FeatureRolloutPoliciesRequestBuilder extends BaseRequestBuilder
      * Retrieve a list of featureRolloutPolicy objects.
      * @param FeatureRolloutPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/featurerolloutpolicies-list?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/featurerolloutpolicies-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?FeatureRolloutPoliciesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,7 +76,7 @@ class FeatureRolloutPoliciesRequestBuilder extends BaseRequestBuilder
      * @param FeatureRolloutPolicy $body The request body
      * @param FeatureRolloutPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/featurerolloutpolicies-post?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/featurerolloutpolicies-post?view=graph-rest-1.0 Find more info here
     */
     public function post(FeatureRolloutPolicy $body, ?FeatureRolloutPoliciesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

@@ -56,7 +56,7 @@ class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuilder
      * Get a list of the federatedIdentityCredential objects and their properties.
      * @param FederatedIdentityCredentialsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/application-list-federatedidentitycredentials?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/application-list-federatedidentitycredentials?view=graph-rest-1.0 Find more info here
     */
     public function get(?FederatedIdentityCredentialsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,7 +76,7 @@ class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuilder
      * @param FederatedIdentityCredential $body The request body
      * @param FederatedIdentityCredentialsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/application-post-federatedidentitycredentials?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/application-post-federatedidentitycredentials?view=graph-rest-1.0 Find more info here
     */
     public function post(FederatedIdentityCredential $body, ?FederatedIdentityCredentialsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

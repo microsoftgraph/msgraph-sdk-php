@@ -64,7 +64,7 @@ class MessagesRequestBuilder extends BaseRequestBuilder
      * Get all the messages in the specified user's mailbox, or those messages in a specified folder in the mailbox.
      * @param MessagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/mailfolder-list-messages?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/mailfolder-list-messages?view=graph-rest-1.0 Find more info here
     */
     public function get(?MessagesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -84,7 +84,7 @@ class MessagesRequestBuilder extends BaseRequestBuilder
      * @param Message $body The request body
      * @param MessagesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/mailfolder-post-messages?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/mailfolder-post-messages?view=graph-rest-1.0 Find more info here
     */
     public function post(Message $body, ?MessagesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

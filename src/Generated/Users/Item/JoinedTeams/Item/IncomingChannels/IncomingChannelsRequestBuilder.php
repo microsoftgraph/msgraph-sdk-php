@@ -55,7 +55,7 @@ class IncomingChannelsRequestBuilder extends BaseRequestBuilder
      * Get the list of incoming channels (channels shared with a team).
      * @param IncomingChannelsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/team-list-incomingchannels?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/team-list-incomingchannels?view=graph-rest-1.0 Find more info here
     */
     public function get(?IncomingChannelsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

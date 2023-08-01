@@ -56,7 +56,7 @@ class OfferShiftRequestsRequestBuilder extends BaseRequestBuilder
      * Retrieve the properties and relationships of all offerShiftRequest objects in a team.
      * @param OfferShiftRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/offershiftrequest-list?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/offershiftrequest-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?OfferShiftRequestsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,7 +76,7 @@ class OfferShiftRequestsRequestBuilder extends BaseRequestBuilder
      * @param OfferShiftRequest $body The request body
      * @param OfferShiftRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/offershiftrequest-post?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/offershiftrequest-post?view=graph-rest-1.0 Find more info here
     */
     public function post(OfferShiftRequest $body, ?OfferShiftRequestsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

@@ -37,7 +37,7 @@ class IdentityProvider extends Entity implements Parsable
     }
 
     /**
-     * Gets the clientSecret property value. The client secret for the application. This is the client secret obtained when registering the application with the identity provider. This is write-only. A read operation will return ****.  Required. Not nullable.
+     * Gets the clientSecret property value. The client secret for the application. This is the client secret obtained when registering the application with the identity provider. This is write-only. A read operation will return .  Required. Not nullable.
      * @return string|null
     */
     public function getClientSecret(): ?string {
@@ -107,7 +107,7 @@ class IdentityProvider extends Entity implements Parsable
     }
 
     /**
-     * Sets the clientSecret property value. The client secret for the application. This is the client secret obtained when registering the application with the identity provider. This is write-only. A read operation will return ****.  Required. Not nullable.
+     * Sets the clientSecret property value. The client secret for the application. This is the client secret obtained when registering the application with the identity provider. This is write-only. A read operation will return .  Required. Not nullable.
      * @param string|null $value Value to set for the clientSecret property.
     */
     public function setClientSecret(?string $value): void {

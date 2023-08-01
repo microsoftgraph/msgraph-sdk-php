@@ -85,7 +85,7 @@ class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder
      * Read the properties and relationships of a subjectRightsRequest object.
      * @param SubjectRightsRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/subjectrightsrequest-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/subjectrightsrequest-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?SubjectRightsRequestItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -105,7 +105,7 @@ class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder
      * @param SubjectRightsRequest $body The request body
      * @param SubjectRightsRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/subjectrightsrequest-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/subjectrightsrequest-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(SubjectRightsRequest $body, ?SubjectRightsRequestItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

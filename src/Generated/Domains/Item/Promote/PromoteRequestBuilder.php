@@ -31,10 +31,10 @@ class PromoteRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Promote a verified subdomain to the root domain. A verified domain has its **isVerified** property set to `true`.
+     * Promote a verified subdomain to the root domain. A verified domain has its isVerified property set to true.
      * @param PromoteRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/domain-promote?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/domain-promote?view=graph-rest-1.0 Find more info here
     */
     public function post(?PromoteRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);
@@ -50,7 +50,7 @@ class PromoteRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Promote a verified subdomain to the root domain. A verified domain has its **isVerified** property set to `true`.
+     * Promote a verified subdomain to the root domain. A verified domain has its isVerified property set to true.
      * @param PromoteRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

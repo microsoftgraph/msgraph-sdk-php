@@ -69,7 +69,7 @@ class WorkbookChartSeriesItemRequestBuilder extends BaseRequestBuilder
      * Retrieve the properties and relationships of chartseries object.
      * @param WorkbookChartSeriesItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/chartseries-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/chartseries-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?WorkbookChartSeriesItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -89,7 +89,7 @@ class WorkbookChartSeriesItemRequestBuilder extends BaseRequestBuilder
      * @param WorkbookChartSeries $body The request body
      * @param WorkbookChartSeriesItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/chartseries-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/chartseries-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(WorkbookChartSeries $body, ?WorkbookChartSeriesItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

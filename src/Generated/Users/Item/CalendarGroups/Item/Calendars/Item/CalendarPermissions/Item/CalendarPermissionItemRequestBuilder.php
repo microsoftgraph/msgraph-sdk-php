@@ -35,7 +35,7 @@ class CalendarPermissionItemRequestBuilder extends BaseRequestBuilder
      * Delete calendarPermission.
      * @param CalendarPermissionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/calendarpermission-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/calendarpermission-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?CalendarPermissionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -54,7 +54,7 @@ class CalendarPermissionItemRequestBuilder extends BaseRequestBuilder
      * Get the specified permissions object of a user or group calendar that has been shared.
      * @param CalendarPermissionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/calendarpermission-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/calendarpermission-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?CalendarPermissionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -74,7 +74,7 @@ class CalendarPermissionItemRequestBuilder extends BaseRequestBuilder
      * @param CalendarPermission $body The request body
      * @param CalendarPermissionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/calendarpermission-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/calendarpermission-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(CalendarPermission $body, ?CalendarPermissionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

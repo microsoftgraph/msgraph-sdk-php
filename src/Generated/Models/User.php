@@ -366,6 +366,18 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
+     * Gets the customSecurityAttributes property value. The customSecurityAttributes property
+     * @return CustomSecurityAttributeValue|null
+    */
+    public function getCustomSecurityAttributes(): ?CustomSecurityAttributeValue {
+        $val = $this->getBackingStore()->get('customSecurityAttributes');
+        if (is_null($val) || $val instanceof CustomSecurityAttributeValue) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'customSecurityAttributes'");
+    }
+
+    /**
      * Gets the department property value. The name for the department in which the user works. Maximum length is 64 characters. Returned only on $select. Supports $filter (eq, ne, not , ge, le, in, and eq on null values).
      * @return string|null
     */
@@ -643,6 +655,7 @@ class User extends DirectoryObject implements Parsable
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'createdObjects' => fn(ParseNode $n) => $o->setCreatedObjects($n->getCollectionOfObjectValues([DirectoryObject::class, 'createFromDiscriminatorValue'])),
             'creationType' => fn(ParseNode $n) => $o->setCreationType($n->getStringValue()),
+            'customSecurityAttributes' => fn(ParseNode $n) => $o->setCustomSecurityAttributes($n->getObjectValue([CustomSecurityAttributeValue::class, 'createFromDiscriminatorValue'])),
             'department' => fn(ParseNode $n) => $o->setDepartment($n->getStringValue()),
             'deviceEnrollmentLimit' => fn(ParseNode $n) => $o->setDeviceEnrollmentLimit($n->getIntegerValue()),
             'deviceManagementTroubleshootingEvents' => fn(ParseNode $n) => $o->setDeviceManagementTroubleshootingEvents($n->getCollectionOfObjectValues([DeviceManagementTroubleshootingEvent::class, 'createFromDiscriminatorValue'])),
@@ -1812,6 +1825,7 @@ class User extends DirectoryObject implements Parsable
         $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
         $writer->writeCollectionOfObjectValues('createdObjects', $this->getCreatedObjects());
         $writer->writeStringValue('creationType', $this->getCreationType());
+        $writer->writeObjectValue('customSecurityAttributes', $this->getCustomSecurityAttributes());
         $writer->writeStringValue('department', $this->getDepartment());
         $writer->writeIntegerValue('deviceEnrollmentLimit', $this->getDeviceEnrollmentLimit());
         $writer->writeCollectionOfObjectValues('deviceManagementTroubleshootingEvents', $this->getDeviceManagementTroubleshootingEvents());
@@ -2116,6 +2130,14 @@ class User extends DirectoryObject implements Parsable
     */
     public function setCreationType(?string $value): void {
         $this->getBackingStore()->set('creationType', $value);
+    }
+
+    /**
+     * Sets the customSecurityAttributes property value. The customSecurityAttributes property
+     * @param CustomSecurityAttributeValue|null $value Value to set for the customSecurityAttributes property.
+    */
+    public function setCustomSecurityAttributes(?CustomSecurityAttributeValue $value): void {
+        $this->getBackingStore()->set('customSecurityAttributes', $value);
     }
 
     /**

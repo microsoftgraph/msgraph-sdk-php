@@ -56,7 +56,7 @@ class PinnedMessagesRequestBuilder extends BaseRequestBuilder
      * Get a list of pinnedChatMessages in a chat.
      * @param PinnedMessagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/chat-list-pinnedmessages?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/chat-list-pinnedmessages?view=graph-rest-1.0 Find more info here
     */
     public function get(?PinnedMessagesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,7 +76,7 @@ class PinnedMessagesRequestBuilder extends BaseRequestBuilder
      * @param PinnedChatMessageInfo $body The request body
      * @param PinnedMessagesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/chat-post-pinnedmessages?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/chat-post-pinnedmessages?view=graph-rest-1.0 Find more info here
     */
     public function post(PinnedChatMessageInfo $body, ?PinnedMessagesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

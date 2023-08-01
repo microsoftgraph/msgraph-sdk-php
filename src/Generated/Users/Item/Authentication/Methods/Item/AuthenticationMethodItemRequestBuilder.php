@@ -43,7 +43,7 @@ class AuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
      * Retrieve the properties and relationships of an authenticationMethod object.
      * @param AuthenticationMethodItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/authenticationmethod-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/authenticationmethod-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?AuthenticationMethodItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

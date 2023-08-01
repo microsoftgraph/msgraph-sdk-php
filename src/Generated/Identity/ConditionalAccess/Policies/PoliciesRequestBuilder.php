@@ -56,7 +56,7 @@ class PoliciesRequestBuilder extends BaseRequestBuilder
      * Retrieve a list of conditionalAccessPolicy objects.
      * @param PoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/conditionalaccessroot-list-policies?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/conditionalaccessroot-list-policies?view=graph-rest-1.0 Find more info here
     */
     public function get(?PoliciesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,7 +76,7 @@ class PoliciesRequestBuilder extends BaseRequestBuilder
      * @param ConditionalAccessPolicy $body The request body
      * @param PoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/conditionalaccessroot-post-policies?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/conditionalaccessroot-post-policies?view=graph-rest-1.0 Find more info here
     */
     public function post(ConditionalAccessPolicy $body, ?PoliciesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

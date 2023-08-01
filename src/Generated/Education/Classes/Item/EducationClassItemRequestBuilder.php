@@ -99,7 +99,7 @@ class EducationClassItemRequestBuilder extends BaseRequestBuilder
      * Delete an educationClass. Because a class is also a universal group, deleting a class deletes the group.
      * @param EducationClassItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/educationclass-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/educationclass-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?EducationClassItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -118,7 +118,7 @@ class EducationClassItemRequestBuilder extends BaseRequestBuilder
      * Retrieve a class from the system. A class is a universal group with a special property that indicates to the system that the group is a class. Group members represent the students; group admins represent the teachers in the class. If you're using the delegated token, the user will only see classes in which they are members.
      * @param EducationClassItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/educationclass-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/educationclass-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?EducationClassItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -138,7 +138,7 @@ class EducationClassItemRequestBuilder extends BaseRequestBuilder
      * @param EducationClass $body The request body
      * @param EducationClassItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/educationclass-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/educationclass-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(EducationClass $body, ?EducationClassItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

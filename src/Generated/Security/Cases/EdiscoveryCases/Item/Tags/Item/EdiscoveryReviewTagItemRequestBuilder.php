@@ -51,7 +51,7 @@ class EdiscoveryReviewTagItemRequestBuilder extends BaseRequestBuilder
      * Remove an ediscoveryReviewTag object.
      * @param EdiscoveryReviewTagItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/security-ediscoverycase-delete-tags?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/security-ediscoverycase-delete-tags?view=graph-rest-1.0 Find more info here
     */
     public function delete(?EdiscoveryReviewTagItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -70,7 +70,7 @@ class EdiscoveryReviewTagItemRequestBuilder extends BaseRequestBuilder
      * Read the properties and relationships of an ediscoveryReviewTag object.
      * @param EdiscoveryReviewTagItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/security-ediscoveryreviewtag-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/security-ediscoveryreviewtag-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?EdiscoveryReviewTagItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -90,7 +90,7 @@ class EdiscoveryReviewTagItemRequestBuilder extends BaseRequestBuilder
      * @param EdiscoveryReviewTag $body The request body
      * @param EdiscoveryReviewTagItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/security-ediscoveryreviewtag-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/security-ediscoveryreviewtag-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(EdiscoveryReviewTag $body, ?EdiscoveryReviewTagItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

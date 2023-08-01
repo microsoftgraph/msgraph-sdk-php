@@ -35,7 +35,7 @@ class FollowRequestBuilder extends BaseRequestBuilder
      * Follow a driveItem.
      * @param FollowRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/driveitem-follow?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/driveitem-follow?view=graph-rest-1.0 Find more info here
     */
     public function post(?FollowRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);

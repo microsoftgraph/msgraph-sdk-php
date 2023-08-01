@@ -53,7 +53,7 @@ class OnPremisesDirectorySynchronizationItemRequestBuilder extends BaseRequestBu
      * Read the properties and relationships of an onPremisesDirectorySynchronization object.
      * @param OnPremisesDirectorySynchronizationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/onpremisesdirectorysynchronization-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/onpremisesdirectorysynchronization-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?OnPremisesDirectorySynchronizationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -73,7 +73,7 @@ class OnPremisesDirectorySynchronizationItemRequestBuilder extends BaseRequestBu
      * @param OnPremisesDirectorySynchronization $body The request body
      * @param OnPremisesDirectorySynchronizationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/onpremisesdirectorysynchronization-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/onpremisesdirectorysynchronization-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(OnPremisesDirectorySynchronization $body, ?OnPremisesDirectorySynchronizationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

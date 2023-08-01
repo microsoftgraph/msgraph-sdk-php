@@ -14,6 +14,7 @@ use Microsoft\Graph\Generated\Users\Item\Chats\Item\MarkChatReadForUser\MarkChat
 use Microsoft\Graph\Generated\Users\Item\Chats\Item\MarkChatUnreadForUser\MarkChatUnreadForUserRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Chats\Item\Members\MembersRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Chats\Item\Messages\MessagesRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Chats\Item\PermissionGrants\PermissionGrantsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Chats\Item\PinnedMessages\PinnedMessagesRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Chats\Item\SendActivityNotification\SendActivityNotificationRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Chats\Item\Tabs\TabsRequestBuilder;
@@ -75,6 +76,13 @@ class ChatItemRequestBuilder extends BaseRequestBuilder
     */
     public function messages(): MessagesRequestBuilder {
         return new MessagesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the permissionGrants property of the microsoft.graph.chat entity.
+    */
+    public function permissionGrants(): PermissionGrantsRequestBuilder {
+        return new PermissionGrantsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -141,7 +149,7 @@ class ChatItemRequestBuilder extends BaseRequestBuilder
      * Retrieve a single chat (without its messages). This method supports federation. To access a chat, at least one chat member must belong to the tenant the request initiated from.
      * @param ChatItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/chat-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/chat-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ChatItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

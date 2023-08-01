@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Res
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get roles from identityGovernance
+ * Read-only. Nullable. Supports $expand.
 */
 class RolesRequestBuilderGetQueryParameters 
 {

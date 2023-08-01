@@ -32,7 +32,7 @@ class CustomExtensionRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get customExtension from identityGovernance
+     * Indicates the custom workflow extension that will be executed at this stage. Nullable. Supports $expand.
      * @param CustomExtensionRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -50,7 +50,7 @@ class CustomExtensionRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get customExtension from identityGovernance
+     * Indicates the custom workflow extension that will be executed at this stage. Nullable. Supports $expand.
      * @param CustomExtensionRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -35,7 +35,7 @@ class UnhideForUserRequestBuilder extends BaseRequestBuilder
      * @param UnhideForUserPostRequestBody $body The request body
      * @param UnhideForUserRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/chat-unhideforuser?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/chat-unhideforuser?view=graph-rest-1.0 Find more info here
     */
     public function post(UnhideForUserPostRequestBody $body, ?UnhideForUserRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

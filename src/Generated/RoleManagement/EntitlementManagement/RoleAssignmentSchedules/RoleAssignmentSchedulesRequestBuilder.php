@@ -66,7 +66,7 @@ class RoleAssignmentSchedulesRequestBuilder extends BaseRequestBuilder
      * Get the schedules for active role assignment operations.
      * @param RoleAssignmentSchedulesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/rbacapplication-list-roleassignmentschedules?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/rbacapplication-list-roleassignmentschedules?view=graph-rest-1.0 Find more info here
     */
     public function get(?RoleAssignmentSchedulesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

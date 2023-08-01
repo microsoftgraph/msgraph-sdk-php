@@ -36,7 +36,7 @@ class RefRequestBuilder extends BaseRequestBuilder
      * List the tokenLifetimePolicy objects that are assigned to an application. Only one object is returned in the collection because only one tokenLifetimePolicy can be assigned to an application.
      * @param RefRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/application-list-tokenlifetimepolicies?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/application-list-tokenlifetimepolicies?view=graph-rest-1.0 Find more info here
     */
     public function get(?RefRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -56,7 +56,7 @@ class RefRequestBuilder extends BaseRequestBuilder
      * @param ReferenceCreate $body The request body
      * @param RefRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/application-post-tokenlifetimepolicies?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/application-post-tokenlifetimepolicies?view=graph-rest-1.0 Find more info here
     */
     public function post(ReferenceCreate $body, ?RefRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

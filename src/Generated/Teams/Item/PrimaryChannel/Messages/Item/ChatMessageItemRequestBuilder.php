@@ -9,8 +9,10 @@ use Microsoft\Graph\Generated\Models\ChatMessage;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\Messages\Item\HostedContents\HostedContentsRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\Messages\Item\Replies\RepliesRequestBuilder;
+use Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\Messages\Item\SetReaction\SetReactionRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\Messages\Item\SoftDelete\SoftDeleteRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\Messages\Item\UndoSoftDelete\UndoSoftDeleteRequestBuilder;
+use Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\Messages\Item\UnsetReaction\UnsetReactionRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -36,6 +38,13 @@ class ChatMessageItemRequestBuilder extends BaseRequestBuilder
     }
     
     /**
+     * Provides operations to call the setReaction method.
+    */
+    public function setReaction(): SetReactionRequestBuilder {
+        return new SetReactionRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to call the softDelete method.
     */
     public function softDelete(): SoftDeleteRequestBuilder {
@@ -47,6 +56,13 @@ class ChatMessageItemRequestBuilder extends BaseRequestBuilder
     */
     public function undoSoftDelete(): UndoSoftDeleteRequestBuilder {
         return new UndoSoftDeleteRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the unsetReaction method.
+    */
+    public function unsetReaction(): UnsetReactionRequestBuilder {
+        return new UnsetReactionRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -85,7 +101,7 @@ class ChatMessageItemRequestBuilder extends BaseRequestBuilder
      * Retrieve a single message or a message reply in a channel or a chat.
      * @param ChatMessageItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/chatmessage-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/chatmessage-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ChatMessageItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -101,11 +117,11 @@ class ChatMessageItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update a chatMessage object. With the exception of the **policyViolation** property, all properties of a **chatMessage** can be updated in delegated permissions scenarios.Only the **policyViolation** property of a **chatMessage** can be updated in application permissions scenarios. The update only works for chats where members are Microsoft Teams users. If one of the participants is using Skype, the operation will fail. This method does not support federation. Only the user in the tenant who sent the message can perform data loss prevention (DLP) updates on the specified chat message.
+     * Update a chatMessage object. With the exception of the policyViolation property, all properties of a chatMessage can be updated in delegated permissions scenarios.Only the policyViolation property of a chatMessage can be updated in application permissions scenarios. The update only works for chats where members are Microsoft Teams users. If one of the participants is using Skype, the operation will fail. This method does not support federation. Only the user in the tenant who sent the message can perform data loss prevention (DLP) updates on the specified chat message.
      * @param ChatMessage $body The request body
      * @param ChatMessageItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/chatmessage-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/chatmessage-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(ChatMessage $body, ?ChatMessageItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -159,7 +175,7 @@ class ChatMessageItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update a chatMessage object. With the exception of the **policyViolation** property, all properties of a **chatMessage** can be updated in delegated permissions scenarios.Only the **policyViolation** property of a **chatMessage** can be updated in application permissions scenarios. The update only works for chats where members are Microsoft Teams users. If one of the participants is using Skype, the operation will fail. This method does not support federation. Only the user in the tenant who sent the message can perform data loss prevention (DLP) updates on the specified chat message.
+     * Update a chatMessage object. With the exception of the policyViolation property, all properties of a chatMessage can be updated in delegated permissions scenarios.Only the policyViolation property of a chatMessage can be updated in application permissions scenarios. The update only works for chats where members are Microsoft Teams users. If one of the participants is using Skype, the operation will fail. This method does not support federation. Only the user in the tenant who sent the message can perform data loss prevention (DLP) updates on the specified chat message.
      * @param ChatMessage $body The request body
      * @param ChatMessageItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

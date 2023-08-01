@@ -73,7 +73,7 @@ class LoginPageTextVisibilitySettings implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Gets the hideAccountResetCredentials property value. The hideAccountResetCredentials property
+     * Gets the hideAccountResetCredentials property value. Option to hide the self-service password reset (SSPR) hyperlinks such as 'Can't access your account?', 'Forgot my password' and 'Reset it now' on the sign-in form.
      * @return bool|null
     */
     public function getHideAccountResetCredentials(): ?bool {
@@ -85,7 +85,7 @@ class LoginPageTextVisibilitySettings implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Gets the hideCannotAccessYourAccount property value. The hideCannotAccessYourAccount property
+     * Gets the hideCannotAccessYourAccount property value. Option to hide the self-service password reset (SSPR) 'Can't access your account?' hyperlink on the sign-in form.
      * @return bool|null
     */
     public function getHideCannotAccessYourAccount(): ?bool {
@@ -97,7 +97,7 @@ class LoginPageTextVisibilitySettings implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Gets the hideForgotMyPassword property value. The hideForgotMyPassword property
+     * Gets the hideForgotMyPassword property value. Option to hide the self-service password reset (SSPR) 'Forgot my password' hyperlink on the sign-in form.
      * @return bool|null
     */
     public function getHideForgotMyPassword(): ?bool {
@@ -109,7 +109,7 @@ class LoginPageTextVisibilitySettings implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Gets the hidePrivacyAndCookies property value. The hidePrivacyAndCookies property
+     * Gets the hidePrivacyAndCookies property value. Option to hide the 'Privacy & Cookies' hyperlink in the footer.
      * @return bool|null
     */
     public function getHidePrivacyAndCookies(): ?bool {
@@ -121,7 +121,7 @@ class LoginPageTextVisibilitySettings implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Gets the hideResetItNow property value. The hideResetItNow property
+     * Gets the hideResetItNow property value. Option to hide the self-service password reset (SSPR) 'reset it now' hyperlink on the sign-in form.
      * @return bool|null
     */
     public function getHideResetItNow(): ?bool {
@@ -133,7 +133,7 @@ class LoginPageTextVisibilitySettings implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Gets the hideTermsOfUse property value. The hideTermsOfUse property
+     * Gets the hideTermsOfUse property value. Option to hide the 'Terms of Use' hyperlink in the footer.
      * @return bool|null
     */
     public function getHideTermsOfUse(): ?bool {
@@ -188,7 +188,7 @@ class LoginPageTextVisibilitySettings implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Sets the hideAccountResetCredentials property value. The hideAccountResetCredentials property
+     * Sets the hideAccountResetCredentials property value. Option to hide the self-service password reset (SSPR) hyperlinks such as 'Can't access your account?', 'Forgot my password' and 'Reset it now' on the sign-in form.
      * @param bool|null $value Value to set for the hideAccountResetCredentials property.
     */
     public function setHideAccountResetCredentials(?bool $value): void {
@@ -196,7 +196,7 @@ class LoginPageTextVisibilitySettings implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Sets the hideCannotAccessYourAccount property value. The hideCannotAccessYourAccount property
+     * Sets the hideCannotAccessYourAccount property value. Option to hide the self-service password reset (SSPR) 'Can't access your account?' hyperlink on the sign-in form.
      * @param bool|null $value Value to set for the hideCannotAccessYourAccount property.
     */
     public function setHideCannotAccessYourAccount(?bool $value): void {
@@ -204,7 +204,7 @@ class LoginPageTextVisibilitySettings implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Sets the hideForgotMyPassword property value. The hideForgotMyPassword property
+     * Sets the hideForgotMyPassword property value. Option to hide the self-service password reset (SSPR) 'Forgot my password' hyperlink on the sign-in form.
      * @param bool|null $value Value to set for the hideForgotMyPassword property.
     */
     public function setHideForgotMyPassword(?bool $value): void {
@@ -212,7 +212,7 @@ class LoginPageTextVisibilitySettings implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Sets the hidePrivacyAndCookies property value. The hidePrivacyAndCookies property
+     * Sets the hidePrivacyAndCookies property value. Option to hide the 'Privacy & Cookies' hyperlink in the footer.
      * @param bool|null $value Value to set for the hidePrivacyAndCookies property.
     */
     public function setHidePrivacyAndCookies(?bool $value): void {
@@ -220,7 +220,7 @@ class LoginPageTextVisibilitySettings implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Sets the hideResetItNow property value. The hideResetItNow property
+     * Sets the hideResetItNow property value. Option to hide the self-service password reset (SSPR) 'reset it now' hyperlink on the sign-in form.
      * @param bool|null $value Value to set for the hideResetItNow property.
     */
     public function setHideResetItNow(?bool $value): void {
@@ -228,7 +228,7 @@ class LoginPageTextVisibilitySettings implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Sets the hideTermsOfUse property value. The hideTermsOfUse property
+     * Sets the hideTermsOfUse property value. Option to hide the 'Terms of Use' hyperlink in the footer.
      * @param bool|null $value Value to set for the hideTermsOfUse property.
     */
     public function setHideTermsOfUse(?bool $value): void {

@@ -38,7 +38,7 @@ class AccessPackageResourceRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
@@ -65,7 +65,7 @@ class AccessPackageResourceRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the requestType property value. The requestType property
+     * Gets the requestType property value. The type of the request. Use adminAdd to add a resource, if the caller is an administrator or resource owner, adminUpdate to update a resource, or adminRemove to remove a resource.
      * @return AccessPackageRequestType|null
     */
     public function getRequestType(): ?AccessPackageRequestType {
@@ -89,7 +89,7 @@ class AccessPackageResourceRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the state property value. The state property
+     * Gets the state property value. The outcome of whether the service was able to add the resource to the catalog.  The value is delivered if the resource was added or removed. Read-only.
      * @return AccessPackageRequestState|null
     */
     public function getState(): ?AccessPackageRequestState {
@@ -122,7 +122,7 @@ class AccessPackageResourceRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
@@ -130,7 +130,7 @@ class AccessPackageResourceRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the requestType property value. The requestType property
+     * Sets the requestType property value. The type of the request. Use adminAdd to add a resource, if the caller is an administrator or resource owner, adminUpdate to update a resource, or adminRemove to remove a resource.
      * @param AccessPackageRequestType|null $value Value to set for the requestType property.
     */
     public function setRequestType(?AccessPackageRequestType $value): void {
@@ -146,7 +146,7 @@ class AccessPackageResourceRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the state property value. The state property
+     * Sets the state property value. The outcome of whether the service was able to add the resource to the catalog.  The value is delivered if the resource was added or removed. Read-only.
      * @param AccessPackageRequestState|null $value Value to set for the state property.
     */
     public function setState(?AccessPackageRequestState $value): void {

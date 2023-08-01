@@ -53,7 +53,7 @@ class ScopesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get scopes from identityGovernance
+     * Read-only. Nullable. Supports $expand.
      * @param ScopesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -90,7 +90,7 @@ class ScopesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get scopes from identityGovernance
+     * Read-only. Nullable. Supports $expand.
      * @param ScopesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

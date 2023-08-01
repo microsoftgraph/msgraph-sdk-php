@@ -43,7 +43,7 @@ class AppManagementPolicyItemRequestBuilder extends BaseRequestBuilder
      * Delete an appManagementPolicy object.
      * @param AppManagementPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/appmanagementpolicy-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/appmanagementpolicy-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?AppManagementPolicyItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -62,7 +62,7 @@ class AppManagementPolicyItemRequestBuilder extends BaseRequestBuilder
      * Read the properties of an appManagementPolicy object.
      * @param AppManagementPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/appmanagementpolicy-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/appmanagementpolicy-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?AppManagementPolicyItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -82,7 +82,7 @@ class AppManagementPolicyItemRequestBuilder extends BaseRequestBuilder
      * @param AppManagementPolicy $body The request body
      * @param AppManagementPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/appmanagementpolicy-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/appmanagementpolicy-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(AppManagementPolicy $body, ?AppManagementPolicyItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

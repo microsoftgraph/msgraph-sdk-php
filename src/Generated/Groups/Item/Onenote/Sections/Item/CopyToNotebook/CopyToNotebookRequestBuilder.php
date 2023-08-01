@@ -36,7 +36,7 @@ class CopyToNotebookRequestBuilder extends BaseRequestBuilder
      * @param CopyToNotebookPostRequestBody $body The request body
      * @param CopyToNotebookRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/section-copytonotebook?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/section-copytonotebook?view=graph-rest-1.0 Find more info here
     */
     public function post(CopyToNotebookPostRequestBody $body, ?CopyToNotebookRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

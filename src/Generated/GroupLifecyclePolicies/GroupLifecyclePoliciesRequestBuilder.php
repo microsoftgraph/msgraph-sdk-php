@@ -56,7 +56,7 @@ class GroupLifecyclePoliciesRequestBuilder extends BaseRequestBuilder
      * List all the groupLifecyclePolicies.
      * @param GroupLifecyclePoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/grouplifecyclepolicy-list?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/grouplifecyclepolicy-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?GroupLifecyclePoliciesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,7 +76,7 @@ class GroupLifecyclePoliciesRequestBuilder extends BaseRequestBuilder
      * @param GroupLifecyclePolicy $body The request body
      * @param GroupLifecyclePoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/grouplifecyclepolicy-post-grouplifecyclepolicies?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/grouplifecyclepolicy-post-grouplifecyclepolicies?view=graph-rest-1.0 Find more info here
     */
     public function post(GroupLifecyclePolicy $body, ?GroupLifecyclePoliciesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

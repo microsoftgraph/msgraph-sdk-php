@@ -34,7 +34,7 @@ class ClearUserPreferredPresenceRequestBuilder extends BaseRequestBuilder
      * Clear the preferred availability and activity status for a user.
      * @param ClearUserPreferredPresenceRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/presence-clearuserpreferredpresence?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/presence-clearuserpreferredpresence?view=graph-rest-1.0 Find more info here
     */
     public function post(?ClearUserPreferredPresenceRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);

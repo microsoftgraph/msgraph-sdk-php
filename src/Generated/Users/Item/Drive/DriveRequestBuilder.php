@@ -35,7 +35,7 @@ class DriveRequestBuilder extends BaseRequestBuilder
      * Retrieve the properties and relationships of a Drive resource. A Drive is the top-level container for a file system, such as OneDrive or SharePoint document libraries.
      * @param DriveRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/drive-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/drive-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DriveRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

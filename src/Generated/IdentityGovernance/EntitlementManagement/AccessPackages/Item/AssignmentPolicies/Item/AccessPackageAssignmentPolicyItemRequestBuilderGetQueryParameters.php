@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Acc
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get assignmentPolicies from identityGovernance
+ * Read-only. Nullable. Supports $expand.
 */
 class AccessPackageAssignmentPolicyItemRequestBuilderGetQueryParameters 
 {

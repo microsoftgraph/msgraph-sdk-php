@@ -51,7 +51,7 @@ class ContactFolderItemRequestBuilder extends BaseRequestBuilder
      * Delete contactFolder other than the default contactFolder.
      * @param ContactFolderItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/contactfolder-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/contactfolder-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?ContactFolderItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -70,7 +70,7 @@ class ContactFolderItemRequestBuilder extends BaseRequestBuilder
      * Get a contact folder by using the contact folder ID. There are two scenarios where an app can get another user's contact folder:
      * @param ContactFolderItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/contactfolder-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/contactfolder-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ContactFolderItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -90,7 +90,7 @@ class ContactFolderItemRequestBuilder extends BaseRequestBuilder
      * @param ContactFolder $body The request body
      * @param ContactFolderItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/contactfolder-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/contactfolder-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(ContactFolder $body, ?ContactFolderItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

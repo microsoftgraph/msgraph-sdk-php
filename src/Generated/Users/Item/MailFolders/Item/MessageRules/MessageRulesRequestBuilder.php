@@ -56,7 +56,7 @@ class MessageRulesRequestBuilder extends BaseRequestBuilder
      * Get all the messageRule objects defined for the user's inbox.
      * @param MessageRulesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/mailfolder-list-messagerules?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/mailfolder-list-messagerules?view=graph-rest-1.0 Find more info here
     */
     public function get(?MessageRulesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,7 +76,7 @@ class MessageRulesRequestBuilder extends BaseRequestBuilder
      * @param MessageRule $body The request body
      * @param MessageRulesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/mailfolder-post-messagerules?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/mailfolder-post-messagerules?view=graph-rest-1.0 Find more info here
     */
     public function post(MessageRule $body, ?MessageRulesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

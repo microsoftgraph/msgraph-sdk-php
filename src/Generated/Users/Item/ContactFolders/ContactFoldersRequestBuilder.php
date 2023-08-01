@@ -64,7 +64,7 @@ class ContactFoldersRequestBuilder extends BaseRequestBuilder
      * Get the contact folder collection in the default Contacts folder of the signed-in user.
      * @param ContactFoldersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/user-list-contactfolders?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/user-list-contactfolders?view=graph-rest-1.0 Find more info here
     */
     public function get(?ContactFoldersRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -84,7 +84,7 @@ class ContactFoldersRequestBuilder extends BaseRequestBuilder
      * @param ContactFolder $body The request body
      * @param ContactFoldersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/user-post-contactfolders?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/user-post-contactfolders?view=graph-rest-1.0 Find more info here
     */
     public function post(ContactFolder $body, ?ContactFoldersRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

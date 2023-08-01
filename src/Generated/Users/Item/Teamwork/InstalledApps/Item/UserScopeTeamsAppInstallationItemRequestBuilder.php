@@ -59,7 +59,7 @@ class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder
      * Uninstall an app from the personal scope of the specified user.
      * @param UserScopeTeamsAppInstallationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/userteamwork-delete-installedapps?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/userteamwork-delete-installedapps?view=graph-rest-1.0 Find more info here
     */
     public function delete(?UserScopeTeamsAppInstallationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -78,7 +78,7 @@ class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder
      * Retrieve the app installed in the personal scope of the specified user.
      * @param UserScopeTeamsAppInstallationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/userteamwork-get-installedapps?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/userteamwork-get-installedapps?view=graph-rest-1.0 Find more info here
     */
     public function get(?UserScopeTeamsAppInstallationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

@@ -69,7 +69,7 @@ class CrossTenantAccessPolicyRequestBuilder extends BaseRequestBuilder
      * Read the properties and relationships of a crossTenantAccessPolicy object.
      * @param CrossTenantAccessPolicyRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/crosstenantaccesspolicy-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/crosstenantaccesspolicy-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?CrossTenantAccessPolicyRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -89,7 +89,7 @@ class CrossTenantAccessPolicyRequestBuilder extends BaseRequestBuilder
      * @param CrossTenantAccessPolicy $body The request body
      * @param CrossTenantAccessPolicyRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/crosstenantaccesspolicy-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/crosstenantaccesspolicy-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(CrossTenantAccessPolicy $body, ?CrossTenantAccessPolicyRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

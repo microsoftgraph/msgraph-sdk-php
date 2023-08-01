@@ -69,7 +69,7 @@ class PrintTaskItemRequestBuilder extends BaseRequestBuilder
      * Get details about a print task. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      * @param PrintTaskItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/printtask-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/printtask-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?PrintTaskItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -89,7 +89,7 @@ class PrintTaskItemRequestBuilder extends BaseRequestBuilder
      * @param PrintTask $body The request body
      * @param PrintTaskItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/printtaskdefinition-update-task?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/printtaskdefinition-update-task?view=graph-rest-1.0 Find more info here
     */
     public function patch(PrintTask $body, ?PrintTaskItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

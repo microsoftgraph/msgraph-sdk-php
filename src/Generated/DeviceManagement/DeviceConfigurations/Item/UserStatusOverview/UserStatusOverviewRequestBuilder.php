@@ -53,7 +53,7 @@ class UserStatusOverviewRequestBuilder extends BaseRequestBuilder
      * Read properties and relationships of the deviceConfigurationUserOverview object.
      * @param UserStatusOverviewRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationuseroverview-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationuseroverview-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?UserStatusOverviewRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -73,7 +73,7 @@ class UserStatusOverviewRequestBuilder extends BaseRequestBuilder
      * @param DeviceConfigurationUserOverview $body The request body
      * @param UserStatusOverviewRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationuseroverview-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationuseroverview-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(DeviceConfigurationUserOverview $body, ?UserStatusOverviewRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

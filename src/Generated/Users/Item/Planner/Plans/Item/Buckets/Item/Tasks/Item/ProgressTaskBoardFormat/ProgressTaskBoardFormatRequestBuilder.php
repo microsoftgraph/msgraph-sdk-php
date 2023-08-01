@@ -50,10 +50,10 @@ class ProgressTaskBoardFormatRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of **plannerProgressTaskBoardTaskFormat** object.
+     * Retrieve the properties and relationships of plannerProgressTaskBoardTaskFormat object.
      * @param ProgressTaskBoardFormatRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/plannerprogresstaskboardtaskformat-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/plannerprogresstaskboardtaskformat-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ProgressTaskBoardFormatRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -73,7 +73,7 @@ class ProgressTaskBoardFormatRequestBuilder extends BaseRequestBuilder
      * @param PlannerProgressTaskBoardTaskFormat $body The request body
      * @param ProgressTaskBoardFormatRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/plannerprogresstaskboardtaskformat-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/plannerprogresstaskboardtaskformat-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(PlannerProgressTaskBoardTaskFormat $body, ?ProgressTaskBoardFormatRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -106,7 +106,7 @@ class ProgressTaskBoardFormatRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of **plannerProgressTaskBoardTaskFormat** object.
+     * Retrieve the properties and relationships of plannerProgressTaskBoardTaskFormat object.
      * @param ProgressTaskBoardFormatRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

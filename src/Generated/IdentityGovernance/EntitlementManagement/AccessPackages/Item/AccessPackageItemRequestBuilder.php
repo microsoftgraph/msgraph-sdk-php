@@ -88,10 +88,10 @@ class AccessPackageItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an accessPackage object. You cannot delete an access package if it has any **accessPackageAssignment**.
+     * Delete an accessPackage object. You cannot delete an access package if it has any accessPackageAssignment.
      * @param AccessPackageItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/accesspackage-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/accesspackage-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?AccessPackageItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -107,10 +107,10 @@ class AccessPackageItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of an accessPackage object.
+     * Retrieve an access package with a list of accessPackageResourceRoleScope objects. These objects represent the resource roles that an access package assigns to each subject. Each object links to an accessPackageResourceRole and an accessPackageResourceScope.
      * @param AccessPackageItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/accesspackage-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/accesspackage-list-resourcerolescopes?view=graph-rest-1.0 Find more info here
     */
     public function get(?AccessPackageItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -130,7 +130,7 @@ class AccessPackageItemRequestBuilder extends BaseRequestBuilder
      * @param AccessPackage $body The request body
      * @param AccessPackageItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/accesspackage-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/accesspackage-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(AccessPackage $body, ?AccessPackageItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -146,7 +146,7 @@ class AccessPackageItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an accessPackage object. You cannot delete an access package if it has any **accessPackageAssignment**.
+     * Delete an accessPackage object. You cannot delete an access package if it has any accessPackageAssignment.
      * @param AccessPackageItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -163,7 +163,7 @@ class AccessPackageItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of an accessPackage object.
+     * Retrieve an access package with a list of accessPackageResourceRoleScope objects. These objects represent the resource roles that an access package assigns to each subject. Each object links to an accessPackageResourceRole and an accessPackageResourceScope.
      * @param AccessPackageItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

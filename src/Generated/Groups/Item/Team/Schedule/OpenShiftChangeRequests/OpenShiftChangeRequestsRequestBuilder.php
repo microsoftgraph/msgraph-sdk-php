@@ -56,7 +56,7 @@ class OpenShiftChangeRequestsRequestBuilder extends BaseRequestBuilder
      * Retrieve a list of openShiftChangeRequest objects in a team.
      * @param OpenShiftChangeRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/openshiftchangerequest-list?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/openshiftchangerequest-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?OpenShiftChangeRequestsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,7 +76,7 @@ class OpenShiftChangeRequestsRequestBuilder extends BaseRequestBuilder
      * @param OpenShiftChangeRequest $body The request body
      * @param OpenShiftChangeRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/openshiftchangerequest-post?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/openshiftchangerequest-post?view=graph-rest-1.0 Find more info here
     */
     public function post(OpenShiftChangeRequest $body, ?OpenShiftChangeRequestsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

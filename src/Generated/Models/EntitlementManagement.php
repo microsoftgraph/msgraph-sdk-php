@@ -146,7 +146,7 @@ class EntitlementManagement extends Entity implements Parsable
     }
 
     /**
-     * Gets the resourceEnvironments property value. The resourceEnvironments property
+     * Gets the resourceEnvironments property value. A reference to the geolocation environments in which a resource is located.
      * @return array<AccessPackageResourceEnvironment>|null
     */
     public function getResourceEnvironments(): ?array {
@@ -160,7 +160,7 @@ class EntitlementManagement extends Entity implements Parsable
     }
 
     /**
-     * Gets the resourceRequests property value. The resourceRequests property
+     * Gets the resourceRequests property value. Represents a request to add or remove a resource to or from a catalog respectively.
      * @return array<AccessPackageResourceRequest>|null
     */
     public function getResourceRequests(): ?array {
@@ -188,7 +188,7 @@ class EntitlementManagement extends Entity implements Parsable
     }
 
     /**
-     * Gets the resources property value. The resources property
+     * Gets the resources property value. The resources associated with the catalogs.
      * @return array<AccessPackageResource>|null
     */
     public function getResources(): ?array {
@@ -290,7 +290,7 @@ class EntitlementManagement extends Entity implements Parsable
     }
 
     /**
-     * Sets the resourceEnvironments property value. The resourceEnvironments property
+     * Sets the resourceEnvironments property value. A reference to the geolocation environments in which a resource is located.
      * @param array<AccessPackageResourceEnvironment>|null $value Value to set for the resourceEnvironments property.
     */
     public function setResourceEnvironments(?array $value): void {
@@ -298,7 +298,7 @@ class EntitlementManagement extends Entity implements Parsable
     }
 
     /**
-     * Sets the resourceRequests property value. The resourceRequests property
+     * Sets the resourceRequests property value. Represents a request to add or remove a resource to or from a catalog respectively.
      * @param array<AccessPackageResourceRequest>|null $value Value to set for the resourceRequests property.
     */
     public function setResourceRequests(?array $value): void {
@@ -314,7 +314,7 @@ class EntitlementManagement extends Entity implements Parsable
     }
 
     /**
-     * Sets the resources property value. The resources property
+     * Sets the resources property value. The resources associated with the catalogs.
      * @param array<AccessPackageResource>|null $value Value to set for the resources property.
     */
     public function setResources(?array $value): void {

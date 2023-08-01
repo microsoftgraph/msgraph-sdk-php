@@ -32,11 +32,11 @@ class RedirectRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Redirect a print job to a different printer. Redirecting a print job will only succeed if there is a printTask in a `processing` state on the associated print job, started by a trigger that the requesting app created.  For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
+     * Redirect a print job to a different printer. Redirecting a print job will only succeed if there is a printTask in a processing state on the associated print job, started by a trigger that the requesting app created.  For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      * @param RedirectPostRequestBody $body The request body
      * @param RedirectRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/printjob-redirect?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/printjob-redirect?view=graph-rest-1.0 Find more info here
     */
     public function post(RedirectPostRequestBody $body, ?RedirectRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -52,7 +52,7 @@ class RedirectRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Redirect a print job to a different printer. Redirecting a print job will only succeed if there is a printTask in a `processing` state on the associated print job, started by a trigger that the requesting app created.  For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
+     * Redirect a print job to a different printer. Redirecting a print job will only succeed if there is a printTask in a processing state on the associated print job, started by a trigger that the requesting app created.  For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      * @param RedirectPostRequestBody $body The request body
      * @param RedirectRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

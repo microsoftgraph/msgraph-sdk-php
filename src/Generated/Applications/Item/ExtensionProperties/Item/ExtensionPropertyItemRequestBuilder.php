@@ -35,7 +35,7 @@ class ExtensionPropertyItemRequestBuilder extends BaseRequestBuilder
      * Delete a directory extension definition represented by an extensionProperty object. You can delete only directory extensions that aren't synced from on-premises active directory (AD).
      * @param ExtensionPropertyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/extensionproperty-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/extensionproperty-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?ExtensionPropertyItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -54,7 +54,7 @@ class ExtensionPropertyItemRequestBuilder extends BaseRequestBuilder
      * Read a directory extension definition represented by an extensionProperty object.
      * @param ExtensionPropertyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/extensionproperty-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/extensionproperty-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ExtensionPropertyItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

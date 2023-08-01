@@ -72,7 +72,7 @@ class RiskyServicePrincipalsRequestBuilder extends BaseRequestBuilder
      * Retrieve the properties and relationships of riskyServicePrincipal objects.
      * @param RiskyServicePrincipalsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/identityprotectionroot-list-riskyserviceprincipals?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/identityprotectionroot-list-riskyserviceprincipals?view=graph-rest-1.0 Find more info here
     */
     public function get(?RiskyServicePrincipalsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

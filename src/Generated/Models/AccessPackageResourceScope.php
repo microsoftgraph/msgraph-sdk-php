@@ -25,7 +25,7 @@ class AccessPackageResourceScope extends Entity implements Parsable
     }
 
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. The description of the scope.
      * @return string|null
     */
     public function getDescription(): ?string {
@@ -37,7 +37,7 @@ class AccessPackageResourceScope extends Entity implements Parsable
     }
 
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name of the scope.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -65,7 +65,7 @@ class AccessPackageResourceScope extends Entity implements Parsable
     }
 
     /**
-     * Gets the isRootScope property value. The isRootScope property
+     * Gets the isRootScope property value. True if the scopes are arranged in a hierarchy and this is the top or root scope of the resource.
      * @return bool|null
     */
     public function getIsRootScope(): ?bool {
@@ -77,7 +77,7 @@ class AccessPackageResourceScope extends Entity implements Parsable
     }
 
     /**
-     * Gets the originId property value. The originId property
+     * Gets the originId property value. The unique identifier for the scope in the resource as defined in the origin system.
      * @return string|null
     */
     public function getOriginId(): ?string {
@@ -89,7 +89,7 @@ class AccessPackageResourceScope extends Entity implements Parsable
     }
 
     /**
-     * Gets the originSystem property value. The originSystem property
+     * Gets the originSystem property value. The origin system for the scope.
      * @return string|null
     */
     public function getOriginSystem(): ?string {
@@ -127,7 +127,7 @@ class AccessPackageResourceScope extends Entity implements Parsable
     }
 
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. The description of the scope.
      * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
@@ -135,7 +135,7 @@ class AccessPackageResourceScope extends Entity implements Parsable
     }
 
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name of the scope.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -143,7 +143,7 @@ class AccessPackageResourceScope extends Entity implements Parsable
     }
 
     /**
-     * Sets the isRootScope property value. The isRootScope property
+     * Sets the isRootScope property value. True if the scopes are arranged in a hierarchy and this is the top or root scope of the resource.
      * @param bool|null $value Value to set for the isRootScope property.
     */
     public function setIsRootScope(?bool $value): void {
@@ -151,7 +151,7 @@ class AccessPackageResourceScope extends Entity implements Parsable
     }
 
     /**
-     * Sets the originId property value. The originId property
+     * Sets the originId property value. The unique identifier for the scope in the resource as defined in the origin system.
      * @param string|null $value Value to set for the originId property.
     */
     public function setOriginId(?string $value): void {
@@ -159,7 +159,7 @@ class AccessPackageResourceScope extends Entity implements Parsable
     }
 
     /**
-     * Sets the originSystem property value. The originSystem property
+     * Sets the originSystem property value. The origin system for the scope.
      * @param string|null $value Value to set for the originSystem property.
     */
     public function setOriginSystem(?string $value): void {

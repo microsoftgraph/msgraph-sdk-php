@@ -53,7 +53,7 @@ class ReputationRequestBuilder extends BaseRequestBuilder
      * Get the properties and relationships of a hostReputation object.
      * @param ReputationRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/security-host-get-reputation?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/security-host-get-reputation?view=graph-rest-1.0 Find more info here
     */
     public function get(?ReputationRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

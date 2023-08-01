@@ -64,7 +64,7 @@ class AssignmentCategoriesRequestBuilder extends BaseRequestBuilder
      * Retrieve a list of educationCategory objects. Only teachers can perform this operation.
      * @param AssignmentCategoriesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/educationclass-list-categories?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/educationclass-list-categories?view=graph-rest-1.0 Find more info here
     */
     public function get(?AssignmentCategoriesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -84,7 +84,7 @@ class AssignmentCategoriesRequestBuilder extends BaseRequestBuilder
      * @param EducationCategory $body The request body
      * @param AssignmentCategoriesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/educationclass-post-category?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/educationclass-post-category?view=graph-rest-1.0 Find more info here
     */
     public function post(EducationCategory $body, ?AssignmentCategoriesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

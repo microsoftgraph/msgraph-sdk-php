@@ -32,7 +32,7 @@ class AccessPackageRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Access package containing this policy. Read-only.
+     * Access package containing this policy. Read-only.  Supports $expand.
      * @param AccessPackageRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -50,7 +50,7 @@ class AccessPackageRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Access package containing this policy. Read-only.
+     * Access package containing this policy. Read-only.  Supports $expand.
      * @param AccessPackageRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

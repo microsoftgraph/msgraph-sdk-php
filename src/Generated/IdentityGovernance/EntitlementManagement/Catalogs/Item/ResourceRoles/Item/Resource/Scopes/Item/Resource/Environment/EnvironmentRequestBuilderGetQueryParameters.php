@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Cat
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get environment from identityGovernance
+ * Contains the environment information for the resource. This can be set using either the @odata.bind annotation or the environment's originId.Supports $expand.
 */
 class EnvironmentRequestBuilderGetQueryParameters 
 {

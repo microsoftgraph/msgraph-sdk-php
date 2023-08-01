@@ -96,7 +96,7 @@ class InternalSponsorsRequestBuilder extends BaseRequestBuilder
      * Retrieve a list of a connectedOrganization's internal sponsors.  The internal sponsors are a set of users who can approve requests on behalf of other users from that connected organization.
      * @param InternalSponsorsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/connectedorganization-list-internalsponsors?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/connectedorganization-list-internalsponsors?view=graph-rest-1.0 Find more info here
     */
     public function get(?InternalSponsorsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -116,7 +116,7 @@ class InternalSponsorsRequestBuilder extends BaseRequestBuilder
      * @param DirectoryObject $body The request body
      * @param InternalSponsorsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/connectedorganization-post-internalsponsors?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/connectedorganization-post-internalsponsors?view=graph-rest-1.0 Find more info here
     */
     public function post(DirectoryObject $body, ?InternalSponsorsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

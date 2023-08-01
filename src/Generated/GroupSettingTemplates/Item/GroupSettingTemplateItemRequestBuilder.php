@@ -93,7 +93,7 @@ class GroupSettingTemplateItemRequestBuilder extends BaseRequestBuilder
      * A group setting template represents a template of settings from which settings may be created within a tenant. This operation allows retrieval of the properties of the groupSettingTemplate object, including the available settings and their defaults.
      * @param GroupSettingTemplateItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/groupsettingtemplate-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/groupsettingtemplate-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?GroupSettingTemplateItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

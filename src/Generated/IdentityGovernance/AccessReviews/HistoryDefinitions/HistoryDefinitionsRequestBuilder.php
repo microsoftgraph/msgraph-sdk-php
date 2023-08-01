@@ -56,7 +56,7 @@ class HistoryDefinitionsRequestBuilder extends BaseRequestBuilder
      * Retrieve the accessReviewHistoryDefinition objects created in the last 30 days, including all nested properties.
      * @param HistoryDefinitionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/accessreviewset-list-historydefinitions?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/accessreviewset-list-historydefinitions?view=graph-rest-1.0 Find more info here
     */
     public function get(?HistoryDefinitionsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,7 +76,7 @@ class HistoryDefinitionsRequestBuilder extends BaseRequestBuilder
      * @param AccessReviewHistoryDefinition $body The request body
      * @param HistoryDefinitionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/accessreviewset-post-historydefinitions?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/accessreviewset-post-historydefinitions?view=graph-rest-1.0 Find more info here
     */
     public function post(AccessReviewHistoryDefinition $body, ?HistoryDefinitionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

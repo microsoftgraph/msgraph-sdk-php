@@ -52,10 +52,10 @@ class RecoveryKeysRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the bitlockerRecoveryKey objects and their properties.  This operation does not return the **key** property. For information about how to read the **key** property, see Get bitlockerRecoveryKey.
+     * Get a list of the bitlockerRecoveryKey objects and their properties.  This operation does not return the key property. For information about how to read the key property, see Get bitlockerRecoveryKey.
      * @param RecoveryKeysRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/bitlocker-list-recoverykeys?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/bitlocker-list-recoverykeys?view=graph-rest-1.0 Find more info here
     */
     public function get(?RecoveryKeysRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -71,7 +71,7 @@ class RecoveryKeysRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the bitlockerRecoveryKey objects and their properties.  This operation does not return the **key** property. For information about how to read the **key** property, see Get bitlockerRecoveryKey.
+     * Get a list of the bitlockerRecoveryKey objects and their properties.  This operation does not return the key property. For information about how to read the key property, see Get bitlockerRecoveryKey.
      * @param RecoveryKeysRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

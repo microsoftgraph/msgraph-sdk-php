@@ -181,7 +181,7 @@ class Permission extends Entity implements Parsable
     }
 
     /**
-     * Gets the shareId property value. A unique token that can be used to access this shared item via the **shares** API. Read-only.
+     * Gets the shareId property value. A unique token that can be used to access this shared item via the shares API. Read-only.
      * @return string|null
     */
     public function getShareId(): ?string {
@@ -292,7 +292,7 @@ class Permission extends Entity implements Parsable
     }
 
     /**
-     * Sets the shareId property value. A unique token that can be used to access this shared item via the **shares** API. Read-only.
+     * Sets the shareId property value. A unique token that can be used to access this shared item via the shares API. Read-only.
      * @param string|null $value Value to set for the shareId property.
     */
     public function setShareId(?string $value): void {

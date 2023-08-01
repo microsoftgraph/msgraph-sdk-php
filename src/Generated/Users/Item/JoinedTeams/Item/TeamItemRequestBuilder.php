@@ -17,6 +17,7 @@ use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\IncomingChannels\Incom
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\InstalledApps\InstalledAppsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Members\MembersRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Operations\OperationsRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PermissionGrants\PermissionGrantsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Photo\PhotoRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\PrimaryChannelRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule\ScheduleRequestBuilder;
@@ -102,6 +103,13 @@ class TeamItemRequestBuilder extends BaseRequestBuilder
     */
     public function operations(): OperationsRequestBuilder {
         return new OperationsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the permissionGrants property of the microsoft.graph.team entity.
+    */
+    public function permissionGrants(): PermissionGrantsRequestBuilder {
+        return new PermissionGrantsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

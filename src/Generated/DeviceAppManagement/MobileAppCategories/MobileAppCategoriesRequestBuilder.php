@@ -56,7 +56,7 @@ class MobileAppCategoriesRequestBuilder extends BaseRequestBuilder
      * List properties and relationships of the mobileAppCategory objects.
      * @param MobileAppCategoriesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-apps-mobileappcategory-list?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-apps-mobileappcategory-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?MobileAppCategoriesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,7 +76,7 @@ class MobileAppCategoriesRequestBuilder extends BaseRequestBuilder
      * @param MobileAppCategory $body The request body
      * @param MobileAppCategoriesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-apps-mobileappcategory-create?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-apps-mobileappcategory-create?view=graph-rest-1.0 Find more info here
     */
     public function post(MobileAppCategory $body, ?MobileAppCategoriesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

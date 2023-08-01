@@ -56,7 +56,7 @@ class TabsRequestBuilder extends BaseRequestBuilder
      * Retrieve the list of tabs in the specified channel within a team. 
      * @param TabsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/channel-list-tabs?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/channel-list-tabs?view=graph-rest-1.0 Find more info here
     */
     public function get(?TabsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,7 +76,7 @@ class TabsRequestBuilder extends BaseRequestBuilder
      * @param TeamsTab $body The request body
      * @param TabsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/channel-post-tabs?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/channel-post-tabs?view=graph-rest-1.0 Find more info here
     */
     public function post(TeamsTab $body, ?TabsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

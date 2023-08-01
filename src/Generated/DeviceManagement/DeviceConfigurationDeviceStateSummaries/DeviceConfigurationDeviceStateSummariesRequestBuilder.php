@@ -53,7 +53,7 @@ class DeviceConfigurationDeviceStateSummariesRequestBuilder extends BaseRequestB
      * Read properties and relationships of the deviceConfigurationDeviceStateSummary object.
      * @param DeviceConfigurationDeviceStateSummariesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationdevicestatesummary-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationdevicestatesummary-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DeviceConfigurationDeviceStateSummariesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -73,7 +73,7 @@ class DeviceConfigurationDeviceStateSummariesRequestBuilder extends BaseRequestB
      * @param DeviceConfigurationDeviceStateSummary $body The request body
      * @param DeviceConfigurationDeviceStateSummariesRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationdevicestatesummary-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationdevicestatesummary-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(DeviceConfigurationDeviceStateSummary $body, ?DeviceConfigurationDeviceStateSummariesRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

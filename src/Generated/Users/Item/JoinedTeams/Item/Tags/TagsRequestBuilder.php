@@ -56,7 +56,7 @@ class TagsRequestBuilder extends BaseRequestBuilder
      * Get a list of the tag objects and their properties.
      * @param TagsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/teamworktag-list?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/teamworktag-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?TagsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,7 +76,7 @@ class TagsRequestBuilder extends BaseRequestBuilder
      * @param TeamworkTag $body The request body
      * @param TagsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/teamworktag-post?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/teamworktag-post?view=graph-rest-1.0 Find more info here
     */
     public function post(TeamworkTag $body, ?TagsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

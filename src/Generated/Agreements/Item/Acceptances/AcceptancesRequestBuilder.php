@@ -56,7 +56,7 @@ class AcceptancesRequestBuilder extends BaseRequestBuilder
      * Get the details about the acceptance records for a specific agreement.
      * @param AcceptancesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/agreement-list-acceptances?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/agreement-list-acceptances?view=graph-rest-1.0 Find more info here
     */
     public function get(?AcceptancesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

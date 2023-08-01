@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Acc
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get scopes from identityGovernance
+ * Read-only. Nullable. Supports $expand.
 */
 class ScopesRequestBuilderGetQueryParameters 
 {

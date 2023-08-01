@@ -56,7 +56,7 @@ class LearningProvidersRequestBuilder extends BaseRequestBuilder
      * Get a list of the learningProvider resources registered in Viva Learning for a tenant.
      * @param LearningProvidersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/employeeexperience-list-learningproviders?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/employeeexperience-list-learningproviders?view=graph-rest-1.0 Find more info here
     */
     public function get(?LearningProvidersRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,7 +76,7 @@ class LearningProvidersRequestBuilder extends BaseRequestBuilder
      * @param LearningProvider $body The request body
      * @param LearningProvidersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/employeeexperience-post-learningproviders?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/employeeexperience-post-learningproviders?view=graph-rest-1.0 Find more info here
     */
     public function post(LearningProvider $body, ?LearningProvidersRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

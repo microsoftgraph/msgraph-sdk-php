@@ -9,8 +9,10 @@ use Microsoft\Graph\Generated\Models\ChatMessage;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Users\Item\Chats\Item\Messages\Item\HostedContents\HostedContentsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Chats\Item\Messages\Item\Replies\RepliesRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Chats\Item\Messages\Item\SetReaction\SetReactionRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Chats\Item\Messages\Item\SoftDelete\SoftDeleteRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Chats\Item\Messages\Item\UndoSoftDelete\UndoSoftDeleteRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Chats\Item\Messages\Item\UnsetReaction\UnsetReactionRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -36,6 +38,13 @@ class ChatMessageItemRequestBuilder extends BaseRequestBuilder
     }
     
     /**
+     * Provides operations to call the setReaction method.
+    */
+    public function setReaction(): SetReactionRequestBuilder {
+        return new SetReactionRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to call the softDelete method.
     */
     public function softDelete(): SoftDeleteRequestBuilder {
@@ -47,6 +56,13 @@ class ChatMessageItemRequestBuilder extends BaseRequestBuilder
     */
     public function undoSoftDelete(): UndoSoftDeleteRequestBuilder {
         return new UndoSoftDeleteRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the unsetReaction method.
+    */
+    public function unsetReaction(): UnsetReactionRequestBuilder {
+        return new UnsetReactionRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -85,7 +101,7 @@ class ChatMessageItemRequestBuilder extends BaseRequestBuilder
      * Retrieve a single message or a message reply in a channel or a chat.
      * @param ChatMessageItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/chatmessage-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/chatmessage-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ChatMessageItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

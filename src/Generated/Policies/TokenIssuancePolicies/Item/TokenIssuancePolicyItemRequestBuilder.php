@@ -43,7 +43,7 @@ class TokenIssuancePolicyItemRequestBuilder extends BaseRequestBuilder
      * Delete a tokenIssuancePolicy object.
      * @param TokenIssuancePolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/tokenissuancepolicy-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/tokenissuancepolicy-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?TokenIssuancePolicyItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -81,7 +81,7 @@ class TokenIssuancePolicyItemRequestBuilder extends BaseRequestBuilder
      * @param TokenIssuancePolicy $body The request body
      * @param TokenIssuancePolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/tokenissuancepolicy-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/tokenissuancepolicy-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(TokenIssuancePolicy $body, ?TokenIssuancePolicyItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

@@ -53,9 +53,10 @@ class AudioRoutingGroupsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get audioRoutingGroups from communications
+     * Retrieve a list of audioRoutingGroup objects.
      * @param AudioRoutingGroupsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://learn.microsoft.com/graph/api/call-list-audioroutinggroups?view=graph-rest-1.0 Find more info here
     */
     public function get(?AudioRoutingGroupsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -71,10 +72,11 @@ class AudioRoutingGroupsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to audioRoutingGroups for communications
+     * Create a new audioRoutingGroup.
      * @param AudioRoutingGroup $body The request body
      * @param AudioRoutingGroupsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://learn.microsoft.com/graph/api/call-post-audioroutinggroups?view=graph-rest-1.0 Find more info here
     */
     public function post(AudioRoutingGroup $body, ?AudioRoutingGroupsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -90,7 +92,7 @@ class AudioRoutingGroupsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get audioRoutingGroups from communications
+     * Retrieve a list of audioRoutingGroup objects.
      * @param AudioRoutingGroupsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -111,7 +113,7 @@ class AudioRoutingGroupsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to audioRoutingGroups for communications
+     * Create a new audioRoutingGroup.
      * @param AudioRoutingGroup $body The request body
      * @param AudioRoutingGroupsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -35,7 +35,7 @@ class SetUpResourcesFolderRequestBuilder extends BaseRequestBuilder
      * Create a SharePoint folder to upload files for a given educationAssignment. Only teachers can perform this operation. The teacher determines the resources to upload in the assignment's folder. 
      * @param SetUpResourcesFolderRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/educationassignment-setupresourcesfolder?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/educationassignment-setupresourcesfolder?view=graph-rest-1.0 Find more info here
     */
     public function post(?SetUpResourcesFolderRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);

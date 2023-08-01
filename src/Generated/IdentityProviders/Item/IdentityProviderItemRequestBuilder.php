@@ -35,7 +35,7 @@ class IdentityProviderItemRequestBuilder extends BaseRequestBuilder
      * Delete an existing identityProvider.
      * @param IdentityProviderItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/identityprovider-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/identityprovider-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?IdentityProviderItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -54,7 +54,7 @@ class IdentityProviderItemRequestBuilder extends BaseRequestBuilder
      * Retrieve the properties of an existing identityProvider.
      * @param IdentityProviderItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/identityprovider-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/identityprovider-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?IdentityProviderItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -74,7 +74,7 @@ class IdentityProviderItemRequestBuilder extends BaseRequestBuilder
      * @param IdentityProvider $body The request body
      * @param IdentityProviderItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/identityprovider-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/identityprovider-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(IdentityProvider $body, ?IdentityProviderItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

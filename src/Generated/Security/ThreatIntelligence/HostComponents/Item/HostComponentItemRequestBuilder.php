@@ -61,7 +61,7 @@ class HostComponentItemRequestBuilder extends BaseRequestBuilder
      * Read the properties and relationships of a hostComponent object.
      * @param HostComponentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/security-hostcomponent-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/security-hostcomponent-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?HostComponentItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

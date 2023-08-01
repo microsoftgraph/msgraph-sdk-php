@@ -56,7 +56,7 @@ class ThreatAssessmentRequestsRequestBuilder extends BaseRequestBuilder
      * Retrieve a list of threatAssessmentRequest objects. A threat assessment request can be one of the following types:
      * @param ThreatAssessmentRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/informationprotection-list-threatassessmentrequests?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/informationprotection-list-threatassessmentrequests?view=graph-rest-1.0 Find more info here
     */
     public function get(?ThreatAssessmentRequestsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,7 +76,7 @@ class ThreatAssessmentRequestsRequestBuilder extends BaseRequestBuilder
      * @param ThreatAssessmentRequest $body The request body
      * @param ThreatAssessmentRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/informationprotection-post-threatassessmentrequests?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/informationprotection-post-threatassessmentrequests?view=graph-rest-1.0 Find more info here
     */
     public function post(ThreatAssessmentRequest $body, ?ThreatAssessmentRequestsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

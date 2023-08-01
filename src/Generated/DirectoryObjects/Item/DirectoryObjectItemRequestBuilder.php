@@ -75,7 +75,7 @@ class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder
      * Delete a directory object, for example, a group, user, application, or service principal.
      * @param DirectoryObjectItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/directoryobject-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/directoryobject-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?DirectoryObjectItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -94,7 +94,7 @@ class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder
      * Retrieve the properties and relationships of a directoryObject object.
      * @param DirectoryObjectItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/directoryobject-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/directoryobject-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DirectoryObjectItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

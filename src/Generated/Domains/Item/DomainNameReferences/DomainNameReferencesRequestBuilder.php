@@ -55,7 +55,7 @@ class DomainNameReferencesRequestBuilder extends BaseRequestBuilder
      * Retrieve a list of directoryObject with a reference to the domain. The returned list will contain all directory objects that have a dependency on the domain.
      * @param DomainNameReferencesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/domain-list-domainnamereferences?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/domain-list-domainnamereferences?view=graph-rest-1.0 Find more info here
     */
     public function get(?DomainNameReferencesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

@@ -66,7 +66,7 @@ class UserConsentRequestsRequestBuilder extends BaseRequestBuilder
      * Retrieve a collection of userConsentRequest objects and their properties.
      * @param UserConsentRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/appconsentrequest-list-userconsentrequests?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/appconsentrequest-list-userconsentrequests?view=graph-rest-1.0 Find more info here
     */
     public function get(?UserConsentRequestsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

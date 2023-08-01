@@ -35,7 +35,7 @@ class EducationOutcomeItemRequestBuilder extends BaseRequestBuilder
      * Delete a feedback resource from a submission. This can only be done by a teacher.
      * @param EducationOutcomeItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/educationfeedbackresourceoutcome-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/educationfeedbackresourceoutcome-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?EducationOutcomeItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -73,7 +73,7 @@ class EducationOutcomeItemRequestBuilder extends BaseRequestBuilder
      * @param EducationOutcome $body The request body
      * @param EducationOutcomeItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/educationoutcome-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/educationoutcome-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(EducationOutcome $body, ?EducationOutcomeItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

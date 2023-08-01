@@ -32,10 +32,10 @@ class AdministrativeUnitRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of **administrativeUnits** associated with an educationSchool object.
+     * Get a list of administrativeUnits associated with an educationSchool object.
      * @param AdministrativeUnitRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/educationschool-list-administrativeunit?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/educationschool-list-administrativeunit?view=graph-rest-1.0 Find more info here
     */
     public function get(?AdministrativeUnitRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -70,7 +70,7 @@ class AdministrativeUnitRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of **administrativeUnits** associated with an educationSchool object.
+     * Get a list of administrativeUnits associated with an educationSchool object.
      * @param AdministrativeUnitRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -31,11 +31,11 @@ class MarkReadRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Mark a list of serviceUpdateMessages as **read** for the signed in user.
+     * Mark a list of serviceUpdateMessages as read for the signed in user.
      * @param MarkReadPostRequestBody $body The request body
      * @param MarkReadRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/serviceupdatemessage-markread?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/serviceupdatemessage-markread?view=graph-rest-1.0 Find more info here
     */
     public function post(MarkReadPostRequestBody $body, ?MarkReadRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -51,7 +51,7 @@ class MarkReadRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Mark a list of serviceUpdateMessages as **read** for the signed in user.
+     * Mark a list of serviceUpdateMessages as read for the signed in user.
      * @param MarkReadPostRequestBody $body The request body
      * @param MarkReadRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

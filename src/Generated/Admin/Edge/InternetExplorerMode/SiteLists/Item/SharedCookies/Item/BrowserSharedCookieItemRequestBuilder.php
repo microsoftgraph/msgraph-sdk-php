@@ -35,7 +35,7 @@ class BrowserSharedCookieItemRequestBuilder extends BaseRequestBuilder
      * Delete a browserSharedCookie from a browserSiteList.
      * @param BrowserSharedCookieItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/browsersitelist-delete-sharedcookies?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/browsersitelist-delete-sharedcookies?view=graph-rest-1.0 Find more info here
     */
     public function delete(?BrowserSharedCookieItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -54,7 +54,7 @@ class BrowserSharedCookieItemRequestBuilder extends BaseRequestBuilder
      * Get a session cookie that can be shared between a Microsoft Edge process and an Internet Explorer process, while using Internet Explorer mode.
      * @param BrowserSharedCookieItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/browsersharedcookie-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/browsersharedcookie-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?BrowserSharedCookieItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -74,7 +74,7 @@ class BrowserSharedCookieItemRequestBuilder extends BaseRequestBuilder
      * @param BrowserSharedCookie $body The request body
      * @param BrowserSharedCookieItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/browsersharedcookie-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/browsersharedcookie-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(BrowserSharedCookie $body, ?BrowserSharedCookieItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

@@ -53,7 +53,7 @@ class SettingsRequestBuilder extends BaseRequestBuilder
      * Retrieve the properties of an entitlementManagementSettings object.
      * @param SettingsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/entitlementmanagementsettings-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/entitlementmanagementsettings-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?SettingsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -73,7 +73,7 @@ class SettingsRequestBuilder extends BaseRequestBuilder
      * @param EntitlementManagementSettings $body The request body
      * @param SettingsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/entitlementmanagementsettings-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/entitlementmanagementsettings-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(EntitlementManagementSettings $body, ?SettingsRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

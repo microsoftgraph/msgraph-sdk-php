@@ -51,7 +51,7 @@ class ConnectedOrganizationItemRequestBuilder extends BaseRequestBuilder
      * Delete a connectedOrganization object.
      * @param ConnectedOrganizationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/connectedorganization-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/connectedorganization-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?ConnectedOrganizationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -70,7 +70,7 @@ class ConnectedOrganizationItemRequestBuilder extends BaseRequestBuilder
      * Retrieve the properties and relationships of a connectedOrganization object.
      * @param ConnectedOrganizationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/connectedorganization-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/connectedorganization-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ConnectedOrganizationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -90,7 +90,7 @@ class ConnectedOrganizationItemRequestBuilder extends BaseRequestBuilder
      * @param ConnectedOrganization $body The request body
      * @param ConnectedOrganizationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/connectedorganization-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/connectedorganization-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(ConnectedOrganization $body, ?ConnectedOrganizationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

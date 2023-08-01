@@ -34,7 +34,7 @@ class MicrosoftGraphSecurityEstimateStatisticsRequestBuilder extends BaseRequest
      * Run an estimate of the number of emails and documents in the eDiscovery search. To learn more about searches in eDiscovery, see Collect data for a case in eDiscovery (Premium).
      * @param MicrosoftGraphSecurityEstimateStatisticsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/security-ediscoverysearch-estimatestatistics?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/security-ediscoverysearch-estimatestatistics?view=graph-rest-1.0 Find more info here
     */
     public function post(?MicrosoftGraphSecurityEstimateStatisticsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);

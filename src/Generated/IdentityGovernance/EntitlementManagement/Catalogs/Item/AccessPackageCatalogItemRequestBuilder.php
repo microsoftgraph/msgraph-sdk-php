@@ -75,7 +75,7 @@ class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder
      * Delete an accessPackageCatalog.
      * @param AccessPackageCatalogItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/accesspackagecatalog-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/accesspackagecatalog-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?AccessPackageCatalogItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -94,7 +94,7 @@ class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder
      * Retrieve the properties and relationships of an accessPackageCatalog object.
      * @param AccessPackageCatalogItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/accesspackagecatalog-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/accesspackagecatalog-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?AccessPackageCatalogItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -114,7 +114,7 @@ class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder
      * @param AccessPackageCatalog $body The request body
      * @param AccessPackageCatalogItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/accesspackagecatalog-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/accesspackagecatalog-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(AccessPackageCatalog $body, ?AccessPackageCatalogItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

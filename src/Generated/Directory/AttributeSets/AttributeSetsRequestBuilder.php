@@ -56,7 +56,7 @@ class AttributeSetsRequestBuilder extends BaseRequestBuilder
      * Get a list of the attributeSet objects and their properties.
      * @param AttributeSetsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/directory-list-attributesets?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/directory-list-attributesets?view=graph-rest-1.0 Find more info here
     */
     public function get(?AttributeSetsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,7 +76,7 @@ class AttributeSetsRequestBuilder extends BaseRequestBuilder
      * @param AttributeSet $body The request body
      * @param AttributeSetsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/directory-post-attributesets?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/directory-post-attributesets?view=graph-rest-1.0 Find more info here
     */
     public function post(AttributeSet $body, ?AttributeSetsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

@@ -50,7 +50,7 @@ class AccessPackageResourceScopeItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get scopes from identityGovernance
+     * Read-only. Nullable. Supports $expand.
      * @param AccessPackageResourceScopeItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -104,7 +104,7 @@ class AccessPackageResourceScopeItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get scopes from identityGovernance
+     * Read-only. Nullable. Supports $expand.
      * @param AccessPackageResourceScopeItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

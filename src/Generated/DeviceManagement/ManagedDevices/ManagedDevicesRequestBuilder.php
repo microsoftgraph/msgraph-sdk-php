@@ -56,7 +56,7 @@ class ManagedDevicesRequestBuilder extends BaseRequestBuilder
      * List properties and relationships of the managedDevice objects.
      * @param ManagedDevicesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-devices-manageddevice-list?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-devices-manageddevice-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?ManagedDevicesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,7 +76,7 @@ class ManagedDevicesRequestBuilder extends BaseRequestBuilder
      * @param ManagedDevice $body The request body
      * @param ManagedDevicesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-devices-manageddevice-create?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-devices-manageddevice-create?view=graph-rest-1.0 Find more info here
     */
     public function post(ManagedDevice $body, ?ManagedDevicesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

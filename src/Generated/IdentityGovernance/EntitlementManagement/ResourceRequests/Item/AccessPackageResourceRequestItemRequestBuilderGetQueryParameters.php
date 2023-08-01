@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Res
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get resourceRequests from identityGovernance
+ * Represents a request to add or remove a resource to or from a catalog respectively.
 */
 class AccessPackageResourceRequestItemRequestBuilderGetQueryParameters 
 {

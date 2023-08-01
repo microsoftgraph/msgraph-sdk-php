@@ -51,7 +51,7 @@ class ConversationThreadItemRequestBuilder extends BaseRequestBuilder
      * Delete conversationThread.
      * @param ConversationThreadItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/conversationthread-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/conversationthread-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?ConversationThreadItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -67,10 +67,10 @@ class ConversationThreadItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a thread object.
+     * Get a specific thread that belongs to a group. You can specify both the parent conversation and the thread, or, you can specify the thread without referencing the parent conversation. 
      * @param ConversationThreadItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/group-get-thread?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/conversationthread-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ConversationThreadItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -90,7 +90,7 @@ class ConversationThreadItemRequestBuilder extends BaseRequestBuilder
      * @param ConversationThread $body The request body
      * @param ConversationThreadItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/group-update-thread?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/group-update-thread?view=graph-rest-1.0 Find more info here
     */
     public function patch(ConversationThread $body, ?ConversationThreadItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -123,7 +123,7 @@ class ConversationThreadItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a thread object.
+     * Get a specific thread that belongs to a group. You can specify both the parent conversation and the thread, or, you can specify the thread without referencing the parent conversation. 
      * @param ConversationThreadItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

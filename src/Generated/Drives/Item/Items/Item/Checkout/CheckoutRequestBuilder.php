@@ -31,10 +31,10 @@ class CheckoutRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Check out a **driveItem** resource to prevent others from editing the document, and prevent your changes from being visible until the documented is checked in.
+     * Check out a driveItem resource to prevent others from editing the document, and prevent your changes from being visible until the documented is checked in.
      * @param CheckoutRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/driveitem-checkout?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/driveitem-checkout?view=graph-rest-1.0 Find more info here
     */
     public function post(?CheckoutRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);
@@ -50,7 +50,7 @@ class CheckoutRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Check out a **driveItem** resource to prevent others from editing the document, and prevent your changes from being visible until the documented is checked in.
+     * Check out a driveItem resource to prevent others from editing the document, and prevent your changes from being visible until the documented is checked in.
      * @param CheckoutRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

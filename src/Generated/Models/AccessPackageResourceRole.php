@@ -25,7 +25,7 @@ class AccessPackageResourceRole extends Entity implements Parsable
     }
 
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. A description for the resource role.
      * @return string|null
     */
     public function getDescription(): ?string {
@@ -37,7 +37,7 @@ class AccessPackageResourceRole extends Entity implements Parsable
     }
 
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name of the resource role such as the role defined by the application.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -64,7 +64,7 @@ class AccessPackageResourceRole extends Entity implements Parsable
     }
 
     /**
-     * Gets the originId property value. The originId property
+     * Gets the originId property value. The unique identifier of the resource role in the origin system. For a SharePoint Online site, the originId will be the sequence number of the role in the site.
      * @return string|null
     */
     public function getOriginId(): ?string {
@@ -76,7 +76,7 @@ class AccessPackageResourceRole extends Entity implements Parsable
     }
 
     /**
-     * Gets the originSystem property value. The originSystem property
+     * Gets the originSystem property value. The type of the resource in the origin system, such as SharePointOnline, AadApplication or AadGroup.
      * @return string|null
     */
     public function getOriginSystem(): ?string {
@@ -113,7 +113,7 @@ class AccessPackageResourceRole extends Entity implements Parsable
     }
 
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. A description for the resource role.
      * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
@@ -121,7 +121,7 @@ class AccessPackageResourceRole extends Entity implements Parsable
     }
 
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name of the resource role such as the role defined by the application.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -129,7 +129,7 @@ class AccessPackageResourceRole extends Entity implements Parsable
     }
 
     /**
-     * Sets the originId property value. The originId property
+     * Sets the originId property value. The unique identifier of the resource role in the origin system. For a SharePoint Online site, the originId will be the sequence number of the role in the site.
      * @param string|null $value Value to set for the originId property.
     */
     public function setOriginId(?string $value): void {
@@ -137,7 +137,7 @@ class AccessPackageResourceRole extends Entity implements Parsable
     }
 
     /**
-     * Sets the originSystem property value. The originSystem property
+     * Sets the originSystem property value. The type of the resource in the origin system, such as SharePointOnline, AadApplication or AadGroup.
      * @param string|null $value Value to set for the originSystem property.
     */
     public function setOriginSystem(?string $value): void {

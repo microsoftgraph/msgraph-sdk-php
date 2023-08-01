@@ -35,7 +35,7 @@ class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseRequestBuilde
      * Delete a delegatedAdminAccessAssignment object.
      * @param DelegatedAdminAccessAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/delegatedadminaccessassignment-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/delegatedadminaccessassignment-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?DelegatedAdminAccessAssignmentItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -54,7 +54,7 @@ class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseRequestBuilde
      * Read the properties of a delegatedAdminAccessAssignment object.
      * @param DelegatedAdminAccessAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/delegatedadminaccessassignment-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/delegatedadminaccessassignment-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DelegatedAdminAccessAssignmentItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -74,7 +74,7 @@ class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseRequestBuilde
      * @param DelegatedAdminAccessAssignment $body The request body
      * @param DelegatedAdminAccessAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/delegatedadminaccessassignment-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/delegatedadminaccessassignment-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(DelegatedAdminAccessAssignment $body, ?DelegatedAdminAccessAssignmentItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

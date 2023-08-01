@@ -35,7 +35,7 @@ class OutlookCategoryItemRequestBuilder extends BaseRequestBuilder
      * Delete the specified outlookCategory object.
      * @param OutlookCategoryItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/outlookcategory-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/outlookcategory-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?OutlookCategoryItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -54,7 +54,7 @@ class OutlookCategoryItemRequestBuilder extends BaseRequestBuilder
      * Get the properties and relationships of the specified outlookCategory object.
      * @param OutlookCategoryItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/outlookcategory-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/outlookcategory-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?OutlookCategoryItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -70,11 +70,11 @@ class OutlookCategoryItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the writable property, **color**, of the specified outlookCategory object. You cannot modify the **displayName** property once you have created the category.
+     * Update the writable property, color, of the specified outlookCategory object. You cannot modify the displayName property once you have created the category.
      * @param OutlookCategory $body The request body
      * @param OutlookCategoryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/outlookcategory-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/outlookcategory-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(OutlookCategory $body, ?OutlookCategoryItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -128,7 +128,7 @@ class OutlookCategoryItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the writable property, **color**, of the specified outlookCategory object. You cannot modify the **displayName** property once you have created the category.
+     * Update the writable property, color, of the specified outlookCategory object. You cannot modify the displayName property once you have created the category.
      * @param OutlookCategory $body The request body
      * @param OutlookCategoryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

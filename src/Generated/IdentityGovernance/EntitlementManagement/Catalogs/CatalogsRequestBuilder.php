@@ -56,7 +56,7 @@ class CatalogsRequestBuilder extends BaseRequestBuilder
      * Retrieve a list of accessPackageCatalog objects.
      * @param CatalogsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/entitlementmanagement-list-catalogs?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/entitlementmanagement-list-catalogs?view=graph-rest-1.0 Find more info here
     */
     public function get(?CatalogsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,7 +76,7 @@ class CatalogsRequestBuilder extends BaseRequestBuilder
      * @param AccessPackageCatalog $body The request body
      * @param CatalogsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/entitlementmanagement-post-catalogs?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/entitlementmanagement-post-catalogs?view=graph-rest-1.0 Find more info here
     */
     public function post(AccessPackageCatalog $body, ?CatalogsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

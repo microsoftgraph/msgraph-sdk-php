@@ -50,7 +50,7 @@ class ProvisionedIdentity extends Identity implements Parsable
     }
 
     /**
-     * Gets the identityType property value. Type of identity that has been provisioned, such as 'user' or 'group'.
+     * Gets the identityType property value. Type of identity that has been provisioned, such as 'user' or 'group'. Supports $filter (eq, contains).
      * @return string|null
     */
     public function getIdentityType(): ?string {
@@ -80,7 +80,7 @@ class ProvisionedIdentity extends Identity implements Parsable
     }
 
     /**
-     * Sets the identityType property value. Type of identity that has been provisioned, such as 'user' or 'group'.
+     * Sets the identityType property value. Type of identity that has been provisioned, such as 'user' or 'group'. Supports $filter (eq, contains).
      * @param string|null $value Value to set for the identityType property.
     */
     public function setIdentityType(?string $value): void {

@@ -58,7 +58,7 @@ class AccessPackageResourceRoleItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get roles from identityGovernance
+     * Read-only. Nullable. Supports $expand.
      * @param AccessPackageResourceRoleItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -112,7 +112,7 @@ class AccessPackageResourceRoleItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get roles from identityGovernance
+     * Read-only. Nullable. Supports $expand.
      * @param AccessPackageResourceRoleItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

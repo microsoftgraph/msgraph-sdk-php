@@ -56,7 +56,7 @@ class RoleAssignmentsRequestBuilder extends BaseRequestBuilder
      * Get a list of unifiedRoleAssignment objects for the RBAC provider. The following RBAC providers are currently supported:- directory (Azure AD)- entitlement management (Azure AD)
      * @param RoleAssignmentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/rbacapplication-list-roleassignments?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/rbacapplication-list-roleassignments?view=graph-rest-1.0 Find more info here
     */
     public function get(?RoleAssignmentsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,7 +76,7 @@ class RoleAssignmentsRequestBuilder extends BaseRequestBuilder
      * @param UnifiedRoleAssignment $body The request body
      * @param RoleAssignmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/rbacapplication-post-roleassignments?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/rbacapplication-post-roleassignments?view=graph-rest-1.0 Find more info here
     */
     public function post(UnifiedRoleAssignment $body, ?RoleAssignmentsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

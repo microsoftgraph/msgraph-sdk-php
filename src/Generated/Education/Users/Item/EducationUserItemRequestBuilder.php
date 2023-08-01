@@ -83,7 +83,7 @@ class EducationUserItemRequestBuilder extends BaseRequestBuilder
      * Delete a user.
      * @param EducationUserItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/educationuser-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/educationuser-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?EducationUserItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -102,7 +102,7 @@ class EducationUserItemRequestBuilder extends BaseRequestBuilder
      * Read the properties and relationships of an educationUser object.
      * @param EducationUserItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/educationuser-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/educationuser-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?EducationUserItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -122,7 +122,7 @@ class EducationUserItemRequestBuilder extends BaseRequestBuilder
      * @param EducationUser $body The request body
      * @param EducationUserItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/educationuser-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/educationuser-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(EducationUser $body, ?EducationUserItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

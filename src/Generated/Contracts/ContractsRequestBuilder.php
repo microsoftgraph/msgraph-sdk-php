@@ -88,7 +88,7 @@ class ContractsRequestBuilder extends BaseRequestBuilder
      * Retrieve a list of contract objects associated to a partner tenant.
      * @param ContractsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/contract-list?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/contract-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?ContractsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

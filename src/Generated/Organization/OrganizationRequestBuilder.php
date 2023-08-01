@@ -85,10 +85,10 @@ class OrganizationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the organization objects.
+     * Retrieve a list of organization objects.
      * @param OrganizationRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-onboarding-organization-list?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/organization-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?OrganizationRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -123,7 +123,7 @@ class OrganizationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the organization objects.
+     * Retrieve a list of organization objects.
      * @param OrganizationRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

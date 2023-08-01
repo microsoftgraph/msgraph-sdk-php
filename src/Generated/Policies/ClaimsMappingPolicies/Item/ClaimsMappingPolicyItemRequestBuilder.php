@@ -43,7 +43,7 @@ class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder
      * Delete a claimsMappingPolicy object.
      * @param ClaimsMappingPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/claimsmappingpolicy-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/claimsmappingpolicy-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?ClaimsMappingPolicyItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -62,7 +62,7 @@ class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder
      * Retrieve the properties and relationships of a claimsMappingPolicy object.
      * @param ClaimsMappingPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/claimsmappingpolicy-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/claimsmappingpolicy-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ClaimsMappingPolicyItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -82,7 +82,7 @@ class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder
      * @param ClaimsMappingPolicy $body The request body
      * @param ClaimsMappingPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/claimsmappingpolicy-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/claimsmappingpolicy-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(ClaimsMappingPolicy $body, ?ClaimsMappingPolicyItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

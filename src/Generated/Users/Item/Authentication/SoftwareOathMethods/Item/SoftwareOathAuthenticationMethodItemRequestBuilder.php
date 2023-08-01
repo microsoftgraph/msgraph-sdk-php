@@ -35,7 +35,7 @@ class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
      * Delete a user's Software OATH token authentication method object.
      * @param SoftwareOathAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/softwareoathauthenticationmethod-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/softwareoathauthenticationmethod-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?SoftwareOathAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -54,7 +54,7 @@ class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
      * Retrieve a user's single Software OATH token authentication method object and its properties.
      * @param SoftwareOathAuthenticationMethodItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/softwareoathauthenticationmethod-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/softwareoathauthenticationmethod-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?SoftwareOathAuthenticationMethodItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

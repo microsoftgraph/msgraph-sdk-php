@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Planner\Plans\Item\Details;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties and relationships of a **plannerPlanDetails** object.
+ * Retrieve the properties and relationships of a plannerPlanDetails object.
 */
 class DetailsRequestBuilderGetQueryParameters 
 {

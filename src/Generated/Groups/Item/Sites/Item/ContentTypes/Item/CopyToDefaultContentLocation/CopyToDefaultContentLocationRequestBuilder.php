@@ -35,7 +35,7 @@ class CopyToDefaultContentLocationRequestBuilder extends BaseRequestBuilder
      * @param CopyToDefaultContentLocationPostRequestBody $body The request body
      * @param CopyToDefaultContentLocationRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/contenttype-copytodefaultcontentlocation?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/contenttype-copytodefaultcontentlocation?view=graph-rest-1.0 Find more info here
     */
     public function post(CopyToDefaultContentLocationPostRequestBody $body, ?CopyToDefaultContentLocationRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

@@ -64,7 +64,7 @@ class ChildFoldersRequestBuilder extends BaseRequestBuilder
      * Get a collection of child folders under the specified contact folder.
      * @param ChildFoldersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/contactfolder-list-childfolders?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/contactfolder-list-childfolders?view=graph-rest-1.0 Find more info here
     */
     public function get(?ChildFoldersRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -84,7 +84,7 @@ class ChildFoldersRequestBuilder extends BaseRequestBuilder
      * @param ContactFolder $body The request body
      * @param ChildFoldersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/contactfolder-post-childfolders?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/contactfolder-post-childfolders?view=graph-rest-1.0 Find more info here
     */
     public function post(ContactFolder $body, ?ChildFoldersRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

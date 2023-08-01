@@ -36,7 +36,7 @@ class RefRequestBuilder extends BaseRequestBuilder
      * Retrieve a list of groups that have been granted access to submit print jobs to the associated printerShare.
      * @param RefRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/printershare-list-allowedgroups?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/printershare-list-allowedgroups?view=graph-rest-1.0 Find more info here
     */
     public function get(?RefRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -56,7 +56,7 @@ class RefRequestBuilder extends BaseRequestBuilder
      * @param ReferenceCreate $body The request body
      * @param RefRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/printershare-post-allowedgroups?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/printershare-post-allowedgroups?view=graph-rest-1.0 Find more info here
     */
     public function post(ReferenceCreate $body, ?RefRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

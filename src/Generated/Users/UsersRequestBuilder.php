@@ -85,10 +85,10 @@ class UsersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of user objects.
+     * List properties and relationships of the user objects.
      * @param UsersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/user-list?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-mam-user-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?UsersRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -108,7 +108,7 @@ class UsersRequestBuilder extends BaseRequestBuilder
      * @param User $body The request body
      * @param UsersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-mam-user-create?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-mam-user-create?view=graph-rest-1.0 Find more info here
     */
     public function post(User $body, ?UsersRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -124,7 +124,7 @@ class UsersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of user objects.
+     * List properties and relationships of the user objects.
      * @param UsersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

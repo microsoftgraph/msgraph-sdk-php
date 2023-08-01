@@ -59,7 +59,7 @@ class AgreementItemRequestBuilder extends BaseRequestBuilder
      * Delete an agreement object.
      * @param AgreementItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/agreement-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/agreement-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?AgreementItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -78,7 +78,7 @@ class AgreementItemRequestBuilder extends BaseRequestBuilder
      * Retrieve the properties and relationships of an agreement object.
      * @param AgreementItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/agreement-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/agreement-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?AgreementItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -98,7 +98,7 @@ class AgreementItemRequestBuilder extends BaseRequestBuilder
      * @param Agreement $body The request body
      * @param AgreementItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/agreement-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/agreement-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(Agreement $body, ?AgreementItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

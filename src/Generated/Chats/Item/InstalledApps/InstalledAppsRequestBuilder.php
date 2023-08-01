@@ -56,7 +56,7 @@ class InstalledAppsRequestBuilder extends BaseRequestBuilder
      * List all app installations within a chat.
      * @param InstalledAppsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/chat-list-installedapps?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/chat-list-installedapps?view=graph-rest-1.0 Find more info here
     */
     public function get(?InstalledAppsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,7 +76,7 @@ class InstalledAppsRequestBuilder extends BaseRequestBuilder
      * @param TeamsAppInstallation $body The request body
      * @param InstalledAppsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/chat-post-installedapps?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/chat-post-installedapps?view=graph-rest-1.0 Find more info here
     */
     public function post(TeamsAppInstallation $body, ?InstalledAppsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

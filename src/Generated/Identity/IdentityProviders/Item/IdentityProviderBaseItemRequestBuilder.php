@@ -32,10 +32,10 @@ class IdentityProviderBaseItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an identity provider resource that is of the type specified by the **id** in the request. Among the types of providers derived from identityProviderBase, you can currently delete a socialIdentityProvider resource in Azure AD. In Azure AD B2C, this operation can currently delete a socialIdentityProvider, or an appleManagedIdentityProvider resource.
+     * Delete an identity provider resource that is of the type specified by the id in the request. Among the types of providers derived from identityProviderBase, you can currently delete a socialIdentityProvider resource in Azure AD. In Azure AD B2C, this operation can currently delete a socialIdentityProvider, or an appleManagedIdentityProvider resource.
      * @param IdentityProviderBaseItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/identityproviderbase-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/identityproviderbase-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?IdentityProviderBaseItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -54,7 +54,7 @@ class IdentityProviderBaseItemRequestBuilder extends BaseRequestBuilder
      * Get the properties and relationships of the specified identity provider configured in the tenant. Among the types of providers derived from identityProviderBase, you can currently get a socialIdentityProvider or a builtinIdentityProvider resource in Azure AD. In Azure AD B2C, this operation can currently get a socialIdentityProvider, or an appleManagedIdentityProvider resource.
      * @param IdentityProviderBaseItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/identityproviderbase-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/identityproviderbase-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?IdentityProviderBaseItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -74,7 +74,7 @@ class IdentityProviderBaseItemRequestBuilder extends BaseRequestBuilder
      * @param IdentityProviderBase $body The request body
      * @param IdentityProviderBaseItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/identityproviderbase-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/identityproviderbase-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(IdentityProviderBase $body, ?IdentityProviderBaseItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -90,7 +90,7 @@ class IdentityProviderBaseItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an identity provider resource that is of the type specified by the **id** in the request. Among the types of providers derived from identityProviderBase, you can currently delete a socialIdentityProvider resource in Azure AD. In Azure AD B2C, this operation can currently delete a socialIdentityProvider, or an appleManagedIdentityProvider resource.
+     * Delete an identity provider resource that is of the type specified by the id in the request. Among the types of providers derived from identityProviderBase, you can currently delete a socialIdentityProvider resource in Azure AD. In Azure AD B2C, this operation can currently delete a socialIdentityProvider, or an appleManagedIdentityProvider resource.
      * @param IdentityProviderBaseItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

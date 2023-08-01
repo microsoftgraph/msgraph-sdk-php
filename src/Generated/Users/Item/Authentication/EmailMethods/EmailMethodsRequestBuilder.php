@@ -56,7 +56,7 @@ class EmailMethodsRequestBuilder extends BaseRequestBuilder
      * Retrieve a list of a user's emailAuthenticationMethod objects and their properties. This API will return only a single object in the collection as only one email method can be set for a user.
      * @param EmailMethodsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/authentication-list-emailmethods?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/authentication-list-emailmethods?view=graph-rest-1.0 Find more info here
     */
     public function get(?EmailMethodsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,7 +76,7 @@ class EmailMethodsRequestBuilder extends BaseRequestBuilder
      * @param EmailAuthenticationMethod $body The request body
      * @param EmailMethodsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/authentication-post-emailmethods?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/authentication-post-emailmethods?view=graph-rest-1.0 Find more info here
     */
     public function post(EmailAuthenticationMethod $body, ?EmailMethodsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

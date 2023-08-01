@@ -35,7 +35,7 @@ class BookingStaffMemberBaseItemRequestBuilder extends BaseRequestBuilder
      * Delete a bookingStaffMember in the specified bookingBusiness.
      * @param BookingStaffMemberBaseItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/bookingstaffmember-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/bookingstaffmember-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?BookingStaffMemberBaseItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -54,7 +54,7 @@ class BookingStaffMemberBaseItemRequestBuilder extends BaseRequestBuilder
      * Get the properties and relationships of a bookingStaffMember in the specified bookingBusiness.
      * @param BookingStaffMemberBaseItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/bookingstaffmember-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/bookingstaffmember-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?BookingStaffMemberBaseItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -74,7 +74,7 @@ class BookingStaffMemberBaseItemRequestBuilder extends BaseRequestBuilder
      * @param BookingStaffMemberBase $body The request body
      * @param BookingStaffMemberBaseItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/bookingstaffmember-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/bookingstaffmember-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(BookingStaffMemberBase $body, ?BookingStaffMemberBaseItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

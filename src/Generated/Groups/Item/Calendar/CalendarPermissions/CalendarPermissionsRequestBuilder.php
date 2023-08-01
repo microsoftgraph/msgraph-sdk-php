@@ -56,7 +56,7 @@ class CalendarPermissionsRequestBuilder extends BaseRequestBuilder
      * Get a collection of calendarPermission resources that describe the identity and roles of users with whom the specified calendar has been shared or delegated. Here, the calendar can be a user calendar or group calendar.
      * @param CalendarPermissionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/calendar-list-calendarpermissions?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/calendar-list-calendarpermissions?view=graph-rest-1.0 Find more info here
     */
     public function get(?CalendarPermissionsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,7 +76,7 @@ class CalendarPermissionsRequestBuilder extends BaseRequestBuilder
      * @param CalendarPermission $body The request body
      * @param CalendarPermissionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/calendar-post-calendarpermissions?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/calendar-post-calendarpermissions?view=graph-rest-1.0 Find more info here
     */
     public function post(CalendarPermission $body, ?CalendarPermissionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

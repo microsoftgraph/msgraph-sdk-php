@@ -203,7 +203,7 @@ class ApplicationItemRequestBuilder extends BaseRequestBuilder
      * Delete an application object. When deleted, apps are moved to a temporary container and can be restored within 30 days. After that time, they are permanently deleted.
      * @param ApplicationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/application-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/application-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?ApplicationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -222,7 +222,7 @@ class ApplicationItemRequestBuilder extends BaseRequestBuilder
      * Get the properties and relationships of an application object.
      * @param ApplicationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/application-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/application-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ApplicationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -242,7 +242,7 @@ class ApplicationItemRequestBuilder extends BaseRequestBuilder
      * @param Application $body The request body
      * @param ApplicationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/application-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/application-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(Application $body, ?ApplicationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

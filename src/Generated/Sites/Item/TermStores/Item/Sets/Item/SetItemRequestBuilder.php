@@ -67,7 +67,7 @@ class SetItemRequestBuilder extends BaseRequestBuilder
      * Delete a set object.
      * @param SetItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/termstore-set-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/termstore-set-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?SetItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -86,7 +86,7 @@ class SetItemRequestBuilder extends BaseRequestBuilder
      * Read the properties and relationships of a set object.
      * @param SetItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/termstore-set-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/termstore-set-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?SetItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -106,7 +106,7 @@ class SetItemRequestBuilder extends BaseRequestBuilder
      * @param Set $body The request body
      * @param SetItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/termstore-set-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/termstore-set-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(Set $body, ?SetItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

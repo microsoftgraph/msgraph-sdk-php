@@ -53,7 +53,7 @@ class AudioRoutingGroup extends Entity implements Parsable
     }
 
     /**
-     * Gets the receivers property value. The receivers property
+     * Gets the receivers property value. List of receiving participant ids.
      * @return array<string>|null
     */
     public function getReceivers(): ?array {
@@ -79,7 +79,7 @@ class AudioRoutingGroup extends Entity implements Parsable
     }
 
     /**
-     * Gets the sources property value. The sources property
+     * Gets the sources property value. List of source participant ids.
      * @return array<string>|null
     */
     public function getSources(): ?array {
@@ -104,7 +104,7 @@ class AudioRoutingGroup extends Entity implements Parsable
     }
 
     /**
-     * Sets the receivers property value. The receivers property
+     * Sets the receivers property value. List of receiving participant ids.
      * @param array<string>|null $value Value to set for the receivers property.
     */
     public function setReceivers(?array $value): void {
@@ -120,7 +120,7 @@ class AudioRoutingGroup extends Entity implements Parsable
     }
 
     /**
-     * Sets the sources property value. The sources property
+     * Sets the sources property value. List of source participant ids.
      * @param array<string>|null $value Value to set for the sources property.
     */
     public function setSources(?array $value): void {

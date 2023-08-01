@@ -35,7 +35,7 @@ class AuthenticationCombinationConfigurationItemRequestBuilder extends BaseReque
      * Delete an authenticationCombinationConfiguration  for a custom authenticationStrengthPolicy object.
      * @param AuthenticationCombinationConfigurationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/authenticationstrengthpolicy-delete-combinationconfigurations?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/authenticationstrengthpolicy-delete-combinationconfigurations?view=graph-rest-1.0 Find more info here
     */
     public function delete(?AuthenticationCombinationConfigurationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -54,7 +54,7 @@ class AuthenticationCombinationConfigurationItemRequestBuilder extends BaseReque
      * Read the properties and relationships of an authenticationCombinationConfiguration object.
      * @param AuthenticationCombinationConfigurationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/authenticationcombinationconfiguration-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/authenticationcombinationconfiguration-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?AuthenticationCombinationConfigurationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -74,7 +74,7 @@ class AuthenticationCombinationConfigurationItemRequestBuilder extends BaseReque
      * @param AuthenticationCombinationConfiguration $body The request body
      * @param AuthenticationCombinationConfigurationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/authenticationcombinationconfiguration-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/authenticationcombinationconfiguration-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(AuthenticationCombinationConfiguration $body, ?AuthenticationCombinationConfigurationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

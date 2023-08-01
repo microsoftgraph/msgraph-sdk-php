@@ -56,7 +56,7 @@ class UserFlowAttributesRequestBuilder extends BaseRequestBuilder
      * Retrieve a list of identityUserFlowAttribute objects.
      * @param UserFlowAttributesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/identityuserflowattribute-list?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/identityuserflowattribute-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?UserFlowAttributesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,7 +76,7 @@ class UserFlowAttributesRequestBuilder extends BaseRequestBuilder
      * @param IdentityUserFlowAttribute $body The request body
      * @param UserFlowAttributesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/identityuserflowattribute-post?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/identityuserflowattribute-post?view=graph-rest-1.0 Find more info here
     */
     public function post(IdentityUserFlowAttribute $body, ?UserFlowAttributesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

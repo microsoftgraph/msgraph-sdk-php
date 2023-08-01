@@ -66,7 +66,7 @@ class AccessPackageResourceRequestItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get resourceRequests from identityGovernance
+     * Represents a request to add or remove a resource to or from a catalog respectively.
      * @param AccessPackageResourceRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -120,7 +120,7 @@ class AccessPackageResourceRequestItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get resourceRequests from identityGovernance
+     * Represents a request to add or remove a resource to or from a catalog respectively.
      * @param AccessPackageResourceRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

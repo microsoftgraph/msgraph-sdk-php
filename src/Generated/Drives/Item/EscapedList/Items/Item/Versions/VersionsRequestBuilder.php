@@ -56,7 +56,7 @@ class VersionsRequestBuilder extends BaseRequestBuilder
      * SharePoint can be configured to retain the history for list items. Previous versions may be retained for a finite period of time depending on admin settings which may be unique per user or location.
      * @param VersionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/listitem-list-versions?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/listitem-list-versions?view=graph-rest-1.0 Find more info here
     */
     public function get(?VersionsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

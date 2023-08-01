@@ -70,7 +70,7 @@ class LoginPageLayoutConfiguration implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Gets the isFooterShown property value. The isFooterShown property
+     * Gets the isFooterShown property value. Option to show the footer on the sign-in page.
      * @return bool|null
     */
     public function getIsFooterShown(): ?bool {
@@ -82,7 +82,7 @@ class LoginPageLayoutConfiguration implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Gets the isHeaderShown property value. The isHeaderShown property
+     * Gets the isHeaderShown property value. Option to show the header on the sign-in page.
      * @return bool|null
     */
     public function getIsHeaderShown(): ?bool {
@@ -94,7 +94,7 @@ class LoginPageLayoutConfiguration implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Gets the layoutTemplateType property value. The layoutTemplateType property
+     * Gets the layoutTemplateType property value. Represents the layout template to be displayed on the login page for a tenant. The possible values are  default - Represents the default Microsoft layout with a centered lightbox.  verticalSplit - Represents a layout with a backgound on the left side and a full-height lightbox to the right.  unknownFutureValue - Evolvable enumeration sentinel value. Do not use.
      * @return LayoutTemplateType|null
     */
     public function getLayoutTemplateType(): ?LayoutTemplateType {
@@ -146,7 +146,7 @@ class LoginPageLayoutConfiguration implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Sets the isFooterShown property value. The isFooterShown property
+     * Sets the isFooterShown property value. Option to show the footer on the sign-in page.
      * @param bool|null $value Value to set for the isFooterShown property.
     */
     public function setIsFooterShown(?bool $value): void {
@@ -154,7 +154,7 @@ class LoginPageLayoutConfiguration implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Sets the isHeaderShown property value. The isHeaderShown property
+     * Sets the isHeaderShown property value. Option to show the header on the sign-in page.
      * @param bool|null $value Value to set for the isHeaderShown property.
     */
     public function setIsHeaderShown(?bool $value): void {
@@ -162,7 +162,7 @@ class LoginPageLayoutConfiguration implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Sets the layoutTemplateType property value. The layoutTemplateType property
+     * Sets the layoutTemplateType property value. Represents the layout template to be displayed on the login page for a tenant. The possible values are  default - Represents the default Microsoft layout with a centered lightbox.  verticalSplit - Represents a layout with a backgound on the left side and a full-height lightbox to the right.  unknownFutureValue - Evolvable enumeration sentinel value. Do not use.
      * @param LayoutTemplateType|null $value Value to set for the layoutTemplateType property.
     */
     public function setLayoutTemplateType(?LayoutTemplateType $value): void {

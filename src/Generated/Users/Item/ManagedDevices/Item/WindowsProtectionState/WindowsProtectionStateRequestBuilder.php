@@ -61,7 +61,7 @@ class WindowsProtectionStateRequestBuilder extends BaseRequestBuilder
      * Read properties and relationships of the windowsProtectionState object.
      * @param WindowsProtectionStateRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-devices-windowsprotectionstate-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-devices-windowsprotectionstate-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?WindowsProtectionStateRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -81,7 +81,7 @@ class WindowsProtectionStateRequestBuilder extends BaseRequestBuilder
      * @param WindowsProtectionState $body The request body
      * @param WindowsProtectionStateRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-devices-windowsprotectionstate-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-devices-windowsprotectionstate-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(WindowsProtectionState $body, ?WindowsProtectionStateRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

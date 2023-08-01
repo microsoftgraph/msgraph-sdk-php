@@ -53,7 +53,7 @@ class FontRequestBuilder extends BaseRequestBuilder
      * Retrieve the properties and relationships of chartfont object.
      * @param FontRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/chartfont-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/chartfont-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?FontRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -73,7 +73,7 @@ class FontRequestBuilder extends BaseRequestBuilder
      * @param WorkbookChartFont $body The request body
      * @param FontRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/chartfont-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/chartfont-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(WorkbookChartFont $body, ?FontRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

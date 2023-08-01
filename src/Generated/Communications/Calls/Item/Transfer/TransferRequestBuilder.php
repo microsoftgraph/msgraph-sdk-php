@@ -35,7 +35,7 @@ class TransferRequestBuilder extends BaseRequestBuilder
      * @param TransferPostRequestBody $body The request body
      * @param TransferRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/call-transfer?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/call-transfer?view=graph-rest-1.0 Find more info here
     */
     public function post(TransferPostRequestBody $body, ?TransferRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

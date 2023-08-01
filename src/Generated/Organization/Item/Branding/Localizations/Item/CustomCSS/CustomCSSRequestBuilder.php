@@ -32,10 +32,10 @@ class CustomCSSRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get customCSS for the navigation property localizations from organization
+     * CSS styling that appears on the sign-in page. The allowed format is .css format only and not larger than 25 KB.
      * @param CustomCSSRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/organizationalbranding-list-localizations?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/organizationalbranding-list-localizations?view=graph-rest-1.0 Find more info here
     */
     public function get(?CustomCSSRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -51,7 +51,7 @@ class CustomCSSRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update customCSS for the navigation property localizations in organization
+     * CSS styling that appears on the sign-in page. The allowed format is .css format only and not larger than 25 KB.
      * @param StreamInterface $body Binary request body
      * @param CustomCSSRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -70,7 +70,7 @@ class CustomCSSRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get customCSS for the navigation property localizations from organization
+     * CSS styling that appears on the sign-in page. The allowed format is .css format only and not larger than 25 KB.
      * @param CustomCSSRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -87,7 +87,7 @@ class CustomCSSRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update customCSS for the navigation property localizations in organization
+     * CSS styling that appears on the sign-in page. The allowed format is .css format only and not larger than 25 KB.
      * @param StreamInterface $body Binary request body
      * @param CustomCSSRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

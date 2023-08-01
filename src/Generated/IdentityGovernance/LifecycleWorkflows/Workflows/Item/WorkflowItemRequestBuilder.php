@@ -123,7 +123,7 @@ class WorkflowItemRequestBuilder extends BaseRequestBuilder
      * Delete a workflow object and its associated tasks, taskProcessingResults and versions. You can restore a deleted workflow and its associated objects within 30 days of deletion.
      * @param WorkflowItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/identitygovernance-workflow-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/identitygovernance-workflow-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?WorkflowItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -142,7 +142,7 @@ class WorkflowItemRequestBuilder extends BaseRequestBuilder
      * Read the properties and relationships of a workflow object.
      * @param WorkflowItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/identitygovernance-workflow-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/identitygovernance-workflow-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?WorkflowItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -162,7 +162,7 @@ class WorkflowItemRequestBuilder extends BaseRequestBuilder
      * @param Workflow $body The request body
      * @param WorkflowItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/identitygovernance-workflow-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/identitygovernance-workflow-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(Workflow $body, ?WorkflowItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

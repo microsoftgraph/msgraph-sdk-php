@@ -32,10 +32,10 @@ class FaviconRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get favicon for the navigation property branding from organization
+     * A custom icon (favicon) to replace a default Microsoft product favicon on an Azure AD tenant.
      * @param FaviconRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/organizationalbranding-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/organizationalbranding-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?FaviconRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -51,7 +51,7 @@ class FaviconRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update favicon for the navigation property branding in organization
+     * A custom icon (favicon) to replace a default Microsoft product favicon on an Azure AD tenant.
      * @param StreamInterface $body Binary request body
      * @param FaviconRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -70,7 +70,7 @@ class FaviconRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get favicon for the navigation property branding from organization
+     * A custom icon (favicon) to replace a default Microsoft product favicon on an Azure AD tenant.
      * @param FaviconRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -87,7 +87,7 @@ class FaviconRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update favicon for the navigation property branding in organization
+     * A custom icon (favicon) to replace a default Microsoft product favicon on an Azure AD tenant.
      * @param StreamInterface $body Binary request body
      * @param FaviconRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

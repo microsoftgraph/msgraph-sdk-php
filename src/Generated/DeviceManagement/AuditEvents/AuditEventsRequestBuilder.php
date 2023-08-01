@@ -65,7 +65,7 @@ class AuditEventsRequestBuilder extends BaseRequestBuilder
      * List properties and relationships of the auditEvent objects.
      * @param AuditEventsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-auditing-auditevent-list?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-auditing-auditevent-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?AuditEventsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -94,7 +94,7 @@ class AuditEventsRequestBuilder extends BaseRequestBuilder
      * @param AuditEvent $body The request body
      * @param AuditEventsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-auditing-auditevent-create?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-auditing-auditevent-create?view=graph-rest-1.0 Find more info here
     */
     public function post(AuditEvent $body, ?AuditEventsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

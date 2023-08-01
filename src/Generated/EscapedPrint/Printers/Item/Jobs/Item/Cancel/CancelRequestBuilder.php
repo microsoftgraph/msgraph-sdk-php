@@ -34,7 +34,7 @@ class CancelRequestBuilder extends BaseRequestBuilder
      * Cancel a print job. Print jobs can be canceled only on behalf of a user, using delegated permissions.
      * @param CancelRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/printjob-cancel?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/printjob-cancel?view=graph-rest-1.0 Find more info here
     */
     public function post(?CancelRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);

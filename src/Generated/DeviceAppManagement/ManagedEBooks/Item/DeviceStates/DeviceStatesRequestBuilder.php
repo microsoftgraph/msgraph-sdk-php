@@ -56,7 +56,7 @@ class DeviceStatesRequestBuilder extends BaseRequestBuilder
      * List properties and relationships of the deviceInstallState objects.
      * @param DeviceStatesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-books-deviceinstallstate-list?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-books-deviceinstallstate-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?DeviceStatesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,7 +76,7 @@ class DeviceStatesRequestBuilder extends BaseRequestBuilder
      * @param DeviceInstallState $body The request body
      * @param DeviceStatesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-books-deviceinstallstate-create?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-books-deviceinstallstate-create?view=graph-rest-1.0 Find more info here
     */
     public function post(DeviceInstallState $body, ?DeviceStatesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

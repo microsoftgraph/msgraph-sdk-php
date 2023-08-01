@@ -126,6 +126,7 @@ class Team extends Entity implements Parsable
             'memberSettings' => fn(ParseNode $n) => $o->setMemberSettings($n->getObjectValue([TeamMemberSettings::class, 'createFromDiscriminatorValue'])),
             'messagingSettings' => fn(ParseNode $n) => $o->setMessagingSettings($n->getObjectValue([TeamMessagingSettings::class, 'createFromDiscriminatorValue'])),
             'operations' => fn(ParseNode $n) => $o->setOperations($n->getCollectionOfObjectValues([TeamsAsyncOperation::class, 'createFromDiscriminatorValue'])),
+            'permissionGrants' => fn(ParseNode $n) => $o->setPermissionGrants($n->getCollectionOfObjectValues([ResourceSpecificPermissionGrant::class, 'createFromDiscriminatorValue'])),
             'photo' => fn(ParseNode $n) => $o->setPhoto($n->getObjectValue([ProfilePhoto::class, 'createFromDiscriminatorValue'])),
             'primaryChannel' => fn(ParseNode $n) => $o->setPrimaryChannel($n->getObjectValue([Channel::class, 'createFromDiscriminatorValue'])),
             'schedule' => fn(ParseNode $n) => $o->setSchedule($n->getObjectValue([Schedule::class, 'createFromDiscriminatorValue'])),
@@ -280,6 +281,20 @@ class Team extends Entity implements Parsable
     }
 
     /**
+     * Gets the permissionGrants property value. The permissionGrants property
+     * @return array<ResourceSpecificPermissionGrant>|null
+    */
+    public function getPermissionGrants(): ?array {
+        $val = $this->getBackingStore()->get('permissionGrants');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ResourceSpecificPermissionGrant::class);
+            /** @var array<ResourceSpecificPermissionGrant>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'permissionGrants'");
+    }
+
+    /**
      * Gets the photo property value. The profile photo for the team.
      * @return ProfilePhoto|null
     */
@@ -424,6 +439,7 @@ class Team extends Entity implements Parsable
         $writer->writeObjectValue('memberSettings', $this->getMemberSettings());
         $writer->writeObjectValue('messagingSettings', $this->getMessagingSettings());
         $writer->writeCollectionOfObjectValues('operations', $this->getOperations());
+        $writer->writeCollectionOfObjectValues('permissionGrants', $this->getPermissionGrants());
         $writer->writeObjectValue('photo', $this->getPhoto());
         $writer->writeObjectValue('primaryChannel', $this->getPrimaryChannel());
         $writer->writeObjectValue('schedule', $this->getSchedule());
@@ -570,6 +586,14 @@ class Team extends Entity implements Parsable
     */
     public function setOperations(?array $value): void {
         $this->getBackingStore()->set('operations', $value);
+    }
+
+    /**
+     * Sets the permissionGrants property value. The permissionGrants property
+     * @param array<ResourceSpecificPermissionGrant>|null $value Value to set for the permissionGrants property.
+    */
+    public function setPermissionGrants(?array $value): void {
+        $this->getBackingStore()->set('permissionGrants', $value);
     }
 
     /**

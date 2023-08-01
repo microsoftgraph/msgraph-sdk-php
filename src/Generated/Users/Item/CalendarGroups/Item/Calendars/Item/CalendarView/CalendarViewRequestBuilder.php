@@ -60,10 +60,10 @@ class CalendarViewRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the occurrences, exceptions and single instances of events in a calendar view defined by a time range,from a user's default calendar `(../me/calendarView)` or some other calendar of the user's.
+     * Get the occurrences, exceptions and single instances of events in a calendar view defined by a time range,from a user's default calendar (../me/calendarView) or some other calendar of the user's.
      * @param CalendarViewRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/calendar-list-calendarview?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/calendar-list-calendarview?view=graph-rest-1.0 Find more info here
     */
     public function get(?CalendarViewRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -79,7 +79,7 @@ class CalendarViewRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the occurrences, exceptions and single instances of events in a calendar view defined by a time range,from a user's default calendar `(../me/calendarView)` or some other calendar of the user's.
+     * Get the occurrences, exceptions and single instances of events in a calendar view defined by a time range,from a user's default calendar (../me/calendarView) or some other calendar of the user's.
      * @param CalendarViewRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

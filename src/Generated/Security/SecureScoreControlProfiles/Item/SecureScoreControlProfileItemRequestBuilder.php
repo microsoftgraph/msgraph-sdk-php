@@ -53,7 +53,7 @@ class SecureScoreControlProfileItemRequestBuilder extends BaseRequestBuilder
      * Retrieve the properties and relationships of an securescorecontrolprofile object.
      * @param SecureScoreControlProfileItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/securescorecontrolprofile-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/securescorecontrolprofile-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?SecureScoreControlProfileItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -69,11 +69,11 @@ class SecureScoreControlProfileItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update an editable **secureScoreControlProfile** object within any integrated solution to change various properties, such as **assignedTo** or **tenantNote**.
+     * Update an editable secureScoreControlProfile object within any integrated solution to change various properties, such as assignedTo or tenantNote.
      * @param SecureScoreControlProfile $body The request body
      * @param SecureScoreControlProfileItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/securescorecontrolprofile-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/securescorecontrolprofile-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(SecureScoreControlProfile $body, ?SecureScoreControlProfileItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -127,7 +127,7 @@ class SecureScoreControlProfileItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update an editable **secureScoreControlProfile** object within any integrated solution to change various properties, such as **assignedTo** or **tenantNote**.
+     * Update an editable secureScoreControlProfile object within any integrated solution to change various properties, such as assignedTo or tenantNote.
      * @param SecureScoreControlProfile $body The request body
      * @param SecureScoreControlProfileItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

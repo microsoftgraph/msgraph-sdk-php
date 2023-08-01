@@ -56,7 +56,7 @@ class ScopedRoleMembersRequestBuilder extends BaseRequestBuilder
      * List Azure Active Directory (Azure AD) role assignments with administrative unit scope.
      * @param ScopedRoleMembersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/administrativeunit-list-scopedrolemembers?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/administrativeunit-list-scopedrolemembers?view=graph-rest-1.0 Find more info here
     */
     public function get(?ScopedRoleMembersRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,7 +76,7 @@ class ScopedRoleMembersRequestBuilder extends BaseRequestBuilder
      * @param ScopedRoleMembership $body The request body
      * @param ScopedRoleMembersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/administrativeunit-post-scopedrolemembers?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/administrativeunit-post-scopedrolemembers?view=graph-rest-1.0 Find more info here
     */
     public function post(ScopedRoleMembership $body, ?ScopedRoleMembersRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

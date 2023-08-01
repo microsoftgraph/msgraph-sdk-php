@@ -75,7 +75,7 @@ class MailFolderItemRequestBuilder extends BaseRequestBuilder
      * Delete the specified mailFolder. The folder can be a mailSearchFolder. You can specify a mail folder by its folder ID, or by its well-known folder name, if one exists.
      * @param MailFolderItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/mailfolder-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/mailfolder-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?MailFolderItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -94,7 +94,7 @@ class MailFolderItemRequestBuilder extends BaseRequestBuilder
      * The user's mail folders. Read-only. Nullable.
      * @param MailFolderItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/mailfolder-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/mailfolder-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?MailFolderItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -114,7 +114,7 @@ class MailFolderItemRequestBuilder extends BaseRequestBuilder
      * @param MailFolder $body The request body
      * @param MailFolderItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/mailsearchfolder-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/mailsearchfolder-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(MailFolder $body, ?MailFolderItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

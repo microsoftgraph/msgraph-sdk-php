@@ -32,10 +32,10 @@ class StartRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Submits the print job to the associated printer or printerShare. It will be printed after any existing pending **jobs** are completed, aborted, or canceled.
+     * Submits the print job to the associated printer or printerShare. It will be printed after any existing pending jobs are completed, aborted, or canceled.
      * @param StartRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/printjob-start?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/printjob-start?view=graph-rest-1.0 Find more info here
     */
     public function post(?StartRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);
@@ -51,7 +51,7 @@ class StartRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Submits the print job to the associated printer or printerShare. It will be printed after any existing pending **jobs** are completed, aborted, or canceled.
+     * Submits the print job to the associated printer or printerShare. It will be printed after any existing pending jobs are completed, aborted, or canceled.
      * @param StartRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

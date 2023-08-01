@@ -51,7 +51,7 @@ class LearningProviderItemRequestBuilder extends BaseRequestBuilder
      * Delete a learningProvider resource and remove its registration in Viva Learning for a tenant.
      * @param LearningProviderItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/employeeexperience-delete-learningproviders?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/employeeexperience-delete-learningproviders?view=graph-rest-1.0 Find more info here
     */
     public function delete(?LearningProviderItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -70,7 +70,7 @@ class LearningProviderItemRequestBuilder extends BaseRequestBuilder
      * Read the properties and relationships of a learningProvider object.
      * @param LearningProviderItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/learningprovider-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/learningprovider-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?LearningProviderItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -90,7 +90,7 @@ class LearningProviderItemRequestBuilder extends BaseRequestBuilder
      * @param LearningProvider $body The request body
      * @param LearningProviderItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/learningprovider-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/learningprovider-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(LearningProvider $body, ?LearningProviderItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

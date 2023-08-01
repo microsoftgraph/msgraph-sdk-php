@@ -27,7 +27,7 @@ class AccessPackageAssignmentRequestWorkflowExtension extends CustomCalloutExten
     }
 
     /**
-     * Gets the callbackConfiguration property value. The callbackConfiguration property
+     * Gets the callbackConfiguration property value. The callback configuration for a custom extension.
      * @return CustomExtensionCallbackConfiguration|null
     */
     public function getCallbackConfiguration(): ?CustomExtensionCallbackConfiguration {
@@ -39,7 +39,7 @@ class AccessPackageAssignmentRequestWorkflowExtension extends CustomCalloutExten
     }
 
     /**
-     * Gets the createdBy property value. The createdBy property
+     * Gets the createdBy property value. The userPrincipalName of the user or identity of the subject that created this resource. Read-only.
      * @return string|null
     */
     public function getCreatedBy(): ?string {
@@ -51,7 +51,7 @@ class AccessPackageAssignmentRequestWorkflowExtension extends CustomCalloutExten
     }
 
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. When the object was created.
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
@@ -78,7 +78,7 @@ class AccessPackageAssignmentRequestWorkflowExtension extends CustomCalloutExten
     }
 
     /**
-     * Gets the lastModifiedBy property value. The lastModifiedBy property
+     * Gets the lastModifiedBy property value. The userPrincipalName of the identity that last modified the object.
      * @return string|null
     */
     public function getLastModifiedBy(): ?string {
@@ -90,7 +90,7 @@ class AccessPackageAssignmentRequestWorkflowExtension extends CustomCalloutExten
     }
 
     /**
-     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Gets the lastModifiedDateTime property value. When the object was last modified.
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
@@ -115,7 +115,7 @@ class AccessPackageAssignmentRequestWorkflowExtension extends CustomCalloutExten
     }
 
     /**
-     * Sets the callbackConfiguration property value. The callbackConfiguration property
+     * Sets the callbackConfiguration property value. The callback configuration for a custom extension.
      * @param CustomExtensionCallbackConfiguration|null $value Value to set for the callbackConfiguration property.
     */
     public function setCallbackConfiguration(?CustomExtensionCallbackConfiguration $value): void {
@@ -123,7 +123,7 @@ class AccessPackageAssignmentRequestWorkflowExtension extends CustomCalloutExten
     }
 
     /**
-     * Sets the createdBy property value. The createdBy property
+     * Sets the createdBy property value. The userPrincipalName of the user or identity of the subject that created this resource. Read-only.
      * @param string|null $value Value to set for the createdBy property.
     */
     public function setCreatedBy(?string $value): void {
@@ -131,7 +131,7 @@ class AccessPackageAssignmentRequestWorkflowExtension extends CustomCalloutExten
     }
 
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. When the object was created.
      * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
@@ -139,7 +139,7 @@ class AccessPackageAssignmentRequestWorkflowExtension extends CustomCalloutExten
     }
 
     /**
-     * Sets the lastModifiedBy property value. The lastModifiedBy property
+     * Sets the lastModifiedBy property value. The userPrincipalName of the identity that last modified the object.
      * @param string|null $value Value to set for the lastModifiedBy property.
     */
     public function setLastModifiedBy(?string $value): void {
@@ -147,7 +147,7 @@ class AccessPackageAssignmentRequestWorkflowExtension extends CustomCalloutExten
     }
 
     /**
-     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Sets the lastModifiedDateTime property value. When the object was last modified.
      * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {

@@ -56,7 +56,7 @@ class EndpointsRequestBuilder extends BaseRequestBuilder
      * Retrieve a list of endpoints exposed by a print service.
      * @param EndpointsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/printservice-list-endpoints?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/printservice-list-endpoints?view=graph-rest-1.0 Find more info here
     */
     public function get(?EndpointsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

@@ -58,7 +58,7 @@ class AccessPackageResourceEnvironmentItemRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Get resourceEnvironments from identityGovernance
+     * A reference to the geolocation environments in which a resource is located.
      * @param AccessPackageResourceEnvironmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -112,7 +112,7 @@ class AccessPackageResourceEnvironmentItemRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Get resourceEnvironments from identityGovernance
+     * A reference to the geolocation environments in which a resource is located.
      * @param AccessPackageResourceEnvironmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

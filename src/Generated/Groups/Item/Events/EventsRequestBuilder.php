@@ -64,7 +64,7 @@ class EventsRequestBuilder extends BaseRequestBuilder
      * Retrieve a list of event objects.
      * @param EventsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/group-list-events?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/group-list-events?view=graph-rest-1.0 Find more info here
     */
     public function get(?EventsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -84,7 +84,7 @@ class EventsRequestBuilder extends BaseRequestBuilder
      * @param Event $body The request body
      * @param EventsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/group-post-events?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/group-post-events?view=graph-rest-1.0 Find more info here
     */
     public function post(Event $body, ?EventsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

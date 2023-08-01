@@ -53,7 +53,7 @@ class SchemaRequestBuilder extends BaseRequestBuilder
      * Read the properties and relationships of a schema object.
      * @param SchemaRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/externalconnectors-schema-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/externalconnectors-schema-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?SchemaRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

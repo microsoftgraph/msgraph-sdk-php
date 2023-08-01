@@ -53,7 +53,7 @@ class SubscribedSkuItemRequestBuilder extends BaseRequestBuilder
      * Get a specific commercial subscription that an organization has acquired.
      * @param SubscribedSkuItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/subscribedsku-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/subscribedsku-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?SubscribedSkuItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

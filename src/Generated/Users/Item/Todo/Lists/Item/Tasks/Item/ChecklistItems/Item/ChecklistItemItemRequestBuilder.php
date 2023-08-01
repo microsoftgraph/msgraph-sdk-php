@@ -35,7 +35,7 @@ class ChecklistItemItemRequestBuilder extends BaseRequestBuilder
      * Delete a checklistItem object.
      * @param ChecklistItemItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/checklistitem-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/checklistitem-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?ChecklistItemItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -54,7 +54,7 @@ class ChecklistItemItemRequestBuilder extends BaseRequestBuilder
      * Read the properties and relationships of a checklistItem object.
      * @param ChecklistItemItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/checklistitem-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/checklistitem-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ChecklistItemItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -74,7 +74,7 @@ class ChecklistItemItemRequestBuilder extends BaseRequestBuilder
      * @param ChecklistItem $body The request body
      * @param ChecklistItemItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/checklistitem-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/checklistitem-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(ChecklistItem $body, ?ChecklistItemItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
