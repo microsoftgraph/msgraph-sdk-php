@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Acc
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get catalog from identityGovernance
+ * Required when creating the access package. Read-only. Nullable.
 */
 class CatalogRequestBuilderGetQueryParameters 
 {

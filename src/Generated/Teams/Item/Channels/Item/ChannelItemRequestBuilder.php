@@ -107,7 +107,7 @@ class ChannelItemRequestBuilder extends BaseRequestBuilder
      * Delete the channel.
      * @param ChannelItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/channel-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/channel-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?ChannelItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -126,7 +126,7 @@ class ChannelItemRequestBuilder extends BaseRequestBuilder
      * Retrieve the properties and relationships of a channel. This method supports federation. Only a user who is a member of the shared channel can retrieve channel information.
      * @param ChannelItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/channel-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/channel-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ChannelItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -146,7 +146,7 @@ class ChannelItemRequestBuilder extends BaseRequestBuilder
      * @param Channel $body The request body
      * @param ChannelItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/channel-patch?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/channel-patch?view=graph-rest-1.0 Find more info here
     */
     public function patch(Channel $body, ?ChannelItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

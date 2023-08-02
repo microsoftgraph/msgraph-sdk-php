@@ -61,7 +61,7 @@ class TitleRequestBuilder extends BaseRequestBuilder
      * Retrieve the properties and relationships of charttitle object.
      * @param TitleRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/charttitle-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/charttitle-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?TitleRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -81,7 +81,7 @@ class TitleRequestBuilder extends BaseRequestBuilder
      * @param WorkbookChartTitle $body The request body
      * @param TitleRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/charttitle-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/charttitle-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(WorkbookChartTitle $body, ?TitleRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

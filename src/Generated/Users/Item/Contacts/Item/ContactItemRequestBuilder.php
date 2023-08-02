@@ -51,7 +51,7 @@ class ContactItemRequestBuilder extends BaseRequestBuilder
      * Delete a contact.
      * @param ContactItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/contact-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/contact-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?ContactItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -70,7 +70,7 @@ class ContactItemRequestBuilder extends BaseRequestBuilder
      * Retrieve the properties and relationships of a contact object. There are two scenarios where an app can get a contact in another user's contact folder:
      * @param ContactItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/contact-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/contact-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ContactItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -90,7 +90,7 @@ class ContactItemRequestBuilder extends BaseRequestBuilder
      * @param Contact $body The request body
      * @param ContactItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/contact-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/contact-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(Contact $body, ?ContactItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

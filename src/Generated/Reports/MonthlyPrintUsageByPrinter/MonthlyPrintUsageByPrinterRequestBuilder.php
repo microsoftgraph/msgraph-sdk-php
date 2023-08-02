@@ -56,7 +56,7 @@ class MonthlyPrintUsageByPrinterRequestBuilder extends BaseRequestBuilder
      * Retrieve a list of monthly print usage summaries, grouped by printer.
      * @param MonthlyPrintUsageByPrinterRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/reportroot-list-monthlyprintusagebyprinter?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/reportroot-list-monthlyprintusagebyprinter?view=graph-rest-1.0 Find more info here
     */
     public function get(?MonthlyPrintUsageByPrinterRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

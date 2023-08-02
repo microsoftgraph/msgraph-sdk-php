@@ -61,7 +61,7 @@ class MinorGridlinesRequestBuilder extends BaseRequestBuilder
      * Retrieve the properties and relationships of chartgridlines object.
      * @param MinorGridlinesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/chartgridlines-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/chartgridlines-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?MinorGridlinesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -81,7 +81,7 @@ class MinorGridlinesRequestBuilder extends BaseRequestBuilder
      * @param WorkbookChartGridlines $body The request body
      * @param MinorGridlinesRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/chartgridlines-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/chartgridlines-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(WorkbookChartGridlines $body, ?MinorGridlinesRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

@@ -53,10 +53,10 @@ class BucketsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of **plannerbucket** objects.
+     * Retrieve a list of plannerbucket objects.
      * @param BucketsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/planner-list-buckets?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/planner-list-buckets?view=graph-rest-1.0 Find more info here
     */
     public function get(?BucketsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,7 +76,7 @@ class BucketsRequestBuilder extends BaseRequestBuilder
      * @param PlannerBucket $body The request body
      * @param BucketsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/planner-post-buckets?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/planner-post-buckets?view=graph-rest-1.0 Find more info here
     */
     public function post(PlannerBucket $body, ?BucketsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -92,7 +92,7 @@ class BucketsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of **plannerbucket** objects.
+     * Retrieve a list of plannerbucket objects.
      * @param BucketsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

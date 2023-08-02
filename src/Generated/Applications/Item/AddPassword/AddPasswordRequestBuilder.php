@@ -36,7 +36,7 @@ class AddPasswordRequestBuilder extends BaseRequestBuilder
      * @param AddPasswordPostRequestBody $body The request body
      * @param AddPasswordRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/application-addpassword?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/application-addpassword?view=graph-rest-1.0 Find more info here
     */
     public function post(AddPasswordPostRequestBody $body, ?AddPasswordRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

@@ -51,7 +51,7 @@ class DocumentSetVersionItemRequestBuilder extends BaseRequestBuilder
      * Delete a version of a document set in a list.
      * @param DocumentSetVersionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/documentsetversion-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/documentsetversion-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?DocumentSetVersionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -70,7 +70,7 @@ class DocumentSetVersionItemRequestBuilder extends BaseRequestBuilder
      * Read the properties and relationships of a documentSetVersion object.
      * @param DocumentSetVersionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/documentsetversion-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/documentsetversion-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DocumentSetVersionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

@@ -43,7 +43,7 @@ class BookingAppointmentItemRequestBuilder extends BaseRequestBuilder
      * Delete a bookingAppointment in the specified bookingBusiness.
      * @param BookingAppointmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/bookingappointment-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/bookingappointment-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?BookingAppointmentItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -59,10 +59,10 @@ class BookingAppointmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the properties and relationships of a bookingAppointment object in the specified bookingBusiness. The **startDateTime** and **endDateTime** properties are always returned in UTC.
+     * Get the properties and relationships of a bookingAppointment object in the specified bookingBusiness. The startDateTime and endDateTime properties are always returned in UTC.
      * @param BookingAppointmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/bookingappointment-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/bookingappointment-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?BookingAppointmentItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -82,7 +82,7 @@ class BookingAppointmentItemRequestBuilder extends BaseRequestBuilder
      * @param BookingAppointment $body The request body
      * @param BookingAppointmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/bookingappointment-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/bookingappointment-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(BookingAppointment $body, ?BookingAppointmentItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -115,7 +115,7 @@ class BookingAppointmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the properties and relationships of a bookingAppointment object in the specified bookingBusiness. The **startDateTime** and **endDateTime** properties are always returned in UTC.
+     * Get the properties and relationships of a bookingAppointment object in the specified bookingBusiness. The startDateTime and endDateTime properties are always returned in UTC.
      * @param BookingAppointmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

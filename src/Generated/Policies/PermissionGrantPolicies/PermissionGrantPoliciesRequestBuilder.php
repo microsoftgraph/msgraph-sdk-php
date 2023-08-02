@@ -56,7 +56,7 @@ class PermissionGrantPoliciesRequestBuilder extends BaseRequestBuilder
      * Retrieve the list of permissionGrantPolicy objects.
      * @param PermissionGrantPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/permissiongrantpolicy-list?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/permissiongrantpolicy-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?PermissionGrantPoliciesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,7 +76,7 @@ class PermissionGrantPoliciesRequestBuilder extends BaseRequestBuilder
      * @param PermissionGrantPolicy $body The request body
      * @param PermissionGrantPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/permissiongrantpolicy-post-permissiongrantpolicies?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/permissiongrantpolicy-post-permissiongrantpolicies?view=graph-rest-1.0 Find more info here
     */
     public function post(PermissionGrantPolicy $body, ?PermissionGrantPoliciesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

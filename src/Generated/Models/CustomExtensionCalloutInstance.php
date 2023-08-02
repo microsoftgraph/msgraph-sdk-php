@@ -56,7 +56,7 @@ class CustomExtensionCalloutInstance implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Gets the customExtensionId property value. The customExtensionId property
+     * Gets the customExtensionId property value. Identification of the custom extension that was triggered at this instance.
      * @return string|null
     */
     public function getCustomExtensionId(): ?string {
@@ -68,7 +68,7 @@ class CustomExtensionCalloutInstance implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Gets the detail property value. The detail property
+     * Gets the detail property value. Details provided by the logic app during the callback of the request instance.
      * @return string|null
     */
     public function getDetail(): ?string {
@@ -80,7 +80,7 @@ class CustomExtensionCalloutInstance implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Gets the externalCorrelationId property value. The externalCorrelationId property
+     * Gets the externalCorrelationId property value. The unique run identifier for the logic app.
      * @return string|null
     */
     public function getExternalCorrelationId(): ?string {
@@ -108,7 +108,7 @@ class CustomExtensionCalloutInstance implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Gets the id property value. The id property
+     * Gets the id property value. Unique identifier for the callout instance. Read-only.
      * @return string|null
     */
     public function getId(): ?string {
@@ -132,7 +132,7 @@ class CustomExtensionCalloutInstance implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Gets the status property value. The status property
+     * Gets the status property value. The status of the request to the custom extension. The possible values are: calloutSent, callbackReceived, calloutFailed, callbackTimedOut, waitingForCallback, unknownFutureValue.
      * @return CustomExtensionCalloutInstanceStatus|null
     */
     public function getStatus(): ?CustomExtensionCalloutInstanceStatus {
@@ -174,7 +174,7 @@ class CustomExtensionCalloutInstance implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Sets the customExtensionId property value. The customExtensionId property
+     * Sets the customExtensionId property value. Identification of the custom extension that was triggered at this instance.
      * @param string|null $value Value to set for the customExtensionId property.
     */
     public function setCustomExtensionId(?string $value): void {
@@ -182,7 +182,7 @@ class CustomExtensionCalloutInstance implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Sets the detail property value. The detail property
+     * Sets the detail property value. Details provided by the logic app during the callback of the request instance.
      * @param string|null $value Value to set for the detail property.
     */
     public function setDetail(?string $value): void {
@@ -190,7 +190,7 @@ class CustomExtensionCalloutInstance implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Sets the externalCorrelationId property value. The externalCorrelationId property
+     * Sets the externalCorrelationId property value. The unique run identifier for the logic app.
      * @param string|null $value Value to set for the externalCorrelationId property.
     */
     public function setExternalCorrelationId(?string $value): void {
@@ -198,7 +198,7 @@ class CustomExtensionCalloutInstance implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Sets the id property value. The id property
+     * Sets the id property value. Unique identifier for the callout instance. Read-only.
      * @param string|null $value Value to set for the id property.
     */
     public function setId(?string $value): void {
@@ -214,7 +214,7 @@ class CustomExtensionCalloutInstance implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Sets the status property value. The status property
+     * Sets the status property value. The status of the request to the custom extension. The possible values are: calloutSent, callbackReceived, calloutFailed, callbackTimedOut, waitingForCallback, unknownFutureValue.
      * @param CustomExtensionCalloutInstanceStatus|null $value Value to set for the status property.
     */
     public function setStatus(?CustomExtensionCalloutInstanceStatus $value): void {

@@ -35,7 +35,7 @@ class ReplyRequestBuilder extends BaseRequestBuilder
      * @param ReplyPostRequestBody $body The request body
      * @param ReplyRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/post-reply?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/post-reply?view=graph-rest-1.0 Find more info here
     */
     public function post(ReplyPostRequestBody $body, ?ReplyRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

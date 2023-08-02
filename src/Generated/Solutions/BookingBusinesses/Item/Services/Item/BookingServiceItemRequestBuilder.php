@@ -35,7 +35,7 @@ class BookingServiceItemRequestBuilder extends BaseRequestBuilder
      * Delete a bookingService object in the specified bookingBusiness.
      * @param BookingServiceItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/bookingservice-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/bookingservice-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?BookingServiceItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -54,7 +54,7 @@ class BookingServiceItemRequestBuilder extends BaseRequestBuilder
      * Get the properties and relationships of a bookingService object in the specified bookingBusiness.
      * @param BookingServiceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/bookingservice-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/bookingservice-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?BookingServiceItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -74,7 +74,7 @@ class BookingServiceItemRequestBuilder extends BaseRequestBuilder
      * @param BookingService $body The request body
      * @param BookingServiceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/bookingservice-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/bookingservice-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(BookingService $body, ?BookingServiceItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Planner\Buckets\Item\Tasks\Item\AssignedToTa
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties and relationships of a **plannerAssignedToTaskBoardTaskFormat** object.
+ * Retrieve the properties and relationships of a plannerAssignedToTaskBoardTaskFormat object.
 */
 class AssignedToTaskBoardFormatRequestBuilderGetQueryParameters 
 {

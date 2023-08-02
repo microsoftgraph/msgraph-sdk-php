@@ -69,7 +69,7 @@ class DriveItemVersionItemRequestBuilder extends BaseRequestBuilder
      * Retrieve the metadata for a specific version of a DriveItem.
      * @param DriveItemVersionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/driveitemversion-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/driveitemversion-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DriveItemVersionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

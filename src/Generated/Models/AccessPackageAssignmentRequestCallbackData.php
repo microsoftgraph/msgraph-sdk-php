@@ -26,7 +26,7 @@ class AccessPackageAssignmentRequestCallbackData extends CustomExtensionData imp
     }
 
     /**
-     * Gets the customExtensionStageInstanceDetail property value. The customExtensionStageInstanceDetail property
+     * Gets the customExtensionStageInstanceDetail property value. Details for the callback.
      * @return string|null
     */
     public function getCustomExtensionStageInstanceDetail(): ?string {
@@ -38,7 +38,7 @@ class AccessPackageAssignmentRequestCallbackData extends CustomExtensionData imp
     }
 
     /**
-     * Gets the customExtensionStageInstanceId property value. The customExtensionStageInstanceId property
+     * Gets the customExtensionStageInstanceId property value. Unique identifier of the callout to the custom extension.
      * @return string|null
     */
     public function getCustomExtensionStageInstanceId(): ?string {
@@ -64,7 +64,7 @@ class AccessPackageAssignmentRequestCallbackData extends CustomExtensionData imp
     }
 
     /**
-     * Gets the stage property value. The stage property
+     * Gets the stage property value. Indicates the stage at which the custom callout extension will be executed. The possible values are: assignmentRequestCreated, assignmentRequestApproved, assignmentRequestGranted, assignmentRequestRemoved, assignmentFourteenDaysBeforeExpiration, assignmentOneDayBeforeExpiration, unknownFutureValue.
      * @return AccessPackageCustomExtensionStage|null
     */
     public function getStage(): ?AccessPackageCustomExtensionStage {
@@ -76,7 +76,7 @@ class AccessPackageAssignmentRequestCallbackData extends CustomExtensionData imp
     }
 
     /**
-     * Gets the state property value. The state property
+     * Gets the state property value. Allow the extension to be able to deny or cancel the request submitted by the requestor. The supported values are Denied and Canceled. This property can only be set for an assignmentRequestCreated stage.
      * @return string|null
     */
     public function getState(): ?string {
@@ -100,7 +100,7 @@ class AccessPackageAssignmentRequestCallbackData extends CustomExtensionData imp
     }
 
     /**
-     * Sets the customExtensionStageInstanceDetail property value. The customExtensionStageInstanceDetail property
+     * Sets the customExtensionStageInstanceDetail property value. Details for the callback.
      * @param string|null $value Value to set for the customExtensionStageInstanceDetail property.
     */
     public function setCustomExtensionStageInstanceDetail(?string $value): void {
@@ -108,7 +108,7 @@ class AccessPackageAssignmentRequestCallbackData extends CustomExtensionData imp
     }
 
     /**
-     * Sets the customExtensionStageInstanceId property value. The customExtensionStageInstanceId property
+     * Sets the customExtensionStageInstanceId property value. Unique identifier of the callout to the custom extension.
      * @param string|null $value Value to set for the customExtensionStageInstanceId property.
     */
     public function setCustomExtensionStageInstanceId(?string $value): void {
@@ -116,7 +116,7 @@ class AccessPackageAssignmentRequestCallbackData extends CustomExtensionData imp
     }
 
     /**
-     * Sets the stage property value. The stage property
+     * Sets the stage property value. Indicates the stage at which the custom callout extension will be executed. The possible values are: assignmentRequestCreated, assignmentRequestApproved, assignmentRequestGranted, assignmentRequestRemoved, assignmentFourteenDaysBeforeExpiration, assignmentOneDayBeforeExpiration, unknownFutureValue.
      * @param AccessPackageCustomExtensionStage|null $value Value to set for the stage property.
     */
     public function setStage(?AccessPackageCustomExtensionStage $value): void {
@@ -124,7 +124,7 @@ class AccessPackageAssignmentRequestCallbackData extends CustomExtensionData imp
     }
 
     /**
-     * Sets the state property value. The state property
+     * Sets the state property value. Allow the extension to be able to deny or cancel the request submitted by the requestor. The supported values are Denied and Canceled. This property can only be set for an assignmentRequestCreated stage.
      * @param string|null $value Value to set for the state property.
     */
     public function setState(?string $value): void {

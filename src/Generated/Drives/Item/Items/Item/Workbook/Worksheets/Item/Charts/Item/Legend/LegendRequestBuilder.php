@@ -61,7 +61,7 @@ class LegendRequestBuilder extends BaseRequestBuilder
      * Retrieve the properties and relationships of chartlegend object.
      * @param LegendRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/chartlegend-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/chartlegend-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?LegendRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -81,7 +81,7 @@ class LegendRequestBuilder extends BaseRequestBuilder
      * @param WorkbookChartLegend $body The request body
      * @param LegendRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/chartlegend-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/chartlegend-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(WorkbookChartLegend $body, ?LegendRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

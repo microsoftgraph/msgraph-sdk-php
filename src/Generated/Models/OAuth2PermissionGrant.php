@@ -25,7 +25,7 @@ class OAuth2PermissionGrant extends Entity implements Parsable
     }
 
     /**
-     * Gets the clientId property value. The id of the client service principal for the application which is authorized to act on behalf of a signed-in user when accessing an API. Required. Supports $filter (eq only).
+     * Gets the clientId property value. The object id (not appId) of the client service principal for the application which is authorized to act on behalf of a signed-in user when accessing an API. Required. Supports $filter (eq only).
      * @return string|null
     */
     public function getClientId(): ?string {
@@ -113,7 +113,7 @@ class OAuth2PermissionGrant extends Entity implements Parsable
     }
 
     /**
-     * Sets the clientId property value. The id of the client service principal for the application which is authorized to act on behalf of a signed-in user when accessing an API. Required. Supports $filter (eq only).
+     * Sets the clientId property value. The object id (not appId) of the client service principal for the application which is authorized to act on behalf of a signed-in user when accessing an API. Required. Supports $filter (eq only).
      * @param string|null $value Value to set for the clientId property.
     */
     public function setClientId(?string $value): void {

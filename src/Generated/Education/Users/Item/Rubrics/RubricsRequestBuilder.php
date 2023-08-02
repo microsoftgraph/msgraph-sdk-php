@@ -56,7 +56,7 @@ class RubricsRequestBuilder extends BaseRequestBuilder
      * Retrieve a list of educationRubric objects.
      * @param RubricsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/educationuser-list-rubrics?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/educationuser-list-rubrics?view=graph-rest-1.0 Find more info here
     */
     public function get(?RubricsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,7 +76,7 @@ class RubricsRequestBuilder extends BaseRequestBuilder
      * @param EducationRubric $body The request body
      * @param RubricsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/educationuser-post-rubrics?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/educationuser-post-rubrics?view=graph-rest-1.0 Find more info here
     */
     public function post(EducationRubric $body, ?RubricsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

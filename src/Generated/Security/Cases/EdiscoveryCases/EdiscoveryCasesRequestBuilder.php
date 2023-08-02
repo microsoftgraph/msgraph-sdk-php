@@ -56,7 +56,7 @@ class EdiscoveryCasesRequestBuilder extends BaseRequestBuilder
      * Get a list of the ediscoveryCase objects and their properties.
      * @param EdiscoveryCasesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/security-casesroot-list-ediscoverycases?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/security-casesroot-list-ediscoverycases?view=graph-rest-1.0 Find more info here
     */
     public function get(?EdiscoveryCasesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,7 +76,7 @@ class EdiscoveryCasesRequestBuilder extends BaseRequestBuilder
      * @param EdiscoveryCase $body The request body
      * @param EdiscoveryCasesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/security-casesroot-post-ediscoverycases?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/security-casesroot-post-ediscoverycases?view=graph-rest-1.0 Find more info here
     */
     public function post(EdiscoveryCase $body, ?EdiscoveryCasesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

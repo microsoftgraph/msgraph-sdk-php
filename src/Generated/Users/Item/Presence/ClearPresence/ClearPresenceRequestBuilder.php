@@ -31,11 +31,11 @@ class ClearPresenceRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Clear the application's presence session for a user. If it is the user's only presence session, the user's presence will change to `Offline/Offline`. For details about presences sessions, see presence: setPresence.
+     * Clear the application's presence session for a user. If it is the user's only presence session, the user's presence will change to Offline/Offline. For details about presences sessions, see presence: setPresence.
      * @param ClearPresencePostRequestBody $body The request body
      * @param ClearPresenceRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/presence-clearpresence?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/presence-clearpresence?view=graph-rest-1.0 Find more info here
     */
     public function post(ClearPresencePostRequestBody $body, ?ClearPresenceRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -51,7 +51,7 @@ class ClearPresenceRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Clear the application's presence session for a user. If it is the user's only presence session, the user's presence will change to `Offline/Offline`. For details about presences sessions, see presence: setPresence.
+     * Clear the application's presence session for a user. If it is the user's only presence session, the user's presence will change to Offline/Offline. For details about presences sessions, see presence: setPresence.
      * @param ClearPresencePostRequestBody $body The request body
      * @param ClearPresenceRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -34,7 +34,7 @@ class RefRequestBuilder extends BaseRequestBuilder
      * Remove a user as a registered owner of the device.
      * @param RefRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/device-delete-registeredowners?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/device-delete-registeredowners?view=graph-rest-1.0 Find more info here
     */
     public function delete(?RefRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);

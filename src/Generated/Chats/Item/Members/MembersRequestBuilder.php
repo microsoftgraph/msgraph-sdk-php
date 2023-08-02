@@ -64,7 +64,7 @@ class MembersRequestBuilder extends BaseRequestBuilder
      * List all conversation members in a chat or channel.
      * @param MembersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/conversationmember-list?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/conversationmember-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?MembersRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -84,7 +84,7 @@ class MembersRequestBuilder extends BaseRequestBuilder
      * @param ConversationMember $body The request body
      * @param MembersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/chat-post-members?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/chat-post-members?view=graph-rest-1.0 Find more info here
     */
     public function post(ConversationMember $body, ?MembersRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

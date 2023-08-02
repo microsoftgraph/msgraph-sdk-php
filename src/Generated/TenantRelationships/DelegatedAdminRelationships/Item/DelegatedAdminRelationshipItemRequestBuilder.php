@@ -59,7 +59,7 @@ class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBuilder
      * Delete a delegatedAdminRelationship object. A relationship can only be deleted if it's in the 'created' status. 
      * @param DelegatedAdminRelationshipItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/delegatedadminrelationship-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/delegatedadminrelationship-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?DelegatedAdminRelationshipItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -78,7 +78,7 @@ class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBuilder
      * Read the properties of a delegatedAdminRelationship object.
      * @param DelegatedAdminRelationshipItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/delegatedadminrelationship-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/delegatedadminrelationship-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DelegatedAdminRelationshipItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -94,11 +94,11 @@ class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a delegatedAdminRelationship object. A relationship can only be updated if it's in the `created` **status**.
+     * Update the properties of a delegatedAdminRelationship object. A relationship can only be updated if it's in the created status.
      * @param DelegatedAdminRelationship $body The request body
      * @param DelegatedAdminRelationshipItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/delegatedadminrelationship-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/delegatedadminrelationship-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(DelegatedAdminRelationship $body, ?DelegatedAdminRelationshipItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -152,7 +152,7 @@ class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a delegatedAdminRelationship object. A relationship can only be updated if it's in the `created` **status**.
+     * Update the properties of a delegatedAdminRelationship object. A relationship can only be updated if it's in the created status.
      * @param DelegatedAdminRelationship $body The request body
      * @param DelegatedAdminRelationshipItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

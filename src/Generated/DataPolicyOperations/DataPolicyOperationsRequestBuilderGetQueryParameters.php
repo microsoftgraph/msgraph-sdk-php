@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DataPolicyOperations;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties of a **dataPolicyOperation** object.
+ * Retrieve the properties of a dataPolicyOperation object.
 */
 class DataPolicyOperationsRequestBuilderGetQueryParameters 
 {

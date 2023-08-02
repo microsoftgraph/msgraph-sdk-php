@@ -67,7 +67,7 @@ class PlannerTaskItemRequestBuilder extends BaseRequestBuilder
      * Delete a plannerTask object.
      * @param PlannerTaskItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/plannertask-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/plannertask-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?PlannerTaskItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -86,7 +86,7 @@ class PlannerTaskItemRequestBuilder extends BaseRequestBuilder
      * Retrieve the properties and relationships of plannerTask object.
      * @param PlannerTaskItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/plannertask-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/plannertask-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?PlannerTaskItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -106,7 +106,7 @@ class PlannerTaskItemRequestBuilder extends BaseRequestBuilder
      * @param PlannerTask $body The request body
      * @param PlannerTaskItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/plannertask-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/plannertask-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(PlannerTask $body, ?PlannerTaskItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

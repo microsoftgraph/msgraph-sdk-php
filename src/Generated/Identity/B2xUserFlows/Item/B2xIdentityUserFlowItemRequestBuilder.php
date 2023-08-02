@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Identity\B2xUserFlows\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
+use Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\ApiConnectorConfiguration\ApiConnectorConfigurationRequestBuilder;
 use Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\IdentityProviders\IdentityProvidersRequestBuilder;
 use Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\Languages\LanguagesRequestBuilder;
 use Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\UserAttributeAssignments\UserAttributeAssignmentsRequestBuilder;
@@ -21,6 +22,13 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class B2xIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * The apiConnectorConfiguration property
+    */
+    public function apiConnectorConfiguration(): ApiConnectorConfigurationRequestBuilder {
+        return new ApiConnectorConfigurationRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Provides operations to manage the identityProviders property of the microsoft.graph.b2xIdentityUserFlow entity.
     */
@@ -67,7 +75,7 @@ class B2xIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder
      * Delete a b2xIdentityUserFlow object.
      * @param B2xIdentityUserFlowItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/b2xidentityuserflow-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/b2xidentityuserflow-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?B2xIdentityUserFlowItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -86,7 +94,7 @@ class B2xIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder
      * Retrieve the properties and relationships of a b2xIdentityUserFlow object.
      * @param B2xIdentityUserFlowItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/b2xidentityuserflow-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/b2xidentityuserflow-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?B2xIdentityUserFlowItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

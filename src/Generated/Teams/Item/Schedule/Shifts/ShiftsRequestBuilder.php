@@ -56,7 +56,7 @@ class ShiftsRequestBuilder extends BaseRequestBuilder
      * Get the list of shift instances in a schedule.
      * @param ShiftsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/schedule-list-shifts?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/schedule-list-shifts?view=graph-rest-1.0 Find more info here
     */
     public function get(?ShiftsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,7 +76,7 @@ class ShiftsRequestBuilder extends BaseRequestBuilder
      * @param Shift $body The request body
      * @param ShiftsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/schedule-post-shifts?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/schedule-post-shifts?view=graph-rest-1.0 Find more info here
     */
     public function post(Shift $body, ?ShiftsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

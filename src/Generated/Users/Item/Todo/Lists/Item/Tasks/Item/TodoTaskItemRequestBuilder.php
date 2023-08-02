@@ -75,7 +75,7 @@ class TodoTaskItemRequestBuilder extends BaseRequestBuilder
      * Deletes a todoTask object.
      * @param TodoTaskItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/todotask-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/todotask-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?TodoTaskItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -94,7 +94,7 @@ class TodoTaskItemRequestBuilder extends BaseRequestBuilder
      * Read the properties and relationships of a todoTask object.
      * @param TodoTaskItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/todotask-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/todotask-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?TodoTaskItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -114,7 +114,7 @@ class TodoTaskItemRequestBuilder extends BaseRequestBuilder
      * @param TodoTask $body The request body
      * @param TodoTaskItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/todotask-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/todotask-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(TodoTask $body, ?TodoTaskItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

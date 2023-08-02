@@ -43,7 +43,7 @@ class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuilder
      * Delete a homeRealmDiscoveryPolicy object.
      * @param HomeRealmDiscoveryPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/homerealmdiscoverypolicy-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/homerealmdiscoverypolicy-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?HomeRealmDiscoveryPolicyItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -62,7 +62,7 @@ class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuilder
      * Retrieve the properties and relationships of a homeRealmDiscoveryPolicy object.
      * @param HomeRealmDiscoveryPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/homerealmdiscoverypolicy-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/homerealmdiscoverypolicy-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?HomeRealmDiscoveryPolicyItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -82,7 +82,7 @@ class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuilder
      * @param HomeRealmDiscoveryPolicy $body The request body
      * @param HomeRealmDiscoveryPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/homerealmdiscoverypolicy-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/homerealmdiscoverypolicy-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(HomeRealmDiscoveryPolicy $body, ?HomeRealmDiscoveryPolicyItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

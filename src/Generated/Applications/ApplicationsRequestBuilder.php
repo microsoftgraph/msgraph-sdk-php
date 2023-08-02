@@ -88,7 +88,7 @@ class ApplicationsRequestBuilder extends BaseRequestBuilder
      * Get the list of applications in this organization.
      * @param ApplicationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/application-list?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/application-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?ApplicationsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -108,7 +108,7 @@ class ApplicationsRequestBuilder extends BaseRequestBuilder
      * @param Application $body The request body
      * @param ApplicationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/application-post-applications?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/application-post-applications?view=graph-rest-1.0 Find more info here
     */
     public function post(Application $body, ?ApplicationsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

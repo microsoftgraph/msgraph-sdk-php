@@ -64,7 +64,7 @@ class UsersRequestBuilder extends BaseRequestBuilder
      * Get a list of the educationUser objects and their properties.
      * @param UsersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/educationuser-list?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/educationuser-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?UsersRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -84,7 +84,7 @@ class UsersRequestBuilder extends BaseRequestBuilder
      * @param EducationUser $body The request body
      * @param UsersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/educationuser-post?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/educationuser-post?view=graph-rest-1.0 Find more info here
     */
     public function post(EducationUser $body, ?UsersRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

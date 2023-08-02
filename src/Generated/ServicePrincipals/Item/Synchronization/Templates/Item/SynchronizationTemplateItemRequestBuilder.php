@@ -80,7 +80,7 @@ class SynchronizationTemplateItemRequestBuilder extends BaseRequestBuilder
      * @param SynchronizationTemplate $body The request body
      * @param SynchronizationTemplateItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/synchronization-synchronizationtemplate-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/synchronization-synchronizationtemplate-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(SynchronizationTemplate $body, ?SynchronizationTemplateItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

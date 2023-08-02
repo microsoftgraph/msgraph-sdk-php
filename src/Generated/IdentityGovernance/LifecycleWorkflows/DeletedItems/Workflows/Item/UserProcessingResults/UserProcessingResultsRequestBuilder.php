@@ -54,10 +54,10 @@ class UserProcessingResultsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the **userProcessingResult** resources for a workflow.
+     * Get the userProcessingResult resources for a workflow.
      * @param UserProcessingResultsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/identitygovernance-workflow-list-userprocessingresults?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/identitygovernance-workflow-list-userprocessingresults?view=graph-rest-1.0 Find more info here
     */
     public function get(?UserProcessingResultsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -83,7 +83,7 @@ class UserProcessingResultsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the **userProcessingResult** resources for a workflow.
+     * Get the userProcessingResult resources for a workflow.
      * @param UserProcessingResultsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

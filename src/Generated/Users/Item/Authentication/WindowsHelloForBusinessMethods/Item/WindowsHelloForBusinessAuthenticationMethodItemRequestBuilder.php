@@ -43,7 +43,7 @@ class WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder extends Base
      * Deletes a windowsHelloForBusinessAuthenticationMethod object.
      * @param WindowsHelloForBusinessAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/windowshelloforbusinessauthenticationmethod-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/windowshelloforbusinessauthenticationmethod-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?WindowsHelloForBusinessAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -62,7 +62,7 @@ class WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder extends Base
      * Read the properties and relationships of a windowsHelloForBusinessAuthenticationMethod object.
      * @param WindowsHelloForBusinessAuthenticationMethodItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/windowshelloforbusinessauthenticationmethod-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/windowshelloforbusinessauthenticationmethod-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?WindowsHelloForBusinessAuthenticationMethodItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

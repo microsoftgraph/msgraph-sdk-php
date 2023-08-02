@@ -123,7 +123,7 @@ class WorkbookTableItemRequestBuilder extends BaseRequestBuilder
      * Deletes the table.
      * @param WorkbookTableItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/table-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/table-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?WorkbookTableItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -142,7 +142,7 @@ class WorkbookTableItemRequestBuilder extends BaseRequestBuilder
      * Retrieve the properties and relationships of table object.
      * @param WorkbookTableItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/table-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/table-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?WorkbookTableItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -162,7 +162,7 @@ class WorkbookTableItemRequestBuilder extends BaseRequestBuilder
      * @param WorkbookTable $body The request body
      * @param WorkbookTableItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/table-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/table-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(WorkbookTable $body, ?WorkbookTableItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

@@ -53,7 +53,7 @@ class DeviceCategoryRequestBuilder extends BaseRequestBuilder
      * Read properties and relationships of the deviceCategory object.
      * @param DeviceCategoryRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-devices-devicecategory-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-devices-devicecategory-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DeviceCategoryRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -73,7 +73,7 @@ class DeviceCategoryRequestBuilder extends BaseRequestBuilder
      * @param DeviceCategory $body The request body
      * @param DeviceCategoryRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-devices-devicecategory-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-devices-devicecategory-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(DeviceCategory $body, ?DeviceCategoryRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

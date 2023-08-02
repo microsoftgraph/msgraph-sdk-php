@@ -32,7 +32,7 @@ class CatalogRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get catalog from identityGovernance
+     * Required when creating the access package. Read-only. Nullable.
      * @param CatalogRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -50,7 +50,7 @@ class CatalogRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get catalog from identityGovernance
+     * Required when creating the access package. Read-only. Nullable.
      * @param CatalogRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

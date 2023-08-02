@@ -56,7 +56,7 @@ class SearchesRequestBuilder extends BaseRequestBuilder
      * Get the list of ediscoverySearch resources from an eDiscoveryCase object.
      * @param SearchesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/security-ediscoverycase-list-searches?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/security-ediscoverycase-list-searches?view=graph-rest-1.0 Find more info here
     */
     public function get(?SearchesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,7 +76,7 @@ class SearchesRequestBuilder extends BaseRequestBuilder
      * @param EdiscoverySearch $body The request body
      * @param SearchesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/security-ediscoverycase-post-searches?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/security-ediscoverycase-post-searches?view=graph-rest-1.0 Find more info here
     */
     public function post(EdiscoverySearch $body, ?SearchesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

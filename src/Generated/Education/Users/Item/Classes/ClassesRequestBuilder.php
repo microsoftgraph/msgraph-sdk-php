@@ -55,7 +55,7 @@ class ClassesRequestBuilder extends BaseRequestBuilder
      * Get the educationClass resources an educationUser is a member of.
      * @param ClassesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/educationuser-list-classes?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/educationuser-list-classes?view=graph-rest-1.0 Find more info here
     */
     public function get(?ClassesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

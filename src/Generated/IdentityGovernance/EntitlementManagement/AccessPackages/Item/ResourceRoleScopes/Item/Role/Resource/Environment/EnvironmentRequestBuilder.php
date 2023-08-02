@@ -32,7 +32,7 @@ class EnvironmentRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get environment from identityGovernance
+     * Contains the environment information for the resource. This can be set using either the @odata.bind annotation or the environment's originId.Supports $expand.
      * @param EnvironmentRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -50,7 +50,7 @@ class EnvironmentRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get environment from identityGovernance
+     * Contains the environment information for the resource. This can be set using either the @odata.bind annotation or the environment's originId.Supports $expand.
      * @param EnvironmentRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

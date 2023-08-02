@@ -56,7 +56,7 @@ class PagesRequestBuilder extends BaseRequestBuilder
      * Retrieve a list of page objects from the specified section.
      * @param PagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/section-list-pages?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/section-list-pages?view=graph-rest-1.0 Find more info here
     */
     public function get(?PagesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,7 +76,7 @@ class PagesRequestBuilder extends BaseRequestBuilder
      * @param OnenotePage $body The request body
      * @param PagesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/section-post-pages?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/section-post-pages?view=graph-rest-1.0 Find more info here
     */
     public function post(OnenotePage $body, ?PagesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

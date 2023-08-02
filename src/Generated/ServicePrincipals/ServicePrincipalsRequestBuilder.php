@@ -88,7 +88,7 @@ class ServicePrincipalsRequestBuilder extends BaseRequestBuilder
      * Retrieve a list of servicePrincipal objects.
      * @param ServicePrincipalsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/serviceprincipal-list?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/serviceprincipal-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?ServicePrincipalsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -108,7 +108,7 @@ class ServicePrincipalsRequestBuilder extends BaseRequestBuilder
      * @param ServicePrincipal $body The request body
      * @param ServicePrincipalsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/serviceprincipal-post-serviceprincipals?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/serviceprincipal-post-serviceprincipals?view=graph-rest-1.0 Find more info here
     */
     public function post(ServicePrincipal $body, ?ServicePrincipalsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

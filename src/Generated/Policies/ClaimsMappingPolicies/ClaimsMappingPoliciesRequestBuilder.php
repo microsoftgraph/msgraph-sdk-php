@@ -56,7 +56,7 @@ class ClaimsMappingPoliciesRequestBuilder extends BaseRequestBuilder
      * Get a list of claimsMappingPolicy objects.
      * @param ClaimsMappingPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/claimsmappingpolicy-list?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/claimsmappingpolicy-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?ClaimsMappingPoliciesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,7 +76,7 @@ class ClaimsMappingPoliciesRequestBuilder extends BaseRequestBuilder
      * @param ClaimsMappingPolicy $body The request body
      * @param ClaimsMappingPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/claimsmappingpolicy-post-claimsmappingpolicies?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/claimsmappingpolicy-post-claimsmappingpolicies?view=graph-rest-1.0 Find more info here
     */
     public function post(ClaimsMappingPolicy $body, ?ClaimsMappingPoliciesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

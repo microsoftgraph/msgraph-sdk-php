@@ -36,7 +36,7 @@ class ParseExpressionRequestBuilder extends BaseRequestBuilder
      * @param ParseExpressionPostRequestBody $body The request body
      * @param ParseExpressionRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/synchronization-synchronizationschema-parseexpression?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/synchronization-synchronizationschema-parseexpression?view=graph-rest-1.0 Find more info here
     */
     public function post(ParseExpressionPostRequestBody $body, ?ParseExpressionRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

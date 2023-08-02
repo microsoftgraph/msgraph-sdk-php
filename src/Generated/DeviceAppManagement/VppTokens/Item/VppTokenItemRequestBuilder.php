@@ -43,7 +43,7 @@ class VppTokenItemRequestBuilder extends BaseRequestBuilder
      * Deletes a vppToken.
      * @param VppTokenItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-onboarding-vpptoken-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-onboarding-vpptoken-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?VppTokenItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -62,7 +62,7 @@ class VppTokenItemRequestBuilder extends BaseRequestBuilder
      * Read properties and relationships of the vppToken object.
      * @param VppTokenItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-onboarding-vpptoken-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-onboarding-vpptoken-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?VppTokenItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -82,7 +82,7 @@ class VppTokenItemRequestBuilder extends BaseRequestBuilder
      * @param VppToken $body The request body
      * @param VppTokenItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-onboarding-vpptoken-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-onboarding-vpptoken-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(VppToken $body, ?VppTokenItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

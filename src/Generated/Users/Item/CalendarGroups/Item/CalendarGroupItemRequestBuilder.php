@@ -43,7 +43,7 @@ class CalendarGroupItemRequestBuilder extends BaseRequestBuilder
      * Delete a calendar group other than the default calendar group.
      * @param CalendarGroupItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/calendargroup-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/calendargroup-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?CalendarGroupItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -62,7 +62,7 @@ class CalendarGroupItemRequestBuilder extends BaseRequestBuilder
      * Retrieve the properties and relationships of a calendar group object.
      * @param CalendarGroupItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/calendargroup-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/calendargroup-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?CalendarGroupItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -82,7 +82,7 @@ class CalendarGroupItemRequestBuilder extends BaseRequestBuilder
      * @param CalendarGroup $body The request body
      * @param CalendarGroupItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/calendargroup-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/calendargroup-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(CalendarGroup $body, ?CalendarGroupItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

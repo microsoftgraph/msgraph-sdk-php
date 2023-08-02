@@ -35,7 +35,7 @@ class BookingCustomerBaseItemRequestBuilder extends BaseRequestBuilder
      * Delete the specified bookingCustomer object.
      * @param BookingCustomerBaseItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/bookingcustomer-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/bookingcustomer-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?BookingCustomerBaseItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -54,7 +54,7 @@ class BookingCustomerBaseItemRequestBuilder extends BaseRequestBuilder
      * Get the properties and relationships of a bookingCustomer object.
      * @param BookingCustomerBaseItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/bookingcustomer-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/bookingcustomer-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?BookingCustomerBaseItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -74,7 +74,7 @@ class BookingCustomerBaseItemRequestBuilder extends BaseRequestBuilder
      * @param BookingCustomerBase $body The request body
      * @param BookingCustomerBaseItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/bookingcustomer-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/bookingcustomer-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(BookingCustomerBase $body, ?BookingCustomerBaseItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

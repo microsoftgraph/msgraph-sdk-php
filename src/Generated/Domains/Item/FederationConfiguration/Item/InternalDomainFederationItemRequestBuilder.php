@@ -35,7 +35,7 @@ class InternalDomainFederationItemRequestBuilder extends BaseRequestBuilder
      * Delete an internalDomainFederation object.
      * @param InternalDomainFederationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/internaldomainfederation-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/internaldomainfederation-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?InternalDomainFederationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -54,7 +54,7 @@ class InternalDomainFederationItemRequestBuilder extends BaseRequestBuilder
      * Read the properties and relationships of an internalDomainFederation object.
      * @param InternalDomainFederationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/internaldomainfederation-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/internaldomainfederation-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?InternalDomainFederationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -74,7 +74,7 @@ class InternalDomainFederationItemRequestBuilder extends BaseRequestBuilder
      * @param InternalDomainFederation $body The request body
      * @param InternalDomainFederationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/internaldomainfederation-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/internaldomainfederation-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(InternalDomainFederation $body, ?InternalDomainFederationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

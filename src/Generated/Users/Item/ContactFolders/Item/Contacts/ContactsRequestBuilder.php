@@ -61,10 +61,10 @@ class ContactsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a contact collection from the default Contacts folder of the signed-in user (`.../me/contacts`), or from the specified contact folder.
+     * Get a contact collection from the default Contacts folder of the signed-in user (.../me/contacts), or from the specified contact folder.
      * @param ContactsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/contactfolder-list-contacts?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/contactfolder-list-contacts?view=graph-rest-1.0 Find more info here
     */
     public function get(?ContactsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -80,11 +80,11 @@ class ContactsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Add a contact to the root Contacts folder or to the `contacts` endpoint of another contact folder.
+     * Add a contact to the root Contacts folder or to the contacts endpoint of another contact folder.
      * @param Contact $body The request body
      * @param ContactsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/contactfolder-post-contacts?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/contactfolder-post-contacts?view=graph-rest-1.0 Find more info here
     */
     public function post(Contact $body, ?ContactsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -100,7 +100,7 @@ class ContactsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a contact collection from the default Contacts folder of the signed-in user (`.../me/contacts`), or from the specified contact folder.
+     * Get a contact collection from the default Contacts folder of the signed-in user (.../me/contacts), or from the specified contact folder.
      * @param ContactsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -121,7 +121,7 @@ class ContactsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Add a contact to the root Contacts folder or to the `contacts` endpoint of another contact folder.
+     * Add a contact to the root Contacts folder or to the contacts endpoint of another contact folder.
      * @param Contact $body The request body
      * @param ContactsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

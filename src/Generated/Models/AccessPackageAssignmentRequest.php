@@ -89,7 +89,7 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the customExtensionCalloutInstances property value. The customExtensionCalloutInstances property
+     * Gets the customExtensionCalloutInstances property value. Information about all the custom extension calls that were made during the access package assignment workflow.
      * @return array<CustomExtensionCalloutInstance>|null
     */
     public function getCustomExtensionCalloutInstances(): ?array {
@@ -243,7 +243,7 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the customExtensionCalloutInstances property value. The customExtensionCalloutInstances property
+     * Sets the customExtensionCalloutInstances property value. Information about all the custom extension calls that were made during the access package assignment workflow.
      * @param array<CustomExtensionCalloutInstance>|null $value Value to set for the customExtensionCalloutInstances property.
     */
     public function setCustomExtensionCalloutInstances(?array $value): void {

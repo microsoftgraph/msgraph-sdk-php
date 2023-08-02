@@ -64,7 +64,7 @@ class ListsRequestBuilder extends BaseRequestBuilder
      * Get a list of the todoTaskList objects and their properties.
      * @param ListsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/todo-list-lists?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/todo-list-lists?view=graph-rest-1.0 Find more info here
     */
     public function get(?ListsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -84,7 +84,7 @@ class ListsRequestBuilder extends BaseRequestBuilder
      * @param TodoTaskList $body The request body
      * @param ListsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/todo-post-lists?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/todo-post-lists?view=graph-rest-1.0 Find more info here
     */
     public function post(TodoTaskList $body, ?ListsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

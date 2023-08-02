@@ -163,7 +163,7 @@ class AccessPackageCatalog extends Entity implements Parsable
     }
 
     /**
-     * Gets the resources property value. The resources property
+     * Gets the resources property value. Access package resources in this catalog.
      * @return array<AccessPackageResource>|null
     */
     public function getResources(): ?array {
@@ -295,7 +295,7 @@ class AccessPackageCatalog extends Entity implements Parsable
     }
 
     /**
-     * Sets the resources property value. The resources property
+     * Sets the resources property value. Access package resources in this catalog.
      * @param array<AccessPackageResource>|null $value Value to set for the resources property.
     */
     public function setResources(?array $value): void {

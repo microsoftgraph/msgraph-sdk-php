@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Members\Item\Ref;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Remove a member from a group via the **members** navigation property. You can't remove a member from groups with dynamic memberships.
+ * Remove a member from a group via the members navigation property. You can't remove a member from groups with dynamic memberships.
 */
 class RefRequestBuilderDeleteQueryParameters 
 {

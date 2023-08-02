@@ -56,7 +56,7 @@ class SchedulingGroupsRequestBuilder extends BaseRequestBuilder
      * Get the list of schedulingGroups in this schedule.
      * @param SchedulingGroupsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/schedule-list-schedulinggroups?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/schedule-list-schedulinggroups?view=graph-rest-1.0 Find more info here
     */
     public function get(?SchedulingGroupsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,7 +76,7 @@ class SchedulingGroupsRequestBuilder extends BaseRequestBuilder
      * @param SchedulingGroup $body The request body
      * @param SchedulingGroupsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/schedule-post-schedulinggroups?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/schedule-post-schedulinggroups?view=graph-rest-1.0 Find more info here
     */
     public function post(SchedulingGroup $body, ?SchedulingGroupsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

@@ -63,7 +63,7 @@ class CreatedObjectsRequestBuilder extends BaseRequestBuilder
      * Get a list of directory objects that were created by the user. This API returns only those directory objects that were created by a user who isn't in any administrator role; otherwise, it returns an empty object.
      * @param CreatedObjectsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/user-list-createdobjects?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/user-list-createdobjects?view=graph-rest-1.0 Find more info here
     */
     public function get(?CreatedObjectsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

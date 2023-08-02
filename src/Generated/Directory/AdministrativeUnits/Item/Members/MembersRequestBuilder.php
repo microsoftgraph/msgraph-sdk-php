@@ -112,7 +112,7 @@ class MembersRequestBuilder extends BaseRequestBuilder
      * Users and groups that are members of this administrative unit. Supports $expand.
      * @param MembersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/administrativeunit-list-members?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/administrativeunit-list-members?view=graph-rest-1.0 Find more info here
     */
     public function get(?MembersRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -132,7 +132,7 @@ class MembersRequestBuilder extends BaseRequestBuilder
      * @param DirectoryObject $body The request body
      * @param MembersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/administrativeunit-post-members?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/administrativeunit-post-members?view=graph-rest-1.0 Find more info here
     */
     public function post(DirectoryObject $body, ?MembersRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

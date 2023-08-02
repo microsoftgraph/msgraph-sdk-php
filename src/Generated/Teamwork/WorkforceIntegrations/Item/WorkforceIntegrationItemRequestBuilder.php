@@ -35,7 +35,7 @@ class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder
      * Delete an instance of a workforceIntegration.
      * @param WorkforceIntegrationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/workforceintegration-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/workforceintegration-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?WorkforceIntegrationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -54,7 +54,7 @@ class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder
      * Retrieve the properties and relationships of a workforceIntegration object.
      * @param WorkforceIntegrationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/workforceintegration-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/workforceintegration-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?WorkforceIntegrationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -74,7 +74,7 @@ class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder
      * @param WorkforceIntegration $body The request body
      * @param WorkforceIntegrationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/workforceintegration-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/workforceintegration-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(WorkforceIntegration $body, ?WorkforceIntegrationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

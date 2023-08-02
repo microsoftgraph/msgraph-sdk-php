@@ -56,7 +56,7 @@ class DocumentSetVersionsRequestBuilder extends BaseRequestBuilder
      * Get a list of the versions of a document set item in a list.
      * @param DocumentSetVersionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/listitem-list-documentsetversions?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/listitem-list-documentsetversions?view=graph-rest-1.0 Find more info here
     */
     public function get(?DocumentSetVersionsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,7 +76,7 @@ class DocumentSetVersionsRequestBuilder extends BaseRequestBuilder
      * @param DocumentSetVersion $body The request body
      * @param DocumentSetVersionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/listitem-post-documentsetversions?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/listitem-post-documentsetversions?view=graph-rest-1.0 Find more info here
     */
     public function post(DocumentSetVersion $body, ?DocumentSetVersionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

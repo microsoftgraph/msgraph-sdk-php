@@ -35,7 +35,7 @@ class DiscoverRequestBuilder extends BaseRequestBuilder
      * Discover the latest schema definition for provisioning to an application. 
      * @param DiscoverRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/synchronization-directorydefinition-discover?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/synchronization-directorydefinition-discover?view=graph-rest-1.0 Find more info here
     */
     public function post(?DiscoverRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);

@@ -61,7 +61,7 @@ class MeetingAttendanceReportItemRequestBuilder extends BaseRequestBuilder
      * Get the meetingAttendanceReport for an onlineMeeting. Each time an online meeting ends, an attendance report will be generated for that session.
      * @param MeetingAttendanceReportItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/meetingattendancereport-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/meetingattendancereport-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?MeetingAttendanceReportItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

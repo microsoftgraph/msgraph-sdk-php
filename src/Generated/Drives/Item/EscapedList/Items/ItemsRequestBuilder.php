@@ -56,7 +56,7 @@ class ItemsRequestBuilder extends BaseRequestBuilder
      * Get the collection of [items][item] in a [list][].
      * @param ItemsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/listitem-list?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/listitem-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?ItemsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,7 +76,7 @@ class ItemsRequestBuilder extends BaseRequestBuilder
      * @param ListItem $body The request body
      * @param ItemsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/listitem-create?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/listitem-create?view=graph-rest-1.0 Find more info here
     */
     public function post(ListItem $body, ?ItemsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

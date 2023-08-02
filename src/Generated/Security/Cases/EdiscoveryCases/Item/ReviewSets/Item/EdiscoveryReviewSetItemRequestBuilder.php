@@ -77,7 +77,7 @@ class EdiscoveryReviewSetItemRequestBuilder extends BaseRequestBuilder
      * Read the properties and relationships of an ediscoveryReviewSet object.
      * @param EdiscoveryReviewSetItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/security-ediscoveryreviewset-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/security-ediscoveryreviewset-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?EdiscoveryReviewSetItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

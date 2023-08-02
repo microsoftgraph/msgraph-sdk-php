@@ -75,7 +75,7 @@ class SetsRequestBuilder extends BaseRequestBuilder
      * @param Set $body The request body
      * @param SetsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/termstore-set-post?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/termstore-set-post?view=graph-rest-1.0 Find more info here
     */
     public function post(Set $body, ?SetsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

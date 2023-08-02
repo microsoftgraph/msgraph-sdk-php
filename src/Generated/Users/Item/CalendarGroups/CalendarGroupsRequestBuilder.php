@@ -56,7 +56,7 @@ class CalendarGroupsRequestBuilder extends BaseRequestBuilder
      * Get the user's calendar groups.
      * @param CalendarGroupsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/user-list-calendargroups?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/user-list-calendargroups?view=graph-rest-1.0 Find more info here
     */
     public function get(?CalendarGroupsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,7 +76,7 @@ class CalendarGroupsRequestBuilder extends BaseRequestBuilder
      * @param CalendarGroup $body The request body
      * @param CalendarGroupsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/user-post-calendargroups?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/user-post-calendargroups?view=graph-rest-1.0 Find more info here
     */
     public function post(CalendarGroup $body, ?CalendarGroupsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

@@ -56,7 +56,7 @@ class RequestsRequestBuilder extends BaseRequestBuilder
      * Get a list of the delegatedAdminRelationshipRequest objects and their properties.
      * @param RequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/delegatedadminrelationship-list-requests?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/delegatedadminrelationship-list-requests?view=graph-rest-1.0 Find more info here
     */
     public function get(?RequestsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,7 +76,7 @@ class RequestsRequestBuilder extends BaseRequestBuilder
      * @param DelegatedAdminRelationshipRequest $body The request body
      * @param RequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/delegatedadminrelationship-post-requests?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/delegatedadminrelationship-post-requests?view=graph-rest-1.0 Find more info here
     */
     public function post(DelegatedAdminRelationshipRequest $body, ?RequestsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

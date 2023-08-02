@@ -56,7 +56,7 @@ class SitesRequestBuilder extends BaseRequestBuilder
      * Get a list of the browserSite objects and their properties.
      * @param SitesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/browsersitelist-list-sites?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/browsersitelist-list-sites?view=graph-rest-1.0 Find more info here
     */
     public function get(?SitesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,7 +76,7 @@ class SitesRequestBuilder extends BaseRequestBuilder
      * @param BrowserSite $body The request body
      * @param SitesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/browsersitelist-post-sites?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/browsersitelist-post-sites?view=graph-rest-1.0 Find more info here
     */
     public function post(BrowserSite $body, ?SitesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

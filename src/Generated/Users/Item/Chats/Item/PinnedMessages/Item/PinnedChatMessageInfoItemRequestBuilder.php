@@ -43,7 +43,7 @@ class PinnedChatMessageInfoItemRequestBuilder extends BaseRequestBuilder
      * Unpin a message from a chat.
      * @param PinnedChatMessageInfoItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/chat-delete-pinnedmessages?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/chat-delete-pinnedmessages?view=graph-rest-1.0 Find more info here
     */
     public function delete(?PinnedChatMessageInfoItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);

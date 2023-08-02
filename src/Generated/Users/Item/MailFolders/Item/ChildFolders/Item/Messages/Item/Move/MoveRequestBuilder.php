@@ -36,7 +36,7 @@ class MoveRequestBuilder extends BaseRequestBuilder
      * @param MovePostRequestBody $body The request body
      * @param MoveRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/message-move?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/message-move?view=graph-rest-1.0 Find more info here
     */
     public function post(MovePostRequestBody $body, ?MoveRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

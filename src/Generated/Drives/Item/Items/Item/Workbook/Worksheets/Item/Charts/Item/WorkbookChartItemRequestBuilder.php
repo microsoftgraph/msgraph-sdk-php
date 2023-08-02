@@ -118,7 +118,7 @@ class WorkbookChartItemRequestBuilder extends BaseRequestBuilder
      * Deletes the chart object.
      * @param WorkbookChartItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/chart-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/chart-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?WorkbookChartItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -137,7 +137,7 @@ class WorkbookChartItemRequestBuilder extends BaseRequestBuilder
      * Retrieve the properties and relationships of chart object.
      * @param WorkbookChartItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/chart-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/chart-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?WorkbookChartItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -187,7 +187,7 @@ class WorkbookChartItemRequestBuilder extends BaseRequestBuilder
      * @param WorkbookChart $body The request body
      * @param WorkbookChartItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/chart-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/chart-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(WorkbookChart $body, ?WorkbookChartItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

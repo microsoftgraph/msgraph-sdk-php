@@ -35,7 +35,7 @@ class MessageRuleItemRequestBuilder extends BaseRequestBuilder
      * Delete the specified messageRule object.
      * @param MessageRuleItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/messagerule-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/messagerule-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?MessageRuleItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -54,7 +54,7 @@ class MessageRuleItemRequestBuilder extends BaseRequestBuilder
      * Get the properties and relationships of a messageRule object.
      * @param MessageRuleItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/messagerule-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/messagerule-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?MessageRuleItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -74,7 +74,7 @@ class MessageRuleItemRequestBuilder extends BaseRequestBuilder
      * @param MessageRule $body The request body
      * @param MessageRuleItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/messagerule-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/messagerule-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(MessageRule $body, ?MessageRuleItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

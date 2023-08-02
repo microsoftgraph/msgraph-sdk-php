@@ -64,7 +64,7 @@ class AttachmentsRequestBuilder extends BaseRequestBuilder
      * Retrieve a list of attachment objects attached to a post.
      * @param AttachmentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/post-list-attachments?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/post-list-attachments?view=graph-rest-1.0 Find more info here
     */
     public function get(?AttachmentsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

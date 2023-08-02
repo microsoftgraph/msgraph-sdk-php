@@ -53,7 +53,7 @@ class RolesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get roles from identityGovernance
+     * Read-only. Nullable. Supports $expand.
      * @param RolesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -90,7 +90,7 @@ class RolesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get roles from identityGovernance
+     * Read-only. Nullable. Supports $expand.
      * @param RolesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -53,10 +53,10 @@ class PlansRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of **plannerplan** objects shared with a user object.
+     * Retrieve a list of plannerplan objects shared with a user object.
      * @param PlansRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/planneruser-list-plans?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/planneruser-list-plans?view=graph-rest-1.0 Find more info here
     */
     public function get(?PlansRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -91,7 +91,7 @@ class PlansRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of **plannerplan** objects shared with a user object.
+     * Retrieve a list of plannerplan objects shared with a user object.
      * @param PlansRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

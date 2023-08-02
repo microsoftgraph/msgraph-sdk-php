@@ -56,7 +56,7 @@ class StaffMembersRequestBuilder extends BaseRequestBuilder
      * Get a list of bookingStaffMember objects in the specified bookingBusiness.
      * @param StaffMembersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/bookingbusiness-list-staffmembers?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/bookingbusiness-list-staffmembers?view=graph-rest-1.0 Find more info here
     */
     public function get(?StaffMembersRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,7 +76,7 @@ class StaffMembersRequestBuilder extends BaseRequestBuilder
      * @param BookingStaffMemberBase $body The request body
      * @param StaffMembersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/bookingbusiness-post-staffmembers?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/bookingbusiness-post-staffmembers?view=graph-rest-1.0 Find more info here
     */
     public function post(BookingStaffMemberBase $body, ?StaffMembersRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

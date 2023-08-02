@@ -48,9 +48,10 @@ class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Delete navigation property resourceRoleScopes for identityGovernance
+     * Remove a accessPackageResourceRoleScope from an accessPackage list of resource role scopes.
      * @param AccessPackageResourceRoleScopeItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://learn.microsoft.com/graph/api/accesspackage-delete-resourcerolescopes?view=graph-rest-1.0 Find more info here
     */
     public function delete(?AccessPackageResourceRoleScopeItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -66,7 +67,7 @@ class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Get resourceRoleScopes from identityGovernance
+     * The resource roles and scopes in this access package.
      * @param AccessPackageResourceRoleScopeItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -103,7 +104,7 @@ class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Delete navigation property resourceRoleScopes for identityGovernance
+     * Remove a accessPackageResourceRoleScope from an accessPackage list of resource role scopes.
      * @param AccessPackageResourceRoleScopeItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -120,7 +121,7 @@ class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Get resourceRoleScopes from identityGovernance
+     * The resource roles and scopes in this access package.
      * @param AccessPackageResourceRoleScopeItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

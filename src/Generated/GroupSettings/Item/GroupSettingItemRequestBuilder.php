@@ -35,7 +35,7 @@ class GroupSettingItemRequestBuilder extends BaseRequestBuilder
      * Delete a tenant-level or group-specific groupSetting object.
      * @param GroupSettingItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/groupsetting-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/groupsetting-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?GroupSettingItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -54,7 +54,7 @@ class GroupSettingItemRequestBuilder extends BaseRequestBuilder
      * Retrieve the properties of a specific group setting object. The setting can be a tenant-level or group-specific setting.
      * @param GroupSettingItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/groupsetting-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/groupsetting-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?GroupSettingItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -74,7 +74,7 @@ class GroupSettingItemRequestBuilder extends BaseRequestBuilder
      * @param GroupSetting $body The request body
      * @param GroupSettingItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/groupsetting-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/groupsetting-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(GroupSetting $body, ?GroupSettingItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

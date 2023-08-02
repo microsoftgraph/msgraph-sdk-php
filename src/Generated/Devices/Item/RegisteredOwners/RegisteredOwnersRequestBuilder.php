@@ -95,7 +95,7 @@ class RegisteredOwnersRequestBuilder extends BaseRequestBuilder
      * The user that cloud joined the device or registered their personal device. The registered owner is set at the time of registration. Read-only. Nullable. Supports $expand.
      * @param RegisteredOwnersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/device-list-registeredowners?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/device-list-registeredowners?view=graph-rest-1.0 Find more info here
     */
     public function get(?RegisteredOwnersRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

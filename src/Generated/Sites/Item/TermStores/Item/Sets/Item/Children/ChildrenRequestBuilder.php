@@ -56,7 +56,7 @@ class ChildrenRequestBuilder extends BaseRequestBuilder
      * Get the first level children of a [set] or [term] resource using the children navigation property.
      * @param ChildrenRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/termstore-term-list-children?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/termstore-term-list-children?view=graph-rest-1.0 Find more info here
     */
     public function get(?ChildrenRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,7 +76,7 @@ class ChildrenRequestBuilder extends BaseRequestBuilder
      * @param Term $body The request body
      * @param ChildrenRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/termstore-term-post?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/termstore-term-post?view=graph-rest-1.0 Find more info here
     */
     public function post(Term $body, ?ChildrenRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

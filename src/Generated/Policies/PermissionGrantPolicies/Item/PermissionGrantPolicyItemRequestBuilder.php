@@ -51,7 +51,7 @@ class PermissionGrantPolicyItemRequestBuilder extends BaseRequestBuilder
      * Delete a permissionGrantPolicy object.
      * @param PermissionGrantPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/permissiongrantpolicy-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/permissiongrantpolicy-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?PermissionGrantPolicyItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -70,7 +70,7 @@ class PermissionGrantPolicyItemRequestBuilder extends BaseRequestBuilder
      * Retrieve a single permissionGrantPolicy object.
      * @param PermissionGrantPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/permissiongrantpolicy-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/permissiongrantpolicy-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?PermissionGrantPolicyItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -90,7 +90,7 @@ class PermissionGrantPolicyItemRequestBuilder extends BaseRequestBuilder
      * @param PermissionGrantPolicy $body The request body
      * @param PermissionGrantPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/permissiongrantpolicy-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/permissiongrantpolicy-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(PermissionGrantPolicy $body, ?PermissionGrantPolicyItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

@@ -65,6 +65,7 @@ class Chat extends Entity implements Parsable
             'members' => fn(ParseNode $n) => $o->setMembers($n->getCollectionOfObjectValues([ConversationMember::class, 'createFromDiscriminatorValue'])),
             'messages' => fn(ParseNode $n) => $o->setMessages($n->getCollectionOfObjectValues([ChatMessage::class, 'createFromDiscriminatorValue'])),
             'onlineMeetingInfo' => fn(ParseNode $n) => $o->setOnlineMeetingInfo($n->getObjectValue([TeamworkOnlineMeetingInfo::class, 'createFromDiscriminatorValue'])),
+            'permissionGrants' => fn(ParseNode $n) => $o->setPermissionGrants($n->getCollectionOfObjectValues([ResourceSpecificPermissionGrant::class, 'createFromDiscriminatorValue'])),
             'pinnedMessages' => fn(ParseNode $n) => $o->setPinnedMessages($n->getCollectionOfObjectValues([PinnedChatMessageInfo::class, 'createFromDiscriminatorValue'])),
             'tabs' => fn(ParseNode $n) => $o->setTabs($n->getCollectionOfObjectValues([TeamsTab::class, 'createFromDiscriminatorValue'])),
             'tenantId' => fn(ParseNode $n) => $o->setTenantId($n->getStringValue()),
@@ -150,6 +151,20 @@ class Chat extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'onlineMeetingInfo'");
+    }
+
+    /**
+     * Gets the permissionGrants property value. The permissionGrants property
+     * @return array<ResourceSpecificPermissionGrant>|null
+    */
+    public function getPermissionGrants(): ?array {
+        $val = $this->getBackingStore()->get('permissionGrants');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ResourceSpecificPermissionGrant::class);
+            /** @var array<ResourceSpecificPermissionGrant>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'permissionGrants'");
     }
 
     /**
@@ -242,6 +257,7 @@ class Chat extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('members', $this->getMembers());
         $writer->writeCollectionOfObjectValues('messages', $this->getMessages());
         $writer->writeObjectValue('onlineMeetingInfo', $this->getOnlineMeetingInfo());
+        $writer->writeCollectionOfObjectValues('permissionGrants', $this->getPermissionGrants());
         $writer->writeCollectionOfObjectValues('pinnedMessages', $this->getPinnedMessages());
         $writer->writeCollectionOfObjectValues('tabs', $this->getTabs());
         $writer->writeStringValue('tenantId', $this->getTenantId());
@@ -312,6 +328,14 @@ class Chat extends Entity implements Parsable
     */
     public function setOnlineMeetingInfo(?TeamworkOnlineMeetingInfo $value): void {
         $this->getBackingStore()->set('onlineMeetingInfo', $value);
+    }
+
+    /**
+     * Sets the permissionGrants property value. The permissionGrants property
+     * @param array<ResourceSpecificPermissionGrant>|null $value Value to set for the permissionGrants property.
+    */
+    public function setPermissionGrants(?array $value): void {
+        $this->getBackingStore()->set('permissionGrants', $value);
     }
 
     /**

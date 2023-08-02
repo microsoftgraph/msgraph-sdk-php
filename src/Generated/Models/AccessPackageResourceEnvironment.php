@@ -27,7 +27,7 @@ class AccessPackageResourceEnvironment extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. The date and time that this object was created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
@@ -39,7 +39,7 @@ class AccessPackageResourceEnvironment extends Entity implements Parsable
     }
 
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. The description of this object.
      * @return string|null
     */
     public function getDescription(): ?string {
@@ -51,7 +51,7 @@ class AccessPackageResourceEnvironment extends Entity implements Parsable
     }
 
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name of this object.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -81,7 +81,7 @@ class AccessPackageResourceEnvironment extends Entity implements Parsable
     }
 
     /**
-     * Gets the isDefaultEnvironment property value. The isDefaultEnvironment property
+     * Gets the isDefaultEnvironment property value. Determines whether this is default environment or not. It is set to true for all static origin systems, such as Azure AD groups and Azure AD Applications.
      * @return bool|null
     */
     public function getIsDefaultEnvironment(): ?bool {
@@ -93,7 +93,7 @@ class AccessPackageResourceEnvironment extends Entity implements Parsable
     }
 
     /**
-     * Gets the modifiedDateTime property value. The modifiedDateTime property
+     * Gets the modifiedDateTime property value. The date and time that this object was last modified. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return DateTime|null
     */
     public function getModifiedDateTime(): ?DateTime {
@@ -105,7 +105,7 @@ class AccessPackageResourceEnvironment extends Entity implements Parsable
     }
 
     /**
-     * Gets the originId property value. The originId property
+     * Gets the originId property value. The unique identifier of this environment in the origin system.
      * @return string|null
     */
     public function getOriginId(): ?string {
@@ -117,7 +117,7 @@ class AccessPackageResourceEnvironment extends Entity implements Parsable
     }
 
     /**
-     * Gets the originSystem property value. The originSystem property
+     * Gets the originSystem property value. The type of the resource in the origin system, that is, SharePointOnline. Requires $filter (eq).
      * @return string|null
     */
     public function getOriginSystem(): ?string {
@@ -129,7 +129,7 @@ class AccessPackageResourceEnvironment extends Entity implements Parsable
     }
 
     /**
-     * Gets the resources property value. The resources property
+     * Gets the resources property value. Read-only. Required.
      * @return array<AccessPackageResource>|null
     */
     public function getResources(): ?array {
@@ -159,7 +159,7 @@ class AccessPackageResourceEnvironment extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. The date and time that this object was created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
@@ -167,7 +167,7 @@ class AccessPackageResourceEnvironment extends Entity implements Parsable
     }
 
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. The description of this object.
      * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
@@ -175,7 +175,7 @@ class AccessPackageResourceEnvironment extends Entity implements Parsable
     }
 
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name of this object.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -183,7 +183,7 @@ class AccessPackageResourceEnvironment extends Entity implements Parsable
     }
 
     /**
-     * Sets the isDefaultEnvironment property value. The isDefaultEnvironment property
+     * Sets the isDefaultEnvironment property value. Determines whether this is default environment or not. It is set to true for all static origin systems, such as Azure AD groups and Azure AD Applications.
      * @param bool|null $value Value to set for the isDefaultEnvironment property.
     */
     public function setIsDefaultEnvironment(?bool $value): void {
@@ -191,7 +191,7 @@ class AccessPackageResourceEnvironment extends Entity implements Parsable
     }
 
     /**
-     * Sets the modifiedDateTime property value. The modifiedDateTime property
+     * Sets the modifiedDateTime property value. The date and time that this object was last modified. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param DateTime|null $value Value to set for the modifiedDateTime property.
     */
     public function setModifiedDateTime(?DateTime $value): void {
@@ -199,7 +199,7 @@ class AccessPackageResourceEnvironment extends Entity implements Parsable
     }
 
     /**
-     * Sets the originId property value. The originId property
+     * Sets the originId property value. The unique identifier of this environment in the origin system.
      * @param string|null $value Value to set for the originId property.
     */
     public function setOriginId(?string $value): void {
@@ -207,7 +207,7 @@ class AccessPackageResourceEnvironment extends Entity implements Parsable
     }
 
     /**
-     * Sets the originSystem property value. The originSystem property
+     * Sets the originSystem property value. The type of the resource in the origin system, that is, SharePointOnline. Requires $filter (eq).
      * @param string|null $value Value to set for the originSystem property.
     */
     public function setOriginSystem(?string $value): void {
@@ -215,7 +215,7 @@ class AccessPackageResourceEnvironment extends Entity implements Parsable
     }
 
     /**
-     * Sets the resources property value. The resources property
+     * Sets the resources property value. Read-only. Required.
      * @param array<AccessPackageResource>|null $value Value to set for the resources property.
     */
     public function setResources(?array $value): void {

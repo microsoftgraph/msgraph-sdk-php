@@ -67,7 +67,7 @@ class PrinterShareItemRequestBuilder extends BaseRequestBuilder
      * Delete a printer share (unshare the associated printer). This action cannot be undone. If the printer is shared again in the future, any Windows users who had previously installed the printer will need to discover and reinstall it.
      * @param PrinterShareItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/printershare-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/printershare-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?PrinterShareItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -86,7 +86,7 @@ class PrinterShareItemRequestBuilder extends BaseRequestBuilder
      * Retrieve the properties and relationships of a printer share.
      * @param PrinterShareItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/printershare-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/printershare-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?PrinterShareItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -106,7 +106,7 @@ class PrinterShareItemRequestBuilder extends BaseRequestBuilder
      * @param PrinterShare $body The request body
      * @param PrinterShareItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/printershare-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/printershare-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(PrinterShare $body, ?PrinterShareItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

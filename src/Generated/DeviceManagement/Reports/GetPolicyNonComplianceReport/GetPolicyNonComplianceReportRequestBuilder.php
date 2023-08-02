@@ -36,7 +36,7 @@ class GetPolicyNonComplianceReportRequestBuilder extends BaseRequestBuilder
      * @param GetPolicyNonComplianceReportPostRequestBody $body The request body
      * @param GetPolicyNonComplianceReportRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-reporting-devicemanagementreports-getpolicynoncompliancereport?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-reporting-devicemanagementreports-getpolicynoncompliancereport?view=graph-rest-1.0 Find more info here
     */
     public function post(GetPolicyNonComplianceReportPostRequestBody $body, ?GetPolicyNonComplianceReportRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

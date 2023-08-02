@@ -35,7 +35,7 @@ class OpenShiftItemRequestBuilder extends BaseRequestBuilder
      * Delete an openShift object.
      * @param OpenShiftItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/openshift-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/openshift-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?OpenShiftItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -54,7 +54,7 @@ class OpenShiftItemRequestBuilder extends BaseRequestBuilder
      * Retrieve the properties and relationships of an openshift object.
      * @param OpenShiftItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/openshift-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/openshift-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?OpenShiftItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -74,7 +74,7 @@ class OpenShiftItemRequestBuilder extends BaseRequestBuilder
      * @param OpenShift $body The request body
      * @param OpenShiftItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/openshift-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/openshift-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(OpenShift $body, ?OpenShiftItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

@@ -56,7 +56,7 @@ class AppointmentsRequestBuilder extends BaseRequestBuilder
      * Get a list of bookingAppointment objects for the specified bookingBusiness.
      * @param AppointmentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/bookingbusiness-list-appointments?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/bookingbusiness-list-appointments?view=graph-rest-1.0 Find more info here
     */
     public function get(?AppointmentsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,7 +76,7 @@ class AppointmentsRequestBuilder extends BaseRequestBuilder
      * @param BookingAppointment $body The request body
      * @param AppointmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/bookingbusiness-post-appointments?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/bookingbusiness-post-appointments?view=graph-rest-1.0 Find more info here
     */
     public function post(BookingAppointment $body, ?AppointmentsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

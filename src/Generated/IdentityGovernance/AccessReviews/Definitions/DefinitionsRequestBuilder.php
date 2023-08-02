@@ -66,7 +66,7 @@ class DefinitionsRequestBuilder extends BaseRequestBuilder
      * Get a list of the accessReviewScheduleDefinition objects and their properties.
      * @param DefinitionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/accessreviewset-list-definitions?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/accessreviewset-list-definitions?view=graph-rest-1.0 Find more info here
     */
     public function get(?DefinitionsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -86,7 +86,7 @@ class DefinitionsRequestBuilder extends BaseRequestBuilder
      * @param AccessReviewScheduleDefinition $body The request body
      * @param DefinitionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/accessreviewset-post-definitions?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/accessreviewset-post-definitions?view=graph-rest-1.0 Find more info here
     */
     public function post(AccessReviewScheduleDefinition $body, ?DefinitionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

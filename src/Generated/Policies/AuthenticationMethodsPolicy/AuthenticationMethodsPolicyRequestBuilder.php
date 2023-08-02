@@ -61,7 +61,7 @@ class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilder
      * Read the properties and relationships of an authenticationMethodsPolicy object.
      * @param AuthenticationMethodsPolicyRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/authenticationmethodspolicy-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/authenticationmethodspolicy-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?AuthenticationMethodsPolicyRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -81,7 +81,7 @@ class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilder
      * @param AuthenticationMethodsPolicy $body The request body
      * @param AuthenticationMethodsPolicyRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/authenticationmethodspolicy-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/authenticationmethodspolicy-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(AuthenticationMethodsPolicy $body, ?AuthenticationMethodsPolicyRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

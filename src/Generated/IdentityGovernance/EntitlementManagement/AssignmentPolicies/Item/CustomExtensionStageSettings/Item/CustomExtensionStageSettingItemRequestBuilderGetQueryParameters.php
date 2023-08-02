@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Ass
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get customExtensionStageSettings from identityGovernance
+ * The collection of stages when to execute one or more custom access package workflow extensions. Supports $expand.
 */
 class CustomExtensionStageSettingItemRequestBuilderGetQueryParameters 
 {

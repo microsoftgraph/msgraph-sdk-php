@@ -41,7 +41,7 @@ class AccessPackage extends Entity implements Parsable
     }
 
     /**
-     * Gets the assignmentPolicies property value. The assignmentPolicies property
+     * Gets the assignmentPolicies property value. Read-only. Nullable. Supports $expand.
      * @return array<AccessPackageAssignmentPolicy>|null
     */
     public function getAssignmentPolicies(): ?array {
@@ -55,7 +55,7 @@ class AccessPackage extends Entity implements Parsable
     }
 
     /**
-     * Gets the catalog property value. The catalog property
+     * Gets the catalog property value. Required when creating the access package. Read-only. Nullable.
      * @return AccessPackageCatalog|null
     */
     public function getCatalog(): ?AccessPackageCatalog {
@@ -91,7 +91,7 @@ class AccessPackage extends Entity implements Parsable
     }
 
     /**
-     * Gets the displayName property value. The display name of the access package. Supports $filter (eq, contains).
+     * Gets the displayName property value. Required. The display name of the access package. Supports $filter (eq, contains).
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -176,7 +176,7 @@ class AccessPackage extends Entity implements Parsable
     }
 
     /**
-     * Gets the resourceRoleScopes property value. The resourceRoleScopes property
+     * Gets the resourceRoleScopes property value. The resource roles and scopes in this access package.
      * @return array<AccessPackageResourceRoleScope>|null
     */
     public function getResourceRoleScopes(): ?array {
@@ -217,7 +217,7 @@ class AccessPackage extends Entity implements Parsable
     }
 
     /**
-     * Sets the assignmentPolicies property value. The assignmentPolicies property
+     * Sets the assignmentPolicies property value. Read-only. Nullable. Supports $expand.
      * @param array<AccessPackageAssignmentPolicy>|null $value Value to set for the assignmentPolicies property.
     */
     public function setAssignmentPolicies(?array $value): void {
@@ -225,7 +225,7 @@ class AccessPackage extends Entity implements Parsable
     }
 
     /**
-     * Sets the catalog property value. The catalog property
+     * Sets the catalog property value. Required when creating the access package. Read-only. Nullable.
      * @param AccessPackageCatalog|null $value Value to set for the catalog property.
     */
     public function setCatalog(?AccessPackageCatalog $value): void {
@@ -249,7 +249,7 @@ class AccessPackage extends Entity implements Parsable
     }
 
     /**
-     * Sets the displayName property value. The display name of the access package. Supports $filter (eq, contains).
+     * Sets the displayName property value. Required. The display name of the access package. Supports $filter (eq, contains).
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -289,7 +289,7 @@ class AccessPackage extends Entity implements Parsable
     }
 
     /**
-     * Sets the resourceRoleScopes property value. The resourceRoleScopes property
+     * Sets the resourceRoleScopes property value. The resource roles and scopes in this access package.
      * @param array<AccessPackageResourceRoleScope>|null $value Value to set for the resourceRoleScopes property.
     */
     public function setResourceRoleScopes(?array $value): void {

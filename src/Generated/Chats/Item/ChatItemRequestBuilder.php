@@ -12,6 +12,7 @@ use Microsoft\Graph\Generated\Chats\Item\MarkChatReadForUser\MarkChatReadForUser
 use Microsoft\Graph\Generated\Chats\Item\MarkChatUnreadForUser\MarkChatUnreadForUserRequestBuilder;
 use Microsoft\Graph\Generated\Chats\Item\Members\MembersRequestBuilder;
 use Microsoft\Graph\Generated\Chats\Item\Messages\MessagesRequestBuilder;
+use Microsoft\Graph\Generated\Chats\Item\PermissionGrants\PermissionGrantsRequestBuilder;
 use Microsoft\Graph\Generated\Chats\Item\PinnedMessages\PinnedMessagesRequestBuilder;
 use Microsoft\Graph\Generated\Chats\Item\SendActivityNotification\SendActivityNotificationRequestBuilder;
 use Microsoft\Graph\Generated\Chats\Item\Tabs\TabsRequestBuilder;
@@ -78,6 +79,13 @@ class ChatItemRequestBuilder extends BaseRequestBuilder
     }
     
     /**
+     * Provides operations to manage the permissionGrants property of the microsoft.graph.chat entity.
+    */
+    public function permissionGrants(): PermissionGrantsRequestBuilder {
+        return new PermissionGrantsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to manage the pinnedMessages property of the microsoft.graph.chat entity.
     */
     public function pinnedMessages(): PinnedMessagesRequestBuilder {
@@ -141,7 +149,7 @@ class ChatItemRequestBuilder extends BaseRequestBuilder
      * Retrieve a single chat (without its messages). This method supports federation. To access a chat, at least one chat member must belong to the tenant the request initiated from.
      * @param ChatItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/chat-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/chat-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ChatItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -161,7 +169,7 @@ class ChatItemRequestBuilder extends BaseRequestBuilder
      * @param Chat $body The request body
      * @param ChatItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/chat-patch?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/chat-patch?view=graph-rest-1.0 Find more info here
     */
     public function patch(Chat $body, ?ChatItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

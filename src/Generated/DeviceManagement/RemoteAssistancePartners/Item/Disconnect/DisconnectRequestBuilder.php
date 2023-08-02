@@ -34,7 +34,7 @@ class DisconnectRequestBuilder extends BaseRequestBuilder
      * A request to remove the active TeamViewer connector
      * @param DisconnectRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-remoteassistance-remoteassistancepartner-disconnect?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-remoteassistance-remoteassistancepartner-disconnect?view=graph-rest-1.0 Find more info here
     */
     public function post(?DisconnectRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);

@@ -56,7 +56,7 @@ class CallRecordsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a callRecord object. There are two ways to get the **id** of a **callRecord**:
+     * Retrieve the properties and relationships of a callRecord object. There are two ways to get the id of a callRecord:
      * @param CallRecordsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -113,7 +113,7 @@ class CallRecordsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a callRecord object. There are two ways to get the **id** of a **callRecord**:
+     * Retrieve the properties and relationships of a callRecord object. There are two ways to get the id of a callRecord:
      * @param CallRecordsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

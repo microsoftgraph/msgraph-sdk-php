@@ -38,7 +38,7 @@ class DevicesWithDeviceIdRequestBuilder extends BaseRequestBuilder
      * Delete a registered device.
      * @param DevicesWithDeviceIdRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/device-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/device-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?DevicesWithDeviceIdRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -57,7 +57,7 @@ class DevicesWithDeviceIdRequestBuilder extends BaseRequestBuilder
      * Get the properties and relationships of a device object.
      * @param DevicesWithDeviceIdRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/device-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/device-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DevicesWithDeviceIdRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -77,7 +77,7 @@ class DevicesWithDeviceIdRequestBuilder extends BaseRequestBuilder
      * @param Device $body The request body
      * @param DevicesWithDeviceIdRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/device-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/device-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(Device $body, ?DevicesWithDeviceIdRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

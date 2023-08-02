@@ -56,7 +56,7 @@ class SectionGroupsRequestBuilder extends BaseRequestBuilder
      * Retrieve a list of section groups from the specified notebook.
      * @param SectionGroupsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/notebook-list-sectiongroups?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/notebook-list-sectiongroups?view=graph-rest-1.0 Find more info here
     */
     public function get(?SectionGroupsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,7 +76,7 @@ class SectionGroupsRequestBuilder extends BaseRequestBuilder
      * @param SectionGroup $body The request body
      * @param SectionGroupsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/notebook-post-sectiongroups?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/notebook-post-sectiongroups?view=graph-rest-1.0 Find more info here
     */
     public function post(SectionGroup $body, ?SectionGroupsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

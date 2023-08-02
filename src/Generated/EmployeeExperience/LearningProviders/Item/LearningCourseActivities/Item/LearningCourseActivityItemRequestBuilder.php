@@ -35,7 +35,7 @@ class LearningCourseActivityItemRequestBuilder extends BaseRequestBuilder
      * Delete a learningCourseActivity object by using the course activity ID of either an assignment or a self-initiated activity.
      * @param LearningCourseActivityItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/learningcourseactivity-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/learningcourseactivity-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?LearningCourseActivityItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -73,7 +73,7 @@ class LearningCourseActivityItemRequestBuilder extends BaseRequestBuilder
      * @param LearningCourseActivity $body The request body
      * @param LearningCourseActivityItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/learningcourseactivity-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/learningcourseactivity-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(LearningCourseActivity $body, ?LearningCourseActivityItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

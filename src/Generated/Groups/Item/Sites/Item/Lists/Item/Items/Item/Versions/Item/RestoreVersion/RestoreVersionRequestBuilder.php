@@ -34,7 +34,7 @@ class RestoreVersionRequestBuilder extends BaseRequestBuilder
      * Restore a previous version of a ListItem to be the current version. This will create a new version with the contents of the previous version, but preserves all existing versions of the item.
      * @param RestoreVersionRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/listitemversion-restore?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/listitemversion-restore?view=graph-rest-1.0 Find more info here
     */
     public function post(?RestoreVersionRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);

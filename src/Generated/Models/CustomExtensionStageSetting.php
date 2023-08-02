@@ -25,7 +25,7 @@ class CustomExtensionStageSetting extends Entity implements Parsable
     }
 
     /**
-     * Gets the customExtension property value. The customExtension property
+     * Gets the customExtension property value. Indicates the custom workflow extension that will be executed at this stage. Nullable. Supports $expand.
      * @return CustomCalloutExtension|null
     */
     public function getCustomExtension(): ?CustomCalloutExtension {
@@ -71,7 +71,7 @@ class CustomExtensionStageSetting extends Entity implements Parsable
     }
 
     /**
-     * Sets the customExtension property value. The customExtension property
+     * Sets the customExtension property value. Indicates the custom workflow extension that will be executed at this stage. Nullable. Supports $expand.
      * @param CustomCalloutExtension|null $value Value to set for the customExtension property.
     */
     public function setCustomExtension(?CustomCalloutExtension $value): void {

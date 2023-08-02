@@ -55,7 +55,7 @@ class Fido2MethodsRequestBuilder extends BaseRequestBuilder
      * Retrieve a list of a user's FIDO2 Security Key Authentication Method objects and their properties.
      * @param Fido2MethodsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/fido2authenticationmethod-list?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/fido2authenticationmethod-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?Fido2MethodsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

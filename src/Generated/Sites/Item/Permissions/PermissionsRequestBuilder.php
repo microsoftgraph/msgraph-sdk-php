@@ -56,7 +56,7 @@ class PermissionsRequestBuilder extends BaseRequestBuilder
      * Get the permission resources from the permissions navigation property on a site.
      * @param PermissionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/site-list-permissions?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/site-list-permissions?view=graph-rest-1.0 Find more info here
     */
     public function get(?PermissionsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,7 +76,7 @@ class PermissionsRequestBuilder extends BaseRequestBuilder
      * @param Permission $body The request body
      * @param PermissionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/site-post-permissions?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/site-post-permissions?view=graph-rest-1.0 Find more info here
     */
     public function post(Permission $body, ?PermissionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

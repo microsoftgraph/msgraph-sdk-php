@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Communications\CallRecords\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties and relationships of a callRecord object. There are two ways to get the **id** of a **callRecord**:
+ * Retrieve the properties and relationships of a callRecord object. There are two ways to get the id of a callRecord:
 */
 class CallRecordItemRequestBuilderGetQueryParameters 
 {

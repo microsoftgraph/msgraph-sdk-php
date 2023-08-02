@@ -53,7 +53,7 @@ class ConditionalAccessSettingsRequestBuilder extends BaseRequestBuilder
      * Read properties and relationships of the onPremisesConditionalAccessSettings object.
      * @param ConditionalAccessSettingsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-onboarding-onpremisesconditionalaccesssettings-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-onboarding-onpremisesconditionalaccesssettings-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ConditionalAccessSettingsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -73,7 +73,7 @@ class ConditionalAccessSettingsRequestBuilder extends BaseRequestBuilder
      * @param OnPremisesConditionalAccessSettings $body The request body
      * @param ConditionalAccessSettingsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-onboarding-onpremisesconditionalaccesssettings-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-onboarding-onpremisesconditionalaccesssettings-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(OnPremisesConditionalAccessSettings $body, ?ConditionalAccessSettingsRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

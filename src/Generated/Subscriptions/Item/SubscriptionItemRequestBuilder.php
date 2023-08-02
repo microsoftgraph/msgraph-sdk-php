@@ -43,7 +43,7 @@ class SubscriptionItemRequestBuilder extends BaseRequestBuilder
      * Delete a subscription. For the list of resources that support subscribing to change notifications, see the table in the Permissions section.
      * @param SubscriptionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/subscription-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/subscription-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?SubscriptionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -62,7 +62,7 @@ class SubscriptionItemRequestBuilder extends BaseRequestBuilder
      * Retrieve the properties and relationships of a subscription. See the table in the Permissions section for the list of resources that support subscribing to change notifications.
      * @param SubscriptionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/subscription-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/subscription-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?SubscriptionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -82,7 +82,7 @@ class SubscriptionItemRequestBuilder extends BaseRequestBuilder
      * @param Subscription $body The request body
      * @param SubscriptionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/subscription-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/subscription-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(Subscription $body, ?SubscriptionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

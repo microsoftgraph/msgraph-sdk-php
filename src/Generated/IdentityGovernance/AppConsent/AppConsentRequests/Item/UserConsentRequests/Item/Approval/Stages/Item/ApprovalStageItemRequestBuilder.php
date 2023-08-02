@@ -53,7 +53,7 @@ class ApprovalStageItemRequestBuilder extends BaseRequestBuilder
      * In Azure AD entitlement management, retrieve the properties of an approvalStage object. An approval stage is contained within an approval object.
      * @param ApprovalStageItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/approvalstage-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/approvalstage-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ApprovalStageItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -73,7 +73,7 @@ class ApprovalStageItemRequestBuilder extends BaseRequestBuilder
      * @param ApprovalStage $body The request body
      * @param ApprovalStageItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/approvalstage-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/approvalstage-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(ApprovalStage $body, ?ApprovalStageItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);

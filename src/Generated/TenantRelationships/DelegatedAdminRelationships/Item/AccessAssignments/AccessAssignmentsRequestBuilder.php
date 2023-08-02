@@ -56,7 +56,7 @@ class AccessAssignmentsRequestBuilder extends BaseRequestBuilder
      * Get a list of the delegatedAdminAccessAssignment objects and their properties.
      * @param AccessAssignmentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/delegatedadminrelationship-list-accessassignments?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/delegatedadminrelationship-list-accessassignments?view=graph-rest-1.0 Find more info here
     */
     public function get(?AccessAssignmentsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,7 +76,7 @@ class AccessAssignmentsRequestBuilder extends BaseRequestBuilder
      * @param DelegatedAdminAccessAssignment $body The request body
      * @param AccessAssignmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/delegatedadminrelationship-post-accessassignments?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/delegatedadminrelationship-post-accessassignments?view=graph-rest-1.0 Find more info here
     */
     public function post(DelegatedAdminAccessAssignment $body, ?AccessAssignmentsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

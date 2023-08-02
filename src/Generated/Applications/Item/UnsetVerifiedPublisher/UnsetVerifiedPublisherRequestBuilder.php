@@ -34,7 +34,7 @@ class UnsetVerifiedPublisherRequestBuilder extends BaseRequestBuilder
      * Unset the verifiedPublisher previously set on an application, removing all verified publisher properties. For more information, see Publisher verification.
      * @param UnsetVerifiedPublisherRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/application-unsetverifiedpublisher?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/application-unsetverifiedpublisher?view=graph-rest-1.0 Find more info here
     */
     public function post(?UnsetVerifiedPublisherRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);

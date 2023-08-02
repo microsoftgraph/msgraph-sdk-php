@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Acc
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get resourceRoleScopes from identityGovernance
+ * The resource roles and scopes in this access package.
 */
 class AccessPackageResourceRoleScopeItemRequestBuilderGetQueryParameters 
 {

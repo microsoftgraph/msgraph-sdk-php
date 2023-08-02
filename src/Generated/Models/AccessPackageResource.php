@@ -27,7 +27,7 @@ class AccessPackageResource extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
@@ -39,7 +39,7 @@ class AccessPackageResource extends Entity implements Parsable
     }
 
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. A description for the resource.
      * @return string|null
     */
     public function getDescription(): ?string {
@@ -51,7 +51,7 @@ class AccessPackageResource extends Entity implements Parsable
     }
 
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name of the resource, such as the application name, group name or site name.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -63,7 +63,7 @@ class AccessPackageResource extends Entity implements Parsable
     }
 
     /**
-     * Gets the environment property value. The environment property
+     * Gets the environment property value. Contains the environment information for the resource. This can be set using either the @odata.bind annotation or the environment's originId.Supports $expand.
      * @return AccessPackageResourceEnvironment|null
     */
     public function getEnvironment(): ?AccessPackageResourceEnvironment {
@@ -94,7 +94,7 @@ class AccessPackageResource extends Entity implements Parsable
     }
 
     /**
-     * Gets the modifiedDateTime property value. The modifiedDateTime property
+     * Gets the modifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @return DateTime|null
     */
     public function getModifiedDateTime(): ?DateTime {
@@ -106,7 +106,7 @@ class AccessPackageResource extends Entity implements Parsable
     }
 
     /**
-     * Gets the originId property value. The originId property
+     * Gets the originId property value. The unique identifier of the resource in the origin system. In the case of an Azure AD group, this is the identifier of the group.
      * @return string|null
     */
     public function getOriginId(): ?string {
@@ -118,7 +118,7 @@ class AccessPackageResource extends Entity implements Parsable
     }
 
     /**
-     * Gets the originSystem property value. The originSystem property
+     * Gets the originSystem property value. The type of the resource in the origin system, such as SharePointOnline, AadApplication or AadGroup.
      * @return string|null
     */
     public function getOriginSystem(): ?string {
@@ -130,7 +130,7 @@ class AccessPackageResource extends Entity implements Parsable
     }
 
     /**
-     * Gets the roles property value. The roles property
+     * Gets the roles property value. Read-only. Nullable. Supports $expand.
      * @return array<AccessPackageResourceRole>|null
     */
     public function getRoles(): ?array {
@@ -144,7 +144,7 @@ class AccessPackageResource extends Entity implements Parsable
     }
 
     /**
-     * Gets the scopes property value. The scopes property
+     * Gets the scopes property value. Read-only. Nullable. Supports $expand.
      * @return array<AccessPackageResourceScope>|null
     */
     public function getScopes(): ?array {
@@ -175,7 +175,7 @@ class AccessPackageResource extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
@@ -183,7 +183,7 @@ class AccessPackageResource extends Entity implements Parsable
     }
 
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. A description for the resource.
      * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
@@ -191,7 +191,7 @@ class AccessPackageResource extends Entity implements Parsable
     }
 
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name of the resource, such as the application name, group name or site name.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -199,7 +199,7 @@ class AccessPackageResource extends Entity implements Parsable
     }
 
     /**
-     * Sets the environment property value. The environment property
+     * Sets the environment property value. Contains the environment information for the resource. This can be set using either the @odata.bind annotation or the environment's originId.Supports $expand.
      * @param AccessPackageResourceEnvironment|null $value Value to set for the environment property.
     */
     public function setEnvironment(?AccessPackageResourceEnvironment $value): void {
@@ -207,7 +207,7 @@ class AccessPackageResource extends Entity implements Parsable
     }
 
     /**
-     * Sets the modifiedDateTime property value. The modifiedDateTime property
+     * Sets the modifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param DateTime|null $value Value to set for the modifiedDateTime property.
     */
     public function setModifiedDateTime(?DateTime $value): void {
@@ -215,7 +215,7 @@ class AccessPackageResource extends Entity implements Parsable
     }
 
     /**
-     * Sets the originId property value. The originId property
+     * Sets the originId property value. The unique identifier of the resource in the origin system. In the case of an Azure AD group, this is the identifier of the group.
      * @param string|null $value Value to set for the originId property.
     */
     public function setOriginId(?string $value): void {
@@ -223,7 +223,7 @@ class AccessPackageResource extends Entity implements Parsable
     }
 
     /**
-     * Sets the originSystem property value. The originSystem property
+     * Sets the originSystem property value. The type of the resource in the origin system, such as SharePointOnline, AadApplication or AadGroup.
      * @param string|null $value Value to set for the originSystem property.
     */
     public function setOriginSystem(?string $value): void {
@@ -231,7 +231,7 @@ class AccessPackageResource extends Entity implements Parsable
     }
 
     /**
-     * Sets the roles property value. The roles property
+     * Sets the roles property value. Read-only. Nullable. Supports $expand.
      * @param array<AccessPackageResourceRole>|null $value Value to set for the roles property.
     */
     public function setRoles(?array $value): void {
@@ -239,7 +239,7 @@ class AccessPackageResource extends Entity implements Parsable
     }
 
     /**
-     * Sets the scopes property value. The scopes property
+     * Sets the scopes property value. Read-only. Nullable. Supports $expand.
      * @param array<AccessPackageResourceScope>|null $value Value to set for the scopes property.
     */
     public function setScopes(?array $value): void {

@@ -55,7 +55,7 @@ class TrackersRequestBuilder extends BaseRequestBuilder
      * Get a list of hostTracker resources.
      * @param TrackersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/security-host-list-trackers?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/security-host-list-trackers?view=graph-rest-1.0 Find more info here
     */
     public function get(?TrackersRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

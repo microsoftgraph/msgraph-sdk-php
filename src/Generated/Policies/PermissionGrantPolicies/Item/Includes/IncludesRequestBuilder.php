@@ -56,7 +56,7 @@ class IncludesRequestBuilder extends BaseRequestBuilder
      * Retrieve the condition sets which are *included* in a permissionGrantPolicy.
      * @param IncludesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/permissiongrantpolicy-list-includes?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/permissiongrantpolicy-list-includes?view=graph-rest-1.0 Find more info here
     */
     public function get(?IncludesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -72,11 +72,11 @@ class IncludesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Add conditions under which a permission grant event is *included* in a permission grant policy. You do this by adding a permissionGrantConditionSet to the **includes** collection of a  permissionGrantPolicy.
+     * Add conditions under which a permission grant event is *included* in a permission grant policy. You do this by adding a permissionGrantConditionSet to the includes collection of a  permissionGrantPolicy.
      * @param PermissionGrantConditionSet $body The request body
      * @param IncludesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/permissiongrantpolicy-post-includes?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/permissiongrantpolicy-post-includes?view=graph-rest-1.0 Find more info here
     */
     public function post(PermissionGrantConditionSet $body, ?IncludesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -113,7 +113,7 @@ class IncludesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Add conditions under which a permission grant event is *included* in a permission grant policy. You do this by adding a permissionGrantConditionSet to the **includes** collection of a  permissionGrantPolicy.
+     * Add conditions under which a permission grant event is *included* in a permission grant policy. You do this by adding a permissionGrantConditionSet to the includes collection of a  permissionGrantPolicy.
      * @param PermissionGrantConditionSet $body The request body
      * @param IncludesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

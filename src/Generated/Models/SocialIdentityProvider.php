@@ -38,7 +38,7 @@ class SocialIdentityProvider extends IdentityProviderBase implements Parsable
     }
 
     /**
-     * Gets the clientSecret property value. The client secret for the application that is obtained when the application is registered with the identity provider. This is write-only. A read operation returns ****. Required.
+     * Gets the clientSecret property value. The client secret for the application that is obtained when the application is registered with the identity provider. This is write-only. A read operation returns . Required.
      * @return string|null
     */
     public function getClientSecret(): ?string {
@@ -94,7 +94,7 @@ class SocialIdentityProvider extends IdentityProviderBase implements Parsable
     }
 
     /**
-     * Sets the clientSecret property value. The client secret for the application that is obtained when the application is registered with the identity provider. This is write-only. A read operation returns ****. Required.
+     * Sets the clientSecret property value. The client secret for the application that is obtained when the application is registered with the identity provider. This is write-only. A read operation returns . Required.
      * @param string|null $value Value to set for the clientSecret property.
     */
     public function setClientSecret(?string $value): void {

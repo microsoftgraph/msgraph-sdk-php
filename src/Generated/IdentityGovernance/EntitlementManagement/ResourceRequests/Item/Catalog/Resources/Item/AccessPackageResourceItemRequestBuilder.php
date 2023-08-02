@@ -74,7 +74,7 @@ class AccessPackageResourceItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get resources from identityGovernance
+     * Access package resources in this catalog.
      * @param AccessPackageResourceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -128,7 +128,7 @@ class AccessPackageResourceItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get resources from identityGovernance
+     * Access package resources in this catalog.
      * @param AccessPackageResourceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
