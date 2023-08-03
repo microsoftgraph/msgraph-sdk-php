@@ -113,6 +113,9 @@ try {
 
 ```
 
+> Note: The SDK is designed to make async requests by default, to get the result object add `wait()` after the operation.
+> Example: `->get()->wait();`
+
 Note that to calling `me()` requires a signed-in user and therefore delegated permissions (obtained using the `authorization_code` flow):
 ```php
 <?php
