@@ -26,7 +26,7 @@ class ContainerImageEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the digestImage property value. The digestImage property
+     * Gets the digestImage property value. The digest image entity, in case this is a tag image.
      * @return ContainerImageEvidence|null
     */
     public function getDigestImage(): ?ContainerImageEvidence {
@@ -51,7 +51,7 @@ class ContainerImageEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the imageId property value. The imageId property
+     * Gets the imageId property value. The unique identifier for the container image entity.
      * @return string|null
     */
     public function getImageId(): ?string {
@@ -63,7 +63,7 @@ class ContainerImageEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the registry property value. The registry property
+     * Gets the registry property value. The container registry for this image.
      * @return ContainerRegistryEvidence|null
     */
     public function getRegistry(): ?ContainerRegistryEvidence {
@@ -86,7 +86,7 @@ class ContainerImageEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the digestImage property value. The digestImage property
+     * Sets the digestImage property value. The digest image entity, in case this is a tag image.
      * @param ContainerImageEvidence|null $value Value to set for the digestImage property.
     */
     public function setDigestImage(?ContainerImageEvidence $value): void {
@@ -94,7 +94,7 @@ class ContainerImageEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the imageId property value. The imageId property
+     * Sets the imageId property value. The unique identifier for the container image entity.
      * @param string|null $value Value to set for the imageId property.
     */
     public function setImageId(?string $value): void {
@@ -102,7 +102,7 @@ class ContainerImageEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the registry property value. The registry property
+     * Sets the registry property value. The container registry for this image.
      * @param ContainerRegistryEvidence|null $value Value to set for the registry property.
     */
     public function setRegistry(?ContainerRegistryEvidence $value): void {

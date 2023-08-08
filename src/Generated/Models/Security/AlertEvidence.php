@@ -105,7 +105,7 @@ class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the detailedRoles property value. The detailedRoles property
+     * Gets the detailedRoles property value. Detailed description of the entity role/s in an alert. Values are free-form.
      * @return array<string>|null
     */
     public function getDetailedRoles(): ?array {
@@ -187,7 +187,7 @@ class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the roles property value. One or more roles that an evidence entity represents in an alert. For example, an IP address that is associated with an attacker has the evidence role Attacker.
+     * Gets the roles property value. The role/s that an evidence entity represents in an alert, e.g., an IP address that is associated with an attacker will have the evidence role Attacker.
      * @return array<EvidenceRole>|null
     */
     public function getRoles(): ?array {
@@ -201,7 +201,7 @@ class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the tags property value. Array of custom tags associated with an evidence instance. For example, to denote a group of devices or high value assets.
+     * Gets the tags property value. Array of custom tags associated with an evidence instance, for example, to denote a group of devices, high-value assets, etc.
      * @return array<string>|null
     */
     public function getTags(): ?array {
@@ -267,7 +267,7 @@ class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the detailedRoles property value. The detailedRoles property
+     * Sets the detailedRoles property value. Detailed description of the entity role/s in an alert. Values are free-form.
      * @param array<string>|null $value Value to set for the detailedRoles property.
     */
     public function setDetailedRoles(?array $value): void {
@@ -299,7 +299,7 @@ class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the roles property value. One or more roles that an evidence entity represents in an alert. For example, an IP address that is associated with an attacker has the evidence role Attacker.
+     * Sets the roles property value. The role/s that an evidence entity represents in an alert, e.g., an IP address that is associated with an attacker will have the evidence role Attacker.
      * @param array<EvidenceRole>|null $value Value to set for the roles property.
     */
     public function setRoles(?array $value): void {
@@ -307,7 +307,7 @@ class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the tags property value. Array of custom tags associated with an evidence instance. For example, to denote a group of devices or high value assets.
+     * Sets the tags property value. Array of custom tags associated with an evidence instance, for example, to denote a group of devices, high-value assets, etc.
      * @param array<string>|null $value Value to set for the tags property.
     */
     public function setTags(?array $value): void {

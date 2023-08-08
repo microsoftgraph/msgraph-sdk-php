@@ -97,7 +97,7 @@ class DefaultUserRolePermissions implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the allowedToReadOtherUsers property value. Indicates whether the default user role can read other users.
+     * Gets the allowedToReadOtherUsers property value. Indicates whether the default user role can read other users. DO NOT SET THIS VALUE TO false.
      * @return bool|null
     */
     public function getAllowedToReadOtherUsers(): ?bool {
@@ -222,7 +222,7 @@ class DefaultUserRolePermissions implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the allowedToReadOtherUsers property value. Indicates whether the default user role can read other users.
+     * Sets the allowedToReadOtherUsers property value. Indicates whether the default user role can read other users. DO NOT SET THIS VALUE TO false.
      * @param bool|null $value Value to set for the allowedToReadOtherUsers property.
     */
     public function setAllowedToReadOtherUsers(?bool $value): void {

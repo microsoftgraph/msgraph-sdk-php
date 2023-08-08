@@ -26,7 +26,7 @@ class KubernetesNamespaceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the cluster property value. The cluster property
+     * Gets the cluster property value. The namespace cluster.
      * @return KubernetesClusterEvidence|null
     */
     public function getCluster(): ?KubernetesClusterEvidence {
@@ -51,7 +51,7 @@ class KubernetesNamespaceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the labels property value. The labels property
+     * Gets the labels property value. The labels for the Kubernetes pod.
      * @return Dictionary|null
     */
     public function getLabels(): ?Dictionary {
@@ -63,7 +63,7 @@ class KubernetesNamespaceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. The namespace name.
      * @return string|null
     */
     public function getName(): ?string {
@@ -86,7 +86,7 @@ class KubernetesNamespaceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the cluster property value. The cluster property
+     * Sets the cluster property value. The namespace cluster.
      * @param KubernetesClusterEvidence|null $value Value to set for the cluster property.
     */
     public function setCluster(?KubernetesClusterEvidence $value): void {
@@ -94,7 +94,7 @@ class KubernetesNamespaceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the labels property value. The labels property
+     * Sets the labels property value. The labels for the Kubernetes pod.
      * @param Dictionary|null $value Value to set for the labels property.
     */
     public function setLabels(?Dictionary $value): void {
@@ -102,7 +102,7 @@ class KubernetesNamespaceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. The namespace name.
      * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {

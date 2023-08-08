@@ -26,7 +26,7 @@ class KubernetesControllerEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the namespace property value. The namespace property
+     * Gets the namespace property value. The service account namespace.
      * @return KubernetesNamespaceEvidence|null
     */
     public function getEscapedNamespace(): ?KubernetesNamespaceEvidence {
@@ -52,7 +52,7 @@ class KubernetesControllerEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the labels property value. The labels property
+     * Gets the labels property value. The labels for the Kubernetes pod.
      * @return Dictionary|null
     */
     public function getLabels(): ?Dictionary {
@@ -64,7 +64,7 @@ class KubernetesControllerEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. The controller name.
      * @return string|null
     */
     public function getName(): ?string {
@@ -76,7 +76,7 @@ class KubernetesControllerEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the type property value. The type property
+     * Gets the type property value. The controller type.
      * @return string|null
     */
     public function getType(): ?string {
@@ -100,7 +100,7 @@ class KubernetesControllerEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the namespace property value. The namespace property
+     * Sets the namespace property value. The service account namespace.
      * @param KubernetesNamespaceEvidence|null $value Value to set for the namespace property.
     */
     public function setEscapedNamespace(?KubernetesNamespaceEvidence $value): void {
@@ -108,7 +108,7 @@ class KubernetesControllerEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the labels property value. The labels property
+     * Sets the labels property value. The labels for the Kubernetes pod.
      * @param Dictionary|null $value Value to set for the labels property.
     */
     public function setLabels(?Dictionary $value): void {
@@ -116,7 +116,7 @@ class KubernetesControllerEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. The controller name.
      * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
@@ -124,7 +124,7 @@ class KubernetesControllerEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the type property value. The type property
+     * Sets the type property value. The controller type.
      * @param string|null $value Value to set for the type property.
     */
     public function setType(?string $value): void {

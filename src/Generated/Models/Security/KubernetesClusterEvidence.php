@@ -26,7 +26,7 @@ class KubernetesClusterEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the cloudResource property value. The cloudResource property
+     * Gets the cloudResource property value. The cloud identifier of the cluster. Can be either an amazonResourceEvidence, azureResourceEvidence, or googleCloudResourceEvidence object.
      * @return AlertEvidence|null
     */
     public function getCloudResource(): ?AlertEvidence {
@@ -38,7 +38,7 @@ class KubernetesClusterEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the distribution property value. The distribution property
+     * Gets the distribution property value. The distribution type of the cluster.
      * @return string|null
     */
     public function getDistribution(): ?string {
@@ -65,7 +65,7 @@ class KubernetesClusterEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. The cluster name.
      * @return string|null
     */
     public function getName(): ?string {
@@ -77,7 +77,7 @@ class KubernetesClusterEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the platform property value. The platform property
+     * Gets the platform property value. The platform the cluster runs on. Possible values are: unknown, aks, eks, gke, arc, unknownFutureValue.
      * @return KubernetesPlatform|null
     */
     public function getPlatform(): ?KubernetesPlatform {
@@ -89,7 +89,7 @@ class KubernetesClusterEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the version property value. The version property
+     * Gets the version property value. The kubernetes version of the cluster.
      * @return string|null
     */
     public function getVersion(): ?string {
@@ -114,7 +114,7 @@ class KubernetesClusterEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the cloudResource property value. The cloudResource property
+     * Sets the cloudResource property value. The cloud identifier of the cluster. Can be either an amazonResourceEvidence, azureResourceEvidence, or googleCloudResourceEvidence object.
      * @param AlertEvidence|null $value Value to set for the cloudResource property.
     */
     public function setCloudResource(?AlertEvidence $value): void {
@@ -122,7 +122,7 @@ class KubernetesClusterEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the distribution property value. The distribution property
+     * Sets the distribution property value. The distribution type of the cluster.
      * @param string|null $value Value to set for the distribution property.
     */
     public function setDistribution(?string $value): void {
@@ -130,7 +130,7 @@ class KubernetesClusterEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. The cluster name.
      * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
@@ -138,7 +138,7 @@ class KubernetesClusterEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the platform property value. The platform property
+     * Sets the platform property value. The platform the cluster runs on. Possible values are: unknown, aks, eks, gke, arc, unknownFutureValue.
      * @param KubernetesPlatform|null $value Value to set for the platform property.
     */
     public function setPlatform(?KubernetesPlatform $value): void {
@@ -146,7 +146,7 @@ class KubernetesClusterEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the version property value. The version property
+     * Sets the version property value. The kubernetes version of the cluster.
      * @param string|null $value Value to set for the version property.
     */
     public function setVersion(?string $value): void {

@@ -27,7 +27,7 @@ class ContainerEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the args property value. The args property
+     * Gets the args property value. The list of arguments.
      * @return array<string>|null
     */
     public function getArgs(): ?array {
@@ -41,7 +41,7 @@ class ContainerEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the command property value. The command property
+     * Gets the command property value. The list of commands.
      * @return array<string>|null
     */
     public function getCommand(): ?array {
@@ -55,7 +55,7 @@ class ContainerEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the containerId property value. The containerId property
+     * Gets the containerId property value. The container ID.
      * @return string|null
     */
     public function getContainerId(): ?string {
@@ -98,7 +98,7 @@ class ContainerEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the image property value. The image property
+     * Gets the image property value. The image used to run the container.
      * @return ContainerImageEvidence|null
     */
     public function getImage(): ?ContainerImageEvidence {
@@ -110,7 +110,7 @@ class ContainerEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the isPrivileged property value. The isPrivileged property
+     * Gets the isPrivileged property value. The privileged status.
      * @return bool|null
     */
     public function getIsPrivileged(): ?bool {
@@ -122,7 +122,7 @@ class ContainerEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. The container name.
      * @return string|null
     */
     public function getName(): ?string {
@@ -134,7 +134,7 @@ class ContainerEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the pod property value. The pod property
+     * Gets the pod property value. The pod this container belongs to.
      * @return KubernetesPodEvidence|null
     */
     public function getPod(): ?KubernetesPodEvidence {
@@ -161,7 +161,7 @@ class ContainerEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the args property value. The args property
+     * Sets the args property value. The list of arguments.
      * @param array<string>|null $value Value to set for the args property.
     */
     public function setArgs(?array $value): void {
@@ -169,7 +169,7 @@ class ContainerEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the command property value. The command property
+     * Sets the command property value. The list of commands.
      * @param array<string>|null $value Value to set for the command property.
     */
     public function setCommand(?array $value): void {
@@ -177,7 +177,7 @@ class ContainerEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the containerId property value. The containerId property
+     * Sets the containerId property value. The container ID.
      * @param string|null $value Value to set for the containerId property.
     */
     public function setContainerId(?string $value): void {
@@ -185,7 +185,7 @@ class ContainerEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the image property value. The image property
+     * Sets the image property value. The image used to run the container.
      * @param ContainerImageEvidence|null $value Value to set for the image property.
     */
     public function setImage(?ContainerImageEvidence $value): void {
@@ -193,7 +193,7 @@ class ContainerEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the isPrivileged property value. The isPrivileged property
+     * Sets the isPrivileged property value. The privileged status.
      * @param bool|null $value Value to set for the isPrivileged property.
     */
     public function setIsPrivileged(?bool $value): void {
@@ -201,7 +201,7 @@ class ContainerEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. The container name.
      * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
@@ -209,7 +209,7 @@ class ContainerEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the pod property value. The pod property
+     * Sets the pod property value. The pod this container belongs to.
      * @param KubernetesPodEvidence|null $value Value to set for the pod property.
     */
     public function setPod(?KubernetesPodEvidence $value): void {
