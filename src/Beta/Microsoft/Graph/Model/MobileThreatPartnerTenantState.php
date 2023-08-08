@@ -33,4 +33,7 @@ class MobileThreatPartnerTenantState extends Enum
     const AVAILABLE = "available";
     const ENABLED = "enabled";
     const UNRESPONSIVE = "unresponsive";
+    const NOT_SET_UP = "notSetUp";
+    const ERROR = "error";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

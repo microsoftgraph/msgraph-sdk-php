@@ -2085,6 +2085,35 @@ class ManagedDevice extends Entity
     }
 
     /**
+    * Gets the securityPatchLevel
+    * This indicates the security patch level of the operating system. These special updates contain important security fixes. For iOS/MacOS they are in (a) format. For android its in 2017-08-07 format. This property is read-only.
+    *
+    * @return string|null The securityPatchLevel
+    */
+    public function getSecurityPatchLevel()
+    {
+        if (array_key_exists("securityPatchLevel", $this->_propDict)) {
+            return $this->_propDict["securityPatchLevel"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the securityPatchLevel
+    * This indicates the security patch level of the operating system. These special updates contain important security fixes. For iOS/MacOS they are in (a) format. For android its in 2017-08-07 format. This property is read-only.
+    *
+    * @param string $val The securityPatchLevel
+    *
+    * @return ManagedDevice
+    */
+    public function setSecurityPatchLevel($val)
+    {
+        $this->_propDict["securityPatchLevel"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the serialNumber
     * SerialNumber. This property is read-only.
     *

@@ -264,4 +264,32 @@ class WorkbookWorksheet extends Entity
         return $this;
     }
 
+
+     /**
+     * Gets the tasks
+     *
+     * @return array|null The tasks
+     */
+    public function getTasks()
+    {
+        if (array_key_exists("tasks", $this->_propDict)) {
+           return $this->_propDict["tasks"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the tasks
+    *
+    * @param WorkbookDocumentTask[] $val The tasks
+    *
+    * @return WorkbookWorksheet
+    */
+    public function setTasks($val)
+    {
+        $this->_propDict["tasks"] = $val;
+        return $this;
+    }
+
 }

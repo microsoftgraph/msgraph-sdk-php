@@ -26,6 +26,7 @@ class KubernetesClusterEvidence extends AlertEvidence
 
     /**
     * Gets the cloudResource
+    * The cloud identifier of the cluster. Can be either an amazonResourceEvidence, azureResourceEvidence, or googleCloudResourceEvidence object.
     *
     * @return AlertEvidence|null The cloudResource
     */
@@ -44,6 +45,7 @@ class KubernetesClusterEvidence extends AlertEvidence
 
     /**
     * Sets the cloudResource
+    * The cloud identifier of the cluster. Can be either an amazonResourceEvidence, azureResourceEvidence, or googleCloudResourceEvidence object.
     *
     * @param AlertEvidence $val The value to assign to the cloudResource
     *
@@ -56,6 +58,7 @@ class KubernetesClusterEvidence extends AlertEvidence
     }
     /**
     * Gets the distribution
+    * The distribution type of the cluster.
     *
     * @return string|null The distribution
     */
@@ -70,6 +73,7 @@ class KubernetesClusterEvidence extends AlertEvidence
 
     /**
     * Sets the distribution
+    * The distribution type of the cluster.
     *
     * @param string $val The value of the distribution
     *
@@ -82,6 +86,7 @@ class KubernetesClusterEvidence extends AlertEvidence
     }
     /**
     * Gets the name
+    * The cluster name.
     *
     * @return string|null The name
     */
@@ -96,6 +101,7 @@ class KubernetesClusterEvidence extends AlertEvidence
 
     /**
     * Sets the name
+    * The cluster name.
     *
     * @param string $val The value of the name
     *
@@ -109,6 +115,7 @@ class KubernetesClusterEvidence extends AlertEvidence
 
     /**
     * Gets the platform
+    * The platform the cluster runs on. Possible values are: unknown, aks, eks, gke, arc, unknownFutureValue.
     *
     * @return KubernetesPlatform|null The platform
     */
@@ -127,6 +134,7 @@ class KubernetesClusterEvidence extends AlertEvidence
 
     /**
     * Sets the platform
+    * The platform the cluster runs on. Possible values are: unknown, aks, eks, gke, arc, unknownFutureValue.
     *
     * @param KubernetesPlatform $val The value to assign to the platform
     *
@@ -139,6 +147,7 @@ class KubernetesClusterEvidence extends AlertEvidence
     }
     /**
     * Gets the version
+    * The kubernetes version of the cluster.
     *
     * @return string|null The version
     */
@@ -153,6 +162,7 @@ class KubernetesClusterEvidence extends AlertEvidence
 
     /**
     * Sets the version
+    * The kubernetes version of the cluster.
     *
     * @param string $val The value of the version
     *

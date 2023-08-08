@@ -140,39 +140,6 @@ class DeviceGeoLocation extends Entity
         $this->_propDict["lastCollectedDateTime"] = $val;
          return $this;
     }
-
-    /**
-    * Gets the lastCollectedDateTimeUtc
-    * Time at which location was recorded, relative to UTC
-    *
-    * @return \DateTime|null The lastCollectedDateTimeUtc
-    */
-    public function getLastCollectedDateTimeUtc()
-    {
-        if (array_key_exists("lastCollectedDateTimeUtc", $this->_propDict)) {
-            if (is_a($this->_propDict["lastCollectedDateTimeUtc"], "\DateTime") || is_null($this->_propDict["lastCollectedDateTimeUtc"])) {
-                return $this->_propDict["lastCollectedDateTimeUtc"];
-            } else {
-                $this->_propDict["lastCollectedDateTimeUtc"] = new \DateTime($this->_propDict["lastCollectedDateTimeUtc"]);
-                return $this->_propDict["lastCollectedDateTimeUtc"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the lastCollectedDateTimeUtc
-    * Time at which location was recorded, relative to UTC
-    *
-    * @param \DateTime $val The value to assign to the lastCollectedDateTimeUtc
-    *
-    * @return DeviceGeoLocation The DeviceGeoLocation
-    */
-    public function setLastCollectedDateTimeUtc($val)
-    {
-        $this->_propDict["lastCollectedDateTimeUtc"] = $val;
-         return $this;
-    }
     /**
     * Gets the latitude
     * Latitude coordinate of the device's location

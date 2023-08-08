@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* MacOSMdatpApp File
+* MultiTenantOrganizationState File
 * PHP version 7
 *
 * @category  Library
@@ -13,8 +13,10 @@
 */
 namespace Beta\Microsoft\Graph\Model;
 
+use Microsoft\Graph\Core\Enum;
+
 /**
-* MacOSMdatpApp class
+* MultiTenantOrganizationState class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,6 +24,12 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class MacOSMdatpApp extends MobileApp
+class MultiTenantOrganizationState extends Enum
 {
+    /**
+    * The Enum MultiTenantOrganizationState
+    */
+    const ACTIVE = "active";
+    const INACTIVE = "inactive";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

@@ -25,6 +25,7 @@ class BlobContainerEvidence extends AlertEvidence
 {
     /**
     * Gets the name
+    * The name of the blob container.
     *
     * @return string|null The name
     */
@@ -39,6 +40,7 @@ class BlobContainerEvidence extends AlertEvidence
 
     /**
     * Sets the name
+    * The name of the blob container.
     *
     * @param string $val The value of the name
     *
@@ -52,6 +54,7 @@ class BlobContainerEvidence extends AlertEvidence
 
     /**
     * Gets the storageResource
+    * The storage which the blob container belongs to.
     *
     * @return AzureResourceEvidence|null The storageResource
     */
@@ -70,6 +73,7 @@ class BlobContainerEvidence extends AlertEvidence
 
     /**
     * Sets the storageResource
+    * The storage which the blob container belongs to.
     *
     * @param AzureResourceEvidence $val The value to assign to the storageResource
     *
@@ -82,6 +86,7 @@ class BlobContainerEvidence extends AlertEvidence
     }
     /**
     * Gets the url
+    * The full URL representation of the blob container.
     *
     * @return string|null The url
     */
@@ -96,6 +101,7 @@ class BlobContainerEvidence extends AlertEvidence
 
     /**
     * Sets the url
+    * The full URL representation of the blob container.
     *
     * @param string $val The value of the url
     *

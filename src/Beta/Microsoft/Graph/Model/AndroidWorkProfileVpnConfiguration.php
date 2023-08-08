@@ -296,6 +296,35 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
     }
 
     /**
+    * Gets the proxyExclusionList
+    * List of hosts to exclude using the proxy on connections for. These hosts can use wildcards such as *.example.com.
+    *
+    * @return array|null The proxyExclusionList
+    */
+    public function getProxyExclusionList()
+    {
+        if (array_key_exists("proxyExclusionList", $this->_propDict)) {
+            return $this->_propDict["proxyExclusionList"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the proxyExclusionList
+    * List of hosts to exclude using the proxy on connections for. These hosts can use wildcards such as *.example.com.
+    *
+    * @param string[] $val The proxyExclusionList
+    *
+    * @return AndroidWorkProfileVpnConfiguration
+    */
+    public function setProxyExclusionList($val)
+    {
+        $this->_propDict["proxyExclusionList"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the proxyServer
     * Proxy server.
     *

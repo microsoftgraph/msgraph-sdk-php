@@ -26,6 +26,7 @@ class KubernetesPodEvidence extends AlertEvidence
 
     /**
     * Gets the containers
+    * The list of pod containers which are not init or ephemeral containers.
     *
     * @return ContainerEvidence|null The containers
     */
@@ -44,6 +45,7 @@ class KubernetesPodEvidence extends AlertEvidence
 
     /**
     * Sets the containers
+    * The list of pod containers which are not init or ephemeral containers.
     *
     * @param ContainerEvidence $val The value to assign to the containers
     *
@@ -57,6 +59,7 @@ class KubernetesPodEvidence extends AlertEvidence
 
     /**
     * Gets the controller
+    * The pod controller.
     *
     * @return KubernetesControllerEvidence|null The controller
     */
@@ -75,6 +78,7 @@ class KubernetesPodEvidence extends AlertEvidence
 
     /**
     * Sets the controller
+    * The pod controller.
     *
     * @param KubernetesControllerEvidence $val The value to assign to the controller
     *
@@ -88,6 +92,7 @@ class KubernetesPodEvidence extends AlertEvidence
 
     /**
     * Gets the ephemeralContainers
+    * The list of pod ephemeral containers.
     *
     * @return ContainerEvidence|null The ephemeralContainers
     */
@@ -106,6 +111,7 @@ class KubernetesPodEvidence extends AlertEvidence
 
     /**
     * Sets the ephemeralContainers
+    * The list of pod ephemeral containers.
     *
     * @param ContainerEvidence $val The value to assign to the ephemeralContainers
     *
@@ -119,6 +125,7 @@ class KubernetesPodEvidence extends AlertEvidence
 
     /**
     * Gets the initContainers
+    * The list of pod init containers.
     *
     * @return ContainerEvidence|null The initContainers
     */
@@ -137,6 +144,7 @@ class KubernetesPodEvidence extends AlertEvidence
 
     /**
     * Sets the initContainers
+    * The list of pod init containers.
     *
     * @param ContainerEvidence $val The value to assign to the initContainers
     *
@@ -150,6 +158,7 @@ class KubernetesPodEvidence extends AlertEvidence
 
     /**
     * Gets the labels
+    * The pod labels.
     *
     * @return Dictionary|null The labels
     */
@@ -168,6 +177,7 @@ class KubernetesPodEvidence extends AlertEvidence
 
     /**
     * Sets the labels
+    * The pod labels.
     *
     * @param Dictionary $val The value to assign to the labels
     *
@@ -180,6 +190,7 @@ class KubernetesPodEvidence extends AlertEvidence
     }
     /**
     * Gets the name
+    * The pod name.
     *
     * @return string|null The name
     */
@@ -194,6 +205,7 @@ class KubernetesPodEvidence extends AlertEvidence
 
     /**
     * Sets the name
+    * The pod name.
     *
     * @param string $val The value of the name
     *
@@ -207,6 +219,7 @@ class KubernetesPodEvidence extends AlertEvidence
 
     /**
     * Gets the namespace
+    * The pod namespace.
     *
     * @return KubernetesNamespaceEvidence|null The namespace
     */
@@ -225,6 +238,7 @@ class KubernetesPodEvidence extends AlertEvidence
 
     /**
     * Sets the namespace
+    * The pod namespace.
     *
     * @param KubernetesNamespaceEvidence $val The value to assign to the namespace
     *
@@ -238,6 +252,7 @@ class KubernetesPodEvidence extends AlertEvidence
 
     /**
     * Gets the podIp
+    * The pod IP.
     *
     * @return IpEvidence|null The podIp
     */
@@ -256,6 +271,7 @@ class KubernetesPodEvidence extends AlertEvidence
 
     /**
     * Sets the podIp
+    * The pod IP.
     *
     * @param IpEvidence $val The value to assign to the podIp
     *
@@ -269,6 +285,7 @@ class KubernetesPodEvidence extends AlertEvidence
 
     /**
     * Gets the serviceAccount
+    * The pod service account.
     *
     * @return KubernetesServiceAccountEvidence|null The serviceAccount
     */
@@ -287,6 +304,7 @@ class KubernetesPodEvidence extends AlertEvidence
 
     /**
     * Sets the serviceAccount
+    * The pod service account.
     *
     * @param KubernetesServiceAccountEvidence $val The value to assign to the serviceAccount
     *

@@ -56,6 +56,7 @@ class IntelligenceProfile extends \Beta\Microsoft\Graph\Model\Entity
 
      /**
      * Gets the countriesOrRegionsOfOrigin
+    * The country/region of origin for the given actor or threat associated with this intelligenceProfile.
      *
      * @return array|null The countriesOrRegionsOfOrigin
      */
@@ -70,6 +71,7 @@ class IntelligenceProfile extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the countriesOrRegionsOfOrigin
+    * The country/region of origin for the given actor or threat associated with this intelligenceProfile.
     *
     * @param IntelligenceProfileCountryOrRegionOfOrigin[] $val The countriesOrRegionsOfOrigin
     *

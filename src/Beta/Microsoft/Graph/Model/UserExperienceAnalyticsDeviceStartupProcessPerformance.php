@@ -83,35 +83,6 @@ class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Entity
     }
 
     /**
-    * Gets the medianImpactInMs2
-    * The median impact of startup process on device boot time in milliseconds. Supports: $filter, $select, $OrderBy. Read-only.
-    *
-    * @return int|null The medianImpactInMs2
-    */
-    public function getMedianImpactInMs2()
-    {
-        if (array_key_exists("medianImpactInMs2", $this->_propDict)) {
-            return $this->_propDict["medianImpactInMs2"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the medianImpactInMs2
-    * The median impact of startup process on device boot time in milliseconds. Supports: $filter, $select, $OrderBy. Read-only.
-    *
-    * @param int $val The medianImpactInMs2
-    *
-    * @return UserExperienceAnalyticsDeviceStartupProcessPerformance
-    */
-    public function setMedianImpactInMs2($val)
-    {
-        $this->_propDict["medianImpactInMs2"] = intval($val);
-        return $this;
-    }
-
-    /**
     * Gets the processName
     * The name of the startup process. Examples: outlook, excel. Supports: $select, $OrderBy. Read-only.
     *
@@ -224,35 +195,6 @@ class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Entity
     public function setTotalImpactInMs($val)
     {
         $this->_propDict["totalImpactInMs"] = intval($val);
-        return $this;
-    }
-
-    /**
-    * Gets the totalImpactInMs2
-    * The total impact of startup process on device boot time in milliseconds. Supports: $filter, $select, $OrderBy. Read-only.
-    *
-    * @return int|null The totalImpactInMs2
-    */
-    public function getTotalImpactInMs2()
-    {
-        if (array_key_exists("totalImpactInMs2", $this->_propDict)) {
-            return $this->_propDict["totalImpactInMs2"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the totalImpactInMs2
-    * The total impact of startup process on device boot time in milliseconds. Supports: $filter, $select, $OrderBy. Read-only.
-    *
-    * @param int $val The totalImpactInMs2
-    *
-    * @return UserExperienceAnalyticsDeviceStartupProcessPerformance
-    */
-    public function setTotalImpactInMs2($val)
-    {
-        $this->_propDict["totalImpactInMs2"] = intval($val);
         return $this;
     }
 

@@ -26,7 +26,7 @@ class OAuth2PermissionGrant extends Entity
 {
     /**
     * Gets the clientId
-    * The id of the client service principal for the application which is authorized to act on behalf of a signed-in user when accessing an API. Required. Supports $filter (eq only).
+    * The object id (not appId) of the client service principal for the application which is authorized to act on behalf of a signed-in user when accessing an API. Required. Supports $filter (eq only).
     *
     * @return string|null The clientId
     */
@@ -41,7 +41,7 @@ class OAuth2PermissionGrant extends Entity
 
     /**
     * Sets the clientId
-    * The id of the client service principal for the application which is authorized to act on behalf of a signed-in user when accessing an API. Required. Supports $filter (eq only).
+    * The object id (not appId) of the client service principal for the application which is authorized to act on behalf of a signed-in user when accessing an API. Required. Supports $filter (eq only).
     *
     * @param string $val The clientId
     *

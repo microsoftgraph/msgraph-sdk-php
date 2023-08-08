@@ -53,7 +53,7 @@ class GovernanceRuleSetting extends Entity
     }
     /**
     * Gets the setting
-    * The settings of the rule. The value is a JSON string with a list of pairs in the format of Parameter_Name:Parameter_Value. For example, {'permanentAssignment':false,'maximumGrantPeriodInMinutes':129600}
+    * The settings of the rule. The value is a JSON string with a list of pairs in the format of ParameterName:ParameterValue. For example, {'permanentAssignment':false,'maximumGrantPeriodInMinutes':129600}
     *
     * @return string|null The setting
     */
@@ -68,7 +68,7 @@ class GovernanceRuleSetting extends Entity
 
     /**
     * Sets the setting
-    * The settings of the rule. The value is a JSON string with a list of pairs in the format of Parameter_Name:Parameter_Value. For example, {'permanentAssignment':false,'maximumGrantPeriodInMinutes':129600}
+    * The settings of the rule. The value is a JSON string with a list of pairs in the format of ParameterName:ParameterValue. For example, {'permanentAssignment':false,'maximumGrantPeriodInMinutes':129600}
     *
     * @param string $val The value of the setting
     *
