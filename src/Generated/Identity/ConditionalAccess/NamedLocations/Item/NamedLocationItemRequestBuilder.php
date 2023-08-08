@@ -51,10 +51,10 @@ class NamedLocationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a countryNamedLocation object.
+     * Retrieve the properties and relationships of a namedLocation object.
      * @param NamedLocationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://learn.microsoft.com/graph/api/countrynamedlocation-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/namedlocation-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?NamedLocationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -107,7 +107,7 @@ class NamedLocationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a countryNamedLocation object.
+     * Retrieve the properties and relationships of a namedLocation object.
      * @param NamedLocationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

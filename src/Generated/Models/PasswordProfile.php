@@ -106,7 +106,7 @@ class PasswordProfile implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the password property value. The password for the user. This property is required when a user is created. It can be updated, but the user will be required to change the password on the next login. The password must satisfy minimum requirements as specified by the user’s passwordPolicies property. By default, a strong password is required.
+     * Gets the password property value. The password for the user. This property is required when a user is created. It can be updated, but the user will be required to change the password on the next login. The password must satisfy minimum requirements as specified by the user's passwordPolicies property. By default, a strong password is required.
      * @return string|null
     */
     public function getPassword(): ?string {
@@ -170,7 +170,7 @@ class PasswordProfile implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the password property value. The password for the user. This property is required when a user is created. It can be updated, but the user will be required to change the password on the next login. The password must satisfy minimum requirements as specified by the user’s passwordPolicies property. By default, a strong password is required.
+     * Sets the password property value. The password for the user. This property is required when a user is created. It can be updated, but the user will be required to change the password on the next login. The password must satisfy minimum requirements as specified by the user's passwordPolicies property. By default, a strong password is required.
      * @param string|null $value Value to set for the password property.
     */
     public function setPassword(?string $value): void {

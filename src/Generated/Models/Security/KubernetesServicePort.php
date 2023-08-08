@@ -48,7 +48,7 @@ class KubernetesServicePort implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the appProtocol property value. The appProtocol property
+     * Gets the appProtocol property value. The application protocol for this port.
      * @return string|null
     */
     public function getAppProtocol(): ?string {
@@ -85,7 +85,7 @@ class KubernetesServicePort implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. The name of this port within the service.
      * @return string|null
     */
     public function getName(): ?string {
@@ -97,7 +97,7 @@ class KubernetesServicePort implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the nodePort property value. The nodePort property
+     * Gets the nodePort property value. The port on each node on which this service is exposed when the type is either NodePort or LoadBalancer.
      * @return int|null
     */
     public function getNodePort(): ?int {
@@ -121,7 +121,7 @@ class KubernetesServicePort implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the port property value. The port property
+     * Gets the port property value. The port that this service exposes.
      * @return int|null
     */
     public function getPort(): ?int {
@@ -133,7 +133,7 @@ class KubernetesServicePort implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the protocol property value. The protocol property
+     * Gets the protocol property value. The protocol name. Possible values are: udp, tcp, sctp, unknownFutureValue.
      * @return ContainerPortProtocol|null
     */
     public function getProtocol(): ?ContainerPortProtocol {
@@ -145,7 +145,7 @@ class KubernetesServicePort implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the targetPort property value. The targetPort property
+     * Gets the targetPort property value. The name or number of the port to access on the pods targeted by the service. The port number must be in the range 1 to 65535. The name must be an IANASVCNAME.
      * @return string|null
     */
     public function getTargetPort(): ?string {
@@ -180,7 +180,7 @@ class KubernetesServicePort implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the appProtocol property value. The appProtocol property
+     * Sets the appProtocol property value. The application protocol for this port.
      * @param string|null $value Value to set for the appProtocol property.
     */
     public function setAppProtocol(?string $value): void {
@@ -196,7 +196,7 @@ class KubernetesServicePort implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. The name of this port within the service.
      * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
@@ -204,7 +204,7 @@ class KubernetesServicePort implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the nodePort property value. The nodePort property
+     * Sets the nodePort property value. The port on each node on which this service is exposed when the type is either NodePort or LoadBalancer.
      * @param int|null $value Value to set for the nodePort property.
     */
     public function setNodePort(?int $value): void {
@@ -220,7 +220,7 @@ class KubernetesServicePort implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the port property value. The port property
+     * Sets the port property value. The port that this service exposes.
      * @param int|null $value Value to set for the port property.
     */
     public function setPort(?int $value): void {
@@ -228,7 +228,7 @@ class KubernetesServicePort implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the protocol property value. The protocol property
+     * Sets the protocol property value. The protocol name. Possible values are: udp, tcp, sctp, unknownFutureValue.
      * @param ContainerPortProtocol|null $value Value to set for the protocol property.
     */
     public function setProtocol(?ContainerPortProtocol $value): void {
@@ -236,7 +236,7 @@ class KubernetesServicePort implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the targetPort property value. The targetPort property
+     * Sets the targetPort property value. The name or number of the port to access on the pods targeted by the service. The port number must be in the range 1 to 65535. The name must be an IANASVCNAME.
      * @param string|null $value Value to set for the targetPort property.
     */
     public function setTargetPort(?string $value): void {

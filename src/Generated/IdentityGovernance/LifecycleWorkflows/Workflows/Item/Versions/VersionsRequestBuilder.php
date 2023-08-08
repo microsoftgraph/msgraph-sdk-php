@@ -28,10 +28,10 @@ class VersionsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the versions property of the microsoft.graph.identityGovernance.workflow entity.
-     * @param string $workflowVersionVersionNumber Unique identifier of the item
+     * @param int $workflowVersionVersionNumber Unique identifier of the item
      * @return WorkflowVersionVersionNumberItemRequestBuilder
     */
-    public function byWorkflowVersionVersionNumber(string $workflowVersionVersionNumber): WorkflowVersionVersionNumberItemRequestBuilder {
+    public function byWorkflowVersionVersionNumber(int $workflowVersionVersionNumber): WorkflowVersionVersionNumberItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['workflowVersion%2DversionNumber'] = $workflowVersionVersionNumber;
         return new WorkflowVersionVersionNumberItemRequestBuilder($urlTplParams, $this->requestAdapter);

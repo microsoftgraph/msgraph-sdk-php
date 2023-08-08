@@ -76,7 +76,7 @@ class OnlineMeeting extends Entity implements Parsable
     }
 
     /**
-     * Gets the allowParticipantsToChangeName property value. The allowParticipantsToChangeName property
+     * Gets the allowParticipantsToChangeName property value. Specifies if participants are allowed to rename themselves in an instance of the meeting.
      * @return bool|null
     */
     public function getAllowParticipantsToChangeName(): ?bool {
@@ -226,6 +226,7 @@ class OnlineMeeting extends Entity implements Parsable
             'lobbyBypassSettings' => fn(ParseNode $n) => $o->setLobbyBypassSettings($n->getObjectValue([LobbyBypassSettings::class, 'createFromDiscriminatorValue'])),
             'participants' => fn(ParseNode $n) => $o->setParticipants($n->getObjectValue([MeetingParticipants::class, 'createFromDiscriminatorValue'])),
             'recordAutomatically' => fn(ParseNode $n) => $o->setRecordAutomatically($n->getBooleanValue()),
+            'shareMeetingChatHistoryDefault' => fn(ParseNode $n) => $o->setShareMeetingChatHistoryDefault($n->getEnumValue(MeetingChatHistoryDefaultMode::class)),
             'startDateTime' => fn(ParseNode $n) => $o->setStartDateTime($n->getDateTimeValue()),
             'subject' => fn(ParseNode $n) => $o->setSubject($n->getStringValue()),
             'videoTeleconferenceId' => fn(ParseNode $n) => $o->setVideoTeleconferenceId($n->getStringValue()),
@@ -330,6 +331,18 @@ class OnlineMeeting extends Entity implements Parsable
     }
 
     /**
+     * Gets the shareMeetingChatHistoryDefault property value. Specifies whether meeting chat history is shared with participants. Possible values are: all, none, unknownFutureValue.
+     * @return MeetingChatHistoryDefaultMode|null
+    */
+    public function getShareMeetingChatHistoryDefault(): ?MeetingChatHistoryDefaultMode {
+        $val = $this->getBackingStore()->get('shareMeetingChatHistoryDefault');
+        if (is_null($val) || $val instanceof MeetingChatHistoryDefaultMode) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'shareMeetingChatHistoryDefault'");
+    }
+
+    /**
      * Gets the startDateTime property value. The meeting start time in UTC.
      * @return DateTime|null
     */
@@ -405,6 +418,7 @@ class OnlineMeeting extends Entity implements Parsable
         $writer->writeObjectValue('lobbyBypassSettings', $this->getLobbyBypassSettings());
         $writer->writeObjectValue('participants', $this->getParticipants());
         $writer->writeBooleanValue('recordAutomatically', $this->getRecordAutomatically());
+        $writer->writeEnumValue('shareMeetingChatHistoryDefault', $this->getShareMeetingChatHistoryDefault());
         $writer->writeDateTimeValue('startDateTime', $this->getStartDateTime());
         $writer->writeStringValue('subject', $this->getSubject());
         $writer->writeStringValue('videoTeleconferenceId', $this->getVideoTeleconferenceId());
@@ -444,7 +458,7 @@ class OnlineMeeting extends Entity implements Parsable
     }
 
     /**
-     * Sets the allowParticipantsToChangeName property value. The allowParticipantsToChangeName property
+     * Sets the allowParticipantsToChangeName property value. Specifies if participants are allowed to rename themselves in an instance of the meeting.
      * @param bool|null $value Value to set for the allowParticipantsToChangeName property.
     */
     public function setAllowParticipantsToChangeName(?bool $value): void {
@@ -585,6 +599,14 @@ class OnlineMeeting extends Entity implements Parsable
     */
     public function setRecordAutomatically(?bool $value): void {
         $this->getBackingStore()->set('recordAutomatically', $value);
+    }
+
+    /**
+     * Sets the shareMeetingChatHistoryDefault property value. Specifies whether meeting chat history is shared with participants. Possible values are: all, none, unknownFutureValue.
+     * @param MeetingChatHistoryDefaultMode|null $value Value to set for the shareMeetingChatHistoryDefault property.
+    */
+    public function setShareMeetingChatHistoryDefault(?MeetingChatHistoryDefaultMode $value): void {
+        $this->getBackingStore()->set('shareMeetingChatHistoryDefault', $value);
     }
 
     /**

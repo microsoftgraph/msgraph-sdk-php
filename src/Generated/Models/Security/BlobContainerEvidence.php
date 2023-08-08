@@ -39,7 +39,7 @@ class BlobContainerEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. The name of the blob container.
      * @return string|null
     */
     public function getName(): ?string {
@@ -51,7 +51,7 @@ class BlobContainerEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the storageResource property value. The storageResource property
+     * Gets the storageResource property value. The storage which the blob container belongs to.
      * @return AzureResourceEvidence|null
     */
     public function getStorageResource(): ?AzureResourceEvidence {
@@ -63,7 +63,7 @@ class BlobContainerEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the url property value. The url property
+     * Gets the url property value. The full URL representation of the blob container.
      * @return string|null
     */
     public function getUrl(): ?string {
@@ -86,7 +86,7 @@ class BlobContainerEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. The name of the blob container.
      * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
@@ -94,7 +94,7 @@ class BlobContainerEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the storageResource property value. The storageResource property
+     * Sets the storageResource property value. The storage which the blob container belongs to.
      * @param AzureResourceEvidence|null $value Value to set for the storageResource property.
     */
     public function setStorageResource(?AzureResourceEvidence $value): void {
@@ -102,7 +102,7 @@ class BlobContainerEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the url property value. The url property
+     * Sets the url property value. The full URL representation of the blob container.
      * @param string|null $value Value to set for the url property.
     */
     public function setUrl(?string $value): void {

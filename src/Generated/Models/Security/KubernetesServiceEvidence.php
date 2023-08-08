@@ -27,7 +27,7 @@ class KubernetesServiceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the clusterIP property value. The clusterIP property
+     * Gets the clusterIP property value. The service cluster IP.
      * @return IpEvidence|null
     */
     public function getClusterIP(): ?IpEvidence {
@@ -39,7 +39,7 @@ class KubernetesServiceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the namespace property value. The namespace property
+     * Gets the namespace property value. The service namespace.
      * @return KubernetesNamespaceEvidence|null
     */
     public function getEscapedNamespace(): ?KubernetesNamespaceEvidence {
@@ -51,7 +51,7 @@ class KubernetesServiceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the externalIPs property value. The externalIPs property
+     * Gets the externalIPs property value. The service external IPs.
      * @return array<IpEvidence>|null
     */
     public function getExternalIPs(): ?array {
@@ -83,7 +83,7 @@ class KubernetesServiceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the labels property value. The labels property
+     * Gets the labels property value. The service labels.
      * @return Dictionary|null
     */
     public function getLabels(): ?Dictionary {
@@ -95,7 +95,7 @@ class KubernetesServiceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. The service name.
      * @return string|null
     */
     public function getName(): ?string {
@@ -107,7 +107,7 @@ class KubernetesServiceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the selector property value. The selector property
+     * Gets the selector property value. The service selector.
      * @return Dictionary|null
     */
     public function getSelector(): ?Dictionary {
@@ -119,7 +119,7 @@ class KubernetesServiceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the servicePorts property value. The servicePorts property
+     * Gets the servicePorts property value. The list of service ports.
      * @return array<KubernetesServicePort>|null
     */
     public function getServicePorts(): ?array {
@@ -161,7 +161,7 @@ class KubernetesServiceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the clusterIP property value. The clusterIP property
+     * Sets the clusterIP property value. The service cluster IP.
      * @param IpEvidence|null $value Value to set for the clusterIP property.
     */
     public function setClusterIP(?IpEvidence $value): void {
@@ -169,7 +169,7 @@ class KubernetesServiceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the namespace property value. The namespace property
+     * Sets the namespace property value. The service namespace.
      * @param KubernetesNamespaceEvidence|null $value Value to set for the namespace property.
     */
     public function setEscapedNamespace(?KubernetesNamespaceEvidence $value): void {
@@ -177,7 +177,7 @@ class KubernetesServiceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the externalIPs property value. The externalIPs property
+     * Sets the externalIPs property value. The service external IPs.
      * @param array<IpEvidence>|null $value Value to set for the externalIPs property.
     */
     public function setExternalIPs(?array $value): void {
@@ -185,7 +185,7 @@ class KubernetesServiceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the labels property value. The labels property
+     * Sets the labels property value. The service labels.
      * @param Dictionary|null $value Value to set for the labels property.
     */
     public function setLabels(?Dictionary $value): void {
@@ -193,7 +193,7 @@ class KubernetesServiceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. The service name.
      * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
@@ -201,7 +201,7 @@ class KubernetesServiceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the selector property value. The selector property
+     * Sets the selector property value. The service selector.
      * @param Dictionary|null $value Value to set for the selector property.
     */
     public function setSelector(?Dictionary $value): void {
@@ -209,7 +209,7 @@ class KubernetesServiceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the servicePorts property value. The servicePorts property
+     * Sets the servicePorts property value. The list of service ports.
      * @param array<KubernetesServicePort>|null $value Value to set for the servicePorts property.
     */
     public function setServicePorts(?array $value): void {

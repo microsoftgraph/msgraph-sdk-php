@@ -26,7 +26,7 @@ class KubernetesSecretEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the namespace property value. The namespace property
+     * Gets the namespace property value. The secret namespace.
      * @return KubernetesNamespaceEvidence|null
     */
     public function getEscapedNamespace(): ?KubernetesNamespaceEvidence {
@@ -51,7 +51,7 @@ class KubernetesSecretEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. The secret name.
      * @return string|null
     */
     public function getName(): ?string {
@@ -63,7 +63,7 @@ class KubernetesSecretEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the secretType property value. The secretType property
+     * Gets the secretType property value. The secret type can include both built-in types and custom ones. Examples of built-in types are: Opaque, kubernetes.io/service-account-token, kubernetes.io/dockercfg, kubernetes.io/dockerconfigjson, kubernetes.io/basic-auth, kubernetes.io/ssh-auth, kubernetes.io/tls, bootstrap.kubernetes.io/token.
      * @return string|null
     */
     public function getSecretType(): ?string {
@@ -86,7 +86,7 @@ class KubernetesSecretEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the namespace property value. The namespace property
+     * Sets the namespace property value. The secret namespace.
      * @param KubernetesNamespaceEvidence|null $value Value to set for the namespace property.
     */
     public function setEscapedNamespace(?KubernetesNamespaceEvidence $value): void {
@@ -94,7 +94,7 @@ class KubernetesSecretEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. The secret name.
      * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
@@ -102,7 +102,7 @@ class KubernetesSecretEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the secretType property value. The secretType property
+     * Sets the secretType property value. The secret type can include both built-in types and custom ones. Examples of built-in types are: Opaque, kubernetes.io/service-account-token, kubernetes.io/dockercfg, kubernetes.io/dockerconfigjson, kubernetes.io/basic-auth, kubernetes.io/ssh-auth, kubernetes.io/tls, bootstrap.kubernetes.io/token.
      * @param string|null $value Value to set for the secretType property.
     */
     public function setSecretType(?string $value): void {

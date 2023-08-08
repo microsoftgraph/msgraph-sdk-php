@@ -1,8 +1,8 @@
 {
-  "descriptionHash": "D789353F3C75209117D37E91A977B262D1194006D35AA14A6E331E322579CC4AE3BEA6F478AA519426EA8B75503789D50276E04B806140750978BF7250F527BD",
+  "descriptionHash": "FEFA1961F8B4AC0F0248B1FE1F35619C98939AB31437CE5EBDF52938AA13654B17D217CE1B4F518A7929A325DA7F77BFA52A47674F0B8FD7A7859850C786279E",
   "descriptionLocation": "/mnt/vss/_work/1/s/msgraph-metadata/clean_v10_openapi/openapi.yaml",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.5.0",
+  "kiotaVersion": "1.6.0",
   "clientClassName": "BaseGraphClient",
   "clientNamespaceName": "Microsoft\\Graph\\Generated",
   "language": "PHP",
@@ -11,7 +11,8 @@
   "serializers": [
     "Microsoft.Kiota.Serialization.Json.JsonSerializationWriterFactory",
     "Microsoft.Kiota.Serialization.Text.TextSerializationWriterFactory",
-    "Microsoft.Kiota.Serialization.Form.FormSerializationWriterFactory"
+    "Microsoft.Kiota.Serialization.Form.FormSerializationWriterFactory",
+    "Microsoft.Kiota.Serialization.Multipart.MultipartSerializationWriterFactory"
   ],
   "deserializers": [
     "Microsoft.Kiota.Serialization.Json.JsonParseNodeFactory",
@@ -21,7 +22,8 @@
   "structuredMimeTypes": [
     "application/json",
     "text/plain",
-    "application/x-www-form-urlencoded"
+    "application/x-www-form-urlencoded",
+    "multipart/form-data"
   ],
   "includePatterns": [],
   "excludePatterns": [

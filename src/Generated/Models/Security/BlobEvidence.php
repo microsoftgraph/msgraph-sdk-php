@@ -27,7 +27,7 @@ class BlobEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the blobContainer property value. The blobContainer property
+     * Gets the blobContainer property value. The container which the blob belongs to.
      * @return BlobContainerEvidence|null
     */
     public function getBlobContainer(): ?BlobContainerEvidence {
@@ -39,7 +39,7 @@ class BlobEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the etag property value. The etag property
+     * Gets the etag property value. The Etag associated with this blob.
      * @return string|null
     */
     public function getEtag(): ?string {
@@ -66,7 +66,7 @@ class BlobEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the fileHashes property value. The fileHashes property
+     * Gets the fileHashes property value. The file hashes associated with this blob.
      * @return array<FileHash>|null
     */
     public function getFileHashes(): ?array {
@@ -80,7 +80,7 @@ class BlobEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. The name of the blob.
      * @return string|null
     */
     public function getName(): ?string {
@@ -92,7 +92,7 @@ class BlobEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the url property value. The url property
+     * Gets the url property value. The full URL representation of the blob.
      * @return string|null
     */
     public function getUrl(): ?string {
@@ -117,7 +117,7 @@ class BlobEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the blobContainer property value. The blobContainer property
+     * Sets the blobContainer property value. The container which the blob belongs to.
      * @param BlobContainerEvidence|null $value Value to set for the blobContainer property.
     */
     public function setBlobContainer(?BlobContainerEvidence $value): void {
@@ -125,7 +125,7 @@ class BlobEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the etag property value. The etag property
+     * Sets the etag property value. The Etag associated with this blob.
      * @param string|null $value Value to set for the etag property.
     */
     public function setEtag(?string $value): void {
@@ -133,7 +133,7 @@ class BlobEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the fileHashes property value. The fileHashes property
+     * Sets the fileHashes property value. The file hashes associated with this blob.
      * @param array<FileHash>|null $value Value to set for the fileHashes property.
     */
     public function setFileHashes(?array $value): void {
@@ -141,7 +141,7 @@ class BlobEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. The name of the blob.
      * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
@@ -149,7 +149,7 @@ class BlobEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the url property value. The url property
+     * Sets the url property value. The full URL representation of the blob.
      * @param string|null $value Value to set for the url property.
     */
     public function setUrl(?string $value): void {

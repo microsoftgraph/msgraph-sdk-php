@@ -42,7 +42,7 @@ class RegistryValueEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the mdeDeviceId property value. The mdeDeviceId property
+     * Gets the mdeDeviceId property value. A unique identifier assigned to a device by Microsoft Defender for Endpoint.
      * @return string|null
     */
     public function getMdeDeviceId(): ?string {
@@ -128,7 +128,7 @@ class RegistryValueEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the mdeDeviceId property value. The mdeDeviceId property
+     * Sets the mdeDeviceId property value. A unique identifier assigned to a device by Microsoft Defender for Endpoint.
      * @param string|null $value Value to set for the mdeDeviceId property.
     */
     public function setMdeDeviceId(?string $value): void {

@@ -27,7 +27,7 @@ class KubernetesPodEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the containers property value. The containers property
+     * Gets the containers property value. The list of pod containers which are not init or ephemeral containers.
      * @return array<ContainerEvidence>|null
     */
     public function getContainers(): ?array {
@@ -41,7 +41,7 @@ class KubernetesPodEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the controller property value. The controller property
+     * Gets the controller property value. The pod controller.
      * @return KubernetesControllerEvidence|null
     */
     public function getController(): ?KubernetesControllerEvidence {
@@ -53,7 +53,7 @@ class KubernetesPodEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the ephemeralContainers property value. The ephemeralContainers property
+     * Gets the ephemeralContainers property value. The list of pod ephemeral containers.
      * @return array<ContainerEvidence>|null
     */
     public function getEphemeralContainers(): ?array {
@@ -67,7 +67,7 @@ class KubernetesPodEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the namespace property value. The namespace property
+     * Gets the namespace property value. The pod namespace.
      * @return KubernetesNamespaceEvidence|null
     */
     public function getEscapedNamespace(): ?KubernetesNamespaceEvidence {
@@ -98,7 +98,7 @@ class KubernetesPodEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the initContainers property value. The initContainers property
+     * Gets the initContainers property value. The list of pod init containers.
      * @return array<ContainerEvidence>|null
     */
     public function getInitContainers(): ?array {
@@ -112,7 +112,7 @@ class KubernetesPodEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the labels property value. The labels property
+     * Gets the labels property value. The pod labels.
      * @return Dictionary|null
     */
     public function getLabels(): ?Dictionary {
@@ -124,7 +124,7 @@ class KubernetesPodEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. The pod name.
      * @return string|null
     */
     public function getName(): ?string {
@@ -136,7 +136,7 @@ class KubernetesPodEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the podIp property value. The podIp property
+     * Gets the podIp property value. The pod IP.
      * @return IpEvidence|null
     */
     public function getPodIp(): ?IpEvidence {
@@ -148,7 +148,7 @@ class KubernetesPodEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the serviceAccount property value. The serviceAccount property
+     * Gets the serviceAccount property value. The pod service account.
      * @return KubernetesServiceAccountEvidence|null
     */
     public function getServiceAccount(): ?KubernetesServiceAccountEvidence {
@@ -177,7 +177,7 @@ class KubernetesPodEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the containers property value. The containers property
+     * Sets the containers property value. The list of pod containers which are not init or ephemeral containers.
      * @param array<ContainerEvidence>|null $value Value to set for the containers property.
     */
     public function setContainers(?array $value): void {
@@ -185,7 +185,7 @@ class KubernetesPodEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the controller property value. The controller property
+     * Sets the controller property value. The pod controller.
      * @param KubernetesControllerEvidence|null $value Value to set for the controller property.
     */
     public function setController(?KubernetesControllerEvidence $value): void {
@@ -193,7 +193,7 @@ class KubernetesPodEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the ephemeralContainers property value. The ephemeralContainers property
+     * Sets the ephemeralContainers property value. The list of pod ephemeral containers.
      * @param array<ContainerEvidence>|null $value Value to set for the ephemeralContainers property.
     */
     public function setEphemeralContainers(?array $value): void {
@@ -201,7 +201,7 @@ class KubernetesPodEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the namespace property value. The namespace property
+     * Sets the namespace property value. The pod namespace.
      * @param KubernetesNamespaceEvidence|null $value Value to set for the namespace property.
     */
     public function setEscapedNamespace(?KubernetesNamespaceEvidence $value): void {
@@ -209,7 +209,7 @@ class KubernetesPodEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the initContainers property value. The initContainers property
+     * Sets the initContainers property value. The list of pod init containers.
      * @param array<ContainerEvidence>|null $value Value to set for the initContainers property.
     */
     public function setInitContainers(?array $value): void {
@@ -217,7 +217,7 @@ class KubernetesPodEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the labels property value. The labels property
+     * Sets the labels property value. The pod labels.
      * @param Dictionary|null $value Value to set for the labels property.
     */
     public function setLabels(?Dictionary $value): void {
@@ -225,7 +225,7 @@ class KubernetesPodEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. The pod name.
      * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
@@ -233,7 +233,7 @@ class KubernetesPodEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the podIp property value. The podIp property
+     * Sets the podIp property value. The pod IP.
      * @param IpEvidence|null $value Value to set for the podIp property.
     */
     public function setPodIp(?IpEvidence $value): void {
@@ -241,7 +241,7 @@ class KubernetesPodEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the serviceAccount property value. The serviceAccount property
+     * Sets the serviceAccount property value. The pod service account.
      * @param KubernetesServiceAccountEvidence|null $value Value to set for the serviceAccount property.
     */
     public function setServiceAccount(?KubernetesServiceAccountEvidence $value): void {

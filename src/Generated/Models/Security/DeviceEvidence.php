@@ -121,7 +121,7 @@ class DeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the ipInterfaces property value. The ipInterfaces property
+     * Gets the ipInterfaces property value. Ip interfaces of the device during the time of the alert.
      * @return array<string>|null
     */
     public function getIpInterfaces(): ?array {
@@ -321,7 +321,7 @@ class DeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the ipInterfaces property value. The ipInterfaces property
+     * Sets the ipInterfaces property value. Ip interfaces of the device during the time of the alert.
      * @param array<string>|null $value Value to set for the ipInterfaces property.
     */
     public function setIpInterfaces(?array $value): void {

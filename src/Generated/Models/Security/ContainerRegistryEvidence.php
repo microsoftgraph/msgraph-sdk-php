@@ -37,7 +37,7 @@ class ContainerRegistryEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the registry property value. The registry property
+     * Gets the registry property value. The registry URI.
      * @return string|null
     */
     public function getRegistry(): ?string {
@@ -58,7 +58,7 @@ class ContainerRegistryEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the registry property value. The registry property
+     * Sets the registry property value. The registry URI.
      * @param string|null $value Value to set for the registry property.
     */
     public function setRegistry(?string $value): void {

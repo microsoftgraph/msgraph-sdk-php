@@ -26,7 +26,7 @@ class KubernetesServiceAccountEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the namespace property value. The namespace property
+     * Gets the namespace property value. The service account namespace.
      * @return KubernetesNamespaceEvidence|null
     */
     public function getEscapedNamespace(): ?KubernetesNamespaceEvidence {
@@ -50,7 +50,7 @@ class KubernetesServiceAccountEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. The service account name.
      * @return string|null
     */
     public function getName(): ?string {
@@ -72,7 +72,7 @@ class KubernetesServiceAccountEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the namespace property value. The namespace property
+     * Sets the namespace property value. The service account namespace.
      * @param KubernetesNamespaceEvidence|null $value Value to set for the namespace property.
     */
     public function setEscapedNamespace(?KubernetesNamespaceEvidence $value): void {
@@ -80,7 +80,7 @@ class KubernetesServiceAccountEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. The service account name.
      * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
