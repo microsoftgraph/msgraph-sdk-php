@@ -27,6 +27,7 @@ class AccessPackageAssignment extends Entity
 
      /**
      * Gets the customExtensionCalloutInstances
+    * Information about all the custom extension calls that were made during the access package assignment workflow.
      *
      * @return array|null The customExtensionCalloutInstances
      */
@@ -41,6 +42,7 @@ class AccessPackageAssignment extends Entity
 
     /**
     * Sets the customExtensionCalloutInstances
+    * Information about all the custom extension calls that were made during the access package assignment workflow.
     *
     * @param CustomExtensionCalloutInstance[] $val The customExtensionCalloutInstances
     *

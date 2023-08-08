@@ -25,6 +25,7 @@ class RegistryValueEvidence extends AlertEvidence
 {
     /**
     * Gets the mdeDeviceId
+    * A unique identifier assigned to a device by Microsoft Defender for Endpoint.
     *
     * @return string|null The mdeDeviceId
     */
@@ -39,6 +40,7 @@ class RegistryValueEvidence extends AlertEvidence
 
     /**
     * Sets the mdeDeviceId
+    * A unique identifier assigned to a device by Microsoft Defender for Endpoint.
     *
     * @param string $val The value of the mdeDeviceId
     *

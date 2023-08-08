@@ -26,6 +26,7 @@ class ContainerImageEvidence extends AlertEvidence
 
     /**
     * Gets the digestImage
+    * The digest image entity, in case this is a tag image.
     *
     * @return ContainerImageEvidence|null The digestImage
     */
@@ -44,6 +45,7 @@ class ContainerImageEvidence extends AlertEvidence
 
     /**
     * Sets the digestImage
+    * The digest image entity, in case this is a tag image.
     *
     * @param ContainerImageEvidence $val The value to assign to the digestImage
     *
@@ -56,6 +58,7 @@ class ContainerImageEvidence extends AlertEvidence
     }
     /**
     * Gets the imageId
+    * The unique identifier for the container image entity.
     *
     * @return string|null The imageId
     */
@@ -70,6 +73,7 @@ class ContainerImageEvidence extends AlertEvidence
 
     /**
     * Sets the imageId
+    * The unique identifier for the container image entity.
     *
     * @param string $val The value of the imageId
     *
@@ -83,6 +87,7 @@ class ContainerImageEvidence extends AlertEvidence
 
     /**
     * Gets the registry
+    * The container registry for this image.
     *
     * @return ContainerRegistryEvidence|null The registry
     */
@@ -101,6 +106,7 @@ class ContainerImageEvidence extends AlertEvidence
 
     /**
     * Sets the registry
+    * The container registry for this image.
     *
     * @param ContainerRegistryEvidence $val The value to assign to the registry
     *

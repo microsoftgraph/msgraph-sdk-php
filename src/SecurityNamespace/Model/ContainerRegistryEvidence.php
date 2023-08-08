@@ -25,6 +25,7 @@ class ContainerRegistryEvidence extends AlertEvidence
 {
     /**
     * Gets the registry
+    * The registry URI.
     *
     * @return string|null The registry
     */
@@ -39,6 +40,7 @@ class ContainerRegistryEvidence extends AlertEvidence
 
     /**
     * Sets the registry
+    * The registry URI.
     *
     * @param string $val The value of the registry
     *

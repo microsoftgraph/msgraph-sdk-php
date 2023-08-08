@@ -26,6 +26,7 @@ class AccessPackageResourceEnvironment extends Entity
 {
     /**
     * Gets the createdDateTime
+    * The date and time that this object was created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -44,6 +45,7 @@ class AccessPackageResourceEnvironment extends Entity
 
     /**
     * Sets the createdDateTime
+    * The date and time that this object was created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -57,6 +59,7 @@ class AccessPackageResourceEnvironment extends Entity
 
     /**
     * Gets the description
+    * The description of this object.
     *
     * @return string|null The description
     */
@@ -71,6 +74,7 @@ class AccessPackageResourceEnvironment extends Entity
 
     /**
     * Sets the description
+    * The description of this object.
     *
     * @param string $val The description
     *
@@ -84,6 +88,7 @@ class AccessPackageResourceEnvironment extends Entity
 
     /**
     * Gets the displayName
+    * The display name of this object.
     *
     * @return string|null The displayName
     */
@@ -98,6 +103,7 @@ class AccessPackageResourceEnvironment extends Entity
 
     /**
     * Sets the displayName
+    * The display name of this object.
     *
     * @param string $val The displayName
     *
@@ -111,6 +117,7 @@ class AccessPackageResourceEnvironment extends Entity
 
     /**
     * Gets the isDefaultEnvironment
+    * Determines whether this is default environment or not. It is set to true for all static origin systems, such as Azure AD groups and Azure AD Applications.
     *
     * @return bool|null The isDefaultEnvironment
     */
@@ -125,6 +132,7 @@ class AccessPackageResourceEnvironment extends Entity
 
     /**
     * Sets the isDefaultEnvironment
+    * Determines whether this is default environment or not. It is set to true for all static origin systems, such as Azure AD groups and Azure AD Applications.
     *
     * @param bool $val The isDefaultEnvironment
     *
@@ -138,6 +146,7 @@ class AccessPackageResourceEnvironment extends Entity
 
     /**
     * Gets the modifiedDateTime
+    * The date and time that this object was last modified. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The modifiedDateTime
     */
@@ -156,6 +165,7 @@ class AccessPackageResourceEnvironment extends Entity
 
     /**
     * Sets the modifiedDateTime
+    * The date and time that this object was last modified. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The modifiedDateTime
     *
@@ -169,6 +179,7 @@ class AccessPackageResourceEnvironment extends Entity
 
     /**
     * Gets the originId
+    * The unique identifier of this environment in the origin system.
     *
     * @return string|null The originId
     */
@@ -183,6 +194,7 @@ class AccessPackageResourceEnvironment extends Entity
 
     /**
     * Sets the originId
+    * The unique identifier of this environment in the origin system.
     *
     * @param string $val The originId
     *
@@ -196,6 +208,7 @@ class AccessPackageResourceEnvironment extends Entity
 
     /**
     * Gets the originSystem
+    * The type of the resource in the origin system, that is, SharePointOnline. Requires $filter (eq).
     *
     * @return string|null The originSystem
     */
@@ -210,6 +223,7 @@ class AccessPackageResourceEnvironment extends Entity
 
     /**
     * Sets the originSystem
+    * The type of the resource in the origin system, that is, SharePointOnline. Requires $filter (eq).
     *
     * @param string $val The originSystem
     *
@@ -224,6 +238,7 @@ class AccessPackageResourceEnvironment extends Entity
 
      /**
      * Gets the resources
+    * Read-only. Required.
      *
      * @return array|null The resources
      */
@@ -238,6 +253,7 @@ class AccessPackageResourceEnvironment extends Entity
 
     /**
     * Sets the resources
+    * Read-only. Required.
     *
     * @param AccessPackageResource[] $val The resources
     *

@@ -26,6 +26,7 @@ class CustomExtensionStageSetting extends Entity
 {
     /**
     * Gets the stage
+    * Indicates the stage of the access package assignment request workflow when the access package custom extension runs. The possible values are: assignmentRequestCreated, assignmentRequestApproved, assignmentRequestGranted, assignmentRequestRemoved, assignmentFourteenDaysBeforeExpiration, assignmentOneDayBeforeExpiration, unknownFutureValue.
     *
     * @return AccessPackageCustomExtensionStage|null The stage
     */
@@ -44,6 +45,7 @@ class CustomExtensionStageSetting extends Entity
 
     /**
     * Sets the stage
+    * Indicates the stage of the access package assignment request workflow when the access package custom extension runs. The possible values are: assignmentRequestCreated, assignmentRequestApproved, assignmentRequestGranted, assignmentRequestRemoved, assignmentFourteenDaysBeforeExpiration, assignmentOneDayBeforeExpiration, unknownFutureValue.
     *
     * @param AccessPackageCustomExtensionStage $val The stage
     *
@@ -57,6 +59,7 @@ class CustomExtensionStageSetting extends Entity
 
     /**
     * Gets the customExtension
+    * Indicates the custom workflow extension that will be executed at this stage. Nullable. Supports $expand.
     *
     * @return CustomCalloutExtension|null The customExtension
     */
@@ -75,6 +78,7 @@ class CustomExtensionStageSetting extends Entity
 
     /**
     * Sets the customExtension
+    * Indicates the custom workflow extension that will be executed at this stage. Nullable. Supports $expand.
     *
     * @param CustomCalloutExtension $val The customExtension
     *
