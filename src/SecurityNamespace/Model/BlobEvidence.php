@@ -26,6 +26,7 @@ class BlobEvidence extends AlertEvidence
 
     /**
     * Gets the blobContainer
+    * The container which the blob belongs to.
     *
     * @return BlobContainerEvidence|null The blobContainer
     */
@@ -44,6 +45,7 @@ class BlobEvidence extends AlertEvidence
 
     /**
     * Sets the blobContainer
+    * The container which the blob belongs to.
     *
     * @param BlobContainerEvidence $val The value to assign to the blobContainer
     *
@@ -56,6 +58,7 @@ class BlobEvidence extends AlertEvidence
     }
     /**
     * Gets the etag
+    * The Etag associated with this blob.
     *
     * @return string|null The etag
     */
@@ -70,6 +73,7 @@ class BlobEvidence extends AlertEvidence
 
     /**
     * Sets the etag
+    * The Etag associated with this blob.
     *
     * @param string $val The value of the etag
     *
@@ -83,6 +87,7 @@ class BlobEvidence extends AlertEvidence
 
     /**
     * Gets the fileHashes
+    * The file hashes associated with this blob.
     *
     * @return FileHash|null The fileHashes
     */
@@ -101,6 +106,7 @@ class BlobEvidence extends AlertEvidence
 
     /**
     * Sets the fileHashes
+    * The file hashes associated with this blob.
     *
     * @param FileHash $val The value to assign to the fileHashes
     *
@@ -113,6 +119,7 @@ class BlobEvidence extends AlertEvidence
     }
     /**
     * Gets the name
+    * The name of the blob.
     *
     * @return string|null The name
     */
@@ -127,6 +134,7 @@ class BlobEvidence extends AlertEvidence
 
     /**
     * Sets the name
+    * The name of the blob.
     *
     * @param string $val The value of the name
     *
@@ -139,6 +147,7 @@ class BlobEvidence extends AlertEvidence
     }
     /**
     * Gets the url
+    * The full URL representation of the blob.
     *
     * @return string|null The url
     */
@@ -153,6 +162,7 @@ class BlobEvidence extends AlertEvidence
 
     /**
     * Sets the url
+    * The full URL representation of the blob.
     *
     * @param string $val The value of the url
     *

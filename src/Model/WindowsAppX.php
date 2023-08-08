@@ -204,7 +204,7 @@ class WindowsAppX extends MobileLobApp
 
     /**
     * Gets the minimumSupportedOperatingSystem
-    * The value for the minimum applicable operating system. Valid values for a WindowsAppX app include v8_0, v8_1 and v10_0. If the app is a bundle, the minimum supported OS has to be at least v8_1.
+    * The value for the minimum applicable operating system. Valid values for a WindowsAppX app include v80, v81 and v100. If the app is a bundle, the minimum supported OS has to be at least v81.
     *
     * @return WindowsMinimumOperatingSystem|null The minimumSupportedOperatingSystem
     */
@@ -223,7 +223,7 @@ class WindowsAppX extends MobileLobApp
 
     /**
     * Sets the minimumSupportedOperatingSystem
-    * The value for the minimum applicable operating system. Valid values for a WindowsAppX app include v8_0, v8_1 and v10_0. If the app is a bundle, the minimum supported OS has to be at least v8_1.
+    * The value for the minimum applicable operating system. Valid values for a WindowsAppX app include v80, v81 and v100. If the app is a bundle, the minimum supported OS has to be at least v81.
     *
     * @param WindowsMinimumOperatingSystem $val The minimumSupportedOperatingSystem
     *

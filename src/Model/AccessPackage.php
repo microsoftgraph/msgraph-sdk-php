@@ -88,7 +88,7 @@ class AccessPackage extends Entity
 
     /**
     * Gets the displayName
-    * The display name of the access package. Supports $filter (eq, contains).
+    * Required. The display name of the access package. Supports $filter (eq, contains).
     *
     * @return string|null The displayName
     */
@@ -103,7 +103,7 @@ class AccessPackage extends Entity
 
     /**
     * Sets the displayName
-    * The display name of the access package. Supports $filter (eq, contains).
+    * Required. The display name of the access package. Supports $filter (eq, contains).
     *
     * @param string $val The displayName
     *
@@ -210,6 +210,7 @@ class AccessPackage extends Entity
 
      /**
      * Gets the assignmentPolicies
+    * Read-only. Nullable. Supports $expand.
      *
      * @return array|null The assignmentPolicies
      */
@@ -224,6 +225,7 @@ class AccessPackage extends Entity
 
     /**
     * Sets the assignmentPolicies
+    * Read-only. Nullable. Supports $expand.
     *
     * @param AccessPackageAssignmentPolicy[] $val The assignmentPolicies
     *
@@ -237,6 +239,7 @@ class AccessPackage extends Entity
 
     /**
     * Gets the catalog
+    * Required when creating the access package. Read-only. Nullable.
     *
     * @return AccessPackageCatalog|null The catalog
     */
@@ -255,6 +258,7 @@ class AccessPackage extends Entity
 
     /**
     * Sets the catalog
+    * Required when creating the access package. Read-only. Nullable.
     *
     * @param AccessPackageCatalog $val The catalog
     *
@@ -329,6 +333,7 @@ class AccessPackage extends Entity
 
      /**
      * Gets the resourceRoleScopes
+    * The resource roles and scopes in this access package.
      *
      * @return array|null The resourceRoleScopes
      */
@@ -343,6 +348,7 @@ class AccessPackage extends Entity
 
     /**
     * Sets the resourceRoleScopes
+    * The resource roles and scopes in this access package.
     *
     * @param AccessPackageResourceRoleScope[] $val The resourceRoleScopes
     *

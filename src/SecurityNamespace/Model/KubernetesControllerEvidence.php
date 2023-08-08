@@ -26,6 +26,7 @@ class KubernetesControllerEvidence extends AlertEvidence
 
     /**
     * Gets the labels
+    * The labels for the Kubernetes pod.
     *
     * @return Dictionary|null The labels
     */
@@ -44,6 +45,7 @@ class KubernetesControllerEvidence extends AlertEvidence
 
     /**
     * Sets the labels
+    * The labels for the Kubernetes pod.
     *
     * @param Dictionary $val The value to assign to the labels
     *
@@ -56,6 +58,7 @@ class KubernetesControllerEvidence extends AlertEvidence
     }
     /**
     * Gets the name
+    * The controller name.
     *
     * @return string|null The name
     */
@@ -70,6 +73,7 @@ class KubernetesControllerEvidence extends AlertEvidence
 
     /**
     * Sets the name
+    * The controller name.
     *
     * @param string $val The value of the name
     *
@@ -83,6 +87,7 @@ class KubernetesControllerEvidence extends AlertEvidence
 
     /**
     * Gets the namespace
+    * The service account namespace.
     *
     * @return KubernetesNamespaceEvidence|null The namespace
     */
@@ -101,6 +106,7 @@ class KubernetesControllerEvidence extends AlertEvidence
 
     /**
     * Sets the namespace
+    * The service account namespace.
     *
     * @param KubernetesNamespaceEvidence $val The value to assign to the namespace
     *
@@ -113,6 +119,7 @@ class KubernetesControllerEvidence extends AlertEvidence
     }
     /**
     * Gets the type
+    * The controller type.
     *
     * @return string|null The type
     */
@@ -127,6 +134,7 @@ class KubernetesControllerEvidence extends AlertEvidence
 
     /**
     * Sets the type
+    * The controller type.
     *
     * @param string $val The value of the type
     *

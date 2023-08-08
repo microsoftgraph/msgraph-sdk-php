@@ -25,6 +25,7 @@ class KubernetesSecretEvidence extends AlertEvidence
 {
     /**
     * Gets the name
+    * The secret name.
     *
     * @return string|null The name
     */
@@ -39,6 +40,7 @@ class KubernetesSecretEvidence extends AlertEvidence
 
     /**
     * Sets the name
+    * The secret name.
     *
     * @param string $val The value of the name
     *
@@ -52,6 +54,7 @@ class KubernetesSecretEvidence extends AlertEvidence
 
     /**
     * Gets the namespace
+    * The secret namespace.
     *
     * @return KubernetesNamespaceEvidence|null The namespace
     */
@@ -70,6 +73,7 @@ class KubernetesSecretEvidence extends AlertEvidence
 
     /**
     * Sets the namespace
+    * The secret namespace.
     *
     * @param KubernetesNamespaceEvidence $val The value to assign to the namespace
     *
@@ -82,6 +86,7 @@ class KubernetesSecretEvidence extends AlertEvidence
     }
     /**
     * Gets the secretType
+    * The secret type can include both built-in types and custom ones. Examples of built-in types are: Opaque, kubernetes.io/service-account-token, kubernetes.io/dockercfg, kubernetes.io/dockerconfigjson, kubernetes.io/basic-auth, kubernetes.io/ssh-auth, kubernetes.io/tls, bootstrap.kubernetes.io/token.
     *
     * @return string|null The secretType
     */
@@ -96,6 +101,7 @@ class KubernetesSecretEvidence extends AlertEvidence
 
     /**
     * Sets the secretType
+    * The secret type can include both built-in types and custom ones. Examples of built-in types are: Opaque, kubernetes.io/service-account-token, kubernetes.io/dockercfg, kubernetes.io/dockerconfigjson, kubernetes.io/basic-auth, kubernetes.io/ssh-auth, kubernetes.io/tls, bootstrap.kubernetes.io/token.
     *
     * @param string $val The value of the secretType
     *

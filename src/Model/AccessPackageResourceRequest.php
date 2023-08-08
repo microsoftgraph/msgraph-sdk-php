@@ -26,6 +26,7 @@ class AccessPackageResourceRequest extends Entity
 {
     /**
     * Gets the createdDateTime
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -44,6 +45,7 @@ class AccessPackageResourceRequest extends Entity
 
     /**
     * Sets the createdDateTime
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -57,6 +59,7 @@ class AccessPackageResourceRequest extends Entity
 
     /**
     * Gets the requestType
+    * The type of the request. Use adminAdd to add a resource, if the caller is an administrator or resource owner, adminUpdate to update a resource, or adminRemove to remove a resource.
     *
     * @return AccessPackageRequestType|null The requestType
     */
@@ -75,6 +78,7 @@ class AccessPackageResourceRequest extends Entity
 
     /**
     * Sets the requestType
+    * The type of the request. Use adminAdd to add a resource, if the caller is an administrator or resource owner, adminUpdate to update a resource, or adminRemove to remove a resource.
     *
     * @param AccessPackageRequestType $val The requestType
     *
@@ -88,6 +92,7 @@ class AccessPackageResourceRequest extends Entity
 
     /**
     * Gets the state
+    * The outcome of whether the service was able to add the resource to the catalog.  The value is delivered if the resource was added or removed. Read-only.
     *
     * @return AccessPackageRequestState|null The state
     */
@@ -106,6 +111,7 @@ class AccessPackageResourceRequest extends Entity
 
     /**
     * Sets the state
+    * The outcome of whether the service was able to add the resource to the catalog.  The value is delivered if the resource was added or removed. Read-only.
     *
     * @param AccessPackageRequestState $val The state
     *

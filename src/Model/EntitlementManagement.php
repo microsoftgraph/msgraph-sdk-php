@@ -237,6 +237,7 @@ class EntitlementManagement extends Entity
 
      /**
      * Gets the resourceEnvironments
+    * A reference to the geolocation environments in which a resource is located.
      *
      * @return array|null The resourceEnvironments
      */
@@ -251,6 +252,7 @@ class EntitlementManagement extends Entity
 
     /**
     * Sets the resourceEnvironments
+    * A reference to the geolocation environments in which a resource is located.
     *
     * @param AccessPackageResourceEnvironment[] $val The resourceEnvironments
     *
@@ -265,6 +267,7 @@ class EntitlementManagement extends Entity
 
      /**
      * Gets the resourceRequests
+    * Represents a request to add or remove a resource to or from a catalog respectively.
      *
      * @return array|null The resourceRequests
      */
@@ -279,6 +282,7 @@ class EntitlementManagement extends Entity
 
     /**
     * Sets the resourceRequests
+    * Represents a request to add or remove a resource to or from a catalog respectively.
     *
     * @param AccessPackageResourceRequest[] $val The resourceRequests
     *
@@ -321,6 +325,7 @@ class EntitlementManagement extends Entity
 
      /**
      * Gets the resources
+    * The resources associated with the catalogs.
      *
      * @return array|null The resources
      */
@@ -335,6 +340,7 @@ class EntitlementManagement extends Entity
 
     /**
     * Sets the resources
+    * The resources associated with the catalogs.
     *
     * @param AccessPackageResource[] $val The resources
     *

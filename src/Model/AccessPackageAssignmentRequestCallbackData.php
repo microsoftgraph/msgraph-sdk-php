@@ -25,6 +25,7 @@ class AccessPackageAssignmentRequestCallbackData extends CustomExtensionData
 {
     /**
     * Gets the customExtensionStageInstanceDetail
+    * Details for the callback.
     *
     * @return string|null The customExtensionStageInstanceDetail
     */
@@ -39,6 +40,7 @@ class AccessPackageAssignmentRequestCallbackData extends CustomExtensionData
 
     /**
     * Sets the customExtensionStageInstanceDetail
+    * Details for the callback.
     *
     * @param string $val The value of the customExtensionStageInstanceDetail
     *
@@ -51,6 +53,7 @@ class AccessPackageAssignmentRequestCallbackData extends CustomExtensionData
     }
     /**
     * Gets the customExtensionStageInstanceId
+    * Unique identifier of the callout to the custom extension.
     *
     * @return string|null The customExtensionStageInstanceId
     */
@@ -65,6 +68,7 @@ class AccessPackageAssignmentRequestCallbackData extends CustomExtensionData
 
     /**
     * Sets the customExtensionStageInstanceId
+    * Unique identifier of the callout to the custom extension.
     *
     * @param string $val The value of the customExtensionStageInstanceId
     *
@@ -78,6 +82,7 @@ class AccessPackageAssignmentRequestCallbackData extends CustomExtensionData
 
     /**
     * Gets the stage
+    * Indicates the stage at which the custom callout extension will be executed. The possible values are: assignmentRequestCreated, assignmentRequestApproved, assignmentRequestGranted, assignmentRequestRemoved, assignmentFourteenDaysBeforeExpiration, assignmentOneDayBeforeExpiration, unknownFutureValue.
     *
     * @return AccessPackageCustomExtensionStage|null The stage
     */
@@ -96,6 +101,7 @@ class AccessPackageAssignmentRequestCallbackData extends CustomExtensionData
 
     /**
     * Sets the stage
+    * Indicates the stage at which the custom callout extension will be executed. The possible values are: assignmentRequestCreated, assignmentRequestApproved, assignmentRequestGranted, assignmentRequestRemoved, assignmentFourteenDaysBeforeExpiration, assignmentOneDayBeforeExpiration, unknownFutureValue.
     *
     * @param AccessPackageCustomExtensionStage $val The value to assign to the stage
     *
@@ -108,6 +114,7 @@ class AccessPackageAssignmentRequestCallbackData extends CustomExtensionData
     }
     /**
     * Gets the state
+    * Allow the extension to be able to deny or cancel the request submitted by the requestor. The supported values are Denied and Canceled. This property can only be set for an assignmentRequestCreated stage.
     *
     * @return string|null The state
     */
@@ -122,6 +129,7 @@ class AccessPackageAssignmentRequestCallbackData extends CustomExtensionData
 
     /**
     * Sets the state
+    * Allow the extension to be able to deny or cancel the request submitted by the requestor. The supported values are Denied and Canceled. This property can only be set for an assignmentRequestCreated stage.
     *
     * @param string $val The value of the state
     *

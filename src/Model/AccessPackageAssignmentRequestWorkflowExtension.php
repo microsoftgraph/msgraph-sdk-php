@@ -26,6 +26,7 @@ class AccessPackageAssignmentRequestWorkflowExtension extends CustomCalloutExten
 {
     /**
     * Gets the callbackConfiguration
+    * The callback configuration for a custom extension.
     *
     * @return CustomExtensionCallbackConfiguration|null The callbackConfiguration
     */
@@ -44,6 +45,7 @@ class AccessPackageAssignmentRequestWorkflowExtension extends CustomCalloutExten
 
     /**
     * Sets the callbackConfiguration
+    * The callback configuration for a custom extension.
     *
     * @param CustomExtensionCallbackConfiguration $val The callbackConfiguration
     *
@@ -57,6 +59,7 @@ class AccessPackageAssignmentRequestWorkflowExtension extends CustomCalloutExten
 
     /**
     * Gets the createdBy
+    * The userPrincipalName of the user or identity of the subject that created this resource. Read-only.
     *
     * @return string|null The createdBy
     */
@@ -71,6 +74,7 @@ class AccessPackageAssignmentRequestWorkflowExtension extends CustomCalloutExten
 
     /**
     * Sets the createdBy
+    * The userPrincipalName of the user or identity of the subject that created this resource. Read-only.
     *
     * @param string $val The createdBy
     *
@@ -84,6 +88,7 @@ class AccessPackageAssignmentRequestWorkflowExtension extends CustomCalloutExten
 
     /**
     * Gets the createdDateTime
+    * When the object was created.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -102,6 +107,7 @@ class AccessPackageAssignmentRequestWorkflowExtension extends CustomCalloutExten
 
     /**
     * Sets the createdDateTime
+    * When the object was created.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -115,6 +121,7 @@ class AccessPackageAssignmentRequestWorkflowExtension extends CustomCalloutExten
 
     /**
     * Gets the lastModifiedBy
+    * The userPrincipalName of the identity that last modified the object.
     *
     * @return string|null The lastModifiedBy
     */
@@ -129,6 +136,7 @@ class AccessPackageAssignmentRequestWorkflowExtension extends CustomCalloutExten
 
     /**
     * Sets the lastModifiedBy
+    * The userPrincipalName of the identity that last modified the object.
     *
     * @param string $val The lastModifiedBy
     *
@@ -142,6 +150,7 @@ class AccessPackageAssignmentRequestWorkflowExtension extends CustomCalloutExten
 
     /**
     * Gets the lastModifiedDateTime
+    * When the object was last modified.
     *
     * @return \DateTime|null The lastModifiedDateTime
     */
@@ -160,6 +169,7 @@ class AccessPackageAssignmentRequestWorkflowExtension extends CustomCalloutExten
 
     /**
     * Sets the lastModifiedDateTime
+    * When the object was last modified.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *

@@ -638,7 +638,7 @@ class PstnCallLogRow extends \Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the userId
-    * Calling user's ID in Graph. GUID. This and other user info will be null/empty for bot call types (ucap_in, ucap_out).
+    * Calling user's ID in Graph. GUID. This and other user info will be null/empty for bot call types (ucapin, ucapout).
     *
     * @return string|null The userId
     */
@@ -653,7 +653,7 @@ class PstnCallLogRow extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the userId
-    * Calling user's ID in Graph. GUID. This and other user info will be null/empty for bot call types (ucap_in, ucap_out).
+    * Calling user's ID in Graph. GUID. This and other user info will be null/empty for bot call types (ucapin, ucapout).
     *
     * @param string $val The value of the userId
     *

@@ -378,7 +378,7 @@ class AccessPackageAssignmentPolicy extends Entity
 
     /**
     * Gets the accessPackage
-    * Access package containing this policy. Read-only.
+    * Access package containing this policy. Read-only.  Supports $expand.
     *
     * @return AccessPackage|null The accessPackage
     */
@@ -397,7 +397,7 @@ class AccessPackageAssignmentPolicy extends Entity
 
     /**
     * Sets the accessPackage
-    * Access package containing this policy. Read-only.
+    * Access package containing this policy. Read-only.  Supports $expand.
     *
     * @param AccessPackage $val The accessPackage
     *
@@ -445,6 +445,7 @@ class AccessPackageAssignmentPolicy extends Entity
 
      /**
      * Gets the customExtensionStageSettings
+    * The collection of stages when to execute one or more custom access package workflow extensions. Supports $expand.
      *
      * @return array|null The customExtensionStageSettings
      */
@@ -459,6 +460,7 @@ class AccessPackageAssignmentPolicy extends Entity
 
     /**
     * Sets the customExtensionStageSettings
+    * The collection of stages when to execute one or more custom access package workflow extensions. Supports $expand.
     *
     * @param CustomExtensionStageSetting[] $val The customExtensionStageSettings
     *

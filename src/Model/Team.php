@@ -702,6 +702,34 @@ class Team extends Entity
         return $this;
     }
 
+
+     /**
+     * Gets the permissionGrants
+     *
+     * @return array|null The permissionGrants
+     */
+    public function getPermissionGrants()
+    {
+        if (array_key_exists("permissionGrants", $this->_propDict)) {
+           return $this->_propDict["permissionGrants"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the permissionGrants
+    *
+    * @param ResourceSpecificPermissionGrant[] $val The permissionGrants
+    *
+    * @return Team
+    */
+    public function setPermissionGrants($val)
+    {
+        $this->_propDict["permissionGrants"] = $val;
+        return $this;
+    }
+
     /**
     * Gets the photo
     * The profile photo for the team.
