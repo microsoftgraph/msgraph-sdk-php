@@ -25,6 +25,7 @@ class KubernetesServiceAccountEvidence extends AlertEvidence
 {
     /**
     * Gets the name
+    * The service account name.
     *
     * @return string|null The name
     */
@@ -39,6 +40,7 @@ class KubernetesServiceAccountEvidence extends AlertEvidence
 
     /**
     * Sets the name
+    * The service account name.
     *
     * @param string $val The value of the name
     *
@@ -52,6 +54,7 @@ class KubernetesServiceAccountEvidence extends AlertEvidence
 
     /**
     * Gets the namespace
+    * The service account namespace.
     *
     * @return KubernetesNamespaceEvidence|null The namespace
     */
@@ -70,6 +73,7 @@ class KubernetesServiceAccountEvidence extends AlertEvidence
 
     /**
     * Sets the namespace
+    * The service account namespace.
     *
     * @param KubernetesNamespaceEvidence $val The value to assign to the namespace
     *

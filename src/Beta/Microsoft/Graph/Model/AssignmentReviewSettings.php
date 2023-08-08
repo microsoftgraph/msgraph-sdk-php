@@ -231,7 +231,7 @@ class AssignmentReviewSettings extends Entity
     }
     /**
     * Gets the reviewerType
-    * Who should be asked to do the review, either Self or Reviewers.
+    * Who should be asked to do the review, either Self, Reviewers or Manager.
     *
     * @return string|null The reviewerType
     */
@@ -246,7 +246,7 @@ class AssignmentReviewSettings extends Entity
 
     /**
     * Sets the reviewerType
-    * Who should be asked to do the review, either Self or Reviewers.
+    * Who should be asked to do the review, either Self, Reviewers or Manager.
     *
     * @param string $val The value of the reviewerType
     *

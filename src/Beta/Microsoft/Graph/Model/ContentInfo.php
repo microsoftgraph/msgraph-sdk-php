@@ -87,7 +87,7 @@ class ContentInfo extends Entity
 
     /**
     * Gets the metadata
-    * Existing Microsoft Purview Information Protection metadata is passed as key/value pairs, where the key is the MSIP_Label_GUID_PropName.
+    * Existing Microsoft Purview Information Protection metadata is passed as key/value pairs, where the key is the MSIPLabelGUID_PropName.
     *
     * @return KeyValuePair|null The metadata
     */
@@ -106,7 +106,7 @@ class ContentInfo extends Entity
 
     /**
     * Sets the metadata
-    * Existing Microsoft Purview Information Protection metadata is passed as key/value pairs, where the key is the MSIP_Label_GUID_PropName.
+    * Existing Microsoft Purview Information Protection metadata is passed as key/value pairs, where the key is the MSIPLabelGUID_PropName.
     *
     * @param KeyValuePair $val The value to assign to the metadata
     *

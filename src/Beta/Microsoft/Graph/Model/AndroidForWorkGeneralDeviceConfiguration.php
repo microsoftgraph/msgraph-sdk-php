@@ -54,6 +54,35 @@ class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguration
     }
 
     /**
+    * Gets the blockUnifiedPasswordForWorkProfile
+    * Prevent using unified password for unlocking device and work profile.
+    *
+    * @return bool|null The blockUnifiedPasswordForWorkProfile
+    */
+    public function getBlockUnifiedPasswordForWorkProfile()
+    {
+        if (array_key_exists("blockUnifiedPasswordForWorkProfile", $this->_propDict)) {
+            return $this->_propDict["blockUnifiedPasswordForWorkProfile"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the blockUnifiedPasswordForWorkProfile
+    * Prevent using unified password for unlocking device and work profile.
+    *
+    * @param bool $val The blockUnifiedPasswordForWorkProfile
+    *
+    * @return AndroidForWorkGeneralDeviceConfiguration
+    */
+    public function setBlockUnifiedPasswordForWorkProfile($val)
+    {
+        $this->_propDict["blockUnifiedPasswordForWorkProfile"] = boolval($val);
+        return $this;
+    }
+
+    /**
     * Gets the passwordBlockFaceUnlock
     * Indicates whether or not to block face unlock.
     *

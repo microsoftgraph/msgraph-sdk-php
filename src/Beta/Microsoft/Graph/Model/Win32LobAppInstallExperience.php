@@ -56,6 +56,34 @@ class Win32LobAppInstallExperience extends Entity
         $this->_propDict["deviceRestartBehavior"] = $val;
          return $this;
     }
+    /**
+    * Gets the maxRunTimeInMinutes
+    * The number of minutes the system will wait for install program to finish. Default value is 60 minutes.
+    *
+    * @return int|null The maxRunTimeInMinutes
+    */
+    public function getMaxRunTimeInMinutes()
+    {
+        if (array_key_exists("maxRunTimeInMinutes", $this->_propDict)) {
+            return $this->_propDict["maxRunTimeInMinutes"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the maxRunTimeInMinutes
+    * The number of minutes the system will wait for install program to finish. Default value is 60 minutes.
+    *
+    * @param int $val The value of the maxRunTimeInMinutes
+    *
+    * @return Win32LobAppInstallExperience
+    */
+    public function setMaxRunTimeInMinutes($val)
+    {
+        $this->_propDict["maxRunTimeInMinutes"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the runAsAccount

@@ -25,6 +25,7 @@ class KubernetesServicePort extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the appProtocol
+    * The application protocol for this port.
     *
     * @return string|null The appProtocol
     */
@@ -39,6 +40,7 @@ class KubernetesServicePort extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the appProtocol
+    * The application protocol for this port.
     *
     * @param string $val The value of the appProtocol
     *
@@ -51,6 +53,7 @@ class KubernetesServicePort extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the name
+    * The name of this port within the service.
     *
     * @return string|null The name
     */
@@ -65,6 +68,7 @@ class KubernetesServicePort extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the name
+    * The name of this port within the service.
     *
     * @param string $val The value of the name
     *
@@ -77,6 +81,7 @@ class KubernetesServicePort extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the nodePort
+    * The port on each node on which this service is exposed when the type is either NodePort or LoadBalancer.
     *
     * @return int|null The nodePort
     */
@@ -91,6 +96,7 @@ class KubernetesServicePort extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the nodePort
+    * The port on each node on which this service is exposed when the type is either NodePort or LoadBalancer.
     *
     * @param int $val The value of the nodePort
     *
@@ -103,6 +109,7 @@ class KubernetesServicePort extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the port
+    * The port that this service exposes.
     *
     * @return int|null The port
     */
@@ -117,6 +124,7 @@ class KubernetesServicePort extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the port
+    * The port that this service exposes.
     *
     * @param int $val The value of the port
     *
@@ -130,6 +138,7 @@ class KubernetesServicePort extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the protocol
+    * The protocol name. Possible values are: udp, tcp, sctp, unknownFutureValue.
     *
     * @return ContainerPortProtocol|null The protocol
     */
@@ -148,6 +157,7 @@ class KubernetesServicePort extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the protocol
+    * The protocol name. Possible values are: udp, tcp, sctp, unknownFutureValue.
     *
     * @param ContainerPortProtocol $val The value to assign to the protocol
     *
@@ -160,6 +170,7 @@ class KubernetesServicePort extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the targetPort
+    * The name or number of the port to access on the pods targeted by the service. The port number must be in the range 1 to 65535. The name must be an IANASVCNAME.
     *
     * @return string|null The targetPort
     */
@@ -174,6 +185,7 @@ class KubernetesServicePort extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the targetPort
+    * The name or number of the port to access on the pods targeted by the service. The port number must be in the range 1 to 65535. The name must be an IANASVCNAME.
     *
     * @param string $val The value of the targetPort
     *

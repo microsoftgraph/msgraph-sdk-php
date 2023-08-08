@@ -59,7 +59,7 @@ class BaseItemVersion extends Entity
 
     /**
     * Gets the lastModifiedDateTime
-    * Date and time the version was last modified. Read-only.
+    * Date and time when the version was last modified. Read-only.
     *
     * @return \DateTime|null The lastModifiedDateTime
     */
@@ -78,7 +78,7 @@ class BaseItemVersion extends Entity
 
     /**
     * Sets the lastModifiedDateTime
-    * Date and time the version was last modified. Read-only.
+    * Date and time when the version was last modified. Read-only.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *

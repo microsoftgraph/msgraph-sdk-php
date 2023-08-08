@@ -24,8 +24,36 @@ namespace Beta\Microsoft\Graph\Model;
 class CustomExtensionClientConfiguration extends Entity
 {
     /**
+    * Gets the maximumRetries
+    * The max number of retries that Azure AD will make to the external API. Values of 0 or 1 are supported. If null, the default for the service will apply.
+    *
+    * @return int|null The maximumRetries
+    */
+    public function getMaximumRetries()
+    {
+        if (array_key_exists("maximumRetries", $this->_propDict)) {
+            return $this->_propDict["maximumRetries"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the maximumRetries
+    * The max number of retries that Azure AD will make to the external API. Values of 0 or 1 are supported. If null, the default for the service will apply.
+    *
+    * @param int $val The value of the maximumRetries
+    *
+    * @return CustomExtensionClientConfiguration
+    */
+    public function setMaximumRetries($val)
+    {
+        $this->_propDict["maximumRetries"] = $val;
+        return $this;
+    }
+    /**
     * Gets the timeoutInMilliseconds
-    * The max duration in milliseconds that Azure AD will wait for a response from the external app before it shuts down the connection. The valid range is between 200 and 2000 milliseconds. Default duration is 1000.
+    * The max duration in milliseconds that Azure AD will wait for a response from the external app before it shuts down the connection. The valid range is between 200 and 2000 milliseconds. If null, the default for the service will apply.
     *
     * @return int|null The timeoutInMilliseconds
     */
@@ -40,7 +68,7 @@ class CustomExtensionClientConfiguration extends Entity
 
     /**
     * Sets the timeoutInMilliseconds
-    * The max duration in milliseconds that Azure AD will wait for a response from the external app before it shuts down the connection. The valid range is between 200 and 2000 milliseconds. Default duration is 1000.
+    * The max duration in milliseconds that Azure AD will wait for a response from the external app before it shuts down the connection. The valid range is between 200 and 2000 milliseconds. If null, the default for the service will apply.
     *
     * @param int $val The value of the timeoutInMilliseconds
     *

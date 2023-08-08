@@ -180,6 +180,7 @@ class DeviceEvidence extends AlertEvidence
     }
     /**
     * Gets the ipInterfaces
+    * Ip interfaces of the device during the time of the alert.
     *
     * @return string|null The ipInterfaces
     */
@@ -194,6 +195,7 @@ class DeviceEvidence extends AlertEvidence
 
     /**
     * Sets the ipInterfaces
+    * Ip interfaces of the device during the time of the alert.
     *
     * @param string $val The value of the ipInterfaces
     *

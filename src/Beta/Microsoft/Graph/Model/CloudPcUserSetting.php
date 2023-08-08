@@ -150,6 +150,7 @@ class CloudPcUserSetting extends Entity
 
     /**
     * Gets the resetEnabled
+    * Indicates whether an end user is allowed to reset their Cloud PC. When true, the user is allowed to reset their Cloud PC. When false, end-user initiated reset is not allowed. The default value is false.
     *
     * @return bool|null The resetEnabled
     */
@@ -164,6 +165,7 @@ class CloudPcUserSetting extends Entity
 
     /**
     * Sets the resetEnabled
+    * Indicates whether an end user is allowed to reset their Cloud PC. When true, the user is allowed to reset their Cloud PC. When false, end-user initiated reset is not allowed. The default value is false.
     *
     * @param bool $val The resetEnabled
     *

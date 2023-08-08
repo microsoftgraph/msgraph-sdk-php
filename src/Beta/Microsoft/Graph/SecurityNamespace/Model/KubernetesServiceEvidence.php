@@ -26,6 +26,7 @@ class KubernetesServiceEvidence extends AlertEvidence
 
     /**
     * Gets the clusterIP
+    * The service cluster IP.
     *
     * @return IpEvidence|null The clusterIP
     */
@@ -44,6 +45,7 @@ class KubernetesServiceEvidence extends AlertEvidence
 
     /**
     * Sets the clusterIP
+    * The service cluster IP.
     *
     * @param IpEvidence $val The value to assign to the clusterIP
     *
@@ -57,6 +59,7 @@ class KubernetesServiceEvidence extends AlertEvidence
 
     /**
     * Gets the externalIPs
+    * The service external IPs.
     *
     * @return IpEvidence|null The externalIPs
     */
@@ -75,6 +78,7 @@ class KubernetesServiceEvidence extends AlertEvidence
 
     /**
     * Sets the externalIPs
+    * The service external IPs.
     *
     * @param IpEvidence $val The value to assign to the externalIPs
     *
@@ -88,6 +92,7 @@ class KubernetesServiceEvidence extends AlertEvidence
 
     /**
     * Gets the labels
+    * The service labels.
     *
     * @return Dictionary|null The labels
     */
@@ -106,6 +111,7 @@ class KubernetesServiceEvidence extends AlertEvidence
 
     /**
     * Sets the labels
+    * The service labels.
     *
     * @param Dictionary $val The value to assign to the labels
     *
@@ -118,6 +124,7 @@ class KubernetesServiceEvidence extends AlertEvidence
     }
     /**
     * Gets the name
+    * The service name.
     *
     * @return string|null The name
     */
@@ -132,6 +139,7 @@ class KubernetesServiceEvidence extends AlertEvidence
 
     /**
     * Sets the name
+    * The service name.
     *
     * @param string $val The value of the name
     *
@@ -145,6 +153,7 @@ class KubernetesServiceEvidence extends AlertEvidence
 
     /**
     * Gets the namespace
+    * The service namespace.
     *
     * @return KubernetesNamespaceEvidence|null The namespace
     */
@@ -163,6 +172,7 @@ class KubernetesServiceEvidence extends AlertEvidence
 
     /**
     * Sets the namespace
+    * The service namespace.
     *
     * @param KubernetesNamespaceEvidence $val The value to assign to the namespace
     *
@@ -176,6 +186,7 @@ class KubernetesServiceEvidence extends AlertEvidence
 
     /**
     * Gets the selector
+    * The service selector.
     *
     * @return Dictionary|null The selector
     */
@@ -194,6 +205,7 @@ class KubernetesServiceEvidence extends AlertEvidence
 
     /**
     * Sets the selector
+    * The service selector.
     *
     * @param Dictionary $val The value to assign to the selector
     *
@@ -207,6 +219,7 @@ class KubernetesServiceEvidence extends AlertEvidence
 
     /**
     * Gets the servicePorts
+    * The list of service ports.
     *
     * @return KubernetesServicePort|null The servicePorts
     */
@@ -225,6 +238,7 @@ class KubernetesServiceEvidence extends AlertEvidence
 
     /**
     * Sets the servicePorts
+    * The list of service ports.
     *
     * @param KubernetesServicePort $val The value to assign to the servicePorts
     *
@@ -238,6 +252,7 @@ class KubernetesServiceEvidence extends AlertEvidence
 
     /**
     * Gets the serviceType
+    * The service type.
     *
     * @return KubernetesServiceType|null The serviceType
     */
@@ -256,6 +271,7 @@ class KubernetesServiceEvidence extends AlertEvidence
 
     /**
     * Sets the serviceType
+    * The service type.
     *
     * @param KubernetesServiceType $val The value to assign to the serviceType
     *

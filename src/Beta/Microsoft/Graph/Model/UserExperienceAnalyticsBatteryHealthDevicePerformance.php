@@ -54,6 +54,35 @@ class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entity
     }
 
     /**
+    * Gets the deviceBatteryCount
+    * Number of batteries in a user device. Valid values 1 to 2147483647
+    *
+    * @return int|null The deviceBatteryCount
+    */
+    public function getDeviceBatteryCount()
+    {
+        if (array_key_exists("deviceBatteryCount", $this->_propDict)) {
+            return $this->_propDict["deviceBatteryCount"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the deviceBatteryCount
+    * Number of batteries in a user device. Valid values 1 to 2147483647
+    *
+    * @param int $val The deviceBatteryCount
+    *
+    * @return UserExperienceAnalyticsBatteryHealthDevicePerformance
+    */
+    public function setDeviceBatteryCount($val)
+    {
+        $this->_propDict["deviceBatteryCount"] = intval($val);
+        return $this;
+    }
+
+    /**
     * Gets the deviceBatteryHealthScore
     * A weighted average of a device’s maximum capacity score and runtime estimate score. Values range from 0-100. Valid values -2147483648 to 2147483647
     *
@@ -166,6 +195,35 @@ class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entity
     public function setEstimatedRuntimeInMinutes($val)
     {
         $this->_propDict["estimatedRuntimeInMinutes"] = intval($val);
+        return $this;
+    }
+
+    /**
+    * Gets the fullBatteryDrainCount
+    * Number of times the battery has been discharged an amount that equals 100% of its capacity, but not necessarily by discharging it from 100% to 0%. Valid values 0 to 2147483647
+    *
+    * @return int|null The fullBatteryDrainCount
+    */
+    public function getFullBatteryDrainCount()
+    {
+        if (array_key_exists("fullBatteryDrainCount", $this->_propDict)) {
+            return $this->_propDict["fullBatteryDrainCount"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the fullBatteryDrainCount
+    * Number of times the battery has been discharged an amount that equals 100% of its capacity, but not necessarily by discharging it from 100% to 0%. Valid values 0 to 2147483647
+    *
+    * @param int $val The fullBatteryDrainCount
+    *
+    * @return UserExperienceAnalyticsBatteryHealthDevicePerformance
+    */
+    public function setFullBatteryDrainCount($val)
+    {
+        $this->_propDict["fullBatteryDrainCount"] = intval($val);
         return $this;
     }
 

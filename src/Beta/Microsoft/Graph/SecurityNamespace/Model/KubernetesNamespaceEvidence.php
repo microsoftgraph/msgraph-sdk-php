@@ -26,6 +26,7 @@ class KubernetesNamespaceEvidence extends AlertEvidence
 
     /**
     * Gets the cluster
+    * The namespace cluster.
     *
     * @return KubernetesClusterEvidence|null The cluster
     */
@@ -44,6 +45,7 @@ class KubernetesNamespaceEvidence extends AlertEvidence
 
     /**
     * Sets the cluster
+    * The namespace cluster.
     *
     * @param KubernetesClusterEvidence $val The value to assign to the cluster
     *
@@ -57,6 +59,7 @@ class KubernetesNamespaceEvidence extends AlertEvidence
 
     /**
     * Gets the labels
+    * The labels for the Kubernetes pod.
     *
     * @return Dictionary|null The labels
     */
@@ -75,6 +78,7 @@ class KubernetesNamespaceEvidence extends AlertEvidence
 
     /**
     * Sets the labels
+    * The labels for the Kubernetes pod.
     *
     * @param Dictionary $val The value to assign to the labels
     *
@@ -87,6 +91,7 @@ class KubernetesNamespaceEvidence extends AlertEvidence
     }
     /**
     * Gets the name
+    * The namespace name.
     *
     * @return string|null The name
     */
@@ -101,6 +106,7 @@ class KubernetesNamespaceEvidence extends AlertEvidence
 
     /**
     * Sets the name
+    * The namespace name.
     *
     * @param string $val The value of the name
     *

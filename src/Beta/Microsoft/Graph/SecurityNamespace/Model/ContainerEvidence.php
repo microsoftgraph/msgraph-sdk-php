@@ -25,6 +25,7 @@ class ContainerEvidence extends AlertEvidence
 {
     /**
     * Gets the args
+    * The list of arguments.
     *
     * @return string|null The args
     */
@@ -39,6 +40,7 @@ class ContainerEvidence extends AlertEvidence
 
     /**
     * Sets the args
+    * The list of arguments.
     *
     * @param string $val The value of the args
     *
@@ -51,6 +53,7 @@ class ContainerEvidence extends AlertEvidence
     }
     /**
     * Gets the command
+    * The list of commands.
     *
     * @return string|null The command
     */
@@ -65,6 +68,7 @@ class ContainerEvidence extends AlertEvidence
 
     /**
     * Sets the command
+    * The list of commands.
     *
     * @param string $val The value of the command
     *
@@ -77,6 +81,7 @@ class ContainerEvidence extends AlertEvidence
     }
     /**
     * Gets the containerId
+    * The container ID.
     *
     * @return string|null The containerId
     */
@@ -91,6 +96,7 @@ class ContainerEvidence extends AlertEvidence
 
     /**
     * Sets the containerId
+    * The container ID.
     *
     * @param string $val The value of the containerId
     *
@@ -104,6 +110,7 @@ class ContainerEvidence extends AlertEvidence
 
     /**
     * Gets the image
+    * The image used to run the container.
     *
     * @return ContainerImageEvidence|null The image
     */
@@ -122,6 +129,7 @@ class ContainerEvidence extends AlertEvidence
 
     /**
     * Sets the image
+    * The image used to run the container.
     *
     * @param ContainerImageEvidence $val The value to assign to the image
     *
@@ -134,6 +142,7 @@ class ContainerEvidence extends AlertEvidence
     }
     /**
     * Gets the isPrivileged
+    * The privileged status.
     *
     * @return bool|null The isPrivileged
     */
@@ -148,6 +157,7 @@ class ContainerEvidence extends AlertEvidence
 
     /**
     * Sets the isPrivileged
+    * The privileged status.
     *
     * @param bool $val The value of the isPrivileged
     *
@@ -160,6 +170,7 @@ class ContainerEvidence extends AlertEvidence
     }
     /**
     * Gets the name
+    * The container name.
     *
     * @return string|null The name
     */
@@ -174,6 +185,7 @@ class ContainerEvidence extends AlertEvidence
 
     /**
     * Sets the name
+    * The container name.
     *
     * @param string $val The value of the name
     *
@@ -187,6 +199,7 @@ class ContainerEvidence extends AlertEvidence
 
     /**
     * Gets the pod
+    * The pod that this container belongs to.
     *
     * @return KubernetesPodEvidence|null The pod
     */
@@ -205,6 +218,7 @@ class ContainerEvidence extends AlertEvidence
 
     /**
     * Sets the pod
+    * The pod that this container belongs to.
     *
     * @param KubernetesPodEvidence $val The value to assign to the pod
     *

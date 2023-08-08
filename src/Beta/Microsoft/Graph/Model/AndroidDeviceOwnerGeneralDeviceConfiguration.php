@@ -53,6 +53,36 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
         return $this;
     }
 
+
+     /**
+     * Gets the androidDeviceOwnerDelegatedScopeAppSettings
+    * Specifies the list of managed apps with app details and its associated delegated scope(s). This collection can contain a maximum of 500 elements.
+     *
+     * @return array|null The androidDeviceOwnerDelegatedScopeAppSettings
+     */
+    public function getAndroidDeviceOwnerDelegatedScopeAppSettings()
+    {
+        if (array_key_exists("androidDeviceOwnerDelegatedScopeAppSettings", $this->_propDict)) {
+           return $this->_propDict["androidDeviceOwnerDelegatedScopeAppSettings"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the androidDeviceOwnerDelegatedScopeAppSettings
+    * Specifies the list of managed apps with app details and its associated delegated scope(s). This collection can contain a maximum of 500 elements.
+    *
+    * @param AndroidDeviceOwnerDelegatedScopeAppSetting[] $val The androidDeviceOwnerDelegatedScopeAppSettings
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setAndroidDeviceOwnerDelegatedScopeAppSettings($val)
+    {
+        $this->_propDict["androidDeviceOwnerDelegatedScopeAppSettings"] = $val;
+        return $this;
+    }
+
     /**
     * Gets the appsAllowInstallFromUnknownSources
     * Indicates whether or not the user is allowed to enable to unknown sources setting.

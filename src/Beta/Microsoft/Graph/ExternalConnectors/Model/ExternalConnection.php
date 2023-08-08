@@ -59,7 +59,6 @@ class ExternalConnection extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the complianceSettings
-    * The settings required for the connection to participate in eDiscovery, such as the display templates for eDiscovery results.
     *
     * @return ComplianceSettings|null The complianceSettings
     */
@@ -78,7 +77,6 @@ class ExternalConnection extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the complianceSettings
-    * The settings required for the connection to participate in eDiscovery, such as the display templates for eDiscovery results.
     *
     * @param ComplianceSettings $val The complianceSettings
     *
@@ -183,7 +181,7 @@ class ExternalConnection extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the enabledContentExperiences
-    * The list of content experiences the connection will participate in. Possible values are search and compliance.
+    * The list of content experiences the connection will participate in. Possible values are search.
     *
     * @return ContentExperienceType|null The enabledContentExperiences
     */
@@ -202,7 +200,7 @@ class ExternalConnection extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the enabledContentExperiences
-    * The list of content experiences the connection will participate in. Possible values are search and compliance.
+    * The list of content experiences the connection will participate in. Possible values are search.
     *
     * @param ContentExperienceType $val The enabledContentExperiences
     *

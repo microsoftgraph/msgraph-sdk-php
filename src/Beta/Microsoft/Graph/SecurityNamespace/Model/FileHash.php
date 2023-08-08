@@ -26,6 +26,7 @@ class FileHash extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the algorithm
+    * The hash algorithm type. Possible values are: unknown, md5, sha1, sha256, sha256ac, unknownFutureValue.
     *
     * @return FileHashAlgorithm|null The algorithm
     */
@@ -44,6 +45,7 @@ class FileHash extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the algorithm
+    * The hash algorithm type. Possible values are: unknown, md5, sha1, sha256, sha256ac, unknownFutureValue.
     *
     * @param FileHashAlgorithm $val The value to assign to the algorithm
     *
@@ -56,6 +58,7 @@ class FileHash extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the value
+    * The hash value.
     *
     * @return string|null The value
     */
@@ -70,6 +73,7 @@ class FileHash extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the value
+    * The hash value.
     *
     * @param string $val The value of the value
     *

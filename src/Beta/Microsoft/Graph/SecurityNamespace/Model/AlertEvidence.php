@@ -58,6 +58,7 @@ class AlertEvidence extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the detailedRoles
+    * Detailed description of the entity role/s in an alert. Values are free-form.
     *
     * @return string|null The detailedRoles
     */
@@ -72,6 +73,7 @@ class AlertEvidence extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the detailedRoles
+    * Detailed description of the entity role/s in an alert. Values are free-form.
     *
     * @param string $val The value of the detailedRoles
     *
@@ -146,7 +148,7 @@ class AlertEvidence extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the roles
-    * One or more roles that an evidence entity represents in an alert. For example, an IP address that is associated with an attacker has the evidence role Attacker.
+    * The role/s that an evidence entity represents in an alert, e.g., an IP address that is associated with an attacker will have the evidence role Attacker.
     *
     * @return EvidenceRole|null The roles
     */
@@ -165,7 +167,7 @@ class AlertEvidence extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the roles
-    * One or more roles that an evidence entity represents in an alert. For example, an IP address that is associated with an attacker has the evidence role Attacker.
+    * The role/s that an evidence entity represents in an alert, e.g., an IP address that is associated with an attacker will have the evidence role Attacker.
     *
     * @param EvidenceRole $val The value to assign to the roles
     *
@@ -178,7 +180,7 @@ class AlertEvidence extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the tags
-    * Array of custom tags associated with an evidence instance. For example, to denote a group of devices or high value assets.
+    * Array of custom tags associated with an evidence instance, for example, to denote a group of devices, high-value assets, etc.
     *
     * @return string|null The tags
     */
@@ -193,7 +195,7 @@ class AlertEvidence extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the tags
-    * Array of custom tags associated with an evidence instance. For example, to denote a group of devices or high value assets.
+    * Array of custom tags associated with an evidence instance, for example, to denote a group of devices, high-value assets, etc.
     *
     * @param string $val The value of the tags
     *
