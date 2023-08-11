@@ -380,6 +380,7 @@ class Directory extends Entity
 
      /**
      * Gets the subscriptions
+    * List of commercial subscriptions that an organization has acquired.
      *
      * @return array|null The subscriptions
      */
@@ -394,6 +395,7 @@ class Directory extends Entity
 
     /**
     * Sets the subscriptions
+    * List of commercial subscriptions that an organization has acquired.
     *
     * @param CompanySubscription[] $val The subscriptions
     *

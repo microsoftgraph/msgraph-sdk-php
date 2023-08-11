@@ -26,6 +26,7 @@ class AccessPackageResourceRole extends Entity
 {
     /**
     * Gets the description
+    * A description for the resource role.
     *
     * @return string|null The description
     */
@@ -40,6 +41,7 @@ class AccessPackageResourceRole extends Entity
 
     /**
     * Sets the description
+    * A description for the resource role.
     *
     * @param string $val The description
     *
@@ -53,6 +55,7 @@ class AccessPackageResourceRole extends Entity
 
     /**
     * Gets the displayName
+    * The display name of the resource role such as the role defined by the application.
     *
     * @return string|null The displayName
     */
@@ -67,6 +70,7 @@ class AccessPackageResourceRole extends Entity
 
     /**
     * Sets the displayName
+    * The display name of the resource role such as the role defined by the application.
     *
     * @param string $val The displayName
     *
@@ -80,6 +84,7 @@ class AccessPackageResourceRole extends Entity
 
     /**
     * Gets the originId
+    * The unique identifier of the resource role in the origin system. For a SharePoint Online site, the originId will be the sequence number of the role in the site.
     *
     * @return string|null The originId
     */
@@ -94,6 +99,7 @@ class AccessPackageResourceRole extends Entity
 
     /**
     * Sets the originId
+    * The unique identifier of the resource role in the origin system. For a SharePoint Online site, the originId will be the sequence number of the role in the site.
     *
     * @param string $val The originId
     *
@@ -107,6 +113,7 @@ class AccessPackageResourceRole extends Entity
 
     /**
     * Gets the originSystem
+    * The type of the resource in the origin system, such as SharePointOnline, AadApplication or AadGroup.
     *
     * @return string|null The originSystem
     */
@@ -121,6 +128,7 @@ class AccessPackageResourceRole extends Entity
 
     /**
     * Sets the originSystem
+    * The type of the resource in the origin system, such as SharePointOnline, AadApplication or AadGroup.
     *
     * @param string $val The originSystem
     *

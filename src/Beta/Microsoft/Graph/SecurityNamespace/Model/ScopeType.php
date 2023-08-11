@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* MacOSMdatpApp File
+* ScopeType File
 * PHP version 7
 *
 * @category  Library
@@ -11,10 +11,12 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Model;
+namespace Beta\Microsoft\Graph\SecurityNamespace\Model;
+
+use Microsoft\Graph\Core\Enum;
 
 /**
-* MacOSMdatpApp class
+* ScopeType class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,6 +24,11 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class MacOSMdatpApp extends MobileApp
+class ScopeType extends Enum
 {
+    /**
+    * The Enum ScopeType
+    */
+    const DEVICE_GROUP = "deviceGroup";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

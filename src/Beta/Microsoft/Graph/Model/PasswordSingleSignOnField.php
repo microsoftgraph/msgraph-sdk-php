@@ -81,7 +81,7 @@ class PasswordSingleSignOnField extends Entity
     }
     /**
     * Gets the fieldId
-    * Id used to identity the field type. This is an internal id and possible values are param_1, param_2, param_userName, param_password.
+    * Id used to identity the field type. This is an internal id and possible values are param1, param2, paramuserName, parampassword.
     *
     * @return string|null The fieldId
     */
@@ -96,7 +96,7 @@ class PasswordSingleSignOnField extends Entity
 
     /**
     * Sets the fieldId
-    * Id used to identity the field type. This is an internal id and possible values are param_1, param_2, param_userName, param_password.
+    * Id used to identity the field type. This is an internal id and possible values are param1, param2, paramuserName, parampassword.
     *
     * @param string $val The value of the fieldId
     *

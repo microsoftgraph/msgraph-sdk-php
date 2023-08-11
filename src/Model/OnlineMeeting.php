@@ -149,6 +149,35 @@ class OnlineMeeting extends Entity
     }
 
     /**
+    * Gets the allowParticipantsToChangeName
+    * Specifies if participants are allowed to rename themselves in an instance of the meeting.
+    *
+    * @return bool|null The allowParticipantsToChangeName
+    */
+    public function getAllowParticipantsToChangeName()
+    {
+        if (array_key_exists("allowParticipantsToChangeName", $this->_propDict)) {
+            return $this->_propDict["allowParticipantsToChangeName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the allowParticipantsToChangeName
+    * Specifies if participants are allowed to rename themselves in an instance of the meeting.
+    *
+    * @param bool $val The allowParticipantsToChangeName
+    *
+    * @return OnlineMeeting
+    */
+    public function setAllowParticipantsToChangeName($val)
+    {
+        $this->_propDict["allowParticipantsToChangeName"] = boolval($val);
+        return $this;
+    }
+
+    /**
     * Gets the allowTeamworkReactions
     * Indicates whether Teams reactions are enabled for the meeting.
     *
@@ -647,6 +676,39 @@ class OnlineMeeting extends Entity
     public function setRecordAutomatically($val)
     {
         $this->_propDict["recordAutomatically"] = boolval($val);
+        return $this;
+    }
+
+    /**
+    * Gets the shareMeetingChatHistoryDefault
+    * Specifies whether meeting chat history is shared with participants. Possible values are: all, none, unknownFutureValue.
+    *
+    * @return MeetingChatHistoryDefaultMode|null The shareMeetingChatHistoryDefault
+    */
+    public function getShareMeetingChatHistoryDefault()
+    {
+        if (array_key_exists("shareMeetingChatHistoryDefault", $this->_propDict)) {
+            if (is_a($this->_propDict["shareMeetingChatHistoryDefault"], "\Microsoft\Graph\Model\MeetingChatHistoryDefaultMode") || is_null($this->_propDict["shareMeetingChatHistoryDefault"])) {
+                return $this->_propDict["shareMeetingChatHistoryDefault"];
+            } else {
+                $this->_propDict["shareMeetingChatHistoryDefault"] = new MeetingChatHistoryDefaultMode($this->_propDict["shareMeetingChatHistoryDefault"]);
+                return $this->_propDict["shareMeetingChatHistoryDefault"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the shareMeetingChatHistoryDefault
+    * Specifies whether meeting chat history is shared with participants. Possible values are: all, none, unknownFutureValue.
+    *
+    * @param MeetingChatHistoryDefaultMode $val The shareMeetingChatHistoryDefault
+    *
+    * @return OnlineMeeting
+    */
+    public function setShareMeetingChatHistoryDefault($val)
+    {
+        $this->_propDict["shareMeetingChatHistoryDefault"] = $val;
         return $this;
     }
 

@@ -439,7 +439,7 @@ class DeviceManagement extends Entity
 
     /**
     * Gets the subscriptions
-    * Tenant's Subscription. Possible values are: none, intune, office365, intunePremium, intune_EDU, intune_SMB.
+    * Tenant's Subscription. Possible values are: none, intune, office365, intunePremium, intuneEDU, intuneSMB.
     *
     * @return DeviceManagementSubscriptions|null The subscriptions
     */
@@ -458,7 +458,7 @@ class DeviceManagement extends Entity
 
     /**
     * Sets the subscriptions
-    * Tenant's Subscription. Possible values are: none, intune, office365, intunePremium, intune_EDU, intune_SMB.
+    * Tenant's Subscription. Possible values are: none, intune, office365, intunePremium, intuneEDU, intuneSMB.
     *
     * @param DeviceManagementSubscriptions $val The subscriptions
     *

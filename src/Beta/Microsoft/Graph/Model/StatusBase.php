@@ -26,7 +26,7 @@ class StatusBase extends Entity
 
     /**
     * Gets the status
-    * Possible values are: success, warning, failure, skipped, unknownFutureValue.
+    * Possible values are: success, warning, failure, skipped, unknownFutureValue. Supports $filter (eq, contains).
     *
     * @return ProvisioningResult|null The status
     */
@@ -45,7 +45,7 @@ class StatusBase extends Entity
 
     /**
     * Sets the status
-    * Possible values are: success, warning, failure, skipped, unknownFutureValue.
+    * Possible values are: success, warning, failure, skipped, unknownFutureValue. Supports $filter (eq, contains).
     *
     * @param ProvisioningResult $val The value to assign to the status
     *

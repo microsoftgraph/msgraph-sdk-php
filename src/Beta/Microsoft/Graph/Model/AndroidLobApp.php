@@ -145,6 +145,39 @@ class AndroidLobApp extends MobileLobApp
     }
 
     /**
+    * Gets the targetedPlatforms
+    * The platforms to which the application can be targeted. If not specified, will defauilt to Android Device Administrator.
+    *
+    * @return AndroidTargetedPlatforms|null The targetedPlatforms
+    */
+    public function getTargetedPlatforms()
+    {
+        if (array_key_exists("targetedPlatforms", $this->_propDict)) {
+            if (is_a($this->_propDict["targetedPlatforms"], "\Beta\Microsoft\Graph\Model\AndroidTargetedPlatforms") || is_null($this->_propDict["targetedPlatforms"])) {
+                return $this->_propDict["targetedPlatforms"];
+            } else {
+                $this->_propDict["targetedPlatforms"] = new AndroidTargetedPlatforms($this->_propDict["targetedPlatforms"]);
+                return $this->_propDict["targetedPlatforms"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the targetedPlatforms
+    * The platforms to which the application can be targeted. If not specified, will defauilt to Android Device Administrator.
+    *
+    * @param AndroidTargetedPlatforms $val The targetedPlatforms
+    *
+    * @return AndroidLobApp
+    */
+    public function setTargetedPlatforms($val)
+    {
+        $this->_propDict["targetedPlatforms"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the versionCode
     * The version code of Android Line of Business (LoB) app.
     *

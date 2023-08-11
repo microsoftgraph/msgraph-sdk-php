@@ -25,6 +25,7 @@ class LoginPageLayoutConfiguration extends Entity
 {
     /**
     * Gets the isFooterShown
+    * Option to show the footer on the sign-in page.
     *
     * @return bool|null The isFooterShown
     */
@@ -39,6 +40,7 @@ class LoginPageLayoutConfiguration extends Entity
 
     /**
     * Sets the isFooterShown
+    * Option to show the footer on the sign-in page.
     *
     * @param bool $val The value of the isFooterShown
     *
@@ -51,6 +53,7 @@ class LoginPageLayoutConfiguration extends Entity
     }
     /**
     * Gets the isHeaderShown
+    * Option to show the header on the sign-in page.
     *
     * @return bool|null The isHeaderShown
     */
@@ -65,6 +68,7 @@ class LoginPageLayoutConfiguration extends Entity
 
     /**
     * Sets the isHeaderShown
+    * Option to show the header on the sign-in page.
     *
     * @param bool $val The value of the isHeaderShown
     *
@@ -78,6 +82,7 @@ class LoginPageLayoutConfiguration extends Entity
 
     /**
     * Gets the layoutTemplateType
+    * Represents the layout template to be displayed on the login page for a tenant. The possible values are  default - Represents the default Microsoft layout with a centered lightbox.  verticalSplit - Represents a layout with a backgound on the left side and a full-height lightbox to the right.  unknownFutureValue - Evolvable enumeration sentinel value. Do not use.
     *
     * @return LayoutTemplateType|null The layoutTemplateType
     */
@@ -96,6 +101,7 @@ class LoginPageLayoutConfiguration extends Entity
 
     /**
     * Sets the layoutTemplateType
+    * Represents the layout template to be displayed on the login page for a tenant. The possible values are  default - Represents the default Microsoft layout with a centered lightbox.  verticalSplit - Represents a layout with a backgound on the left side and a full-height lightbox to the right.  unknownFutureValue - Evolvable enumeration sentinel value. Do not use.
     *
     * @param LayoutTemplateType $val The value to assign to the layoutTemplateType
     *

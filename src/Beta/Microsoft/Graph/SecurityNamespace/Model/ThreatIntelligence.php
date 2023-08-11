@@ -146,6 +146,36 @@ class ThreatIntelligence extends \Beta\Microsoft\Graph\Model\Entity
 
 
      /**
+     * Gets the hostPairs
+    * Retrieve details about microsoft.graph.security.hostTracker objects.Note: List retrieval is not yet supported.
+     *
+     * @return array|null The hostPairs
+     */
+    public function getHostPairs()
+    {
+        if (array_key_exists("hostPairs", $this->_propDict)) {
+           return $this->_propDict["hostPairs"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the hostPairs
+    * Retrieve details about microsoft.graph.security.hostTracker objects.Note: List retrieval is not yet supported.
+    *
+    * @param HostPair[] $val The hostPairs
+    *
+    * @return ThreatIntelligence
+    */
+    public function setHostPairs($val)
+    {
+        $this->_propDict["hostPairs"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the hosts
     * Refers to microsoft.graph.security.host objects that Microsoft Threat Intelligence has observed.Note: List retrieval is not yet supported.
      *
@@ -171,6 +201,34 @@ class ThreatIntelligence extends \Beta\Microsoft\Graph\Model\Entity
     public function setHosts($val)
     {
         $this->_propDict["hosts"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the hostSslCertificates
+     *
+     * @return array|null The hostSslCertificates
+     */
+    public function getHostSslCertificates()
+    {
+        if (array_key_exists("hostSslCertificates", $this->_propDict)) {
+           return $this->_propDict["hostSslCertificates"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the hostSslCertificates
+    *
+    * @param HostSslCertificate[] $val The hostSslCertificates
+    *
+    * @return ThreatIntelligence
+    */
+    public function setHostSslCertificates($val)
+    {
+        $this->_propDict["hostSslCertificates"] = $val;
         return $this;
     }
 
@@ -294,6 +352,34 @@ class ThreatIntelligence extends \Beta\Microsoft\Graph\Model\Entity
 
 
      /**
+     * Gets the sslCertificates
+     *
+     * @return array|null The sslCertificates
+     */
+    public function getSslCertificates()
+    {
+        if (array_key_exists("sslCertificates", $this->_propDict)) {
+           return $this->_propDict["sslCertificates"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the sslCertificates
+    *
+    * @param SslCertificate[] $val The sslCertificates
+    *
+    * @return ThreatIntelligence
+    */
+    public function setSslCertificates($val)
+    {
+        $this->_propDict["sslCertificates"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the subdomains
     * Retrieve details about the microsoft.graph.security.subdomain.Note: List retrieval is not yet supported.
      *
@@ -349,6 +435,34 @@ class ThreatIntelligence extends \Beta\Microsoft\Graph\Model\Entity
     public function setVulnerabilities($val)
     {
         $this->_propDict["vulnerabilities"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the whoisRecords
+     *
+     * @return array|null The whoisRecords
+     */
+    public function getWhoisRecords()
+    {
+        if (array_key_exists("whoisRecords", $this->_propDict)) {
+           return $this->_propDict["whoisRecords"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the whoisRecords
+    *
+    * @param WhoisRecord[] $val The whoisRecords
+    *
+    * @return ThreatIntelligence
+    */
+    public function setWhoisRecords($val)
+    {
+        $this->_propDict["whoisRecords"] = $val;
         return $this;
     }
 

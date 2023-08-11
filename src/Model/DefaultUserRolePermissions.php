@@ -137,7 +137,7 @@ class DefaultUserRolePermissions extends Entity
     }
     /**
     * Gets the allowedToReadOtherUsers
-    * Indicates whether the default user role can read other users.
+    * Indicates whether the default user role can read other users. DO NOT SET THIS VALUE TO false.
     *
     * @return bool|null The allowedToReadOtherUsers
     */
@@ -152,7 +152,7 @@ class DefaultUserRolePermissions extends Entity
 
     /**
     * Sets the allowedToReadOtherUsers
-    * Indicates whether the default user role can read other users.
+    * Indicates whether the default user role can read other users. DO NOT SET THIS VALUE TO false.
     *
     * @param bool $val The value of the allowedToReadOtherUsers
     *

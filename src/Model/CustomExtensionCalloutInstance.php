@@ -25,6 +25,7 @@ class CustomExtensionCalloutInstance extends Entity
 {
     /**
     * Gets the customExtensionId
+    * Identification of the custom extension that was triggered at this instance.
     *
     * @return string|null The customExtensionId
     */
@@ -39,6 +40,7 @@ class CustomExtensionCalloutInstance extends Entity
 
     /**
     * Sets the customExtensionId
+    * Identification of the custom extension that was triggered at this instance.
     *
     * @param string $val The value of the customExtensionId
     *
@@ -51,6 +53,7 @@ class CustomExtensionCalloutInstance extends Entity
     }
     /**
     * Gets the detail
+    * Details provided by the logic app during the callback of the request instance.
     *
     * @return string|null The detail
     */
@@ -65,6 +68,7 @@ class CustomExtensionCalloutInstance extends Entity
 
     /**
     * Sets the detail
+    * Details provided by the logic app during the callback of the request instance.
     *
     * @param string $val The value of the detail
     *
@@ -77,6 +81,7 @@ class CustomExtensionCalloutInstance extends Entity
     }
     /**
     * Gets the externalCorrelationId
+    * The unique run identifier for the logic app.
     *
     * @return string|null The externalCorrelationId
     */
@@ -91,6 +96,7 @@ class CustomExtensionCalloutInstance extends Entity
 
     /**
     * Sets the externalCorrelationId
+    * The unique run identifier for the logic app.
     *
     * @param string $val The value of the externalCorrelationId
     *
@@ -103,6 +109,7 @@ class CustomExtensionCalloutInstance extends Entity
     }
     /**
     * Gets the id
+    * Unique identifier for the callout instance. Read-only.
     *
     * @return string|null The id
     */
@@ -117,6 +124,7 @@ class CustomExtensionCalloutInstance extends Entity
 
     /**
     * Sets the id
+    * Unique identifier for the callout instance. Read-only.
     *
     * @param string $val The value of the id
     *
@@ -130,6 +138,7 @@ class CustomExtensionCalloutInstance extends Entity
 
     /**
     * Gets the status
+    * The status of the request to the custom extension. The possible values are: calloutSent, callbackReceived, calloutFailed, callbackTimedOut, waitingForCallback, unknownFutureValue.
     *
     * @return CustomExtensionCalloutInstanceStatus|null The status
     */
@@ -148,6 +157,7 @@ class CustomExtensionCalloutInstance extends Entity
 
     /**
     * Sets the status
+    * The status of the request to the custom extension. The possible values are: calloutSent, callbackReceived, calloutFailed, callbackTimedOut, waitingForCallback, unknownFutureValue.
     *
     * @param CustomExtensionCalloutInstanceStatus $val The value to assign to the status
     *

@@ -43,4 +43,5 @@ class DeviceManagementConfigurationTemplateFamily extends Enum
     const BASELINE = "baseline";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
     const DEVICE_CONFIGURATION_SCRIPTS = "deviceConfigurationScripts";
+    const DEVICE_CONFIGURATION_POLICIES = "deviceConfigurationPolicies";
 }

@@ -26,7 +26,7 @@ class AlertRecord extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the alertImpact
-    * The impact of the alert event. Consists of a number followed by the aggregation type. For example, 6 affectedCloudPcCount means that 6 Cloud PCs are affected. 12 affectedCloudPcPercentage means 12% of Cloud PCs are affected.
+    * The impact of the alert event. Consists of a list of key-value pair and a number followed by the aggregation type. For example, 6 affectedCloudPcCount means that 6 Cloud PCs are affected. 12 affectedCloudPcPercentage means 12% of Cloud PCs are affected. The list of key-value pair indicates the details of the alert impact.
     *
     * @return AlertImpact|null The alertImpact
     */
@@ -45,7 +45,7 @@ class AlertRecord extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the alertImpact
-    * The impact of the alert event. Consists of a number followed by the aggregation type. For example, 6 affectedCloudPcCount means that 6 Cloud PCs are affected. 12 affectedCloudPcPercentage means 12% of Cloud PCs are affected.
+    * The impact of the alert event. Consists of a list of key-value pair and a number followed by the aggregation type. For example, 6 affectedCloudPcCount means that 6 Cloud PCs are affected. 12 affectedCloudPcPercentage means 12% of Cloud PCs are affected. The list of key-value pair indicates the details of the alert impact.
     *
     * @param AlertImpact $val The alertImpact
     *
@@ -88,7 +88,7 @@ class AlertRecord extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the alertRuleTemplate
-    * The rule template of the alert event. The possible values are: cloudPcProvisionScenario, cloudPcImageUploadScenario, cloudPcOnPremiseNetworkConnectionCheckScenario, unknownFutureValue.
+    * The rule template of the alert event. The possible values are: cloudPcProvisionScenario, cloudPcImageUploadScenario, cloudPcOnPremiseNetworkConnectionCheckScenario, unknownFutureValue, cloudPcInGracePeriodScenario. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: cloudPcInGracePeriodScenario.
     *
     * @return AlertRuleTemplate|null The alertRuleTemplate
     */
@@ -107,7 +107,7 @@ class AlertRecord extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the alertRuleTemplate
-    * The rule template of the alert event. The possible values are: cloudPcProvisionScenario, cloudPcImageUploadScenario, cloudPcOnPremiseNetworkConnectionCheckScenario, unknownFutureValue.
+    * The rule template of the alert event. The possible values are: cloudPcProvisionScenario, cloudPcImageUploadScenario, cloudPcOnPremiseNetworkConnectionCheckScenario, unknownFutureValue, cloudPcInGracePeriodScenario. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: cloudPcInGracePeriodScenario.
     *
     * @param AlertRuleTemplate $val The alertRuleTemplate
     *

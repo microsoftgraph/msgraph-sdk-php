@@ -514,6 +514,34 @@ class EducationClass extends Entity
         return $this;
     }
 
+
+     /**
+     * Gets the modules
+     *
+     * @return array|null The modules
+     */
+    public function getModules()
+    {
+        if (array_key_exists("modules", $this->_propDict)) {
+           return $this->_propDict["modules"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the modules
+    *
+    * @param EducationModule[] $val The modules
+    *
+    * @return EducationClass
+    */
+    public function setModules($val)
+    {
+        $this->_propDict["modules"] = $val;
+        return $this;
+    }
+
     /**
     * Gets the group
     *

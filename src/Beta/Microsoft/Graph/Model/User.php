@@ -267,6 +267,37 @@ class User extends DirectoryObject
     }
 
     /**
+    * Gets the cloudRealtimeCommunicationInfo
+    *
+    * @return CloudRealtimeCommunicationInfo|null The cloudRealtimeCommunicationInfo
+    */
+    public function getCloudRealtimeCommunicationInfo()
+    {
+        if (array_key_exists("cloudRealtimeCommunicationInfo", $this->_propDict)) {
+            if (is_a($this->_propDict["cloudRealtimeCommunicationInfo"], "\Beta\Microsoft\Graph\Model\CloudRealtimeCommunicationInfo") || is_null($this->_propDict["cloudRealtimeCommunicationInfo"])) {
+                return $this->_propDict["cloudRealtimeCommunicationInfo"];
+            } else {
+                $this->_propDict["cloudRealtimeCommunicationInfo"] = new CloudRealtimeCommunicationInfo($this->_propDict["cloudRealtimeCommunicationInfo"]);
+                return $this->_propDict["cloudRealtimeCommunicationInfo"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the cloudRealtimeCommunicationInfo
+    *
+    * @param CloudRealtimeCommunicationInfo $val The cloudRealtimeCommunicationInfo
+    *
+    * @return User
+    */
+    public function setCloudRealtimeCommunicationInfo($val)
+    {
+        $this->_propDict["cloudRealtimeCommunicationInfo"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the companyName
     * The company name which the user is associated. This property can be useful for describing the company that an external user comes from. The maximum length is 64 characters.Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
     *
@@ -1457,6 +1488,37 @@ class User extends DirectoryObject
     public function setOnPremisesSecurityIdentifier($val)
     {
         $this->_propDict["onPremisesSecurityIdentifier"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the onPremisesSipInfo
+    *
+    * @return OnPremisesSipInfo|null The onPremisesSipInfo
+    */
+    public function getOnPremisesSipInfo()
+    {
+        if (array_key_exists("onPremisesSipInfo", $this->_propDict)) {
+            if (is_a($this->_propDict["onPremisesSipInfo"], "\Beta\Microsoft\Graph\Model\OnPremisesSipInfo") || is_null($this->_propDict["onPremisesSipInfo"])) {
+                return $this->_propDict["onPremisesSipInfo"];
+            } else {
+                $this->_propDict["onPremisesSipInfo"] = new OnPremisesSipInfo($this->_propDict["onPremisesSipInfo"]);
+                return $this->_propDict["onPremisesSipInfo"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the onPremisesSipInfo
+    *
+    * @param OnPremisesSipInfo $val The onPremisesSipInfo
+    *
+    * @return User
+    */
+    public function setOnPremisesSipInfo($val)
+    {
+        $this->_propDict["onPremisesSipInfo"] = $val;
         return $this;
     }
 
@@ -2954,6 +3016,7 @@ class User extends DirectoryObject
 
      /**
      * Gets the sponsors
+    * The users and groups that are responsible for this guest user's privileges in the tenant and keep the guest user's information and access updated. (HTTP Methods: GET, POST, DELETE.). Supports $expand.
      *
      * @return array|null The sponsors
      */
@@ -2968,6 +3031,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the sponsors
+    * The users and groups that are responsible for this guest user's privileges in the tenant and keep the guest user's information and access updated. (HTTP Methods: GET, POST, DELETE.). Supports $expand.
     *
     * @param DirectoryObject[] $val The sponsors
     *

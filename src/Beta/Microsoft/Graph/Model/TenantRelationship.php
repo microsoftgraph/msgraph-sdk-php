@@ -56,6 +56,37 @@ class TenantRelationship implements \JsonSerializable
     }
 
     /**
+    * Gets the multiTenantOrganization
+    *
+    * @return MultiTenantOrganization|null The multiTenantOrganization
+    */
+    public function getMultiTenantOrganization()
+    {
+        if (array_key_exists("multiTenantOrganization", $this->_propDict)) {
+            if (is_a($this->_propDict["multiTenantOrganization"], "\Beta\Microsoft\Graph\Model\MultiTenantOrganization") || is_null($this->_propDict["multiTenantOrganization"])) {
+                return $this->_propDict["multiTenantOrganization"];
+            } else {
+                $this->_propDict["multiTenantOrganization"] = new MultiTenantOrganization($this->_propDict["multiTenantOrganization"]);
+                return $this->_propDict["multiTenantOrganization"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the multiTenantOrganization
+    *
+    * @param MultiTenantOrganization $val The multiTenantOrganization
+    *
+    * @return TenantRelationship
+    */
+    public function setMultiTenantOrganization($val)
+    {
+        $this->_propDict["multiTenantOrganization"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the managedTenants
     * The operations available to interact with the multi-tenant management platform.
     *

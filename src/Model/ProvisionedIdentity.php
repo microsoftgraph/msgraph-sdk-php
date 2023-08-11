@@ -58,7 +58,7 @@ class ProvisionedIdentity extends Identity
     }
     /**
     * Gets the identityType
-    * Type of identity that has been provisioned, such as 'user' or 'group'.
+    * Type of identity that has been provisioned, such as 'user' or 'group'. Supports $filter (eq, contains).
     *
     * @return string|null The identityType
     */
@@ -73,7 +73,7 @@ class ProvisionedIdentity extends Identity
 
     /**
     * Sets the identityType
-    * Type of identity that has been provisioned, such as 'user' or 'group'.
+    * Type of identity that has been provisioned, such as 'user' or 'group'. Supports $filter (eq, contains).
     *
     * @param string $val The value of the identityType
     *

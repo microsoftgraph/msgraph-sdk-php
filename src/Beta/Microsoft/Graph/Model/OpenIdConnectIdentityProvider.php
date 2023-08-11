@@ -88,7 +88,7 @@ class OpenIdConnectIdentityProvider extends IdentityProviderBase
 
     /**
     * Gets the clientSecret
-    * The client secret for the application obtained when registering the application with the identity provider. The clientSecret has a dependency on responseType. When responseType is code, a secret is required for the auth code exchange.When responseType is id_token the secret is not required because there is no code exchange. The id_token is returned directly from the authorization response. This is write-only. A read operation returns ****.
+    * The client secret for the application obtained when registering the application with the identity provider. The clientSecret has a dependency on responseType. When responseType is code, a secret is required for the auth code exchange.When responseType is idtoken the secret is not required because there is no code exchange. The idtoken is returned directly from the authorization response. This is write-only. A read operation returns .
     *
     * @return string|null The clientSecret
     */
@@ -103,7 +103,7 @@ class OpenIdConnectIdentityProvider extends IdentityProviderBase
 
     /**
     * Sets the clientSecret
-    * The client secret for the application obtained when registering the application with the identity provider. The clientSecret has a dependency on responseType. When responseType is code, a secret is required for the auth code exchange.When responseType is id_token the secret is not required because there is no code exchange. The id_token is returned directly from the authorization response. This is write-only. A read operation returns ****.
+    * The client secret for the application obtained when registering the application with the identity provider. The clientSecret has a dependency on responseType. When responseType is code, a secret is required for the auth code exchange.When responseType is idtoken the secret is not required because there is no code exchange. The idtoken is returned directly from the authorization response. This is write-only. A read operation returns .
     *
     * @param string $val The clientSecret
     *
@@ -208,7 +208,7 @@ class OpenIdConnectIdentityProvider extends IdentityProviderBase
 
     /**
     * Gets the responseType
-    * The response type describes the type of information sent back in the initial call to the authorization_endpoint of the custom identity provider. Possible values: code , id_token , token.  Required.
+    * The response type describes the type of information sent back in the initial call to the authorizationendpoint of the custom identity provider. Possible values: code , idtoken , token.  Required.
     *
     * @return OpenIdConnectResponseTypes|null The responseType
     */
@@ -227,7 +227,7 @@ class OpenIdConnectIdentityProvider extends IdentityProviderBase
 
     /**
     * Sets the responseType
-    * The response type describes the type of information sent back in the initial call to the authorization_endpoint of the custom identity provider. Possible values: code , id_token , token.  Required.
+    * The response type describes the type of information sent back in the initial call to the authorizationendpoint of the custom identity provider. Possible values: code , idtoken , token.  Required.
     *
     * @param OpenIdConnectResponseTypes $val The responseType
     *

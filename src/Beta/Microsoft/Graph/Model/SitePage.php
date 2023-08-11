@@ -22,70 +22,8 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class SitePage extends BaseItem
+class SitePage extends BaseSitePage
 {
-    /**
-    * Gets the contentType
-    *
-    * @return ContentTypeInfo|null The contentType
-    */
-    public function getContentType()
-    {
-        if (array_key_exists("contentType", $this->_propDict)) {
-            if (is_a($this->_propDict["contentType"], "\Beta\Microsoft\Graph\Model\ContentTypeInfo") || is_null($this->_propDict["contentType"])) {
-                return $this->_propDict["contentType"];
-            } else {
-                $this->_propDict["contentType"] = new ContentTypeInfo($this->_propDict["contentType"]);
-                return $this->_propDict["contentType"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the contentType
-    *
-    * @param ContentTypeInfo $val The contentType
-    *
-    * @return SitePage
-    */
-    public function setContentType($val)
-    {
-        $this->_propDict["contentType"] = $val;
-        return $this;
-    }
-
-    /**
-    * Gets the pageLayout
-    *
-    * @return PageLayoutType|null The pageLayout
-    */
-    public function getPageLayout()
-    {
-        if (array_key_exists("pageLayout", $this->_propDict)) {
-            if (is_a($this->_propDict["pageLayout"], "\Beta\Microsoft\Graph\Model\PageLayoutType") || is_null($this->_propDict["pageLayout"])) {
-                return $this->_propDict["pageLayout"];
-            } else {
-                $this->_propDict["pageLayout"] = new PageLayoutType($this->_propDict["pageLayout"]);
-                return $this->_propDict["pageLayout"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the pageLayout
-    *
-    * @param PageLayoutType $val The pageLayout
-    *
-    * @return SitePage
-    */
-    public function setPageLayout($val)
-    {
-        $this->_propDict["pageLayout"] = $val;
-        return $this;
-    }
-
     /**
     * Gets the promotionKind
     * Indicates the promotion kind of the sitePage. The possible values are: microsoftReserved, page, newsPost, unknownFutureValue.
@@ -116,37 +54,6 @@ class SitePage extends BaseItem
     public function setPromotionKind($val)
     {
         $this->_propDict["promotionKind"] = $val;
-        return $this;
-    }
-
-    /**
-    * Gets the publishingState
-    *
-    * @return PublicationFacet|null The publishingState
-    */
-    public function getPublishingState()
-    {
-        if (array_key_exists("publishingState", $this->_propDict)) {
-            if (is_a($this->_propDict["publishingState"], "\Beta\Microsoft\Graph\Model\PublicationFacet") || is_null($this->_propDict["publishingState"])) {
-                return $this->_propDict["publishingState"];
-            } else {
-                $this->_propDict["publishingState"] = new PublicationFacet($this->_propDict["publishingState"]);
-                return $this->_propDict["publishingState"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the publishingState
-    *
-    * @param PublicationFacet $val The publishingState
-    *
-    * @return SitePage
-    */
-    public function setPublishingState($val)
-    {
-        $this->_propDict["publishingState"] = $val;
         return $this;
     }
 
@@ -267,33 +174,6 @@ class SitePage extends BaseItem
     public function setThumbnailWebUrl($val)
     {
         $this->_propDict["thumbnailWebUrl"] = $val;
-        return $this;
-    }
-
-    /**
-    * Gets the title
-    *
-    * @return string|null The title
-    */
-    public function getTitle()
-    {
-        if (array_key_exists("title", $this->_propDict)) {
-            return $this->_propDict["title"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the title
-    *
-    * @param string $val The title
-    *
-    * @return SitePage
-    */
-    public function setTitle($val)
-    {
-        $this->_propDict["title"] = $val;
         return $this;
     }
 
