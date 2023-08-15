@@ -29,7 +29,7 @@ class UsedRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the used property of the microsoft.graph.officeGraphInsights entity.
-     * @param string $usedInsightId Unique identifier of the item
+     * @param string $usedInsightId The unique identifier of usedInsight
      * @return UsedInsightItemRequestBuilder
     */
     public function byUsedInsightId(string $usedInsightId): UsedInsightItemRequestBuilder {

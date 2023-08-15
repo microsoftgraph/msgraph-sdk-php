@@ -28,7 +28,7 @@ class TokenLifetimePoliciesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the tokenLifetimePolicies property of the microsoft.graph.servicePrincipal entity.
-     * @param string $tokenLifetimePolicyId Unique identifier of the item
+     * @param string $tokenLifetimePolicyId The unique identifier of tokenLifetimePolicy
      * @return TokenLifetimePolicyItemRequestBuilder
     */
     public function byTokenLifetimePolicyId(string $tokenLifetimePolicyId): TokenLifetimePolicyItemRequestBuilder {

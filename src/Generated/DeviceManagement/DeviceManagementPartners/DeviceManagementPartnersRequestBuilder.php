@@ -29,7 +29,7 @@ class DeviceManagementPartnersRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the deviceManagementPartners property of the microsoft.graph.deviceManagement entity.
-     * @param string $deviceManagementPartnerId Unique identifier of the item
+     * @param string $deviceManagementPartnerId The unique identifier of deviceManagementPartner
      * @return DeviceManagementPartnerItemRequestBuilder
     */
     public function byDeviceManagementPartnerId(string $deviceManagementPartnerId): DeviceManagementPartnerItemRequestBuilder {

@@ -29,7 +29,7 @@ class DataPolicyOperationsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the collection of dataPolicyOperation entities.
-     * @param string $dataPolicyOperationId Unique identifier of the item
+     * @param string $dataPolicyOperationId The unique identifier of dataPolicyOperation
      * @return DataPolicyOperationItemRequestBuilder
     */
     public function byDataPolicyOperationId(string $dataPolicyOperationId): DataPolicyOperationItemRequestBuilder {

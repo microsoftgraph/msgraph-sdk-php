@@ -29,7 +29,7 @@ class CatalogsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the catalogs property of the microsoft.graph.entitlementManagement entity.
-     * @param string $accessPackageCatalogId Unique identifier of the item
+     * @param string $accessPackageCatalogId The unique identifier of accessPackageCatalog
      * @return AccessPackageCatalogItemRequestBuilder
     */
     public function byAccessPackageCatalogId(string $accessPackageCatalogId): AccessPackageCatalogItemRequestBuilder {

@@ -28,7 +28,7 @@ class DomainNameReferencesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the domainNameReferences property of the microsoft.graph.domain entity.
-     * @param string $directoryObjectId Unique identifier of the item
+     * @param string $directoryObjectId The unique identifier of directoryObject
      * @return DirectoryObjectItemRequestBuilder
     */
     public function byDirectoryObjectId(string $directoryObjectId): DirectoryObjectItemRequestBuilder {

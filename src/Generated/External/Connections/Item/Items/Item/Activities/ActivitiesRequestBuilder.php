@@ -29,7 +29,7 @@ class ActivitiesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the activities property of the microsoft.graph.externalConnectors.externalItem entity.
-     * @param string $externalActivityId Unique identifier of the item
+     * @param string $externalActivityId The unique identifier of externalActivity
      * @return ExternalActivityItemRequestBuilder
     */
     public function byExternalActivityId(string $externalActivityId): ExternalActivityItemRequestBuilder {

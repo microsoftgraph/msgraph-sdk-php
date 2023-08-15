@@ -29,7 +29,7 @@ class OfferShiftRequestsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the offerShiftRequests property of the microsoft.graph.schedule entity.
-     * @param string $offerShiftRequestId Unique identifier of the item
+     * @param string $offerShiftRequestId The unique identifier of offerShiftRequest
      * @return OfferShiftRequestItemRequestBuilder
     */
     public function byOfferShiftRequestId(string $offerShiftRequestId): OfferShiftRequestItemRequestBuilder {

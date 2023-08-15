@@ -29,7 +29,7 @@ class LogCollectionRequestsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the logCollectionRequests property of the microsoft.graph.managedDevice entity.
-     * @param string $deviceLogCollectionResponseId Unique identifier of the item
+     * @param string $deviceLogCollectionResponseId The unique identifier of deviceLogCollectionResponse
      * @return DeviceLogCollectionResponseItemRequestBuilder
     */
     public function byDeviceLogCollectionResponseId(string $deviceLogCollectionResponseId): DeviceLogCollectionResponseItemRequestBuilder {

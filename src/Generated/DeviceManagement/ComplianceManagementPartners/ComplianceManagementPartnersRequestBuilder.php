@@ -29,7 +29,7 @@ class ComplianceManagementPartnersRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the complianceManagementPartners property of the microsoft.graph.deviceManagement entity.
-     * @param string $complianceManagementPartnerId Unique identifier of the item
+     * @param string $complianceManagementPartnerId The unique identifier of complianceManagementPartner
      * @return ComplianceManagementPartnerItemRequestBuilder
     */
     public function byComplianceManagementPartnerId(string $complianceManagementPartnerId): ComplianceManagementPartnerItemRequestBuilder {

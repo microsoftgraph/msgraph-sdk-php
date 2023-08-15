@@ -29,7 +29,7 @@ class ReviewSetsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the reviewSets property of the microsoft.graph.security.ediscoveryCase entity.
-     * @param string $ediscoveryReviewSetId Unique identifier of the item
+     * @param string $ediscoveryReviewSetId The unique identifier of ediscoveryReviewSet
      * @return EdiscoveryReviewSetItemRequestBuilder
     */
     public function byEdiscoveryReviewSetId(string $ediscoveryReviewSetId): EdiscoveryReviewSetItemRequestBuilder {

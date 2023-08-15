@@ -29,7 +29,7 @@ class ServicesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the services property of the microsoft.graph.print entity.
-     * @param string $printServiceId Unique identifier of the item
+     * @param string $printServiceId The unique identifier of printService
      * @return PrintServiceItemRequestBuilder
     */
     public function byPrintServiceId(string $printServiceId): PrintServiceItemRequestBuilder {

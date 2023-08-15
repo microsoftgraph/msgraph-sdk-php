@@ -29,7 +29,7 @@ class GroupsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the groups property of the microsoft.graph.termStore.store entity.
-     * @param string $groupId1 Unique identifier of the item
+     * @param string $groupId1 The unique identifier of group
      * @return GroupItemRequestBuilder
     */
     public function byGroupId1(string $groupId1): GroupItemRequestBuilder {

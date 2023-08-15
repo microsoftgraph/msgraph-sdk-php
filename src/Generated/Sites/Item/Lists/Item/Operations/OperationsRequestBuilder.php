@@ -29,7 +29,7 @@ class OperationsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the operations property of the microsoft.graph.list entity.
-     * @param string $richLongRunningOperationId Unique identifier of the item
+     * @param string $richLongRunningOperationId The unique identifier of richLongRunningOperation
      * @return RichLongRunningOperationItemRequestBuilder
     */
     public function byRichLongRunningOperationId(string $richLongRunningOperationId): RichLongRunningOperationItemRequestBuilder {

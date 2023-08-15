@@ -29,7 +29,7 @@ class HostCookiesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the hostCookies property of the microsoft.graph.security.threatIntelligence entity.
-     * @param string $hostCookieId Unique identifier of the item
+     * @param string $hostCookieId The unique identifier of hostCookie
      * @return HostCookieItemRequestBuilder
     */
     public function byHostCookieId(string $hostCookieId): HostCookieItemRequestBuilder {

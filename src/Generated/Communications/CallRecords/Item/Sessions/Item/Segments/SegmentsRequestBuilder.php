@@ -29,7 +29,7 @@ class SegmentsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the segments property of the microsoft.graph.callRecords.session entity.
-     * @param string $segmentId Unique identifier of the item
+     * @param string $segmentId The unique identifier of segment
      * @return SegmentItemRequestBuilder
     */
     public function bySegmentId(string $segmentId): SegmentItemRequestBuilder {

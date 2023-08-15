@@ -29,7 +29,7 @@ class VersionsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the versions property of the microsoft.graph.agreementFileLocalization entity.
-     * @param string $agreementFileVersionId Unique identifier of the item
+     * @param string $agreementFileVersionId The unique identifier of agreementFileVersion
      * @return AgreementFileVersionItemRequestBuilder
     */
     public function byAgreementFileVersionId(string $agreementFileVersionId): AgreementFileVersionItemRequestBuilder {

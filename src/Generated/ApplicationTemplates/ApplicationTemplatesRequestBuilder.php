@@ -28,7 +28,7 @@ class ApplicationTemplatesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the collection of applicationTemplate entities.
-     * @param string $applicationTemplateId Unique identifier of the item
+     * @param string $applicationTemplateId The unique identifier of applicationTemplate
      * @return ApplicationTemplateItemRequestBuilder
     */
     public function byApplicationTemplateId(string $applicationTemplateId): ApplicationTemplateItemRequestBuilder {

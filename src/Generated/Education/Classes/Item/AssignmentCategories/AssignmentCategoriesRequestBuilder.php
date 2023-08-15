@@ -37,7 +37,7 @@ class AssignmentCategoriesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the assignmentCategories property of the microsoft.graph.educationClass entity.
-     * @param string $educationCategoryId Unique identifier of the item
+     * @param string $educationCategoryId The unique identifier of educationCategory
      * @return EducationCategoryItemRequestBuilder
     */
     public function byEducationCategoryId(string $educationCategoryId): EducationCategoryItemRequestBuilder {

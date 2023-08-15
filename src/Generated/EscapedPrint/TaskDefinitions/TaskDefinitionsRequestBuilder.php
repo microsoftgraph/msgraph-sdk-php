@@ -29,7 +29,7 @@ class TaskDefinitionsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the taskDefinitions property of the microsoft.graph.print entity.
-     * @param string $printTaskDefinitionId Unique identifier of the item
+     * @param string $printTaskDefinitionId The unique identifier of printTaskDefinition
      * @return PrintTaskDefinitionItemRequestBuilder
     */
     public function byPrintTaskDefinitionId(string $printTaskDefinitionId): PrintTaskDefinitionItemRequestBuilder {

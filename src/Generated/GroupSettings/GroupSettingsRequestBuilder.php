@@ -29,7 +29,7 @@ class GroupSettingsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the collection of groupSetting entities.
-     * @param string $groupSettingId Unique identifier of the item
+     * @param string $groupSettingId The unique identifier of groupSetting
      * @return GroupSettingItemRequestBuilder
     */
     public function byGroupSettingId(string $groupSettingId): GroupSettingItemRequestBuilder {

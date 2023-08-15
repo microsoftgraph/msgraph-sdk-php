@@ -29,7 +29,7 @@ class SharedWithTeamsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the sharedWithTeams property of the microsoft.graph.channel entity.
-     * @param string $sharedWithChannelTeamInfoId Unique identifier of the item
+     * @param string $sharedWithChannelTeamInfoId The unique identifier of sharedWithChannelTeamInfo
      * @return SharedWithChannelTeamInfoItemRequestBuilder
     */
     public function bySharedWithChannelTeamInfoId(string $sharedWithChannelTeamInfoId): SharedWithChannelTeamInfoItemRequestBuilder {

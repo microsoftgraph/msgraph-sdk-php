@@ -29,7 +29,7 @@ class OverridesPagesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the overridesPages property of the microsoft.graph.userFlowLanguageConfiguration entity.
-     * @param string $userFlowLanguagePageId Unique identifier of the item
+     * @param string $userFlowLanguagePageId The unique identifier of userFlowLanguagePage
      * @return UserFlowLanguagePageItemRequestBuilder
     */
     public function byUserFlowLanguagePageId(string $userFlowLanguagePageId): UserFlowLanguagePageItemRequestBuilder {

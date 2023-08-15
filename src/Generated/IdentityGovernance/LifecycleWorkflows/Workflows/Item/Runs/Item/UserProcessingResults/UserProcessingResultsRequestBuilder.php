@@ -30,7 +30,7 @@ class UserProcessingResultsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the userProcessingResults property of the microsoft.graph.identityGovernance.run entity.
-     * @param string $userProcessingResultId Unique identifier of the item
+     * @param string $userProcessingResultId The unique identifier of userProcessingResult
      * @return UserProcessingResultItemRequestBuilder
     */
     public function byUserProcessingResultId(string $userProcessingResultId): UserProcessingResultItemRequestBuilder {

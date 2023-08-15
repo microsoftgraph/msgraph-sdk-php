@@ -30,7 +30,7 @@ class DefinitionsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the definitions property of the microsoft.graph.accessReviewSet entity.
-     * @param string $accessReviewScheduleDefinitionId Unique identifier of the item
+     * @param string $accessReviewScheduleDefinitionId The unique identifier of accessReviewScheduleDefinition
      * @return AccessReviewScheduleDefinitionItemRequestBuilder
     */
     public function byAccessReviewScheduleDefinitionId(string $accessReviewScheduleDefinitionId): AccessReviewScheduleDefinitionItemRequestBuilder {

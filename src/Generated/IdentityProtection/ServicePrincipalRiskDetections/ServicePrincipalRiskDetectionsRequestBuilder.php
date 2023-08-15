@@ -29,7 +29,7 @@ class ServicePrincipalRiskDetectionsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the servicePrincipalRiskDetections property of the microsoft.graph.identityProtectionRoot entity.
-     * @param string $servicePrincipalRiskDetectionId Unique identifier of the item
+     * @param string $servicePrincipalRiskDetectionId The unique identifier of servicePrincipalRiskDetection
      * @return ServicePrincipalRiskDetectionItemRequestBuilder
     */
     public function byServicePrincipalRiskDetectionId(string $servicePrincipalRiskDetectionId): ServicePrincipalRiskDetectionItemRequestBuilder {

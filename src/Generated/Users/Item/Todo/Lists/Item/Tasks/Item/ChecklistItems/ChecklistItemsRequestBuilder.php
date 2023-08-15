@@ -29,7 +29,7 @@ class ChecklistItemsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the checklistItems property of the microsoft.graph.todoTask entity.
-     * @param string $checklistItemId Unique identifier of the item
+     * @param string $checklistItemId The unique identifier of checklistItem
      * @return ChecklistItemItemRequestBuilder
     */
     public function byChecklistItemId(string $checklistItemId): ChecklistItemItemRequestBuilder {

@@ -29,7 +29,7 @@ class OperationsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the operations property of the microsoft.graph.security.ediscoveryCase entity.
-     * @param string $caseOperationId Unique identifier of the item
+     * @param string $caseOperationId The unique identifier of caseOperation
      * @return CaseOperationItemRequestBuilder
     */
     public function byCaseOperationId(string $caseOperationId): CaseOperationItemRequestBuilder {

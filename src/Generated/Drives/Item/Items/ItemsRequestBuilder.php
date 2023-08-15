@@ -29,7 +29,7 @@ class ItemsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the items property of the microsoft.graph.drive entity.
-     * @param string $driveItemId Unique identifier of the item
+     * @param string $driveItemId The unique identifier of driveItem
      * @return DriveItemItemRequestBuilder
     */
     public function byDriveItemId(string $driveItemId): DriveItemItemRequestBuilder {

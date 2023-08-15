@@ -29,7 +29,7 @@ class B2xUserFlowsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the b2xUserFlows property of the microsoft.graph.identityContainer entity.
-     * @param string $b2xIdentityUserFlowId Unique identifier of the item
+     * @param string $b2xIdentityUserFlowId The unique identifier of b2xIdentityUserFlow
      * @return B2xIdentityUserFlowItemRequestBuilder
     */
     public function byB2xIdentityUserFlowId(string $b2xIdentityUserFlowId): B2xIdentityUserFlowItemRequestBuilder {

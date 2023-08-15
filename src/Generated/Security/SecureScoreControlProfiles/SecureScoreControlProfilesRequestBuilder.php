@@ -29,7 +29,7 @@ class SecureScoreControlProfilesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the secureScoreControlProfiles property of the microsoft.graph.security entity.
-     * @param string $secureScoreControlProfileId Unique identifier of the item
+     * @param string $secureScoreControlProfileId The unique identifier of secureScoreControlProfile
      * @return SecureScoreControlProfileItemRequestBuilder
     */
     public function bySecureScoreControlProfileId(string $secureScoreControlProfileId): SecureScoreControlProfileItemRequestBuilder {

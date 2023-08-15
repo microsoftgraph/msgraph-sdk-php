@@ -29,7 +29,7 @@ class OverridesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the overrides property of the microsoft.graph.inferenceClassification entity.
-     * @param string $inferenceClassificationOverrideId Unique identifier of the item
+     * @param string $inferenceClassificationOverrideId The unique identifier of inferenceClassificationOverride
      * @return InferenceClassificationOverrideItemRequestBuilder
     */
     public function byInferenceClassificationOverrideId(string $inferenceClassificationOverrideId): InferenceClassificationOverrideItemRequestBuilder {

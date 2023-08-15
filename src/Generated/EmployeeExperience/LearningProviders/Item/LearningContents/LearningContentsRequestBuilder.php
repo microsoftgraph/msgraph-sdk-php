@@ -29,7 +29,7 @@ class LearningContentsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the learningContents property of the microsoft.graph.learningProvider entity.
-     * @param string $learningContentId Unique identifier of the item
+     * @param string $learningContentId The unique identifier of learningContent
      * @return LearningContentItemRequestBuilder
     */
     public function byLearningContentId(string $learningContentId): LearningContentItemRequestBuilder {

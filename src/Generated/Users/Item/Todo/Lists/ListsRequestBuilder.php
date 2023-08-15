@@ -37,7 +37,7 @@ class ListsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the lists property of the microsoft.graph.todo entity.
-     * @param string $todoTaskListId Unique identifier of the item
+     * @param string $todoTaskListId The unique identifier of todoTaskList
      * @return TodoTaskListItemRequestBuilder
     */
     public function byTodoTaskListId(string $todoTaskListId): TodoTaskListItemRequestBuilder {

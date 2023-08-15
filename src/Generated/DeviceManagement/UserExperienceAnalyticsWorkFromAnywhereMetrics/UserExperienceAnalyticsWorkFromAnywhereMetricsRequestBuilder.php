@@ -29,7 +29,7 @@ class UserExperienceAnalyticsWorkFromAnywhereMetricsRequestBuilder extends BaseR
     
     /**
      * Provides operations to manage the userExperienceAnalyticsWorkFromAnywhereMetrics property of the microsoft.graph.deviceManagement entity.
-     * @param string $userExperienceAnalyticsWorkFromAnywhereMetricId Unique identifier of the item
+     * @param string $userExperienceAnalyticsWorkFromAnywhereMetricId The unique identifier of userExperienceAnalyticsWorkFromAnywhereMetric
      * @return UserExperienceAnalyticsWorkFromAnywhereMetricItemRequestBuilder
     */
     public function byUserExperienceAnalyticsWorkFromAnywhereMetricId(string $userExperienceAnalyticsWorkFromAnywhereMetricId): UserExperienceAnalyticsWorkFromAnywhereMetricItemRequestBuilder {

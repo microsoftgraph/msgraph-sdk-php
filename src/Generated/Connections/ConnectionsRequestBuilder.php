@@ -29,7 +29,7 @@ class ConnectionsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the collection of externalConnection entities.
-     * @param string $externalConnectionId Unique identifier of the item
+     * @param string $externalConnectionId The unique identifier of externalConnection
      * @return ExternalConnectionItemRequestBuilder
     */
     public function byExternalConnectionId(string $externalConnectionId): ExternalConnectionItemRequestBuilder {

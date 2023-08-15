@@ -56,12 +56,25 @@ class PublicationFacet implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
+     * Gets the checkedOutBy property value. The checkedOutBy property
+     * @return IdentitySet|null
+    */
+    public function getCheckedOutBy(): ?IdentitySet {
+        $val = $this->getBackingStore()->get('checkedOutBy');
+        if (is_null($val) || $val instanceof IdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'checkedOutBy'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
+            'checkedOutBy' => fn(ParseNode $n) => $o->setCheckedOutBy($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
             'level' => fn(ParseNode $n) => $o->setLevel($n->getStringValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'versionId' => fn(ParseNode $n) => $o->setVersionId($n->getStringValue()),
@@ -109,6 +122,7 @@ class PublicationFacet implements AdditionalDataHolder, BackedModel, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
+        $writer->writeObjectValue('checkedOutBy', $this->getCheckedOutBy());
         $writer->writeStringValue('level', $this->getLevel());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('versionId', $this->getVersionId());
@@ -129,6 +143,14 @@ class PublicationFacet implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
+    }
+
+    /**
+     * Sets the checkedOutBy property value. The checkedOutBy property
+     * @param IdentitySet|null $value Value to set for the checkedOutBy property.
+    */
+    public function setCheckedOutBy(?IdentitySet $value): void {
+        $this->getBackingStore()->set('checkedOutBy', $value);
     }
 
     /**

@@ -29,7 +29,7 @@ class LocalizationsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the localizations property of the microsoft.graph.organizationalBranding entity.
-     * @param string $organizationalBrandingLocalizationId Unique identifier of the item
+     * @param string $organizationalBrandingLocalizationId The unique identifier of organizationalBrandingLocalization
      * @return OrganizationalBrandingLocalizationItemRequestBuilder
     */
     public function byOrganizationalBrandingLocalizationId(string $organizationalBrandingLocalizationId): OrganizationalBrandingLocalizationItemRequestBuilder {

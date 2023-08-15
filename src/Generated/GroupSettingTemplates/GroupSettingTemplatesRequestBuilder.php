@@ -61,7 +61,7 @@ class GroupSettingTemplatesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the collection of groupSettingTemplate entities.
-     * @param string $groupSettingTemplateId Unique identifier of the item
+     * @param string $groupSettingTemplateId The unique identifier of groupSettingTemplate
      * @return GroupSettingTemplateItemRequestBuilder
     */
     public function byGroupSettingTemplateId(string $groupSettingTemplateId): GroupSettingTemplateItemRequestBuilder {

@@ -29,7 +29,7 @@ class AttributeSetsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the attributeSets property of the microsoft.graph.directory entity.
-     * @param string $attributeSetId Unique identifier of the item
+     * @param string $attributeSetId The unique identifier of attributeSet
      * @return AttributeSetItemRequestBuilder
     */
     public function byAttributeSetId(string $attributeSetId): AttributeSetItemRequestBuilder {

@@ -29,7 +29,7 @@ class RetentionEventTypesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the retentionEventTypes property of the microsoft.graph.security.triggerTypesRoot entity.
-     * @param string $retentionEventTypeId Unique identifier of the item
+     * @param string $retentionEventTypeId The unique identifier of retentionEventType
      * @return RetentionEventTypeItemRequestBuilder
     */
     public function byRetentionEventTypeId(string $retentionEventTypeId): RetentionEventTypeItemRequestBuilder {

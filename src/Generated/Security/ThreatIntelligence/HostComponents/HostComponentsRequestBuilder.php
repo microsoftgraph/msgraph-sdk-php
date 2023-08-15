@@ -29,7 +29,7 @@ class HostComponentsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the hostComponents property of the microsoft.graph.security.threatIntelligence entity.
-     * @param string $hostComponentId Unique identifier of the item
+     * @param string $hostComponentId The unique identifier of hostComponent
      * @return HostComponentItemRequestBuilder
     */
     public function byHostComponentId(string $hostComponentId): HostComponentItemRequestBuilder {

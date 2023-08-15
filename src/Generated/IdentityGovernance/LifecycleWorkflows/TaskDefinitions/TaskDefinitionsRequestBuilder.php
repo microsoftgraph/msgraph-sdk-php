@@ -28,7 +28,7 @@ class TaskDefinitionsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the taskDefinitions property of the microsoft.graph.identityGovernance.lifecycleWorkflowsContainer entity.
-     * @param string $taskDefinitionId Unique identifier of the item
+     * @param string $taskDefinitionId The unique identifier of taskDefinition
      * @return TaskDefinitionItemRequestBuilder
     */
     public function byTaskDefinitionId(string $taskDefinitionId): TaskDefinitionItemRequestBuilder {

@@ -37,7 +37,7 @@ class IdentityProvidersRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the collection of identityProvider entities.
-     * @param string $identityProviderId Unique identifier of the item
+     * @param string $identityProviderId The unique identifier of identityProvider
      * @return IdentityProviderItemRequestBuilder
     */
     public function byIdentityProviderId(string $identityProviderId): IdentityProviderItemRequestBuilder {

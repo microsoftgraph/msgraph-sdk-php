@@ -37,7 +37,7 @@ class MembersRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the members property of the microsoft.graph.chat entity.
-     * @param string $conversationMemberId Unique identifier of the item
+     * @param string $conversationMemberId The unique identifier of conversationMember
      * @return ConversationMemberItemRequestBuilder
     */
     public function byConversationMemberId(string $conversationMemberId): ConversationMemberItemRequestBuilder {

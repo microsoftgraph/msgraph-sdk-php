@@ -29,7 +29,7 @@ class ConversationsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the conversations property of the microsoft.graph.group entity.
-     * @param string $conversationId Unique identifier of the item
+     * @param string $conversationId The unique identifier of conversation
      * @return ConversationItemRequestBuilder
     */
     public function byConversationId(string $conversationId): ConversationItemRequestBuilder {

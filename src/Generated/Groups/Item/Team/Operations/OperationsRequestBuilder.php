@@ -29,7 +29,7 @@ class OperationsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the operations property of the microsoft.graph.team entity.
-     * @param string $teamsAsyncOperationId Unique identifier of the item
+     * @param string $teamsAsyncOperationId The unique identifier of teamsAsyncOperation
      * @return TeamsAsyncOperationItemRequestBuilder
     */
     public function byTeamsAsyncOperationId(string $teamsAsyncOperationId): TeamsAsyncOperationItemRequestBuilder {

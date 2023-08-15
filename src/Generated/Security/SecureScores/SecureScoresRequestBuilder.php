@@ -29,7 +29,7 @@ class SecureScoresRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the secureScores property of the microsoft.graph.security entity.
-     * @param string $secureScoreId Unique identifier of the item
+     * @param string $secureScoreId The unique identifier of secureScore
      * @return SecureScoreItemRequestBuilder
     */
     public function bySecureScoreId(string $secureScoreId): SecureScoreItemRequestBuilder {

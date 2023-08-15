@@ -29,7 +29,7 @@ class DelegatedPermissionClassificationsRequestBuilder extends BaseRequestBuilde
     
     /**
      * Provides operations to manage the delegatedPermissionClassifications property of the microsoft.graph.servicePrincipal entity.
-     * @param string $delegatedPermissionClassificationId Unique identifier of the item
+     * @param string $delegatedPermissionClassificationId The unique identifier of delegatedPermissionClassification
      * @return DelegatedPermissionClassificationItemRequestBuilder
     */
     public function byDelegatedPermissionClassificationId(string $delegatedPermissionClassificationId): DelegatedPermissionClassificationItemRequestBuilder {

@@ -37,7 +37,7 @@ class PlacesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the collection of place entities.
-     * @param string $placeId Unique identifier of the item
+     * @param string $placeId The unique identifier of place
      * @return PlaceItemRequestBuilder
     */
     public function byPlaceId(string $placeId): PlaceItemRequestBuilder {

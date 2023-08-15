@@ -37,7 +37,7 @@ class TagsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the tags property of the microsoft.graph.security.ediscoveryCase entity.
-     * @param string $ediscoveryReviewTagId Unique identifier of the item
+     * @param string $ediscoveryReviewTagId The unique identifier of ediscoveryReviewTag
      * @return EdiscoveryReviewTagItemRequestBuilder
     */
     public function byEdiscoveryReviewTagId(string $ediscoveryReviewTagId): EdiscoveryReviewTagItemRequestBuilder {

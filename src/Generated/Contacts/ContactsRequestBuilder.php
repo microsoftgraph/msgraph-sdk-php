@@ -61,7 +61,7 @@ class ContactsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the collection of orgContact entities.
-     * @param string $orgContactId Unique identifier of the item
+     * @param string $orgContactId The unique identifier of orgContact
      * @return OrgContactItemRequestBuilder
     */
     public function byOrgContactId(string $orgContactId): OrgContactItemRequestBuilder {

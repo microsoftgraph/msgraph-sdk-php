@@ -29,7 +29,7 @@ class UserStatusesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the userStatuses property of the microsoft.graph.deviceConfiguration entity.
-     * @param string $deviceConfigurationUserStatusId Unique identifier of the item
+     * @param string $deviceConfigurationUserStatusId The unique identifier of deviceConfigurationUserStatus
      * @return DeviceConfigurationUserStatusItemRequestBuilder
     */
     public function byDeviceConfigurationUserStatusId(string $deviceConfigurationUserStatusId): DeviceConfigurationUserStatusItemRequestBuilder {

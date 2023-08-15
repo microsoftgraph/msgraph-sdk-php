@@ -45,7 +45,7 @@ class NamesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the names property of the microsoft.graph.workbookWorksheet entity.
-     * @param string $workbookNamedItemId Unique identifier of the item
+     * @param string $workbookNamedItemId The unique identifier of workbookNamedItem
      * @return WorkbookNamedItemItemRequestBuilder
     */
     public function byWorkbookNamedItemId(string $workbookNamedItemId): WorkbookNamedItemItemRequestBuilder {

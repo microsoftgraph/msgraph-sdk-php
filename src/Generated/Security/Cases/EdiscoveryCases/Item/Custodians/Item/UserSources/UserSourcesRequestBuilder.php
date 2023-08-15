@@ -29,7 +29,7 @@ class UserSourcesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the userSources property of the microsoft.graph.security.ediscoveryCustodian entity.
-     * @param string $userSourceId Unique identifier of the item
+     * @param string $userSourceId The unique identifier of userSource
      * @return UserSourceItemRequestBuilder
     */
     public function byUserSourceId(string $userSourceId): UserSourceItemRequestBuilder {

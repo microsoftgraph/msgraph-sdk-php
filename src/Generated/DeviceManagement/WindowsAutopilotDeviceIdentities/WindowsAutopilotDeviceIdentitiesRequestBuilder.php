@@ -29,7 +29,7 @@ class WindowsAutopilotDeviceIdentitiesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the windowsAutopilotDeviceIdentities property of the microsoft.graph.deviceManagement entity.
-     * @param string $windowsAutopilotDeviceIdentityId Unique identifier of the item
+     * @param string $windowsAutopilotDeviceIdentityId The unique identifier of windowsAutopilotDeviceIdentity
      * @return WindowsAutopilotDeviceIdentityItemRequestBuilder
     */
     public function byWindowsAutopilotDeviceIdentityId(string $windowsAutopilotDeviceIdentityId): WindowsAutopilotDeviceIdentityItemRequestBuilder {

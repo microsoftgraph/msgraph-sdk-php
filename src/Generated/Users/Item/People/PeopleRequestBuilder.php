@@ -28,7 +28,7 @@ class PeopleRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the people property of the microsoft.graph.user entity.
-     * @param string $personId Unique identifier of the item
+     * @param string $personId The unique identifier of person
      * @return PersonItemRequestBuilder
     */
     public function byPersonId(string $personId): PersonItemRequestBuilder {

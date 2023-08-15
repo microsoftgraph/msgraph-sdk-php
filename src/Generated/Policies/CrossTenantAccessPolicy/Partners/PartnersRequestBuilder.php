@@ -29,7 +29,7 @@ class PartnersRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the partners property of the microsoft.graph.crossTenantAccessPolicy entity.
-     * @param string $crossTenantAccessPolicyConfigurationPartnerTenantId Unique identifier of the item
+     * @param string $crossTenantAccessPolicyConfigurationPartnerTenantId The unique identifier of crossTenantAccessPolicyConfigurationPartner
      * @return CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
     */
     public function byCrossTenantAccessPolicyConfigurationPartnerTenantId(string $crossTenantAccessPolicyConfigurationPartnerTenantId): CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder {

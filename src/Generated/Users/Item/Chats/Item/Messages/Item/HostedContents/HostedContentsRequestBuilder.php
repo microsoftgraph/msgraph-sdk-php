@@ -29,7 +29,7 @@ class HostedContentsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the hostedContents property of the microsoft.graph.chatMessage entity.
-     * @param string $chatMessageHostedContentId Unique identifier of the item
+     * @param string $chatMessageHostedContentId The unique identifier of chatMessageHostedContent
      * @return ChatMessageHostedContentItemRequestBuilder
     */
     public function byChatMessageHostedContentId(string $chatMessageHostedContentId): ChatMessageHostedContentItemRequestBuilder {

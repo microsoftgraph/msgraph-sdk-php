@@ -29,7 +29,7 @@ class HostsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the hosts property of the microsoft.graph.security.threatIntelligence entity.
-     * @param string $hostId Unique identifier of the item
+     * @param string $hostId The unique identifier of host
      * @return HostItemRequestBuilder
     */
     public function byHostId(string $hostId): HostItemRequestBuilder {

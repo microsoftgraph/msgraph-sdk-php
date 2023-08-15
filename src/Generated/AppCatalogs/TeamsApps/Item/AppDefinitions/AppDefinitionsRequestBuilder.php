@@ -29,7 +29,7 @@ class AppDefinitionsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the appDefinitions property of the microsoft.graph.teamsApp entity.
-     * @param string $teamsAppDefinitionId Unique identifier of the item
+     * @param string $teamsAppDefinitionId The unique identifier of teamsAppDefinition
      * @return TeamsAppDefinitionItemRequestBuilder
     */
     public function byTeamsAppDefinitionId(string $teamsAppDefinitionId): TeamsAppDefinitionItemRequestBuilder {

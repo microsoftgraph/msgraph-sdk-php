@@ -37,7 +37,7 @@ class AssignmentsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the assignments property of the microsoft.graph.educationUser entity.
-     * @param string $educationAssignmentId Unique identifier of the item
+     * @param string $educationAssignmentId The unique identifier of educationAssignment
      * @return EducationAssignmentItemRequestBuilder
     */
     public function byEducationAssignmentId(string $educationAssignmentId): EducationAssignmentItemRequestBuilder {

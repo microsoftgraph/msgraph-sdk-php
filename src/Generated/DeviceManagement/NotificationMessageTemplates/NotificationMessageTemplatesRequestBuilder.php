@@ -29,7 +29,7 @@ class NotificationMessageTemplatesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the notificationMessageTemplates property of the microsoft.graph.deviceManagement entity.
-     * @param string $notificationMessageTemplateId Unique identifier of the item
+     * @param string $notificationMessageTemplateId The unique identifier of notificationMessageTemplate
      * @return NotificationMessageTemplateItemRequestBuilder
     */
     public function byNotificationMessageTemplateId(string $notificationMessageTemplateId): NotificationMessageTemplateItemRequestBuilder {

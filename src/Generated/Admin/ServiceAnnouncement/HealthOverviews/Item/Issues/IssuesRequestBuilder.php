@@ -29,7 +29,7 @@ class IssuesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the issues property of the microsoft.graph.serviceHealth entity.
-     * @param string $serviceHealthIssueId Unique identifier of the item
+     * @param string $serviceHealthIssueId The unique identifier of serviceHealthIssue
      * @return ServiceHealthIssueItemRequestBuilder
     */
     public function byServiceHealthIssueId(string $serviceHealthIssueId): ServiceHealthIssueItemRequestBuilder {

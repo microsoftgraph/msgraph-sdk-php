@@ -29,7 +29,7 @@ class SetsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the sets property of the microsoft.graph.termStore.group entity.
-     * @param string $setId1 Unique identifier of the item
+     * @param string $setId1 The unique identifier of set
      * @return SetItemRequestBuilder
     */
     public function bySetId1(string $setId1): SetItemRequestBuilder {

@@ -29,7 +29,7 @@ class ResourcesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the resources property of the microsoft.graph.onenote entity.
-     * @param string $onenoteResourceId Unique identifier of the item
+     * @param string $onenoteResourceId The unique identifier of onenoteResource
      * @return OnenoteResourceItemRequestBuilder
     */
     public function byOnenoteResourceId(string $onenoteResourceId): OnenoteResourceItemRequestBuilder {

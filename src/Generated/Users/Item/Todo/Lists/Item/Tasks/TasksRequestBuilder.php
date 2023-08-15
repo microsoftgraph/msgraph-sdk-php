@@ -37,7 +37,7 @@ class TasksRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the tasks property of the microsoft.graph.todoTaskList entity.
-     * @param string $todoTaskId Unique identifier of the item
+     * @param string $todoTaskId The unique identifier of todoTask
      * @return TodoTaskItemRequestBuilder
     */
     public function byTodoTaskId(string $todoTaskId): TodoTaskItemRequestBuilder {

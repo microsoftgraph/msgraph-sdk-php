@@ -61,7 +61,7 @@ class GroupsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the collection of group entities.
-     * @param string $groupId Unique identifier of the item
+     * @param string $groupId The unique identifier of group
      * @return GroupItemRequestBuilder
     */
     public function byGroupId(string $groupId): GroupItemRequestBuilder {

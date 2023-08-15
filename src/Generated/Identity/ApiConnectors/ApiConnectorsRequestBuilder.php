@@ -29,7 +29,7 @@ class ApiConnectorsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the apiConnectors property of the microsoft.graph.identityContainer entity.
-     * @param string $identityApiConnectorId Unique identifier of the item
+     * @param string $identityApiConnectorId The unique identifier of identityApiConnector
      * @return IdentityApiConnectorItemRequestBuilder
     */
     public function byIdentityApiConnectorId(string $identityApiConnectorId): IdentityApiConnectorItemRequestBuilder {

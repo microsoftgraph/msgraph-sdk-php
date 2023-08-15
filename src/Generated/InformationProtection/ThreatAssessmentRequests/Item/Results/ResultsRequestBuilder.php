@@ -29,7 +29,7 @@ class ResultsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the results property of the microsoft.graph.threatAssessmentRequest entity.
-     * @param string $threatAssessmentResultId Unique identifier of the item
+     * @param string $threatAssessmentResultId The unique identifier of threatAssessmentResult
      * @return ThreatAssessmentResultItemRequestBuilder
     */
     public function byThreatAssessmentResultId(string $threatAssessmentResultId): ThreatAssessmentResultItemRequestBuilder {

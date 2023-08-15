@@ -61,7 +61,7 @@ class DirectoryRoleTemplatesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the collection of directoryRoleTemplate entities.
-     * @param string $directoryRoleTemplateId Unique identifier of the item
+     * @param string $directoryRoleTemplateId The unique identifier of directoryRoleTemplate
      * @return DirectoryRoleTemplateItemRequestBuilder
     */
     public function byDirectoryRoleTemplateId(string $directoryRoleTemplateId): DirectoryRoleTemplateItemRequestBuilder {

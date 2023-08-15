@@ -37,7 +37,7 @@ class SchoolsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the schools property of the microsoft.graph.educationRoot entity.
-     * @param string $educationSchoolId Unique identifier of the item
+     * @param string $educationSchoolId The unique identifier of educationSchool
      * @return EducationSchoolItemRequestBuilder
     */
     public function byEducationSchoolId(string $educationSchoolId): EducationSchoolItemRequestBuilder {

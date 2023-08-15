@@ -29,7 +29,7 @@ class ContentSharingSessionsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the contentSharingSessions property of the microsoft.graph.call entity.
-     * @param string $contentSharingSessionId Unique identifier of the item
+     * @param string $contentSharingSessionId The unique identifier of contentSharingSession
      * @return ContentSharingSessionItemRequestBuilder
     */
     public function byContentSharingSessionId(string $contentSharingSessionId): ContentSharingSessionItemRequestBuilder {

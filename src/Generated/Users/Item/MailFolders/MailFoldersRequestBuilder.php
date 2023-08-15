@@ -37,7 +37,7 @@ class MailFoldersRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the mailFolders property of the microsoft.graph.user entity.
-     * @param string $mailFolderId Unique identifier of the item
+     * @param string $mailFolderId The unique identifier of mailFolder
      * @return MailFolderItemRequestBuilder
     */
     public function byMailFolderId(string $mailFolderId): MailFolderItemRequestBuilder {

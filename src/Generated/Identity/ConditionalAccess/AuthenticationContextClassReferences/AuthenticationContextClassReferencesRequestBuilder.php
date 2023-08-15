@@ -29,7 +29,7 @@ class AuthenticationContextClassReferencesRequestBuilder extends BaseRequestBuil
     
     /**
      * Provides operations to manage the authenticationContextClassReferences property of the microsoft.graph.conditionalAccessRoot entity.
-     * @param string $authenticationContextClassReferenceId Unique identifier of the item
+     * @param string $authenticationContextClassReferenceId The unique identifier of authenticationContextClassReference
      * @return AuthenticationContextClassReferenceItemRequestBuilder
     */
     public function byAuthenticationContextClassReferenceId(string $authenticationContextClassReferenceId): AuthenticationContextClassReferenceItemRequestBuilder {

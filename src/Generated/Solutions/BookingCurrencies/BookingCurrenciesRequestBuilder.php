@@ -29,7 +29,7 @@ class BookingCurrenciesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the bookingCurrencies property of the microsoft.graph.solutionsRoot entity.
-     * @param string $bookingCurrencyId Unique identifier of the item
+     * @param string $bookingCurrencyId The unique identifier of bookingCurrency
      * @return BookingCurrencyItemRequestBuilder
     */
     public function byBookingCurrencyId(string $bookingCurrencyId): BookingCurrencyItemRequestBuilder {

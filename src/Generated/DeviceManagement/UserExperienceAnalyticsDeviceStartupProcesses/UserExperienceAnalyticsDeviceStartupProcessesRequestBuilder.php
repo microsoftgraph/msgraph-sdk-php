@@ -29,7 +29,7 @@ class UserExperienceAnalyticsDeviceStartupProcessesRequestBuilder extends BaseRe
     
     /**
      * Provides operations to manage the userExperienceAnalyticsDeviceStartupProcesses property of the microsoft.graph.deviceManagement entity.
-     * @param string $userExperienceAnalyticsDeviceStartupProcessId Unique identifier of the item
+     * @param string $userExperienceAnalyticsDeviceStartupProcessId The unique identifier of userExperienceAnalyticsDeviceStartupProcess
      * @return UserExperienceAnalyticsDeviceStartupProcessItemRequestBuilder
     */
     public function byUserExperienceAnalyticsDeviceStartupProcessId(string $userExperienceAnalyticsDeviceStartupProcessId): UserExperienceAnalyticsDeviceStartupProcessItemRequestBuilder {

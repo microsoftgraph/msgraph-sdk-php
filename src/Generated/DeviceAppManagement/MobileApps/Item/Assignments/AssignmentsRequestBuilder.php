@@ -29,7 +29,7 @@ class AssignmentsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the assignments property of the microsoft.graph.mobileApp entity.
-     * @param string $mobileAppAssignmentId Unique identifier of the item
+     * @param string $mobileAppAssignmentId The unique identifier of mobileAppAssignment
      * @return MobileAppAssignmentItemRequestBuilder
     */
     public function byMobileAppAssignmentId(string $mobileAppAssignmentId): MobileAppAssignmentItemRequestBuilder {

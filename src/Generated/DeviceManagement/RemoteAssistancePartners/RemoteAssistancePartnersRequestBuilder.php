@@ -29,7 +29,7 @@ class RemoteAssistancePartnersRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the remoteAssistancePartners property of the microsoft.graph.deviceManagement entity.
-     * @param string $remoteAssistancePartnerId Unique identifier of the item
+     * @param string $remoteAssistancePartnerId The unique identifier of remoteAssistancePartner
      * @return RemoteAssistancePartnerItemRequestBuilder
     */
     public function byRemoteAssistancePartnerId(string $remoteAssistancePartnerId): RemoteAssistancePartnerItemRequestBuilder {

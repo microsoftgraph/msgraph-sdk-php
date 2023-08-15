@@ -29,7 +29,7 @@ class ConnectedOrganizationsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the connectedOrganizations property of the microsoft.graph.entitlementManagement entity.
-     * @param string $connectedOrganizationId Unique identifier of the item
+     * @param string $connectedOrganizationId The unique identifier of connectedOrganization
      * @return ConnectedOrganizationItemRequestBuilder
     */
     public function byConnectedOrganizationId(string $connectedOrganizationId): ConnectedOrganizationItemRequestBuilder {

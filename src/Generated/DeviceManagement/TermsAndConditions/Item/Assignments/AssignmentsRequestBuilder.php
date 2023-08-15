@@ -29,7 +29,7 @@ class AssignmentsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the assignments property of the microsoft.graph.termsAndConditions entity.
-     * @param string $termsAndConditionsAssignmentId Unique identifier of the item
+     * @param string $termsAndConditionsAssignmentId The unique identifier of termsAndConditionsAssignment
      * @return TermsAndConditionsAssignmentItemRequestBuilder
     */
     public function byTermsAndConditionsAssignmentId(string $termsAndConditionsAssignmentId): TermsAndConditionsAssignmentItemRequestBuilder {

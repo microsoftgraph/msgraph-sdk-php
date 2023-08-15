@@ -29,7 +29,7 @@ class AttendanceRecordsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the attendanceRecords property of the microsoft.graph.meetingAttendanceReport entity.
-     * @param string $attendanceRecordId Unique identifier of the item
+     * @param string $attendanceRecordId The unique identifier of attendanceRecord
      * @return AttendanceRecordItemRequestBuilder
     */
     public function byAttendanceRecordId(string $attendanceRecordId): AttendanceRecordItemRequestBuilder {

@@ -29,7 +29,7 @@ class OperationsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the operations property of the microsoft.graph.call entity.
-     * @param string $commsOperationId Unique identifier of the item
+     * @param string $commsOperationId The unique identifier of commsOperation
      * @return CommsOperationItemRequestBuilder
     */
     public function byCommsOperationId(string $commsOperationId): CommsOperationItemRequestBuilder {

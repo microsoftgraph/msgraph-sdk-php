@@ -29,7 +29,7 @@ class FilterOperatorsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the collection of filterOperatorSchema entities.
-     * @param string $filterOperatorSchemaId Unique identifier of the item
+     * @param string $filterOperatorSchemaId The unique identifier of filterOperatorSchema
      * @return FilterOperatorSchemaItemRequestBuilder
     */
     public function byFilterOperatorSchemaId(string $filterOperatorSchemaId): FilterOperatorSchemaItemRequestBuilder {

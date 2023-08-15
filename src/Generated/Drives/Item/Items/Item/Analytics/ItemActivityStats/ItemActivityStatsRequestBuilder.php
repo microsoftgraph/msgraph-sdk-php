@@ -29,7 +29,7 @@ class ItemActivityStatsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the itemActivityStats property of the microsoft.graph.itemAnalytics entity.
-     * @param string $itemActivityStatId Unique identifier of the item
+     * @param string $itemActivityStatId The unique identifier of itemActivityStat
      * @return ItemActivityStatItemRequestBuilder
     */
     public function byItemActivityStatId(string $itemActivityStatId): ItemActivityStatItemRequestBuilder {

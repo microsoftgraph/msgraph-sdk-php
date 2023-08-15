@@ -29,7 +29,7 @@ class AppointmentsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the appointments property of the microsoft.graph.bookingBusiness entity.
-     * @param string $bookingAppointmentId Unique identifier of the item
+     * @param string $bookingAppointmentId The unique identifier of bookingAppointment
      * @return BookingAppointmentItemRequestBuilder
     */
     public function byBookingAppointmentId(string $bookingAppointmentId): BookingAppointmentItemRequestBuilder {

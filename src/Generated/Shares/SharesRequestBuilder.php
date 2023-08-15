@@ -29,7 +29,7 @@ class SharesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the collection of sharedDriveItem entities.
-     * @param string $sharedDriveItemId Unique identifier of the item
+     * @param string $sharedDriveItemId The unique identifier of sharedDriveItem
      * @return SharedDriveItemItemRequestBuilder
     */
     public function bySharedDriveItemId(string $sharedDriveItemId): SharedDriveItemItemRequestBuilder {

@@ -37,7 +37,7 @@ class JoinedTeamsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the joinedTeams property of the microsoft.graph.user entity.
-     * @param string $teamId Unique identifier of the item
+     * @param string $teamId The unique identifier of team
      * @return TeamItemRequestBuilder
     */
     public function byTeamId(string $teamId): TeamItemRequestBuilder {

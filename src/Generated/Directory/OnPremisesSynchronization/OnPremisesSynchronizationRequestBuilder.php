@@ -29,7 +29,7 @@ class OnPremisesSynchronizationRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the onPremisesSynchronization property of the microsoft.graph.directory entity.
-     * @param string $onPremisesDirectorySynchronizationId Unique identifier of the item
+     * @param string $onPremisesDirectorySynchronizationId The unique identifier of onPremisesDirectorySynchronization
      * @return OnPremisesDirectorySynchronizationItemRequestBuilder
     */
     public function byOnPremisesDirectorySynchronizationId(string $onPremisesDirectorySynchronizationId): OnPremisesDirectorySynchronizationItemRequestBuilder {

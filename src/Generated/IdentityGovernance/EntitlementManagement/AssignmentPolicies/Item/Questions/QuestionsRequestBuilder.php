@@ -29,7 +29,7 @@ class QuestionsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the questions property of the microsoft.graph.accessPackageAssignmentPolicy entity.
-     * @param string $accessPackageQuestionId Unique identifier of the item
+     * @param string $accessPackageQuestionId The unique identifier of accessPackageQuestion
      * @return AccessPackageQuestionItemRequestBuilder
     */
     public function byAccessPackageQuestionId(string $accessPackageQuestionId): AccessPackageQuestionItemRequestBuilder {

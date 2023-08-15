@@ -29,7 +29,7 @@ class OperationsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the operations property of the microsoft.graph.workbook entity.
-     * @param string $workbookOperationId Unique identifier of the item
+     * @param string $workbookOperationId The unique identifier of workbookOperation
      * @return WorkbookOperationItemRequestBuilder
     */
     public function byWorkbookOperationId(string $workbookOperationId): WorkbookOperationItemRequestBuilder {

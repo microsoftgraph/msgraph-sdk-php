@@ -38,7 +38,7 @@ class AuditEventsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the auditEvents property of the microsoft.graph.deviceManagement entity.
-     * @param string $auditEventId Unique identifier of the item
+     * @param string $auditEventId The unique identifier of auditEvent
      * @return AuditEventItemRequestBuilder
     */
     public function byAuditEventId(string $auditEventId): AuditEventItemRequestBuilder {

@@ -29,7 +29,7 @@ class DeviceStatusesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the deviceStatuses property of the microsoft.graph.managedDeviceMobileAppConfiguration entity.
-     * @param string $managedDeviceMobileAppConfigurationDeviceStatusId Unique identifier of the item
+     * @param string $managedDeviceMobileAppConfigurationDeviceStatusId The unique identifier of managedDeviceMobileAppConfigurationDeviceStatus
      * @return ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilder
     */
     public function byManagedDeviceMobileAppConfigurationDeviceStatusId(string $managedDeviceMobileAppConfigurationDeviceStatusId): ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilder {

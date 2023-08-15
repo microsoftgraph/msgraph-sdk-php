@@ -29,7 +29,7 @@ class SiteListsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the siteLists property of the microsoft.graph.internetExplorerMode entity.
-     * @param string $browserSiteListId Unique identifier of the item
+     * @param string $browserSiteListId The unique identifier of browserSiteList
      * @return BrowserSiteListItemRequestBuilder
     */
     public function byBrowserSiteListId(string $browserSiteListId): BrowserSiteListItemRequestBuilder {

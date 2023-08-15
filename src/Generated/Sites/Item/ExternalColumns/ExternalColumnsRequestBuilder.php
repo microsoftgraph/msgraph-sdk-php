@@ -28,7 +28,7 @@ class ExternalColumnsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the externalColumns property of the microsoft.graph.site entity.
-     * @param string $columnDefinitionId Unique identifier of the item
+     * @param string $columnDefinitionId The unique identifier of columnDefinition
      * @return ColumnDefinitionItemRequestBuilder
     */
     public function byColumnDefinitionId(string $columnDefinitionId): ColumnDefinitionItemRequestBuilder {

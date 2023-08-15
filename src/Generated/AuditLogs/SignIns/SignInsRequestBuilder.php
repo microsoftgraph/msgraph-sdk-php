@@ -29,7 +29,7 @@ class SignInsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the signIns property of the microsoft.graph.auditLogRoot entity.
-     * @param string $signInId Unique identifier of the item
+     * @param string $signInId The unique identifier of signIn
      * @return SignInItemRequestBuilder
     */
     public function bySignInId(string $signInId): SignInItemRequestBuilder {

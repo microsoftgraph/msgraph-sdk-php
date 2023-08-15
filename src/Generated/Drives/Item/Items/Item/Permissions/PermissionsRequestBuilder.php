@@ -29,7 +29,7 @@ class PermissionsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the permissions property of the microsoft.graph.driveItem entity.
-     * @param string $permissionId Unique identifier of the item
+     * @param string $permissionId The unique identifier of permission
      * @return PermissionItemRequestBuilder
     */
     public function byPermissionId(string $permissionId): PermissionItemRequestBuilder {

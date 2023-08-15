@@ -28,7 +28,7 @@ class WorkflowTemplatesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the workflowTemplates property of the microsoft.graph.identityGovernance.lifecycleWorkflowsContainer entity.
-     * @param string $workflowTemplateId Unique identifier of the item
+     * @param string $workflowTemplateId The unique identifier of workflowTemplate
      * @return WorkflowTemplateItemRequestBuilder
     */
     public function byWorkflowTemplateId(string $workflowTemplateId): WorkflowTemplateItemRequestBuilder {

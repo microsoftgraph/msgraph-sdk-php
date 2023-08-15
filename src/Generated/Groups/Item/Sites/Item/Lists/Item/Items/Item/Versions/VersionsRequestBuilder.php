@@ -29,7 +29,7 @@ class VersionsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the versions property of the microsoft.graph.listItem entity.
-     * @param string $listItemVersionId Unique identifier of the item
+     * @param string $listItemVersionId The unique identifier of listItemVersion
      * @return ListItemVersionItemRequestBuilder
     */
     public function byListItemVersionId(string $listItemVersionId): ListItemVersionItemRequestBuilder {

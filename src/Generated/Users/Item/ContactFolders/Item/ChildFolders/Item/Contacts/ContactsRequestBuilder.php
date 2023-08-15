@@ -37,7 +37,7 @@ class ContactsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the contacts property of the microsoft.graph.contactFolder entity.
-     * @param string $contactId Unique identifier of the item
+     * @param string $contactId The unique identifier of contact
      * @return ContactItemRequestBuilder
     */
     public function byContactId(string $contactId): ContactItemRequestBuilder {

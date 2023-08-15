@@ -29,7 +29,7 @@ class MobileAppConfigurationsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the mobileAppConfigurations property of the microsoft.graph.deviceAppManagement entity.
-     * @param string $managedDeviceMobileAppConfigurationId Unique identifier of the item
+     * @param string $managedDeviceMobileAppConfigurationId The unique identifier of managedDeviceMobileAppConfiguration
      * @return ManagedDeviceMobileAppConfigurationItemRequestBuilder
     */
     public function byManagedDeviceMobileAppConfigurationId(string $managedDeviceMobileAppConfigurationId): ManagedDeviceMobileAppConfigurationItemRequestBuilder {

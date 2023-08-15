@@ -29,7 +29,7 @@ class DirectoriesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the directories property of the microsoft.graph.synchronizationSchema entity.
-     * @param string $directoryDefinitionId Unique identifier of the item
+     * @param string $directoryDefinitionId The unique identifier of directoryDefinition
      * @return DirectoryDefinitionItemRequestBuilder
     */
     public function byDirectoryDefinitionId(string $directoryDefinitionId): DirectoryDefinitionItemRequestBuilder {

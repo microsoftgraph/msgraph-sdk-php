@@ -29,7 +29,7 @@ class CommentsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the comments property of the microsoft.graph.workbook entity.
-     * @param string $workbookCommentId Unique identifier of the item
+     * @param string $workbookCommentId The unique identifier of workbookComment
      * @return WorkbookCommentItemRequestBuilder
     */
     public function byWorkbookCommentId(string $workbookCommentId): WorkbookCommentItemRequestBuilder {

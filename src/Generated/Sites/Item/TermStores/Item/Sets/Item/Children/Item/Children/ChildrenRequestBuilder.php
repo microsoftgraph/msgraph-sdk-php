@@ -29,7 +29,7 @@ class ChildrenRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the children property of the microsoft.graph.termStore.term entity.
-     * @param string $termId1 Unique identifier of the item
+     * @param string $termId1 The unique identifier of term
      * @return TermItemRequestBuilder
     */
     public function byTermId1(string $termId1): TermItemRequestBuilder {

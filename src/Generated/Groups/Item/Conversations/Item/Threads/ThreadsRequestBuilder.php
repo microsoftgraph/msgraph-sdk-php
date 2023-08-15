@@ -29,7 +29,7 @@ class ThreadsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the threads property of the microsoft.graph.conversation entity.
-     * @param string $conversationThreadId Unique identifier of the item
+     * @param string $conversationThreadId The unique identifier of conversationThread
      * @return ConversationThreadItemRequestBuilder
     */
     public function byConversationThreadId(string $conversationThreadId): ConversationThreadItemRequestBuilder {

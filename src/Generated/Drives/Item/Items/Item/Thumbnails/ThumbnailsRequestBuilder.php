@@ -29,7 +29,7 @@ class ThumbnailsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the thumbnails property of the microsoft.graph.driveItem entity.
-     * @param string $thumbnailSetId Unique identifier of the item
+     * @param string $thumbnailSetId The unique identifier of thumbnailSet
      * @return ThumbnailSetItemRequestBuilder
     */
     public function byThumbnailSetId(string $thumbnailSetId): ThumbnailSetItemRequestBuilder {

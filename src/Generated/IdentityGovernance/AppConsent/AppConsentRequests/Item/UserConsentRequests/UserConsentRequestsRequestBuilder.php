@@ -30,7 +30,7 @@ class UserConsentRequestsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the userConsentRequests property of the microsoft.graph.appConsentRequest entity.
-     * @param string $userConsentRequestId Unique identifier of the item
+     * @param string $userConsentRequestId The unique identifier of userConsentRequest
      * @return UserConsentRequestItemRequestBuilder
     */
     public function byUserConsentRequestId(string $userConsentRequestId): UserConsentRequestItemRequestBuilder {

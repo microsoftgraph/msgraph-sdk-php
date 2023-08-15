@@ -29,7 +29,7 @@ class AttachmentsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the attachments property of the microsoft.graph.serviceUpdateMessage entity.
-     * @param string $serviceAnnouncementAttachmentId Unique identifier of the item
+     * @param string $serviceAnnouncementAttachmentId The unique identifier of serviceAnnouncementAttachment
      * @return ServiceAnnouncementAttachmentItemRequestBuilder
     */
     public function byServiceAnnouncementAttachmentId(string $serviceAnnouncementAttachmentId): ServiceAnnouncementAttachmentItemRequestBuilder {

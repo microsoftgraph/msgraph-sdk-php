@@ -28,7 +28,7 @@ class TemplatesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the templates property of the microsoft.graph.conditionalAccessRoot entity.
-     * @param string $conditionalAccessTemplateId Unique identifier of the item
+     * @param string $conditionalAccessTemplateId The unique identifier of conditionalAccessTemplate
      * @return ConditionalAccessTemplateItemRequestBuilder
     */
     public function byConditionalAccessTemplateId(string $conditionalAccessTemplateId): ConditionalAccessTemplateItemRequestBuilder {

@@ -29,7 +29,7 @@ class ResourceActionsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the resourceActions property of the microsoft.graph.unifiedRbacResourceNamespace entity.
-     * @param string $unifiedRbacResourceActionId Unique identifier of the item
+     * @param string $unifiedRbacResourceActionId The unique identifier of unifiedRbacResourceAction
      * @return UnifiedRbacResourceActionItemRequestBuilder
     */
     public function byUnifiedRbacResourceActionId(string $unifiedRbacResourceActionId): UnifiedRbacResourceActionItemRequestBuilder {

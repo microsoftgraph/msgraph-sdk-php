@@ -29,7 +29,7 @@ class ServicesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the services property of the microsoft.graph.bookingBusiness entity.
-     * @param string $bookingServiceId Unique identifier of the item
+     * @param string $bookingServiceId The unique identifier of bookingService
      * @return BookingServiceItemRequestBuilder
     */
     public function byBookingServiceId(string $bookingServiceId): BookingServiceItemRequestBuilder {

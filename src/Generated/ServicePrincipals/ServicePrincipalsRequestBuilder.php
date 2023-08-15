@@ -61,7 +61,7 @@ class ServicePrincipalsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the collection of servicePrincipal entities.
-     * @param string $servicePrincipalId Unique identifier of the item
+     * @param string $servicePrincipalId The unique identifier of servicePrincipal
      * @return ServicePrincipalItemRequestBuilder
     */
     public function byServicePrincipalId(string $servicePrincipalId): ServicePrincipalItemRequestBuilder {

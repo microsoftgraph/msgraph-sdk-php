@@ -29,7 +29,7 @@ class WorkflowsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the workflows property of the microsoft.graph.identityGovernance.lifecycleWorkflowsContainer entity.
-     * @param string $workflowId Unique identifier of the item
+     * @param string $workflowId The unique identifier of workflow
      * @return WorkflowItemRequestBuilder
     */
     public function byWorkflowId(string $workflowId): WorkflowItemRequestBuilder {

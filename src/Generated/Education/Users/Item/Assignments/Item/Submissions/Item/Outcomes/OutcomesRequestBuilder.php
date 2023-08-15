@@ -29,7 +29,7 @@ class OutcomesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the outcomes property of the microsoft.graph.educationSubmission entity.
-     * @param string $educationOutcomeId Unique identifier of the item
+     * @param string $educationOutcomeId The unique identifier of educationOutcome
      * @return EducationOutcomeItemRequestBuilder
     */
     public function byEducationOutcomeId(string $educationOutcomeId): EducationOutcomeItemRequestBuilder {

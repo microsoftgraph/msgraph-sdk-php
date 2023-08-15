@@ -29,7 +29,7 @@ class ConnectionsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the connections property of the microsoft.graph.externalConnectors.external entity.
-     * @param string $externalConnectionId Unique identifier of the item
+     * @param string $externalConnectionId The unique identifier of externalConnection
      * @return ExternalConnectionItemRequestBuilder
     */
     public function byExternalConnectionId(string $externalConnectionId): ExternalConnectionItemRequestBuilder {

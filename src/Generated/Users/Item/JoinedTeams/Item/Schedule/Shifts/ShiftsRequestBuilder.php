@@ -29,7 +29,7 @@ class ShiftsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the shifts property of the microsoft.graph.schedule entity.
-     * @param string $shiftId Unique identifier of the item
+     * @param string $shiftId The unique identifier of shift
      * @return ShiftItemRequestBuilder
     */
     public function byShiftId(string $shiftId): ShiftItemRequestBuilder {

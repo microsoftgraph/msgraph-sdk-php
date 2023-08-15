@@ -29,7 +29,7 @@ class ConditionalAccessPoliciesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the conditionalAccessPolicies property of the microsoft.graph.policyRoot entity.
-     * @param string $conditionalAccessPolicyId Unique identifier of the item
+     * @param string $conditionalAccessPolicyId The unique identifier of conditionalAccessPolicy
      * @return ConditionalAccessPolicyItemRequestBuilder
     */
     public function byConditionalAccessPolicyId(string $conditionalAccessPolicyId): ConditionalAccessPolicyItemRequestBuilder {

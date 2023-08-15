@@ -21,7 +21,7 @@ class SubscribedSkusRequestBuilder extends BaseRequestBuilder
 {
     /**
      * Provides operations to manage the collection of subscribedSku entities.
-     * @param string $subscribedSkuId Unique identifier of the item
+     * @param string $subscribedSkuId The unique identifier of subscribedSku
      * @return SubscribedSkuItemRequestBuilder
     */
     public function bySubscribedSkuId(string $subscribedSkuId): SubscribedSkuItemRequestBuilder {

@@ -29,7 +29,7 @@ class DetectedAppsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the detectedApps property of the microsoft.graph.deviceManagement entity.
-     * @param string $detectedAppId Unique identifier of the item
+     * @param string $detectedAppId The unique identifier of detectedApp
      * @return DetectedAppItemRequestBuilder
     */
     public function byDetectedAppId(string $detectedAppId): DetectedAppItemRequestBuilder {

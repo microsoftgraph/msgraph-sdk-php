@@ -29,7 +29,7 @@ class HealthOverviewsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the healthOverviews property of the microsoft.graph.serviceAnnouncement entity.
-     * @param string $serviceHealthId Unique identifier of the item
+     * @param string $serviceHealthId The unique identifier of serviceHealth
      * @return ServiceHealthItemRequestBuilder
     */
     public function byServiceHealthId(string $serviceHealthId): ServiceHealthItemRequestBuilder {

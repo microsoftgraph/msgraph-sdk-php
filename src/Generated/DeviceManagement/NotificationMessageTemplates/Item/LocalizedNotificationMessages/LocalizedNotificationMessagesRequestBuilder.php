@@ -29,7 +29,7 @@ class LocalizedNotificationMessagesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the localizedNotificationMessages property of the microsoft.graph.notificationMessageTemplate entity.
-     * @param string $localizedNotificationMessageId Unique identifier of the item
+     * @param string $localizedNotificationMessageId The unique identifier of localizedNotificationMessage
      * @return LocalizedNotificationMessageItemRequestBuilder
     */
     public function byLocalizedNotificationMessageId(string $localizedNotificationMessageId): LocalizedNotificationMessageItemRequestBuilder {

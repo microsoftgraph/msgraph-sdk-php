@@ -37,7 +37,7 @@ class ChildFoldersRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the childFolders property of the microsoft.graph.contactFolder entity.
-     * @param string $contactFolderId1 Unique identifier of the item
+     * @param string $contactFolderId1 The unique identifier of contactFolder
      * @return ContactFolderItemRequestBuilder
     */
     public function byContactFolderId1(string $contactFolderId1): ContactFolderItemRequestBuilder {

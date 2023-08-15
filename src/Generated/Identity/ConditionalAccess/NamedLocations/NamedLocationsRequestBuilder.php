@@ -29,7 +29,7 @@ class NamedLocationsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the namedLocations property of the microsoft.graph.conditionalAccessRoot entity.
-     * @param string $namedLocationId Unique identifier of the item
+     * @param string $namedLocationId The unique identifier of namedLocation
      * @return NamedLocationItemRequestBuilder
     */
     public function byNamedLocationId(string $namedLocationId): NamedLocationItemRequestBuilder {

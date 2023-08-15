@@ -29,7 +29,7 @@ class UserExperienceAnalyticsDeviceScoresRequestBuilder extends BaseRequestBuild
     
     /**
      * Provides operations to manage the userExperienceAnalyticsDeviceScores property of the microsoft.graph.deviceManagement entity.
-     * @param string $userExperienceAnalyticsDeviceScoresId Unique identifier of the item
+     * @param string $userExperienceAnalyticsDeviceScoresId The unique identifier of userExperienceAnalyticsDeviceScores
      * @return UserExperienceAnalyticsDeviceScoresItemRequestBuilder
     */
     public function byUserExperienceAnalyticsDeviceScoresId(string $userExperienceAnalyticsDeviceScoresId): UserExperienceAnalyticsDeviceScoresItemRequestBuilder {

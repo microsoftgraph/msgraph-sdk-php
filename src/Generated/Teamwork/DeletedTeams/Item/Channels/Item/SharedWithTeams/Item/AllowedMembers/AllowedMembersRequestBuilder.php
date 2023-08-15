@@ -28,7 +28,7 @@ class AllowedMembersRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the allowedMembers property of the microsoft.graph.sharedWithChannelTeamInfo entity.
-     * @param string $conversationMemberId Unique identifier of the item
+     * @param string $conversationMemberId The unique identifier of conversationMember
      * @return ConversationMemberItemRequestBuilder
     */
     public function byConversationMemberId(string $conversationMemberId): ConversationMemberItemRequestBuilder {

@@ -29,7 +29,7 @@ class TeamsTemplatesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the collection of teamsTemplate entities.
-     * @param string $teamsTemplateId Unique identifier of the item
+     * @param string $teamsTemplateId The unique identifier of teamsTemplate
      * @return TeamsTemplateItemRequestBuilder
     */
     public function byTeamsTemplateId(string $teamsTemplateId): TeamsTemplateItemRequestBuilder {

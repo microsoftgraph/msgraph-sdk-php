@@ -29,7 +29,7 @@ class HistoryDefinitionsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the historyDefinitions property of the microsoft.graph.accessReviewSet entity.
-     * @param string $accessReviewHistoryDefinitionId Unique identifier of the item
+     * @param string $accessReviewHistoryDefinitionId The unique identifier of accessReviewHistoryDefinition
      * @return AccessReviewHistoryDefinitionItemRequestBuilder
     */
     public function byAccessReviewHistoryDefinitionId(string $accessReviewHistoryDefinitionId): AccessReviewHistoryDefinitionItemRequestBuilder {

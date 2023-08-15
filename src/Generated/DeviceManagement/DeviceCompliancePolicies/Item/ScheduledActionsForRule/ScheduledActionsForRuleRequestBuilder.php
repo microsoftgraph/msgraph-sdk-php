@@ -29,7 +29,7 @@ class ScheduledActionsForRuleRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the scheduledActionsForRule property of the microsoft.graph.deviceCompliancePolicy entity.
-     * @param string $deviceComplianceScheduledActionForRuleId Unique identifier of the item
+     * @param string $deviceComplianceScheduledActionForRuleId The unique identifier of deviceComplianceScheduledActionForRule
      * @return DeviceComplianceScheduledActionForRuleItemRequestBuilder
     */
     public function byDeviceComplianceScheduledActionForRuleId(string $deviceComplianceScheduledActionForRuleId): DeviceComplianceScheduledActionForRuleItemRequestBuilder {

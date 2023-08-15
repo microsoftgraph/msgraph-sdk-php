@@ -29,7 +29,7 @@ class FunctionsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the collection of attributeMappingFunctionSchema entities.
-     * @param string $attributeMappingFunctionSchemaId Unique identifier of the item
+     * @param string $attributeMappingFunctionSchemaId The unique identifier of attributeMappingFunctionSchema
      * @return AttributeMappingFunctionSchemaItemRequestBuilder
     */
     public function byAttributeMappingFunctionSchemaId(string $attributeMappingFunctionSchemaId): AttributeMappingFunctionSchemaItemRequestBuilder {

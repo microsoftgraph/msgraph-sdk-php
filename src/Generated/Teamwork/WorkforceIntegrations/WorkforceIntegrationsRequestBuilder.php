@@ -29,7 +29,7 @@ class WorkforceIntegrationsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the workforceIntegrations property of the microsoft.graph.teamwork entity.
-     * @param string $workforceIntegrationId Unique identifier of the item
+     * @param string $workforceIntegrationId The unique identifier of workforceIntegration
      * @return WorkforceIntegrationItemRequestBuilder
     */
     public function byWorkforceIntegrationId(string $workforceIntegrationId): WorkforceIntegrationItemRequestBuilder {

@@ -28,7 +28,7 @@ class IndicatorsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the indicators property of the microsoft.graph.security.article entity.
-     * @param string $articleIndicatorId Unique identifier of the item
+     * @param string $articleIndicatorId The unique identifier of articleIndicator
      * @return ArticleIndicatorItemRequestBuilder
     */
     public function byArticleIndicatorId(string $articleIndicatorId): ArticleIndicatorItemRequestBuilder {

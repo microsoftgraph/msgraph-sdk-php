@@ -37,7 +37,7 @@ class ManagedAppRegistrationsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the managedAppRegistrations property of the microsoft.graph.deviceAppManagement entity.
-     * @param string $managedAppRegistrationId Unique identifier of the item
+     * @param string $managedAppRegistrationId The unique identifier of managedAppRegistration
      * @return ManagedAppRegistrationItemRequestBuilder
     */
     public function byManagedAppRegistrationId(string $managedAppRegistrationId): ManagedAppRegistrationItemRequestBuilder {

@@ -37,7 +37,7 @@ class ParticipantsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the participants property of the microsoft.graph.call entity.
-     * @param string $participantId Unique identifier of the item
+     * @param string $participantId The unique identifier of participant
      * @return ParticipantItemRequestBuilder
     */
     public function byParticipantId(string $participantId): ParticipantItemRequestBuilder {

@@ -29,7 +29,7 @@ class FederationConfigurationRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the federationConfiguration property of the microsoft.graph.domain entity.
-     * @param string $internalDomainFederationId Unique identifier of the item
+     * @param string $internalDomainFederationId The unique identifier of internalDomainFederation
      * @return InternalDomainFederationItemRequestBuilder
     */
     public function byInternalDomainFederationId(string $internalDomainFederationId): InternalDomainFederationItemRequestBuilder {

@@ -29,7 +29,7 @@ class LearningCourseActivitiesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the learningCourseActivities property of the microsoft.graph.learningProvider entity.
-     * @param string $learningCourseActivityId Unique identifier of the item
+     * @param string $learningCourseActivityId The unique identifier of learningCourseActivity
      * @return LearningCourseActivityItemRequestBuilder
     */
     public function byLearningCourseActivityId(string $learningCourseActivityId): LearningCourseActivityItemRequestBuilder {

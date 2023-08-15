@@ -30,7 +30,7 @@ class StagesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the stages property of the microsoft.graph.accessReviewInstance entity.
-     * @param string $accessReviewStageId Unique identifier of the item
+     * @param string $accessReviewStageId The unique identifier of accessReviewStage
      * @return AccessReviewStageItemRequestBuilder
     */
     public function byAccessReviewStageId(string $accessReviewStageId): AccessReviewStageItemRequestBuilder {

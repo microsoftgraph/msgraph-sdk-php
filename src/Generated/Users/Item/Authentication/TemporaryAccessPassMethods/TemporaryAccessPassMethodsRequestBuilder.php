@@ -29,7 +29,7 @@ class TemporaryAccessPassMethodsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the temporaryAccessPassMethods property of the microsoft.graph.authentication entity.
-     * @param string $temporaryAccessPassAuthenticationMethodId Unique identifier of the item
+     * @param string $temporaryAccessPassAuthenticationMethodId The unique identifier of temporaryAccessPassAuthenticationMethod
      * @return TemporaryAccessPassAuthenticationMethodItemRequestBuilder
     */
     public function byTemporaryAccessPassAuthenticationMethodId(string $temporaryAccessPassAuthenticationMethodId): TemporaryAccessPassAuthenticationMethodItemRequestBuilder {

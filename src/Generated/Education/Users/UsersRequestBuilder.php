@@ -37,7 +37,7 @@ class UsersRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the users property of the microsoft.graph.educationRoot entity.
-     * @param string $educationUserId Unique identifier of the item
+     * @param string $educationUserId The unique identifier of educationUser
      * @return EducationUserItemRequestBuilder
     */
     public function byEducationUserId(string $educationUserId): EducationUserItemRequestBuilder {

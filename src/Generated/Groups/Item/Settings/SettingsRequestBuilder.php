@@ -29,7 +29,7 @@ class SettingsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the settings property of the microsoft.graph.group entity.
-     * @param string $groupSettingId Unique identifier of the item
+     * @param string $groupSettingId The unique identifier of groupSetting
      * @return GroupSettingItemRequestBuilder
     */
     public function byGroupSettingId(string $groupSettingId): GroupSettingItemRequestBuilder {

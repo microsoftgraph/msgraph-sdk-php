@@ -28,7 +28,7 @@ class ConnectorsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the connectors property of the microsoft.graph.printer entity.
-     * @param string $printConnectorId Unique identifier of the item
+     * @param string $printConnectorId The unique identifier of printConnector
      * @return PrintConnectorItemRequestBuilder
     */
     public function byPrintConnectorId(string $printConnectorId): PrintConnectorItemRequestBuilder {

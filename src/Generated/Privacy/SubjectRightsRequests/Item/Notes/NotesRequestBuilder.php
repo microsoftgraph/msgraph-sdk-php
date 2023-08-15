@@ -29,7 +29,7 @@ class NotesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the notes property of the microsoft.graph.subjectRightsRequest entity.
-     * @param string $authoredNoteId Unique identifier of the item
+     * @param string $authoredNoteId The unique identifier of authoredNote
      * @return AuthoredNoteItemRequestBuilder
     */
     public function byAuthoredNoteId(string $authoredNoteId): AuthoredNoteItemRequestBuilder {

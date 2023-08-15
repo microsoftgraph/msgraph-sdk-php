@@ -29,7 +29,7 @@ class AuthenticationMethodConfigurationsRequestBuilder extends BaseRequestBuilde
     
     /**
      * Provides operations to manage the authenticationMethodConfigurations property of the microsoft.graph.authenticationMethodsPolicy entity.
-     * @param string $authenticationMethodConfigurationId Unique identifier of the item
+     * @param string $authenticationMethodConfigurationId The unique identifier of authenticationMethodConfiguration
      * @return AuthenticationMethodConfigurationItemRequestBuilder
     */
     public function byAuthenticationMethodConfigurationId(string $authenticationMethodConfigurationId): AuthenticationMethodConfigurationItemRequestBuilder {

@@ -28,7 +28,7 @@ class SoftwareOathMethodsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the softwareOathMethods property of the microsoft.graph.authentication entity.
-     * @param string $softwareOathAuthenticationMethodId Unique identifier of the item
+     * @param string $softwareOathAuthenticationMethodId The unique identifier of softwareOathAuthenticationMethod
      * @return SoftwareOathAuthenticationMethodItemRequestBuilder
     */
     public function bySoftwareOathAuthenticationMethodId(string $softwareOathAuthenticationMethodId): SoftwareOathAuthenticationMethodItemRequestBuilder {

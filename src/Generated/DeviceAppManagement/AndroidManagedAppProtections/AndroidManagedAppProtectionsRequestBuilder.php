@@ -29,7 +29,7 @@ class AndroidManagedAppProtectionsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the androidManagedAppProtections property of the microsoft.graph.deviceAppManagement entity.
-     * @param string $androidManagedAppProtectionId Unique identifier of the item
+     * @param string $androidManagedAppProtectionId The unique identifier of androidManagedAppProtection
      * @return AndroidManagedAppProtectionItemRequestBuilder
     */
     public function byAndroidManagedAppProtectionId(string $androidManagedAppProtectionId): AndroidManagedAppProtectionItemRequestBuilder {

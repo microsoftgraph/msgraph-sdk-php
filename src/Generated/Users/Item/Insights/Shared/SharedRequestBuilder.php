@@ -29,7 +29,7 @@ class SharedRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the shared property of the microsoft.graph.officeGraphInsights entity.
-     * @param string $sharedInsightId Unique identifier of the item
+     * @param string $sharedInsightId The unique identifier of sharedInsight
      * @return SharedInsightItemRequestBuilder
     */
     public function bySharedInsightId(string $sharedInsightId): SharedInsightItemRequestBuilder {

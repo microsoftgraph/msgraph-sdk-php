@@ -28,7 +28,7 @@ class Fido2MethodsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the fido2Methods property of the microsoft.graph.authentication entity.
-     * @param string $fido2AuthenticationMethodId Unique identifier of the item
+     * @param string $fido2AuthenticationMethodId The unique identifier of fido2AuthenticationMethod
      * @return Fido2AuthenticationMethodItemRequestBuilder
     */
     public function byFido2AuthenticationMethodId(string $fido2AuthenticationMethodId): Fido2AuthenticationMethodItemRequestBuilder {

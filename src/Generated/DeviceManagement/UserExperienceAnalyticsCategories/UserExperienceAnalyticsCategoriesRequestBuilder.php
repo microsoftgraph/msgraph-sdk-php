@@ -29,7 +29,7 @@ class UserExperienceAnalyticsCategoriesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the userExperienceAnalyticsCategories property of the microsoft.graph.deviceManagement entity.
-     * @param string $userExperienceAnalyticsCategoryId Unique identifier of the item
+     * @param string $userExperienceAnalyticsCategoryId The unique identifier of userExperienceAnalyticsCategory
      * @return UserExperienceAnalyticsCategoryItemRequestBuilder
     */
     public function byUserExperienceAnalyticsCategoryId(string $userExperienceAnalyticsCategoryId): UserExperienceAnalyticsCategoryItemRequestBuilder {

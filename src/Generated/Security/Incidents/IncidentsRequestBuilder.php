@@ -29,7 +29,7 @@ class IncidentsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the incidents property of the microsoft.graph.security entity.
-     * @param string $incidentId Unique identifier of the item
+     * @param string $incidentId The unique identifier of incident
      * @return IncidentItemRequestBuilder
     */
     public function byIncidentId(string $incidentId): IncidentItemRequestBuilder {

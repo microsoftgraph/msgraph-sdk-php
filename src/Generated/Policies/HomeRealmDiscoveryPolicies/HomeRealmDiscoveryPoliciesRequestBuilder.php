@@ -29,7 +29,7 @@ class HomeRealmDiscoveryPoliciesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the homeRealmDiscoveryPolicies property of the microsoft.graph.policyRoot entity.
-     * @param string $homeRealmDiscoveryPolicyId Unique identifier of the item
+     * @param string $homeRealmDiscoveryPolicyId The unique identifier of homeRealmDiscoveryPolicy
      * @return HomeRealmDiscoveryPolicyItemRequestBuilder
     */
     public function byHomeRealmDiscoveryPolicyId(string $homeRealmDiscoveryPolicyId): HomeRealmDiscoveryPolicyItemRequestBuilder {

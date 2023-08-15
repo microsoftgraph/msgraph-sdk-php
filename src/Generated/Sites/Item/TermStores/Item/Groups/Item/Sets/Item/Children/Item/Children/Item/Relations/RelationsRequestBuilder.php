@@ -29,7 +29,7 @@ class RelationsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the relations property of the microsoft.graph.termStore.term entity.
-     * @param string $relationId Unique identifier of the item
+     * @param string $relationId The unique identifier of relation
      * @return RelationItemRequestBuilder
     */
     public function byRelationId(string $relationId): RelationItemRequestBuilder {

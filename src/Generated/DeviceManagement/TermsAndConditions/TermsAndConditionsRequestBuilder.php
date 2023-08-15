@@ -29,7 +29,7 @@ class TermsAndConditionsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the termsAndConditions property of the microsoft.graph.deviceManagement entity.
-     * @param string $termsAndConditionsId Unique identifier of the item
+     * @param string $termsAndConditionsId The unique identifier of termsAndConditions
      * @return TermsAndConditionsItemRequestBuilder
     */
     public function byTermsAndConditionsId(string $termsAndConditionsId): TermsAndConditionsItemRequestBuilder {

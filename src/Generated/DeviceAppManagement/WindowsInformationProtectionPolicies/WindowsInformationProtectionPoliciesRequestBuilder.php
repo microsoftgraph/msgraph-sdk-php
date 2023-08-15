@@ -29,7 +29,7 @@ class WindowsInformationProtectionPoliciesRequestBuilder extends BaseRequestBuil
     
     /**
      * Provides operations to manage the windowsInformationProtectionPolicies property of the microsoft.graph.deviceAppManagement entity.
-     * @param string $windowsInformationProtectionPolicyId Unique identifier of the item
+     * @param string $windowsInformationProtectionPolicyId The unique identifier of windowsInformationProtectionPolicy
      * @return WindowsInformationProtectionPolicyItemRequestBuilder
     */
     public function byWindowsInformationProtectionPolicyId(string $windowsInformationProtectionPolicyId): WindowsInformationProtectionPolicyItemRequestBuilder {

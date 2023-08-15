@@ -29,7 +29,7 @@ class TaskTriggersRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the taskTriggers property of the microsoft.graph.printer entity.
-     * @param string $printTaskTriggerId Unique identifier of the item
+     * @param string $printTaskTriggerId The unique identifier of printTaskTrigger
      * @return PrintTaskTriggerItemRequestBuilder
     */
     public function byPrintTaskTriggerId(string $printTaskTriggerId): PrintTaskTriggerItemRequestBuilder {

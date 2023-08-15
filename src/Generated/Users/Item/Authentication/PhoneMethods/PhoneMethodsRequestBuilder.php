@@ -29,7 +29,7 @@ class PhoneMethodsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the phoneMethods property of the microsoft.graph.authentication entity.
-     * @param string $phoneAuthenticationMethodId Unique identifier of the item
+     * @param string $phoneAuthenticationMethodId The unique identifier of phoneAuthenticationMethod
      * @return PhoneAuthenticationMethodItemRequestBuilder
     */
     public function byPhoneAuthenticationMethodId(string $phoneAuthenticationMethodId): PhoneAuthenticationMethodItemRequestBuilder {

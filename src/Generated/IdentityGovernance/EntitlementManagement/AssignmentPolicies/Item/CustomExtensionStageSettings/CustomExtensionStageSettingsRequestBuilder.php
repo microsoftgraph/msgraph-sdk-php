@@ -29,7 +29,7 @@ class CustomExtensionStageSettingsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the customExtensionStageSettings property of the microsoft.graph.accessPackageAssignmentPolicy entity.
-     * @param string $customExtensionStageSettingId Unique identifier of the item
+     * @param string $customExtensionStageSettingId The unique identifier of customExtensionStageSetting
      * @return CustomExtensionStageSettingItemRequestBuilder
     */
     public function byCustomExtensionStageSettingId(string $customExtensionStageSettingId): CustomExtensionStageSettingItemRequestBuilder {

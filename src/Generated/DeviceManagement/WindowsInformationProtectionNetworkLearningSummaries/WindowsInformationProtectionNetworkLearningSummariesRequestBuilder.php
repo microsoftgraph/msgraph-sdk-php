@@ -29,7 +29,7 @@ class WindowsInformationProtectionNetworkLearningSummariesRequestBuilder extends
     
     /**
      * Provides operations to manage the windowsInformationProtectionNetworkLearningSummaries property of the microsoft.graph.deviceManagement entity.
-     * @param string $windowsInformationProtectionNetworkLearningSummaryId Unique identifier of the item
+     * @param string $windowsInformationProtectionNetworkLearningSummaryId The unique identifier of windowsInformationProtectionNetworkLearningSummary
      * @return WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilder
     */
     public function byWindowsInformationProtectionNetworkLearningSummaryId(string $windowsInformationProtectionNetworkLearningSummaryId): WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilder {

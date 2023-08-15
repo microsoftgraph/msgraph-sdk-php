@@ -29,7 +29,7 @@ class GroupsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the groups property of the microsoft.graph.externalConnectors.externalConnection entity.
-     * @param string $externalGroupId Unique identifier of the item
+     * @param string $externalGroupId The unique identifier of externalGroup
      * @return ExternalGroupItemRequestBuilder
     */
     public function byExternalGroupId(string $externalGroupId): ExternalGroupItemRequestBuilder {

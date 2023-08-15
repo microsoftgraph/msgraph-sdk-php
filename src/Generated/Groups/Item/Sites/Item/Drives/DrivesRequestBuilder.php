@@ -28,7 +28,7 @@ class DrivesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the drives property of the microsoft.graph.site entity.
-     * @param string $driveId Unique identifier of the item
+     * @param string $driveId The unique identifier of drive
      * @return DriveItemRequestBuilder
     */
     public function byDriveId(string $driveId): DriveItemRequestBuilder {

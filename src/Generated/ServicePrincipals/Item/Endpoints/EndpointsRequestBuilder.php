@@ -29,7 +29,7 @@ class EndpointsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the endpoints property of the microsoft.graph.servicePrincipal entity.
-     * @param string $endpointId Unique identifier of the item
+     * @param string $endpointId The unique identifier of endpoint
      * @return EndpointItemRequestBuilder
     */
     public function byEndpointId(string $endpointId): EndpointItemRequestBuilder {

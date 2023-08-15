@@ -37,7 +37,7 @@ class ActivitiesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the activities property of the microsoft.graph.user entity.
-     * @param string $userActivityId Unique identifier of the item
+     * @param string $userActivityId The unique identifier of userActivity
      * @return UserActivityItemRequestBuilder
     */
     public function byUserActivityId(string $userActivityId): UserActivityItemRequestBuilder {
