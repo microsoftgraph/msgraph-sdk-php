@@ -23,6 +23,37 @@ namespace Microsoft\Graph\Model;
 */
 class PublicationFacet extends Entity
 {
+
+    /**
+    * Gets the checkedOutBy
+    *
+    * @return IdentitySet|null The checkedOutBy
+    */
+    public function getCheckedOutBy()
+    {
+        if (array_key_exists("checkedOutBy", $this->_propDict)) {
+            if (is_a($this->_propDict["checkedOutBy"], "\Microsoft\Graph\Model\IdentitySet") || is_null($this->_propDict["checkedOutBy"])) {
+                return $this->_propDict["checkedOutBy"];
+            } else {
+                $this->_propDict["checkedOutBy"] = new IdentitySet($this->_propDict["checkedOutBy"]);
+                return $this->_propDict["checkedOutBy"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the checkedOutBy
+    *
+    * @param IdentitySet $val The value to assign to the checkedOutBy
+    *
+    * @return PublicationFacet The PublicationFacet
+    */
+    public function setCheckedOutBy($val)
+    {
+        $this->_propDict["checkedOutBy"] = $val;
+         return $this;
+    }
     /**
     * Gets the level
     * The state of publication for this document. Either published or checkout. Read-only.
