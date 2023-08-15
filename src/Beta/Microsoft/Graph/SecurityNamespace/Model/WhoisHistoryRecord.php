@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* CloudPcPartnerAgentName File
+* WhoisHistoryRecord File
 * PHP version 7
 *
 * @category  Library
@@ -11,12 +11,10 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Model;
-
-use Microsoft\Graph\Core\Enum;
+namespace Beta\Microsoft\Graph\SecurityNamespace\Model;
 
 /**
-* CloudPcPartnerAgentName class
+* WhoisHistoryRecord class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,12 +22,6 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class CloudPcPartnerAgentName extends Enum
+class WhoisHistoryRecord extends WhoisBaseRecord
 {
-    /**
-    * The Enum CloudPcPartnerAgentName
-    */
-    const CITRIX = "citrix";
-    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
-    const V_MWARE = "vMware";
 }

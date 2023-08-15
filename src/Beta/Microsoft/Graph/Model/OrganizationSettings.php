@@ -58,7 +58,6 @@ class OrganizationSettings extends Entity
 
      /**
      * Gets the profileCardProperties
-    * Contains a collection of the properties an administrator has defined as visible on the Microsoft 365 profile card. Get organization settings returns the properties configured for profile cards for the organization.
      *
      * @return array|null The profileCardProperties
      */
@@ -73,7 +72,6 @@ class OrganizationSettings extends Entity
 
     /**
     * Sets the profileCardProperties
-    * Contains a collection of the properties an administrator has defined as visible on the Microsoft 365 profile card. Get organization settings returns the properties configured for profile cards for the organization.
     *
     * @param ProfileCardProperty[] $val The profileCardProperties
     *

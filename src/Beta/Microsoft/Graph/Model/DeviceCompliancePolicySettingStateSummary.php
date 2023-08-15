@@ -321,7 +321,6 @@ class DeviceCompliancePolicySettingStateSummary extends Entity
 
      /**
      * Gets the deviceComplianceSettingStates
-    * Not yet documented
      *
      * @return array|null The deviceComplianceSettingStates
      */
@@ -336,7 +335,6 @@ class DeviceCompliancePolicySettingStateSummary extends Entity
 
     /**
     * Sets the deviceComplianceSettingStates
-    * Not yet documented
     *
     * @param DeviceComplianceSettingState[] $val The deviceComplianceSettingStates
     *

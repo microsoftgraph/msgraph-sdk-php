@@ -25,6 +25,7 @@ class OnPremisesSipInfo extends Entity
 {
     /**
     * Gets the isSipEnabled
+    * Indicates whether the user is currently enabled for on-premises Skype for Business.
     *
     * @return bool|null The isSipEnabled
     */
@@ -39,6 +40,7 @@ class OnPremisesSipInfo extends Entity
 
     /**
     * Sets the isSipEnabled
+    * Indicates whether the user is currently enabled for on-premises Skype for Business.
     *
     * @param bool $val The value of the isSipEnabled
     *
@@ -51,6 +53,7 @@ class OnPremisesSipInfo extends Entity
     }
     /**
     * Gets the sipDeploymentLocation
+    * Indicates a fully qualified DNS name of the Microsoft Online Communications Server deployment.
     *
     * @return string|null The sipDeploymentLocation
     */
@@ -65,6 +68,7 @@ class OnPremisesSipInfo extends Entity
 
     /**
     * Sets the sipDeploymentLocation
+    * Indicates a fully qualified DNS name of the Microsoft Online Communications Server deployment.
     *
     * @param string $val The value of the sipDeploymentLocation
     *
@@ -77,6 +81,7 @@ class OnPremisesSipInfo extends Entity
     }
     /**
     * Gets the sipPrimaryAddress
+    * Serves as a unique identifier for each user on the on-premises Skype for Business.
     *
     * @return string|null The sipPrimaryAddress
     */
@@ -91,6 +96,7 @@ class OnPremisesSipInfo extends Entity
 
     /**
     * Sets the sipPrimaryAddress
+    * Serves as a unique identifier for each user on the on-premises Skype for Business.
     *
     * @param string $val The value of the sipPrimaryAddress
     *

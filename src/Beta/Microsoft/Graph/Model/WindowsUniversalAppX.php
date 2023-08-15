@@ -26,7 +26,7 @@ class WindowsUniversalAppX extends MobileLobApp
 {
     /**
     * Gets the applicableArchitectures
-    * The Windows architecture(s) for which this app can run on. Possible values are: none, x86, x64, arm, neutral, arm64.
+    * The Windows architecture(s) for which this app can run on. Possible values are: none, x86, x64, arm, neutral; default value is none. Possible values are: none, x86, x64, arm, neutral, arm64.
     *
     * @return WindowsArchitecture|null The applicableArchitectures
     */
@@ -45,7 +45,7 @@ class WindowsUniversalAppX extends MobileLobApp
 
     /**
     * Sets the applicableArchitectures
-    * The Windows architecture(s) for which this app can run on. Possible values are: none, x86, x64, arm, neutral, arm64.
+    * The Windows architecture(s) for which this app can run on. Possible values are: none, x86, x64, arm, neutral; default value is none. Possible values are: none, x86, x64, arm, neutral, arm64.
     *
     * @param WindowsArchitecture $val The applicableArchitectures
     *
@@ -59,7 +59,7 @@ class WindowsUniversalAppX extends MobileLobApp
 
     /**
     * Gets the applicableDeviceTypes
-    * The Windows device type(s) for which this app can run on. Possible values are: none, desktop, mobile, holographic, team.
+    * The Windows device type(s) for which this app can run on. Possible values are: none, desktop, mobile, holographic, team; default value is none. Possible values are: none, desktop, mobile, holographic, team, unknownFutureValue.
     *
     * @return WindowsDeviceType|null The applicableDeviceTypes
     */
@@ -78,7 +78,7 @@ class WindowsUniversalAppX extends MobileLobApp
 
     /**
     * Sets the applicableDeviceTypes
-    * The Windows device type(s) for which this app can run on. Possible values are: none, desktop, mobile, holographic, team.
+    * The Windows device type(s) for which this app can run on. Possible values are: none, desktop, mobile, holographic, team; default value is none. Possible values are: none, desktop, mobile, holographic, team, unknownFutureValue.
     *
     * @param WindowsDeviceType $val The applicableDeviceTypes
     *
@@ -92,7 +92,7 @@ class WindowsUniversalAppX extends MobileLobApp
 
     /**
     * Gets the identityName
-    * The Identity Name.
+    * The Identity Name of the app, parsed from the appx file when it is uploaded through the Intune MEM console. For example: 'Contoso.DemoApp'.
     *
     * @return string|null The identityName
     */
@@ -107,7 +107,7 @@ class WindowsUniversalAppX extends MobileLobApp
 
     /**
     * Sets the identityName
-    * The Identity Name.
+    * The Identity Name of the app, parsed from the appx file when it is uploaded through the Intune MEM console. For example: 'Contoso.DemoApp'.
     *
     * @param string $val The identityName
     *
@@ -121,7 +121,7 @@ class WindowsUniversalAppX extends MobileLobApp
 
     /**
     * Gets the identityPublisherHash
-    * The Identity Publisher Hash.
+    * The Identity Publisher Hash of the app, parsed from the appx file when it is uploaded through the Intune MEM console. For example: 'AB82CD0XYZ'.
     *
     * @return string|null The identityPublisherHash
     */
@@ -136,7 +136,7 @@ class WindowsUniversalAppX extends MobileLobApp
 
     /**
     * Sets the identityPublisherHash
-    * The Identity Publisher Hash.
+    * The Identity Publisher Hash of the app, parsed from the appx file when it is uploaded through the Intune MEM console. For example: 'AB82CD0XYZ'.
     *
     * @param string $val The identityPublisherHash
     *
@@ -150,7 +150,7 @@ class WindowsUniversalAppX extends MobileLobApp
 
     /**
     * Gets the identityResourceIdentifier
-    * The Identity Resource Identifier.
+    * The Identity Resource Identifier of the app, parsed from the appx file when it is uploaded through the Intune MEM console. For example: 'TestResourceId'.
     *
     * @return string|null The identityResourceIdentifier
     */
@@ -165,7 +165,7 @@ class WindowsUniversalAppX extends MobileLobApp
 
     /**
     * Sets the identityResourceIdentifier
-    * The Identity Resource Identifier.
+    * The Identity Resource Identifier of the app, parsed from the appx file when it is uploaded through the Intune MEM console. For example: 'TestResourceId'.
     *
     * @param string $val The identityResourceIdentifier
     *
@@ -179,7 +179,7 @@ class WindowsUniversalAppX extends MobileLobApp
 
     /**
     * Gets the identityVersion
-    * The identity version.
+    * The Identity Version of the app, parsed from the appx file when it is uploaded through the Intune MEM console.  For example: '1.0.0.0'.
     *
     * @return string|null The identityVersion
     */
@@ -194,7 +194,7 @@ class WindowsUniversalAppX extends MobileLobApp
 
     /**
     * Sets the identityVersion
-    * The identity version.
+    * The Identity Version of the app, parsed from the appx file when it is uploaded through the Intune MEM console.  For example: '1.0.0.0'.
     *
     * @param string $val The identityVersion
     *
@@ -208,7 +208,7 @@ class WindowsUniversalAppX extends MobileLobApp
 
     /**
     * Gets the isBundle
-    * Whether or not the app is a bundle.
+    * Whether or not the app is a bundle. If TRUE, app is a bundle; if FALSE, app is not a bundle.
     *
     * @return bool|null The isBundle
     */
@@ -223,7 +223,7 @@ class WindowsUniversalAppX extends MobileLobApp
 
     /**
     * Sets the isBundle
-    * Whether or not the app is a bundle.
+    * Whether or not the app is a bundle. If TRUE, app is a bundle; if FALSE, app is not a bundle.
     *
     * @param bool $val The isBundle
     *
@@ -237,7 +237,7 @@ class WindowsUniversalAppX extends MobileLobApp
 
     /**
     * Gets the minimumSupportedOperatingSystem
-    * The value for the minimum applicable operating system.
+    * The value for the minimum applicable Windows operating system.
     *
     * @return WindowsMinimumOperatingSystem|null The minimumSupportedOperatingSystem
     */
@@ -256,7 +256,7 @@ class WindowsUniversalAppX extends MobileLobApp
 
     /**
     * Sets the minimumSupportedOperatingSystem
-    * The value for the minimum applicable operating system.
+    * The value for the minimum applicable Windows operating system.
     *
     * @param WindowsMinimumOperatingSystem $val The minimumSupportedOperatingSystem
     *

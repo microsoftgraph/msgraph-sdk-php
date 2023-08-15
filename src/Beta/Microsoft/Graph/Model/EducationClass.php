@@ -517,6 +517,7 @@ class EducationClass extends Entity
 
      /**
      * Gets the modules
+    * All modules in the class. Nullable.
      *
      * @return array|null The modules
      */
@@ -531,6 +532,7 @@ class EducationClass extends Entity
 
     /**
     * Sets the modules
+    * All modules in the class. Nullable.
     *
     * @param EducationModule[] $val The modules
     *

@@ -237,7 +237,7 @@ class CloudPcOnPremisesConnectionHealthCheck extends Entity
 
     /**
     * Gets the status
-    * The status of the health check item. Possible values are: pending, running, passed, failed, unknownFutureValue. Read-only.
+    * The status of the health check item. Possible values are: pending, running, passed, failed, warning, informational, unknownFutureValue. Read-only.
     *
     * @return CloudPcOnPremisesConnectionStatus|null The status
     */
@@ -256,7 +256,7 @@ class CloudPcOnPremisesConnectionHealthCheck extends Entity
 
     /**
     * Sets the status
-    * The status of the health check item. Possible values are: pending, running, passed, failed, unknownFutureValue. Read-only.
+    * The status of the health check item. Possible values are: pending, running, passed, failed, warning, informational, unknownFutureValue. Read-only.
     *
     * @param CloudPcOnPremisesConnectionStatus $val The value to assign to the status
     *

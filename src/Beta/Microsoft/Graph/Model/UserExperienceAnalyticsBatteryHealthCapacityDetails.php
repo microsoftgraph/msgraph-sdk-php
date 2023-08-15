@@ -26,7 +26,7 @@ class UserExperienceAnalyticsBatteryHealthCapacityDetails extends Entity
 {
     /**
     * Gets the activeDevices
-    * Number of active devices within the tenant. Valid values -2147483648 to 2147483647
+    * Number of active devices within the tenant. Valid values 0 to 2147483647
     *
     * @return int|null The activeDevices
     */
@@ -41,7 +41,7 @@ class UserExperienceAnalyticsBatteryHealthCapacityDetails extends Entity
 
     /**
     * Sets the activeDevices
-    * Number of active devices within the tenant. Valid values -2147483648 to 2147483647
+    * Number of active devices within the tenant. Valid values 0 to 2147483647
     *
     * @param int $val The activeDevices
     *
@@ -55,7 +55,7 @@ class UserExperienceAnalyticsBatteryHealthCapacityDetails extends Entity
 
     /**
     * Gets the batteryCapacityFair
-    * Number of devices whose battery maximum capacity is greater than 50% but lesser than 80%. Valid values -2147483648 to 2147483647
+    * Number of devices whose battery maximum capacity is greater than 50% but lesser than 80%. Valid values 0 to 2147483647
     *
     * @return int|null The batteryCapacityFair
     */
@@ -70,7 +70,7 @@ class UserExperienceAnalyticsBatteryHealthCapacityDetails extends Entity
 
     /**
     * Sets the batteryCapacityFair
-    * Number of devices whose battery maximum capacity is greater than 50% but lesser than 80%. Valid values -2147483648 to 2147483647
+    * Number of devices whose battery maximum capacity is greater than 50% but lesser than 80%. Valid values 0 to 2147483647
     *
     * @param int $val The batteryCapacityFair
     *
@@ -84,7 +84,7 @@ class UserExperienceAnalyticsBatteryHealthCapacityDetails extends Entity
 
     /**
     * Gets the batteryCapacityGood
-    * Number of devices whose battery maximum capacity is greater than 80%. Valid values -2147483648 to 2147483647
+    * Number of devices whose battery maximum capacity is greater than 80%. Valid values 0 to 2147483647
     *
     * @return int|null The batteryCapacityGood
     */
@@ -99,7 +99,7 @@ class UserExperienceAnalyticsBatteryHealthCapacityDetails extends Entity
 
     /**
     * Sets the batteryCapacityGood
-    * Number of devices whose battery maximum capacity is greater than 80%. Valid values -2147483648 to 2147483647
+    * Number of devices whose battery maximum capacity is greater than 80%. Valid values 0 to 2147483647
     *
     * @param int $val The batteryCapacityGood
     *
@@ -113,7 +113,7 @@ class UserExperienceAnalyticsBatteryHealthCapacityDetails extends Entity
 
     /**
     * Gets the batteryCapacityPoor
-    * Number of devices whose battery maximum capacity is lesser than 50%. Valid values -2147483648 to 2147483647
+    * Number of devices whose battery maximum capacity is lesser than 50%. Valid values 0 to 2147483647
     *
     * @return int|null The batteryCapacityPoor
     */
@@ -128,7 +128,7 @@ class UserExperienceAnalyticsBatteryHealthCapacityDetails extends Entity
 
     /**
     * Sets the batteryCapacityPoor
-    * Number of devices whose battery maximum capacity is lesser than 50%. Valid values -2147483648 to 2147483647
+    * Number of devices whose battery maximum capacity is lesser than 50%. Valid values 0 to 2147483647
     *
     * @param int $val The batteryCapacityPoor
     *

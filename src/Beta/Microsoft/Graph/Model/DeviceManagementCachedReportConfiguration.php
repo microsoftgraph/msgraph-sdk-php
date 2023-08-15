@@ -26,7 +26,7 @@ class DeviceManagementCachedReportConfiguration extends Entity
 {
     /**
     * Gets the expirationDateTime
-    * Time that the cached report expires
+    * Time that the cached report expires. This property is read-only.
     *
     * @return \DateTime|null The expirationDateTime
     */
@@ -45,7 +45,7 @@ class DeviceManagementCachedReportConfiguration extends Entity
 
     /**
     * Sets the expirationDateTime
-    * Time that the cached report expires
+    * Time that the cached report expires. This property is read-only.
     *
     * @param \DateTime $val The expirationDateTime
     *
@@ -88,7 +88,7 @@ class DeviceManagementCachedReportConfiguration extends Entity
 
     /**
     * Gets the lastRefreshDateTime
-    * Time that the cached report was last refreshed
+    * Time that the cached report was last refreshed. This property is read-only.
     *
     * @return \DateTime|null The lastRefreshDateTime
     */
@@ -107,7 +107,7 @@ class DeviceManagementCachedReportConfiguration extends Entity
 
     /**
     * Sets the lastRefreshDateTime
-    * Time that the cached report was last refreshed
+    * Time that the cached report was last refreshed. This property is read-only.
     *
     * @param \DateTime $val The lastRefreshDateTime
     *
@@ -179,7 +179,7 @@ class DeviceManagementCachedReportConfiguration extends Entity
 
     /**
     * Gets the reportName
-    * Name of the report
+    * Name of the report. This property is read-only.
     *
     * @return string|null The reportName
     */
@@ -194,7 +194,7 @@ class DeviceManagementCachedReportConfiguration extends Entity
 
     /**
     * Sets the reportName
-    * Name of the report
+    * Name of the report. This property is read-only.
     *
     * @param string $val The reportName
     *
@@ -237,7 +237,7 @@ class DeviceManagementCachedReportConfiguration extends Entity
 
     /**
     * Gets the status
-    * Status of the cached report. Possible values are: unknown, notStarted, inProgress, completed, failed.
+    * Status of the cached report. This property is read-only. Possible values are: unknown, notStarted, inProgress, completed, failed.
     *
     * @return DeviceManagementReportStatus|null The status
     */
@@ -256,7 +256,7 @@ class DeviceManagementCachedReportConfiguration extends Entity
 
     /**
     * Sets the status
-    * Status of the cached report. Possible values are: unknown, notStarted, inProgress, completed, failed.
+    * Status of the cached report. This property is read-only. Possible values are: unknown, notStarted, inProgress, completed, failed.
     *
     * @param DeviceManagementReportStatus $val The status
     *

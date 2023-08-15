@@ -92,7 +92,7 @@ class ConditionalAccessConditionSet extends Entity
 
     /**
     * Gets the clientAppTypes
-    * Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other. Required.
+    * Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other. Required.  The easUnsupported enumeration member will be deprecated in favor of exchangeActiveSync which includes EAS supported and unsupported platforms.
     *
     * @return ConditionalAccessClientApp|null The clientAppTypes
     */
@@ -111,7 +111,7 @@ class ConditionalAccessConditionSet extends Entity
 
     /**
     * Sets the clientAppTypes
-    * Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other. Required.
+    * Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other. Required.  The easUnsupported enumeration member will be deprecated in favor of exchangeActiveSync which includes EAS supported and unsupported platforms.
     *
     * @param ConditionalAccessClientApp $val The value to assign to the clientAppTypes
     *
@@ -158,7 +158,7 @@ class ConditionalAccessConditionSet extends Entity
 
     /**
     * Gets the deviceStates
-    * Device states in the policy.
+    * Device states in the policy. To be deprecated and removed. Use the devices property instead.
     *
     * @return ConditionalAccessDeviceStates|null The deviceStates
     */
@@ -177,7 +177,7 @@ class ConditionalAccessConditionSet extends Entity
 
     /**
     * Sets the deviceStates
-    * Device states in the policy.
+    * Device states in the policy. To be deprecated and removed. Use the devices property instead.
     *
     * @param ConditionalAccessDeviceStates $val The value to assign to the deviceStates
     *

@@ -26,7 +26,7 @@ class MacOSDmgApp extends MobileLobApp
 {
     /**
     * Gets the ignoreVersionDetection
-    * A value indicating whether the app's version will be used to detect the app after it is installed on a device. Set this to true for apps that use a self-update feature. Set this to false to install the app when it is not already installed on the device, or if the deploying app's version number does not match the version that's already installed on the device.
+    * When TRUE, indicates that the app's version will NOT be used to detect if the app is installed on a device. When FALSE, indicates that the app's version will be used to detect if the app is installed on a device. Set this to true for apps that use a self update feature. The default value is FALSE.
     *
     * @return bool|null The ignoreVersionDetection
     */
@@ -41,7 +41,7 @@ class MacOSDmgApp extends MobileLobApp
 
     /**
     * Sets the ignoreVersionDetection
-    * A value indicating whether the app's version will be used to detect the app after it is installed on a device. Set this to true for apps that use a self-update feature. Set this to false to install the app when it is not already installed on the device, or if the deploying app's version number does not match the version that's already installed on the device.
+    * When TRUE, indicates that the app's version will NOT be used to detect if the app is installed on a device. When FALSE, indicates that the app's version will be used to detect if the app is installed on a device. Set this to true for apps that use a self update feature. The default value is FALSE.
     *
     * @param bool $val The ignoreVersionDetection
     *
@@ -56,7 +56,7 @@ class MacOSDmgApp extends MobileLobApp
 
      /**
      * Gets the includedApps
-    * The list of apps expected to be installed by the DMG.
+    * The list of .apps expected to be installed by the DMG (Apple Disk Image)
      *
      * @return array|null The includedApps
      */
@@ -71,7 +71,7 @@ class MacOSDmgApp extends MobileLobApp
 
     /**
     * Sets the includedApps
-    * The list of apps expected to be installed by the DMG.
+    * The list of .apps expected to be installed by the DMG (Apple Disk Image)
     *
     * @param MacOSIncludedApp[] $val The includedApps
     *
@@ -85,7 +85,7 @@ class MacOSDmgApp extends MobileLobApp
 
     /**
     * Gets the minimumSupportedOperatingSystem
-    * The value for the minimum applicable operating system.
+    * ComplexType macOSMinimumOperatingSystem that indicates the minimum operating system applicable for the application.
     *
     * @return MacOSMinimumOperatingSystem|null The minimumSupportedOperatingSystem
     */
@@ -104,7 +104,7 @@ class MacOSDmgApp extends MobileLobApp
 
     /**
     * Sets the minimumSupportedOperatingSystem
-    * The value for the minimum applicable operating system.
+    * ComplexType macOSMinimumOperatingSystem that indicates the minimum operating system applicable for the application.
     *
     * @param MacOSMinimumOperatingSystem $val The minimumSupportedOperatingSystem
     *
@@ -118,7 +118,7 @@ class MacOSDmgApp extends MobileLobApp
 
     /**
     * Gets the primaryBundleId
-    * The primary CFBundleIdentifier of the DMG.
+    * The bundleId of the primary .app in the DMG (Apple Disk Image). This maps to the CFBundleIdentifier in the app's bundle configuration.
     *
     * @return string|null The primaryBundleId
     */
@@ -133,7 +133,7 @@ class MacOSDmgApp extends MobileLobApp
 
     /**
     * Sets the primaryBundleId
-    * The primary CFBundleIdentifier of the DMG.
+    * The bundleId of the primary .app in the DMG (Apple Disk Image). This maps to the CFBundleIdentifier in the app's bundle configuration.
     *
     * @param string $val The primaryBundleId
     *
@@ -147,7 +147,7 @@ class MacOSDmgApp extends MobileLobApp
 
     /**
     * Gets the primaryBundleVersion
-    * The primary CFBundleVersion of the DMG.
+    * The version of the primary .app in the DMG (Apple Disk Image). This maps to the CFBundleShortVersion in the app's bundle configuration.
     *
     * @return string|null The primaryBundleVersion
     */
@@ -162,7 +162,7 @@ class MacOSDmgApp extends MobileLobApp
 
     /**
     * Sets the primaryBundleVersion
-    * The primary CFBundleVersion of the DMG.
+    * The version of the primary .app in the DMG (Apple Disk Image). This maps to the CFBundleShortVersion in the app's bundle configuration.
     *
     * @param string $val The primaryBundleVersion
     *

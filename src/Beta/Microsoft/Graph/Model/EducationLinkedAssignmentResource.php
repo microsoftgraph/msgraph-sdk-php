@@ -36,6 +36,7 @@ class EducationLinkedAssignmentResource extends EducationResource
 
     /**
     * Gets the url
+    * URL of the actual assignment.
     *
     * @return string|null The url
     */
@@ -50,6 +51,7 @@ class EducationLinkedAssignmentResource extends EducationResource
 
     /**
     * Sets the url
+    * URL of the actual assignment.
     *
     * @param string $val The value of the url
     *

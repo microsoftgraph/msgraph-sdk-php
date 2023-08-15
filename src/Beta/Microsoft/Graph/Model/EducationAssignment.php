@@ -600,6 +600,7 @@ class EducationAssignment extends Entity
 
     /**
     * Gets the moduleUrl
+    * The URL of the module from which to access the assignment.
     *
     * @return string|null The moduleUrl
     */
@@ -614,6 +615,7 @@ class EducationAssignment extends Entity
 
     /**
     * Sets the moduleUrl
+    * The URL of the module from which to access the assignment.
     *
     * @param string $val The moduleUrl
     *

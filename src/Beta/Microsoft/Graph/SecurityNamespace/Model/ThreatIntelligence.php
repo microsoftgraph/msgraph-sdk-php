@@ -440,6 +440,34 @@ class ThreatIntelligence extends \Beta\Microsoft\Graph\Model\Entity
 
 
      /**
+     * Gets the whoisHistoryRecords
+     *
+     * @return array|null The whoisHistoryRecords
+     */
+    public function getWhoisHistoryRecords()
+    {
+        if (array_key_exists("whoisHistoryRecords", $this->_propDict)) {
+           return $this->_propDict["whoisHistoryRecords"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the whoisHistoryRecords
+    *
+    * @param WhoisHistoryRecord[] $val The whoisHistoryRecords
+    *
+    * @return ThreatIntelligence
+    */
+    public function setWhoisHistoryRecords($val)
+    {
+        $this->_propDict["whoisHistoryRecords"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the whoisRecords
      *
      * @return array|null The whoisRecords

@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* VirtualEventSession File
+* CloudPcBulkResize File
 * PHP version 7
 *
 * @category  Library
@@ -14,7 +14,7 @@
 namespace Beta\Microsoft\Graph\Model;
 
 /**
-* VirtualEventSession class
+* CloudPcBulkResize class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,33 +22,32 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class VirtualEventSession extends OnlineMeeting
+class CloudPcBulkResize extends CloudPcBulkAction
 {
-
-     /**
-     * Gets the registrations
-     *
-     * @return array|null The registrations
-     */
-    public function getRegistrations()
+    /**
+    * Gets the targetServicePlanId
+    *
+    * @return string|null The targetServicePlanId
+    */
+    public function getTargetServicePlanId()
     {
-        if (array_key_exists("registrations", $this->_propDict)) {
-           return $this->_propDict["registrations"];
+        if (array_key_exists("targetServicePlanId", $this->_propDict)) {
+            return $this->_propDict["targetServicePlanId"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the registrations
+    * Sets the targetServicePlanId
     *
-    * @param VirtualEventRegistration[] $val The registrations
+    * @param string $val The targetServicePlanId
     *
-    * @return VirtualEventSession
+    * @return CloudPcBulkResize
     */
-    public function setRegistrations($val)
+    public function setTargetServicePlanId($val)
     {
-        $this->_propDict["registrations"] = $val;
+        $this->_propDict["targetServicePlanId"] = $val;
         return $this;
     }
 

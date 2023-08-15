@@ -36,6 +36,7 @@ class EducationChannelResource extends EducationResource
 
     /**
     * Gets the url
+    * URL of the channel resource.
     *
     * @return string|null The url
     */
@@ -50,6 +51,7 @@ class EducationChannelResource extends EducationResource
 
     /**
     * Sets the url
+    * URL of the channel resource.
     *
     * @param string $val The value of the url
     *

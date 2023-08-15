@@ -146,7 +146,7 @@ class ManagedAndroidLobApp extends ManagedMobileLobApp
 
     /**
     * Gets the targetedPlatforms
-    * The platforms to which the application can be targeted. If not specified, will defauilt to Android Device Administrator.
+    * The platforms to which the application can be targeted. If not specified, will defauilt to Android Device Administrator. Possible values are: androidDeviceAdministrator, androidOpenSourceProject, unknownFutureValue.
     *
     * @return AndroidTargetedPlatforms|null The targetedPlatforms
     */
@@ -165,7 +165,7 @@ class ManagedAndroidLobApp extends ManagedMobileLobApp
 
     /**
     * Sets the targetedPlatforms
-    * The platforms to which the application can be targeted. If not specified, will defauilt to Android Device Administrator.
+    * The platforms to which the application can be targeted. If not specified, will defauilt to Android Device Administrator. Possible values are: androidDeviceAdministrator, androidOpenSourceProject, unknownFutureValue.
     *
     * @param AndroidTargetedPlatforms $val The targetedPlatforms
     *

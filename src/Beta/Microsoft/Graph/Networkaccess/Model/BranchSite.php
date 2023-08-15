@@ -239,6 +239,37 @@ class BranchSite extends \Beta\Microsoft\Graph\Model\Entity
         return $this;
     }
 
+    /**
+    * Gets the connectivityConfiguration
+    *
+    * @return BranchConnectivityConfiguration|null The connectivityConfiguration
+    */
+    public function getConnectivityConfiguration()
+    {
+        if (array_key_exists("connectivityConfiguration", $this->_propDict)) {
+            if (is_a($this->_propDict["connectivityConfiguration"], "\Beta\Microsoft\Graph\Networkaccess\Model\BranchConnectivityConfiguration") || is_null($this->_propDict["connectivityConfiguration"])) {
+                return $this->_propDict["connectivityConfiguration"];
+            } else {
+                $this->_propDict["connectivityConfiguration"] = new BranchConnectivityConfiguration($this->_propDict["connectivityConfiguration"]);
+                return $this->_propDict["connectivityConfiguration"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the connectivityConfiguration
+    *
+    * @param BranchConnectivityConfiguration $val The connectivityConfiguration
+    *
+    * @return BranchSite
+    */
+    public function setConnectivityConfiguration($val)
+    {
+        $this->_propDict["connectivityConfiguration"] = $val;
+        return $this;
+    }
+
 
      /**
      * Gets the deviceLinks

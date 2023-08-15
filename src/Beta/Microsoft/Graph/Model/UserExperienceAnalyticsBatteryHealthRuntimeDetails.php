@@ -26,7 +26,7 @@ class UserExperienceAnalyticsBatteryHealthRuntimeDetails extends Entity
 {
     /**
     * Gets the activeDevices
-    * Number of active devices within the tenant. Valid values -2147483648 to 2147483647
+    * Number of active devices within the tenant. Valid values 0 to 2147483647
     *
     * @return int|null The activeDevices
     */
@@ -41,7 +41,7 @@ class UserExperienceAnalyticsBatteryHealthRuntimeDetails extends Entity
 
     /**
     * Sets the activeDevices
-    * Number of active devices within the tenant. Valid values -2147483648 to 2147483647
+    * Number of active devices within the tenant. Valid values 0 to 2147483647
     *
     * @param int $val The activeDevices
     *
@@ -55,7 +55,7 @@ class UserExperienceAnalyticsBatteryHealthRuntimeDetails extends Entity
 
     /**
     * Gets the batteryRuntimeFair
-    * Number of devices whose active runtime is greater than 3 hours but lesser than 5 hours. Valid values -2147483648 to 2147483647
+    * Number of devices whose active runtime is greater than 3 hours but lesser than 5 hours. Valid values 0 to 2147483647
     *
     * @return int|null The batteryRuntimeFair
     */
@@ -70,7 +70,7 @@ class UserExperienceAnalyticsBatteryHealthRuntimeDetails extends Entity
 
     /**
     * Sets the batteryRuntimeFair
-    * Number of devices whose active runtime is greater than 3 hours but lesser than 5 hours. Valid values -2147483648 to 2147483647
+    * Number of devices whose active runtime is greater than 3 hours but lesser than 5 hours. Valid values 0 to 2147483647
     *
     * @param int $val The batteryRuntimeFair
     *
@@ -84,7 +84,7 @@ class UserExperienceAnalyticsBatteryHealthRuntimeDetails extends Entity
 
     /**
     * Gets the batteryRuntimeGood
-    * Number of devices  whose active runtime is greater than 5 hours. Valid values -2147483648 to 2147483647
+    * Number of devices  whose active runtime is greater than 5 hours. Valid values 0 to 2147483647
     *
     * @return int|null The batteryRuntimeGood
     */
@@ -99,7 +99,7 @@ class UserExperienceAnalyticsBatteryHealthRuntimeDetails extends Entity
 
     /**
     * Sets the batteryRuntimeGood
-    * Number of devices  whose active runtime is greater than 5 hours. Valid values -2147483648 to 2147483647
+    * Number of devices  whose active runtime is greater than 5 hours. Valid values 0 to 2147483647
     *
     * @param int $val The batteryRuntimeGood
     *
@@ -113,7 +113,7 @@ class UserExperienceAnalyticsBatteryHealthRuntimeDetails extends Entity
 
     /**
     * Gets the batteryRuntimePoor
-    * Number of devices whose active runtime is lesser than 3 hours. Valid values -2147483648 to 2147483647
+    * Number of devices whose active runtime is lesser than 3 hours. Valid values 0 to 2147483647
     *
     * @return int|null The batteryRuntimePoor
     */
@@ -128,7 +128,7 @@ class UserExperienceAnalyticsBatteryHealthRuntimeDetails extends Entity
 
     /**
     * Sets the batteryRuntimePoor
-    * Number of devices whose active runtime is lesser than 3 hours. Valid values -2147483648 to 2147483647
+    * Number of devices whose active runtime is lesser than 3 hours. Valid values 0 to 2147483647
     *
     * @param int $val The batteryRuntimePoor
     *

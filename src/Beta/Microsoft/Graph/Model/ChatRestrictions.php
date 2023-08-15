@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* CloudPcPartnerAgentName File
+* ChatRestrictions File
 * PHP version 7
 *
 * @category  Library
@@ -12,11 +12,8 @@
 * @link      https://graph.microsoft.com
 */
 namespace Beta\Microsoft\Graph\Model;
-
-use Microsoft\Graph\Core\Enum;
-
 /**
-* CloudPcPartnerAgentName class
+* ChatRestrictions class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,12 +21,32 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class CloudPcPartnerAgentName extends Enum
+class ChatRestrictions extends Entity
 {
     /**
-    * The Enum CloudPcPartnerAgentName
+    * Gets the allowTextOnly
+    *
+    * @return bool|null The allowTextOnly
     */
-    const CITRIX = "citrix";
-    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
-    const V_MWARE = "vMware";
+    public function getAllowTextOnly()
+    {
+        if (array_key_exists("allowTextOnly", $this->_propDict)) {
+            return $this->_propDict["allowTextOnly"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the allowTextOnly
+    *
+    * @param bool $val The value of the allowTextOnly
+    *
+    * @return ChatRestrictions
+    */
+    public function setAllowTextOnly($val)
+    {
+        $this->_propDict["allowTextOnly"] = $val;
+        return $this;
+    }
 }

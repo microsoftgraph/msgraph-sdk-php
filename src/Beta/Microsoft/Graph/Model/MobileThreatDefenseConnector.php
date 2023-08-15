@@ -378,7 +378,7 @@ class MobileThreatDefenseConnector extends Entity
 
     /**
     * Gets the partnerState
-    * Mobile Threat Defense partner state for this account. Possible values are: unavailable, available, enabled, unresponsive.
+    * Mobile Threat Defense partner state for this account. Possible values are: unavailable, available, enabled, unresponsive, notSetUp, error, unknownFutureValue.
     *
     * @return MobileThreatPartnerTenantState|null The partnerState
     */
@@ -397,7 +397,7 @@ class MobileThreatDefenseConnector extends Entity
 
     /**
     * Sets the partnerState
-    * Mobile Threat Defense partner state for this account. Possible values are: unavailable, available, enabled, unresponsive.
+    * Mobile Threat Defense partner state for this account. Possible values are: unavailable, available, enabled, unresponsive, notSetUp, error, unknownFutureValue.
     *
     * @param MobileThreatPartnerTenantState $val The partnerState
     *
