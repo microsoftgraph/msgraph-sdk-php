@@ -21,7 +21,7 @@ class AgreementsRequestBuilder extends BaseRequestBuilder
 {
     /**
      * Provides operations to manage the collection of agreement entities.
-     * @param string $agreementId Unique identifier of the item
+     * @param string $agreementId The unique identifier of agreement
      * @return AgreementItemRequestBuilder
     */
     public function byAgreementId(string $agreementId): AgreementItemRequestBuilder {

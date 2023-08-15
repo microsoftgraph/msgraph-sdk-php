@@ -28,7 +28,7 @@ class RecoveryKeysRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the recoveryKeys property of the microsoft.graph.bitlocker entity.
-     * @param string $bitlockerRecoveryKeyId Unique identifier of the item
+     * @param string $bitlockerRecoveryKeyId The unique identifier of bitlockerRecoveryKey
      * @return BitlockerRecoveryKeyItemRequestBuilder
     */
     public function byBitlockerRecoveryKeyId(string $bitlockerRecoveryKeyId): BitlockerRecoveryKeyItemRequestBuilder {

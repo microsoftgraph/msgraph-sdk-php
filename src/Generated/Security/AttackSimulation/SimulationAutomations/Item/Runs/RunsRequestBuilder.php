@@ -29,7 +29,7 @@ class RunsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the runs property of the microsoft.graph.simulationAutomation entity.
-     * @param string $simulationAutomationRunId Unique identifier of the item
+     * @param string $simulationAutomationRunId The unique identifier of simulationAutomationRun
      * @return SimulationAutomationRunItemRequestBuilder
     */
     public function bySimulationAutomationRunId(string $simulationAutomationRunId): SimulationAutomationRunItemRequestBuilder {

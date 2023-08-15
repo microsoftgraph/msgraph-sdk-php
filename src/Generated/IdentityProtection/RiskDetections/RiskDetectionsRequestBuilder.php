@@ -29,7 +29,7 @@ class RiskDetectionsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the riskDetections property of the microsoft.graph.identityProtectionRoot entity.
-     * @param string $riskDetectionId Unique identifier of the item
+     * @param string $riskDetectionId The unique identifier of riskDetection
      * @return RiskDetectionItemRequestBuilder
     */
     public function byRiskDetectionId(string $riskDetectionId): RiskDetectionItemRequestBuilder {

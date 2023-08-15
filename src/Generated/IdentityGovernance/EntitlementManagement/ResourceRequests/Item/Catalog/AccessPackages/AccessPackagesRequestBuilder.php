@@ -28,7 +28,7 @@ class AccessPackagesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the accessPackages property of the microsoft.graph.accessPackageCatalog entity.
-     * @param string $accessPackageId Unique identifier of the item
+     * @param string $accessPackageId The unique identifier of accessPackage
      * @return AccessPackageItemRequestBuilder
     */
     public function byAccessPackageId(string $accessPackageId): AccessPackageItemRequestBuilder {

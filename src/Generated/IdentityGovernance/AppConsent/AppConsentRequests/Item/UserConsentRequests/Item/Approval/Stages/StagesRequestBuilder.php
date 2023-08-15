@@ -29,7 +29,7 @@ class StagesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the stages property of the microsoft.graph.approval entity.
-     * @param string $approvalStageId Unique identifier of the item
+     * @param string $approvalStageId The unique identifier of approvalStage
      * @return ApprovalStageItemRequestBuilder
     */
     public function byApprovalStageId(string $approvalStageId): ApprovalStageItemRequestBuilder {

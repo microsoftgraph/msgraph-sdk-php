@@ -29,7 +29,7 @@ class ExtensionsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the extensions property of the microsoft.graph.post entity.
-     * @param string $extensionId Unique identifier of the item
+     * @param string $extensionId The unique identifier of extension
      * @return ExtensionItemRequestBuilder
     */
     public function byExtensionId(string $extensionId): ExtensionItemRequestBuilder {

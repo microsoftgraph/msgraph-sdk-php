@@ -29,7 +29,7 @@ class AssignmentsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the assignments property of the microsoft.graph.deviceEnrollmentConfiguration entity.
-     * @param string $enrollmentConfigurationAssignmentId Unique identifier of the item
+     * @param string $enrollmentConfigurationAssignmentId The unique identifier of enrollmentConfigurationAssignment
      * @return EnrollmentConfigurationAssignmentItemRequestBuilder
     */
     public function byEnrollmentConfigurationAssignmentId(string $enrollmentConfigurationAssignmentId): EnrollmentConfigurationAssignmentItemRequestBuilder {

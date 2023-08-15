@@ -28,7 +28,7 @@ class ArticlesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the articles property of the microsoft.graph.security.vulnerability entity.
-     * @param string $articleId Unique identifier of the item
+     * @param string $articleId The unique identifier of article
      * @return ArticleItemRequestBuilder
     */
     public function byArticleId(string $articleId): ArticleItemRequestBuilder {

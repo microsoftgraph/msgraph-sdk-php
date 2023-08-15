@@ -29,7 +29,7 @@ class AppsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the apps property of the microsoft.graph.targetedManagedAppConfiguration entity.
-     * @param string $managedMobileAppId Unique identifier of the item
+     * @param string $managedMobileAppId The unique identifier of managedMobileApp
      * @return ManagedMobileAppItemRequestBuilder
     */
     public function byManagedMobileAppId(string $managedMobileAppId): ManagedMobileAppItemRequestBuilder {

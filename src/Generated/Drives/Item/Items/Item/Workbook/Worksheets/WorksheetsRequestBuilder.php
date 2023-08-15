@@ -37,7 +37,7 @@ class WorksheetsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the worksheets property of the microsoft.graph.workbook entity.
-     * @param string $workbookWorksheetId Unique identifier of the item
+     * @param string $workbookWorksheetId The unique identifier of workbookWorksheet
      * @return WorkbookWorksheetItemRequestBuilder
     */
     public function byWorkbookWorksheetId(string $workbookWorksheetId): WorkbookWorksheetItemRequestBuilder {

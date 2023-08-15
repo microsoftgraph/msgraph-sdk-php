@@ -29,7 +29,7 @@ class StaffMembersRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the staffMembers property of the microsoft.graph.bookingBusiness entity.
-     * @param string $bookingStaffMemberBaseId Unique identifier of the item
+     * @param string $bookingStaffMemberBaseId The unique identifier of bookingStaffMemberBase
      * @return BookingStaffMemberBaseItemRequestBuilder
     */
     public function byBookingStaffMemberBaseId(string $bookingStaffMemberBaseId): BookingStaffMemberBaseItemRequestBuilder {

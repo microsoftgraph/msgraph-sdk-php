@@ -29,7 +29,7 @@ class DailyPrintUsageByUserRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the dailyPrintUsageByUser property of the microsoft.graph.reportRoot entity.
-     * @param string $printUsageByUserId Unique identifier of the item
+     * @param string $printUsageByUserId The unique identifier of printUsageByUser
      * @return PrintUsageByUserItemRequestBuilder
     */
     public function byPrintUsageByUserId(string $printUsageByUserId): PrintUsageByUserItemRequestBuilder {

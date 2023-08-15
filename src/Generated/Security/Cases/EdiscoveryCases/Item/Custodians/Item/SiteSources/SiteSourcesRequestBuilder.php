@@ -29,7 +29,7 @@ class SiteSourcesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the siteSources property of the microsoft.graph.security.ediscoveryCustodian entity.
-     * @param string $siteSourceId Unique identifier of the item
+     * @param string $siteSourceId The unique identifier of siteSource
      * @return SiteSourceItemRequestBuilder
     */
     public function bySiteSourceId(string $siteSourceId): SiteSourceItemRequestBuilder {

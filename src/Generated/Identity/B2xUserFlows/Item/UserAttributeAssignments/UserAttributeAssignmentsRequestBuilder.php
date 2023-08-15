@@ -45,7 +45,7 @@ class UserAttributeAssignmentsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the userAttributeAssignments property of the microsoft.graph.b2xIdentityUserFlow entity.
-     * @param string $identityUserFlowAttributeAssignmentId Unique identifier of the item
+     * @param string $identityUserFlowAttributeAssignmentId The unique identifier of identityUserFlowAttributeAssignment
      * @return IdentityUserFlowAttributeAssignmentItemRequestBuilder
     */
     public function byIdentityUserFlowAttributeAssignmentId(string $identityUserFlowAttributeAssignmentId): IdentityUserFlowAttributeAssignmentItemRequestBuilder {

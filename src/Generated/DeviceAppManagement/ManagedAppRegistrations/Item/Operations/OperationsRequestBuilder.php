@@ -29,7 +29,7 @@ class OperationsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the operations property of the microsoft.graph.managedAppRegistration entity.
-     * @param string $managedAppOperationId Unique identifier of the item
+     * @param string $managedAppOperationId The unique identifier of managedAppOperation
      * @return ManagedAppOperationItemRequestBuilder
     */
     public function byManagedAppOperationId(string $managedAppOperationId): ManagedAppOperationItemRequestBuilder {

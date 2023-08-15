@@ -28,7 +28,7 @@ class SitesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the sites property of the microsoft.graph.site entity.
-     * @param string $siteId1 Unique identifier of the item
+     * @param string $siteId1 The unique identifier of site
      * @return SiteItemRequestBuilder
     */
     public function bySiteId1(string $siteId1): SiteItemRequestBuilder {

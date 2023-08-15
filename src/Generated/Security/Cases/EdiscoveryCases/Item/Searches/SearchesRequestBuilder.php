@@ -29,7 +29,7 @@ class SearchesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the searches property of the microsoft.graph.security.ediscoveryCase entity.
-     * @param string $ediscoverySearchId Unique identifier of the item
+     * @param string $ediscoverySearchId The unique identifier of ediscoverySearch
      * @return EdiscoverySearchItemRequestBuilder
     */
     public function byEdiscoverySearchId(string $ediscoverySearchId): EdiscoverySearchItemRequestBuilder {

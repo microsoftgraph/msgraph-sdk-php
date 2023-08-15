@@ -45,7 +45,7 @@ class RiskyServicePrincipalsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the riskyServicePrincipals property of the microsoft.graph.identityProtectionRoot entity.
-     * @param string $riskyServicePrincipalId Unique identifier of the item
+     * @param string $riskyServicePrincipalId The unique identifier of riskyServicePrincipal
      * @return RiskyServicePrincipalItemRequestBuilder
     */
     public function byRiskyServicePrincipalId(string $riskyServicePrincipalId): RiskyServicePrincipalItemRequestBuilder {

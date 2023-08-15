@@ -29,7 +29,7 @@ class UserStatusesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the userStatuses property of the microsoft.graph.deviceCompliancePolicy entity.
-     * @param string $deviceComplianceUserStatusId Unique identifier of the item
+     * @param string $deviceComplianceUserStatusId The unique identifier of deviceComplianceUserStatus
      * @return DeviceComplianceUserStatusItemRequestBuilder
     */
     public function byDeviceComplianceUserStatusId(string $deviceComplianceUserStatusId): DeviceComplianceUserStatusItemRequestBuilder {

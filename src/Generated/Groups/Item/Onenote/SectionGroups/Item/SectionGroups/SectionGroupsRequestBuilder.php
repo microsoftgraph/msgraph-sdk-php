@@ -28,7 +28,7 @@ class SectionGroupsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the sectionGroups property of the microsoft.graph.sectionGroup entity.
-     * @param string $sectionGroupId1 Unique identifier of the item
+     * @param string $sectionGroupId1 The unique identifier of sectionGroup
      * @return SectionGroupItemRequestBuilder
     */
     public function bySectionGroupId1(string $sectionGroupId1): SectionGroupItemRequestBuilder {

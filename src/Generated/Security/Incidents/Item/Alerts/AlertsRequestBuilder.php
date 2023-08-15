@@ -28,7 +28,7 @@ class AlertsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the alerts property of the microsoft.graph.security.incident entity.
-     * @param string $alertId Unique identifier of the item
+     * @param string $alertId The unique identifier of alert
      * @return AlertItemRequestBuilder
     */
     public function byAlertId(string $alertId): AlertItemRequestBuilder {

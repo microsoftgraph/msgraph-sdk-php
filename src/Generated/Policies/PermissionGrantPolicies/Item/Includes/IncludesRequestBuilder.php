@@ -29,7 +29,7 @@ class IncludesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the includes property of the microsoft.graph.permissionGrantPolicy entity.
-     * @param string $permissionGrantConditionSetId Unique identifier of the item
+     * @param string $permissionGrantConditionSetId The unique identifier of permissionGrantConditionSet
      * @return PermissionGrantConditionSetItemRequestBuilder
     */
     public function byPermissionGrantConditionSetId(string $permissionGrantConditionSetId): PermissionGrantConditionSetItemRequestBuilder {

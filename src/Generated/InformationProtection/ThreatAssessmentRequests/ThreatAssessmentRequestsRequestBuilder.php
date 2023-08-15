@@ -29,7 +29,7 @@ class ThreatAssessmentRequestsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the threatAssessmentRequests property of the microsoft.graph.informationProtection entity.
-     * @param string $threatAssessmentRequestId Unique identifier of the item
+     * @param string $threatAssessmentRequestId The unique identifier of threatAssessmentRequest
      * @return ThreatAssessmentRequestItemRequestBuilder
     */
     public function byThreatAssessmentRequestId(string $threatAssessmentRequestId): ThreatAssessmentRequestItemRequestBuilder {

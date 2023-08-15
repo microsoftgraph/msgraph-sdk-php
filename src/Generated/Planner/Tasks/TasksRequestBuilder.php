@@ -29,7 +29,7 @@ class TasksRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the tasks property of the microsoft.graph.planner entity.
-     * @param string $plannerTaskId Unique identifier of the item
+     * @param string $plannerTaskId The unique identifier of plannerTask
      * @return PlannerTaskItemRequestBuilder
     */
     public function byPlannerTaskId(string $plannerTaskId): PlannerTaskItemRequestBuilder {

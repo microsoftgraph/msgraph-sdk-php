@@ -29,7 +29,7 @@ class AppManagementPoliciesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the appManagementPolicies property of the microsoft.graph.policyRoot entity.
-     * @param string $appManagementPolicyId Unique identifier of the item
+     * @param string $appManagementPolicyId The unique identifier of appManagementPolicy
      * @return AppManagementPolicyItemRequestBuilder
     */
     public function byAppManagementPolicyId(string $appManagementPolicyId): AppManagementPolicyItemRequestBuilder {

@@ -36,7 +36,7 @@ class InstancesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the instances property of the microsoft.graph.event entity.
-     * @param string $eventId1 Unique identifier of the item
+     * @param string $eventId1 The unique identifier of event
      * @return EventItemRequestBuilder
     */
     public function byEventId1(string $eventId1): EventItemRequestBuilder {

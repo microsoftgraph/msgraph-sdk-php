@@ -77,7 +77,7 @@ class MessagesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the messages property of the microsoft.graph.serviceAnnouncement entity.
-     * @param string $serviceUpdateMessageId Unique identifier of the item
+     * @param string $serviceUpdateMessageId The unique identifier of serviceUpdateMessage
      * @return ServiceUpdateMessageItemRequestBuilder
     */
     public function byServiceUpdateMessageId(string $serviceUpdateMessageId): ServiceUpdateMessageItemRequestBuilder {

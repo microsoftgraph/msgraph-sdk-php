@@ -37,7 +37,7 @@ class DeletedTeamsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the deletedTeams property of the microsoft.graph.teamwork entity.
-     * @param string $deletedTeamId Unique identifier of the item
+     * @param string $deletedTeamId The unique identifier of deletedTeam
      * @return DeletedTeamItemRequestBuilder
     */
     public function byDeletedTeamId(string $deletedTeamId): DeletedTeamItemRequestBuilder {

@@ -29,7 +29,7 @@ class HistoryItemsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the historyItems property of the microsoft.graph.userActivity entity.
-     * @param string $activityHistoryItemId Unique identifier of the item
+     * @param string $activityHistoryItemId The unique identifier of activityHistoryItem
      * @return ActivityHistoryItemItemRequestBuilder
     */
     public function byActivityHistoryItemId(string $activityHistoryItemId): ActivityHistoryItemItemRequestBuilder {

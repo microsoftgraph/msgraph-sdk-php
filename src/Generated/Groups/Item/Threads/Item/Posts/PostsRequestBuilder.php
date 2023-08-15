@@ -28,7 +28,7 @@ class PostsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the posts property of the microsoft.graph.conversationThread entity.
-     * @param string $postId Unique identifier of the item
+     * @param string $postId The unique identifier of post
      * @return PostItemRequestBuilder
     */
     public function byPostId(string $postId): PostItemRequestBuilder {

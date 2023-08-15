@@ -29,7 +29,7 @@ class ExportJobsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the exportJobs property of the microsoft.graph.deviceManagementReports entity.
-     * @param string $deviceManagementExportJobId Unique identifier of the item
+     * @param string $deviceManagementExportJobId The unique identifier of deviceManagementExportJob
      * @return DeviceManagementExportJobItemRequestBuilder
     */
     public function byDeviceManagementExportJobId(string $deviceManagementExportJobId): DeviceManagementExportJobItemRequestBuilder {

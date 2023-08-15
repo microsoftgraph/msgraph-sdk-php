@@ -37,7 +37,7 @@ class ChatsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the collection of chat entities.
-     * @param string $chatId Unique identifier of the item
+     * @param string $chatId The unique identifier of chat
      * @return ChatItemRequestBuilder
     */
     public function byChatId(string $chatId): ChatItemRequestBuilder {

@@ -29,7 +29,7 @@ class RoleAssignmentsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the roleAssignments property of the microsoft.graph.roleDefinition entity.
-     * @param string $roleAssignmentId Unique identifier of the item
+     * @param string $roleAssignmentId The unique identifier of roleAssignment
      * @return RoleAssignmentItemRequestBuilder
     */
     public function byRoleAssignmentId(string $roleAssignmentId): RoleAssignmentItemRequestBuilder {

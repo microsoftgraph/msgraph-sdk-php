@@ -29,7 +29,7 @@ class PresencesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the presences property of the microsoft.graph.cloudCommunications entity.
-     * @param string $presenceId Unique identifier of the item
+     * @param string $presenceId The unique identifier of presence
      * @return PresenceItemRequestBuilder
     */
     public function byPresenceId(string $presenceId): PresenceItemRequestBuilder {

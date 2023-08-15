@@ -29,7 +29,7 @@ class EmailMethodsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the emailMethods property of the microsoft.graph.authentication entity.
-     * @param string $emailAuthenticationMethodId Unique identifier of the item
+     * @param string $emailAuthenticationMethodId The unique identifier of emailAuthenticationMethod
      * @return EmailAuthenticationMethodItemRequestBuilder
     */
     public function byEmailAuthenticationMethodId(string $emailAuthenticationMethodId): EmailAuthenticationMethodItemRequestBuilder {

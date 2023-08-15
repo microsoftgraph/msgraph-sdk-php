@@ -29,7 +29,7 @@ class DomainsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the collection of domain entities.
-     * @param string $domainId Unique identifier of the item
+     * @param string $domainId The unique identifier of domain
      * @return DomainItemRequestBuilder
     */
     public function byDomainId(string $domainId): DomainItemRequestBuilder {

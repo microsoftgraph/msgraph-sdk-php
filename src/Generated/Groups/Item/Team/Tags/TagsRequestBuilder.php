@@ -29,7 +29,7 @@ class TagsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the tags property of the microsoft.graph.team entity.
-     * @param string $teamworkTagId Unique identifier of the item
+     * @param string $teamworkTagId The unique identifier of teamworkTag
      * @return TeamworkTagItemRequestBuilder
     */
     public function byTeamworkTagId(string $teamworkTagId): TeamworkTagItemRequestBuilder {

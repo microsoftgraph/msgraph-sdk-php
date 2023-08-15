@@ -29,7 +29,7 @@ class WindowsInformationProtectionAppLearningSummariesRequestBuilder extends Bas
     
     /**
      * Provides operations to manage the windowsInformationProtectionAppLearningSummaries property of the microsoft.graph.deviceManagement entity.
-     * @param string $windowsInformationProtectionAppLearningSummaryId Unique identifier of the item
+     * @param string $windowsInformationProtectionAppLearningSummaryId The unique identifier of windowsInformationProtectionAppLearningSummary
      * @return WindowsInformationProtectionAppLearningSummaryItemRequestBuilder
     */
     public function byWindowsInformationProtectionAppLearningSummaryId(string $windowsInformationProtectionAppLearningSummaryId): WindowsInformationProtectionAppLearningSummaryItemRequestBuilder {

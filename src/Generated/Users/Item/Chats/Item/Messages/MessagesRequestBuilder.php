@@ -37,7 +37,7 @@ class MessagesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the messages property of the microsoft.graph.chat entity.
-     * @param string $chatMessageId Unique identifier of the item
+     * @param string $chatMessageId The unique identifier of chatMessage
      * @return ChatMessageItemRequestBuilder
     */
     public function byChatMessageId(string $chatMessageId): ChatMessageItemRequestBuilder {

@@ -28,7 +28,7 @@ class TaskProcessingResultsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the taskProcessingResults property of the microsoft.graph.identityGovernance.run entity.
-     * @param string $taskProcessingResultId Unique identifier of the item
+     * @param string $taskProcessingResultId The unique identifier of taskProcessingResult
      * @return TaskProcessingResultItemRequestBuilder
     */
     public function byTaskProcessingResultId(string $taskProcessingResultId): TaskProcessingResultItemRequestBuilder {

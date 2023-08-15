@@ -29,7 +29,7 @@ class ColumnsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the columns property of the microsoft.graph.contentType entity.
-     * @param string $columnDefinitionId Unique identifier of the item
+     * @param string $columnDefinitionId The unique identifier of columnDefinition
      * @return ColumnDefinitionItemRequestBuilder
     */
     public function byColumnDefinitionId(string $columnDefinitionId): ColumnDefinitionItemRequestBuilder {

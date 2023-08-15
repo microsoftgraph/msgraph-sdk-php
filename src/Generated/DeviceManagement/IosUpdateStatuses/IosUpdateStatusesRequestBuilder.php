@@ -29,7 +29,7 @@ class IosUpdateStatusesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the iosUpdateStatuses property of the microsoft.graph.deviceManagement entity.
-     * @param string $iosUpdateDeviceStatusId Unique identifier of the item
+     * @param string $iosUpdateDeviceStatusId The unique identifier of iosUpdateDeviceStatus
      * @return IosUpdateDeviceStatusItemRequestBuilder
     */
     public function byIosUpdateDeviceStatusId(string $iosUpdateDeviceStatusId): IosUpdateDeviceStatusItemRequestBuilder {

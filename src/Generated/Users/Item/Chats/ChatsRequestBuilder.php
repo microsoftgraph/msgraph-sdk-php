@@ -37,7 +37,7 @@ class ChatsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the chats property of the microsoft.graph.user entity.
-     * @param string $chatId Unique identifier of the item
+     * @param string $chatId The unique identifier of chat
      * @return ChatItemRequestBuilder
     */
     public function byChatId(string $chatId): ChatItemRequestBuilder {

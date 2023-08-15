@@ -29,7 +29,7 @@ class ItemsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the items property of the microsoft.graph.externalConnectors.externalConnection entity.
-     * @param string $externalItemId Unique identifier of the item
+     * @param string $externalItemId The unique identifier of externalItem
      * @return ExternalItemItemRequestBuilder
     */
     public function byExternalItemId(string $externalItemId): ExternalItemItemRequestBuilder {

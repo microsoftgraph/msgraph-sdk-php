@@ -28,7 +28,7 @@ class AllChannelsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the allChannels property of the microsoft.graph.team entity.
-     * @param string $channelId Unique identifier of the item
+     * @param string $channelId The unique identifier of channel
      * @return ChannelItemRequestBuilder
     */
     public function byChannelId(string $channelId): ChannelItemRequestBuilder {

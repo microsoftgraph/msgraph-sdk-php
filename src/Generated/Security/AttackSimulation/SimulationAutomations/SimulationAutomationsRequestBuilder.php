@@ -29,7 +29,7 @@ class SimulationAutomationsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the simulationAutomations property of the microsoft.graph.attackSimulationRoot entity.
-     * @param string $simulationAutomationId Unique identifier of the item
+     * @param string $simulationAutomationId The unique identifier of simulationAutomation
      * @return SimulationAutomationItemRequestBuilder
     */
     public function bySimulationAutomationId(string $simulationAutomationId): SimulationAutomationItemRequestBuilder {

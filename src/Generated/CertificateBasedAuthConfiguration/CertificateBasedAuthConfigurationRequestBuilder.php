@@ -29,7 +29,7 @@ class CertificateBasedAuthConfigurationRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the collection of certificateBasedAuthConfiguration entities.
-     * @param string $certificateBasedAuthConfigurationId Unique identifier of the item
+     * @param string $certificateBasedAuthConfigurationId The unique identifier of certificateBasedAuthConfiguration
      * @return CertificateBasedAuthConfigurationItemRequestBuilder
     */
     public function byCertificateBasedAuthConfigurationId(string $certificateBasedAuthConfigurationId): CertificateBasedAuthConfigurationItemRequestBuilder {

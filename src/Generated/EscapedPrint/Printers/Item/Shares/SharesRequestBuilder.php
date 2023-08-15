@@ -28,7 +28,7 @@ class SharesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the shares property of the microsoft.graph.printer entity.
-     * @param string $printerShareId Unique identifier of the item
+     * @param string $printerShareId The unique identifier of printerShare
      * @return PrinterShareItemRequestBuilder
     */
     public function byPrinterShareId(string $printerShareId): PrinterShareItemRequestBuilder {

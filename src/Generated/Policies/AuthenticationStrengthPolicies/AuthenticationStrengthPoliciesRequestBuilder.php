@@ -29,7 +29,7 @@ class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the authenticationStrengthPolicies property of the microsoft.graph.policyRoot entity.
-     * @param string $authenticationStrengthPolicyId Unique identifier of the item
+     * @param string $authenticationStrengthPolicyId The unique identifier of authenticationStrengthPolicy
      * @return AuthenticationStrengthPolicyItemRequestBuilder
     */
     public function byAuthenticationStrengthPolicyId(string $authenticationStrengthPolicyId): AuthenticationStrengthPolicyItemRequestBuilder {

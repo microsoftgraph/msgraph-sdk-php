@@ -76,7 +76,7 @@ class TransitiveMembersRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the transitiveMembers property of the microsoft.graph.group entity.
-     * @param string $directoryObjectId Unique identifier of the item
+     * @param string $directoryObjectId The unique identifier of directoryObject
      * @return DirectoryObjectItemRequestBuilder
     */
     public function byDirectoryObjectId(string $directoryObjectId): DirectoryObjectItemRequestBuilder {

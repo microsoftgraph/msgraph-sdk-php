@@ -29,7 +29,7 @@ class SchedulingGroupsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the schedulingGroups property of the microsoft.graph.schedule entity.
-     * @param string $schedulingGroupId Unique identifier of the item
+     * @param string $schedulingGroupId The unique identifier of schedulingGroup
      * @return SchedulingGroupItemRequestBuilder
     */
     public function bySchedulingGroupId(string $schedulingGroupId): SchedulingGroupItemRequestBuilder {

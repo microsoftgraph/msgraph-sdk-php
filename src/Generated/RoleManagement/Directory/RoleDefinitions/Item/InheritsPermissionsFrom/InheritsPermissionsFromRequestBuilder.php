@@ -29,7 +29,7 @@ class InheritsPermissionsFromRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the inheritsPermissionsFrom property of the microsoft.graph.unifiedRoleDefinition entity.
-     * @param string $unifiedRoleDefinitionId1 Unique identifier of the item
+     * @param string $unifiedRoleDefinitionId1 The unique identifier of unifiedRoleDefinition
      * @return UnifiedRoleDefinitionItemRequestBuilder
     */
     public function byUnifiedRoleDefinitionId1(string $unifiedRoleDefinitionId1): UnifiedRoleDefinitionItemRequestBuilder {

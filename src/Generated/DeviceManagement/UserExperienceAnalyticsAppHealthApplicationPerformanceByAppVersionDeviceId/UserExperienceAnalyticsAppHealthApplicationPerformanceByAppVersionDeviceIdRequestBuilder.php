@@ -29,7 +29,7 @@ class UserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId
     
     /**
      * Provides operations to manage the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId property of the microsoft.graph.deviceManagement entity.
-     * @param string $userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceIdId Unique identifier of the item
+     * @param string $userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceIdId The unique identifier of userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId
      * @return UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceIdItemRequestBuilder
     */
     public function byUserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceIdId(string $userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceIdId): UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceIdItemRequestBuilder {

@@ -29,7 +29,7 @@ class HistoryRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the history property of the microsoft.graph.riskyUser entity.
-     * @param string $riskyUserHistoryItemId Unique identifier of the item
+     * @param string $riskyUserHistoryItemId The unique identifier of riskyUserHistoryItem
      * @return RiskyUserHistoryItemItemRequestBuilder
     */
     public function byRiskyUserHistoryItemId(string $riskyUserHistoryItemId): RiskyUserHistoryItemItemRequestBuilder {
@@ -53,10 +53,10 @@ class HistoryRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the riskyUserHistoryItems from the history navigation property.
+     * Read the properties and relationships of a riskyUserHistoryItem object.
      * @param HistoryRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://learn.microsoft.com/graph/api/riskyuser-list-history?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/riskyuser-get-riskyuserhistoryitem?view=graph-rest-1.0 Find more info here
     */
     public function get(?HistoryRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -91,7 +91,7 @@ class HistoryRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the riskyUserHistoryItems from the history navigation property.
+     * Read the properties and relationships of a riskyUserHistoryItem object.
      * @param HistoryRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

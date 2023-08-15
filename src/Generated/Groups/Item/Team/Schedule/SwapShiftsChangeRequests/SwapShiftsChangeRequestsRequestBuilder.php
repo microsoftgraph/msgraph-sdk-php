@@ -29,7 +29,7 @@ class SwapShiftsChangeRequestsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the swapShiftsChangeRequests property of the microsoft.graph.schedule entity.
-     * @param string $swapShiftsChangeRequestId Unique identifier of the item
+     * @param string $swapShiftsChangeRequestId The unique identifier of swapShiftsChangeRequest
      * @return SwapShiftsChangeRequestItemRequestBuilder
     */
     public function bySwapShiftsChangeRequestId(string $swapShiftsChangeRequestId): SwapShiftsChangeRequestItemRequestBuilder {

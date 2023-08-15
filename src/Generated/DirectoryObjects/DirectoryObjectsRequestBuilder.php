@@ -61,7 +61,7 @@ class DirectoryObjectsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the collection of directoryObject entities.
-     * @param string $directoryObjectId Unique identifier of the item
+     * @param string $directoryObjectId The unique identifier of directoryObject
      * @return DirectoryObjectItemRequestBuilder
     */
     public function byDirectoryObjectId(string $directoryObjectId): DirectoryObjectItemRequestBuilder {

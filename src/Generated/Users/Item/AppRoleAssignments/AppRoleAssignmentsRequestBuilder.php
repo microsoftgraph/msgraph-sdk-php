@@ -29,7 +29,7 @@ class AppRoleAssignmentsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the appRoleAssignments property of the microsoft.graph.user entity.
-     * @param string $appRoleAssignmentId Unique identifier of the item
+     * @param string $appRoleAssignmentId The unique identifier of appRoleAssignment
      * @return AppRoleAssignmentItemRequestBuilder
     */
     public function byAppRoleAssignmentId(string $appRoleAssignmentId): AppRoleAssignmentItemRequestBuilder {

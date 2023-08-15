@@ -37,7 +37,7 @@ class TeamsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the collection of team entities.
-     * @param string $teamId Unique identifier of the item
+     * @param string $teamId The unique identifier of team
      * @return TeamItemRequestBuilder
     */
     public function byTeamId(string $teamId): TeamItemRequestBuilder {

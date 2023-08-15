@@ -29,7 +29,7 @@ class ResourceOperationsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the resourceOperations property of the microsoft.graph.deviceManagement entity.
-     * @param string $resourceOperationId Unique identifier of the item
+     * @param string $resourceOperationId The unique identifier of resourceOperation
      * @return ResourceOperationItemRequestBuilder
     */
     public function byResourceOperationId(string $resourceOperationId): ResourceOperationItemRequestBuilder {

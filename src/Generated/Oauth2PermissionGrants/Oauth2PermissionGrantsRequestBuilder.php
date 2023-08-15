@@ -37,7 +37,7 @@ class Oauth2PermissionGrantsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the collection of oAuth2PermissionGrant entities.
-     * @param string $oAuth2PermissionGrantId Unique identifier of the item
+     * @param string $oAuth2PermissionGrantId The unique identifier of oAuth2PermissionGrant
      * @return OAuth2PermissionGrantItemRequestBuilder
     */
     public function byOAuth2PermissionGrantId(string $oAuth2PermissionGrantId): OAuth2PermissionGrantItemRequestBuilder {

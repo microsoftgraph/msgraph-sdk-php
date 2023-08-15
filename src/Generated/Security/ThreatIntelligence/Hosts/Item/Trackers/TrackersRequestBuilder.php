@@ -28,7 +28,7 @@ class TrackersRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the trackers property of the microsoft.graph.security.host entity.
-     * @param string $hostTrackerId Unique identifier of the item
+     * @param string $hostTrackerId The unique identifier of hostTracker
      * @return HostTrackerItemRequestBuilder
     */
     public function byHostTrackerId(string $hostTrackerId): HostTrackerItemRequestBuilder {

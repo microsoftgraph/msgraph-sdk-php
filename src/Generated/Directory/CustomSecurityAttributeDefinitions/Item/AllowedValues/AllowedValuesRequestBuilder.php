@@ -29,7 +29,7 @@ class AllowedValuesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the allowedValues property of the microsoft.graph.customSecurityAttributeDefinition entity.
-     * @param string $allowedValueId Unique identifier of the item
+     * @param string $allowedValueId The unique identifier of allowedValue
      * @return AllowedValueItemRequestBuilder
     */
     public function byAllowedValueId(string $allowedValueId): AllowedValueItemRequestBuilder {

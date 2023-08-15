@@ -29,7 +29,7 @@ class SessionsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the sessions property of the microsoft.graph.callRecords.callRecord entity.
-     * @param string $sessionId Unique identifier of the item
+     * @param string $sessionId The unique identifier of session
      * @return SessionItemRequestBuilder
     */
     public function bySessionId(string $sessionId): SessionItemRequestBuilder {

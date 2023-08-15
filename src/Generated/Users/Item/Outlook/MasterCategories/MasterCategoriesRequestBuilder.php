@@ -29,7 +29,7 @@ class MasterCategoriesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the masterCategories property of the microsoft.graph.outlookUser entity.
-     * @param string $outlookCategoryId Unique identifier of the item
+     * @param string $outlookCategoryId The unique identifier of outlookCategory
      * @return OutlookCategoryItemRequestBuilder
     */
     public function byOutlookCategoryId(string $outlookCategoryId): OutlookCategoryItemRequestBuilder {

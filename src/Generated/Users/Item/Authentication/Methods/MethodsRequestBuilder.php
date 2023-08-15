@@ -29,7 +29,7 @@ class MethodsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the methods property of the microsoft.graph.authentication entity.
-     * @param string $authenticationMethodId Unique identifier of the item
+     * @param string $authenticationMethodId The unique identifier of authenticationMethod
      * @return AuthenticationMethodItemRequestBuilder
     */
     public function byAuthenticationMethodId(string $authenticationMethodId): AuthenticationMethodItemRequestBuilder {

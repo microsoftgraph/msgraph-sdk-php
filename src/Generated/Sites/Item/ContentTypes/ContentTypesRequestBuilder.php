@@ -53,7 +53,7 @@ class ContentTypesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the contentTypes property of the microsoft.graph.site entity.
-     * @param string $contentTypeId Unique identifier of the item
+     * @param string $contentTypeId The unique identifier of contentType
      * @return ContentTypeItemRequestBuilder
     */
     public function byContentTypeId(string $contentTypeId): ContentTypeItemRequestBuilder {

@@ -28,7 +28,7 @@ class PhotosRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the photos property of the microsoft.graph.group entity.
-     * @param string $profilePhotoId Unique identifier of the item
+     * @param string $profilePhotoId The unique identifier of profilePhoto
      * @return ProfilePhotoItemRequestBuilder
     */
     public function byProfilePhotoId(string $profilePhotoId): ProfilePhotoItemRequestBuilder {

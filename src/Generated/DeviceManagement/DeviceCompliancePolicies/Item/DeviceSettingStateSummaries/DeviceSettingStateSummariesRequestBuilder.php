@@ -29,7 +29,7 @@ class DeviceSettingStateSummariesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the deviceSettingStateSummaries property of the microsoft.graph.deviceCompliancePolicy entity.
-     * @param string $settingStateDeviceSummaryId Unique identifier of the item
+     * @param string $settingStateDeviceSummaryId The unique identifier of settingStateDeviceSummary
      * @return SettingStateDeviceSummaryItemRequestBuilder
     */
     public function bySettingStateDeviceSummaryId(string $settingStateDeviceSummaryId): SettingStateDeviceSummaryItemRequestBuilder {

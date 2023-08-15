@@ -29,7 +29,7 @@ class AdditionalSourcesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the additionalSources property of the microsoft.graph.security.ediscoverySearch entity.
-     * @param string $dataSourceId Unique identifier of the item
+     * @param string $dataSourceId The unique identifier of dataSource
      * @return DataSourceItemRequestBuilder
     */
     public function byDataSourceId(string $dataSourceId): DataSourceItemRequestBuilder {

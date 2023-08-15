@@ -61,7 +61,7 @@ class ContractsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the collection of contract entities.
-     * @param string $contractId Unique identifier of the item
+     * @param string $contractId The unique identifier of contract
      * @return ContractItemRequestBuilder
     */
     public function byContractId(string $contractId): ContractItemRequestBuilder {

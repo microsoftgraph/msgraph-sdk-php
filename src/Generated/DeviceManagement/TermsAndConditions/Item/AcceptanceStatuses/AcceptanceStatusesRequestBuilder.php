@@ -29,7 +29,7 @@ class AcceptanceStatusesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the acceptanceStatuses property of the microsoft.graph.termsAndConditions entity.
-     * @param string $termsAndConditionsAcceptanceStatusId Unique identifier of the item
+     * @param string $termsAndConditionsAcceptanceStatusId The unique identifier of termsAndConditionsAcceptanceStatus
      * @return TermsAndConditionsAcceptanceStatusItemRequestBuilder
     */
     public function byTermsAndConditionsAcceptanceStatusId(string $termsAndConditionsAcceptanceStatusId): TermsAndConditionsAcceptanceStatusItemRequestBuilder {

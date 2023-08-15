@@ -29,7 +29,7 @@ class DomainDnsRecordsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the collection of domainDnsRecord entities.
-     * @param string $domainDnsRecordId Unique identifier of the item
+     * @param string $domainDnsRecordId The unique identifier of domainDnsRecord
      * @return DomainDnsRecordItemRequestBuilder
     */
     public function byDomainDnsRecordId(string $domainDnsRecordId): DomainDnsRecordItemRequestBuilder {

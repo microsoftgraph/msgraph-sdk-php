@@ -29,7 +29,7 @@ class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the federatedIdentityCredentials property of the microsoft.graph.application entity.
-     * @param string $federatedIdentityCredentialId Unique identifier of the item
+     * @param string $federatedIdentityCredentialId The unique identifier of federatedIdentityCredential
      * @return FederatedIdentityCredentialItemRequestBuilder
     */
     public function byFederatedIdentityCredentialId(string $federatedIdentityCredentialId): FederatedIdentityCredentialItemRequestBuilder {

@@ -29,7 +29,7 @@ class AssignmentsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the assignments property of the microsoft.graph.deviceConfiguration entity.
-     * @param string $deviceConfigurationAssignmentId Unique identifier of the item
+     * @param string $deviceConfigurationAssignmentId The unique identifier of deviceConfigurationAssignment
      * @return DeviceConfigurationAssignmentItemRequestBuilder
     */
     public function byDeviceConfigurationAssignmentId(string $deviceConfigurationAssignmentId): DeviceConfigurationAssignmentItemRequestBuilder {

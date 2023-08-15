@@ -29,7 +29,7 @@ class ServiceConfigurationRecordsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the serviceConfigurationRecords property of the microsoft.graph.domain entity.
-     * @param string $domainDnsRecordId Unique identifier of the item
+     * @param string $domainDnsRecordId The unique identifier of domainDnsRecord
      * @return DomainDnsRecordItemRequestBuilder
     */
     public function byDomainDnsRecordId(string $domainDnsRecordId): DomainDnsRecordItemRequestBuilder {

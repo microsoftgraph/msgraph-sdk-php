@@ -39,7 +39,7 @@ class ChartsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the charts property of the microsoft.graph.workbookWorksheet entity.
-     * @param string $workbookChartId Unique identifier of the item
+     * @param string $workbookChartId The unique identifier of workbookChart
      * @return WorkbookChartItemRequestBuilder
     */
     public function byWorkbookChartId(string $workbookChartId): WorkbookChartItemRequestBuilder {

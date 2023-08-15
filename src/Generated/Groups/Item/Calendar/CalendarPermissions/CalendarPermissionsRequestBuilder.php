@@ -29,7 +29,7 @@ class CalendarPermissionsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the calendarPermissions property of the microsoft.graph.calendar entity.
-     * @param string $calendarPermissionId Unique identifier of the item
+     * @param string $calendarPermissionId The unique identifier of calendarPermission
      * @return CalendarPermissionItemRequestBuilder
     */
     public function byCalendarPermissionId(string $calendarPermissionId): CalendarPermissionItemRequestBuilder {

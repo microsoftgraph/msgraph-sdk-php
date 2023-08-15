@@ -28,7 +28,7 @@ class FollowedSitesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the followedSites property of the microsoft.graph.user entity.
-     * @param string $siteId Unique identifier of the item
+     * @param string $siteId The unique identifier of site
      * @return SiteItemRequestBuilder
     */
     public function bySiteId(string $siteId): SiteItemRequestBuilder {

@@ -28,7 +28,7 @@ class TasksRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the tasks property of the microsoft.graph.identityGovernance.workflowTemplate entity.
-     * @param string $taskId Unique identifier of the item
+     * @param string $taskId The unique identifier of task
      * @return TaskItemRequestBuilder
     */
     public function byTaskId(string $taskId): TaskItemRequestBuilder {

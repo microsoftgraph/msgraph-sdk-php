@@ -30,7 +30,7 @@ class RunsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the runs property of the microsoft.graph.identityGovernance.workflow entity.
-     * @param string $runId Unique identifier of the item
+     * @param string $runId The unique identifier of run
      * @return RunItemRequestBuilder
     */
     public function byRunId(string $runId): RunItemRequestBuilder {

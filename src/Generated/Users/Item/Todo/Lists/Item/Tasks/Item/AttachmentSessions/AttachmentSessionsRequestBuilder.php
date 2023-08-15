@@ -28,7 +28,7 @@ class AttachmentSessionsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the attachmentSessions property of the microsoft.graph.todoTask entity.
-     * @param string $attachmentSessionId Unique identifier of the item
+     * @param string $attachmentSessionId The unique identifier of attachmentSession
      * @return AttachmentSessionItemRequestBuilder
     */
     public function byAttachmentSessionId(string $attachmentSessionId): AttachmentSessionItemRequestBuilder {

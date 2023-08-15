@@ -29,7 +29,7 @@ class CustomSecurityAttributeDefinitionsRequestBuilder extends BaseRequestBuilde
     
     /**
      * Provides operations to manage the customSecurityAttributeDefinitions property of the microsoft.graph.directory entity.
-     * @param string $customSecurityAttributeDefinitionId Unique identifier of the item
+     * @param string $customSecurityAttributeDefinitionId The unique identifier of customSecurityAttributeDefinition
      * @return CustomSecurityAttributeDefinitionItemRequestBuilder
     */
     public function byCustomSecurityAttributeDefinitionId(string $customSecurityAttributeDefinitionId): CustomSecurityAttributeDefinitionItemRequestBuilder {

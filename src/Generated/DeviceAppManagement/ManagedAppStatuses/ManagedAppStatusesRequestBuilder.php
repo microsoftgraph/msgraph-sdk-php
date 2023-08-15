@@ -29,7 +29,7 @@ class ManagedAppStatusesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the managedAppStatuses property of the microsoft.graph.deviceAppManagement entity.
-     * @param string $managedAppStatusId Unique identifier of the item
+     * @param string $managedAppStatusId The unique identifier of managedAppStatus
      * @return ManagedAppStatusItemRequestBuilder
     */
     public function byManagedAppStatusId(string $managedAppStatusId): ManagedAppStatusItemRequestBuilder {

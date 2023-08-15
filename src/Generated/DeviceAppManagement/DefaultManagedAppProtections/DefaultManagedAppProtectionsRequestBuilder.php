@@ -29,7 +29,7 @@ class DefaultManagedAppProtectionsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the defaultManagedAppProtections property of the microsoft.graph.deviceAppManagement entity.
-     * @param string $defaultManagedAppProtectionId Unique identifier of the item
+     * @param string $defaultManagedAppProtectionId The unique identifier of defaultManagedAppProtection
      * @return DefaultManagedAppProtectionItemRequestBuilder
     */
     public function byDefaultManagedAppProtectionId(string $defaultManagedAppProtectionId): DefaultManagedAppProtectionItemRequestBuilder {

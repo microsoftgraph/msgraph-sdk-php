@@ -36,7 +36,7 @@ class CalendarViewRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the calendarView property of the microsoft.graph.group entity.
-     * @param string $eventId Unique identifier of the item
+     * @param string $eventId The unique identifier of event
      * @return EventItemRequestBuilder
     */
     public function byEventId(string $eventId): EventItemRequestBuilder {

@@ -29,7 +29,7 @@ class SharedCookiesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the sharedCookies property of the microsoft.graph.browserSiteList entity.
-     * @param string $browserSharedCookieId Unique identifier of the item
+     * @param string $browserSharedCookieId The unique identifier of browserSharedCookie
      * @return BrowserSharedCookieItemRequestBuilder
     */
     public function byBrowserSharedCookieId(string $browserSharedCookieId): BrowserSharedCookieItemRequestBuilder {

@@ -29,7 +29,7 @@ class IntelProfilesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the intelProfiles property of the microsoft.graph.security.threatIntelligence entity.
-     * @param string $intelligenceProfileId Unique identifier of the item
+     * @param string $intelligenceProfileId The unique identifier of intelligenceProfile
      * @return IntelligenceProfileItemRequestBuilder
     */
     public function byIntelligenceProfileId(string $intelligenceProfileId): IntelligenceProfileItemRequestBuilder {

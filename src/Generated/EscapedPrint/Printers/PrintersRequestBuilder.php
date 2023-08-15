@@ -37,7 +37,7 @@ class PrintersRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the printers property of the microsoft.graph.print entity.
-     * @param string $printerId Unique identifier of the item
+     * @param string $printerId The unique identifier of printer
      * @return PrinterItemRequestBuilder
     */
     public function byPrinterId(string $printerId): PrinterItemRequestBuilder {

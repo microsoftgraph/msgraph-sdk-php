@@ -37,7 +37,7 @@ class ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder extends BaseRequest
     
     /**
      * Provides operations to manage the importedWindowsAutopilotDeviceIdentities property of the microsoft.graph.deviceManagement entity.
-     * @param string $importedWindowsAutopilotDeviceIdentityId Unique identifier of the item
+     * @param string $importedWindowsAutopilotDeviceIdentityId The unique identifier of importedWindowsAutopilotDeviceIdentity
      * @return ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder
     */
     public function byImportedWindowsAutopilotDeviceIdentityId(string $importedWindowsAutopilotDeviceIdentityId): ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder {

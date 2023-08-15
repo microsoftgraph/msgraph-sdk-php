@@ -29,7 +29,7 @@ class TelecomExpenseManagementPartnersRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the telecomExpenseManagementPartners property of the microsoft.graph.deviceManagement entity.
-     * @param string $telecomExpenseManagementPartnerId Unique identifier of the item
+     * @param string $telecomExpenseManagementPartnerId The unique identifier of telecomExpenseManagementPartner
      * @return TelecomExpenseManagementPartnerItemRequestBuilder
     */
     public function byTelecomExpenseManagementPartnerId(string $telecomExpenseManagementPartnerId): TelecomExpenseManagementPartnerItemRequestBuilder {

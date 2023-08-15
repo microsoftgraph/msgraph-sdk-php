@@ -29,7 +29,7 @@ class MembersRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the members property of the microsoft.graph.externalConnectors.externalGroup entity.
-     * @param string $identityId Unique identifier of the item
+     * @param string $identityId The unique identifier of identity
      * @return IdentityItemRequestBuilder
     */
     public function byIdentityId(string $identityId): IdentityItemRequestBuilder {

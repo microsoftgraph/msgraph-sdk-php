@@ -29,7 +29,7 @@ class LinkedResourcesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the linkedResources property of the microsoft.graph.todoTask entity.
-     * @param string $linkedResourceId Unique identifier of the item
+     * @param string $linkedResourceId The unique identifier of linkedResource
      * @return LinkedResourceItemRequestBuilder
     */
     public function byLinkedResourceId(string $linkedResourceId): LinkedResourceItemRequestBuilder {

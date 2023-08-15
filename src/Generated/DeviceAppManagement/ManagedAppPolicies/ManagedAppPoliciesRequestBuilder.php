@@ -29,7 +29,7 @@ class ManagedAppPoliciesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the managedAppPolicies property of the microsoft.graph.deviceAppManagement entity.
-     * @param string $managedAppPolicyId Unique identifier of the item
+     * @param string $managedAppPolicyId The unique identifier of managedAppPolicy
      * @return ManagedAppPolicyItemRequestBuilder
     */
     public function byManagedAppPolicyId(string $managedAppPolicyId): ManagedAppPolicyItemRequestBuilder {
@@ -53,10 +53,10 @@ class ManagedAppPoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the windowsInformationProtection objects.
+     * List properties and relationships of the targetedManagedAppProtection objects.
      * @param ManagedAppPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://learn.microsoft.com/graph/api/intune-mam-windowsinformationprotection-list?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-mam-targetedmanagedappprotection-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?ManagedAppPoliciesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -91,7 +91,7 @@ class ManagedAppPoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the windowsInformationProtection objects.
+     * List properties and relationships of the targetedManagedAppProtection objects.
      * @param ManagedAppPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

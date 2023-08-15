@@ -37,7 +37,7 @@ class CallsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the calls property of the microsoft.graph.cloudCommunications entity.
-     * @param string $callId Unique identifier of the item
+     * @param string $callId The unique identifier of call
      * @return CallItemRequestBuilder
     */
     public function byCallId(string $callId): CallItemRequestBuilder {

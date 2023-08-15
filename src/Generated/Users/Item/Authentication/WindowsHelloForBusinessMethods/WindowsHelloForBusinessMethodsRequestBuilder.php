@@ -28,7 +28,7 @@ class WindowsHelloForBusinessMethodsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the windowsHelloForBusinessMethods property of the microsoft.graph.authentication entity.
-     * @param string $windowsHelloForBusinessAuthenticationMethodId Unique identifier of the item
+     * @param string $windowsHelloForBusinessAuthenticationMethodId The unique identifier of windowsHelloForBusinessAuthenticationMethod
      * @return WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder
     */
     public function byWindowsHelloForBusinessAuthenticationMethodId(string $windowsHelloForBusinessAuthenticationMethodId): WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder {

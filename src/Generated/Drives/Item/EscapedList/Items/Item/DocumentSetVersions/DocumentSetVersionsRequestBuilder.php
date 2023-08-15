@@ -29,7 +29,7 @@ class DocumentSetVersionsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the documentSetVersions property of the microsoft.graph.listItem entity.
-     * @param string $documentSetVersionId Unique identifier of the item
+     * @param string $documentSetVersionId The unique identifier of documentSetVersion
      * @return DocumentSetVersionItemRequestBuilder
     */
     public function byDocumentSetVersionId(string $documentSetVersionId): DocumentSetVersionItemRequestBuilder {

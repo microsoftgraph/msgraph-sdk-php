@@ -29,7 +29,7 @@ class ProtectedAppLockerFilesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the protectedAppLockerFiles property of the microsoft.graph.windowsInformationProtection entity.
-     * @param string $windowsInformationProtectionAppLockerFileId Unique identifier of the item
+     * @param string $windowsInformationProtectionAppLockerFileId The unique identifier of windowsInformationProtectionAppLockerFile
      * @return WindowsInformationProtectionAppLockerFileItemRequestBuilder
     */
     public function byWindowsInformationProtectionAppLockerFileId(string $windowsInformationProtectionAppLockerFileId): WindowsInformationProtectionAppLockerFileItemRequestBuilder {

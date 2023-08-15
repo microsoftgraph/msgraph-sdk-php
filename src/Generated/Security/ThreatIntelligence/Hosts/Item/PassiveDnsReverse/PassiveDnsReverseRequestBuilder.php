@@ -28,7 +28,7 @@ class PassiveDnsReverseRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the passiveDnsReverse property of the microsoft.graph.security.host entity.
-     * @param string $passiveDnsRecordId Unique identifier of the item
+     * @param string $passiveDnsRecordId The unique identifier of passiveDnsRecord
      * @return PassiveDnsRecordItemRequestBuilder
     */
     public function byPassiveDnsRecordId(string $passiveDnsRecordId): PassiveDnsRecordItemRequestBuilder {

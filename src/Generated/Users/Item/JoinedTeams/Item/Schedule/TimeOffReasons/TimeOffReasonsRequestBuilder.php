@@ -29,7 +29,7 @@ class TimeOffReasonsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the timeOffReasons property of the microsoft.graph.schedule entity.
-     * @param string $timeOffReasonId Unique identifier of the item
+     * @param string $timeOffReasonId The unique identifier of timeOffReason
      * @return TimeOffReasonItemRequestBuilder
     */
     public function byTimeOffReasonId(string $timeOffReasonId): TimeOffReasonItemRequestBuilder {

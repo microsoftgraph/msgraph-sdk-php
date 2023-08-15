@@ -29,7 +29,7 @@ class LicenseDetailsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the licenseDetails property of the microsoft.graph.user entity.
-     * @param string $licenseDetailsId Unique identifier of the item
+     * @param string $licenseDetailsId The unique identifier of licenseDetails
      * @return LicenseDetailsItemRequestBuilder
     */
     public function byLicenseDetailsId(string $licenseDetailsId): LicenseDetailsItemRequestBuilder {

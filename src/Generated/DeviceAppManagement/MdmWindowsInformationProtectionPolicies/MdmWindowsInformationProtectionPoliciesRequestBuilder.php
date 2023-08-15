@@ -29,7 +29,7 @@ class MdmWindowsInformationProtectionPoliciesRequestBuilder extends BaseRequestB
     
     /**
      * Provides operations to manage the mdmWindowsInformationProtectionPolicies property of the microsoft.graph.deviceAppManagement entity.
-     * @param string $mdmWindowsInformationProtectionPolicyId Unique identifier of the item
+     * @param string $mdmWindowsInformationProtectionPolicyId The unique identifier of mdmWindowsInformationProtectionPolicy
      * @return MdmWindowsInformationProtectionPolicyItemRequestBuilder
     */
     public function byMdmWindowsInformationProtectionPolicyId(string $mdmWindowsInformationProtectionPolicyId): MdmWindowsInformationProtectionPolicyItemRequestBuilder {

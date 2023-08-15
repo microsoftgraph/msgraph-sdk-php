@@ -28,7 +28,7 @@ class CategoriesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the categories property of the microsoft.graph.mobileApp entity.
-     * @param string $mobileAppCategoryId Unique identifier of the item
+     * @param string $mobileAppCategoryId The unique identifier of mobileAppCategory
      * @return MobileAppCategoryItemRequestBuilder
     */
     public function byMobileAppCategoryId(string $mobileAppCategoryId): MobileAppCategoryItemRequestBuilder {

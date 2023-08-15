@@ -29,7 +29,7 @@ class RubricsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the rubrics property of the microsoft.graph.educationUser entity.
-     * @param string $educationRubricId Unique identifier of the item
+     * @param string $educationRubricId The unique identifier of educationRubric
      * @return EducationRubricItemRequestBuilder
     */
     public function byEducationRubricId(string $educationRubricId): EducationRubricItemRequestBuilder {

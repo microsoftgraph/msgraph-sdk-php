@@ -29,7 +29,7 @@ class SubmissionsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the submissions property of the microsoft.graph.educationAssignment entity.
-     * @param string $educationSubmissionId Unique identifier of the item
+     * @param string $educationSubmissionId The unique identifier of educationSubmission
      * @return EducationSubmissionItemRequestBuilder
     */
     public function byEducationSubmissionId(string $educationSubmissionId): EducationSubmissionItemRequestBuilder {

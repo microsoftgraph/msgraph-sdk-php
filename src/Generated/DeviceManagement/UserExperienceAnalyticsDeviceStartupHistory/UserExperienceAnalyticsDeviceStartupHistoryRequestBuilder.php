@@ -29,7 +29,7 @@ class UserExperienceAnalyticsDeviceStartupHistoryRequestBuilder extends BaseRequ
     
     /**
      * Provides operations to manage the userExperienceAnalyticsDeviceStartupHistory property of the microsoft.graph.deviceManagement entity.
-     * @param string $userExperienceAnalyticsDeviceStartupHistoryId Unique identifier of the item
+     * @param string $userExperienceAnalyticsDeviceStartupHistoryId The unique identifier of userExperienceAnalyticsDeviceStartupHistory
      * @return UserExperienceAnalyticsDeviceStartupHistoryItemRequestBuilder
     */
     public function byUserExperienceAnalyticsDeviceStartupHistoryId(string $userExperienceAnalyticsDeviceStartupHistoryId): UserExperienceAnalyticsDeviceStartupHistoryItemRequestBuilder {

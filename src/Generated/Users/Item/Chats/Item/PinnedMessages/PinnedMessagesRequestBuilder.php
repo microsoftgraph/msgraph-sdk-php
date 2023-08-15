@@ -29,7 +29,7 @@ class PinnedMessagesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the pinnedMessages property of the microsoft.graph.chat entity.
-     * @param string $pinnedChatMessageInfoId Unique identifier of the item
+     * @param string $pinnedChatMessageInfoId The unique identifier of pinnedChatMessageInfo
      * @return PinnedChatMessageInfoItemRequestBuilder
     */
     public function byPinnedChatMessageInfoId(string $pinnedChatMessageInfoId): PinnedChatMessageInfoItemRequestBuilder {

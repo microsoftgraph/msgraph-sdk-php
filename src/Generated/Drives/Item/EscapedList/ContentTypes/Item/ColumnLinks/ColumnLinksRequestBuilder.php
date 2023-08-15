@@ -29,7 +29,7 @@ class ColumnLinksRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the columnLinks property of the microsoft.graph.contentType entity.
-     * @param string $columnLinkId Unique identifier of the item
+     * @param string $columnLinkId The unique identifier of columnLink
      * @return ColumnLinkItemRequestBuilder
     */
     public function byColumnLinkId(string $columnLinkId): ColumnLinkItemRequestBuilder {

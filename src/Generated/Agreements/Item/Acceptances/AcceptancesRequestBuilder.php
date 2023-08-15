@@ -29,7 +29,7 @@ class AcceptancesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the acceptances property of the microsoft.graph.agreement entity.
-     * @param string $agreementAcceptanceId Unique identifier of the item
+     * @param string $agreementAcceptanceId The unique identifier of agreementAcceptance
      * @return AgreementAcceptanceItemRequestBuilder
     */
     public function byAgreementAcceptanceId(string $agreementAcceptanceId): AgreementAcceptanceItemRequestBuilder {

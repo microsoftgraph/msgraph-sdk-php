@@ -29,7 +29,7 @@ class SchemaExtensionsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the collection of schemaExtension entities.
-     * @param string $schemaExtensionId Unique identifier of the item
+     * @param string $schemaExtensionId The unique identifier of schemaExtension
      * @return SchemaExtensionItemRequestBuilder
     */
     public function bySchemaExtensionId(string $schemaExtensionId): SchemaExtensionItemRequestBuilder {

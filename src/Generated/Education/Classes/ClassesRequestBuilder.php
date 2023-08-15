@@ -37,7 +37,7 @@ class ClassesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the classes property of the microsoft.graph.educationRoot entity.
-     * @param string $educationClassId Unique identifier of the item
+     * @param string $educationClassId The unique identifier of educationClass
      * @return EducationClassItemRequestBuilder
     */
     public function byEducationClassId(string $educationClassId): EducationClassItemRequestBuilder {

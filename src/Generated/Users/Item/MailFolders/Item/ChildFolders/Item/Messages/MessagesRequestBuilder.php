@@ -37,7 +37,7 @@ class MessagesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the messages property of the microsoft.graph.mailFolder entity.
-     * @param string $messageId Unique identifier of the item
+     * @param string $messageId The unique identifier of message
      * @return MessageItemRequestBuilder
     */
     public function byMessageId(string $messageId): MessageItemRequestBuilder {

@@ -29,7 +29,7 @@ class PlansRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the plans property of the microsoft.graph.planner entity.
-     * @param string $plannerPlanId Unique identifier of the item
+     * @param string $plannerPlanId The unique identifier of plannerPlan
      * @return PlannerPlanItemRequestBuilder
     */
     public function byPlannerPlanId(string $plannerPlanId): PlannerPlanItemRequestBuilder {

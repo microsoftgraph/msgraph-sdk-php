@@ -29,7 +29,7 @@ class InstalledAppsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the installedApps property of the microsoft.graph.team entity.
-     * @param string $teamsAppInstallationId Unique identifier of the item
+     * @param string $teamsAppInstallationId The unique identifier of teamsAppInstallation
      * @return TeamsAppInstallationItemRequestBuilder
     */
     public function byTeamsAppInstallationId(string $teamsAppInstallationId): TeamsAppInstallationItemRequestBuilder {

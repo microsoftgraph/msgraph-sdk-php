@@ -29,7 +29,7 @@ class AgreementsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the agreements property of the microsoft.graph.termsOfUseContainer entity.
-     * @param string $agreementId Unique identifier of the item
+     * @param string $agreementId The unique identifier of agreement
      * @return AgreementItemRequestBuilder
     */
     public function byAgreementId(string $agreementId): AgreementItemRequestBuilder {

@@ -21,7 +21,7 @@ class SubscriptionsRequestBuilder extends BaseRequestBuilder
 {
     /**
      * Provides operations to manage the collection of subscription entities.
-     * @param string $subscriptionId Unique identifier of the item
+     * @param string $subscriptionId The unique identifier of subscription
      * @return SubscriptionItemRequestBuilder
     */
     public function bySubscriptionId(string $subscriptionId): SubscriptionItemRequestBuilder {

@@ -30,7 +30,7 @@ class RoleEligibilityScheduleInstancesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the roleEligibilityScheduleInstances property of the microsoft.graph.rbacApplication entity.
-     * @param string $unifiedRoleEligibilityScheduleInstanceId Unique identifier of the item
+     * @param string $unifiedRoleEligibilityScheduleInstanceId The unique identifier of unifiedRoleEligibilityScheduleInstance
      * @return UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder
     */
     public function byUnifiedRoleEligibilityScheduleInstanceId(string $unifiedRoleEligibilityScheduleInstanceId): UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder {

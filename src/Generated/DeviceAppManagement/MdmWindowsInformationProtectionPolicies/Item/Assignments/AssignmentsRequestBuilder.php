@@ -29,7 +29,7 @@ class AssignmentsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the assignments property of the microsoft.graph.windowsInformationProtection entity.
-     * @param string $targetedManagedAppPolicyAssignmentId Unique identifier of the item
+     * @param string $targetedManagedAppPolicyAssignmentId The unique identifier of targetedManagedAppPolicyAssignment
      * @return TargetedManagedAppPolicyAssignmentItemRequestBuilder
     */
     public function byTargetedManagedAppPolicyAssignmentId(string $targetedManagedAppPolicyAssignmentId): TargetedManagedAppPolicyAssignmentItemRequestBuilder {

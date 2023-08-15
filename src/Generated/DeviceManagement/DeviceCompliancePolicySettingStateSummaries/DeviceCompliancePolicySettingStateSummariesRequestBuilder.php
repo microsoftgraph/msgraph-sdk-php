@@ -29,7 +29,7 @@ class DeviceCompliancePolicySettingStateSummariesRequestBuilder extends BaseRequ
     
     /**
      * Provides operations to manage the deviceCompliancePolicySettingStateSummaries property of the microsoft.graph.deviceManagement entity.
-     * @param string $deviceCompliancePolicySettingStateSummaryId Unique identifier of the item
+     * @param string $deviceCompliancePolicySettingStateSummaryId The unique identifier of deviceCompliancePolicySettingStateSummary
      * @return DeviceCompliancePolicySettingStateSummaryItemRequestBuilder
     */
     public function byDeviceCompliancePolicySettingStateSummaryId(string $deviceCompliancePolicySettingStateSummaryId): DeviceCompliancePolicySettingStateSummaryItemRequestBuilder {

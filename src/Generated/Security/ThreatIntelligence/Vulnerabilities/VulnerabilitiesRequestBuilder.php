@@ -29,7 +29,7 @@ class VulnerabilitiesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the vulnerabilities property of the microsoft.graph.security.threatIntelligence entity.
-     * @param string $vulnerabilityId Unique identifier of the item
+     * @param string $vulnerabilityId The unique identifier of vulnerability
      * @return VulnerabilityItemRequestBuilder
     */
     public function byVulnerabilityId(string $vulnerabilityId): VulnerabilityItemRequestBuilder {

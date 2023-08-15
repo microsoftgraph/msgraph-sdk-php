@@ -29,7 +29,7 @@ class TrendingRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the trending property of the microsoft.graph.officeGraphInsights entity.
-     * @param string $trendingId Unique identifier of the item
+     * @param string $trendingId The unique identifier of trending
      * @return TrendingItemRequestBuilder
     */
     public function byTrendingId(string $trendingId): TrendingItemRequestBuilder {

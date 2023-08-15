@@ -29,7 +29,7 @@ class RepliesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the replies property of the microsoft.graph.workbookComment entity.
-     * @param string $workbookCommentReplyId Unique identifier of the item
+     * @param string $workbookCommentReplyId The unique identifier of workbookCommentReply
      * @return WorkbookCommentReplyItemRequestBuilder
     */
     public function byWorkbookCommentReplyId(string $workbookCommentReplyId): WorkbookCommentReplyItemRequestBuilder {

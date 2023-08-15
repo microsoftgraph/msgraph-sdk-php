@@ -29,7 +29,7 @@ class RequestsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the requests property of the microsoft.graph.delegatedAdminRelationship entity.
-     * @param string $delegatedAdminRelationshipRequestId Unique identifier of the item
+     * @param string $delegatedAdminRelationshipRequestId The unique identifier of delegatedAdminRelationshipRequest
      * @return DelegatedAdminRelationshipRequestItemRequestBuilder
     */
     public function byDelegatedAdminRelationshipRequestId(string $delegatedAdminRelationshipRequestId): DelegatedAdminRelationshipRequestItemRequestBuilder {

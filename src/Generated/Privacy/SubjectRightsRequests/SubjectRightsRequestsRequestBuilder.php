@@ -29,7 +29,7 @@ class SubjectRightsRequestsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the subjectRightsRequests property of the microsoft.graph.privacy entity.
-     * @param string $subjectRightsRequestId Unique identifier of the item
+     * @param string $subjectRightsRequestId The unique identifier of subjectRightsRequest
      * @return SubjectRightsRequestItemRequestBuilder
     */
     public function bySubjectRightsRequestId(string $subjectRightsRequestId): SubjectRightsRequestItemRequestBuilder {

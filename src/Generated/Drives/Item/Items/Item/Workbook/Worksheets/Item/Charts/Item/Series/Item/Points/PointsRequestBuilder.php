@@ -30,7 +30,7 @@ class PointsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the points property of the microsoft.graph.workbookChartSeries entity.
-     * @param string $workbookChartPointId Unique identifier of the item
+     * @param string $workbookChartPointId The unique identifier of workbookChartPoint
      * @return WorkbookChartPointItemRequestBuilder
     */
     public function byWorkbookChartPointId(string $workbookChartPointId): WorkbookChartPointItemRequestBuilder {
@@ -54,10 +54,10 @@ class PointsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of chartpoints objects.
+     * Retrieve a list of chartpoint objects.
      * @param PointsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://learn.microsoft.com/graph/api/chartseries-list-points?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/chartpoint-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?PointsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -102,7 +102,7 @@ class PointsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of chartpoints objects.
+     * Retrieve a list of chartpoint objects.
      * @param PointsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

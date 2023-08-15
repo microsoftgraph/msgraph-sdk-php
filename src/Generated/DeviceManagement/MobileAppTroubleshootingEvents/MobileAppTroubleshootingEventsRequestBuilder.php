@@ -29,7 +29,7 @@ class MobileAppTroubleshootingEventsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the mobileAppTroubleshootingEvents property of the microsoft.graph.deviceManagement entity.
-     * @param string $mobileAppTroubleshootingEventId Unique identifier of the item
+     * @param string $mobileAppTroubleshootingEventId The unique identifier of mobileAppTroubleshootingEvent
      * @return MobileAppTroubleshootingEventItemRequestBuilder
     */
     public function byMobileAppTroubleshootingEventId(string $mobileAppTroubleshootingEventId): MobileAppTroubleshootingEventItemRequestBuilder {

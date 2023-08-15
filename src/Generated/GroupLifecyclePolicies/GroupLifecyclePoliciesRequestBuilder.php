@@ -29,7 +29,7 @@ class GroupLifecyclePoliciesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the collection of groupLifecyclePolicy entities.
-     * @param string $groupLifecyclePolicyId Unique identifier of the item
+     * @param string $groupLifecyclePolicyId The unique identifier of groupLifecyclePolicy
      * @return GroupLifecyclePolicyItemRequestBuilder
     */
     public function byGroupLifecyclePolicyId(string $groupLifecyclePolicyId): GroupLifecyclePolicyItemRequestBuilder {

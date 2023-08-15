@@ -38,7 +38,7 @@ class NotebooksRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the notebooks property of the microsoft.graph.onenote entity.
-     * @param string $notebookId Unique identifier of the item
+     * @param string $notebookId The unique identifier of notebook
      * @return NotebookItemRequestBuilder
     */
     public function byNotebookId(string $notebookId): NotebookItemRequestBuilder {

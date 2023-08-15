@@ -29,7 +29,7 @@ class ProvisioningRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the provisioning property of the microsoft.graph.auditLogRoot entity.
-     * @param string $provisioningObjectSummaryId Unique identifier of the item
+     * @param string $provisioningObjectSummaryId The unique identifier of provisioningObjectSummary
      * @return ProvisioningObjectSummaryItemRequestBuilder
     */
     public function byProvisioningObjectSummaryId(string $provisioningObjectSummaryId): ProvisioningObjectSummaryItemRequestBuilder {

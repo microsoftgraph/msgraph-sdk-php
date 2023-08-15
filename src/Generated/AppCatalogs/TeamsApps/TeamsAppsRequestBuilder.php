@@ -29,7 +29,7 @@ class TeamsAppsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the teamsApps property of the microsoft.graph.appCatalogs entity.
-     * @param string $teamsAppId Unique identifier of the item
+     * @param string $teamsAppId The unique identifier of teamsApp
      * @return TeamsAppItemRequestBuilder
     */
     public function byTeamsAppId(string $teamsAppId): TeamsAppItemRequestBuilder {

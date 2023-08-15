@@ -29,7 +29,7 @@ class EndpointsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the endpoints property of the microsoft.graph.printService entity.
-     * @param string $printServiceEndpointId Unique identifier of the item
+     * @param string $printServiceEndpointId The unique identifier of printServiceEndpoint
      * @return PrintServiceEndpointItemRequestBuilder
     */
     public function byPrintServiceEndpointId(string $printServiceEndpointId): PrintServiceEndpointItemRequestBuilder {

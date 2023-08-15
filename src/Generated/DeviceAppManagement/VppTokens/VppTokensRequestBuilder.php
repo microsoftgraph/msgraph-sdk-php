@@ -29,7 +29,7 @@ class VppTokensRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the vppTokens property of the microsoft.graph.deviceAppManagement entity.
-     * @param string $vppTokenId Unique identifier of the item
+     * @param string $vppTokenId The unique identifier of vppToken
      * @return VppTokenItemRequestBuilder
     */
     public function byVppTokenId(string $vppTokenId): VppTokenItemRequestBuilder {

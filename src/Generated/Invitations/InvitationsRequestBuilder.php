@@ -29,7 +29,7 @@ class InvitationsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the collection of invitation entities.
-     * @param string $invitationId Unique identifier of the item
+     * @param string $invitationId The unique identifier of invitation
      * @return InvitationItemRequestBuilder
     */
     public function byInvitationId(string $invitationId): InvitationItemRequestBuilder {

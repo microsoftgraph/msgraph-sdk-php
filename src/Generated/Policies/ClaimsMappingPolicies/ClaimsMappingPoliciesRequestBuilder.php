@@ -29,7 +29,7 @@ class ClaimsMappingPoliciesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the claimsMappingPolicies property of the microsoft.graph.policyRoot entity.
-     * @param string $claimsMappingPolicyId Unique identifier of the item
+     * @param string $claimsMappingPolicyId The unique identifier of claimsMappingPolicy
      * @return ClaimsMappingPolicyItemRequestBuilder
     */
     public function byClaimsMappingPolicyId(string $claimsMappingPolicyId): ClaimsMappingPolicyItemRequestBuilder {

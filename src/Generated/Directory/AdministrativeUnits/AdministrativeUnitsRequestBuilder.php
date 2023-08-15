@@ -37,7 +37,7 @@ class AdministrativeUnitsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the administrativeUnits property of the microsoft.graph.directory entity.
-     * @param string $administrativeUnitId Unique identifier of the item
+     * @param string $administrativeUnitId The unique identifier of administrativeUnit
      * @return AdministrativeUnitItemRequestBuilder
     */
     public function byAdministrativeUnitId(string $administrativeUnitId): AdministrativeUnitItemRequestBuilder {

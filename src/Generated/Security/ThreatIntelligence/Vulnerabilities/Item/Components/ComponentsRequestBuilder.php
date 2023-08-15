@@ -29,7 +29,7 @@ class ComponentsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the components property of the microsoft.graph.security.vulnerability entity.
-     * @param string $vulnerabilityComponentId Unique identifier of the item
+     * @param string $vulnerabilityComponentId The unique identifier of vulnerabilityComponent
      * @return VulnerabilityComponentItemRequestBuilder
     */
     public function byVulnerabilityComponentId(string $vulnerabilityComponentId): VulnerabilityComponentItemRequestBuilder {

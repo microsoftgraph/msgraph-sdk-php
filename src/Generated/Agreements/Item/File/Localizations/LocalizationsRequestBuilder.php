@@ -29,7 +29,7 @@ class LocalizationsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the localizations property of the microsoft.graph.agreementFile entity.
-     * @param string $agreementFileLocalizationId Unique identifier of the item
+     * @param string $agreementFileLocalizationId The unique identifier of agreementFileLocalization
      * @return AgreementFileLocalizationItemRequestBuilder
     */
     public function byAgreementFileLocalizationId(string $agreementFileLocalizationId): AgreementFileLocalizationItemRequestBuilder {

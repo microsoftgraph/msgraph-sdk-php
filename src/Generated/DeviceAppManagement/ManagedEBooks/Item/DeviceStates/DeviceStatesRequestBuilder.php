@@ -29,7 +29,7 @@ class DeviceStatesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the deviceStates property of the microsoft.graph.managedEBook entity.
-     * @param string $deviceInstallStateId Unique identifier of the item
+     * @param string $deviceInstallStateId The unique identifier of deviceInstallState
      * @return DeviceInstallStateItemRequestBuilder
     */
     public function byDeviceInstallStateId(string $deviceInstallStateId): DeviceInstallStateItemRequestBuilder {

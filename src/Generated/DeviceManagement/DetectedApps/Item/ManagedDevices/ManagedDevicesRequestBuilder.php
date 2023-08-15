@@ -28,7 +28,7 @@ class ManagedDevicesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the managedDevices property of the microsoft.graph.detectedApp entity.
-     * @param string $managedDeviceId Unique identifier of the item
+     * @param string $managedDeviceId The unique identifier of managedDevice
      * @return ManagedDeviceItemRequestBuilder
     */
     public function byManagedDeviceId(string $managedDeviceId): ManagedDeviceItemRequestBuilder {

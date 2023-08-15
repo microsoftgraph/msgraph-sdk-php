@@ -29,7 +29,7 @@ class TabsRequestBuilder extends BaseRequestBuilder
     
     /**
      * Provides operations to manage the tabs property of the microsoft.graph.channel entity.
-     * @param string $teamsTabId Unique identifier of the item
+     * @param string $teamsTabId The unique identifier of teamsTab
      * @return TeamsTabItemRequestBuilder
     */
     public function byTeamsTabId(string $teamsTabId): TeamsTabItemRequestBuilder {
