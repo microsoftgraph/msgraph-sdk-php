@@ -16,7 +16,14 @@ defaults:
 jobs:
   validate-pull-request:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php-versions: ['7.4', '8.0', '8.1', '8.2']
     steps:
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: ${{ matrix.php-versions }}
     - uses: actions/checkout@v3
     - name: Validate composer file
       run: |
