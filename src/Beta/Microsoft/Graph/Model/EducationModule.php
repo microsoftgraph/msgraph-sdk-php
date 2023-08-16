@@ -26,6 +26,7 @@ class EducationModule extends Entity
 {
     /**
     * Gets the createdBy
+    * The display name of the user that created the module.
     *
     * @return IdentitySet|null The createdBy
     */
@@ -44,6 +45,7 @@ class EducationModule extends Entity
 
     /**
     * Sets the createdBy
+    * The display name of the user that created the module.
     *
     * @param IdentitySet $val The createdBy
     *
@@ -57,6 +59,7 @@ class EducationModule extends Entity
 
     /**
     * Gets the createdDateTime
+    * Date time the module was created.  The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -75,6 +78,7 @@ class EducationModule extends Entity
 
     /**
     * Sets the createdDateTime
+    * Date time the module was created.  The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -88,6 +92,7 @@ class EducationModule extends Entity
 
     /**
     * Gets the description
+    * Description of the module.
     *
     * @return string|null The description
     */
@@ -102,6 +107,7 @@ class EducationModule extends Entity
 
     /**
     * Sets the description
+    * Description of the module.
     *
     * @param string $val The description
     *
@@ -115,6 +121,7 @@ class EducationModule extends Entity
 
     /**
     * Gets the displayName
+    * Name of the module.
     *
     * @return string|null The displayName
     */
@@ -129,6 +136,7 @@ class EducationModule extends Entity
 
     /**
     * Sets the displayName
+    * Name of the module.
     *
     * @param string $val The displayName
     *
@@ -142,6 +150,7 @@ class EducationModule extends Entity
 
     /**
     * Gets the isPinned
+    * Indicates whether the module is pinned or not.
     *
     * @return bool|null The isPinned
     */
@@ -156,6 +165,7 @@ class EducationModule extends Entity
 
     /**
     * Sets the isPinned
+    * Indicates whether the module is pinned or not.
     *
     * @param bool $val The isPinned
     *
@@ -169,6 +179,7 @@ class EducationModule extends Entity
 
     /**
     * Gets the lastModifiedBy
+    * The last user that modified the module.
     *
     * @return IdentitySet|null The lastModifiedBy
     */
@@ -187,6 +198,7 @@ class EducationModule extends Entity
 
     /**
     * Sets the lastModifiedBy
+    * The last user that modified the module.
     *
     * @param IdentitySet $val The lastModifiedBy
     *
@@ -200,6 +212,7 @@ class EducationModule extends Entity
 
     /**
     * Gets the lastModifiedDateTime
+    * Date time the module was last modified.  The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z
     *
     * @return \DateTime|null The lastModifiedDateTime
     */
@@ -218,6 +231,7 @@ class EducationModule extends Entity
 
     /**
     * Sets the lastModifiedDateTime
+    * Date time the module was last modified.  The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -231,6 +245,7 @@ class EducationModule extends Entity
 
     /**
     * Gets the resourcesFolderUrl
+    * Folder URL where all the file resources for this module are stored.
     *
     * @return string|null The resourcesFolderUrl
     */
@@ -245,6 +260,7 @@ class EducationModule extends Entity
 
     /**
     * Sets the resourcesFolderUrl
+    * Folder URL where all the file resources for this module are stored.
     *
     * @param string $val The resourcesFolderUrl
     *
@@ -258,6 +274,7 @@ class EducationModule extends Entity
 
     /**
     * Gets the status
+    * Status of the module.  You can't use a PATCH operation to update this value. Possible values are: draft and published.
     *
     * @return EducationModuleStatus|null The status
     */
@@ -276,6 +293,7 @@ class EducationModule extends Entity
 
     /**
     * Sets the status
+    * Status of the module.  You can't use a PATCH operation to update this value. Possible values are: draft and published.
     *
     * @param EducationModuleStatus $val The status
     *
@@ -290,6 +308,7 @@ class EducationModule extends Entity
 
      /**
      * Gets the resources
+    * Learning objects that are associated with this module.  Only teachers can modify this list. Nullable.
      *
      * @return array|null The resources
      */
@@ -304,6 +323,7 @@ class EducationModule extends Entity
 
     /**
     * Sets the resources
+    * Learning objects that are associated with this module.  Only teachers can modify this list. Nullable.
     *
     * @param EducationModuleResource[] $val The resources
     *

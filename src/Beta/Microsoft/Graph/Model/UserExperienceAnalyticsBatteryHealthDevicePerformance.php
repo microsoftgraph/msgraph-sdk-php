@@ -26,7 +26,7 @@ class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entity
 {
     /**
     * Gets the batteryAgeInDays
-    * Estimated battery age. Unit in days. Valid values -2147483648 to 2147483647
+    * Estimated battery age. Unit in days. Valid values 0 to 2147483647
     *
     * @return int|null The batteryAgeInDays
     */
@@ -41,7 +41,7 @@ class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entity
 
     /**
     * Sets the batteryAgeInDays
-    * Estimated battery age. Unit in days. Valid values -2147483648 to 2147483647
+    * Estimated battery age. Unit in days. Valid values 0 to 2147483647
     *
     * @param int $val The batteryAgeInDays
     *
@@ -84,7 +84,7 @@ class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entity
 
     /**
     * Gets the deviceBatteryHealthScore
-    * A weighted average of a device’s maximum capacity score and runtime estimate score. Values range from 0-100. Valid values -2147483648 to 2147483647
+    * A weighted average of a device’s maximum capacity score and runtime estimate score. Values range from 0-100. Valid values 0 to 2147483647
     *
     * @return int|null The deviceBatteryHealthScore
     */
@@ -99,7 +99,7 @@ class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entity
 
     /**
     * Sets the deviceBatteryHealthScore
-    * A weighted average of a device’s maximum capacity score and runtime estimate score. Values range from 0-100. Valid values -2147483648 to 2147483647
+    * A weighted average of a device’s maximum capacity score and runtime estimate score. Values range from 0-100. Valid values 0 to 2147483647
     *
     * @param int $val The deviceBatteryHealthScore
     *
@@ -171,7 +171,7 @@ class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entity
 
     /**
     * Gets the estimatedRuntimeInMinutes
-    * The estimated runtime of the device when the battery is fully charged. Unit in minutes. Valid values -2147483648 to 2147483647
+    * The estimated runtime of the device when the battery is fully charged. Unit in minutes. Valid values 0 to 2147483647
     *
     * @return int|null The estimatedRuntimeInMinutes
     */
@@ -186,7 +186,7 @@ class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entity
 
     /**
     * Sets the estimatedRuntimeInMinutes
-    * The estimated runtime of the device when the battery is fully charged. Unit in minutes. Valid values -2147483648 to 2147483647
+    * The estimated runtime of the device when the battery is fully charged. Unit in minutes. Valid values 0 to 2147483647
     *
     * @param int $val The estimatedRuntimeInMinutes
     *
@@ -291,7 +291,7 @@ class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entity
 
     /**
     * Gets the maxCapacityPercentage
-    * Ratio of current capacity and design capacity of the battery with the lowest capacity. Unit in percentage and values range from 0-100. Valid values -2147483648 to 2147483647
+    * Ratio of current capacity and design capacity of the battery with the lowest capacity. Unit in percentage and values range from 0-100. Valid values 0 to 2147483647
     *
     * @return int|null The maxCapacityPercentage
     */
@@ -306,7 +306,7 @@ class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entity
 
     /**
     * Sets the maxCapacityPercentage
-    * Ratio of current capacity and design capacity of the battery with the lowest capacity. Unit in percentage and values range from 0-100. Valid values -2147483648 to 2147483647
+    * Ratio of current capacity and design capacity of the battery with the lowest capacity. Unit in percentage and values range from 0-100. Valid values 0 to 2147483647
     *
     * @param int $val The maxCapacityPercentage
     *

@@ -26,6 +26,7 @@ class EducationModuleResource extends Entity
 {
     /**
     * Gets the resource
+    * Resource object that has been associated with this module.
     *
     * @return EducationResource|null The resource
     */
@@ -44,6 +45,7 @@ class EducationModuleResource extends Entity
 
     /**
     * Sets the resource
+    * Resource object that has been associated with this module.
     *
     * @param EducationResource $val The resource
     *

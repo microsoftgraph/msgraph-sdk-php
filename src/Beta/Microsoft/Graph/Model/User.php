@@ -268,6 +268,7 @@ class User extends DirectoryObject
 
     /**
     * Gets the cloudRealtimeCommunicationInfo
+    * Microsoft realtime communication information related to the user.  Supports $filter (eq, ne,not).
     *
     * @return CloudRealtimeCommunicationInfo|null The cloudRealtimeCommunicationInfo
     */
@@ -286,6 +287,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the cloudRealtimeCommunicationInfo
+    * Microsoft realtime communication information related to the user.  Supports $filter (eq, ne,not).
     *
     * @param CloudRealtimeCommunicationInfo $val The cloudRealtimeCommunicationInfo
     *
@@ -1493,6 +1495,7 @@ class User extends DirectoryObject
 
     /**
     * Gets the onPremisesSipInfo
+    * Contains all on-premises Session Initiation Protocol (SIP) information related to the user. Read-only.
     *
     * @return OnPremisesSipInfo|null The onPremisesSipInfo
     */
@@ -1511,6 +1514,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the onPremisesSipInfo
+    * Contains all on-premises Session Initiation Protocol (SIP) information related to the user. Read-only.
     *
     * @param OnPremisesSipInfo $val The onPremisesSipInfo
     *
@@ -4439,6 +4443,7 @@ class User extends DirectoryObject
 
      /**
      * Gets the permissionGrants
+    * List all resource-specific permission grants of a user.
      *
      * @return array|null The permissionGrants
      */
@@ -4453,6 +4458,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the permissionGrants
+    * List all resource-specific permission grants of a user.
     *
     * @param ResourceSpecificPermissionGrant[] $val The permissionGrants
     *

@@ -25,7 +25,7 @@ class MacOSIncludedApp extends Entity
 {
     /**
     * Gets the bundleId
-    * The CFBundleIdentifier.
+    * The bundleId of the app. This maps to the CFBundleIdentifier in the app's bundle configuration.
     *
     * @return string|null The bundleId
     */
@@ -40,7 +40,7 @@ class MacOSIncludedApp extends Entity
 
     /**
     * Sets the bundleId
-    * The CFBundleIdentifier.
+    * The bundleId of the app. This maps to the CFBundleIdentifier in the app's bundle configuration.
     *
     * @param string $val The value of the bundleId
     *
@@ -53,7 +53,7 @@ class MacOSIncludedApp extends Entity
     }
     /**
     * Gets the bundleVersion
-    * The CFBundleVersion.
+    * The version of the app. This maps to the CFBundleShortVersion in the app's bundle configuration.
     *
     * @return string|null The bundleVersion
     */
@@ -68,7 +68,7 @@ class MacOSIncludedApp extends Entity
 
     /**
     * Sets the bundleVersion
-    * The CFBundleVersion.
+    * The version of the app. This maps to the CFBundleShortVersion in the app's bundle configuration.
     *
     * @param string $val The value of the bundleVersion
     *

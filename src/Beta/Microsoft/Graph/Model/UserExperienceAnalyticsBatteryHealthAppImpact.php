@@ -26,7 +26,7 @@ class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity
 {
     /**
     * Gets the activeDevices
-    * Number of active devices for using that app over a 14-day period. Valid values -2147483648 to 2147483647
+    * Number of active devices for using that app over a 14-day period. Valid values 0 to 2147483647
     *
     * @return int|null The activeDevices
     */
@@ -41,7 +41,7 @@ class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity
 
     /**
     * Sets the activeDevices
-    * Number of active devices for using that app over a 14-day period. Valid values -2147483648 to 2147483647
+    * Number of active devices for using that app over a 14-day period. Valid values 0 to 2147483647
     *
     * @param int $val The activeDevices
     *
@@ -142,7 +142,7 @@ class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity
 
     /**
     * Gets the batteryUsagePercentage
-    * The percent of total battery power used by this application when the device was not plugged into AC power, over 14 days computed across all devices in the tenant. Unit in percentage. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+    * The percent of total battery power used by this application when the device was not plugged into AC power, over 14 days computed across all devices in the tenant. Unit in percentage. Valid values 0 to 1.79769313486232E+308
     *
     * @return float|null The batteryUsagePercentage
     */
@@ -157,7 +157,7 @@ class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity
 
     /**
     * Sets the batteryUsagePercentage
-    * The percent of total battery power used by this application when the device was not plugged into AC power, over 14 days computed across all devices in the tenant. Unit in percentage. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+    * The percent of total battery power used by this application when the device was not plugged into AC power, over 14 days computed across all devices in the tenant. Unit in percentage. Valid values 0 to 1.79769313486232E+308
     *
     * @param float $val The batteryUsagePercentage
     *

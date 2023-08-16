@@ -26,7 +26,7 @@ class DeviceManagementExportJob extends Entity
 {
     /**
     * Gets the expirationDateTime
-    * Time that the exported report expires
+    * Time that the exported report expires. This property is read-only.
     *
     * @return \DateTime|null The expirationDateTime
     */
@@ -45,7 +45,7 @@ class DeviceManagementExportJob extends Entity
 
     /**
     * Sets the expirationDateTime
-    * Time that the exported report expires
+    * Time that the exported report expires. This property is read-only.
     *
     * @param \DateTime $val The expirationDateTime
     *
@@ -183,7 +183,7 @@ class DeviceManagementExportJob extends Entity
 
     /**
     * Gets the requestDateTime
-    * Time that the exported report was requested
+    * Time that the exported report was requested. This property is read-only.
     *
     * @return \DateTime|null The requestDateTime
     */
@@ -202,7 +202,7 @@ class DeviceManagementExportJob extends Entity
 
     /**
     * Sets the requestDateTime
-    * Time that the exported report was requested
+    * Time that the exported report was requested. This property is read-only.
     *
     * @param \DateTime $val The requestDateTime
     *
@@ -274,7 +274,7 @@ class DeviceManagementExportJob extends Entity
 
     /**
     * Gets the status
-    * Status of the export job. Possible values are: unknown, notStarted, inProgress, completed, failed.
+    * Status of the export job. This property is read-only. Possible values are: unknown, notStarted, inProgress, completed, failed.
     *
     * @return DeviceManagementReportStatus|null The status
     */
@@ -293,7 +293,7 @@ class DeviceManagementExportJob extends Entity
 
     /**
     * Sets the status
-    * Status of the export job. Possible values are: unknown, notStarted, inProgress, completed, failed.
+    * Status of the export job. This property is read-only. Possible values are: unknown, notStarted, inProgress, completed, failed.
     *
     * @param DeviceManagementReportStatus $val The status
     *
@@ -307,7 +307,7 @@ class DeviceManagementExportJob extends Entity
 
     /**
     * Gets the url
-    * Temporary location of the exported report
+    * Temporary location of the exported report. This property is read-only.
     *
     * @return string|null The url
     */
@@ -322,7 +322,7 @@ class DeviceManagementExportJob extends Entity
 
     /**
     * Sets the url
-    * Temporary location of the exported report
+    * Temporary location of the exported report. This property is read-only.
     *
     * @param string $val The url
     *

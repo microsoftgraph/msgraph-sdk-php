@@ -25,6 +25,7 @@ class CloudRealtimeCommunicationInfo extends Entity
 {
     /**
     * Gets the isSipEnabled
+    * Indicates whether the user has a SIP-enabled client registered for them. Read-only.
     *
     * @return bool|null The isSipEnabled
     */
@@ -39,6 +40,7 @@ class CloudRealtimeCommunicationInfo extends Entity
 
     /**
     * Sets the isSipEnabled
+    * Indicates whether the user has a SIP-enabled client registered for them. Read-only.
     *
     * @param bool $val The value of the isSipEnabled
     *

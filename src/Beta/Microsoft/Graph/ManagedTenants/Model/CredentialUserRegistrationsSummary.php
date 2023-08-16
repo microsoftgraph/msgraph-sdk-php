@@ -320,6 +320,7 @@ class CredentialUserRegistrationsSummary extends \Beta\Microsoft\Graph\Model\Ent
 
     /**
     * Gets the tenantLicenseType
+    * The license type associated with the tenant; for example, AADFree, AADPremium1, AADPremium2.
     *
     * @return string|null The tenantLicenseType
     */
@@ -334,6 +335,7 @@ class CredentialUserRegistrationsSummary extends \Beta\Microsoft\Graph\Model\Ent
 
     /**
     * Sets the tenantLicenseType
+    * The license type associated with the tenant; for example, AADFree, AADPremium1, AADPremium2.
     *
     * @param string $val The tenantLicenseType
     *
