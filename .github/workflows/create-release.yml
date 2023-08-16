@@ -1,0 +1,24 @@
+name: "create release"
+
+on:
+  push:
+    tags:
+      '*'
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  create-release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+    - uses: actions/checkout@v3
+    - name: Create Release
+      uses: ncipollo/release-action@v1
+      with:
+        generateReleaseNotes: true
+        prerelease: ${{ contains(github.ref_name, 'RC') }}
+        skipIfReleaseExists: true
