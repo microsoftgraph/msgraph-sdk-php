@@ -1242,7 +1242,7 @@ class Application extends DirectoryObject
 
      /**
      * Gets the owners
-    * Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
+    * Directory objects that are owners of the application. Read-only. Nullable. Supports $expand, $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1), and $select nested in $expand.
      *
      * @return array|null The owners
      */
@@ -1257,7 +1257,7 @@ class Application extends DirectoryObject
 
     /**
     * Sets the owners
-    * Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
+    * Directory objects that are owners of the application. Read-only. Nullable. Supports $expand, $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1), and $select nested in $expand.
     *
     * @param DirectoryObject[] $val The owners
     *
