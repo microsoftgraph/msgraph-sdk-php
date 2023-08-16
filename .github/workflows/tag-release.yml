@@ -8,7 +8,7 @@ name: "tag release"
 on:
   push:
     branches:
-      - main
+      - feat/kiota-preview
 
 defaults:
   run:
