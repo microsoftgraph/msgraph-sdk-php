@@ -8,8 +8,6 @@ on:
     branches: [ main, dev, feat/kiota-preview ]
   pull_request:
     branches: [ main, dev, feat/kiota-preview ]
-    # Add assigned to defaults as a hack to easily trigger code-gen PRs to run validation
-    types: [assigned, opened, synchronize, reopened]
 
 defaults:
   run:
@@ -18,7 +16,14 @@ defaults:
 jobs:
   validate-pull-request:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php-versions: ['7.4', '8.0', '8.1', '8.2']
     steps:
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: ${{ matrix.php-versions }}
     - uses: actions/checkout@v3
     - name: Validate composer file
       run: |
