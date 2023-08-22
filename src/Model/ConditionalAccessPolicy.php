@@ -278,4 +278,31 @@ class ConditionalAccessPolicy extends Entity
         return $this;
     }
 
+    /**
+    * Gets the templateId
+    *
+    * @return string|null The templateId
+    */
+    public function getTemplateId()
+    {
+        if (array_key_exists("templateId", $this->_propDict)) {
+            return $this->_propDict["templateId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the templateId
+    *
+    * @param string $val The templateId
+    *
+    * @return ConditionalAccessPolicy
+    */
+    public function setTemplateId($val)
+    {
+        $this->_propDict["templateId"] = $val;
+        return $this;
+    }
+
 }
