@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* DlpAction File
+* OriginalTransferMethods File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Beta\Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* DlpAction class
+* OriginalTransferMethods class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,12 +24,13 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class DlpAction extends Enum
+class OriginalTransferMethods extends Enum
 {
     /**
-    * The Enum DlpAction
+    * The Enum OriginalTransferMethods
     */
-    const NOTIFY_USER = "notifyUser";
-    const BLOCK_ACCESS = "blockAccess";
-    const DEVICE_RESTRICTION = "deviceRestriction";
+    const NONE = "none";
+    const DEVICE_CODE_FLOW = "deviceCodeFlow";
+    const AUTHENTICATION_TRANSFER = "authenticationTransfer";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

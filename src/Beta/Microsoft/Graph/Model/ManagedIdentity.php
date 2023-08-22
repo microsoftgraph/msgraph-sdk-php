@@ -51,6 +51,62 @@ class ManagedIdentity extends Entity
         $this->_propDict["associatedResourceId"] = $val;
         return $this;
     }
+    /**
+    * Gets the federatedTokenId
+    * The unique ID of the federated token.
+    *
+    * @return string|null The federatedTokenId
+    */
+    public function getFederatedTokenId()
+    {
+        if (array_key_exists("federatedTokenId", $this->_propDict)) {
+            return $this->_propDict["federatedTokenId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the federatedTokenId
+    * The unique ID of the federated token.
+    *
+    * @param string $val The value of the federatedTokenId
+    *
+    * @return ManagedIdentity
+    */
+    public function setFederatedTokenId($val)
+    {
+        $this->_propDict["federatedTokenId"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the federatedTokenIssuer
+    * The issuer of the federated token.
+    *
+    * @return string|null The federatedTokenIssuer
+    */
+    public function getFederatedTokenIssuer()
+    {
+        if (array_key_exists("federatedTokenIssuer", $this->_propDict)) {
+            return $this->_propDict["federatedTokenIssuer"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the federatedTokenIssuer
+    * The issuer of the federated token.
+    *
+    * @param string $val The value of the federatedTokenIssuer
+    *
+    * @return ManagedIdentity
+    */
+    public function setFederatedTokenIssuer($val)
+    {
+        $this->_propDict["federatedTokenIssuer"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the msiType
