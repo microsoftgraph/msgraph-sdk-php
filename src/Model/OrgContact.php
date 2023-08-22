@@ -408,6 +408,34 @@ class OrgContact extends DirectoryObject
         return $this;
     }
 
+
+     /**
+     * Gets the serviceProvisioningErrors
+     *
+     * @return array|null The serviceProvisioningErrors
+     */
+    public function getServiceProvisioningErrors()
+    {
+        if (array_key_exists("serviceProvisioningErrors", $this->_propDict)) {
+           return $this->_propDict["serviceProvisioningErrors"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the serviceProvisioningErrors
+    *
+    * @param ServiceProvisioningError[] $val The serviceProvisioningErrors
+    *
+    * @return OrgContact
+    */
+    public function setServiceProvisioningErrors($val)
+    {
+        $this->_propDict["serviceProvisioningErrors"] = $val;
+        return $this;
+    }
+
     /**
     * Gets the surname
     * Last name for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).
