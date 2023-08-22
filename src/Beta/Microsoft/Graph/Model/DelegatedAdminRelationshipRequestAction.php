@@ -33,4 +33,5 @@ class DelegatedAdminRelationshipRequestAction extends Enum
     const APPROVE = "approve";
     const TERMINATE = "terminate";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
+    const REJECT = "reject";
 }

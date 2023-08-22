@@ -200,7 +200,7 @@ class Alert extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the classification
-    * Specifies whether the alert represents a true threat. Possible values are: unknown, falsePositive, truePositive, benignPositive, unknownFutureValue.
+    * Specifies whether the alert represents a true threat. Possible values are: unknown, falsePositive, truePositive, informationalExpectedActivity, unknownFutureValue.
     *
     * @return AlertClassification|null The classification
     */
@@ -219,7 +219,7 @@ class Alert extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the classification
-    * Specifies whether the alert represents a true threat. Possible values are: unknown, falsePositive, truePositive, benignPositive, unknownFutureValue.
+    * Specifies whether the alert represents a true threat. Possible values are: unknown, falsePositive, truePositive, informationalExpectedActivity, unknownFutureValue.
     *
     * @param AlertClassification $val The classification
     *

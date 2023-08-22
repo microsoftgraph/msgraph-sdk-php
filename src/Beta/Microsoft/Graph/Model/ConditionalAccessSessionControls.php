@@ -186,6 +186,7 @@ class ConditionalAccessSessionControls extends Entity
 
     /**
     * Gets the secureSignInSession
+    * Session control to require sign in sessions to be bound to a device.
     *
     * @return SecureSignInSessionControl|null The secureSignInSession
     */
@@ -204,6 +205,7 @@ class ConditionalAccessSessionControls extends Entity
 
     /**
     * Sets the secureSignInSession
+    * Session control to require sign in sessions to be bound to a device.
     *
     * @param SecureSignInSessionControl $val The value to assign to the secureSignInSession
     *

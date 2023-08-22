@@ -91,6 +91,64 @@ class CallTranscript extends Entity
     }
 
     /**
+    * Gets the meetingId
+    * The unique identifier of the online meeting related to this transcript. Read-only.
+    *
+    * @return string|null The meetingId
+    */
+    public function getMeetingId()
+    {
+        if (array_key_exists("meetingId", $this->_propDict)) {
+            return $this->_propDict["meetingId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the meetingId
+    * The unique identifier of the online meeting related to this transcript. Read-only.
+    *
+    * @param string $val The meetingId
+    *
+    * @return CallTranscript
+    */
+    public function setMeetingId($val)
+    {
+        $this->_propDict["meetingId"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the meetingOrganizerId
+    * The unique identifier of the organizer of the onlineMeeting related to this transcript. Read-only.
+    *
+    * @return string|null The meetingOrganizerId
+    */
+    public function getMeetingOrganizerId()
+    {
+        if (array_key_exists("meetingOrganizerId", $this->_propDict)) {
+            return $this->_propDict["meetingOrganizerId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the meetingOrganizerId
+    * The unique identifier of the organizer of the onlineMeeting related to this transcript. Read-only.
+    *
+    * @param string $val The meetingOrganizerId
+    *
+    * @return CallTranscript
+    */
+    public function setMeetingOrganizerId($val)
+    {
+        $this->_propDict["meetingOrganizerId"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the metadataContent
     * The time-aligned metadata of the utterances in the transcript. Read-only.
     *
@@ -120,6 +178,35 @@ class CallTranscript extends Entity
     public function setMetadataContent($val)
     {
         $this->_propDict["metadataContent"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the transcriptContentUrl
+    * The URL which can be used to access the content of the transcript. Read-only.
+    *
+    * @return string|null The transcriptContentUrl
+    */
+    public function getTranscriptContentUrl()
+    {
+        if (array_key_exists("transcriptContentUrl", $this->_propDict)) {
+            return $this->_propDict["transcriptContentUrl"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the transcriptContentUrl
+    * The URL which can be used to access the content of the transcript. Read-only.
+    *
+    * @param string $val The transcriptContentUrl
+    *
+    * @return CallTranscript
+    */
+    public function setTranscriptContentUrl($val)
+    {
+        $this->_propDict["transcriptContentUrl"] = $val;
         return $this;
     }
 

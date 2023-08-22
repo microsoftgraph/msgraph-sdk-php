@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* DlpActionInfo File
+* QualityUpdateCadence File
 * PHP version 7
 *
 * @category  Library
@@ -11,9 +11,12 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Model;
+namespace Beta\Microsoft\Graph\WindowsUpdates\Model;
+
+use Microsoft\Graph\Core\Enum;
+
 /**
-* DlpActionInfo class
+* QualityUpdateCadence class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -21,6 +24,12 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class DlpActionInfo extends Entity
+class QualityUpdateCadence extends Enum
 {
+    /**
+    * The Enum QualityUpdateCadence
+    */
+    const MONTHLY = "monthly";
+    const OUT_OF_BAND = "outOfBand";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

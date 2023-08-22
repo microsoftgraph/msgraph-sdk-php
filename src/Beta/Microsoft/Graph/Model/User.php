@@ -2930,7 +2930,7 @@ class User extends DirectoryObject
 
      /**
      * Gets the ownedObjects
-    * Directory objects that are owned by the user. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
+    * Directory objects that are owned by the user. Read-only. Nullable. Supports $expand, $select nested in $expand, and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
      *
      * @return array|null The ownedObjects
      */
@@ -2945,7 +2945,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the ownedObjects
-    * Directory objects that are owned by the user. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
+    * Directory objects that are owned by the user. Read-only. Nullable. Supports $expand, $select nested in $expand, and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
     *
     * @param DirectoryObject[] $val The ownedObjects
     *
