@@ -113,6 +113,9 @@ try {
 
 ```
 
+> Note: The SDK is designed to make async requests by default. Operations (`get()`, `post()`...) return a [Promise](https://docs.php-http.org/en/latest/components/promise.html). To get the result, call `wait()` after the operation.
+> Example: `->get()->wait();`
+
 Note that to calling `me()` requires a signed-in user and therefore delegated permissions (obtained using the `authorization_code` flow):
 ```php
 <?php
