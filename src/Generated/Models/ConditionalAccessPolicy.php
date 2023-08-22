@@ -88,6 +88,7 @@ class ConditionalAccessPolicy extends Entity implements Parsable
             'modifiedDateTime' => fn(ParseNode $n) => $o->setModifiedDateTime($n->getDateTimeValue()),
             'sessionControls' => fn(ParseNode $n) => $o->setSessionControls($n->getObjectValue([ConditionalAccessSessionControls::class, 'createFromDiscriminatorValue'])),
             'state' => fn(ParseNode $n) => $o->setState($n->getEnumValue(ConditionalAccessPolicyState::class)),
+            'templateId' => fn(ParseNode $n) => $o->setTemplateId($n->getStringValue()),
         ]);
     }
 
@@ -140,6 +141,18 @@ class ConditionalAccessPolicy extends Entity implements Parsable
     }
 
     /**
+     * Gets the templateId property value. The templateId property
+     * @return string|null
+    */
+    public function getTemplateId(): ?string {
+        $val = $this->getBackingStore()->get('templateId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'templateId'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -153,6 +166,7 @@ class ConditionalAccessPolicy extends Entity implements Parsable
         $writer->writeDateTimeValue('modifiedDateTime', $this->getModifiedDateTime());
         $writer->writeObjectValue('sessionControls', $this->getSessionControls());
         $writer->writeEnumValue('state', $this->getState());
+        $writer->writeStringValue('templateId', $this->getTemplateId());
     }
 
     /**
@@ -217,6 +231,14 @@ class ConditionalAccessPolicy extends Entity implements Parsable
     */
     public function setState(?ConditionalAccessPolicyState $value): void {
         $this->getBackingStore()->set('state', $value);
+    }
+
+    /**
+     * Sets the templateId property value. The templateId property
+     * @param string|null $value Value to set for the templateId property.
+    */
+    public function setTemplateId(?string $value): void {
+        $this->getBackingStore()->set('templateId', $value);
     }
 
 }

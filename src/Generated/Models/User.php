@@ -366,7 +366,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the customSecurityAttributes property value. The customSecurityAttributes property
+     * Gets the customSecurityAttributes property value. An open complex type that holds the value of a custom security attribute that is assigned to a directory object. Nullable. Returned only on $select. Supports $filter (eq, ne, not, startsWith). Filter value is case sensitive.
      * @return CustomSecurityAttributeValue|null
     */
     public function getCustomSecurityAttributes(): ?CustomSecurityAttributeValue {
@@ -787,6 +787,7 @@ class User extends DirectoryObject implements Parsable
             },
             'scopedRoleMemberOf' => fn(ParseNode $n) => $o->setScopedRoleMemberOf($n->getCollectionOfObjectValues([ScopedRoleMembership::class, 'createFromDiscriminatorValue'])),
             'securityIdentifier' => fn(ParseNode $n) => $o->setSecurityIdentifier($n->getStringValue()),
+            'serviceProvisioningErrors' => fn(ParseNode $n) => $o->setServiceProvisioningErrors($n->getCollectionOfObjectValues([ServiceProvisioningError::class, 'createFromDiscriminatorValue'])),
             'settings' => fn(ParseNode $n) => $o->setSettings($n->getObjectValue([UserSettings::class, 'createFromDiscriminatorValue'])),
             'showInAddressList' => fn(ParseNode $n) => $o->setShowInAddressList($n->getBooleanValue()),
             'signInActivity' => fn(ParseNode $n) => $o->setSignInActivity($n->getObjectValue([SignInActivity::class, 'createFromDiscriminatorValue'])),
@@ -1362,7 +1363,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the ownedObjects property value. Directory objects that are owned by the user. Read-only. Nullable. Supports $expand.
+     * Gets the ownedObjects property value. Directory objects that are owned by the user. Read-only. Nullable. Supports $expand, $select nested in $expand, and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
      * @return array<DirectoryObject>|null
     */
     public function getOwnedObjects(): ?array {
@@ -1619,6 +1620,20 @@ class User extends DirectoryObject implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'securityIdentifier'");
+    }
+
+    /**
+     * Gets the serviceProvisioningErrors property value. The serviceProvisioningErrors property
+     * @return array<ServiceProvisioningError>|null
+    */
+    public function getServiceProvisioningErrors(): ?array {
+        $val = $this->getBackingStore()->get('serviceProvisioningErrors');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ServiceProvisioningError::class);
+            /** @var array<ServiceProvisioningError>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'serviceProvisioningErrors'");
     }
 
     /**
@@ -1908,6 +1923,7 @@ class User extends DirectoryObject implements Parsable
         $writer->writeCollectionOfPrimitiveValues('schools', $this->getSchools());
         $writer->writeCollectionOfObjectValues('scopedRoleMemberOf', $this->getScopedRoleMemberOf());
         $writer->writeStringValue('securityIdentifier', $this->getSecurityIdentifier());
+        $writer->writeCollectionOfObjectValues('serviceProvisioningErrors', $this->getServiceProvisioningErrors());
         $writer->writeObjectValue('settings', $this->getSettings());
         $writer->writeBooleanValue('showInAddressList', $this->getShowInAddressList());
         $writer->writeObjectValue('signInActivity', $this->getSignInActivity());
@@ -2133,7 +2149,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the customSecurityAttributes property value. The customSecurityAttributes property
+     * Sets the customSecurityAttributes property value. An open complex type that holds the value of a custom security attribute that is assigned to a directory object. Nullable. Returned only on $select. Supports $filter (eq, ne, not, startsWith). Filter value is case sensitive.
      * @param CustomSecurityAttributeValue|null $value Value to set for the customSecurityAttributes property.
     */
     public function setCustomSecurityAttributes(?CustomSecurityAttributeValue $value): void {
@@ -2637,7 +2653,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the ownedObjects property value. Directory objects that are owned by the user. Read-only. Nullable. Supports $expand.
+     * Sets the ownedObjects property value. Directory objects that are owned by the user. Read-only. Nullable. Supports $expand, $select nested in $expand, and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
      * @param array<DirectoryObject>|null $value Value to set for the ownedObjects property.
     */
     public function setOwnedObjects(?array $value): void {
@@ -2794,6 +2810,14 @@ class User extends DirectoryObject implements Parsable
     */
     public function setSecurityIdentifier(?string $value): void {
         $this->getBackingStore()->set('securityIdentifier', $value);
+    }
+
+    /**
+     * Sets the serviceProvisioningErrors property value. The serviceProvisioningErrors property
+     * @param array<ServiceProvisioningError>|null $value Value to set for the serviceProvisioningErrors property.
+    */
+    public function setServiceProvisioningErrors(?array $value): void {
+        $this->getBackingStore()->set('serviceProvisioningErrors', $value);
     }
 
     /**

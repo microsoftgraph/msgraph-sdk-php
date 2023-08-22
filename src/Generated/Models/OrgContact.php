@@ -121,6 +121,7 @@ class OrgContact extends DirectoryObject implements Parsable
                 /** @var array<string>|null $val */
                 $this->setProxyAddresses($val);
             },
+            'serviceProvisioningErrors' => fn(ParseNode $n) => $o->setServiceProvisioningErrors($n->getCollectionOfObjectValues([ServiceProvisioningError::class, 'createFromDiscriminatorValue'])),
             'surname' => fn(ParseNode $n) => $o->setSurname($n->getStringValue()),
             'transitiveMemberOf' => fn(ParseNode $n) => $o->setTransitiveMemberOf($n->getCollectionOfObjectValues([DirectoryObject::class, 'createFromDiscriminatorValue'])),
         ]);
@@ -267,6 +268,20 @@ class OrgContact extends DirectoryObject implements Parsable
     }
 
     /**
+     * Gets the serviceProvisioningErrors property value. The serviceProvisioningErrors property
+     * @return array<ServiceProvisioningError>|null
+    */
+    public function getServiceProvisioningErrors(): ?array {
+        $val = $this->getBackingStore()->get('serviceProvisioningErrors');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ServiceProvisioningError::class);
+            /** @var array<ServiceProvisioningError>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'serviceProvisioningErrors'");
+    }
+
+    /**
      * Gets the surname property value. Last name for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).
      * @return string|null
     */
@@ -314,6 +329,7 @@ class OrgContact extends DirectoryObject implements Parsable
         $writer->writeBooleanValue('onPremisesSyncEnabled', $this->getOnPremisesSyncEnabled());
         $writer->writeCollectionOfObjectValues('phones', $this->getPhones());
         $writer->writeCollectionOfPrimitiveValues('proxyAddresses', $this->getProxyAddresses());
+        $writer->writeCollectionOfObjectValues('serviceProvisioningErrors', $this->getServiceProvisioningErrors());
         $writer->writeStringValue('surname', $this->getSurname());
         $writer->writeCollectionOfObjectValues('transitiveMemberOf', $this->getTransitiveMemberOf());
     }
@@ -444,6 +460,14 @@ class OrgContact extends DirectoryObject implements Parsable
     */
     public function setProxyAddresses(?array $value): void {
         $this->getBackingStore()->set('proxyAddresses', $value);
+    }
+
+    /**
+     * Sets the serviceProvisioningErrors property value. The serviceProvisioningErrors property
+     * @param array<ServiceProvisioningError>|null $value Value to set for the serviceProvisioningErrors property.
+    */
+    public function setServiceProvisioningErrors(?array $value): void {
+        $this->getBackingStore()->set('serviceProvisioningErrors', $value);
     }
 
     /**

@@ -350,6 +350,7 @@ class Group extends DirectoryObject implements Parsable
             'renewedDateTime' => fn(ParseNode $n) => $o->setRenewedDateTime($n->getDateTimeValue()),
             'securityEnabled' => fn(ParseNode $n) => $o->setSecurityEnabled($n->getBooleanValue()),
             'securityIdentifier' => fn(ParseNode $n) => $o->setSecurityIdentifier($n->getStringValue()),
+            'serviceProvisioningErrors' => fn(ParseNode $n) => $o->setServiceProvisioningErrors($n->getCollectionOfObjectValues([ServiceProvisioningError::class, 'createFromDiscriminatorValue'])),
             'settings' => fn(ParseNode $n) => $o->setSettings($n->getCollectionOfObjectValues([GroupSetting::class, 'createFromDiscriminatorValue'])),
             'sites' => fn(ParseNode $n) => $o->setSites($n->getCollectionOfObjectValues([Site::class, 'createFromDiscriminatorValue'])),
             'team' => fn(ParseNode $n) => $o->setTeam($n->getObjectValue([Team::class, 'createFromDiscriminatorValue'])),
@@ -829,6 +830,20 @@ class Group extends DirectoryObject implements Parsable
     }
 
     /**
+     * Gets the serviceProvisioningErrors property value. The serviceProvisioningErrors property
+     * @return array<ServiceProvisioningError>|null
+    */
+    public function getServiceProvisioningErrors(): ?array {
+        $val = $this->getBackingStore()->get('serviceProvisioningErrors');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ServiceProvisioningError::class);
+            /** @var array<ServiceProvisioningError>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'serviceProvisioningErrors'");
+    }
+
+    /**
      * Gets the settings property value. Settings that can govern this group's behavior, like whether members can invite guest users to the group. Nullable.
      * @return array<GroupSetting>|null
     */
@@ -935,7 +950,7 @@ class Group extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the visibility property value. Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or HiddenMembership. HiddenMembership can be set only for Microsoft 365 groups, when the groups are created. It can't be updated later. Other values of visibility can be updated after group creation. If visibility value is not specified during group creation on Microsoft Graph, a security group is created as Private by default and Microsoft 365 group is Public. Groups assignable to roles are always Private. See group visibility options to learn more. Returned by default. Nullable.
+     * Gets the visibility property value. Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or HiddenMembership. HiddenMembership can be set only for Microsoft 365 groups, when the groups are created. It can't be updated later. Other values of visibility can be updated after group creation. If visibility value is not specified during group creation on Microsoft Graph, a security group is created as Private by default and Microsoft 365 group is Public. Groups assignable to roles are always Private. To learn more, see group visibility options. Returned by default. Nullable.
      * @return string|null
     */
     public function getVisibility(): ?string {
@@ -1008,6 +1023,7 @@ class Group extends DirectoryObject implements Parsable
         $writer->writeDateTimeValue('renewedDateTime', $this->getRenewedDateTime());
         $writer->writeBooleanValue('securityEnabled', $this->getSecurityEnabled());
         $writer->writeStringValue('securityIdentifier', $this->getSecurityIdentifier());
+        $writer->writeCollectionOfObjectValues('serviceProvisioningErrors', $this->getServiceProvisioningErrors());
         $writer->writeCollectionOfObjectValues('settings', $this->getSettings());
         $writer->writeCollectionOfObjectValues('sites', $this->getSites());
         $writer->writeObjectValue('team', $this->getTeam());
@@ -1468,6 +1484,14 @@ class Group extends DirectoryObject implements Parsable
     }
 
     /**
+     * Sets the serviceProvisioningErrors property value. The serviceProvisioningErrors property
+     * @param array<ServiceProvisioningError>|null $value Value to set for the serviceProvisioningErrors property.
+    */
+    public function setServiceProvisioningErrors(?array $value): void {
+        $this->getBackingStore()->set('serviceProvisioningErrors', $value);
+    }
+
+    /**
      * Sets the settings property value. Settings that can govern this group's behavior, like whether members can invite guest users to the group. Nullable.
      * @param array<GroupSetting>|null $value Value to set for the settings property.
     */
@@ -1532,7 +1556,7 @@ class Group extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the visibility property value. Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or HiddenMembership. HiddenMembership can be set only for Microsoft 365 groups, when the groups are created. It can't be updated later. Other values of visibility can be updated after group creation. If visibility value is not specified during group creation on Microsoft Graph, a security group is created as Private by default and Microsoft 365 group is Public. Groups assignable to roles are always Private. See group visibility options to learn more. Returned by default. Nullable.
+     * Sets the visibility property value. Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or HiddenMembership. HiddenMembership can be set only for Microsoft 365 groups, when the groups are created. It can't be updated later. Other values of visibility can be updated after group creation. If visibility value is not specified during group creation on Microsoft Graph, a security group is created as Private by default and Microsoft 365 group is Public. Groups assignable to roles are always Private. To learn more, see group visibility options. Returned by default. Nullable.
      * @param string|null $value Value to set for the visibility property.
     */
     public function setVisibility(?string $value): void {

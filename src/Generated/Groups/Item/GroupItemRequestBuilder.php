@@ -37,6 +37,7 @@ use Microsoft\Graph\Generated\Groups\Item\RemoveFavorite\RemoveFavoriteRequestBu
 use Microsoft\Graph\Generated\Groups\Item\Renew\RenewRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\ResetUnseenCount\ResetUnseenCountRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Restore\RestoreRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\RetryServiceProvisioning\RetryServiceProvisioningRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Settings\SettingsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\SitesRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\SubscribeByMail\SubscribeByMailRequestBuilder;
@@ -280,6 +281,13 @@ class GroupItemRequestBuilder extends BaseRequestBuilder
     */
     public function restore(): RestoreRequestBuilder {
         return new RestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the retryServiceProvisioning method.
+    */
+    public function retryServiceProvisioning(): RetryServiceProvisioningRequestBuilder {
+        return new RetryServiceProvisioningRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
