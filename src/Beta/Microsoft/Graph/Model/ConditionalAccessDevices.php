@@ -112,7 +112,7 @@ class ConditionalAccessDevices extends Entity
     }
     /**
     * Gets the includeDevices
-    * States in the scope of the policy. All is the only allowed value. Cannot be set if deviceFIlter is set.
+    * States in the scope of the policy. All is the only allowed value. Cannot be set if deviceFilter is set.
     *
     * @return string|null The includeDevices
     */
@@ -127,7 +127,7 @@ class ConditionalAccessDevices extends Entity
 
     /**
     * Sets the includeDevices
-    * States in the scope of the policy. All is the only allowed value. Cannot be set if deviceFIlter is set.
+    * States in the scope of the policy. All is the only allowed value. Cannot be set if deviceFilter is set.
     *
     * @param string $val The value of the includeDevices
     *

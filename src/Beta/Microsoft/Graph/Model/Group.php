@@ -1120,8 +1120,35 @@ class Group extends DirectoryObject
     }
 
     /**
+    * Gets the uniqueName
+    *
+    * @return string|null The uniqueName
+    */
+    public function getUniqueName()
+    {
+        if (array_key_exists("uniqueName", $this->_propDict)) {
+            return $this->_propDict["uniqueName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the uniqueName
+    *
+    * @param string $val The uniqueName
+    *
+    * @return Group
+    */
+    public function setUniqueName($val)
+    {
+        $this->_propDict["uniqueName"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the visibility
-    * Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or HiddenMembership. HiddenMembership can be set only for Microsoft 365 groups, when the groups are created. It can't be updated later. Other values of visibility can be updated after group creation. If visibility value is not specified during group creation on Microsoft Graph, a security group is created as Private by default and Microsoft 365 group is Public. Groups assignable to roles are always Private. See group visibility options to learn more. Returned by default. Nullable.
+    * Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or HiddenMembership. HiddenMembership can be set only for Microsoft 365 groups, when the groups are created. It can't be updated later. Other values of visibility can be updated after group creation. If visibility value is not specified during group creation on Microsoft Graph, a security group is created as Private by default and Microsoft 365 group is Public. Groups assignable to roles are always Private. To learn more, see group visibility options. Returned by default. Nullable.
     *
     * @return string|null The visibility
     */
@@ -1136,7 +1163,7 @@ class Group extends DirectoryObject
 
     /**
     * Sets the visibility
-    * Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or HiddenMembership. HiddenMembership can be set only for Microsoft 365 groups, when the groups are created. It can't be updated later. Other values of visibility can be updated after group creation. If visibility value is not specified during group creation on Microsoft Graph, a security group is created as Private by default and Microsoft 365 group is Public. Groups assignable to roles are always Private. See group visibility options to learn more. Returned by default. Nullable.
+    * Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or HiddenMembership. HiddenMembership can be set only for Microsoft 365 groups, when the groups are created. It can't be updated later. Other values of visibility can be updated after group creation. If visibility value is not specified during group creation on Microsoft Graph, a security group is created as Private by default and Microsoft 365 group is Public. Groups assignable to roles are always Private. To learn more, see group visibility options. Returned by default. Nullable.
     *
     * @param string $val The visibility
     *

@@ -26,7 +26,7 @@ class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity
 {
     /**
     * Gets the activeDevices
-    * Number of active devices for that os version. Valid values -2147483648 to 2147483647
+    * Number of active devices for that os version. Valid values 0 to 2147483647
     *
     * @return int|null The activeDevices
     */
@@ -41,7 +41,7 @@ class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity
 
     /**
     * Sets the activeDevices
-    * Number of active devices for that os version. Valid values -2147483648 to 2147483647
+    * Number of active devices for that os version. Valid values 0 to 2147483647
     *
     * @param int $val The activeDevices
     *
@@ -55,7 +55,7 @@ class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity
 
     /**
     * Gets the averageBatteryAgeInDays
-    * The mean of the battery age for all devices running a particular operating system version in a tenant. Unit in days. Valid values -2147483648 to 2147483647
+    * The mean of the battery age for all devices running a particular operating system version in a tenant. Unit in days. Valid values 0 to 2147483647
     *
     * @return int|null The averageBatteryAgeInDays
     */
@@ -70,7 +70,7 @@ class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity
 
     /**
     * Sets the averageBatteryAgeInDays
-    * The mean of the battery age for all devices running a particular operating system version in a tenant. Unit in days. Valid values -2147483648 to 2147483647
+    * The mean of the battery age for all devices running a particular operating system version in a tenant. Unit in days. Valid values 0 to 2147483647
     *
     * @param int $val The averageBatteryAgeInDays
     *
@@ -84,7 +84,7 @@ class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity
 
     /**
     * Gets the averageEstimatedRuntimeInMinutes
-    * The mean of the estimated runtimes on full charge for all devices running a particular operating system version. Unit in minutes. Valid values -2147483648 to 2147483647
+    * The mean of the estimated runtimes on full charge for all devices running a particular operating system version. Unit in minutes. Valid values 0 to 2147483647
     *
     * @return int|null The averageEstimatedRuntimeInMinutes
     */
@@ -99,7 +99,7 @@ class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity
 
     /**
     * Sets the averageEstimatedRuntimeInMinutes
-    * The mean of the estimated runtimes on full charge for all devices running a particular operating system version. Unit in minutes. Valid values -2147483648 to 2147483647
+    * The mean of the estimated runtimes on full charge for all devices running a particular operating system version. Unit in minutes. Valid values 0 to 2147483647
     *
     * @param int $val The averageEstimatedRuntimeInMinutes
     *
@@ -113,7 +113,7 @@ class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity
 
     /**
     * Gets the averageMaxCapacityPercentage
-    * The mean of the maximum capacity for all devices running a particular operating system version. Maximum capacity measures the full charge vs. design capacity for a device’s batteries.. Valid values -2147483648 to 2147483647
+    * The mean of the maximum capacity for all devices running a particular operating system version. Maximum capacity measures the full charge vs. design capacity for a device’s batteries.. Valid values 0 to 2147483647
     *
     * @return int|null The averageMaxCapacityPercentage
     */
@@ -128,7 +128,7 @@ class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity
 
     /**
     * Sets the averageMaxCapacityPercentage
-    * The mean of the maximum capacity for all devices running a particular operating system version. Maximum capacity measures the full charge vs. design capacity for a device’s batteries.. Valid values -2147483648 to 2147483647
+    * The mean of the maximum capacity for all devices running a particular operating system version. Maximum capacity measures the full charge vs. design capacity for a device’s batteries.. Valid values 0 to 2147483647
     *
     * @param int $val The averageMaxCapacityPercentage
     *
@@ -316,7 +316,7 @@ class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity
 
     /**
     * Gets the osHealthStatus
-    * The overall battery health status of a given os version in a tenant.
+    * The overall battery health status of a given os version in a tenant. Possible values are: unknown, insufficientData, needsAttention, meetingGoals, unknownFutureValue.
     *
     * @return UserExperienceAnalyticsHealthState|null The osHealthStatus
     */
@@ -335,7 +335,7 @@ class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity
 
     /**
     * Sets the osHealthStatus
-    * The overall battery health status of a given os version in a tenant.
+    * The overall battery health status of a given os version in a tenant. Possible values are: unknown, insufficientData, needsAttention, meetingGoals, unknownFutureValue.
     *
     * @param UserExperienceAnalyticsHealthState $val The osHealthStatus
     *

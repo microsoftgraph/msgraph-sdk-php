@@ -31,4 +31,5 @@ class CloudPcPartnerAgentName extends Enum
     */
     const CITRIX = "citrix";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
+    const V_MWARE = "vMware";
 }

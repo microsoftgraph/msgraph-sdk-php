@@ -54,6 +54,64 @@ class Alert extends \Microsoft\Graph\Model\Entity
     }
 
     /**
+    * Gets the additionalData
+    *
+    * @return Dictionary|null The additionalData
+    */
+    public function getAdditionalData()
+    {
+        if (array_key_exists("additionalData", $this->_propDict)) {
+            if (is_a($this->_propDict["additionalData"], "\Microsoft\Graph\SecurityNamespace\Model\Dictionary") || is_null($this->_propDict["additionalData"])) {
+                return $this->_propDict["additionalData"];
+            } else {
+                $this->_propDict["additionalData"] = new Dictionary($this->_propDict["additionalData"]);
+                return $this->_propDict["additionalData"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the additionalData
+    *
+    * @param Dictionary $val The additionalData
+    *
+    * @return Alert
+    */
+    public function setAdditionalData($val)
+    {
+        $this->_propDict["additionalData"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the alertPolicyId
+    *
+    * @return string|null The alertPolicyId
+    */
+    public function getAlertPolicyId()
+    {
+        if (array_key_exists("alertPolicyId", $this->_propDict)) {
+            return $this->_propDict["alertPolicyId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the alertPolicyId
+    *
+    * @param string $val The alertPolicyId
+    *
+    * @return Alert
+    */
+    public function setAlertPolicyId($val)
+    {
+        $this->_propDict["alertPolicyId"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the alertWebUrl
     * URL for the alert page in the Microsoft 365 Defender portal.
     *
@@ -142,7 +200,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Gets the classification
-    * Specifies whether the alert represents a true threat. Possible values are: unknown, falsePositive, truePositive, benignPositive, unknownFutureValue.
+    * Specifies whether the alert represents a true threat. Possible values are: unknown, falsePositive, truePositive, informationalExpectedActivity, unknownFutureValue.
     *
     * @return AlertClassification|null The classification
     */
@@ -161,7 +219,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the classification
-    * Specifies whether the alert represents a true threat. Possible values are: unknown, falsePositive, truePositive, benignPositive, unknownFutureValue.
+    * Specifies whether the alert represents a true threat. Possible values are: unknown, falsePositive, truePositive, informationalExpectedActivity, unknownFutureValue.
     *
     * @param AlertClassification $val The classification
     *

@@ -26,7 +26,7 @@ class ContinuousAccessEvaluationSessionControl extends Entity
 
     /**
     * Gets the mode
-    * Specifies continuous access evaluation settings. The possible values are: strictEnforcement, disabled, unknownFutureValue.
+    * Specifies continuous access evaluation settings. The possible values are: strictEnforcement, disabled, unknownFutureValue, strictLocation. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: strictLocation.
     *
     * @return ContinuousAccessEvaluationMode|null The mode
     */
@@ -45,7 +45,7 @@ class ContinuousAccessEvaluationSessionControl extends Entity
 
     /**
     * Sets the mode
-    * Specifies continuous access evaluation settings. The possible values are: strictEnforcement, disabled, unknownFutureValue.
+    * Specifies continuous access evaluation settings. The possible values are: strictEnforcement, disabled, unknownFutureValue, strictLocation. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: strictLocation.
     *
     * @param ContinuousAccessEvaluationMode $val The value to assign to the mode
     *

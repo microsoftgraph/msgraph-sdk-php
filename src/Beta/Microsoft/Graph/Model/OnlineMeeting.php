@@ -519,6 +519,37 @@ class OnlineMeeting extends Entity
     }
 
     /**
+    * Gets the chatRestrictions
+    *
+    * @return ChatRestrictions|null The chatRestrictions
+    */
+    public function getChatRestrictions()
+    {
+        if (array_key_exists("chatRestrictions", $this->_propDict)) {
+            if (is_a($this->_propDict["chatRestrictions"], "\Beta\Microsoft\Graph\Model\ChatRestrictions") || is_null($this->_propDict["chatRestrictions"])) {
+                return $this->_propDict["chatRestrictions"];
+            } else {
+                $this->_propDict["chatRestrictions"] = new ChatRestrictions($this->_propDict["chatRestrictions"]);
+                return $this->_propDict["chatRestrictions"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the chatRestrictions
+    *
+    * @param ChatRestrictions $val The chatRestrictions
+    *
+    * @return OnlineMeeting
+    */
+    public function setChatRestrictions($val)
+    {
+        $this->_propDict["chatRestrictions"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the creationDateTime
     * The meeting creation time in UTC. Read-only.
     *
@@ -1075,37 +1106,6 @@ class OnlineMeeting extends Entity
     public function setWatermarkProtection($val)
     {
         $this->_propDict["watermarkProtection"] = $val;
-        return $this;
-    }
-
-    /**
-    * Gets the virtualAppointment
-    *
-    * @return VirtualAppointment|null The virtualAppointment
-    */
-    public function getVirtualAppointment()
-    {
-        if (array_key_exists("virtualAppointment", $this->_propDict)) {
-            if (is_a($this->_propDict["virtualAppointment"], "\Beta\Microsoft\Graph\Model\VirtualAppointment") || is_null($this->_propDict["virtualAppointment"])) {
-                return $this->_propDict["virtualAppointment"];
-            } else {
-                $this->_propDict["virtualAppointment"] = new VirtualAppointment($this->_propDict["virtualAppointment"]);
-                return $this->_propDict["virtualAppointment"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the virtualAppointment
-    *
-    * @param VirtualAppointment $val The virtualAppointment
-    *
-    * @return OnlineMeeting
-    */
-    public function setVirtualAppointment($val)
-    {
-        $this->_propDict["virtualAppointment"] = $val;
         return $this;
     }
 

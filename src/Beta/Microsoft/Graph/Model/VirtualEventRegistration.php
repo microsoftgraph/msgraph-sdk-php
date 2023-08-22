@@ -25,120 +25,259 @@ namespace Beta\Microsoft\Graph\Model;
 class VirtualEventRegistration extends Entity
 {
     /**
-    * Gets the capacity
-    * Total capacity of the virtual event.
+    * Gets the cancelationDateTime
     *
-    * @return int|null The capacity
+    * @return \DateTime|null The cancelationDateTime
     */
-    public function getCapacity()
+    public function getCancelationDateTime()
     {
-        if (array_key_exists("capacity", $this->_propDict)) {
-            return $this->_propDict["capacity"];
-        } else {
-            return null;
+        if (array_key_exists("cancelationDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["cancelationDateTime"], "\DateTime") || is_null($this->_propDict["cancelationDateTime"])) {
+                return $this->_propDict["cancelationDateTime"];
+            } else {
+                $this->_propDict["cancelationDateTime"] = new \DateTime($this->_propDict["cancelationDateTime"]);
+                return $this->_propDict["cancelationDateTime"];
+            }
         }
+        return null;
     }
 
     /**
-    * Sets the capacity
-    * Total capacity of the virtual event.
+    * Sets the cancelationDateTime
     *
-    * @param int $val The capacity
+    * @param \DateTime $val The cancelationDateTime
     *
     * @return VirtualEventRegistration
     */
-    public function setCapacity($val)
+    public function setCancelationDateTime($val)
     {
-        $this->_propDict["capacity"] = intval($val);
+        $this->_propDict["cancelationDateTime"] = $val;
         return $this;
     }
 
     /**
-    * Gets the registrationWebUrl
-    * Registration URL of the virtual event.
+    * Gets the email
     *
-    * @return string|null The registrationWebUrl
+    * @return string|null The email
     */
-    public function getRegistrationWebUrl()
+    public function getEmail()
     {
-        if (array_key_exists("registrationWebUrl", $this->_propDict)) {
-            return $this->_propDict["registrationWebUrl"];
+        if (array_key_exists("email", $this->_propDict)) {
+            return $this->_propDict["email"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the registrationWebUrl
-    * Registration URL of the virtual event.
+    * Sets the email
     *
-    * @param string $val The registrationWebUrl
+    * @param string $val The email
     *
     * @return VirtualEventRegistration
     */
-    public function setRegistrationWebUrl($val)
+    public function setEmail($val)
     {
-        $this->_propDict["registrationWebUrl"] = $val;
+        $this->_propDict["email"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the firstName
+    *
+    * @return string|null The firstName
+    */
+    public function getFirstName()
+    {
+        if (array_key_exists("firstName", $this->_propDict)) {
+            return $this->_propDict["firstName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the firstName
+    *
+    * @param string $val The firstName
+    *
+    * @return VirtualEventRegistration
+    */
+    public function setFirstName($val)
+    {
+        $this->_propDict["firstName"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the lastName
+    *
+    * @return string|null The lastName
+    */
+    public function getLastName()
+    {
+        if (array_key_exists("lastName", $this->_propDict)) {
+            return $this->_propDict["lastName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the lastName
+    *
+    * @param string $val The lastName
+    *
+    * @return VirtualEventRegistration
+    */
+    public function setLastName($val)
+    {
+        $this->_propDict["lastName"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the registrationDateTime
+    *
+    * @return \DateTime|null The registrationDateTime
+    */
+    public function getRegistrationDateTime()
+    {
+        if (array_key_exists("registrationDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["registrationDateTime"], "\DateTime") || is_null($this->_propDict["registrationDateTime"])) {
+                return $this->_propDict["registrationDateTime"];
+            } else {
+                $this->_propDict["registrationDateTime"] = new \DateTime($this->_propDict["registrationDateTime"]);
+                return $this->_propDict["registrationDateTime"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the registrationDateTime
+    *
+    * @param \DateTime $val The registrationDateTime
+    *
+    * @return VirtualEventRegistration
+    */
+    public function setRegistrationDateTime($val)
+    {
+        $this->_propDict["registrationDateTime"] = $val;
         return $this;
     }
 
 
      /**
-     * Gets the questions
-    * Registration questions.
+     * Gets the registrationQuestionAnswers
      *
-     * @return array|null The questions
+     * @return array|null The registrationQuestionAnswers
      */
-    public function getQuestions()
+    public function getRegistrationQuestionAnswers()
     {
-        if (array_key_exists("questions", $this->_propDict)) {
-           return $this->_propDict["questions"];
+        if (array_key_exists("registrationQuestionAnswers", $this->_propDict)) {
+           return $this->_propDict["registrationQuestionAnswers"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the questions
-    * Registration questions.
+    * Sets the registrationQuestionAnswers
     *
-    * @param VirtualEventRegistrationQuestion[] $val The questions
+    * @param VirtualEventRegistrationQuestionAnswer[] $val The registrationQuestionAnswers
     *
     * @return VirtualEventRegistration
     */
-    public function setQuestions($val)
+    public function setRegistrationQuestionAnswers($val)
     {
-        $this->_propDict["questions"] = $val;
+        $this->_propDict["registrationQuestionAnswers"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the status
+    *
+    * @return VirtualEventAttendeeRegistrationStatus|null The status
+    */
+    public function getStatus()
+    {
+        if (array_key_exists("status", $this->_propDict)) {
+            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\VirtualEventAttendeeRegistrationStatus") || is_null($this->_propDict["status"])) {
+                return $this->_propDict["status"];
+            } else {
+                $this->_propDict["status"] = new VirtualEventAttendeeRegistrationStatus($this->_propDict["status"]);
+                return $this->_propDict["status"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the status
+    *
+    * @param VirtualEventAttendeeRegistrationStatus $val The status
+    *
+    * @return VirtualEventRegistration
+    */
+    public function setStatus($val)
+    {
+        $this->_propDict["status"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the userId
+    *
+    * @return string|null The userId
+    */
+    public function getUserId()
+    {
+        if (array_key_exists("userId", $this->_propDict)) {
+            return $this->_propDict["userId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the userId
+    *
+    * @param string $val The userId
+    *
+    * @return VirtualEventRegistration
+    */
+    public function setUserId($val)
+    {
+        $this->_propDict["userId"] = $val;
         return $this;
     }
 
 
      /**
-     * Gets the registrants
-    * Information of attendees who have registered for the virtual event.
+     * Gets the sessions
      *
-     * @return array|null The registrants
+     * @return array|null The sessions
      */
-    public function getRegistrants()
+    public function getSessions()
     {
-        if (array_key_exists("registrants", $this->_propDict)) {
-           return $this->_propDict["registrants"];
+        if (array_key_exists("sessions", $this->_propDict)) {
+           return $this->_propDict["sessions"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the registrants
-    * Information of attendees who have registered for the virtual event.
+    * Sets the sessions
     *
-    * @param VirtualEventRegistrant[] $val The registrants
+    * @param VirtualEventSession[] $val The sessions
     *
     * @return VirtualEventRegistration
     */
-    public function setRegistrants($val)
+    public function setSessions($val)
     {
-        $this->_propDict["registrants"] = $val;
+        $this->_propDict["sessions"] = $val;
         return $this;
     }
 

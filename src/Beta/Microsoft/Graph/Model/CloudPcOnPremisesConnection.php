@@ -171,7 +171,7 @@ class CloudPcOnPremisesConnection extends Entity
 
     /**
     * Gets the healthCheckStatus
-    * The status of the most recent health check done on the Azure network connection. For example, if status is passed, the Azure network connection has passed all checks run by the service. Possible values are: pending, running, passed, failed, unknownFutureValue. Read-only.
+    * The status of the most recent health check done on the Azure network connection. For example, if status is passed, the Azure network connection has passed all checks run by the service. Possible values are: pending, running, passed, failed,  warning, informational, unknownFutureValue. Read-only.
     *
     * @return CloudPcOnPremisesConnectionStatus|null The healthCheckStatus
     */
@@ -190,7 +190,7 @@ class CloudPcOnPremisesConnection extends Entity
 
     /**
     * Sets the healthCheckStatus
-    * The status of the most recent health check done on the Azure network connection. For example, if status is passed, the Azure network connection has passed all checks run by the service. Possible values are: pending, running, passed, failed, unknownFutureValue. Read-only.
+    * The status of the most recent health check done on the Azure network connection. For example, if status is passed, the Azure network connection has passed all checks run by the service. Possible values are: pending, running, passed, failed,  warning, informational, unknownFutureValue. Read-only.
     *
     * @param CloudPcOnPremisesConnectionStatus $val The healthCheckStatus
     *

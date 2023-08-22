@@ -24,4 +24,32 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class VirtualEventSession extends OnlineMeeting
 {
+
+     /**
+     * Gets the registrations
+     *
+     * @return array|null The registrations
+     */
+    public function getRegistrations()
+    {
+        if (array_key_exists("registrations", $this->_propDict)) {
+           return $this->_propDict["registrations"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the registrations
+    *
+    * @param VirtualEventRegistration[] $val The registrations
+    *
+    * @return VirtualEventSession
+    */
+    public function setRegistrations($val)
+    {
+        $this->_propDict["registrations"] = $val;
+        return $this;
+    }
+
 }

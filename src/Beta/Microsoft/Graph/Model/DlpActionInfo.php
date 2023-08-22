@@ -23,35 +23,4 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class DlpActionInfo extends Entity
 {
-
-    /**
-    * Gets the action
-    *
-    * @return DlpAction|null The action
-    */
-    public function getAction()
-    {
-        if (array_key_exists("action", $this->_propDict)) {
-            if (is_a($this->_propDict["action"], "\Beta\Microsoft\Graph\Model\DlpAction") || is_null($this->_propDict["action"])) {
-                return $this->_propDict["action"];
-            } else {
-                $this->_propDict["action"] = new DlpAction($this->_propDict["action"]);
-                return $this->_propDict["action"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the action
-    *
-    * @param DlpAction $val The value to assign to the action
-    *
-    * @return DlpActionInfo The DlpActionInfo
-    */
-    public function setAction($val)
-    {
-        $this->_propDict["action"] = $val;
-         return $this;
-    }
 }

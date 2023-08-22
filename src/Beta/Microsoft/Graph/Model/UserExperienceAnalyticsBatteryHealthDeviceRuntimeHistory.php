@@ -55,7 +55,7 @@ class UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory extends Entity
 
     /**
     * Gets the estimatedRuntimeInMinutes
-    * The estimated runtime of the device when the battery is fully charged. Unit in minutes. Valid values -2147483648 to 2147483647
+    * The estimated runtime of the device when the battery is fully charged. Unit in minutes. Valid values 0 to 2147483647
     *
     * @return int|null The estimatedRuntimeInMinutes
     */
@@ -70,7 +70,7 @@ class UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory extends Entity
 
     /**
     * Sets the estimatedRuntimeInMinutes
-    * The estimated runtime of the device when the battery is fully charged. Unit in minutes. Valid values -2147483648 to 2147483647
+    * The estimated runtime of the device when the battery is fully charged. Unit in minutes. Valid values 0 to 2147483647
     *
     * @param int $val The estimatedRuntimeInMinutes
     *

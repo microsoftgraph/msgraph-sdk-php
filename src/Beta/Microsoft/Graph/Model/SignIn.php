@@ -143,6 +143,37 @@ class SignIn extends Entity
     }
 
     /**
+    * Gets the appTokenProtectionStatus
+    *
+    * @return TokenProtectionStatus|null The appTokenProtectionStatus
+    */
+    public function getAppTokenProtectionStatus()
+    {
+        if (array_key_exists("appTokenProtectionStatus", $this->_propDict)) {
+            if (is_a($this->_propDict["appTokenProtectionStatus"], "\Beta\Microsoft\Graph\Model\TokenProtectionStatus") || is_null($this->_propDict["appTokenProtectionStatus"])) {
+                return $this->_propDict["appTokenProtectionStatus"];
+            } else {
+                $this->_propDict["appTokenProtectionStatus"] = new TokenProtectionStatus($this->_propDict["appTokenProtectionStatus"]);
+                return $this->_propDict["appTokenProtectionStatus"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the appTokenProtectionStatus
+    *
+    * @param TokenProtectionStatus $val The appTokenProtectionStatus
+    *
+    * @return SignIn
+    */
+    public function setAppTokenProtectionStatus($val)
+    {
+        $this->_propDict["appTokenProtectionStatus"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the authenticationAppDeviceDetails
     * Provides details about the app and device used during an Azure AD authentication step.
     *
@@ -997,7 +1028,7 @@ class SignIn extends Entity
 
     /**
     * Gets the managedServiceIdentity
-    * Contains information about the managed identity used for the sign in, including its type and associated Azure Resource Manager (ARM) resource ID.
+    * Contains information about the managed identity used for the sign in, including its type, associated Azure Resource Manager (ARM) resource ID, and federated token information.
     *
     * @return ManagedIdentity|null The managedServiceIdentity
     */
@@ -1016,7 +1047,7 @@ class SignIn extends Entity
 
     /**
     * Sets the managedServiceIdentity
-    * Contains information about the managed identity used for the sign in, including its type and associated Azure Resource Manager (ARM) resource ID.
+    * Contains information about the managed identity used for the sign in, including its type, associated Azure Resource Manager (ARM) resource ID, and federated token information.
     *
     * @param ManagedIdentity $val The managedServiceIdentity
     *
@@ -1115,6 +1146,37 @@ class SignIn extends Entity
     public function setOriginalRequestId($val)
     {
         $this->_propDict["originalRequestId"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the originalTransferMethod
+    *
+    * @return OriginalTransferMethods|null The originalTransferMethod
+    */
+    public function getOriginalTransferMethod()
+    {
+        if (array_key_exists("originalTransferMethod", $this->_propDict)) {
+            if (is_a($this->_propDict["originalTransferMethod"], "\Beta\Microsoft\Graph\Model\OriginalTransferMethods") || is_null($this->_propDict["originalTransferMethod"])) {
+                return $this->_propDict["originalTransferMethod"];
+            } else {
+                $this->_propDict["originalTransferMethod"] = new OriginalTransferMethods($this->_propDict["originalTransferMethod"]);
+                return $this->_propDict["originalTransferMethod"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the originalTransferMethod
+    *
+    * @param OriginalTransferMethods $val The originalTransferMethod
+    *
+    * @return SignIn
+    */
+    public function setOriginalTransferMethod($val)
+    {
+        $this->_propDict["originalTransferMethod"] = $val;
         return $this;
     }
 
@@ -1691,6 +1753,37 @@ class SignIn extends Entity
     public function setSignInIdentifierType($val)
     {
         $this->_propDict["signInIdentifierType"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the signInTokenProtectionStatus
+    *
+    * @return TokenProtectionStatus|null The signInTokenProtectionStatus
+    */
+    public function getSignInTokenProtectionStatus()
+    {
+        if (array_key_exists("signInTokenProtectionStatus", $this->_propDict)) {
+            if (is_a($this->_propDict["signInTokenProtectionStatus"], "\Beta\Microsoft\Graph\Model\TokenProtectionStatus") || is_null($this->_propDict["signInTokenProtectionStatus"])) {
+                return $this->_propDict["signInTokenProtectionStatus"];
+            } else {
+                $this->_propDict["signInTokenProtectionStatus"] = new TokenProtectionStatus($this->_propDict["signInTokenProtectionStatus"]);
+                return $this->_propDict["signInTokenProtectionStatus"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the signInTokenProtectionStatus
+    *
+    * @param TokenProtectionStatus $val The signInTokenProtectionStatus
+    *
+    * @return SignIn
+    */
+    public function setSignInTokenProtectionStatus($val)
+    {
+        $this->_propDict["signInTokenProtectionStatus"] = $val;
         return $this;
     }
 

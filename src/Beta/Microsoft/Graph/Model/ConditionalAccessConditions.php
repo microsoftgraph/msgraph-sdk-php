@@ -45,4 +45,6 @@ class ConditionalAccessConditions extends Enum
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
     const SERVICE_PRINCIPALS = "servicePrincipals";
     const SERVICE_PRINCIPAL_RISK = "servicePrincipalRisk";
+    const AUTHENTICATION_FLOWS = "authenticationFlows";
+    const INSIDER_RISK = "insiderRisk";
 }

@@ -35,4 +35,8 @@ class CloudPcDeviceImageStatusDetails extends Enum
     const SOURCE_IMAGE_INVALID = "sourceImageInvalid";
     const SOURCE_IMAGE_NOT_GENERALIZED = "sourceImageNotGeneralized";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
+    const VM_ALREADY_AZURE_ADJOINED = "vmAlreadyAzureAdjoined";
+    const PAID_SOURCE_IMAGE_NOT_SUPPORT = "paidSourceImageNotSupport";
+    const SOURCE_IMAGE_NOT_SUPPORT_CUSTOMIZE_VM_NAME = "sourceImageNotSupportCustomizeVMName";
+    const SOURCE_IMAGE_SIZE_EXCEEDS_LIMITATION = "sourceImageSizeExceedsLimitation";
 }

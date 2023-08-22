@@ -206,7 +206,7 @@ class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration
 
     /**
     * Gets the proxyExclusionList
-    * List of hosts to exclude using the proxy on connections for. These hosts can use wildcards such as *.example.com.
+    * List of hosts to exclude using the proxy on connections for. These hosts can use wildcards such as .example.com.
     *
     * @return array|null The proxyExclusionList
     */
@@ -221,7 +221,7 @@ class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration
 
     /**
     * Sets the proxyExclusionList
-    * List of hosts to exclude using the proxy on connections for. These hosts can use wildcards such as *.example.com.
+    * List of hosts to exclude using the proxy on connections for. These hosts can use wildcards such as .example.com.
     *
     * @param string[] $val The proxyExclusionList
     *

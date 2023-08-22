@@ -237,7 +237,7 @@ class UnifiedRoleManagementAlert extends Entity
 
     /**
     * Gets the alertConfiguration
-    * The configuration of the alert in PIM for Azure AD roles. Alert configurations are pre-defined and cannot be created or deleted, but some configurations can be modified. Supports $expand.
+    * The configuration of the alert in PIM for Azure AD roles. Alert configurations are pre-defined and cannot be created or deleted, but some configurations can be modified. Supports $filter for the isEnabled property and $expand.
     *
     * @return UnifiedRoleManagementAlertConfiguration|null The alertConfiguration
     */
@@ -256,7 +256,7 @@ class UnifiedRoleManagementAlert extends Entity
 
     /**
     * Sets the alertConfiguration
-    * The configuration of the alert in PIM for Azure AD roles. Alert configurations are pre-defined and cannot be created or deleted, but some configurations can be modified. Supports $expand.
+    * The configuration of the alert in PIM for Azure AD roles. Alert configurations are pre-defined and cannot be created or deleted, but some configurations can be modified. Supports $filter for the isEnabled property and $expand.
     *
     * @param UnifiedRoleManagementAlertConfiguration $val The alertConfiguration
     *

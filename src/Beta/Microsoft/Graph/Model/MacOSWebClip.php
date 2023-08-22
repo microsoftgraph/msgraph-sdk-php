@@ -26,7 +26,7 @@ class MacOSWebClip extends MobileApp
 {
     /**
     * Gets the appUrl
-    * The web app URL starting with http:// or https://, such as https://learn.microsoft.com/en-us/mem/.
+    * The web app URL starting with http:// or https://, such as https://learn.microsoft.com/mem/.
     *
     * @return string|null The appUrl
     */
@@ -41,7 +41,7 @@ class MacOSWebClip extends MobileApp
 
     /**
     * Sets the appUrl
-    * The web app URL starting with http:// or https://, such as https://learn.microsoft.com/en-us/mem/.
+    * The web app URL starting with http:// or https://, such as https://learn.microsoft.com/mem/.
     *
     * @param string $val The appUrl
     *
@@ -84,7 +84,7 @@ class MacOSWebClip extends MobileApp
 
     /**
     * Gets the preComposedIconEnabled
-    * Whether or not the icon for the app is precomosed. Defaults to false. If TRUE, prevents SpringBoard from adding "shine" to the icon. If FALSE, SpringBoard can add "shine".
+    * Whether or not the icon for the app is precomosed. Defaults to false. If TRUE, prevents SpringBoard from adding 'shine' to the icon. If FALSE, SpringBoard can add 'shine'.
     *
     * @return bool|null The preComposedIconEnabled
     */
@@ -99,7 +99,7 @@ class MacOSWebClip extends MobileApp
 
     /**
     * Sets the preComposedIconEnabled
-    * Whether or not the icon for the app is precomosed. Defaults to false. If TRUE, prevents SpringBoard from adding "shine" to the icon. If FALSE, SpringBoard can add "shine".
+    * Whether or not the icon for the app is precomosed. Defaults to false. If TRUE, prevents SpringBoard from adding 'shine' to the icon. If FALSE, SpringBoard can add 'shine'.
     *
     * @param bool $val The preComposedIconEnabled
     *
