@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* KeyValue File
+* MetadataEntry File
 * PHP version 7
 *
 * @category  Library
@@ -13,7 +13,7 @@
 */
 namespace Beta\Microsoft\Graph\Model;
 /**
-* KeyValue class
+* MetadataEntry class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -21,11 +21,10 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class KeyValue extends Entity
+class MetadataEntry extends Entity
 {
     /**
     * Gets the key
-    * Contains the name of the field that a value is associated with.
     *
     * @return string|null The key
     */
@@ -40,11 +39,10 @@ class KeyValue extends Entity
 
     /**
     * Sets the key
-    * Contains the name of the field that a value is associated with.
     *
     * @param string $val The value of the key
     *
-    * @return KeyValue
+    * @return MetadataEntry
     */
     public function setKey($val)
     {
@@ -53,7 +51,6 @@ class KeyValue extends Entity
     }
     /**
     * Gets the value
-    * Contains the corresponding value for the specified key.
     *
     * @return string|null The value
     */
@@ -68,11 +65,10 @@ class KeyValue extends Entity
 
     /**
     * Sets the value
-    * Contains the corresponding value for the specified key.
     *
     * @param string $val The value of the value
     *
-    * @return KeyValue
+    * @return MetadataEntry
     */
     public function setValue($val)
     {

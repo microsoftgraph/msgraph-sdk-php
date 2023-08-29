@@ -30,6 +30,7 @@ class MonitoringAction extends Enum
     * The Enum MonitoringAction
     */
     const ALERT_ERROR = "alertError";
+    const OFFER_FALLBACK = "offerFallback";
     const PAUSE_DEPLOYMENT = "pauseDeployment";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

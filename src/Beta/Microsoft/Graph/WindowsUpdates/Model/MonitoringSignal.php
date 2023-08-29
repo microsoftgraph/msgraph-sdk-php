@@ -30,5 +30,6 @@ class MonitoringSignal extends Enum
     * The Enum MonitoringSignal
     */
     const ROLLBACK = "rollback";
+    const INELIGIBLE = "ineligible";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

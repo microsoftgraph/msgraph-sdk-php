@@ -26,6 +26,7 @@ class MultiTenantOrganizationJoinRequestRecord extends Entity
 {
     /**
     * Gets the addedByTenantId
+    * Tenant ID of the Azure Active Directory tenant that added a tenant to the multi-tenant organization. To reset a failed join request, set addedByTenantId to 00000000-0000-0000-0000-000000000000. Required.
     *
     * @return string|null The addedByTenantId
     */
@@ -40,6 +41,7 @@ class MultiTenantOrganizationJoinRequestRecord extends Entity
 
     /**
     * Sets the addedByTenantId
+    * Tenant ID of the Azure Active Directory tenant that added a tenant to the multi-tenant organization. To reset a failed join request, set addedByTenantId to 00000000-0000-0000-0000-000000000000. Required.
     *
     * @param string $val The addedByTenantId
     *
@@ -53,6 +55,7 @@ class MultiTenantOrganizationJoinRequestRecord extends Entity
 
     /**
     * Gets the memberState
+    * State of the tenant in the multi-tenant organization. The possible values are: pending, active, removed, unknownFutureValue. Tenants in the pending state must join the multi-tenant organization to participate in the multi-tenant organization. Tenants in the active state can participate in the multi-tenant organization. Tenants in the removed state are in the process of being removed from the multi-tenant organization. Read-only.
     *
     * @return MultiTenantOrganizationMemberState|null The memberState
     */
@@ -71,6 +74,7 @@ class MultiTenantOrganizationJoinRequestRecord extends Entity
 
     /**
     * Sets the memberState
+    * State of the tenant in the multi-tenant organization. The possible values are: pending, active, removed, unknownFutureValue. Tenants in the pending state must join the multi-tenant organization to participate in the multi-tenant organization. Tenants in the active state can participate in the multi-tenant organization. Tenants in the removed state are in the process of being removed from the multi-tenant organization. Read-only.
     *
     * @param MultiTenantOrganizationMemberState $val The memberState
     *
@@ -84,6 +88,7 @@ class MultiTenantOrganizationJoinRequestRecord extends Entity
 
     /**
     * Gets the role
+    * Role of the tenant in the multi-tenant organization. The possible values are: owner, member (default), unknownFutureValue. Tenants with the owner role can manage the multi-tenant organization. There can be multiple tenants with the owner role in a multi-tenant organization. Tenants with the member role can participate in a multi-tenant organization.
     *
     * @return MultiTenantOrganizationMemberRole|null The role
     */
@@ -102,6 +107,7 @@ class MultiTenantOrganizationJoinRequestRecord extends Entity
 
     /**
     * Sets the role
+    * Role of the tenant in the multi-tenant organization. The possible values are: owner, member (default), unknownFutureValue. Tenants with the owner role can manage the multi-tenant organization. There can be multiple tenants with the owner role in a multi-tenant organization. Tenants with the member role can participate in a multi-tenant organization.
     *
     * @param MultiTenantOrganizationMemberRole $val The role
     *
@@ -115,6 +121,7 @@ class MultiTenantOrganizationJoinRequestRecord extends Entity
 
     /**
     * Gets the transitionDetails
+    * Details of the processing status for a tenant joining a multi-tenant organization. Read-only.
     *
     * @return MultiTenantOrganizationJoinRequestTransitionDetails|null The transitionDetails
     */
@@ -133,6 +140,7 @@ class MultiTenantOrganizationJoinRequestRecord extends Entity
 
     /**
     * Sets the transitionDetails
+    * Details of the processing status for a tenant joining a multi-tenant organization. Read-only.
     *
     * @param MultiTenantOrganizationJoinRequestTransitionDetails $val The transitionDetails
     *

@@ -26,6 +26,7 @@ class MultiTenantOrganizationMember extends DirectoryObject
 {
     /**
     * Gets the addedByTenantId
+    * Tenant ID of the tenant that added the tenant to the multi-tenant organization. Read-only.
     *
     * @return string|null The addedByTenantId
     */
@@ -40,6 +41,7 @@ class MultiTenantOrganizationMember extends DirectoryObject
 
     /**
     * Sets the addedByTenantId
+    * Tenant ID of the tenant that added the tenant to the multi-tenant organization. Read-only.
     *
     * @param string $val The addedByTenantId
     *
@@ -53,6 +55,7 @@ class MultiTenantOrganizationMember extends DirectoryObject
 
     /**
     * Gets the addedDateTime
+    * Date and time when the tenant was added to the multi-tenant organization. Read-only.
     *
     * @return \DateTime|null The addedDateTime
     */
@@ -71,6 +74,7 @@ class MultiTenantOrganizationMember extends DirectoryObject
 
     /**
     * Sets the addedDateTime
+    * Date and time when the tenant was added to the multi-tenant organization. Read-only.
     *
     * @param \DateTime $val The addedDateTime
     *
@@ -84,6 +88,7 @@ class MultiTenantOrganizationMember extends DirectoryObject
 
     /**
     * Gets the displayName
+    * Display name of the tenant added to the multi-tenant organization.
     *
     * @return string|null The displayName
     */
@@ -98,6 +103,7 @@ class MultiTenantOrganizationMember extends DirectoryObject
 
     /**
     * Sets the displayName
+    * Display name of the tenant added to the multi-tenant organization.
     *
     * @param string $val The displayName
     *
@@ -111,6 +117,7 @@ class MultiTenantOrganizationMember extends DirectoryObject
 
     /**
     * Gets the joinedDateTime
+    * Date and time when the tenant joined the multi-tenant organization. Read-only.
     *
     * @return \DateTime|null The joinedDateTime
     */
@@ -129,6 +136,7 @@ class MultiTenantOrganizationMember extends DirectoryObject
 
     /**
     * Sets the joinedDateTime
+    * Date and time when the tenant joined the multi-tenant organization. Read-only.
     *
     * @param \DateTime $val The joinedDateTime
     *
@@ -142,6 +150,7 @@ class MultiTenantOrganizationMember extends DirectoryObject
 
     /**
     * Gets the role
+    * Role of the tenant in the multi-tenant organization. The possible values are: owner, member (default), unknownFutureValue. Tenants with the owner role can manage the multi-tenant organization but tenants with the member role can only participate in a multi-tenant organization. There can be multiple tenants with the owner role in a multi-tenant organization.
     *
     * @return MultiTenantOrganizationMemberRole|null The role
     */
@@ -160,6 +169,7 @@ class MultiTenantOrganizationMember extends DirectoryObject
 
     /**
     * Sets the role
+    * Role of the tenant in the multi-tenant organization. The possible values are: owner, member (default), unknownFutureValue. Tenants with the owner role can manage the multi-tenant organization but tenants with the member role can only participate in a multi-tenant organization. There can be multiple tenants with the owner role in a multi-tenant organization.
     *
     * @param MultiTenantOrganizationMemberRole $val The role
     *
@@ -173,6 +183,7 @@ class MultiTenantOrganizationMember extends DirectoryObject
 
     /**
     * Gets the state
+    * State of the tenant in the multi-tenant organization. The possible values are: pending, active, removed, unknownFutureValue. Tenants in the pending state must join the multi-tenant organization to participate in the multi-tenant organization. Tenants in the active state can participate in the multi-tenant organization. Tenants in the removed state are in the process of being removed from the multi-tenant organization. Read-only.
     *
     * @return MultiTenantOrganizationMemberState|null The state
     */
@@ -191,6 +202,7 @@ class MultiTenantOrganizationMember extends DirectoryObject
 
     /**
     * Sets the state
+    * State of the tenant in the multi-tenant organization. The possible values are: pending, active, removed, unknownFutureValue. Tenants in the pending state must join the multi-tenant organization to participate in the multi-tenant organization. Tenants in the active state can participate in the multi-tenant organization. Tenants in the removed state are in the process of being removed from the multi-tenant organization. Read-only.
     *
     * @param MultiTenantOrganizationMemberState $val The state
     *
@@ -204,6 +216,7 @@ class MultiTenantOrganizationMember extends DirectoryObject
 
     /**
     * Gets the tenantId
+    * Tenant ID of the Azure Active Directory tenant added to the multi-tenant organization. Set at the time tenant is added.Supports $filter. Key.
     *
     * @return string|null The tenantId
     */
@@ -218,6 +231,7 @@ class MultiTenantOrganizationMember extends DirectoryObject
 
     /**
     * Sets the tenantId
+    * Tenant ID of the Azure Active Directory tenant added to the multi-tenant organization. Set at the time tenant is added.Supports $filter. Key.
     *
     * @param string $val The tenantId
     *
@@ -231,6 +245,7 @@ class MultiTenantOrganizationMember extends DirectoryObject
 
     /**
     * Gets the transitionDetails
+    * Details of the processing status for a tenant in a multi-tenant organization. Read-only. Nullable.
     *
     * @return MultiTenantOrganizationMemberTransitionDetails|null The transitionDetails
     */
@@ -249,6 +264,7 @@ class MultiTenantOrganizationMember extends DirectoryObject
 
     /**
     * Sets the transitionDetails
+    * Details of the processing status for a tenant in a multi-tenant organization. Read-only. Nullable.
     *
     * @param MultiTenantOrganizationMemberTransitionDetails $val The transitionDetails
     *

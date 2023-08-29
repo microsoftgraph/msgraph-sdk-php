@@ -54,6 +54,37 @@ class AccessPackageSubject extends Entity
     }
 
     /**
+    * Gets the cleanupScheduledDateTime
+    *
+    * @return \DateTime|null The cleanupScheduledDateTime
+    */
+    public function getCleanupScheduledDateTime()
+    {
+        if (array_key_exists("cleanupScheduledDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["cleanupScheduledDateTime"], "\DateTime") || is_null($this->_propDict["cleanupScheduledDateTime"])) {
+                return $this->_propDict["cleanupScheduledDateTime"];
+            } else {
+                $this->_propDict["cleanupScheduledDateTime"] = new \DateTime($this->_propDict["cleanupScheduledDateTime"]);
+                return $this->_propDict["cleanupScheduledDateTime"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the cleanupScheduledDateTime
+    *
+    * @param \DateTime $val The cleanupScheduledDateTime
+    *
+    * @return AccessPackageSubject
+    */
+    public function setCleanupScheduledDateTime($val)
+    {
+        $this->_propDict["cleanupScheduledDateTime"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the connectedOrganizationId
     * The identifier of the connected organization of the subject.
     *

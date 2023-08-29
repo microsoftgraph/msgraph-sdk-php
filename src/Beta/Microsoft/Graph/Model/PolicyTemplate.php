@@ -26,6 +26,7 @@ class PolicyTemplate extends Entity
 {
     /**
     * Gets the multiTenantOrganizationIdentitySynchronization
+    * Defines an optional cross-tenant access policy template with user synchronization settings for a multi-tenant organization.
     *
     * @return MultiTenantOrganizationIdentitySyncPolicyTemplate|null The multiTenantOrganizationIdentitySynchronization
     */
@@ -44,6 +45,7 @@ class PolicyTemplate extends Entity
 
     /**
     * Sets the multiTenantOrganizationIdentitySynchronization
+    * Defines an optional cross-tenant access policy template with user synchronization settings for a multi-tenant organization.
     *
     * @param MultiTenantOrganizationIdentitySyncPolicyTemplate $val The multiTenantOrganizationIdentitySynchronization
     *
@@ -57,6 +59,7 @@ class PolicyTemplate extends Entity
 
     /**
     * Gets the multiTenantOrganizationPartnerConfiguration
+    * Defines an optional cross-tenant access policy template with inbound and outbound partner configuration settings for a multi-tenant organization.
     *
     * @return MultiTenantOrganizationPartnerConfigurationTemplate|null The multiTenantOrganizationPartnerConfiguration
     */
@@ -75,6 +78,7 @@ class PolicyTemplate extends Entity
 
     /**
     * Sets the multiTenantOrganizationPartnerConfiguration
+    * Defines an optional cross-tenant access policy template with inbound and outbound partner configuration settings for a multi-tenant organization.
     *
     * @param MultiTenantOrganizationPartnerConfigurationTemplate $val The multiTenantOrganizationPartnerConfiguration
     *

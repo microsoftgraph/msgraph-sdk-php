@@ -26,6 +26,7 @@ class MultiTenantOrganizationJoinRequestTransitionDetails extends Entity
 
     /**
     * Gets the desiredMemberState
+    * State of the tenant in the multi-tenant organization currently being processed. The possible values are: pending, active, removed, unknownFutureValue. Read-only.
     *
     * @return MultiTenantOrganizationMemberState|null The desiredMemberState
     */
@@ -44,6 +45,7 @@ class MultiTenantOrganizationJoinRequestTransitionDetails extends Entity
 
     /**
     * Sets the desiredMemberState
+    * State of the tenant in the multi-tenant organization currently being processed. The possible values are: pending, active, removed, unknownFutureValue. Read-only.
     *
     * @param MultiTenantOrganizationMemberState $val The value to assign to the desiredMemberState
     *
@@ -56,6 +58,7 @@ class MultiTenantOrganizationJoinRequestTransitionDetails extends Entity
     }
     /**
     * Gets the details
+    * Details that explain the processing status if any. Read-only.
     *
     * @return string|null The details
     */
@@ -70,6 +73,7 @@ class MultiTenantOrganizationJoinRequestTransitionDetails extends Entity
 
     /**
     * Sets the details
+    * Details that explain the processing status if any. Read-only.
     *
     * @param string $val The value of the details
     *
@@ -83,6 +87,7 @@ class MultiTenantOrganizationJoinRequestTransitionDetails extends Entity
 
     /**
     * Gets the status
+    * Processing state of the asynchronous job. The possible values are: notStarted, running, succeeded, failed, unknownFutureValue. Read-only.
     *
     * @return MultiTenantOrganizationMemberProcessingStatus|null The status
     */
@@ -101,6 +106,7 @@ class MultiTenantOrganizationJoinRequestTransitionDetails extends Entity
 
     /**
     * Sets the status
+    * Processing state of the asynchronous job. The possible values are: notStarted, running, succeeded, failed, unknownFutureValue. Read-only.
     *
     * @param MultiTenantOrganizationMemberProcessingStatus $val The value to assign to the status
     *
