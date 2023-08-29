@@ -402,6 +402,7 @@ class Chat extends Entity
 
      /**
      * Gets the permissionGrants
+    * A collection of permissions granted to apps for the chat.
      *
      * @return array|null The permissionGrants
      */
@@ -416,6 +417,7 @@ class Chat extends Entity
 
     /**
     * Sets the permissionGrants
+    * A collection of permissions granted to apps for the chat.
     *
     * @param ResourceSpecificPermissionGrant[] $val The permissionGrants
     *
