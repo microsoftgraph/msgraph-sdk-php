@@ -267,6 +267,7 @@ class Application extends DirectoryObject implements Parsable
             'requiredResourceAccess' => fn(ParseNode $n) => $o->setRequiredResourceAccess($n->getCollectionOfObjectValues([RequiredResourceAccess::class, 'createFromDiscriminatorValue'])),
             'samlMetadataUrl' => fn(ParseNode $n) => $o->setSamlMetadataUrl($n->getStringValue()),
             'serviceManagementReference' => fn(ParseNode $n) => $o->setServiceManagementReference($n->getStringValue()),
+            'servicePrincipalLockConfiguration' => fn(ParseNode $n) => $o->setServicePrincipalLockConfiguration($n->getObjectValue([ServicePrincipalLockConfiguration::class, 'createFromDiscriminatorValue'])),
             'signInAudience' => fn(ParseNode $n) => $o->setSignInAudience($n->getStringValue()),
             'spa' => fn(ParseNode $n) => $o->setSpa($n->getObjectValue([SpaApplication::class, 'createFromDiscriminatorValue'])),
             'synchronization' => fn(ParseNode $n) => $o->setSynchronization($n->getObjectValue([Synchronization::class, 'createFromDiscriminatorValue'])),
@@ -539,6 +540,18 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
+     * Gets the servicePrincipalLockConfiguration property value. Specifies whether sensitive properties of a multi-tenant application should be locked for editing after the application is provisioned in a tenant. Nullable. null by default.
+     * @return ServicePrincipalLockConfiguration|null
+    */
+    public function getServicePrincipalLockConfiguration(): ?ServicePrincipalLockConfiguration {
+        $val = $this->getBackingStore()->get('servicePrincipalLockConfiguration');
+        if (is_null($val) || $val instanceof ServicePrincipalLockConfiguration) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'servicePrincipalLockConfiguration'");
+    }
+
+    /**
      * Gets the signInAudience property value. Specifies the Microsoft accounts that are supported for the current application. The possible values are: AzureADMyOrg, AzureADMultipleOrgs, AzureADandPersonalMicrosoftAccount (default), and PersonalMicrosoftAccount. See more in the table. The value of this object also limits the number of permissions an app can request. For more information, see Limits on requested permissions per app. The value for this property has implications on other app object properties. As a result, if you change this property, you may need to change other properties first. For more information, see Validation differences for signInAudience.Supports $filter (eq, ne, not).
      * @return string|null
     */
@@ -693,6 +706,7 @@ class Application extends DirectoryObject implements Parsable
         $writer->writeCollectionOfObjectValues('requiredResourceAccess', $this->getRequiredResourceAccess());
         $writer->writeStringValue('samlMetadataUrl', $this->getSamlMetadataUrl());
         $writer->writeStringValue('serviceManagementReference', $this->getServiceManagementReference());
+        $writer->writeObjectValue('servicePrincipalLockConfiguration', $this->getServicePrincipalLockConfiguration());
         $writer->writeStringValue('signInAudience', $this->getSignInAudience());
         $writer->writeObjectValue('spa', $this->getSpa());
         $writer->writeObjectValue('synchronization', $this->getSynchronization());
@@ -982,6 +996,14 @@ class Application extends DirectoryObject implements Parsable
     */
     public function setServiceManagementReference(?string $value): void {
         $this->getBackingStore()->set('serviceManagementReference', $value);
+    }
+
+    /**
+     * Sets the servicePrincipalLockConfiguration property value. Specifies whether sensitive properties of a multi-tenant application should be locked for editing after the application is provisioned in a tenant. Nullable. null by default.
+     * @param ServicePrincipalLockConfiguration|null $value Value to set for the servicePrincipalLockConfiguration property.
+    */
+    public function setServicePrincipalLockConfiguration(?ServicePrincipalLockConfiguration $value): void {
+        $this->getBackingStore()->set('servicePrincipalLockConfiguration', $value);
     }
 
     /**

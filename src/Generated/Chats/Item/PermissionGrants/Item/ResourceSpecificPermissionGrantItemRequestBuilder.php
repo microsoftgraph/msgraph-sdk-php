@@ -90,7 +90,7 @@ class ResourceSpecificPermissionGrantItemRequestBuilder extends BaseRequestBuild
     }
 
     /**
-     * Get permissionGrants from chats
+     * A collection of permissions granted to apps for the chat.
      * @param ResourceSpecificPermissionGrantItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -144,7 +144,7 @@ class ResourceSpecificPermissionGrantItemRequestBuilder extends BaseRequestBuild
     }
 
     /**
-     * Get permissionGrants from chats
+     * A collection of permissions granted to apps for the chat.
      * @param ResourceSpecificPermissionGrantItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

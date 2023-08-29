@@ -927,7 +927,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the id property value. The unique idenfier for an entity. Read-only.
+     * Gets the id property value. The unique identifier for an entity. Read-only.
      * @return string|null
     */
     public function getId(): ?string {
@@ -977,7 +977,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the id property value. The unique idenfier for an entity. Read-only.
+     * Sets the id property value. The unique identifier for an entity. Read-only.
      * @param string|null $value Value to set for the id property.
     */
     public function setId(?string $value): void {

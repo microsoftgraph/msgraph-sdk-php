@@ -281,7 +281,7 @@ class Team extends Entity implements Parsable
     }
 
     /**
-     * Gets the permissionGrants property value. The permissionGrants property
+     * Gets the permissionGrants property value. A collection of permissions granted to apps to access the team.
      * @return array<ResourceSpecificPermissionGrant>|null
     */
     public function getPermissionGrants(): ?array {
@@ -589,7 +589,7 @@ class Team extends Entity implements Parsable
     }
 
     /**
-     * Sets the permissionGrants property value. The permissionGrants property
+     * Sets the permissionGrants property value. A collection of permissions granted to apps to access the team.
      * @param array<ResourceSpecificPermissionGrant>|null $value Value to set for the permissionGrants property.
     */
     public function setPermissionGrants(?array $value): void {

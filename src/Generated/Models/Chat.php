@@ -154,7 +154,7 @@ class Chat extends Entity implements Parsable
     }
 
     /**
-     * Gets the permissionGrants property value. The permissionGrants property
+     * Gets the permissionGrants property value. A collection of permissions granted to apps for the chat.
      * @return array<ResourceSpecificPermissionGrant>|null
     */
     public function getPermissionGrants(): ?array {
@@ -331,7 +331,7 @@ class Chat extends Entity implements Parsable
     }
 
     /**
-     * Sets the permissionGrants property value. The permissionGrants property
+     * Sets the permissionGrants property value. A collection of permissions granted to apps for the chat.
      * @param array<ResourceSpecificPermissionGrant>|null $value Value to set for the permissionGrants property.
     */
     public function setPermissionGrants(?array $value): void {
