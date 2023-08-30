@@ -70,4 +70,13 @@ class GetCachedReportRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return GetCachedReportRequestBuilder
+    */
+    public function withUrl(string $rawUrl): GetCachedReportRequestBuilder {
+        return new GetCachedReportRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

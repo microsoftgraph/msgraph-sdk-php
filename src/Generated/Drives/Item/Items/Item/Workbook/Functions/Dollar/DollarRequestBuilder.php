@@ -70,4 +70,13 @@ class DollarRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return DollarRequestBuilder
+    */
+    public function withUrl(string $rawUrl): DollarRequestBuilder {
+        return new DollarRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

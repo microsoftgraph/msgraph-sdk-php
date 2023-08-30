@@ -70,4 +70,13 @@ class GraphRoomRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return GraphRoomRequestBuilder
+    */
+    public function withUrl(string $rawUrl): GraphRoomRequestBuilder {
+        return new GraphRoomRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

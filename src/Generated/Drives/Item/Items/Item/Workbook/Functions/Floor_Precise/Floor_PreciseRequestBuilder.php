@@ -70,4 +70,13 @@ class Floor_PreciseRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return Floor_PreciseRequestBuilder
+    */
+    public function withUrl(string $rawUrl): Floor_PreciseRequestBuilder {
+        return new Floor_PreciseRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

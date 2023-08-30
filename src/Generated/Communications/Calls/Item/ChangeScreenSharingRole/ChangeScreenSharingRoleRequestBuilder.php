@@ -69,4 +69,13 @@ class ChangeScreenSharingRoleRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return ChangeScreenSharingRoleRequestBuilder
+    */
+    public function withUrl(string $rawUrl): ChangeScreenSharingRoleRequestBuilder {
+        return new ChangeScreenSharingRoleRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

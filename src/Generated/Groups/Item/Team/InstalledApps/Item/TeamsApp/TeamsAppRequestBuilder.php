@@ -70,4 +70,13 @@ class TeamsAppRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return TeamsAppRequestBuilder
+    */
+    public function withUrl(string $rawUrl): TeamsAppRequestBuilder {
+        return new TeamsAppRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

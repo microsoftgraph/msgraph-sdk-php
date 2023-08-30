@@ -70,4 +70,13 @@ class TriggerRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return TriggerRequestBuilder
+    */
+    public function withUrl(string $rawUrl): TriggerRequestBuilder {
+        return new TriggerRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

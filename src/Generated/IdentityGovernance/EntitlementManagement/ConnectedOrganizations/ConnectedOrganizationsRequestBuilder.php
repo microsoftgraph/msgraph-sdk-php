@@ -132,4 +132,13 @@ class ConnectedOrganizationsRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return ConnectedOrganizationsRequestBuilder
+    */
+    public function withUrl(string $rawUrl): ConnectedOrganizationsRequestBuilder {
+        return new ConnectedOrganizationsRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

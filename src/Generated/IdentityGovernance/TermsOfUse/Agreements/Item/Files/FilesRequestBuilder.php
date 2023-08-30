@@ -131,4 +131,13 @@ class FilesRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return FilesRequestBuilder
+    */
+    public function withUrl(string $rawUrl): FilesRequestBuilder {
+        return new FilesRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

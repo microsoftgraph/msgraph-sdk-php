@@ -153,4 +153,13 @@ class RiskyUserItemRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return RiskyUserItemRequestBuilder
+    */
+    public function withUrl(string $rawUrl): RiskyUserItemRequestBuilder {
+        return new RiskyUserItemRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

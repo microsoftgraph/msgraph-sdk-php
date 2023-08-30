@@ -132,4 +132,13 @@ class DomainsRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return DomainsRequestBuilder
+    */
+    public function withUrl(string $rawUrl): DomainsRequestBuilder {
+        return new DomainsRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

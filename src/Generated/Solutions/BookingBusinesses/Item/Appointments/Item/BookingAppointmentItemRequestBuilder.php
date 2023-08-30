@@ -155,4 +155,13 @@ class BookingAppointmentItemRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return BookingAppointmentItemRequestBuilder
+    */
+    public function withUrl(string $rawUrl): BookingAppointmentItemRequestBuilder {
+        return new BookingAppointmentItemRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

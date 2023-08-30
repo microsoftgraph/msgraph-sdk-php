@@ -145,4 +145,13 @@ class PrintServiceEndpointItemRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return PrintServiceEndpointItemRequestBuilder
+    */
+    public function withUrl(string $rawUrl): PrintServiceEndpointItemRequestBuilder {
+        return new PrintServiceEndpointItemRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

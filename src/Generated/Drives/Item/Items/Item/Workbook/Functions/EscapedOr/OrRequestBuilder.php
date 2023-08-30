@@ -70,4 +70,13 @@ class OrRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return OrRequestBuilder
+    */
+    public function withUrl(string $rawUrl): OrRequestBuilder {
+        return new OrRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

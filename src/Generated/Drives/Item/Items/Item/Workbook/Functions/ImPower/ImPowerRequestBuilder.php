@@ -70,4 +70,13 @@ class ImPowerRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return ImPowerRequestBuilder
+    */
+    public function withUrl(string $rawUrl): ImPowerRequestBuilder {
+        return new ImPowerRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

@@ -131,4 +131,13 @@ class UserRegistrationDetailsRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return UserRegistrationDetailsRequestBuilder
+    */
+    public function withUrl(string $rawUrl): UserRegistrationDetailsRequestBuilder {
+        return new UserRegistrationDetailsRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

@@ -69,4 +69,13 @@ class TargetAppsRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return TargetAppsRequestBuilder
+    */
+    public function withUrl(string $rawUrl): TargetAppsRequestBuilder {
+        return new TargetAppsRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

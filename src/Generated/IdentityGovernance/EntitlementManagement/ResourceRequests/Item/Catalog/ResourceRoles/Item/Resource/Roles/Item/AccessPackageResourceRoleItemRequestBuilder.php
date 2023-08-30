@@ -144,4 +144,13 @@ class AccessPackageResourceRoleItemRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return AccessPackageResourceRoleItemRequestBuilder
+    */
+    public function withUrl(string $rawUrl): AccessPackageResourceRoleItemRequestBuilder {
+        return new AccessPackageResourceRoleItemRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

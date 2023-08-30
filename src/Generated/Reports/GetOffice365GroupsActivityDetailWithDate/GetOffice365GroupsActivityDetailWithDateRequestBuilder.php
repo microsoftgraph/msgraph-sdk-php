@@ -70,4 +70,13 @@ class GetOffice365GroupsActivityDetailWithDateRequestBuilder extends BaseRequest
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return GetOffice365GroupsActivityDetailWithDateRequestBuilder
+    */
+    public function withUrl(string $rawUrl): GetOffice365GroupsActivityDetailWithDateRequestBuilder {
+        return new GetOffice365GroupsActivityDetailWithDateRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

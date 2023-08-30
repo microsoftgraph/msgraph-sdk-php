@@ -168,4 +168,13 @@ class AnalyticsRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return AnalyticsRequestBuilder
+    */
+    public function withUrl(string $rawUrl): AnalyticsRequestBuilder {
+        return new AnalyticsRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

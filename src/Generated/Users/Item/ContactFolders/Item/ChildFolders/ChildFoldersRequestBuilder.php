@@ -140,4 +140,13 @@ class ChildFoldersRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return ChildFoldersRequestBuilder
+    */
+    public function withUrl(string $rawUrl): ChildFoldersRequestBuilder {
+        return new ChildFoldersRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

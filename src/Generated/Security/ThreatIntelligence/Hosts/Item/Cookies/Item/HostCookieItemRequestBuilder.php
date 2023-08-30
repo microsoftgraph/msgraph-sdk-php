@@ -70,4 +70,13 @@ class HostCookieItemRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return HostCookieItemRequestBuilder
+    */
+    public function withUrl(string $rawUrl): HostCookieItemRequestBuilder {
+        return new HostCookieItemRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

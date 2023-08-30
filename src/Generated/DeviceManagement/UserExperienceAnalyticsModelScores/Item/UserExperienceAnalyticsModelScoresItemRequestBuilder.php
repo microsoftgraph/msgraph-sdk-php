@@ -144,4 +144,13 @@ class UserExperienceAnalyticsModelScoresItemRequestBuilder extends BaseRequestBu
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return UserExperienceAnalyticsModelScoresItemRequestBuilder
+    */
+    public function withUrl(string $rawUrl): UserExperienceAnalyticsModelScoresItemRequestBuilder {
+        return new UserExperienceAnalyticsModelScoresItemRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

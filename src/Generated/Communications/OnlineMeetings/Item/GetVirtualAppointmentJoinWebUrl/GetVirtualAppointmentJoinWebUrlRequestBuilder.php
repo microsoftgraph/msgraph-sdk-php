@@ -66,4 +66,13 @@ class GetVirtualAppointmentJoinWebUrlRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return GetVirtualAppointmentJoinWebUrlRequestBuilder
+    */
+    public function withUrl(string $rawUrl): GetVirtualAppointmentJoinWebUrlRequestBuilder {
+        return new GetVirtualAppointmentJoinWebUrlRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

@@ -70,4 +70,13 @@ class Z_TestRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return Z_TestRequestBuilder
+    */
+    public function withUrl(string $rawUrl): Z_TestRequestBuilder {
+        return new Z_TestRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

@@ -138,4 +138,13 @@ class MembersWithLicenseErrorsRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return MembersWithLicenseErrorsRequestBuilder
+    */
+    public function withUrl(string $rawUrl): MembersWithLicenseErrorsRequestBuilder {
+        return new MembersWithLicenseErrorsRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

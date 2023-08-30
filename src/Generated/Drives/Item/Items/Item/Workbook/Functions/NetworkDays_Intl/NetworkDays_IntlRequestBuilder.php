@@ -70,4 +70,13 @@ class NetworkDays_IntlRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return NetworkDays_IntlRequestBuilder
+    */
+    public function withUrl(string $rawUrl): NetworkDays_IntlRequestBuilder {
+        return new NetworkDays_IntlRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

@@ -70,4 +70,13 @@ class Dec2OctRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return Dec2OctRequestBuilder
+    */
+    public function withUrl(string $rawUrl): Dec2OctRequestBuilder {
+        return new Dec2OctRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

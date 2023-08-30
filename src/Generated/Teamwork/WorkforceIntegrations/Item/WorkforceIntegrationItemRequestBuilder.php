@@ -147,4 +147,13 @@ class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return WorkforceIntegrationItemRequestBuilder
+    */
+    public function withUrl(string $rawUrl): WorkforceIntegrationItemRequestBuilder {
+        return new WorkforceIntegrationItemRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

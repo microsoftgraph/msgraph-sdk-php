@@ -70,4 +70,13 @@ class TanRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return TanRequestBuilder
+    */
+    public function withUrl(string $rawUrl): TanRequestBuilder {
+        return new TanRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

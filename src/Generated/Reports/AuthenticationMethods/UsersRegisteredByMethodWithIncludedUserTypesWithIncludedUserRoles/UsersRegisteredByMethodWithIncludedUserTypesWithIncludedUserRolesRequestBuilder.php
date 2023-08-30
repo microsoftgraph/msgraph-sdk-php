@@ -72,4 +72,13 @@ class UsersRegisteredByMethodWithIncludedUserTypesWithIncludedUserRolesRequestBu
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return UsersRegisteredByMethodWithIncludedUserTypesWithIncludedUserRolesRequestBuilder
+    */
+    public function withUrl(string $rawUrl): UsersRegisteredByMethodWithIncludedUserTypesWithIncludedUserRolesRequestBuilder {
+        return new UsersRegisteredByMethodWithIncludedUserTypesWithIncludedUserRolesRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

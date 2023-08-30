@@ -72,11 +72,11 @@ class DeviceCompliancePoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new iosCompliancePolicy object.
+     * Create a new androidCompliancePolicy object.
      * @param DeviceCompliancePolicy $body The request body
      * @param DeviceCompliancePoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-ioscompliancepolicy-create?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-androidcompliancepolicy-create?view=graph-rest-1.0 Find more info here
     */
     public function post(DeviceCompliancePolicy $body, ?DeviceCompliancePoliciesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -113,7 +113,7 @@ class DeviceCompliancePoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new iosCompliancePolicy object.
+     * Create a new androidCompliancePolicy object.
      * @param DeviceCompliancePolicy $body The request body
      * @param DeviceCompliancePoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -130,6 +130,15 @@ class DeviceCompliancePoliciesRequestBuilder extends BaseRequestBuilder
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
+    }
+
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return DeviceCompliancePoliciesRequestBuilder
+    */
+    public function withUrl(string $rawUrl): DeviceCompliancePoliciesRequestBuilder {
+        return new DeviceCompliancePoliciesRequestBuilder($rawUrl, $this->requestAdapter);
     }
 
 }

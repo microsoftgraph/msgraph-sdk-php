@@ -69,4 +69,13 @@ class CreateRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return CreateRequestBuilder
+    */
+    public function withUrl(string $rawUrl): CreateRequestBuilder {
+        return new CreateRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

@@ -234,4 +234,13 @@ class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder
         return new UsedRangeWithValuesOnlyRequestBuilder($this->pathParameters, $this->requestAdapter, $valuesOnly);
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return WorkbookWorksheetItemRequestBuilder
+    */
+    public function withUrl(string $rawUrl): WorkbookWorksheetItemRequestBuilder {
+        return new WorkbookWorksheetItemRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

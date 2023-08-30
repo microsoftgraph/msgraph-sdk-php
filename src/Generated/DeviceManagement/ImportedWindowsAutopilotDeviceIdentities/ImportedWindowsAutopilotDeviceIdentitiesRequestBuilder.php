@@ -140,4 +140,13 @@ class ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder extends BaseRequest
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder
+    */
+    public function withUrl(string $rawUrl): ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder {
+        return new ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

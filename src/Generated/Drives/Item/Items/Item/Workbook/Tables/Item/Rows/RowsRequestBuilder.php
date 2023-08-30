@@ -65,7 +65,7 @@ class RowsRequestBuilder extends BaseRequestBuilder
      * Retrieve a list of tablerow objects.
      * @param RowsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://learn.microsoft.com/graph/api/tablerow-list?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/table-list-rows?view=graph-rest-1.0 Find more info here
     */
     public function get(?RowsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -148,6 +148,15 @@ class RowsRequestBuilder extends BaseRequestBuilder
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
+    }
+
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return RowsRequestBuilder
+    */
+    public function withUrl(string $rawUrl): RowsRequestBuilder {
+        return new RowsRequestBuilder($rawUrl, $this->requestAdapter);
     }
 
 }

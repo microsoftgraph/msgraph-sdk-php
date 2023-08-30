@@ -70,4 +70,13 @@ class FvRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return FvRequestBuilder
+    */
+    public function withUrl(string $rawUrl): FvRequestBuilder {
+        return new FvRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

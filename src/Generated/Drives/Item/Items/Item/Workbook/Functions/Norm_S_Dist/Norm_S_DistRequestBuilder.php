@@ -70,4 +70,13 @@ class Norm_S_DistRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return Norm_S_DistRequestBuilder
+    */
+    public function withUrl(string $rawUrl): Norm_S_DistRequestBuilder {
+        return new Norm_S_DistRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

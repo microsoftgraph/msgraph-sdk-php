@@ -70,4 +70,13 @@ class Floor_MathRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return Floor_MathRequestBuilder
+    */
+    public function withUrl(string $rawUrl): Floor_MathRequestBuilder {
+        return new Floor_MathRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

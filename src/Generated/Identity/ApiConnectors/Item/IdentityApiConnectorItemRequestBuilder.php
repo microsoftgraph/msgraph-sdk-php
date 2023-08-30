@@ -155,4 +155,13 @@ class IdentityApiConnectorItemRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return IdentityApiConnectorItemRequestBuilder
+    */
+    public function withUrl(string $rawUrl): IdentityApiConnectorItemRequestBuilder {
+        return new IdentityApiConnectorItemRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

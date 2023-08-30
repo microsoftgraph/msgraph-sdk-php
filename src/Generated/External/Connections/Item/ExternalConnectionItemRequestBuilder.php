@@ -179,4 +179,13 @@ class ExternalConnectionItemRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return ExternalConnectionItemRequestBuilder
+    */
+    public function withUrl(string $rawUrl): ExternalConnectionItemRequestBuilder {
+        return new ExternalConnectionItemRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

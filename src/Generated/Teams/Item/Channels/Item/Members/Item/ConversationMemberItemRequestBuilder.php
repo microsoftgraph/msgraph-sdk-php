@@ -70,11 +70,11 @@ class ConversationMemberItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the role of a conversationMember in a team or channel.
+     * Update the role of a conversationMember in a channel. This operation is allowed only for channels with a membershipType value of private or shared.
      * @param ConversationMember $body The request body
      * @param ConversationMemberItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://learn.microsoft.com/graph/api/conversationmember-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/channel-update-members?view=graph-rest-1.0 Find more info here
     */
     public function patch(ConversationMember $body, ?ConversationMemberItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -128,7 +128,7 @@ class ConversationMemberItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the role of a conversationMember in a team or channel.
+     * Update the role of a conversationMember in a channel. This operation is allowed only for channels with a membershipType value of private or shared.
      * @param ConversationMember $body The request body
      * @param ConversationMemberItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -145,6 +145,15 @@ class ConversationMemberItemRequestBuilder extends BaseRequestBuilder
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
+    }
+
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return ConversationMemberItemRequestBuilder
+    */
+    public function withUrl(string $rawUrl): ConversationMemberItemRequestBuilder {
+        return new ConversationMemberItemRequestBuilder($rawUrl, $this->requestAdapter);
     }
 
 }

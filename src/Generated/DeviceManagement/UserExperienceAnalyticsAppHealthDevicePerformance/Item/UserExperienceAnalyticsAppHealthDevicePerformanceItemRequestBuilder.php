@@ -144,4 +144,13 @@ class UserExperienceAnalyticsAppHealthDevicePerformanceItemRequestBuilder extend
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return UserExperienceAnalyticsAppHealthDevicePerformanceItemRequestBuilder
+    */
+    public function withUrl(string $rawUrl): UserExperienceAnalyticsAppHealthDevicePerformanceItemRequestBuilder {
+        return new UserExperienceAnalyticsAppHealthDevicePerformanceItemRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

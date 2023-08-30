@@ -70,4 +70,13 @@ class Norm_InvRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return Norm_InvRequestBuilder
+    */
+    public function withUrl(string $rawUrl): Norm_InvRequestBuilder {
+        return new Norm_InvRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

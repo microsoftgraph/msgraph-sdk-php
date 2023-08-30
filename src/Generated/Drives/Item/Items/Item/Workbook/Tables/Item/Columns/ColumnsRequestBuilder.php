@@ -65,7 +65,7 @@ class ColumnsRequestBuilder extends BaseRequestBuilder
      * Retrieve a list of tablecolumn objects.
      * @param ColumnsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://learn.microsoft.com/graph/api/tablecolumn-list?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/table-list-columns?view=graph-rest-1.0 Find more info here
     */
     public function get(?ColumnsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -148,6 +148,15 @@ class ColumnsRequestBuilder extends BaseRequestBuilder
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
+    }
+
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return ColumnsRequestBuilder
+    */
+    public function withUrl(string $rawUrl): ColumnsRequestBuilder {
+        return new ColumnsRequestBuilder($rawUrl, $this->requestAdapter);
     }
 
 }

@@ -171,4 +171,13 @@ class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return AuthenticationStrengthPolicyItemRequestBuilder
+    */
+    public function withUrl(string $rawUrl): AuthenticationStrengthPolicyItemRequestBuilder {
+        return new AuthenticationStrengthPolicyItemRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

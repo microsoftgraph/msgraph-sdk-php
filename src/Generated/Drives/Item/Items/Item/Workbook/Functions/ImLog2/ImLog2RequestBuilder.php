@@ -70,4 +70,13 @@ class ImLog2RequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return ImLog2RequestBuilder
+    */
+    public function withUrl(string $rawUrl): ImLog2RequestBuilder {
+        return new ImLog2RequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

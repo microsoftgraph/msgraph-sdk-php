@@ -146,4 +146,13 @@ class IdentitySecurityDefaultsEnforcementPolicyRequestBuilder extends BaseReques
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return IdentitySecurityDefaultsEnforcementPolicyRequestBuilder
+    */
+    public function withUrl(string $rawUrl): IdentitySecurityDefaultsEnforcementPolicyRequestBuilder {
+        return new IdentitySecurityDefaultsEnforcementPolicyRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

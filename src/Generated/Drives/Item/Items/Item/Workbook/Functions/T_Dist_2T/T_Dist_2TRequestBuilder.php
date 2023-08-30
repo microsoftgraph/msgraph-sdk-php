@@ -70,4 +70,13 @@ class T_Dist_2TRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return T_Dist_2TRequestBuilder
+    */
+    public function withUrl(string $rawUrl): T_Dist_2TRequestBuilder {
+        return new T_Dist_2TRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

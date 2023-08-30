@@ -69,4 +69,13 @@ class GetOffice365GroupsActivityStorageWithPeriodRequestBuilder extends BaseRequ
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return GetOffice365GroupsActivityStorageWithPeriodRequestBuilder
+    */
+    public function withUrl(string $rawUrl): GetOffice365GroupsActivityStorageWithPeriodRequestBuilder {
+        return new GetOffice365GroupsActivityStorageWithPeriodRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

@@ -70,4 +70,13 @@ class Rank_EqRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return Rank_EqRequestBuilder
+    */
+    public function withUrl(string $rawUrl): Rank_EqRequestBuilder {
+        return new Rank_EqRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }
