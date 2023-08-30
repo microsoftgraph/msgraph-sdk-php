@@ -57,6 +57,7 @@ class TenantRelationship implements \JsonSerializable
 
     /**
     * Gets the multiTenantOrganization
+    * Defines an organization with more than one instance of Azure Active Directory (Azure AD).
     *
     * @return MultiTenantOrganization|null The multiTenantOrganization
     */
@@ -75,6 +76,7 @@ class TenantRelationship implements \JsonSerializable
 
     /**
     * Sets the multiTenantOrganization
+    * Defines an organization with more than one instance of Azure Active Directory (Azure AD).
     *
     * @param MultiTenantOrganization $val The multiTenantOrganization
     *

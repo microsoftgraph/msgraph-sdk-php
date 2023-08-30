@@ -25,7 +25,7 @@ class KeyValuePair extends Entity
 {
     /**
     * Gets the name
-    * Name for this key-value pair. For more information about possible names for each resource type that uses this configuration, see keyValuePair names and values.
+    * Name for this key-value pair
     *
     * @return string|null The name
     */
@@ -40,7 +40,7 @@ class KeyValuePair extends Entity
 
     /**
     * Sets the name
-    * Name for this key-value pair. For more information about possible names for each resource type that uses this configuration, see keyValuePair names and values.
+    * Name for this key-value pair
     *
     * @param string $val The value of the name
     *
@@ -53,7 +53,7 @@ class KeyValuePair extends Entity
     }
     /**
     * Gets the value
-    * Value for this key-value pair. For more information about possible values for each resource type that uses this configuration, see keyValuePair names and values.
+    * Value for this key-value pair
     *
     * @return string|null The value
     */
@@ -68,7 +68,7 @@ class KeyValuePair extends Entity
 
     /**
     * Sets the value
-    * Value for this key-value pair. For more information about possible values for each resource type that uses this configuration, see keyValuePair names and values.
+    * Value for this key-value pair
     *
     * @param string $val The value of the value
     *
