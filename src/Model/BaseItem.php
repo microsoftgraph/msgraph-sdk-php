@@ -26,7 +26,7 @@ class BaseItem extends Entity
 {
     /**
     * Gets the createdBy
-    * Identity of the user, device, or application which created the item. Read-only.
+    * Identity of the user, device, or application that created the item. Read-only.
     *
     * @return IdentitySet|null The createdBy
     */
@@ -45,7 +45,7 @@ class BaseItem extends Entity
 
     /**
     * Sets the createdBy
-    * Identity of the user, device, or application which created the item. Read-only.
+    * Identity of the user, device, or application that created the item. Read-only.
     *
     * @param IdentitySet $val The createdBy
     *
@@ -150,7 +150,7 @@ class BaseItem extends Entity
 
     /**
     * Gets the lastModifiedBy
-    * Identity of the user, device, and application which last modified the item. Read-only.
+    * Identity of the user, device, and application that last modified the item. Read-only.
     *
     * @return IdentitySet|null The lastModifiedBy
     */
@@ -169,7 +169,7 @@ class BaseItem extends Entity
 
     /**
     * Sets the lastModifiedBy
-    * Identity of the user, device, and application which last modified the item. Read-only.
+    * Identity of the user, device, and application that last modified the item. Read-only.
     *
     * @param IdentitySet $val The lastModifiedBy
     *
@@ -278,7 +278,7 @@ class BaseItem extends Entity
 
     /**
     * Gets the webUrl
-    * URL that displays the resource in the browser. Read-only.
+    * URL that either displays the resource in the browser (for Office file formats), or is a direct link to the file (for other formats). Read-only.
     *
     * @return string|null The webUrl
     */
@@ -293,7 +293,7 @@ class BaseItem extends Entity
 
     /**
     * Sets the webUrl
-    * URL that displays the resource in the browser. Read-only.
+    * URL that either displays the resource in the browser (for Office file formats), or is a direct link to the file (for other formats). Read-only.
     *
     * @param string $val The webUrl
     *
