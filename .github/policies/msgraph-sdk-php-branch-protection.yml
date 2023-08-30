@@ -10,7 +10,7 @@ configuration:
   branchProtectionRules:
 
   - branchNamePattern: dev
-    # This branch pattern applies to the following branches as of 06/12/2023 10:31:17:
+    # This branch pattern applies to the following branches as of 08/30/2023:
     # dev
 
     # Specifies whether this branch can be deleted. boolean
@@ -33,6 +33,9 @@ configuration:
     requiresConversationResolution: true
     # Are merge commits prohibited from being pushed to this branch. boolean
     requiresLinearHistory: false
+    # Required status checks to pass before merging. Values can be any string, but if the value does not correspond to any existing status check, the status check will be stuck on pending for status since nothing exists to push an actual status
+    requiredStatusChecks:
+    - validate-pull-request
     # Require branches to be up to date before merging. Requires requiredStatusChecks. boolean
     requiresStrictStatusChecks: true
     # Indicates whether there are restrictions on who can push. boolean. Should be set with whoCanPush.
@@ -41,7 +44,7 @@ configuration:
     restrictsReviewDismissals: false
 
   - branchNamePattern: main
-    # This branch pattern applies to the following branches as of 06/12/2023 10:31:17:
+    # This branch pattern applies to the following branches as of 08/30/2023:
     # main
 
     # Specifies whether this branch can be deleted. boolean
@@ -57,13 +60,16 @@ configuration:
     # Specifies the number of pull request reviews before merging. int (0-6). Should be null/empty if PRs are not required
     requiredApprovingReviewsCount: 1
     # Require review from Code Owners. Requires requiredApprovingReviewsCount. boolean
-    requireCodeOwnersReview: false
+    requireCodeOwnersReview: true
     # Are commits required to be signed. boolean. TODO: all contributors must have commit signing on local machines.
     requiresCommitSignatures: false
     # Are conversations required to be resolved before merging? boolean
     requiresConversationResolution: true
     # Are merge commits prohibited from being pushed to this branch. boolean
     requiresLinearHistory: false
+    # Required status checks to pass before merging. Values can be any string, but if the value does not correspond to any existing status check, the status check will be stuck on pending for status since nothing exists to push an actual status
+    requiredStatusChecks:
+    - validate-pull-request
     # Require branches to be up to date before merging. Requires requiredStatusChecks. boolean
     requiresStrictStatusChecks: true
     # Indicates whether there are restrictions on who can push. boolean. Should be set with whoCanPush.
