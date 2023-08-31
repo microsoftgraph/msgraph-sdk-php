@@ -70,4 +70,13 @@ class Binom_Dist_RangeRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return Binom_Dist_RangeRequestBuilder
+    */
+    public function withUrl(string $rawUrl): Binom_Dist_RangeRequestBuilder {
+        return new Binom_Dist_RangeRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

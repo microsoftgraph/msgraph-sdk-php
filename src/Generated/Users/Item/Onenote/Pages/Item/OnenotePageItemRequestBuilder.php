@@ -194,4 +194,13 @@ class OnenotePageItemRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return OnenotePageItemRequestBuilder
+    */
+    public function withUrl(string $rawUrl): OnenotePageItemRequestBuilder {
+        return new OnenotePageItemRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

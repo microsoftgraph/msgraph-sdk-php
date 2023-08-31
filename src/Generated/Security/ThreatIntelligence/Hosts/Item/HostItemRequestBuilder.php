@@ -193,4 +193,13 @@ class HostItemRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return HostItemRequestBuilder
+    */
+    public function withUrl(string $rawUrl): HostItemRequestBuilder {
+        return new HostItemRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

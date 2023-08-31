@@ -146,4 +146,13 @@ class SecureScoreControlProfileItemRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return SecureScoreControlProfileItemRequestBuilder
+    */
+    public function withUrl(string $rawUrl): SecureScoreControlProfileItemRequestBuilder {
+        return new SecureScoreControlProfileItemRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

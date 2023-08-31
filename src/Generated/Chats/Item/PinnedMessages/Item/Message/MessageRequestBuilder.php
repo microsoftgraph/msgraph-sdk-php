@@ -70,4 +70,13 @@ class MessageRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return MessageRequestBuilder
+    */
+    public function withUrl(string $rawUrl): MessageRequestBuilder {
+        return new MessageRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

@@ -61,10 +61,10 @@ class AttachmentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of attachment objects.
+     * Retrieve a list of attachment objects attached to a message.
      * @param AttachmentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://learn.microsoft.com/graph/api/eventmessage-list-attachments?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/message-list-attachments?view=graph-rest-1.0 Find more info here
     */
     public function get(?AttachmentsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -100,7 +100,7 @@ class AttachmentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of attachment objects.
+     * Retrieve a list of attachment objects attached to a message.
      * @param AttachmentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -138,6 +138,15 @@ class AttachmentsRequestBuilder extends BaseRequestBuilder
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
+    }
+
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return AttachmentsRequestBuilder
+    */
+    public function withUrl(string $rawUrl): AttachmentsRequestBuilder {
+        return new AttachmentsRequestBuilder($rawUrl, $this->requestAdapter);
     }
 
 }

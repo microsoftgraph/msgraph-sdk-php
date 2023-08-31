@@ -155,4 +155,13 @@ class DeviceManagementExchangeConnectorItemRequestBuilder extends BaseRequestBui
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return DeviceManagementExchangeConnectorItemRequestBuilder
+    */
+    public function withUrl(string $rawUrl): DeviceManagementExchangeConnectorItemRequestBuilder {
+        return new DeviceManagementExchangeConnectorItemRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

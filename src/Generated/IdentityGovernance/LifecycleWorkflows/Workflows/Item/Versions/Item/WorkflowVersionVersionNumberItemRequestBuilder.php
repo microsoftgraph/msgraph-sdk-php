@@ -95,4 +95,13 @@ class WorkflowVersionVersionNumberItemRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return WorkflowVersionVersionNumberItemRequestBuilder
+    */
+    public function withUrl(string $rawUrl): WorkflowVersionVersionNumberItemRequestBuilder {
+        return new WorkflowVersionVersionNumberItemRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

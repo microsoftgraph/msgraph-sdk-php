@@ -66,4 +66,13 @@ class ClearRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return ClearRequestBuilder
+    */
+    public function withUrl(string $rawUrl): ClearRequestBuilder {
+        return new ClearRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Team\PermissionGrants\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get permissionGrants from groups
+ * A collection of permissions granted to apps to access the team.
 */
 class ResourceSpecificPermissionGrantItemRequestBuilderGetQueryParameters 
 {

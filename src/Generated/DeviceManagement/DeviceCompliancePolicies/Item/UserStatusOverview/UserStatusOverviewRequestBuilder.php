@@ -146,4 +146,13 @@ class UserStatusOverviewRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return UserStatusOverviewRequestBuilder
+    */
+    public function withUrl(string $rawUrl): UserStatusOverviewRequestBuilder {
+        return new UserStatusOverviewRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

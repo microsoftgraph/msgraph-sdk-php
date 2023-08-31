@@ -152,4 +152,13 @@ class AssociatedTeamInfoItemRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return AssociatedTeamInfoItemRequestBuilder
+    */
+    public function withUrl(string $rawUrl): AssociatedTeamInfoItemRequestBuilder {
+        return new AssociatedTeamInfoItemRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

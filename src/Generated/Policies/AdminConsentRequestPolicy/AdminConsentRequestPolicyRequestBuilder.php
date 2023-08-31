@@ -146,4 +146,13 @@ class AdminConsentRequestPolicyRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return AdminConsentRequestPolicyRequestBuilder
+    */
+    public function withUrl(string $rawUrl): AdminConsentRequestPolicyRequestBuilder {
+        return new AdminConsentRequestPolicyRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

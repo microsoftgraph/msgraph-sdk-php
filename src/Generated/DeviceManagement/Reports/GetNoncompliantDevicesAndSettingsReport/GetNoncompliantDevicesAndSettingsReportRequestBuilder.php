@@ -70,4 +70,13 @@ class GetNoncompliantDevicesAndSettingsReportRequestBuilder extends BaseRequestB
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return GetNoncompliantDevicesAndSettingsReportRequestBuilder
+    */
+    public function withUrl(string $rawUrl): GetNoncompliantDevicesAndSettingsReportRequestBuilder {
+        return new GetNoncompliantDevicesAndSettingsReportRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

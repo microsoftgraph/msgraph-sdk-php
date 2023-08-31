@@ -69,4 +69,13 @@ class GetMailboxUsageQuotaStatusMailboxCountsWithPeriodRequestBuilder extends Ba
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return GetMailboxUsageQuotaStatusMailboxCountsWithPeriodRequestBuilder
+    */
+    public function withUrl(string $rawUrl): GetMailboxUsageQuotaStatusMailboxCountsWithPeriodRequestBuilder {
+        return new GetMailboxUsageQuotaStatusMailboxCountsWithPeriodRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

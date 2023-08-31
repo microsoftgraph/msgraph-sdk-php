@@ -70,11 +70,11 @@ class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the user synchronization policy of a partner-specific configuration.
+     * Create a cross-tenant user synchronization policy for a partner-specific configuration.
      * @param CrossTenantIdentitySyncPolicyPartner $body The request body
      * @param IdentitySynchronizationRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://learn.microsoft.com/graph/api/crosstenantidentitysyncpolicypartner-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationpartner-put-identitysynchronization?view=graph-rest-1.0 Find more info here
     */
     public function patch(CrossTenantIdentitySyncPolicyPartner $body, ?IdentitySynchronizationRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -128,7 +128,7 @@ class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the user synchronization policy of a partner-specific configuration.
+     * Create a cross-tenant user synchronization policy for a partner-specific configuration.
      * @param CrossTenantIdentitySyncPolicyPartner $body The request body
      * @param IdentitySynchronizationRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -145,6 +145,15 @@ class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
+    }
+
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return IdentitySynchronizationRequestBuilder
+    */
+    public function withUrl(string $rawUrl): IdentitySynchronizationRequestBuilder {
+        return new IdentitySynchronizationRequestBuilder($rawUrl, $this->requestAdapter);
     }
 
 }

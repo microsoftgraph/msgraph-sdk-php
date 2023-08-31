@@ -70,4 +70,13 @@ class CschRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return CschRequestBuilder
+    */
+    public function withUrl(string $rawUrl): CschRequestBuilder {
+        return new CschRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

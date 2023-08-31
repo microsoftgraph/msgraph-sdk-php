@@ -70,4 +70,13 @@ class GammaLn_PreciseRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return GammaLn_PreciseRequestBuilder
+    */
+    public function withUrl(string $rawUrl): GammaLn_PreciseRequestBuilder {
+        return new GammaLn_PreciseRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

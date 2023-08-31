@@ -69,4 +69,13 @@ class GetM365AppUserDetailWithPeriodRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return GetM365AppUserDetailWithPeriodRequestBuilder
+    */
+    public function withUrl(string $rawUrl): GetM365AppUserDetailWithPeriodRequestBuilder {
+        return new GetM365AppUserDetailWithPeriodRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

@@ -145,4 +145,13 @@ class AppRoleAssignmentItemRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return AppRoleAssignmentItemRequestBuilder
+    */
+    public function withUrl(string $rawUrl): AppRoleAssignmentItemRequestBuilder {
+        return new AppRoleAssignmentItemRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

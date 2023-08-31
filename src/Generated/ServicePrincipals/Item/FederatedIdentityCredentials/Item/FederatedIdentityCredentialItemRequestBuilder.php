@@ -144,4 +144,13 @@ class FederatedIdentityCredentialItemRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return FederatedIdentityCredentialItemRequestBuilder
+    */
+    public function withUrl(string $rawUrl): FederatedIdentityCredentialItemRequestBuilder {
+        return new FederatedIdentityCredentialItemRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

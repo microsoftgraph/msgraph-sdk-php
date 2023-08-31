@@ -70,4 +70,13 @@ class GetDeviceManagementIntentSettingsReportRequestBuilder extends BaseRequestB
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return GetDeviceManagementIntentSettingsReportRequestBuilder
+    */
+    public function withUrl(string $rawUrl): GetDeviceManagementIntentSettingsReportRequestBuilder {
+        return new GetDeviceManagementIntentSettingsReportRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

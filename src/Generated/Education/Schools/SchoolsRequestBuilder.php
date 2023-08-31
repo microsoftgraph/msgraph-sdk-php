@@ -140,4 +140,13 @@ class SchoolsRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return SchoolsRequestBuilder
+    */
+    public function withUrl(string $rawUrl): SchoolsRequestBuilder {
+        return new SchoolsRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

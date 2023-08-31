@@ -80,11 +80,11 @@ class ChildFoldersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Use this API to create a new child mailFolder. If you intend a new folder to be hidden, you must set the isHidden property to true on creation.
+     * Create a new mailSearchFolder in the specified user's mailbox.
      * @param MailFolder $body The request body
      * @param ChildFoldersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://learn.microsoft.com/graph/api/mailfolder-post-childfolders?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/mailsearchfolder-post?view=graph-rest-1.0 Find more info here
     */
     public function post(MailFolder $body, ?ChildFoldersRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -121,7 +121,7 @@ class ChildFoldersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Use this API to create a new child mailFolder. If you intend a new folder to be hidden, you must set the isHidden property to true on creation.
+     * Create a new mailSearchFolder in the specified user's mailbox.
      * @param MailFolder $body The request body
      * @param ChildFoldersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -138,6 +138,15 @@ class ChildFoldersRequestBuilder extends BaseRequestBuilder
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
+    }
+
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return ChildFoldersRequestBuilder
+    */
+    public function withUrl(string $rawUrl): ChildFoldersRequestBuilder {
+        return new ChildFoldersRequestBuilder($rawUrl, $this->requestAdapter);
     }
 
 }

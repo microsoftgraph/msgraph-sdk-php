@@ -144,4 +144,13 @@ class UserExperienceAnalyticsOverviewRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return UserExperienceAnalyticsOverviewRequestBuilder
+    */
+    public function withUrl(string $rawUrl): UserExperienceAnalyticsOverviewRequestBuilder {
+        return new UserExperienceAnalyticsOverviewRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

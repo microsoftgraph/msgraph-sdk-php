@@ -155,4 +155,13 @@ class RubricRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return RubricRequestBuilder
+    */
+    public function withUrl(string $rawUrl): RubricRequestBuilder {
+        return new RubricRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

@@ -690,7 +690,7 @@ class Group extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the permissionGrants property value. The permission that has been granted for a group to a specific application. Supports $expand.
+     * Gets the permissionGrants property value. The permissionGrants property
      * @return array<ResourceSpecificPermissionGrant>|null
     */
     public function getPermissionGrants(): ?array {
@@ -1396,7 +1396,7 @@ class Group extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the permissionGrants property value. The permission that has been granted for a group to a specific application. Supports $expand.
+     * Sets the permissionGrants property value. The permissionGrants property
      * @param array<ResourceSpecificPermissionGrant>|null $value Value to set for the permissionGrants property.
     */
     public function setPermissionGrants(?array $value): void {

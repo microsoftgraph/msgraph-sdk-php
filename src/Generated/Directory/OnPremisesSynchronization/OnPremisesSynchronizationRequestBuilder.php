@@ -130,4 +130,13 @@ class OnPremisesSynchronizationRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return OnPremisesSynchronizationRequestBuilder
+    */
+    public function withUrl(string $rawUrl): OnPremisesSynchronizationRequestBuilder {
+        return new OnPremisesSynchronizationRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

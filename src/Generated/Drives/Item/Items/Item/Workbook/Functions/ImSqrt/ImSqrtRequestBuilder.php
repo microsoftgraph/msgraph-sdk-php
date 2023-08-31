@@ -70,4 +70,13 @@ class ImSqrtRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return ImSqrtRequestBuilder
+    */
+    public function withUrl(string $rawUrl): ImSqrtRequestBuilder {
+        return new ImSqrtRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

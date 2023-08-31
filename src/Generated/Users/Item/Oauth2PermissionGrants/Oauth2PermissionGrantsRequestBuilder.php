@@ -91,4 +91,13 @@ class Oauth2PermissionGrantsRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return Oauth2PermissionGrantsRequestBuilder
+    */
+    public function withUrl(string $rawUrl): Oauth2PermissionGrantsRequestBuilder {
+        return new Oauth2PermissionGrantsRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

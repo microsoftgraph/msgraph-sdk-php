@@ -69,4 +69,13 @@ class MicrosoftGraphSecurityPurgeDataRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return MicrosoftGraphSecurityPurgeDataRequestBuilder
+    */
+    public function withUrl(string $rawUrl): MicrosoftGraphSecurityPurgeDataRequestBuilder {
+        return new MicrosoftGraphSecurityPurgeDataRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

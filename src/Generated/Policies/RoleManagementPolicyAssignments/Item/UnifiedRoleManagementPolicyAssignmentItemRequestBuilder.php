@@ -153,4 +153,13 @@ class UnifiedRoleManagementPolicyAssignmentItemRequestBuilder extends BaseReques
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return UnifiedRoleManagementPolicyAssignmentItemRequestBuilder
+    */
+    public function withUrl(string $rawUrl): UnifiedRoleManagementPolicyAssignmentItemRequestBuilder {
+        return new UnifiedRoleManagementPolicyAssignmentItemRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

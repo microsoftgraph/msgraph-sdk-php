@@ -155,4 +155,13 @@ class TeamworkTagItemRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return TeamworkTagItemRequestBuilder
+    */
+    public function withUrl(string $rawUrl): TeamworkTagItemRequestBuilder {
+        return new TeamworkTagItemRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

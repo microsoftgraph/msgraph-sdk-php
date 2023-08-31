@@ -69,4 +69,13 @@ class GetSkypeForBusinessDeviceUsageDistributionUserCountsWithPeriodRequestBuild
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return GetSkypeForBusinessDeviceUsageDistributionUserCountsWithPeriodRequestBuilder
+    */
+    public function withUrl(string $rawUrl): GetSkypeForBusinessDeviceUsageDistributionUserCountsWithPeriodRequestBuilder {
+        return new GetSkypeForBusinessDeviceUsageDistributionUserCountsWithPeriodRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

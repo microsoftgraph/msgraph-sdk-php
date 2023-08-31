@@ -152,4 +152,13 @@ class AccessPackageResourceEnvironmentItemRequestBuilder extends BaseRequestBuil
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return AccessPackageResourceEnvironmentItemRequestBuilder
+    */
+    public function withUrl(string $rawUrl): AccessPackageResourceEnvironmentItemRequestBuilder {
+        return new AccessPackageResourceEnvironmentItemRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

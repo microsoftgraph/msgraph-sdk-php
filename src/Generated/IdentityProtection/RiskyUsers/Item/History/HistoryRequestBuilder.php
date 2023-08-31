@@ -53,10 +53,10 @@ class HistoryRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the riskyUserHistoryItems from the history navigation property.
+     * Read the properties and relationships of a riskyUserHistoryItem object.
      * @param HistoryRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://learn.microsoft.com/graph/api/riskyuser-list-history?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/riskyuser-get-riskyuserhistoryitem?view=graph-rest-1.0 Find more info here
     */
     public function get(?HistoryRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -91,7 +91,7 @@ class HistoryRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the riskyUserHistoryItems from the history navigation property.
+     * Read the properties and relationships of a riskyUserHistoryItem object.
      * @param HistoryRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -129,6 +129,15 @@ class HistoryRequestBuilder extends BaseRequestBuilder
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
+    }
+
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return HistoryRequestBuilder
+    */
+    public function withUrl(string $rawUrl): HistoryRequestBuilder {
+        return new HistoryRequestBuilder($rawUrl, $this->requestAdapter);
     }
 
 }

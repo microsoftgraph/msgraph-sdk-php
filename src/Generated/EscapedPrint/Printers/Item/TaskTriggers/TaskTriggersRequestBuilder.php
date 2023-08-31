@@ -132,4 +132,13 @@ class TaskTriggersRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return TaskTriggersRequestBuilder
+    */
+    public function withUrl(string $rawUrl): TaskTriggersRequestBuilder {
+        return new TaskTriggersRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

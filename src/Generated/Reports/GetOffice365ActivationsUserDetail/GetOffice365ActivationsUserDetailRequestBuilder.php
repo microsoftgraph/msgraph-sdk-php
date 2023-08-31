@@ -66,4 +66,13 @@ class GetOffice365ActivationsUserDetailRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return GetOffice365ActivationsUserDetailRequestBuilder
+    */
+    public function withUrl(string $rawUrl): GetOffice365ActivationsUserDetailRequestBuilder {
+        return new GetOffice365ActivationsUserDetailRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

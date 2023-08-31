@@ -70,4 +70,13 @@ class WorkDayRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return WorkDayRequestBuilder
+    */
+    public function withUrl(string $rawUrl): WorkDayRequestBuilder {
+        return new WorkDayRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

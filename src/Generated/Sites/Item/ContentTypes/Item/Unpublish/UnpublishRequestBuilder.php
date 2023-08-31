@@ -66,4 +66,13 @@ class UnpublishRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return UnpublishRequestBuilder
+    */
+    public function withUrl(string $rawUrl): UnpublishRequestBuilder {
+        return new UnpublishRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

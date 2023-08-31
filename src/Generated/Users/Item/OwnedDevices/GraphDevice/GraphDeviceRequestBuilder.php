@@ -78,4 +78,13 @@ class GraphDeviceRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return GraphDeviceRequestBuilder
+    */
+    public function withUrl(string $rawUrl): GraphDeviceRequestBuilder {
+        return new GraphDeviceRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

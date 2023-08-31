@@ -153,4 +153,13 @@ class SimulationAutomationItemRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return SimulationAutomationItemRequestBuilder
+    */
+    public function withUrl(string $rawUrl): SimulationAutomationItemRequestBuilder {
+        return new SimulationAutomationItemRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

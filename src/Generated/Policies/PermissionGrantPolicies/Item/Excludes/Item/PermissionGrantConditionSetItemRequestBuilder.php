@@ -145,4 +145,13 @@ class PermissionGrantConditionSetItemRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return PermissionGrantConditionSetItemRequestBuilder
+    */
+    public function withUrl(string $rawUrl): PermissionGrantConditionSetItemRequestBuilder {
+        return new PermissionGrantConditionSetItemRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

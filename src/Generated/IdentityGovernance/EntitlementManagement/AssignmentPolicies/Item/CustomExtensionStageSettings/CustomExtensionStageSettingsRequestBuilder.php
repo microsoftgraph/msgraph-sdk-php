@@ -130,4 +130,13 @@ class CustomExtensionStageSettingsRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return CustomExtensionStageSettingsRequestBuilder
+    */
+    public function withUrl(string $rawUrl): CustomExtensionStageSettingsRequestBuilder {
+        return new CustomExtensionStageSettingsRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

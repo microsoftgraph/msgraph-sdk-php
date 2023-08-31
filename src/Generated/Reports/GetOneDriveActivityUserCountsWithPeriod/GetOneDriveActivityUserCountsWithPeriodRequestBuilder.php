@@ -69,4 +69,13 @@ class GetOneDriveActivityUserCountsWithPeriodRequestBuilder extends BaseRequestB
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return GetOneDriveActivityUserCountsWithPeriodRequestBuilder
+    */
+    public function withUrl(string $rawUrl): GetOneDriveActivityUserCountsWithPeriodRequestBuilder {
+        return new GetOneDriveActivityUserCountsWithPeriodRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }

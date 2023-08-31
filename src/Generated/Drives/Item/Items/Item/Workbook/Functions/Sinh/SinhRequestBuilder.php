@@ -70,4 +70,13 @@ class SinhRequestBuilder extends BaseRequestBuilder
         return $requestInfo;
     }
 
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return SinhRequestBuilder
+    */
+    public function withUrl(string $rawUrl): SinhRequestBuilder {
+        return new SinhRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
 }
