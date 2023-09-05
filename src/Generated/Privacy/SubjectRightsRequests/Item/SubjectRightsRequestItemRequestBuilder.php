@@ -7,6 +7,8 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\SubjectRightsRequest;
+use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\Approvers\ApproversRequestBuilder;
+use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\Collaborators\CollaboratorsRequestBuilder;
 use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\GetFinalAttachment\GetFinalAttachmentRequestBuilder;
 use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\GetFinalReport\GetFinalReportRequestBuilder;
 use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\Notes\NotesRequestBuilder;
@@ -21,6 +23,20 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to manage the approvers property of the microsoft.graph.subjectRightsRequest entity.
+    */
+    public function approvers(): ApproversRequestBuilder {
+        return new ApproversRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the collaborators property of the microsoft.graph.subjectRightsRequest entity.
+    */
+    public function collaborators(): CollaboratorsRequestBuilder {
+        return new CollaboratorsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Provides operations to call the getFinalAttachment method.
     */

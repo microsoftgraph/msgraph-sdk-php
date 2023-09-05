@@ -15,6 +15,7 @@ use Microsoft\Graph\Generated\Security\Incidents\IncidentsRequestBuilder;
 use Microsoft\Graph\Generated\Security\MicrosoftGraphSecurityRunHuntingQuery\MicrosoftGraphSecurityRunHuntingQueryRequestBuilder;
 use Microsoft\Graph\Generated\Security\SecureScoreControlProfiles\SecureScoreControlProfilesRequestBuilder;
 use Microsoft\Graph\Generated\Security\SecureScores\SecureScoresRequestBuilder;
+use Microsoft\Graph\Generated\Security\SubjectRightsRequests\SubjectRightsRequestsRequestBuilder;
 use Microsoft\Graph\Generated\Security\ThreatIntelligence\ThreatIntelligenceRequestBuilder;
 use Microsoft\Graph\Generated\Security\Triggers\TriggersRequestBuilder;
 use Microsoft\Graph\Generated\Security\TriggerTypes\TriggerTypesRequestBuilder;
@@ -82,6 +83,13 @@ class SecurityRequestBuilder extends BaseRequestBuilder
     */
     public function secureScores(): SecureScoresRequestBuilder {
         return new SecureScoresRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the subjectRightsRequests property of the microsoft.graph.security entity.
+    */
+    public function subjectRightsRequests(): SubjectRightsRequestsRequestBuilder {
+        return new SubjectRightsRequestsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

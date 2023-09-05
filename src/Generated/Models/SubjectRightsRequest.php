@@ -27,6 +27,20 @@ class SubjectRightsRequest extends Entity implements Parsable
     }
 
     /**
+     * Gets the approvers property value. The approvers property
+     * @return array<User>|null
+    */
+    public function getApprovers(): ?array {
+        $val = $this->getBackingStore()->get('approvers');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, User::class);
+            /** @var array<User>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'approvers'");
+    }
+
+    /**
      * Gets the assignedTo property value. Identity that the request is assigned to.
      * @return Identity|null
     */
@@ -48,6 +62,32 @@ class SubjectRightsRequest extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'closedDateTime'");
+    }
+
+    /**
+     * Gets the collaborators property value. The collaborators property
+     * @return array<User>|null
+    */
+    public function getCollaborators(): ?array {
+        $val = $this->getBackingStore()->get('collaborators');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, User::class);
+            /** @var array<User>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'collaborators'");
+    }
+
+    /**
+     * Gets the contentQuery property value. The contentQuery property
+     * @return string|null
+    */
+    public function getContentQuery(): ?string {
+        $val = $this->getBackingStore()->get('contentQuery');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'contentQuery'");
     }
 
     /**
@@ -123,26 +163,46 @@ class SubjectRightsRequest extends Entity implements Parsable
     }
 
     /**
+     * Gets the externalId property value. The externalId property
+     * @return string|null
+    */
+    public function getExternalId(): ?string {
+        $val = $this->getBackingStore()->get('externalId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'externalId'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'approvers' => fn(ParseNode $n) => $o->setApprovers($n->getCollectionOfObjectValues([User::class, 'createFromDiscriminatorValue'])),
             'assignedTo' => fn(ParseNode $n) => $o->setAssignedTo($n->getObjectValue([Identity::class, 'createFromDiscriminatorValue'])),
             'closedDateTime' => fn(ParseNode $n) => $o->setClosedDateTime($n->getDateTimeValue()),
+            'collaborators' => fn(ParseNode $n) => $o->setCollaborators($n->getCollectionOfObjectValues([User::class, 'createFromDiscriminatorValue'])),
+            'contentQuery' => fn(ParseNode $n) => $o->setContentQuery($n->getStringValue()),
             'createdBy' => fn(ParseNode $n) => $o->setCreatedBy($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'dataSubject' => fn(ParseNode $n) => $o->setDataSubject($n->getObjectValue([DataSubject::class, 'createFromDiscriminatorValue'])),
             'dataSubjectType' => fn(ParseNode $n) => $o->setDataSubjectType($n->getEnumValue(DataSubjectType::class)),
             'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'externalId' => fn(ParseNode $n) => $o->setExternalId($n->getStringValue()),
             'history' => fn(ParseNode $n) => $o->setHistory($n->getCollectionOfObjectValues([SubjectRightsRequestHistory::class, 'createFromDiscriminatorValue'])),
+            'includeAllVersions' => fn(ParseNode $n) => $o->setIncludeAllVersions($n->getBooleanValue()),
+            'includeAuthoredContent' => fn(ParseNode $n) => $o->setIncludeAuthoredContent($n->getBooleanValue()),
             'insight' => fn(ParseNode $n) => $o->setInsight($n->getObjectValue([SubjectRightsRequestDetail::class, 'createFromDiscriminatorValue'])),
             'internalDueDateTime' => fn(ParseNode $n) => $o->setInternalDueDateTime($n->getDateTimeValue()),
             'lastModifiedBy' => fn(ParseNode $n) => $o->setLastModifiedBy($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
             'lastModifiedDateTime' => fn(ParseNode $n) => $o->setLastModifiedDateTime($n->getDateTimeValue()),
+            'mailboxlocations' => fn(ParseNode $n) => $o->setMailboxlocations($n->getObjectValue([SubjectRightsRequestMailboxLocation::class, 'createFromDiscriminatorValue'])),
             'notes' => fn(ParseNode $n) => $o->setNotes($n->getCollectionOfObjectValues([AuthoredNote::class, 'createFromDiscriminatorValue'])),
+            'pauseAfterEstimate' => fn(ParseNode $n) => $o->setPauseAfterEstimate($n->getBooleanValue()),
             'regulations' => function (ParseNode $n) {
                 $val = $n->getCollectionOfPrimitiveValues();
                 if (is_array($val)) {
@@ -151,6 +211,7 @@ class SubjectRightsRequest extends Entity implements Parsable
                 /** @var array<string>|null $val */
                 $this->setRegulations($val);
             },
+            'sitelocations' => fn(ParseNode $n) => $o->setSitelocations($n->getObjectValue([SubjectRightsRequestSiteLocation::class, 'createFromDiscriminatorValue'])),
             'stages' => fn(ParseNode $n) => $o->setStages($n->getCollectionOfObjectValues([SubjectRightsRequestStageDetail::class, 'createFromDiscriminatorValue'])),
             'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(SubjectRightsRequestStatus::class)),
             'team' => fn(ParseNode $n) => $o->setTeam($n->getObjectValue([Team::class, 'createFromDiscriminatorValue'])),
@@ -170,6 +231,30 @@ class SubjectRightsRequest extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'history'");
+    }
+
+    /**
+     * Gets the includeAllVersions property value. The includeAllVersions property
+     * @return bool|null
+    */
+    public function getIncludeAllVersions(): ?bool {
+        $val = $this->getBackingStore()->get('includeAllVersions');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'includeAllVersions'");
+    }
+
+    /**
+     * Gets the includeAuthoredContent property value. The includeAuthoredContent property
+     * @return bool|null
+    */
+    public function getIncludeAuthoredContent(): ?bool {
+        $val = $this->getBackingStore()->get('includeAuthoredContent');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'includeAuthoredContent'");
     }
 
     /**
@@ -221,6 +306,18 @@ class SubjectRightsRequest extends Entity implements Parsable
     }
 
     /**
+     * Gets the mailboxlocations property value. The mailboxlocations property
+     * @return SubjectRightsRequestMailboxLocation|null
+    */
+    public function getMailboxlocations(): ?SubjectRightsRequestMailboxLocation {
+        $val = $this->getBackingStore()->get('mailboxlocations');
+        if (is_null($val) || $val instanceof SubjectRightsRequestMailboxLocation) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'mailboxlocations'");
+    }
+
+    /**
      * Gets the notes property value. List of notes associcated with the request.
      * @return array<AuthoredNote>|null
     */
@@ -235,6 +332,18 @@ class SubjectRightsRequest extends Entity implements Parsable
     }
 
     /**
+     * Gets the pauseAfterEstimate property value. The pauseAfterEstimate property
+     * @return bool|null
+    */
+    public function getPauseAfterEstimate(): ?bool {
+        $val = $this->getBackingStore()->get('pauseAfterEstimate');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'pauseAfterEstimate'");
+    }
+
+    /**
      * Gets the regulations property value. List of regulations that this request will fulfill.
      * @return array<string>|null
     */
@@ -246,6 +355,18 @@ class SubjectRightsRequest extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'regulations'");
+    }
+
+    /**
+     * Gets the sitelocations property value. The sitelocations property
+     * @return SubjectRightsRequestSiteLocation|null
+    */
+    public function getSitelocations(): ?SubjectRightsRequestSiteLocation {
+        $val = $this->getBackingStore()->get('sitelocations');
+        if (is_null($val) || $val instanceof SubjectRightsRequestSiteLocation) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sitelocations'");
     }
 
     /**
@@ -304,25 +425,42 @@ class SubjectRightsRequest extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeCollectionOfObjectValues('approvers', $this->getApprovers());
         $writer->writeObjectValue('assignedTo', $this->getAssignedTo());
         $writer->writeDateTimeValue('closedDateTime', $this->getClosedDateTime());
+        $writer->writeCollectionOfObjectValues('collaborators', $this->getCollaborators());
+        $writer->writeStringValue('contentQuery', $this->getContentQuery());
         $writer->writeObjectValue('createdBy', $this->getCreatedBy());
         $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
         $writer->writeObjectValue('dataSubject', $this->getDataSubject());
         $writer->writeEnumValue('dataSubjectType', $this->getDataSubjectType());
         $writer->writeStringValue('description', $this->getDescription());
         $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeStringValue('externalId', $this->getExternalId());
         $writer->writeCollectionOfObjectValues('history', $this->getHistory());
+        $writer->writeBooleanValue('includeAllVersions', $this->getIncludeAllVersions());
+        $writer->writeBooleanValue('includeAuthoredContent', $this->getIncludeAuthoredContent());
         $writer->writeObjectValue('insight', $this->getInsight());
         $writer->writeDateTimeValue('internalDueDateTime', $this->getInternalDueDateTime());
         $writer->writeObjectValue('lastModifiedBy', $this->getLastModifiedBy());
         $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
+        $writer->writeObjectValue('mailboxlocations', $this->getMailboxlocations());
         $writer->writeCollectionOfObjectValues('notes', $this->getNotes());
+        $writer->writeBooleanValue('pauseAfterEstimate', $this->getPauseAfterEstimate());
         $writer->writeCollectionOfPrimitiveValues('regulations', $this->getRegulations());
+        $writer->writeObjectValue('sitelocations', $this->getSitelocations());
         $writer->writeCollectionOfObjectValues('stages', $this->getStages());
         $writer->writeEnumValue('status', $this->getStatus());
         $writer->writeObjectValue('team', $this->getTeam());
         $writer->writeEnumValue('type', $this->getType());
+    }
+
+    /**
+     * Sets the approvers property value. The approvers property
+     * @param array<User>|null $value Value to set for the approvers property.
+    */
+    public function setApprovers(?array $value): void {
+        $this->getBackingStore()->set('approvers', $value);
     }
 
     /**
@@ -339,6 +477,22 @@ class SubjectRightsRequest extends Entity implements Parsable
     */
     public function setClosedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('closedDateTime', $value);
+    }
+
+    /**
+     * Sets the collaborators property value. The collaborators property
+     * @param array<User>|null $value Value to set for the collaborators property.
+    */
+    public function setCollaborators(?array $value): void {
+        $this->getBackingStore()->set('collaborators', $value);
+    }
+
+    /**
+     * Sets the contentQuery property value. The contentQuery property
+     * @param string|null $value Value to set for the contentQuery property.
+    */
+    public function setContentQuery(?string $value): void {
+        $this->getBackingStore()->set('contentQuery', $value);
     }
 
     /**
@@ -390,11 +544,35 @@ class SubjectRightsRequest extends Entity implements Parsable
     }
 
     /**
+     * Sets the externalId property value. The externalId property
+     * @param string|null $value Value to set for the externalId property.
+    */
+    public function setExternalId(?string $value): void {
+        $this->getBackingStore()->set('externalId', $value);
+    }
+
+    /**
      * Sets the history property value. Collection of history change events.
      * @param array<SubjectRightsRequestHistory>|null $value Value to set for the history property.
     */
     public function setHistory(?array $value): void {
         $this->getBackingStore()->set('history', $value);
+    }
+
+    /**
+     * Sets the includeAllVersions property value. The includeAllVersions property
+     * @param bool|null $value Value to set for the includeAllVersions property.
+    */
+    public function setIncludeAllVersions(?bool $value): void {
+        $this->getBackingStore()->set('includeAllVersions', $value);
+    }
+
+    /**
+     * Sets the includeAuthoredContent property value. The includeAuthoredContent property
+     * @param bool|null $value Value to set for the includeAuthoredContent property.
+    */
+    public function setIncludeAuthoredContent(?bool $value): void {
+        $this->getBackingStore()->set('includeAuthoredContent', $value);
     }
 
     /**
@@ -430,6 +608,14 @@ class SubjectRightsRequest extends Entity implements Parsable
     }
 
     /**
+     * Sets the mailboxlocations property value. The mailboxlocations property
+     * @param SubjectRightsRequestMailboxLocation|null $value Value to set for the mailboxlocations property.
+    */
+    public function setMailboxlocations(?SubjectRightsRequestMailboxLocation $value): void {
+        $this->getBackingStore()->set('mailboxlocations', $value);
+    }
+
+    /**
      * Sets the notes property value. List of notes associcated with the request.
      * @param array<AuthoredNote>|null $value Value to set for the notes property.
     */
@@ -438,11 +624,27 @@ class SubjectRightsRequest extends Entity implements Parsable
     }
 
     /**
+     * Sets the pauseAfterEstimate property value. The pauseAfterEstimate property
+     * @param bool|null $value Value to set for the pauseAfterEstimate property.
+    */
+    public function setPauseAfterEstimate(?bool $value): void {
+        $this->getBackingStore()->set('pauseAfterEstimate', $value);
+    }
+
+    /**
      * Sets the regulations property value. List of regulations that this request will fulfill.
      * @param array<string>|null $value Value to set for the regulations property.
     */
     public function setRegulations(?array $value): void {
         $this->getBackingStore()->set('regulations', $value);
+    }
+
+    /**
+     * Sets the sitelocations property value. The sitelocations property
+     * @param SubjectRightsRequestSiteLocation|null $value Value to set for the sitelocations property.
+    */
+    public function setSitelocations(?SubjectRightsRequestSiteLocation $value): void {
+        $this->getBackingStore()->set('sitelocations', $value);
     }
 
     /**

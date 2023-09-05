@@ -8,6 +8,7 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Communications\Presences\Item\ClearPresence\ClearPresenceRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Presences\Item\ClearUserPreferredPresence\ClearUserPreferredPresenceRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Presences\Item\SetPresence\SetPresenceRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Presences\Item\SetStatusMessage\SetStatusMessageRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Presences\Item\SetUserPreferredPresence\SetUserPreferredPresenceRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Presence;
@@ -40,6 +41,13 @@ class PresenceItemRequestBuilder extends BaseRequestBuilder
     */
     public function setPresence(): SetPresenceRequestBuilder {
         return new SetPresenceRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the setStatusMessage method.
+    */
+    public function setStatusMessage(): SetStatusMessageRequestBuilder {
+        return new SetStatusMessageRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
