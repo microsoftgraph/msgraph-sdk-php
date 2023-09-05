@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* SubjectRightsRequestStage File
+* SubjectRightsRequestSiteLocation File
 * PHP version 7
 *
 * @category  Library
@@ -12,11 +12,8 @@
 * @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
-
-use Microsoft\Graph\Core\Enum;
-
 /**
-* SubjectRightsRequestStage class
+* SubjectRightsRequestSiteLocation class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,17 +21,6 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class SubjectRightsRequestStage extends Enum
+class SubjectRightsRequestSiteLocation extends Entity
 {
-    /**
-    * The Enum SubjectRightsRequestStage
-    */
-    const CONTENT_RETRIEVAL = "contentRetrieval";
-    const CONTENT_REVIEW = "contentReview";
-    const GENERATE_REPORT = "generateReport";
-    const CONTENT_DELETION = "contentDeletion";
-    const CASE_RESOLVED = "caseResolved";
-    const CONTENT_ESTIMATE = "contentEstimate";
-    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
-    const APPROVAL = "approval";
 }
