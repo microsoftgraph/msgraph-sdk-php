@@ -26,6 +26,7 @@ class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry
 {
     /**
     * Gets the catalogName
+    * The catalog name of the content. Read-only.
     *
     * @return string|null The catalogName
     */
@@ -40,6 +41,7 @@ class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry
 
     /**
     * Sets the catalogName
+    * The catalog name of the content. Read-only.
     *
     * @param string $val The catalogName
     *
@@ -53,6 +55,7 @@ class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry
 
     /**
     * Gets the cveSeverityInformation
+    * Severity information of the Common Vulnerabilities and Exposures associated with the content.
     *
     * @return QualityUpdateCveSeverityInformation|null The cveSeverityInformation
     */
@@ -71,6 +74,7 @@ class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry
 
     /**
     * Sets the cveSeverityInformation
+    * Severity information of the Common Vulnerabilities and Exposures associated with the content.
     *
     * @param QualityUpdateCveSeverityInformation $val The cveSeverityInformation
     *
@@ -113,6 +117,7 @@ class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry
 
     /**
     * Gets the qualityUpdateCadence
+    * The publishing cadence of the quality update. Possible values are: monthly, outOfBand, unknownFutureValue. Read-only.
     *
     * @return QualityUpdateCadence|null The qualityUpdateCadence
     */
@@ -131,6 +136,7 @@ class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry
 
     /**
     * Sets the qualityUpdateCadence
+    * The publishing cadence of the quality update. Possible values are: monthly, outOfBand, unknownFutureValue. Read-only.
     *
     * @param QualityUpdateCadence $val The qualityUpdateCadence
     *
@@ -177,6 +183,7 @@ class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry
 
     /**
     * Gets the shortName
+    * The short name of the content. Read-only.
     *
     * @return string|null The shortName
     */
@@ -191,6 +198,7 @@ class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry
 
     /**
     * Sets the shortName
+    * The short name of the content. Read-only.
     *
     * @param string $val The shortName
     *
@@ -205,6 +213,7 @@ class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry
 
      /**
      * Gets the productRevisions
+    * The operating system product revisions that are released as part of this quality update.
      *
      * @return array|null The productRevisions
      */
@@ -219,6 +228,7 @@ class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry
 
     /**
     * Sets the productRevisions
+    * The operating system product revisions that are released as part of this quality update.
     *
     * @param ProductRevision[] $val The productRevisions
     *

@@ -25,6 +25,7 @@ class BuildVersionDetails extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the buildNumber
+    * The build number of the product release. Read-only.
     *
     * @return int|null The buildNumber
     */
@@ -39,6 +40,7 @@ class BuildVersionDetails extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the buildNumber
+    * The build number of the product release. Read-only.
     *
     * @param int $val The value of the buildNumber
     *
@@ -51,6 +53,7 @@ class BuildVersionDetails extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the majorVersion
+    * The major version of the product release. Read-only.
     *
     * @return int|null The majorVersion
     */
@@ -65,6 +68,7 @@ class BuildVersionDetails extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the majorVersion
+    * The major version of the product release. Read-only.
     *
     * @param int $val The value of the majorVersion
     *
@@ -77,6 +81,7 @@ class BuildVersionDetails extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the minorVersion
+    * The minor version of the product release. Read-only.
     *
     * @return int|null The minorVersion
     */
@@ -91,6 +96,7 @@ class BuildVersionDetails extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the minorVersion
+    * The minor version of the product release. Read-only.
     *
     * @param int $val The value of the minorVersion
     *
@@ -103,6 +109,7 @@ class BuildVersionDetails extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the updateBuildRevision
+    * The update build revision number of the product revision. Read-only.
     *
     * @return int|null The updateBuildRevision
     */
@@ -117,6 +124,7 @@ class BuildVersionDetails extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the updateBuildRevision
+    * The update build revision number of the product revision. Read-only.
     *
     * @param int $val The value of the updateBuildRevision
     *

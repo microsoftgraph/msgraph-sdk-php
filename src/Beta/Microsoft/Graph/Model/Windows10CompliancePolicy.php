@@ -381,6 +381,93 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy
     }
 
     /**
+    * Gets the firmwareProtectionEnabled
+    * When TRUE, indicates that Firmware protection is required to be reported as healthy by Microsoft Azure Attestion. When FALSE, indicates that Firmware protection is not required to be reported as healthy. Devices that support either Dynamic Root of Trust for Measurement (DRTM) or Firmware Attack Surface Reduction (FASR) will report compliant for this setting. Default value is FALSE.
+    *
+    * @return bool|null The firmwareProtectionEnabled
+    */
+    public function getFirmwareProtectionEnabled()
+    {
+        if (array_key_exists("firmwareProtectionEnabled", $this->_propDict)) {
+            return $this->_propDict["firmwareProtectionEnabled"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the firmwareProtectionEnabled
+    * When TRUE, indicates that Firmware protection is required to be reported as healthy by Microsoft Azure Attestion. When FALSE, indicates that Firmware protection is not required to be reported as healthy. Devices that support either Dynamic Root of Trust for Measurement (DRTM) or Firmware Attack Surface Reduction (FASR) will report compliant for this setting. Default value is FALSE.
+    *
+    * @param bool $val The firmwareProtectionEnabled
+    *
+    * @return Windows10CompliancePolicy
+    */
+    public function setFirmwareProtectionEnabled($val)
+    {
+        $this->_propDict["firmwareProtectionEnabled"] = boolval($val);
+        return $this;
+    }
+
+    /**
+    * Gets the kernelDmaProtectionEnabled
+    * When TRUE, indicates that Kernel Direct Memory Access (DMA) protection is required to be reported as healthy by Microsoft Azure Attestion. When FALSE, indicates that Kernel DMA Protection is not required to be reported as healthy. Default value is FALSE.
+    *
+    * @return bool|null The kernelDmaProtectionEnabled
+    */
+    public function getKernelDmaProtectionEnabled()
+    {
+        if (array_key_exists("kernelDmaProtectionEnabled", $this->_propDict)) {
+            return $this->_propDict["kernelDmaProtectionEnabled"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the kernelDmaProtectionEnabled
+    * When TRUE, indicates that Kernel Direct Memory Access (DMA) protection is required to be reported as healthy by Microsoft Azure Attestion. When FALSE, indicates that Kernel DMA Protection is not required to be reported as healthy. Default value is FALSE.
+    *
+    * @param bool $val The kernelDmaProtectionEnabled
+    *
+    * @return Windows10CompliancePolicy
+    */
+    public function setKernelDmaProtectionEnabled($val)
+    {
+        $this->_propDict["kernelDmaProtectionEnabled"] = boolval($val);
+        return $this;
+    }
+
+    /**
+    * Gets the memoryIntegrityEnabled
+    * When TRUE, indicates that Memory Integrity as known as Hypervisor-protected Code Integrity (HVCI) or Hypervisor Enforced Code Integrity protection is required to be reported as healthy by Microsoft Azure Attestion. When FALSE, indicates that Memory Integrity Protection is not required to be reported as healthy. Default value is FALSE.
+    *
+    * @return bool|null The memoryIntegrityEnabled
+    */
+    public function getMemoryIntegrityEnabled()
+    {
+        if (array_key_exists("memoryIntegrityEnabled", $this->_propDict)) {
+            return $this->_propDict["memoryIntegrityEnabled"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the memoryIntegrityEnabled
+    * When TRUE, indicates that Memory Integrity as known as Hypervisor-protected Code Integrity (HVCI) or Hypervisor Enforced Code Integrity protection is required to be reported as healthy by Microsoft Azure Attestion. When FALSE, indicates that Memory Integrity Protection is not required to be reported as healthy. Default value is FALSE.
+    *
+    * @param bool $val The memoryIntegrityEnabled
+    *
+    * @return Windows10CompliancePolicy
+    */
+    public function setMemoryIntegrityEnabled($val)
+    {
+        $this->_propDict["memoryIntegrityEnabled"] = boolval($val);
+        return $this;
+    }
+
+    /**
     * Gets the mobileOsMaximumVersion
     * Maximum Windows Phone version.
     *
@@ -962,6 +1049,35 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy
     public function setValidOperatingSystemBuildRanges($val)
     {
         $this->_propDict["validOperatingSystemBuildRanges"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the virtualizationBasedSecurityEnabled
+    * When TRUE, indicates that Virtualization-based Security is required to be reported as healthy by Microsoft Azure Attestion. When FALSE, indicates that Virtualization-based Security is not required to be reported as healthy. Default value is FALSE.
+    *
+    * @return bool|null The virtualizationBasedSecurityEnabled
+    */
+    public function getVirtualizationBasedSecurityEnabled()
+    {
+        if (array_key_exists("virtualizationBasedSecurityEnabled", $this->_propDict)) {
+            return $this->_propDict["virtualizationBasedSecurityEnabled"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the virtualizationBasedSecurityEnabled
+    * When TRUE, indicates that Virtualization-based Security is required to be reported as healthy by Microsoft Azure Attestion. When FALSE, indicates that Virtualization-based Security is not required to be reported as healthy. Default value is FALSE.
+    *
+    * @param bool $val The virtualizationBasedSecurityEnabled
+    *
+    * @return Windows10CompliancePolicy
+    */
+    public function setVirtualizationBasedSecurityEnabled($val)
+    {
+        $this->_propDict["virtualizationBasedSecurityEnabled"] = boolval($val);
         return $this;
     }
 

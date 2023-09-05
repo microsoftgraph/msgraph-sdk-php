@@ -57,6 +57,7 @@ class Teamwork extends Entity
 
      /**
      * Gets the deletedChats
+    * A collection of deleted chats.
      *
      * @return array|null The deletedChats
      */
@@ -71,6 +72,7 @@ class Teamwork extends Entity
 
     /**
     * Sets the deletedChats
+    * A collection of deleted chats.
     *
     * @param DeletedChat[] $val The deletedChats
     *

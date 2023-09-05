@@ -749,6 +749,39 @@ class WindowsAutopilotDeviceIdentity extends Entity
     }
 
     /**
+    * Gets the userlessEnrollmentStatus
+    * Enrollment status for userless enrollments.
+    *
+    * @return WindowsAutopilotUserlessEnrollmentStatus|null The userlessEnrollmentStatus
+    */
+    public function getUserlessEnrollmentStatus()
+    {
+        if (array_key_exists("userlessEnrollmentStatus", $this->_propDict)) {
+            if (is_a($this->_propDict["userlessEnrollmentStatus"], "\Beta\Microsoft\Graph\Model\WindowsAutopilotUserlessEnrollmentStatus") || is_null($this->_propDict["userlessEnrollmentStatus"])) {
+                return $this->_propDict["userlessEnrollmentStatus"];
+            } else {
+                $this->_propDict["userlessEnrollmentStatus"] = new WindowsAutopilotUserlessEnrollmentStatus($this->_propDict["userlessEnrollmentStatus"]);
+                return $this->_propDict["userlessEnrollmentStatus"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the userlessEnrollmentStatus
+    * Enrollment status for userless enrollments.
+    *
+    * @param WindowsAutopilotUserlessEnrollmentStatus $val The userlessEnrollmentStatus
+    *
+    * @return WindowsAutopilotDeviceIdentity
+    */
+    public function setUserlessEnrollmentStatus($val)
+    {
+        $this->_propDict["userlessEnrollmentStatus"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the userPrincipalName
     * User Principal Name.
     *

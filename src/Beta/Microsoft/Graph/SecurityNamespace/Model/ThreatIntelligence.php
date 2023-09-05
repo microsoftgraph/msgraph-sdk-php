@@ -27,7 +27,7 @@ class ThreatIntelligence extends \Beta\Microsoft\Graph\Model\Entity
 
      /**
      * Gets the articleIndicators
-    * Refers to indicators of threat or compromise highlighted in an microsoft.graph.security.article.Note: List retrieval is not yet supported.
+    * Refers to indicators of threat or compromise highlighted in an article.Note: List retrieval is not yet supported.
      *
      * @return array|null The articleIndicators
      */
@@ -42,7 +42,7 @@ class ThreatIntelligence extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the articleIndicators
-    * Refers to indicators of threat or compromise highlighted in an microsoft.graph.security.article.Note: List retrieval is not yet supported.
+    * Refers to indicators of threat or compromise highlighted in an article.Note: List retrieval is not yet supported.
     *
     * @param ArticleIndicator[] $val The articleIndicators
     *
@@ -87,7 +87,7 @@ class ThreatIntelligence extends \Beta\Microsoft\Graph\Model\Entity
 
      /**
      * Gets the hostComponents
-    * Retrieve details about microsoft.graph.security.hostComponent objects.Note: List retrieval is not yet supported.
+    * Retrieve details about hostComponent objects.Note: List retrieval is not yet supported.
      *
      * @return array|null The hostComponents
      */
@@ -102,7 +102,7 @@ class ThreatIntelligence extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the hostComponents
-    * Retrieve details about microsoft.graph.security.hostComponent objects.Note: List retrieval is not yet supported.
+    * Retrieve details about hostComponent objects.Note: List retrieval is not yet supported.
     *
     * @param HostComponent[] $val The hostComponents
     *
@@ -117,7 +117,7 @@ class ThreatIntelligence extends \Beta\Microsoft\Graph\Model\Entity
 
      /**
      * Gets the hostCookies
-    * Retrieve details about microsoft.graph.security.hostCookie objects.Note: List retrieval is not yet supported.
+    * Retrieve details about hostCookie objects.Note: List retrieval is not yet supported.
      *
      * @return array|null The hostCookies
      */
@@ -132,7 +132,7 @@ class ThreatIntelligence extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the hostCookies
-    * Retrieve details about microsoft.graph.security.hostCookie objects.Note: List retrieval is not yet supported.
+    * Retrieve details about hostCookie objects.Note: List retrieval is not yet supported.
     *
     * @param HostCookie[] $val The hostCookies
     *
@@ -147,7 +147,7 @@ class ThreatIntelligence extends \Beta\Microsoft\Graph\Model\Entity
 
      /**
      * Gets the hostPairs
-    * Retrieve details about microsoft.graph.security.hostTracker objects.Note: List retrieval is not yet supported.
+    * Retrieve details about hostTracker objects.Note: List retrieval is not yet supported.
      *
      * @return array|null The hostPairs
      */
@@ -162,7 +162,7 @@ class ThreatIntelligence extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the hostPairs
-    * Retrieve details about microsoft.graph.security.hostTracker objects.Note: List retrieval is not yet supported.
+    * Retrieve details about hostTracker objects.Note: List retrieval is not yet supported.
     *
     * @param HostPair[] $val The hostPairs
     *
@@ -177,7 +177,7 @@ class ThreatIntelligence extends \Beta\Microsoft\Graph\Model\Entity
 
      /**
      * Gets the hosts
-    * Refers to microsoft.graph.security.host objects that Microsoft Threat Intelligence has observed.Note: List retrieval is not yet supported.
+    * Refers to host objects that Microsoft Threat Intelligence has observed.Note: List retrieval is not yet supported.
      *
      * @return array|null The hosts
      */
@@ -192,7 +192,7 @@ class ThreatIntelligence extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the hosts
-    * Refers to microsoft.graph.security.host objects that Microsoft Threat Intelligence has observed.Note: List retrieval is not yet supported.
+    * Refers to host objects that Microsoft Threat Intelligence has observed.Note: List retrieval is not yet supported.
     *
     * @param Host[] $val The hosts
     *
@@ -235,7 +235,7 @@ class ThreatIntelligence extends \Beta\Microsoft\Graph\Model\Entity
 
      /**
      * Gets the hostTrackers
-    * Retrieve details about microsoft.graph.security.hostTracker objects.Note: List retrieval is not yet supported.
+    * Retrieve details about hostTracker objects.Note: List retrieval is not yet supported.
      *
      * @return array|null The hostTrackers
      */
@@ -250,7 +250,7 @@ class ThreatIntelligence extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the hostTrackers
-    * Retrieve details about microsoft.graph.security.hostTracker objects.Note: List retrieval is not yet supported.
+    * Retrieve details about hostTracker objects.Note: List retrieval is not yet supported.
     *
     * @param HostTracker[] $val The hostTrackers
     *
@@ -323,7 +323,7 @@ class ThreatIntelligence extends \Beta\Microsoft\Graph\Model\Entity
 
      /**
      * Gets the passiveDnsRecords
-    * Retrieve details about microsoft.graph.security.passiveDnsRecord objects.Note: List retrieval is not yet supported.
+    * Retrieve details about passiveDnsRecord objects.Note: List retrieval is not yet supported.
      *
      * @return array|null The passiveDnsRecords
      */
@@ -338,7 +338,7 @@ class ThreatIntelligence extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the passiveDnsRecords
-    * Retrieve details about microsoft.graph.security.passiveDnsRecord objects.Note: List retrieval is not yet supported.
+    * Retrieve details about passiveDnsRecord objects.Note: List retrieval is not yet supported.
     *
     * @param PassiveDnsRecord[] $val The passiveDnsRecords
     *
@@ -381,7 +381,7 @@ class ThreatIntelligence extends \Beta\Microsoft\Graph\Model\Entity
 
      /**
      * Gets the subdomains
-    * Retrieve details about the microsoft.graph.security.subdomain.Note: List retrieval is not yet supported.
+    * Retrieve details about the subdomain.Note: List retrieval is not yet supported.
      *
      * @return array|null The subdomains
      */
@@ -396,7 +396,7 @@ class ThreatIntelligence extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the subdomains
-    * Retrieve details about the microsoft.graph.security.subdomain.Note: List retrieval is not yet supported.
+    * Retrieve details about the subdomain.Note: List retrieval is not yet supported.
     *
     * @param Subdomain[] $val The subdomains
     *
@@ -411,7 +411,7 @@ class ThreatIntelligence extends \Beta\Microsoft\Graph\Model\Entity
 
      /**
      * Gets the vulnerabilities
-    * Retrieve details about microsoft.graph.security.vulnerabilities.Note: List retrieval is not yet supported.
+    * Retrieve details about vulnerabilities.Note: List retrieval is not yet supported.
      *
      * @return array|null The vulnerabilities
      */
@@ -426,7 +426,7 @@ class ThreatIntelligence extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the vulnerabilities
-    * Retrieve details about microsoft.graph.security.vulnerabilities.Note: List retrieval is not yet supported.
+    * Retrieve details about vulnerabilities.Note: List retrieval is not yet supported.
     *
     * @param Vulnerability[] $val The vulnerabilities
     *
@@ -441,6 +441,7 @@ class ThreatIntelligence extends \Beta\Microsoft\Graph\Model\Entity
 
      /**
      * Gets the whoisHistoryRecords
+    * Retrieve details about whoisHistoryRecord objects.Note: List retrieval is not yet supported.
      *
      * @return array|null The whoisHistoryRecords
      */
@@ -455,6 +456,7 @@ class ThreatIntelligence extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the whoisHistoryRecords
+    * Retrieve details about whoisHistoryRecord objects.Note: List retrieval is not yet supported.
     *
     * @param WhoisHistoryRecord[] $val The whoisHistoryRecords
     *
@@ -469,6 +471,7 @@ class ThreatIntelligence extends \Beta\Microsoft\Graph\Model\Entity
 
      /**
      * Gets the whoisRecords
+    * A list of whoisRecord objects.
      *
      * @return array|null The whoisRecords
      */
@@ -483,6 +486,7 @@ class ThreatIntelligence extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the whoisRecords
+    * A list of whoisRecord objects.
     *
     * @param WhoisRecord[] $val The whoisRecords
     *
