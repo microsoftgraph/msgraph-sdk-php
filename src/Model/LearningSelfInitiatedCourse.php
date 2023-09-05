@@ -26,7 +26,7 @@ class LearningSelfInitiatedCourse extends LearningCourseActivity
 {
     /**
     * Gets the startedDateTime
-    * The date time value on which the self-initiated course was started by the learner. Optional.
+    * The date and time on which the self-initiated course was started by the learner. Optional.
     *
     * @return \DateTime|null The startedDateTime
     */
@@ -45,7 +45,7 @@ class LearningSelfInitiatedCourse extends LearningCourseActivity
 
     /**
     * Sets the startedDateTime
-    * The date time value on which the self-initiated course was started by the learner. Optional.
+    * The date and time on which the self-initiated course was started by the learner. Optional.
     *
     * @param \DateTime $val The startedDateTime
     *
