@@ -26,6 +26,7 @@ class ProductRevision extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the displayName
+    * The display name of the content. Read-only.
     *
     * @return string|null The displayName
     */
@@ -40,6 +41,7 @@ class ProductRevision extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the displayName
+    * The display name of the content. Read-only.
     *
     * @param string $val The displayName
     *
@@ -53,6 +55,7 @@ class ProductRevision extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the osBuild
+    * The version details of the product revision. Read-only.
     *
     * @return BuildVersionDetails|null The osBuild
     */
@@ -71,6 +74,7 @@ class ProductRevision extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the osBuild
+    * The version details of the product revision. Read-only.
     *
     * @param BuildVersionDetails $val The osBuild
     *
@@ -84,6 +88,7 @@ class ProductRevision extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the product
+    * The product of the revision. Possible values are: Windows 10, Windows 11. Read-only.
     *
     * @return string|null The product
     */
@@ -98,6 +103,7 @@ class ProductRevision extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the product
+    * The product of the revision. Possible values are: Windows 10, Windows 11. Read-only.
     *
     * @param string $val The product
     *
@@ -111,6 +117,7 @@ class ProductRevision extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the releaseDateTime
+    * The release date for the content. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
     *
     * @return \DateTime|null The releaseDateTime
     */
@@ -129,6 +136,7 @@ class ProductRevision extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the releaseDateTime
+    * The release date for the content. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
     *
     * @param \DateTime $val The releaseDateTime
     *
@@ -142,6 +150,7 @@ class ProductRevision extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the version
+    * The version of the feature update. Read-only.
     *
     * @return string|null The version
     */
@@ -156,6 +165,7 @@ class ProductRevision extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the version
+    * The version of the feature update. Read-only.
     *
     * @param string $val The version
     *
@@ -169,6 +179,7 @@ class ProductRevision extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the knowledgeBaseArticle
+    * The knowledge base article associated with the product revision.
     *
     * @return KnowledgeBaseArticle|null The knowledgeBaseArticle
     */
@@ -187,6 +198,7 @@ class ProductRevision extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the knowledgeBaseArticle
+    * The knowledge base article associated with the product revision.
     *
     * @param KnowledgeBaseArticle $val The knowledgeBaseArticle
     *

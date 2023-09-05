@@ -25,6 +25,7 @@ class QualityUpdateCveSeverityInformation extends \Beta\Microsoft\Graph\Model\En
 {
     /**
     * Gets the maxBaseScore
+    * Highest base score that occurs of any CVE addressed by the quality update. Read-only.
     *
     * @return float|null The maxBaseScore
     */
@@ -39,6 +40,7 @@ class QualityUpdateCveSeverityInformation extends \Beta\Microsoft\Graph\Model\En
 
     /**
     * Sets the maxBaseScore
+    * Highest base score that occurs of any CVE addressed by the quality update. Read-only.
     *
     * @param float $val The value of the maxBaseScore
     *

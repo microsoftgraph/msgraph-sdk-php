@@ -26,6 +26,7 @@ class FeatureUpdateCatalogEntry extends SoftwareUpdateCatalogEntry
 {
     /**
     * Gets the buildNumber
+    * The build number of the feature update. Read-only.
     *
     * @return string|null The buildNumber
     */
@@ -40,6 +41,7 @@ class FeatureUpdateCatalogEntry extends SoftwareUpdateCatalogEntry
 
     /**
     * Sets the buildNumber
+    * The build number of the feature update. Read-only.
     *
     * @param string $val The buildNumber
     *

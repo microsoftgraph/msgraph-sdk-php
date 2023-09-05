@@ -26,6 +26,7 @@ class WhoisContact extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the address
+    * The physical address of the entity.
     *
     * @return \Beta\Microsoft\Graph\Model\PhysicalAddress|null The address
     */
@@ -44,6 +45,7 @@ class WhoisContact extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the address
+    * The physical address of the entity.
     *
     * @param \Beta\Microsoft\Graph\Model\PhysicalAddress $val The value to assign to the address
     *
@@ -56,6 +58,7 @@ class WhoisContact extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the email
+    * The email of this WHOIS contact.
     *
     * @return string|null The email
     */
@@ -70,6 +73,7 @@ class WhoisContact extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the email
+    * The email of this WHOIS contact.
     *
     * @param string $val The value of the email
     *
@@ -82,6 +86,7 @@ class WhoisContact extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the fax
+    * The fax of this WHOIS contact. No format is guaranteed.
     *
     * @return string|null The fax
     */
@@ -96,6 +101,7 @@ class WhoisContact extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the fax
+    * The fax of this WHOIS contact. No format is guaranteed.
     *
     * @param string $val The value of the fax
     *
@@ -108,6 +114,7 @@ class WhoisContact extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the name
+    * The name of this WHOIS contact.
     *
     * @return string|null The name
     */
@@ -122,6 +129,7 @@ class WhoisContact extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the name
+    * The name of this WHOIS contact.
     *
     * @param string $val The value of the name
     *
@@ -134,6 +142,7 @@ class WhoisContact extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the organization
+    * The organization of this WHOIS contact.
     *
     * @return string|null The organization
     */
@@ -148,6 +157,7 @@ class WhoisContact extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the organization
+    * The organization of this WHOIS contact.
     *
     * @param string $val The value of the organization
     *
@@ -160,6 +170,7 @@ class WhoisContact extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the telephone
+    * The telephone of this WHOIS contact. No format is guaranteed.
     *
     * @return string|null The telephone
     */
@@ -174,6 +185,7 @@ class WhoisContact extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the telephone
+    * The telephone of this WHOIS contact. No format is guaranteed.
     *
     * @param string $val The value of the telephone
     *

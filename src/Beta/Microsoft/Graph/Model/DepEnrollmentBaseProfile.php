@@ -633,4 +633,33 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
         return $this;
     }
 
+    /**
+    * Gets the waitForDeviceConfiguredConfirmation
+    * Indicates if the device will need to wait for configured confirmation
+    *
+    * @return bool|null The waitForDeviceConfiguredConfirmation
+    */
+    public function getWaitForDeviceConfiguredConfirmation()
+    {
+        if (array_key_exists("waitForDeviceConfiguredConfirmation", $this->_propDict)) {
+            return $this->_propDict["waitForDeviceConfiguredConfirmation"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the waitForDeviceConfiguredConfirmation
+    * Indicates if the device will need to wait for configured confirmation
+    *
+    * @param bool $val The waitForDeviceConfiguredConfirmation
+    *
+    * @return DepEnrollmentBaseProfile
+    */
+    public function setWaitForDeviceConfiguredConfirmation($val)
+    {
+        $this->_propDict["waitForDeviceConfiguredConfirmation"] = boolval($val);
+        return $this;
+    }
+
 }

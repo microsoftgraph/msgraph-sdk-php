@@ -27,6 +27,7 @@ class WhoisRecord extends WhoisBaseRecord
 
      /**
      * Gets the history
+    * The collection of historical records associated to this WHOIS object.
      *
      * @return array|null The history
      */
@@ -41,6 +42,7 @@ class WhoisRecord extends WhoisBaseRecord
 
     /**
     * Sets the history
+    * The collection of historical records associated to this WHOIS object.
     *
     * @param WhoisHistoryRecord[] $val The history
     *

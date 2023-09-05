@@ -111,7 +111,7 @@ class UnifiedRoleAssignmentMultiple extends Entity
 
     /**
     * Gets the directoryScopeIds
-    * Ids of the directory objects representing the scopes of the assignment. The scopes of an assignment determine the set of resources for which the principals have been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.
+    * Ids of the directory objects that represent the scopes of the assignment. The scopes of an assignment determine the set of resources for which the principals have been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.
     *
     * @return array|null The directoryScopeIds
     */
@@ -126,7 +126,7 @@ class UnifiedRoleAssignmentMultiple extends Entity
 
     /**
     * Sets the directoryScopeIds
-    * Ids of the directory objects representing the scopes of the assignment. The scopes of an assignment determine the set of resources for which the principals have been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.
+    * Ids of the directory objects that represent the scopes of the assignment. The scopes of an assignment determine the set of resources for which the principals have been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.
     *
     * @param string[] $val The directoryScopeIds
     *
@@ -258,7 +258,7 @@ class UnifiedRoleAssignmentMultiple extends Entity
 
      /**
      * Gets the directoryScopes
-    * Read-only collection referencing the directory objects that are scope of the assignment. Provided so that callers can get the directory objects using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
+    * Read-only collection that references the directory objects that are scope of the assignment. Provided so that callers can get the directory objects using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
      *
      * @return array|null The directoryScopes
      */
@@ -273,7 +273,7 @@ class UnifiedRoleAssignmentMultiple extends Entity
 
     /**
     * Sets the directoryScopes
-    * Read-only collection referencing the directory objects that are scope of the assignment. Provided so that callers can get the directory objects using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
+    * Read-only collection that references the directory objects that are scope of the assignment. Provided so that callers can get the directory objects using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
     *
     * @param DirectoryObject[] $val The directoryScopes
     *
@@ -288,7 +288,7 @@ class UnifiedRoleAssignmentMultiple extends Entity
 
      /**
      * Gets the principals
-    * Read-only collection referencing the assigned principals. Provided so that callers can get the principals using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
+    * Read-only collection that references the assigned principals. Provided so that callers can get the principals using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
      *
      * @return array|null The principals
      */
@@ -303,7 +303,7 @@ class UnifiedRoleAssignmentMultiple extends Entity
 
     /**
     * Sets the principals
-    * Read-only collection referencing the assigned principals. Provided so that callers can get the principals using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
+    * Read-only collection that references the assigned principals. Provided so that callers can get the principals using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
     *
     * @param DirectoryObject[] $val The principals
     *

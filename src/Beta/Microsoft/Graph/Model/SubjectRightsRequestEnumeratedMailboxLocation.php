@@ -62,4 +62,30 @@ class SubjectRightsRequestEnumeratedMailboxLocation extends SubjectRightsRequest
         $this->_propDict["upns"] = $val;
         return $this;
     }
+    /**
+    * Gets the userPrincipalNames
+    *
+    * @return string|null The userPrincipalNames
+    */
+    public function getUserPrincipalNames()
+    {
+        if (array_key_exists("userPrincipalNames", $this->_propDict)) {
+            return $this->_propDict["userPrincipalNames"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the userPrincipalNames
+    *
+    * @param string $val The value of the userPrincipalNames
+    *
+    * @return SubjectRightsRequestEnumeratedMailboxLocation
+    */
+    public function setUserPrincipalNames($val)
+    {
+        $this->_propDict["userPrincipalNames"] = $val;
+        return $this;
+    }
 }

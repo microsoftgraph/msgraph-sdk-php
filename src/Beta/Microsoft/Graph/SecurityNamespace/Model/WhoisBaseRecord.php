@@ -26,6 +26,7 @@ class WhoisBaseRecord extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the abuse
+    * The contact information for the abuse contact.
     *
     * @return WhoisContact|null The abuse
     */
@@ -44,6 +45,7 @@ class WhoisBaseRecord extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the abuse
+    * The contact information for the abuse contact.
     *
     * @param WhoisContact $val The abuse
     *
@@ -57,6 +59,7 @@ class WhoisBaseRecord extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the admin
+    * The contact information for the admin contact.
     *
     * @return WhoisContact|null The admin
     */
@@ -75,6 +78,7 @@ class WhoisBaseRecord extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the admin
+    * The contact information for the admin contact.
     *
     * @param WhoisContact $val The admin
     *
@@ -88,6 +92,7 @@ class WhoisBaseRecord extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the billing
+    * The contact information for the billing contact.
     *
     * @return WhoisContact|null The billing
     */
@@ -106,6 +111,7 @@ class WhoisBaseRecord extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the billing
+    * The contact information for the billing contact.
     *
     * @param WhoisContact $val The billing
     *
@@ -119,6 +125,7 @@ class WhoisBaseRecord extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the domainStatus
+    * The domain status for this WHOIS object.
     *
     * @return string|null The domainStatus
     */
@@ -133,6 +140,7 @@ class WhoisBaseRecord extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the domainStatus
+    * The domain status for this WHOIS object.
     *
     * @param string $val The domainStatus
     *
@@ -146,6 +154,7 @@ class WhoisBaseRecord extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the expirationDateTime
+    * The date and time when this WHOIS record expires with the registrar. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The expirationDateTime
     */
@@ -164,6 +173,7 @@ class WhoisBaseRecord extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the expirationDateTime
+    * The date and time when this WHOIS record expires with the registrar. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The expirationDateTime
     *
@@ -177,6 +187,7 @@ class WhoisBaseRecord extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the firstSeenDateTime
+    * The first seen date and time of this WHOIS record. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The firstSeenDateTime
     */
@@ -195,6 +206,7 @@ class WhoisBaseRecord extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the firstSeenDateTime
+    * The first seen date and time of this WHOIS record. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The firstSeenDateTime
     *
@@ -208,6 +220,7 @@ class WhoisBaseRecord extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the lastSeenDateTime
+    * The last seen date and time of this WHOIS record. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The lastSeenDateTime
     */
@@ -226,6 +239,7 @@ class WhoisBaseRecord extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the lastSeenDateTime
+    * The last seen date and time of this WHOIS record. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The lastSeenDateTime
     *
@@ -239,6 +253,7 @@ class WhoisBaseRecord extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the lastUpdateDateTime
+    * The date and time when this WHOIS record was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The lastUpdateDateTime
     */
@@ -257,6 +272,7 @@ class WhoisBaseRecord extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the lastUpdateDateTime
+    * The date and time when this WHOIS record was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The lastUpdateDateTime
     *
@@ -271,6 +287,7 @@ class WhoisBaseRecord extends \Beta\Microsoft\Graph\Model\Entity
 
      /**
      * Gets the nameservers
+    * The nameservers for this WHOIS object.
      *
      * @return array|null The nameservers
      */
@@ -285,6 +302,7 @@ class WhoisBaseRecord extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the nameservers
+    * The nameservers for this WHOIS object.
     *
     * @param WhoisNameserver[] $val The nameservers
     *
@@ -298,6 +316,7 @@ class WhoisBaseRecord extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the noc
+    * The contact information for the noc contact.
     *
     * @return WhoisContact|null The noc
     */
@@ -316,6 +335,7 @@ class WhoisBaseRecord extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the noc
+    * The contact information for the noc contact.
     *
     * @param WhoisContact $val The noc
     *
@@ -329,6 +349,7 @@ class WhoisBaseRecord extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the rawWhoisText
+    * The raw WHOIS details for this WHOIS object.
     *
     * @return string|null The rawWhoisText
     */
@@ -343,6 +364,7 @@ class WhoisBaseRecord extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the rawWhoisText
+    * The raw WHOIS details for this WHOIS object.
     *
     * @param string $val The rawWhoisText
     *
@@ -356,6 +378,7 @@ class WhoisBaseRecord extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the registrant
+    * The contact information for the registrant contact.
     *
     * @return WhoisContact|null The registrant
     */
@@ -374,6 +397,7 @@ class WhoisBaseRecord extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the registrant
+    * The contact information for the registrant contact.
     *
     * @param WhoisContact $val The registrant
     *
@@ -387,6 +411,7 @@ class WhoisBaseRecord extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the registrar
+    * The contact information for the registrar contact.
     *
     * @return WhoisContact|null The registrar
     */
@@ -405,6 +430,7 @@ class WhoisBaseRecord extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the registrar
+    * The contact information for the registrar contact.
     *
     * @param WhoisContact $val The registrar
     *
@@ -418,6 +444,7 @@ class WhoisBaseRecord extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the registrationDateTime
+    * The date and time when this WHOIS record was registered with a registrar. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The registrationDateTime
     */
@@ -436,6 +463,7 @@ class WhoisBaseRecord extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the registrationDateTime
+    * The date and time when this WHOIS record was registered with a registrar. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The registrationDateTime
     *
@@ -449,6 +477,7 @@ class WhoisBaseRecord extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the technical
+    * The contact information for the technical contact.
     *
     * @return WhoisContact|null The technical
     */
@@ -467,6 +496,7 @@ class WhoisBaseRecord extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the technical
+    * The contact information for the technical contact.
     *
     * @param WhoisContact $val The technical
     *
@@ -480,6 +510,7 @@ class WhoisBaseRecord extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the whoisServer
+    * The WHOIS server that provides the details.
     *
     * @return string|null The whoisServer
     */
@@ -494,6 +525,7 @@ class WhoisBaseRecord extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the whoisServer
+    * The WHOIS server that provides the details.
     *
     * @param string $val The whoisServer
     *
@@ -507,6 +539,7 @@ class WhoisBaseRecord extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the zone
+    * The contact information for the zone contact.
     *
     * @return WhoisContact|null The zone
     */
@@ -525,6 +558,7 @@ class WhoisBaseRecord extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the zone
+    * The contact information for the zone contact.
     *
     * @param WhoisContact $val The zone
     *
@@ -538,6 +572,7 @@ class WhoisBaseRecord extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the host
+    * The host associated to this WHOIS object.
     *
     * @return Host|null The host
     */
@@ -556,6 +591,7 @@ class WhoisBaseRecord extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the host
+    * The host associated to this WHOIS object.
     *
     * @param Host $val The host
     *

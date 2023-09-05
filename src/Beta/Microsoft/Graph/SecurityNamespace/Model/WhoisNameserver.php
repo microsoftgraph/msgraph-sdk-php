@@ -26,6 +26,7 @@ class WhoisNameserver extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the firstSeenDateTime
+    * The first seen date and time of this WHOIS contact. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The firstSeenDateTime
     */
@@ -44,6 +45,7 @@ class WhoisNameserver extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the firstSeenDateTime
+    * The first seen date and time of this WHOIS contact. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The value to assign to the firstSeenDateTime
     *
@@ -57,6 +59,7 @@ class WhoisNameserver extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the lastSeenDateTime
+    * The last seen date and time of this WHOIS contact. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The lastSeenDateTime
     */
@@ -75,6 +78,7 @@ class WhoisNameserver extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the lastSeenDateTime
+    * The last seen date and time of this WHOIS contact. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The value to assign to the lastSeenDateTime
     *

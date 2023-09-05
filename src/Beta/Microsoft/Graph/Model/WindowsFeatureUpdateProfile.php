@@ -207,6 +207,35 @@ class WindowsFeatureUpdateProfile extends Entity
     }
 
     /**
+    * Gets the installLatestWindows10OnWindows11IneligibleDevice
+    * If true, the latest Microsoft Windows 10 update will be installed on devices ineligible for Microsoft Windows 11
+    *
+    * @return bool|null The installLatestWindows10OnWindows11IneligibleDevice
+    */
+    public function getInstallLatestWindows10OnWindows11IneligibleDevice()
+    {
+        if (array_key_exists("installLatestWindows10OnWindows11IneligibleDevice", $this->_propDict)) {
+            return $this->_propDict["installLatestWindows10OnWindows11IneligibleDevice"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the installLatestWindows10OnWindows11IneligibleDevice
+    * If true, the latest Microsoft Windows 10 update will be installed on devices ineligible for Microsoft Windows 11
+    *
+    * @param bool $val The installLatestWindows10OnWindows11IneligibleDevice
+    *
+    * @return WindowsFeatureUpdateProfile
+    */
+    public function setInstallLatestWindows10OnWindows11IneligibleDevice($val)
+    {
+        $this->_propDict["installLatestWindows10OnWindows11IneligibleDevice"] = boolval($val);
+        return $this;
+    }
+
+    /**
     * Gets the lastModifiedDateTime
     * The date time that the profile was last modified.
     *
