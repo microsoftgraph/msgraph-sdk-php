@@ -2,6 +2,7 @@
 # Licensed under the MIT License.
 
 # File initially created using https://github.com/MIchaelMainer/policyservicetoolkit/blob/main/branch_protection_export.ps1.
+# This line can be deleted
 
 name: msgraph-sdk-php-branch-protection
 description: Branch protection policy for the msgraph-sdk-php repository
