@@ -26,7 +26,7 @@ class MonitoringRule extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the action
-    * The action triggered when the threshold for the given signal is met. Possible values are: alertError, pauseDeployment, unknownFutureValue.
+    * The action triggered when the threshold for the given signal is reached. Possible values are: alertError, pauseDeployment, offerFallback, unknownFutureValue. The offerFallback member is only supported on feature update deployments of Windows 11 and must be paired with the ineligible signal. The fallback version offered is the version 22H2 of Windows 10.
     *
     * @return MonitoringAction|null The action
     */
@@ -45,7 +45,7 @@ class MonitoringRule extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the action
-    * The action triggered when the threshold for the given signal is met. Possible values are: alertError, pauseDeployment, unknownFutureValue.
+    * The action triggered when the threshold for the given signal is reached. Possible values are: alertError, pauseDeployment, offerFallback, unknownFutureValue. The offerFallback member is only supported on feature update deployments of Windows 11 and must be paired with the ineligible signal. The fallback version offered is the version 22H2 of Windows 10.
     *
     * @param MonitoringAction $val The value to assign to the action
     *
@@ -59,7 +59,7 @@ class MonitoringRule extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the signal
-    * The signal to monitor. Possible values are: rollback, unknownFutureValue.
+    * The signal to monitor. Possible values are: rollback, ineligible, unknownFutureValue. The ineligible member is only supported on feature update deployments of Windows 11 and must be paired with the offerFallback action.
     *
     * @return MonitoringSignal|null The signal
     */
@@ -78,7 +78,7 @@ class MonitoringRule extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the signal
-    * The signal to monitor. Possible values are: rollback, unknownFutureValue.
+    * The signal to monitor. Possible values are: rollback, ineligible, unknownFutureValue. The ineligible member is only supported on feature update deployments of Windows 11 and must be paired with the offerFallback action.
     *
     * @param MonitoringSignal $val The value to assign to the signal
     *
@@ -91,7 +91,7 @@ class MonitoringRule extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the threshold
-    * The threshold for a signal at which to trigger action. An integer from 1 to 100 (inclusive).
+    * The threshold for a signal at which to trigger the action. An integer from 1 to 100 (inclusive). This value is ignored when the signal is ineligible and the action is offerFallback.
     *
     * @return int|null The threshold
     */
@@ -106,7 +106,7 @@ class MonitoringRule extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the threshold
-    * The threshold for a signal at which to trigger action. An integer from 1 to 100 (inclusive).
+    * The threshold for a signal at which to trigger the action. An integer from 1 to 100 (inclusive). This value is ignored when the signal is ineligible and the action is offerFallback.
     *
     * @param int $val The value of the threshold
     *

@@ -57,6 +57,7 @@ class CveInformation implements \JsonSerializable
 
     /**
     * Gets the number
+    * Identifies the number of the CVE. Read-only.
     *
     * @return string|null The number
     */
@@ -71,6 +72,7 @@ class CveInformation implements \JsonSerializable
 
     /**
     * Sets the number
+    * Identifies the number of the CVE. Read-only.
     *
     * @param string $val The number
     *
@@ -84,6 +86,7 @@ class CveInformation implements \JsonSerializable
 
     /**
     * Gets the url
+    * URL to the full CVE information. Read-only.
     *
     * @return string|null The url
     */
@@ -98,6 +101,7 @@ class CveInformation implements \JsonSerializable
 
     /**
     * Sets the url
+    * URL to the full CVE information. Read-only.
     *
     * @param string $val The url
     *

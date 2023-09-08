@@ -175,6 +175,7 @@ class UnifiedRoleDefinition extends Entity
 
     /**
     * Gets the isPrivileged
+    * Flag indicating if the role is privileged. Azure AD defines a role as privileged if it contains at least one sensitive resource action in the rolePermissions and allowedResourceActions objects. Applies only for actions in the microsoft.directory resource namespace. Read-only. Supports $filter (eq).
     *
     * @return bool|null The isPrivileged
     */
@@ -189,6 +190,7 @@ class UnifiedRoleDefinition extends Entity
 
     /**
     * Sets the isPrivileged
+    * Flag indicating if the role is privileged. Azure AD defines a role as privileged if it contains at least one sensitive resource action in the rolePermissions and allowedResourceActions objects. Applies only for actions in the microsoft.directory resource namespace. Read-only. Supports $filter (eq).
     *
     * @param bool $val The isPrivileged
     *

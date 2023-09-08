@@ -705,6 +705,7 @@ class Team extends Entity
 
      /**
      * Gets the permissionGrants
+    * A collection of permissions granted to apps to access the team.
      *
      * @return array|null The permissionGrants
      */
@@ -719,6 +720,7 @@ class Team extends Entity
 
     /**
     * Sets the permissionGrants
+    * A collection of permissions granted to apps to access the team.
     *
     * @param ResourceSpecificPermissionGrant[] $val The permissionGrants
     *

@@ -57,7 +57,7 @@ class Entity implements \JsonSerializable
 
     /**
     * Gets the id
-    * The unique idenfier for an entity. Read-only.
+    * The unique identifier for an entity. Read-only.
     *
     * @return string|null The id
     */
@@ -72,7 +72,7 @@ class Entity implements \JsonSerializable
 
     /**
     * Sets the id
-    * The unique idenfier for an entity. Read-only.
+    * The unique identifier for an entity. Read-only.
     *
     * @param string $val The id
     *

@@ -138,6 +138,7 @@ class UnifiedRbacResourceAction extends Entity
 
     /**
     * Gets the isPrivileged
+    * Flag indicating if the action is a sensitive resource action. Applies only for actions in the microsoft.directory resource namespace. Read-only. Supports $filter (eq).
     *
     * @return bool|null The isPrivileged
     */
@@ -152,6 +153,7 @@ class UnifiedRbacResourceAction extends Entity
 
     /**
     * Sets the isPrivileged
+    * Flag indicating if the action is a sensitive resource action. Applies only for actions in the microsoft.directory resource namespace. Read-only. Supports $filter (eq).
     *
     * @param bool $val The isPrivileged
     *

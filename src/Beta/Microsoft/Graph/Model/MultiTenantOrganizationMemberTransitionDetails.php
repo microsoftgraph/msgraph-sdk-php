@@ -26,6 +26,7 @@ class MultiTenantOrganizationMemberTransitionDetails extends Entity
 
     /**
     * Gets the desiredRole
+    * Role of the tenant in the multi-tenant organization. The possible values are: owner, member, unknownFutureValue.
     *
     * @return MultiTenantOrganizationMemberRole|null The desiredRole
     */
@@ -44,6 +45,7 @@ class MultiTenantOrganizationMemberTransitionDetails extends Entity
 
     /**
     * Sets the desiredRole
+    * Role of the tenant in the multi-tenant organization. The possible values are: owner, member, unknownFutureValue.
     *
     * @param MultiTenantOrganizationMemberRole $val The value to assign to the desiredRole
     *
@@ -57,6 +59,7 @@ class MultiTenantOrganizationMemberTransitionDetails extends Entity
 
     /**
     * Gets the desiredState
+    * State of the tenant in the multi-tenant organization currently being processed. The possible values are: pending, active, removed, unknownFutureValue. Read-only.
     *
     * @return MultiTenantOrganizationMemberState|null The desiredState
     */
@@ -75,6 +78,7 @@ class MultiTenantOrganizationMemberTransitionDetails extends Entity
 
     /**
     * Sets the desiredState
+    * State of the tenant in the multi-tenant organization currently being processed. The possible values are: pending, active, removed, unknownFutureValue. Read-only.
     *
     * @param MultiTenantOrganizationMemberState $val The value to assign to the desiredState
     *
@@ -87,6 +91,7 @@ class MultiTenantOrganizationMemberTransitionDetails extends Entity
     }
     /**
     * Gets the details
+    * Details that explain the processing status if any. Read-only.
     *
     * @return string|null The details
     */
@@ -101,6 +106,7 @@ class MultiTenantOrganizationMemberTransitionDetails extends Entity
 
     /**
     * Sets the details
+    * Details that explain the processing status if any. Read-only.
     *
     * @param string $val The value of the details
     *
@@ -114,6 +120,7 @@ class MultiTenantOrganizationMemberTransitionDetails extends Entity
 
     /**
     * Gets the status
+    * Processing state of the asynchronous job. The possible values are: notStarted, running, succeeded, failed, unknownFutureValue. Read-only.
     *
     * @return MultiTenantOrganizationMemberProcessingStatus|null The status
     */
@@ -132,6 +139,7 @@ class MultiTenantOrganizationMemberTransitionDetails extends Entity
 
     /**
     * Sets the status
+    * Processing state of the asynchronous job. The possible values are: notStarted, running, succeeded, failed, unknownFutureValue. Read-only.
     *
     * @param MultiTenantOrganizationMemberProcessingStatus $val The value to assign to the status
     *

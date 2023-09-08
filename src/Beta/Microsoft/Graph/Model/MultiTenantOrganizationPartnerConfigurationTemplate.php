@@ -26,6 +26,7 @@ class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity
 {
     /**
     * Gets the automaticUserConsentSettings
+    * Determines the partner-specific configuration for automatic user consent settings. Unless specifically configured, the inboundAllowed and outboundAllowed properties are null and inherit from the default settings, which is always false.
     *
     * @return InboundOutboundPolicyConfiguration|null The automaticUserConsentSettings
     */
@@ -44,6 +45,7 @@ class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity
 
     /**
     * Sets the automaticUserConsentSettings
+    * Determines the partner-specific configuration for automatic user consent settings. Unless specifically configured, the inboundAllowed and outboundAllowed properties are null and inherit from the default settings, which is always false.
     *
     * @param InboundOutboundPolicyConfiguration $val The automaticUserConsentSettings
     *
@@ -57,6 +59,7 @@ class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity
 
     /**
     * Gets the b2bCollaborationInbound
+    * Defines your partner-specific configuration for users from other organizations accessing your resources via Azure AD B2B collaboration.
     *
     * @return CrossTenantAccessPolicyB2BSetting|null The b2bCollaborationInbound
     */
@@ -75,6 +78,7 @@ class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity
 
     /**
     * Sets the b2bCollaborationInbound
+    * Defines your partner-specific configuration for users from other organizations accessing your resources via Azure AD B2B collaboration.
     *
     * @param CrossTenantAccessPolicyB2BSetting $val The b2bCollaborationInbound
     *
@@ -88,6 +92,7 @@ class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity
 
     /**
     * Gets the b2bCollaborationOutbound
+    * Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B collaboration.
     *
     * @return CrossTenantAccessPolicyB2BSetting|null The b2bCollaborationOutbound
     */
@@ -106,6 +111,7 @@ class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity
 
     /**
     * Sets the b2bCollaborationOutbound
+    * Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B collaboration.
     *
     * @param CrossTenantAccessPolicyB2BSetting $val The b2bCollaborationOutbound
     *
@@ -119,6 +125,7 @@ class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity
 
     /**
     * Gets the b2bDirectConnectInbound
+    * Defines your partner-specific configuration for users from other organizations accessing your resources via Azure B2B direct connect.
     *
     * @return CrossTenantAccessPolicyB2BSetting|null The b2bDirectConnectInbound
     */
@@ -137,6 +144,7 @@ class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity
 
     /**
     * Sets the b2bDirectConnectInbound
+    * Defines your partner-specific configuration for users from other organizations accessing your resources via Azure B2B direct connect.
     *
     * @param CrossTenantAccessPolicyB2BSetting $val The b2bDirectConnectInbound
     *
@@ -150,6 +158,7 @@ class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity
 
     /**
     * Gets the b2bDirectConnectOutbound
+    * Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B direct connect.
     *
     * @return CrossTenantAccessPolicyB2BSetting|null The b2bDirectConnectOutbound
     */
@@ -168,6 +177,7 @@ class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity
 
     /**
     * Sets the b2bDirectConnectOutbound
+    * Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B direct connect.
     *
     * @param CrossTenantAccessPolicyB2BSetting $val The b2bDirectConnectOutbound
     *
@@ -181,6 +191,7 @@ class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity
 
     /**
     * Gets the inboundTrust
+    * Determines the partner-specific configuration for trusting other Conditional Access claims from external Azure AD organizations.
     *
     * @return CrossTenantAccessPolicyInboundTrust|null The inboundTrust
     */
@@ -199,6 +210,7 @@ class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity
 
     /**
     * Sets the inboundTrust
+    * Determines the partner-specific configuration for trusting other Conditional Access claims from external Azure AD organizations.
     *
     * @param CrossTenantAccessPolicyInboundTrust $val The inboundTrust
     *
@@ -212,6 +224,7 @@ class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity
 
     /**
     * Gets the templateApplicationLevel
+    * Specifies whether the template will be applied to partner configuration settings of certain tenants. The possible values are: none, newPartners, existingPartners, unknownFutureValue. You can also specify multiple values like newPartners,existingPartners (default). none indicates the template is not applied to any new or existing partner tenants. newPartners indicates the template is applied to new partner tenants. existingPartners indicates the template is applied to existing partner tenants, those who already had partner-specific partner configurations in place.
     *
     * @return TemplateApplicationLevel|null The templateApplicationLevel
     */
@@ -230,6 +243,7 @@ class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity
 
     /**
     * Sets the templateApplicationLevel
+    * Specifies whether the template will be applied to partner configuration settings of certain tenants. The possible values are: none, newPartners, existingPartners, unknownFutureValue. You can also specify multiple values like newPartners,existingPartners (default). none indicates the template is not applied to any new or existing partner tenants. newPartners indicates the template is applied to new partner tenants. existingPartners indicates the template is applied to existing partner tenants, those who already had partner-specific partner configurations in place.
     *
     * @param TemplateApplicationLevel $val The templateApplicationLevel
     *

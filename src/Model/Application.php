@@ -903,6 +903,39 @@ class Application extends DirectoryObject
     }
 
     /**
+    * Gets the servicePrincipalLockConfiguration
+    * Specifies whether sensitive properties of a multi-tenant application should be locked for editing after the application is provisioned in a tenant. Nullable. null by default.
+    *
+    * @return ServicePrincipalLockConfiguration|null The servicePrincipalLockConfiguration
+    */
+    public function getServicePrincipalLockConfiguration()
+    {
+        if (array_key_exists("servicePrincipalLockConfiguration", $this->_propDict)) {
+            if (is_a($this->_propDict["servicePrincipalLockConfiguration"], "\Microsoft\Graph\Model\ServicePrincipalLockConfiguration") || is_null($this->_propDict["servicePrincipalLockConfiguration"])) {
+                return $this->_propDict["servicePrincipalLockConfiguration"];
+            } else {
+                $this->_propDict["servicePrincipalLockConfiguration"] = new ServicePrincipalLockConfiguration($this->_propDict["servicePrincipalLockConfiguration"]);
+                return $this->_propDict["servicePrincipalLockConfiguration"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the servicePrincipalLockConfiguration
+    * Specifies whether sensitive properties of a multi-tenant application should be locked for editing after the application is provisioned in a tenant. Nullable. null by default.
+    *
+    * @param ServicePrincipalLockConfiguration $val The servicePrincipalLockConfiguration
+    *
+    * @return Application
+    */
+    public function setServicePrincipalLockConfiguration($val)
+    {
+        $this->_propDict["servicePrincipalLockConfiguration"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the signInAudience
     * Specifies the Microsoft accounts that are supported for the current application. The possible values are: AzureADMyOrg, AzureADMultipleOrgs, AzureADandPersonalMicrosoftAccount (default), and PersonalMicrosoftAccount. See more in the table. The value of this object also limits the number of permissions an app can request. For more information, see Limits on requested permissions per app. The value for this property has implications on other app object properties. As a result, if you change this property, you may need to change other properties first. For more information, see Validation differences for signInAudience.Supports $filter (eq, ne, not).
     *

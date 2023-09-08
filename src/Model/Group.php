@@ -1359,7 +1359,6 @@ class Group extends DirectoryObject
 
      /**
      * Gets the permissionGrants
-    * The permission that has been granted for a group to a specific application. Supports $expand.
      *
      * @return array|null The permissionGrants
      */
@@ -1374,7 +1373,6 @@ class Group extends DirectoryObject
 
     /**
     * Sets the permissionGrants
-    * The permission that has been granted for a group to a specific application. Supports $expand.
     *
     * @param ResourceSpecificPermissionGrant[] $val The permissionGrants
     *

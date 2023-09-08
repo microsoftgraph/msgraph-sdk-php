@@ -87,7 +87,7 @@ class CloudPcPartnerAgentInstallResult extends Entity
 
     /**
     * Gets the partnerAgentName
-    * Indicates the name of a partner agent and includes first-party and third-party. Currently, Citrix is the only third-party value. Read-Only.
+    * The name of the partner agent, whether first party or third party. Possible values for third-party partners are Citrix and VMware. Read-Only.
     *
     * @return CloudPcPartnerAgentName|null The partnerAgentName
     */
@@ -106,7 +106,7 @@ class CloudPcPartnerAgentInstallResult extends Entity
 
     /**
     * Sets the partnerAgentName
-    * Indicates the name of a partner agent and includes first-party and third-party. Currently, Citrix is the only third-party value. Read-Only.
+    * The name of the partner agent, whether first party or third party. Possible values for third-party partners are Citrix and VMware. Read-Only.
     *
     * @param CloudPcPartnerAgentName $val The value to assign to the partnerAgentName
     *

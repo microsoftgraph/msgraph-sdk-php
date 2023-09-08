@@ -26,6 +26,7 @@ class PublicationFacet extends Entity
 
     /**
     * Gets the checkedOutBy
+    * User who has checked out the file.
     *
     * @return IdentitySet|null The checkedOutBy
     */
@@ -44,6 +45,7 @@ class PublicationFacet extends Entity
 
     /**
     * Sets the checkedOutBy
+    * User who has checked out the file.
     *
     * @param IdentitySet $val The value to assign to the checkedOutBy
     *

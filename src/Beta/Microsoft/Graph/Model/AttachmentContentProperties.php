@@ -54,4 +54,35 @@ class AttachmentContentProperties extends ContentProperties
         $this->_propDict["currentLabel"] = $val;
          return $this;
     }
+
+    /**
+    * Gets the discoveredSensitiveTypes
+    *
+    * @return DiscoveredSensitiveType|null The discoveredSensitiveTypes
+    */
+    public function getDiscoveredSensitiveTypes()
+    {
+        if (array_key_exists("discoveredSensitiveTypes", $this->_propDict)) {
+            if (is_a($this->_propDict["discoveredSensitiveTypes"], "\Beta\Microsoft\Graph\Model\DiscoveredSensitiveType") || is_null($this->_propDict["discoveredSensitiveTypes"])) {
+                return $this->_propDict["discoveredSensitiveTypes"];
+            } else {
+                $this->_propDict["discoveredSensitiveTypes"] = new DiscoveredSensitiveType($this->_propDict["discoveredSensitiveTypes"]);
+                return $this->_propDict["discoveredSensitiveTypes"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the discoveredSensitiveTypes
+    *
+    * @param DiscoveredSensitiveType $val The value to assign to the discoveredSensitiveTypes
+    *
+    * @return AttachmentContentProperties The AttachmentContentProperties
+    */
+    public function setDiscoveredSensitiveTypes($val)
+    {
+        $this->_propDict["discoveredSensitiveTypes"] = $val;
+         return $this;
+    }
 }

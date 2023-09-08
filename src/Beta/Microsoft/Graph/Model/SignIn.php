@@ -1151,6 +1151,7 @@ class SignIn extends Entity
 
     /**
     * Gets the originalTransferMethod
+    * Transfer method used to initiate a session throughout all subsequent request. The possible values are: none, deviceCodeFlow, authenticationTransfer, unknownFutureValue.
     *
     * @return OriginalTransferMethods|null The originalTransferMethod
     */
@@ -1169,6 +1170,7 @@ class SignIn extends Entity
 
     /**
     * Sets the originalTransferMethod
+    * Transfer method used to initiate a session throughout all subsequent request. The possible values are: none, deviceCodeFlow, authenticationTransfer, unknownFutureValue.
     *
     * @param OriginalTransferMethods $val The originalTransferMethod
     *
@@ -1758,6 +1760,7 @@ class SignIn extends Entity
 
     /**
     * Gets the signInTokenProtectionStatus
+    * Token protection creates a cryptographically secure tie between the token and the device it's issued to. This field indicates whether the signin token was bound to the device or not. The possible values are: none, bound, unbound, unknownFutureValue.
     *
     * @return TokenProtectionStatus|null The signInTokenProtectionStatus
     */
@@ -1776,6 +1779,7 @@ class SignIn extends Entity
 
     /**
     * Sets the signInTokenProtectionStatus
+    * Token protection creates a cryptographically secure tie between the token and the device it's issued to. This field indicates whether the signin token was bound to the device or not. The possible values are: none, bound, unbound, unknownFutureValue.
     *
     * @param TokenProtectionStatus $val The signInTokenProtectionStatus
     *

@@ -255,6 +255,7 @@ class CrossTenantAccessPolicyConfigurationPartner implements \JsonSerializable
 
     /**
     * Gets the isInMultiTenantOrganization
+    * Identifies whether a tenant is a member of a multi-tenant organization.
     *
     * @return bool|null The isInMultiTenantOrganization
     */
@@ -269,6 +270,7 @@ class CrossTenantAccessPolicyConfigurationPartner implements \JsonSerializable
 
     /**
     * Sets the isInMultiTenantOrganization
+    * Identifies whether a tenant is a member of a multi-tenant organization.
     *
     * @param bool $val The isInMultiTenantOrganization
     *

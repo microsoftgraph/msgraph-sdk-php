@@ -443,6 +443,39 @@ class DeviceHealthAttestationState extends Entity
         $this->_propDict["earlyLaunchAntiMalwareDriverProtection"] = $val;
         return $this;
     }
+
+    /**
+    * Gets the firmwareProtection
+    * Indicates whether the device has Firmware protection enabled. Firmware protection is a set of features that helps to ensure attackers can't get your device to start with untrusted or malicious firmware. Possible values are "systemGuardSecureLaunch", "firmwareAttackSurfaceReduction", "disabled" and "notApplicable". "systemGuardSecureLaunch" indicates System Guard Secure Launch is enabled for Firmware protection. "firmwareAttackSurfaceReduction" indicates Firmware Attack Surface Reduction is enabled for Firmware protection. "disabled" indicates Firmware protection is disabled. "notApplicable" indicates the device is not a Windows 11 device. Default value is "notApplicable".
+    *
+    * @return FirmwareProtectionType|null The firmwareProtection
+    */
+    public function getFirmwareProtection()
+    {
+        if (array_key_exists("firmwareProtection", $this->_propDict)) {
+            if (is_a($this->_propDict["firmwareProtection"], "\Beta\Microsoft\Graph\Model\FirmwareProtectionType") || is_null($this->_propDict["firmwareProtection"])) {
+                return $this->_propDict["firmwareProtection"];
+            } else {
+                $this->_propDict["firmwareProtection"] = new FirmwareProtectionType($this->_propDict["firmwareProtection"]);
+                return $this->_propDict["firmwareProtection"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the firmwareProtection
+    * Indicates whether the device has Firmware protection enabled. Firmware protection is a set of features that helps to ensure attackers can't get your device to start with untrusted or malicious firmware. Possible values are "systemGuardSecureLaunch", "firmwareAttackSurfaceReduction", "disabled" and "notApplicable". "systemGuardSecureLaunch" indicates System Guard Secure Launch is enabled for Firmware protection. "firmwareAttackSurfaceReduction" indicates Firmware Attack Surface Reduction is enabled for Firmware protection. "disabled" indicates Firmware protection is disabled. "notApplicable" indicates the device is not a Windows 11 device. Default value is "notApplicable".
+    *
+    * @param FirmwareProtectionType $val The value to assign to the firmwareProtection
+    *
+    * @return DeviceHealthAttestationState The DeviceHealthAttestationState
+    */
+    public function setFirmwareProtection($val)
+    {
+        $this->_propDict["firmwareProtection"] = $val;
+         return $this;
+    }
     /**
     * Gets the healthAttestationSupportedStatus
     * This attribute indicates if DHA is supported for the device
@@ -559,6 +592,72 @@ class DeviceHealthAttestationState extends Entity
     {
         $this->_propDict["lastUpdateDateTime"] = $val;
         return $this;
+    }
+
+    /**
+    * Gets the memoryAccessProtection
+    * Indicates whether the device has Memory access protection enabled. A Windows security feature that protects against external peripherals from gaining unauthorized access to memory. Possible values are "enabled", "disabled" and "notApplicable". "enabled" indicates Memory access protection is enabled. "disabled" indicates Memory access protection is disabled. "notApplicable" indicates the device is not a Windows 11 device. Default value is "notApplicable".
+    *
+    * @return AzureAttestationSettingStatus|null The memoryAccessProtection
+    */
+    public function getMemoryAccessProtection()
+    {
+        if (array_key_exists("memoryAccessProtection", $this->_propDict)) {
+            if (is_a($this->_propDict["memoryAccessProtection"], "\Beta\Microsoft\Graph\Model\AzureAttestationSettingStatus") || is_null($this->_propDict["memoryAccessProtection"])) {
+                return $this->_propDict["memoryAccessProtection"];
+            } else {
+                $this->_propDict["memoryAccessProtection"] = new AzureAttestationSettingStatus($this->_propDict["memoryAccessProtection"]);
+                return $this->_propDict["memoryAccessProtection"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the memoryAccessProtection
+    * Indicates whether the device has Memory access protection enabled. A Windows security feature that protects against external peripherals from gaining unauthorized access to memory. Possible values are "enabled", "disabled" and "notApplicable". "enabled" indicates Memory access protection is enabled. "disabled" indicates Memory access protection is disabled. "notApplicable" indicates the device is not a Windows 11 device. Default value is "notApplicable".
+    *
+    * @param AzureAttestationSettingStatus $val The value to assign to the memoryAccessProtection
+    *
+    * @return DeviceHealthAttestationState The DeviceHealthAttestationState
+    */
+    public function setMemoryAccessProtection($val)
+    {
+        $this->_propDict["memoryAccessProtection"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the memoryIntegrityProtection
+    * Indicates whether the device has Memory Integrity protection enabled. Memory Integrity is a feature of Virtualization-based security, also known as Hypervisor-protected code integrity (HVCI). It improves the threat mode of Windows and provides stronger protections against malware trying to exploit the Windows kernel. Possible values are "enabled", "disabled" and "notApplicable". "enabled" indicates Memory Integrity protection is enabled. "disabled" indicates Memory Integrity protection is disabled. "notApplicable" indicates the device is not a Windows 11 device. Default value is "notApplicable".
+    *
+    * @return AzureAttestationSettingStatus|null The memoryIntegrityProtection
+    */
+    public function getMemoryIntegrityProtection()
+    {
+        if (array_key_exists("memoryIntegrityProtection", $this->_propDict)) {
+            if (is_a($this->_propDict["memoryIntegrityProtection"], "\Beta\Microsoft\Graph\Model\AzureAttestationSettingStatus") || is_null($this->_propDict["memoryIntegrityProtection"])) {
+                return $this->_propDict["memoryIntegrityProtection"];
+            } else {
+                $this->_propDict["memoryIntegrityProtection"] = new AzureAttestationSettingStatus($this->_propDict["memoryIntegrityProtection"]);
+                return $this->_propDict["memoryIntegrityProtection"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the memoryIntegrityProtection
+    * Indicates whether the device has Memory Integrity protection enabled. Memory Integrity is a feature of Virtualization-based security, also known as Hypervisor-protected code integrity (HVCI). It improves the threat mode of Windows and provides stronger protections against malware trying to exploit the Windows kernel. Possible values are "enabled", "disabled" and "notApplicable". "enabled" indicates Memory Integrity protection is enabled. "disabled" indicates Memory Integrity protection is disabled. "notApplicable" indicates the device is not a Windows 11 device. Default value is "notApplicable".
+    *
+    * @param AzureAttestationSettingStatus $val The value to assign to the memoryIntegrityProtection
+    *
+    * @return DeviceHealthAttestationState The DeviceHealthAttestationState
+    */
+    public function setMemoryIntegrityProtection($val)
+    {
+        $this->_propDict["memoryIntegrityProtection"] = $val;
+         return $this;
     }
     /**
     * Gets the operatingSystemKernelDebugging
@@ -812,6 +911,72 @@ class DeviceHealthAttestationState extends Entity
         $this->_propDict["secureBootConfigurationPolicyFingerPrint"] = $val;
         return $this;
     }
+
+    /**
+    * Gets the securedCorePC
+    * Indicates whether the device has Secured-core PC enabled. Secured-core PCs provide protections that are useful against sophisticated attacks and provide increased assurance when handling mission-critical data. Possible values are "enabled", "disabled" and "notApplicable". "enabled" indicates Secured-core PC is enabled. "disabled" indicates Secured-core PC is disabled. "notApplicable" indicates the device is not a Windows 11 device. Default value is "notApplicable".
+    *
+    * @return AzureAttestationSettingStatus|null The securedCorePC
+    */
+    public function getSecuredCorePC()
+    {
+        if (array_key_exists("securedCorePC", $this->_propDict)) {
+            if (is_a($this->_propDict["securedCorePC"], "\Beta\Microsoft\Graph\Model\AzureAttestationSettingStatus") || is_null($this->_propDict["securedCorePC"])) {
+                return $this->_propDict["securedCorePC"];
+            } else {
+                $this->_propDict["securedCorePC"] = new AzureAttestationSettingStatus($this->_propDict["securedCorePC"]);
+                return $this->_propDict["securedCorePC"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the securedCorePC
+    * Indicates whether the device has Secured-core PC enabled. Secured-core PCs provide protections that are useful against sophisticated attacks and provide increased assurance when handling mission-critical data. Possible values are "enabled", "disabled" and "notApplicable". "enabled" indicates Secured-core PC is enabled. "disabled" indicates Secured-core PC is disabled. "notApplicable" indicates the device is not a Windows 11 device. Default value is "notApplicable".
+    *
+    * @param AzureAttestationSettingStatus $val The value to assign to the securedCorePC
+    *
+    * @return DeviceHealthAttestationState The DeviceHealthAttestationState
+    */
+    public function setSecuredCorePC($val)
+    {
+        $this->_propDict["securedCorePC"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the systemManagementMode
+    * Indicates the device meets enhanced hardware security. Possible values are "level1", "level2", "level3" and "notApplicable". "level1" indicates that deny System Management Mode (SMM) read/write access to OS and Virtualization-based security (VBS) memory. "level2" indicates that in addition to the System Management Mode (SMM) Level 1 protections, this level prevents System Management Mode (SMM) from tampering with Input-Output Memory Management Unit (IOMMU) config. "level3" indicates that in addition to the System Management Mode (SMM) Level 2 protections, this level reduces System Management Mode (SMM) save state capabilities. "notApplicable" indicates that the device does not have Firmware protection (System Management Mode) enabled. Default value is "notApplicable".
+    *
+    * @return SystemManagementModeLevel|null The systemManagementMode
+    */
+    public function getSystemManagementMode()
+    {
+        if (array_key_exists("systemManagementMode", $this->_propDict)) {
+            if (is_a($this->_propDict["systemManagementMode"], "\Beta\Microsoft\Graph\Model\SystemManagementModeLevel") || is_null($this->_propDict["systemManagementMode"])) {
+                return $this->_propDict["systemManagementMode"];
+            } else {
+                $this->_propDict["systemManagementMode"] = new SystemManagementModeLevel($this->_propDict["systemManagementMode"]);
+                return $this->_propDict["systemManagementMode"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the systemManagementMode
+    * Indicates the device meets enhanced hardware security. Possible values are "level1", "level2", "level3" and "notApplicable". "level1" indicates that deny System Management Mode (SMM) read/write access to OS and Virtualization-based security (VBS) memory. "level2" indicates that in addition to the System Management Mode (SMM) Level 1 protections, this level prevents System Management Mode (SMM) from tampering with Input-Output Memory Management Unit (IOMMU) config. "level3" indicates that in addition to the System Management Mode (SMM) Level 2 protections, this level reduces System Management Mode (SMM) save state capabilities. "notApplicable" indicates that the device does not have Firmware protection (System Management Mode) enabled. Default value is "notApplicable".
+    *
+    * @param SystemManagementModeLevel $val The value to assign to the systemManagementMode
+    *
+    * @return DeviceHealthAttestationState The DeviceHealthAttestationState
+    */
+    public function setSystemManagementMode($val)
+    {
+        $this->_propDict["systemManagementMode"] = $val;
+         return $this;
+    }
     /**
     * Gets the testSigning
     * When test signing is allowed, the device does not enforce signature validation during boot
@@ -867,6 +1032,39 @@ class DeviceHealthAttestationState extends Entity
     {
         $this->_propDict["tpmVersion"] = $val;
         return $this;
+    }
+
+    /**
+    * Gets the virtualizationBasedSecurity
+    * Indicates whether the device has Virtualization-based security (VBS) enabled. Virtualization-based security (VBS) uses hardware virtualization and the Windows hypervisor to create an isolated virtual environment that becomes the root of trust of the OS that assumes the kernel can be compromised. Possible values are "enabled", "disabled" and "notApplicable". "enabled" indicates Virtualization-based security (VBS) is enabled. "disabled" indicates Virtualization-based security (VBS) is disabled. "notApplicable" indicates the device is not a Windows 11 device. Default value is "notApplicable".
+    *
+    * @return AzureAttestationSettingStatus|null The virtualizationBasedSecurity
+    */
+    public function getVirtualizationBasedSecurity()
+    {
+        if (array_key_exists("virtualizationBasedSecurity", $this->_propDict)) {
+            if (is_a($this->_propDict["virtualizationBasedSecurity"], "\Beta\Microsoft\Graph\Model\AzureAttestationSettingStatus") || is_null($this->_propDict["virtualizationBasedSecurity"])) {
+                return $this->_propDict["virtualizationBasedSecurity"];
+            } else {
+                $this->_propDict["virtualizationBasedSecurity"] = new AzureAttestationSettingStatus($this->_propDict["virtualizationBasedSecurity"]);
+                return $this->_propDict["virtualizationBasedSecurity"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the virtualizationBasedSecurity
+    * Indicates whether the device has Virtualization-based security (VBS) enabled. Virtualization-based security (VBS) uses hardware virtualization and the Windows hypervisor to create an isolated virtual environment that becomes the root of trust of the OS that assumes the kernel can be compromised. Possible values are "enabled", "disabled" and "notApplicable". "enabled" indicates Virtualization-based security (VBS) is enabled. "disabled" indicates Virtualization-based security (VBS) is disabled. "notApplicable" indicates the device is not a Windows 11 device. Default value is "notApplicable".
+    *
+    * @param AzureAttestationSettingStatus $val The value to assign to the virtualizationBasedSecurity
+    *
+    * @return DeviceHealthAttestationState The DeviceHealthAttestationState
+    */
+    public function setVirtualizationBasedSecurity($val)
+    {
+        $this->_propDict["virtualizationBasedSecurity"] = $val;
+         return $this;
     }
     /**
     * Gets the virtualSecureMode

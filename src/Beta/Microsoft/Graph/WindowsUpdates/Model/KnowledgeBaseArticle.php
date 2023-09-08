@@ -26,6 +26,7 @@ class KnowledgeBaseArticle extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the url
+    * The URL of the knowledge base article. Read-only.
     *
     * @return string|null The url
     */
@@ -40,6 +41,7 @@ class KnowledgeBaseArticle extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the url
+    * The URL of the knowledge base article. Read-only.
     *
     * @param string $val The url
     *
