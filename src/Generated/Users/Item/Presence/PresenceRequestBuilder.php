@@ -10,6 +10,7 @@ use Microsoft\Graph\Generated\Models\Presence;
 use Microsoft\Graph\Generated\Users\Item\Presence\ClearPresence\ClearPresenceRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Presence\ClearUserPreferredPresence\ClearUserPreferredPresenceRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Presence\SetPresence\SetPresenceRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Presence\SetStatusMessage\SetStatusMessageRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Presence\SetUserPreferredPresence\SetUserPreferredPresenceRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -40,6 +41,13 @@ class PresenceRequestBuilder extends BaseRequestBuilder
     */
     public function setPresence(): SetPresenceRequestBuilder {
         return new SetPresenceRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the setStatusMessage method.
+    */
+    public function setStatusMessage(): SetStatusMessageRequestBuilder {
+        return new SetStatusMessageRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

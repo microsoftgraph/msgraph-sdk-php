@@ -12,4 +12,5 @@ class SubjectRightsRequestStage extends Enum {
     public const CASE_RESOLVED = 'caseResolved';
     public const CONTENT_ESTIMATE = 'contentEstimate';
     public const UNKNOWN_FUTURE_VALUE = 'unknownFutureValue';
+    public const APPROVAL = 'approval';
 }

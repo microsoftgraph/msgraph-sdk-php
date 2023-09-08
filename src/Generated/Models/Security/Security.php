@@ -7,6 +7,7 @@ use Microsoft\Graph\Generated\Models\AttackSimulationRoot;
 use Microsoft\Graph\Generated\Models\Entity;
 use Microsoft\Graph\Generated\Models\SecureScore;
 use Microsoft\Graph\Generated\Models\SecureScoreControlProfile;
+use Microsoft\Graph\Generated\Models\SubjectRightsRequest;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
@@ -96,6 +97,7 @@ class Security extends Entity implements Parsable
             'incidents' => fn(ParseNode $n) => $o->setIncidents($n->getCollectionOfObjectValues([Incident::class, 'createFromDiscriminatorValue'])),
             'secureScoreControlProfiles' => fn(ParseNode $n) => $o->setSecureScoreControlProfiles($n->getCollectionOfObjectValues([SecureScoreControlProfile::class, 'createFromDiscriminatorValue'])),
             'secureScores' => fn(ParseNode $n) => $o->setSecureScores($n->getCollectionOfObjectValues([SecureScore::class, 'createFromDiscriminatorValue'])),
+            'subjectRightsRequests' => fn(ParseNode $n) => $o->setSubjectRightsRequests($n->getCollectionOfObjectValues([SubjectRightsRequest::class, 'createFromDiscriminatorValue'])),
             'threatIntelligence' => fn(ParseNode $n) => $o->setThreatIntelligence($n->getObjectValue([ThreatIntelligence::class, 'createFromDiscriminatorValue'])),
             'triggers' => fn(ParseNode $n) => $o->setTriggers($n->getObjectValue([TriggersRoot::class, 'createFromDiscriminatorValue'])),
             'triggerTypes' => fn(ParseNode $n) => $o->setTriggerTypes($n->getObjectValue([TriggerTypesRoot::class, 'createFromDiscriminatorValue'])),
@@ -142,6 +144,20 @@ class Security extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'secureScores'");
+    }
+
+    /**
+     * Gets the subjectRightsRequests property value. The subjectRightsRequests property
+     * @return array<SubjectRightsRequest>|null
+    */
+    public function getSubjectRightsRequests(): ?array {
+        $val = $this->getBackingStore()->get('subjectRightsRequests');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, SubjectRightsRequest::class);
+            /** @var array<SubjectRightsRequest>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'subjectRightsRequests'");
     }
 
     /**
@@ -193,6 +209,7 @@ class Security extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('incidents', $this->getIncidents());
         $writer->writeCollectionOfObjectValues('secureScoreControlProfiles', $this->getSecureScoreControlProfiles());
         $writer->writeCollectionOfObjectValues('secureScores', $this->getSecureScores());
+        $writer->writeCollectionOfObjectValues('subjectRightsRequests', $this->getSubjectRightsRequests());
         $writer->writeObjectValue('threatIntelligence', $this->getThreatIntelligence());
         $writer->writeObjectValue('triggers', $this->getTriggers());
         $writer->writeObjectValue('triggerTypes', $this->getTriggerTypes());
@@ -252,6 +269,14 @@ class Security extends Entity implements Parsable
     */
     public function setSecureScores(?array $value): void {
         $this->getBackingStore()->set('secureScores', $value);
+    }
+
+    /**
+     * Sets the subjectRightsRequests property value. The subjectRightsRequests property
+     * @param array<SubjectRightsRequest>|null $value Value to set for the subjectRightsRequests property.
+    */
+    public function setSubjectRightsRequests(?array $value): void {
+        $this->getBackingStore()->set('subjectRightsRequests', $value);
     }
 
     /**

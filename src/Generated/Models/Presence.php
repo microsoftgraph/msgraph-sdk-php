@@ -57,7 +57,20 @@ class Presence extends Entity implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'activity' => fn(ParseNode $n) => $o->setActivity($n->getStringValue()),
             'availability' => fn(ParseNode $n) => $o->setAvailability($n->getStringValue()),
+            'statusMessage' => fn(ParseNode $n) => $o->setStatusMessage($n->getObjectValue([PresenceStatusMessage::class, 'createFromDiscriminatorValue'])),
         ]);
+    }
+
+    /**
+     * Gets the statusMessage property value. The statusMessage property
+     * @return PresenceStatusMessage|null
+    */
+    public function getStatusMessage(): ?PresenceStatusMessage {
+        $val = $this->getBackingStore()->get('statusMessage');
+        if (is_null($val) || $val instanceof PresenceStatusMessage) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'statusMessage'");
     }
 
     /**
@@ -68,6 +81,7 @@ class Presence extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeStringValue('activity', $this->getActivity());
         $writer->writeStringValue('availability', $this->getAvailability());
+        $writer->writeObjectValue('statusMessage', $this->getStatusMessage());
     }
 
     /**
@@ -84,6 +98,14 @@ class Presence extends Entity implements Parsable
     */
     public function setAvailability(?string $value): void {
         $this->getBackingStore()->set('availability', $value);
+    }
+
+    /**
+     * Sets the statusMessage property value. The statusMessage property
+     * @param PresenceStatusMessage|null $value Value to set for the statusMessage property.
+    */
+    public function setStatusMessage(?PresenceStatusMessage $value): void {
+        $this->getBackingStore()->set('statusMessage', $value);
     }
 
 }
