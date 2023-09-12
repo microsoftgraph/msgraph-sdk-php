@@ -26,6 +26,7 @@ class SslCertificateEntity extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the address
+    * A physical address of the entity.
     *
     * @return \Beta\Microsoft\Graph\Model\PhysicalAddress|null The address
     */
@@ -44,6 +45,7 @@ class SslCertificateEntity extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the address
+    * A physical address of the entity.
     *
     * @param \Beta\Microsoft\Graph\Model\PhysicalAddress $val The value to assign to the address
     *
@@ -56,6 +58,7 @@ class SslCertificateEntity extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the alternateNames
+    * Alternate names for this entity that are part of the certificate.
     *
     * @return string|null The alternateNames
     */
@@ -70,6 +73,7 @@ class SslCertificateEntity extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the alternateNames
+    * Alternate names for this entity that are part of the certificate.
     *
     * @param string $val The value of the alternateNames
     *
@@ -82,6 +86,7 @@ class SslCertificateEntity extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the commonName
+    * A common name for this entity.
     *
     * @return string|null The commonName
     */
@@ -96,6 +101,7 @@ class SslCertificateEntity extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the commonName
+    * A common name for this entity.
     *
     * @param string $val The value of the commonName
     *
@@ -108,6 +114,7 @@ class SslCertificateEntity extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the email
+    * An email for this entity.
     *
     * @return string|null The email
     */
@@ -122,6 +129,7 @@ class SslCertificateEntity extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the email
+    * An email for this entity.
     *
     * @param string $val The value of the email
     *
@@ -134,6 +142,7 @@ class SslCertificateEntity extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the givenName
+    * If the entity is a person, this is the person's given name (first name).
     *
     * @return string|null The givenName
     */
@@ -148,6 +157,7 @@ class SslCertificateEntity extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the givenName
+    * If the entity is a person, this is the person's given name (first name).
     *
     * @param string $val The value of the givenName
     *
@@ -160,6 +170,7 @@ class SslCertificateEntity extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the organizationName
+    * If the entity is an organization, this is the name of the organization.
     *
     * @return string|null The organizationName
     */
@@ -174,6 +185,7 @@ class SslCertificateEntity extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the organizationName
+    * If the entity is an organization, this is the name of the organization.
     *
     * @param string $val The value of the organizationName
     *
@@ -186,6 +198,7 @@ class SslCertificateEntity extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the organizationUnitName
+    * If the entity is an organization, this communicates if a unit in the organization is named on the entity.
     *
     * @return string|null The organizationUnitName
     */
@@ -200,6 +213,7 @@ class SslCertificateEntity extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the organizationUnitName
+    * If the entity is an organization, this communicates if a unit in the organization is named on the entity.
     *
     * @param string $val The value of the organizationUnitName
     *
@@ -212,6 +226,7 @@ class SslCertificateEntity extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the serialNumber
+    * A serial number assigned to the entity; usually only available if the entity is the issuer.
     *
     * @return string|null The serialNumber
     */
@@ -226,6 +241,7 @@ class SslCertificateEntity extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the serialNumber
+    * A serial number assigned to the entity; usually only available if the entity is the issuer.
     *
     * @param string $val The value of the serialNumber
     *
@@ -238,6 +254,7 @@ class SslCertificateEntity extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the surname
+    * If the entity is a person, this is the person's surname (last name).
     *
     * @return string|null The surname
     */
@@ -252,6 +269,7 @@ class SslCertificateEntity extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the surname
+    * If the entity is a person, this is the person's surname (last name).
     *
     * @param string $val The value of the surname
     *

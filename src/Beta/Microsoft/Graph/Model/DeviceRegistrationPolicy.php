@@ -92,7 +92,7 @@ class DeviceRegistrationPolicy extends Entity
 
     /**
     * Gets the description
-    * The description of the device registration policy. It is always set to Tenant-wide policy that manages intial provisioning controls using quota restrictions, additional authentication and authorization checks. Read-only.
+    * The description of the device registration policy. It's always set to Tenant-wide policy that manages intial provisioning controls using quota restrictions, additional authentication and authorization checks. Read-only.
     *
     * @return string|null The description
     */
@@ -107,7 +107,7 @@ class DeviceRegistrationPolicy extends Entity
 
     /**
     * Sets the description
-    * The description of the device registration policy. It is always set to Tenant-wide policy that manages intial provisioning controls using quota restrictions, additional authentication and authorization checks. Read-only.
+    * The description of the device registration policy. It's always set to Tenant-wide policy that manages intial provisioning controls using quota restrictions, additional authentication and authorization checks. Read-only.
     *
     * @param string $val The description
     *
@@ -121,7 +121,7 @@ class DeviceRegistrationPolicy extends Entity
 
     /**
     * Gets the displayName
-    * The name of the device registration policy. It is always set to Device Registration Policy. Read-only.
+    * The name of the device registration policy. It's always set to Device Registration Policy. Read-only.
     *
     * @return string|null The displayName
     */
@@ -136,7 +136,7 @@ class DeviceRegistrationPolicy extends Entity
 
     /**
     * Sets the displayName
-    * The name of the device registration policy. It is always set to Device Registration Policy. Read-only.
+    * The name of the device registration policy. It's always set to Device Registration Policy. Read-only.
     *
     * @param string $val The displayName
     *
@@ -216,7 +216,7 @@ class DeviceRegistrationPolicy extends Entity
 
     /**
     * Gets the userDeviceQuota
-    * Specifies the maximum number of devices that a user can have within your organization before blocking new device registrations. The default value is set to 50. If this property is not specified during the policy update operation, it is automatically reset to 0 to indicate that users are not allowed to join any devices.
+    * Specifies the maximum number of devices that a user can have within your organization before blocking new device registrations. The default value is set to 50. If this property isn't specified during the policy update operation, it's automatically reset to 0 to indicate that users aren't allowed to join any devices.
     *
     * @return int|null The userDeviceQuota
     */
@@ -231,7 +231,7 @@ class DeviceRegistrationPolicy extends Entity
 
     /**
     * Sets the userDeviceQuota
-    * Specifies the maximum number of devices that a user can have within your organization before blocking new device registrations. The default value is set to 50. If this property is not specified during the policy update operation, it is automatically reset to 0 to indicate that users are not allowed to join any devices.
+    * Specifies the maximum number of devices that a user can have within your organization before blocking new device registrations. The default value is set to 50. If this property isn't specified during the policy update operation, it's automatically reset to 0 to indicate that users aren't allowed to join any devices.
     *
     * @param int $val The userDeviceQuota
     *

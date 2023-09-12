@@ -25,6 +25,7 @@ class WorkbookEmailIdentity extends Entity
 {
     /**
     * Gets the displayName
+    * Display name of the user.
     *
     * @return string|null The displayName
     */
@@ -39,6 +40,7 @@ class WorkbookEmailIdentity extends Entity
 
     /**
     * Sets the displayName
+    * Display name of the user.
     *
     * @param string $val The value of the displayName
     *
@@ -51,6 +53,7 @@ class WorkbookEmailIdentity extends Entity
     }
     /**
     * Gets the email
+    * Email address of the user.
     *
     * @return string|null The email
     */
@@ -65,6 +68,7 @@ class WorkbookEmailIdentity extends Entity
 
     /**
     * Sets the email
+    * Email address of the user.
     *
     * @param string $val The value of the email
     *
@@ -77,6 +81,7 @@ class WorkbookEmailIdentity extends Entity
     }
     /**
     * Gets the id
+    * The unique identifier of the user.
     *
     * @return string|null The id
     */
@@ -91,6 +96,7 @@ class WorkbookEmailIdentity extends Entity
 
     /**
     * Sets the id
+    * The unique identifier of the user.
     *
     * @param string $val The value of the id
     *

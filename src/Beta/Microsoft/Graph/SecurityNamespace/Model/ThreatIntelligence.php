@@ -207,6 +207,7 @@ class ThreatIntelligence extends \Beta\Microsoft\Graph\Model\Entity
 
      /**
      * Gets the hostSslCertificates
+    * Retrieve details about hostSslCertificate objects.Note: List retrieval is not yet supported.
      *
      * @return array|null The hostSslCertificates
      */
@@ -221,6 +222,7 @@ class ThreatIntelligence extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the hostSslCertificates
+    * Retrieve details about hostSslCertificate objects.Note: List retrieval is not yet supported.
     *
     * @param HostSslCertificate[] $val The hostSslCertificates
     *
@@ -353,6 +355,7 @@ class ThreatIntelligence extends \Beta\Microsoft\Graph\Model\Entity
 
      /**
      * Gets the sslCertificates
+    * Retrieve details about sslCertificate objects.Note: List retrieval is not yet supported.
      *
      * @return array|null The sslCertificates
      */
@@ -367,6 +370,7 @@ class ThreatIntelligence extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the sslCertificates
+    * Retrieve details about sslCertificate objects.Note: List retrieval is not yet supported.
     *
     * @param SslCertificate[] $val The sslCertificates
     *

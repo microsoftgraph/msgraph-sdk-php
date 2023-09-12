@@ -84,7 +84,7 @@ class WorkbookWorksheet extends Entity
 
     /**
     * Gets the visibility
-    * The Visibility of the worksheet. The possible values are: Visible, Hidden, VeryHidden.
+    * The visibility of the worksheet. The possible values are: Visible, Hidden, VeryHidden.
     *
     * @return string|null The visibility
     */
@@ -99,7 +99,7 @@ class WorkbookWorksheet extends Entity
 
     /**
     * Sets the visibility
-    * The Visibility of the worksheet. The possible values are: Visible, Hidden, VeryHidden.
+    * The visibility of the worksheet. The possible values are: Visible, Hidden, VeryHidden.
     *
     * @param string $val The visibility
     *
@@ -267,6 +267,7 @@ class WorkbookWorksheet extends Entity
 
      /**
      * Gets the tasks
+    * Collection of document tasks on this worksheet. Read-only.
      *
      * @return array|null The tasks
      */
@@ -281,6 +282,7 @@ class WorkbookWorksheet extends Entity
 
     /**
     * Sets the tasks
+    * Collection of document tasks on this worksheet. Read-only.
     *
     * @param WorkbookDocumentTask[] $val The tasks
     *

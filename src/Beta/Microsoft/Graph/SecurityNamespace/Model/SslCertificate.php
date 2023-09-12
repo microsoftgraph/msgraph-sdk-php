@@ -26,6 +26,7 @@ class SslCertificate extends Artifact
 {
     /**
     * Gets the expirationDateTime
+    * The date and time when a certificate expires. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The expirationDateTime
     */
@@ -44,6 +45,7 @@ class SslCertificate extends Artifact
 
     /**
     * Sets the expirationDateTime
+    * The date and time when a certificate expires. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The expirationDateTime
     *
@@ -57,6 +59,7 @@ class SslCertificate extends Artifact
 
     /**
     * Gets the fingerprint
+    * A hash of the certificate calculated on the data and signature.
     *
     * @return string|null The fingerprint
     */
@@ -71,6 +74,7 @@ class SslCertificate extends Artifact
 
     /**
     * Sets the fingerprint
+    * A hash of the certificate calculated on the data and signature.
     *
     * @param string $val The fingerprint
     *
@@ -84,6 +88,7 @@ class SslCertificate extends Artifact
 
     /**
     * Gets the firstSeenDateTime
+    * The first date and time that this sslCertificate was observed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The firstSeenDateTime
     */
@@ -102,6 +107,7 @@ class SslCertificate extends Artifact
 
     /**
     * Sets the firstSeenDateTime
+    * The first date and time that this sslCertificate was observed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The firstSeenDateTime
     *
@@ -115,6 +121,7 @@ class SslCertificate extends Artifact
 
     /**
     * Gets the issueDateTime
+    * The date and time when a certificate was issued. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The issueDateTime
     */
@@ -133,6 +140,7 @@ class SslCertificate extends Artifact
 
     /**
     * Sets the issueDateTime
+    * The date and time when a certificate was issued. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The issueDateTime
     *
@@ -146,6 +154,7 @@ class SslCertificate extends Artifact
 
     /**
     * Gets the issuer
+    * The entity granting this certificate.
     *
     * @return SslCertificateEntity|null The issuer
     */
@@ -164,6 +173,7 @@ class SslCertificate extends Artifact
 
     /**
     * Sets the issuer
+    * The entity granting this certificate.
     *
     * @param SslCertificateEntity $val The issuer
     *
@@ -177,6 +187,7 @@ class SslCertificate extends Artifact
 
     /**
     * Gets the lastSeenDateTime
+    * The most recent date and time that this sslCertificate was observed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The lastSeenDateTime
     */
@@ -195,6 +206,7 @@ class SslCertificate extends Artifact
 
     /**
     * Sets the lastSeenDateTime
+    * The most recent date and time that this sslCertificate was observed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The lastSeenDateTime
     *
@@ -208,6 +220,7 @@ class SslCertificate extends Artifact
 
     /**
     * Gets the serialNumber
+    * The serial number associated with an SSL certificate.
     *
     * @return string|null The serialNumber
     */
@@ -222,6 +235,7 @@ class SslCertificate extends Artifact
 
     /**
     * Sets the serialNumber
+    * The serial number associated with an SSL certificate.
     *
     * @param string $val The serialNumber
     *
@@ -235,6 +249,7 @@ class SslCertificate extends Artifact
 
     /**
     * Gets the sha1
+    * A SHA-1 hash of the certificate. Note: This is not the signature.
     *
     * @return string|null The sha1
     */
@@ -249,6 +264,7 @@ class SslCertificate extends Artifact
 
     /**
     * Sets the sha1
+    * A SHA-1 hash of the certificate. Note: This is not the signature.
     *
     * @param string $val The sha1
     *
@@ -262,6 +278,7 @@ class SslCertificate extends Artifact
 
     /**
     * Gets the subject
+    * The person, site, machine, and so on, this certificate is for.
     *
     * @return SslCertificateEntity|null The subject
     */
@@ -280,6 +297,7 @@ class SslCertificate extends Artifact
 
     /**
     * Sets the subject
+    * The person, site, machine, and so on, this certificate is for.
     *
     * @param SslCertificateEntity $val The subject
     *
@@ -294,6 +312,7 @@ class SslCertificate extends Artifact
 
      /**
      * Gets the relatedHosts
+    * The hosts related with this sslCertificate.
      *
      * @return array|null The relatedHosts
      */
@@ -308,6 +327,7 @@ class SslCertificate extends Artifact
 
     /**
     * Sets the relatedHosts
+    * The hosts related with this sslCertificate.
     *
     * @param Host[] $val The relatedHosts
     *

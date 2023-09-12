@@ -114,7 +114,7 @@ class OrgContact extends DirectoryObject
 
     /**
     * Gets the displayName
-    * Display name for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values), $search, and $orderBy.
+    * Display name for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values), $search, and $orderby.
     *
     * @return string|null The displayName
     */
@@ -129,7 +129,7 @@ class OrgContact extends DirectoryObject
 
     /**
     * Sets the displayName
-    * Display name for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values), $search, and $orderBy.
+    * Display name for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values), $search, and $orderby.
     *
     * @param string $val The displayName
     *

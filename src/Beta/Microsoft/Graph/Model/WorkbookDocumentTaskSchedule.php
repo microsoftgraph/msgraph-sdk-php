@@ -26,6 +26,7 @@ class WorkbookDocumentTaskSchedule extends Entity
 
     /**
     * Gets the dueDateTime
+    * The due date and time for the task. Nullable. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The dueDateTime
     */
@@ -44,6 +45,7 @@ class WorkbookDocumentTaskSchedule extends Entity
 
     /**
     * Sets the dueDateTime
+    * The due date and time for the task. Nullable. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The value to assign to the dueDateTime
     *
@@ -57,6 +59,7 @@ class WorkbookDocumentTaskSchedule extends Entity
 
     /**
     * Gets the startDateTime
+    * The start date and time for the task. Nullable. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The startDateTime
     */
@@ -75,6 +78,7 @@ class WorkbookDocumentTaskSchedule extends Entity
 
     /**
     * Sets the startDateTime
+    * The start date and time for the task. Nullable. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The value to assign to the startDateTime
     *

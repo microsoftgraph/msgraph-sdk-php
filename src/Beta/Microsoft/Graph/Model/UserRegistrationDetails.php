@@ -382,7 +382,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Gets the userDisplayName
-    * The user display name, such as Adele Vance. Supports $filter (eq, startsWith) and $orderBy.
+    * The user display name, such as Adele Vance. Supports $filter (eq, startsWith) and $orderby.
     *
     * @return string|null The userDisplayName
     */
@@ -397,7 +397,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Sets the userDisplayName
-    * The user display name, such as Adele Vance. Supports $filter (eq, startsWith) and $orderBy.
+    * The user display name, such as Adele Vance. Supports $filter (eq, startsWith) and $orderby.
     *
     * @param string $val The userDisplayName
     *
@@ -444,7 +444,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Gets the userPrincipalName
-    * The user principal name, such as AdeleV@contoso.com. Supports $filter (eq, startsWith) and $orderBy.
+    * The user principal name, such as AdeleV@contoso.com. Supports $filter (eq, startsWith) and $orderby.
     *
     * @return string|null The userPrincipalName
     */
@@ -459,7 +459,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Sets the userPrincipalName
-    * The user principal name, such as AdeleV@contoso.com. Supports $filter (eq, startsWith) and $orderBy.
+    * The user principal name, such as AdeleV@contoso.com. Supports $filter (eq, startsWith) and $orderby.
     *
     * @param string $val The userPrincipalName
     *
