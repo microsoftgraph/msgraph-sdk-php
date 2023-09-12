@@ -202,7 +202,7 @@ class UserRegistrationDetails extends Entity implements Parsable
     }
 
     /**
-     * Gets the userDisplayName property value. The user display name, such as Adele Vance. Supports $filter (eq, startsWith) and $orderBy.
+     * Gets the userDisplayName property value. The user display name, such as Adele Vance. Supports $filter (eq, startsWith) and $orderby.
      * @return string|null
     */
     public function getUserDisplayName(): ?string {
@@ -226,7 +226,7 @@ class UserRegistrationDetails extends Entity implements Parsable
     }
 
     /**
-     * Gets the userPrincipalName property value. The user principal name, such as AdeleV@contoso.com. Supports $filter (eq, startsWith) and $orderBy.
+     * Gets the userPrincipalName property value. The user principal name, such as AdeleV@contoso.com. Supports $filter (eq, startsWith) and $orderby.
      * @return string|null
     */
     public function getUserPrincipalName(): ?string {
@@ -361,7 +361,7 @@ class UserRegistrationDetails extends Entity implements Parsable
     }
 
     /**
-     * Sets the userDisplayName property value. The user display name, such as Adele Vance. Supports $filter (eq, startsWith) and $orderBy.
+     * Sets the userDisplayName property value. The user display name, such as Adele Vance. Supports $filter (eq, startsWith) and $orderby.
      * @param string|null $value Value to set for the userDisplayName property.
     */
     public function setUserDisplayName(?string $value): void {
@@ -377,7 +377,7 @@ class UserRegistrationDetails extends Entity implements Parsable
     }
 
     /**
-     * Sets the userPrincipalName property value. The user principal name, such as AdeleV@contoso.com. Supports $filter (eq, startsWith) and $orderBy.
+     * Sets the userPrincipalName property value. The user principal name, such as AdeleV@contoso.com. Supports $filter (eq, startsWith) and $orderby.
      * @param string|null $value Value to set for the userPrincipalName property.
     */
     public function setUserPrincipalName(?string $value): void {

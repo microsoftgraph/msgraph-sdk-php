@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read properties and relationships of the windowsDefenderAdvancedThreatProtectionConfiguration object.
+ * Read properties and relationships of the windows10EndpointProtectionConfiguration object.
 */
 class DeviceConfigurationItemRequestBuilderGetQueryParameters 
 {

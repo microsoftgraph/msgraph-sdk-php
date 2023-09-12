@@ -40,7 +40,7 @@ class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Directory objects that were created by the user. Read-only. Nullable.
+     * Directory objects that the user created. Read-only. Nullable.
      * @param DirectoryObjectItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -58,7 +58,7 @@ class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Directory objects that were created by the user. Read-only. Nullable.
+     * Directory objects that the user created. Read-only. Nullable.
      * @param DirectoryObjectItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

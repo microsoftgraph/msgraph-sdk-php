@@ -10,4 +10,5 @@ class WindowsDeviceType extends Enum {
     public const MOBILE = 'mobile';
     public const HOLOGRAPHIC = 'holographic';
     public const TEAM = 'team';
+    public const UNKNOWN_FUTURE_VALUE = 'unknownFutureValue';
 }

@@ -43,6 +43,7 @@ class DeviceActionResult implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.locateDeviceActionResult': return new LocateDeviceActionResult();
                 case '#microsoft.graph.remoteLockActionResult': return new RemoteLockActionResult();
                 case '#microsoft.graph.resetPasscodeActionResult': return new ResetPasscodeActionResult();
+                case '#microsoft.graph.rotateBitLockerKeysDeviceActionResult': return new RotateBitLockerKeysDeviceActionResult();
                 case '#microsoft.graph.windowsDefenderScanActionResult': return new WindowsDefenderScanActionResult();
             }
         }

@@ -32,6 +32,7 @@ class MobileLobApp extends MobileApp implements Parsable
             switch ($mappingValue) {
                 case '#microsoft.graph.androidLobApp': return new AndroidLobApp();
                 case '#microsoft.graph.iosLobApp': return new IosLobApp();
+                case '#microsoft.graph.macOSDmgApp': return new MacOSDmgApp();
                 case '#microsoft.graph.macOSLobApp': return new MacOSLobApp();
                 case '#microsoft.graph.win32LobApp': return new Win32LobApp();
                 case '#microsoft.graph.windowsAppX': return new WindowsAppX();

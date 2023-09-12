@@ -89,7 +89,7 @@ class AccessPackageResourceRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the state property value. The outcome of whether the service was able to add the resource to the catalog.  The value is delivered if the resource was added or removed. Read-only.
+     * Gets the state property value. The outcome of whether the service was able to add the resource to the catalog.  The value is delivered if the resource was added or removed, and deliveryFailed if it could not be added or removed. Read-only.
      * @return AccessPackageRequestState|null
     */
     public function getState(): ?AccessPackageRequestState {
@@ -146,7 +146,7 @@ class AccessPackageResourceRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the state property value. The outcome of whether the service was able to add the resource to the catalog.  The value is delivered if the resource was added or removed. Read-only.
+     * Sets the state property value. The outcome of whether the service was able to add the resource to the catalog.  The value is delivered if the resource was added or removed, and deliveryFailed if it could not be added or removed. Read-only.
      * @param AccessPackageRequestState|null $value Value to set for the state property.
     */
     public function setState(?AccessPackageRequestState $value): void {

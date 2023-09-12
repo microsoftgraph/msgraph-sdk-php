@@ -8,7 +8,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 /**
- * Contains properties and inherited properties for Windows Universal AppX Line Of Business apps.
+ * Contains properties and inherited properties for Windows Universal AppX Line Of Business apps. Inherits from `mobileLobApp`.
 */
 class WindowsUniversalAppX extends MobileLobApp implements Parsable 
 {
@@ -42,7 +42,7 @@ class WindowsUniversalAppX extends MobileLobApp implements Parsable
     }
 
     /**
-     * Gets the applicableDeviceTypes property value. Contains properties for Windows device type.
+     * Gets the applicableDeviceTypes property value. Contains properties for Windows device type. Multiple values can be selected. Default value is `none`.
      * @return WindowsDeviceType|null
     */
     public function getApplicableDeviceTypes(): ?WindowsDeviceType {
@@ -184,7 +184,7 @@ class WindowsUniversalAppX extends MobileLobApp implements Parsable
     }
 
     /**
-     * Sets the applicableDeviceTypes property value. Contains properties for Windows device type.
+     * Sets the applicableDeviceTypes property value. Contains properties for Windows device type. Multiple values can be selected. Default value is `none`.
      * @param WindowsDeviceType|null $value Value to set for the applicableDeviceTypes property.
     */
     public function setApplicableDeviceTypes(?WindowsDeviceType $value): void {

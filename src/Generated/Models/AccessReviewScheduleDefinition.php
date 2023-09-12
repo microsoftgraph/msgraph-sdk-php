@@ -89,7 +89,7 @@ class AccessReviewScheduleDefinition extends Entity implements Parsable
     }
 
     /**
-     * Gets the displayName property value. Name of the access review series. Supports $select and $orderBy. Required on create.
+     * Gets the displayName property value. Name of the access review series. Supports $select and $orderby. Required on create.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -305,7 +305,7 @@ class AccessReviewScheduleDefinition extends Entity implements Parsable
     }
 
     /**
-     * Sets the displayName property value. Name of the access review series. Supports $select and $orderBy. Required on create.
+     * Sets the displayName property value. Name of the access review series. Supports $select and $orderby. Required on create.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {

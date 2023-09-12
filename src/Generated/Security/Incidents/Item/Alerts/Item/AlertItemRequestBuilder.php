@@ -7,6 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Security\Alert;
+use Microsoft\Graph\Generated\Security\Incidents\Item\Alerts\Item\Comments\CommentsRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -17,6 +18,13 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class AlertItemRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * The comments property
+    */
+    public function comments(): CommentsRequestBuilder {
+        return new CommentsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Instantiates a new AlertItemRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
