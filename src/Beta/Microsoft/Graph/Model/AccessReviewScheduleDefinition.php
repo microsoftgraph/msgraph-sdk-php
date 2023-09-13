@@ -208,7 +208,7 @@ class AccessReviewScheduleDefinition extends Entity
 
     /**
     * Gets the displayName
-    * Name of the access review series. Supports $select and $orderBy. Required on create.
+    * Name of the access review series. Supports $select and $orderby. Required on create.
     *
     * @return string|null The displayName
     */
@@ -223,7 +223,7 @@ class AccessReviewScheduleDefinition extends Entity
 
     /**
     * Sets the displayName
-    * Name of the access review series. Supports $select and $orderBy. Required on create.
+    * Name of the access review series. Supports $select and $orderby. Required on create.
     *
     * @param string $val The displayName
     *

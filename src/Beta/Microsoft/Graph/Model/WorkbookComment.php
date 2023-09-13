@@ -112,6 +112,7 @@ class WorkbookComment extends Entity
 
     /**
     * Gets the task
+    * The task associated with the comment. Read-only. Nullable.
     *
     * @return WorkbookDocumentTask|null The task
     */
@@ -130,6 +131,7 @@ class WorkbookComment extends Entity
 
     /**
     * Sets the task
+    * The task associated with the comment. Read-only. Nullable.
     *
     * @param WorkbookDocumentTask $val The task
     *

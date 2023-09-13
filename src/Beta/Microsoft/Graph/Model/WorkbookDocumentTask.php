@@ -27,6 +27,7 @@ class WorkbookDocumentTask extends Entity
 
      /**
      * Gets the assignees
+    * A collection of user identities the task is assigned to.
      *
      * @return array|null The assignees
      */
@@ -41,6 +42,7 @@ class WorkbookDocumentTask extends Entity
 
     /**
     * Sets the assignees
+    * A collection of user identities the task is assigned to.
     *
     * @param WorkbookEmailIdentity[] $val The assignees
     *
@@ -54,6 +56,7 @@ class WorkbookDocumentTask extends Entity
 
     /**
     * Gets the completedBy
+    * The identity of the user who completed the task. Nullable.
     *
     * @return WorkbookEmailIdentity|null The completedBy
     */
@@ -72,6 +75,7 @@ class WorkbookDocumentTask extends Entity
 
     /**
     * Sets the completedBy
+    * The identity of the user who completed the task. Nullable.
     *
     * @param WorkbookEmailIdentity $val The completedBy
     *
@@ -85,6 +89,7 @@ class WorkbookDocumentTask extends Entity
 
     /**
     * Gets the completedDateTime
+    * Date and time when the task was completed. Nullable. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The completedDateTime
     */
@@ -103,6 +108,7 @@ class WorkbookDocumentTask extends Entity
 
     /**
     * Sets the completedDateTime
+    * Date and time when the task was completed. Nullable. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The completedDateTime
     *
@@ -116,6 +122,7 @@ class WorkbookDocumentTask extends Entity
 
     /**
     * Gets the createdBy
+    * A user identity that creates the task. Nullable.
     *
     * @return WorkbookEmailIdentity|null The createdBy
     */
@@ -134,6 +141,7 @@ class WorkbookDocumentTask extends Entity
 
     /**
     * Sets the createdBy
+    * A user identity that creates the task. Nullable.
     *
     * @param WorkbookEmailIdentity $val The createdBy
     *
@@ -147,6 +155,7 @@ class WorkbookDocumentTask extends Entity
 
     /**
     * Gets the createdDateTime
+    * Date and time when the task was created. Nullable. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -165,6 +174,7 @@ class WorkbookDocumentTask extends Entity
 
     /**
     * Sets the createdDateTime
+    * Date and time when the task was created. Nullable. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -178,6 +188,7 @@ class WorkbookDocumentTask extends Entity
 
     /**
     * Gets the percentComplete
+    * An integer value from 0 to 100 that represents the percentage of the completion of the task. 100 means that the task is completed. Nullable.
     *
     * @return int|null The percentComplete
     */
@@ -192,6 +203,7 @@ class WorkbookDocumentTask extends Entity
 
     /**
     * Sets the percentComplete
+    * An integer value from 0 to 100 that represents the percentage of the completion of the task. 100 means that the task is completed. Nullable.
     *
     * @param int $val The percentComplete
     *
@@ -205,6 +217,7 @@ class WorkbookDocumentTask extends Entity
 
     /**
     * Gets the priority
+    * An integer value from 0 to 10 that represents the priority of the task. A lower value indicates a higher priority. Nullable.
     *
     * @return int|null The priority
     */
@@ -219,6 +232,7 @@ class WorkbookDocumentTask extends Entity
 
     /**
     * Sets the priority
+    * An integer value from 0 to 10 that represents the priority of the task. A lower value indicates a higher priority. Nullable.
     *
     * @param int $val The priority
     *
@@ -232,6 +246,7 @@ class WorkbookDocumentTask extends Entity
 
     /**
     * Gets the startAndDueDateTime
+    * Start and due date of the task. Nullable.
     *
     * @return WorkbookDocumentTaskSchedule|null The startAndDueDateTime
     */
@@ -250,6 +265,7 @@ class WorkbookDocumentTask extends Entity
 
     /**
     * Sets the startAndDueDateTime
+    * Start and due date of the task. Nullable.
     *
     * @param WorkbookDocumentTaskSchedule $val The startAndDueDateTime
     *
@@ -263,6 +279,7 @@ class WorkbookDocumentTask extends Entity
 
     /**
     * Gets the title
+    * The title of the task.
     *
     * @return string|null The title
     */
@@ -277,6 +294,7 @@ class WorkbookDocumentTask extends Entity
 
     /**
     * Sets the title
+    * The title of the task.
     *
     * @param string $val The title
     *
@@ -291,6 +309,7 @@ class WorkbookDocumentTask extends Entity
 
      /**
      * Gets the changes
+    * A collection of task change histories.
      *
      * @return array|null The changes
      */
@@ -305,6 +324,7 @@ class WorkbookDocumentTask extends Entity
 
     /**
     * Sets the changes
+    * A collection of task change histories.
     *
     * @param WorkbookDocumentTaskChange[] $val The changes
     *
@@ -318,6 +338,7 @@ class WorkbookDocumentTask extends Entity
 
     /**
     * Gets the comment
+    * The comment that the task is associated with.
     *
     * @return WorkbookComment|null The comment
     */
@@ -336,6 +357,7 @@ class WorkbookDocumentTask extends Entity
 
     /**
     * Sets the comment
+    * The comment that the task is associated with.
     *
     * @param WorkbookComment $val The comment
     *

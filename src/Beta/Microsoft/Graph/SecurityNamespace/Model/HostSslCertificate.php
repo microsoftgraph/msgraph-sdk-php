@@ -26,6 +26,7 @@ class HostSslCertificate extends Artifact
 {
     /**
     * Gets the firstSeenDateTime
+    * The first date and time that this hostSslCertificate was observed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The firstSeenDateTime
     */
@@ -44,6 +45,7 @@ class HostSslCertificate extends Artifact
 
     /**
     * Sets the firstSeenDateTime
+    * The first date and time that this hostSslCertificate was observed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The firstSeenDateTime
     *
@@ -57,6 +59,7 @@ class HostSslCertificate extends Artifact
 
     /**
     * Gets the lastSeenDateTime
+    * The most recent date and time that this hostSslCertificate was observed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The lastSeenDateTime
     */
@@ -75,6 +78,7 @@ class HostSslCertificate extends Artifact
 
     /**
     * Sets the lastSeenDateTime
+    * The most recent date and time that this hostSslCertificate was observed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The lastSeenDateTime
     *
@@ -89,6 +93,7 @@ class HostSslCertificate extends Artifact
 
      /**
      * Gets the ports
+    * The ports related with this hostSslCertificate.
      *
      * @return array|null The ports
      */
@@ -103,6 +108,7 @@ class HostSslCertificate extends Artifact
 
     /**
     * Sets the ports
+    * The ports related with this hostSslCertificate.
     *
     * @param HostSslCertificatePort[] $val The ports
     *
@@ -116,6 +122,7 @@ class HostSslCertificate extends Artifact
 
     /**
     * Gets the host
+    * The host for this hostSslCertificate.
     *
     * @return Host|null The host
     */
@@ -134,6 +141,7 @@ class HostSslCertificate extends Artifact
 
     /**
     * Sets the host
+    * The host for this hostSslCertificate.
     *
     * @param Host $val The host
     *
@@ -147,6 +155,7 @@ class HostSslCertificate extends Artifact
 
     /**
     * Gets the sslCertificate
+    * The sslCertificate for this hostSslCertificate.
     *
     * @return SslCertificate|null The sslCertificate
     */
@@ -165,6 +174,7 @@ class HostSslCertificate extends Artifact
 
     /**
     * Sets the sslCertificate
+    * The sslCertificate for this hostSslCertificate.
     *
     * @param SslCertificate $val The sslCertificate
     *

@@ -93,7 +93,7 @@ class Host extends Artifact
 
      /**
      * Gets the childHostPairs
-    * The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a childHost.
+    * The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a cihldHost.
      *
      * @return array|null The childHostPairs
      */
@@ -108,7 +108,7 @@ class Host extends Artifact
 
     /**
     * Sets the childHostPairs
-    * The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a childHost.
+    * The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a cihldHost.
     *
     * @param HostPair[] $val The childHostPairs
     *
@@ -336,6 +336,7 @@ class Host extends Artifact
 
      /**
      * Gets the sslCertificates
+    * The hostSslCertificates that are associated with this host.
      *
      * @return array|null The sslCertificates
      */
@@ -350,6 +351,7 @@ class Host extends Artifact
 
     /**
     * Sets the sslCertificates
+    * The hostSslCertificates that are associated with this host.
     *
     * @param HostSslCertificate[] $val The sslCertificates
     *

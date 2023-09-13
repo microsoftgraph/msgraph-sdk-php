@@ -85,6 +85,33 @@ class Site extends BaseItem
     }
 
     /**
+    * Gets the isPersonalSite
+    *
+    * @return bool|null The isPersonalSite
+    */
+    public function getIsPersonalSite()
+    {
+        if (array_key_exists("isPersonalSite", $this->_propDict)) {
+            return $this->_propDict["isPersonalSite"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isPersonalSite
+    *
+    * @param bool $val The isPersonalSite
+    *
+    * @return Site
+    */
+    public function setIsPersonalSite($val)
+    {
+        $this->_propDict["isPersonalSite"] = boolval($val);
+        return $this;
+    }
+
+    /**
     * Gets the root
     * If present, indicates that this is the root site in the site collection. Read-only.
     *

@@ -552,6 +552,35 @@ class RecommendationBase extends Entity
     }
 
     /**
+    * Gets the releaseType
+    * The current release type of the recommendation. The possible values are: preview or generallyAvailable.
+    *
+    * @return string|null The releaseType
+    */
+    public function getReleaseType()
+    {
+        if (array_key_exists("releaseType", $this->_propDict)) {
+            return $this->_propDict["releaseType"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the releaseType
+    * The current release type of the recommendation. The possible values are: preview or generallyAvailable.
+    *
+    * @param string $val The releaseType
+    *
+    * @return RecommendationBase
+    */
+    public function setReleaseType($val)
+    {
+        $this->_propDict["releaseType"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the remediationImpact
     * Description of the impact on users of the remediation. Only applies to recommendations with category set to identitySecureScore.
     *
