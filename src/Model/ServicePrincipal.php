@@ -409,7 +409,7 @@ class ServicePrincipal extends DirectoryObject
 
     /**
     * Gets the displayName
-    * The display name for the service principal. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
+    * The display name for the service principal. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderby.
     *
     * @return string|null The displayName
     */
@@ -424,7 +424,7 @@ class ServicePrincipal extends DirectoryObject
 
     /**
     * Sets the displayName
-    * The display name for the service principal. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
+    * The display name for the service principal. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderby.
     *
     * @param string $val The displayName
     *

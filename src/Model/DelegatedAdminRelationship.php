@@ -286,7 +286,7 @@ class DelegatedAdminRelationship extends Entity
 
     /**
     * Gets the status
-    * The status of the relationship. Read Only. The possible values are: activating, active, approvalPending, approved, created, expired, expiring, terminated, terminating, terminationRequested, unknownFutureValue. Supports $orderBy.
+    * The status of the relationship. Read Only. The possible values are: activating, active, approvalPending, approved, created, expired, expiring, terminated, terminating, terminationRequested, unknownFutureValue. Supports $orderby.
     *
     * @return DelegatedAdminRelationshipStatus|null The status
     */
@@ -305,7 +305,7 @@ class DelegatedAdminRelationship extends Entity
 
     /**
     * Sets the status
-    * The status of the relationship. Read Only. The possible values are: activating, active, approvalPending, approved, created, expired, expiring, terminated, terminating, terminationRequested, unknownFutureValue. Supports $orderBy.
+    * The status of the relationship. Read Only. The possible values are: activating, active, approvalPending, approved, created, expired, expiring, terminated, terminating, terminationRequested, unknownFutureValue. Supports $orderby.
     *
     * @param DelegatedAdminRelationshipStatus $val The status
     *
