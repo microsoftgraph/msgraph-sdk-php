@@ -39,7 +39,7 @@ class AdministrativeUnit extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the displayName property value. Display name for the administrative unit. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
+     * Gets the displayName property value. Display name for the administrative unit. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderby.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -143,7 +143,7 @@ class AdministrativeUnit extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the displayName property value. Display name for the administrative unit. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
+     * Sets the displayName property value. Display name for the administrative unit. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderby.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {

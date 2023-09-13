@@ -146,6 +146,7 @@ class Site extends BaseItem implements Parsable
             'drives' => fn(ParseNode $n) => $o->setDrives($n->getCollectionOfObjectValues([Drive::class, 'createFromDiscriminatorValue'])),
             'error' => fn(ParseNode $n) => $o->setError($n->getObjectValue([PublicError::class, 'createFromDiscriminatorValue'])),
             'externalColumns' => fn(ParseNode $n) => $o->setExternalColumns($n->getCollectionOfObjectValues([ColumnDefinition::class, 'createFromDiscriminatorValue'])),
+            'isPersonalSite' => fn(ParseNode $n) => $o->setIsPersonalSite($n->getBooleanValue()),
             'items' => fn(ParseNode $n) => $o->setItems($n->getCollectionOfObjectValues([BaseItem::class, 'createFromDiscriminatorValue'])),
             'lists' => fn(ParseNode $n) => $o->setLists($n->getCollectionOfObjectValues([EscapedList::class, 'createFromDiscriminatorValue'])),
             'onenote' => fn(ParseNode $n) => $o->setOnenote($n->getObjectValue([Onenote::class, 'createFromDiscriminatorValue'])),
@@ -158,6 +159,18 @@ class Site extends BaseItem implements Parsable
             'termStore' => fn(ParseNode $n) => $o->setTermStore($n->getObjectValue([Store::class, 'createFromDiscriminatorValue'])),
             'termStores' => fn(ParseNode $n) => $o->setTermStores($n->getCollectionOfObjectValues([Store::class, 'createFromDiscriminatorValue'])),
         ]);
+    }
+
+    /**
+     * Gets the isPersonalSite property value. The isPersonalSite property
+     * @return bool|null
+    */
+    public function getIsPersonalSite(): ?bool {
+        $val = $this->getBackingStore()->get('isPersonalSite');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isPersonalSite'");
     }
 
     /**
@@ -318,6 +331,7 @@ class Site extends BaseItem implements Parsable
         $writer->writeCollectionOfObjectValues('drives', $this->getDrives());
         $writer->writeObjectValue('error', $this->getError());
         $writer->writeCollectionOfObjectValues('externalColumns', $this->getExternalColumns());
+        $writer->writeBooleanValue('isPersonalSite', $this->getIsPersonalSite());
         $writer->writeCollectionOfObjectValues('items', $this->getItems());
         $writer->writeCollectionOfObjectValues('lists', $this->getLists());
         $writer->writeObjectValue('onenote', $this->getOnenote());
@@ -393,6 +407,14 @@ class Site extends BaseItem implements Parsable
     */
     public function setExternalColumns(?array $value): void {
         $this->getBackingStore()->set('externalColumns', $value);
+    }
+
+    /**
+     * Sets the isPersonalSite property value. The isPersonalSite property
+     * @param bool|null $value Value to set for the isPersonalSite property.
+    */
+    public function setIsPersonalSite(?bool $value): void {
+        $this->getBackingStore()->set('isPersonalSite', $value);
     }
 
     /**

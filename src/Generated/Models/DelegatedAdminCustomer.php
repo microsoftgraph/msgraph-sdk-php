@@ -26,7 +26,7 @@ class DelegatedAdminCustomer extends Entity implements Parsable
     }
 
     /**
-     * Gets the displayName property value. The Azure AD display name of the customer tenant. Read-only. Supports $orderBy.
+     * Gets the displayName property value. The Azure AD display name of the customer tenant. Read-only. Supports $orderby.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -88,7 +88,7 @@ class DelegatedAdminCustomer extends Entity implements Parsable
     }
 
     /**
-     * Sets the displayName property value. The Azure AD display name of the customer tenant. Read-only. Supports $orderBy.
+     * Sets the displayName property value. The Azure AD display name of the customer tenant. Read-only. Supports $orderby.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {

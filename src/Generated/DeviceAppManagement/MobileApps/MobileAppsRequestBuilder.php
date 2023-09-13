@@ -69,10 +69,10 @@ class MobileAppsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the windowsUniversalAppX objects.
+     * List properties and relationships of the iosVppApp objects.
      * @param MobileAppsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://learn.microsoft.com/graph/api/intune-apps-windowsuniversalappx-list?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-apps-iosvppapp-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?MobileAppsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -88,11 +88,11 @@ class MobileAppsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new macOSOfficeSuiteApp object.
+     * Create a new microsoftStoreForBusinessApp object.
      * @param MobileApp $body The request body
      * @param MobileAppsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://learn.microsoft.com/graph/api/intune-apps-macosofficesuiteapp-create?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-apps-microsoftstoreforbusinessapp-create?view=graph-rest-1.0 Find more info here
     */
     public function post(MobileApp $body, ?MobileAppsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -108,7 +108,7 @@ class MobileAppsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the windowsUniversalAppX objects.
+     * List properties and relationships of the iosVppApp objects.
      * @param MobileAppsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -129,7 +129,7 @@ class MobileAppsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new macOSOfficeSuiteApp object.
+     * Create a new microsoftStoreForBusinessApp object.
      * @param MobileApp $body The request body
      * @param MobileAppsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

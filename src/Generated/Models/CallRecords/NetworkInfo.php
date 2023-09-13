@@ -178,7 +178,7 @@ class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the macAddress property value. The media access control (MAC) address of the media endpoint's network device.
+     * Gets the macAddress property value. The media access control (MAC) address of the media endpoint's network device. This value may be missing or shown as 02:00:00:00:00:00 due to operating system privacy policies.
      * @return string|null
     */
     public function getMacAddress(): ?string {
@@ -527,7 +527,7 @@ class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the macAddress property value. The media access control (MAC) address of the media endpoint's network device.
+     * Sets the macAddress property value. The media access control (MAC) address of the media endpoint's network device. This value may be missing or shown as 02:00:00:00:00:00 due to operating system privacy policies.
      * @param string|null $value Value to set for the macAddress property.
     */
     public function setMacAddress(?string $value): void {

@@ -40,7 +40,7 @@ class InferenceClassificationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Relevance classification of the user's messages based on explicit designations which override inferred relevance or importance.
+     * Relevance classification of the user's messages based on explicit designations that override inferred relevance or importance.
      * @param InferenceClassificationRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -77,7 +77,7 @@ class InferenceClassificationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Relevance classification of the user's messages based on explicit designations which override inferred relevance or importance.
+     * Relevance classification of the user's messages based on explicit designations that override inferred relevance or importance.
      * @param InferenceClassificationRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

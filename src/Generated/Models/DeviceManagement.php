@@ -285,6 +285,7 @@ class DeviceManagement extends Entity implements Parsable
             'userExperienceAnalyticsDeviceScores' => fn(ParseNode $n) => $o->setUserExperienceAnalyticsDeviceScores($n->getCollectionOfObjectValues([UserExperienceAnalyticsDeviceScores::class, 'createFromDiscriminatorValue'])),
             'userExperienceAnalyticsDeviceStartupHistory' => fn(ParseNode $n) => $o->setUserExperienceAnalyticsDeviceStartupHistory($n->getCollectionOfObjectValues([UserExperienceAnalyticsDeviceStartupHistory::class, 'createFromDiscriminatorValue'])),
             'userExperienceAnalyticsDeviceStartupProcesses' => fn(ParseNode $n) => $o->setUserExperienceAnalyticsDeviceStartupProcesses($n->getCollectionOfObjectValues([UserExperienceAnalyticsDeviceStartupProcess::class, 'createFromDiscriminatorValue'])),
+            'userExperienceAnalyticsDeviceStartupProcessPerformance' => fn(ParseNode $n) => $o->setUserExperienceAnalyticsDeviceStartupProcessPerformance($n->getCollectionOfObjectValues([UserExperienceAnalyticsDeviceStartupProcessPerformance::class, 'createFromDiscriminatorValue'])),
             'userExperienceAnalyticsMetricHistory' => fn(ParseNode $n) => $o->setUserExperienceAnalyticsMetricHistory($n->getCollectionOfObjectValues([UserExperienceAnalyticsMetricHistory::class, 'createFromDiscriminatorValue'])),
             'userExperienceAnalyticsModelScores' => fn(ParseNode $n) => $o->setUserExperienceAnalyticsModelScores($n->getCollectionOfObjectValues([UserExperienceAnalyticsModelScores::class, 'createFromDiscriminatorValue'])),
             'userExperienceAnalyticsOverview' => fn(ParseNode $n) => $o->setUserExperienceAnalyticsOverview($n->getObjectValue([UserExperienceAnalyticsOverview::class, 'createFromDiscriminatorValue'])),
@@ -776,6 +777,20 @@ class DeviceManagement extends Entity implements Parsable
     }
 
     /**
+     * Gets the userExperienceAnalyticsDeviceStartupProcessPerformance property value. User experience analytics device Startup Process Performance
+     * @return array<UserExperienceAnalyticsDeviceStartupProcessPerformance>|null
+    */
+    public function getUserExperienceAnalyticsDeviceStartupProcessPerformance(): ?array {
+        $val = $this->getBackingStore()->get('userExperienceAnalyticsDeviceStartupProcessPerformance');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, UserExperienceAnalyticsDeviceStartupProcessPerformance::class);
+            /** @var array<UserExperienceAnalyticsDeviceStartupProcessPerformance>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userExperienceAnalyticsDeviceStartupProcessPerformance'");
+    }
+
+    /**
      * Gets the userExperienceAnalyticsMetricHistory property value. User experience analytics metric history
      * @return array<UserExperienceAnalyticsMetricHistory>|null
     */
@@ -1005,6 +1020,7 @@ class DeviceManagement extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('userExperienceAnalyticsDeviceScores', $this->getUserExperienceAnalyticsDeviceScores());
         $writer->writeCollectionOfObjectValues('userExperienceAnalyticsDeviceStartupHistory', $this->getUserExperienceAnalyticsDeviceStartupHistory());
         $writer->writeCollectionOfObjectValues('userExperienceAnalyticsDeviceStartupProcesses', $this->getUserExperienceAnalyticsDeviceStartupProcesses());
+        $writer->writeCollectionOfObjectValues('userExperienceAnalyticsDeviceStartupProcessPerformance', $this->getUserExperienceAnalyticsDeviceStartupProcessPerformance());
         $writer->writeCollectionOfObjectValues('userExperienceAnalyticsMetricHistory', $this->getUserExperienceAnalyticsMetricHistory());
         $writer->writeCollectionOfObjectValues('userExperienceAnalyticsModelScores', $this->getUserExperienceAnalyticsModelScores());
         $writer->writeObjectValue('userExperienceAnalyticsOverview', $this->getUserExperienceAnalyticsOverview());
@@ -1418,6 +1434,14 @@ class DeviceManagement extends Entity implements Parsable
     */
     public function setUserExperienceAnalyticsDeviceStartupProcesses(?array $value): void {
         $this->getBackingStore()->set('userExperienceAnalyticsDeviceStartupProcesses', $value);
+    }
+
+    /**
+     * Sets the userExperienceAnalyticsDeviceStartupProcessPerformance property value. User experience analytics device Startup Process Performance
+     * @param array<UserExperienceAnalyticsDeviceStartupProcessPerformance>|null $value Value to set for the userExperienceAnalyticsDeviceStartupProcessPerformance property.
+    */
+    public function setUserExperienceAnalyticsDeviceStartupProcessPerformance(?array $value): void {
+        $this->getBackingStore()->set('userExperienceAnalyticsDeviceStartupProcessPerformance', $value);
     }
 
     /**

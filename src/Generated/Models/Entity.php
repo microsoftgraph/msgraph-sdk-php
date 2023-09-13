@@ -452,6 +452,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.macOSCompliancePolicy': return new MacOSCompliancePolicy();
                 case '#microsoft.graph.macOSCustomConfiguration': return new MacOSCustomConfiguration();
                 case '#microsoft.graph.macOSDeviceFeaturesConfiguration': return new MacOSDeviceFeaturesConfiguration();
+                case '#microsoft.graph.macOSDmgApp': return new MacOSDmgApp();
                 case '#microsoft.graph.macOSGeneralDeviceConfiguration': return new MacOSGeneralDeviceConfiguration();
                 case '#microsoft.graph.macOSLobApp': return new MacOSLobApp();
                 case '#microsoft.graph.macOSMicrosoftDefenderApp': return new MacOSMicrosoftDefenderApp();
@@ -788,6 +789,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.userExperienceAnalyticsDeviceScores': return new UserExperienceAnalyticsDeviceScores();
                 case '#microsoft.graph.userExperienceAnalyticsDeviceStartupHistory': return new UserExperienceAnalyticsDeviceStartupHistory();
                 case '#microsoft.graph.userExperienceAnalyticsDeviceStartupProcess': return new UserExperienceAnalyticsDeviceStartupProcess();
+                case '#microsoft.graph.userExperienceAnalyticsDeviceStartupProcessPerformance': return new UserExperienceAnalyticsDeviceStartupProcessPerformance();
                 case '#microsoft.graph.userExperienceAnalyticsMetric': return new UserExperienceAnalyticsMetric();
                 case '#microsoft.graph.userExperienceAnalyticsMetricHistory': return new UserExperienceAnalyticsMetricHistory();
                 case '#microsoft.graph.userExperienceAnalyticsModelScores': return new UserExperienceAnalyticsModelScores();

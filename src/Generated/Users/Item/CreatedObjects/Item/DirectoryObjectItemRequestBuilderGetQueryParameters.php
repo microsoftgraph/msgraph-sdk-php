@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\CreatedObjects\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Directory objects that were created by the user. Read-only. Nullable.
+ * Directory objects that the user created. Read-only. Nullable.
 */
 class DirectoryObjectItemRequestBuilderGetQueryParameters 
 {

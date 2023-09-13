@@ -85,7 +85,7 @@ class Workflow extends WorkflowBase implements Parsable
     }
 
     /**
-     * Gets the nextScheduleRunDateTime property value. The date time when the workflow is expected to run next based on the schedule interval, if there are any users matching the execution conditions. Supports $filter(lt,gt) and $orderBy.
+     * Gets the nextScheduleRunDateTime property value. The date time when the workflow is expected to run next based on the schedule interval, if there are any users matching the execution conditions. Supports $filter(lt,gt) and $orderby.
      * @return DateTime|null
     */
     public function getNextScheduleRunDateTime(): ?DateTime {
@@ -206,7 +206,7 @@ class Workflow extends WorkflowBase implements Parsable
     }
 
     /**
-     * Sets the nextScheduleRunDateTime property value. The date time when the workflow is expected to run next based on the schedule interval, if there are any users matching the execution conditions. Supports $filter(lt,gt) and $orderBy.
+     * Sets the nextScheduleRunDateTime property value. The date time when the workflow is expected to run next based on the schedule interval, if there are any users matching the execution conditions. Supports $filter(lt,gt) and $orderby.
      * @param DateTime|null $value Value to set for the nextScheduleRunDateTime property.
     */
     public function setNextScheduleRunDateTime(?DateTime $value): void {
