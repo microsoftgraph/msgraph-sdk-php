@@ -55,7 +55,7 @@ class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManagementPol
 
     /**
     * Gets the maximumDuration
-    * The maximum duration allowed for eligibility or assignment which is not permanent. Required when isExpirationRequired is true.
+    * The maximum duration allowed for eligibility or assignment that isn't permanent. Required when isExpirationRequired is true.
     *
     * @return \DateInterval|null The maximumDuration
     */
@@ -74,7 +74,7 @@ class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManagementPol
 
     /**
     * Sets the maximumDuration
-    * The maximum duration allowed for eligibility or assignment which is not permanent. Required when isExpirationRequired is true.
+    * The maximum duration allowed for eligibility or assignment that isn't permanent. Required when isExpirationRequired is true.
     *
     * @param \DateInterval $val The maximumDuration
     *

@@ -56,7 +56,7 @@ class CalendarPermission extends Entity
 
     /**
     * Gets the emailAddress
-    * Represents a sharee or delegate who has access to the calendar. For the 'My Organization' sharee, the address property is null. Read-only.
+    * Represents a share recipient or delegate who has access to the calendar. For the 'My Organization' share recipient, the address property is null. Read-only.
     *
     * @return EmailAddress|null The emailAddress
     */
@@ -75,7 +75,7 @@ class CalendarPermission extends Entity
 
     /**
     * Sets the emailAddress
-    * Represents a sharee or delegate who has access to the calendar. For the 'My Organization' sharee, the address property is null. Read-only.
+    * Represents a share recipient or delegate who has access to the calendar. For the 'My Organization' share recipient, the address property is null. Read-only.
     *
     * @param EmailAddress $val The emailAddress
     *
@@ -89,7 +89,7 @@ class CalendarPermission extends Entity
 
     /**
     * Gets the isInsideOrganization
-    * True if the user in context (sharee or delegate) is inside the same organization as the calendar owner.
+    * True if the user in context (share recipient or delegate) is inside the same organization as the calendar owner.
     *
     * @return bool|null The isInsideOrganization
     */
@@ -104,7 +104,7 @@ class CalendarPermission extends Entity
 
     /**
     * Sets the isInsideOrganization
-    * True if the user in context (sharee or delegate) is inside the same organization as the calendar owner.
+    * True if the user in context (share recipient or delegate) is inside the same organization as the calendar owner.
     *
     * @param bool $val The isInsideOrganization
     *
@@ -118,7 +118,7 @@ class CalendarPermission extends Entity
 
     /**
     * Gets the isRemovable
-    * True if the user can be removed from the list of sharees or delegates for the specified calendar, false otherwise. The 'My organization' user determines the permissions other people within your organization have to the given calendar. You cannot remove 'My organization' as a sharee to a calendar.
+    * True if the user can be removed from the list of recipients or delegates for the specified calendar, false otherwise. The 'My organization' user determines the permissions other people within your organization have to the given calendar. You can't remove 'My organization' as a recipient to a calendar.
     *
     * @return bool|null The isRemovable
     */
@@ -133,7 +133,7 @@ class CalendarPermission extends Entity
 
     /**
     * Sets the isRemovable
-    * True if the user can be removed from the list of sharees or delegates for the specified calendar, false otherwise. The 'My organization' user determines the permissions other people within your organization have to the given calendar. You cannot remove 'My organization' as a sharee to a calendar.
+    * True if the user can be removed from the list of recipients or delegates for the specified calendar, false otherwise. The 'My organization' user determines the permissions other people within your organization have to the given calendar. You can't remove 'My organization' as a recipient to a calendar.
     *
     * @param bool $val The isRemovable
     *
@@ -147,7 +147,7 @@ class CalendarPermission extends Entity
 
     /**
     * Gets the role
-    * Current permission level of the calendar sharee or delegate.
+    * Current permission level of the calendar share recipient or delegate.
     *
     * @return CalendarRoleType|null The role
     */
@@ -166,7 +166,7 @@ class CalendarPermission extends Entity
 
     /**
     * Sets the role
-    * Current permission level of the calendar sharee or delegate.
+    * Current permission level of the calendar share recipient or delegate.
     *
     * @param CalendarRoleType $val The role
     *

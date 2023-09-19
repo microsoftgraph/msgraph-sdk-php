@@ -81,7 +81,7 @@ class TopicModelingSettings extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the isEnabled
-    * Indicates whether themes is enabled for the case.
+    * Indicates whether themes are enabled for the case.
     *
     * @return bool|null The isEnabled
     */
@@ -96,7 +96,7 @@ class TopicModelingSettings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the isEnabled
-    * Indicates whether themes is enabled for the case.
+    * Indicates whether themes are enabled for the case.
     *
     * @param bool $val The value of the isEnabled
     *

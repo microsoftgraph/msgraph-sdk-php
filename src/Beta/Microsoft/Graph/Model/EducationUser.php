@@ -298,7 +298,7 @@ class EducationUser extends Entity
 
     /**
     * Gets the externalSourceDetail
-    * The name of the external source this resources was generated from.
+    * The name of the external source this resource was generated from.
     *
     * @return string|null The externalSourceDetail
     */
@@ -313,7 +313,7 @@ class EducationUser extends Entity
 
     /**
     * Sets the externalSourceDetail
-    * The name of the external source this resources was generated from.
+    * The name of the external source this resource was generated from.
     *
     * @param string $val The externalSourceDetail
     *
@@ -385,7 +385,7 @@ class EducationUser extends Entity
 
     /**
     * Gets the mailingAddress
-    * Mail address of user. Note: type and postOfficeBox are not supported for educationUser resources.
+    * Mail address of user. Note: type and postOfficeBox aren't supported for educationUser resources.
     *
     * @return PhysicalAddress|null The mailingAddress
     */
@@ -404,7 +404,7 @@ class EducationUser extends Entity
 
     /**
     * Sets the mailingAddress
-    * Mail address of user. Note: type and postOfficeBox are not supported for educationUser resources.
+    * Mail address of user. Note: type and postOfficeBox aren't supported for educationUser resources.
     *
     * @param PhysicalAddress $val The mailingAddress
     *
@@ -532,7 +532,7 @@ class EducationUser extends Entity
 
     /**
     * Gets the onPremisesInfo
-    * Additional information used to associate the AAD user with it's Active Directory counterpart.
+    * Additional information used to associate the Azure Active Directory user with its Active Directory counterpart.
     *
     * @return EducationOnPremisesInfo|null The onPremisesInfo
     */
@@ -551,7 +551,7 @@ class EducationUser extends Entity
 
     /**
     * Sets the onPremisesInfo
-    * Additional information used to associate the AAD user with it's Active Directory counterpart.
+    * Additional information used to associate the Azure Active Directory user with its Active Directory counterpart.
     *
     * @param EducationOnPremisesInfo $val The onPremisesInfo
     *
@@ -565,7 +565,7 @@ class EducationUser extends Entity
 
     /**
     * Gets the passwordPolicies
-    * Specifies password policies for the user. See standard [user] resource for additional details.
+    * Specifies password policies for the user. See standard [user] resource for more details.
     *
     * @return string|null The passwordPolicies
     */
@@ -580,7 +580,7 @@ class EducationUser extends Entity
 
     /**
     * Sets the passwordPolicies
-    * Specifies password policies for the user. See standard [user] resource for additional details.
+    * Specifies password policies for the user. See standard [user] resource for more details.
     *
     * @param string $val The passwordPolicies
     *
@@ -594,7 +594,7 @@ class EducationUser extends Entity
 
     /**
     * Gets the passwordProfile
-    * Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. See standard [user] resource for additional details.
+    * Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. See standard [user] resource for more details.
     *
     * @return PasswordProfile|null The passwordProfile
     */
@@ -613,7 +613,7 @@ class EducationUser extends Entity
 
     /**
     * Sets the passwordProfile
-    * Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. See standard [user] resource for additional details.
+    * Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. See standard [user] resource for more details.
     *
     * @param PasswordProfile $val The passwordProfile
     *
@@ -750,7 +750,7 @@ class EducationUser extends Entity
 
     /**
     * Gets the residenceAddress
-    * Address where user lives. Note: type and postOfficeBox are not supported for educationUser resources.
+    * Address where user lives. Note: type and postOfficeBox aren't supported for educationUser resources.
     *
     * @return PhysicalAddress|null The residenceAddress
     */
@@ -769,7 +769,7 @@ class EducationUser extends Entity
 
     /**
     * Sets the residenceAddress
-    * Address where user lives. Note: type and postOfficeBox are not supported for educationUser resources.
+    * Address where user lives. Note: type and postOfficeBox aren't supported for educationUser resources.
     *
     * @param PhysicalAddress $val The residenceAddress
     *
@@ -810,7 +810,7 @@ class EducationUser extends Entity
 
     /**
     * Gets the student
-    * If the primary role is student, this block will contain student specific data.
+    * If the primary role is student, this block contains student specific data.
     *
     * @return EducationStudent|null The student
     */
@@ -829,7 +829,7 @@ class EducationUser extends Entity
 
     /**
     * Sets the student
-    * If the primary role is student, this block will contain student specific data.
+    * If the primary role is student, this block contains student specific data.
     *
     * @param EducationStudent $val The student
     *

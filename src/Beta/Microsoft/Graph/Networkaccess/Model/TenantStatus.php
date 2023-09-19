@@ -26,7 +26,7 @@ class TenantStatus extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the onboardingErrorMessage
-    * Reflects a message to the user in case of an error.
+    * Reflects a message to the user if there's an error.
     *
     * @return string|null The onboardingErrorMessage
     */
@@ -41,7 +41,7 @@ class TenantStatus extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the onboardingErrorMessage
-    * Reflects a message to the user in case of an error.
+    * Reflects a message to the user if there's an error.
     *
     * @param string $val The onboardingErrorMessage
     *

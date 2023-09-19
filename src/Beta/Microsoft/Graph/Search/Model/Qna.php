@@ -26,7 +26,7 @@ class Qna extends SearchAnswer
 {
     /**
     * Gets the availabilityEndDateTime
-    * Timestamp of when the qna will stop to appear as a search result. Set as null for always available.
+    * Timestamp of when the qna stops to appear as a search result. Set as null for always available.
     *
     * @return \DateTime|null The availabilityEndDateTime
     */
@@ -45,7 +45,7 @@ class Qna extends SearchAnswer
 
     /**
     * Sets the availabilityEndDateTime
-    * Timestamp of when the qna will stop to appear as a search result. Set as null for always available.
+    * Timestamp of when the qna stops to appear as a search result. Set as null for always available.
     *
     * @param \DateTime $val The availabilityEndDateTime
     *
@@ -59,7 +59,7 @@ class Qna extends SearchAnswer
 
     /**
     * Gets the availabilityStartDateTime
-    * Timestamp of when the qna will start to appear as a search result. Set as null for always available.
+    * Timestamp of when the qna starts to appear as a search result. Set as null for always available.
     *
     * @return \DateTime|null The availabilityStartDateTime
     */
@@ -78,7 +78,7 @@ class Qna extends SearchAnswer
 
     /**
     * Sets the availabilityStartDateTime
-    * Timestamp of when the qna will start to appear as a search result. Set as null for always available.
+    * Timestamp of when the qna starts to appear as a search result. Set as null for always available.
     *
     * @param \DateTime $val The availabilityStartDateTime
     *
@@ -121,7 +121,7 @@ class Qna extends SearchAnswer
 
     /**
     * Gets the isSuggested
-    * True if this qna was suggested to the admin by a user or was mined and suggested by Microsoft. Read-only.
+    * True if a user or Microsoft suggested this qna to the admin. Read-only.
     *
     * @return bool|null The isSuggested
     */
@@ -136,7 +136,7 @@ class Qna extends SearchAnswer
 
     /**
     * Sets the isSuggested
-    * True if this qna was suggested to the admin by a user or was mined and suggested by Microsoft. Read-only.
+    * True if a user or Microsoft suggested this qna to the admin. Read-only.
     *
     * @param bool $val The isSuggested
     *
@@ -276,7 +276,7 @@ class Qna extends SearchAnswer
 
      /**
      * Gets the targetedVariations
-    * Variations of a qna for different countries or devices. Use when you need to show different content to users based on their device, country/region, or both. The date and group settings will apply to all variations.
+    * Variations of a qna for different countries or devices. Use when you need to show different content to users based on their device, country/region, or both. The date and group settings apply to all variations.
      *
      * @return array|null The targetedVariations
      */
@@ -291,7 +291,7 @@ class Qna extends SearchAnswer
 
     /**
     * Sets the targetedVariations
-    * Variations of a qna for different countries or devices. Use when you need to show different content to users based on their device, country/region, or both. The date and group settings will apply to all variations.
+    * Variations of a qna for different countries or devices. Use when you need to show different content to users based on their device, country/region, or both. The date and group settings apply to all variations.
     *
     * @param AnswerVariant[] $val The targetedVariations
     *

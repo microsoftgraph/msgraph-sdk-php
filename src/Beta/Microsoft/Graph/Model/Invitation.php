@@ -55,7 +55,7 @@ class Invitation extends Entity
 
     /**
     * Gets the invitedUserEmailAddress
-    * The email address of the user being invited. Required. The following special characters are not permitted in the email address:Tilde (~)Exclamation point (!)At sign (@)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&amp;)Asterisk (*)Parentheses (( ))Hyphen (-)Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (`
+    * The email address of the user being invited. Required. The following special characters aren't permitted in the email address:Tilde (~)Exclamation point (!)At sign (@)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&amp;)Asterisk (*)Parentheses (( ))Hyphen (-)Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (`
     *
     * @return string|null The invitedUserEmailAddress
     */
@@ -70,7 +70,7 @@ class Invitation extends Entity
 
     /**
     * Sets the invitedUserEmailAddress
-    * The email address of the user being invited. Required. The following special characters are not permitted in the email address:Tilde (~)Exclamation point (!)At sign (@)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&amp;)Asterisk (*)Parentheses (( ))Hyphen (-)Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (`
+    * The email address of the user being invited. Required. The following special characters aren't permitted in the email address:Tilde (~)Exclamation point (!)At sign (@)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&amp;)Asterisk (*)Parentheses (( ))Hyphen (-)Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (`
     *
     * @param string $val The invitedUserEmailAddress
     *
@@ -117,7 +117,7 @@ class Invitation extends Entity
 
     /**
     * Gets the invitedUserType
-    * The userType of the user being invited. By default, this is Guest. You can invite as Member if you're are company administrator. The default is false.
+    * The userType of the user being invited. By default, this is Guest. You can invite as Member if you're a company administrator. The default is false.
     *
     * @return string|null The invitedUserType
     */
@@ -132,7 +132,7 @@ class Invitation extends Entity
 
     /**
     * Sets the invitedUserType
-    * The userType of the user being invited. By default, this is Guest. You can invite as Member if you're are company administrator. The default is false.
+    * The userType of the user being invited. By default, this is Guest. You can invite as Member if you're a company administrator. The default is false.
     *
     * @param string $val The invitedUserType
     *

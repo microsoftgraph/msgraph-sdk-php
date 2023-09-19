@@ -109,7 +109,7 @@ class AccessReviewSettings extends Entity
     }
     /**
     * Gets the autoReviewEnabled
-    * Indicates whether a decision should be set if the reviewer did not supply one. For use when auto-apply is enabled. If you don't want to have a review decision recorded unless the reviewer makes an explicit choice, set it to false.
+    * Indicates whether a decision should be set if the reviewer didn't supply one. For use when, auto-apply is enabled. If you don't want to have a review decision recorded unless the reviewer makes an explicit choice, set it to false.
     *
     * @return bool|null The autoReviewEnabled
     */
@@ -124,7 +124,7 @@ class AccessReviewSettings extends Entity
 
     /**
     * Sets the autoReviewEnabled
-    * Indicates whether a decision should be set if the reviewer did not supply one. For use when auto-apply is enabled. If you don't want to have a review decision recorded unless the reviewer makes an explicit choice, set it to false.
+    * Indicates whether a decision should be set if the reviewer didn't supply one. For use when, auto-apply is enabled. If you don't want to have a review decision recorded unless the reviewer makes an explicit choice, set it to false.
     *
     * @param bool $val The value of the autoReviewEnabled
     *
@@ -138,7 +138,7 @@ class AccessReviewSettings extends Entity
 
     /**
     * Gets the autoReviewSettings
-    * Detailed settings for how the feature should set the review decision. For use when auto-apply is enabled.
+    * Detailed settings for how the feature should set the review decision. For use when, auto-apply is enabled.
     *
     * @return AutoReviewSettings|null The autoReviewSettings
     */
@@ -157,7 +157,7 @@ class AccessReviewSettings extends Entity
 
     /**
     * Sets the autoReviewSettings
-    * Detailed settings for how the feature should set the review decision. For use when auto-apply is enabled.
+    * Detailed settings for how the feature should set the review decision. For use when, auto-apply is enabled.
     *
     * @param AutoReviewSettings $val The value to assign to the autoReviewSettings
     *

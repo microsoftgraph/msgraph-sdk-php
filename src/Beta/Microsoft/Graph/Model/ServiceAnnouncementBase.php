@@ -27,7 +27,7 @@ class ServiceAnnouncementBase extends Entity
 
      /**
      * Gets the details
-    * Additional details about service event. This property doesn't support filters.
+    * Extra details about service event. This property doesn't support filters.
      *
      * @return array|null The details
      */
@@ -42,7 +42,7 @@ class ServiceAnnouncementBase extends Entity
 
     /**
     * Sets the details
-    * Additional details about service event. This property doesn't support filters.
+    * Extra details about service event. This property doesn't support filters.
     *
     * @param KeyValuePair[] $val The details
     *

@@ -25,7 +25,7 @@ class WorkbookSessionInfo extends Entity
 {
     /**
     * Gets the id
-    * Id of the workbook session.
+    * ID of the workbook session.
     *
     * @return string|null The id
     */
@@ -40,7 +40,7 @@ class WorkbookSessionInfo extends Entity
 
     /**
     * Sets the id
-    * Id of the workbook session.
+    * ID of the workbook session.
     *
     * @param string $val The value of the id
     *

@@ -55,7 +55,7 @@ class AccessReviewDecision extends Entity
 
     /**
     * Gets the accessReviewId
-    * The feature-generated id of the access review.
+    * The feature-generated ID of the access review.
     *
     * @return string|null The accessReviewId
     */
@@ -70,7 +70,7 @@ class AccessReviewDecision extends Entity
 
     /**
     * Sets the accessReviewId
-    * The feature-generated id of the access review.
+    * The feature-generated ID of the access review.
     *
     * @param string $val The accessReviewId
     *
@@ -84,7 +84,7 @@ class AccessReviewDecision extends Entity
 
     /**
     * Gets the appliedBy
-    * When the review completes, if the results were manually applied, the user identity of the user who applied the decision. If the review was auto-applied, the userPrincipalName is empty.
+    * When the review completes, if the results were manually applied, the user identity of the user who applied the decision. If the review was autoapplied, the userPrincipalName is empty.
     *
     * @return UserIdentity|null The appliedBy
     */
@@ -103,7 +103,7 @@ class AccessReviewDecision extends Entity
 
     /**
     * Sets the appliedBy
-    * When the review completes, if the results were manually applied, the user identity of the user who applied the decision. If the review was auto-applied, the userPrincipalName is empty.
+    * When the review completes, if the results were manually applied, the user identity of the user who applied the decision. If the review was autoapplied, the userPrincipalName is empty.
     *
     * @param UserIdentity $val The appliedBy
     *
