@@ -148,7 +148,7 @@ class DeviceEvidence extends AlertEvidence
 
     /**
     * Gets the healthStatus
-    * The health state of the device.The possible values are: active, inactive, impairedCommunication, noSensorData, noSensorDataImpairedCommunication, unknown, unknownFutureValue.
+    * The health state of the device. The possible values are: active, inactive, impairedCommunication, noSensorData, noSensorDataImpairedCommunication, unknown, unknownFutureValue.
     *
     * @return DeviceHealthStatus|null The healthStatus
     */
@@ -167,7 +167,7 @@ class DeviceEvidence extends AlertEvidence
 
     /**
     * Sets the healthStatus
-    * The health state of the device.The possible values are: active, inactive, impairedCommunication, noSensorData, noSensorDataImpairedCommunication, unknown, unknownFutureValue.
+    * The health state of the device. The possible values are: active, inactive, impairedCommunication, noSensorData, noSensorDataImpairedCommunication, unknown, unknownFutureValue.
     *
     * @param DeviceHealthStatus $val The value to assign to the healthStatus
     *
@@ -270,7 +270,7 @@ class DeviceEvidence extends AlertEvidence
 
     /**
     * Gets the onboardingStatus
-    * The status of the machine onboarding to Microsoft Defender for Endpoint.The possible values are: insufficientInfo, onboarded, canBeOnboarded, unsupported, unknownFutureValue.
+    * The status of the machine onboarding to Microsoft Defender for Endpoint. The possible values are: insufficientInfo, onboarded, canBeOnboarded, unsupported, unknownFutureValue.
     *
     * @return OnboardingStatus|null The onboardingStatus
     */
@@ -289,7 +289,7 @@ class DeviceEvidence extends AlertEvidence
 
     /**
     * Sets the onboardingStatus
-    * The status of the machine onboarding to Microsoft Defender for Endpoint.The possible values are: insufficientInfo, onboarded, canBeOnboarded, unsupported, unknownFutureValue.
+    * The status of the machine onboarding to Microsoft Defender for Endpoint. The possible values are: insufficientInfo, onboarded, canBeOnboarded, unsupported, unknownFutureValue.
     *
     * @param OnboardingStatus $val The value to assign to the onboardingStatus
     *

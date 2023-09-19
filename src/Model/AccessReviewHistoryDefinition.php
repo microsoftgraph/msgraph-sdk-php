@@ -93,7 +93,7 @@ class AccessReviewHistoryDefinition extends Entity
 
      /**
      * Gets the decisions
-    * Determines which review decisions will be included in the fetched review history data if specified. Optional on create. All decisions will be included by default if no decisions are provided on create. Possible values are: approve, deny, dontKnow, notReviewed, and notNotified.
+    * Determines which review decisions will be included in the fetched review history data if specified. Optional on create. All decisions are included by default if no decisions are provided on create. Possible values are: approve, deny, dontKnow, notReviewed, and notNotified.
      *
      * @return array|null The decisions
      */
@@ -108,7 +108,7 @@ class AccessReviewHistoryDefinition extends Entity
 
     /**
     * Sets the decisions
-    * Determines which review decisions will be included in the fetched review history data if specified. Optional on create. All decisions will be included by default if no decisions are provided on create. Possible values are: approve, deny, dontKnow, notReviewed, and notNotified.
+    * Determines which review decisions will be included in the fetched review history data if specified. Optional on create. All decisions are included by default if no decisions are provided on create. Possible values are: approve, deny, dontKnow, notReviewed, and notNotified.
     *
     * @param AccessReviewHistoryDecisionFilter[] $val The decisions
     *
@@ -151,7 +151,7 @@ class AccessReviewHistoryDefinition extends Entity
 
     /**
     * Gets the reviewHistoryPeriodEndDateTime
-    * A timestamp. Reviews ending on or before this date will be included in the fetched history data. Only required if scheduleSettings is not defined.
+    * A timestamp. Reviews ending on or before this date will be included in the fetched history data. Only required if scheduleSettings isn't defined.
     *
     * @return \DateTime|null The reviewHistoryPeriodEndDateTime
     */
@@ -170,7 +170,7 @@ class AccessReviewHistoryDefinition extends Entity
 
     /**
     * Sets the reviewHistoryPeriodEndDateTime
-    * A timestamp. Reviews ending on or before this date will be included in the fetched history data. Only required if scheduleSettings is not defined.
+    * A timestamp. Reviews ending on or before this date will be included in the fetched history data. Only required if scheduleSettings isn't defined.
     *
     * @param \DateTime $val The reviewHistoryPeriodEndDateTime
     *
@@ -184,7 +184,7 @@ class AccessReviewHistoryDefinition extends Entity
 
     /**
     * Gets the reviewHistoryPeriodStartDateTime
-    * A timestamp. Reviews starting on or before this date will be included in the fetched history data. Only required if scheduleSettings is not defined.
+    * A timestamp. Reviews starting on or before this date will be included in the fetched history data. Only required if scheduleSettings isn't defined.
     *
     * @return \DateTime|null The reviewHistoryPeriodStartDateTime
     */
@@ -203,7 +203,7 @@ class AccessReviewHistoryDefinition extends Entity
 
     /**
     * Sets the reviewHistoryPeriodStartDateTime
-    * A timestamp. Reviews starting on or before this date will be included in the fetched history data. Only required if scheduleSettings is not defined.
+    * A timestamp. Reviews starting on or before this date will be included in the fetched history data. Only required if scheduleSettings isn't defined.
     *
     * @param \DateTime $val The reviewHistoryPeriodStartDateTime
     *
@@ -217,7 +217,7 @@ class AccessReviewHistoryDefinition extends Entity
 
     /**
     * Gets the scheduleSettings
-    * The settings for a recurring access review history definition series. Only required if reviewHistoryPeriodStartDateTime or reviewHistoryPeriodEndDateTime are not defined. Not supported yet.
+    * The settings for a recurring access review history definition series. Only required if reviewHistoryPeriodStartDateTime or reviewHistoryPeriodEndDateTime aren't defined. Not supported yet.
     *
     * @return AccessReviewHistoryScheduleSettings|null The scheduleSettings
     */
@@ -236,7 +236,7 @@ class AccessReviewHistoryDefinition extends Entity
 
     /**
     * Sets the scheduleSettings
-    * The settings for a recurring access review history definition series. Only required if reviewHistoryPeriodStartDateTime or reviewHistoryPeriodEndDateTime are not defined. Not supported yet.
+    * The settings for a recurring access review history definition series. Only required if reviewHistoryPeriodStartDateTime or reviewHistoryPeriodEndDateTime aren't defined. Not supported yet.
     *
     * @param AccessReviewHistoryScheduleSettings $val The scheduleSettings
     *
@@ -314,7 +314,7 @@ class AccessReviewHistoryDefinition extends Entity
 
      /**
      * Gets the instances
-    * If the accessReviewHistoryDefinition is a recurring definition, instances represent each recurrence. A definition that does not recur will have exactly one instance.
+    * If the accessReviewHistoryDefinition is a recurring definition, instances represent each recurrence. A definition that doesn't recur will have exactly one instance.
      *
      * @return array|null The instances
      */
@@ -329,7 +329,7 @@ class AccessReviewHistoryDefinition extends Entity
 
     /**
     * Sets the instances
-    * If the accessReviewHistoryDefinition is a recurring definition, instances represent each recurrence. A definition that does not recur will have exactly one instance.
+    * If the accessReviewHistoryDefinition is a recurring definition, instances represent each recurrence. A definition that doesn't recur will have exactly one instance.
     *
     * @param AccessReviewHistoryInstance[] $val The instances
     *

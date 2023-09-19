@@ -86,7 +86,7 @@ class WebApplication extends Entity
     }
     /**
     * Gets the logoutUrl
-    * Specifies the URL that will be used by Microsoft's authorization service to logout an user using front-channel, back-channel or SAML logout protocols.
+    * Specifies the URL that is used by Microsoft's authorization service to log out a user using front-channel, back-channel or SAML logout protocols.
     *
     * @return string|null The logoutUrl
     */
@@ -101,7 +101,7 @@ class WebApplication extends Entity
 
     /**
     * Sets the logoutUrl
-    * Specifies the URL that will be used by Microsoft's authorization service to logout an user using front-channel, back-channel or SAML logout protocols.
+    * Specifies the URL that is used by Microsoft's authorization service to log out a user using front-channel, back-channel or SAML logout protocols.
     *
     * @param string $val The value of the logoutUrl
     *

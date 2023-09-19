@@ -88,7 +88,7 @@ class FileAttachment extends Attachment
 
     /**
     * Gets the contentLocation
-    * Do not use this property as it is not supported.
+    * Don't use this property as it isn't supported.
     *
     * @return string|null The contentLocation
     */
@@ -103,7 +103,7 @@ class FileAttachment extends Attachment
 
     /**
     * Sets the contentLocation
-    * Do not use this property as it is not supported.
+    * Don't use this property as it isn't supported.
     *
     * @param string $val The contentLocation
     *

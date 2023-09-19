@@ -81,7 +81,7 @@ class ResultInfo extends Entity
     }
     /**
     * Gets the subcode
-    * The result sub-code.
+    * The result subcode.
     *
     * @return int|null The subcode
     */
@@ -96,7 +96,7 @@ class ResultInfo extends Entity
 
     /**
     * Sets the subcode
-    * The result sub-code.
+    * The result subcode.
     *
     * @param int $val The value of the subcode
     *
