@@ -92,7 +92,7 @@ class DataSource extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the displayName
-    * The display name of the dataSource. This will be the name of the SharePoint site.
+    * The display name of the dataSource and is the name of the SharePoint site.
     *
     * @return string|null The displayName
     */
@@ -107,7 +107,7 @@ class DataSource extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the displayName
-    * The display name of the dataSource. This will be the name of the SharePoint site.
+    * The display name of the dataSource and is the name of the SharePoint site.
     *
     * @param string $val The displayName
     *

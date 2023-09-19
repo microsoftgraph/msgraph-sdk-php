@@ -58,7 +58,7 @@ class CloudPcPartnerAgentInstallResult extends Entity
     }
     /**
     * Gets the isThirdPartyPartner
-    * Indicates if the partner agent is a third party. When 'TRUE', the agent is a third-party (non-Microsoft) agent.  When 'FALSE', the agent is a Microsoft agent or is not known.  The default value is 'FALSE'.
+    * Indicates if the partner agent is a third party. When 'TRUE' the agent is a third-party (non-Microsoft) agent and when 'FALSE' the agent is a Microsoft agent or isn't known.  The default value is 'FALSE'
     *
     * @return bool|null The isThirdPartyPartner
     */
@@ -73,7 +73,7 @@ class CloudPcPartnerAgentInstallResult extends Entity
 
     /**
     * Sets the isThirdPartyPartner
-    * Indicates if the partner agent is a third party. When 'TRUE', the agent is a third-party (non-Microsoft) agent.  When 'FALSE', the agent is a Microsoft agent or is not known.  The default value is 'FALSE'.
+    * Indicates if the partner agent is a third party. When 'TRUE' the agent is a third-party (non-Microsoft) agent and when 'FALSE' the agent is a Microsoft agent or isn't known.  The default value is 'FALSE'
     *
     * @param bool $val The value of the isThirdPartyPartner
     *
@@ -119,7 +119,7 @@ class CloudPcPartnerAgentInstallResult extends Entity
     }
     /**
     * Gets the retriable
-    * Indicates if the partner agent is a third party. When 'TRUE', the agent is a third-party (non-Microsoft) agent. When 'FALSE', the agent is a Microsoft agent or is not known. The default value is 'FALSE'.
+    * Indicates if the partner agent is a third party. When 'TRUE' the agent is a third-party (non-Microsoft) agent and when 'FALSE' the agent is a Microsoft agent or isn't known. The default value is 'FALSE'
     *
     * @return bool|null The retriable
     */
@@ -134,7 +134,7 @@ class CloudPcPartnerAgentInstallResult extends Entity
 
     /**
     * Sets the retriable
-    * Indicates if the partner agent is a third party. When 'TRUE', the agent is a third-party (non-Microsoft) agent. When 'FALSE', the agent is a Microsoft agent or is not known. The default value is 'FALSE'.
+    * Indicates if the partner agent is a third party. When 'TRUE' the agent is a third-party (non-Microsoft) agent and when 'FALSE' the agent is a Microsoft agent or isn't known. The default value is 'FALSE'
     *
     * @param bool $val The value of the retriable
     *

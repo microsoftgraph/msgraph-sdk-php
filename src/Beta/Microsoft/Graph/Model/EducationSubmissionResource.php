@@ -26,7 +26,7 @@ class EducationSubmissionResource extends Entity
 {
     /**
     * Gets the assignmentResourceUrl
-    * Pointer to the assignment from which this resource was copied. If this is null, the student uploaded the resource.
+    * Pointer to the assignment from which the resource was copied. If the value is null, the student uploaded the resource.
     *
     * @return string|null The assignmentResourceUrl
     */
@@ -41,7 +41,7 @@ class EducationSubmissionResource extends Entity
 
     /**
     * Sets the assignmentResourceUrl
-    * Pointer to the assignment from which this resource was copied. If this is null, the student uploaded the resource.
+    * Pointer to the assignment from which the resource was copied. If the value is null, the student uploaded the resource.
     *
     * @param string $val The assignmentResourceUrl
     *
@@ -83,6 +83,34 @@ class EducationSubmissionResource extends Entity
     public function setResource($val)
     {
         $this->_propDict["resource"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the dependentResources
+     *
+     * @return array|null The dependentResources
+     */
+    public function getDependentResources()
+    {
+        if (array_key_exists("dependentResources", $this->_propDict)) {
+           return $this->_propDict["dependentResources"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the dependentResources
+    *
+    * @param EducationSubmissionResource[] $val The dependentResources
+    *
+    * @return EducationSubmissionResource
+    */
+    public function setDependentResources($val)
+    {
+        $this->_propDict["dependentResources"] = $val;
         return $this;
     }
 

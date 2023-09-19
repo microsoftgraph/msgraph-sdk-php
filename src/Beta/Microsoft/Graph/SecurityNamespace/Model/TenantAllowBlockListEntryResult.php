@@ -26,7 +26,7 @@ class TenantAllowBlockListEntryResult extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the entryType
-    * The entry type of tenant allow block list. The possible values are: url, fileHash, sender, recipient and unkownFutureValue.
+    * The tenant allow-block list entry type. The possible values are: url, fileHash, sender, recipient and unkownFutureValue.
     *
     * @return TenantAllowBlockListEntryType|null The entryType
     */
@@ -45,7 +45,7 @@ class TenantAllowBlockListEntryResult extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the entryType
-    * The entry type of tenant allow block list. The possible values are: url, fileHash, sender, recipient and unkownFutureValue.
+    * The tenant allow-block list entry type. The possible values are: url, fileHash, sender, recipient and unkownFutureValue.
     *
     * @param TenantAllowBlockListEntryType $val The value to assign to the entryType
     *
@@ -59,7 +59,7 @@ class TenantAllowBlockListEntryResult extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the expirationDateTime
-    * Specifies when will this entry expire in date time.
+    * Specifies the date and time when the entry expires.
     *
     * @return \DateTime|null The expirationDateTime
     */
@@ -78,7 +78,7 @@ class TenantAllowBlockListEntryResult extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the expirationDateTime
-    * Specifies when will this entry expire in date time.
+    * Specifies the date and time when the entry expires.
     *
     * @param \DateTime $val The value to assign to the expirationDateTime
     *

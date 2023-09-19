@@ -81,7 +81,7 @@ class EmailPayloadDetail extends PayloadDetail
     }
     /**
     * Gets the isExternalSender
-    * Indicates whether the sender is not from the user's organization.
+    * Indicates whether the sender isn't from the user's organization.
     *
     * @return bool|null The isExternalSender
     */
@@ -96,7 +96,7 @@ class EmailPayloadDetail extends PayloadDetail
 
     /**
     * Sets the isExternalSender
-    * Indicates whether the sender is not from the user's organization.
+    * Indicates whether the sender isn't from the user's organization.
     *
     * @param bool $val The value of the isExternalSender
     *

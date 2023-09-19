@@ -605,7 +605,7 @@ class PstnCallLogRow extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the operator
-    * The telecommunications operator which provided PSTN services for this call. This may be Microsoft, or it may be a third-party operator via the Operator Connect Program.
+    * The telecommunications operator that provided PSTN services for this call. This may be Microsoft, or it may be a third-party operator via the Operator Connect Program.
     *
     * @return string|null The operator
     */
@@ -620,7 +620,7 @@ class PstnCallLogRow extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the operator
-    * The telecommunications operator which provided PSTN services for this call. This may be Microsoft, or it may be a third-party operator via the Operator Connect Program.
+    * The telecommunications operator that provided PSTN services for this call. This may be Microsoft, or it may be a third-party operator via the Operator Connect Program.
     *
     * @param string $val The value of the operator
     *
@@ -633,7 +633,7 @@ class PstnCallLogRow extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the otherPartyCountryCode
-    * Country code of the caller in case of an incoming call, or callee in case of an outgoing call. For details, see ISO 3166-1 alpha-2.
+    * Country code of the caller for an incoming call, or callee for an outgoing call. For details, see ISO 3166-1 alpha-2.
     *
     * @return string|null The otherPartyCountryCode
     */
@@ -648,7 +648,7 @@ class PstnCallLogRow extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the otherPartyCountryCode
-    * Country code of the caller in case of an incoming call, or callee in case of an outgoing call. For details, see ISO 3166-1 alpha-2.
+    * Country code of the caller for an incoming call, or callee for an outgoing call. For details, see ISO 3166-1 alpha-2.
     *
     * @param string $val The value of the otherPartyCountryCode
     *

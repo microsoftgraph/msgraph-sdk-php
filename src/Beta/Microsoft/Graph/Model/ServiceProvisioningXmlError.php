@@ -36,7 +36,7 @@ class ServiceProvisioningXmlError extends ServiceProvisioningError
 
     /**
     * Gets the errorDetail
-    * Error Information published by the Federated Service as an xml string .
+    * Error Information published by the Federated Service as an xml string.
     *
     * @return string|null The errorDetail
     */
@@ -51,7 +51,7 @@ class ServiceProvisioningXmlError extends ServiceProvisioningError
 
     /**
     * Sets the errorDetail
-    * Error Information published by the Federated Service as an xml string .
+    * Error Information published by the Federated Service as an xml string.
     *
     * @param string $val The value of the errorDetail
     *

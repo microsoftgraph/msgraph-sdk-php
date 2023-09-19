@@ -86,4 +86,32 @@ class EducationAssignmentResource extends Entity
         return $this;
     }
 
+
+     /**
+     * Gets the dependentResources
+     *
+     * @return array|null The dependentResources
+     */
+    public function getDependentResources()
+    {
+        if (array_key_exists("dependentResources", $this->_propDict)) {
+           return $this->_propDict["dependentResources"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the dependentResources
+    *
+    * @param EducationAssignmentResource[] $val The dependentResources
+    *
+    * @return EducationAssignmentResource
+    */
+    public function setDependentResources($val)
+    {
+        $this->_propDict["dependentResources"] = $val;
+        return $this;
+    }
+
 }

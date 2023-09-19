@@ -60,7 +60,7 @@ class VirtualEventWebinar extends VirtualEvent
 
      /**
      * Gets the coOrganizers
-    * Identity information of co-organizers of the webinar.
+    * Identity information of coorganizers of the webinar.
      *
      * @return array|null The coOrganizers
      */
@@ -75,7 +75,7 @@ class VirtualEventWebinar extends VirtualEvent
 
     /**
     * Sets the coOrganizers
-    * Identity information of co-organizers of the webinar.
+    * Identity information of coorganizers of the webinar.
     *
     * @param CommunicationsUserIdentity[] $val The coOrganizers
     *

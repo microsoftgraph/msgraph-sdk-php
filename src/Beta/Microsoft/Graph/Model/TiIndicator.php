@@ -540,7 +540,7 @@ class TiIndicator extends Entity
 
     /**
     * Gets the externalId
-    * An identification number that ties the indicator back to the indicator provider’s system (e.g. a foreign key).
+    * An identification number that ties the indicator back to the indicator provider’s system (for example, a foreign key).
     *
     * @return string|null The externalId
     */
@@ -555,7 +555,7 @@ class TiIndicator extends Entity
 
     /**
     * Sets the externalId
-    * An identification number that ties the indicator back to the indicator provider’s system (e.g. a foreign key).
+    * An identification number that ties the indicator back to the indicator provider’s system (for example, a foreign key).
     *
     * @param string $val The externalId
     *
@@ -1004,7 +1004,7 @@ class TiIndicator extends Entity
 
     /**
     * Gets the malwareFamilyNames
-    * The malware family name associated with an indicator if it exists. Microsoft prefers the Microsoft malware family name if at all possible which can be found via the Windows Defender Security Intelligence threat encyclopedia.
+    * The malware family name associated with an indicator if it exists. Microsoft prefers the Microsoft malware family name if at all possible that can be found via the Windows Defender Security Intelligence threat encyclopedia.
     *
     * @return array|null The malwareFamilyNames
     */
@@ -1019,7 +1019,7 @@ class TiIndicator extends Entity
 
     /**
     * Sets the malwareFamilyNames
-    * The malware family name associated with an indicator if it exists. Microsoft prefers the Microsoft malware family name if at all possible which can be found via the Windows Defender Security Intelligence threat encyclopedia.
+    * The malware family name associated with an indicator if it exists. Microsoft prefers the Microsoft malware family name if at all possible that can be found via the Windows Defender Security Intelligence threat encyclopedia.
     *
     * @param string[] $val The malwareFamilyNames
     *
@@ -1438,7 +1438,7 @@ class TiIndicator extends Entity
 
     /**
     * Gets the passiveOnly
-    * Determines if the indicator should trigger an event that is visible to an end-user. When set to ‘true,’ security tools will not notify the end user that a ‘hit’ has occurred. This is most often treated as audit or silent mode by security products where they will simply log that a match occurred but will not perform the action. Default value is false.
+    * Determines if the indicator should trigger an event that is visible to an end-user. When set to ‘true,’ security tools won't notify the end user that a ‘hit’ has occurred. This is most often treated as audit or silent mode by security products where they'll simply log that a match occurred but won't perform the action. Default value is false.
     *
     * @return bool|null The passiveOnly
     */
@@ -1453,7 +1453,7 @@ class TiIndicator extends Entity
 
     /**
     * Sets the passiveOnly
-    * Determines if the indicator should trigger an event that is visible to an end-user. When set to ‘true,’ security tools will not notify the end user that a ‘hit’ has occurred. This is most often treated as audit or silent mode by security products where they will simply log that a match occurred but will not perform the action. Default value is false.
+    * Determines if the indicator should trigger an event that is visible to an end-user. When set to ‘true,’ security tools won't notify the end user that a ‘hit’ has occurred. This is most often treated as audit or silent mode by security products where they'll simply log that a match occurred but won't perform the action. Default value is false.
     *
     * @param bool $val The passiveOnly
     *
@@ -1467,7 +1467,7 @@ class TiIndicator extends Entity
 
     /**
     * Gets the severity
-    * An integer representing the severity of the malicious behavior identified by the data within the indicator. Acceptable values are 0 – 5 where 5 is the most severe and zero is not severe at all. Default value is 3.
+    * An integer representing the severity of the malicious behavior identified by the data within the indicator. Acceptable values are 0 – 5 where 5 is the most severe and zero isn't severe at all. Default value is 3.
     *
     * @return int|null The severity
     */
@@ -1482,7 +1482,7 @@ class TiIndicator extends Entity
 
     /**
     * Sets the severity
-    * An integer representing the severity of the malicious behavior identified by the data within the indicator. Acceptable values are 0 – 5 where 5 is the most severe and zero is not severe at all. Default value is 3.
+    * An integer representing the severity of the malicious behavior identified by the data within the indicator. Acceptable values are 0 – 5 where 5 is the most severe and zero isn't severe at all. Default value is 3.
     *
     * @param int $val The severity
     *

@@ -680,6 +680,33 @@ class Device extends DirectoryObject
     }
 
     /**
+    * Gets the onPremisesSecurityIdentifier
+    *
+    * @return string|null The onPremisesSecurityIdentifier
+    */
+    public function getOnPremisesSecurityIdentifier()
+    {
+        if (array_key_exists("onPremisesSecurityIdentifier", $this->_propDict)) {
+            return $this->_propDict["onPremisesSecurityIdentifier"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the onPremisesSecurityIdentifier
+    *
+    * @param string $val The onPremisesSecurityIdentifier
+    *
+    * @return Device
+    */
+    public function setOnPremisesSecurityIdentifier($val)
+    {
+        $this->_propDict["onPremisesSecurityIdentifier"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the onPremisesSyncEnabled
     * true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default). Read-only. Supports $filter (eq, ne, not, in, and eq on null values).
     *

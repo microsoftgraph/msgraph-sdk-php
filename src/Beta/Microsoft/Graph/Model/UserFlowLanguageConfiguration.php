@@ -85,7 +85,7 @@ class UserFlowLanguageConfiguration extends Entity
 
      /**
      * Gets the defaultPages
-    * Collection of pages with the default content to display in a user flow for a specified language. This collection does not allow any kind of modification.
+    * Collection of pages with the default content to display in a user flow for a specified language. This collection doesn't allow any kind of modification.
      *
      * @return array|null The defaultPages
      */
@@ -100,7 +100,7 @@ class UserFlowLanguageConfiguration extends Entity
 
     /**
     * Sets the defaultPages
-    * Collection of pages with the default content to display in a user flow for a specified language. This collection does not allow any kind of modification.
+    * Collection of pages with the default content to display in a user flow for a specified language. This collection doesn't allow any kind of modification.
     *
     * @param UserFlowLanguagePage[] $val The defaultPages
     *
@@ -115,7 +115,7 @@ class UserFlowLanguageConfiguration extends Entity
 
      /**
      * Gets the overridesPages
-    * Collection of pages with the overrides messages to display in a user flow for a specified language. This collection only allows to modify the content of the page, any other modification is not allowed (creation or deletion of pages).
+    * Collection of pages with the overrides messages to display in a user flow for a specified language. This collection only allows to modify the content of the page, any other modification isn't allowed (creation or deletion of pages).
      *
      * @return array|null The overridesPages
      */
@@ -130,7 +130,7 @@ class UserFlowLanguageConfiguration extends Entity
 
     /**
     * Sets the overridesPages
-    * Collection of pages with the overrides messages to display in a user flow for a specified language. This collection only allows to modify the content of the page, any other modification is not allowed (creation or deletion of pages).
+    * Collection of pages with the overrides messages to display in a user flow for a specified language. This collection only allows to modify the content of the page, any other modification isn't allowed (creation or deletion of pages).
     *
     * @param UserFlowLanguagePage[] $val The overridesPages
     *

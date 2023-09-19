@@ -59,7 +59,7 @@ class CustomExtensionStageSetting extends Entity
 
     /**
     * Gets the customExtension
-    * Indicates the custom workflow extension that will be executed at this stage. Nullable. Supports $expand.
+    * Indicates the custom workflow extension that is executed at this stage. Nullable. Supports $expand.
     *
     * @return CustomCalloutExtension|null The customExtension
     */
@@ -78,7 +78,7 @@ class CustomExtensionStageSetting extends Entity
 
     /**
     * Sets the customExtension
-    * Indicates the custom workflow extension that will be executed at this stage. Nullable. Supports $expand.
+    * Indicates the custom workflow extension that is executed at this stage. Nullable. Supports $expand.
     *
     * @param CustomCalloutExtension $val The customExtension
     *

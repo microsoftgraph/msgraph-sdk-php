@@ -59,7 +59,7 @@ class SubmissionResult extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the detail
-    * Specifies the additional details provided by Microsoft to substantiate their analysis result.
+    * Specifies the extra details provided by Microsoft to substantiate their analysis result.
     *
     * @return SubmissionResultDetail|null The detail
     */
@@ -78,7 +78,7 @@ class SubmissionResult extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the detail
-    * Specifies the additional details provided by Microsoft to substantiate their analysis result.
+    * Specifies the extra details provided by Microsoft to substantiate their analysis result.
     *
     * @param SubmissionResultDetail $val The value to assign to the detail
     *
@@ -124,7 +124,7 @@ class SubmissionResult extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the detectedUrls
-    * Specifes the URLs detected by Microsoft in the submitted email.
+    * Specifies the URLs detected by Microsoft in the submitted email.
     *
     * @return string|null The detectedUrls
     */
@@ -139,7 +139,7 @@ class SubmissionResult extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the detectedUrls
-    * Specifes the URLs detected by Microsoft in the submitted email.
+    * Specifies the URLs detected by Microsoft in the submitted email.
     *
     * @param string $val The value of the detectedUrls
     *

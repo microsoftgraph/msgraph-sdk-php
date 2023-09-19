@@ -26,6 +26,7 @@ class ItemRetentionLabel extends Entity
 {
     /**
     * Gets the isLabelAppliedExplicitly
+    * Specifies whether the label is applied explicitly on the item. True indicates that the label is applied explicitly; otherwise, the label is inherited from its parent. Read-only.
     *
     * @return bool|null The isLabelAppliedExplicitly
     */
@@ -40,6 +41,7 @@ class ItemRetentionLabel extends Entity
 
     /**
     * Sets the isLabelAppliedExplicitly
+    * Specifies whether the label is applied explicitly on the item. True indicates that the label is applied explicitly; otherwise, the label is inherited from its parent. Read-only.
     *
     * @param bool $val The isLabelAppliedExplicitly
     *
@@ -53,6 +55,7 @@ class ItemRetentionLabel extends Entity
 
     /**
     * Gets the labelAppliedBy
+    * Identity of the user who applied the label. Read-only.
     *
     * @return IdentitySet|null The labelAppliedBy
     */
@@ -71,6 +74,7 @@ class ItemRetentionLabel extends Entity
 
     /**
     * Sets the labelAppliedBy
+    * Identity of the user who applied the label. Read-only.
     *
     * @param IdentitySet $val The labelAppliedBy
     *
@@ -84,6 +88,7 @@ class ItemRetentionLabel extends Entity
 
     /**
     * Gets the labelAppliedDateTime
+    * The date and time when the label was applied on the item. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
     *
     * @return \DateTime|null The labelAppliedDateTime
     */
@@ -102,6 +107,7 @@ class ItemRetentionLabel extends Entity
 
     /**
     * Sets the labelAppliedDateTime
+    * The date and time when the label was applied on the item. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
     *
     * @param \DateTime $val The labelAppliedDateTime
     *
@@ -115,6 +121,7 @@ class ItemRetentionLabel extends Entity
 
     /**
     * Gets the name
+    * The retention label on the document. Read-write.
     *
     * @return string|null The name
     */
@@ -129,6 +136,7 @@ class ItemRetentionLabel extends Entity
 
     /**
     * Sets the name
+    * The retention label on the document. Read-write.
     *
     * @param string $val The name
     *
@@ -142,6 +150,7 @@ class ItemRetentionLabel extends Entity
 
     /**
     * Gets the retentionSettings
+    * The retention settings enforced on the item. Read-write.
     *
     * @return RetentionLabelSettings|null The retentionSettings
     */
@@ -160,6 +169,7 @@ class ItemRetentionLabel extends Entity
 
     /**
     * Sets the retentionSettings
+    * The retention settings enforced on the item. Read-write.
     *
     * @param RetentionLabelSettings $val The retentionSettings
     *

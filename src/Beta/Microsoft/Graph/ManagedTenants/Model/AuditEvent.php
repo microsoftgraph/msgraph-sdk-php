@@ -26,7 +26,7 @@ class AuditEvent extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the activity
-    * A string which uniquely represents the operation that occurred. Required. Read-only.
+    * A string that uniquely represents the operation that occurred. Required. Read-only.
     *
     * @return string|null The activity
     */
@@ -41,7 +41,7 @@ class AuditEvent extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the activity
-    * A string which uniquely represents the operation that occurred. Required. Read-only.
+    * A string that uniquely represents the operation that occurred. Required. Read-only.
     *
     * @param string $val The activity
     *
@@ -55,7 +55,7 @@ class AuditEvent extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the activityDateTime
-    * The time when the activity ocurred. Required. Read-only.
+    * The time when the activity occurred. Required. Read-only.
     *
     * @return \DateTime|null The activityDateTime
     */
@@ -74,7 +74,7 @@ class AuditEvent extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the activityDateTime
-    * The time when the activity ocurred. Required. Read-only.
+    * The time when the activity occurred. Required. Read-only.
     *
     * @param \DateTime $val The activityDateTime
     *
@@ -117,7 +117,7 @@ class AuditEvent extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the category
-    * A category which represents a logical grouping of activities. Required. Read-only.
+    * A category that represents a logical grouping of activities. Required. Read-only.
     *
     * @return string|null The category
     */
@@ -132,7 +132,7 @@ class AuditEvent extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the category
-    * A category which represents a logical grouping of activities. Required. Read-only.
+    * A category that represents a logical grouping of activities. Required. Read-only.
     *
     * @param string $val The category
     *
@@ -349,7 +349,7 @@ class AuditEvent extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the tenantIds
-    * The collection of Azure Active Directory tenant identifiers for the managed tenants that were impacted by this change. This is formatted as a list of comma-separated values. Required. Read-only.
+    * The collection of Azure Active Directory tenant identifiers for the managed tenants that were affected by a change, and is formatted as a list of comma-separated values. Required. Read-only.
     *
     * @return string|null The tenantIds
     */
@@ -364,7 +364,7 @@ class AuditEvent extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the tenantIds
-    * The collection of Azure Active Directory tenant identifiers for the managed tenants that were impacted by this change. This is formatted as a list of comma-separated values. Required. Read-only.
+    * The collection of Azure Active Directory tenant identifiers for the managed tenants that were affected by a change, and is formatted as a list of comma-separated values. Required. Read-only.
     *
     * @param string $val The tenantIds
     *
@@ -378,7 +378,7 @@ class AuditEvent extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the tenantNames
-    * The collection of tenant names that were impacted by this change. This is formatted as a list of comma-separated values. Required. Read-only.
+    * The collection of tenant names that were affected by a change, and is formatted as a list of comma-separated values. Required. Read-only.
     *
     * @return string|null The tenantNames
     */
@@ -393,7 +393,7 @@ class AuditEvent extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the tenantNames
-    * The collection of tenant names that were impacted by this change. This is formatted as a list of comma-separated values. Required. Read-only.
+    * The collection of tenant names that were affected by a change, and is formatted as a list of comma-separated values. Required. Read-only.
     *
     * @param string $val The tenantNames
     *

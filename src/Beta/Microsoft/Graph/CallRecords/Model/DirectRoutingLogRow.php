@@ -25,7 +25,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the calleeNumber
-    * Number of the user or bot who received the call (E.164 format, but may include additional data).
+    * Number of the user or bot who received the call (E.164 format, but may include more data).
     *
     * @return string|null The calleeNumber
     */
@@ -40,7 +40,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the calleeNumber
-    * Number of the user or bot who received the call (E.164 format, but may include additional data).
+    * Number of the user or bot who received the call (E.164 format, but may include more data).
     *
     * @param string $val The value of the calleeNumber
     *
@@ -81,7 +81,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the callerNumber
-    * Number of the user or bot who made the call (E.164 format, but may include additional data).
+    * Number of the user or bot who made the call (E.164 format, but may include more data).
     *
     * @return string|null The callerNumber
     */
@@ -96,7 +96,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the callerNumber
-    * Number of the user or bot who made the call (E.164 format, but may include additional data).
+    * Number of the user or bot who made the call (E.164 format, but may include more data).
     *
     * @param string $val The value of the callerNumber
     *
@@ -344,7 +344,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the inviteDateTime
-    * When the initial invite was sent.
+    * The date and time when the initial invite was sent.
     *
     * @return \DateTime|null The inviteDateTime
     */
@@ -363,7 +363,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the inviteDateTime
-    * When the initial invite was sent.
+    * The date and time when the initial invite was sent.
     *
     * @param \DateTime $val The value to assign to the inviteDateTime
     *
@@ -432,7 +432,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the otherPartyCountryCode
-    * Country code of the caller in case of an incoming call, or callee in case of an outgoing call. For details, see ISO 3166-1 alpha-2.
+    * Country code of the caller for an incoming call, or callee for an outgoing call. For details, see ISO 3166-1 alpha-2.
     *
     * @return string|null The otherPartyCountryCode
     */
@@ -447,7 +447,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the otherPartyCountryCode
-    * Country code of the caller in case of an incoming call, or callee in case of an outgoing call. For details, see ISO 3166-1 alpha-2.
+    * Country code of the caller for an incoming call, or callee for an outgoing call. For details, see ISO 3166-1 alpha-2.
     *
     * @param string $val The value of the otherPartyCountryCode
     *
@@ -633,7 +633,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the userId
-    * The unique identifier (GUID) of the user in Azure Active Directory. This and other user info will be null/empty for bot call types.
+    * The unique identifier (GUID) of the user in Azure Active Directory. This and other user info is null/empty for bot call types.
     *
     * @return string|null The userId
     */
@@ -648,7 +648,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the userId
-    * The unique identifier (GUID) of the user in Azure Active Directory. This and other user info will be null/empty for bot call types.
+    * The unique identifier (GUID) of the user in Azure Active Directory. This and other user info is null/empty for bot call types.
     *
     * @param string $val The value of the userId
     *
@@ -661,7 +661,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the userPrincipalName
-    * The user principal name (sign-in name) in Azure Active Directory. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
+    * The user principal name (sign-in name) in Azure Active Directory, is usually the same as the user's SIP address, and can be same as the user's e-mail address.
     *
     * @return string|null The userPrincipalName
     */
@@ -676,7 +676,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the userPrincipalName
-    * The user principal name (sign-in name) in Azure Active Directory. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
+    * The user principal name (sign-in name) in Azure Active Directory, is usually the same as the user's SIP address, and can be same as the user's e-mail address.
     *
     * @param string $val The value of the userPrincipalName
     *

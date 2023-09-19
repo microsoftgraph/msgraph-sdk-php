@@ -120,6 +120,37 @@ class CallTranscript extends Entity
     }
 
     /**
+    * Gets the meetingOrganizer
+    *
+    * @return IdentitySet|null The meetingOrganizer
+    */
+    public function getMeetingOrganizer()
+    {
+        if (array_key_exists("meetingOrganizer", $this->_propDict)) {
+            if (is_a($this->_propDict["meetingOrganizer"], "\Beta\Microsoft\Graph\Model\IdentitySet") || is_null($this->_propDict["meetingOrganizer"])) {
+                return $this->_propDict["meetingOrganizer"];
+            } else {
+                $this->_propDict["meetingOrganizer"] = new IdentitySet($this->_propDict["meetingOrganizer"]);
+                return $this->_propDict["meetingOrganizer"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the meetingOrganizer
+    *
+    * @param IdentitySet $val The meetingOrganizer
+    *
+    * @return CallTranscript
+    */
+    public function setMeetingOrganizer($val)
+    {
+        $this->_propDict["meetingOrganizer"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the meetingOrganizerId
     * The unique identifier of the organizer of the onlineMeeting related to this transcript. Read-only.
     *

@@ -58,7 +58,7 @@ class AuthenticationContext extends Entity
     }
     /**
     * Gets the id
-    * The identifier of a authentication context in your tenant.
+    * The identifier of an authentication context in your tenant.
     *
     * @return string|null The id
     */
@@ -73,7 +73,7 @@ class AuthenticationContext extends Entity
 
     /**
     * Sets the id
-    * The identifier of a authentication context in your tenant.
+    * The identifier of an authentication context in your tenant.
     *
     * @param string $val The value of the id
     *

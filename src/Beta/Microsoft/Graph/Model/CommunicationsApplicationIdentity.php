@@ -53,7 +53,7 @@ class CommunicationsApplicationIdentity extends Identity
     }
     /**
     * Gets the hidden
-    * True if the participant would not like to be shown in other participants' rosters.
+    * True if the participant wouldn't like to be shown in other participants' rosters.
     *
     * @return bool|null The hidden
     */
@@ -68,7 +68,7 @@ class CommunicationsApplicationIdentity extends Identity
 
     /**
     * Sets the hidden
-    * True if the participant would not like to be shown in other participants' rosters.
+    * True if the participant wouldn't like to be shown in other participants' rosters.
     *
     * @param bool $val The value of the hidden
     *

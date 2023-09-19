@@ -25,7 +25,7 @@ class CloudPcResizeValidationResult extends Entity
 {
     /**
     * Gets the cloudPcId
-    * The cloudPC id that corresponds to its unique identifier.
+    * The cloudPC ID that corresponds to its unique identifier.
     *
     * @return string|null The cloudPcId
     */
@@ -40,7 +40,7 @@ class CloudPcResizeValidationResult extends Entity
 
     /**
     * Sets the cloudPcId
-    * The cloudPC id that corresponds to its unique identifier.
+    * The cloudPC ID that corresponds to its unique identifier.
     *
     * @param string $val The value of the cloudPcId
     *

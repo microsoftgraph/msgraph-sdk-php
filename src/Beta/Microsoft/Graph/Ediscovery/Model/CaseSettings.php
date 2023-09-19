@@ -92,7 +92,7 @@ class CaseSettings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the topicModeling
-    * The Topic Modeling (Themes) settings for the case.
+    * The article Modeling (Themes) settings for the case.
     *
     * @return TopicModelingSettings|null The topicModeling
     */
@@ -111,7 +111,7 @@ class CaseSettings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the topicModeling
-    * The Topic Modeling (Themes) settings for the case.
+    * The article Modeling (Themes) settings for the case.
     *
     * @param TopicModelingSettings $val The topicModeling
     *

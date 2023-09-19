@@ -53,7 +53,7 @@ class SignInLocation extends Entity
     }
     /**
     * Gets the countryOrRegion
-    * Provides the country code info (2 letter code) where the sign-in originated.  This is calculated using latitude/longitude information from the sign-in activity.
+    * Provides the country code info (two letter code) where the sign-in originated.  This is calculated using latitude/longitude information from the sign-in activity.
     *
     * @return string|null The countryOrRegion
     */
@@ -68,7 +68,7 @@ class SignInLocation extends Entity
 
     /**
     * Sets the countryOrRegion
-    * Provides the country code info (2 letter code) where the sign-in originated.  This is calculated using latitude/longitude information from the sign-in activity.
+    * Provides the country code info (two letter code) where the sign-in originated.  This is calculated using latitude/longitude information from the sign-in activity.
     *
     * @param string $val The value of the countryOrRegion
     *

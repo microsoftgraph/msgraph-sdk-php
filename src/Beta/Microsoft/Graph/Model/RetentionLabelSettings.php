@@ -26,6 +26,7 @@ class RetentionLabelSettings extends Entity
 
     /**
     * Gets the behaviorDuringRetentionPeriod
+    * Describes the item behavior during retention period. Possible values are: doNotRetain, retain, retainAsRecord, retainAsRegulatoryRecord, unknownFutureValue. Read-only.
     *
     * @return \Beta\Microsoft\Graph\SecurityNamespace\Model\BehaviorDuringRetentionPeriod|null The behaviorDuringRetentionPeriod
     */
@@ -44,6 +45,7 @@ class RetentionLabelSettings extends Entity
 
     /**
     * Sets the behaviorDuringRetentionPeriod
+    * Describes the item behavior during retention period. Possible values are: doNotRetain, retain, retainAsRecord, retainAsRegulatoryRecord, unknownFutureValue. Read-only.
     *
     * @param \Beta\Microsoft\Graph\SecurityNamespace\Model\BehaviorDuringRetentionPeriod $val The value to assign to the behaviorDuringRetentionPeriod
     *
@@ -56,6 +58,7 @@ class RetentionLabelSettings extends Entity
     }
     /**
     * Gets the isContentUpdateAllowed
+    * Specifies whether updates to document content are allowed. Read-only.
     *
     * @return bool|null The isContentUpdateAllowed
     */
@@ -70,6 +73,7 @@ class RetentionLabelSettings extends Entity
 
     /**
     * Sets the isContentUpdateAllowed
+    * Specifies whether updates to document content are allowed. Read-only.
     *
     * @param bool $val The value of the isContentUpdateAllowed
     *
@@ -82,6 +86,7 @@ class RetentionLabelSettings extends Entity
     }
     /**
     * Gets the isDeleteAllowed
+    * Specifies whether the document deletion is allowed. Read-only.
     *
     * @return bool|null The isDeleteAllowed
     */
@@ -96,6 +101,7 @@ class RetentionLabelSettings extends Entity
 
     /**
     * Sets the isDeleteAllowed
+    * Specifies whether the document deletion is allowed. Read-only.
     *
     * @param bool $val The value of the isDeleteAllowed
     *
@@ -108,6 +114,7 @@ class RetentionLabelSettings extends Entity
     }
     /**
     * Gets the isLabelUpdateAllowed
+    * Specifies whether you're allowed to change the retention label on the document. Read-only.
     *
     * @return bool|null The isLabelUpdateAllowed
     */
@@ -122,6 +129,7 @@ class RetentionLabelSettings extends Entity
 
     /**
     * Sets the isLabelUpdateAllowed
+    * Specifies whether you're allowed to change the retention label on the document. Read-only.
     *
     * @param bool $val The value of the isLabelUpdateAllowed
     *
@@ -134,6 +142,7 @@ class RetentionLabelSettings extends Entity
     }
     /**
     * Gets the isMetadataUpdateAllowed
+    * Specifies whether updates to the item metadata (for example, the Title field) are blocked. Read-only.
     *
     * @return bool|null The isMetadataUpdateAllowed
     */
@@ -148,6 +157,7 @@ class RetentionLabelSettings extends Entity
 
     /**
     * Sets the isMetadataUpdateAllowed
+    * Specifies whether updates to the item metadata (for example, the Title field) are blocked. Read-only.
     *
     * @param bool $val The value of the isMetadataUpdateAllowed
     *
@@ -160,6 +170,7 @@ class RetentionLabelSettings extends Entity
     }
     /**
     * Gets the isRecordLocked
+    * Specifies whether the item is locked. Read-write.
     *
     * @return bool|null The isRecordLocked
     */
@@ -174,6 +185,7 @@ class RetentionLabelSettings extends Entity
 
     /**
     * Sets the isRecordLocked
+    * Specifies whether the item is locked. Read-write.
     *
     * @param bool $val The value of the isRecordLocked
     *

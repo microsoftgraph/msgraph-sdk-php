@@ -26,7 +26,7 @@ class DeviceManagementConfigurationChoiceSettingDefinition extends DeviceManagem
 {
     /**
     * Gets the defaultOptionId
-    * Default option for choice setting
+    * Default option for the choice setting.
     *
     * @return string|null The defaultOptionId
     */
@@ -41,7 +41,7 @@ class DeviceManagementConfigurationChoiceSettingDefinition extends DeviceManagem
 
     /**
     * Sets the defaultOptionId
-    * Default option for choice setting
+    * Default option for the choice setting.
     *
     * @param string $val The defaultOptionId
     *
@@ -56,7 +56,7 @@ class DeviceManagementConfigurationChoiceSettingDefinition extends DeviceManagem
 
      /**
      * Gets the options
-    * Options for the setting that can be selected
+    * Options for the setting that can be selected.
      *
      * @return array|null The options
      */
@@ -71,7 +71,7 @@ class DeviceManagementConfigurationChoiceSettingDefinition extends DeviceManagem
 
     /**
     * Sets the options
-    * Options for the setting that can be selected
+    * Options for the setting that can be selected.
     *
     * @param DeviceManagementConfigurationOptionDefinition[] $val The options
     *

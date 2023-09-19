@@ -214,7 +214,7 @@ class WorkflowBase implements \JsonSerializable
 
     /**
     * Gets the isEnabled
-    * Whether the workflow is enabled or disabled. If this setting is true, the workflow can be run on demand or on schedule when isSchedulingEnabled is true.
+    * Determines whether the workflow is enabled or disabled. If this setting is true, the workflow can be run on demand or on schedule when isSchedulingEnabled is true.
     *
     * @return bool|null The isEnabled
     */
@@ -229,7 +229,7 @@ class WorkflowBase implements \JsonSerializable
 
     /**
     * Sets the isEnabled
-    * Whether the workflow is enabled or disabled. If this setting is true, the workflow can be run on demand or on schedule when isSchedulingEnabled is true.
+    * Determines whether the workflow is enabled or disabled. If this setting is true, the workflow can be run on demand or on schedule when isSchedulingEnabled is true.
     *
     * @param bool $val The isEnabled
     *
@@ -243,7 +243,7 @@ class WorkflowBase implements \JsonSerializable
 
     /**
     * Gets the isSchedulingEnabled
-    * If true, the Lifecycle Workflow engine executes the workflow based on the schedule defined by tenant settings. Cannot be true for a disabled workflow (where isEnabled is false).
+    * If true, the Lifecycle Workflow engine executes the workflow based on the schedule defined by tenant settings. Can't be true for a disabled workflow (where isEnabled is false).
     *
     * @return bool|null The isSchedulingEnabled
     */
@@ -258,7 +258,7 @@ class WorkflowBase implements \JsonSerializable
 
     /**
     * Sets the isSchedulingEnabled
-    * If true, the Lifecycle Workflow engine executes the workflow based on the schedule defined by tenant settings. Cannot be true for a disabled workflow (where isEnabled is false).
+    * If true, the Lifecycle Workflow engine executes the workflow based on the schedule defined by tenant settings. Can't be true for a disabled workflow (where isEnabled is false).
     *
     * @param bool $val The isSchedulingEnabled
     *

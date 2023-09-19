@@ -36,7 +36,7 @@ class BasicAuthentication extends ApiAuthenticationConfigurationBase
 
     /**
     * Gets the password
-    * The password. It is not returned in the responses.
+    * The password. It isn't returned in the responses.
     *
     * @return string|null The password
     */
@@ -51,7 +51,7 @@ class BasicAuthentication extends ApiAuthenticationConfigurationBase
 
     /**
     * Sets the password
-    * The password. It is not returned in the responses.
+    * The password. It isn't returned in the responses.
     *
     * @param string $val The value of the password
     *
