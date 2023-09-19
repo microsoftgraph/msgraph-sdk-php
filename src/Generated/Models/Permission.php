@@ -27,7 +27,7 @@ class Permission extends Entity implements Parsable
     }
 
     /**
-     * Gets the expirationDateTime property value. A format of yyyy-MM-ddTHH:mm:ssZ of DateTimeOffset indicates the expiration time of the permission. DateTime.MinValue indicates there is no expiration set for this permission. Optional.
+     * Gets the expirationDateTime property value. A format of yyyy-MM-ddTHH:mm:ssZ of DateTimeOffset indicates the expiration time of the permission. DateTime.MinValue indicates there's no expiration set for this permission. Optional.
      * @return DateTime|null
     */
     public function getExpirationDateTime(): ?DateTime {
@@ -131,7 +131,7 @@ class Permission extends Entity implements Parsable
     }
 
     /**
-     * Gets the inheritedFrom property value. Provides a reference to the ancestor of the current permission, if it is inherited from an ancestor. Read-only.
+     * Gets the inheritedFrom property value. Provides a reference to the ancestor of the current permission, if it's inherited from an ancestor. Read-only.
      * @return ItemReference|null
     */
     public function getInheritedFrom(): ?ItemReference {
@@ -155,7 +155,7 @@ class Permission extends Entity implements Parsable
     }
 
     /**
-     * Gets the link property value. Provides the link details of the current permission, if it is a link type permissions. Read-only.
+     * Gets the link property value. Provides the link details of the current permission, if it's a link type permission. Read-only.
      * @return SharingLink|null
     */
     public function getLink(): ?SharingLink {
@@ -212,7 +212,7 @@ class Permission extends Entity implements Parsable
     }
 
     /**
-     * Sets the expirationDateTime property value. A format of yyyy-MM-ddTHH:mm:ssZ of DateTimeOffset indicates the expiration time of the permission. DateTime.MinValue indicates there is no expiration set for this permission. Optional.
+     * Sets the expirationDateTime property value. A format of yyyy-MM-ddTHH:mm:ssZ of DateTimeOffset indicates the expiration time of the permission. DateTime.MinValue indicates there's no expiration set for this permission. Optional.
      * @param DateTime|null $value Value to set for the expirationDateTime property.
     */
     public function setExpirationDateTime(?DateTime $value): void {
@@ -260,7 +260,7 @@ class Permission extends Entity implements Parsable
     }
 
     /**
-     * Sets the inheritedFrom property value. Provides a reference to the ancestor of the current permission, if it is inherited from an ancestor. Read-only.
+     * Sets the inheritedFrom property value. Provides a reference to the ancestor of the current permission, if it's inherited from an ancestor. Read-only.
      * @param ItemReference|null $value Value to set for the inheritedFrom property.
     */
     public function setInheritedFrom(?ItemReference $value): void {
@@ -276,7 +276,7 @@ class Permission extends Entity implements Parsable
     }
 
     /**
-     * Sets the link property value. Provides the link details of the current permission, if it is a link type permissions. Read-only.
+     * Sets the link property value. Provides the link details of the current permission, if it's a link type permission. Read-only.
      * @param SharingLink|null $value Value to set for the link property.
     */
     public function setLink(?SharingLink $value): void {

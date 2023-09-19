@@ -69,7 +69,7 @@ class WorkbookSessionInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the id property value. Id of the workbook session.
+     * Gets the id property value. ID of the workbook session.
      * @return string|null
     */
     public function getId(): ?string {
@@ -132,7 +132,7 @@ class WorkbookSessionInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the id property value. Id of the workbook session.
+     * Sets the id property value. ID of the workbook session.
      * @param string|null $value Value to set for the id property.
     */
     public function setId(?string $value): void {

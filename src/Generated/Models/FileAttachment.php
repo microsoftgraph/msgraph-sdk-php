@@ -51,7 +51,7 @@ class FileAttachment extends Attachment implements Parsable
     }
 
     /**
-     * Gets the contentLocation property value. Do not use this property as it is not supported.
+     * Gets the contentLocation property value. Don't use this property as it isn't supported.
      * @return string|null
     */
     public function getContentLocation(): ?string {
@@ -103,7 +103,7 @@ class FileAttachment extends Attachment implements Parsable
     }
 
     /**
-     * Sets the contentLocation property value. Do not use this property as it is not supported.
+     * Sets the contentLocation property value. Don't use this property as it isn't supported.
      * @param string|null $value Value to set for the contentLocation property.
     */
     public function setContentLocation(?string $value): void {

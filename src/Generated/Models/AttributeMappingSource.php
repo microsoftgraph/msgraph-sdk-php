@@ -108,7 +108,7 @@ class AttributeMappingSource implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the parameters property value. If this object represents a function, lists function parameters. Parameters consist of attributeMappingSource objects themselves, allowing for complex expressions. If type is not Function, this property will be null/empty array.
+     * Gets the parameters property value. If this object represents a function, lists function parameters. Parameters consist of attributeMappingSource objects themselves, allowing for complex expressions. If type isn't Function, this property is null/empty array.
      * @return array<StringKeyAttributeMappingSourceValuePair>|null
     */
     public function getParameters(): ?array {
@@ -187,7 +187,7 @@ class AttributeMappingSource implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the parameters property value. If this object represents a function, lists function parameters. Parameters consist of attributeMappingSource objects themselves, allowing for complex expressions. If type is not Function, this property will be null/empty array.
+     * Sets the parameters property value. If this object represents a function, lists function parameters. Parameters consist of attributeMappingSource objects themselves, allowing for complex expressions. If type isn't Function, this property is null/empty array.
      * @param array<StringKeyAttributeMappingSourceValuePair>|null $value Value to set for the parameters property.
     */
     public function setParameters(?array $value): void {

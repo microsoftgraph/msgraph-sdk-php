@@ -104,7 +104,7 @@ class WebApplication implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the logoutUrl property value. Specifies the URL that will be used by Microsoft's authorization service to logout an user using front-channel, back-channel or SAML logout protocols.
+     * Gets the logoutUrl property value. Specifies the URL that is used by Microsoft's authorization service to log out a user using front-channel, back-channel or SAML logout protocols.
      * @return string|null
     */
     public function getLogoutUrl(): ?string {
@@ -202,7 +202,7 @@ class WebApplication implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the logoutUrl property value. Specifies the URL that will be used by Microsoft's authorization service to logout an user using front-channel, back-channel or SAML logout protocols.
+     * Sets the logoutUrl property value. Specifies the URL that is used by Microsoft's authorization service to log out a user using front-channel, back-channel or SAML logout protocols.
      * @param string|null $value Value to set for the logoutUrl property.
     */
     public function setLogoutUrl(?string $value): void {

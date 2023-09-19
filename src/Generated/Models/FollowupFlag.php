@@ -68,7 +68,7 @@ class FollowupFlag implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the dueDateTime property value. The date and time that the follow up is to be finished. Note: To set the due date, you must also specify the startDateTime; otherwise, you will get a 400 Bad Request response.
+     * Gets the dueDateTime property value. The date and time that the follow-up is to be finished. Note: To set the due date, you must also specify the startDateTime; otherwise, you get a 400 Bad Request response.
      * @return DateTimeTimeZone|null
     */
     public function getDueDateTime(): ?DateTimeTimeZone {
@@ -168,7 +168,7 @@ class FollowupFlag implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the dueDateTime property value. The date and time that the follow up is to be finished. Note: To set the due date, you must also specify the startDateTime; otherwise, you will get a 400 Bad Request response.
+     * Sets the dueDateTime property value. The date and time that the follow-up is to be finished. Note: To set the due date, you must also specify the startDateTime; otherwise, you get a 400 Bad Request response.
      * @param DateTimeTimeZone|null $value Value to set for the dueDateTime property.
     */
     public function setDueDateTime(?DateTimeTimeZone $value): void {

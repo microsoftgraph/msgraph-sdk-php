@@ -50,7 +50,7 @@ class TermColumn implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the allowMultipleValues property value. Specifies whether the column will allow more than one value.
+     * Gets the allowMultipleValues property value. Specifies whether the column allows more than one value.
      * @return bool|null
     */
     public function getAllowMultipleValues(): ?bool {
@@ -154,7 +154,7 @@ class TermColumn implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the allowMultipleValues property value. Specifies whether the column will allow more than one value.
+     * Sets the allowMultipleValues property value. Specifies whether the column allows more than one value.
      * @param bool|null $value Value to set for the allowMultipleValues property.
     */
     public function setAllowMultipleValues(?bool $value): void {

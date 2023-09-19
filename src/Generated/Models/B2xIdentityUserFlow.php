@@ -67,7 +67,7 @@ class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable
     }
 
     /**
-     * Gets the languages property value. The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You cannot create custom languages in self-service sign-up user flows.
+     * Gets the languages property value. The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You can't create custom languages in self-service sign-up user flows.
      * @return array<UserFlowLanguageConfiguration>|null
     */
     public function getLanguages(): ?array {
@@ -138,7 +138,7 @@ class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable
     }
 
     /**
-     * Sets the languages property value. The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You cannot create custom languages in self-service sign-up user flows.
+     * Sets the languages property value. The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You can't create custom languages in self-service sign-up user flows.
      * @param array<UserFlowLanguageConfiguration>|null $value Value to set for the languages property.
     */
     public function setLanguages(?array $value): void {

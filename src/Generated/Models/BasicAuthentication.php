@@ -38,7 +38,7 @@ class BasicAuthentication extends ApiAuthenticationConfigurationBase implements 
     }
 
     /**
-     * Gets the password property value. The password. It is not returned in the responses.
+     * Gets the password property value. The password. It isn't returned in the responses.
      * @return string|null
     */
     public function getPassword(): ?string {
@@ -72,7 +72,7 @@ class BasicAuthentication extends ApiAuthenticationConfigurationBase implements 
     }
 
     /**
-     * Sets the password property value. The password. It is not returned in the responses.
+     * Sets the password property value. The password. It isn't returned in the responses.
      * @param string|null $value Value to set for the password property.
     */
     public function setPassword(?string $value): void {

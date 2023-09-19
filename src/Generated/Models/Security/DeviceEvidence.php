@@ -109,7 +109,7 @@ class DeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the healthStatus property value. The health state of the device.The possible values are: active, inactive, impairedCommunication, noSensorData, noSensorDataImpairedCommunication, unknown, unknownFutureValue.
+     * Gets the healthStatus property value. The health state of the device. The possible values are: active, inactive, impairedCommunication, noSensorData, noSensorDataImpairedCommunication, unknown, unknownFutureValue.
      * @return DeviceHealthStatus|null
     */
     public function getHealthStatus(): ?DeviceHealthStatus {
@@ -161,7 +161,7 @@ class DeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the onboardingStatus property value. The status of the machine onboarding to Microsoft Defender for Endpoint.The possible values are: insufficientInfo, onboarded, canBeOnboarded, unsupported, unknownFutureValue.
+     * Gets the onboardingStatus property value. The status of the machine onboarding to Microsoft Defender for Endpoint. The possible values are: insufficientInfo, onboarded, canBeOnboarded, unsupported, unknownFutureValue.
      * @return OnboardingStatus|null
     */
     public function getOnboardingStatus(): ?OnboardingStatus {
@@ -313,7 +313,7 @@ class DeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the healthStatus property value. The health state of the device.The possible values are: active, inactive, impairedCommunication, noSensorData, noSensorDataImpairedCommunication, unknown, unknownFutureValue.
+     * Sets the healthStatus property value. The health state of the device. The possible values are: active, inactive, impairedCommunication, noSensorData, noSensorDataImpairedCommunication, unknown, unknownFutureValue.
      * @param DeviceHealthStatus|null $value Value to set for the healthStatus property.
     */
     public function setHealthStatus(?DeviceHealthStatus $value): void {
@@ -345,7 +345,7 @@ class DeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the onboardingStatus property value. The status of the machine onboarding to Microsoft Defender for Endpoint.The possible values are: insufficientInfo, onboarded, canBeOnboarded, unsupported, unknownFutureValue.
+     * Sets the onboardingStatus property value. The status of the machine onboarding to Microsoft Defender for Endpoint. The possible values are: insufficientInfo, onboarded, canBeOnboarded, unsupported, unknownFutureValue.
      * @param OnboardingStatus|null $value Value to set for the onboardingStatus property.
     */
     public function setOnboardingStatus(?OnboardingStatus $value): void {

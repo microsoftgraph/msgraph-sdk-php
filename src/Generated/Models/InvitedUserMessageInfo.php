@@ -57,7 +57,7 @@ class InvitedUserMessageInfo implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the ccRecipients property value. Additional recipients the invitation message should be sent to. Currently only 1 additional recipient is supported.
+     * Gets the ccRecipients property value. Additional recipients the invitation message should be sent to. Currently only one additional recipient is supported.
      * @return array<Recipient>|null
     */
     public function getCcRecipients(): ?array {
@@ -149,7 +149,7 @@ class InvitedUserMessageInfo implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the ccRecipients property value. Additional recipients the invitation message should be sent to. Currently only 1 additional recipient is supported.
+     * Sets the ccRecipients property value. Additional recipients the invitation message should be sent to. Currently only one additional recipient is supported.
      * @param array<Recipient>|null $value Value to set for the ccRecipients property.
     */
     public function setCcRecipients(?array $value): void {

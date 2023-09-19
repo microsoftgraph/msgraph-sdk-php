@@ -49,7 +49,7 @@ class AppScope extends Entity implements Parsable
     }
 
     /**
-     * Gets the type property value. Describes the type of app-specific resource represented by the app scope. Provided for display purposes, so a user interface can convey to the user the kind of app specific resource represented by the app scope. Read-only.
+     * Gets the type property value. Describes the type of app-specific resource represented by the app scope and is provided for display purposes, so a user interface can convey to the user the kind of app specific resource represented by the app scope. Read-only.
      * @return string|null
     */
     public function getType(): ?string {
@@ -79,7 +79,7 @@ class AppScope extends Entity implements Parsable
     }
 
     /**
-     * Sets the type property value. Describes the type of app-specific resource represented by the app scope. Provided for display purposes, so a user interface can convey to the user the kind of app specific resource represented by the app scope. Read-only.
+     * Sets the type property value. Describes the type of app-specific resource represented by the app scope and is provided for display purposes, so a user interface can convey to the user the kind of app specific resource represented by the app scope. Read-only.
      * @param string|null $value Value to set for the type property.
     */
     public function setType(?string $value): void {

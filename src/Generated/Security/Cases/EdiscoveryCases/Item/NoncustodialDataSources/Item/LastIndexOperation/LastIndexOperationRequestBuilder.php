@@ -32,7 +32,7 @@ class LastIndexOperationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Operation entity that represents the latest indexing for the non-custodial data source.
+     * Operation entity that represents the latest indexing for the noncustodial data source.
      * @param LastIndexOperationRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -50,7 +50,7 @@ class LastIndexOperationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Operation entity that represents the latest indexing for the non-custodial data source.
+     * Operation entity that represents the latest indexing for the noncustodial data source.
      * @param LastIndexOperationRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

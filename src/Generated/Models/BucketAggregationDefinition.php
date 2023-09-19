@@ -121,7 +121,7 @@ class BucketAggregationDefinition implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Gets the ranges property value. Specifies the manual ranges to compute the aggregations. This is only valid for non-string refiners of date or numeric type. Optional.
+     * Gets the ranges property value. Specifies the manual ranges to compute the aggregations. This is only valid for nonstring refiners of date or numeric type. Optional.
      * @return array<BucketAggregationRange>|null
     */
     public function getRanges(): ?array {
@@ -209,7 +209,7 @@ class BucketAggregationDefinition implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Sets the ranges property value. Specifies the manual ranges to compute the aggregations. This is only valid for non-string refiners of date or numeric type. Optional.
+     * Sets the ranges property value. Specifies the manual ranges to compute the aggregations. This is only valid for nonstring refiners of date or numeric type. Optional.
      * @param array<BucketAggregationRange>|null $value Value to set for the ranges property.
     */
     public function setRanges(?array $value): void {

@@ -75,7 +75,7 @@ class DomainDnsRecord extends Entity implements Parsable
     }
 
     /**
-     * Gets the recordType property value. Indicates what type of DNS record this entity represents.The value can be one of the following: CName, Mx, Srv, Txt.
+     * Gets the recordType property value. Indicates what type of DNS record this entity represents. The value can be CName, Mx, Srv, or Txt.
      * @return string|null
     */
     public function getRecordType(): ?string {
@@ -87,7 +87,7 @@ class DomainDnsRecord extends Entity implements Parsable
     }
 
     /**
-     * Gets the supportedService property value. Microsoft Online Service or feature that has a dependency on this DNS record.Can be one of the following values: null, Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline, SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune.
+     * Gets the supportedService property value. Microsoft Online Service or feature that has a dependency on this DNS record. Can be one of the following values: null, Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline, SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune.
      * @return string|null
     */
     public function getSupportedService(): ?string {
@@ -140,7 +140,7 @@ class DomainDnsRecord extends Entity implements Parsable
     }
 
     /**
-     * Sets the recordType property value. Indicates what type of DNS record this entity represents.The value can be one of the following: CName, Mx, Srv, Txt.
+     * Sets the recordType property value. Indicates what type of DNS record this entity represents. The value can be CName, Mx, Srv, or Txt.
      * @param string|null $value Value to set for the recordType property.
     */
     public function setRecordType(?string $value): void {
@@ -148,7 +148,7 @@ class DomainDnsRecord extends Entity implements Parsable
     }
 
     /**
-     * Sets the supportedService property value. Microsoft Online Service or feature that has a dependency on this DNS record.Can be one of the following values: null, Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline, SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune.
+     * Sets the supportedService property value. Microsoft Online Service or feature that has a dependency on this DNS record. Can be one of the following values: null, Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline, SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune.
      * @param string|null $value Value to set for the supportedService property.
     */
     public function setSupportedService(?string $value): void {

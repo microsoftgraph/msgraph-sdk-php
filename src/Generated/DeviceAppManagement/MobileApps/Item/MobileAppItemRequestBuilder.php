@@ -8,8 +8,22 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\Assign\AssignRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\Assignments\AssignmentsRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\Categories\CategoriesRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\GraphAndroidLobApp\GraphAndroidLobAppRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\GraphAndroidStoreApp\GraphAndroidStoreAppRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\GraphIosLobApp\GraphIosLobAppRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\GraphIosStoreApp\GraphIosStoreAppRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\GraphIosVppApp\GraphIosVppAppRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\GraphMacOSDmgApp\GraphMacOSDmgAppRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\GraphMacOSLobApp\GraphMacOSLobAppRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\GraphManagedAndroidLobApp\GraphManagedAndroidLobAppRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\GraphManagedIOSLobApp\GraphManagedIOSLobAppRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\GraphManagedMobileLobApp\GraphManagedMobileLobAppRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\GraphMobileLobApp\GraphMobileLobAppRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\GraphMicrosoftStoreForBusinessApp\GraphMicrosoftStoreForBusinessAppRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\GraphWin32LobApp\GraphWin32LobAppRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\GraphWindowsAppX\GraphWindowsAppXRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\GraphWindowsMobileMSI\GraphWindowsMobileMSIRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\GraphWindowsUniversalAppX\GraphWindowsUniversalAppXRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\GraphWindowsWebApp\GraphWindowsWebAppRequestBuilder;
 use Microsoft\Graph\Generated\Models\MobileApp;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -44,6 +58,69 @@ class MobileAppItemRequestBuilder extends BaseRequestBuilder
     }
     
     /**
+     * Casts the previous resource to androidLobApp.
+    */
+    public function graphAndroidLobApp(): GraphAndroidLobAppRequestBuilder {
+        return new GraphAndroidLobAppRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Casts the previous resource to androidStoreApp.
+    */
+    public function graphAndroidStoreApp(): GraphAndroidStoreAppRequestBuilder {
+        return new GraphAndroidStoreAppRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Casts the previous resource to iosLobApp.
+    */
+    public function graphIosLobApp(): GraphIosLobAppRequestBuilder {
+        return new GraphIosLobAppRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Casts the previous resource to iosStoreApp.
+    */
+    public function graphIosStoreApp(): GraphIosStoreAppRequestBuilder {
+        return new GraphIosStoreAppRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Casts the previous resource to iosVppApp.
+    */
+    public function graphIosVppApp(): GraphIosVppAppRequestBuilder {
+        return new GraphIosVppAppRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Casts the previous resource to macOSDmgApp.
+    */
+    public function graphMacOSDmgApp(): GraphMacOSDmgAppRequestBuilder {
+        return new GraphMacOSDmgAppRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Casts the previous resource to macOSLobApp.
+    */
+    public function graphMacOSLobApp(): GraphMacOSLobAppRequestBuilder {
+        return new GraphMacOSLobAppRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Casts the previous resource to managedAndroidLobApp.
+    */
+    public function graphManagedAndroidLobApp(): GraphManagedAndroidLobAppRequestBuilder {
+        return new GraphManagedAndroidLobAppRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Casts the previous resource to managedIOSLobApp.
+    */
+    public function graphManagedIOSLobApp(): GraphManagedIOSLobAppRequestBuilder {
+        return new GraphManagedIOSLobAppRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Casts the previous resource to managedMobileLobApp.
     */
     public function graphManagedMobileLobApp(): GraphManagedMobileLobAppRequestBuilder {
@@ -51,10 +128,45 @@ class MobileAppItemRequestBuilder extends BaseRequestBuilder
     }
     
     /**
-     * Casts the previous resource to mobileLobApp.
+     * Casts the previous resource to microsoftStoreForBusinessApp.
     */
-    public function graphMobileLobApp(): GraphMobileLobAppRequestBuilder {
-        return new GraphMobileLobAppRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function graphMicrosoftStoreForBusinessApp(): GraphMicrosoftStoreForBusinessAppRequestBuilder {
+        return new GraphMicrosoftStoreForBusinessAppRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Casts the previous resource to win32LobApp.
+    */
+    public function graphWin32LobApp(): GraphWin32LobAppRequestBuilder {
+        return new GraphWin32LobAppRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Casts the previous resource to windowsAppX.
+    */
+    public function graphWindowsAppX(): GraphWindowsAppXRequestBuilder {
+        return new GraphWindowsAppXRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Casts the previous resource to windowsMobileMSI.
+    */
+    public function graphWindowsMobileMSI(): GraphWindowsMobileMSIRequestBuilder {
+        return new GraphWindowsMobileMSIRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Casts the previous resource to windowsUniversalAppX.
+    */
+    public function graphWindowsUniversalAppX(): GraphWindowsUniversalAppXRequestBuilder {
+        return new GraphWindowsUniversalAppXRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Casts the previous resource to windowsWebApp.
+    */
+    public function graphWindowsWebApp(): GraphWindowsWebAppRequestBuilder {
+        return new GraphWindowsWebAppRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -91,10 +203,10 @@ class MobileAppItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the windowsMicrosoftEdgeApp object.
+     * Read properties and relationships of the webApp object.
      * @param MobileAppItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://learn.microsoft.com/graph/api/intune-apps-windowsmicrosoftedgeapp-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-apps-webapp-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?MobileAppItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -110,11 +222,11 @@ class MobileAppItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a win32LobApp object.
+     * Update the properties of a windowsMicrosoftEdgeApp object.
      * @param MobileApp $body The request body
      * @param MobileAppItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://learn.microsoft.com/graph/api/intune-apps-win32lobapp-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-apps-windowsmicrosoftedgeapp-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(MobileApp $body, ?MobileAppItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -147,7 +259,7 @@ class MobileAppItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the windowsMicrosoftEdgeApp object.
+     * Read properties and relationships of the webApp object.
      * @param MobileAppItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -168,7 +280,7 @@ class MobileAppItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a win32LobApp object.
+     * Update the properties of a windowsMicrosoftEdgeApp object.
      * @param MobileApp $body The request body
      * @param MobileAppItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -78,7 +78,7 @@ class DelegatedAdminRelationship extends Entity implements Parsable
     }
 
     /**
-     * Gets the customer property value. The display name and unique identifier of the customer of the relationship. This is configured either by the partner at the time the relationship is created or by the system after the customer approves the relationship. Cannot be changed by the customer.
+     * Gets the customer property value. The display name and unique identifier of the customer of the relationship. This is configured either by the partner at the time the relationship is created or by the system after the customer approves the relationship. Can't be changed by the customer.
      * @return DelegatedAdminRelationshipCustomerParticipant|null
     */
     public function getCustomer(): ?DelegatedAdminRelationshipCustomerParticipant {
@@ -90,7 +90,7 @@ class DelegatedAdminRelationship extends Entity implements Parsable
     }
 
     /**
-     * Gets the displayName property value. The display name of the relationship used for ease of identification. Must be unique across all delegated admin relationships of the partner. This is set by the partner only when the relationship is in the created status and cannot be changed by the customer.
+     * Gets the displayName property value. The display name of the relationship used for ease of identification. Must be unique across all delegated admin relationships of the partner and is set by the partner only when the relationship is in the created status and can't be changed by the customer.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -102,7 +102,7 @@ class DelegatedAdminRelationship extends Entity implements Parsable
     }
 
     /**
-     * Gets the duration property value. The duration of the relationship in ISO 8601 format. Must be a value between P1D and P2Y inclusive. This is set by the partner only when the relationship is in the created status and cannot be changed by the customer.
+     * Gets the duration property value. The duration of the relationship in ISO 8601 format. Must be a value between P1D and P2Y inclusive. This is set by the partner only when the relationship is in the created status and can't be changed by the customer.
      * @return DateInterval|null
     */
     public function getDuration(): ?DateInterval {
@@ -252,7 +252,7 @@ class DelegatedAdminRelationship extends Entity implements Parsable
     }
 
     /**
-     * Sets the customer property value. The display name and unique identifier of the customer of the relationship. This is configured either by the partner at the time the relationship is created or by the system after the customer approves the relationship. Cannot be changed by the customer.
+     * Sets the customer property value. The display name and unique identifier of the customer of the relationship. This is configured either by the partner at the time the relationship is created or by the system after the customer approves the relationship. Can't be changed by the customer.
      * @param DelegatedAdminRelationshipCustomerParticipant|null $value Value to set for the customer property.
     */
     public function setCustomer(?DelegatedAdminRelationshipCustomerParticipant $value): void {
@@ -260,7 +260,7 @@ class DelegatedAdminRelationship extends Entity implements Parsable
     }
 
     /**
-     * Sets the displayName property value. The display name of the relationship used for ease of identification. Must be unique across all delegated admin relationships of the partner. This is set by the partner only when the relationship is in the created status and cannot be changed by the customer.
+     * Sets the displayName property value. The display name of the relationship used for ease of identification. Must be unique across all delegated admin relationships of the partner and is set by the partner only when the relationship is in the created status and can't be changed by the customer.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -268,7 +268,7 @@ class DelegatedAdminRelationship extends Entity implements Parsable
     }
 
     /**
-     * Sets the duration property value. The duration of the relationship in ISO 8601 format. Must be a value between P1D and P2Y inclusive. This is set by the partner only when the relationship is in the created status and cannot be changed by the customer.
+     * Sets the duration property value. The duration of the relationship in ISO 8601 format. Must be a value between P1D and P2Y inclusive. This is set by the partner only when the relationship is in the created status and can't be changed by the customer.
      * @param DateInterval|null $value Value to set for the duration property.
     */
     public function setDuration(?DateInterval $value): void {

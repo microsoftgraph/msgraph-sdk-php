@@ -318,7 +318,7 @@ class SubjectRightsRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the notes property value. List of notes associcated with the request.
+     * Gets the notes property value. List of notes associated with the request.
      * @return array<AuthoredNote>|null
     */
     public function getNotes(): ?array {
@@ -344,7 +344,7 @@ class SubjectRightsRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the regulations property value. List of regulations that this request will fulfill.
+     * Gets the regulations property value. List of regulations that this request fulfills.
      * @return array<string>|null
     */
     public function getRegulations(): ?array {
@@ -384,7 +384,7 @@ class SubjectRightsRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. The status of the request.. Possible values are: active, closed, unknownFutureValue.
+     * Gets the status property value. The status of the request. Possible values are: active, closed, unknownFutureValue.
      * @return SubjectRightsRequestStatus|null
     */
     public function getStatus(): ?SubjectRightsRequestStatus {
@@ -616,7 +616,7 @@ class SubjectRightsRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the notes property value. List of notes associcated with the request.
+     * Sets the notes property value. List of notes associated with the request.
      * @param array<AuthoredNote>|null $value Value to set for the notes property.
     */
     public function setNotes(?array $value): void {
@@ -632,7 +632,7 @@ class SubjectRightsRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the regulations property value. List of regulations that this request will fulfill.
+     * Sets the regulations property value. List of regulations that this request fulfills.
      * @param array<string>|null $value Value to set for the regulations property.
     */
     public function setRegulations(?array $value): void {
@@ -656,7 +656,7 @@ class SubjectRightsRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. The status of the request.. Possible values are: active, closed, unknownFutureValue.
+     * Sets the status property value. The status of the request. Possible values are: active, closed, unknownFutureValue.
      * @param SubjectRightsRequestStatus|null $value Value to set for the status property.
     */
     public function setStatus(?SubjectRightsRequestStatus $value): void {

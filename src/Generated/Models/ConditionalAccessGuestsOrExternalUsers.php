@@ -56,7 +56,7 @@ class ConditionalAccessGuestsOrExternalUsers implements AdditionalDataHolder, Ba
     }
 
     /**
-     * Gets the externalTenants property value. The tenant IDs of the selected types of external users. Either all B2B tenant or a collection of tenant IDs. External tenants can be specified only when the property guestOrExternalUserTypes is not null or an empty String.
+     * Gets the externalTenants property value. The tenant IDs of the selected types of external users. Either all B2B tenant or a collection of tenant IDs. External tenants can be specified only when the property guestOrExternalUserTypes isn't null or an empty String.
      * @return ConditionalAccessExternalTenants|null
     */
     public function getExternalTenants(): ?ConditionalAccessExternalTenants {
@@ -132,7 +132,7 @@ class ConditionalAccessGuestsOrExternalUsers implements AdditionalDataHolder, Ba
     }
 
     /**
-     * Sets the externalTenants property value. The tenant IDs of the selected types of external users. Either all B2B tenant or a collection of tenant IDs. External tenants can be specified only when the property guestOrExternalUserTypes is not null or an empty String.
+     * Sets the externalTenants property value. The tenant IDs of the selected types of external users. Either all B2B tenant or a collection of tenant IDs. External tenants can be specified only when the property guestOrExternalUserTypes isn't null or an empty String.
      * @param ConditionalAccessExternalTenants|null $value Value to set for the externalTenants property.
     */
     public function setExternalTenants(?ConditionalAccessExternalTenants $value): void {

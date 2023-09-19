@@ -78,7 +78,7 @@ class AccessPackageSubject extends Entity implements Parsable
     }
 
     /**
-     * Gets the objectId property value. The object identifier of the subject. null if the subject is not yet a user in the tenant.
+     * Gets the objectId property value. The object identifier of the subject. null if the subject isn't yet a user in the tenant.
      * @return string|null
     */
     public function getObjectId(): ?string {
@@ -90,7 +90,7 @@ class AccessPackageSubject extends Entity implements Parsable
     }
 
     /**
-     * Gets the onPremisesSecurityIdentifier property value. A string representation of the principal's security identifier, if known, or null if the subject does not have a security identifier.
+     * Gets the onPremisesSecurityIdentifier property value. A string representation of the principal's security identifier, if known, or null if the subject doesn't have a security identifier.
      * @return string|null
     */
     public function getOnPremisesSecurityIdentifier(): ?string {
@@ -165,7 +165,7 @@ class AccessPackageSubject extends Entity implements Parsable
     }
 
     /**
-     * Sets the objectId property value. The object identifier of the subject. null if the subject is not yet a user in the tenant.
+     * Sets the objectId property value. The object identifier of the subject. null if the subject isn't yet a user in the tenant.
      * @param string|null $value Value to set for the objectId property.
     */
     public function setObjectId(?string $value): void {
@@ -173,7 +173,7 @@ class AccessPackageSubject extends Entity implements Parsable
     }
 
     /**
-     * Sets the onPremisesSecurityIdentifier property value. A string representation of the principal's security identifier, if known, or null if the subject does not have a security identifier.
+     * Sets the onPremisesSecurityIdentifier property value. A string representation of the principal's security identifier, if known, or null if the subject doesn't have a security identifier.
      * @param string|null $value Value to set for the onPremisesSecurityIdentifier property.
     */
     public function setOnPremisesSecurityIdentifier(?string $value): void {

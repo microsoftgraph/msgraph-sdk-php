@@ -35,7 +35,7 @@ class ServiceAnnouncementBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the details property value. Additional details about service event. This property doesn't support filters.
+     * Gets the details property value. More details about service event. This property doesn't support filters.
      * @return array<KeyValuePair>|null
     */
     public function getDetails(): ?array {
@@ -125,7 +125,7 @@ class ServiceAnnouncementBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the details property value. Additional details about service event. This property doesn't support filters.
+     * Sets the details property value. More details about service event. This property doesn't support filters.
      * @param array<KeyValuePair>|null $value Value to set for the details property.
     */
     public function setDetails(?array $value): void {
