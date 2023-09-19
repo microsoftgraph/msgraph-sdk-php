@@ -84,7 +84,7 @@ class DomainDnsRecord extends Entity
 
     /**
     * Gets the recordType
-    * Indicates what type of DNS record this entity represents.The value can be one of the following: CName, Mx, Srv, Txt.
+    * Indicates what type of DNS record this entity represents. The value can be CName, Mx, Srv, or Txt.
     *
     * @return string|null The recordType
     */
@@ -99,7 +99,7 @@ class DomainDnsRecord extends Entity
 
     /**
     * Sets the recordType
-    * Indicates what type of DNS record this entity represents.The value can be one of the following: CName, Mx, Srv, Txt.
+    * Indicates what type of DNS record this entity represents. The value can be CName, Mx, Srv, or Txt.
     *
     * @param string $val The recordType
     *
@@ -113,7 +113,7 @@ class DomainDnsRecord extends Entity
 
     /**
     * Gets the supportedService
-    * Microsoft Online Service or feature that has a dependency on this DNS record.Can be one of the following values: null, Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline, SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune.
+    * Microsoft Online Service or feature that has a dependency on this DNS record. Can be one of the following values: null, Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline, SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune.
     *
     * @return string|null The supportedService
     */
@@ -128,7 +128,7 @@ class DomainDnsRecord extends Entity
 
     /**
     * Sets the supportedService
-    * Microsoft Online Service or feature that has a dependency on this DNS record.Can be one of the following values: null, Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline, SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune.
+    * Microsoft Online Service or feature that has a dependency on this DNS record. Can be one of the following values: null, Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline, SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune.
     *
     * @param string $val The supportedService
     *

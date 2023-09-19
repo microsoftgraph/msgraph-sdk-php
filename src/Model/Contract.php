@@ -84,7 +84,7 @@ class Contract extends DirectoryObject
 
     /**
     * Gets the defaultDomainName
-    * A copy of the customer tenant's default domain name. The copy is made when the partnership with the customer is established. It is not automatically updated if the customer tenant's default domain name changes.
+    * A copy of the customer tenant's default domain name. The copy is made when the partnership with the customer is established. It isn't automatically updated if the customer tenant's default domain name changes.
     *
     * @return string|null The defaultDomainName
     */
@@ -99,7 +99,7 @@ class Contract extends DirectoryObject
 
     /**
     * Sets the defaultDomainName
-    * A copy of the customer tenant's default domain name. The copy is made when the partnership with the customer is established. It is not automatically updated if the customer tenant's default domain name changes.
+    * A copy of the customer tenant's default domain name. The copy is made when the partnership with the customer is established. It isn't automatically updated if the customer tenant's default domain name changes.
     *
     * @param string $val The defaultDomainName
     *

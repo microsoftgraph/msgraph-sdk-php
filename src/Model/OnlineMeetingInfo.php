@@ -53,7 +53,7 @@ class OnlineMeetingInfo extends Entity
     }
     /**
     * Gets the joinUrl
-    * The external link that launches the online meeting. This is a URL that clients will launch into a browser and will redirect the user to join the meeting.
+    * The external link that launches the online meeting. This is a URL that clients launch into a browser and will redirect the user to join the meeting.
     *
     * @return string|null The joinUrl
     */
@@ -68,7 +68,7 @@ class OnlineMeetingInfo extends Entity
 
     /**
     * Sets the joinUrl
-    * The external link that launches the online meeting. This is a URL that clients will launch into a browser and will redirect the user to join the meeting.
+    * The external link that launches the online meeting. This is a URL that clients launch into a browser and will redirect the user to join the meeting.
     *
     * @param string $val The value of the joinUrl
     *
@@ -114,7 +114,7 @@ class OnlineMeetingInfo extends Entity
     }
     /**
     * Gets the quickDial
-    * The pre-formatted quickdial for this call.
+    * The preformatted quick dial for this call.
     *
     * @return string|null The quickDial
     */
@@ -129,7 +129,7 @@ class OnlineMeetingInfo extends Entity
 
     /**
     * Sets the quickDial
-    * The pre-formatted quickdial for this call.
+    * The preformatted quick dial for this call.
     *
     * @param string $val The value of the quickDial
     *

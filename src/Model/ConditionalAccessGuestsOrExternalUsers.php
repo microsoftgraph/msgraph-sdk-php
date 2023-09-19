@@ -26,7 +26,7 @@ class ConditionalAccessGuestsOrExternalUsers extends Entity
 
     /**
     * Gets the externalTenants
-    * The tenant IDs of the selected types of external users. Either all B2B tenant or a collection of tenant IDs. External tenants can be specified only when the property guestOrExternalUserTypes is not null or an empty String.
+    * The tenant IDs of the selected types of external users. Either all B2B tenant or a collection of tenant IDs. External tenants can be specified only when the property guestOrExternalUserTypes isn't null or an empty String.
     *
     * @return ConditionalAccessExternalTenants|null The externalTenants
     */
@@ -45,7 +45,7 @@ class ConditionalAccessGuestsOrExternalUsers extends Entity
 
     /**
     * Sets the externalTenants
-    * The tenant IDs of the selected types of external users. Either all B2B tenant or a collection of tenant IDs. External tenants can be specified only when the property guestOrExternalUserTypes is not null or an empty String.
+    * The tenant IDs of the selected types of external users. Either all B2B tenant or a collection of tenant IDs. External tenants can be specified only when the property guestOrExternalUserTypes isn't null or an empty String.
     *
     * @param ConditionalAccessExternalTenants $val The value to assign to the externalTenants
     *
@@ -59,7 +59,7 @@ class ConditionalAccessGuestsOrExternalUsers extends Entity
 
     /**
     * Gets the guestOrExternalUserTypes
-    * Indicates internal guests or external user types. This is a multi-valued property. Possible values are: none, internalGuest, b2bCollaborationGuest, b2bCollaborationMember, b2bDirectConnectUser,  otherExternalUser, serviceProvider, unknownFutureValue.
+    * Indicates internal guests or external user types, and is a multi-valued property. Possible values are: none, internalGuest, b2bCollaborationGuest, b2bCollaborationMember, b2bDirectConnectUser,  otherExternalUser, serviceProvider, unknownFutureValue.
     *
     * @return ConditionalAccessGuestOrExternalUserTypes|null The guestOrExternalUserTypes
     */
@@ -78,7 +78,7 @@ class ConditionalAccessGuestsOrExternalUsers extends Entity
 
     /**
     * Sets the guestOrExternalUserTypes
-    * Indicates internal guests or external user types. This is a multi-valued property. Possible values are: none, internalGuest, b2bCollaborationGuest, b2bCollaborationMember, b2bDirectConnectUser,  otherExternalUser, serviceProvider, unknownFutureValue.
+    * Indicates internal guests or external user types, and is a multi-valued property. Possible values are: none, internalGuest, b2bCollaborationGuest, b2bCollaborationMember, b2bDirectConnectUser,  otherExternalUser, serviceProvider, unknownFutureValue.
     *
     * @param ConditionalAccessGuestOrExternalUserTypes $val The value to assign to the guestOrExternalUserTypes
     *

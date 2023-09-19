@@ -26,7 +26,7 @@ class AccessReviewHistoryInstance extends Entity
 {
     /**
     * Gets the downloadUri
-    * Uri which can be used to retrieve review history data. This URI will be active for 24 hours after being generated. Required.
+    * Uri that can be used to retrieve review history data. This URI will be active for 24 hours after being generated. Required.
     *
     * @return string|null The downloadUri
     */
@@ -41,7 +41,7 @@ class AccessReviewHistoryInstance extends Entity
 
     /**
     * Sets the downloadUri
-    * Uri which can be used to retrieve review history data. This URI will be active for 24 hours after being generated. Required.
+    * Uri that can be used to retrieve review history data. This URI will be active for 24 hours after being generated. Required.
     *
     * @param string $val The downloadUri
     *
@@ -88,7 +88,7 @@ class AccessReviewHistoryInstance extends Entity
 
     /**
     * Gets the fulfilledDateTime
-    * Timestamp when all of the available data for this instance was collected. This will be set after this instance's status is set to done. Required.
+    * Timestamp when all of the available data for this instance was collected and is set after this instance's status is set to done. Required.
     *
     * @return \DateTime|null The fulfilledDateTime
     */
@@ -107,7 +107,7 @@ class AccessReviewHistoryInstance extends Entity
 
     /**
     * Sets the fulfilledDateTime
-    * Timestamp when all of the available data for this instance was collected. This will be set after this instance's status is set to done. Required.
+    * Timestamp when all of the available data for this instance was collected and is set after this instance's status is set to done. Required.
     *
     * @param \DateTime $val The fulfilledDateTime
     *
@@ -121,7 +121,7 @@ class AccessReviewHistoryInstance extends Entity
 
     /**
     * Gets the reviewHistoryPeriodEndDateTime
-    * Timestamp, reviews ending on or before this date will be included in the fetched history data.
+    * Timestamp reviews ending on or before this date will be included in the fetched history data.
     *
     * @return \DateTime|null The reviewHistoryPeriodEndDateTime
     */
@@ -140,7 +140,7 @@ class AccessReviewHistoryInstance extends Entity
 
     /**
     * Sets the reviewHistoryPeriodEndDateTime
-    * Timestamp, reviews ending on or before this date will be included in the fetched history data.
+    * Timestamp reviews ending on or before this date will be included in the fetched history data.
     *
     * @param \DateTime $val The reviewHistoryPeriodEndDateTime
     *
@@ -154,7 +154,7 @@ class AccessReviewHistoryInstance extends Entity
 
     /**
     * Gets the reviewHistoryPeriodStartDateTime
-    * Timestamp, reviews starting on or after this date will be included in the fetched history data.
+    * Timestamp reviews starting on or after this date will be included in the fetched history data.
     *
     * @return \DateTime|null The reviewHistoryPeriodStartDateTime
     */
@@ -173,7 +173,7 @@ class AccessReviewHistoryInstance extends Entity
 
     /**
     * Sets the reviewHistoryPeriodStartDateTime
-    * Timestamp, reviews starting on or after this date will be included in the fetched history data.
+    * Timestamp reviews starting on or after this date will be included in the fetched history data.
     *
     * @param \DateTime $val The reviewHistoryPeriodStartDateTime
     *

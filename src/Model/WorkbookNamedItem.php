@@ -142,7 +142,7 @@ class WorkbookNamedItem extends Entity
 
     /**
     * Gets the value
-    * Represents the formula that the name is defined to refer to. E.g. =Sheet14!$B$2:$H$12, =4.75, etc. Read-only.
+    * Represents the formula that the name is defined to refer to. for example, =Sheet14!$B$2:$H$12, =4.75, etc. Read-only.
     *
     * @return string|null The value
     */
@@ -157,7 +157,7 @@ class WorkbookNamedItem extends Entity
 
     /**
     * Sets the value
-    * Represents the formula that the name is defined to refer to. E.g. =Sheet14!$B$2:$H$12, =4.75, etc. Read-only.
+    * Represents the formula that the name is defined to refer to. for example, =Sheet14!$B$2:$H$12, =4.75, etc. Read-only.
     *
     * @param string $val The value
     *

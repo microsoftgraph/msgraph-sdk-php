@@ -26,7 +26,7 @@ class RetentionEventStatus extends \Microsoft\Graph\Model\Entity
 
     /**
     * Gets the error
-    * The error if the status is not successful.
+    * The error if the status isn't successful.
     *
     * @return \Microsoft\Graph\Model\PublicError|null The error
     */
@@ -45,7 +45,7 @@ class RetentionEventStatus extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the error
-    * The error if the status is not successful.
+    * The error if the status isn't successful.
     *
     * @param \Microsoft\Graph\Model\PublicError $val The value to assign to the error
     *

@@ -26,7 +26,7 @@ class Permission extends Entity
 {
     /**
     * Gets the expirationDateTime
-    * A format of yyyy-MM-ddTHH:mm:ssZ of DateTimeOffset indicates the expiration time of the permission. DateTime.MinValue indicates there is no expiration set for this permission. Optional.
+    * A format of yyyy-MM-ddTHH:mm:ssZ of DateTimeOffset indicates the expiration time of the permission. DateTime.MinValue indicates there's no expiration set for this permission. Optional.
     *
     * @return \DateTime|null The expirationDateTime
     */
@@ -45,7 +45,7 @@ class Permission extends Entity
 
     /**
     * Sets the expirationDateTime
-    * A format of yyyy-MM-ddTHH:mm:ssZ of DateTimeOffset indicates the expiration time of the permission. DateTime.MinValue indicates there is no expiration set for this permission. Optional.
+    * A format of yyyy-MM-ddTHH:mm:ssZ of DateTimeOffset indicates the expiration time of the permission. DateTime.MinValue indicates there's no expiration set for this permission. Optional.
     *
     * @param \DateTime $val The expirationDateTime
     *
@@ -210,7 +210,7 @@ class Permission extends Entity
 
     /**
     * Gets the inheritedFrom
-    * Provides a reference to the ancestor of the current permission, if it is inherited from an ancestor. Read-only.
+    * Provides a reference to the ancestor of the current permission, if it's inherited from an ancestor. Read-only.
     *
     * @return ItemReference|null The inheritedFrom
     */
@@ -229,7 +229,7 @@ class Permission extends Entity
 
     /**
     * Sets the inheritedFrom
-    * Provides a reference to the ancestor of the current permission, if it is inherited from an ancestor. Read-only.
+    * Provides a reference to the ancestor of the current permission, if it's inherited from an ancestor. Read-only.
     *
     * @param ItemReference $val The inheritedFrom
     *
@@ -276,7 +276,7 @@ class Permission extends Entity
 
     /**
     * Gets the link
-    * Provides the link details of the current permission, if it is a link type permissions. Read-only.
+    * Provides the link details of the current permission, if it's a link type permission. Read-only.
     *
     * @return SharingLink|null The link
     */
@@ -295,7 +295,7 @@ class Permission extends Entity
 
     /**
     * Sets the link
-    * Provides the link details of the current permission, if it is a link type permissions. Read-only.
+    * Provides the link details of the current permission, if it's a link type permission. Read-only.
     *
     * @param SharingLink $val The link
     *
