@@ -26,7 +26,7 @@ class EdiscoveryNoncustodialDataSource extends DataSourceContainer implements Pa
     }
 
     /**
-     * Gets the dataSource property value. User source or SharePoint site data source as non-custodial data source.
+     * Gets the dataSource property value. User source or SharePoint site data source as noncustodial data source.
      * @return DataSource|null
     */
     public function getDataSource(): ?DataSource {
@@ -50,7 +50,7 @@ class EdiscoveryNoncustodialDataSource extends DataSourceContainer implements Pa
     }
 
     /**
-     * Gets the lastIndexOperation property value. Operation entity that represents the latest indexing for the non-custodial data source.
+     * Gets the lastIndexOperation property value. Operation entity that represents the latest indexing for the noncustodial data source.
      * @return EdiscoveryIndexOperation|null
     */
     public function getLastIndexOperation(): ?EdiscoveryIndexOperation {
@@ -72,7 +72,7 @@ class EdiscoveryNoncustodialDataSource extends DataSourceContainer implements Pa
     }
 
     /**
-     * Sets the dataSource property value. User source or SharePoint site data source as non-custodial data source.
+     * Sets the dataSource property value. User source or SharePoint site data source as noncustodial data source.
      * @param DataSource|null $value Value to set for the dataSource property.
     */
     public function setDataSource(?DataSource $value): void {
@@ -80,7 +80,7 @@ class EdiscoveryNoncustodialDataSource extends DataSourceContainer implements Pa
     }
 
     /**
-     * Sets the lastIndexOperation property value. Operation entity that represents the latest indexing for the non-custodial data source.
+     * Sets the lastIndexOperation property value. Operation entity that represents the latest indexing for the noncustodial data source.
      * @param EdiscoveryIndexOperation|null $value Value to set for the lastIndexOperation property.
     */
     public function setLastIndexOperation(?EdiscoveryIndexOperation $value): void {

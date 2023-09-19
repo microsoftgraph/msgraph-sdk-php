@@ -26,7 +26,7 @@ class EntitlementManagementSettings extends Entity implements Parsable
     }
 
     /**
-     * Gets the durationUntilExternalUserDeletedAfterBlocked property value. If externalUserLifecycleAction is blockSignInAndDelete, the duration, typically a number of days, after an external user is blocked from sign in before their account is deleted.
+     * Gets the durationUntilExternalUserDeletedAfterBlocked property value. If externalUserLifecycleAction is blockSignInAndDelete, the duration, typically many days, after an external user is blocked from sign in before their account is deleted.
      * @return DateInterval|null
     */
     public function getDurationUntilExternalUserDeletedAfterBlocked(): ?DateInterval {
@@ -72,7 +72,7 @@ class EntitlementManagementSettings extends Entity implements Parsable
     }
 
     /**
-     * Sets the durationUntilExternalUserDeletedAfterBlocked property value. If externalUserLifecycleAction is blockSignInAndDelete, the duration, typically a number of days, after an external user is blocked from sign in before their account is deleted.
+     * Sets the durationUntilExternalUserDeletedAfterBlocked property value. If externalUserLifecycleAction is blockSignInAndDelete, the duration, typically many days, after an external user is blocked from sign in before their account is deleted.
      * @param DateInterval|null $value Value to set for the durationUntilExternalUserDeletedAfterBlocked property.
     */
     public function setDurationUntilExternalUserDeletedAfterBlocked(?DateInterval $value): void {

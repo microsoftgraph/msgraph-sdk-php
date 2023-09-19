@@ -26,7 +26,7 @@ class ChatMessageInfo extends Entity implements Parsable
     }
 
     /**
-     * Gets the body property value. Body of the chatMessage. This will still contain markers for @mentions and attachments even though the object does not return @mentions and attachments.
+     * Gets the body property value. Body of the chatMessage. This will still contain markers for @mentions and attachments even though the object doesn't return @mentions and attachments.
      * @return ItemBody|null
     */
     public function getBody(): ?ItemBody {
@@ -50,7 +50,7 @@ class ChatMessageInfo extends Entity implements Parsable
     }
 
     /**
-     * Gets the eventDetail property value. Read-only.  If present, represents details of an event that happened in a chat, a channel, or a team, for example, members were added, and so on. For event messages, the messageType property will be set to systemEventMessage.
+     * Gets the eventDetail property value. Read-only.  If present, represents details of an event that happened in a chat, a channel, or a team, for example, members were added, and so on. For event messages, the messageType property is set to systemEventMessage.
      * @return EventMessageDetail|null
     */
     public function getEventDetail(): ?EventMessageDetail {
@@ -128,7 +128,7 @@ class ChatMessageInfo extends Entity implements Parsable
     }
 
     /**
-     * Sets the body property value. Body of the chatMessage. This will still contain markers for @mentions and attachments even though the object does not return @mentions and attachments.
+     * Sets the body property value. Body of the chatMessage. This will still contain markers for @mentions and attachments even though the object doesn't return @mentions and attachments.
      * @param ItemBody|null $value Value to set for the body property.
     */
     public function setBody(?ItemBody $value): void {
@@ -144,7 +144,7 @@ class ChatMessageInfo extends Entity implements Parsable
     }
 
     /**
-     * Sets the eventDetail property value. Read-only.  If present, represents details of an event that happened in a chat, a channel, or a team, for example, members were added, and so on. For event messages, the messageType property will be set to systemEventMessage.
+     * Sets the eventDetail property value. Read-only.  If present, represents details of an event that happened in a chat, a channel, or a team, for example, members were added, and so on. For event messages, the messageType property is set to systemEventMessage.
      * @param EventMessageDetail|null $value Value to set for the eventDetail property.
     */
     public function setEventDetail(?EventMessageDetail $value): void {

@@ -69,7 +69,7 @@ class ExtensionSchemaProperty implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the name property value. The name of the strongly-typed property defined as part of a schema extension.
+     * Gets the name property value. The name of the strongly typed property defined as part of a schema extension.
      * @return string|null
     */
     public function getName(): ?string {
@@ -93,7 +93,7 @@ class ExtensionSchemaProperty implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the type property value. The type of the property that is defined as part of a schema extension.  Allowed values are Binary, Boolean, DateTime, Integer or String. See the table below for more details.
+     * Gets the type property value. The type of the property that is defined as part of a schema extension.  Allowed values are Binary, Boolean, DateTime, Integer or String. See the table in the Supported property data types section for more details.
      * @return string|null
     */
     public function getType(): ?string {
@@ -132,7 +132,7 @@ class ExtensionSchemaProperty implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the name property value. The name of the strongly-typed property defined as part of a schema extension.
+     * Sets the name property value. The name of the strongly typed property defined as part of a schema extension.
      * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
@@ -148,7 +148,7 @@ class ExtensionSchemaProperty implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the type property value. The type of the property that is defined as part of a schema extension.  Allowed values are Binary, Boolean, DateTime, Integer or String. See the table below for more details.
+     * Sets the type property value. The type of the property that is defined as part of a schema extension.  Allowed values are Binary, Boolean, DateTime, Integer or String. See the table in the Supported property data types section for more details.
      * @param string|null $value Value to set for the type property.
     */
     public function setType(?string $value): void {

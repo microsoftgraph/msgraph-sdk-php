@@ -45,7 +45,7 @@ class TeamworkHostedContent extends Entity implements Parsable
     }
 
     /**
-     * Gets the contentType property value. Write only. Content type. sicj as image/png, image/jpg.
+     * Gets the contentType property value. Write only. Content type. such as image/png, image/jpg.
      * @return string|null
     */
     public function getContentType(): ?string {
@@ -87,7 +87,7 @@ class TeamworkHostedContent extends Entity implements Parsable
     }
 
     /**
-     * Sets the contentType property value. Write only. Content type. sicj as image/png, image/jpg.
+     * Sets the contentType property value. Write only. Content type. such as image/png, image/jpg.
      * @param string|null $value Value to set for the contentType property.
     */
     public function setContentType(?string $value): void {

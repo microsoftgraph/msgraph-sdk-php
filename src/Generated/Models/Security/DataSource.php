@@ -61,7 +61,7 @@ class DataSource extends Entity implements Parsable
     }
 
     /**
-     * Gets the displayName property value. The display name of the dataSource. This will be the name of the SharePoint site.
+     * Gets the displayName property value. The display name of the dataSource and is the name of the SharePoint site.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -127,7 +127,7 @@ class DataSource extends Entity implements Parsable
     }
 
     /**
-     * Sets the displayName property value. The display name of the dataSource. This will be the name of the SharePoint site.
+     * Sets the displayName property value. The display name of the dataSource and is the name of the SharePoint site.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {

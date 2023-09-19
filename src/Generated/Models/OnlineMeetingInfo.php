@@ -93,7 +93,7 @@ class OnlineMeetingInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the joinUrl property value. The external link that launches the online meeting. This is a URL that clients will launch into a browser and will redirect the user to join the meeting.
+     * Gets the joinUrl property value. The external link that launches the online meeting. This is a URL that clients launch into a browser and will redirect the user to join the meeting.
      * @return string|null
     */
     public function getJoinUrl(): ?string {
@@ -131,7 +131,7 @@ class OnlineMeetingInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the quickDial property value. The pre-formatted quickdial for this call.
+     * Gets the quickDial property value. The preformatted quick dial for this call.
      * @return string|null
     */
     public function getQuickDial(): ?string {
@@ -208,7 +208,7 @@ class OnlineMeetingInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the joinUrl property value. The external link that launches the online meeting. This is a URL that clients will launch into a browser and will redirect the user to join the meeting.
+     * Sets the joinUrl property value. The external link that launches the online meeting. This is a URL that clients launch into a browser and will redirect the user to join the meeting.
      * @param string|null $value Value to set for the joinUrl property.
     */
     public function setJoinUrl(?string $value): void {
@@ -232,7 +232,7 @@ class OnlineMeetingInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the quickDial property value. The pre-formatted quickdial for this call.
+     * Sets the quickDial property value. The preformatted quick dial for this call.
      * @param string|null $value Value to set for the quickDial property.
     */
     public function setQuickDial(?string $value): void {

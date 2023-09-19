@@ -83,7 +83,7 @@ class LicenseUnitsDetail implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the lockedOut property value. The number of units that are locked out because the customer cancelled their subscription of the service SKU.
+     * Gets the lockedOut property value. The number of units that are locked out because the customer canceled their subscription of the service SKU.
      * @return int|null
     */
     public function getLockedOut(): ?int {
@@ -107,7 +107,7 @@ class LicenseUnitsDetail implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the suspended property value. The number of units that are suspended because the subscription of the service SKU has been cancelled. The units cannot be assigned but can still be reactivated before they are deleted.
+     * Gets the suspended property value. The number of units that are suspended because the subscription of the service SKU has been canceled. The units can't be assigned but can still be reactivated before they're deleted.
      * @return int|null
     */
     public function getSuspended(): ?int {
@@ -119,7 +119,7 @@ class LicenseUnitsDetail implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the warning property value. The number of units that are in warning status. When the subscription of the service SKU has expired, the customer has a grace period to renew their subscription before it is cancelled (moved to a suspended state).
+     * Gets the warning property value. The number of units that are in warning status. When the subscription of the service SKU has expired, the customer has a grace period to renew their subscription before it's canceled (moved to a suspended state).
      * @return int|null
     */
     public function getWarning(): ?int {
@@ -168,7 +168,7 @@ class LicenseUnitsDetail implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the lockedOut property value. The number of units that are locked out because the customer cancelled their subscription of the service SKU.
+     * Sets the lockedOut property value. The number of units that are locked out because the customer canceled their subscription of the service SKU.
      * @param int|null $value Value to set for the lockedOut property.
     */
     public function setLockedOut(?int $value): void {
@@ -184,7 +184,7 @@ class LicenseUnitsDetail implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the suspended property value. The number of units that are suspended because the subscription of the service SKU has been cancelled. The units cannot be assigned but can still be reactivated before they are deleted.
+     * Sets the suspended property value. The number of units that are suspended because the subscription of the service SKU has been canceled. The units can't be assigned but can still be reactivated before they're deleted.
      * @param int|null $value Value to set for the suspended property.
     */
     public function setSuspended(?int $value): void {
@@ -192,7 +192,7 @@ class LicenseUnitsDetail implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the warning property value. The number of units that are in warning status. When the subscription of the service SKU has expired, the customer has a grace period to renew their subscription before it is cancelled (moved to a suspended state).
+     * Sets the warning property value. The number of units that are in warning status. When the subscription of the service SKU has expired, the customer has a grace period to renew their subscription before it's canceled (moved to a suspended state).
      * @param int|null $value Value to set for the warning property.
     */
     public function setWarning(?int $value): void {

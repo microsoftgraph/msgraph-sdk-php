@@ -90,7 +90,7 @@ class WorkbookNamedItem extends Entity implements Parsable
     }
 
     /**
-     * Gets the value property value. Represents the formula that the name is defined to refer to. E.g. =Sheet14!$B$2:$H$12, =4.75, etc. Read-only.
+     * Gets the value property value. Represents the formula that the name is defined to refer to. for example, =Sheet14!$B$2:$H$12, =4.75, etc. Read-only.
      * @return Json|null
     */
     public function getValue(): ?Json {
@@ -173,7 +173,7 @@ class WorkbookNamedItem extends Entity implements Parsable
     }
 
     /**
-     * Sets the value property value. Represents the formula that the name is defined to refer to. E.g. =Sheet14!$B$2:$H$12, =4.75, etc. Read-only.
+     * Sets the value property value. Represents the formula that the name is defined to refer to. for example, =Sheet14!$B$2:$H$12, =4.75, etc. Read-only.
      * @param Json|null $value Value to set for the value property.
     */
     public function setValue(?Json $value): void {

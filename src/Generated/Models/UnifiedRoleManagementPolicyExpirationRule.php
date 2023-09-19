@@ -51,7 +51,7 @@ class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManagementPol
     }
 
     /**
-     * Gets the maximumDuration property value. The maximum duration allowed for eligibility or assignment which is not permanent. Required when isExpirationRequired is true.
+     * Gets the maximumDuration property value. The maximum duration allowed for eligibility or assignment that isn't permanent. Required when isExpirationRequired is true.
      * @return DateInterval|null
     */
     public function getMaximumDuration(): ?DateInterval {
@@ -81,7 +81,7 @@ class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManagementPol
     }
 
     /**
-     * Sets the maximumDuration property value. The maximum duration allowed for eligibility or assignment which is not permanent. Required when isExpirationRequired is true.
+     * Sets the maximumDuration property value. The maximum duration allowed for eligibility or assignment that isn't permanent. Required when isExpirationRequired is true.
      * @param DateInterval|null $value Value to set for the maximumDuration property.
     */
     public function setMaximumDuration(?DateInterval $value): void {

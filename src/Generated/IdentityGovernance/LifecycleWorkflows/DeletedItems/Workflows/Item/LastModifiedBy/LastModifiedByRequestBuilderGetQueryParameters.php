@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Delete
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The unique identifier of the AAD identity that last modified the workflow.
+ * The unique identifier of the Azure Active Directory identity that last modified the workflow.
 */
 class LastModifiedByRequestBuilderGetQueryParameters 
 {

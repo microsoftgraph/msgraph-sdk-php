@@ -106,7 +106,7 @@ class ResultInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the subcode property value. The result sub-code.
+     * Gets the subcode property value. The result subcode.
      * @return int|null
     */
     public function getSubcode(): ?int {
@@ -170,7 +170,7 @@ class ResultInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the subcode property value. The result sub-code.
+     * Sets the subcode property value. The result subcode.
      * @param int|null $value Value to set for the subcode property.
     */
     public function setSubcode(?int $value): void {

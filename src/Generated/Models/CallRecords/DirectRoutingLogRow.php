@@ -57,7 +57,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the calleeNumber property value. Number of the user or bot who received the call. E.164 format, but may include additional data.
+     * Gets the calleeNumber property value. Number of the user or bot who received the call. E.164 format, but may include other data.
      * @return string|null
     */
     public function getCalleeNumber(): ?string {
@@ -81,7 +81,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the callerNumber property value. Number of the user or bot who made the call. E.164 format, but may include additional data.
+     * Gets the callerNumber property value. Number of the user or bot who made the call. E.164 format, but may include other data.
      * @return string|null
     */
     public function getCallerNumber(): ?string {
@@ -185,7 +185,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the finalSipCode property value. The code with which the call ended, RFC 3261.
+     * Gets the finalSipCode property value. The code with which the call ended, see RFC 3261.
      * @return int|null
     */
     public function getFinalSipCode(): ?int {
@@ -245,7 +245,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the mediaPathLocation property value. The datacenter used for media path in non-bypass call.
+     * Gets the mediaPathLocation property value. The datacenter used for media path in nonbypass call.
      * @return string|null
     */
     public function getMediaPathLocation(): ?string {
@@ -269,7 +269,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the signalingLocation property value. The datacenter used for signaling for both bypass and non-bypass calls.
+     * Gets the signalingLocation property value. The datacenter used for signaling for both bypass and nonbypass calls.
      * @return string|null
     */
     public function getSignalingLocation(): ?string {
@@ -399,7 +399,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the calleeNumber property value. Number of the user or bot who received the call. E.164 format, but may include additional data.
+     * Sets the calleeNumber property value. Number of the user or bot who received the call. E.164 format, but may include other data.
      * @param string|null $value Value to set for the calleeNumber property.
     */
     public function setCalleeNumber(?string $value): void {
@@ -415,7 +415,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the callerNumber property value. Number of the user or bot who made the call. E.164 format, but may include additional data.
+     * Sets the callerNumber property value. Number of the user or bot who made the call. E.164 format, but may include other data.
      * @param string|null $value Value to set for the callerNumber property.
     */
     public function setCallerNumber(?string $value): void {
@@ -463,7 +463,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the finalSipCode property value. The code with which the call ended, RFC 3261.
+     * Sets the finalSipCode property value. The code with which the call ended, see RFC 3261.
      * @param int|null $value Value to set for the finalSipCode property.
     */
     public function setFinalSipCode(?int $value): void {
@@ -503,7 +503,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the mediaPathLocation property value. The datacenter used for media path in non-bypass call.
+     * Sets the mediaPathLocation property value. The datacenter used for media path in nonbypass call.
      * @param string|null $value Value to set for the mediaPathLocation property.
     */
     public function setMediaPathLocation(?string $value): void {
@@ -519,7 +519,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the signalingLocation property value. The datacenter used for signaling for both bypass and non-bypass calls.
+     * Sets the signalingLocation property value. The datacenter used for signaling for both bypass and nonbypass calls.
      * @param string|null $value Value to set for the signalingLocation property.
     */
     public function setSignalingLocation(?string $value): void {

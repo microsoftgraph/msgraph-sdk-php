@@ -94,7 +94,7 @@ class LoginPageLayoutConfiguration implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Gets the layoutTemplateType property value. Represents the layout template to be displayed on the login page for a tenant. The possible values are  default - Represents the default Microsoft layout with a centered lightbox.  verticalSplit - Represents a layout with a backgound on the left side and a full-height lightbox to the right.  unknownFutureValue - Evolvable enumeration sentinel value. Do not use.
+     * Gets the layoutTemplateType property value. Represents the layout template to be displayed on the login page for a tenant. The possible values are  default - Represents the default Microsoft layout with a centered lightbox.  verticalSplit - Represents a layout with a background on the left side and a full-height lightbox to the right.  unknownFutureValue - Evolvable enumeration sentinel value. Don't use.
      * @return LayoutTemplateType|null
     */
     public function getLayoutTemplateType(): ?LayoutTemplateType {
@@ -162,7 +162,7 @@ class LoginPageLayoutConfiguration implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Sets the layoutTemplateType property value. Represents the layout template to be displayed on the login page for a tenant. The possible values are  default - Represents the default Microsoft layout with a centered lightbox.  verticalSplit - Represents a layout with a backgound on the left side and a full-height lightbox to the right.  unknownFutureValue - Evolvable enumeration sentinel value. Do not use.
+     * Sets the layoutTemplateType property value. Represents the layout template to be displayed on the login page for a tenant. The possible values are  default - Represents the default Microsoft layout with a centered lightbox.  verticalSplit - Represents a layout with a background on the left side and a full-height lightbox to the right.  unknownFutureValue - Evolvable enumeration sentinel value. Don't use.
      * @param LayoutTemplateType|null $value Value to set for the layoutTemplateType property.
     */
     public function setLayoutTemplateType(?LayoutTemplateType $value): void {

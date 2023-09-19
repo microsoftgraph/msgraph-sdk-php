@@ -56,7 +56,7 @@ class SignInLocation implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the city property value. Provides the city where the sign-in originated. This is calculated using latitude/longitude information from the sign-in activity.
+     * Gets the city property value. Provides the city where the sign-in originated and is determined using latitude/longitude information from the sign-in activity.
      * @return string|null
     */
     public function getCity(): ?string {
@@ -68,7 +68,7 @@ class SignInLocation implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the countryOrRegion property value. Provides the country code info (2 letter code) where the sign-in originated.  This is calculated using latitude/longitude information from the sign-in activity.
+     * Gets the countryOrRegion property value. Provides the country code info (two letter code) where the sign-in originated.  This is calculated using latitude/longitude information from the sign-in activity.
      * @return string|null
     */
     public function getCountryOrRegion(): ?string {
@@ -160,7 +160,7 @@ class SignInLocation implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the city property value. Provides the city where the sign-in originated. This is calculated using latitude/longitude information from the sign-in activity.
+     * Sets the city property value. Provides the city where the sign-in originated and is determined using latitude/longitude information from the sign-in activity.
      * @param string|null $value Value to set for the city property.
     */
     public function setCity(?string $value): void {
@@ -168,7 +168,7 @@ class SignInLocation implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the countryOrRegion property value. Provides the country code info (2 letter code) where the sign-in originated.  This is calculated using latitude/longitude information from the sign-in activity.
+     * Sets the countryOrRegion property value. Provides the country code info (two letter code) where the sign-in originated.  This is calculated using latitude/longitude information from the sign-in activity.
      * @param string|null $value Value to set for the countryOrRegion property.
     */
     public function setCountryOrRegion(?string $value): void {

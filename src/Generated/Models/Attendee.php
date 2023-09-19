@@ -38,7 +38,7 @@ class Attendee extends AttendeeBase implements Parsable
     }
 
     /**
-     * Gets the proposedNewTime property value. An alternate date/time proposed by the attendee for a meeting request to start and end. If the attendee hasn't proposed another time, then this property is not included in a response of a GET event.
+     * Gets the proposedNewTime property value. An alternate date/time proposed by the attendee for a meeting request to start and end. If the attendee hasn't proposed another time, then this property isn't included in a response of a GET event.
      * @return TimeSlot|null
     */
     public function getProposedNewTime(): ?TimeSlot {
@@ -72,7 +72,7 @@ class Attendee extends AttendeeBase implements Parsable
     }
 
     /**
-     * Sets the proposedNewTime property value. An alternate date/time proposed by the attendee for a meeting request to start and end. If the attendee hasn't proposed another time, then this property is not included in a response of a GET event.
+     * Sets the proposedNewTime property value. An alternate date/time proposed by the attendee for a meeting request to start and end. If the attendee hasn't proposed another time, then this property isn't included in a response of a GET event.
      * @param TimeSlot|null $value Value to set for the proposedNewTime property.
     */
     public function setProposedNewTime(?TimeSlot $value): void {

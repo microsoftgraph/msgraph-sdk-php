@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List properties and relationships of the managedEBook objects.
+ * List properties and relationships of the iosVppEBook objects.
 */
 class ManagedEBooksRequestBuilderGetQueryParameters 
 {

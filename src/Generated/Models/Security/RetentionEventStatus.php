@@ -57,7 +57,7 @@ class RetentionEventStatus implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the error property value. The error if the status is not successful.
+     * Gets the error property value. The error if the status isn't successful.
      * @return PublicError|null
     */
     public function getError(): ?PublicError {
@@ -133,7 +133,7 @@ class RetentionEventStatus implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the error property value. The error if the status is not successful.
+     * Sets the error property value. The error if the status isn't successful.
      * @param PublicError|null $value Value to set for the error property.
     */
     public function setError(?PublicError $value): void {

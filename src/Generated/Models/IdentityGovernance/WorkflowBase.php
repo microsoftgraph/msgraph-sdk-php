@@ -173,7 +173,7 @@ class WorkflowBase implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the isSchedulingEnabled property value. If true, the Lifecycle Workflow engine executes the workflow based on the schedule defined by tenant settings. Cannot be true for a disabled workflow (where isEnabled is false).
+     * Gets the isSchedulingEnabled property value. If true, the Lifecycle Workflow engine executes the workflow based on the schedule defined by tenant settings. Can't be true for a disabled workflow (where isEnabled is false).
      * @return bool|null
     */
     public function getIsSchedulingEnabled(): ?bool {
@@ -185,7 +185,7 @@ class WorkflowBase implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the lastModifiedBy property value. The unique identifier of the AAD identity that last modified the workflow.
+     * Gets the lastModifiedBy property value. The unique identifier of the Azure Active Directory identity that last modified the workflow.
      * @return User|null
     */
     public function getLastModifiedBy(): ?User {
@@ -327,7 +327,7 @@ class WorkflowBase implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the isSchedulingEnabled property value. If true, the Lifecycle Workflow engine executes the workflow based on the schedule defined by tenant settings. Cannot be true for a disabled workflow (where isEnabled is false).
+     * Sets the isSchedulingEnabled property value. If true, the Lifecycle Workflow engine executes the workflow based on the schedule defined by tenant settings. Can't be true for a disabled workflow (where isEnabled is false).
      * @param bool|null $value Value to set for the isSchedulingEnabled property.
     */
     public function setIsSchedulingEnabled(?bool $value): void {
@@ -335,7 +335,7 @@ class WorkflowBase implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the lastModifiedBy property value. The unique identifier of the AAD identity that last modified the workflow.
+     * Sets the lastModifiedBy property value. The unique identifier of the Azure Active Directory identity that last modified the workflow.
      * @param User|null $value Value to set for the lastModifiedBy property.
     */
     public function setLastModifiedBy(?User $value): void {

@@ -56,7 +56,7 @@ class MicrosoftAuthenticatorFeatureSettings implements AdditionalDataHolder, Bac
     }
 
     /**
-     * Gets the displayAppInformationRequiredState property value. Determines whether the user's Authenticator app will show them the client app they are signing into.
+     * Gets the displayAppInformationRequiredState property value. Determines whether the user's Authenticator app shows them the client app they're signing into.
      * @return AuthenticationMethodFeatureConfiguration|null
     */
     public function getDisplayAppInformationRequiredState(): ?AuthenticationMethodFeatureConfiguration {
@@ -68,7 +68,7 @@ class MicrosoftAuthenticatorFeatureSettings implements AdditionalDataHolder, Bac
     }
 
     /**
-     * Gets the displayLocationInformationRequiredState property value. Determines whether the user's Authenticator app will show them the geographic location of where the authentication request originated from.
+     * Gets the displayLocationInformationRequiredState property value. Determines whether the user's Authenticator app shows them the geographic location of where the authentication request originated from.
      * @return AuthenticationMethodFeatureConfiguration|null
     */
     public function getDisplayLocationInformationRequiredState(): ?AuthenticationMethodFeatureConfiguration {
@@ -132,7 +132,7 @@ class MicrosoftAuthenticatorFeatureSettings implements AdditionalDataHolder, Bac
     }
 
     /**
-     * Sets the displayAppInformationRequiredState property value. Determines whether the user's Authenticator app will show them the client app they are signing into.
+     * Sets the displayAppInformationRequiredState property value. Determines whether the user's Authenticator app shows them the client app they're signing into.
      * @param AuthenticationMethodFeatureConfiguration|null $value Value to set for the displayAppInformationRequiredState property.
     */
     public function setDisplayAppInformationRequiredState(?AuthenticationMethodFeatureConfiguration $value): void {
@@ -140,7 +140,7 @@ class MicrosoftAuthenticatorFeatureSettings implements AdditionalDataHolder, Bac
     }
 
     /**
-     * Sets the displayLocationInformationRequiredState property value. Determines whether the user's Authenticator app will show them the geographic location of where the authentication request originated from.
+     * Sets the displayLocationInformationRequiredState property value. Determines whether the user's Authenticator app shows them the geographic location of where the authentication request originated from.
      * @param AuthenticationMethodFeatureConfiguration|null $value Value to set for the displayLocationInformationRequiredState property.
     */
     public function setDisplayLocationInformationRequiredState(?AuthenticationMethodFeatureConfiguration $value): void {

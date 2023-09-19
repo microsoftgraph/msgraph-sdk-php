@@ -50,7 +50,7 @@ class AuthoredNoteItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List of notes associcated with the request.
+     * List of notes associated with the request.
      * @param AuthoredNoteItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -104,7 +104,7 @@ class AuthoredNoteItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List of notes associcated with the request.
+     * List of notes associated with the request.
      * @param AuthoredNoteItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
