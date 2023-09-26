@@ -2960,7 +2960,7 @@ class User extends DirectoryObject
 
      /**
      * Gets the registeredDevices
-    * Devices that are registered for the user. Read-only. Nullable. Supports $expand.
+    * Devices that are registered for the user. Read-only. Nullable. Supports $expand and returns up to 100 objects.
      *
      * @return array|null The registeredDevices
      */
@@ -2975,7 +2975,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the registeredDevices
-    * Devices that are registered for the user. Read-only. Nullable. Supports $expand.
+    * Devices that are registered for the user. Read-only. Nullable. Supports $expand and returns up to 100 objects.
     *
     * @param DirectoryObject[] $val The registeredDevices
     *

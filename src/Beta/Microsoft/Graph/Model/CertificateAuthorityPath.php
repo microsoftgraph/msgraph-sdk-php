@@ -27,7 +27,6 @@ class CertificateAuthorityPath extends Entity
 
      /**
      * Gets the certificateBasedApplicationConfigurations
-    * Defines the trusted certificate authorities for certificates that can be added to apps and service principals in the tenant.
      *
      * @return array|null The certificateBasedApplicationConfigurations
      */
@@ -42,7 +41,6 @@ class CertificateAuthorityPath extends Entity
 
     /**
     * Sets the certificateBasedApplicationConfigurations
-    * Defines the trusted certificate authorities for certificates that can be added to apps and service principals in the tenant.
     *
     * @param CertificateBasedApplicationConfiguration[] $val The certificateBasedApplicationConfigurations
     *

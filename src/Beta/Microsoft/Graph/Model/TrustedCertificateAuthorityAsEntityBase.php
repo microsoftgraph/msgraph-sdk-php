@@ -27,7 +27,6 @@ class TrustedCertificateAuthorityAsEntityBase extends DirectoryObject
 
      /**
      * Gets the trustedCertificateAuthorities
-    * Collection of trusted certificate authorities.
      *
      * @return array|null The trustedCertificateAuthorities
      */
@@ -42,7 +41,6 @@ class TrustedCertificateAuthorityAsEntityBase extends DirectoryObject
 
     /**
     * Sets the trustedCertificateAuthorities
-    * Collection of trusted certificate authorities.
     *
     * @param CertificateAuthorityAsEntity[] $val The trustedCertificateAuthorities
     *

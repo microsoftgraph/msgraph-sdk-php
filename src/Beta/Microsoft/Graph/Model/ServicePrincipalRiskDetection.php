@@ -368,6 +368,33 @@ class ServicePrincipalRiskDetection extends Entity
     }
 
     /**
+    * Gets the mitreTechniqueId
+    *
+    * @return string|null The mitreTechniqueId
+    */
+    public function getMitreTechniqueId()
+    {
+        if (array_key_exists("mitreTechniqueId", $this->_propDict)) {
+            return $this->_propDict["mitreTechniqueId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the mitreTechniqueId
+    *
+    * @param string $val The mitreTechniqueId
+    *
+    * @return ServicePrincipalRiskDetection
+    */
+    public function setMitreTechniqueId($val)
+    {
+        $this->_propDict["mitreTechniqueId"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the requestId
     * Request identifier of the sign-in activity associated with the risk detection. This property is null if the risk detection is not associated with a sign-in activity. Supports $filter (eq).
     *

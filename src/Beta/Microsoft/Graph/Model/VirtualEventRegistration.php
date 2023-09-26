@@ -26,6 +26,7 @@ class VirtualEventRegistration extends Entity
 {
     /**
     * Gets the cancelationDateTime
+    * Date and time when the registrant cancels their registration for the virtual event. Only appears when applicable. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The cancelationDateTime
     */
@@ -44,6 +45,7 @@ class VirtualEventRegistration extends Entity
 
     /**
     * Sets the cancelationDateTime
+    * Date and time when the registrant cancels their registration for the virtual event. Only appears when applicable. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The cancelationDateTime
     *
@@ -57,6 +59,7 @@ class VirtualEventRegistration extends Entity
 
     /**
     * Gets the email
+    * Email address of the registrant.
     *
     * @return string|null The email
     */
@@ -71,6 +74,7 @@ class VirtualEventRegistration extends Entity
 
     /**
     * Sets the email
+    * Email address of the registrant.
     *
     * @param string $val The email
     *
@@ -84,6 +88,7 @@ class VirtualEventRegistration extends Entity
 
     /**
     * Gets the firstName
+    * First name of the registrant.
     *
     * @return string|null The firstName
     */
@@ -98,6 +103,7 @@ class VirtualEventRegistration extends Entity
 
     /**
     * Sets the firstName
+    * First name of the registrant.
     *
     * @param string $val The firstName
     *
@@ -111,6 +117,7 @@ class VirtualEventRegistration extends Entity
 
     /**
     * Gets the lastName
+    * Last name of the registrant.
     *
     * @return string|null The lastName
     */
@@ -125,6 +132,7 @@ class VirtualEventRegistration extends Entity
 
     /**
     * Sets the lastName
+    * Last name of the registrant.
     *
     * @param string $val The lastName
     *
@@ -138,6 +146,7 @@ class VirtualEventRegistration extends Entity
 
     /**
     * Gets the registrationDateTime
+    * Date and time when the registrant registers for the virtual event. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The registrationDateTime
     */
@@ -156,6 +165,7 @@ class VirtualEventRegistration extends Entity
 
     /**
     * Sets the registrationDateTime
+    * Date and time when the registrant registers for the virtual event. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The registrationDateTime
     *
@@ -170,6 +180,7 @@ class VirtualEventRegistration extends Entity
 
      /**
      * Gets the registrationQuestionAnswers
+    * The registrant's answer to the registration questions.
      *
      * @return array|null The registrationQuestionAnswers
      */
@@ -184,6 +195,7 @@ class VirtualEventRegistration extends Entity
 
     /**
     * Sets the registrationQuestionAnswers
+    * The registrant's answer to the registration questions.
     *
     * @param VirtualEventRegistrationQuestionAnswer[] $val The registrationQuestionAnswers
     *
@@ -197,6 +209,7 @@ class VirtualEventRegistration extends Entity
 
     /**
     * Gets the status
+    * Registration status of the registrant. Read-only. Possible values are: registered, canceled, waitlisted, pendingApproval, rejectedByOrganizer, unknownFutureValue.
     *
     * @return VirtualEventAttendeeRegistrationStatus|null The status
     */
@@ -215,6 +228,7 @@ class VirtualEventRegistration extends Entity
 
     /**
     * Sets the status
+    * Registration status of the registrant. Read-only. Possible values are: registered, canceled, waitlisted, pendingApproval, rejectedByOrganizer, unknownFutureValue.
     *
     * @param VirtualEventAttendeeRegistrationStatus $val The status
     *
@@ -228,6 +242,7 @@ class VirtualEventRegistration extends Entity
 
     /**
     * Gets the userId
+    * The registrant's ID in Azure Active Directory (Azure AD). Only appears when the registrant is registered in Azure AD.
     *
     * @return string|null The userId
     */
@@ -242,6 +257,7 @@ class VirtualEventRegistration extends Entity
 
     /**
     * Sets the userId
+    * The registrant's ID in Azure Active Directory (Azure AD). Only appears when the registrant is registered in Azure AD.
     *
     * @param string $val The userId
     *
@@ -256,6 +272,7 @@ class VirtualEventRegistration extends Entity
 
      /**
      * Gets the sessions
+    * Sessions of the webinar.
      *
      * @return array|null The sessions
      */
@@ -270,6 +287,7 @@ class VirtualEventRegistration extends Entity
 
     /**
     * Sets the sessions
+    * Sessions of the webinar.
     *
     * @param VirtualEventSession[] $val The sessions
     *

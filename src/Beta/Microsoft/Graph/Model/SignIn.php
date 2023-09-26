@@ -26,7 +26,7 @@ class SignIn extends Entity
 {
     /**
     * Gets the appDisplayName
-    * The application name displayed in the Azure portal.  Supports $filter (eq, startsWith).
+    * The application name displayed in the Microsoft Entra admin center.  Supports $filter (eq, startsWith).
     *
     * @return string|null The appDisplayName
     */
@@ -41,7 +41,7 @@ class SignIn extends Entity
 
     /**
     * Sets the appDisplayName
-    * The application name displayed in the Azure portal.  Supports $filter (eq, startsWith).
+    * The application name displayed in the Microsoft Entra admin center.  Supports $filter (eq, startsWith).
     *
     * @param string $val The appDisplayName
     *

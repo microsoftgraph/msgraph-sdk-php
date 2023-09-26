@@ -36,7 +36,7 @@ class OnInteractiveAuthFlowStartExternalUsersSelfServiceSignUp extends OnInterac
 
     /**
     * Gets the isSignUpAllowed
-    * Optional. Specifes whether the authentication flow includes an option to sign up (create account) as well as sign in. Default value is false meaning only sign in is enabled.
+    * Optional. Specifies whether the authentication flow includes an option to sign up (create account) and sign in. Default value is false meaning only sign in is enabled.
     *
     * @return bool|null The isSignUpAllowed
     */
@@ -51,7 +51,7 @@ class OnInteractiveAuthFlowStartExternalUsersSelfServiceSignUp extends OnInterac
 
     /**
     * Sets the isSignUpAllowed
-    * Optional. Specifes whether the authentication flow includes an option to sign up (create account) as well as sign in. Default value is false meaning only sign in is enabled.
+    * Optional. Specifies whether the authentication flow includes an option to sign up (create account) and sign in. Default value is false meaning only sign in is enabled.
     *
     * @param bool $val The value of the isSignUpAllowed
     *

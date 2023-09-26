@@ -88,7 +88,7 @@ class TiIndicator extends Entity
 
     /**
     * Gets the additionalInformation
-    * A catchall area into which extra data from the indicator not covered by the other tiIndicator properties may be placed. Data placed into additionalInformation will typically not be utilized by the targetProduct security tool.
+    * A catchall area for extra data from the indicator that is not specifically covered by other tiIndicator properties. The security tool specified by targetProduct typically does not utilize this data.
     *
     * @return string|null The additionalInformation
     */
@@ -103,7 +103,7 @@ class TiIndicator extends Entity
 
     /**
     * Sets the additionalInformation
-    * A catchall area into which extra data from the indicator not covered by the other tiIndicator properties may be placed. Data placed into additionalInformation will typically not be utilized by the targetProduct security tool.
+    * A catchall area for extra data from the indicator that is not specifically covered by other tiIndicator properties. The security tool specified by targetProduct typically does not utilize this data.
     *
     * @param string $val The additionalInformation
     *

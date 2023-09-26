@@ -26,7 +26,6 @@ class CertificateAuthorityAsEntity extends Entity
 {
     /**
     * Gets the certificate
-    * The trusted certificate.
     *
     * @return \GuzzleHttp\Psr7\Stream|null The certificate
     */
@@ -45,7 +44,6 @@ class CertificateAuthorityAsEntity extends Entity
 
     /**
     * Sets the certificate
-    * The trusted certificate.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The certificate
     *
@@ -59,7 +57,6 @@ class CertificateAuthorityAsEntity extends Entity
 
     /**
     * Gets the isRootAuthority
-    * Indicates if the certificate is a root authority. In a certificateBasedApplicationConfiguration object, at least one object in the trustedCertificateAuthorities collection must be a root authority.
     *
     * @return bool|null The isRootAuthority
     */
@@ -74,7 +71,6 @@ class CertificateAuthorityAsEntity extends Entity
 
     /**
     * Sets the isRootAuthority
-    * Indicates if the certificate is a root authority. In a certificateBasedApplicationConfiguration object, at least one object in the trustedCertificateAuthorities collection must be a root authority.
     *
     * @param bool $val The isRootAuthority
     *
@@ -88,7 +84,6 @@ class CertificateAuthorityAsEntity extends Entity
 
     /**
     * Gets the issuer
-    * The issuer of the trusted certificate.
     *
     * @return string|null The issuer
     */
@@ -103,7 +98,6 @@ class CertificateAuthorityAsEntity extends Entity
 
     /**
     * Sets the issuer
-    * The issuer of the trusted certificate.
     *
     * @param string $val The issuer
     *
@@ -117,7 +111,6 @@ class CertificateAuthorityAsEntity extends Entity
 
     /**
     * Gets the issuerSubjectKeyIdentifier
-    * The subject key identifier of the trusted certificate.
     *
     * @return string|null The issuerSubjectKeyIdentifier
     */
@@ -132,7 +125,6 @@ class CertificateAuthorityAsEntity extends Entity
 
     /**
     * Sets the issuerSubjectKeyIdentifier
-    * The subject key identifier of the trusted certificate.
     *
     * @param string $val The issuerSubjectKeyIdentifier
     *

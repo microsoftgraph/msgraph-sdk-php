@@ -370,7 +370,7 @@ class SubjectRightsRequest extends Entity
 
     /**
     * Gets the includeAllVersions
-    * Include all versions of the documents. By default, the current copies of the documents will be returned. If SharePoint sites have versioning enabled, including all versions will include the historical copies of the documents. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
+    * Include all versions of the documents. By default, the current copies of the documents will be returned. If SharePoint sites have versioning enabled, including all versions include the historical copies of the documents. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
     *
     * @return bool|null The includeAllVersions
     */
@@ -385,7 +385,7 @@ class SubjectRightsRequest extends Entity
 
     /**
     * Sets the includeAllVersions
-    * Include all versions of the documents. By default, the current copies of the documents will be returned. If SharePoint sites have versioning enabled, including all versions will include the historical copies of the documents. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
+    * Include all versions of the documents. By default, the current copies of the documents will be returned. If SharePoint sites have versioning enabled, including all versions include the historical copies of the documents. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
     *
     * @param bool $val The includeAllVersions
     *
@@ -559,39 +559,41 @@ class SubjectRightsRequest extends Entity
     }
 
     /**
-    * Gets the mailboxlocations
+    * Gets the mailboxLocations
+    * The mailbox locations that should be searched. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
     *
-    * @return SubjectRightsRequestMailboxLocation|null The mailboxlocations
+    * @return SubjectRightsRequestMailboxLocation|null The mailboxLocations
     */
-    public function getMailboxlocations()
+    public function getMailboxLocations()
     {
-        if (array_key_exists("mailboxlocations", $this->_propDict)) {
-            if (is_a($this->_propDict["mailboxlocations"], "\Beta\Microsoft\Graph\Model\SubjectRightsRequestMailboxLocation") || is_null($this->_propDict["mailboxlocations"])) {
-                return $this->_propDict["mailboxlocations"];
+        if (array_key_exists("mailboxLocations", $this->_propDict)) {
+            if (is_a($this->_propDict["mailboxLocations"], "\Beta\Microsoft\Graph\Model\SubjectRightsRequestMailboxLocation") || is_null($this->_propDict["mailboxLocations"])) {
+                return $this->_propDict["mailboxLocations"];
             } else {
-                $this->_propDict["mailboxlocations"] = new SubjectRightsRequestMailboxLocation($this->_propDict["mailboxlocations"]);
-                return $this->_propDict["mailboxlocations"];
+                $this->_propDict["mailboxLocations"] = new SubjectRightsRequestMailboxLocation($this->_propDict["mailboxLocations"]);
+                return $this->_propDict["mailboxLocations"];
             }
         }
         return null;
     }
 
     /**
-    * Sets the mailboxlocations
+    * Sets the mailboxLocations
+    * The mailbox locations that should be searched. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
     *
-    * @param SubjectRightsRequestMailboxLocation $val The mailboxlocations
+    * @param SubjectRightsRequestMailboxLocation $val The mailboxLocations
     *
     * @return SubjectRightsRequest
     */
-    public function setMailboxlocations($val)
+    public function setMailboxLocations($val)
     {
-        $this->_propDict["mailboxlocations"] = $val;
+        $this->_propDict["mailboxLocations"] = $val;
         return $this;
     }
 
     /**
     * Gets the pauseAfterEstimate
-    * Pause the request after estimate has finished. By default, the data estimate will run and then pause, allowing you to preview results and then select the option to retrieve data in the UI. You can set this property to false if you want it to perform the estimate and then automatically begin with the retrieval of the content. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
+    * Pause the request after estimate has finished. By default, the data estimate runs and then pauses, allowing you to preview results and then select the option to retrieve data in the UI. You can set this property to false if you want it to perform the estimate and then automatically begin with the retrieval of the content. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
     *
     * @return bool|null The pauseAfterEstimate
     */
@@ -606,7 +608,7 @@ class SubjectRightsRequest extends Entity
 
     /**
     * Sets the pauseAfterEstimate
-    * Pause the request after estimate has finished. By default, the data estimate will run and then pause, allowing you to preview results and then select the option to retrieve data in the UI. You can set this property to false if you want it to perform the estimate and then automatically begin with the retrieval of the content. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
+    * Pause the request after estimate has finished. By default, the data estimate runs and then pauses, allowing you to preview results and then select the option to retrieve data in the UI. You can set this property to false if you want it to perform the estimate and then automatically begin with the retrieval of the content. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
     *
     * @param bool $val The pauseAfterEstimate
     *
@@ -620,7 +622,7 @@ class SubjectRightsRequest extends Entity
 
     /**
     * Gets the regulations
-    * List of regulations that this request will fulfill.
+    * List of regulations that this request fulfills.
     *
     * @return array|null The regulations
     */
@@ -635,7 +637,7 @@ class SubjectRightsRequest extends Entity
 
     /**
     * Sets the regulations
-    * List of regulations that this request will fulfill.
+    * List of regulations that this request fulfills.
     *
     * @param string[] $val The regulations
     *
@@ -648,33 +650,35 @@ class SubjectRightsRequest extends Entity
     }
 
     /**
-    * Gets the sitelocations
+    * Gets the siteLocations
+    * The SharePoint and OneDrive site locations that should be searched. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
     *
-    * @return SubjectRightsRequestSiteLocation|null The sitelocations
+    * @return SubjectRightsRequestSiteLocation|null The siteLocations
     */
-    public function getSitelocations()
+    public function getSiteLocations()
     {
-        if (array_key_exists("sitelocations", $this->_propDict)) {
-            if (is_a($this->_propDict["sitelocations"], "\Beta\Microsoft\Graph\Model\SubjectRightsRequestSiteLocation") || is_null($this->_propDict["sitelocations"])) {
-                return $this->_propDict["sitelocations"];
+        if (array_key_exists("siteLocations", $this->_propDict)) {
+            if (is_a($this->_propDict["siteLocations"], "\Beta\Microsoft\Graph\Model\SubjectRightsRequestSiteLocation") || is_null($this->_propDict["siteLocations"])) {
+                return $this->_propDict["siteLocations"];
             } else {
-                $this->_propDict["sitelocations"] = new SubjectRightsRequestSiteLocation($this->_propDict["sitelocations"]);
-                return $this->_propDict["sitelocations"];
+                $this->_propDict["siteLocations"] = new SubjectRightsRequestSiteLocation($this->_propDict["siteLocations"]);
+                return $this->_propDict["siteLocations"];
             }
         }
         return null;
     }
 
     /**
-    * Sets the sitelocations
+    * Sets the siteLocations
+    * The SharePoint and OneDrive site locations that should be searched. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
     *
-    * @param SubjectRightsRequestSiteLocation $val The sitelocations
+    * @param SubjectRightsRequestSiteLocation $val The siteLocations
     *
     * @return SubjectRightsRequest
     */
-    public function setSitelocations($val)
+    public function setSiteLocations($val)
     {
-        $this->_propDict["sitelocations"] = $val;
+        $this->_propDict["siteLocations"] = $val;
         return $this;
     }
 

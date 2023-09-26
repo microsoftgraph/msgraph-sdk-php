@@ -55,7 +55,7 @@ class UnifiedRoleManagementAlertDefinition extends Entity
 
     /**
     * Gets the displayName
-    * The friendly display name that renders in Privileged Identity Management (PIM) alerts in the Azure portal.
+    * The friendly display name that renders in Privileged Identity Management (PIM) alerts in the Microsoft Entra admin center.
     *
     * @return string|null The displayName
     */
@@ -70,7 +70,7 @@ class UnifiedRoleManagementAlertDefinition extends Entity
 
     /**
     * Sets the displayName
-    * The friendly display name that renders in Privileged Identity Management (PIM) alerts in the Azure portal.
+    * The friendly display name that renders in Privileged Identity Management (PIM) alerts in the Microsoft Entra admin center.
     *
     * @param string $val The displayName
     *
@@ -113,7 +113,7 @@ class UnifiedRoleManagementAlertDefinition extends Entity
 
     /**
     * Gets the isConfigurable
-    * true if the alert configuration can be customized in the tenant, and false otherwise. For example, the number and percentage thresholds of the 'There are too many global administrators' alert can be configured by users, while the 'This organization does not have Azure AD Premium P2' cannot be configured, because the criteria is restricted.
+    * true if the alert configuration can be customized in the tenant, and false otherwise. For example, the number and percentage thresholds of the 'There are too many global administrators' alert can be configured by users, while the 'This organization doesn't have Azure AD Premium P2' can't be configured, because the criteria are restricted.
     *
     * @return bool|null The isConfigurable
     */
@@ -128,7 +128,7 @@ class UnifiedRoleManagementAlertDefinition extends Entity
 
     /**
     * Sets the isConfigurable
-    * true if the alert configuration can be customized in the tenant, and false otherwise. For example, the number and percentage thresholds of the 'There are too many global administrators' alert can be configured by users, while the 'This organization does not have Azure AD Premium P2' cannot be configured, because the criteria is restricted.
+    * true if the alert configuration can be customized in the tenant, and false otherwise. For example, the number and percentage thresholds of the 'There are too many global administrators' alert can be configured by users, while the 'This organization doesn't have Azure AD Premium P2' can't be configured, because the criteria are restricted.
     *
     * @param bool $val The isConfigurable
     *
