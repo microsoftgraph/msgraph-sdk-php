@@ -57,7 +57,7 @@ class IdentityUserFlowAttribute extends Entity implements Parsable
     }
 
     /**
-     * Gets the displayName property value. The display name of the user flow attribute.
+     * Gets the displayName property value. The display name of the user flow attribute.  Supports $filter (eq, ne).
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -123,7 +123,7 @@ class IdentityUserFlowAttribute extends Entity implements Parsable
     }
 
     /**
-     * Sets the displayName property value. The display name of the user flow attribute.
+     * Sets the displayName property value. The display name of the user flow attribute.  Supports $filter (eq, ne).
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {

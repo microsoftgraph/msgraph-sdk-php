@@ -89,7 +89,7 @@ class PrinterBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the isAcceptingJobs property value. Whether the printer/printerShare is currently accepting new print jobs.
+     * Gets the isAcceptingJobs property value. Specifies whether the printer/printerShare is currently accepting new print jobs.
      * @return bool|null
     */
     public function getIsAcceptingJobs(): ?bool {
@@ -204,7 +204,7 @@ class PrinterBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the isAcceptingJobs property value. Whether the printer/printerShare is currently accepting new print jobs.
+     * Sets the isAcceptingJobs property value. Specifies whether the printer/printerShare is currently accepting new print jobs.
      * @param bool|null $value Value to set for the isAcceptingJobs property.
     */
     public function setIsAcceptingJobs(?bool $value): void {

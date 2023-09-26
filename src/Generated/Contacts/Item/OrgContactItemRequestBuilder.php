@@ -14,6 +14,7 @@ use Microsoft\Graph\Generated\Contacts\Item\Manager\ManagerRequestBuilder;
 use Microsoft\Graph\Generated\Contacts\Item\MemberOf\MemberOfRequestBuilder;
 use Microsoft\Graph\Generated\Contacts\Item\Restore\RestoreRequestBuilder;
 use Microsoft\Graph\Generated\Contacts\Item\RetryServiceProvisioning\RetryServiceProvisioningRequestBuilder;
+use Microsoft\Graph\Generated\Contacts\Item\ServiceProvisioningErrors\ServiceProvisioningErrorsRequestBuilder;
 use Microsoft\Graph\Generated\Contacts\Item\TransitiveMemberOf\TransitiveMemberOfRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\OrgContact;
@@ -88,6 +89,13 @@ class OrgContactItemRequestBuilder extends BaseRequestBuilder
     */
     public function retryServiceProvisioning(): RetryServiceProvisioningRequestBuilder {
         return new RetryServiceProvisioningRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * The serviceProvisioningErrors property
+    */
+    public function serviceProvisioningErrors(): ServiceProvisioningErrorsRequestBuilder {
+        return new ServiceProvisioningErrorsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

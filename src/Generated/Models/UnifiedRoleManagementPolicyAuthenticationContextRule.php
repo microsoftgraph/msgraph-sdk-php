@@ -50,7 +50,7 @@ class UnifiedRoleManagementPolicyAuthenticationContextRule extends UnifiedRoleMa
     }
 
     /**
-     * Gets the isEnabled property value. Whether this rule is enabled.
+     * Gets the isEnabled property value. Determines whether this rule is enabled.
      * @return bool|null
     */
     public function getIsEnabled(): ?bool {
@@ -80,7 +80,7 @@ class UnifiedRoleManagementPolicyAuthenticationContextRule extends UnifiedRoleMa
     }
 
     /**
-     * Sets the isEnabled property value. Whether this rule is enabled.
+     * Sets the isEnabled property value. Determines whether this rule is enabled.
      * @param bool|null $value Value to set for the isEnabled property.
     */
     public function setIsEnabled(?bool $value): void {

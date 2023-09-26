@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\AccessReviewsRequ
 use Microsoft\Graph\Generated\IdentityGovernance\AppConsent\AppConsentRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\EntitlementManagementRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\LifecycleWorkflowsRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\PrivilegedAccess\PrivilegedAccessRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\TermsOfUseRequestBuilder;
 use Microsoft\Graph\Generated\Models\IdentityGovernance\IdentityGovernance;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -48,6 +49,13 @@ class IdentityGovernanceRequestBuilder extends BaseRequestBuilder
     */
     public function lifecycleWorkflows(): LifecycleWorkflowsRequestBuilder {
         return new LifecycleWorkflowsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the privilegedAccess property of the microsoft.graph.identityGovernance entity.
+    */
+    public function privilegedAccess(): PrivilegedAccessRequestBuilder {
+        return new PrivilegedAccessRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

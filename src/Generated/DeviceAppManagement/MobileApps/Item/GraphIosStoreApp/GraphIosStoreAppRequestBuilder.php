@@ -5,6 +5,8 @@ namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\GraphIos
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\GraphIosStoreApp\Assignments\AssignmentsRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\GraphIosStoreApp\Categories\CategoriesRequestBuilder;
 use Microsoft\Graph\Generated\Models\IosStoreApp;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -17,6 +19,20 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class GraphIosStoreAppRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to manage the assignments property of the microsoft.graph.mobileApp entity.
+    */
+    public function assignments(): AssignmentsRequestBuilder {
+        return new AssignmentsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the categories property of the microsoft.graph.mobileApp entity.
+    */
+    public function categories(): CategoriesRequestBuilder {
+        return new CategoriesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Instantiates a new GraphIosStoreAppRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

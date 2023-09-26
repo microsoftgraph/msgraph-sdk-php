@@ -32,7 +32,7 @@ class DefinitionRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * An abstract definition that will be used to create a printTask when triggered by a print event. Read-only.
+     * An abstract definition that is used to create a printTask when triggered by a print event. Read-only.
      * @param DefinitionRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -50,7 +50,7 @@ class DefinitionRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * An abstract definition that will be used to create a printTask when triggered by a print event. Read-only.
+     * An abstract definition that is used to create a printTask when triggered by a print event. Read-only.
      * @param DefinitionRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

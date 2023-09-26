@@ -72,7 +72,7 @@ class UserFlowAttributesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new identityUserFlowAttribute object.
+     * Create a new custom identityUserFlowAttribute object.
      * @param IdentityUserFlowAttribute $body The request body
      * @param UserFlowAttributesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -113,7 +113,7 @@ class UserFlowAttributesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new identityUserFlowAttribute object.
+     * Create a new custom identityUserFlowAttribute object.
      * @param IdentityUserFlowAttribute $body The request body
      * @param UserFlowAttributesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

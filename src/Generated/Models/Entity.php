@@ -580,6 +580,17 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.printUsage': return new PrintUsage();
                 case '#microsoft.graph.printUsageByPrinter': return new PrintUsageByPrinter();
                 case '#microsoft.graph.printUsageByUser': return new PrintUsageByUser();
+                case '#microsoft.graph.privilegedAccessGroup': return new PrivilegedAccessGroup();
+                case '#microsoft.graph.privilegedAccessGroupAssignmentSchedule': return new PrivilegedAccessGroupAssignmentSchedule();
+                case '#microsoft.graph.privilegedAccessGroupAssignmentScheduleInstance': return new PrivilegedAccessGroupAssignmentScheduleInstance();
+                case '#microsoft.graph.privilegedAccessGroupAssignmentScheduleRequest': return new PrivilegedAccessGroupAssignmentScheduleRequest();
+                case '#microsoft.graph.privilegedAccessGroupEligibilitySchedule': return new PrivilegedAccessGroupEligibilitySchedule();
+                case '#microsoft.graph.privilegedAccessGroupEligibilityScheduleInstance': return new PrivilegedAccessGroupEligibilityScheduleInstance();
+                case '#microsoft.graph.privilegedAccessGroupEligibilityScheduleRequest': return new PrivilegedAccessGroupEligibilityScheduleRequest();
+                case '#microsoft.graph.privilegedAccessRoot': return new PrivilegedAccessRoot();
+                case '#microsoft.graph.privilegedAccessSchedule': return new PrivilegedAccessSchedule();
+                case '#microsoft.graph.privilegedAccessScheduleInstance': return new PrivilegedAccessScheduleInstance();
+                case '#microsoft.graph.privilegedAccessScheduleRequest': return new PrivilegedAccessScheduleRequest();
                 case '#microsoft.graph.profilePhoto': return new ProfilePhoto();
                 case '#microsoft.graph.provisioningObjectSummary': return new ProvisioningObjectSummary();
                 case '#microsoft.graph.rbacApplication': return new RbacApplication();
@@ -587,6 +598,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.referenceAttachment': return new ReferenceAttachment();
                 case '#microsoft.graph.remoteAssistancePartner': return new RemoteAssistancePartner();
                 case '#microsoft.graph.request': return new Request();
+                case '#microsoft.graph.resellerDelegatedAdminRelationship': return new ResellerDelegatedAdminRelationship();
                 case '#microsoft.graph.resourceOperation': return new ResourceOperation();
                 case '#microsoft.graph.resourceSpecificPermissionGrant': return new ResourceSpecificPermissionGrant();
                 case '#microsoft.graph.richLongRunningOperation': return new RichLongRunningOperation();

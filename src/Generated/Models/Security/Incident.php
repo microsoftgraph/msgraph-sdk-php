@@ -106,6 +106,18 @@ class Incident extends Entity implements Parsable
     }
 
     /**
+     * Gets the description property value. The description property
+     * @return string|null
+    */
+    public function getDescription(): ?string {
+        $val = $this->getBackingStore()->get('description');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'description'");
+    }
+
+    /**
      * Gets the determination property value. Specifies the determination of the incident. Possible values are: unknown, apt, malware, securityPersonnel, securityTesting, unwantedSoftware, other, multiStagedAttack, compromisedUser, phishing, maliciousUserActivity, clean, insufficientData, confirmedUserActivity, lineOfBusinessApplication, unknownFutureValue.
      * @return AlertDetermination|null
     */
@@ -149,6 +161,7 @@ class Incident extends Entity implements Parsable
                 /** @var array<string>|null $val */
                 $this->setCustomTags($val);
             },
+            'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
             'determination' => fn(ParseNode $n) => $o->setDetermination($n->getEnumValue(AlertDetermination::class)),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'incidentWebUrl' => fn(ParseNode $n) => $o->setIncidentWebUrl($n->getStringValue()),
@@ -157,6 +170,14 @@ class Incident extends Entity implements Parsable
             'redirectIncidentId' => fn(ParseNode $n) => $o->setRedirectIncidentId($n->getStringValue()),
             'severity' => fn(ParseNode $n) => $o->setSeverity($n->getEnumValue(AlertSeverity::class)),
             'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(IncidentStatus::class)),
+            'systemTags' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setSystemTags($val);
+            },
             'tenantId' => fn(ParseNode $n) => $o->setTenantId($n->getStringValue()),
         ]);
     }
@@ -234,6 +255,20 @@ class Incident extends Entity implements Parsable
     }
 
     /**
+     * Gets the systemTags property value. The systemTags property
+     * @return array<string>|null
+    */
+    public function getSystemTags(): ?array {
+        $val = $this->getBackingStore()->get('systemTags');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'systemTags'");
+    }
+
+    /**
      * Gets the tenantId property value. The Azure Active Directory tenant in which the alert was created.
      * @return string|null
     */
@@ -257,6 +292,7 @@ class Incident extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('comments', $this->getComments());
         $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
         $writer->writeCollectionOfPrimitiveValues('customTags', $this->getCustomTags());
+        $writer->writeStringValue('description', $this->getDescription());
         $writer->writeEnumValue('determination', $this->getDetermination());
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeStringValue('incidentWebUrl', $this->getIncidentWebUrl());
@@ -265,6 +301,7 @@ class Incident extends Entity implements Parsable
         $writer->writeStringValue('redirectIncidentId', $this->getRedirectIncidentId());
         $writer->writeEnumValue('severity', $this->getSeverity());
         $writer->writeEnumValue('status', $this->getStatus());
+        $writer->writeCollectionOfPrimitiveValues('systemTags', $this->getSystemTags());
         $writer->writeStringValue('tenantId', $this->getTenantId());
     }
 
@@ -314,6 +351,14 @@ class Incident extends Entity implements Parsable
     */
     public function setCustomTags(?array $value): void {
         $this->getBackingStore()->set('customTags', $value);
+    }
+
+    /**
+     * Sets the description property value. The description property
+     * @param string|null $value Value to set for the description property.
+    */
+    public function setDescription(?string $value): void {
+        $this->getBackingStore()->set('description', $value);
     }
 
     /**
@@ -378,6 +423,14 @@ class Incident extends Entity implements Parsable
     */
     public function setStatus(?IncidentStatus $value): void {
         $this->getBackingStore()->set('status', $value);
+    }
+
+    /**
+     * Sets the systemTags property value. The systemTags property
+     * @param array<string>|null $value Value to set for the systemTags property.
+    */
+    public function setSystemTags(?array $value): void {
+        $this->getBackingStore()->set('systemTags', $value);
     }
 
     /**

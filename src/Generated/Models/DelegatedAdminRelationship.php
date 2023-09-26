@@ -24,6 +24,13 @@ class DelegatedAdminRelationship extends Entity implements Parsable
      * @return DelegatedAdminRelationship
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): DelegatedAdminRelationship {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.resellerDelegatedAdminRelationship': return new ResellerDelegatedAdminRelationship();
+            }
+        }
         return new DelegatedAdminRelationship();
     }
 

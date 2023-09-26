@@ -1555,7 +1555,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the registeredDevices property value. Devices that are registered for the user. Read-only. Nullable. Supports $expand.
+     * Gets the registeredDevices property value. Devices that are registered for the user. Read-only. Nullable. Supports $expand and returns up to 100 objects.
      * @return array<DirectoryObject>|null
     */
     public function getRegisteredDevices(): ?array {
@@ -2773,7 +2773,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the registeredDevices property value. Devices that are registered for the user. Read-only. Nullable. Supports $expand.
+     * Sets the registeredDevices property value. Devices that are registered for the user. Read-only. Nullable. Supports $expand and returns up to 100 objects.
      * @param array<DirectoryObject>|null $value Value to set for the registeredDevices property.
     */
     public function setRegisteredDevices(?array $value): void {

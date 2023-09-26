@@ -70,7 +70,7 @@ class OutlookCategoryItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the writable property, color, of the specified outlookCategory object. You cannot modify the displayName propertyonce you have created the category.
+     * Update the writable property, color, of the specified outlookCategory object. You can't modify the displayName propertyonce you have created the category.
      * @param OutlookCategory $body The request body
      * @param OutlookCategoryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -128,7 +128,7 @@ class OutlookCategoryItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the writable property, color, of the specified outlookCategory object. You cannot modify the displayName propertyonce you have created the category.
+     * Update the writable property, color, of the specified outlookCategory object. You can't modify the displayName propertyonce you have created the category.
      * @param OutlookCategory $body The request body
      * @param OutlookCategoryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

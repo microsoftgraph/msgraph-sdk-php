@@ -148,7 +148,7 @@ class HostSecurityState implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the os property value. Host Operating System. (For example, Windows10, MacOS, RHEL, etc.).
+     * Gets the os property value. Host Operating System. (For example, Windows 10, macOS, RHEL, etc.).
      * @return string|null
     */
     public function getOs(): ?string {
@@ -278,7 +278,7 @@ class HostSecurityState implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the os property value. Host Operating System. (For example, Windows10, MacOS, RHEL, etc.).
+     * Sets the os property value. Host Operating System. (For example, Windows 10, macOS, RHEL, etc.).
      * @param string|null $value Value to set for the os property.
     */
     public function setOs(?string $value): void {

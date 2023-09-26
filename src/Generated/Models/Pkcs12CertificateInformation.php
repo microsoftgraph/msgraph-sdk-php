@@ -71,7 +71,7 @@ class Pkcs12CertificateInformation implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Gets the isActive property value. Represents whether the certificate is the active certificate to be used for calling the API connector. The active certificate is the most recently uploaded certificate which is not yet expired but whose notBefore time is in the past.
+     * Gets the isActive property value. Represents whether the certificate is the active certificate to be used for calling the API connector. The active certificate is the most recently uploaded certificate that isn't yet expired but whose notBefore time is in the past.
      * @return bool|null
     */
     public function getIsActive(): ?bool {
@@ -160,7 +160,7 @@ class Pkcs12CertificateInformation implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Sets the isActive property value. Represents whether the certificate is the active certificate to be used for calling the API connector. The active certificate is the most recently uploaded certificate which is not yet expired but whose notBefore time is in the past.
+     * Sets the isActive property value. Represents whether the certificate is the active certificate to be used for calling the API connector. The active certificate is the most recently uploaded certificate that isn't yet expired but whose notBefore time is in the past.
      * @param bool|null $value Value to set for the isActive property.
     */
     public function setIsActive(?bool $value): void {

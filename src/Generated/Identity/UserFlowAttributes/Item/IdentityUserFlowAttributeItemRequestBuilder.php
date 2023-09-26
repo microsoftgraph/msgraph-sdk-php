@@ -32,7 +32,7 @@ class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an identityUserFlowAttribute. Only custom user flow attributes can be deleted.
+     * Delete a custom identityUserFlowAttribute.
      * @param IdentityUserFlowAttributeItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/identityuserflowattribute-delete?view=graph-rest-1.0 Find more info here
@@ -70,7 +70,7 @@ class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a identityUserFlowAttribute object. Only custom user flow attributes can be updated.
+     * Update the properties of a custom identityUserFlowAttribute object.
      * @param IdentityUserFlowAttribute $body The request body
      * @param IdentityUserFlowAttributeItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -90,7 +90,7 @@ class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an identityUserFlowAttribute. Only custom user flow attributes can be deleted.
+     * Delete a custom identityUserFlowAttribute.
      * @param IdentityUserFlowAttributeItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -128,7 +128,7 @@ class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a identityUserFlowAttribute object. Only custom user flow attributes can be updated.
+     * Update the properties of a custom identityUserFlowAttribute object.
      * @param IdentityUserFlowAttribute $body The request body
      * @param IdentityUserFlowAttributeItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
