@@ -55,7 +55,7 @@ class UnifiedRoleManagementPolicyAuthenticationContextRule extends UnifiedRoleMa
 
     /**
     * Gets the isEnabled
-    * Whether this rule is enabled.
+    * Determines whether this rule is enabled.
     *
     * @return bool|null The isEnabled
     */
@@ -70,7 +70,7 @@ class UnifiedRoleManagementPolicyAuthenticationContextRule extends UnifiedRoleMa
 
     /**
     * Sets the isEnabled
-    * Whether this rule is enabled.
+    * Determines whether this rule is enabled.
     *
     * @param bool $val The isEnabled
     *

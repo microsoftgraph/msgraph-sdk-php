@@ -26,7 +26,7 @@ class PlannerPlan extends Entity
 {
     /**
     * Gets the container
-    * Identifies the container of the plan. Specify only the url, the containerId and type, or all properties. After it is set, this property can’t be updated. Required.
+    * Identifies the container of the plan. Specify only the url, the containerId and type, or all properties. After it's set, this property can’t be updated. Required.
     *
     * @return PlannerPlanContainer|null The container
     */
@@ -45,7 +45,7 @@ class PlannerPlan extends Entity
 
     /**
     * Sets the container
-    * Identifies the container of the plan. Specify only the url, the containerId and type, or all properties. After it is set, this property can’t be updated. Required.
+    * Identifies the container of the plan. Specify only the url, the containerId and type, or all properties. After it's set, this property can’t be updated. Required.
     *
     * @param PlannerPlanContainer $val The container
     *
@@ -211,7 +211,7 @@ class PlannerPlan extends Entity
 
     /**
     * Gets the details
-    * Read-only. Nullable. Additional details about the plan.
+    * Read-only. Nullable. Extra details about the plan.
     *
     * @return PlannerPlanDetails|null The details
     */
@@ -230,7 +230,7 @@ class PlannerPlan extends Entity
 
     /**
     * Sets the details
-    * Read-only. Nullable. Additional details about the plan.
+    * Read-only. Nullable. Extra details about the plan.
     *
     * @param PlannerPlanDetails $val The details
     *

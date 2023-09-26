@@ -25,7 +25,7 @@ class Pkcs12CertificateInformation extends Entity
 {
     /**
     * Gets the isActive
-    * Represents whether the certificate is the active certificate to be used for calling the API connector. The active certificate is the most recently uploaded certificate which is not yet expired but whose notBefore time is in the past.
+    * Represents whether the certificate is the active certificate to be used for calling the API connector. The active certificate is the most recently uploaded certificate that isn't yet expired but whose notBefore time is in the past.
     *
     * @return bool|null The isActive
     */
@@ -40,7 +40,7 @@ class Pkcs12CertificateInformation extends Entity
 
     /**
     * Sets the isActive
-    * Represents whether the certificate is the active certificate to be used for calling the API connector. The active certificate is the most recently uploaded certificate which is not yet expired but whose notBefore time is in the past.
+    * Represents whether the certificate is the active certificate to be used for calling the API connector. The active certificate is the most recently uploaded certificate that isn't yet expired but whose notBefore time is in the past.
     *
     * @param bool $val The value of the isActive
     *

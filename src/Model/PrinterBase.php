@@ -121,7 +121,7 @@ class PrinterBase extends Entity
 
     /**
     * Gets the isAcceptingJobs
-    * Whether the printer/printerShare is currently accepting new print jobs.
+    * Specifies whether the printer/printerShare is currently accepting new print jobs.
     *
     * @return bool|null The isAcceptingJobs
     */
@@ -136,7 +136,7 @@ class PrinterBase extends Entity
 
     /**
     * Sets the isAcceptingJobs
-    * Whether the printer/printerShare is currently accepting new print jobs.
+    * Specifies whether the printer/printerShare is currently accepting new print jobs.
     *
     * @param bool $val The isAcceptingJobs
     *
