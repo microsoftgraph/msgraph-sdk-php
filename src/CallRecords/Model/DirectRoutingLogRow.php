@@ -25,7 +25,7 @@ class DirectRoutingLogRow extends \Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the calleeNumber
-    * Number of the user or bot who received the call. E.164 format, but may include additional data.
+    * Number of the user or bot who received the call. E.164 format, but may include other data.
     *
     * @return string|null The calleeNumber
     */
@@ -40,7 +40,7 @@ class DirectRoutingLogRow extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the calleeNumber
-    * Number of the user or bot who received the call. E.164 format, but may include additional data.
+    * Number of the user or bot who received the call. E.164 format, but may include other data.
     *
     * @param string $val The value of the calleeNumber
     *
@@ -81,7 +81,7 @@ class DirectRoutingLogRow extends \Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the callerNumber
-    * Number of the user or bot who made the call. E.164 format, but may include additional data.
+    * Number of the user or bot who made the call. E.164 format, but may include other data.
     *
     * @return string|null The callerNumber
     */
@@ -96,7 +96,7 @@ class DirectRoutingLogRow extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the callerNumber
-    * Number of the user or bot who made the call. E.164 format, but may include additional data.
+    * Number of the user or bot who made the call. E.164 format, but may include other data.
     *
     * @param string $val The value of the callerNumber
     *
@@ -259,7 +259,7 @@ class DirectRoutingLogRow extends \Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the finalSipCode
-    * The code with which the call ended, RFC 3261.
+    * The code with which the call ended, see RFC 3261.
     *
     * @return int|null The finalSipCode
     */
@@ -274,7 +274,7 @@ class DirectRoutingLogRow extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the finalSipCode
-    * The code with which the call ended, RFC 3261.
+    * The code with which the call ended, see RFC 3261.
     *
     * @param int $val The value of the finalSipCode
     *
@@ -404,7 +404,7 @@ class DirectRoutingLogRow extends \Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the mediaPathLocation
-    * The datacenter used for media path in non-bypass call.
+    * The datacenter used for media path in nonbypass call.
     *
     * @return string|null The mediaPathLocation
     */
@@ -419,7 +419,7 @@ class DirectRoutingLogRow extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the mediaPathLocation
-    * The datacenter used for media path in non-bypass call.
+    * The datacenter used for media path in nonbypass call.
     *
     * @param string $val The value of the mediaPathLocation
     *
@@ -432,7 +432,7 @@ class DirectRoutingLogRow extends \Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the signalingLocation
-    * The datacenter used for signaling for both bypass and non-bypass calls.
+    * The datacenter used for signaling for both bypass and nonbypass calls.
     *
     * @return string|null The signalingLocation
     */
@@ -447,7 +447,7 @@ class DirectRoutingLogRow extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the signalingLocation
-    * The datacenter used for signaling for both bypass and non-bypass calls.
+    * The datacenter used for signaling for both bypass and nonbypass calls.
     *
     * @param string $val The value of the signalingLocation
     *

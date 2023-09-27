@@ -27,7 +27,7 @@ class Connectivity extends \Beta\Microsoft\Graph\Model\Entity
 
      /**
      * Gets the branches
-    * Branch represent locations for connectivity.
+    * Branches represent locations for connectivity.
      *
      * @return array|null The branches
      */
@@ -42,7 +42,7 @@ class Connectivity extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the branches
-    * Branch represent locations for connectivity.
+    * Branches represent locations for connectivity.
     *
     * @param BranchSite[] $val The branches
     *

@@ -26,6 +26,7 @@ class HostSslCertificatePort extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the firstSeenDateTime
+    * The first date and time that this port was observed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The firstSeenDateTime
     */
@@ -44,6 +45,7 @@ class HostSslCertificatePort extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the firstSeenDateTime
+    * The first date and time that this port was observed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The value to assign to the firstSeenDateTime
     *
@@ -57,6 +59,7 @@ class HostSslCertificatePort extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the lastSeenDateTime
+    * The most recent date and time that this port was observed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The lastSeenDateTime
     */
@@ -75,6 +78,7 @@ class HostSslCertificatePort extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the lastSeenDateTime
+    * The most recent date and time that this port was observed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The value to assign to the lastSeenDateTime
     *
@@ -87,6 +91,7 @@ class HostSslCertificatePort extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the port
+    * The port number.
     *
     * @return int|null The port
     */
@@ -101,6 +106,7 @@ class HostSslCertificatePort extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the port
+    * The port number.
     *
     * @param int $val The value of the port
     *

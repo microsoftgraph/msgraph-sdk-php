@@ -55,7 +55,7 @@ class AppScope extends Entity
 
     /**
     * Gets the type
-    * Describes the type of app-specific resource represented by the app scope. Provided for display purposes, so a user interface can convey to the user the kind of app specific resource represented by the app scope. Read-only.
+    * Describes the type of app-specific resource represented by the app scope and is provided for display purposes, so a user interface can convey to the user the kind of app specific resource represented by the app scope. Read-only.
     *
     * @return string|null The type
     */
@@ -70,7 +70,7 @@ class AppScope extends Entity
 
     /**
     * Sets the type
-    * Describes the type of app-specific resource represented by the app scope. Provided for display purposes, so a user interface can convey to the user the kind of app specific resource represented by the app scope. Read-only.
+    * Describes the type of app-specific resource represented by the app scope and is provided for display purposes, so a user interface can convey to the user the kind of app specific resource represented by the app scope. Read-only.
     *
     * @param string $val The type
     *

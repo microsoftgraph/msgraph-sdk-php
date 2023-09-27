@@ -161,7 +161,7 @@ class HostSecurityState extends Entity
     }
     /**
     * Gets the os
-    * Host Operating System. (For example, Windows10, MacOS, RHEL, etc.).
+    * Host Operating System. (For example, Windows 10, macOS, RHEL, etc.).
     *
     * @return string|null The os
     */
@@ -176,7 +176,7 @@ class HostSecurityState extends Entity
 
     /**
     * Sets the os
-    * Host Operating System. (For example, Windows10, MacOS, RHEL, etc.).
+    * Host Operating System. (For example, Windows 10, macOS, RHEL, etc.).
     *
     * @param string $val The value of the os
     *

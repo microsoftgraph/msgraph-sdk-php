@@ -26,6 +26,7 @@ class WorkbookDocumentTaskChange extends Entity
 {
     /**
     * Gets the assignee
+    * The user identity the task is assigned to. Only present when the type property is assign. Nullable.
     *
     * @return WorkbookEmailIdentity|null The assignee
     */
@@ -44,6 +45,7 @@ class WorkbookDocumentTaskChange extends Entity
 
     /**
     * Sets the assignee
+    * The user identity the task is assigned to. Only present when the type property is assign. Nullable.
     *
     * @param WorkbookEmailIdentity $val The assignee
     *
@@ -57,6 +59,7 @@ class WorkbookDocumentTaskChange extends Entity
 
     /**
     * Gets the changedBy
+    * The identity of the user who performs the change.
     *
     * @return WorkbookEmailIdentity|null The changedBy
     */
@@ -75,6 +78,7 @@ class WorkbookDocumentTaskChange extends Entity
 
     /**
     * Sets the changedBy
+    * The identity of the user who performs the change.
     *
     * @param WorkbookEmailIdentity $val The changedBy
     *
@@ -88,6 +92,7 @@ class WorkbookDocumentTaskChange extends Entity
 
     /**
     * Gets the commentId
+    * The identifier of the associated comment.
     *
     * @return string|null The commentId
     */
@@ -102,6 +107,7 @@ class WorkbookDocumentTaskChange extends Entity
 
     /**
     * Sets the commentId
+    * The identifier of the associated comment.
     *
     * @param string $val The commentId
     *
@@ -115,6 +121,7 @@ class WorkbookDocumentTaskChange extends Entity
 
     /**
     * Gets the createdDateTime
+    * Date and time when the task was changed. Nullable. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -133,6 +140,7 @@ class WorkbookDocumentTaskChange extends Entity
 
     /**
     * Sets the createdDateTime
+    * Date and time when the task was changed. Nullable. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -146,6 +154,7 @@ class WorkbookDocumentTaskChange extends Entity
 
     /**
     * Gets the dueDateTime
+    * The due date and time for the task. Only present when the type property is setSchedule. Nullable. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The dueDateTime
     */
@@ -164,6 +173,7 @@ class WorkbookDocumentTaskChange extends Entity
 
     /**
     * Sets the dueDateTime
+    * The due date and time for the task. Only present when the type property is setSchedule. Nullable. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The dueDateTime
     *
@@ -177,6 +187,7 @@ class WorkbookDocumentTaskChange extends Entity
 
     /**
     * Gets the percentComplete
+    * An integer value from 0 to 100 that represents the percentage of the completion of the task and associated comment. 100 means that the task and associated comment are completed. If you change the completion from 100 to a lower value, the associated task and comment are reactivated. Only present when the type property is setPercentComplete. Nullable.
     *
     * @return int|null The percentComplete
     */
@@ -191,6 +202,7 @@ class WorkbookDocumentTaskChange extends Entity
 
     /**
     * Sets the percentComplete
+    * An integer value from 0 to 100 that represents the percentage of the completion of the task and associated comment. 100 means that the task and associated comment are completed. If you change the completion from 100 to a lower value, the associated task and comment are reactivated. Only present when the type property is setPercentComplete. Nullable.
     *
     * @param int $val The percentComplete
     *
@@ -204,6 +216,7 @@ class WorkbookDocumentTaskChange extends Entity
 
     /**
     * Gets the priority
+    * An integer value from 0 to 10 that represents the priority of the task. A lower value indicates a higher priority. 5 indicates the default priority if not set. Only present when the type property is setPriority. Nullable.
     *
     * @return int|null The priority
     */
@@ -218,6 +231,7 @@ class WorkbookDocumentTaskChange extends Entity
 
     /**
     * Sets the priority
+    * An integer value from 0 to 10 that represents the priority of the task. A lower value indicates a higher priority. 5 indicates the default priority if not set. Only present when the type property is setPriority. Nullable.
     *
     * @param int $val The priority
     *
@@ -231,6 +245,7 @@ class WorkbookDocumentTaskChange extends Entity
 
     /**
     * Gets the startDateTime
+    * The start date and time for the task. Only present when the type property is setSchedule. Nullable. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The startDateTime
     */
@@ -249,6 +264,7 @@ class WorkbookDocumentTaskChange extends Entity
 
     /**
     * Sets the startDateTime
+    * The start date and time for the task. Only present when the type property is setSchedule. Nullable. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The startDateTime
     *
@@ -262,6 +278,7 @@ class WorkbookDocumentTaskChange extends Entity
 
     /**
     * Gets the title
+    * The title of the task. Only present when the type property is setTitle. Nullable.
     *
     * @return string|null The title
     */
@@ -276,6 +293,7 @@ class WorkbookDocumentTaskChange extends Entity
 
     /**
     * Sets the title
+    * The title of the task. Only present when the type property is setTitle. Nullable.
     *
     * @param string $val The title
     *
@@ -289,6 +307,7 @@ class WorkbookDocumentTaskChange extends Entity
 
     /**
     * Gets the type
+    * The type of the change history. Possible values are: create, assign, unassign, unassignAll, setPriority, setTitle, setPercentComplete, setSchedule, remove, restore, undo.
     *
     * @return string|null The type
     */
@@ -303,6 +322,7 @@ class WorkbookDocumentTaskChange extends Entity
 
     /**
     * Sets the type
+    * The type of the change history. Possible values are: create, assign, unassign, unassignAll, setPriority, setTitle, setPercentComplete, setSchedule, remove, restore, undo.
     *
     * @param string $val The type
     *
@@ -316,6 +336,7 @@ class WorkbookDocumentTaskChange extends Entity
 
     /**
     * Gets the undoChangeId
+    * The ID of the workbookDocumentTaskChange that was undone for the undo change action. Only exists on an undo change history. Nullable.
     *
     * @return string|null The undoChangeId
     */
@@ -330,6 +351,7 @@ class WorkbookDocumentTaskChange extends Entity
 
     /**
     * Sets the undoChangeId
+    * The ID of the workbookDocumentTaskChange that was undone for the undo change action. Only exists on an undo change history. Nullable.
     *
     * @param string $val The undoChangeId
     *

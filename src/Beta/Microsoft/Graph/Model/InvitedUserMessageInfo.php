@@ -26,7 +26,7 @@ class InvitedUserMessageInfo extends Entity
 
     /**
     * Gets the ccRecipients
-    * Additional recipients the invitation message should be sent to. Currently only 1 additional recipient is supported.
+    * Additional recipients the invitation message should be sent to. Currently only one additional recipient is supported.
     *
     * @return Recipient|null The ccRecipients
     */
@@ -45,7 +45,7 @@ class InvitedUserMessageInfo extends Entity
 
     /**
     * Sets the ccRecipients
-    * Additional recipients the invitation message should be sent to. Currently only 1 additional recipient is supported.
+    * Additional recipients the invitation message should be sent to. Currently only one additional recipient is supported.
     *
     * @param Recipient $val The value to assign to the ccRecipients
     *

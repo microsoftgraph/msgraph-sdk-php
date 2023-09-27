@@ -26,7 +26,7 @@ class ActionStep extends Entity
 
     /**
     * Gets the actionUrl
-    * A link to the documentation or Azure portal page that is associated with the action step.
+    * A link to the documentation or Microsoft Entra admin center page that is associated with the action step.
     *
     * @return ActionUrl|null The actionUrl
     */
@@ -45,7 +45,7 @@ class ActionStep extends Entity
 
     /**
     * Sets the actionUrl
-    * A link to the documentation or Azure portal page that is associated with the action step.
+    * A link to the documentation or Microsoft Entra admin center page that is associated with the action step.
     *
     * @param ActionUrl $val The value to assign to the actionUrl
     *

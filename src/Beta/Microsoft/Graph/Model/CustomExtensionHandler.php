@@ -59,7 +59,7 @@ class CustomExtensionHandler extends Entity
 
     /**
     * Gets the customExtension
-    * Indicates which custom workflow extension will be executed at this stage. Nullable. Supports $expand.
+    * Indicates which custom workflow extension is executed at this stage. Nullable. Supports $expand.
     *
     * @return CustomAccessPackageWorkflowExtension|null The customExtension
     */
@@ -78,7 +78,7 @@ class CustomExtensionHandler extends Entity
 
     /**
     * Sets the customExtension
-    * Indicates which custom workflow extension will be executed at this stage. Nullable. Supports $expand.
+    * Indicates which custom workflow extension is executed at this stage. Nullable. Supports $expand.
     *
     * @param CustomAccessPackageWorkflowExtension $val The customExtension
     *

@@ -1354,6 +1354,36 @@ class DeviceManagement extends Entity
 
 
      /**
+     * Gets the userExperienceAnalyticsDeviceStartupProcessPerformance
+    * User experience analytics device Startup Process Performance
+     *
+     * @return array|null The userExperienceAnalyticsDeviceStartupProcessPerformance
+     */
+    public function getUserExperienceAnalyticsDeviceStartupProcessPerformance()
+    {
+        if (array_key_exists("userExperienceAnalyticsDeviceStartupProcessPerformance", $this->_propDict)) {
+           return $this->_propDict["userExperienceAnalyticsDeviceStartupProcessPerformance"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the userExperienceAnalyticsDeviceStartupProcessPerformance
+    * User experience analytics device Startup Process Performance
+    *
+    * @param UserExperienceAnalyticsDeviceStartupProcessPerformance[] $val The userExperienceAnalyticsDeviceStartupProcessPerformance
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsDeviceStartupProcessPerformance($val)
+    {
+        $this->_propDict["userExperienceAnalyticsDeviceStartupProcessPerformance"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the userExperienceAnalyticsMetricHistory
     * User experience analytics metric history
      *

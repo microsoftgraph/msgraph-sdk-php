@@ -26,7 +26,7 @@ class Attendee extends AttendeeBase
 
     /**
     * Gets the proposedNewTime
-    * An alternate date/time proposed by the attendee for a meeting request to start and end. If the attendee hasn't proposed another time, then this property is not included in a response of a GET event.
+    * An alternate date/time proposed by the attendee for a meeting request to start and end. If the attendee hasn't proposed another time, then this property isn't included in a response of a GET event.
     *
     * @return TimeSlot|null The proposedNewTime
     */
@@ -45,7 +45,7 @@ class Attendee extends AttendeeBase
 
     /**
     * Sets the proposedNewTime
-    * An alternate date/time proposed by the attendee for a meeting request to start and end. If the attendee hasn't proposed another time, then this property is not included in a response of a GET event.
+    * An alternate date/time proposed by the attendee for a meeting request to start and end. If the attendee hasn't proposed another time, then this property isn't included in a response of a GET event.
     *
     * @param TimeSlot $val The value to assign to the proposedNewTime
     *

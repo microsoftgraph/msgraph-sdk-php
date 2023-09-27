@@ -87,6 +87,37 @@ class X509CertificateAuthenticationMethodConfiguration extends AuthenticationMet
         return $this;
     }
 
+    /**
+    * Gets the issuerHintsConfiguration
+    *
+    * @return X509CertificateIssuerHintsConfiguration|null The issuerHintsConfiguration
+    */
+    public function getIssuerHintsConfiguration()
+    {
+        if (array_key_exists("issuerHintsConfiguration", $this->_propDict)) {
+            if (is_a($this->_propDict["issuerHintsConfiguration"], "\Beta\Microsoft\Graph\Model\X509CertificateIssuerHintsConfiguration") || is_null($this->_propDict["issuerHintsConfiguration"])) {
+                return $this->_propDict["issuerHintsConfiguration"];
+            } else {
+                $this->_propDict["issuerHintsConfiguration"] = new X509CertificateIssuerHintsConfiguration($this->_propDict["issuerHintsConfiguration"]);
+                return $this->_propDict["issuerHintsConfiguration"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the issuerHintsConfiguration
+    *
+    * @param X509CertificateIssuerHintsConfiguration $val The issuerHintsConfiguration
+    *
+    * @return X509CertificateAuthenticationMethodConfiguration
+    */
+    public function setIssuerHintsConfiguration($val)
+    {
+        $this->_propDict["issuerHintsConfiguration"] = $val;
+        return $this;
+    }
+
 
      /**
      * Gets the includeTargets

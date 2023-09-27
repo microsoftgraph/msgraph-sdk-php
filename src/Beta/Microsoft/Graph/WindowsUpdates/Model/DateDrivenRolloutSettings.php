@@ -26,7 +26,7 @@ class DateDrivenRolloutSettings extends GradualRolloutSettings
 
     /**
     * Gets the endDateTime
-    * Specifies the date before which all devices currently in the deployment are offered the update. Devices added after this date are offered immediately. When the endDateTime is not set, all devices in the deployment are offered content at the same time.
+    * Specifies the date before which all devices currently in the deployment are offered the update. Devices added after this date are offered immediately. When the endDateTime isn't set, all devices in the deployment are offered content at the same time.
     *
     * @return \DateTime|null The endDateTime
     */
@@ -45,7 +45,7 @@ class DateDrivenRolloutSettings extends GradualRolloutSettings
 
     /**
     * Sets the endDateTime
-    * Specifies the date before which all devices currently in the deployment are offered the update. Devices added after this date are offered immediately. When the endDateTime is not set, all devices in the deployment are offered content at the same time.
+    * Specifies the date before which all devices currently in the deployment are offered the update. Devices added after this date are offered immediately. When the endDateTime isn't set, all devices in the deployment are offered content at the same time.
     *
     * @param \DateTime $val The value to assign to the endDateTime
     *

@@ -26,7 +26,7 @@ class Endpoint extends DirectoryObject
 {
     /**
     * Gets the capability
-    * Describes the capability that is associated with this resource. (e.g. Messages, Conversations, etc.) Not nullable. Read-only.
+    * Describes the capability that is associated with this resource. (for example, Messages, Conversations, etc.) Not nullable. Read-only.
     *
     * @return string|null The capability
     */
@@ -41,7 +41,7 @@ class Endpoint extends DirectoryObject
 
     /**
     * Sets the capability
-    * Describes the capability that is associated with this resource. (e.g. Messages, Conversations, etc.) Not nullable. Read-only.
+    * Describes the capability that is associated with this resource. (for example, Messages, Conversations, etc.) Not nullable. Read-only.
     *
     * @param string $val The capability
     *
@@ -113,7 +113,7 @@ class Endpoint extends DirectoryObject
 
     /**
     * Gets the providerResourceId
-    * For Microsoft 365 groups, this is set to a well-known name for the resource (e.g. Yammer.FeedURL etc.). Not nullable. Read-only.
+    * For Microsoft 365 groups, this is set to a well-known name for the resource (for example, Yammer.FeedURL etc.). Not nullable. Read-only.
     *
     * @return string|null The providerResourceId
     */
@@ -128,7 +128,7 @@ class Endpoint extends DirectoryObject
 
     /**
     * Sets the providerResourceId
-    * For Microsoft 365 groups, this is set to a well-known name for the resource (e.g. Yammer.FeedURL etc.). Not nullable. Read-only.
+    * For Microsoft 365 groups, this is set to a well-known name for the resource (for example, Yammer.FeedURL etc.). Not nullable. Read-only.
     *
     * @param string $val The providerResourceId
     *

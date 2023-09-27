@@ -27,6 +27,7 @@ class VirtualEventSession extends OnlineMeeting
 
      /**
      * Gets the registrations
+    * Registration records of this virtual event session.
      *
      * @return array|null The registrations
      */
@@ -41,6 +42,7 @@ class VirtualEventSession extends OnlineMeeting
 
     /**
     * Sets the registrations
+    * Registration records of this virtual event session.
     *
     * @param VirtualEventRegistration[] $val The registrations
     *

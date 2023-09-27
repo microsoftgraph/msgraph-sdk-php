@@ -25,7 +25,7 @@ class TrustFrameworkKey extends Entity
 {
     /**
     * Gets the d
-    * RSA Key - private exponent. Field cannot be read back.
+    * RSA Key - private exponent. Field can't be read back.
     *
     * @return string|null The d
     */
@@ -40,7 +40,7 @@ class TrustFrameworkKey extends Entity
 
     /**
     * Sets the d
-    * RSA Key - private exponent. Field cannot be read back.
+    * RSA Key - private exponent. Field can't be read back.
     *
     * @param string $val The value of the d
     *
@@ -53,7 +53,7 @@ class TrustFrameworkKey extends Entity
     }
     /**
     * Gets the dp
-    * RSA Key - first exponent. Field cannot be read back.
+    * RSA Key - first exponent. Field can't be read back.
     *
     * @return string|null The dp
     */
@@ -68,7 +68,7 @@ class TrustFrameworkKey extends Entity
 
     /**
     * Sets the dp
-    * RSA Key - first exponent. Field cannot be read back.
+    * RSA Key - first exponent. Field can't be read back.
     *
     * @param string $val The value of the dp
     *
@@ -81,7 +81,7 @@ class TrustFrameworkKey extends Entity
     }
     /**
     * Gets the dq
-    * RSA Key - second exponent. Field cannot be read back.
+    * RSA Key - second exponent. Field can't be read back.
     *
     * @return string|null The dq
     */
@@ -96,7 +96,7 @@ class TrustFrameworkKey extends Entity
 
     /**
     * Sets the dq
-    * RSA Key - second exponent. Field cannot be read back.
+    * RSA Key - second exponent. Field can't be read back.
     *
     * @param string $val The value of the dq
     *
@@ -165,7 +165,7 @@ class TrustFrameworkKey extends Entity
     }
     /**
     * Gets the k
-    * Symmetric Key for oct key type. Field cannot be read back.
+    * Symmetric Key for oct key type. Field can't be read back.
     *
     * @return string|null The k
     */
@@ -180,7 +180,7 @@ class TrustFrameworkKey extends Entity
 
     /**
     * Sets the k
-    * Symmetric Key for oct key type. Field cannot be read back.
+    * Symmetric Key for oct key type. Field can't be read back.
     *
     * @param string $val The value of the k
     *
@@ -305,7 +305,7 @@ class TrustFrameworkKey extends Entity
     }
     /**
     * Gets the p
-    * RSA Key - first prime. Field cannot be read back.
+    * RSA Key - first prime. Field can't be read back.
     *
     * @return string|null The p
     */
@@ -320,7 +320,7 @@ class TrustFrameworkKey extends Entity
 
     /**
     * Sets the p
-    * RSA Key - first prime. Field cannot be read back.
+    * RSA Key - first prime. Field can't be read back.
     *
     * @param string $val The value of the p
     *
@@ -333,7 +333,7 @@ class TrustFrameworkKey extends Entity
     }
     /**
     * Gets the q
-    * RSA Key - second prime. Field cannot be read back.
+    * RSA Key - second prime. Field can't be read back.
     *
     * @return string|null The q
     */
@@ -348,7 +348,7 @@ class TrustFrameworkKey extends Entity
 
     /**
     * Sets the q
-    * RSA Key - second prime. Field cannot be read back.
+    * RSA Key - second prime. Field can't be read back.
     *
     * @param string $val The value of the q
     *
@@ -361,7 +361,7 @@ class TrustFrameworkKey extends Entity
     }
     /**
     * Gets the qi
-    * RSA Key - Coefficient. Field cannot be read back.
+    * RSA Key - Coefficient. Field can't be read back.
     *
     * @return string|null The qi
     */
@@ -376,7 +376,7 @@ class TrustFrameworkKey extends Entity
 
     /**
     * Sets the qi
-    * RSA Key - Coefficient. Field cannot be read back.
+    * RSA Key - Coefficient. Field can't be read back.
     *
     * @param string $val The value of the qi
     *
@@ -445,7 +445,7 @@ class TrustFrameworkKey extends Entity
     }
     /**
     * Gets the x5t
-    * The x5t (X.509 certificate SHA-1 thumbprint) parameter is a base64url-encoded SHA-1 thumbprint (a.k.a. digest) of the DER encoding of an X.509 certificate RFC 5280.
+    * The x5t (X.509 certificate SHA-1 thumbprint) parameter is a base64url-encoded SHA-1 thumbprint (also known as digest) of the DER encoding of an X.509 certificate RFC 5280.
     *
     * @return string|null The x5t
     */
@@ -460,7 +460,7 @@ class TrustFrameworkKey extends Entity
 
     /**
     * Sets the x5t
-    * The x5t (X.509 certificate SHA-1 thumbprint) parameter is a base64url-encoded SHA-1 thumbprint (a.k.a. digest) of the DER encoding of an X.509 certificate RFC 5280.
+    * The x5t (X.509 certificate SHA-1 thumbprint) parameter is a base64url-encoded SHA-1 thumbprint (also known as digest) of the DER encoding of an X.509 certificate RFC 5280.
     *
     * @param string $val The value of the x5t
     *

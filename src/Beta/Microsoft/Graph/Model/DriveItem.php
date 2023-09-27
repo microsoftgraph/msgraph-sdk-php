@@ -125,7 +125,7 @@ class DriveItem extends BaseItem
 
     /**
     * Gets the cTag
-    * An eTag for the content of the item. This eTag is not changed if only the metadata is changed. Note This property is not returned if the item is a folder. Read-only.
+    * An eTag for the content of the item. This eTag isn't changed if only the metadata is changed. Note This property isn't returned if the item is a folder. Read-only.
     *
     * @return string|null The cTag
     */
@@ -140,7 +140,7 @@ class DriveItem extends BaseItem
 
     /**
     * Sets the cTag
-    * An eTag for the content of the item. This eTag is not changed if only the metadata is changed. Note This property is not returned if the item is a folder. Read-only.
+    * An eTag for the content of the item. This eTag isn't changed if only the metadata is changed. Note This property isn't returned if the item is a folder. Read-only.
     *
     * @param string $val The cTag
     *
@@ -517,7 +517,7 @@ class DriveItem extends BaseItem
 
     /**
     * Gets the publication
-    * Provides information about the published or checked-out state of an item, in locations that support such actions. This property is not returned by default. Read-only.
+    * Provides information about the published or checked-out state of an item, in locations that support such actions. This property isn't returned by default. Read-only.
     *
     * @return PublicationFacet|null The publication
     */
@@ -536,7 +536,7 @@ class DriveItem extends BaseItem
 
     /**
     * Sets the publication
-    * Provides information about the published or checked-out state of an item, in locations that support such actions. This property is not returned by default. Read-only.
+    * Provides information about the published or checked-out state of an item, in locations that support such actions. This property isn't returned by default. Read-only.
     *
     * @param PublicationFacet $val The publication
     *
@@ -872,7 +872,7 @@ class DriveItem extends BaseItem
 
     /**
     * Gets the workbook
-    * For files that are Excel spreadsheets, accesses the workbook API to work with the spreadsheet's contents. Nullable.
+    * For files that are Excel spreadsheets, access to the workbook API to work with the spreadsheet's contents. Nullable.
     *
     * @return Workbook|null The workbook
     */
@@ -891,7 +891,7 @@ class DriveItem extends BaseItem
 
     /**
     * Sets the workbook
-    * For files that are Excel spreadsheets, accesses the workbook API to work with the spreadsheet's contents. Nullable.
+    * For files that are Excel spreadsheets, access to the workbook API to work with the spreadsheet's contents. Nullable.
     *
     * @param Workbook $val The workbook
     *
@@ -1061,6 +1061,7 @@ class DriveItem extends BaseItem
 
     /**
     * Gets the retentionLabel
+    * Information about retention label and settings enforced on the driveItem. Read-write.
     *
     * @return ItemRetentionLabel|null The retentionLabel
     */
@@ -1079,6 +1080,7 @@ class DriveItem extends BaseItem
 
     /**
     * Sets the retentionLabel
+    * Information about retention label and settings enforced on the driveItem. Read-write.
     *
     * @param ItemRetentionLabel $val The retentionLabel
     *

@@ -26,6 +26,7 @@ class VirtualEventRegistrationConfiguration extends Entity
 {
     /**
     * Gets the capacity
+    * Total capacity of the virtual event.
     *
     * @return int|null The capacity
     */
@@ -40,6 +41,7 @@ class VirtualEventRegistrationConfiguration extends Entity
 
     /**
     * Sets the capacity
+    * Total capacity of the virtual event.
     *
     * @param int $val The capacity
     *
@@ -53,6 +55,7 @@ class VirtualEventRegistrationConfiguration extends Entity
 
     /**
     * Gets the registrationWebUrl
+    * Registration URL of the virtual event.
     *
     * @return string|null The registrationWebUrl
     */
@@ -67,6 +70,7 @@ class VirtualEventRegistrationConfiguration extends Entity
 
     /**
     * Sets the registrationWebUrl
+    * Registration URL of the virtual event.
     *
     * @param string $val The registrationWebUrl
     *
@@ -81,6 +85,7 @@ class VirtualEventRegistrationConfiguration extends Entity
 
      /**
      * Gets the questions
+    * Registration questions.
      *
      * @return array|null The questions
      */
@@ -95,6 +100,7 @@ class VirtualEventRegistrationConfiguration extends Entity
 
     /**
     * Sets the questions
+    * Registration questions.
     *
     * @param VirtualEventRegistrationQuestion[] $val The questions
     *

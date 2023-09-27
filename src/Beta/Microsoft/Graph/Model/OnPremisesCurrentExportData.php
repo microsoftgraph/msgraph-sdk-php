@@ -25,7 +25,7 @@ class OnPremisesCurrentExportData extends Entity
 {
     /**
     * Gets the clientMachineName
-    * The name of the onPremises client machine which ran the last export.
+    * The name of the onPremises client machine that ran the last export.
     *
     * @return string|null The clientMachineName
     */
@@ -40,7 +40,7 @@ class OnPremisesCurrentExportData extends Entity
 
     /**
     * Sets the clientMachineName
-    * The name of the onPremises client machine which ran the last export.
+    * The name of the onPremises client machine that ran the last export.
     *
     * @param string $val The value of the clientMachineName
     *
@@ -137,7 +137,7 @@ class OnPremisesCurrentExportData extends Entity
     }
     /**
     * Gets the serviceAccount
-    * The name of the dirsync service account which is configured to connect to the directory.
+    * The name of the dirsync service account that is configured to connect to the directory.
     *
     * @return string|null The serviceAccount
     */
@@ -152,7 +152,7 @@ class OnPremisesCurrentExportData extends Entity
 
     /**
     * Sets the serviceAccount
-    * The name of the dirsync service account which is configured to connect to the directory.
+    * The name of the dirsync service account that is configured to connect to the directory.
     *
     * @param string $val The value of the serviceAccount
     *
@@ -193,7 +193,7 @@ class OnPremisesCurrentExportData extends Entity
     }
     /**
     * Gets the successfulObjectsProvisioningCount
-    * The count of objects which were successfully provisioned during the current directory sync export run.
+    * The count of objects that were successfully provisioned during the current directory sync export run.
     *
     * @return int|null The successfulObjectsProvisioningCount
     */
@@ -208,7 +208,7 @@ class OnPremisesCurrentExportData extends Entity
 
     /**
     * Sets the successfulObjectsProvisioningCount
-    * The count of objects which were successfully provisioned during the current directory sync export run.
+    * The count of objects that were successfully provisioned during the current directory sync export run.
     *
     * @param int $val The value of the successfulObjectsProvisioningCount
     *

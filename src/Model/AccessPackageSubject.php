@@ -84,7 +84,7 @@ class AccessPackageSubject extends Entity
 
     /**
     * Gets the objectId
-    * The object identifier of the subject. null if the subject is not yet a user in the tenant.
+    * The object identifier of the subject. null if the subject isn't yet a user in the tenant.
     *
     * @return string|null The objectId
     */
@@ -99,7 +99,7 @@ class AccessPackageSubject extends Entity
 
     /**
     * Sets the objectId
-    * The object identifier of the subject. null if the subject is not yet a user in the tenant.
+    * The object identifier of the subject. null if the subject isn't yet a user in the tenant.
     *
     * @param string $val The objectId
     *
@@ -113,7 +113,7 @@ class AccessPackageSubject extends Entity
 
     /**
     * Gets the onPremisesSecurityIdentifier
-    * A string representation of the principal's security identifier, if known, or null if the subject does not have a security identifier.
+    * A string representation of the principal's security identifier, if known, or null if the subject doesn't have a security identifier.
     *
     * @return string|null The onPremisesSecurityIdentifier
     */
@@ -128,7 +128,7 @@ class AccessPackageSubject extends Entity
 
     /**
     * Sets the onPremisesSecurityIdentifier
-    * A string representation of the principal's security identifier, if known, or null if the subject does not have a security identifier.
+    * A string representation of the principal's security identifier, if known, or null if the subject doesn't have a security identifier.
     *
     * @param string $val The onPremisesSecurityIdentifier
     *

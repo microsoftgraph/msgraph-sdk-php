@@ -25,7 +25,7 @@ class OnPremisesPublishing extends Entity
 {
     /**
     * Gets the alternateUrl
-    * If you are configuring a traffic manager in front of multiple App Proxy applications, the alternateUrl is the user-friendly URL that will point to the traffic manager.
+    * If you're configuring a traffic manager in front of multiple App Proxy applications, the alternateUrl is the user-friendly URL that points to the traffic manager.
     *
     * @return string|null The alternateUrl
     */
@@ -40,7 +40,7 @@ class OnPremisesPublishing extends Entity
 
     /**
     * Sets the alternateUrl
-    * If you are configuring a traffic manager in front of multiple App Proxy applications, the alternateUrl is the user-friendly URL that will point to the traffic manager.
+    * If you're configuring a traffic manager in front of multiple App Proxy applications, the alternateUrl is the user-friendly URL that points to the traffic manager.
     *
     * @param string $val The value of the alternateUrl
     *
@@ -53,7 +53,7 @@ class OnPremisesPublishing extends Entity
     }
     /**
     * Gets the applicationServerTimeout
-    * The duration the connector will wait for a response from the backend application before closing the connection. Possible values are default, long. When set to default, the backend application timeout has a length of 85 seconds. When set to long, the backend timeout is increased to 180 seconds. Use long if your server takes more than 85 seconds to respond to requests or if you are unable to access the application and the error status is 'Backend Timeout'. Default value is default.
+    * The duration the connector waits for a response from the backend application before closing the connection. Possible values are default, long. When set to default, the backend application timeout has a length of 85 seconds. When set to long, the backend timeout is increased to 180 seconds. Use long if your server takes more than 85 seconds to respond to requests or if you are unable to access the application and the error status is 'Backend Timeout'. Default value is default.
     *
     * @return string|null The applicationServerTimeout
     */
@@ -68,7 +68,7 @@ class OnPremisesPublishing extends Entity
 
     /**
     * Sets the applicationServerTimeout
-    * The duration the connector will wait for a response from the backend application before closing the connection. Possible values are default, long. When set to default, the backend application timeout has a length of 85 seconds. When set to long, the backend timeout is increased to 180 seconds. Use long if your server takes more than 85 seconds to respond to requests or if you are unable to access the application and the error status is 'Backend Timeout'. Default value is default.
+    * The duration the connector waits for a response from the backend application before closing the connection. Possible values are default, long. When set to default, the backend application timeout has a length of 85 seconds. When set to long, the backend timeout is increased to 180 seconds. Use long if your server takes more than 85 seconds to respond to requests or if you are unable to access the application and the error status is 'Backend Timeout'. Default value is default.
     *
     * @param string $val The value of the applicationServerTimeout
     *
@@ -110,7 +110,7 @@ class OnPremisesPublishing extends Entity
 
     /**
     * Gets the externalAuthenticationType
-    * Details the pre-authentication setting for the application. Pre-authentication enforces that users must authenticate before accessing the app. Passthru does not require authentication. Possible values are: passthru, aadPreAuthentication.
+    * Details the pre-authentication setting for the application. Pre-authentication enforces that users must authenticate before accessing the app. Pass through doesn't require authentication. Possible values are: passthru, aadPreAuthentication.
     *
     * @return ExternalAuthenticationType|null The externalAuthenticationType
     */
@@ -129,7 +129,7 @@ class OnPremisesPublishing extends Entity
 
     /**
     * Sets the externalAuthenticationType
-    * Details the pre-authentication setting for the application. Pre-authentication enforces that users must authenticate before accessing the app. Passthru does not require authentication. Possible values are: passthru, aadPreAuthentication.
+    * Details the pre-authentication setting for the application. Pre-authentication enforces that users must authenticate before accessing the app. Pass through doesn't require authentication. Possible values are: passthru, aadPreAuthentication.
     *
     * @param ExternalAuthenticationType $val The value to assign to the externalAuthenticationType
     *
@@ -224,7 +224,7 @@ class OnPremisesPublishing extends Entity
     }
     /**
     * Gets the isBackendCertificateValidationEnabled
-    * Indicates whether backend SSL certificate validation is enabled for the application. For all new Application Proxy apps, the property will be set to true by default. For all existing apps, the property will be set to false.
+    * Indicates whether backend SSL certificate validation is enabled for the application. For all new Application Proxy apps, the property is set to true by default. For all existing apps, the property is set to false.
     *
     * @return bool|null The isBackendCertificateValidationEnabled
     */
@@ -239,7 +239,7 @@ class OnPremisesPublishing extends Entity
 
     /**
     * Sets the isBackendCertificateValidationEnabled
-    * Indicates whether backend SSL certificate validation is enabled for the application. For all new Application Proxy apps, the property will be set to true by default. For all existing apps, the property will be set to false.
+    * Indicates whether backend SSL certificate validation is enabled for the application. For all new Application Proxy apps, the property is set to true by default. For all existing apps, the property is set to false.
     *
     * @param bool $val The value of the isBackendCertificateValidationEnabled
     *
@@ -280,7 +280,7 @@ class OnPremisesPublishing extends Entity
     }
     /**
     * Gets the isOnPremPublishingEnabled
-    * Indicates if the application is currently being published via Application Proxy or not. This is pre-set by the system. Read-only.
+    * Indicates if the application is currently being published via Application Proxy or not. This is preset by the system. Read-only.
     *
     * @return bool|null The isOnPremPublishingEnabled
     */
@@ -295,7 +295,7 @@ class OnPremisesPublishing extends Entity
 
     /**
     * Sets the isOnPremPublishingEnabled
-    * Indicates if the application is currently being published via Application Proxy or not. This is pre-set by the system. Read-only.
+    * Indicates if the application is currently being published via Application Proxy or not. This is preset by the system. Read-only.
     *
     * @param bool $val The value of the isOnPremPublishingEnabled
     *
@@ -392,7 +392,7 @@ class OnPremisesPublishing extends Entity
     }
     /**
     * Gets the isTranslateHostHeaderEnabled
-    * Indicates if the application should translate urls in the reponse headers. Keep this value as true unless your application required the original host header in the authentication request. Default value is true.
+    * Indicates if the application should translate urls in the response headers. Keep this value as true unless your application required the original host header in the authentication request. Default value is true.
     *
     * @return bool|null The isTranslateHostHeaderEnabled
     */
@@ -407,7 +407,7 @@ class OnPremisesPublishing extends Entity
 
     /**
     * Sets the isTranslateHostHeaderEnabled
-    * Indicates if the application should translate urls in the reponse headers. Keep this value as true unless your application required the original host header in the authentication request. Default value is true.
+    * Indicates if the application should translate urls in the response headers. Keep this value as true unless your application required the original host header in the authentication request. Default value is true.
     *
     * @param bool $val The value of the isTranslateHostHeaderEnabled
     *

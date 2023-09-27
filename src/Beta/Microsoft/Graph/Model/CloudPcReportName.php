@@ -36,6 +36,9 @@ class CloudPcReportName extends Enum
     const SHARED_USE_LICENSE_USAGE_REAL_TIME_REPORT = "sharedUseLicenseUsageRealTimeReport";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
     const NO_LICENSE_AVAILABLE_CONNECTIVITY_FAILURE_REPORT = "noLicenseAvailableConnectivityFailureReport";
+    const FRONTLINE_LICENSE_USAGE_REPORT = "frontlineLicenseUsageReport";
+    const FRONTLINE_LICENSE_USAGE_REAL_TIME_REPORT = "frontlineLicenseUsageRealTimeReport";
     const REMOTE_CONNECTION_QUALITY_REPORTS = "remoteConnectionQualityReports";
     const INACCESSIBLE_CLOUD_PC_REPORTS = "inaccessibleCloudPcReports";
+    const RAW_REMOTE_CONNECTION_REPORTS = "rawRemoteConnectionReports";
 }

@@ -53,7 +53,7 @@ class AppIdentity extends Entity
     }
     /**
     * Gets the displayName
-    * Refers to the Application Name displayed in the Azure Portal.
+    * Refers to the application name displayed in the Microsoft Entra admin center.
     *
     * @return string|null The displayName
     */
@@ -68,7 +68,7 @@ class AppIdentity extends Entity
 
     /**
     * Sets the displayName
-    * Refers to the Application Name displayed in the Azure Portal.
+    * Refers to the application name displayed in the Microsoft Entra admin center.
     *
     * @param string $val The value of the displayName
     *

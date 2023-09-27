@@ -25,7 +25,7 @@ class NetworkInterface extends Entity
 {
     /**
     * Gets the description
-    * Description of the NIC (e.g. Ethernet adapter, Wireless LAN adapter Local Area Connection, and so on).
+    * Description of the NIC (for example, Ethernet adapter, Wireless LAN adapter Local Area Connection, and so on).
     *
     * @return string|null The description
     */
@@ -40,7 +40,7 @@ class NetworkInterface extends Entity
 
     /**
     * Sets the description
-    * Description of the NIC (e.g. Ethernet adapter, Wireless LAN adapter Local Area Connection, and so on).
+    * Description of the NIC (for example, Ethernet adapter, Wireless LAN adapter Local Area Connection, and so on).
     *
     * @param string $val The value of the description
     *
@@ -81,7 +81,7 @@ class NetworkInterface extends Entity
     }
     /**
     * Gets the ipV6Address
-    * Last Public (aka global) IPv6 address associated with this NIC.
+    * Last Public (also known as global) IPv6 address associated with this NIC.
     *
     * @return string|null The ipV6Address
     */
@@ -96,7 +96,7 @@ class NetworkInterface extends Entity
 
     /**
     * Sets the ipV6Address
-    * Last Public (aka global) IPv6 address associated with this NIC.
+    * Last Public (also known as global) IPv6 address associated with this NIC.
     *
     * @param string $val The value of the ipV6Address
     *

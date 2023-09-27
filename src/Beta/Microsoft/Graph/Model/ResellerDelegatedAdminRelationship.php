@@ -26,6 +26,7 @@ class ResellerDelegatedAdminRelationship extends DelegatedAdminRelationship
 {
     /**
     * Gets the indirectProviderTenantId
+    * The tenant ID of the indirect provider partner who created the relationship for the indirect reseller partner.
     *
     * @return string|null The indirectProviderTenantId
     */
@@ -40,6 +41,7 @@ class ResellerDelegatedAdminRelationship extends DelegatedAdminRelationship
 
     /**
     * Sets the indirectProviderTenantId
+    * The tenant ID of the indirect provider partner who created the relationship for the indirect reseller partner.
     *
     * @param string $val The indirectProviderTenantId
     *
@@ -53,6 +55,7 @@ class ResellerDelegatedAdminRelationship extends DelegatedAdminRelationship
 
     /**
     * Gets the isPartnerConsentPending
+    * Indicates the indirect reseller partner consent status. true indicates that the partner has yet to review the relationship; false indicates that the partner has already provided consent by approving or rejecting the relationship.
     *
     * @return bool|null The isPartnerConsentPending
     */
@@ -67,6 +70,7 @@ class ResellerDelegatedAdminRelationship extends DelegatedAdminRelationship
 
     /**
     * Sets the isPartnerConsentPending
+    * Indicates the indirect reseller partner consent status. true indicates that the partner has yet to review the relationship; false indicates that the partner has already provided consent by approving or rejecting the relationship.
     *
     * @param bool $val The isPartnerConsentPending
     *

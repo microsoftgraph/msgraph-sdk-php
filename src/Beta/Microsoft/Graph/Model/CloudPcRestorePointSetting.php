@@ -53,7 +53,7 @@ class CloudPcRestorePointSetting extends Entity
     }
     /**
     * Gets the userRestoreEnabled
-    * If true, the user has the ability to use snapshots to restore Cloud PCs. If false, non-admin users cannot use snapshots to restore the Cloud PC.
+    * If true, the user has the ability to use snapshots to restore Cloud PCs. If false, non-admin users can't use snapshots to restore the Cloud PC.
     *
     * @return bool|null The userRestoreEnabled
     */
@@ -68,7 +68,7 @@ class CloudPcRestorePointSetting extends Entity
 
     /**
     * Sets the userRestoreEnabled
-    * If true, the user has the ability to use snapshots to restore Cloud PCs. If false, non-admin users cannot use snapshots to restore the Cloud PC.
+    * If true, the user has the ability to use snapshots to restore Cloud PCs. If false, non-admin users can't use snapshots to restore the Cloud PC.
     *
     * @param bool $val The value of the userRestoreEnabled
     *

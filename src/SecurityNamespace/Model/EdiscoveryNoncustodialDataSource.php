@@ -26,7 +26,7 @@ class EdiscoveryNoncustodialDataSource extends DataSourceContainer
 {
     /**
     * Gets the dataSource
-    * User source or SharePoint site data source as non-custodial data source.
+    * User source or SharePoint site data source as noncustodial data source.
     *
     * @return DataSource|null The dataSource
     */
@@ -45,7 +45,7 @@ class EdiscoveryNoncustodialDataSource extends DataSourceContainer
 
     /**
     * Sets the dataSource
-    * User source or SharePoint site data source as non-custodial data source.
+    * User source or SharePoint site data source as noncustodial data source.
     *
     * @param DataSource $val The dataSource
     *
@@ -59,7 +59,7 @@ class EdiscoveryNoncustodialDataSource extends DataSourceContainer
 
     /**
     * Gets the lastIndexOperation
-    * Operation entity that represents the latest indexing for the non-custodial data source.
+    * Operation entity that represents the latest indexing for the noncustodial data source.
     *
     * @return EdiscoveryIndexOperation|null The lastIndexOperation
     */
@@ -78,7 +78,7 @@ class EdiscoveryNoncustodialDataSource extends DataSourceContainer
 
     /**
     * Sets the lastIndexOperation
-    * Operation entity that represents the latest indexing for the non-custodial data source.
+    * Operation entity that represents the latest indexing for the noncustodial data source.
     *
     * @param EdiscoveryIndexOperation $val The lastIndexOperation
     *

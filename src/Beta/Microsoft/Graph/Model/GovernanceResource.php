@@ -298,7 +298,7 @@ class GovernanceResource extends Entity
 
      /**
      * Gets the roleDefinitions
-    * The collection of role defintions for the resource.
+    * The collection of role definitions for the resource.
      *
      * @return array|null The roleDefinitions
      */
@@ -313,7 +313,7 @@ class GovernanceResource extends Entity
 
     /**
     * Sets the roleDefinitions
-    * The collection of role defintions for the resource.
+    * The collection of role definitions for the resource.
     *
     * @param GovernanceRoleDefinition[] $val The roleDefinitions
     *

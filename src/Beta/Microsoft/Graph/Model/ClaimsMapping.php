@@ -25,7 +25,7 @@ class ClaimsMapping extends Entity
 {
     /**
     * Gets the displayName
-    * The claim that provides the display name or full name for the user. It is a required propoerty.
+    * The claim that provides the display name or full name for the user. It's a required property.
     *
     * @return string|null The displayName
     */
@@ -40,7 +40,7 @@ class ClaimsMapping extends Entity
 
     /**
     * Sets the displayName
-    * The claim that provides the display name or full name for the user. It is a required propoerty.
+    * The claim that provides the display name or full name for the user. It's a required property.
     *
     * @param string $val The value of the displayName
     *
@@ -137,7 +137,7 @@ class ClaimsMapping extends Entity
     }
     /**
     * Gets the userId
-    * The claim that provides the unique identifier for the signed-in user. It is a required propoerty.
+    * The claim that provides the unique identifier for the signed-in user. It is a required property.
     *
     * @return string|null The userId
     */
@@ -152,7 +152,7 @@ class ClaimsMapping extends Entity
 
     /**
     * Sets the userId
-    * The claim that provides the unique identifier for the signed-in user. It is a required propoerty.
+    * The claim that provides the unique identifier for the signed-in user. It is a required property.
     *
     * @param string $val The value of the userId
     *

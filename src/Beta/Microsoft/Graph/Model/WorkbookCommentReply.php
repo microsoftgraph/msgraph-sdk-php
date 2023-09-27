@@ -84,6 +84,7 @@ class WorkbookCommentReply extends Entity
 
     /**
     * Gets the task
+    * The task associated with the comment thread.
     *
     * @return WorkbookDocumentTask|null The task
     */
@@ -102,6 +103,7 @@ class WorkbookCommentReply extends Entity
 
     /**
     * Sets the task
+    * The task associated with the comment thread.
     *
     * @param WorkbookDocumentTask $val The task
     *

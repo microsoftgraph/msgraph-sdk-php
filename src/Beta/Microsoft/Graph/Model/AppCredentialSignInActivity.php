@@ -26,7 +26,7 @@ class AppCredentialSignInActivity extends Entity
 {
     /**
     * Gets the appId
-    * The globally unique appId (also called client ID on the Azure portal) of the credential application.
+    * The globally unique appId (also called client ID on the Microsoft Entra admin center) of the credential application.
     *
     * @return string|null The appId
     */
@@ -41,7 +41,7 @@ class AppCredentialSignInActivity extends Entity
 
     /**
     * Sets the appId
-    * The globally unique appId (also called client ID on the Azure portal) of the credential application.
+    * The globally unique appId (also called client ID on the Microsoft Entra admin center) of the credential application.
     *
     * @param string $val The appId
     *

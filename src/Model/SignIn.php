@@ -26,7 +26,7 @@ class SignIn extends Entity
 {
     /**
     * Gets the appDisplayName
-    * App name displayed in the Azure Portal.  Supports $filter (eq, startsWith).
+    * App name displayed in the Microsoft Entra admin center.  Supports $filter (eq, startsWith).
     *
     * @return string|null The appDisplayName
     */
@@ -41,7 +41,7 @@ class SignIn extends Entity
 
     /**
     * Sets the appDisplayName
-    * App name displayed in the Azure Portal.  Supports $filter (eq, startsWith).
+    * App name displayed in the Microsoft Entra admin center.  Supports $filter (eq, startsWith).
     *
     * @param string $val The appDisplayName
     *
@@ -512,7 +512,7 @@ class SignIn extends Entity
 
     /**
     * Gets the riskLevelAggregated
-    * Aggregated risk level. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection.  Supports $filter (eq).  Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers will be returned hidden.
+    * Aggregated risk level. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in wasn't enabled for Azure AD Identity Protection.  Supports $filter (eq).  Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
     *
     * @return RiskLevel|null The riskLevelAggregated
     */
@@ -531,7 +531,7 @@ class SignIn extends Entity
 
     /**
     * Sets the riskLevelAggregated
-    * Aggregated risk level. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection.  Supports $filter (eq).  Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers will be returned hidden.
+    * Aggregated risk level. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in wasn't enabled for Azure AD Identity Protection.  Supports $filter (eq).  Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
     *
     * @param RiskLevel $val The riskLevelAggregated
     *
@@ -545,7 +545,7 @@ class SignIn extends Entity
 
     /**
     * Gets the riskLevelDuringSignIn
-    * Risk level during sign-in. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection.  Supports $filter (eq).  Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers will be returned hidden.
+    * Risk level during sign-in. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in wasn't enabled for Azure AD Identity Protection.  Supports $filter (eq).  Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
     *
     * @return RiskLevel|null The riskLevelDuringSignIn
     */
@@ -564,7 +564,7 @@ class SignIn extends Entity
 
     /**
     * Sets the riskLevelDuringSignIn
-    * Risk level during sign-in. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection.  Supports $filter (eq).  Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers will be returned hidden.
+    * Risk level during sign-in. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in wasn't enabled for Azure AD Identity Protection.  Supports $filter (eq).  Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
     *
     * @param RiskLevel $val The riskLevelDuringSignIn
     *
@@ -611,7 +611,7 @@ class SignIn extends Entity
 
     /**
     * Gets the status
-    * Sign-in status. Includes the error code and description of the error (in case of a sign-in failure).  Supports $filter (eq) on errorCode property.
+    * Sign-in status. Includes the error code and description of the error (if there's a sign-in failure).  Supports $filter (eq) on errorCode property.
     *
     * @return SignInStatus|null The status
     */
@@ -630,7 +630,7 @@ class SignIn extends Entity
 
     /**
     * Sets the status
-    * Sign-in status. Includes the error code and description of the error (in case of a sign-in failure).  Supports $filter (eq) on errorCode property.
+    * Sign-in status. Includes the error code and description of the error (if there's a sign-in failure).  Supports $filter (eq) on errorCode property.
     *
     * @param SignInStatus $val The status
     *

@@ -92,7 +92,7 @@ class AccessPackageResourceRequest extends Entity
 
     /**
     * Gets the state
-    * The outcome of whether the service was able to add the resource to the catalog.  The value is delivered if the resource was added or removed. Read-only.
+    * The outcome of whether the service was able to add the resource to the catalog.  The value is delivered if the resource was added or removed, and deliveryFailed if it could not be added or removed. Read-only.
     *
     * @return AccessPackageRequestState|null The state
     */
@@ -111,7 +111,7 @@ class AccessPackageResourceRequest extends Entity
 
     /**
     * Sets the state
-    * The outcome of whether the service was able to add the resource to the catalog.  The value is delivered if the resource was added or removed. Read-only.
+    * The outcome of whether the service was able to add the resource to the catalog.  The value is delivered if the resource was added or removed, and deliveryFailed if it could not be added or removed. Read-only.
     *
     * @param AccessPackageRequestState $val The state
     *

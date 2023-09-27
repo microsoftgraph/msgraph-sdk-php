@@ -223,6 +223,37 @@ class CrossTenantAccessPolicyConfigurationDefault extends Entity
     }
 
     /**
+    * Gets the invitationRedemptionIdentityProviderConfiguration
+    *
+    * @return DefaultInvitationRedemptionIdentityProviderConfiguration|null The invitationRedemptionIdentityProviderConfiguration
+    */
+    public function getInvitationRedemptionIdentityProviderConfiguration()
+    {
+        if (array_key_exists("invitationRedemptionIdentityProviderConfiguration", $this->_propDict)) {
+            if (is_a($this->_propDict["invitationRedemptionIdentityProviderConfiguration"], "\Beta\Microsoft\Graph\Model\DefaultInvitationRedemptionIdentityProviderConfiguration") || is_null($this->_propDict["invitationRedemptionIdentityProviderConfiguration"])) {
+                return $this->_propDict["invitationRedemptionIdentityProviderConfiguration"];
+            } else {
+                $this->_propDict["invitationRedemptionIdentityProviderConfiguration"] = new DefaultInvitationRedemptionIdentityProviderConfiguration($this->_propDict["invitationRedemptionIdentityProviderConfiguration"]);
+                return $this->_propDict["invitationRedemptionIdentityProviderConfiguration"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the invitationRedemptionIdentityProviderConfiguration
+    *
+    * @param DefaultInvitationRedemptionIdentityProviderConfiguration $val The invitationRedemptionIdentityProviderConfiguration
+    *
+    * @return CrossTenantAccessPolicyConfigurationDefault
+    */
+    public function setInvitationRedemptionIdentityProviderConfiguration($val)
+    {
+        $this->_propDict["invitationRedemptionIdentityProviderConfiguration"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the isServiceDefault
     * If true, the default configuration is set to the system default configuration. If false, the default settings have been customized.
     *

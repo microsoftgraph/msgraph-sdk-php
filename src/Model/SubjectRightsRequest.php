@@ -551,33 +551,33 @@ class SubjectRightsRequest extends Entity
     }
 
     /**
-    * Gets the mailboxlocations
+    * Gets the mailboxLocations
     *
-    * @return SubjectRightsRequestMailboxLocation|null The mailboxlocations
+    * @return SubjectRightsRequestMailboxLocation|null The mailboxLocations
     */
-    public function getMailboxlocations()
+    public function getMailboxLocations()
     {
-        if (array_key_exists("mailboxlocations", $this->_propDict)) {
-            if (is_a($this->_propDict["mailboxlocations"], "\Microsoft\Graph\Model\SubjectRightsRequestMailboxLocation") || is_null($this->_propDict["mailboxlocations"])) {
-                return $this->_propDict["mailboxlocations"];
+        if (array_key_exists("mailboxLocations", $this->_propDict)) {
+            if (is_a($this->_propDict["mailboxLocations"], "\Microsoft\Graph\Model\SubjectRightsRequestMailboxLocation") || is_null($this->_propDict["mailboxLocations"])) {
+                return $this->_propDict["mailboxLocations"];
             } else {
-                $this->_propDict["mailboxlocations"] = new SubjectRightsRequestMailboxLocation($this->_propDict["mailboxlocations"]);
-                return $this->_propDict["mailboxlocations"];
+                $this->_propDict["mailboxLocations"] = new SubjectRightsRequestMailboxLocation($this->_propDict["mailboxLocations"]);
+                return $this->_propDict["mailboxLocations"];
             }
         }
         return null;
     }
 
     /**
-    * Sets the mailboxlocations
+    * Sets the mailboxLocations
     *
-    * @param SubjectRightsRequestMailboxLocation $val The mailboxlocations
+    * @param SubjectRightsRequestMailboxLocation $val The mailboxLocations
     *
     * @return SubjectRightsRequest
     */
-    public function setMailboxlocations($val)
+    public function setMailboxLocations($val)
     {
-        $this->_propDict["mailboxlocations"] = $val;
+        $this->_propDict["mailboxLocations"] = $val;
         return $this;
     }
 
@@ -610,7 +610,7 @@ class SubjectRightsRequest extends Entity
 
     /**
     * Gets the regulations
-    * List of regulations that this request will fulfill.
+    * List of regulations that this request fulfills.
     *
     * @return array|null The regulations
     */
@@ -625,7 +625,7 @@ class SubjectRightsRequest extends Entity
 
     /**
     * Sets the regulations
-    * List of regulations that this request will fulfill.
+    * List of regulations that this request fulfills.
     *
     * @param string[] $val The regulations
     *
@@ -638,33 +638,33 @@ class SubjectRightsRequest extends Entity
     }
 
     /**
-    * Gets the sitelocations
+    * Gets the siteLocations
     *
-    * @return SubjectRightsRequestSiteLocation|null The sitelocations
+    * @return SubjectRightsRequestSiteLocation|null The siteLocations
     */
-    public function getSitelocations()
+    public function getSiteLocations()
     {
-        if (array_key_exists("sitelocations", $this->_propDict)) {
-            if (is_a($this->_propDict["sitelocations"], "\Microsoft\Graph\Model\SubjectRightsRequestSiteLocation") || is_null($this->_propDict["sitelocations"])) {
-                return $this->_propDict["sitelocations"];
+        if (array_key_exists("siteLocations", $this->_propDict)) {
+            if (is_a($this->_propDict["siteLocations"], "\Microsoft\Graph\Model\SubjectRightsRequestSiteLocation") || is_null($this->_propDict["siteLocations"])) {
+                return $this->_propDict["siteLocations"];
             } else {
-                $this->_propDict["sitelocations"] = new SubjectRightsRequestSiteLocation($this->_propDict["sitelocations"]);
-                return $this->_propDict["sitelocations"];
+                $this->_propDict["siteLocations"] = new SubjectRightsRequestSiteLocation($this->_propDict["siteLocations"]);
+                return $this->_propDict["siteLocations"];
             }
         }
         return null;
     }
 
     /**
-    * Sets the sitelocations
+    * Sets the siteLocations
     *
-    * @param SubjectRightsRequestSiteLocation $val The sitelocations
+    * @param SubjectRightsRequestSiteLocation $val The siteLocations
     *
     * @return SubjectRightsRequest
     */
-    public function setSitelocations($val)
+    public function setSiteLocations($val)
     {
-        $this->_propDict["sitelocations"] = $val;
+        $this->_propDict["siteLocations"] = $val;
         return $this;
     }
 
@@ -700,7 +700,7 @@ class SubjectRightsRequest extends Entity
 
     /**
     * Gets the status
-    * The status of the request.. Possible values are: active, closed, unknownFutureValue.
+    * The status of the request. Possible values are: active, closed, unknownFutureValue.
     *
     * @return SubjectRightsRequestStatus|null The status
     */
@@ -719,7 +719,7 @@ class SubjectRightsRequest extends Entity
 
     /**
     * Sets the status
-    * The status of the request.. Possible values are: active, closed, unknownFutureValue.
+    * The status of the request. Possible values are: active, closed, unknownFutureValue.
     *
     * @param SubjectRightsRequestStatus $val The status
     *
@@ -823,7 +823,7 @@ class SubjectRightsRequest extends Entity
 
      /**
      * Gets the notes
-    * List of notes associcated with the request.
+    * List of notes associated with the request.
      *
      * @return array|null The notes
      */
@@ -838,7 +838,7 @@ class SubjectRightsRequest extends Entity
 
     /**
     * Sets the notes
-    * List of notes associcated with the request.
+    * List of notes associated with the request.
     *
     * @param AuthoredNote[] $val The notes
     *

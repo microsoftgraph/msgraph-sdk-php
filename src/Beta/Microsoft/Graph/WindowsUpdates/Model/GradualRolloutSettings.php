@@ -26,7 +26,7 @@ class GradualRolloutSettings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the durationBetweenOffers
-    * The duration between each set of devices being offered the update. The value is represented in ISO 8601 format for duration. Default value is P1D (1 day).
+    * The duration between each set of devices being offered the update. The value is represented in ISO 8601 format for duration. Default value is P1D (one day).
     *
     * @return \DateInterval|null The durationBetweenOffers
     */
@@ -45,7 +45,7 @@ class GradualRolloutSettings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the durationBetweenOffers
-    * The duration between each set of devices being offered the update. The value is represented in ISO 8601 format for duration. Default value is P1D (1 day).
+    * The duration between each set of devices being offered the update. The value is represented in ISO 8601 format for duration. Default value is P1D (one day).
     *
     * @param \DateInterval $val The value to assign to the durationBetweenOffers
     *

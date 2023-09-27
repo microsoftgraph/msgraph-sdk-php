@@ -26,7 +26,7 @@ class TimeClockSettings extends Entity
 
     /**
     * Gets the approvedLocation
-    * The aprroved location of the timeClock.
+    * The approved location of the timeClock.
     *
     * @return GeoCoordinates|null The approvedLocation
     */
@@ -45,7 +45,7 @@ class TimeClockSettings extends Entity
 
     /**
     * Sets the approvedLocation
-    * The aprroved location of the timeClock.
+    * The approved location of the timeClock.
     *
     * @param GeoCoordinates $val The value to assign to the approvedLocation
     *

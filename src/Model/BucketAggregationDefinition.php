@@ -110,7 +110,7 @@ class BucketAggregationDefinition extends Entity
 
     /**
     * Gets the ranges
-    * Specifies the manual ranges to compute the aggregations. This is only valid for non-string refiners of date or numeric type. Optional.
+    * Specifies the manual ranges to compute the aggregations. This is only valid for nonstring refiners of date or numeric type. Optional.
     *
     * @return BucketAggregationRange|null The ranges
     */
@@ -129,7 +129,7 @@ class BucketAggregationDefinition extends Entity
 
     /**
     * Sets the ranges
-    * Specifies the manual ranges to compute the aggregations. This is only valid for non-string refiners of date or numeric type. Optional.
+    * Specifies the manual ranges to compute the aggregations. This is only valid for nonstring refiners of date or numeric type. Optional.
     *
     * @param BucketAggregationRange $val The value to assign to the ranges
     *
@@ -143,7 +143,7 @@ class BucketAggregationDefinition extends Entity
 
     /**
     * Gets the sortBy
-    * The possible values are count to sort by the number of matches in the aggregation, keyAsStringto sort alphabeticaly based on the key in the aggregation, keyAsNumber for numerical sorting based on the key in the aggregation. Required.
+    * The possible values are count to sort by the number of matches in the aggregation, keyAsStringto sort alphabetically based on the key in the aggregation, keyAsNumber for numerical sorting based on the key in the aggregation. Required.
     *
     * @return BucketAggregationSortProperty|null The sortBy
     */
@@ -162,7 +162,7 @@ class BucketAggregationDefinition extends Entity
 
     /**
     * Sets the sortBy
-    * The possible values are count to sort by the number of matches in the aggregation, keyAsStringto sort alphabeticaly based on the key in the aggregation, keyAsNumber for numerical sorting based on the key in the aggregation. Required.
+    * The possible values are count to sort by the number of matches in the aggregation, keyAsStringto sort alphabetically based on the key in the aggregation, keyAsNumber for numerical sorting based on the key in the aggregation. Required.
     *
     * @param BucketAggregationSortProperty $val The value to assign to the sortBy
     *

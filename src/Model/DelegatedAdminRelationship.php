@@ -125,7 +125,7 @@ class DelegatedAdminRelationship extends Entity
 
     /**
     * Gets the customer
-    * The display name and unique identifier of the customer of the relationship. This is configured either by the partner at the time the relationship is created or by the system after the customer approves the relationship. Cannot be changed by the customer.
+    * The display name and unique identifier of the customer of the relationship. This is configured either by the partner at the time the relationship is created or by the system after the customer approves the relationship. Can't be changed by the customer.
     *
     * @return DelegatedAdminRelationshipCustomerParticipant|null The customer
     */
@@ -144,7 +144,7 @@ class DelegatedAdminRelationship extends Entity
 
     /**
     * Sets the customer
-    * The display name and unique identifier of the customer of the relationship. This is configured either by the partner at the time the relationship is created or by the system after the customer approves the relationship. Cannot be changed by the customer.
+    * The display name and unique identifier of the customer of the relationship. This is configured either by the partner at the time the relationship is created or by the system after the customer approves the relationship. Can't be changed by the customer.
     *
     * @param DelegatedAdminRelationshipCustomerParticipant $val The customer
     *
@@ -158,7 +158,7 @@ class DelegatedAdminRelationship extends Entity
 
     /**
     * Gets the displayName
-    * The display name of the relationship used for ease of identification. Must be unique across all delegated admin relationships of the partner. This is set by the partner only when the relationship is in the created status and cannot be changed by the customer.
+    * The display name of the relationship used for ease of identification. Must be unique across all delegated admin relationships of the partner and is set by the partner only when the relationship is in the created status and can't be changed by the customer.
     *
     * @return string|null The displayName
     */
@@ -173,7 +173,7 @@ class DelegatedAdminRelationship extends Entity
 
     /**
     * Sets the displayName
-    * The display name of the relationship used for ease of identification. Must be unique across all delegated admin relationships of the partner. This is set by the partner only when the relationship is in the created status and cannot be changed by the customer.
+    * The display name of the relationship used for ease of identification. Must be unique across all delegated admin relationships of the partner and is set by the partner only when the relationship is in the created status and can't be changed by the customer.
     *
     * @param string $val The displayName
     *
@@ -187,7 +187,7 @@ class DelegatedAdminRelationship extends Entity
 
     /**
     * Gets the duration
-    * The duration of the relationship in ISO 8601 format. Must be a value between P1D and P2Y inclusive. This is set by the partner only when the relationship is in the created status and cannot be changed by the customer.
+    * The duration of the relationship in ISO 8601 format. Must be a value between P1D and P2Y inclusive. This is set by the partner only when the relationship is in the created status and can't be changed by the customer.
     *
     * @return \DateInterval|null The duration
     */
@@ -206,7 +206,7 @@ class DelegatedAdminRelationship extends Entity
 
     /**
     * Sets the duration
-    * The duration of the relationship in ISO 8601 format. Must be a value between P1D and P2Y inclusive. This is set by the partner only when the relationship is in the created status and cannot be changed by the customer.
+    * The duration of the relationship in ISO 8601 format. Must be a value between P1D and P2Y inclusive. This is set by the partner only when the relationship is in the created status and can't be changed by the customer.
     *
     * @param \DateInterval $val The duration
     *
@@ -286,7 +286,7 @@ class DelegatedAdminRelationship extends Entity
 
     /**
     * Gets the status
-    * The status of the relationship. Read Only. The possible values are: activating, active, approvalPending, approved, created, expired, expiring, terminated, terminating, terminationRequested, unknownFutureValue. Supports $orderBy.
+    * The status of the relationship. Read Only. The possible values are: activating, active, approvalPending, approved, created, expired, expiring, terminated, terminating, terminationRequested, unknownFutureValue. Supports $orderby.
     *
     * @return DelegatedAdminRelationshipStatus|null The status
     */
@@ -305,7 +305,7 @@ class DelegatedAdminRelationship extends Entity
 
     /**
     * Sets the status
-    * The status of the relationship. Read Only. The possible values are: activating, active, approvalPending, approved, created, expired, expiring, terminated, terminating, terminationRequested, unknownFutureValue. Supports $orderBy.
+    * The status of the relationship. Read Only. The possible values are: activating, active, approvalPending, approved, created, expired, expiring, terminated, terminating, terminationRequested, unknownFutureValue. Supports $orderby.
     *
     * @param DelegatedAdminRelationshipStatus $val The status
     *

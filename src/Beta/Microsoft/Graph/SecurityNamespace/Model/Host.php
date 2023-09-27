@@ -93,7 +93,7 @@ class Host extends Artifact
 
      /**
      * Gets the childHostPairs
-    * The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a childHost.
+    * The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a cihldHost.
      *
      * @return array|null The childHostPairs
      */
@@ -108,7 +108,7 @@ class Host extends Artifact
 
     /**
     * Sets the childHostPairs
-    * The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a childHost.
+    * The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a cihldHost.
     *
     * @param HostPair[] $val The childHostPairs
     *
@@ -300,6 +300,34 @@ class Host extends Artifact
         return $this;
     }
 
+
+     /**
+     * Gets the ports
+     *
+     * @return array|null The ports
+     */
+    public function getPorts()
+    {
+        if (array_key_exists("ports", $this->_propDict)) {
+           return $this->_propDict["ports"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the ports
+    *
+    * @param HostPort[] $val The ports
+    *
+    * @return Host
+    */
+    public function setPorts($val)
+    {
+        $this->_propDict["ports"] = $val;
+        return $this;
+    }
+
     /**
     * Gets the reputation
     * Represents a calculated reputation of this host.
@@ -336,6 +364,7 @@ class Host extends Artifact
 
      /**
      * Gets the sslCertificates
+    * The hostSslCertificates that are associated with this host.
      *
      * @return array|null The sslCertificates
      */
@@ -350,6 +379,7 @@ class Host extends Artifact
 
     /**
     * Sets the sslCertificates
+    * The hostSslCertificates that are associated with this host.
     *
     * @param HostSslCertificate[] $val The sslCertificates
     *

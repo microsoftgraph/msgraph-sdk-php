@@ -56,7 +56,7 @@ class UnifiedRbacResourceNamespace extends Entity
 
      /**
      * Gets the resourceActions
-    * Operations that an authorized principal are allowed to perform.
+    * Operations that an authorized principal is allowed to perform.
      *
      * @return array|null The resourceActions
      */
@@ -71,7 +71,7 @@ class UnifiedRbacResourceNamespace extends Entity
 
     /**
     * Sets the resourceActions
-    * Operations that an authorized principal are allowed to perform.
+    * Operations that an authorized principal is allowed to perform.
     *
     * @param UnifiedRbacResourceAction[] $val The resourceActions
     *

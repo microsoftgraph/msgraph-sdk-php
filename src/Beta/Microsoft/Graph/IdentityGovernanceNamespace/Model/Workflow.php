@@ -88,7 +88,7 @@ class Workflow extends WorkflowBase
 
     /**
     * Gets the nextScheduleRunDateTime
-    * The date time when the workflow is expected to run next based on the schedule interval, if there are any users matching the execution conditions. Supports $filter(lt,gt) and $orderBy.
+    * The date time when the workflow is expected to run next based on the schedule interval, if there are any users matching the execution conditions. Supports $filter(lt,gt) and $orderby.
     *
     * @return \DateTime|null The nextScheduleRunDateTime
     */
@@ -107,7 +107,7 @@ class Workflow extends WorkflowBase
 
     /**
     * Sets the nextScheduleRunDateTime
-    * The date time when the workflow is expected to run next based on the schedule interval, if there are any users matching the execution conditions. Supports $filter(lt,gt) and $orderBy.
+    * The date time when the workflow is expected to run next based on the schedule interval, if there are any users matching the execution conditions. Supports $filter(lt,gt) and $orderby.
     *
     * @param \DateTime $val The nextScheduleRunDateTime
     *

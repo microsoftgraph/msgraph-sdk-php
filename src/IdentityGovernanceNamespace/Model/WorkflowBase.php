@@ -243,7 +243,7 @@ class WorkflowBase implements \JsonSerializable
 
     /**
     * Gets the isSchedulingEnabled
-    * If true, the Lifecycle Workflow engine executes the workflow based on the schedule defined by tenant settings. Cannot be true for a disabled workflow (where isEnabled is false).
+    * If true, the Lifecycle Workflow engine executes the workflow based on the schedule defined by tenant settings. Can't be true for a disabled workflow (where isEnabled is false).
     *
     * @return bool|null The isSchedulingEnabled
     */
@@ -258,7 +258,7 @@ class WorkflowBase implements \JsonSerializable
 
     /**
     * Sets the isSchedulingEnabled
-    * If true, the Lifecycle Workflow engine executes the workflow based on the schedule defined by tenant settings. Cannot be true for a disabled workflow (where isEnabled is false).
+    * If true, the Lifecycle Workflow engine executes the workflow based on the schedule defined by tenant settings. Can't be true for a disabled workflow (where isEnabled is false).
     *
     * @param bool $val The isSchedulingEnabled
     *
@@ -338,7 +338,7 @@ class WorkflowBase implements \JsonSerializable
 
     /**
     * Gets the lastModifiedBy
-    * The unique identifier of the AAD identity that last modified the workflow.
+    * The unique identifier of the Azure Active Directory identity that last modified the workflow.
     *
     * @return \Microsoft\Graph\Model\User|null The lastModifiedBy
     */
@@ -357,7 +357,7 @@ class WorkflowBase implements \JsonSerializable
 
     /**
     * Sets the lastModifiedBy
-    * The unique identifier of the AAD identity that last modified the workflow.
+    * The unique identifier of the Azure Active Directory identity that last modified the workflow.
     *
     * @param \Microsoft\Graph\Model\User $val The lastModifiedBy
     *

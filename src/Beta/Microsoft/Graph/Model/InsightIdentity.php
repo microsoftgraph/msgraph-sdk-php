@@ -81,7 +81,7 @@ class InsightIdentity extends Entity
     }
     /**
     * Gets the id
-    * The id of the user who shared the item.
+    * The ID of the user who shared the item.
     *
     * @return string|null The id
     */
@@ -96,7 +96,7 @@ class InsightIdentity extends Entity
 
     /**
     * Sets the id
-    * The id of the user who shared the item.
+    * The ID of the user who shared the item.
     *
     * @param string $val The value of the id
     *

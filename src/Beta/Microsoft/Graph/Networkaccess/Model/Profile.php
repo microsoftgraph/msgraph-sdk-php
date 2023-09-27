@@ -117,7 +117,7 @@ class Profile extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the state
-    * Profile state.The possible values are: enabled, disabled.
+    * Profile state. The possible values are: enabled, disabled.
     *
     * @return Status|null The state
     */
@@ -136,7 +136,7 @@ class Profile extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the state
-    * Profile state.The possible values are: enabled, disabled.
+    * Profile state. The possible values are: enabled, disabled.
     *
     * @param Status $val The state
     *

@@ -26,7 +26,7 @@ class MicrosoftAuthenticatorFeatureSettings extends Entity
 
     /**
     * Gets the displayAppInformationRequiredState
-    * Determines whether the user's Authenticator app will show them the client app they are signing into.
+    * Determines whether the user's Authenticator app shows them the client app they're signing into.
     *
     * @return AuthenticationMethodFeatureConfiguration|null The displayAppInformationRequiredState
     */
@@ -45,7 +45,7 @@ class MicrosoftAuthenticatorFeatureSettings extends Entity
 
     /**
     * Sets the displayAppInformationRequiredState
-    * Determines whether the user's Authenticator app will show them the client app they are signing into.
+    * Determines whether the user's Authenticator app shows them the client app they're signing into.
     *
     * @param AuthenticationMethodFeatureConfiguration $val The value to assign to the displayAppInformationRequiredState
     *
@@ -59,7 +59,7 @@ class MicrosoftAuthenticatorFeatureSettings extends Entity
 
     /**
     * Gets the displayLocationInformationRequiredState
-    * Determines whether the user's Authenticator app will show them the geographic location of where the authentication request originated from.
+    * Determines whether the user's Authenticator app shows them the geographic location of where the authentication request originated from.
     *
     * @return AuthenticationMethodFeatureConfiguration|null The displayLocationInformationRequiredState
     */
@@ -78,7 +78,7 @@ class MicrosoftAuthenticatorFeatureSettings extends Entity
 
     /**
     * Sets the displayLocationInformationRequiredState
-    * Determines whether the user's Authenticator app will show them the geographic location of where the authentication request originated from.
+    * Determines whether the user's Authenticator app shows them the geographic location of where the authentication request originated from.
     *
     * @param AuthenticationMethodFeatureConfiguration $val The value to assign to the displayLocationInformationRequiredState
     *

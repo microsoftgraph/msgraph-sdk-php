@@ -26,7 +26,7 @@ class DelegatedAdminCustomer extends Entity
 {
     /**
     * Gets the displayName
-    * The Azure AD display name of the customer tenant. Read-only. Supports $orderBy.
+    * The Azure AD display name of the customer tenant. Read-only. Supports $orderby.
     *
     * @return string|null The displayName
     */
@@ -41,7 +41,7 @@ class DelegatedAdminCustomer extends Entity
 
     /**
     * Sets the displayName
-    * The Azure AD display name of the customer tenant. Read-only. Supports $orderBy.
+    * The Azure AD display name of the customer tenant. Read-only. Supports $orderby.
     *
     * @param string $val The displayName
     *

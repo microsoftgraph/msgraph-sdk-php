@@ -176,6 +176,34 @@ class ThreatIntelligence extends \Beta\Microsoft\Graph\Model\Entity
 
 
      /**
+     * Gets the hostPorts
+     *
+     * @return array|null The hostPorts
+     */
+    public function getHostPorts()
+    {
+        if (array_key_exists("hostPorts", $this->_propDict)) {
+           return $this->_propDict["hostPorts"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the hostPorts
+    *
+    * @param HostPort[] $val The hostPorts
+    *
+    * @return ThreatIntelligence
+    */
+    public function setHostPorts($val)
+    {
+        $this->_propDict["hostPorts"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the hosts
     * Refers to host objects that Microsoft Threat Intelligence has observed.Note: List retrieval is not yet supported.
      *
@@ -207,6 +235,7 @@ class ThreatIntelligence extends \Beta\Microsoft\Graph\Model\Entity
 
      /**
      * Gets the hostSslCertificates
+    * Retrieve details about hostSslCertificate objects.Note: List retrieval is not yet supported.
      *
      * @return array|null The hostSslCertificates
      */
@@ -221,6 +250,7 @@ class ThreatIntelligence extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the hostSslCertificates
+    * Retrieve details about hostSslCertificate objects.Note: List retrieval is not yet supported.
     *
     * @param HostSslCertificate[] $val The hostSslCertificates
     *
@@ -353,6 +383,7 @@ class ThreatIntelligence extends \Beta\Microsoft\Graph\Model\Entity
 
      /**
      * Gets the sslCertificates
+    * Retrieve details about sslCertificate objects.Note: List retrieval is not yet supported.
      *
      * @return array|null The sslCertificates
      */
@@ -367,6 +398,7 @@ class ThreatIntelligence extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the sslCertificates
+    * Retrieve details about sslCertificate objects.Note: List retrieval is not yet supported.
     *
     * @param SslCertificate[] $val The sslCertificates
     *

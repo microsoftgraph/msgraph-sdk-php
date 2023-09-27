@@ -226,7 +226,7 @@ class NetworkInfo extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the macAddress
-    * The media access control (MAC) address of the media endpoint's network device.
+    * The media access control (MAC) address of the media endpoint's network device. This value may be missing or shown as 02:00:00:00:00:00 due to operating system privacy policies.
     *
     * @return string|null The macAddress
     */
@@ -241,7 +241,7 @@ class NetworkInfo extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the macAddress
-    * The media access control (MAC) address of the media endpoint's network device.
+    * The media access control (MAC) address of the media endpoint's network device. This value may be missing or shown as 02:00:00:00:00:00 due to operating system privacy policies.
     *
     * @param string $val The value of the macAddress
     *
