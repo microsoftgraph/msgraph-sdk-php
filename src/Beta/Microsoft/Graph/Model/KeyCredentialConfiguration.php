@@ -25,7 +25,6 @@ class KeyCredentialConfiguration extends Entity
 {
     /**
     * Gets the certificateBasedApplicationConfigurationIds
-    * Collection of GUIDs that point to the certificateBasedApplicationConfiguration that contains the collection of allowed root and intermediate certificate authorities.
     *
     * @return string|null The certificateBasedApplicationConfigurationIds
     */
@@ -40,7 +39,6 @@ class KeyCredentialConfiguration extends Entity
 
     /**
     * Sets the certificateBasedApplicationConfigurationIds
-    * Collection of GUIDs that point to the certificateBasedApplicationConfiguration that contains the collection of allowed root and intermediate certificate authorities.
     *
     * @param string $val The value of the certificateBasedApplicationConfigurationIds
     *

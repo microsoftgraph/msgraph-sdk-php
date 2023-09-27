@@ -26,7 +26,7 @@ class TenantAllowOrBlockListAction extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the action
-    * Specifies whether the tenant allow block list is an allow or block. The possible values are: allow, block, and unkownFutureValue.
+    * Specifies whether the tenant allow-or-block list is an allow or block. The possible values are: allow, block, and unkownFutureValue.
     *
     * @return TenantAllowBlockListAction|null The action
     */
@@ -45,7 +45,7 @@ class TenantAllowOrBlockListAction extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the action
-    * Specifies whether the tenant allow block list is an allow or block. The possible values are: allow, block, and unkownFutureValue.
+    * Specifies whether the tenant allow-or-block list is an allow or block. The possible values are: allow, block, and unkownFutureValue.
     *
     * @param TenantAllowBlockListAction $val The value to assign to the action
     *
@@ -91,7 +91,7 @@ class TenantAllowOrBlockListAction extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the note
-    * Specifies the note added to the tenant allow block list entry in the format of string.
+    * Specifies the note added to the tenant allow-or-block list entry in the format of string.
     *
     * @return string|null The note
     */
@@ -106,7 +106,7 @@ class TenantAllowOrBlockListAction extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the note
-    * Specifies the note added to the tenant allow block list entry in the format of string.
+    * Specifies the note added to the tenant allow-or-block list entry in the format of string.
     *
     * @param string $val The value of the note
     *

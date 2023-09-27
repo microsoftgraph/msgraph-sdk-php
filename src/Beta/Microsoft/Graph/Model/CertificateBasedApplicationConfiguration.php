@@ -26,7 +26,6 @@ class CertificateBasedApplicationConfiguration extends TrustedCertificateAuthori
 {
     /**
     * Gets the description
-    * The description of the trusted certificate authorities.
     *
     * @return string|null The description
     */
@@ -41,7 +40,6 @@ class CertificateBasedApplicationConfiguration extends TrustedCertificateAuthori
 
     /**
     * Sets the description
-    * The description of the trusted certificate authorities.
     *
     * @param string $val The description
     *
@@ -55,7 +53,6 @@ class CertificateBasedApplicationConfiguration extends TrustedCertificateAuthori
 
     /**
     * Gets the displayName
-    * The display name of the trusted certificate authorities.
     *
     * @return string|null The displayName
     */
@@ -70,7 +67,6 @@ class CertificateBasedApplicationConfiguration extends TrustedCertificateAuthori
 
     /**
     * Sets the displayName
-    * The display name of the trusted certificate authorities.
     *
     * @param string $val The displayName
     *

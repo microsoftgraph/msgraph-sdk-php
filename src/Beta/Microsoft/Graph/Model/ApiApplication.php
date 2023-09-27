@@ -115,7 +115,7 @@ class ApiApplication extends Entity
 
     /**
     * Gets the preAuthorizedApplications
-    * Lists the client applications that are pre-authorized with the specified delegated permissions to access this application's APIs. Users are not required to consent to any pre-authorized application (for the permissions specified). However, any additional permissions not listed in preAuthorizedApplications (requested through incremental consent for example) will require user consent.
+    * Lists the client applications that are preauthorized with the specified delegated permissions to access this application's APIs. Users aren't required to consent to any preauthorized application (for the permissions specified). However, any other permissions not listed in preAuthorizedApplications (requested through incremental consent for example) will require user consent.
     *
     * @return PreAuthorizedApplication|null The preAuthorizedApplications
     */
@@ -134,7 +134,7 @@ class ApiApplication extends Entity
 
     /**
     * Sets the preAuthorizedApplications
-    * Lists the client applications that are pre-authorized with the specified delegated permissions to access this application's APIs. Users are not required to consent to any pre-authorized application (for the permissions specified). However, any additional permissions not listed in preAuthorizedApplications (requested through incremental consent for example) will require user consent.
+    * Lists the client applications that are preauthorized with the specified delegated permissions to access this application's APIs. Users aren't required to consent to any preauthorized application (for the permissions specified). However, any other permissions not listed in preAuthorizedApplications (requested through incremental consent for example) will require user consent.
     *
     * @param PreAuthorizedApplication $val The value to assign to the preAuthorizedApplications
     *

@@ -53,7 +53,7 @@ class ActionUrl extends Entity
     }
     /**
     * Gets the url
-    * The URL to the documentation or Azure portal page.
+    * The URL to the documentation or Microsoft Entra admin center page.
     *
     * @return string|null The url
     */
@@ -68,7 +68,7 @@ class ActionUrl extends Entity
 
     /**
     * Sets the url
-    * The URL to the documentation or Azure portal page.
+    * The URL to the documentation or Microsoft Entra admin center page.
     *
     * @param string $val The value of the url
     *

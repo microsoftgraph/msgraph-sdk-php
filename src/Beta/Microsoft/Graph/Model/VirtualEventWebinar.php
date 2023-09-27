@@ -89,6 +89,7 @@ class VirtualEventWebinar extends VirtualEvent
 
     /**
     * Gets the registrationConfiguration
+    * Registration configuration of the webinar.
     *
     * @return VirtualEventRegistrationConfiguration|null The registrationConfiguration
     */
@@ -107,6 +108,7 @@ class VirtualEventWebinar extends VirtualEvent
 
     /**
     * Sets the registrationConfiguration
+    * Registration configuration of the webinar.
     *
     * @param VirtualEventRegistrationConfiguration $val The registrationConfiguration
     *
@@ -121,6 +123,7 @@ class VirtualEventWebinar extends VirtualEvent
 
      /**
      * Gets the registrations
+    * Registration records of the webinar.
      *
      * @return array|null The registrations
      */
@@ -135,6 +138,7 @@ class VirtualEventWebinar extends VirtualEvent
 
     /**
     * Sets the registrations
+    * Registration records of the webinar.
     *
     * @param VirtualEventRegistration[] $val The registrations
     *
