@@ -88,7 +88,7 @@ class AttachmentBase extends Entity
 
     /**
     * Gets the name
-    * The display name of the attachment. This does not need to be the actual file name.
+    * The display name of the attachment. This doesn't need to be the actual file name.
     *
     * @return string|null The name
     */
@@ -103,7 +103,7 @@ class AttachmentBase extends Entity
 
     /**
     * Sets the name
-    * The display name of the attachment. This does not need to be the actual file name.
+    * The display name of the attachment. This doesn't need to be the actual file name.
     *
     * @param string $val The name
     *
