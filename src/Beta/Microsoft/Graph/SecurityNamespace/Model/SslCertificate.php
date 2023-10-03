@@ -26,7 +26,7 @@ class SslCertificate extends Artifact
 {
     /**
     * Gets the expirationDateTime
-    * The date and time when a certificate expires. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * The date and time when a certificate expires. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The expirationDateTime
     */
@@ -45,7 +45,7 @@ class SslCertificate extends Artifact
 
     /**
     * Sets the expirationDateTime
-    * The date and time when a certificate expires. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * The date and time when a certificate expires. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The expirationDateTime
     *
@@ -88,7 +88,7 @@ class SslCertificate extends Artifact
 
     /**
     * Gets the firstSeenDateTime
-    * The first date and time that this sslCertificate was observed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * The first date and time when this sslCertificate was observed. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The firstSeenDateTime
     */
@@ -107,7 +107,7 @@ class SslCertificate extends Artifact
 
     /**
     * Sets the firstSeenDateTime
-    * The first date and time that this sslCertificate was observed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * The first date and time when this sslCertificate was observed. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The firstSeenDateTime
     *
@@ -121,7 +121,7 @@ class SslCertificate extends Artifact
 
     /**
     * Gets the issueDateTime
-    * The date and time when a certificate was issued. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * The date and time when a certificate was issued. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The issueDateTime
     */
@@ -140,7 +140,7 @@ class SslCertificate extends Artifact
 
     /**
     * Sets the issueDateTime
-    * The date and time when a certificate was issued. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * The date and time when a certificate was issued. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The issueDateTime
     *
@@ -154,7 +154,7 @@ class SslCertificate extends Artifact
 
     /**
     * Gets the issuer
-    * The entity granting this certificate.
+    * The entity that grants this certificate.
     *
     * @return SslCertificateEntity|null The issuer
     */
@@ -173,7 +173,7 @@ class SslCertificate extends Artifact
 
     /**
     * Sets the issuer
-    * The entity granting this certificate.
+    * The entity that grants this certificate.
     *
     * @param SslCertificateEntity $val The issuer
     *
@@ -187,7 +187,7 @@ class SslCertificate extends Artifact
 
     /**
     * Gets the lastSeenDateTime
-    * The most recent date and time that this sslCertificate was observed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * The most recent date and time when this sslCertificate was observed. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The lastSeenDateTime
     */
@@ -206,7 +206,7 @@ class SslCertificate extends Artifact
 
     /**
     * Sets the lastSeenDateTime
-    * The most recent date and time that this sslCertificate was observed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * The most recent date and time when this sslCertificate was observed. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The lastSeenDateTime
     *

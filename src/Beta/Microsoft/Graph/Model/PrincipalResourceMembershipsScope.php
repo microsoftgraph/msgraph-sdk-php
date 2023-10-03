@@ -26,7 +26,7 @@ class PrincipalResourceMembershipsScope extends AccessReviewScope
 
     /**
     * Gets the principalScopes
-    * Defines the scopes of the principals whose access to resources are reviewed in the access review.
+    * Defines the scopes of the principals for which access to resources are reviewed in the access review.
     *
     * @return AccessReviewScope|null The principalScopes
     */
@@ -45,7 +45,7 @@ class PrincipalResourceMembershipsScope extends AccessReviewScope
 
     /**
     * Sets the principalScopes
-    * Defines the scopes of the principals whose access to resources are reviewed in the access review.
+    * Defines the scopes of the principals for which access to resources are reviewed in the access review.
     *
     * @param AccessReviewScope $val The value to assign to the principalScopes
     *

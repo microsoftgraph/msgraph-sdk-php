@@ -54,7 +54,7 @@ class ContentApplicabilitySettings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the safeguard
-    * Settings for governing safeguard holds on offering content.
+    * Settings for governing safeguard-holds on offering content.
     *
     * @return SafeguardSettings|null The safeguard
     */
@@ -73,7 +73,7 @@ class ContentApplicabilitySettings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the safeguard
-    * Settings for governing safeguard holds on offering content.
+    * Settings for governing safeguard-holds on offering content.
     *
     * @param SafeguardSettings $val The value to assign to the safeguard
     *

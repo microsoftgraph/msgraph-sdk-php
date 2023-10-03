@@ -26,7 +26,7 @@ class EducationResource extends Entity
 
     /**
     * Gets the createdBy
-    * Who created the resource.
+    * Who created the resource?
     *
     * @return IdentitySet|null The createdBy
     */
@@ -45,7 +45,7 @@ class EducationResource extends Entity
 
     /**
     * Sets the createdBy
-    * Who created the resource.
+    * Who created the resource?
     *
     * @param IdentitySet $val The value to assign to the createdBy
     *
@@ -120,7 +120,7 @@ class EducationResource extends Entity
 
     /**
     * Gets the lastModifiedBy
-    * Who was the last user to modify the resource.
+    * Who was the last user to modify the resource?
     *
     * @return IdentitySet|null The lastModifiedBy
     */
@@ -139,7 +139,7 @@ class EducationResource extends Entity
 
     /**
     * Sets the lastModifiedBy
-    * Who was the last user to modify the resource.
+    * Who was the last user to modify the resource?
     *
     * @param IdentitySet $val The value to assign to the lastModifiedBy
     *

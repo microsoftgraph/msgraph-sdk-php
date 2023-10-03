@@ -26,6 +26,7 @@ class TrainingReminderNotification extends BaseEndUserNotification
 
     /**
     * Gets the deliveryFrequency
+    * Configurable frequency for the reminder email introduced during simulation creation. Possible values are: unknown, weekly, biWeekly, unknownFutureValue.
     *
     * @return NotificationDeliveryFrequency|null The deliveryFrequency
     */
@@ -44,6 +45,7 @@ class TrainingReminderNotification extends BaseEndUserNotification
 
     /**
     * Sets the deliveryFrequency
+    * Configurable frequency for the reminder email introduced during simulation creation. Possible values are: unknown, weekly, biWeekly, unknownFutureValue.
     *
     * @param NotificationDeliveryFrequency $val The value to assign to the deliveryFrequency
     *

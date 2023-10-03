@@ -25,7 +25,7 @@ class WebPartData extends Entity
 {
     /**
     * Gets the audiences
-    * Audience information of the web part. By using this property, specific content will be prioritized to specific audiences.
+    * Audience information of the web part. By using this property, specific content is prioritized to specific audiences.
     *
     * @return string|null The audiences
     */
@@ -40,7 +40,7 @@ class WebPartData extends Entity
 
     /**
     * Sets the audiences
-    * Audience information of the web part. By using this property, specific content will be prioritized to specific audiences.
+    * Audience information of the web part. By using this property, specific content is prioritized to specific audiences.
     *
     * @param string $val The value of the audiences
     *

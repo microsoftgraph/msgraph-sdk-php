@@ -26,7 +26,7 @@ class WorkbookRangeFormat extends Entity
 {
     /**
     * Gets the columnWidth
-    * Gets or sets the width of all colums within the range. If the column widths are not uniform, null will be returned.
+    * Gets or sets the width of all columns within the range. If the column widths aren't uniform, null will be returned.
     *
     * @return float|null The columnWidth
     */
@@ -41,7 +41,7 @@ class WorkbookRangeFormat extends Entity
 
     /**
     * Sets the columnWidth
-    * Gets or sets the width of all colums within the range. If the column widths are not uniform, null will be returned.
+    * Gets or sets the width of all columns within the range. If the column widths aren't uniform, null will be returned.
     *
     * @param float $val The columnWidth
     *
@@ -84,7 +84,7 @@ class WorkbookRangeFormat extends Entity
 
     /**
     * Gets the rowHeight
-    * Gets or sets the height of all rows in the range. If the row heights are not uniform null will be returned.
+    * Gets or sets the height of all rows in the range. If the row heights aren't uniform null will be returned.
     *
     * @return float|null The rowHeight
     */
@@ -99,7 +99,7 @@ class WorkbookRangeFormat extends Entity
 
     /**
     * Sets the rowHeight
-    * Gets or sets the height of all rows in the range. If the row heights are not uniform null will be returned.
+    * Gets or sets the height of all rows in the range. If the row heights aren't uniform null will be returned.
     *
     * @param float $val The rowHeight
     *

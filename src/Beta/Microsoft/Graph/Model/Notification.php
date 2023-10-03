@@ -26,7 +26,7 @@ class Notification extends Entity
 {
     /**
     * Gets the displayTimeToLive
-    * Sets how long (in seconds) this notification content will stay in each platform's notification viewer. For example, when the notification is delivered to a Windows device, the value of this property is passed on to ToastNotification.ExpirationTime, which determines how long the toast notification will stay in the user's Windows Action Center.
+    * Sets how long (in seconds) this notification content stays in each platform's notification viewer. For example, when the notification is delivered to a Windows device, the value of this property is passed on to ToastNotification.ExpirationTime, which determines how long the toast notification stays in the user's Windows Action Center.
     *
     * @return int|null The displayTimeToLive
     */
@@ -41,7 +41,7 @@ class Notification extends Entity
 
     /**
     * Sets the displayTimeToLive
-    * Sets how long (in seconds) this notification content will stay in each platform's notification viewer. For example, when the notification is delivered to a Windows device, the value of this property is passed on to ToastNotification.ExpirationTime, which determines how long the toast notification will stay in the user's Windows Action Center.
+    * Sets how long (in seconds) this notification content stays in each platform's notification viewer. For example, when the notification is delivered to a Windows device, the value of this property is passed on to ToastNotification.ExpirationTime, which determines how long the toast notification stays in the user's Windows Action Center.
     *
     * @param int $val The displayTimeToLive
     *
@@ -88,7 +88,7 @@ class Notification extends Entity
 
     /**
     * Gets the groupName
-    * The name of the group that this notification belongs to. It is set by the developer for the purpose of grouping notifications together.
+    * The name of the group that this notification belongs to. It is set by the developer for grouping notifications together.
     *
     * @return string|null The groupName
     */
@@ -103,7 +103,7 @@ class Notification extends Entity
 
     /**
     * Sets the groupName
-    * The name of the group that this notification belongs to. It is set by the developer for the purpose of grouping notifications together.
+    * The name of the group that this notification belongs to. It is set by the developer for grouping notifications together.
     *
     * @param string $val The groupName
     *

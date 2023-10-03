@@ -23,4 +23,35 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class EnumeratedAccountsWithAccess extends AccountsWithAccess
 {
+
+    /**
+    * Gets the accounts
+    *
+    * @return AuthorizationSystem|null The accounts
+    */
+    public function getAccounts()
+    {
+        if (array_key_exists("accounts", $this->_propDict)) {
+            if (is_a($this->_propDict["accounts"], "\Beta\Microsoft\Graph\Model\AuthorizationSystem") || is_null($this->_propDict["accounts"])) {
+                return $this->_propDict["accounts"];
+            } else {
+                $this->_propDict["accounts"] = new AuthorizationSystem($this->_propDict["accounts"]);
+                return $this->_propDict["accounts"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the accounts
+    *
+    * @param AuthorizationSystem $val The value to assign to the accounts
+    *
+    * @return EnumeratedAccountsWithAccess The EnumeratedAccountsWithAccess
+    */
+    public function setAccounts($val)
+    {
+        $this->_propDict["accounts"] = $val;
+         return $this;
+    }
 }

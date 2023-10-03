@@ -26,7 +26,7 @@ class GovernanceRoleAssignment extends Entity
 {
     /**
     * Gets the assignmentState
-    * The state of the assignment. The value can be Eligible for eligible assignment or Active if it is directly assigned Active by administrators, or activated on an eligible assignment by the users.
+    * The state of the assignment. The value can be Eligible for eligible assignment or Active if it's directly assigned Active by administrators, or activated on an eligible assignment by the users.
     *
     * @return string|null The assignmentState
     */
@@ -41,7 +41,7 @@ class GovernanceRoleAssignment extends Entity
 
     /**
     * Sets the assignmentState
-    * The state of the assignment. The value can be Eligible for eligible assignment or Active if it is directly assigned Active by administrators, or activated on an eligible assignment by the users.
+    * The state of the assignment. The value can be Eligible for eligible assignment or Active if it's directly assigned Active by administrators, or activated on an eligible assignment by the users.
     *
     * @param string $val The assignmentState
     *
@@ -55,7 +55,7 @@ class GovernanceRoleAssignment extends Entity
 
     /**
     * Gets the endDateTime
-    * For a non-permanent role assignment, this is the time when the role assignment will be expired. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    * For a non-permanent role assignment, this is the time when the role assignment is expired. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @return \DateTime|null The endDateTime
     */
@@ -74,7 +74,7 @@ class GovernanceRoleAssignment extends Entity
 
     /**
     * Sets the endDateTime
-    * For a non-permanent role assignment, this is the time when the role assignment will be expired. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    * For a non-permanent role assignment, this is the time when the role assignment is expired. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @param \DateTime $val The endDateTime
     *
@@ -146,7 +146,7 @@ class GovernanceRoleAssignment extends Entity
 
     /**
     * Gets the memberType
-    * The type of member. The value can be: Inherited (if the role assignment is inherited from a parent resource scope), Group (if the role assignment is not inherited, but comes from the membership of a group assignment), or User (if the role assignment is neither inherited nor from a group assignment).
+    * The type of member. The value can be: Inherited (if the role assignment is inherited from a parent resource scope), Group (if the role assignment isn't inherited, but comes from the membership of a group assignment), or User (if the role assignment isn't inherited or from a group assignment).
     *
     * @return string|null The memberType
     */
@@ -161,7 +161,7 @@ class GovernanceRoleAssignment extends Entity
 
     /**
     * Sets the memberType
-    * The type of member. The value can be: Inherited (if the role assignment is inherited from a parent resource scope), Group (if the role assignment is not inherited, but comes from the membership of a group assignment), or User (if the role assignment is neither inherited nor from a group assignment).
+    * The type of member. The value can be: Inherited (if the role assignment is inherited from a parent resource scope), Group (if the role assignment isn't inherited, but comes from the membership of a group assignment), or User (if the role assignment isn't inherited or from a group assignment).
     *
     * @param string $val The memberType
     *
@@ -175,7 +175,7 @@ class GovernanceRoleAssignment extends Entity
 
     /**
     * Gets the resourceId
-    * Required. The ID of the resource which the role assignment is associated with.
+    * Required. The ID of the resource that the role assignment is associated with.
     *
     * @return string|null The resourceId
     */
@@ -190,7 +190,7 @@ class GovernanceRoleAssignment extends Entity
 
     /**
     * Sets the resourceId
-    * Required. The ID of the resource which the role assignment is associated with.
+    * Required. The ID of the resource that the role assignment is associated with.
     *
     * @param string $val The resourceId
     *
@@ -204,7 +204,7 @@ class GovernanceRoleAssignment extends Entity
 
     /**
     * Gets the roleDefinitionId
-    * Required. The ID of the role definition which the role assignment is associated with.
+    * Required. The ID of the role definition that the role assignment is associated with.
     *
     * @return string|null The roleDefinitionId
     */
@@ -219,7 +219,7 @@ class GovernanceRoleAssignment extends Entity
 
     /**
     * Sets the roleDefinitionId
-    * Required. The ID of the role definition which the role assignment is associated with.
+    * Required. The ID of the role definition that the role assignment is associated with.
     *
     * @param string $val The roleDefinitionId
     *
@@ -293,7 +293,7 @@ class GovernanceRoleAssignment extends Entity
 
     /**
     * Gets the subjectId
-    * Required. The ID of the subject which the role assignment is associated with.
+    * Required. The ID of the subject that the role assignment is associated with.
     *
     * @return string|null The subjectId
     */
@@ -308,7 +308,7 @@ class GovernanceRoleAssignment extends Entity
 
     /**
     * Sets the subjectId
-    * Required. The ID of the subject which the role assignment is associated with.
+    * Required. The ID of the subject that the role assignment is associated with.
     *
     * @param string $val The subjectId
     *

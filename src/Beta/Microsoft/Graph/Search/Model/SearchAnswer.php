@@ -150,7 +150,7 @@ class SearchAnswer extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the webUrl
-    * Search answer URL link. When users click this search answer in search results, they will go to this URL.
+    * Search answer URL link. When users click this search answer in search results, they'll go to this URL.
     *
     * @return string|null The webUrl
     */
@@ -165,7 +165,7 @@ class SearchAnswer extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the webUrl
-    * Search answer URL link. When users click this search answer in search results, they will go to this URL.
+    * Search answer URL link. When users click this search answer in search results, they'll go to this URL.
     *
     * @param string $val The webUrl
     *

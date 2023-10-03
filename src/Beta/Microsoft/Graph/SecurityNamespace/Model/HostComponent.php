@@ -150,7 +150,7 @@ class HostComponent extends Artifact
 
     /**
     * Gets the version
-    * The component version running on the artifact, for example, v8.5. This should not be assumed to be strictly numerical.
+    * The component version running on the artifact, for example, v8.5. This shouldn't be assumed to be strictly numerical.
     *
     * @return string|null The version
     */
@@ -165,7 +165,7 @@ class HostComponent extends Artifact
 
     /**
     * Sets the version
-    * The component version running on the artifact, for example, v8.5. This should not be assumed to be strictly numerical.
+    * The component version running on the artifact, for example, v8.5. This shouldn't be assumed to be strictly numerical.
     *
     * @param string $val The version
     *
@@ -179,7 +179,7 @@ class HostComponent extends Artifact
 
     /**
     * Gets the host
-    * The host related to this component. This is a reverse navigation property. When navigating to components from a host, this should be assumed to be a return reference.
+    * The host related to this component. This is a reverse navigation property. When you navigate to components from a host, this should be assumed to be a return reference.
     *
     * @return Host|null The host
     */
@@ -198,7 +198,7 @@ class HostComponent extends Artifact
 
     /**
     * Sets the host
-    * The host related to this component. This is a reverse navigation property. When navigating to components from a host, this should be assumed to be a return reference.
+    * The host related to this component. This is a reverse navigation property. When you navigate to components from a host, this should be assumed to be a return reference.
     *
     * @param Host $val The host
     *

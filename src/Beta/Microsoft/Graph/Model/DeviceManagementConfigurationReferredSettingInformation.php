@@ -25,7 +25,7 @@ class DeviceManagementConfigurationReferredSettingInformation extends Entity
 {
     /**
     * Gets the settingDefinitionId
-    * Setting definition id that is being referred to a setting. Applicable for reusable setting
+    * Setting definition id that is being referred to a setting. Applicable for reusable setting.
     *
     * @return string|null The settingDefinitionId
     */
@@ -40,7 +40,7 @@ class DeviceManagementConfigurationReferredSettingInformation extends Entity
 
     /**
     * Sets the settingDefinitionId
-    * Setting definition id that is being referred to a setting. Applicable for reusable setting
+    * Setting definition id that is being referred to a setting. Applicable for reusable setting.
     *
     * @param string $val The value of the settingDefinitionId
     *

@@ -26,7 +26,7 @@ class AuthenticationEventsFlow extends Entity
 {
     /**
     * Gets the conditions
-    * The conditions representing the context of the authentication request which will be used to decide whether the events policy will be invoked.
+    * The conditions representing the context of the authentication request that will be used to decide whether the events policy will be invoked.
     *
     * @return AuthenticationConditions|null The conditions
     */
@@ -45,7 +45,7 @@ class AuthenticationEventsFlow extends Entity
 
     /**
     * Sets the conditions
-    * The conditions representing the context of the authentication request which will be used to decide whether the events policy will be invoked.
+    * The conditions representing the context of the authentication request that will be used to decide whether the events policy will be invoked.
     *
     * @param AuthenticationConditions $val The conditions
     *

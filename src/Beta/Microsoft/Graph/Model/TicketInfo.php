@@ -24,6 +24,32 @@ namespace Beta\Microsoft\Graph\Model;
 class TicketInfo extends Entity
 {
     /**
+    * Gets the ticketApproverIdentityId
+    *
+    * @return string|null The ticketApproverIdentityId
+    */
+    public function getTicketApproverIdentityId()
+    {
+        if (array_key_exists("ticketApproverIdentityId", $this->_propDict)) {
+            return $this->_propDict["ticketApproverIdentityId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the ticketApproverIdentityId
+    *
+    * @param string $val The value of the ticketApproverIdentityId
+    *
+    * @return TicketInfo
+    */
+    public function setTicketApproverIdentityId($val)
+    {
+        $this->_propDict["ticketApproverIdentityId"] = $val;
+        return $this;
+    }
+    /**
     * Gets the ticketNumber
     * The ticket number.
     *
@@ -49,6 +75,32 @@ class TicketInfo extends Entity
     public function setTicketNumber($val)
     {
         $this->_propDict["ticketNumber"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the ticketSubmitterIdentityId
+    *
+    * @return string|null The ticketSubmitterIdentityId
+    */
+    public function getTicketSubmitterIdentityId()
+    {
+        if (array_key_exists("ticketSubmitterIdentityId", $this->_propDict)) {
+            return $this->_propDict["ticketSubmitterIdentityId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the ticketSubmitterIdentityId
+    *
+    * @param string $val The value of the ticketSubmitterIdentityId
+    *
+    * @return TicketInfo
+    */
+    public function setTicketSubmitterIdentityId($val)
+    {
+        $this->_propDict["ticketSubmitterIdentityId"] = $val;
         return $this;
     }
     /**

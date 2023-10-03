@@ -301,7 +301,7 @@ class BookingService extends BookingNamedEntity
 
     /**
     * Gets the isHiddenFromCustomers
-    * True means this service is not available to customers for booking.
+    * True means this service isn't available to customers for booking.
     *
     * @return bool|null The isHiddenFromCustomers
     */
@@ -316,7 +316,7 @@ class BookingService extends BookingNamedEntity
 
     /**
     * Sets the isHiddenFromCustomers
-    * True means this service is not available to customers for booking.
+    * True means this service isn't available to customers for booking.
     *
     * @param bool $val The isHiddenFromCustomers
     *

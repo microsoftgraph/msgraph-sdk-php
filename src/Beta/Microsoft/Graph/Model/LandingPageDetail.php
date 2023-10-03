@@ -26,6 +26,7 @@ class LandingPageDetail extends Entity
 {
     /**
     * Gets the content
+    * Landing page detail content.
     *
     * @return string|null The content
     */
@@ -40,6 +41,7 @@ class LandingPageDetail extends Entity
 
     /**
     * Sets the content
+    * Landing page detail content.
     *
     * @param string $val The content
     *
@@ -53,6 +55,7 @@ class LandingPageDetail extends Entity
 
     /**
     * Gets the isDefaultLangauge
+    * Indicates whether this language detail is default for the landing page.
     *
     * @return bool|null The isDefaultLangauge
     */
@@ -67,6 +70,7 @@ class LandingPageDetail extends Entity
 
     /**
     * Sets the isDefaultLangauge
+    * Indicates whether this language detail is default for the landing page.
     *
     * @param bool $val The isDefaultLangauge
     *
@@ -80,6 +84,7 @@ class LandingPageDetail extends Entity
 
     /**
     * Gets the language
+    * The content language for the landing page.
     *
     * @return string|null The language
     */
@@ -94,6 +99,7 @@ class LandingPageDetail extends Entity
 
     /**
     * Sets the language
+    * The content language for the landing page.
     *
     * @param string $val The language
     *

@@ -26,6 +26,7 @@ class NoTrainingNotificationSetting extends EndUserNotificationSetting
 
     /**
     * Gets the simulationNotification
+    * The notification for the user who is part of the simulation.
     *
     * @return SimulationNotification|null The simulationNotification
     */
@@ -44,6 +45,7 @@ class NoTrainingNotificationSetting extends EndUserNotificationSetting
 
     /**
     * Sets the simulationNotification
+    * The notification for the user who is part of the simulation.
     *
     * @param SimulationNotification $val The value to assign to the simulationNotification
     *

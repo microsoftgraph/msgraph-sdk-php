@@ -54,7 +54,7 @@ class Certification extends Entity
 
     /**
     * Gets the certificationExpirationDateTime
-    * The timestamp when the current certification for the application will expire.
+    * The timestamp when the current certification for the application expires.
     *
     * @return \DateTime|null The certificationExpirationDateTime
     */
@@ -73,7 +73,7 @@ class Certification extends Entity
 
     /**
     * Sets the certificationExpirationDateTime
-    * The timestamp when the current certification for the application will expire.
+    * The timestamp when the current certification for the application expires.
     *
     * @param \DateTime $val The value to assign to the certificationExpirationDateTime
     *

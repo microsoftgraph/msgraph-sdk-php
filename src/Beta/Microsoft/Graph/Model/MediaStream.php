@@ -87,7 +87,7 @@ class MediaStream extends Entity
 
     /**
     * Gets the mediaType
-    * The media type. The possible value are unknown, audio, video, videoBasedScreenSharing, data.
+    * The media type. The possible values are unknown, audio, video, videoBasedScreenSharing, data.
     *
     * @return Modality|null The mediaType
     */
@@ -106,7 +106,7 @@ class MediaStream extends Entity
 
     /**
     * Sets the mediaType
-    * The media type. The possible value are unknown, audio, video, videoBasedScreenSharing, data.
+    * The media type. The possible values are unknown, audio, video, videoBasedScreenSharing, data.
     *
     * @param Modality $val The value to assign to the mediaType
     *
@@ -119,7 +119,7 @@ class MediaStream extends Entity
     }
     /**
     * Gets the serverMuted
-    * Indicates whether the media is muted by the server.
+    * Indicates whether the server has muted the media.
     *
     * @return bool|null The serverMuted
     */
@@ -134,7 +134,7 @@ class MediaStream extends Entity
 
     /**
     * Sets the serverMuted
-    * Indicates whether the media is muted by the server.
+    * Indicates whether the server has muted the media.
     *
     * @param bool $val The value of the serverMuted
     *

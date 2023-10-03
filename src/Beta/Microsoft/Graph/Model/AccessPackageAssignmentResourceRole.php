@@ -84,7 +84,7 @@ class AccessPackageAssignmentResourceRole extends Entity
 
     /**
     * Gets the status
-    * The value is PendingFulfillment when the access package assignment has not yet been delivered to the origin system, and Fulfilled when the access package assignment has been delivered to the origin system.
+    * The value is PendingFulfillment when the access package assignment hasn't yet been delivered to the origin system, and Fulfilled when the access package assignment has been delivered to the origin system.
     *
     * @return string|null The status
     */
@@ -99,7 +99,7 @@ class AccessPackageAssignmentResourceRole extends Entity
 
     /**
     * Sets the status
-    * The value is PendingFulfillment when the access package assignment has not yet been delivered to the origin system, and Fulfilled when the access package assignment has been delivered to the origin system.
+    * The value is PendingFulfillment when the access package assignment hasn't yet been delivered to the origin system, and Fulfilled when the access package assignment has been delivered to the origin system.
     *
     * @param string $val The status
     *

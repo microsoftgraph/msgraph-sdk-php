@@ -37,6 +37,7 @@ class MicrosoftManagedTrainingSetting extends TrainingSetting
 
     /**
     * Gets the completionDateTime
+    * The completion date for the training. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The completionDateTime
     */
@@ -55,6 +56,7 @@ class MicrosoftManagedTrainingSetting extends TrainingSetting
 
     /**
     * Sets the completionDateTime
+    * The completion date for the training. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The value to assign to the completionDateTime
     *
@@ -68,6 +70,7 @@ class MicrosoftManagedTrainingSetting extends TrainingSetting
 
     /**
     * Gets the trainingCompletionDuration
+    * The training completion duration that needs to be provided before scheduling the training. The possible values are: week, fortnite, month, unknownFutureValue.
     *
     * @return TrainingCompletionDuration|null The trainingCompletionDuration
     */
@@ -86,6 +89,7 @@ class MicrosoftManagedTrainingSetting extends TrainingSetting
 
     /**
     * Sets the trainingCompletionDuration
+    * The training completion duration that needs to be provided before scheduling the training. The possible values are: week, fortnite, month, unknownFutureValue.
     *
     * @param TrainingCompletionDuration $val The value to assign to the trainingCompletionDuration
     *

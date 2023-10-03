@@ -26,7 +26,7 @@ class ThreatSubmission extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the adminReview
-    * Specifies the admin review property which constitutes of who reviewed the user submission, when and what was it identified as.
+    * Specifies the admin review property that constitutes of who reviewed the user submission, when and what was it identified as.
     *
     * @return SubmissionAdminReview|null The adminReview
     */
@@ -45,7 +45,7 @@ class ThreatSubmission extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the adminReview
-    * Specifies the admin review property which constitutes of who reviewed the user submission, when and what was it identified as.
+    * Specifies the admin review property that constitutes of who reviewed the user submission, when and what was it identified as.
     *
     * @param SubmissionAdminReview $val The adminReview
     *
@@ -323,7 +323,7 @@ class ThreatSubmission extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the tenantId
-    * Indicates the tenant id of the submitter. Not required when created using a POST operation. It is extracted from the token of the post API call.
+    * Indicates the tenant id of the submitter. Not required when created using a POST operation. It's extracted from the token of the post API call.
     *
     * @return string|null The tenantId
     */
@@ -338,7 +338,7 @@ class ThreatSubmission extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the tenantId
-    * Indicates the tenant id of the submitter. Not required when created using a POST operation. It is extracted from the token of the post API call.
+    * Indicates the tenant id of the submitter. Not required when created using a POST operation. It's extracted from the token of the post API call.
     *
     * @param string $val The tenantId
     *

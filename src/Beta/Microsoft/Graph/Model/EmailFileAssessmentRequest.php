@@ -26,7 +26,7 @@ class EmailFileAssessmentRequest extends ThreatAssessmentRequest
 {
     /**
     * Gets the contentData
-    * Base64 encoded .eml email file content. The file content cannot fetch back because it isn't stored.
+    * Base64 encoded .eml email file content. The file content can't fetch back because it isn't stored.
     *
     * @return string|null The contentData
     */
@@ -41,7 +41,7 @@ class EmailFileAssessmentRequest extends ThreatAssessmentRequest
 
     /**
     * Sets the contentData
-    * Base64 encoded .eml email file content. The file content cannot fetch back because it isn't stored.
+    * Base64 encoded .eml email file content. The file content can't fetch back because it isn't stored.
     *
     * @param string $val The contentData
     *

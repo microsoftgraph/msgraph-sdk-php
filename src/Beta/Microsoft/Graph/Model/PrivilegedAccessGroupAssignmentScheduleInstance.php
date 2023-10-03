@@ -212,7 +212,7 @@ class PrivilegedAccessGroupAssignmentScheduleInstance extends PrivilegedAccessSc
 
     /**
     * Gets the activatedUsing
-    * When the request activates a membership or ownership in PIM for groups, this object represents the eligibility request for the group. Otherwise, it is null.
+    * When the request activates a membership or ownership in PIM for groups, this object represents the eligibility request for the group. Otherwise, it's null.
     *
     * @return PrivilegedAccessGroupEligibilityScheduleInstance|null The activatedUsing
     */
@@ -231,7 +231,7 @@ class PrivilegedAccessGroupAssignmentScheduleInstance extends PrivilegedAccessSc
 
     /**
     * Sets the activatedUsing
-    * When the request activates a membership or ownership in PIM for groups, this object represents the eligibility request for the group. Otherwise, it is null.
+    * When the request activates a membership or ownership in PIM for groups, this object represents the eligibility request for the group. Otherwise, it's null.
     *
     * @param PrivilegedAccessGroupEligibilityScheduleInstance $val The activatedUsing
     *

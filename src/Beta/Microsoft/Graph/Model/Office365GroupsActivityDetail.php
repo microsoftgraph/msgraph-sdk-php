@@ -84,7 +84,7 @@ class Office365GroupsActivityDetail extends Entity
 
     /**
     * Gets the exchangeReceivedEmailCount
-    * The number of email that the group mailbox received.
+    * The number of emails that the group mailbox received.
     *
     * @return int|null The exchangeReceivedEmailCount
     */
@@ -99,7 +99,7 @@ class Office365GroupsActivityDetail extends Entity
 
     /**
     * Sets the exchangeReceivedEmailCount
-    * The number of email that the group mailbox received.
+    * The number of emails that the group mailbox received.
     *
     * @param int $val The exchangeReceivedEmailCount
     *

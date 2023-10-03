@@ -86,7 +86,7 @@ class AttachmentInfo extends Entity
     }
     /**
     * Gets the name
-    * The display name of the attachment. This can be a descriptive string and does not have to be the actual file name. Required.
+    * The display name of the attachment. This can be a descriptive string and doesn't have to be the actual file name. Required.
     *
     * @return string|null The name
     */
@@ -101,7 +101,7 @@ class AttachmentInfo extends Entity
 
     /**
     * Sets the name
-    * The display name of the attachment. This can be a descriptive string and does not have to be the actual file name. Required.
+    * The display name of the attachment. This can be a descriptive string and doesn't have to be the actual file name. Required.
     *
     * @param string $val The value of the name
     *

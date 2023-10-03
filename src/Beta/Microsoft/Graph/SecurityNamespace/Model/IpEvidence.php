@@ -25,7 +25,7 @@ class IpEvidence extends AlertEvidence
 {
     /**
     * Gets the countryLetterCode
-    * The two-letter country code according to ISO 3166 format, for example: US, UK, CA, etc..).
+    * The two-letter country code according to ISO 3166 format, for example: US, UK, or CA.).
     *
     * @return string|null The countryLetterCode
     */
@@ -40,7 +40,7 @@ class IpEvidence extends AlertEvidence
 
     /**
     * Sets the countryLetterCode
-    * The two-letter country code according to ISO 3166 format, for example: US, UK, CA, etc..).
+    * The two-letter country code according to ISO 3166 format, for example: US, UK, or CA.).
     *
     * @param string $val The value of the countryLetterCode
     *
@@ -53,7 +53,7 @@ class IpEvidence extends AlertEvidence
     }
     /**
     * Gets the ipAddress
-    * The value of the IP Address, can be either in V4 address or V6 address format.
+    * The value of the IP Address can be either in V4 address or V6 address format.
     *
     * @return string|null The ipAddress
     */
@@ -68,7 +68,7 @@ class IpEvidence extends AlertEvidence
 
     /**
     * Sets the ipAddress
-    * The value of the IP Address, can be either in V4 address or V6 address format.
+    * The value of the IP Address can be either in V4 address or V6 address format.
     *
     * @param string $val The value of the ipAddress
     *
