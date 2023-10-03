@@ -26,7 +26,7 @@ class ConvertIdResult extends Entity
 
     /**
     * Gets the errorDetails
-    * An error object indicating the reason for the conversion failure. This value is not present if the conversion succeeded.
+    * An error object indicating the reason for the conversion failure. This value isn't present if the conversion succeeded.
     *
     * @return GenericError|null The errorDetails
     */
@@ -45,7 +45,7 @@ class ConvertIdResult extends Entity
 
     /**
     * Sets the errorDetails
-    * An error object indicating the reason for the conversion failure. This value is not present if the conversion succeeded.
+    * An error object indicating the reason for the conversion failure. This value isn't present if the conversion succeeded.
     *
     * @param GenericError $val The value to assign to the errorDetails
     *
@@ -86,7 +86,7 @@ class ConvertIdResult extends Entity
     }
     /**
     * Gets the targetId
-    * The converted identifier. This value is not present if the conversion failed.
+    * The converted identifier. This value isn't present if the conversion failed.
     *
     * @return string|null The targetId
     */
@@ -101,7 +101,7 @@ class ConvertIdResult extends Entity
 
     /**
     * Sets the targetId
-    * The converted identifier. This value is not present if the conversion failed.
+    * The converted identifier. This value isn't present if the conversion failed.
     *
     * @param string $val The value of the targetId
     *

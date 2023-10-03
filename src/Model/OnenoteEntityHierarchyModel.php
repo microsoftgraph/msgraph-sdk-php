@@ -26,7 +26,7 @@ class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel
 {
     /**
     * Gets the createdBy
-    * Identity of the user, device, and application which created the item. Read-only.
+    * Identity of the user, device, and application that created the item. Read-only.
     *
     * @return IdentitySet|null The createdBy
     */
@@ -45,7 +45,7 @@ class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel
 
     /**
     * Sets the createdBy
-    * Identity of the user, device, and application which created the item. Read-only.
+    * Identity of the user, device, and application that created the item. Read-only.
     *
     * @param IdentitySet $val The createdBy
     *
@@ -88,7 +88,7 @@ class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel
 
     /**
     * Gets the lastModifiedBy
-    * Identity of the user, device, and application which created the item. Read-only.
+    * Identity of the user, device, and application that created the item. Read-only.
     *
     * @return IdentitySet|null The lastModifiedBy
     */
@@ -107,7 +107,7 @@ class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel
 
     /**
     * Sets the lastModifiedBy
-    * Identity of the user, device, and application which created the item. Read-only.
+    * Identity of the user, device, and application that created the item. Read-only.
     *
     * @param IdentitySet $val The lastModifiedBy
     *

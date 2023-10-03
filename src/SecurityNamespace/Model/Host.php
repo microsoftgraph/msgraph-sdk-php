@@ -26,7 +26,7 @@ class Host extends Artifact
 {
     /**
     * Gets the firstSeenDateTime
-    * The first date and time this host was observed. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
+    * The first date and time when this host was observed. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The firstSeenDateTime
     */
@@ -45,7 +45,7 @@ class Host extends Artifact
 
     /**
     * Sets the firstSeenDateTime
-    * The first date and time this host was observed. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
+    * The first date and time when this host was observed. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The firstSeenDateTime
     *
@@ -59,7 +59,7 @@ class Host extends Artifact
 
     /**
     * Gets the lastSeenDateTime
-    * The most recent date and time when this host was observed. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
+    * The most recent date and time when this host was observed. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The lastSeenDateTime
     */
@@ -78,7 +78,7 @@ class Host extends Artifact
 
     /**
     * Sets the lastSeenDateTime
-    * The most recent date and time when this host was observed. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
+    * The most recent date and time when this host was observed. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The lastSeenDateTime
     *
@@ -87,6 +87,36 @@ class Host extends Artifact
     public function setLastSeenDateTime($val)
     {
         $this->_propDict["lastSeenDateTime"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the childHostPairs
+    * The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a cihldHost.
+     *
+     * @return array|null The childHostPairs
+     */
+    public function getChildHostPairs()
+    {
+        if (array_key_exists("childHostPairs", $this->_propDict)) {
+           return $this->_propDict["childHostPairs"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the childHostPairs
+    * The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a cihldHost.
+    *
+    * @param HostPair[] $val The childHostPairs
+    *
+    * @return Host
+    */
+    public function setChildHostPairs($val)
+    {
+        $this->_propDict["childHostPairs"] = $val;
         return $this;
     }
 
@@ -147,6 +177,66 @@ class Host extends Artifact
     public function setCookies($val)
     {
         $this->_propDict["cookies"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the hostPairs
+    * The hostPairs that are associated with this host, where this host is either the parentHost or childHost.
+     *
+     * @return array|null The hostPairs
+     */
+    public function getHostPairs()
+    {
+        if (array_key_exists("hostPairs", $this->_propDict)) {
+           return $this->_propDict["hostPairs"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the hostPairs
+    * The hostPairs that are associated with this host, where this host is either the parentHost or childHost.
+    *
+    * @param HostPair[] $val The hostPairs
+    *
+    * @return Host
+    */
+    public function setHostPairs($val)
+    {
+        $this->_propDict["hostPairs"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the parentHostPairs
+    * The hostPairs that are associated with a host, where that host is the childHost and has an incoming pairing with a parentHost.
+     *
+     * @return array|null The parentHostPairs
+     */
+    public function getParentHostPairs()
+    {
+        if (array_key_exists("parentHostPairs", $this->_propDict)) {
+           return $this->_propDict["parentHostPairs"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the parentHostPairs
+    * The hostPairs that are associated with a host, where that host is the childHost and has an incoming pairing with a parentHost.
+    *
+    * @param HostPair[] $val The parentHostPairs
+    *
+    * @return Host
+    */
+    public function setParentHostPairs($val)
+    {
+        $this->_propDict["parentHostPairs"] = $val;
         return $this;
     }
 
@@ -245,6 +335,66 @@ class Host extends Artifact
 
 
      /**
+     * Gets the sslCertificates
+    * The hostSslCertificates that are associated with this host.
+     *
+     * @return array|null The sslCertificates
+     */
+    public function getSslCertificates()
+    {
+        if (array_key_exists("sslCertificates", $this->_propDict)) {
+           return $this->_propDict["sslCertificates"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the sslCertificates
+    * The hostSslCertificates that are associated with this host.
+    *
+    * @param HostSslCertificate[] $val The sslCertificates
+    *
+    * @return Host
+    */
+    public function setSslCertificates($val)
+    {
+        $this->_propDict["sslCertificates"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the subdomains
+    * The subdomains that are associated with this host.
+     *
+     * @return array|null The subdomains
+     */
+    public function getSubdomains()
+    {
+        if (array_key_exists("subdomains", $this->_propDict)) {
+           return $this->_propDict["subdomains"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the subdomains
+    * The subdomains that are associated with this host.
+    *
+    * @param Subdomain[] $val The subdomains
+    *
+    * @return Host
+    */
+    public function setSubdomains($val)
+    {
+        $this->_propDict["subdomains"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the trackers
     * The hostTrackers that are associated with this host.
      *
@@ -270,6 +420,39 @@ class Host extends Artifact
     public function setTrackers($val)
     {
         $this->_propDict["trackers"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the whois
+    * The most recent whoisRecord for this host.
+    *
+    * @return WhoisRecord|null The whois
+    */
+    public function getWhois()
+    {
+        if (array_key_exists("whois", $this->_propDict)) {
+            if (is_a($this->_propDict["whois"], "\Microsoft\Graph\SecurityNamespace\Model\WhoisRecord") || is_null($this->_propDict["whois"])) {
+                return $this->_propDict["whois"];
+            } else {
+                $this->_propDict["whois"] = new WhoisRecord($this->_propDict["whois"]);
+                return $this->_propDict["whois"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the whois
+    * The most recent whoisRecord for this host.
+    *
+    * @param WhoisRecord $val The whois
+    *
+    * @return Host
+    */
+    public function setWhois($val)
+    {
+        $this->_propDict["whois"] = $val;
         return $this;
     }
 

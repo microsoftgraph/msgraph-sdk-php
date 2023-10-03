@@ -148,7 +148,7 @@ class AlertEvidence extends \Microsoft\Graph\Model\Entity
 
     /**
     * Gets the roles
-    * The role/s that an evidence entity represents in an alert, e.g., an IP address that is associated with an attacker will have the evidence role Attacker.
+    * The role/s that an evidence entity represents in an alert, for example, an IP address that is associated with an attacker has the evidence role Attacker.
     *
     * @return EvidenceRole|null The roles
     */
@@ -167,7 +167,7 @@ class AlertEvidence extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the roles
-    * The role/s that an evidence entity represents in an alert, e.g., an IP address that is associated with an attacker will have the evidence role Attacker.
+    * The role/s that an evidence entity represents in an alert, for example, an IP address that is associated with an attacker has the evidence role Attacker.
     *
     * @param EvidenceRole $val The value to assign to the roles
     *

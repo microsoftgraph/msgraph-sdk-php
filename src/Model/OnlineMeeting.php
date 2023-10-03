@@ -866,4 +866,32 @@ class OnlineMeeting extends Entity
         return $this;
     }
 
+
+     /**
+     * Gets the transcripts
+     *
+     * @return array|null The transcripts
+     */
+    public function getTranscripts()
+    {
+        if (array_key_exists("transcripts", $this->_propDict)) {
+           return $this->_propDict["transcripts"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the transcripts
+    *
+    * @param CallTranscript[] $val The transcripts
+    *
+    * @return OnlineMeeting
+    */
+    public function setTranscripts($val)
+    {
+        $this->_propDict["transcripts"] = $val;
+        return $this;
+    }
+
 }

@@ -26,7 +26,7 @@ class FileAssessmentRequest extends ThreatAssessmentRequest
 {
     /**
     * Gets the contentData
-    * Base64 encoded file content. The file content cannot fetch back because it isn't stored.
+    * Base64 encoded file content. The file content can't fetch back because it isn't stored.
     *
     * @return string|null The contentData
     */
@@ -41,7 +41,7 @@ class FileAssessmentRequest extends ThreatAssessmentRequest
 
     /**
     * Sets the contentData
-    * Base64 encoded file content. The file content cannot fetch back because it isn't stored.
+    * Base64 encoded file content. The file content can't fetch back because it isn't stored.
     *
     * @param string $val The contentData
     *

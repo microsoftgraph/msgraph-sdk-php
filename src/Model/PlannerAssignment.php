@@ -26,7 +26,7 @@ class PlannerAssignment extends Entity
 
     /**
     * Gets the assignedBy
-    * The identity of the user that performed the assignment of the task, i.e. the assignor.
+    * The identity of the user that performed the assignment of the task, that is, the assignor.
     *
     * @return IdentitySet|null The assignedBy
     */
@@ -45,7 +45,7 @@ class PlannerAssignment extends Entity
 
     /**
     * Sets the assignedBy
-    * The identity of the user that performed the assignment of the task, i.e. the assignor.
+    * The identity of the user that performed the assignment of the task, that is, the assignor.
     *
     * @param IdentitySet $val The value to assign to the assignedBy
     *
@@ -59,7 +59,7 @@ class PlannerAssignment extends Entity
 
     /**
     * Gets the assignedDateTime
-    * The time at which the task was assigned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    * The time when the task was assigned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @return \DateTime|null The assignedDateTime
     */
@@ -78,7 +78,7 @@ class PlannerAssignment extends Entity
 
     /**
     * Sets the assignedDateTime
-    * The time at which the task was assigned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    * The time when the task was assigned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @param \DateTime $val The value to assign to the assignedDateTime
     *

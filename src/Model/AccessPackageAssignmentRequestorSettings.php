@@ -25,7 +25,7 @@ class AccessPackageAssignmentRequestorSettings extends Entity
 {
     /**
     * Gets the allowCustomAssignmentSchedule
-    * False indicates that the requestor is not permitted to include a schedule in their request.
+    * False indicates that the requestor isn't permitted to include a schedule in their request.
     *
     * @return bool|null The allowCustomAssignmentSchedule
     */
@@ -40,7 +40,7 @@ class AccessPackageAssignmentRequestorSettings extends Entity
 
     /**
     * Sets the allowCustomAssignmentSchedule
-    * False indicates that the requestor is not permitted to include a schedule in their request.
+    * False indicates that the requestor isn't permitted to include a schedule in their request.
     *
     * @param bool $val The value of the allowCustomAssignmentSchedule
     *

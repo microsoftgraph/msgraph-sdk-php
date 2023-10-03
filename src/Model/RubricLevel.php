@@ -87,7 +87,7 @@ class RubricLevel extends Entity
 
     /**
     * Gets the grading
-    * Null if this is a no-points rubric; educationAssignmentPointsGradeType if it is a points rubric.
+    * Null if this is a no-points rubric; educationAssignmentPointsGradeType if it's a points rubric.
     *
     * @return EducationAssignmentGradeType|null The grading
     */
@@ -106,7 +106,7 @@ class RubricLevel extends Entity
 
     /**
     * Sets the grading
-    * Null if this is a no-points rubric; educationAssignmentPointsGradeType if it is a points rubric.
+    * Null if this is a no-points rubric; educationAssignmentPointsGradeType if it's a points rubric.
     *
     * @param EducationAssignmentGradeType $val The value to assign to the grading
     *

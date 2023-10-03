@@ -53,7 +53,7 @@ class BookingQuestionAssignment extends Entity
     }
     /**
     * Gets the questionId
-    * Indicates whether it is mandatory to answer the custom question.
+    * Indicates whether it's mandatory to answer the custom question.
     *
     * @return string|null The questionId
     */
@@ -68,7 +68,7 @@ class BookingQuestionAssignment extends Entity
 
     /**
     * Sets the questionId
-    * Indicates whether it is mandatory to answer the custom question.
+    * Indicates whether it's mandatory to answer the custom question.
     *
     * @param string $val The value of the questionId
     *

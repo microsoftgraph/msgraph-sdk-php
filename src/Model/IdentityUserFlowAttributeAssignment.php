@@ -55,7 +55,7 @@ class IdentityUserFlowAttributeAssignment extends Entity
 
     /**
     * Gets the isOptional
-    * Determines whether the identityUserFlowAttribute is optional. true means the user doesn't have to provide a value. false means the user cannot complete sign-up without providing a value.
+    * Determines whether the identityUserFlowAttribute is optional. true means the user doesn't have to provide a value. false means the user can't complete sign-up without providing a value.
     *
     * @return bool|null The isOptional
     */
@@ -70,7 +70,7 @@ class IdentityUserFlowAttributeAssignment extends Entity
 
     /**
     * Sets the isOptional
-    * Determines whether the identityUserFlowAttribute is optional. true means the user doesn't have to provide a value. false means the user cannot complete sign-up without providing a value.
+    * Determines whether the identityUserFlowAttribute is optional. true means the user doesn't have to provide a value. false means the user can't complete sign-up without providing a value.
     *
     * @param bool $val The isOptional
     *
@@ -84,7 +84,7 @@ class IdentityUserFlowAttributeAssignment extends Entity
 
     /**
     * Gets the requiresVerification
-    * Determines whether the identityUserFlowAttribute requires verification. This is only used for verifying the user's phone number or email address.
+    * Determines whether the identityUserFlowAttribute requires verification, and is only used for verifying the user's phone number or email address.
     *
     * @return bool|null The requiresVerification
     */
@@ -99,7 +99,7 @@ class IdentityUserFlowAttributeAssignment extends Entity
 
     /**
     * Sets the requiresVerification
-    * Determines whether the identityUserFlowAttribute requires verification. This is only used for verifying the user's phone number or email address.
+    * Determines whether the identityUserFlowAttribute requires verification, and is only used for verifying the user's phone number or email address.
     *
     * @param bool $val The requiresVerification
     *
