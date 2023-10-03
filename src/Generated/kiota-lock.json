@@ -1,5 +1,5 @@
 {
-  "descriptionHash": "2AAF887FC5FCB642F6A66D336486BA0F789832446E6D8397B3F06786FC10C93E8C65E556AEC2D90537E5E8D95D9898908E4A7B7F1BF93B7D9945EFC269243CC5",
+  "descriptionHash": "A6D4D3C6A6ED9A57C4ED9F1D3AED728561CE6A8684D2C8CD494417BFBC1BDC0EC688BB29F5C12E12B0F828D91213F2E5DB6C7F1324B29D17FCAD02136F98C54C",
   "descriptionLocation": "/mnt/vss/_work/1/s/msgraph-metadata/clean_v10_openapi/openapi.yaml",
   "lockFileVersion": "1.0.0",
   "kiotaVersion": "1.7.0",
@@ -7,6 +7,7 @@
   "clientNamespaceName": "Microsoft\\Graph\\Generated",
   "language": "PHP",
   "usesBackingStore": true,
+  "excludeBackwardCompatible": false,
   "includeAdditionalData": true,
   "serializers": [
     "Microsoft.Kiota.Serialization.Json.JsonSerializationWriterFactory",

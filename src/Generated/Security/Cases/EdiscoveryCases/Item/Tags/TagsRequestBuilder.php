@@ -61,7 +61,7 @@ class TagsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of eDiscoveryReviewTag objects and their properties.
+     * Get a list of eDiscoveryReviewTag objects and their properties. This API is supported in the following national cloud deployments.
      * @param TagsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/security-ediscoverycase-list-tags?view=graph-rest-1.0 Find more info here
@@ -80,7 +80,7 @@ class TagsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new ediscoveryReviewTag object.
+     * Create a new ediscoveryReviewTag object. This API is supported in the following national cloud deployments.
      * @param EdiscoveryReviewTag $body The request body
      * @param TagsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -100,7 +100,7 @@ class TagsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of eDiscoveryReviewTag objects and their properties.
+     * Get a list of eDiscoveryReviewTag objects and their properties. This API is supported in the following national cloud deployments.
      * @param TagsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -121,7 +121,7 @@ class TagsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new ediscoveryReviewTag object.
+     * Create a new ediscoveryReviewTag object. This API is supported in the following national cloud deployments.
      * @param EdiscoveryReviewTag $body The request body
      * @param TagsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

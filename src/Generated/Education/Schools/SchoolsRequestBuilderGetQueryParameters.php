@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Education\Schools;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a list of the educationSchool objects and their properties.
+ * Get a list of the educationSchool objects and their properties. This API is supported in the following national cloud deployments.
 */
 class SchoolsRequestBuilderGetQueryParameters 
 {

@@ -32,7 +32,7 @@ class TemporaryAccessPassAuthenticationMethodItemRequestBuilder extends BaseRequ
     }
 
     /**
-     * Delete a users's temporaryAccessPassAuthenticationMethod object.
+     * Delete a users's temporaryAccessPassAuthenticationMethod object. This API is supported in the following national cloud deployments.
      * @param TemporaryAccessPassAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/temporaryaccesspassauthenticationmethod-delete?view=graph-rest-1.0 Find more info here
@@ -51,7 +51,7 @@ class TemporaryAccessPassAuthenticationMethodItemRequestBuilder extends BaseRequ
     }
 
     /**
-     * Retrieve a user's single temporaryAccessPassAuthenticationMethod object.
+     * Retrieve a user's single temporaryAccessPassAuthenticationMethod object. This API is supported in the following national cloud deployments.
      * @param TemporaryAccessPassAuthenticationMethodItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/temporaryaccesspassauthenticationmethod-get?view=graph-rest-1.0 Find more info here
@@ -70,7 +70,7 @@ class TemporaryAccessPassAuthenticationMethodItemRequestBuilder extends BaseRequ
     }
 
     /**
-     * Delete a users's temporaryAccessPassAuthenticationMethod object.
+     * Delete a users's temporaryAccessPassAuthenticationMethod object. This API is supported in the following national cloud deployments.
      * @param TemporaryAccessPassAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -87,7 +87,7 @@ class TemporaryAccessPassAuthenticationMethodItemRequestBuilder extends BaseRequ
     }
 
     /**
-     * Retrieve a user's single temporaryAccessPassAuthenticationMethod object.
+     * Retrieve a user's single temporaryAccessPassAuthenticationMethod object. This API is supported in the following national cloud deployments.
      * @param TemporaryAccessPassAuthenticationMethodItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

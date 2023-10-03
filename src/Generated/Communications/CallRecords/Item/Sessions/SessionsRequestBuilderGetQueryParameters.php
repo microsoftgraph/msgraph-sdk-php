@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Communications\CallRecords\Item\Sessions;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the list of sessions associated with a callRecord object. If the sessions list is truncated, a sessions@odata.nextLink value will be provided to retrieve the next page of sessions. The maximum page size for sessions is 60 entries.
+ * Retrieve the list of sessions associated with a callRecord object. If the sessions list is truncated, a sessions@odata.nextLink value will be provided to retrieve the next page of sessions. The maximum page size for sessions is 60 entries. This API is supported in the following national cloud deployments.
 */
 class SessionsRequestBuilderGetQueryParameters 
 {

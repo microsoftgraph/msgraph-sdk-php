@@ -26,7 +26,7 @@ class FileAssessmentRequest extends ThreatAssessmentRequest implements Parsable
     }
 
     /**
-     * Gets the contentData property value. Base64 encoded file content. The file content cannot fetch back because it isn't stored.
+     * Gets the contentData property value. Base64 encoded file content. The file content can't fetch back because it isn't stored.
      * @return string|null
     */
     public function getContentData(): ?string {
@@ -72,7 +72,7 @@ class FileAssessmentRequest extends ThreatAssessmentRequest implements Parsable
     }
 
     /**
-     * Sets the contentData property value. Base64 encoded file content. The file content cannot fetch back because it isn't stored.
+     * Sets the contentData property value. Base64 encoded file content. The file content can't fetch back because it isn't stored.
      * @param string|null $value Value to set for the contentData property.
     */
     public function setContentData(?string $value): void {

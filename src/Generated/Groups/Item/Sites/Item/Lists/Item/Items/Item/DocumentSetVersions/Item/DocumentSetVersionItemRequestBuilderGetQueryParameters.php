@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\Items\Item
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read the properties and relationships of a documentSetVersion object.
+ * Read the properties and relationships of a documentSetVersion object. This API is supported in the following national cloud deployments.
 */
 class DocumentSetVersionItemRequestBuilderGetQueryParameters 
 {

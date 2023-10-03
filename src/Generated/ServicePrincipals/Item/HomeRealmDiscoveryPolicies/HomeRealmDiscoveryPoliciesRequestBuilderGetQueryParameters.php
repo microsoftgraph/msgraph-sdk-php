@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\ServicePrincipals\Item\HomeRealmDiscoveryPol
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List the homeRealmDiscoveryPolicy objects that are assigned to a servicePrincipal.
+ * List the homeRealmDiscoveryPolicy objects that are assigned to a servicePrincipal. This API is supported in the following national cloud deployments.
 */
 class HomeRealmDiscoveryPoliciesRequestBuilderGetQueryParameters 
 {

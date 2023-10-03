@@ -88,7 +88,7 @@ class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRequestBu
     }
 
     /**
-     * Delete a localized branding object. To delete the organizationalBrandingLocalization object, all images (Stream types) must first be removed from the object.
+     * Delete a localized branding object. To delete the organizationalBrandingLocalization object, all images (Stream types) must first be removed from the object. This API is supported in the following national cloud deployments.
      * @param OrganizationalBrandingLocalizationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/organizationalbrandinglocalization-delete?view=graph-rest-1.0 Find more info here
@@ -107,7 +107,7 @@ class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRequestBu
     }
 
     /**
-     * Read the properties and relationships of an organizationalBrandingLocalization object. To retrieve a localization branding object, specify the value of id in the URL.
+     * Read the properties and relationships of an organizationalBrandingLocalization object. To retrieve a localization branding object, specify the value of id in the URL. This API is supported in the following national cloud deployments.
      * @param OrganizationalBrandingLocalizationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/organizationalbrandinglocalization-get?view=graph-rest-1.0 Find more info here
@@ -126,7 +126,7 @@ class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRequestBu
     }
 
     /**
-     * Update the properties of an organizationalBrandingLocalization object for a specific localization.
+     * Update the properties of an organizationalBrandingLocalization object for a specific localization. This API is supported in the following national cloud deployments.
      * @param OrganizationalBrandingLocalization $body The request body
      * @param OrganizationalBrandingLocalizationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -146,7 +146,7 @@ class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRequestBu
     }
 
     /**
-     * Delete a localized branding object. To delete the organizationalBrandingLocalization object, all images (Stream types) must first be removed from the object.
+     * Delete a localized branding object. To delete the organizationalBrandingLocalization object, all images (Stream types) must first be removed from the object. This API is supported in the following national cloud deployments.
      * @param OrganizationalBrandingLocalizationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -163,7 +163,7 @@ class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRequestBu
     }
 
     /**
-     * Read the properties and relationships of an organizationalBrandingLocalization object. To retrieve a localization branding object, specify the value of id in the URL.
+     * Read the properties and relationships of an organizationalBrandingLocalization object. To retrieve a localization branding object, specify the value of id in the URL. This API is supported in the following national cloud deployments.
      * @param OrganizationalBrandingLocalizationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -184,7 +184,7 @@ class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRequestBu
     }
 
     /**
-     * Update the properties of an organizationalBrandingLocalization object for a specific localization.
+     * Update the properties of an organizationalBrandingLocalization object for a specific localization. This API is supported in the following national cloud deployments.
      * @param OrganizationalBrandingLocalization $body The request body
      * @param OrganizationalBrandingLocalizationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

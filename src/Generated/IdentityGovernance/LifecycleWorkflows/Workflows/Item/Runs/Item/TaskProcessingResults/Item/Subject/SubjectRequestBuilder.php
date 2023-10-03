@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\Runs\Item\TaskProcessingResults\Item\Subject\MailboxSettings\MailboxSettingsRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\Runs\Item\TaskProcessingResults\Item\Subject\ServiceProvisioningErrors\ServiceProvisioningErrorsRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\User;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -23,6 +24,13 @@ class SubjectRequestBuilder extends BaseRequestBuilder
     */
     public function mailboxSettings(): MailboxSettingsRequestBuilder {
         return new MailboxSettingsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * The serviceProvisioningErrors property
+    */
+    public function serviceProvisioningErrors(): ServiceProvisioningErrorsRequestBuilder {
+        return new ServiceProvisioningErrorsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

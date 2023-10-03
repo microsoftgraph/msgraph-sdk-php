@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\EscapedPrint\Services\Item\Endpoints\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties and relationships of a print service endpoint.
+ * Retrieve the properties and relationships of a print service endpoint. This API is supported in the following national cloud deployments.
 */
 class PrintServiceEndpointItemRequestBuilderGetQueryParameters 
 {

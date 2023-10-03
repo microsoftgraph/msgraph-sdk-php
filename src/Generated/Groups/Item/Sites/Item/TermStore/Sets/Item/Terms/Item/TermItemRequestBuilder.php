@@ -56,7 +56,7 @@ class TermItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a term object.
+     * Delete a term object. This API is supported in the following national cloud deployments.
      * @param TermItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/termstore-term-delete?view=graph-rest-1.0 Find more info here
@@ -75,7 +75,7 @@ class TermItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a term object.
+     * Read the properties and relationships of a term object. This API is supported in the following national cloud deployments.
      * @param TermItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/termstore-term-get?view=graph-rest-1.0 Find more info here
@@ -94,7 +94,7 @@ class TermItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a term object.
+     * Update the properties of a term object. This API is supported in the following national cloud deployments.
      * @param Term $body The request body
      * @param TermItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -114,7 +114,7 @@ class TermItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a term object.
+     * Delete a term object. This API is supported in the following national cloud deployments.
      * @param TermItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -131,7 +131,7 @@ class TermItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a term object.
+     * Read the properties and relationships of a term object. This API is supported in the following national cloud deployments.
      * @param TermItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -152,7 +152,7 @@ class TermItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a term object.
+     * Update the properties of a term object. This API is supported in the following national cloud deployments.
      * @param Term $body The request body
      * @param TermItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

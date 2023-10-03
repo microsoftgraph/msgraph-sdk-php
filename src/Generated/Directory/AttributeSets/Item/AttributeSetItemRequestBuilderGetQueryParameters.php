@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Directory\AttributeSets\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read the properties and relationships of an attributeSet object.
+ * Read the properties and relationships of an attributeSet object. This API is supported in the following national cloud deployments.
 */
 class AttributeSetItemRequestBuilderGetQueryParameters 
 {

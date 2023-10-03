@@ -63,7 +63,7 @@ class UserConsentRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a collection of userConsentRequest objects and their properties.
+     * Retrieve a collection of userConsentRequest objects and their properties. This API is supported in the following national cloud deployments.
      * @param UserConsentRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/appconsentrequest-list-userconsentrequests?view=graph-rest-1.0 Find more info here
@@ -101,7 +101,7 @@ class UserConsentRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a collection of userConsentRequest objects and their properties.
+     * Retrieve a collection of userConsentRequest objects and their properties. This API is supported in the following national cloud deployments.
      * @param UserConsentRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

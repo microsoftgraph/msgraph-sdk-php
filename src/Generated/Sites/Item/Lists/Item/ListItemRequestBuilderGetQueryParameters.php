@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Sites\Item\Lists\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a list of rich long-running operations associated with a list.
+ * Get a list of rich long-running operations associated with a list. This API is supported in the following national cloud deployments.
 */
 class ListItemRequestBuilderGetQueryParameters 
 {

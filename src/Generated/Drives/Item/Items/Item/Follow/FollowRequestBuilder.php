@@ -32,7 +32,7 @@ class FollowRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Follow a driveItem.
+     * Follow a driveItem. This API is supported in the following national cloud deployments.
      * @param FollowRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/driveitem-follow?view=graph-rest-1.0 Find more info here
@@ -51,7 +51,7 @@ class FollowRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Follow a driveItem.
+     * Follow a driveItem. This API is supported in the following national cloud deployments.
      * @param FollowRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

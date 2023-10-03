@@ -94,7 +94,7 @@ class TeamworkActivityTopic implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the value property value. The topic value. If the value of the source property is entityUrl, this must be a Microsoft Graph URL. If the vaule is text, this must be a plain text value.
+     * Gets the value property value. The topic value. If the value of the source property is entityUrl, this must be a Microsoft Graph URL. If the value is text, this must be a plain text value.
      * @return string|null
     */
     public function getValue(): ?string {
@@ -162,7 +162,7 @@ class TeamworkActivityTopic implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the value property value. The topic value. If the value of the source property is entityUrl, this must be a Microsoft Graph URL. If the vaule is text, this must be a plain text value.
+     * Sets the value property value. The topic value. If the value of the source property is entityUrl, this must be a Microsoft Graph URL. If the value is text, this must be a plain text value.
      * @param string|null $value Value to set for the value property.
     */
     public function setValue(?string $value): void {

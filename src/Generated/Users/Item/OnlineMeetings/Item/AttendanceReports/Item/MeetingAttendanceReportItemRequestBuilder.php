@@ -58,7 +58,7 @@ class MeetingAttendanceReportItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the meetingAttendanceReport for an onlineMeeting. Each time an online meeting ends, an attendance report will be generated for that session.
+     * Get the meetingAttendanceReport for an onlineMeeting. Each time an online meeting ends, an attendance report will be generated for that session. This API is supported in the following national cloud deployments.
      * @param MeetingAttendanceReportItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/meetingattendancereport-get?view=graph-rest-1.0 Find more info here
@@ -113,7 +113,7 @@ class MeetingAttendanceReportItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the meetingAttendanceReport for an onlineMeeting. Each time an online meeting ends, an attendance report will be generated for that session.
+     * Get the meetingAttendanceReport for an onlineMeeting. Each time an online meeting ends, an attendance report will be generated for that session. This API is supported in the following national cloud deployments.
      * @param MeetingAttendanceReportItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -61,7 +61,7 @@ class MembersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the conversationMember collection of a team.
+     * Get the conversationMember collection of a team. The membership IDs returned by the server must be treated as opaque strings. The client should not try to parse or make assumptions about these resource IDs. In the future, membership results may include users from various tenants, as indicated in the response. Clients should avoid assuming that all members exclusively belong to the current tenant. This API is supported in the following national cloud deployments.
      * @param MembersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/team-list-members?view=graph-rest-1.0 Find more info here
@@ -80,7 +80,7 @@ class MembersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Add a new conversationMember to a team.
+     * Add a new conversationMember to a team. This API is supported in the following national cloud deployments.
      * @param ConversationMember $body The request body
      * @param MembersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -100,7 +100,7 @@ class MembersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the conversationMember collection of a team.
+     * Get the conversationMember collection of a team. The membership IDs returned by the server must be treated as opaque strings. The client should not try to parse or make assumptions about these resource IDs. In the future, membership results may include users from various tenants, as indicated in the response. Clients should avoid assuming that all members exclusively belong to the current tenant. This API is supported in the following national cloud deployments.
      * @param MembersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -121,7 +121,7 @@ class MembersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Add a new conversationMember to a team.
+     * Add a new conversationMember to a team. This API is supported in the following national cloud deployments.
      * @param ConversationMember $body The request body
      * @param MembersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

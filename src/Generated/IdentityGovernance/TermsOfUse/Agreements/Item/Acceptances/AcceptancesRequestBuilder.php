@@ -53,7 +53,7 @@ class AcceptancesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the details about the acceptance records for a specific agreement.
+     * Get the details about the acceptance records for a specific agreement. This API is supported in the following national cloud deployments.
      * @param AcceptancesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/agreement-list-acceptances?view=graph-rest-1.0 Find more info here
@@ -91,7 +91,7 @@ class AcceptancesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the details about the acceptance records for a specific agreement.
+     * Get the details about the acceptance records for a specific agreement. This API is supported in the following national cloud deployments.
      * @param AcceptancesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

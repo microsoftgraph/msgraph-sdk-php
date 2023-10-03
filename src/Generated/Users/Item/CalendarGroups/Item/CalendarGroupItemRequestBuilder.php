@@ -40,7 +40,7 @@ class CalendarGroupItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a calendar group other than the default calendar group.
+     * Delete a calendar group other than the default calendar group. This API is supported in the following national cloud deployments.
      * @param CalendarGroupItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/calendargroup-delete?view=graph-rest-1.0 Find more info here
@@ -59,7 +59,7 @@ class CalendarGroupItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a calendar group object.
+     * Retrieve the properties and relationships of a calendar group object. This API is supported in the following national cloud deployments.
      * @param CalendarGroupItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/calendargroup-get?view=graph-rest-1.0 Find more info here
@@ -78,7 +78,7 @@ class CalendarGroupItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of calendargroup object.
+     * Update the properties of calendargroup object. This API is supported in the following national cloud deployments.
      * @param CalendarGroup $body The request body
      * @param CalendarGroupItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -98,7 +98,7 @@ class CalendarGroupItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a calendar group other than the default calendar group.
+     * Delete a calendar group other than the default calendar group. This API is supported in the following national cloud deployments.
      * @param CalendarGroupItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -115,7 +115,7 @@ class CalendarGroupItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a calendar group object.
+     * Retrieve the properties and relationships of a calendar group object. This API is supported in the following national cloud deployments.
      * @param CalendarGroupItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -136,7 +136,7 @@ class CalendarGroupItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of calendargroup object.
+     * Update the properties of calendargroup object. This API is supported in the following national cloud deployments.
      * @param CalendarGroup $body The request body
      * @param CalendarGroupItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

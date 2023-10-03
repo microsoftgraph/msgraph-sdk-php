@@ -32,7 +32,7 @@ class AuthenticationContextClassReferenceItemRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Delete an authenticationContextClassReference object that's not published or used by a conditional access policy.
+     * Delete an authenticationContextClassReference object that's not published or used by a conditional access policy. This API is supported in the following national cloud deployments.
      * @param AuthenticationContextClassReferenceItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/authenticationcontextclassreference-delete?view=graph-rest-1.0 Find more info here
@@ -51,7 +51,7 @@ class AuthenticationContextClassReferenceItemRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Retrieve the properties and relationships of a authenticationContextClassReference object.
+     * Retrieve the properties and relationships of a authenticationContextClassReference object. This API is supported in the following national cloud deployments.
      * @param AuthenticationContextClassReferenceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/authenticationcontextclassreference-get?view=graph-rest-1.0 Find more info here
@@ -70,7 +70,7 @@ class AuthenticationContextClassReferenceItemRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Create an authenticationContextClassReference object, if the ID has not been used. If ID has been used, this call updates the authenticationContextClassReference object.
+     * Create an authenticationContextClassReference object, if the ID has not been used. If ID has been used, this call updates the authenticationContextClassReference object. This API is supported in the following national cloud deployments.
      * @param AuthenticationContextClassReference $body The request body
      * @param AuthenticationContextClassReferenceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -90,7 +90,7 @@ class AuthenticationContextClassReferenceItemRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Delete an authenticationContextClassReference object that's not published or used by a conditional access policy.
+     * Delete an authenticationContextClassReference object that's not published or used by a conditional access policy. This API is supported in the following national cloud deployments.
      * @param AuthenticationContextClassReferenceItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -107,7 +107,7 @@ class AuthenticationContextClassReferenceItemRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Retrieve the properties and relationships of a authenticationContextClassReference object.
+     * Retrieve the properties and relationships of a authenticationContextClassReference object. This API is supported in the following national cloud deployments.
      * @param AuthenticationContextClassReferenceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -128,7 +128,7 @@ class AuthenticationContextClassReferenceItemRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Create an authenticationContextClassReference object, if the ID has not been used. If ID has been used, this call updates the authenticationContextClassReference object.
+     * Create an authenticationContextClassReference object, if the ID has not been used. If ID has been used, this call updates the authenticationContextClassReference object. This API is supported in the following national cloud deployments.
      * @param AuthenticationContextClassReference $body The request body
      * @param AuthenticationContextClassReferenceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

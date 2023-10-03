@@ -32,7 +32,7 @@ class IdentityItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an identity resource to remove the corresponding member from an externalGroup.
+     * Delete an identity resource to remove the corresponding member from an externalGroup. This API is supported in the following national cloud deployments.
      * @param IdentityItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/externalconnectors-identity-delete?view=graph-rest-1.0 Find more info here
@@ -88,7 +88,7 @@ class IdentityItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an identity resource to remove the corresponding member from an externalGroup.
+     * Delete an identity resource to remove the corresponding member from an externalGroup. This API is supported in the following national cloud deployments.
      * @param IdentityItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

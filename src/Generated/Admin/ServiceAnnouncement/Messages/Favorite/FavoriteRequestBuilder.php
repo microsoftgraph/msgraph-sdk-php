@@ -31,7 +31,7 @@ class FavoriteRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Change the status of a list of serviceUpdateMessages to favorite for the signed in user.
+     * Change the status of a list of serviceUpdateMessages to favorite for the signed in user. This API is supported in the following national cloud deployments.
      * @param FavoritePostRequestBody $body The request body
      * @param FavoriteRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -44,14 +44,14 @@ class FavoriteRequestBuilder extends BaseRequestBuilder
                     '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
                     '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
             ];
-            return $this->requestAdapter->sendAsync($requestInfo, [FavoriteResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+            return $this->requestAdapter->sendAsync($requestInfo, [FavoritePostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
     }
 
     /**
-     * Change the status of a list of serviceUpdateMessages to favorite for the signed in user.
+     * Change the status of a list of serviceUpdateMessages to favorite for the signed in user. This API is supported in the following national cloud deployments.
      * @param FavoritePostRequestBody $body The request body
      * @param FavoriteRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

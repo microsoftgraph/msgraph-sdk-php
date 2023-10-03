@@ -61,7 +61,7 @@ class AttachmentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of attachment objects attached to a post.
+     * Retrieve a list of attachment objects attached to a post. This API is supported in the following national cloud deployments.
      * @param AttachmentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/post-list-attachments?view=graph-rest-1.0 Find more info here
@@ -99,7 +99,7 @@ class AttachmentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of attachment objects attached to a post.
+     * Retrieve a list of attachment objects attached to a post. This API is supported in the following national cloud deployments.
      * @param AttachmentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

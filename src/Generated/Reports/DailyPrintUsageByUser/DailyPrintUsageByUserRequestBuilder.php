@@ -53,7 +53,7 @@ class DailyPrintUsageByUserRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of daily print usage summaries, grouped by user.
+     * Retrieve a list of daily print usage summaries, grouped by user. This API is supported in the following national cloud deployments.
      * @param DailyPrintUsageByUserRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/reportroot-list-dailyprintusagebyuser?view=graph-rest-1.0 Find more info here
@@ -91,7 +91,7 @@ class DailyPrintUsageByUserRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of daily print usage summaries, grouped by user.
+     * Retrieve a list of daily print usage summaries, grouped by user. This API is supported in the following national cloud deployments.
      * @param DailyPrintUsageByUserRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -54,7 +54,7 @@ class IdentityUserFlowAttributeAssignment extends Entity implements Parsable
     }
 
     /**
-     * Gets the isOptional property value. Determines whether the identityUserFlowAttribute is optional. true means the user doesn't have to provide a value. false means the user cannot complete sign-up without providing a value.
+     * Gets the isOptional property value. Determines whether the identityUserFlowAttribute is optional. true means the user doesn't have to provide a value. false means the user can't complete sign-up without providing a value.
      * @return bool|null
     */
     public function getIsOptional(): ?bool {
@@ -66,7 +66,7 @@ class IdentityUserFlowAttributeAssignment extends Entity implements Parsable
     }
 
     /**
-     * Gets the requiresVerification property value. Determines whether the identityUserFlowAttribute requires verification. This is only used for verifying the user's phone number or email address.
+     * Gets the requiresVerification property value. Determines whether the identityUserFlowAttribute requires verification, and is only used for verifying the user's phone number or email address.
      * @return bool|null
     */
     public function getRequiresVerification(): ?bool {
@@ -138,7 +138,7 @@ class IdentityUserFlowAttributeAssignment extends Entity implements Parsable
     }
 
     /**
-     * Sets the isOptional property value. Determines whether the identityUserFlowAttribute is optional. true means the user doesn't have to provide a value. false means the user cannot complete sign-up without providing a value.
+     * Sets the isOptional property value. Determines whether the identityUserFlowAttribute is optional. true means the user doesn't have to provide a value. false means the user can't complete sign-up without providing a value.
      * @param bool|null $value Value to set for the isOptional property.
     */
     public function setIsOptional(?bool $value): void {
@@ -146,7 +146,7 @@ class IdentityUserFlowAttributeAssignment extends Entity implements Parsable
     }
 
     /**
-     * Sets the requiresVerification property value. Determines whether the identityUserFlowAttribute requires verification. This is only used for verifying the user's phone number or email address.
+     * Sets the requiresVerification property value. Determines whether the identityUserFlowAttribute requires verification, and is only used for verifying the user's phone number or email address.
      * @param bool|null $value Value to set for the requiresVerification property.
     */
     public function setRequiresVerification(?bool $value): void {

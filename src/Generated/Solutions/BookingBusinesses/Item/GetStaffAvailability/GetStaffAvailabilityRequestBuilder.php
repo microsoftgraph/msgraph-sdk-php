@@ -31,7 +31,7 @@ class GetStaffAvailabilityRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the availability information of staff members of a Microsoft Bookings calendar.
+     * Get the availability information of staff members of a Microsoft Bookings calendar. This API is supported in the following national cloud deployments.
      * @param GetStaffAvailabilityPostRequestBody $body The request body
      * @param GetStaffAvailabilityRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -44,14 +44,14 @@ class GetStaffAvailabilityRequestBuilder extends BaseRequestBuilder
                     '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
                     '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
             ];
-            return $this->requestAdapter->sendAsync($requestInfo, [GetStaffAvailabilityResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+            return $this->requestAdapter->sendAsync($requestInfo, [GetStaffAvailabilityPostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
     }
 
     /**
-     * Get the availability information of staff members of a Microsoft Bookings calendar.
+     * Get the availability information of staff members of a Microsoft Bookings calendar. This API is supported in the following national cloud deployments.
      * @param GetStaffAvailabilityPostRequestBody $body The request body
      * @param GetStaffAvailabilityRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

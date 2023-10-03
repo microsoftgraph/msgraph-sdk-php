@@ -62,7 +62,7 @@ class NotebooksRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of notebook objects.
+     * Retrieve a list of notebook objects. This API is supported in the following national cloud deployments.
      * @param NotebooksRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/onenote-list-notebooks?view=graph-rest-1.0 Find more info here
@@ -90,7 +90,7 @@ class NotebooksRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new OneNote notebook.
+     * Create a new OneNote notebook. This API is supported in the following national cloud deployments.
      * @param Notebook $body The request body
      * @param NotebooksRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -110,7 +110,7 @@ class NotebooksRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of notebook objects.
+     * Retrieve a list of notebook objects. This API is supported in the following national cloud deployments.
      * @param NotebooksRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -131,7 +131,7 @@ class NotebooksRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new OneNote notebook.
+     * Create a new OneNote notebook. This API is supported in the following national cloud deployments.
      * @param Notebook $body The request body
      * @param NotebooksRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

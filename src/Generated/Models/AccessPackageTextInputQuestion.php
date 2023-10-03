@@ -50,7 +50,7 @@ class AccessPackageTextInputQuestion extends AccessPackageQuestion implements Pa
     }
 
     /**
-     * Gets the regexPattern property value. The regular expression pattern which any answer to this question must match.
+     * Gets the regexPattern property value. The regular expression pattern that any answer to this question must match.
      * @return string|null
     */
     public function getRegexPattern(): ?string {
@@ -80,7 +80,7 @@ class AccessPackageTextInputQuestion extends AccessPackageQuestion implements Pa
     }
 
     /**
-     * Sets the regexPattern property value. The regular expression pattern which any answer to this question must match.
+     * Sets the regexPattern property value. The regular expression pattern that any answer to this question must match.
      * @param string|null $value Value to set for the regexPattern property.
     */
     public function setRegexPattern(?string $value): void {

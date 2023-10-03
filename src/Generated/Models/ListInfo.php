@@ -82,7 +82,7 @@ class ListInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the hidden property value. If true, indicates that the list is not normally visible in the SharePoint user experience.
+     * Gets the hidden property value. If true, indicates that the list isn't normally visible in the SharePoint user experience.
      * @return bool|null
     */
     public function getHidden(): ?bool {
@@ -154,7 +154,7 @@ class ListInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the hidden property value. If true, indicates that the list is not normally visible in the SharePoint user experience.
+     * Sets the hidden property value. If true, indicates that the list isn't normally visible in the SharePoint user experience.
      * @param bool|null $value Value to set for the hidden property.
     */
     public function setHidden(?bool $value): void {

@@ -122,7 +122,7 @@ class SharedDriveItemItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Access a shared DriveItem or a collection of shared items by using a shareId or sharing URL. To use a sharing URL with this API, your app needs to transform the URL into a sharing token.
+     * Access a shared DriveItem or a collection of shared items by using a shareId or sharing URL. To use a sharing URL with this API, your app needs to transform the URL into a sharing token. This API is supported in the following national cloud deployments.
      * @param SharedDriveItemItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/shares-get?view=graph-rest-1.0 Find more info here
@@ -177,7 +177,7 @@ class SharedDriveItemItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Access a shared DriveItem or a collection of shared items by using a shareId or sharing URL. To use a sharing URL with this API, your app needs to transform the URL into a sharing token.
+     * Access a shared DriveItem or a collection of shared items by using a shareId or sharing URL. To use a sharing URL with this API, your app needs to transform the URL into a sharing token. This API is supported in the following national cloud deployments.
      * @param SharedDriveItemItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

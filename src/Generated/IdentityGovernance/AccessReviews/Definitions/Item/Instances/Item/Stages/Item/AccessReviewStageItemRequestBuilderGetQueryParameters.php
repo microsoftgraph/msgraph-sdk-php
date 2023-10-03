@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties and relationships of an accessReviewStage object.
+ * Retrieve the properties and relationships of an accessReviewStage object. This API is supported in the following national cloud deployments.
 */
 class AccessReviewStageItemRequestBuilderGetQueryParameters 
 {

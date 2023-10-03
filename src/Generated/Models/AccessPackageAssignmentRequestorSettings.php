@@ -49,7 +49,7 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
     }
 
     /**
-     * Gets the allowCustomAssignmentSchedule property value. False indicates that the requestor is not permitted to include a schedule in their request.
+     * Gets the allowCustomAssignmentSchedule property value. False indicates that the requestor isn't permitted to include a schedule in their request.
      * @return bool|null
     */
     public function getAllowCustomAssignmentSchedule(): ?bool {
@@ -211,7 +211,7 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
     }
 
     /**
-     * Sets the allowCustomAssignmentSchedule property value. False indicates that the requestor is not permitted to include a schedule in their request.
+     * Sets the allowCustomAssignmentSchedule property value. False indicates that the requestor isn't permitted to include a schedule in their request.
      * @param bool|null $value Value to set for the allowCustomAssignmentSchedule property.
     */
     public function setAllowCustomAssignmentSchedule(?bool $value): void {

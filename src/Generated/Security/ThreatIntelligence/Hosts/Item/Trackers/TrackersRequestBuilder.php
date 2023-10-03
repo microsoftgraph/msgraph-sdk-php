@@ -52,7 +52,7 @@ class TrackersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of hostTracker resources.
+     * Get a list of hostTracker resources. This API is supported in the following national cloud deployments.
      * @param TrackersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/security-host-list-trackers?view=graph-rest-1.0 Find more info here
@@ -71,7 +71,7 @@ class TrackersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of hostTracker resources.
+     * Get a list of hostTracker resources. This API is supported in the following national cloud deployments.
      * @param TrackersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

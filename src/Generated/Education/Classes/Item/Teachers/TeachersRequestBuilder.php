@@ -60,7 +60,7 @@ class TeachersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list teachers for a class. Delegated tokens must be members of the class to get the teacher list.
+     * Retrieve a list of teachers for a class. Delegated tokens must be members of the class to get the teacher list. This API is supported in the following national cloud deployments.
      * @param TeachersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/educationclass-list-teachers?view=graph-rest-1.0 Find more info here
@@ -79,7 +79,7 @@ class TeachersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list teachers for a class. Delegated tokens must be members of the class to get the teacher list.
+     * Retrieve a list of teachers for a class. Delegated tokens must be members of the class to get the teacher list. This API is supported in the following national cloud deployments.
      * @param TeachersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

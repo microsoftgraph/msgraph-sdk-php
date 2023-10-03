@@ -52,7 +52,7 @@ class RecoveryKeysRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the bitlockerRecoveryKey objects and their properties.  This operation does not return the key property. For information about how to read the key property, see Get bitlockerRecoveryKey.
+     * Get a list of the bitlockerRecoveryKey objects and their properties.  This operation does not return the key property. For information about how to read the key property, see Get bitlockerRecoveryKey. This API is supported in the following national cloud deployments.
      * @param RecoveryKeysRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/bitlocker-list-recoverykeys?view=graph-rest-1.0 Find more info here
@@ -71,7 +71,7 @@ class RecoveryKeysRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the bitlockerRecoveryKey objects and their properties.  This operation does not return the key property. For information about how to read the key property, see Get bitlockerRecoveryKey.
+     * Get a list of the bitlockerRecoveryKey objects and their properties.  This operation does not return the key property. For information about how to read the key property, see Get bitlockerRecoveryKey. This API is supported in the following national cloud deployments.
      * @param RecoveryKeysRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

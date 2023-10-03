@@ -32,7 +32,7 @@ class TimeOffItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a timeOff instance from a schedule.
+     * Delete a timeOff instance from a schedule. This API is supported in the following national cloud deployments.
      * @param TimeOffItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/timeoff-delete?view=graph-rest-1.0 Find more info here
@@ -51,7 +51,7 @@ class TimeOffItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a timeOff object by ID.
+     * Retrieve the properties and relationships of a timeOff object by ID. This API is supported in the following national cloud deployments.
      * @param TimeOffItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/timeoff-get?view=graph-rest-1.0 Find more info here
@@ -90,7 +90,7 @@ class TimeOffItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a timeOff instance from a schedule.
+     * Delete a timeOff instance from a schedule. This API is supported in the following national cloud deployments.
      * @param TimeOffItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -107,7 +107,7 @@ class TimeOffItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a timeOff object by ID.
+     * Retrieve the properties and relationships of a timeOff object by ID. This API is supported in the following national cloud deployments.
      * @param TimeOffItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

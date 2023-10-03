@@ -40,7 +40,7 @@ class TeamsTabItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Removes (unpins) a tab from the specified channel within a team. 
+     * Removes (unpins) a tab from the specified channel within a team.  This API is supported in the following national cloud deployments.
      * @param TeamsTabItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/channel-delete-tabs?view=graph-rest-1.0 Find more info here
@@ -59,7 +59,7 @@ class TeamsTabItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of the specified tab in a channel within a team. 
+     * Retrieve the properties and relationships of the specified tab in a channel within a team.  This API is supported in the following national cloud deployments.
      * @param TeamsTabItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/channel-get-tabs?view=graph-rest-1.0 Find more info here
@@ -78,7 +78,7 @@ class TeamsTabItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of the specified tab.This can be used to configure the content of the tab.
+     * Update the properties of the specified tab.This can be used to configure the content of the tab. This API is supported in the following national cloud deployments.
      * @param TeamsTab $body The request body
      * @param TeamsTabItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -98,7 +98,7 @@ class TeamsTabItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Removes (unpins) a tab from the specified channel within a team. 
+     * Removes (unpins) a tab from the specified channel within a team.  This API is supported in the following national cloud deployments.
      * @param TeamsTabItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -115,7 +115,7 @@ class TeamsTabItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of the specified tab in a channel within a team. 
+     * Retrieve the properties and relationships of the specified tab in a channel within a team.  This API is supported in the following national cloud deployments.
      * @param TeamsTabItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -136,7 +136,7 @@ class TeamsTabItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of the specified tab.This can be used to configure the content of the tab.
+     * Update the properties of the specified tab.This can be used to configure the content of the tab. This API is supported in the following national cloud deployments.
      * @param TeamsTab $body The request body
      * @param TeamsTabItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

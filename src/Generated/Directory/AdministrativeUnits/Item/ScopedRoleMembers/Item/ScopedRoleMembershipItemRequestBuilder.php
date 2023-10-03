@@ -32,7 +32,7 @@ class ScopedRoleMembershipItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Remove an Azure Active Directory (Azure AD) role assignment with administrative unit scope.
+     * Remove an Azure Active Directory (Azure AD) role assignment with administrative unit scope. This API is supported in the following national cloud deployments.
      * @param ScopedRoleMembershipItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/administrativeunit-delete-scopedrolemembers?view=graph-rest-1.0 Find more info here
@@ -51,7 +51,7 @@ class ScopedRoleMembershipItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get an Azure Active Directory (Azure AD) role assignment with administrative unit scope.
+     * Get an Azure Active Directory (Azure AD) role assignment with administrative unit scope. This API is supported in the following national cloud deployments.
      * @param ScopedRoleMembershipItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/administrativeunit-get-scopedrolemembers?view=graph-rest-1.0 Find more info here
@@ -89,7 +89,7 @@ class ScopedRoleMembershipItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Remove an Azure Active Directory (Azure AD) role assignment with administrative unit scope.
+     * Remove an Azure Active Directory (Azure AD) role assignment with administrative unit scope. This API is supported in the following national cloud deployments.
      * @param ScopedRoleMembershipItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -106,7 +106,7 @@ class ScopedRoleMembershipItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get an Azure Active Directory (Azure AD) role assignment with administrative unit scope.
+     * Get an Azure Active Directory (Azure AD) role assignment with administrative unit scope. This API is supported in the following national cloud deployments.
      * @param ScopedRoleMembershipItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

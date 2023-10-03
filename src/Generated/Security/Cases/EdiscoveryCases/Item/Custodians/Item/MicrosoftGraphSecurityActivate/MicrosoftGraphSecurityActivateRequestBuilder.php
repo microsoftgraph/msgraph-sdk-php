@@ -31,7 +31,7 @@ class MicrosoftGraphSecurityActivateRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Activate a custodian that has been released from a case to make them part of the case again. For details, see Manage custodians in an eDiscovery (Premium) case.
+     * Activate a custodian that has been released from a case to make them part of the case again. For details, see Manage custodians in an eDiscovery (Premium) case. This API is supported in the following national cloud deployments.
      * @param MicrosoftGraphSecurityActivateRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/security-ediscoverycustodian-activate?view=graph-rest-1.0 Find more info here
@@ -50,7 +50,7 @@ class MicrosoftGraphSecurityActivateRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Activate a custodian that has been released from a case to make them part of the case again. For details, see Manage custodians in an eDiscovery (Premium) case.
+     * Activate a custodian that has been released from a case to make them part of the case again. For details, see Manage custodians in an eDiscovery (Premium) case. This API is supported in the following national cloud deployments.
      * @param MicrosoftGraphSecurityActivateRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -53,7 +53,7 @@ class TokenIssuancePoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of tokenIssuancePolicy objects.
+     * Get a list of tokenIssuancePolicy objects. This API is supported in the following national cloud deployments.
      * @param TokenIssuancePoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/tokenissuancepolicy-list?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class TokenIssuancePoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new tokenIssuancePolicy object.
+     * Create a new tokenIssuancePolicy object. This API is supported in the following national cloud deployments.
      * @param TokenIssuancePolicy $body The request body
      * @param TokenIssuancePoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class TokenIssuancePoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of tokenIssuancePolicy objects.
+     * Get a list of tokenIssuancePolicy objects. This API is supported in the following national cloud deployments.
      * @param TokenIssuancePoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class TokenIssuancePoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new tokenIssuancePolicy object.
+     * Create a new tokenIssuancePolicy object. This API is supported in the following national cloud deployments.
      * @param TokenIssuancePolicy $body The request body
      * @param TokenIssuancePoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

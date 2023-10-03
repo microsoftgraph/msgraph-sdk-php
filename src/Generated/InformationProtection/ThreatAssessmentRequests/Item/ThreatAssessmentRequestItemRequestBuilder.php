@@ -58,7 +58,7 @@ class ThreatAssessmentRequestItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a specified threatAssessmentRequest object. A threat assessment request can be one of the following types:
+     * Retrieve the properties and relationships of a specified threatAssessmentRequest object. A threat assessment request can be one of the following types: This API is supported in the following national cloud deployments.
      * @param ThreatAssessmentRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/threatassessmentrequest-get?view=graph-rest-1.0 Find more info here
@@ -113,7 +113,7 @@ class ThreatAssessmentRequestItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a specified threatAssessmentRequest object. A threat assessment request can be one of the following types:
+     * Retrieve the properties and relationships of a specified threatAssessmentRequest object. A threat assessment request can be one of the following types: This API is supported in the following national cloud deployments.
      * @param ThreatAssessmentRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

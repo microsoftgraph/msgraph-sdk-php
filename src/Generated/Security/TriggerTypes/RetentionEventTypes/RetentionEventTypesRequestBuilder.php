@@ -53,7 +53,7 @@ class RetentionEventTypesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the retentionEventType objects and their properties.
+     * Get a list of the retentionEventType objects and their properties. This API is supported in the following national cloud deployments.
      * @param RetentionEventTypesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/security-retentioneventtype-list?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class RetentionEventTypesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new retentionEventType object.
+     * Create a new retentionEventType object. This API is supported in the following national cloud deployments.
      * @param RetentionEventType $body The request body
      * @param RetentionEventTypesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class RetentionEventTypesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the retentionEventType objects and their properties.
+     * Get a list of the retentionEventType objects and their properties. This API is supported in the following national cloud deployments.
      * @param RetentionEventTypesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class RetentionEventTypesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new retentionEventType object.
+     * Create a new retentionEventType object. This API is supported in the following national cloud deployments.
      * @param RetentionEventType $body The request body
      * @param RetentionEventTypesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

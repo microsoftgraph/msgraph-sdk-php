@@ -53,7 +53,7 @@ class OpenShiftsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List openShift objects in a team.
+     * List openShift objects in a team. This API is supported in the following national cloud deployments.
      * @param OpenShiftsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/openshift-list?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class OpenShiftsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create an instance of an openShift object.
+     * Create an instance of an openShift object. This API is supported in the following national cloud deployments.
      * @param OpenShift $body The request body
      * @param OpenShiftsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class OpenShiftsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List openShift objects in a team.
+     * List openShift objects in a team. This API is supported in the following national cloud deployments.
      * @param OpenShiftsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class OpenShiftsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create an instance of an openShift object.
+     * Create an instance of an openShift object. This API is supported in the following national cloud deployments.
      * @param OpenShift $body The request body
      * @param OpenShiftsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

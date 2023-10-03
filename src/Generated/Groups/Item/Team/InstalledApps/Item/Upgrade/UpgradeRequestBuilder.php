@@ -31,7 +31,7 @@ class UpgradeRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Upgrade an app installation within a chat.
+     * Upgrade an app installation within a chat. This API is supported in the following national cloud deployments.
      * @param UpgradePostRequestBody $body The request body
      * @param UpgradeRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -51,7 +51,7 @@ class UpgradeRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Upgrade an app installation within a chat.
+     * Upgrade an app installation within a chat. This API is supported in the following national cloud deployments.
      * @param UpgradePostRequestBody $body The request body
      * @param UpgradeRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

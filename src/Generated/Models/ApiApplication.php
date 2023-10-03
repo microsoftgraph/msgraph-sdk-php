@@ -132,7 +132,7 @@ class ApiApplication implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the preAuthorizedApplications property value. Lists the client applications that are pre-authorized with the specified delegated permissions to access this application's APIs. Users are not required to consent to any pre-authorized application (for the permissions specified). However, any additional permissions not listed in preAuthorizedApplications (requested through incremental consent for example) will require user consent.
+     * Gets the preAuthorizedApplications property value. Lists the client applications that are preauthorized with the specified delegated permissions to access this application's APIs. Users aren't required to consent to any preauthorized application (for the permissions specified). However, any other permissions not listed in preAuthorizedApplications (requested through incremental consent for example) will require user consent.
      * @return array<PreAuthorizedApplication>|null
     */
     public function getPreAuthorizedApplications(): ?array {
@@ -220,7 +220,7 @@ class ApiApplication implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the preAuthorizedApplications property value. Lists the client applications that are pre-authorized with the specified delegated permissions to access this application's APIs. Users are not required to consent to any pre-authorized application (for the permissions specified). However, any additional permissions not listed in preAuthorizedApplications (requested through incremental consent for example) will require user consent.
+     * Sets the preAuthorizedApplications property value. Lists the client applications that are preauthorized with the specified delegated permissions to access this application's APIs. Users aren't required to consent to any preauthorized application (for the permissions specified). However, any other permissions not listed in preAuthorizedApplications (requested through incremental consent for example) will require user consent.
      * @param array<PreAuthorizedApplication>|null $value Value to set for the preAuthorizedApplications property.
     */
     public function setPreAuthorizedApplications(?array $value): void {

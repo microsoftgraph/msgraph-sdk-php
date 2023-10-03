@@ -85,7 +85,7 @@ class ContactsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the list of organizational contacts for this organization.
+     * Get the list of organizational contacts for this organization. This API is supported in the following national cloud deployments.
      * @param ContactsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/orgcontact-list?view=graph-rest-1.0 Find more info here
@@ -123,7 +123,7 @@ class ContactsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the list of organizational contacts for this organization.
+     * Get the list of organizational contacts for this organization. This API is supported in the following national cloud deployments.
      * @param ContactsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

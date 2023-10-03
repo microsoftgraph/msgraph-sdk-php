@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Res
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get customWorkflowExtensions from identityGovernance
+ * Read the properties and relationships of an accessPackageAssignmentWorkflowExtension object. This API is supported in the following national cloud deployments.
 */
 class CustomCalloutExtensionItemRequestBuilderGetQueryParameters 
 {

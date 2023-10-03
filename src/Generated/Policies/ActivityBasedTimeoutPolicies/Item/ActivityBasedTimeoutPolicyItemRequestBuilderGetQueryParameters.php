@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Policies\ActivityBasedTimeoutPolicies\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the properties of an activityBasedTimeoutPolicy object.
+ * Get the properties of an activityBasedTimeoutPolicy object. This API is supported in the following national cloud deployments.
 */
 class ActivityBasedTimeoutPolicyItemRequestBuilderGetQueryParameters 
 {

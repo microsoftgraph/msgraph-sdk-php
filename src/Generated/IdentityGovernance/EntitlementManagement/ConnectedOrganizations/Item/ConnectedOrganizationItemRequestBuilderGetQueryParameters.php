@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Con
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties and relationships of a connectedOrganization object.
+ * Retrieve the properties and relationships of a connectedOrganization object. This API is supported in the following national cloud deployments.
 */
 class ConnectedOrganizationItemRequestBuilderGetQueryParameters 
 {

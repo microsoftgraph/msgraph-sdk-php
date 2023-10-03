@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignmentSched
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the instance of an active role assignment.
+ * Get the instance of an active role assignment. This API is supported in the following national cloud deployments.
 */
 class UnifiedRoleAssignmentScheduleInstanceItemRequestBuilderGetQueryParameters 
 {

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Policies\AuthenticationMethodsPolicy;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read the properties and relationships of an authenticationMethodsPolicy object.
+ * Read the properties and relationships of an authenticationMethodsPolicy object. This API is supported in the following national cloud deployments.
 */
 class AuthenticationMethodsPolicyRequestBuilderGetQueryParameters 
 {

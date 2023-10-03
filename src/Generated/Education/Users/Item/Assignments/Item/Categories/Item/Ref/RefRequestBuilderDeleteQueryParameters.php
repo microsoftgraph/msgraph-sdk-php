@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Education\Users\Item\Assignments\Item\Catego
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Remove an educationCategory from an educationAssignment. Only teachers can perform this operation.
+ * Remove an educationCategory from an educationAssignment. Only teachers can perform this operation. This API is supported in the following national cloud deployments.
 */
 class RefRequestBuilderDeleteQueryParameters 
 {

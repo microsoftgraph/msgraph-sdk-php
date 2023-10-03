@@ -58,7 +58,7 @@ class AccessReviewInstanceDecisionItemItemRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Read the properties and relationships of an accessReviewInstanceDecisionItem object.
+     * Read the properties and relationships of an accessReviewInstanceDecisionItem object. This API is supported in the following national cloud deployments.
      * @param AccessReviewInstanceDecisionItemItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/accessreviewinstancedecisionitem-get?view=graph-rest-1.0 Find more info here
@@ -77,7 +77,7 @@ class AccessReviewInstanceDecisionItemItemRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Update access decisions, known as accessReviewInstanceDecisionItems, for which the user is the reviewer.
+     * Update access decisions, known as accessReviewInstanceDecisionItems, for which the user is the reviewer. This API is supported in the following national cloud deployments.
      * @param AccessReviewInstanceDecisionItem $body The request body
      * @param AccessReviewInstanceDecisionItemItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -114,7 +114,7 @@ class AccessReviewInstanceDecisionItemItemRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Read the properties and relationships of an accessReviewInstanceDecisionItem object.
+     * Read the properties and relationships of an accessReviewInstanceDecisionItem object. This API is supported in the following national cloud deployments.
      * @param AccessReviewInstanceDecisionItemItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -135,7 +135,7 @@ class AccessReviewInstanceDecisionItemItemRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Update access decisions, known as accessReviewInstanceDecisionItems, for which the user is the reviewer.
+     * Update access decisions, known as accessReviewInstanceDecisionItems, for which the user is the reviewer. This API is supported in the following national cloud deployments.
      * @param AccessReviewInstanceDecisionItem $body The request body
      * @param AccessReviewInstanceDecisionItemItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

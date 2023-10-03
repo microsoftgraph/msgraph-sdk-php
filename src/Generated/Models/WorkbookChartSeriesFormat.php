@@ -37,7 +37,7 @@ class WorkbookChartSeriesFormat extends Entity implements Parsable
     }
 
     /**
-     * Gets the fill property value. Represents the fill format of a chart series, which includes background formating information. Read-only.
+     * Gets the fill property value. Represents the fill format of a chart series, which includes background formatting information. Read-only.
      * @return WorkbookChartFill|null
     */
     public function getFill(): ?WorkbookChartFill {
@@ -71,7 +71,7 @@ class WorkbookChartSeriesFormat extends Entity implements Parsable
     }
 
     /**
-     * Sets the fill property value. Represents the fill format of a chart series, which includes background formating information. Read-only.
+     * Sets the fill property value. Represents the fill format of a chart series, which includes background formatting information. Read-only.
      * @param WorkbookChartFill|null $value Value to set for the fill property.
     */
     public function setFill(?WorkbookChartFill $value): void {

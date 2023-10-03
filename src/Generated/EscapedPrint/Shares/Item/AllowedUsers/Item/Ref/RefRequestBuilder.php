@@ -31,7 +31,7 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Revoke the specified user's access to submit print jobs to the associated printerShare.
+     * Revoke the specified user's access to submit print jobs to the associated printerShare. This API is supported in the following national cloud deployments.
      * @param RefRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/printershare-delete-alloweduser?view=graph-rest-1.0 Find more info here
@@ -50,7 +50,7 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Revoke the specified user's access to submit print jobs to the associated printerShare.
+     * Revoke the specified user's access to submit print jobs to the associated printerShare. This API is supported in the following national cloud deployments.
      * @param RefRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

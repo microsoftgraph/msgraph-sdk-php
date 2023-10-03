@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DirectoryObjects\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties and relationships of a directoryObject object.
+ * Retrieve the properties and relationships of a directoryObject object. This API is supported in the following national cloud deployments.
 */
 class DirectoryObjectItemRequestBuilderGetQueryParameters 
 {

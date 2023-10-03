@@ -31,7 +31,7 @@ class HideForUserRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Hide a chat for a user.
+     * Hide a chat for a user. This API is supported in the following national cloud deployments.
      * @param HideForUserPostRequestBody $body The request body
      * @param HideForUserRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -51,7 +51,7 @@ class HideForUserRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Hide a chat for a user.
+     * Hide a chat for a user. This API is supported in the following national cloud deployments.
      * @param HideForUserPostRequestBody $body The request body
      * @param HideForUserRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

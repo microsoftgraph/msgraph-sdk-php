@@ -31,7 +31,7 @@ class PublishRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Make the scheduling page of a business available to external customers. Set the isPublished property to true, and the publicUrl property to the URL of the scheduling page.
+     * Make the scheduling page of a business available to external customers. Set the isPublished property to true, and the publicUrl property to the URL of the scheduling page. This API is supported in the following national cloud deployments.
      * @param PublishRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/bookingbusiness-publish?view=graph-rest-1.0 Find more info here
@@ -50,7 +50,7 @@ class PublishRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Make the scheduling page of a business available to external customers. Set the isPublished property to true, and the publicUrl property to the URL of the scheduling page.
+     * Make the scheduling page of a business available to external customers. Set the isPublished property to true, and the publicUrl property to the URL of the scheduling page. This API is supported in the following national cloud deployments.
      * @param PublishRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Teams\Item\Schedule\TimesOff\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties and relationships of a timeOff object by ID.
+ * Retrieve the properties and relationships of a timeOff object by ID. This API is supported in the following national cloud deployments.
 */
 class TimeOffItemRequestBuilderGetQueryParameters 
 {

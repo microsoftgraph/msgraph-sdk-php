@@ -52,7 +52,7 @@ class DrivesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the list of Drive resources available for a target User, Group, or Site.
+     * Retrieve the list of Drive resources available for a target User, Group, or Site. This API is supported in the following national cloud deployments.
      * @param DrivesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/drive-list?view=graph-rest-1.0 Find more info here
@@ -71,7 +71,7 @@ class DrivesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the list of Drive resources available for a target User, Group, or Site.
+     * Retrieve the list of Drive resources available for a target User, Group, or Site. This API is supported in the following national cloud deployments.
      * @param DrivesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -32,7 +32,7 @@ class AlertItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of an alert object.
+     * Retrieve the properties and relationships of an alert object. This API is supported in the following national cloud deployments.
      * @param AlertItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/alert-get?view=graph-rest-1.0 Find more info here
@@ -51,7 +51,7 @@ class AlertItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update an editable alert property within any integrated solution to keep alert status and assignments in sync across solutions. This method updates any solution that has a record of the referenced alert ID.
+     * Update an editable alert property within any integrated solution to keep alert status and assignments in sync across solutions. This method updates any solution that has a record of the referenced alert ID. This API is supported in the following national cloud deployments.
      * @param Alert $body The request body
      * @param AlertItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -71,7 +71,7 @@ class AlertItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of an alert object.
+     * Retrieve the properties and relationships of an alert object. This API is supported in the following national cloud deployments.
      * @param AlertItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -92,7 +92,7 @@ class AlertItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update an editable alert property within any integrated solution to keep alert status and assignments in sync across solutions. This method updates any solution that has a record of the referenced alert ID.
+     * Update an editable alert property within any integrated solution to keep alert status and assignments in sync across solutions. This method updates any solution that has a record of the referenced alert ID. This API is supported in the following national cloud deployments.
      * @param Alert $body The request body
      * @param AlertItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

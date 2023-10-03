@@ -48,7 +48,7 @@ class ContactItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a contact.
+     * Delete a contact. This API is supported in the following national cloud deployments.
      * @param ContactItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/contact-delete?view=graph-rest-1.0 Find more info here
@@ -67,7 +67,7 @@ class ContactItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a contact object. There are two scenarios where an app can get a contact in another user's contact folder:
+     * Retrieve the properties and relationships of a contact object. There are two scenarios where an app can get a contact in another user's contact folder: This API is supported in the following national cloud deployments.
      * @param ContactItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/contact-get?view=graph-rest-1.0 Find more info here
@@ -86,7 +86,7 @@ class ContactItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a contact object.
+     * Update the properties of a contact object. This API is supported in the following national cloud deployments.
      * @param Contact $body The request body
      * @param ContactItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -106,7 +106,7 @@ class ContactItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a contact.
+     * Delete a contact. This API is supported in the following national cloud deployments.
      * @param ContactItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -123,7 +123,7 @@ class ContactItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a contact object. There are two scenarios where an app can get a contact in another user's contact folder:
+     * Retrieve the properties and relationships of a contact object. There are two scenarios where an app can get a contact in another user's contact folder: This API is supported in the following national cloud deployments.
      * @param ContactItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -144,7 +144,7 @@ class ContactItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a contact object.
+     * Update the properties of a contact object. This API is supported in the following national cloud deployments.
      * @param Contact $body The request body
      * @param ContactItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

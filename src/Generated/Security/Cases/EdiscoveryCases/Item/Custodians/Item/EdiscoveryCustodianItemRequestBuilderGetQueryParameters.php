@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodia
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read the properties and relationships of an ediscoveryCustodian object.
+ * Read the properties and relationships of an ediscoveryCustodian object. This API is supported in the following national cloud deployments.
 */
 class EdiscoveryCustodianItemRequestBuilderGetQueryParameters 
 {

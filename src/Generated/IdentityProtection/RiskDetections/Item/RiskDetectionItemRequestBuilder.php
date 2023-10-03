@@ -50,7 +50,7 @@ class RiskDetectionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a riskDetection object.
+     * Read the properties and relationships of a riskDetection object. This API is supported in the following national cloud deployments.
      * @param RiskDetectionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/riskdetection-get?view=graph-rest-1.0 Find more info here
@@ -105,7 +105,7 @@ class RiskDetectionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a riskDetection object.
+     * Read the properties and relationships of a riskDetection object. This API is supported in the following national cloud deployments.
      * @param RiskDetectionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -53,7 +53,7 @@ class OperationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of rich long-running operations associated with a site.
+     * Get a list of rich long-running operations associated with a site. This API is supported in the following national cloud deployments.
      * @param OperationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/site-list-operations?view=graph-rest-1.0 Find more info here
@@ -91,7 +91,7 @@ class OperationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of rich long-running operations associated with a site.
+     * Get a list of rich long-running operations associated with a site. This API is supported in the following national cloud deployments.
      * @param OperationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

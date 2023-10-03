@@ -53,7 +53,7 @@ class SharedCookiesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the browserSharedCookie objects and their properties.
+     * Get a list of the browserSharedCookie objects and their properties. This API is supported in the following national cloud deployments.
      * @param SharedCookiesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/browsersitelist-list-sharedcookies?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class SharedCookiesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new browserSharedCookie object in a browserSiteList.
+     * Create a new browserSharedCookie object in a browserSiteList. This API is supported in the following national cloud deployments.
      * @param BrowserSharedCookie $body The request body
      * @param SharedCookiesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class SharedCookiesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the browserSharedCookie objects and their properties.
+     * Get a list of the browserSharedCookie objects and their properties. This API is supported in the following national cloud deployments.
      * @param SharedCookiesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class SharedCookiesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new browserSharedCookie object in a browserSiteList.
+     * Create a new browserSharedCookie object in a browserSiteList. This API is supported in the following national cloud deployments.
      * @param BrowserSharedCookie $body The request body
      * @param SharedCookiesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

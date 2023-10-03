@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Sites\Item\TermStores\Item\Sets\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read the properties and relationships of a set object.
+ * Read the properties and relationships of a set object. This API is supported in the following national cloud deployments.
 */
 class SetItemRequestBuilderGetQueryParameters 
 {

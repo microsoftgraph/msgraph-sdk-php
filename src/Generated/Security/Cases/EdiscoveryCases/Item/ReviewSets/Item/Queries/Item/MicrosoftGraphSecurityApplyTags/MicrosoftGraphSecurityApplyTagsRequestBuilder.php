@@ -31,7 +31,7 @@ class MicrosoftGraphSecurityApplyTagsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Apply tags to files in an eDiscovery review set. For details, see Tag documents in a review set in eDiscovery.
+     * Apply tags to files in an eDiscovery review set. For details, see Tag documents in a review set in eDiscovery. This API is supported in the following national cloud deployments.
      * @param ApplyTagsPostRequestBody $body The request body
      * @param MicrosoftGraphSecurityApplyTagsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -51,7 +51,7 @@ class MicrosoftGraphSecurityApplyTagsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Apply tags to files in an eDiscovery review set. For details, see Tag documents in a review set in eDiscovery.
+     * Apply tags to files in an eDiscovery review set. For details, see Tag documents in a review set in eDiscovery. This API is supported in the following national cloud deployments.
      * @param ApplyTagsPostRequestBody $body The request body
      * @param MicrosoftGraphSecurityApplyTagsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

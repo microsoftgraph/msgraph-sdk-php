@@ -31,7 +31,7 @@ class SendActivityNotificationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Send an activity feed notification in the scope of a team. For more details about sending notifications and the requirements for doing so, seesending Teams activity notifications.
+     * Send an activity feed notification in the scope of a team. For more details about sending notifications and the requirements for doing so, seesending Teams activity notifications. This API is supported in the following national cloud deployments.
      * @param SendActivityNotificationPostRequestBody $body The request body
      * @param SendActivityNotificationRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -51,7 +51,7 @@ class SendActivityNotificationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Send an activity feed notification in the scope of a team. For more details about sending notifications and the requirements for doing so, seesending Teams activity notifications.
+     * Send an activity feed notification in the scope of a team. For more details about sending notifications and the requirements for doing so, seesending Teams activity notifications. This API is supported in the following national cloud deployments.
      * @param SendActivityNotificationPostRequestBody $body The request body
      * @param SendActivityNotificationRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

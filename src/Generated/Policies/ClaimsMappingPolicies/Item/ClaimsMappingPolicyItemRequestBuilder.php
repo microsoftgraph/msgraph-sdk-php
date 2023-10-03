@@ -40,7 +40,7 @@ class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a claimsMappingPolicy object.
+     * Delete a claimsMappingPolicy object. This API is supported in the following national cloud deployments.
      * @param ClaimsMappingPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/claimsmappingpolicy-delete?view=graph-rest-1.0 Find more info here
@@ -59,7 +59,7 @@ class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a claimsMappingPolicy object.
+     * Retrieve the properties and relationships of a claimsMappingPolicy object. This API is supported in the following national cloud deployments.
      * @param ClaimsMappingPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/claimsmappingpolicy-get?view=graph-rest-1.0 Find more info here
@@ -78,7 +78,7 @@ class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a claimsMappingPolicy object.
+     * Update the properties of a claimsMappingPolicy object. This API is supported in the following national cloud deployments.
      * @param ClaimsMappingPolicy $body The request body
      * @param ClaimsMappingPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -98,7 +98,7 @@ class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a claimsMappingPolicy object.
+     * Delete a claimsMappingPolicy object. This API is supported in the following national cloud deployments.
      * @param ClaimsMappingPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -115,7 +115,7 @@ class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a claimsMappingPolicy object.
+     * Retrieve the properties and relationships of a claimsMappingPolicy object. This API is supported in the following national cloud deployments.
      * @param ClaimsMappingPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -136,7 +136,7 @@ class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a claimsMappingPolicy object.
+     * Update the properties of a claimsMappingPolicy object. This API is supported in the following national cloud deployments.
      * @param ClaimsMappingPolicy $body The request body
      * @param ClaimsMappingPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

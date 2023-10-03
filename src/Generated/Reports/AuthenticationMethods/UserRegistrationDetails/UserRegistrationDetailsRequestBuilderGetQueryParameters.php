@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Reports\AuthenticationMethods\UserRegistrati
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a list of the authentication methods registered for a user as defined in the userRegistrationDetails object.
+ * Get a list of the authentication methods registered for a user as defined in the userRegistrationDetails object. This API is supported in the following national cloud deployments.
 */
 class UserRegistrationDetailsRequestBuilderGetQueryParameters 
 {

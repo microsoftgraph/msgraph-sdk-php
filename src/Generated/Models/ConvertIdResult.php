@@ -56,7 +56,7 @@ class ConvertIdResult implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the errorDetails property value. An error object indicating the reason for the conversion failure. This value is not present if the conversion succeeded.
+     * Gets the errorDetails property value. An error object indicating the reason for the conversion failure. This value isn't present if the conversion succeeded.
      * @return GenericError|null
     */
     public function getErrorDetails(): ?GenericError {
@@ -106,7 +106,7 @@ class ConvertIdResult implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the targetId property value. The converted identifier. This value is not present if the conversion failed.
+     * Gets the targetId property value. The converted identifier. This value isn't present if the conversion failed.
      * @return string|null
     */
     public function getTargetId(): ?string {
@@ -146,7 +146,7 @@ class ConvertIdResult implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the errorDetails property value. An error object indicating the reason for the conversion failure. This value is not present if the conversion succeeded.
+     * Sets the errorDetails property value. An error object indicating the reason for the conversion failure. This value isn't present if the conversion succeeded.
      * @param GenericError|null $value Value to set for the errorDetails property.
     */
     public function setErrorDetails(?GenericError $value): void {
@@ -170,7 +170,7 @@ class ConvertIdResult implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the targetId property value. The converted identifier. This value is not present if the conversion failed.
+     * Sets the targetId property value. The converted identifier. This value isn't present if the conversion failed.
      * @param string|null $value Value to set for the targetId property.
     */
     public function setTargetId(?string $value): void {

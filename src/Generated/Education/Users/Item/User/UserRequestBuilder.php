@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Education\Users\Item\User\MailboxSettings\MailboxSettingsRequestBuilder;
+use Microsoft\Graph\Generated\Education\Users\Item\User\ServiceProvisioningErrors\ServiceProvisioningErrorsRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\User;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -26,6 +27,13 @@ class UserRequestBuilder extends BaseRequestBuilder
     }
     
     /**
+     * The serviceProvisioningErrors property
+    */
+    public function serviceProvisioningErrors(): ServiceProvisioningErrorsRequestBuilder {
+        return new ServiceProvisioningErrorsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Instantiates a new UserRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
@@ -40,7 +48,7 @@ class UserRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the simple directory user that corresponds to this educationUser.
+     * Retrieve the simple directory user that corresponds to this educationUser. This API is supported in the following national cloud deployments.
      * @param UserRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/educationuser-get-user?view=graph-rest-1.0 Find more info here
@@ -59,7 +67,7 @@ class UserRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the simple directory user that corresponds to this educationUser.
+     * Retrieve the simple directory user that corresponds to this educationUser. This API is supported in the following national cloud deployments.
      * @param UserRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

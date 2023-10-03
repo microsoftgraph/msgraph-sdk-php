@@ -38,7 +38,7 @@ class IpNamedLocation extends NamedLocation implements Parsable
     }
 
     /**
-     * Gets the ipRanges property value. List of IP address ranges in IPv4 CIDR format (e.g. 1.2.3.4/32) or any allowable IPv6 format from IETF RFC5969. Required.
+     * Gets the ipRanges property value. List of IP address ranges in IPv4 CIDR format (for example, 1.2.3.4/32) or any allowable IPv6 format from IETF RFC5969. Required.
      * @return array<IpRange>|null
     */
     public function getIpRanges(): ?array {
@@ -74,7 +74,7 @@ class IpNamedLocation extends NamedLocation implements Parsable
     }
 
     /**
-     * Sets the ipRanges property value. List of IP address ranges in IPv4 CIDR format (e.g. 1.2.3.4/32) or any allowable IPv6 format from IETF RFC5969. Required.
+     * Sets the ipRanges property value. List of IP address ranges in IPv4 CIDR format (for example, 1.2.3.4/32) or any allowable IPv6 format from IETF RFC5969. Required.
      * @param array<IpRange>|null $value Value to set for the ipRanges property.
     */
     public function setIpRanges(?array $value): void {

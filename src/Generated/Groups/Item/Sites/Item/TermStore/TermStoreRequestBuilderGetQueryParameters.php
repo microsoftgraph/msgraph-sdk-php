@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStore;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read the properties and relationships of a store object.
+ * Read the properties and relationships of a store object. This API is supported in the following national cloud deployments.
 */
 class TermStoreRequestBuilderGetQueryParameters 
 {

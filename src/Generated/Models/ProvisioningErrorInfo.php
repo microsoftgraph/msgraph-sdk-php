@@ -48,7 +48,7 @@ class ProvisioningErrorInfo implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the additionalDetails property value. Additional details in case of error.
+     * Gets the additionalDetails property value. Additional details if there's error.
      * @return string|null
     */
     public function getAdditionalDetails(): ?string {
@@ -166,7 +166,7 @@ class ProvisioningErrorInfo implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the additionalDetails property value. Additional details in case of error.
+     * Sets the additionalDetails property value. Additional details if there's error.
      * @param string|null $value Value to set for the additionalDetails property.
     */
     public function setAdditionalDetails(?string $value): void {

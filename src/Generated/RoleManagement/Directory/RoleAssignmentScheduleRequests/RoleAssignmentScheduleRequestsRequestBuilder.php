@@ -63,7 +63,7 @@ class RoleAssignmentScheduleRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the requests for active role assignments to principals. The active assignments include those made through assignments and activation requests, and directly through the role assignments API. The role assignments can be permanently active with or without an expiry date, or temporarily active after user activation of eligible assignments.
+     * Retrieve the requests for active role assignments to principals. The active assignments include those made through assignments and activation requests, and directly through the role assignments API. The role assignments can be permanently active with or without an expiry date, or temporarily active after user activation of eligible assignments. This API is supported in the following national cloud deployments.
      * @param RoleAssignmentScheduleRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/rbacapplication-list-roleassignmentschedulerequests?view=graph-rest-1.0 Find more info here
@@ -82,7 +82,7 @@ class RoleAssignmentScheduleRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * In PIM, carry out the following operations through the unifiedRoleAssignmentScheduleRequest object:+ Request active and persistent role assignments for a principal, with or without expiry dates.+ Activate, deactivate, extend, or renew an eligible role assignment for a principal. To call this API to update, renew, and extend assignments for yourself, you must have multi-factor authentication (MFA) enforced, and running the query in a session in which they were challenged for MFA. See Enable per-user Azure AD Multi-Factor Authentication to secure sign-in events.
+     * In PIM, carry out the following operations through the unifiedRoleAssignmentScheduleRequest object: To call this API to update, renew, and extend assignments for yourself, you must have multi-factor authentication (MFA) enforced, and running the query in a session in which they were challenged for MFA. See Enable per-user Azure AD Multi-Factor Authentication to secure sign-in events. This API is supported in the following national cloud deployments.
      * @param UnifiedRoleAssignmentScheduleRequest $body The request body
      * @param RoleAssignmentScheduleRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -102,7 +102,7 @@ class RoleAssignmentScheduleRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the requests for active role assignments to principals. The active assignments include those made through assignments and activation requests, and directly through the role assignments API. The role assignments can be permanently active with or without an expiry date, or temporarily active after user activation of eligible assignments.
+     * Retrieve the requests for active role assignments to principals. The active assignments include those made through assignments and activation requests, and directly through the role assignments API. The role assignments can be permanently active with or without an expiry date, or temporarily active after user activation of eligible assignments. This API is supported in the following national cloud deployments.
      * @param RoleAssignmentScheduleRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -123,7 +123,7 @@ class RoleAssignmentScheduleRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * In PIM, carry out the following operations through the unifiedRoleAssignmentScheduleRequest object:+ Request active and persistent role assignments for a principal, with or without expiry dates.+ Activate, deactivate, extend, or renew an eligible role assignment for a principal. To call this API to update, renew, and extend assignments for yourself, you must have multi-factor authentication (MFA) enforced, and running the query in a session in which they were challenged for MFA. See Enable per-user Azure AD Multi-Factor Authentication to secure sign-in events.
+     * In PIM, carry out the following operations through the unifiedRoleAssignmentScheduleRequest object: To call this API to update, renew, and extend assignments for yourself, you must have multi-factor authentication (MFA) enforced, and running the query in a session in which they were challenged for MFA. See Enable per-user Azure AD Multi-Factor Authentication to secure sign-in events. This API is supported in the following national cloud deployments.
      * @param UnifiedRoleAssignmentScheduleRequest $body The request body
      * @param RoleAssignmentScheduleRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

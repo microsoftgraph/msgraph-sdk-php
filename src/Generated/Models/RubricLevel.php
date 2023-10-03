@@ -95,7 +95,7 @@ class RubricLevel implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the grading property value. Null if this is a no-points rubric; educationAssignmentPointsGradeType if it is a points rubric.
+     * Gets the grading property value. Null if this is a no-points rubric; educationAssignmentPointsGradeType if it's a points rubric.
      * @return EducationAssignmentGradeType|null
     */
     public function getGrading(): ?EducationAssignmentGradeType {
@@ -176,7 +176,7 @@ class RubricLevel implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the grading property value. Null if this is a no-points rubric; educationAssignmentPointsGradeType if it is a points rubric.
+     * Sets the grading property value. Null if this is a no-points rubric; educationAssignmentPointsGradeType if it's a points rubric.
      * @param EducationAssignmentGradeType|null $value Value to set for the grading property.
     */
     public function setGrading(?EducationAssignmentGradeType $value): void {

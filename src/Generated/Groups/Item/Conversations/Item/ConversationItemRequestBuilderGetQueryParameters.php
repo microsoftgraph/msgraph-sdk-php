@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Conversations\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The group's conversations.
+ * This API is supported in the following national cloud deployments.
 */
 class ConversationItemRequestBuilderGetQueryParameters 
 {

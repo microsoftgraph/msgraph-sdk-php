@@ -32,7 +32,7 @@ class PrintConnectorItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete (unregister) a printConnector.
+     * Delete (unregister) a printConnector. This API is supported in the following national cloud deployments.
      * @param PrintConnectorItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/printconnector-delete?view=graph-rest-1.0 Find more info here
@@ -51,7 +51,7 @@ class PrintConnectorItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a printConnector object.
+     * Retrieve the properties and relationships of a printConnector object. This API is supported in the following national cloud deployments.
      * @param PrintConnectorItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/printconnector-get?view=graph-rest-1.0 Find more info here
@@ -70,7 +70,7 @@ class PrintConnectorItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a printConnector object.
+     * Update the properties of a printConnector object. This API is supported in the following national cloud deployments.
      * @param PrintConnector $body The request body
      * @param PrintConnectorItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -90,7 +90,7 @@ class PrintConnectorItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete (unregister) a printConnector.
+     * Delete (unregister) a printConnector. This API is supported in the following national cloud deployments.
      * @param PrintConnectorItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -107,7 +107,7 @@ class PrintConnectorItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a printConnector object.
+     * Retrieve the properties and relationships of a printConnector object. This API is supported in the following national cloud deployments.
      * @param PrintConnectorItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -128,7 +128,7 @@ class PrintConnectorItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a printConnector object.
+     * Update the properties of a printConnector object. This API is supported in the following national cloud deployments.
      * @param PrintConnector $body The request body
      * @param PrintConnectorItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

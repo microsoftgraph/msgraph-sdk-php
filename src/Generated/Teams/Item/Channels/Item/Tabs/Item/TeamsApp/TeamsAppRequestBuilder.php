@@ -32,7 +32,7 @@ class TeamsAppRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The application that is linked to the tab. This cannot be changed after tab creation.
+     * The application that is linked to the tab. This can't be changed after tab creation.
      * @param TeamsAppRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -50,7 +50,7 @@ class TeamsAppRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The application that is linked to the tab. This cannot be changed after tab creation.
+     * The application that is linked to the tab. This can't be changed after tab creation.
      * @param TeamsAppRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

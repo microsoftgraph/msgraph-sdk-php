@@ -32,7 +32,7 @@ class ReprocessLicenseAssignmentRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Reprocess all group-based license assignments for the user. To learn more about group-based licensing, see What is group-based licensing in Azure Active Directory. Also see Identify and resolve license assignment problems for a group in Azure Active Directory for more details.
+     * Reprocess all group-based license assignments for the user. To learn more about group-based licensing, see What is group-based licensing in Azure Active Directory. Also see Identify and resolve license assignment problems for a group in Azure Active Directory for more details. This API is supported in the following national cloud deployments.
      * @param ReprocessLicenseAssignmentRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/user-reprocesslicenseassignment?view=graph-rest-1.0 Find more info here
@@ -51,7 +51,7 @@ class ReprocessLicenseAssignmentRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Reprocess all group-based license assignments for the user. To learn more about group-based licensing, see What is group-based licensing in Azure Active Directory. Also see Identify and resolve license assignment problems for a group in Azure Active Directory for more details.
+     * Reprocess all group-based license assignments for the user. To learn more about group-based licensing, see What is group-based licensing in Azure Active Directory. Also see Identify and resolve license assignment problems for a group in Azure Active Directory for more details. This API is supported in the following national cloud deployments.
      * @param ReprocessLicenseAssignmentRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

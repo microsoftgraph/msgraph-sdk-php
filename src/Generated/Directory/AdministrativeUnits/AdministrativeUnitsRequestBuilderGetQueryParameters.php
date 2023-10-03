@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Directory\AdministrativeUnits;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve a list of administrativeUnit objects.
+ * Retrieve a list of administrativeUnit objects. This API is supported in the following national cloud deployments.
 */
 class AdministrativeUnitsRequestBuilderGetQueryParameters 
 {

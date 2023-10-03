@@ -56,7 +56,7 @@ class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an administrativeUnit.
+     * Delete an administrativeUnit. This API is supported in the following national cloud deployments.
      * @param AdministrativeUnitItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/administrativeunit-delete?view=graph-rest-1.0 Find more info here
@@ -75,7 +75,7 @@ class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of an administrativeUnit object.
+     * Retrieve the properties and relationships of an administrativeUnit object. This API is supported in the following national cloud deployments.
      * @param AdministrativeUnitItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/administrativeunit-get?view=graph-rest-1.0 Find more info here
@@ -94,7 +94,7 @@ class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an administrativeUnit object.
+     * Update the properties of an administrativeUnit object. This API is supported in the following national cloud deployments.
      * @param AdministrativeUnit $body The request body
      * @param AdministrativeUnitItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -114,7 +114,7 @@ class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an administrativeUnit.
+     * Delete an administrativeUnit. This API is supported in the following national cloud deployments.
      * @param AdministrativeUnitItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -131,7 +131,7 @@ class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of an administrativeUnit object.
+     * Retrieve the properties and relationships of an administrativeUnit object. This API is supported in the following national cloud deployments.
      * @param AdministrativeUnitItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -152,7 +152,7 @@ class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an administrativeUnit object.
+     * Update the properties of an administrativeUnit object. This API is supported in the following national cloud deployments.
      * @param AdministrativeUnit $body The request body
      * @param AdministrativeUnitItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

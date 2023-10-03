@@ -38,7 +38,7 @@ class IpAddress extends Host implements Parsable
     }
 
     /**
-     * Gets the countryOrRegion property value. The country or region for this IP address.
+     * Gets the countryOrRegion property value. The country/region for this IP address.
      * @return string|null
     */
     public function getCountryOrRegion(): ?string {
@@ -108,7 +108,7 @@ class IpAddress extends Host implements Parsable
     }
 
     /**
-     * Sets the countryOrRegion property value. The country or region for this IP address.
+     * Sets the countryOrRegion property value. The country/region for this IP address.
      * @param string|null $value Value to set for the countryOrRegion property.
     */
     public function setCountryOrRegion(?string $value): void {

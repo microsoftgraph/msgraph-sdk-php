@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Identity\IdentityProviders\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the properties and relationships of the specified identity provider configured in the tenant. Among the types of providers derived from identityProviderBase, you can currently get a socialIdentityProvider or a builtinIdentityProvider resource in Azure AD. In Azure AD B2C, this operation can currently get a socialIdentityProvider, or an appleManagedIdentityProvider resource.
+ * Get the properties and relationships of the specified identity provider configured in the tenant. Among the types of providers derived from identityProviderBase, you can currently get a socialIdentityProvider or a builtinIdentityProvider resource in Azure AD. In Azure AD B2C, this operation can currently get a socialIdentityProvider, or an appleManagedIdentityProvider resource. This API is supported in the following national cloud deployments.
 */
 class IdentityProviderBaseItemRequestBuilderGetQueryParameters 
 {

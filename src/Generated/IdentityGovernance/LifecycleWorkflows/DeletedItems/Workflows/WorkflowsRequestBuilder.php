@@ -52,7 +52,7 @@ class WorkflowsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the deleted workflow objects and their properties.
+     * Get a list of the deleted workflow objects and their properties. This API is supported in the following national cloud deployments.
      * @param WorkflowsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/identitygovernance-lifecycleworkflowscontainer-list-deleteditems?view=graph-rest-1.0 Find more info here
@@ -71,7 +71,7 @@ class WorkflowsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the deleted workflow objects and their properties.
+     * Get a list of the deleted workflow objects and their properties. This API is supported in the following national cloud deployments.
      * @param WorkflowsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

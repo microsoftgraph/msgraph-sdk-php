@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\SecureScoreControlProfiles;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties and relationships of a secureScoreControlProfiles object.
+ * Retrieve the properties and relationships of a secureScoreControlProfiles object. This API is supported in the following national cloud deployments.
 */
 class SecureScoreControlProfilesRequestBuilderGetQueryParameters 
 {

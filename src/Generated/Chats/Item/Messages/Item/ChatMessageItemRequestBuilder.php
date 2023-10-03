@@ -98,7 +98,7 @@ class ChatMessageItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a single message or a message reply in a channel or a chat.
+     * Retrieve a single message or a message reply in a channel or a chat. This API is supported in the following national cloud deployments.
      * @param ChatMessageItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/chatmessage-get?view=graph-rest-1.0 Find more info here
@@ -153,7 +153,7 @@ class ChatMessageItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a single message or a message reply in a channel or a chat.
+     * Retrieve a single message or a message reply in a channel or a chat. This API is supported in the following national cloud deployments.
      * @param ChatMessageItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

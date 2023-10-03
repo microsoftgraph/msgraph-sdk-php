@@ -71,7 +71,7 @@ class TermsExpiration implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the frequency property value. Represents the frequency at which the terms will expire, after its first expiration as set in startDateTime. The value is represented in ISO 8601 format for durations. For example, PT1M represents a time period of 1 month.
+     * Gets the frequency property value. Represents the frequency at which the terms will expire, after its first expiration as set in startDateTime. The value is represented in ISO 8601 format for durations. For example, PT1M represents a time period of one month.
      * @return DateInterval|null
     */
     public function getFrequency(): ?DateInterval {
@@ -134,7 +134,7 @@ class TermsExpiration implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the frequency property value. Represents the frequency at which the terms will expire, after its first expiration as set in startDateTime. The value is represented in ISO 8601 format for durations. For example, PT1M represents a time period of 1 month.
+     * Sets the frequency property value. Represents the frequency at which the terms will expire, after its first expiration as set in startDateTime. The value is represented in ISO 8601 format for durations. For example, PT1M represents a time period of one month.
      * @param DateInterval|null $value Value to set for the frequency property.
     */
     public function setFrequency(?DateInterval $value): void {

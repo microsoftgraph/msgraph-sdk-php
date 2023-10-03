@@ -31,7 +31,7 @@ class DismissReminderRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Dismiss a reminder that has been triggered for an event in a user calendar.
+     * Dismiss a reminder that has been triggered for an event in a user calendar. This API is supported in the following national cloud deployments.
      * @param DismissReminderRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/event-dismissreminder?view=graph-rest-1.0 Find more info here
@@ -50,7 +50,7 @@ class DismissReminderRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Dismiss a reminder that has been triggered for an event in a user calendar.
+     * Dismiss a reminder that has been triggered for an event in a user calendar. This API is supported in the following national cloud deployments.
      * @param DismissReminderRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

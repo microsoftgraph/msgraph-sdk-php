@@ -67,7 +67,7 @@ class Synchronization extends Entity implements Parsable
     }
 
     /**
-     * Gets the templates property value. Pre-configured synchronization settings for a particular application.
+     * Gets the templates property value. Preconfigured synchronization settings for a particular application.
      * @return array<SynchronizationTemplate>|null
     */
     public function getTemplates(): ?array {
@@ -108,7 +108,7 @@ class Synchronization extends Entity implements Parsable
     }
 
     /**
-     * Sets the templates property value. Pre-configured synchronization settings for a particular application.
+     * Sets the templates property value. Preconfigured synchronization settings for a particular application.
      * @param array<SynchronizationTemplate>|null $value Value to set for the templates property.
     */
     public function setTemplates(?array $value): void {

@@ -31,7 +31,7 @@ class MicrosoftGraphSecurityExportRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Initiate an export from a ediscoveryReviewSet. For details, see Export documents from a review set in eDiscovery (Premium).
+     * Initiate an export from a ediscoveryReviewSet. For details, see Export documents from a review set in eDiscovery (Premium). This API is supported in the following national cloud deployments.
      * @param ExportPostRequestBody $body The request body
      * @param MicrosoftGraphSecurityExportRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -51,7 +51,7 @@ class MicrosoftGraphSecurityExportRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Initiate an export from a ediscoveryReviewSet. For details, see Export documents from a review set in eDiscovery (Premium).
+     * Initiate an export from a ediscoveryReviewSet. For details, see Export documents from a review set in eDiscovery (Premium). This API is supported in the following national cloud deployments.
      * @param ExportPostRequestBody $body The request body
      * @param MicrosoftGraphSecurityExportRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

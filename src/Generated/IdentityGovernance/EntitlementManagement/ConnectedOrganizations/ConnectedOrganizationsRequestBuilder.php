@@ -53,7 +53,7 @@ class ConnectedOrganizationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of connectedOrganization objects.
+     * Retrieve a list of connectedOrganization objects. This API is supported in the following national cloud deployments.
      * @param ConnectedOrganizationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/entitlementmanagement-list-connectedorganizations?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class ConnectedOrganizationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new connectedOrganization object.
+     * Create a new connectedOrganization object. This API is supported in the following national cloud deployments.
      * @param ConnectedOrganization $body The request body
      * @param ConnectedOrganizationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class ConnectedOrganizationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of connectedOrganization objects.
+     * Retrieve a list of connectedOrganization objects. This API is supported in the following national cloud deployments.
      * @param ConnectedOrganizationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class ConnectedOrganizationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new connectedOrganization object.
+     * Create a new connectedOrganization object. This API is supported in the following national cloud deployments.
      * @param ConnectedOrganization $body The request body
      * @param ConnectedOrganizationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

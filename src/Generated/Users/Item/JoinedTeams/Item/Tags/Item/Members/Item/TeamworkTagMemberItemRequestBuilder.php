@@ -32,7 +32,7 @@ class TeamworkTagMemberItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a member from a standard tag in a team.
+     * Delete a member from a standard tag in a team. This API is supported in the following national cloud deployments.
      * @param TeamworkTagMemberItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/teamworktagmember-delete?view=graph-rest-1.0 Find more info here
@@ -51,7 +51,7 @@ class TeamworkTagMemberItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the properties and relationships of a member of a standard tag in a team.
+     * Get the properties and relationships of a member of a standard tag in a team. This API is supported in the following national cloud deployments.
      * @param TeamworkTagMemberItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/teamworktagmember-get?view=graph-rest-1.0 Find more info here
@@ -89,7 +89,7 @@ class TeamworkTagMemberItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a member from a standard tag in a team.
+     * Delete a member from a standard tag in a team. This API is supported in the following national cloud deployments.
      * @param TeamworkTagMemberItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -106,7 +106,7 @@ class TeamworkTagMemberItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the properties and relationships of a member of a standard tag in a team.
+     * Get the properties and relationships of a member of a standard tag in a team. This API is supported in the following national cloud deployments.
      * @param TeamworkTagMemberItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

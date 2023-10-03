@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\EmployeeExperience\LearningCourse
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the specified learningCourseActivity object using either an ID or an externalCourseActivityId of the learning provider, or a courseActivityId of a user.
+ * Get the specified learningCourseActivity object using either an ID or an externalCourseActivityId of the learning provider, or a courseActivityId of a user. This API is supported in the following national cloud deployments.
 */
 class LearningCourseActivityItemRequestBuilderGetQueryParameters 
 {

@@ -40,7 +40,7 @@ class RetentionEventItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a retentionEvent object.
+     * Delete a retentionEvent object. This API is supported in the following national cloud deployments.
      * @param RetentionEventItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/security-retentionevent-delete?view=graph-rest-1.0 Find more info here
@@ -59,7 +59,7 @@ class RetentionEventItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a retentionEvent object.
+     * Read the properties and relationships of a retentionEvent object. This API is supported in the following national cloud deployments.
      * @param RetentionEventItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/security-retentionevent-get?view=graph-rest-1.0 Find more info here
@@ -97,7 +97,7 @@ class RetentionEventItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a retentionEvent object.
+     * Delete a retentionEvent object. This API is supported in the following national cloud deployments.
      * @param RetentionEventItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -114,7 +114,7 @@ class RetentionEventItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a retentionEvent object.
+     * Read the properties and relationships of a retentionEvent object. This API is supported in the following national cloud deployments.
      * @param RetentionEventItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -53,7 +53,7 @@ class HistoryRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the riskyUserHistoryItems from the history navigation property.
+     * Get the riskyUserHistoryItems from the history navigation property. This API is supported in the following national cloud deployments.
      * @param HistoryRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/riskyuser-list-history?view=graph-rest-1.0 Find more info here
@@ -91,7 +91,7 @@ class HistoryRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the riskyUserHistoryItems from the history navigation property.
+     * Get the riskyUserHistoryItems from the history navigation property. This API is supported in the following national cloud deployments.
      * @param HistoryRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

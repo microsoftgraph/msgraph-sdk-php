@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\Sites;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a collection of subsites defined for a [site][].
+ * Get a collection of subsites defined for a site][]. This API is supported in the following [national cloud deployments.
 */
 class SitesRequestBuilderGetQueryParameters 
 {

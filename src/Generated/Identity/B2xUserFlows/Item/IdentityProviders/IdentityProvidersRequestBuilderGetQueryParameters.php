@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\IdentityProviders
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the identity providers in a b2xIdentityUserFlow object.
+ * Get the identity providers in a b2xIdentityUserFlow object. This API is supported in the following national cloud deployments.
 */
 class IdentityProvidersRequestBuilderGetQueryParameters 
 {

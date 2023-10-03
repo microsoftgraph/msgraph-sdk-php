@@ -88,7 +88,7 @@ class EdiscoverySearchItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an ediscoverySearch object.
+     * Delete an ediscoverySearch object. This API is supported in the following national cloud deployments.
      * @param EdiscoverySearchItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/security-ediscoverycase-delete-searches?view=graph-rest-1.0 Find more info here
@@ -107,7 +107,7 @@ class EdiscoverySearchItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of an ediscoverySearch object.
+     * Read the properties and relationships of an ediscoverySearch object. This API is supported in the following national cloud deployments.
      * @param EdiscoverySearchItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/security-ediscoverysearch-get?view=graph-rest-1.0 Find more info here
@@ -126,7 +126,7 @@ class EdiscoverySearchItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an ediscoverySearch object.
+     * Update the properties of an ediscoverySearch object. This API is supported in the following national cloud deployments.
      * @param EdiscoverySearch $body The request body
      * @param EdiscoverySearchItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -146,7 +146,7 @@ class EdiscoverySearchItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an ediscoverySearch object.
+     * Delete an ediscoverySearch object. This API is supported in the following national cloud deployments.
      * @param EdiscoverySearchItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -163,7 +163,7 @@ class EdiscoverySearchItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of an ediscoverySearch object.
+     * Read the properties and relationships of an ediscoverySearch object. This API is supported in the following national cloud deployments.
      * @param EdiscoverySearchItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -184,7 +184,7 @@ class EdiscoverySearchItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an ediscoverySearch object.
+     * Update the properties of an ediscoverySearch object. This API is supported in the following national cloud deployments.
      * @param EdiscoverySearch $body The request body
      * @param EdiscoverySearchItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

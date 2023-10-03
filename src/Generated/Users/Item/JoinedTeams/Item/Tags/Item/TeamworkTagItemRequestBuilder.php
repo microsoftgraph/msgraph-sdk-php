@@ -40,7 +40,7 @@ class TeamworkTagItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a tag object permanently.
+     * Delete a tag object permanently. This API is supported in the following national cloud deployments.
      * @param TeamworkTagItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/teamworktag-delete?view=graph-rest-1.0 Find more info here
@@ -59,7 +59,7 @@ class TeamworkTagItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a tag object.
+     * Read the properties and relationships of a tag object. This API is supported in the following national cloud deployments.
      * @param TeamworkTagItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/teamworktag-get?view=graph-rest-1.0 Find more info here
@@ -78,7 +78,7 @@ class TeamworkTagItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a tag object.
+     * Update the properties of a tag object. This API is supported in the following national cloud deployments.
      * @param TeamworkTag $body The request body
      * @param TeamworkTagItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -98,7 +98,7 @@ class TeamworkTagItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a tag object permanently.
+     * Delete a tag object permanently. This API is supported in the following national cloud deployments.
      * @param TeamworkTagItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -115,7 +115,7 @@ class TeamworkTagItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a tag object.
+     * Read the properties and relationships of a tag object. This API is supported in the following national cloud deployments.
      * @param TeamworkTagItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -136,7 +136,7 @@ class TeamworkTagItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a tag object.
+     * Update the properties of a tag object. This API is supported in the following national cloud deployments.
      * @param TeamworkTag $body The request body
      * @param TeamworkTagItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

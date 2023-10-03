@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\External\Connections\Item\Groups;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get an externalGroup object.
+ * Get an externalGroup object. This API is supported in the following national cloud deployments.
 */
 class GroupsRequestBuilderGetQueryParameters 
 {

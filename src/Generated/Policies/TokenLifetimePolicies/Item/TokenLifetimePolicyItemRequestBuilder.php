@@ -40,7 +40,7 @@ class TokenLifetimePolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a tokenLifetimePolicy object.
+     * Delete a tokenLifetimePolicy object. This API is supported in the following national cloud deployments.
      * @param TokenLifetimePolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/tokenlifetimepolicy-delete?view=graph-rest-1.0 Find more info here
@@ -59,7 +59,7 @@ class TokenLifetimePolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a tokenLifetimePolicy object.
+     * Retrieve the properties and relationships of a tokenLifetimePolicy object. This API is supported in the following national cloud deployments.
      * @param TokenLifetimePolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/tokenlifetimepolicy-get?view=graph-rest-1.0 Find more info here
@@ -78,7 +78,7 @@ class TokenLifetimePolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a tokenLifetimePolicy object.
+     * Update the properties of a tokenLifetimePolicy object. This API is supported in the following national cloud deployments.
      * @param TokenLifetimePolicy $body The request body
      * @param TokenLifetimePolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -98,7 +98,7 @@ class TokenLifetimePolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a tokenLifetimePolicy object.
+     * Delete a tokenLifetimePolicy object. This API is supported in the following national cloud deployments.
      * @param TokenLifetimePolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -115,7 +115,7 @@ class TokenLifetimePolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a tokenLifetimePolicy object.
+     * Retrieve the properties and relationships of a tokenLifetimePolicy object. This API is supported in the following national cloud deployments.
      * @param TokenLifetimePolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -136,7 +136,7 @@ class TokenLifetimePolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a tokenLifetimePolicy object.
+     * Update the properties of a tokenLifetimePolicy object. This API is supported in the following national cloud deployments.
      * @param TokenLifetimePolicy $body The request body
      * @param TokenLifetimePolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

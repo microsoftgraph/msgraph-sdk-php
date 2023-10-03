@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Communications\Calls\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties and relationships of a call object.
+ * Retrieve the properties and relationships of a call object. This API is supported in the following national cloud deployments.
 */
 class CallItemRequestBuilderGetQueryParameters 
 {

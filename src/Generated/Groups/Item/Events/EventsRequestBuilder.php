@@ -61,7 +61,7 @@ class EventsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of event objects.
+     * Retrieve a list of event objects. This API is supported in the following national cloud deployments.
      * @param EventsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/group-list-events?view=graph-rest-1.0 Find more info here
@@ -80,7 +80,7 @@ class EventsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Use this API to create a new event.
+     * Use this API to create a new event. This API is supported in the following national cloud deployments.
      * @param Event $body The request body
      * @param EventsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -100,7 +100,7 @@ class EventsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of event objects.
+     * Retrieve a list of event objects. This API is supported in the following national cloud deployments.
      * @param EventsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -121,7 +121,7 @@ class EventsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Use this API to create a new event.
+     * Use this API to create a new event. This API is supported in the following national cloud deployments.
      * @param Event $body The request body
      * @param EventsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

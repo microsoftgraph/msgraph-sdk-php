@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Policies\DefaultAppManagementPolicy;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read the properties of a tenantAppManagementPolicy object.
+ * Read the properties of a tenantAppManagementPolicy object. This API is supported in the following national cloud deployments.
 */
 class DefaultAppManagementPolicyRequestBuilderGetQueryParameters 
 {

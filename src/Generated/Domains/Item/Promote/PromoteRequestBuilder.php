@@ -31,7 +31,7 @@ class PromoteRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Promote a verified subdomain to the root domain. A verified domain has its isVerified property set to true.
+     * Promote a verified subdomain to the root domain. A verified domain has its isVerified property set to true. This API is supported in the following national cloud deployments.
      * @param PromoteRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/domain-promote?view=graph-rest-1.0 Find more info here
@@ -43,14 +43,14 @@ class PromoteRequestBuilder extends BaseRequestBuilder
                     '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
                     '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
             ];
-            return $this->requestAdapter->sendAsync($requestInfo, [PromoteResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+            return $this->requestAdapter->sendAsync($requestInfo, [PromotePostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
     }
 
     /**
-     * Promote a verified subdomain to the root domain. A verified domain has its isVerified property set to true.
+     * Promote a verified subdomain to the root domain. A verified domain has its isVerified property set to true. This API is supported in the following national cloud deployments.
      * @param PromoteRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

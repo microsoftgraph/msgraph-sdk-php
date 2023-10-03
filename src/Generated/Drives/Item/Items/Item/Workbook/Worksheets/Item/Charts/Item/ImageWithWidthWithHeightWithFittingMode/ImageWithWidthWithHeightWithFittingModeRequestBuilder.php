@@ -49,7 +49,7 @@ class ImageWithWidthWithHeightWithFittingModeRequestBuilder extends BaseRequestB
                     '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
                     '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
             ];
-            return $this->requestAdapter->sendAsync($requestInfo, [ImageWithWidthWithHeightWithFittingModeResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+            return $this->requestAdapter->sendAsync($requestInfo, [ImageWithWidthWithHeightWithFittingModeGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }

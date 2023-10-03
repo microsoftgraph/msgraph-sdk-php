@@ -76,7 +76,7 @@ class RegisteredDevicesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Devices that are registered for the user. Read-only. Nullable. Supports $expand.
+     * Devices that are registered for the user. Read-only. Nullable. Supports $expand and returns up to 100 objects.
      * @param RegisteredDevicesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/user-list-registereddevices?view=graph-rest-1.0 Find more info here
@@ -95,7 +95,7 @@ class RegisteredDevicesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Devices that are registered for the user. Read-only. Nullable. Supports $expand.
+     * Devices that are registered for the user. Read-only. Nullable. Supports $expand and returns up to 100 objects.
      * @param RegisteredDevicesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -31,7 +31,7 @@ class RenewRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Renews a group's expiration. When a group is renewed, the group expiration is extended by the number of days defined in the policy.
+     * Renews a group's expiration. When a group is renewed, the group expiration is extended by the number of days defined in the policy. This API is supported in the following national cloud deployments.
      * @param RenewRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/group-renew?view=graph-rest-1.0 Find more info here
@@ -50,7 +50,7 @@ class RenewRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Renews a group's expiration. When a group is renewed, the group expiration is extended by the number of days defined in the policy.
+     * Renews a group's expiration. When a group is renewed, the group expiration is extended by the number of days defined in the policy. This API is supported in the following national cloud deployments.
      * @param RenewRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

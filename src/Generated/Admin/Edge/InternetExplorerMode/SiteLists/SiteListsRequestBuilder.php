@@ -53,7 +53,7 @@ class SiteListsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the browserSiteList objects and their properties.
+     * Get a list of the browserSiteList objects and their properties. This API is supported in the following national cloud deployments.
      * @param SiteListsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/internetexplorermode-list-sitelists?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class SiteListsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new browserSiteList object to support Internet Explorer mode.
+     * Create a new browserSiteList object to support Internet Explorer mode. This API is supported in the following national cloud deployments.
      * @param BrowserSiteList $body The request body
      * @param SiteListsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class SiteListsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the browserSiteList objects and their properties.
+     * Get a list of the browserSiteList objects and their properties. This API is supported in the following national cloud deployments.
      * @param SiteListsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class SiteListsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new browserSiteList object to support Internet Explorer mode.
+     * Create a new browserSiteList object to support Internet Explorer mode. This API is supported in the following national cloud deployments.
      * @param BrowserSiteList $body The request body
      * @param SiteListsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

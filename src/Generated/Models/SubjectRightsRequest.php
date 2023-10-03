@@ -200,7 +200,7 @@ class SubjectRightsRequest extends Entity implements Parsable
             'internalDueDateTime' => fn(ParseNode $n) => $o->setInternalDueDateTime($n->getDateTimeValue()),
             'lastModifiedBy' => fn(ParseNode $n) => $o->setLastModifiedBy($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
             'lastModifiedDateTime' => fn(ParseNode $n) => $o->setLastModifiedDateTime($n->getDateTimeValue()),
-            'mailboxlocations' => fn(ParseNode $n) => $o->setMailboxlocations($n->getObjectValue([SubjectRightsRequestMailboxLocation::class, 'createFromDiscriminatorValue'])),
+            'mailboxLocations' => fn(ParseNode $n) => $o->setMailboxLocations($n->getObjectValue([SubjectRightsRequestMailboxLocation::class, 'createFromDiscriminatorValue'])),
             'notes' => fn(ParseNode $n) => $o->setNotes($n->getCollectionOfObjectValues([AuthoredNote::class, 'createFromDiscriminatorValue'])),
             'pauseAfterEstimate' => fn(ParseNode $n) => $o->setPauseAfterEstimate($n->getBooleanValue()),
             'regulations' => function (ParseNode $n) {
@@ -211,7 +211,7 @@ class SubjectRightsRequest extends Entity implements Parsable
                 /** @var array<string>|null $val */
                 $this->setRegulations($val);
             },
-            'sitelocations' => fn(ParseNode $n) => $o->setSitelocations($n->getObjectValue([SubjectRightsRequestSiteLocation::class, 'createFromDiscriminatorValue'])),
+            'siteLocations' => fn(ParseNode $n) => $o->setSiteLocations($n->getObjectValue([SubjectRightsRequestSiteLocation::class, 'createFromDiscriminatorValue'])),
             'stages' => fn(ParseNode $n) => $o->setStages($n->getCollectionOfObjectValues([SubjectRightsRequestStageDetail::class, 'createFromDiscriminatorValue'])),
             'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(SubjectRightsRequestStatus::class)),
             'team' => fn(ParseNode $n) => $o->setTeam($n->getObjectValue([Team::class, 'createFromDiscriminatorValue'])),
@@ -306,15 +306,15 @@ class SubjectRightsRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the mailboxlocations property value. The mailboxlocations property
+     * Gets the mailboxLocations property value. The mailboxLocations property
      * @return SubjectRightsRequestMailboxLocation|null
     */
-    public function getMailboxlocations(): ?SubjectRightsRequestMailboxLocation {
-        $val = $this->getBackingStore()->get('mailboxlocations');
+    public function getMailboxLocations(): ?SubjectRightsRequestMailboxLocation {
+        $val = $this->getBackingStore()->get('mailboxLocations');
         if (is_null($val) || $val instanceof SubjectRightsRequestMailboxLocation) {
             return $val;
         }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'mailboxlocations'");
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'mailboxLocations'");
     }
 
     /**
@@ -358,15 +358,15 @@ class SubjectRightsRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the sitelocations property value. The sitelocations property
+     * Gets the siteLocations property value. The siteLocations property
      * @return SubjectRightsRequestSiteLocation|null
     */
-    public function getSitelocations(): ?SubjectRightsRequestSiteLocation {
-        $val = $this->getBackingStore()->get('sitelocations');
+    public function getSiteLocations(): ?SubjectRightsRequestSiteLocation {
+        $val = $this->getBackingStore()->get('siteLocations');
         if (is_null($val) || $val instanceof SubjectRightsRequestSiteLocation) {
             return $val;
         }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'sitelocations'");
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'siteLocations'");
     }
 
     /**
@@ -444,11 +444,11 @@ class SubjectRightsRequest extends Entity implements Parsable
         $writer->writeDateTimeValue('internalDueDateTime', $this->getInternalDueDateTime());
         $writer->writeObjectValue('lastModifiedBy', $this->getLastModifiedBy());
         $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
-        $writer->writeObjectValue('mailboxlocations', $this->getMailboxlocations());
+        $writer->writeObjectValue('mailboxLocations', $this->getMailboxLocations());
         $writer->writeCollectionOfObjectValues('notes', $this->getNotes());
         $writer->writeBooleanValue('pauseAfterEstimate', $this->getPauseAfterEstimate());
         $writer->writeCollectionOfPrimitiveValues('regulations', $this->getRegulations());
-        $writer->writeObjectValue('sitelocations', $this->getSitelocations());
+        $writer->writeObjectValue('siteLocations', $this->getSiteLocations());
         $writer->writeCollectionOfObjectValues('stages', $this->getStages());
         $writer->writeEnumValue('status', $this->getStatus());
         $writer->writeObjectValue('team', $this->getTeam());
@@ -608,11 +608,11 @@ class SubjectRightsRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the mailboxlocations property value. The mailboxlocations property
-     * @param SubjectRightsRequestMailboxLocation|null $value Value to set for the mailboxlocations property.
+     * Sets the mailboxLocations property value. The mailboxLocations property
+     * @param SubjectRightsRequestMailboxLocation|null $value Value to set for the mailboxLocations property.
     */
-    public function setMailboxlocations(?SubjectRightsRequestMailboxLocation $value): void {
-        $this->getBackingStore()->set('mailboxlocations', $value);
+    public function setMailboxLocations(?SubjectRightsRequestMailboxLocation $value): void {
+        $this->getBackingStore()->set('mailboxLocations', $value);
     }
 
     /**
@@ -640,11 +640,11 @@ class SubjectRightsRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the sitelocations property value. The sitelocations property
-     * @param SubjectRightsRequestSiteLocation|null $value Value to set for the sitelocations property.
+     * Sets the siteLocations property value. The siteLocations property
+     * @param SubjectRightsRequestSiteLocation|null $value Value to set for the siteLocations property.
     */
-    public function setSitelocations(?SubjectRightsRequestSiteLocation $value): void {
-        $this->getBackingStore()->set('sitelocations', $value);
+    public function setSiteLocations(?SubjectRightsRequestSiteLocation $value): void {
+        $this->getBackingStore()->set('siteLocations', $value);
     }
 
     /**

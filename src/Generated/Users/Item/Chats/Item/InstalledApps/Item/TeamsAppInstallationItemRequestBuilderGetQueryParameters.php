@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Chats\Item\InstalledApps\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get an app installed in a chat.
+ * Get an app installed in a chat. This API is supported in the following national cloud deployments.
 */
 class TeamsAppInstallationItemRequestBuilderGetQueryParameters 
 {

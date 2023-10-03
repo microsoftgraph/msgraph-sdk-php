@@ -56,7 +56,7 @@ class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a custom authenticationStrengthPolicy object.
+     * Delete a custom authenticationStrengthPolicy object. This API is supported in the following national cloud deployments.
      * @param AuthenticationStrengthPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/authenticationstrengthroot-delete-policies?view=graph-rest-1.0 Find more info here
@@ -75,7 +75,7 @@ class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of an authenticationStrengthPolicy object.
+     * Read the properties and relationships of an authenticationStrengthPolicy object. This API is supported in the following national cloud deployments.
      * @param AuthenticationStrengthPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/authenticationstrengthpolicy-get?view=graph-rest-1.0 Find more info here
@@ -94,7 +94,7 @@ class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an authenticationStrengthPolicy object. You cannot update the allowed auth method combinations using this request. To do so, use the Update allowed combinations action.
+     * Update the properties of an authenticationStrengthPolicy object. You cannot update the allowed auth method combinations using this request. To do so, use the Update allowed combinations action. This API is supported in the following national cloud deployments.
      * @param AuthenticationStrengthPolicy $body The request body
      * @param AuthenticationStrengthPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -114,7 +114,7 @@ class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a custom authenticationStrengthPolicy object.
+     * Delete a custom authenticationStrengthPolicy object. This API is supported in the following national cloud deployments.
      * @param AuthenticationStrengthPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -131,7 +131,7 @@ class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of an authenticationStrengthPolicy object.
+     * Read the properties and relationships of an authenticationStrengthPolicy object. This API is supported in the following national cloud deployments.
      * @param AuthenticationStrengthPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -152,7 +152,7 @@ class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an authenticationStrengthPolicy object. You cannot update the allowed auth method combinations using this request. To do so, use the Update allowed combinations action.
+     * Update the properties of an authenticationStrengthPolicy object. You cannot update the allowed auth method combinations using this request. To do so, use the Update allowed combinations action. This API is supported in the following national cloud deployments.
      * @param AuthenticationStrengthPolicy $body The request body
      * @param AuthenticationStrengthPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

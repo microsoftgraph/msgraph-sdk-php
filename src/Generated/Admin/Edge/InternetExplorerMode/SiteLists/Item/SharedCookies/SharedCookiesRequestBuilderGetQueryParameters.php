@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Admin\Edge\InternetExplorerMode\SiteLists\It
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a list of the browserSharedCookie objects and their properties.
+ * Get a list of the browserSharedCookie objects and their properties. This API is supported in the following national cloud deployments.
 */
 class SharedCookiesRequestBuilderGetQueryParameters 
 {

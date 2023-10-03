@@ -32,7 +32,7 @@ class UpdateAllowedCombinationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the allowedCombinations property of an authenticationStrengthPolicy object. To update other properties of an authenticationStrengthPolicy object, use the Update authenticationStrengthPolicy method.
+     * Update the allowedCombinations property of an authenticationStrengthPolicy object. To update other properties of an authenticationStrengthPolicy object, use the Update authenticationStrengthPolicy method. This API is supported in the following national cloud deployments.
      * @param UpdateAllowedCombinationsPostRequestBody $body The request body
      * @param UpdateAllowedCombinationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -52,7 +52,7 @@ class UpdateAllowedCombinationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the allowedCombinations property of an authenticationStrengthPolicy object. To update other properties of an authenticationStrengthPolicy object, use the Update authenticationStrengthPolicy method.
+     * Update the allowedCombinations property of an authenticationStrengthPolicy object. To update other properties of an authenticationStrengthPolicy object, use the Update authenticationStrengthPolicy method. This API is supported in the following national cloud deployments.
      * @param UpdateAllowedCombinationsPostRequestBody $body The request body
      * @param UpdateAllowedCombinationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -32,7 +32,7 @@ class OpenShiftItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an openShift object.
+     * Delete an openShift object. This API is supported in the following national cloud deployments.
      * @param OpenShiftItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/openshift-delete?view=graph-rest-1.0 Find more info here
@@ -51,7 +51,7 @@ class OpenShiftItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of an openshift object.
+     * Retrieve the properties and relationships of an openshift object. This API is supported in the following national cloud deployments.
      * @param OpenShiftItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/openshift-get?view=graph-rest-1.0 Find more info here
@@ -90,7 +90,7 @@ class OpenShiftItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an openShift object.
+     * Delete an openShift object. This API is supported in the following national cloud deployments.
      * @param OpenShiftItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -107,7 +107,7 @@ class OpenShiftItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of an openshift object.
+     * Retrieve the properties and relationships of an openshift object. This API is supported in the following national cloud deployments.
      * @param OpenShiftItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

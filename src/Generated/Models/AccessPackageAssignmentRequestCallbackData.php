@@ -64,7 +64,7 @@ class AccessPackageAssignmentRequestCallbackData extends CustomExtensionData imp
     }
 
     /**
-     * Gets the stage property value. Indicates the stage at which the custom callout extension will be executed. The possible values are: assignmentRequestCreated, assignmentRequestApproved, assignmentRequestGranted, assignmentRequestRemoved, assignmentFourteenDaysBeforeExpiration, assignmentOneDayBeforeExpiration, unknownFutureValue.
+     * Gets the stage property value. Indicates the stage at which the custom callout extension is executed. The possible values are: assignmentRequestCreated, assignmentRequestApproved, assignmentRequestGranted, assignmentRequestRemoved, assignmentFourteenDaysBeforeExpiration, assignmentOneDayBeforeExpiration, unknownFutureValue.
      * @return AccessPackageCustomExtensionStage|null
     */
     public function getStage(): ?AccessPackageCustomExtensionStage {
@@ -116,7 +116,7 @@ class AccessPackageAssignmentRequestCallbackData extends CustomExtensionData imp
     }
 
     /**
-     * Sets the stage property value. Indicates the stage at which the custom callout extension will be executed. The possible values are: assignmentRequestCreated, assignmentRequestApproved, assignmentRequestGranted, assignmentRequestRemoved, assignmentFourteenDaysBeforeExpiration, assignmentOneDayBeforeExpiration, unknownFutureValue.
+     * Sets the stage property value. Indicates the stage at which the custom callout extension is executed. The possible values are: assignmentRequestCreated, assignmentRequestApproved, assignmentRequestGranted, assignmentRequestRemoved, assignmentFourteenDaysBeforeExpiration, assignmentOneDayBeforeExpiration, unknownFutureValue.
      * @param AccessPackageCustomExtensionStage|null $value Value to set for the stage property.
     */
     public function setStage(?AccessPackageCustomExtensionStage $value): void {

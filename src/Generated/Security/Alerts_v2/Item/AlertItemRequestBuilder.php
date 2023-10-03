@@ -58,7 +58,7 @@ class AlertItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the properties and relationships of an alert in an organization based on the specified alert id property.
+     * Get the properties and relationships of an alert in an organization based on the specified alert id property. This API is supported in the following national cloud deployments.
      * @param AlertItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/security-alert-get?view=graph-rest-1.0 Find more info here
@@ -77,7 +77,7 @@ class AlertItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an alert object in an organization based on the specified alert id property.
+     * Update the properties of an alert object in an organization based on the specified alert id property. This API is supported in the following national cloud deployments.
      * @param Alert $body The request body
      * @param AlertItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -114,7 +114,7 @@ class AlertItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the properties and relationships of an alert in an organization based on the specified alert id property.
+     * Get the properties and relationships of an alert in an organization based on the specified alert id property. This API is supported in the following national cloud deployments.
      * @param AlertItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -135,7 +135,7 @@ class AlertItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an alert object in an organization based on the specified alert id property.
+     * Update the properties of an alert object in an organization based on the specified alert id property. This API is supported in the following national cloud deployments.
      * @param Alert $body The request body
      * @param AlertItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

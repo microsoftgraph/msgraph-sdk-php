@@ -52,7 +52,7 @@ class DomainNameReferencesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of directoryObject with a reference to the domain. The returned list will contain all directory objects that have a dependency on the domain.
+     * Retrieve a list of directoryObject with a reference to the domain. The returned list will contain all directory objects that have a dependency on the domain. This API is supported in the following national cloud deployments.
      * @param DomainNameReferencesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/domain-list-domainnamereferences?view=graph-rest-1.0 Find more info here
@@ -71,7 +71,7 @@ class DomainNameReferencesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of directoryObject with a reference to the domain. The returned list will contain all directory objects that have a dependency on the domain.
+     * Retrieve a list of directoryObject with a reference to the domain. The returned list will contain all directory objects that have a dependency on the domain. This API is supported in the following national cloud deployments.
      * @param DomainNameReferencesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

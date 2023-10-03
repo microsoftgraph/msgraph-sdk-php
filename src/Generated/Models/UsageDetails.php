@@ -82,7 +82,7 @@ class UsageDetails implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the lastModifiedDateTime property value. The date and time the resource was last modified by the user. The timestamp represents date and time information using ISO 8601 format and is always in UTC time.For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     * Gets the lastModifiedDateTime property value. The date and time the resource was last modified by the user. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
@@ -141,7 +141,7 @@ class UsageDetails implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the lastModifiedDateTime property value. The date and time the resource was last modified by the user. The timestamp represents date and time information using ISO 8601 format and is always in UTC time.For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     * Sets the lastModifiedDateTime property value. The date and time the resource was last modified by the user. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {

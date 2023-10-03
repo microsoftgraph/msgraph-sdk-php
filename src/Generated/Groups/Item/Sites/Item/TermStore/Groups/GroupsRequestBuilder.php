@@ -53,7 +53,7 @@ class GroupsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of group objects in a term store.
+     * Get a list of group objects in a term store. This API is supported in the following national cloud deployments.
      * @param GroupsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/termstore-list-groups?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class GroupsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new group object in a term store.
+     * Create a new group object in a term store. This API is supported in the following national cloud deployments.
      * @param Group $body The request body
      * @param GroupsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class GroupsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of group objects in a term store.
+     * Get a list of group objects in a term store. This API is supported in the following national cloud deployments.
      * @param GroupsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class GroupsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new group object in a term store.
+     * Create a new group object in a term store. This API is supported in the following national cloud deployments.
      * @param Group $body The request body
      * @param GroupsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

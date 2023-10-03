@@ -50,7 +50,7 @@ class OnPremisesDirectorySynchronizationItemRequestBuilder extends BaseRequestBu
     }
 
     /**
-     * Read the properties and relationships of an onPremisesDirectorySynchronization object.
+     * Read the properties and relationships of an onPremisesDirectorySynchronization object. This API is supported in the following national cloud deployments.
      * @param OnPremisesDirectorySynchronizationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/onpremisesdirectorysynchronization-get?view=graph-rest-1.0 Find more info here
@@ -69,7 +69,7 @@ class OnPremisesDirectorySynchronizationItemRequestBuilder extends BaseRequestBu
     }
 
     /**
-     * Update the properties of an onPremisesDirectorySynchronization object.
+     * Update the properties of an onPremisesDirectorySynchronization object. This API is supported in the following national cloud deployments.
      * @param OnPremisesDirectorySynchronization $body The request body
      * @param OnPremisesDirectorySynchronizationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -106,7 +106,7 @@ class OnPremisesDirectorySynchronizationItemRequestBuilder extends BaseRequestBu
     }
 
     /**
-     * Read the properties and relationships of an onPremisesDirectorySynchronization object.
+     * Read the properties and relationships of an onPremisesDirectorySynchronization object. This API is supported in the following national cloud deployments.
      * @param OnPremisesDirectorySynchronizationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -127,7 +127,7 @@ class OnPremisesDirectorySynchronizationItemRequestBuilder extends BaseRequestBu
     }
 
     /**
-     * Update the properties of an onPremisesDirectorySynchronization object.
+     * Update the properties of an onPremisesDirectorySynchronization object. This API is supported in the following national cloud deployments.
      * @param OnPremisesDirectorySynchronization $body The request body
      * @param OnPremisesDirectorySynchronizationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -53,7 +53,7 @@ class Teamwork extends Entity implements Parsable
     }
 
     /**
-     * Gets the teamsAppSettings property value. The teamsAppSettings property
+     * Gets the teamsAppSettings property value. Represents tenant-wide settings for all Teams apps in the tenant.
      * @return TeamsAppSettings|null
     */
     public function getTeamsAppSettings(): ?TeamsAppSettings {
@@ -98,7 +98,7 @@ class Teamwork extends Entity implements Parsable
     }
 
     /**
-     * Sets the teamsAppSettings property value. The teamsAppSettings property
+     * Sets the teamsAppSettings property value. Represents tenant-wide settings for all Teams apps in the tenant.
      * @param TeamsAppSettings|null $value Value to set for the teamsAppSettings property.
     */
     public function setTeamsAppSettings(?TeamsAppSettings $value): void {

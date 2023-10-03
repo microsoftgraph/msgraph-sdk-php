@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Applications\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the properties and relationships of an application object.
+ * Get the properties and relationships of an application object. This API is supported in the following national cloud deployments.
 */
 class ApplicationItemRequestBuilderGetQueryParameters 
 {

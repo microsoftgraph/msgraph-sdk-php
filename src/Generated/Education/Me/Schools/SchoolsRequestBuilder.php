@@ -52,7 +52,7 @@ class SchoolsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of schools for a user.
+     * Retrieve a list of schools for a user. This API is supported in the following national cloud deployments.
      * @param SchoolsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/educationuser-list-schools?view=graph-rest-1.0 Find more info here
@@ -71,7 +71,7 @@ class SchoolsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of schools for a user.
+     * Retrieve a list of schools for a user. This API is supported in the following national cloud deployments.
      * @param SchoolsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

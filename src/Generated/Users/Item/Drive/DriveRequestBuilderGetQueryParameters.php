@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Drive;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties and relationships of a Drive resource. A Drive is the top-level container for a file system, such as OneDrive or SharePoint document libraries.
+ * Retrieve the properties and relationships of a Drive resource. A Drive is the top-level container for a file system, such as OneDrive or SharePoint document libraries. This API is supported in the following national cloud deployments.
 */
 class DriveRequestBuilderGetQueryParameters 
 {

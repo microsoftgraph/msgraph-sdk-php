@@ -94,7 +94,7 @@ class InsightIdentity implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the id property value. The id of the user who shared the item.
+     * Gets the id property value. The ID of the user who shared the item.
      * @return string|null
     */
     public function getId(): ?string {
@@ -162,7 +162,7 @@ class InsightIdentity implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the id property value. The id of the user who shared the item.
+     * Sets the id property value. The ID of the user who shared the item.
      * @param string|null $value Value to set for the id property.
     */
     public function setId(?string $value): void {

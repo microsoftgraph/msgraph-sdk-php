@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Applications\Item\ExtensionProperties;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the list of directory extension definitions, represented by extensionProperty objects on an application.
+ * Retrieve the list of directory extension definitions, represented by extensionProperty objects on an application. This API is supported in the following national cloud deployments.
 */
 class ExtensionPropertiesRequestBuilderGetQueryParameters 
 {

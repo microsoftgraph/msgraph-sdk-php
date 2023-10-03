@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\ApplicationTemplates\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties of an applicationTemplate object.
+ * Retrieve the properties of an applicationTemplate object. This API is supported in the following national cloud deployments.
 */
 class ApplicationTemplateItemRequestBuilderGetQueryParameters 
 {

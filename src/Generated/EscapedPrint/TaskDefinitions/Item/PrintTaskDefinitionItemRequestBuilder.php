@@ -40,7 +40,7 @@ class PrintTaskDefinitionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a taskDefinition. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
+     * Delete a taskDefinition. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing. This API is supported in the following national cloud deployments.
      * @param PrintTaskDefinitionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/print-delete-taskdefinition?view=graph-rest-1.0 Find more info here
@@ -59,7 +59,7 @@ class PrintTaskDefinitionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get details about a task definition. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
+     * Get details about a task definition. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing. This API is supported in the following national cloud deployments.
      * @param PrintTaskDefinitionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/printtaskdefinition-get?view=graph-rest-1.0 Find more info here
@@ -78,7 +78,7 @@ class PrintTaskDefinitionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update a task definition. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
+     * Update a task definition. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing. This API is supported in the following national cloud deployments.
      * @param PrintTaskDefinition $body The request body
      * @param PrintTaskDefinitionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -98,7 +98,7 @@ class PrintTaskDefinitionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a taskDefinition. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
+     * Delete a taskDefinition. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing. This API is supported in the following national cloud deployments.
      * @param PrintTaskDefinitionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -115,7 +115,7 @@ class PrintTaskDefinitionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get details about a task definition. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
+     * Get details about a task definition. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing. This API is supported in the following national cloud deployments.
      * @param PrintTaskDefinitionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -136,7 +136,7 @@ class PrintTaskDefinitionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update a task definition. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
+     * Update a task definition. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing. This API is supported in the following national cloud deployments.
      * @param PrintTaskDefinition $body The request body
      * @param PrintTaskDefinitionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -50,7 +50,7 @@ class ReputationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the properties and relationships of a hostReputation object.
+     * Get the properties and relationships of a hostReputation object. This API is supported in the following national cloud deployments.
      * @param ReputationRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/security-host-get-reputation?view=graph-rest-1.0 Find more info here
@@ -105,7 +105,7 @@ class ReputationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the properties and relationships of a hostReputation object.
+     * Get the properties and relationships of a hostReputation object. This API is supported in the following national cloud deployments.
      * @param ReputationRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

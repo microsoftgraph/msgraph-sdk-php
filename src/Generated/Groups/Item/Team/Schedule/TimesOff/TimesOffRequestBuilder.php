@@ -53,7 +53,7 @@ class TimesOffRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the list of timeOff instances in a schedule.
+     * Get the list of timeOff instances in a schedule. This API is supported in the following national cloud deployments.
      * @param TimesOffRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/schedule-list-timesoff?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class TimesOffRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new timeOff instance in a schedule.
+     * Create a new timeOff instance in a schedule. This API is supported in the following national cloud deployments.
      * @param TimeOff $body The request body
      * @param TimesOffRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class TimesOffRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the list of timeOff instances in a schedule.
+     * Get the list of timeOff instances in a schedule. This API is supported in the following national cloud deployments.
      * @param TimesOffRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class TimesOffRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new timeOff instance in a schedule.
+     * Create a new timeOff instance in a schedule. This API is supported in the following national cloud deployments.
      * @param TimeOff $body The request body
      * @param TimesOffRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

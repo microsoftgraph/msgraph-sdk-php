@@ -32,7 +32,7 @@ class PlayPromptRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Play a prompt in the call. For more information about how to handle operations, see commsOperation
+     * Play a prompt in the call. For more information about how to handle operations, see commsOperation This API is supported in the following national cloud deployments.
      * @param PlayPromptPostRequestBody $body The request body
      * @param PlayPromptRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -52,7 +52,7 @@ class PlayPromptRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Play a prompt in the call. For more information about how to handle operations, see commsOperation
+     * Play a prompt in the call. For more information about how to handle operations, see commsOperation This API is supported in the following national cloud deployments.
      * @param PlayPromptPostRequestBody $body The request body
      * @param PlayPromptRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -85,7 +85,7 @@ class ContractsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of contract objects associated to a partner tenant.
+     * Retrieve a list of contract objects associated to a partner tenant. This API is supported in the following national cloud deployments.
      * @param ContractsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/contract-list?view=graph-rest-1.0 Find more info here
@@ -123,7 +123,7 @@ class ContractsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of contract objects associated to a partner tenant.
+     * Retrieve a list of contract objects associated to a partner tenant. This API is supported in the following national cloud deployments.
      * @param ContractsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

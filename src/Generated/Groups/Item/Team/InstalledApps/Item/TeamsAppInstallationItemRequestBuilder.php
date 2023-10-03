@@ -56,7 +56,7 @@ class TeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Uninstalls an app from the specified team.
+     * Uninstalls an app from the specified team. This API is supported in the following national cloud deployments.
      * @param TeamsAppInstallationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/team-delete-installedapps?view=graph-rest-1.0 Find more info here
@@ -75,7 +75,7 @@ class TeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the app installed in the specified team.
+     * Retrieve the app installed in the specified team. This API is supported in the following national cloud deployments.
      * @param TeamsAppInstallationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/team-get-installedapps?view=graph-rest-1.0 Find more info here
@@ -113,7 +113,7 @@ class TeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Uninstalls an app from the specified team.
+     * Uninstalls an app from the specified team. This API is supported in the following national cloud deployments.
      * @param TeamsAppInstallationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -130,7 +130,7 @@ class TeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the app installed in the specified team.
+     * Retrieve the app installed in the specified team. This API is supported in the following national cloud deployments.
      * @param TeamsAppInstallationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

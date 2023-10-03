@@ -54,7 +54,7 @@ class BookingAppointment extends Entity implements Parsable
     }
 
     /**
-     * Gets the customers property value. A collection of customer properties for an appointment. An appointment will contain a list of customer information and each unit will indicate the properties of a customer who is part of that appointment. Optional.
+     * Gets the customers property value. A collection of customer properties for an appointment. An appointment contains a list of customer information and each unit will indicate the properties of a customer who is part of that appointment. Optional.
      * @return array<BookingCustomerInformationBase>|null
     */
     public function getCustomers(): ?array {
@@ -193,7 +193,7 @@ class BookingAppointment extends Entity implements Parsable
     }
 
     /**
-     * Gets the optOutOfCustomerEmail property value. If true indicates that the bookingCustomer for this appointment does not wish to receive a confirmation for this appointment.
+     * Gets the optOutOfCustomerEmail property value. If true indicates that the bookingCustomer for this appointment doesn't wish to receive a confirmation for this appointment.
      * @return bool|null
     */
     public function getOptOutOfCustomerEmail(): ?bool {
@@ -303,7 +303,7 @@ class BookingAppointment extends Entity implements Parsable
     }
 
     /**
-     * Gets the serviceName property value. The name of the bookingService associated with this appointment.This property is optional when creating a new appointment. If not specified, it is computed from the service associated with the appointment by the serviceId property.
+     * Gets the serviceName property value. The name of the bookingService associated with this appointment.This property is optional when creating a new appointment. If not specified, it's computed from the service associated with the appointment by the serviceId property.
      * @return string|null
     */
     public function getServiceName(): ?string {
@@ -411,7 +411,7 @@ class BookingAppointment extends Entity implements Parsable
     }
 
     /**
-     * Sets the customers property value. A collection of customer properties for an appointment. An appointment will contain a list of customer information and each unit will indicate the properties of a customer who is part of that appointment. Optional.
+     * Sets the customers property value. A collection of customer properties for an appointment. An appointment contains a list of customer information and each unit will indicate the properties of a customer who is part of that appointment. Optional.
      * @param array<BookingCustomerInformationBase>|null $value Value to set for the customers property.
     */
     public function setCustomers(?array $value): void {
@@ -475,7 +475,7 @@ class BookingAppointment extends Entity implements Parsable
     }
 
     /**
-     * Sets the optOutOfCustomerEmail property value. If true indicates that the bookingCustomer for this appointment does not wish to receive a confirmation for this appointment.
+     * Sets the optOutOfCustomerEmail property value. If true indicates that the bookingCustomer for this appointment doesn't wish to receive a confirmation for this appointment.
      * @param bool|null $value Value to set for the optOutOfCustomerEmail property.
     */
     public function setOptOutOfCustomerEmail(?bool $value): void {
@@ -547,7 +547,7 @@ class BookingAppointment extends Entity implements Parsable
     }
 
     /**
-     * Sets the serviceName property value. The name of the bookingService associated with this appointment.This property is optional when creating a new appointment. If not specified, it is computed from the service associated with the appointment by the serviceId property.
+     * Sets the serviceName property value. The name of the bookingService associated with this appointment.This property is optional when creating a new appointment. If not specified, it's computed from the service associated with the appointment by the serviceId property.
      * @param string|null $value Value to set for the serviceName property.
     */
     public function setServiceName(?string $value): void {

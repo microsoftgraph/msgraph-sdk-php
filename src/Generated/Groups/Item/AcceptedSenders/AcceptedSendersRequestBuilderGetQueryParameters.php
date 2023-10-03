@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\AcceptedSenders;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Users in the accepted senders list can post to conversations of the group (identified in the GET request URL).Make sure you do not specify the same user or group in the accepted senders and rejected senders lists, otherwise you will get an error.
+ * Users in the accepted senders list can post to conversations of the group (identified in the GET request URL).Make sure you do not specify the same user or group in the accepted senders and rejected senders lists, otherwise you will get an error. This API is supported in the following national cloud deployments.
 */
 class AcceptedSendersRequestBuilderGetQueryParameters 
 {

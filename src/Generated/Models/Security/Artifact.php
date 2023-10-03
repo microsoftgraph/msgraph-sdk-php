@@ -30,9 +30,11 @@ class Artifact extends Entity implements Parsable
                 case '#microsoft.graph.security.hostComponent': return new HostComponent();
                 case '#microsoft.graph.security.hostCookie': return new HostCookie();
                 case '#microsoft.graph.security.hostname': return new Hostname();
+                case '#microsoft.graph.security.hostSslCertificate': return new HostSslCertificate();
                 case '#microsoft.graph.security.hostTracker': return new HostTracker();
                 case '#microsoft.graph.security.ipAddress': return new IpAddress();
                 case '#microsoft.graph.security.passiveDnsRecord': return new PassiveDnsRecord();
+                case '#microsoft.graph.security.sslCertificate': return new SslCertificate();
                 case '#microsoft.graph.security.unclassifiedArtifact': return new UnclassifiedArtifact();
             }
         }

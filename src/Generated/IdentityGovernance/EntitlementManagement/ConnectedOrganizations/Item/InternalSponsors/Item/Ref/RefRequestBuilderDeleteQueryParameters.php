@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Con
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Remove a user or a group from the connected organization's internal sponsors. The internal sponsors are a set of users who can approve requests on behalf of other users from that connected organization.
+ * Remove a user or a group from the connected organization's internal sponsors. The internal sponsors are a set of users who can approve requests on behalf of other users from that connected organization. This API is supported in the following national cloud deployments.
 */
 class RefRequestBuilderDeleteQueryParameters 
 {

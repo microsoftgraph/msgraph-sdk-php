@@ -53,7 +53,7 @@ class SectionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of onenoteSection objects from the specified section group.
+     * Retrieve a list of onenoteSection objects from the specified section group. This API is supported in the following national cloud deployments.
      * @param SectionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/sectiongroup-list-sections?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class SectionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new onenoteSection in the specified section group.
+     * Create a new onenoteSection in the specified section group. This API is supported in the following national cloud deployments.
      * @param OnenoteSection $body The request body
      * @param SectionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class SectionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of onenoteSection objects from the specified section group.
+     * Retrieve a list of onenoteSection objects from the specified section group. This API is supported in the following national cloud deployments.
      * @param SectionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class SectionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new onenoteSection in the specified section group.
+     * Create a new onenoteSection in the specified section group. This API is supported in the following national cloud deployments.
      * @param OnenoteSection $body The request body
      * @param SectionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

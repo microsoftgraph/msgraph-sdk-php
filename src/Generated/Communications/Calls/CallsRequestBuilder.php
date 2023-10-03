@@ -61,7 +61,7 @@ class CallsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a call object.
+     * Retrieve the properties and relationships of a call object. This API is supported in the following national cloud deployments.
      * @param CallsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -79,7 +79,7 @@ class CallsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create call enables your bot to create a new outgoing peer-to-peer or group call, or join an existing meeting. You will need to register the calling bot and go through the list of permissions needed as mentioned below.
+     * Create call enables your bot to create a new outgoing peer-to-peer or group call, or join an existing meeting. You will need to register the calling bot and go through the list of permissions needed as mentioned below. This API is supported in the following national cloud deployments.
      * @param Call $body The request body
      * @param CallsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -99,7 +99,7 @@ class CallsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a call object.
+     * Retrieve the properties and relationships of a call object. This API is supported in the following national cloud deployments.
      * @param CallsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -120,7 +120,7 @@ class CallsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create call enables your bot to create a new outgoing peer-to-peer or group call, or join an existing meeting. You will need to register the calling bot and go through the list of permissions needed as mentioned below.
+     * Create call enables your bot to create a new outgoing peer-to-peer or group call, or join an existing meeting. You will need to register the calling bot and go through the list of permissions needed as mentioned below. This API is supported in the following national cloud deployments.
      * @param Call $body The request body
      * @param CallsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

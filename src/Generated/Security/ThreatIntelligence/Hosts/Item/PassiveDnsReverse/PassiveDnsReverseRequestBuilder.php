@@ -52,7 +52,7 @@ class PassiveDnsReverseRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of passiveDnsRecord resources.
+     * Get a collection of passiveDnsRecord resources from a reverse passive DNS retrieval.  A reverse DNS lookup queries the hostname of a host using an IP address. This API is supported in the following national cloud deployments.
      * @param PassiveDnsReverseRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/security-host-list-passivednsreverse?view=graph-rest-1.0 Find more info here
@@ -71,7 +71,7 @@ class PassiveDnsReverseRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of passiveDnsRecord resources.
+     * Get a collection of passiveDnsRecord resources from a reverse passive DNS retrieval.  A reverse DNS lookup queries the hostname of a host using an IP address. This API is supported in the following national cloud deployments.
      * @param PassiveDnsReverseRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

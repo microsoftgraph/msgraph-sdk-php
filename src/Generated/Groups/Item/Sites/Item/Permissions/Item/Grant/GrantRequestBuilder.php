@@ -31,7 +31,7 @@ class GrantRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Grant users access to a link represented by a [permission][].
+     * Grant users access to a link represented by a permission][]. This API is supported in the following [national cloud deployments.
      * @param GrantPostRequestBody $body The request body
      * @param GrantRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -44,14 +44,14 @@ class GrantRequestBuilder extends BaseRequestBuilder
                     '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
                     '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
             ];
-            return $this->requestAdapter->sendAsync($requestInfo, [GrantResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+            return $this->requestAdapter->sendAsync($requestInfo, [GrantPostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
     }
 
     /**
-     * Grant users access to a link represented by a [permission][].
+     * Grant users access to a link represented by a permission][]. This API is supported in the following [national cloud deployments.
      * @param GrantPostRequestBody $body The request body
      * @param GrantRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

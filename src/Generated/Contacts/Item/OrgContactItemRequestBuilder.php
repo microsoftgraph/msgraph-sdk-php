@@ -14,6 +14,7 @@ use Microsoft\Graph\Generated\Contacts\Item\Manager\ManagerRequestBuilder;
 use Microsoft\Graph\Generated\Contacts\Item\MemberOf\MemberOfRequestBuilder;
 use Microsoft\Graph\Generated\Contacts\Item\Restore\RestoreRequestBuilder;
 use Microsoft\Graph\Generated\Contacts\Item\RetryServiceProvisioning\RetryServiceProvisioningRequestBuilder;
+use Microsoft\Graph\Generated\Contacts\Item\ServiceProvisioningErrors\ServiceProvisioningErrorsRequestBuilder;
 use Microsoft\Graph\Generated\Contacts\Item\TransitiveMemberOf\TransitiveMemberOfRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\OrgContact;
@@ -91,6 +92,13 @@ class OrgContactItemRequestBuilder extends BaseRequestBuilder
     }
     
     /**
+     * The serviceProvisioningErrors property
+    */
+    public function serviceProvisioningErrors(): ServiceProvisioningErrorsRequestBuilder {
+        return new ServiceProvisioningErrorsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to manage the transitiveMemberOf property of the microsoft.graph.orgContact entity.
     */
     public function transitiveMemberOf(): TransitiveMemberOfRequestBuilder {
@@ -130,7 +138,7 @@ class OrgContactItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the properties and relationships of an organizational contact.
+     * Get the properties and relationships of an organizational contact. This API is supported in the following national cloud deployments.
      * @param OrgContactItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/orgcontact-get?view=graph-rest-1.0 Find more info here
@@ -185,7 +193,7 @@ class OrgContactItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the properties and relationships of an organizational contact.
+     * Get the properties and relationships of an organizational contact. This API is supported in the following national cloud deployments.
      * @param OrgContactItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

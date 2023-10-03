@@ -50,7 +50,7 @@ class Subscription extends Entity implements Parsable
     }
 
     /**
-     * Gets the clientState property value. Required. Specifies the value of the clientState property sent by the service in each change notification. The maximum length is 128 characters. The client can check that the change notification came from the service by comparing the value of the clientState property sent with the subscription with the value of the clientState property received with each change notification.
+     * Gets the clientState property value. Optional. Specifies the value of the clientState property sent by the service in each change notification. The maximum length is 128 characters. The client can check that the change notification came from the service by comparing the value of the clientState property sent with the subscription with the value of the clientState property received with each change notification.
      * @return string|null
     */
     public function getClientState(): ?string {
@@ -256,7 +256,7 @@ class Subscription extends Entity implements Parsable
     }
 
     /**
-     * Sets the clientState property value. Required. Specifies the value of the clientState property sent by the service in each change notification. The maximum length is 128 characters. The client can check that the change notification came from the service by comparing the value of the clientState property sent with the subscription with the value of the clientState property received with each change notification.
+     * Sets the clientState property value. Optional. Specifies the value of the clientState property sent by the service in each change notification. The maximum length is 128 characters. The client can check that the change notification came from the service by comparing the value of the clientState property sent with the subscription with the value of the clientState property received with each change notification.
      * @param string|null $value Value to set for the clientState property.
     */
     public function setClientState(?string $value): void {

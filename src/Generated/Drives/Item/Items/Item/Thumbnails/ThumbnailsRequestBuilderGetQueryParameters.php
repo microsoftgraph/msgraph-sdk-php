@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Thumbnails;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve a collection of ThumbnailSet resources for a DriveItem resource. A DriveItem can be represented by zero or more ThumbnailSet resources.Each thumbnailSet can have one or more thumbnail objects, which are images that represent the item.For example, a thumbnailSet may include thumbnail objects, such as common ones including small, medium, or large. There are many ways to work with thumbnails on OneDrive.Here are the most common ones:
+ * Retrieve a collection of ThumbnailSet resources for a DriveItem resource. A DriveItem can be represented by zero or more ThumbnailSet resources.Each thumbnailSet can have one or more thumbnail objects, which are images that represent the item.For example, a thumbnailSet may include thumbnail objects, such as common ones including small, medium, or large. There are many ways to work with thumbnails on OneDrive.Here are the most common ones: This API is supported in the following national cloud deployments.
 */
 class ThumbnailsRequestBuilderGetQueryParameters 
 {

@@ -48,7 +48,7 @@ class PermissionGrantPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a permissionGrantPolicy object.
+     * Delete a permissionGrantPolicy object. This API is supported in the following national cloud deployments.
      * @param PermissionGrantPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/permissiongrantpolicy-delete?view=graph-rest-1.0 Find more info here
@@ -67,7 +67,7 @@ class PermissionGrantPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a single permissionGrantPolicy object.
+     * Retrieve a single permissionGrantPolicy object. This API is supported in the following national cloud deployments.
      * @param PermissionGrantPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/permissiongrantpolicy-get?view=graph-rest-1.0 Find more info here
@@ -86,7 +86,7 @@ class PermissionGrantPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update properties of a  permissionGrantPolicy.
+     * Update properties of a  permissionGrantPolicy. This API is supported in the following national cloud deployments.
      * @param PermissionGrantPolicy $body The request body
      * @param PermissionGrantPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -106,7 +106,7 @@ class PermissionGrantPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a permissionGrantPolicy object.
+     * Delete a permissionGrantPolicy object. This API is supported in the following national cloud deployments.
      * @param PermissionGrantPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -123,7 +123,7 @@ class PermissionGrantPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a single permissionGrantPolicy object.
+     * Retrieve a single permissionGrantPolicy object. This API is supported in the following national cloud deployments.
      * @param PermissionGrantPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -144,7 +144,7 @@ class PermissionGrantPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update properties of a  permissionGrantPolicy.
+     * Update properties of a  permissionGrantPolicy. This API is supported in the following national cloud deployments.
      * @param PermissionGrantPolicy $body The request body
      * @param PermissionGrantPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

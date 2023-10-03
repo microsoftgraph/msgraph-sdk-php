@@ -75,7 +75,7 @@ class WorkbookChartTitle extends Entity implements Parsable
     }
 
     /**
-     * Gets the visible property value. A boolean value the represents the visibility of a chart title object.
+     * Gets the visible property value. A boolean value that represents the visibility of a chart title object.
      * @return bool|null
     */
     public function getVisible(): ?bool {
@@ -123,7 +123,7 @@ class WorkbookChartTitle extends Entity implements Parsable
     }
 
     /**
-     * Sets the visible property value. A boolean value the represents the visibility of a chart title object.
+     * Sets the visible property value. A boolean value that represents the visibility of a chart title object.
      * @param bool|null $value Value to set for the visible property.
     */
     public function setVisible(?bool $value): void {

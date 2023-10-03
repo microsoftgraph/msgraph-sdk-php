@@ -32,7 +32,7 @@ class ExtensionPropertyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a directory extension definition represented by an extensionProperty object. You can delete only directory extensions that aren't synced from on-premises active directory (AD).
+     * Delete a directory extension definition represented by an extensionProperty object. You can delete only directory extensions that aren't synced from on-premises active directory (AD). This API is supported in the following national cloud deployments.
      * @param ExtensionPropertyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/extensionproperty-delete?view=graph-rest-1.0 Find more info here
@@ -51,7 +51,7 @@ class ExtensionPropertyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read a directory extension definition represented by an extensionProperty object.
+     * Read a directory extension definition represented by an extensionProperty object. This API is supported in the following national cloud deployments.
      * @param ExtensionPropertyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/extensionproperty-get?view=graph-rest-1.0 Find more info here
@@ -89,7 +89,7 @@ class ExtensionPropertyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a directory extension definition represented by an extensionProperty object. You can delete only directory extensions that aren't synced from on-premises active directory (AD).
+     * Delete a directory extension definition represented by an extensionProperty object. You can delete only directory extensions that aren't synced from on-premises active directory (AD). This API is supported in the following national cloud deployments.
      * @param ExtensionPropertyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -106,7 +106,7 @@ class ExtensionPropertyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read a directory extension definition represented by an extensionProperty object.
+     * Read a directory extension definition represented by an extensionProperty object. This API is supported in the following national cloud deployments.
      * @param ExtensionPropertyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

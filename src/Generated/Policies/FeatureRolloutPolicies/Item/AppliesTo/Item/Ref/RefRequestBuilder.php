@@ -31,7 +31,7 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Remove an appliesTo on a featureRolloutPolicy object to remove the directoryObject from feature rollout.
+     * Remove an appliesTo on a featureRolloutPolicy object to remove the directoryObject from feature rollout. This API is supported in the following national cloud deployments.
      * @param RefRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/featurerolloutpolicy-delete-appliesto?view=graph-rest-1.0 Find more info here
@@ -50,7 +50,7 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Remove an appliesTo on a featureRolloutPolicy object to remove the directoryObject from feature rollout.
+     * Remove an appliesTo on a featureRolloutPolicy object to remove the directoryObject from feature rollout. This API is supported in the following national cloud deployments.
      * @param RefRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

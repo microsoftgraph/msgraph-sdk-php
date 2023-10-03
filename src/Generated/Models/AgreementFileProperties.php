@@ -35,7 +35,7 @@ class AgreementFileProperties extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdDateTime property value. The date time representing when the file was created.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Gets the createdDateTime property value. The date time representing when the file was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
@@ -100,7 +100,7 @@ class AgreementFileProperties extends Entity implements Parsable
     }
 
     /**
-     * Gets the isDefault property value. If none of the languages matches the client preference, indicates whether this is the default agreement file . If none of the files are marked as default, the first one is treated as the default. Read-only.
+     * Gets the isDefault property value. If none of the languages matches the client preference, indicates whether this is the default agreement file. If none of the files are marked as default, the first one is treated as the default. Read-only.
      * @return bool|null
     */
     public function getIsDefault(): ?bool {
@@ -151,7 +151,7 @@ class AgreementFileProperties extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdDateTime property value. The date time representing when the file was created.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Sets the createdDateTime property value. The date time representing when the file was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
@@ -183,7 +183,7 @@ class AgreementFileProperties extends Entity implements Parsable
     }
 
     /**
-     * Sets the isDefault property value. If none of the languages matches the client preference, indicates whether this is the default agreement file . If none of the files are marked as default, the first one is treated as the default. Read-only.
+     * Sets the isDefault property value. If none of the languages matches the client preference, indicates whether this is the default agreement file. If none of the files are marked as default, the first one is treated as the default. Read-only.
      * @param bool|null $value Value to set for the isDefault property.
     */
     public function setIsDefault(?bool $value): void {

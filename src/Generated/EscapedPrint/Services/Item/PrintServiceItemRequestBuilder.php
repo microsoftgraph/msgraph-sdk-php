@@ -58,7 +58,7 @@ class PrintServiceItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a print service.
+     * Retrieve the properties and relationships of a print service. This API is supported in the following national cloud deployments.
      * @param PrintServiceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/printservice-get?view=graph-rest-1.0 Find more info here
@@ -113,7 +113,7 @@ class PrintServiceItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a print service.
+     * Retrieve the properties and relationships of a print service. This API is supported in the following national cloud deployments.
      * @param PrintServiceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

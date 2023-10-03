@@ -68,7 +68,7 @@ class AppIdentity implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the displayName property value. Refers to the Application Name displayed in the Azure Portal.
+     * Gets the displayName property value. Refers to the application name displayed in the Microsoft Entra admin center.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -168,7 +168,7 @@ class AppIdentity implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the displayName property value. Refers to the Application Name displayed in the Azure Portal.
+     * Sets the displayName property value. Refers to the application name displayed in the Microsoft Entra admin center.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {

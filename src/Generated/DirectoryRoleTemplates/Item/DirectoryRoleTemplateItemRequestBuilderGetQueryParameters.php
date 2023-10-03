@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DirectoryRoleTemplates\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties and relationships of a directoryroletemplate object.
+ * Retrieve the properties and relationships of a directoryroletemplate object. This API is supported in the following national cloud deployments.
 */
 class DirectoryRoleTemplateItemRequestBuilderGetQueryParameters 
 {

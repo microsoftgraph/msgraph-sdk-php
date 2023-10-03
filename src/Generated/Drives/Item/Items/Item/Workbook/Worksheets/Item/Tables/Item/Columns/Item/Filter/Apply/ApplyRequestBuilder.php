@@ -31,7 +31,7 @@ class ApplyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Apply the given filter criteria on the given column.
+     * Apply the given filter criteria on the given column. This API is supported in the following national cloud deployments.
      * @param ApplyPostRequestBody $body The request body
      * @param ApplyRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -51,7 +51,7 @@ class ApplyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Apply the given filter criteria on the given column.
+     * Apply the given filter criteria on the given column. This API is supported in the following national cloud deployments.
      * @param ApplyPostRequestBody $body The request body
      * @param ApplyRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

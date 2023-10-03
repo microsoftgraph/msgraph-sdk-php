@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\Sections\Item
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties and relationships of a onenoteSection object.
+ * Retrieve the properties and relationships of a onenoteSection object. This API is supported in the following national cloud deployments.
 */
 class OnenoteSectionItemRequestBuilderGetQueryParameters 
 {

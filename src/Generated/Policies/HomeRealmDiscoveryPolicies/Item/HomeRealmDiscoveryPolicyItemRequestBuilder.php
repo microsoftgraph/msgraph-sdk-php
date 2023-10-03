@@ -40,7 +40,7 @@ class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a homeRealmDiscoveryPolicy object.
+     * Delete a homeRealmDiscoveryPolicy object. This API is supported in the following national cloud deployments.
      * @param HomeRealmDiscoveryPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/homerealmdiscoverypolicy-delete?view=graph-rest-1.0 Find more info here
@@ -59,7 +59,7 @@ class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a homeRealmDiscoveryPolicy object.
+     * Retrieve the properties and relationships of a homeRealmDiscoveryPolicy object. This API is supported in the following national cloud deployments.
      * @param HomeRealmDiscoveryPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/homerealmdiscoverypolicy-get?view=graph-rest-1.0 Find more info here
@@ -78,7 +78,7 @@ class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a homeRealmDiscoveryPolicy object.
+     * Update the properties of a homeRealmDiscoveryPolicy object. This API is supported in the following national cloud deployments.
      * @param HomeRealmDiscoveryPolicy $body The request body
      * @param HomeRealmDiscoveryPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -98,7 +98,7 @@ class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a homeRealmDiscoveryPolicy object.
+     * Delete a homeRealmDiscoveryPolicy object. This API is supported in the following national cloud deployments.
      * @param HomeRealmDiscoveryPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -115,7 +115,7 @@ class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a homeRealmDiscoveryPolicy object.
+     * Retrieve the properties and relationships of a homeRealmDiscoveryPolicy object. This API is supported in the following national cloud deployments.
      * @param HomeRealmDiscoveryPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -136,7 +136,7 @@ class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a homeRealmDiscoveryPolicy object.
+     * Update the properties of a homeRealmDiscoveryPolicy object. This API is supported in the following national cloud deployments.
      * @param HomeRealmDiscoveryPolicy $body The request body
      * @param HomeRealmDiscoveryPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

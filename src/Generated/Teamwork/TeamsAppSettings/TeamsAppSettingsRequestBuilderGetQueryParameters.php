@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Teamwork\TeamsAppSettings;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get teamsAppSettings from teamwork
+ * Get the tenant-wide teamsAppSettings for all Teams apps in the tenant. This API is supported in the following national cloud deployments.
 */
 class TeamsAppSettingsRequestBuilderGetQueryParameters 
 {

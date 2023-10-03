@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Education\Schools\Item\AdministrativeUnit;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a list of administrativeUnits associated with an educationSchool object.
+ * Get a list of administrativeUnits associated with an educationSchool object. This API is supported in the following national cloud deployments.
 */
 class AdministrativeUnitRequestBuilderGetQueryParameters 
 {

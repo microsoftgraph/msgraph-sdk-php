@@ -5,6 +5,9 @@ namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\GraphMan
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\GraphManagedMobileLobApp\Assignments\AssignmentsRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\GraphManagedMobileLobApp\Categories\CategoriesRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\GraphManagedMobileLobApp\ContentVersions\ContentVersionsRequestBuilder;
 use Microsoft\Graph\Generated\Models\ManagedMobileLobApp;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -17,6 +20,27 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class GraphManagedMobileLobAppRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to manage the assignments property of the microsoft.graph.mobileApp entity.
+    */
+    public function assignments(): AssignmentsRequestBuilder {
+        return new AssignmentsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the categories property of the microsoft.graph.mobileApp entity.
+    */
+    public function categories(): CategoriesRequestBuilder {
+        return new CategoriesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the contentVersions property of the microsoft.graph.managedMobileLobApp entity.
+    */
+    public function contentVersions(): ContentVersionsRequestBuilder {
+        return new ContentVersionsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Instantiates a new GraphManagedMobileLobAppRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

@@ -53,7 +53,7 @@ class PagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of page objects from the specified section.
+     * Retrieve a list of page objects from the specified section. This API is supported in the following national cloud deployments.
      * @param PagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/section-list-pages?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class PagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new page in the specified section.
+     * Create a new page in the specified section. This API is supported in the following national cloud deployments.
      * @param OnenotePage $body The request body
      * @param PagesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class PagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of page objects from the specified section.
+     * Retrieve a list of page objects from the specified section. This API is supported in the following national cloud deployments.
      * @param PagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class PagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new page in the specified section.
+     * Create a new page in the specified section. This API is supported in the following national cloud deployments.
      * @param OnenotePage $body The request body
      * @param PagesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

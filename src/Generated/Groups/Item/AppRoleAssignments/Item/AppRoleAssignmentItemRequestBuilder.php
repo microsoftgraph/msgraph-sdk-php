@@ -32,7 +32,7 @@ class AppRoleAssignmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes an appRoleAssignment that a group has been granted.
+     * Deletes an appRoleAssignment that a group has been granted. This API is supported in the following national cloud deployments.
      * @param AppRoleAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/group-delete-approleassignments?view=graph-rest-1.0 Find more info here
@@ -88,7 +88,7 @@ class AppRoleAssignmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes an appRoleAssignment that a group has been granted.
+     * Deletes an appRoleAssignment that a group has been granted. This API is supported in the following national cloud deployments.
      * @param AppRoleAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

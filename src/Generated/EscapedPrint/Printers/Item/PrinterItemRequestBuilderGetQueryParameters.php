@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\EscapedPrint\Printers\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties and relationships of a printer object.
+ * Retrieve the properties and relationships of a printer object. This API is supported in the following national cloud deployments.
 */
 class PrinterItemRequestBuilderGetQueryParameters 
 {

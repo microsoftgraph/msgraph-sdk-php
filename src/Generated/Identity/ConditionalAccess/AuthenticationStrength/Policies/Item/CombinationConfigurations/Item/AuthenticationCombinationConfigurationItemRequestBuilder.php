@@ -32,7 +32,7 @@ class AuthenticationCombinationConfigurationItemRequestBuilder extends BaseReque
     }
 
     /**
-     * Delete an authenticationCombinationConfiguration  for a custom authenticationStrengthPolicy object.
+     * Delete an authenticationCombinationConfiguration  for a custom authenticationStrengthPolicy object. This API is supported in the following national cloud deployments.
      * @param AuthenticationCombinationConfigurationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/authenticationstrengthpolicy-delete-combinationconfigurations?view=graph-rest-1.0 Find more info here
@@ -51,7 +51,7 @@ class AuthenticationCombinationConfigurationItemRequestBuilder extends BaseReque
     }
 
     /**
-     * Read the properties and relationships of an authenticationCombinationConfiguration object.
+     * Read the properties and relationships of an authenticationCombinationConfiguration object. This API is supported in the following national cloud deployments.
      * @param AuthenticationCombinationConfigurationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/authenticationcombinationconfiguration-get?view=graph-rest-1.0 Find more info here
@@ -70,7 +70,7 @@ class AuthenticationCombinationConfigurationItemRequestBuilder extends BaseReque
     }
 
     /**
-     * Update the properties of an authenticationCombinationConfiguration object. In use, only fido2combinationConfigurations may be updated as they are the only type of authenticationCombinationConfiguration that may be created.
+     * Update the properties of an authenticationCombinationConfiguration object. In use, only fido2combinationConfigurations may be updated as they're the only type of authenticationCombinationConfiguration that may be created. This API is supported in the following national cloud deployments.
      * @param AuthenticationCombinationConfiguration $body The request body
      * @param AuthenticationCombinationConfigurationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -90,7 +90,7 @@ class AuthenticationCombinationConfigurationItemRequestBuilder extends BaseReque
     }
 
     /**
-     * Delete an authenticationCombinationConfiguration  for a custom authenticationStrengthPolicy object.
+     * Delete an authenticationCombinationConfiguration  for a custom authenticationStrengthPolicy object. This API is supported in the following national cloud deployments.
      * @param AuthenticationCombinationConfigurationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -107,7 +107,7 @@ class AuthenticationCombinationConfigurationItemRequestBuilder extends BaseReque
     }
 
     /**
-     * Read the properties and relationships of an authenticationCombinationConfiguration object.
+     * Read the properties and relationships of an authenticationCombinationConfiguration object. This API is supported in the following national cloud deployments.
      * @param AuthenticationCombinationConfigurationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -128,7 +128,7 @@ class AuthenticationCombinationConfigurationItemRequestBuilder extends BaseReque
     }
 
     /**
-     * Update the properties of an authenticationCombinationConfiguration object. In use, only fido2combinationConfigurations may be updated as they are the only type of authenticationCombinationConfiguration that may be created.
+     * Update the properties of an authenticationCombinationConfiguration object. In use, only fido2combinationConfigurations may be updated as they're the only type of authenticationCombinationConfiguration that may be created. This API is supported in the following national cloud deployments.
      * @param AuthenticationCombinationConfiguration $body The request body
      * @param AuthenticationCombinationConfigurationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

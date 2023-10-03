@@ -54,10 +54,10 @@ class SeriesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of chartseries objects.
+     * Retrieve a list of chartseries objects. This API is supported in the following national cloud deployments.
      * @param SeriesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://learn.microsoft.com/graph/api/chart-list-series?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/chartseries-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?SeriesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -82,7 +82,7 @@ class SeriesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Use this API to create a new ChartSeries.
+     * Use this API to create a new ChartSeries. This API is supported in the following national cloud deployments.
      * @param WorkbookChartSeries $body The request body
      * @param SeriesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -102,7 +102,7 @@ class SeriesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of chartseries objects.
+     * Retrieve a list of chartseries objects. This API is supported in the following national cloud deployments.
      * @param SeriesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -123,7 +123,7 @@ class SeriesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Use this API to create a new ChartSeries.
+     * Use this API to create a new ChartSeries. This API is supported in the following national cloud deployments.
      * @param WorkbookChartSeries $body The request body
      * @param SeriesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

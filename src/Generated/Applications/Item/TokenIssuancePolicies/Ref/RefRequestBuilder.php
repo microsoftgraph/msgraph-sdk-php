@@ -33,7 +33,7 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List the tokenIssuancePolicy objects that are assigned to an application.
+     * List the tokenIssuancePolicy objects that are assigned to an application. This API is supported in the following national cloud deployments.
      * @param RefRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/application-list-tokenissuancepolicies?view=graph-rest-1.0 Find more info here
@@ -52,7 +52,7 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Assign a tokenIssuancePolicy to an application.
+     * Assign a tokenIssuancePolicy to an application. This API is supported in the following national cloud deployments.
      * @param ReferenceCreate $body The request body
      * @param RefRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -72,7 +72,7 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List the tokenIssuancePolicy objects that are assigned to an application.
+     * List the tokenIssuancePolicy objects that are assigned to an application. This API is supported in the following national cloud deployments.
      * @param RefRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -93,7 +93,7 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Assign a tokenIssuancePolicy to an application.
+     * Assign a tokenIssuancePolicy to an application. This API is supported in the following national cloud deployments.
      * @param ReferenceCreate $body The request body
      * @param RefRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

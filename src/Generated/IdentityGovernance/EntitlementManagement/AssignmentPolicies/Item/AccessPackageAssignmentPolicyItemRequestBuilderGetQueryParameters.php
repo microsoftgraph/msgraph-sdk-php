@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Ass
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * In Azure AD entitlement management, retrieve the properties and relationships of an accessPackageAssignmentPolicy object.
+ * In Azure AD entitlement management, retrieve the properties and relationships of an accessPackageAssignmentPolicy object. This API is supported in the following national cloud deployments.
 */
 class AccessPackageAssignmentPolicyItemRequestBuilderGetQueryParameters 
 {

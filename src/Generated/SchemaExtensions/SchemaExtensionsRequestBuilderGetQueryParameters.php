@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\SchemaExtensions;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a list of schemaExtension objects in your tenant. The schema extensions can be InDevelopment, Available, or Deprecated and includes schema extensions:+ Created by any apps you own in the current tenant.+ Owned by other apps that are marked as Available.+ Created by other developers from other tenants and marked as Available. This is different from other APIs that only return tenant-specific data. Extension data created based on schema extension definitions is tenant-specific and can only be accessed by apps explicitly granted permission. 
+ * Get a list of schemaExtension objects in your tenant. The schema extensions can be InDevelopment, Available, or Deprecated and includes schema extensions: This API is supported in the following national cloud deployments.
 */
 class SchemaExtensionsRequestBuilderGetQueryParameters 
 {

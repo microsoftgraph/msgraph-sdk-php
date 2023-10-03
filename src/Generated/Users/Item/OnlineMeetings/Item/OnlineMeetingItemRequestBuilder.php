@@ -10,6 +10,7 @@ use Microsoft\Graph\Generated\Models\OnlineMeeting;
 use Microsoft\Graph\Generated\Users\Item\OnlineMeetings\Item\AttendanceReports\AttendanceReportsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\OnlineMeetings\Item\AttendeeReport\AttendeeReportRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\OnlineMeetings\Item\GetVirtualAppointmentJoinWebUrl\GetVirtualAppointmentJoinWebUrlRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\OnlineMeetings\Item\Transcripts\TranscriptsRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -42,6 +43,13 @@ class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder
     }
     
     /**
+     * Provides operations to manage the transcripts property of the microsoft.graph.onlineMeeting entity.
+    */
+    public function transcripts(): TranscriptsRequestBuilder {
+        return new TranscriptsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Instantiates a new OnlineMeetingItemRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
@@ -56,7 +64,7 @@ class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an onlineMeeting object.
+     * Delete an onlineMeeting object. This API is supported in the following national cloud deployments.
      * @param OnlineMeetingItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/onlinemeeting-delete?view=graph-rest-1.0 Find more info here
@@ -75,7 +83,7 @@ class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of an onlineMeeting object. For example, you can: Teams live event attendee report is an online meeting artifact. For details, see Online meeting artifacts and permissions.
+     * Retrieve the properties and relationships of an onlineMeeting object. For example, you can: Teams live event attendee report is an online meeting artifact. For details, see Online meeting artifacts and permissions. This API is supported in the following national cloud deployments.
      * @param OnlineMeetingItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/onlinemeeting-get?view=graph-rest-1.0 Find more info here
@@ -94,7 +102,7 @@ class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of the specified onlineMeeting object. Please see Request body section for the list of properties that support updating.
+     * Update the properties of the specified onlineMeeting object. Please see Request body section for the list of properties that support updating. This API is supported in the following national cloud deployments.
      * @param OnlineMeeting $body The request body
      * @param OnlineMeetingItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -114,7 +122,7 @@ class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an onlineMeeting object.
+     * Delete an onlineMeeting object. This API is supported in the following national cloud deployments.
      * @param OnlineMeetingItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -131,7 +139,7 @@ class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of an onlineMeeting object. For example, you can: Teams live event attendee report is an online meeting artifact. For details, see Online meeting artifacts and permissions.
+     * Retrieve the properties and relationships of an onlineMeeting object. For example, you can: Teams live event attendee report is an online meeting artifact. For details, see Online meeting artifacts and permissions. This API is supported in the following national cloud deployments.
      * @param OnlineMeetingItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -152,7 +160,7 @@ class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of the specified onlineMeeting object. Please see Request body section for the list of properties that support updating.
+     * Update the properties of the specified onlineMeeting object. Please see Request body section for the list of properties that support updating. This API is supported in the following national cloud deployments.
      * @param OnlineMeeting $body The request body
      * @param OnlineMeetingItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

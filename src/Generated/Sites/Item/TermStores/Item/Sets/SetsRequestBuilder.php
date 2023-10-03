@@ -53,7 +53,7 @@ class SetsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a set object.
+     * Read the properties and relationships of a set object. This API is supported in the following national cloud deployments.
      * @param SetsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -71,7 +71,7 @@ class SetsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new set object.
+     * Create a new set object. This API is supported in the following national cloud deployments.
      * @param Set $body The request body
      * @param SetsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -91,7 +91,7 @@ class SetsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a set object.
+     * Read the properties and relationships of a set object. This API is supported in the following national cloud deployments.
      * @param SetsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -112,7 +112,7 @@ class SetsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new set object.
+     * Create a new set object. This API is supported in the following national cloud deployments.
      * @param Set $body The request body
      * @param SetsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

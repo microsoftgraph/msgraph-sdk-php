@@ -32,7 +32,7 @@ class CreateOrGetRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create an onlineMeeting object with a custom specified external ID. If the external ID already exists, this API will return the onlineMeeting object with that external ID. 
+     * Create an onlineMeeting object with a custom specified external ID. If the external ID already exists, this API will return the onlineMeeting object with that external ID.  This API is supported in the following national cloud deployments.
      * @param CreateOrGetPostRequestBody $body The request body
      * @param CreateOrGetRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -52,7 +52,7 @@ class CreateOrGetRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create an onlineMeeting object with a custom specified external ID. If the external ID already exists, this API will return the onlineMeeting object with that external ID. 
+     * Create an onlineMeeting object with a custom specified external ID. If the external ID already exists, this API will return the onlineMeeting object with that external ID.  This API is supported in the following national cloud deployments.
      * @param CreateOrGetPostRequestBody $body The request body
      * @param CreateOrGetRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

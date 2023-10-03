@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Team\Channels\Item\Messages\Item
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List all the replies to a message in a channel of a team. This method lists only the replies of the specified message, if any. To get the message itself, simply call get channel message.
+ * List all the replies to a message in a channel of a team. This method lists only the replies of the specified message, if any. To get the message itself, simply call get channel message. This API is supported in the following national cloud deployments.
 */
 class RepliesRequestBuilderGetQueryParameters 
 {

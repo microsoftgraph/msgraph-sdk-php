@@ -48,7 +48,7 @@ class GroupLifecyclePolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a groupLifecyclePolicy.
+     * Delete a groupLifecyclePolicy. This API is supported in the following national cloud deployments.
      * @param GroupLifecyclePolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/grouplifecyclepolicy-delete?view=graph-rest-1.0 Find more info here
@@ -67,7 +67,7 @@ class GroupLifecyclePolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a groupLifecyclePolicies object.
+     * Retrieve the properties and relationships of a groupLifecyclePolicies object. This API is supported in the following national cloud deployments.
      * @param GroupLifecyclePolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/grouplifecyclepolicy-get?view=graph-rest-1.0 Find more info here
@@ -86,7 +86,7 @@ class GroupLifecyclePolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a groupLifecyclePolicygroupLifecyclePolicy resource type object.
+     * Update the properties of a groupLifecyclePolicygroupLifecyclePolicy resource type object. This API is supported in the following national cloud deployments.
      * @param GroupLifecyclePolicy $body The request body
      * @param GroupLifecyclePolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -106,7 +106,7 @@ class GroupLifecyclePolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a groupLifecyclePolicy.
+     * Delete a groupLifecyclePolicy. This API is supported in the following national cloud deployments.
      * @param GroupLifecyclePolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -123,7 +123,7 @@ class GroupLifecyclePolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a groupLifecyclePolicies object.
+     * Retrieve the properties and relationships of a groupLifecyclePolicies object. This API is supported in the following national cloud deployments.
      * @param GroupLifecyclePolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -144,7 +144,7 @@ class GroupLifecyclePolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a groupLifecyclePolicygroupLifecyclePolicy resource type object.
+     * Update the properties of a groupLifecyclePolicygroupLifecyclePolicy resource type object. This API is supported in the following national cloud deployments.
      * @param GroupLifecyclePolicy $body The request body
      * @param GroupLifecyclePolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

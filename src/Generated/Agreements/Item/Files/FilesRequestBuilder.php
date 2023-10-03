@@ -71,7 +71,7 @@ class FilesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new localized agreement file.
+     * Create a new localized agreement file. This API is supported in the following national cloud deployments.
      * @param AgreementFileLocalization $body The request body
      * @param FilesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -112,7 +112,7 @@ class FilesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new localized agreement file.
+     * Create a new localized agreement file. This API is supported in the following national cloud deployments.
      * @param AgreementFileLocalization $body The request body
      * @param FilesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

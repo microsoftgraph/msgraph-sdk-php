@@ -32,7 +32,7 @@ class AssignLicenseRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Add or remove licenses on the group. Licenses assigned to the group will be assigned to all users in the group. To learn more about group-based licensing, see What is group-based licensing in Azure Active Directory. To get the subscriptions available in the directory, perform a GET subscribedSkus request.
+     * Add or remove licenses on the group. Licenses assigned to the group will be assigned to all users in the group. To learn more about group-based licensing, see What is group-based licensing in Azure Active Directory. To get the subscriptions available in the directory, perform a GET subscribedSkus request. This API is supported in the following national cloud deployments.
      * @param AssignLicensePostRequestBody $body The request body
      * @param AssignLicenseRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -52,7 +52,7 @@ class AssignLicenseRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Add or remove licenses on the group. Licenses assigned to the group will be assigned to all users in the group. To learn more about group-based licensing, see What is group-based licensing in Azure Active Directory. To get the subscriptions available in the directory, perform a GET subscribedSkus request.
+     * Add or remove licenses on the group. Licenses assigned to the group will be assigned to all users in the group. To learn more about group-based licensing, see What is group-based licensing in Azure Active Directory. To get the subscriptions available in the directory, perform a GET subscribedSkus request. This API is supported in the following national cloud deployments.
      * @param AssignLicensePostRequestBody $body The request body
      * @param AssignLicenseRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

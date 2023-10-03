@@ -61,7 +61,7 @@ class TeamsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List all teams in an organization.
+     * List all teams in an organization. This API is supported in the following national cloud deployments.
      * @param TeamsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/teams-list?view=graph-rest-1.0 Find more info here
@@ -80,7 +80,7 @@ class TeamsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new team.
+     * Create a new team. This API is supported in the following national cloud deployments.
      * @param Team $body The request body
      * @param TeamsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -100,7 +100,7 @@ class TeamsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List all teams in an organization.
+     * List all teams in an organization. This API is supported in the following national cloud deployments.
      * @param TeamsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -121,7 +121,7 @@ class TeamsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new team.
+     * Create a new team. This API is supported in the following national cloud deployments.
      * @param Team $body The request body
      * @param TeamsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

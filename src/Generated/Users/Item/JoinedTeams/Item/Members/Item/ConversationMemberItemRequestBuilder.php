@@ -32,7 +32,7 @@ class ConversationMemberItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Remove a conversationMember from a team.
+     * Remove a conversationMember from a team. This API is supported in the following national cloud deployments.
      * @param ConversationMemberItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/team-delete-members?view=graph-rest-1.0 Find more info here
@@ -51,7 +51,7 @@ class ConversationMemberItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a conversationMember from a team.
+     * Get a conversationMember from a team. This API is supported in the following national cloud deployments.
      * @param ConversationMemberItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/team-get-members?view=graph-rest-1.0 Find more info here
@@ -70,7 +70,7 @@ class ConversationMemberItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the role of a conversationMember in a team.
+     * Update the role of a conversationMember in a team. This API is supported in the following national cloud deployments.
      * @param ConversationMember $body The request body
      * @param ConversationMemberItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -90,7 +90,7 @@ class ConversationMemberItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Remove a conversationMember from a team.
+     * Remove a conversationMember from a team. This API is supported in the following national cloud deployments.
      * @param ConversationMemberItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -107,7 +107,7 @@ class ConversationMemberItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a conversationMember from a team.
+     * Get a conversationMember from a team. This API is supported in the following national cloud deployments.
      * @param ConversationMemberItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -128,7 +128,7 @@ class ConversationMemberItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the role of a conversationMember in a team.
+     * Update the role of a conversationMember in a team. This API is supported in the following national cloud deployments.
      * @param ConversationMember $body The request body
      * @param ConversationMemberItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

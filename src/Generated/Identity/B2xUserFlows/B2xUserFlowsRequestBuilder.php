@@ -53,7 +53,7 @@ class B2xUserFlowsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of b2xIdentityUserFlow objects.
+     * Retrieve a list of b2xIdentityUserFlow objects. This API is supported in the following national cloud deployments.
      * @param B2xUserFlowsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/identitycontainer-list-b2xuserflows?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class B2xUserFlowsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new b2xIdentityUserFlow object.
+     * Create a new b2xIdentityUserFlow object. This API is supported in the following national cloud deployments.
      * @param B2xIdentityUserFlow $body The request body
      * @param B2xUserFlowsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class B2xUserFlowsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of b2xIdentityUserFlow objects.
+     * Retrieve a list of b2xIdentityUserFlow objects. This API is supported in the following national cloud deployments.
      * @param B2xUserFlowsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class B2xUserFlowsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new b2xIdentityUserFlow object.
+     * Create a new b2xIdentityUserFlow object. This API is supported in the following national cloud deployments.
      * @param B2xIdentityUserFlow $body The request body
      * @param B2xUserFlowsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -122,6 +122,42 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
+     * Gets the durationInDays property value. The durationInDays property
+     * @return int|null
+    */
+    public function getDurationInDays(): ?int {
+        $val = $this->getBackingStore()->get('durationInDays');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'durationInDays'");
+    }
+
+    /**
+     * Gets the endUserNotificationSetting property value. The endUserNotificationSetting property
+     * @return EndUserNotificationSetting|null
+    */
+    public function getEndUserNotificationSetting(): ?EndUserNotificationSetting {
+        $val = $this->getBackingStore()->get('endUserNotificationSetting');
+        if (is_null($val) || $val instanceof EndUserNotificationSetting) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'endUserNotificationSetting'");
+    }
+
+    /**
+     * Gets the excludedAccountTarget property value. The excludedAccountTarget property
+     * @return AccountTargetContent|null
+    */
+    public function getExcludedAccountTarget(): ?AccountTargetContent {
+        $val = $this->getBackingStore()->get('excludedAccountTarget');
+        if (is_null($val) || $val instanceof AccountTargetContent) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'excludedAccountTarget'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
@@ -136,14 +172,35 @@ class Simulation extends Entity implements Parsable
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'durationInDays' => fn(ParseNode $n) => $o->setDurationInDays($n->getIntegerValue()),
+            'endUserNotificationSetting' => fn(ParseNode $n) => $o->setEndUserNotificationSetting($n->getObjectValue([EndUserNotificationSetting::class, 'createFromDiscriminatorValue'])),
+            'excludedAccountTarget' => fn(ParseNode $n) => $o->setExcludedAccountTarget($n->getObjectValue([AccountTargetContent::class, 'createFromDiscriminatorValue'])),
+            'includedAccountTarget' => fn(ParseNode $n) => $o->setIncludedAccountTarget($n->getObjectValue([AccountTargetContent::class, 'createFromDiscriminatorValue'])),
             'isAutomated' => fn(ParseNode $n) => $o->setIsAutomated($n->getBooleanValue()),
+            'landingPage' => fn(ParseNode $n) => $o->setLandingPage($n->getObjectValue([LandingPage::class, 'createFromDiscriminatorValue'])),
             'lastModifiedBy' => fn(ParseNode $n) => $o->setLastModifiedBy($n->getObjectValue([EmailIdentity::class, 'createFromDiscriminatorValue'])),
             'lastModifiedDateTime' => fn(ParseNode $n) => $o->setLastModifiedDateTime($n->getDateTimeValue()),
             'launchDateTime' => fn(ParseNode $n) => $o->setLaunchDateTime($n->getDateTimeValue()),
+            'loginPage' => fn(ParseNode $n) => $o->setLoginPage($n->getObjectValue([LoginPage::class, 'createFromDiscriminatorValue'])),
+            'oAuthConsentAppDetail' => fn(ParseNode $n) => $o->setOAuthConsentAppDetail($n->getObjectValue([OAuthConsentAppDetail::class, 'createFromDiscriminatorValue'])),
+            'payload' => fn(ParseNode $n) => $o->setPayload($n->getObjectValue([Payload::class, 'createFromDiscriminatorValue'])),
             'payloadDeliveryPlatform' => fn(ParseNode $n) => $o->setPayloadDeliveryPlatform($n->getEnumValue(PayloadDeliveryPlatform::class)),
             'report' => fn(ParseNode $n) => $o->setReport($n->getObjectValue([SimulationReport::class, 'createFromDiscriminatorValue'])),
             'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(SimulationStatus::class)),
+            'trainingSetting' => fn(ParseNode $n) => $o->setTrainingSetting($n->getObjectValue([TrainingSetting::class, 'createFromDiscriminatorValue'])),
         ]);
+    }
+
+    /**
+     * Gets the includedAccountTarget property value. The includedAccountTarget property
+     * @return AccountTargetContent|null
+    */
+    public function getIncludedAccountTarget(): ?AccountTargetContent {
+        $val = $this->getBackingStore()->get('includedAccountTarget');
+        if (is_null($val) || $val instanceof AccountTargetContent) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'includedAccountTarget'");
     }
 
     /**
@@ -156,6 +213,18 @@ class Simulation extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'isAutomated'");
+    }
+
+    /**
+     * Gets the landingPage property value. The landingPage property
+     * @return LandingPage|null
+    */
+    public function getLandingPage(): ?LandingPage {
+        $val = $this->getBackingStore()->get('landingPage');
+        if (is_null($val) || $val instanceof LandingPage) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'landingPage'");
     }
 
     /**
@@ -195,6 +264,42 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
+     * Gets the loginPage property value. The loginPage property
+     * @return LoginPage|null
+    */
+    public function getLoginPage(): ?LoginPage {
+        $val = $this->getBackingStore()->get('loginPage');
+        if (is_null($val) || $val instanceof LoginPage) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'loginPage'");
+    }
+
+    /**
+     * Gets the oAuthConsentAppDetail property value. The oAuthConsentAppDetail property
+     * @return OAuthConsentAppDetail|null
+    */
+    public function getOAuthConsentAppDetail(): ?OAuthConsentAppDetail {
+        $val = $this->getBackingStore()->get('oAuthConsentAppDetail');
+        if (is_null($val) || $val instanceof OAuthConsentAppDetail) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'oAuthConsentAppDetail'");
+    }
+
+    /**
+     * Gets the payload property value. The payload property
+     * @return Payload|null
+    */
+    public function getPayload(): ?Payload {
+        $val = $this->getBackingStore()->get('payload');
+        if (is_null($val) || $val instanceof Payload) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'payload'");
+    }
+
+    /**
      * Gets the payloadDeliveryPlatform property value. Method of delivery of the phishing payload used in the attack simulation and training campaign. Possible values are: unknown, sms, email, teams, unknownFutureValue.
      * @return PayloadDeliveryPlatform|null
     */
@@ -231,6 +336,18 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
+     * Gets the trainingSetting property value. The trainingSetting property
+     * @return TrainingSetting|null
+    */
+    public function getTrainingSetting(): ?TrainingSetting {
+        $val = $this->getBackingStore()->get('trainingSetting');
+        if (is_null($val) || $val instanceof TrainingSetting) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'trainingSetting'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -244,13 +361,22 @@ class Simulation extends Entity implements Parsable
         $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
         $writer->writeStringValue('description', $this->getDescription());
         $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeIntegerValue('durationInDays', $this->getDurationInDays());
+        $writer->writeObjectValue('endUserNotificationSetting', $this->getEndUserNotificationSetting());
+        $writer->writeObjectValue('excludedAccountTarget', $this->getExcludedAccountTarget());
+        $writer->writeObjectValue('includedAccountTarget', $this->getIncludedAccountTarget());
         $writer->writeBooleanValue('isAutomated', $this->getIsAutomated());
+        $writer->writeObjectValue('landingPage', $this->getLandingPage());
         $writer->writeObjectValue('lastModifiedBy', $this->getLastModifiedBy());
         $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
         $writer->writeDateTimeValue('launchDateTime', $this->getLaunchDateTime());
+        $writer->writeObjectValue('loginPage', $this->getLoginPage());
+        $writer->writeObjectValue('oAuthConsentAppDetail', $this->getOAuthConsentAppDetail());
+        $writer->writeObjectValue('payload', $this->getPayload());
         $writer->writeEnumValue('payloadDeliveryPlatform', $this->getPayloadDeliveryPlatform());
         $writer->writeObjectValue('report', $this->getReport());
         $writer->writeEnumValue('status', $this->getStatus());
+        $writer->writeObjectValue('trainingSetting', $this->getTrainingSetting());
     }
 
     /**
@@ -318,11 +444,51 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
+     * Sets the durationInDays property value. The durationInDays property
+     * @param int|null $value Value to set for the durationInDays property.
+    */
+    public function setDurationInDays(?int $value): void {
+        $this->getBackingStore()->set('durationInDays', $value);
+    }
+
+    /**
+     * Sets the endUserNotificationSetting property value. The endUserNotificationSetting property
+     * @param EndUserNotificationSetting|null $value Value to set for the endUserNotificationSetting property.
+    */
+    public function setEndUserNotificationSetting(?EndUserNotificationSetting $value): void {
+        $this->getBackingStore()->set('endUserNotificationSetting', $value);
+    }
+
+    /**
+     * Sets the excludedAccountTarget property value. The excludedAccountTarget property
+     * @param AccountTargetContent|null $value Value to set for the excludedAccountTarget property.
+    */
+    public function setExcludedAccountTarget(?AccountTargetContent $value): void {
+        $this->getBackingStore()->set('excludedAccountTarget', $value);
+    }
+
+    /**
+     * Sets the includedAccountTarget property value. The includedAccountTarget property
+     * @param AccountTargetContent|null $value Value to set for the includedAccountTarget property.
+    */
+    public function setIncludedAccountTarget(?AccountTargetContent $value): void {
+        $this->getBackingStore()->set('includedAccountTarget', $value);
+    }
+
+    /**
      * Sets the isAutomated property value. Flag that represents if the attack simulation and training campaign was created from a simulation automation flow. Supports $filter and $orderby.
      * @param bool|null $value Value to set for the isAutomated property.
     */
     public function setIsAutomated(?bool $value): void {
         $this->getBackingStore()->set('isAutomated', $value);
+    }
+
+    /**
+     * Sets the landingPage property value. The landingPage property
+     * @param LandingPage|null $value Value to set for the landingPage property.
+    */
+    public function setLandingPage(?LandingPage $value): void {
+        $this->getBackingStore()->set('landingPage', $value);
     }
 
     /**
@@ -350,6 +516,30 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
+     * Sets the loginPage property value. The loginPage property
+     * @param LoginPage|null $value Value to set for the loginPage property.
+    */
+    public function setLoginPage(?LoginPage $value): void {
+        $this->getBackingStore()->set('loginPage', $value);
+    }
+
+    /**
+     * Sets the oAuthConsentAppDetail property value. The oAuthConsentAppDetail property
+     * @param OAuthConsentAppDetail|null $value Value to set for the oAuthConsentAppDetail property.
+    */
+    public function setOAuthConsentAppDetail(?OAuthConsentAppDetail $value): void {
+        $this->getBackingStore()->set('oAuthConsentAppDetail', $value);
+    }
+
+    /**
+     * Sets the payload property value. The payload property
+     * @param Payload|null $value Value to set for the payload property.
+    */
+    public function setPayload(?Payload $value): void {
+        $this->getBackingStore()->set('payload', $value);
+    }
+
+    /**
      * Sets the payloadDeliveryPlatform property value. Method of delivery of the phishing payload used in the attack simulation and training campaign. Possible values are: unknown, sms, email, teams, unknownFutureValue.
      * @param PayloadDeliveryPlatform|null $value Value to set for the payloadDeliveryPlatform property.
     */
@@ -371,6 +561,14 @@ class Simulation extends Entity implements Parsable
     */
     public function setStatus(?SimulationStatus $value): void {
         $this->getBackingStore()->set('status', $value);
+    }
+
+    /**
+     * Sets the trainingSetting property value. The trainingSetting property
+     * @param TrainingSetting|null $value Value to set for the trainingSetting property.
+    */
+    public function setTrainingSetting(?TrainingSetting $value): void {
+        $this->getBackingStore()->set('trainingSetting', $value);
     }
 
 }

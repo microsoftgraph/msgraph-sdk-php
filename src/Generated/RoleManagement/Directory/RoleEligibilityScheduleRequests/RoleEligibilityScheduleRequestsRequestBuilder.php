@@ -63,7 +63,7 @@ class RoleEligibilityScheduleRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * In PIM, retrieve the requests for role eligibilities for principals made through the unifiedRoleEligibilityScheduleRequest object.
+     * In PIM, retrieve the requests for role eligibilities for principals made through the unifiedRoleEligibilityScheduleRequest object. This API is supported in the following national cloud deployments.
      * @param RoleEligibilityScheduleRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/rbacapplication-list-roleeligibilityschedulerequests?view=graph-rest-1.0 Find more info here
@@ -82,7 +82,7 @@ class RoleEligibilityScheduleRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * In PIM, request for a role eligibility for a principal through the unifiedRoleEligibilityScheduleRequest object. This operation allows both admins and eligible users to add, revoke, or extend eligible assignments.
+     * In PIM, request for a role eligibility for a principal through the unifiedRoleEligibilityScheduleRequest object. This operation allows both admins and eligible users to add, revoke, or extend eligible assignments. This API is supported in the following national cloud deployments.
      * @param UnifiedRoleEligibilityScheduleRequest $body The request body
      * @param RoleEligibilityScheduleRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -102,7 +102,7 @@ class RoleEligibilityScheduleRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * In PIM, retrieve the requests for role eligibilities for principals made through the unifiedRoleEligibilityScheduleRequest object.
+     * In PIM, retrieve the requests for role eligibilities for principals made through the unifiedRoleEligibilityScheduleRequest object. This API is supported in the following national cloud deployments.
      * @param RoleEligibilityScheduleRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -123,7 +123,7 @@ class RoleEligibilityScheduleRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * In PIM, request for a role eligibility for a principal through the unifiedRoleEligibilityScheduleRequest object. This operation allows both admins and eligible users to add, revoke, or extend eligible assignments.
+     * In PIM, request for a role eligibility for a principal through the unifiedRoleEligibilityScheduleRequest object. This operation allows both admins and eligible users to add, revoke, or extend eligible assignments. This API is supported in the following national cloud deployments.
      * @param UnifiedRoleEligibilityScheduleRequest $body The request body
      * @param RoleEligibilityScheduleRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

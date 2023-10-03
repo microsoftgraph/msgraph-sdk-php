@@ -33,7 +33,7 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list teachers for a class. Delegated tokens must be members of the class to get the teacher list.
+     * Retrieve a list of teachers for a class. Delegated tokens must be members of the class to get the teacher list. This API is supported in the following national cloud deployments.
      * @param RefRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/educationclass-list-teachers?view=graph-rest-1.0 Find more info here
@@ -52,7 +52,7 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Add a teacher to a class.
+     * Add a teacher to a class. This API is supported in the following national cloud deployments.
      * @param ReferenceCreate $body The request body
      * @param RefRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -72,7 +72,7 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list teachers for a class. Delegated tokens must be members of the class to get the teacher list.
+     * Retrieve a list of teachers for a class. Delegated tokens must be members of the class to get the teacher list. This API is supported in the following national cloud deployments.
      * @param RefRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -93,7 +93,7 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Add a teacher to a class.
+     * Add a teacher to a class. This API is supported in the following national cloud deployments.
      * @param ReferenceCreate $body The request body
      * @param RefRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

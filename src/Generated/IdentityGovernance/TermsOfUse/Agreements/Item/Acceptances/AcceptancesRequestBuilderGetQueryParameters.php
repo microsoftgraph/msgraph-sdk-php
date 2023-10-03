@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\Agreements\Ite
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the details about the acceptance records for a specific agreement.
+ * Get the details about the acceptance records for a specific agreement. This API is supported in the following national cloud deployments.
 */
 class AcceptancesRequestBuilderGetQueryParameters 
 {

@@ -61,7 +61,7 @@ class MembersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List all conversation members in a chat or channel.
+     * List all conversation members in a chat or channel. This API is supported in the following national cloud deployments.
      * @param MembersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/conversationmember-list?view=graph-rest-1.0 Find more info here
@@ -80,7 +80,7 @@ class MembersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Add a conversationMember to a chat.
+     * Add a conversationMember to a chat. This API is supported in the following national cloud deployments.
      * @param ConversationMember $body The request body
      * @param MembersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -100,7 +100,7 @@ class MembersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List all conversation members in a chat or channel.
+     * List all conversation members in a chat or channel. This API is supported in the following national cloud deployments.
      * @param MembersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -121,7 +121,7 @@ class MembersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Add a conversationMember to a chat.
+     * Add a conversationMember to a chat. This API is supported in the following national cloud deployments.
      * @param ConversationMember $body The request body
      * @param MembersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a list of the accessReviewScheduleDefinition objects and their properties.
+ * Get a list of the accessReviewScheduleDefinition objects and their properties. This API is supported in the following national cloud deployments.
 */
 class DefinitionsRequestBuilderGetQueryParameters 
 {

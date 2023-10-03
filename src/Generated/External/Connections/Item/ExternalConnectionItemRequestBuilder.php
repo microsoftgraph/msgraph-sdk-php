@@ -64,7 +64,7 @@ class ExternalConnectionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes an externalConnection object.
+     * Deletes an externalConnection object. This API is supported in the following national cloud deployments.
      * @param ExternalConnectionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/externalconnectors-externalconnection-delete?view=graph-rest-1.0 Find more info here
@@ -83,7 +83,7 @@ class ExternalConnectionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of an externalConnection object.
+     * Read the properties and relationships of an externalConnection object. This API is supported in the following national cloud deployments.
      * @param ExternalConnectionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/externalconnectors-externalconnection-get?view=graph-rest-1.0 Find more info here
@@ -102,7 +102,7 @@ class ExternalConnectionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an externalConnection object.
+     * Update the properties of an externalConnection object. This API is supported in the following national cloud deployments.
      * @param ExternalConnection $body The request body
      * @param ExternalConnectionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -122,7 +122,7 @@ class ExternalConnectionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes an externalConnection object.
+     * Deletes an externalConnection object. This API is supported in the following national cloud deployments.
      * @param ExternalConnectionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -139,7 +139,7 @@ class ExternalConnectionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of an externalConnection object.
+     * Read the properties and relationships of an externalConnection object. This API is supported in the following national cloud deployments.
      * @param ExternalConnectionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -160,7 +160,7 @@ class ExternalConnectionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an externalConnection object.
+     * Update the properties of an externalConnection object. This API is supported in the following national cloud deployments.
      * @param ExternalConnection $body The request body
      * @param ExternalConnectionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

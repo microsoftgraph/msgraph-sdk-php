@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\Services;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a list of bookingService objects in the specified bookingBusiness.
+ * Get a list of bookingService objects in the specified bookingBusiness. This API is supported in the following national cloud deployments.
 */
 class ServicesRequestBuilderGetQueryParameters 
 {

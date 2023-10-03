@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Insights\Trending;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Calculated insight that includes a list of documents trending around the user.
+ * Calculated insight that includes a list of documents trending around the user. This API is supported in the following national cloud deployments.
 */
 class TrendingRequestBuilderGetQueryParameters 
 {

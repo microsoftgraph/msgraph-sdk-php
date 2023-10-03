@@ -31,7 +31,7 @@ class UnfavoriteRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Remove the favorite status of serviceUpdateMessages for the signed in user.
+     * Remove the favorite status of serviceUpdateMessages for the signed in user. This API is supported in the following national cloud deployments.
      * @param UnfavoritePostRequestBody $body The request body
      * @param UnfavoriteRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -44,14 +44,14 @@ class UnfavoriteRequestBuilder extends BaseRequestBuilder
                     '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
                     '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
             ];
-            return $this->requestAdapter->sendAsync($requestInfo, [UnfavoriteResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+            return $this->requestAdapter->sendAsync($requestInfo, [UnfavoritePostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
     }
 
     /**
-     * Remove the favorite status of serviceUpdateMessages for the signed in user.
+     * Remove the favorite status of serviceUpdateMessages for the signed in user. This API is supported in the following national cloud deployments.
      * @param UnfavoritePostRequestBody $body The request body
      * @param UnfavoriteRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

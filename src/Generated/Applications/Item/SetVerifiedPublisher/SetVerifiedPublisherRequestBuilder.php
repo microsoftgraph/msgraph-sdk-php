@@ -31,7 +31,7 @@ class SetVerifiedPublisherRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Set the verifiedPublisher on an application. For more information, including prerequisites to setting a verified publisher, see Publisher verification.
+     * Set the verifiedPublisher on an application. For more information, including prerequisites to setting a verified publisher, see Publisher verification. This API is supported in the following national cloud deployments.
      * @param SetVerifiedPublisherPostRequestBody $body The request body
      * @param SetVerifiedPublisherRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -51,7 +51,7 @@ class SetVerifiedPublisherRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Set the verifiedPublisher on an application. For more information, including prerequisites to setting a verified publisher, see Publisher verification.
+     * Set the verifiedPublisher on an application. For more information, including prerequisites to setting a verified publisher, see Publisher verification. This API is supported in the following national cloud deployments.
      * @param SetVerifiedPublisherPostRequestBody $body The request body
      * @param SetVerifiedPublisherRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

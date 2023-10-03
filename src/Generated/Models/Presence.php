@@ -62,7 +62,7 @@ class Presence extends Entity implements Parsable
     }
 
     /**
-     * Gets the statusMessage property value. The statusMessage property
+     * Gets the statusMessage property value. The presence status message of a user.
      * @return PresenceStatusMessage|null
     */
     public function getStatusMessage(): ?PresenceStatusMessage {
@@ -101,7 +101,7 @@ class Presence extends Entity implements Parsable
     }
 
     /**
-     * Sets the statusMessage property value. The statusMessage property
+     * Sets the statusMessage property value. The presence status message of a user.
      * @param PresenceStatusMessage|null $value Value to set for the statusMessage property.
     */
     public function setStatusMessage(?PresenceStatusMessage $value): void {

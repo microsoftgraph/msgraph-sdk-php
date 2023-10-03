@@ -32,7 +32,7 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Remove a user's manager.
+     * Remove a user's manager. This API is supported in the following national cloud deployments.
      * @param RefRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/user-delete-manager?view=graph-rest-1.0 Find more info here
@@ -51,7 +51,7 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Returns the user or organizational contact assigned as the user's manager. Optionally, you can expand the manager's chain up to the root node.
+     * Returns the user or organizational contact assigned as the user's manager. Optionally, you can expand the manager's chain up to the root node. This API is supported in the following national cloud deployments.
      * @param RefRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/user-list-manager?view=graph-rest-1.0 Find more info here
@@ -70,7 +70,7 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Assign a user's manager.
+     * Assign a user's manager. This API is supported in the following national cloud deployments.
      * @param ReferenceUpdate $body The request body
      * @param RefRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -90,7 +90,7 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Remove a user's manager.
+     * Remove a user's manager. This API is supported in the following national cloud deployments.
      * @param RefRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -107,7 +107,7 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Returns the user or organizational contact assigned as the user's manager. Optionally, you can expand the manager's chain up to the root node.
+     * Returns the user or organizational contact assigned as the user's manager. Optionally, you can expand the manager's chain up to the root node. This API is supported in the following national cloud deployments.
      * @param RefRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -125,7 +125,7 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Assign a user's manager.
+     * Assign a user's manager. This API is supported in the following national cloud deployments.
      * @param ReferenceUpdate $body The request body
      * @param RefRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

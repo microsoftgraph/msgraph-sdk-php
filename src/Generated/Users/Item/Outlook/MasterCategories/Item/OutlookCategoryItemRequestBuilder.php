@@ -32,7 +32,7 @@ class OutlookCategoryItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete the specified outlookCategory object.
+     * Delete the specified outlookCategory object. This API is supported in the following national cloud deployments.
      * @param OutlookCategoryItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/outlookcategory-delete?view=graph-rest-1.0 Find more info here
@@ -51,7 +51,7 @@ class OutlookCategoryItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the properties and relationships of the specified outlookCategory object.
+     * Get the properties and relationships of the specified outlookCategory object. This API is supported in the following national cloud deployments.
      * @param OutlookCategoryItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/outlookcategory-get?view=graph-rest-1.0 Find more info here
@@ -70,7 +70,7 @@ class OutlookCategoryItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the writable property, color, of the specified outlookCategory object. You cannot modify the displayName propertyonce you have created the category.
+     * Update the writable property, color, of the specified outlookCategory object. You can't modify the displayName propertyonce you have created the category. This API is supported in the following national cloud deployments.
      * @param OutlookCategory $body The request body
      * @param OutlookCategoryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -90,7 +90,7 @@ class OutlookCategoryItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete the specified outlookCategory object.
+     * Delete the specified outlookCategory object. This API is supported in the following national cloud deployments.
      * @param OutlookCategoryItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -107,7 +107,7 @@ class OutlookCategoryItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the properties and relationships of the specified outlookCategory object.
+     * Get the properties and relationships of the specified outlookCategory object. This API is supported in the following national cloud deployments.
      * @param OutlookCategoryItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -128,7 +128,7 @@ class OutlookCategoryItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the writable property, color, of the specified outlookCategory object. You cannot modify the displayName propertyonce you have created the category.
+     * Update the writable property, color, of the specified outlookCategory object. You can't modify the displayName propertyonce you have created the category. This API is supported in the following national cloud deployments.
      * @param OutlookCategory $body The request body
      * @param OutlookCategoryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

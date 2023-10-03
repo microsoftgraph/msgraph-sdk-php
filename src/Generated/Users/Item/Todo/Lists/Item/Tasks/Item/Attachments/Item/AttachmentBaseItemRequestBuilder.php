@@ -40,7 +40,7 @@ class AttachmentBaseItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a taskFileAttachment object from a todoTask resource.
+     * Delete a taskFileAttachment object from a todoTask resource. This API is supported in the following national cloud deployments.
      * @param AttachmentBaseItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/taskfileattachment-delete?view=graph-rest-1.0 Find more info here
@@ -59,7 +59,7 @@ class AttachmentBaseItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a taskFileAttachment object.
+     * Read the properties and relationships of a taskFileAttachment object. This API is supported in the following national cloud deployments.
      * @param AttachmentBaseItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/taskfileattachment-get?view=graph-rest-1.0 Find more info here
@@ -78,7 +78,7 @@ class AttachmentBaseItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a taskFileAttachment object from a todoTask resource.
+     * Delete a taskFileAttachment object from a todoTask resource. This API is supported in the following national cloud deployments.
      * @param AttachmentBaseItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -95,7 +95,7 @@ class AttachmentBaseItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a taskFileAttachment object.
+     * Read the properties and relationships of a taskFileAttachment object. This API is supported in the following national cloud deployments.
      * @param AttachmentBaseItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

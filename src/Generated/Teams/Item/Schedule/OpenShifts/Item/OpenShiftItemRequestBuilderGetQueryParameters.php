@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Teams\Item\Schedule\OpenShifts\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties and relationships of an openshift object.
+ * Retrieve the properties and relationships of an openshift object. This API is supported in the following national cloud deployments.
 */
 class OpenShiftItemRequestBuilderGetQueryParameters 
 {

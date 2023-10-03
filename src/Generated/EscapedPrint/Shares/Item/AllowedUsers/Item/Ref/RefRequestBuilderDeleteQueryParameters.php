@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\EscapedPrint\Shares\Item\AllowedUsers\Item\R
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Revoke the specified user's access to submit print jobs to the associated printerShare.
+ * Revoke the specified user's access to submit print jobs to the associated printerShare. This API is supported in the following national cloud deployments.
 */
 class RefRequestBuilderDeleteQueryParameters 
 {

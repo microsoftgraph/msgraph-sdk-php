@@ -53,7 +53,7 @@ class CalendarsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of calendars belonging to a calendar group.
+     * Retrieve a list of calendars belonging to a calendar group. This API is supported in the following national cloud deployments.
      * @param CalendarsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/calendargroup-list-calendars?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class CalendarsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Use this API to create a new calendar in a calendar group for a user.
+     * Use this API to create a new calendar in a calendar group for a user. This API is supported in the following national cloud deployments.
      * @param Calendar $body The request body
      * @param CalendarsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class CalendarsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of calendars belonging to a calendar group.
+     * Retrieve a list of calendars belonging to a calendar group. This API is supported in the following national cloud deployments.
      * @param CalendarsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class CalendarsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Use this API to create a new calendar in a calendar group for a user.
+     * Use this API to create a new calendar in a calendar group for a user. This API is supported in the following national cloud deployments.
      * @param Calendar $body The request body
      * @param CalendarsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

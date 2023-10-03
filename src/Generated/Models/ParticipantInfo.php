@@ -145,7 +145,7 @@ class ParticipantInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the region property value. The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant's current physical location. Read-only.
+     * Gets the region property value. The home region of the participant. This can be a country, a continent, or a larger geographic region. This doesn't change based on the participant's current physical location. Read-only.
      * @return string|null
     */
     public function getRegion(): ?string {
@@ -236,7 +236,7 @@ class ParticipantInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the region property value. The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant's current physical location. Read-only.
+     * Sets the region property value. The home region of the participant. This can be a country, a continent, or a larger geographic region. This doesn't change based on the participant's current physical location. Read-only.
      * @param string|null $value Value to set for the region property.
     */
     public function setRegion(?string $value): void {

@@ -72,7 +72,7 @@ class PrinterItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete (unregister) a printer.
+     * Delete (unregister) a printer. This API is supported in the following national cloud deployments.
      * @param PrinterItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/printer-delete?view=graph-rest-1.0 Find more info here
@@ -91,7 +91,7 @@ class PrinterItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a printer object.
+     * Retrieve the properties and relationships of a printer object. This API is supported in the following national cloud deployments.
      * @param PrinterItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/printer-get?view=graph-rest-1.0 Find more info here
@@ -110,7 +110,7 @@ class PrinterItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a printer object.
+     * Update the properties of a printer object. This API is supported in the following national cloud deployments.
      * @param Printer $body The request body
      * @param PrinterItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -130,7 +130,7 @@ class PrinterItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete (unregister) a printer.
+     * Delete (unregister) a printer. This API is supported in the following national cloud deployments.
      * @param PrinterItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -147,7 +147,7 @@ class PrinterItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a printer object.
+     * Retrieve the properties and relationships of a printer object. This API is supported in the following national cloud deployments.
      * @param PrinterItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -168,7 +168,7 @@ class PrinterItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a printer object.
+     * Update the properties of a printer object. This API is supported in the following national cloud deployments.
      * @param Printer $body The request body
      * @param PrinterItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

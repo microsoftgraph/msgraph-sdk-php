@@ -56,7 +56,7 @@ class Onenote extends Entity implements Parsable
     }
 
     /**
-     * Gets the operations property value. The status of OneNote operations. Getting an operations collection is not supported, but you can get the status of long-running operations if the Operation-Location header is returned in the response. Read-only. Nullable.
+     * Gets the operations property value. The status of OneNote operations. Getting an operations collection isn't supported, but you can get the status of long-running operations if the Operation-Location header is returned in the response. Read-only. Nullable.
      * @return array<OnenoteOperation>|null
     */
     public function getOperations(): ?array {
@@ -84,7 +84,7 @@ class Onenote extends Entity implements Parsable
     }
 
     /**
-     * Gets the resources property value. The image and other file resources in OneNote pages. Getting a resources collection is not supported, but you can get the binary content of a specific resource. Read-only. Nullable.
+     * Gets the resources property value. The image and other file resources in OneNote pages. Getting a resources collection isn't supported, but you can get the binary content of a specific resource. Read-only. Nullable.
      * @return array<OnenoteResource>|null
     */
     public function getResources(): ?array {
@@ -148,7 +148,7 @@ class Onenote extends Entity implements Parsable
     }
 
     /**
-     * Sets the operations property value. The status of OneNote operations. Getting an operations collection is not supported, but you can get the status of long-running operations if the Operation-Location header is returned in the response. Read-only. Nullable.
+     * Sets the operations property value. The status of OneNote operations. Getting an operations collection isn't supported, but you can get the status of long-running operations if the Operation-Location header is returned in the response. Read-only. Nullable.
      * @param array<OnenoteOperation>|null $value Value to set for the operations property.
     */
     public function setOperations(?array $value): void {
@@ -164,7 +164,7 @@ class Onenote extends Entity implements Parsable
     }
 
     /**
-     * Sets the resources property value. The image and other file resources in OneNote pages. Getting a resources collection is not supported, but you can get the binary content of a specific resource. Read-only. Nullable.
+     * Sets the resources property value. The image and other file resources in OneNote pages. Getting a resources collection isn't supported, but you can get the binary content of a specific resource. Read-only. Nullable.
      * @param array<OnenoteResource>|null $value Value to set for the resources property.
     */
     public function setResources(?array $value): void {

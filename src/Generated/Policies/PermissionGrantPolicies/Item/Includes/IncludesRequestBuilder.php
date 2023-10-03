@@ -53,7 +53,7 @@ class IncludesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the condition sets which are *included* in a permissionGrantPolicy.
+     * Retrieve the condition sets which are *included* in a permissionGrantPolicy. This API is supported in the following national cloud deployments.
      * @param IncludesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/permissiongrantpolicy-list-includes?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class IncludesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Add conditions under which a permission grant event is *included* in a permission grant policy. You do this by adding a permissionGrantConditionSet to the includes collection of a  permissionGrantPolicy.
+     * Add conditions under which a permission grant event is *included* in a permission grant policy. You do this by adding a permissionGrantConditionSet to the includes collection of a  permissionGrantPolicy. This API is supported in the following national cloud deployments.
      * @param PermissionGrantConditionSet $body The request body
      * @param IncludesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class IncludesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the condition sets which are *included* in a permissionGrantPolicy.
+     * Retrieve the condition sets which are *included* in a permissionGrantPolicy. This API is supported in the following national cloud deployments.
      * @param IncludesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class IncludesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Add conditions under which a permission grant event is *included* in a permission grant policy. You do this by adding a permissionGrantConditionSet to the includes collection of a  permissionGrantPolicy.
+     * Add conditions under which a permission grant event is *included* in a permission grant policy. You do this by adding a permissionGrantConditionSet to the includes collection of a  permissionGrantPolicy. This API is supported in the following national cloud deployments.
      * @param PermissionGrantConditionSet $body The request body
      * @param IncludesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

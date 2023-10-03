@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\Tasks\Item\Attach
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read the properties and relationships of a taskFileAttachment object.
+ * Read the properties and relationships of a taskFileAttachment object. This API is supported in the following national cloud deployments.
 */
 class AttachmentBaseItemRequestBuilderGetQueryParameters 
 {

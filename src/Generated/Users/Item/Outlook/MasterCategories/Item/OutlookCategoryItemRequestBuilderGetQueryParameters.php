@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Outlook\MasterCategories\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the properties and relationships of the specified outlookCategory object.
+ * Get the properties and relationships of the specified outlookCategory object. This API is supported in the following national cloud deployments.
 */
 class OutlookCategoryItemRequestBuilderGetQueryParameters 
 {

@@ -58,7 +58,7 @@ class MinorGridlinesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of chartgridlines object.
+     * Retrieve the properties and relationships of chartgridlines object. This API is supported in the following national cloud deployments.
      * @param MinorGridlinesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/chartgridlines-get?view=graph-rest-1.0 Find more info here
@@ -77,7 +77,7 @@ class MinorGridlinesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of chartgridlines object.
+     * Update the properties of chartgridlines object. This API is supported in the following national cloud deployments.
      * @param WorkbookChartGridlines $body The request body
      * @param MinorGridlinesRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -114,7 +114,7 @@ class MinorGridlinesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of chartgridlines object.
+     * Retrieve the properties and relationships of chartgridlines object. This API is supported in the following national cloud deployments.
      * @param MinorGridlinesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -135,7 +135,7 @@ class MinorGridlinesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of chartgridlines object.
+     * Update the properties of chartgridlines object. This API is supported in the following national cloud deployments.
      * @param WorkbookChartGridlines $body The request body
      * @param MinorGridlinesRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

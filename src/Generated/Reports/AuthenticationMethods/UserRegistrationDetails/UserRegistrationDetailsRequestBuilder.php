@@ -53,7 +53,7 @@ class UserRegistrationDetailsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the authentication methods registered for a user as defined in the userRegistrationDetails object.
+     * Get a list of the authentication methods registered for a user as defined in the userRegistrationDetails object. This API is supported in the following national cloud deployments.
      * @param UserRegistrationDetailsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/authenticationmethodsroot-list-userregistrationdetails?view=graph-rest-1.0 Find more info here
@@ -91,7 +91,7 @@ class UserRegistrationDetailsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the authentication methods registered for a user as defined in the userRegistrationDetails object.
+     * Get a list of the authentication methods registered for a user as defined in the userRegistrationDetails object. This API is supported in the following national cloud deployments.
      * @param UserRegistrationDetailsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -48,7 +48,7 @@ class EdiscoveryReviewTagItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Remove an ediscoveryReviewTag object.
+     * Remove an ediscoveryReviewTag object. This API is supported in the following national cloud deployments.
      * @param EdiscoveryReviewTagItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/security-ediscoverycase-delete-tags?view=graph-rest-1.0 Find more info here
@@ -67,7 +67,7 @@ class EdiscoveryReviewTagItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of an ediscoveryReviewTag object.
+     * Read the properties and relationships of an ediscoveryReviewTag object. This API is supported in the following national cloud deployments.
      * @param EdiscoveryReviewTagItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/security-ediscoveryreviewtag-get?view=graph-rest-1.0 Find more info here
@@ -86,7 +86,7 @@ class EdiscoveryReviewTagItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an ediscoveryReviewTag object.
+     * Update the properties of an ediscoveryReviewTag object. This API is supported in the following national cloud deployments.
      * @param EdiscoveryReviewTag $body The request body
      * @param EdiscoveryReviewTagItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -106,7 +106,7 @@ class EdiscoveryReviewTagItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Remove an ediscoveryReviewTag object.
+     * Remove an ediscoveryReviewTag object. This API is supported in the following national cloud deployments.
      * @param EdiscoveryReviewTagItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -123,7 +123,7 @@ class EdiscoveryReviewTagItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of an ediscoveryReviewTag object.
+     * Read the properties and relationships of an ediscoveryReviewTag object. This API is supported in the following national cloud deployments.
      * @param EdiscoveryReviewTagItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -144,7 +144,7 @@ class EdiscoveryReviewTagItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an ediscoveryReviewTag object.
+     * Update the properties of an ediscoveryReviewTag object. This API is supported in the following national cloud deployments.
      * @param EdiscoveryReviewTag $body The request body
      * @param EdiscoveryReviewTagItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

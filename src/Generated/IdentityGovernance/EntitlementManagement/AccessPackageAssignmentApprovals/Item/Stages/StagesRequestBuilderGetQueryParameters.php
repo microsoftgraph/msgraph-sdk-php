@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Acc
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * In Azure AD entitlement management, list the approvalStage objects associated with an approval object. This call can be made by an approver, providing the identifier of the access package assignment request.
+ * In Azure AD entitlement management, list the approvalStage objects associated with an approval object. This call can be made by an approver, providing the identifier of the access package assignment request. This API is supported in the following national cloud deployments.
 */
 class StagesRequestBuilderGetQueryParameters 
 {

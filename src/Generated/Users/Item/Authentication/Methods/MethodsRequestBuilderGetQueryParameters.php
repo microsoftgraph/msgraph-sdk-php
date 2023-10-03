@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Authentication\Methods;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve a list of authentication methods registered to a user. The authentication methods are defined by the types derived from the authenticationMethod resource type, and only the methods supported on this API version. See Azure AD authentication methods API overview for a list of currently supported methods.
+ * Retrieve a list of authentication methods registered to a user. The authentication methods are defined by the types derived from the authenticationMethod resource type, and only the methods supported on this API version. See Azure AD authentication methods API overview for a list of currently supported methods. This API is supported in the following national cloud deployments.
 */
 class MethodsRequestBuilderGetQueryParameters 
 {

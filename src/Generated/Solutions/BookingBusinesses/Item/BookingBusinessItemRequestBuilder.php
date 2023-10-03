@@ -104,7 +104,7 @@ class BookingBusinessItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a bookingBusiness object.
+     * Delete a bookingBusiness object. This API is supported in the following national cloud deployments.
      * @param BookingBusinessItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/bookingbusiness-delete?view=graph-rest-1.0 Find more info here
@@ -123,7 +123,7 @@ class BookingBusinessItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the properties and relationships of a bookingBusiness object.
+     * Get the properties and relationships of a bookingBusiness object. This API is supported in the following national cloud deployments.
      * @param BookingBusinessItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/bookingbusiness-get?view=graph-rest-1.0 Find more info here
@@ -142,7 +142,7 @@ class BookingBusinessItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a bookingBusiness object.
+     * Update the properties of a bookingBusiness object. This API is supported in the following national cloud deployments.
      * @param BookingBusiness $body The request body
      * @param BookingBusinessItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -162,7 +162,7 @@ class BookingBusinessItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a bookingBusiness object.
+     * Delete a bookingBusiness object. This API is supported in the following national cloud deployments.
      * @param BookingBusinessItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -179,7 +179,7 @@ class BookingBusinessItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the properties and relationships of a bookingBusiness object.
+     * Get the properties and relationships of a bookingBusiness object. This API is supported in the following national cloud deployments.
      * @param BookingBusinessItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -200,7 +200,7 @@ class BookingBusinessItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a bookingBusiness object.
+     * Update the properties of a bookingBusiness object. This API is supported in the following national cloud deployments.
      * @param BookingBusiness $body The request body
      * @param BookingBusinessItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

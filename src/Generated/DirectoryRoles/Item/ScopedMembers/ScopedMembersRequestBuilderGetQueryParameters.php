@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DirectoryRoles\Item\ScopedMembers;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve a list of scopedRoleMembership objects for a directory role.
+ * Retrieve a list of scopedRoleMembership objects for a directory role. This API is supported in the following national cloud deployments.
 */
 class ScopedMembersRequestBuilderGetQueryParameters 
 {

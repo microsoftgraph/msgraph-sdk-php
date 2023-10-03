@@ -32,7 +32,7 @@ class SubscribeToToneRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Subscribe to DTMF (dual-tone multi-frequency signaling). This allows you to be notified when the user presses keys on a 'dialpad'.
+     * Subscribe to DTMF (dual-tone multi-frequency signaling). This allows you to be notified when the user presses keys on a 'dialpad'. This API is supported in the following national cloud deployments.
      * @param SubscribeToTonePostRequestBody $body The request body
      * @param SubscribeToToneRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -52,7 +52,7 @@ class SubscribeToToneRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Subscribe to DTMF (dual-tone multi-frequency signaling). This allows you to be notified when the user presses keys on a 'dialpad'.
+     * Subscribe to DTMF (dual-tone multi-frequency signaling). This allows you to be notified when the user presses keys on a 'dialpad'. This API is supported in the following national cloud deployments.
      * @param SubscribeToTonePostRequestBody $body The request body
      * @param SubscribeToToneRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -61,7 +61,7 @@ class EventsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of event objects in the user's mailbox. The list contains single instance meetings and series masters. To get expanded event instances, you can get the calendar view, or get the instances of an event. Currently, this operation returns event bodies in only HTML format. There are two scenarios where an app can get events in another user's calendar:
+     * Get a list of event objects in the user's mailbox. The list contains single instance meetings and series masters. To get expanded event instances, you can get the calendar view, or get the instances of an event. Currently, this operation returns event bodies in only HTML format. There are two scenarios where an app can get events in another user's calendar: This API is supported in the following national cloud deployments.
      * @param EventsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/user-list-events?view=graph-rest-1.0 Find more info here
@@ -80,11 +80,11 @@ class EventsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create one or more multi-value extended properties in a new or existing instance of a resource. The following user resources are supported: As well as the following group resources: See Extended properties overview for more information about when to useopen extensions or extended properties, and how to specify extended properties.
+     * Create one or more single-value extended properties in a new or existing instance of a resource. The following user resources are supported: The following group resources: See Extended properties overview for more information about when to useopen extensions or extended properties, and how to specify extended properties. This API is supported in the following national cloud deployments.
      * @param Event $body The request body
      * @param EventsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://learn.microsoft.com/graph/api/multivaluelegacyextendedproperty-post-multivalueextendedproperties?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/singlevaluelegacyextendedproperty-post-singlevalueextendedproperties?view=graph-rest-1.0 Find more info here
     */
     public function post(Event $body, ?EventsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -100,7 +100,7 @@ class EventsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of event objects in the user's mailbox. The list contains single instance meetings and series masters. To get expanded event instances, you can get the calendar view, or get the instances of an event. Currently, this operation returns event bodies in only HTML format. There are two scenarios where an app can get events in another user's calendar:
+     * Get a list of event objects in the user's mailbox. The list contains single instance meetings and series masters. To get expanded event instances, you can get the calendar view, or get the instances of an event. Currently, this operation returns event bodies in only HTML format. There are two scenarios where an app can get events in another user's calendar: This API is supported in the following national cloud deployments.
      * @param EventsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -121,7 +121,7 @@ class EventsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create one or more multi-value extended properties in a new or existing instance of a resource. The following user resources are supported: As well as the following group resources: See Extended properties overview for more information about when to useopen extensions or extended properties, and how to specify extended properties.
+     * Create one or more single-value extended properties in a new or existing instance of a resource. The following user resources are supported: The following group resources: See Extended properties overview for more information about when to useopen extensions or extended properties, and how to specify extended properties. This API is supported in the following national cloud deployments.
      * @param Event $body The request body
      * @param EventsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

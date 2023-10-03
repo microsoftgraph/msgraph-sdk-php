@@ -53,7 +53,7 @@ class CalendarsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get all the user's calendars (/calendars navigation property), get the calendars from the default calendar group or from a specific calendar group. 
+     * Get all the user's calendars (/calendars navigation property), get the calendars from the default calendar group or from a specific calendar group.  This API is supported in the following national cloud deployments.
      * @param CalendarsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/user-list-calendars?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class CalendarsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new calendar for a user.
+     * Create a new calendar for a user. This API is supported in the following national cloud deployments.
      * @param Calendar $body The request body
      * @param CalendarsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class CalendarsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get all the user's calendars (/calendars navigation property), get the calendars from the default calendar group or from a specific calendar group. 
+     * Get all the user's calendars (/calendars navigation property), get the calendars from the default calendar group or from a specific calendar group.  This API is supported in the following national cloud deployments.
      * @param CalendarsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class CalendarsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new calendar for a user.
+     * Create a new calendar for a user. This API is supported in the following national cloud deployments.
      * @param Calendar $body The request body
      * @param CalendarsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

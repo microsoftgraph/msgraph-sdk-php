@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\GroupSettings\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties of a specific group setting object. The setting can be a tenant-level or group-specific setting.
+ * Retrieve the properties of a specific group setting object. The setting can be a tenant-level or group-specific setting. This API is supported in the following national cloud deployments.
 */
 class GroupSettingItemRequestBuilderGetQueryParameters 
 {

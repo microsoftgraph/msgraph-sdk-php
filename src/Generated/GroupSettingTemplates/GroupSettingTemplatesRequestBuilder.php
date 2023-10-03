@@ -85,7 +85,7 @@ class GroupSettingTemplatesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Group setting templates represents a set of templates from which group settings may be created and used within a tenant. This operation retrieves the list of available groupSettingTemplates objects.
+     * Group setting templates represents a set of templates from which group settings may be created and used within a tenant. This operation retrieves the list of available groupSettingTemplates objects. This API is supported in the following national cloud deployments.
      * @param GroupSettingTemplatesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/groupsettingtemplate-list?view=graph-rest-1.0 Find more info here
@@ -123,7 +123,7 @@ class GroupSettingTemplatesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Group setting templates represents a set of templates from which group settings may be created and used within a tenant. This operation retrieves the list of available groupSettingTemplates objects.
+     * Group setting templates represents a set of templates from which group settings may be created and used within a tenant. This operation retrieves the list of available groupSettingTemplates objects. This API is supported in the following national cloud deployments.
      * @param GroupSettingTemplatesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

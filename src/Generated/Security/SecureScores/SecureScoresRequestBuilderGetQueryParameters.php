@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\SecureScores;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve a list of secureScore objects.
+ * Retrieve a list of secureScore objects. This API is supported in the following national cloud deployments.
 */
 class SecureScoresRequestBuilderGetQueryParameters 
 {

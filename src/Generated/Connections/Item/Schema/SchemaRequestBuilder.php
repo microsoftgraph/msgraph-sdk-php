@@ -32,25 +32,7 @@ class SchemaRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property schema for connections
-     * @param SchemaRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise
-    */
-    public function delete(?SchemaRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
-        $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
-        try {
-            $errorMappings = [
-                    '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                    '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-            ];
-            return $this->requestAdapter->sendNoContentAsync($requestInfo, $errorMappings);
-        } catch(Exception $ex) {
-            return new RejectedPromise($ex);
-        }
-    }
-
-    /**
-     * Read the properties and relationships of a schema object.
+     * Read the properties and relationships of a schema object. This API is supported in the following national cloud deployments.
      * @param SchemaRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/externalconnectors-schema-get?view=graph-rest-1.0 Find more info here
@@ -88,24 +70,7 @@ class SchemaRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property schema for connections
-     * @param SchemaRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return RequestInformation
-    */
-    public function toDeleteRequestInformation(?SchemaRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
-        $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
-        $requestInfo->pathParameters = $this->pathParameters;
-        $requestInfo->httpMethod = HttpMethod::DELETE;
-        if ($requestConfiguration !== null) {
-            $requestInfo->addHeaders($requestConfiguration->headers);
-            $requestInfo->addRequestOptions(...$requestConfiguration->options);
-        }
-        return $requestInfo;
-    }
-
-    /**
-     * Read the properties and relationships of a schema object.
+     * Read the properties and relationships of a schema object. This API is supported in the following national cloud deployments.
      * @param SchemaRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\CalendarGroups\Item\Calendars\Ite
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the specified permissions object of a user or group calendar that has been shared.
+ * Get the specified permissions object of a user or group calendar that has been shared. This API is supported in the following national cloud deployments.
 */
 class CalendarPermissionItemRequestBuilderGetQueryParameters 
 {

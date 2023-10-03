@@ -32,7 +32,7 @@ class LinkedResourceItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a linkedResource object.
+     * Deletes a linkedResource object. This API is supported in the following national cloud deployments.
      * @param LinkedResourceItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/linkedresource-delete?view=graph-rest-1.0 Find more info here
@@ -51,7 +51,7 @@ class LinkedResourceItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a linkedResource object.
+     * Read the properties and relationships of a linkedResource object. This API is supported in the following national cloud deployments.
      * @param LinkedResourceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/linkedresource-get?view=graph-rest-1.0 Find more info here
@@ -70,7 +70,7 @@ class LinkedResourceItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a linkedResource object.
+     * Update the properties of a linkedResource object. This API is supported in the following national cloud deployments.
      * @param LinkedResource $body The request body
      * @param LinkedResourceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -90,7 +90,7 @@ class LinkedResourceItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a linkedResource object.
+     * Deletes a linkedResource object. This API is supported in the following national cloud deployments.
      * @param LinkedResourceItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -107,7 +107,7 @@ class LinkedResourceItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a linkedResource object.
+     * Read the properties and relationships of a linkedResource object. This API is supported in the following national cloud deployments.
      * @param LinkedResourceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -128,7 +128,7 @@ class LinkedResourceItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a linkedResource object.
+     * Update the properties of a linkedResource object. This API is supported in the following national cloud deployments.
      * @param LinkedResource $body The request body
      * @param LinkedResourceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

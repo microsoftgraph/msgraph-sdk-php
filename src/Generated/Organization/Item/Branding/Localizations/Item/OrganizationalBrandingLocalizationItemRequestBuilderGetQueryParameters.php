@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Organization\Item\Branding\Localizations\Ite
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read the properties and relationships of an organizationalBrandingLocalization object. To retrieve a localization branding object, specify the value of id in the URL.
+ * Read the properties and relationships of an organizationalBrandingLocalization object. To retrieve a localization branding object, specify the value of id in the URL. This API is supported in the following national cloud deployments.
 */
 class OrganizationalBrandingLocalizationItemRequestBuilderGetQueryParameters 
 {

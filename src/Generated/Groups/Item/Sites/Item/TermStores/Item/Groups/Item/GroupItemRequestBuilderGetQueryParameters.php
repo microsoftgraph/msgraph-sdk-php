@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStores\Item\Group
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read the properties and relationships of a term store group object.
+ * Read the properties and relationships of a term store group object. This API is supported in the following national cloud deployments.
 */
 class GroupItemRequestBuilderGetQueryParameters 
 {

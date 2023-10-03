@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\ThreatIntelligence\Articles\Item\In
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a list of articleIndicator objects that represent indicators of threat or compromise related to the contents of an article.
+ * Get a list of articleIndicator objects that represent indicators of threat or compromise related to the contents of an article. This API is supported in the following national cloud deployments.
 */
 class IndicatorsRequestBuilderGetQueryParameters 
 {

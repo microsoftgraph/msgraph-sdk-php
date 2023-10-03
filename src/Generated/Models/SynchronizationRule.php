@@ -69,7 +69,7 @@ class SynchronizationRule implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the editable property value. true if the synchronization rule can be customized; false if this rule is read-only and should not be changed.
+     * Gets the editable property value. true if the synchronization rule can be customized; false if this rule is read-only and shouldn't be changed.
      * @return bool|null
     */
     public function getEditable(): ?bool {
@@ -126,7 +126,7 @@ class SynchronizationRule implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the metadata property value. Additional extension properties. Unless instructed explicitly by the support team, metadata values should not be changed.
+     * Gets the metadata property value. Additional extension properties. Unless instructed explicitly by the support team, metadata values shouldn't be changed.
      * @return array<StringKeyStringValuePair>|null
     */
     public function getMetadata(): ?array {
@@ -257,7 +257,7 @@ class SynchronizationRule implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the editable property value. true if the synchronization rule can be customized; false if this rule is read-only and should not be changed.
+     * Sets the editable property value. true if the synchronization rule can be customized; false if this rule is read-only and shouldn't be changed.
      * @param bool|null $value Value to set for the editable property.
     */
     public function setEditable(?bool $value): void {
@@ -281,7 +281,7 @@ class SynchronizationRule implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the metadata property value. Additional extension properties. Unless instructed explicitly by the support team, metadata values should not be changed.
+     * Sets the metadata property value. Additional extension properties. Unless instructed explicitly by the support team, metadata values shouldn't be changed.
      * @param array<StringKeyStringValuePair>|null $value Value to set for the metadata property.
     */
     public function setMetadata(?array $value): void {
