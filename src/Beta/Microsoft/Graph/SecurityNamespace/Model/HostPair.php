@@ -92,7 +92,7 @@ class HostPair extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the linkKind
-    * The reason the two hosts are identified as hostPairs.
+    * The reason that two hosts are identified as hostPair.
     *
     * @return string|null The linkKind
     */
@@ -107,7 +107,7 @@ class HostPair extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the linkKind
-    * The reason the two hosts are identified as hostPairs.
+    * The reason that two hosts are identified as hostPair.
     *
     * @param string $val The linkKind
     *

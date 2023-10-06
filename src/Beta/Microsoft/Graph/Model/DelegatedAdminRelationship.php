@@ -92,6 +92,7 @@ class DelegatedAdminRelationship extends Entity
 
     /**
     * Gets the autoExtendDuration
+    * The duration by which the validity of the relationship is automatically extended, denoted in ISO 8601 format. Supported values are: P0D, PT0S, P180D. Default value is PT0S. PT0S indicates that the relationship expires when the endDateTime is reached and it is not automatically extended.
     *
     * @return \DateInterval|null The autoExtendDuration
     */
@@ -110,6 +111,7 @@ class DelegatedAdminRelationship extends Entity
 
     /**
     * Sets the autoExtendDuration
+    * The duration by which the validity of the relationship is automatically extended, denoted in ISO 8601 format. Supported values are: P0D, PT0S, P180D. Default value is PT0S. PT0S indicates that the relationship expires when the endDateTime is reached and it is not automatically extended.
     *
     * @param \DateInterval $val The autoExtendDuration
     *

@@ -86,7 +86,7 @@ class AggregationOption extends Entity
     }
     /**
     * Gets the size
-    * The number of searchBucket resources to be returned. This is not required when the range is provided manually in the search request. Optional.
+    * The number of searchBucket resources to be returned. This isn't required when the range is provided manually in the search request. Optional.
     *
     * @return int|null The size
     */
@@ -101,7 +101,7 @@ class AggregationOption extends Entity
 
     /**
     * Sets the size
-    * The number of searchBucket resources to be returned. This is not required when the range is provided manually in the search request. Optional.
+    * The number of searchBucket resources to be returned. This isn't required when the range is provided manually in the search request. Optional.
     *
     * @param int $val The value of the size
     *

@@ -25,7 +25,7 @@ class StatusDetails extends StatusBase
 {
     /**
     * Gets the additionalDetails
-    * Additional details in case of error.
+    * Additional details if there is an error.
     *
     * @return string|null The additionalDetails
     */
@@ -40,7 +40,7 @@ class StatusDetails extends StatusBase
 
     /**
     * Sets the additionalDetails
-    * Additional details in case of error.
+    * Additional details if there is an error.
     *
     * @param string $val The value of the additionalDetails
     *

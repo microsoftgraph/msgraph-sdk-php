@@ -53,7 +53,7 @@ class PrinterCapabilities extends Entity
     }
     /**
     * Gets the collation
-    * True if the printer supports collating when printing muliple copies of a multi-page document; false otherwise.
+    * True if the printer supports collating when printing multiple copies of a multi-page document; false otherwise.
     *
     * @return bool|null The collation
     */
@@ -68,7 +68,7 @@ class PrinterCapabilities extends Entity
 
     /**
     * Sets the collation
-    * True if the printer supports collating when printing muliple copies of a multi-page document; false otherwise.
+    * True if the printer supports collating when printing multiple copies of a multi-page document; false otherwise.
     *
     * @param bool $val The value of the collation
     *
@@ -114,7 +114,7 @@ class PrinterCapabilities extends Entity
     }
     /**
     * Gets the contentTypes
-    * A list of supported content (MIME) types that the printer supports. It is not guaranteed that the Universal Print service supports printing all of these MIME types.
+    * A list of supported content (MIME) types that the printer supports. It isn't guaranteed that the Universal Print service supports printing all of these MIME types.
     *
     * @return string|null The contentTypes
     */
@@ -129,7 +129,7 @@ class PrinterCapabilities extends Entity
 
     /**
     * Sets the contentTypes
-    * A list of supported content (MIME) types that the printer supports. It is not guaranteed that the Universal Print service supports printing all of these MIME types.
+    * A list of supported content (MIME) types that the printer supports. It isn't guaranteed that the Universal Print service supports printing all of these MIME types.
     *
     * @param string $val The value of the contentTypes
     *
@@ -445,7 +445,7 @@ class PrinterCapabilities extends Entity
     }
     /**
     * Gets the mediaColors
-    * The media (i.e., paper) colors supported by the printer.
+    * The media (that is, paper) colors supported by the printer.
     *
     * @return string|null The mediaColors
     */
@@ -460,7 +460,7 @@ class PrinterCapabilities extends Entity
 
     /**
     * Sets the mediaColors
-    * The media (i.e., paper) colors supported by the printer.
+    * The media (that is, paper) colors supported by the printer.
     *
     * @param string $val The value of the mediaColors
     *

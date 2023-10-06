@@ -26,7 +26,7 @@ class Office365GroupsActivityGroupCounts extends Entity
 {
     /**
     * Gets the active
-    * The number of active groups. A group is considered active if any of the following occurred: group mailbox received email; user viewed, edited, shared, or synced files in SharePoint document library; user viewed SharePoint pages; user posted, read, or liked messages in Yammer groups.
+    * The number of active groups. A group is considered active if any of the following occurred: group mailbox received email, or  a user viewed, edited, shared, or synced files in SharePoint document library, or a user viewed SharePoint pages, or a user posted, read, or liked messages in Yammer groups.
     *
     * @return int|null The active
     */
@@ -41,7 +41,7 @@ class Office365GroupsActivityGroupCounts extends Entity
 
     /**
     * Sets the active
-    * The number of active groups. A group is considered active if any of the following occurred: group mailbox received email; user viewed, edited, shared, or synced files in SharePoint document library; user viewed SharePoint pages; user posted, read, or liked messages in Yammer groups.
+    * The number of active groups. A group is considered active if any of the following occurred: group mailbox received email, or  a user viewed, edited, shared, or synced files in SharePoint document library, or a user viewed SharePoint pages, or a user posted, read, or liked messages in Yammer groups.
     *
     * @param int $val The active
     *
@@ -55,7 +55,7 @@ class Office365GroupsActivityGroupCounts extends Entity
 
     /**
     * Gets the reportDate
-    * The date on which a number of groups were active.
+    * The date on which groups were active.
     *
     * @return \DateTime|null The reportDate
     */
@@ -74,7 +74,7 @@ class Office365GroupsActivityGroupCounts extends Entity
 
     /**
     * Sets the reportDate
-    * The date on which a number of groups were active.
+    * The date on which groups were active.
     *
     * @param \DateTime $val The reportDate
     *

@@ -146,7 +146,7 @@ class PrivilegedAccess extends Entity
 
      /**
      * Gets the roleDefinitions
-    * A collection of role defintions for the provider.
+    * A collection of role definitions for the provider.
      *
      * @return array|null The roleDefinitions
      */
@@ -161,7 +161,7 @@ class PrivilegedAccess extends Entity
 
     /**
     * Sets the roleDefinitions
-    * A collection of role defintions for the provider.
+    * A collection of role definitions for the provider.
     *
     * @param GovernanceRoleDefinition[] $val The roleDefinitions
     *

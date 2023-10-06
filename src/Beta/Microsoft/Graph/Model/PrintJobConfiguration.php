@@ -25,7 +25,7 @@ class PrintJobConfiguration extends Entity
 {
     /**
     * Gets the collate
-    * Whether the printer should collate pages wehen printing multiple copies of a multi-page document.
+    * Whether the printer should collate pages when printing multiple copies of a multi-page document.
     *
     * @return bool|null The collate
     */
@@ -40,7 +40,7 @@ class PrintJobConfiguration extends Entity
 
     /**
     * Sets the collate
-    * Whether the printer should collate pages wehen printing multiple copies of a multi-page document.
+    * Whether the printer should collate pages when printing multiple copies of a multi-page document.
     *
     * @param bool $val The value of the collate
     *

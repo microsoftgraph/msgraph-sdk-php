@@ -26,7 +26,7 @@ class PlannerTaskPolicy extends Entity
 
     /**
     * Gets the rules
-    * The rules that should be enforced on the tasks when they are being changed outside of the scenario, based on the role of the caller.
+    * The rules that should be enforced on the tasks when they're being changed outside of the scenario, based on the role of the caller.
     *
     * @return PlannerTaskRoleBasedRule|null The rules
     */
@@ -45,7 +45,7 @@ class PlannerTaskPolicy extends Entity
 
     /**
     * Sets the rules
-    * The rules that should be enforced on the tasks when they are being changed outside of the scenario, based on the role of the caller.
+    * The rules that should be enforced on the tasks when they're being changed outside of the scenario, based on the role of the caller.
     *
     * @param PlannerTaskRoleBasedRule $val The value to assign to the rules
     *

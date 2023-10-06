@@ -55,7 +55,7 @@ class Office365ActiveUserDetail extends Entity
 
     /**
     * Gets the deletedDate
-    * The date when the delete operation happened. Default value is 'null' when the user has not been deleted.
+    * The date when the delete operation happened. Default value is 'null' when the user hasn't been deleted.
     *
     * @return \DateTime|null The deletedDate
     */
@@ -74,7 +74,7 @@ class Office365ActiveUserDetail extends Entity
 
     /**
     * Sets the deletedDate
-    * The date when the delete operation happened. Default value is 'null' when the user has not been deleted.
+    * The date when the delete operation happened. Default value is 'null' when the user hasn't been deleted.
     *
     * @param \DateTime $val The deletedDate
     *
@@ -88,7 +88,7 @@ class Office365ActiveUserDetail extends Entity
 
     /**
     * Gets the displayName
-    * The name displayed in the address book for the user. This is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created and it cannot be cleared during updates.
+    * The name displayed in the address book for the user. This is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created and it can't be cleared during updates.
     *
     * @return string|null The displayName
     */
@@ -103,7 +103,7 @@ class Office365ActiveUserDetail extends Entity
 
     /**
     * Sets the displayName
-    * The name displayed in the address book for the user. This is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created and it cannot be cleared during updates.
+    * The name displayed in the address book for the user. This is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created and it can't be cleared during updates.
     *
     * @param string $val The displayName
     *

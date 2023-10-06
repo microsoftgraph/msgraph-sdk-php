@@ -84,7 +84,7 @@ class WorkbookTableColumn extends Entity
 
     /**
     * Gets the values
-    * Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
+    * Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contains an error returns the error string.
     *
     * @return string|null The values
     */
@@ -99,7 +99,7 @@ class WorkbookTableColumn extends Entity
 
     /**
     * Sets the values
-    * Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
+    * Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contains an error returns the error string.
     *
     * @param string $val The values
     *

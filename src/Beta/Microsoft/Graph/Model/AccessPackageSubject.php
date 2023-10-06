@@ -55,6 +55,7 @@ class AccessPackageSubject extends Entity
 
     /**
     * Gets the cleanupScheduledDateTime
+    * The date and time the subject is marked to be blocked from sign in or deleted. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time.
     *
     * @return \DateTime|null The cleanupScheduledDateTime
     */
@@ -73,6 +74,7 @@ class AccessPackageSubject extends Entity
 
     /**
     * Sets the cleanupScheduledDateTime
+    * The date and time the subject is marked to be blocked from sign in or deleted. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time.
     *
     * @param \DateTime $val The cleanupScheduledDateTime
     *
@@ -173,7 +175,7 @@ class AccessPackageSubject extends Entity
 
     /**
     * Gets the objectId
-    * The object identifier of the subject. null if the subject is not yet a user in the tenant. Alternate key.
+    * The object identifier of the subject. null if the subject isn't yet a user in the tenant. Alternate key.
     *
     * @return string|null The objectId
     */
@@ -188,7 +190,7 @@ class AccessPackageSubject extends Entity
 
     /**
     * Sets the objectId
-    * The object identifier of the subject. null if the subject is not yet a user in the tenant. Alternate key.
+    * The object identifier of the subject. null if the subject isn't yet a user in the tenant. Alternate key.
     *
     * @param string $val The objectId
     *

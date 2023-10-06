@@ -109,7 +109,7 @@ class ResourceVisualization extends Entity
     }
     /**
     * Gets the mediaType
-    * The item's media type. Can be used for filtering for a specific type of file based on supported IANA Media Mime Types. Note that not all Media Mime Types are supported.
+    * The item's media type. Can be used for filtering for a specific type of file based on supported IANA Media Mime Types. Not all Media Mime Types are supported.
     *
     * @return string|null The mediaType
     */
@@ -124,7 +124,7 @@ class ResourceVisualization extends Entity
 
     /**
     * Sets the mediaType
-    * The item's media type. Can be used for filtering for a specific type of file based on supported IANA Media Mime Types. Note that not all Media Mime Types are supported.
+    * The item's media type. Can be used for filtering for a specific type of file based on supported IANA Media Mime Types. Not all Media Mime Types are supported.
     *
     * @param string $val The value of the mediaType
     *
@@ -221,7 +221,7 @@ class ResourceVisualization extends Entity
     }
     /**
     * Gets the type
-    * The item's media type. Can be used for filtering for a specific file based on a specific type. See below for supported types.
+    * The item's media type. Can be used for filtering for a specific file based on a specific type. See the Type property values section, for supported types.
     *
     * @return string|null The type
     */
@@ -236,7 +236,7 @@ class ResourceVisualization extends Entity
 
     /**
     * Sets the type
-    * The item's media type. Can be used for filtering for a specific file based on a specific type. See below for supported types.
+    * The item's media type. Can be used for filtering for a specific file based on a specific type. See the Type property values section, for supported types.
     *
     * @param string $val The value of the type
     *

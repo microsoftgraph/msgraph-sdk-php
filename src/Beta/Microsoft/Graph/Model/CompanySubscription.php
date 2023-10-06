@@ -352,7 +352,7 @@ class CompanySubscription extends Entity
 
     /**
     * Gets the status
-    * The status of this subscription. Possible values are: Enabled, Expired, Suspended, Warning, LockedOut.
+    * The status of this subscription. Possible values are: Enabled, Deleted, Suspended, Warning, LockedOut.
     *
     * @return string|null The status
     */
@@ -367,7 +367,7 @@ class CompanySubscription extends Entity
 
     /**
     * Sets the status
-    * The status of this subscription. Possible values are: Enabled, Expired, Suspended, Warning, LockedOut.
+    * The status of this subscription. Possible values are: Enabled, Deleted, Suspended, Warning, LockedOut.
     *
     * @param string $val The status
     *

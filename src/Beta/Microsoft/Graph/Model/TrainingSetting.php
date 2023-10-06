@@ -26,6 +26,7 @@ class TrainingSetting extends Entity
 
     /**
     * Gets the settingType
+    * Type of setting. Possible values are: microsoftCustom, microsoftManaged, noTraining, custom, unknownFutureValue.
     *
     * @return TrainingSettingType|null The settingType
     */
@@ -44,6 +45,7 @@ class TrainingSetting extends Entity
 
     /**
     * Sets the settingType
+    * Type of setting. Possible values are: microsoftCustom, microsoftManaged, noTraining, custom, unknownFutureValue.
     *
     * @param TrainingSettingType $val The value to assign to the settingType
     *

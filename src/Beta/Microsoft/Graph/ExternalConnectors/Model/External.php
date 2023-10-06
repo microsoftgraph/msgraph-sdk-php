@@ -88,6 +88,34 @@ class External implements \JsonSerializable
 
 
      /**
+     * Gets the authorizationSystems
+     *
+     * @return array|null The authorizationSystems
+     */
+    public function getAuthorizationSystems()
+    {
+        if (array_key_exists("authorizationSystems", $this->_propDict)) {
+           return $this->_propDict["authorizationSystems"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the authorizationSystems
+    *
+    * @param \Beta\Microsoft\Graph\Model\AuthorizationSystem[] $val The authorizationSystems
+    *
+    * @return External
+    */
+    public function setAuthorizationSystems($val)
+    {
+        $this->_propDict["authorizationSystems"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the connections
      *
      * @return array|null The connections

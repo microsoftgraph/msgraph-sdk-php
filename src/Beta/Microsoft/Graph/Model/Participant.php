@@ -203,6 +203,7 @@ class Participant extends Entity
 
     /**
     * Gets the preferredDisplayName
+    * The participant's preferred display name that overrides the original display name.
     *
     * @return string|null The preferredDisplayName
     */
@@ -217,6 +218,7 @@ class Participant extends Entity
 
     /**
     * Sets the preferredDisplayName
+    * The participant's preferred display name that overrides the original display name.
     *
     * @param string $val The preferredDisplayName
     *

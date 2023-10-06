@@ -55,7 +55,7 @@ class IdentityUserFlowAttributeAssignment extends Entity
 
     /**
     * Gets the isOptional
-    * Determines whether the identityUserFlowAttribute is optional. true means the user doesn't have to provide a value. false means the user cannot complete sign-up without providing a value.
+    * Determines whether the identityUserFlowAttribute is optional. true means the user doesn't have to provide a value. false means the user can't complete sign-up without providing a value.
     *
     * @return bool|null The isOptional
     */
@@ -70,7 +70,7 @@ class IdentityUserFlowAttributeAssignment extends Entity
 
     /**
     * Sets the isOptional
-    * Determines whether the identityUserFlowAttribute is optional. true means the user doesn't have to provide a value. false means the user cannot complete sign-up without providing a value.
+    * Determines whether the identityUserFlowAttribute is optional. true means the user doesn't have to provide a value. false means the user can't complete sign-up without providing a value.
     *
     * @param bool $val The isOptional
     *

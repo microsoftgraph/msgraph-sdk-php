@@ -237,7 +237,7 @@ class CloudPcOnPremisesConnection extends Entity
 
     /**
     * Gets the inUse
-    * When true, the Azure network connection is in use. When false, the connection is not in use. You cannot delete a connection that’s in use. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetails. Read-only.
+    * When true, the Azure network connection is in use. When false, the connection isn't in use. You can't delete a connection that’s in use. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetails. Read-only.
     *
     * @return bool|null The inUse
     */
@@ -252,7 +252,7 @@ class CloudPcOnPremisesConnection extends Entity
 
     /**
     * Sets the inUse
-    * When true, the Azure network connection is in use. When false, the connection is not in use. You cannot delete a connection that’s in use. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetails. Read-only.
+    * When true, the Azure network connection is in use. When false, the connection isn't in use. You can't delete a connection that’s in use. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetails. Read-only.
     *
     * @param bool $val The inUse
     *
@@ -266,7 +266,7 @@ class CloudPcOnPremisesConnection extends Entity
 
     /**
     * Gets the managedBy
-    * Specifies which services manage the Azure network connection. Possible values are: windows365, devBox, unknownFutureValue, rpaBox. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: rpaBox. Read-only.
+    * Specifies which services manage the Azure network connection. Possible values are: windows365, devBox, unknownFutureValue, rpaBox. You must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: rpaBox. Read-only.
     *
     * @return CloudPcManagementService|null The managedBy
     */
@@ -285,7 +285,7 @@ class CloudPcOnPremisesConnection extends Entity
 
     /**
     * Sets the managedBy
-    * Specifies which services manage the Azure network connection. Possible values are: windows365, devBox, unknownFutureValue, rpaBox. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: rpaBox. Read-only.
+    * Specifies which services manage the Azure network connection. Possible values are: windows365, devBox, unknownFutureValue, rpaBox. You must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: rpaBox. Read-only.
     *
     * @param CloudPcManagementService $val The managedBy
     *
@@ -444,7 +444,7 @@ class CloudPcOnPremisesConnection extends Entity
 
     /**
     * Gets the type
-    * Specifies how the provisioned Cloud PC will be joined to Azure Active Directory. Default value is hybridAzureADJoin. Possible values are: azureADJoin, hybridAzureADJoin, unknownFutureValue.
+    * Specifies how the provisioned Cloud PC is joined to Azure Active Directory. Default value is hybridAzureADJoin. Possible values are: azureADJoin, hybridAzureADJoin, unknownFutureValue.
     *
     * @return CloudPcOnPremisesConnectionType|null The type
     */
@@ -463,7 +463,7 @@ class CloudPcOnPremisesConnection extends Entity
 
     /**
     * Sets the type
-    * Specifies how the provisioned Cloud PC will be joined to Azure Active Directory. Default value is hybridAzureADJoin. Possible values are: azureADJoin, hybridAzureADJoin, unknownFutureValue.
+    * Specifies how the provisioned Cloud PC is joined to Azure Active Directory. Default value is hybridAzureADJoin. Possible values are: azureADJoin, hybridAzureADJoin, unknownFutureValue.
     *
     * @param CloudPcOnPremisesConnectionType $val The type
     *

@@ -26,6 +26,7 @@ class OAuthConsentAppDetail extends Entity
 
     /**
     * Gets the appScope
+    * App scope. Possible values are: unknown, readCalendar, readContact, readMail, readAllChat, readAllFile, readAndWriteMail, sendMail, unknownFutureValue.
     *
     * @return OAuthAppScope|null The appScope
     */
@@ -44,6 +45,7 @@ class OAuthConsentAppDetail extends Entity
 
     /**
     * Sets the appScope
+    * App scope. Possible values are: unknown, readCalendar, readContact, readMail, readAllChat, readAllFile, readAndWriteMail, sendMail, unknownFutureValue.
     *
     * @param OAuthAppScope $val The value to assign to the appScope
     *
@@ -56,6 +58,7 @@ class OAuthConsentAppDetail extends Entity
     }
     /**
     * Gets the displayLogo
+    * App display logo.
     *
     * @return string|null The displayLogo
     */
@@ -70,6 +73,7 @@ class OAuthConsentAppDetail extends Entity
 
     /**
     * Sets the displayLogo
+    * App display logo.
     *
     * @param string $val The value of the displayLogo
     *
@@ -82,6 +86,7 @@ class OAuthConsentAppDetail extends Entity
     }
     /**
     * Gets the displayName
+    * App name.
     *
     * @return string|null The displayName
     */
@@ -96,6 +101,7 @@ class OAuthConsentAppDetail extends Entity
 
     /**
     * Sets the displayName
+    * App name.
     *
     * @param string $val The value of the displayName
     *

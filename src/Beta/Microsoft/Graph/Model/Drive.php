@@ -26,7 +26,7 @@ class Drive extends BaseItem
 {
     /**
     * Gets the driveType
-    * Describes the type of drive represented by this resource. OneDrive personal drives will return personal. OneDrive for Business will return business. SharePoint document libraries will return documentLibrary. Read-only.
+    * Describes the type of drive represented by this resource. OneDrive personal drives return personal. OneDrive for Business returns business. SharePoint document libraries return documentLibrary. Read-only.
     *
     * @return string|null The driveType
     */
@@ -41,7 +41,7 @@ class Drive extends BaseItem
 
     /**
     * Sets the driveType
-    * Describes the type of drive represented by this resource. OneDrive personal drives will return personal. OneDrive for Business will return business. SharePoint document libraries will return documentLibrary. Read-only.
+    * Describes the type of drive represented by this resource. OneDrive personal drives return personal. OneDrive for Business returns business. SharePoint document libraries return documentLibrary. Read-only.
     *
     * @param string $val The driveType
     *

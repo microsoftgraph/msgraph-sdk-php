@@ -86,7 +86,7 @@ class ServiceProvisioningError extends Entity
     }
     /**
     * Gets the serviceInstance
-    * Qualified service instance (e.g., 'SharePoint/Dublin') that published the service error information.
+    * Qualified service instance (for example, 'SharePoint/Dublin') that published the service error information.
     *
     * @return string|null The serviceInstance
     */
@@ -101,7 +101,7 @@ class ServiceProvisioningError extends Entity
 
     /**
     * Sets the serviceInstance
-    * Qualified service instance (e.g., 'SharePoint/Dublin') that published the service error information.
+    * Qualified service instance (for example, 'SharePoint/Dublin') that published the service error information.
     *
     * @param string $val The value of the serviceInstance
     *

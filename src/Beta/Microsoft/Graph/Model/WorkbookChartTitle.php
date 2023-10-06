@@ -84,7 +84,7 @@ class WorkbookChartTitle extends Entity
 
     /**
     * Gets the visible
-    * A boolean value the represents the visibility of a chart title object.
+    * A boolean value that represents the visibility of a chart title object.
     *
     * @return bool|null The visible
     */
@@ -99,7 +99,7 @@ class WorkbookChartTitle extends Entity
 
     /**
     * Sets the visible
-    * A boolean value the represents the visibility of a chart title object.
+    * A boolean value that represents the visibility of a chart title object.
     *
     * @param bool $val The visible
     *
