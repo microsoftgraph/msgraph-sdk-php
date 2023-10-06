@@ -26,7 +26,7 @@ class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod
 {
     /**
     * Gets the createdDateTime
-    * The date and time that this app was registered. This property is null if the device is not registered for passwordless Phone Sign-In.
+    * The date and time that this app was registered. This property is null if the device isn't registered for passwordless Phone Sign-In.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -45,7 +45,7 @@ class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod
 
     /**
     * Sets the createdDateTime
-    * The date and time that this app was registered. This property is null if the device is not registered for passwordless Phone Sign-In.
+    * The date and time that this app was registered. This property is null if the device isn't registered for passwordless Phone Sign-In.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -146,7 +146,7 @@ class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod
 
     /**
     * Gets the device
-    * The registered device on which Microsoft Authenticator resides. This property is null if the device is not registered for passwordless Phone Sign-In.
+    * The registered device on which Microsoft Authenticator resides. This property is null if the device isn't registered for passwordless Phone Sign-In.
     *
     * @return Device|null The device
     */
@@ -165,7 +165,7 @@ class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod
 
     /**
     * Sets the device
-    * The registered device on which Microsoft Authenticator resides. This property is null if the device is not registered for passwordless Phone Sign-In.
+    * The registered device on which Microsoft Authenticator resides. This property is null if the device isn't registered for passwordless Phone Sign-In.
     *
     * @param Device $val The device
     *

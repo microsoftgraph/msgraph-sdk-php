@@ -84,6 +84,7 @@ class Presence extends Entity
 
     /**
     * Gets the statusMessage
+    * The presence status message of a user.
     *
     * @return PresenceStatusMessage|null The statusMessage
     */
@@ -102,6 +103,7 @@ class Presence extends Entity
 
     /**
     * Sets the statusMessage
+    * The presence status message of a user.
     *
     * @param PresenceStatusMessage $val The statusMessage
     *

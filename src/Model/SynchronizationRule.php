@@ -56,7 +56,7 @@ class SynchronizationRule extends Entity
     }
     /**
     * Gets the editable
-    * true if the synchronization rule can be customized; false if this rule is read-only and should not be changed.
+    * true if the synchronization rule can be customized; false if this rule is read-only and shouldn't be changed.
     *
     * @return bool|null The editable
     */
@@ -71,7 +71,7 @@ class SynchronizationRule extends Entity
 
     /**
     * Sets the editable
-    * true if the synchronization rule can be customized; false if this rule is read-only and should not be changed.
+    * true if the synchronization rule can be customized; false if this rule is read-only and shouldn't be changed.
     *
     * @param bool $val The value of the editable
     *
@@ -144,7 +144,7 @@ class SynchronizationRule extends Entity
 
     /**
     * Gets the metadata
-    * Additional extension properties. Unless instructed explicitly by the support team, metadata values should not be changed.
+    * Additional extension properties. Unless instructed explicitly by the support team, metadata values shouldn't be changed.
     *
     * @return StringKeyStringValuePair|null The metadata
     */
@@ -163,7 +163,7 @@ class SynchronizationRule extends Entity
 
     /**
     * Sets the metadata
-    * Additional extension properties. Unless instructed explicitly by the support team, metadata values should not be changed.
+    * Additional extension properties. Unless instructed explicitly by the support team, metadata values shouldn't be changed.
     *
     * @param StringKeyStringValuePair $val The value to assign to the metadata
     *

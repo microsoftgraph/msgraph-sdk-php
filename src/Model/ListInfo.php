@@ -53,7 +53,7 @@ class ListInfo extends Entity
     }
     /**
     * Gets the hidden
-    * If true, indicates that the list is not normally visible in the SharePoint user experience.
+    * If true, indicates that the list isn't normally visible in the SharePoint user experience.
     *
     * @return bool|null The hidden
     */
@@ -68,7 +68,7 @@ class ListInfo extends Entity
 
     /**
     * Sets the hidden
-    * If true, indicates that the list is not normally visible in the SharePoint user experience.
+    * If true, indicates that the list isn't normally visible in the SharePoint user experience.
     *
     * @param bool $val The value of the hidden
     *

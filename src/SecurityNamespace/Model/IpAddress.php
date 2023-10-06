@@ -59,7 +59,7 @@ class IpAddress extends Host
 
     /**
     * Gets the countryOrRegion
-    * The country or region for this IP address.
+    * The country/region for this IP address.
     *
     * @return string|null The countryOrRegion
     */
@@ -74,7 +74,7 @@ class IpAddress extends Host
 
     /**
     * Sets the countryOrRegion
-    * The country or region for this IP address.
+    * The country/region for this IP address.
     *
     * @param string $val The countryOrRegion
     *

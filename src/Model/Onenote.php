@@ -57,7 +57,7 @@ class Onenote extends Entity
 
      /**
      * Gets the operations
-    * The status of OneNote operations. Getting an operations collection is not supported, but you can get the status of long-running operations if the Operation-Location header is returned in the response. Read-only. Nullable.
+    * The status of OneNote operations. Getting an operations collection isn't supported, but you can get the status of long-running operations if the Operation-Location header is returned in the response. Read-only. Nullable.
      *
      * @return array|null The operations
      */
@@ -72,7 +72,7 @@ class Onenote extends Entity
 
     /**
     * Sets the operations
-    * The status of OneNote operations. Getting an operations collection is not supported, but you can get the status of long-running operations if the Operation-Location header is returned in the response. Read-only. Nullable.
+    * The status of OneNote operations. Getting an operations collection isn't supported, but you can get the status of long-running operations if the Operation-Location header is returned in the response. Read-only. Nullable.
     *
     * @param OnenoteOperation[] $val The operations
     *
@@ -117,7 +117,7 @@ class Onenote extends Entity
 
      /**
      * Gets the resources
-    * The image and other file resources in OneNote pages. Getting a resources collection is not supported, but you can get the binary content of a specific resource. Read-only. Nullable.
+    * The image and other file resources in OneNote pages. Getting a resources collection isn't supported, but you can get the binary content of a specific resource. Read-only. Nullable.
      *
      * @return array|null The resources
      */
@@ -132,7 +132,7 @@ class Onenote extends Entity
 
     /**
     * Sets the resources
-    * The image and other file resources in OneNote pages. Getting a resources collection is not supported, but you can get the binary content of a specific resource. Read-only. Nullable.
+    * The image and other file resources in OneNote pages. Getting a resources collection isn't supported, but you can get the binary content of a specific resource. Read-only. Nullable.
     *
     * @param OnenoteResource[] $val The resources
     *

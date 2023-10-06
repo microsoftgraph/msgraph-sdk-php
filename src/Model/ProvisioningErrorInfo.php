@@ -25,7 +25,7 @@ class ProvisioningErrorInfo extends Entity
 {
     /**
     * Gets the additionalDetails
-    * Additional details in case of error.
+    * Additional details if there's error.
     *
     * @return string|null The additionalDetails
     */
@@ -40,7 +40,7 @@ class ProvisioningErrorInfo extends Entity
 
     /**
     * Sets the additionalDetails
-    * Additional details in case of error.
+    * Additional details if there's error.
     *
     * @param string $val The value of the additionalDetails
     *

@@ -25,7 +25,7 @@ class Identity extends Entity
 {
     /**
     * Gets the displayName
-    * The display name of the identity. Note that this might not always be available or up to date. For example, if a user changes their display name, the API might show the new value in a future response, but the items associated with the user won't show up as having changed when using delta.
+    * The display name of the identity. The display name might not always be available or up to date. For example, if a user changes their display name, the API might show the new value in a future response, but the items associated with the user won't show up as having changed when using delta.
     *
     * @return string|null The displayName
     */
@@ -40,7 +40,7 @@ class Identity extends Entity
 
     /**
     * Sets the displayName
-    * The display name of the identity. Note that this might not always be available or up to date. For example, if a user changes their display name, the API might show the new value in a future response, but the items associated with the user won't show up as having changed when using delta.
+    * The display name of the identity. The display name might not always be available or up to date. For example, if a user changes their display name, the API might show the new value in a future response, but the items associated with the user won't show up as having changed when using delta.
     *
     * @param string $val The value of the displayName
     *

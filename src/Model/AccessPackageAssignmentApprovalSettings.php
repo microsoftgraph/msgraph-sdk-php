@@ -25,7 +25,7 @@ class AccessPackageAssignmentApprovalSettings extends Entity
 {
     /**
     * Gets the isApprovalRequiredForAdd
-    * If false, then approval is not required for new requests in this policy.
+    * If false, then approval isn't required for new requests in this policy.
     *
     * @return bool|null The isApprovalRequiredForAdd
     */
@@ -40,7 +40,7 @@ class AccessPackageAssignmentApprovalSettings extends Entity
 
     /**
     * Sets the isApprovalRequiredForAdd
-    * If false, then approval is not required for new requests in this policy.
+    * If false, then approval isn't required for new requests in this policy.
     *
     * @param bool $val The value of the isApprovalRequiredForAdd
     *
@@ -53,7 +53,7 @@ class AccessPackageAssignmentApprovalSettings extends Entity
     }
     /**
     * Gets the isApprovalRequiredForUpdate
-    * If false, then approval is not required for updates to requests in this policy.
+    * If false, then approval isn't required for updates to requests in this policy.
     *
     * @return bool|null The isApprovalRequiredForUpdate
     */
@@ -68,7 +68,7 @@ class AccessPackageAssignmentApprovalSettings extends Entity
 
     /**
     * Sets the isApprovalRequiredForUpdate
-    * If false, then approval is not required for updates to requests in this policy.
+    * If false, then approval isn't required for updates to requests in this policy.
     *
     * @param bool $val The value of the isApprovalRequiredForUpdate
     *

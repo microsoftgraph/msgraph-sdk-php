@@ -26,7 +26,7 @@ class WorkbookChartPointFormat extends Entity
 {
     /**
     * Gets the fill
-    * Represents the fill format of a chart, which includes background formating information. Read-only.
+    * Represents the fill format of a chart, which includes background formatting information. Read-only.
     *
     * @return WorkbookChartFill|null The fill
     */
@@ -45,7 +45,7 @@ class WorkbookChartPointFormat extends Entity
 
     /**
     * Sets the fill
-    * Represents the fill format of a chart, which includes background formating information. Read-only.
+    * Represents the fill format of a chart, which includes background formatting information. Read-only.
     *
     * @param WorkbookChartFill $val The fill
     *

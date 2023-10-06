@@ -53,7 +53,7 @@ class WorkbookFilterDatetime extends Entity
     }
     /**
     * Gets the specificity
-    * How specific the date should be used to keep data. For example, if the date is 2005-04-02 and the specifity is set to 'month', the filter operation will keep all rows with a date in the month of april 2009. The possible values are: Year, Monday, Day, Hour, Minute, Second.
+    * How specific the date should be used to keep data. For example, if the date is 2005-04-02 and the specificity is set to 'month', the filter operation will keep all rows with a date in the month of April 2009. The possible values are: Year, Monday, Day, Hour, Minute, Second.
     *
     * @return string|null The specificity
     */
@@ -68,7 +68,7 @@ class WorkbookFilterDatetime extends Entity
 
     /**
     * Sets the specificity
-    * How specific the date should be used to keep data. For example, if the date is 2005-04-02 and the specifity is set to 'month', the filter operation will keep all rows with a date in the month of april 2009. The possible values are: Year, Monday, Day, Hour, Minute, Second.
+    * How specific the date should be used to keep data. For example, if the date is 2005-04-02 and the specificity is set to 'month', the filter operation will keep all rows with a date in the month of April 2009. The possible values are: Year, Monday, Day, Hour, Minute, Second.
     *
     * @param string $val The value of the specificity
     *

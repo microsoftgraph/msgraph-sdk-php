@@ -58,7 +58,7 @@ class AttachmentItem extends Entity
     }
     /**
     * Gets the contentId
-    * The CID or Content-Id of the attachment for referencing in case of in-line attachments using &amp;lt;img src='cid:contentId'&amp;gt; tag in HTML messages. Optional.
+    * The CID or Content-Id of the attachment for referencing for the in-line attachments using the &amp;lt;img src='cid:contentId'&amp;gt; tag in HTML messages. Optional.
     *
     * @return string|null The contentId
     */
@@ -73,7 +73,7 @@ class AttachmentItem extends Entity
 
     /**
     * Sets the contentId
-    * The CID or Content-Id of the attachment for referencing in case of in-line attachments using &amp;lt;img src='cid:contentId'&amp;gt; tag in HTML messages. Optional.
+    * The CID or Content-Id of the attachment for referencing for the in-line attachments using the &amp;lt;img src='cid:contentId'&amp;gt; tag in HTML messages. Optional.
     *
     * @param string $val The value of the contentId
     *
@@ -142,7 +142,7 @@ class AttachmentItem extends Entity
     }
     /**
     * Gets the name
-    * The display name of the attachment. This can be a descriptive string and does not have to be the actual file name. Required.
+    * The display name of the attachment. This can be a descriptive string and doesn't have to be the actual file name. Required.
     *
     * @return string|null The name
     */
@@ -157,7 +157,7 @@ class AttachmentItem extends Entity
 
     /**
     * Sets the name
-    * The display name of the attachment. This can be a descriptive string and does not have to be the actual file name. Required.
+    * The display name of the attachment. This can be a descriptive string and doesn't have to be the actual file name. Required.
     *
     * @param string $val The value of the name
     *

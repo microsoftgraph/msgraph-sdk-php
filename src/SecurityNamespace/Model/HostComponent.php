@@ -150,7 +150,7 @@ class HostComponent extends Artifact
 
     /**
     * Gets the version
-    * The component version running on the artifact, for example, v8.5. This should not be assumed to be strictly numerical.
+    * The component version running on the artifact, for example, v8.5. This shouldn't be assumed to be strictly numerical.
     *
     * @return string|null The version
     */
@@ -165,7 +165,7 @@ class HostComponent extends Artifact
 
     /**
     * Sets the version
-    * The component version running on the artifact, for example, v8.5. This should not be assumed to be strictly numerical.
+    * The component version running on the artifact, for example, v8.5. This shouldn't be assumed to be strictly numerical.
     *
     * @param string $val The version
     *

@@ -180,7 +180,7 @@ class Call extends Entity
 
     /**
     * Gets the direction
-    * The direction of the call. The possible value are incoming or outgoing. Read-only.
+    * The direction of the call. The possible values are incoming or outgoing. Read-only.
     *
     * @return CallDirection|null The direction
     */
@@ -199,7 +199,7 @@ class Call extends Entity
 
     /**
     * Sets the direction
-    * The direction of the call. The possible value are incoming or outgoing. Read-only.
+    * The direction of the call. The possible values are incoming or outgoing. Read-only.
     *
     * @param CallDirection $val The direction
     *
@@ -402,7 +402,7 @@ class Call extends Entity
 
     /**
     * Gets the resultInfo
-    * The result information. For example can hold termination reason. Read-only.
+    * The result information. For example, the result can hold termination reason. Read-only.
     *
     * @return ResultInfo|null The resultInfo
     */
@@ -421,7 +421,7 @@ class Call extends Entity
 
     /**
     * Sets the resultInfo
-    * The result information. For example can hold termination reason. Read-only.
+    * The result information. For example, the result can hold termination reason. Read-only.
     *
     * @param ResultInfo $val The resultInfo
     *
