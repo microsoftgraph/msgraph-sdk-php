@@ -50,7 +50,7 @@ class PrintUsageByPrinterItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a usage summary for a printer for a particular time period. For descriptions of each of the endpoints, see printUsageByPrinter.
+     * Retrieve a usage summary for a printer for a particular time period. For descriptions of each of the endpoints, see printUsageByPrinter. This API is supported in the following national cloud deployments.
      * @param PrintUsageByPrinterItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/printusagebyprinter-get?view=graph-rest-1.0 Find more info here
@@ -105,7 +105,7 @@ class PrintUsageByPrinterItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a usage summary for a printer for a particular time period. For descriptions of each of the endpoints, see printUsageByPrinter.
+     * Retrieve a usage summary for a printer for a particular time period. For descriptions of each of the endpoints, see printUsageByPrinter. This API is supported in the following national cloud deployments.
      * @param PrintUsageByPrinterItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

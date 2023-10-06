@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Shares;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Access a shared DriveItem or a collection of shared items by using a shareId or sharing URL. To use a sharing URL with this API, your app needs to transform the URL into a sharing token.
+ * Access a shared DriveItem or a collection of shared items by using a shareId or sharing URL. To use a sharing URL with this API, your app needs to transform the URL into a sharing token. This API is supported in the following national cloud deployments.
 */
 class SharesRequestBuilderGetQueryParameters 
 {

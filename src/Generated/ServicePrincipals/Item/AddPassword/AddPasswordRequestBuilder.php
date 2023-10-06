@@ -32,7 +32,7 @@ class AddPasswordRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Add a strong password or secret to a servicePrincipal object.
+     * Add a strong password or secret to a servicePrincipal object. This API is supported in the following national cloud deployments.
      * @param AddPasswordPostRequestBody $body The request body
      * @param AddPasswordRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -52,7 +52,7 @@ class AddPasswordRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Add a strong password or secret to a servicePrincipal object.
+     * Add a strong password or secret to a servicePrincipal object. This API is supported in the following national cloud deployments.
      * @param AddPasswordPostRequestBody $body The request body
      * @param AddPasswordRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

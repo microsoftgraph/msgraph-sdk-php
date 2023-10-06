@@ -95,7 +95,7 @@ class AttachmentInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the name property value. The display name of the attachment. This can be a descriptive string and does not have to be the actual file name. Required.
+     * Gets the name property value. The display name of the attachment. This can be a descriptive string and doesn't have to be the actual file name. Required.
      * @return string|null
     */
     public function getName(): ?string {
@@ -176,7 +176,7 @@ class AttachmentInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the name property value. The display name of the attachment. This can be a descriptive string and does not have to be the actual file name. Required.
+     * Sets the name property value. The display name of the attachment. This can be a descriptive string and doesn't have to be the actual file name. Required.
      * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\Items\Item
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * SharePoint can be configured to retain the history for list items. Previous versions may be retained for a finite period of time depending on admin settings which may be unique per user or location.
+ * SharePoint can be configured to retain the history for list items. Previous versions may be retained for a finite period of time depending on admin settings which may be unique per user or location. This API is supported in the following national cloud deployments.
 */
 class VersionsRequestBuilderGetQueryParameters 
 {

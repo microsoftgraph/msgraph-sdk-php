@@ -31,7 +31,7 @@ class CancelRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Cancel a print job. Print jobs can be canceled only on behalf of a user, using delegated permissions.
+     * Cancel a print job. Print jobs can be canceled only on behalf of a user, using delegated permissions. This API is supported in the following national cloud deployments.
      * @param CancelRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/printjob-cancel?view=graph-rest-1.0 Find more info here
@@ -50,7 +50,7 @@ class CancelRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Cancel a print job. Print jobs can be canceled only on behalf of a user, using delegated permissions.
+     * Cancel a print job. Print jobs can be canceled only on behalf of a user, using delegated permissions. This API is supported in the following national cloud deployments.
      * @param CancelRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

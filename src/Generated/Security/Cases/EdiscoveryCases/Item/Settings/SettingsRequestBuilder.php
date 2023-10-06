@@ -58,7 +58,7 @@ class SettingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of an ediscoveryCaseSettings object.
+     * Read the properties and relationships of an ediscoveryCaseSettings object. This API is supported in the following national cloud deployments.
      * @param SettingsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/security-ediscoverycasesettings-get?view=graph-rest-1.0 Find more info here
@@ -77,7 +77,7 @@ class SettingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an ediscoveryCaseSettings object.
+     * Update the properties of an ediscoveryCaseSettings object. This API is supported in the following national cloud deployments.
      * @param EdiscoveryCaseSettings $body The request body
      * @param SettingsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -114,7 +114,7 @@ class SettingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of an ediscoveryCaseSettings object.
+     * Read the properties and relationships of an ediscoveryCaseSettings object. This API is supported in the following national cloud deployments.
      * @param SettingsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -135,7 +135,7 @@ class SettingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an ediscoveryCaseSettings object.
+     * Update the properties of an ediscoveryCaseSettings object. This API is supported in the following national cloud deployments.
      * @param EdiscoveryCaseSettings $body The request body
      * @param SettingsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

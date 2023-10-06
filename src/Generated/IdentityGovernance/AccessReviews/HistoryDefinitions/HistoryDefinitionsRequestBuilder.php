@@ -53,7 +53,7 @@ class HistoryDefinitionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the accessReviewHistoryDefinition objects created in the last 30 days, including all nested properties.
+     * Retrieve the accessReviewHistoryDefinition objects created in the last 30 days, including all nested properties. This API is supported in the following national cloud deployments.
      * @param HistoryDefinitionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/accessreviewset-list-historydefinitions?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class HistoryDefinitionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new accessReviewHistoryDefinition object.
+     * Create a new accessReviewHistoryDefinition object. This API is supported in the following national cloud deployments.
      * @param AccessReviewHistoryDefinition $body The request body
      * @param HistoryDefinitionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class HistoryDefinitionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the accessReviewHistoryDefinition objects created in the last 30 days, including all nested properties.
+     * Retrieve the accessReviewHistoryDefinition objects created in the last 30 days, including all nested properties. This API is supported in the following national cloud deployments.
      * @param HistoryDefinitionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class HistoryDefinitionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new accessReviewHistoryDefinition object.
+     * Create a new accessReviewHistoryDefinition object. This API is supported in the following national cloud deployments.
      * @param AccessReviewHistoryDefinition $body The request body
      * @param HistoryDefinitionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Messages\Item\Atta
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read the properties and relationships of a serviceAnnouncementAttachment object.
+ * Read the properties and relationships of a serviceAnnouncementAttachment object. This API is supported in the following national cloud deployments.
 */
 class ServiceAnnouncementAttachmentItemRequestBuilderGetQueryParameters 
 {

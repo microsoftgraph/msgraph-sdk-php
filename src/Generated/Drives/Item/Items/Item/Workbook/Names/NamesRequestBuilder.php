@@ -69,10 +69,10 @@ class NamesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of nameditem objects.
+     * Retrieve a list of nameditem objects. This API is supported in the following national cloud deployments.
      * @param NamesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://learn.microsoft.com/graph/api/nameditem-list?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/workbook-list-names?view=graph-rest-1.0 Find more info here
     */
     public function get(?NamesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -107,7 +107,7 @@ class NamesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of nameditem objects.
+     * Retrieve a list of nameditem objects. This API is supported in the following national cloud deployments.
      * @param NamesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

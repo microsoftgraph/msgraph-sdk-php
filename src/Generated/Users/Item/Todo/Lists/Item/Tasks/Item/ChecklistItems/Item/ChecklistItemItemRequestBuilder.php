@@ -32,7 +32,7 @@ class ChecklistItemItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a checklistItem object.
+     * Delete a checklistItem object. This API is supported in the following national cloud deployments.
      * @param ChecklistItemItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/checklistitem-delete?view=graph-rest-1.0 Find more info here
@@ -51,7 +51,7 @@ class ChecklistItemItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a checklistItem object.
+     * Read the properties and relationships of a checklistItem object. This API is supported in the following national cloud deployments.
      * @param ChecklistItemItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/checklistitem-get?view=graph-rest-1.0 Find more info here
@@ -70,7 +70,7 @@ class ChecklistItemItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a checklistItem object.
+     * Update the properties of a checklistItem object. This API is supported in the following national cloud deployments.
      * @param ChecklistItem $body The request body
      * @param ChecklistItemItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -90,7 +90,7 @@ class ChecklistItemItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a checklistItem object.
+     * Delete a checklistItem object. This API is supported in the following national cloud deployments.
      * @param ChecklistItemItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -107,7 +107,7 @@ class ChecklistItemItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a checklistItem object.
+     * Read the properties and relationships of a checklistItem object. This API is supported in the following national cloud deployments.
      * @param ChecklistItemItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -128,7 +128,7 @@ class ChecklistItemItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a checklistItem object.
+     * Update the properties of a checklistItem object. This API is supported in the following national cloud deployments.
      * @param ChecklistItem $body The request body
      * @param ChecklistItemItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

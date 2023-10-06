@@ -32,7 +32,7 @@ class Fido2AuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a user's FIDO2 Security Key Authentication Method object.
+     * Deletes a user's FIDO2 Security Key Authentication Method object. This API is supported in the following national cloud deployments.
      * @param Fido2AuthenticationMethodItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/fido2authenticationmethod-delete?view=graph-rest-1.0 Find more info here
@@ -51,7 +51,7 @@ class Fido2AuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a user's single FIDO2 Security Key Authentication Method object.
+     * Retrieve a user's single FIDO2 Security Key Authentication Method object. This API is supported in the following national cloud deployments.
      * @param Fido2AuthenticationMethodItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/fido2authenticationmethod-get?view=graph-rest-1.0 Find more info here
@@ -70,7 +70,7 @@ class Fido2AuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a user's FIDO2 Security Key Authentication Method object.
+     * Deletes a user's FIDO2 Security Key Authentication Method object. This API is supported in the following national cloud deployments.
      * @param Fido2AuthenticationMethodItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -87,7 +87,7 @@ class Fido2AuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a user's single FIDO2 Security Key Authentication Method object.
+     * Retrieve a user's single FIDO2 Security Key Authentication Method object. This API is supported in the following national cloud deployments.
      * @param Fido2AuthenticationMethodItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

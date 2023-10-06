@@ -80,7 +80,7 @@ class OnenotePageItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a OneNote page.
+     * Delete a OneNote page. This API is supported in the following national cloud deployments.
      * @param OnenotePageItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/page-delete?view=graph-rest-1.0 Find more info here
@@ -99,7 +99,7 @@ class OnenotePageItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a page object. Getting page information Access a page's metadata by page identifier: Getting page content You can use the page's content endpoint to get the HTML content of a page: The includeIDs=true query option is used to update pages.
+     * Retrieve the properties and relationships of a page object. Getting page information Access a page's metadata by page identifier: Getting page content You can use the page's content endpoint to get the HTML content of a page: The includeIDs=true query option is used to update pages. This API is supported in the following national cloud deployments.
      * @param OnenotePageItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/page-get?view=graph-rest-1.0 Find more info here
@@ -137,7 +137,7 @@ class OnenotePageItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a OneNote page.
+     * Delete a OneNote page. This API is supported in the following national cloud deployments.
      * @param OnenotePageItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -154,7 +154,7 @@ class OnenotePageItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a page object. Getting page information Access a page's metadata by page identifier: Getting page content You can use the page's content endpoint to get the HTML content of a page: The includeIDs=true query option is used to update pages.
+     * Retrieve the properties and relationships of a page object. Getting page information Access a page's metadata by page identifier: Getting page content You can use the page's content endpoint to get the HTML content of a page: The includeIDs=true query option is used to update pages. This API is supported in the following national cloud deployments.
      * @param OnenotePageItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

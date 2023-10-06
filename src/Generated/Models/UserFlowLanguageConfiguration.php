@@ -26,7 +26,7 @@ class UserFlowLanguageConfiguration extends Entity implements Parsable
     }
 
     /**
-     * Gets the defaultPages property value. Collection of pages with the default content to display in a user flow for a specified language. This collection does not allow any kind of modification.
+     * Gets the defaultPages property value. Collection of pages with the default content to display in a user flow for a specified language. This collection doesn't allow any kind of modification.
      * @return array<UserFlowLanguagePage>|null
     */
     public function getDefaultPages(): ?array {
@@ -78,7 +78,7 @@ class UserFlowLanguageConfiguration extends Entity implements Parsable
     }
 
     /**
-     * Gets the overridesPages property value. Collection of pages with the overrides messages to display in a user flow for a specified language. This collection only allows to modify the content of the page, any other modification is not allowed (creation or deletion of pages).
+     * Gets the overridesPages property value. Collection of pages with the overrides messages to display in a user flow for a specified language. This collection only allows you to modify the content of the page, any other modification isn't allowed (creation or deletion of pages).
      * @return array<UserFlowLanguagePage>|null
     */
     public function getOverridesPages(): ?array {
@@ -104,7 +104,7 @@ class UserFlowLanguageConfiguration extends Entity implements Parsable
     }
 
     /**
-     * Sets the defaultPages property value. Collection of pages with the default content to display in a user flow for a specified language. This collection does not allow any kind of modification.
+     * Sets the defaultPages property value. Collection of pages with the default content to display in a user flow for a specified language. This collection doesn't allow any kind of modification.
      * @param array<UserFlowLanguagePage>|null $value Value to set for the defaultPages property.
     */
     public function setDefaultPages(?array $value): void {
@@ -128,7 +128,7 @@ class UserFlowLanguageConfiguration extends Entity implements Parsable
     }
 
     /**
-     * Sets the overridesPages property value. Collection of pages with the overrides messages to display in a user flow for a specified language. This collection only allows to modify the content of the page, any other modification is not allowed (creation or deletion of pages).
+     * Sets the overridesPages property value. Collection of pages with the overrides messages to display in a user flow for a specified language. This collection only allows you to modify the content of the page, any other modification isn't allowed (creation or deletion of pages).
      * @param array<UserFlowLanguagePage>|null $value Value to set for the overridesPages property.
     */
     public function setOverridesPages(?array $value): void {

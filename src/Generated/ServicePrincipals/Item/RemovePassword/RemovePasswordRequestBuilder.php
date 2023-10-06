@@ -31,7 +31,7 @@ class RemovePasswordRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Remove a password from a servicePrincipal object.
+     * Remove a password from a servicePrincipal object. This API is supported in the following national cloud deployments.
      * @param RemovePasswordPostRequestBody $body The request body
      * @param RemovePasswordRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -51,7 +51,7 @@ class RemovePasswordRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Remove a password from a servicePrincipal object.
+     * Remove a password from a servicePrincipal object. This API is supported in the following national cloud deployments.
      * @param RemovePasswordPostRequestBody $body The request body
      * @param RemovePasswordRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -90,7 +90,7 @@ class PresenceRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a user's presence information.
+     * Get a user's presence information. This API is supported in the following national cloud deployments.
      * @param PresenceRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/presence-get?view=graph-rest-1.0 Find more info here
@@ -145,7 +145,7 @@ class PresenceRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a user's presence information.
+     * Get a user's presence information. This API is supported in the following national cloud deployments.
      * @param PresenceRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -71,7 +71,7 @@ class LearningCourseActivitiesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new learningCourseActivity object. A learning course activity can be one of two types: - Assignment- Self-initiated Use this method to create either type of activity.
+     * Create a new learningCourseActivity object. A learning course activity can be one of two types: - Assignment- Self-initiated Use this method to create either type of activity. This API is supported in the following national cloud deployments.
      * @param LearningCourseActivity $body The request body
      * @param LearningCourseActivitiesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -112,7 +112,7 @@ class LearningCourseActivitiesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new learningCourseActivity object. A learning course activity can be one of two types: - Assignment- Self-initiated Use this method to create either type of activity.
+     * Create a new learningCourseActivity object. A learning course activity can be one of two types: - Assignment- Self-initiated Use this method to create either type of activity. This API is supported in the following national cloud deployments.
      * @param LearningCourseActivity $body The request body
      * @param LearningCourseActivitiesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

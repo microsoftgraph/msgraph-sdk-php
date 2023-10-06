@@ -61,7 +61,7 @@ class ChildFoldersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a collection of child folders under the specified contact folder.
+     * Get a collection of child folders under the specified contact folder. This API is supported in the following national cloud deployments.
      * @param ChildFoldersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/contactfolder-list-childfolders?view=graph-rest-1.0 Find more info here
@@ -80,7 +80,7 @@ class ChildFoldersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new contactFolder as a child of a specified folder.  You can also create a new contactFolder under the user's default contact folder.
+     * Create a new contactFolder as a child of a specified folder.  You can also create a new contactFolder under the user's default contact folder. This API is supported in the following national cloud deployments.
      * @param ContactFolder $body The request body
      * @param ChildFoldersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -100,7 +100,7 @@ class ChildFoldersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a collection of child folders under the specified contact folder.
+     * Get a collection of child folders under the specified contact folder. This API is supported in the following national cloud deployments.
      * @param ChildFoldersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -121,7 +121,7 @@ class ChildFoldersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new contactFolder as a child of a specified folder.  You can also create a new contactFolder under the user's default contact folder.
+     * Create a new contactFolder as a child of a specified folder.  You can also create a new contactFolder under the user's default contact folder. This API is supported in the following national cloud deployments.
      * @param ContactFolder $body The request body
      * @param ChildFoldersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

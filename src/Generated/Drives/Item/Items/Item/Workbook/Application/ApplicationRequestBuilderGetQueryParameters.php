@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Application;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties and relationships of a workbookApplication object.
+ * Retrieve the properties and relationships of a workbookApplication object. This API is supported in the following national cloud deployments.
 */
 class ApplicationRequestBuilderGetQueryParameters 
 {

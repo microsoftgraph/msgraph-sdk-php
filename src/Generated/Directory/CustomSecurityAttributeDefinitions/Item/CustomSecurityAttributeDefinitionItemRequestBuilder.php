@@ -58,7 +58,7 @@ class CustomSecurityAttributeDefinitionItemRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * Read the properties and relationships of a customSecurityAttributeDefinition object.
+     * Read the properties and relationships of a customSecurityAttributeDefinition object. This API is supported in the following national cloud deployments.
      * @param CustomSecurityAttributeDefinitionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/customsecurityattributedefinition-get?view=graph-rest-1.0 Find more info here
@@ -77,7 +77,7 @@ class CustomSecurityAttributeDefinitionItemRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * Update the properties of a customSecurityAttributeDefinition object.
+     * Update the properties of a customSecurityAttributeDefinition object. This API is supported in the following national cloud deployments.
      * @param CustomSecurityAttributeDefinition $body The request body
      * @param CustomSecurityAttributeDefinitionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -114,7 +114,7 @@ class CustomSecurityAttributeDefinitionItemRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * Read the properties and relationships of a customSecurityAttributeDefinition object.
+     * Read the properties and relationships of a customSecurityAttributeDefinition object. This API is supported in the following national cloud deployments.
      * @param CustomSecurityAttributeDefinitionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -135,7 +135,7 @@ class CustomSecurityAttributeDefinitionItemRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * Update the properties of a customSecurityAttributeDefinition object.
+     * Update the properties of a customSecurityAttributeDefinition object. This API is supported in the following national cloud deployments.
      * @param CustomSecurityAttributeDefinition $body The request body
      * @param CustomSecurityAttributeDefinitionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

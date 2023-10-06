@@ -53,7 +53,7 @@ class AuthenticationMethodModesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of all supported authentication methods, or all supported authentication method combinations as a list of authenticationMethodModes objects and their properties.
+     * Get a list of all supported authentication methods, or all supported authentication method combinations as a list of authenticationMethodModes objects and their properties. This API is supported in the following national cloud deployments.
      * @param AuthenticationMethodModesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/authenticationstrengthroot-list-authenticationmethodmodes?view=graph-rest-1.0 Find more info here
@@ -91,7 +91,7 @@ class AuthenticationMethodModesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of all supported authentication methods, or all supported authentication method combinations as a list of authenticationMethodModes objects and their properties.
+     * Get a list of all supported authentication methods, or all supported authentication method combinations as a list of authenticationMethodModes objects and their properties. This API is supported in the following national cloud deployments.
      * @param AuthenticationMethodModesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

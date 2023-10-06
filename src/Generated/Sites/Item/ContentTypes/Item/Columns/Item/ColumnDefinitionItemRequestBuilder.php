@@ -40,7 +40,7 @@ class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Remove a [column][columndefinition] from a [site][], a [list][], or a [content type][contentType].
+     * Remove a column][columndefinition] from a [site][], a [list][], or a [content type][contentType]. This API is supported in the following [national cloud deployments.
      * @param ColumnDefinitionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/columndefinition-delete?view=graph-rest-1.0 Find more info here
@@ -59,7 +59,7 @@ class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the metadata for a [site][], a [list][], or a [contentType][] [column][columnDefinition].
+     * Retrieve the metadata for a site][], a [list][], or a [contentType][] [column][columnDefinition]. This API is supported in the following [national cloud deployments.
      * @param ColumnDefinitionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/columndefinition-get?view=graph-rest-1.0 Find more info here
@@ -78,7 +78,7 @@ class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update a [site][], a [list][], or a [content type][contentType] [column][columnDefinition].
+     * Update a site][], a [list][], or a [content type][contentType] [column][columnDefinition]. This API is supported in the following [national cloud deployments.
      * @param ColumnDefinition $body The request body
      * @param ColumnDefinitionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -98,7 +98,7 @@ class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Remove a [column][columndefinition] from a [site][], a [list][], or a [content type][contentType].
+     * Remove a column][columndefinition] from a [site][], a [list][], or a [content type][contentType]. This API is supported in the following [national cloud deployments.
      * @param ColumnDefinitionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -115,7 +115,7 @@ class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the metadata for a [site][], a [list][], or a [contentType][] [column][columnDefinition].
+     * Retrieve the metadata for a site][], a [list][], or a [contentType][] [column][columnDefinition]. This API is supported in the following [national cloud deployments.
      * @param ColumnDefinitionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -136,7 +136,7 @@ class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update a [site][], a [list][], or a [content type][contentType] [column][columnDefinition].
+     * Update a site][], a [list][], or a [content type][contentType] [column][columnDefinition]. This API is supported in the following [national cloud deployments.
      * @param ColumnDefinition $body The request body
      * @param ColumnDefinitionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

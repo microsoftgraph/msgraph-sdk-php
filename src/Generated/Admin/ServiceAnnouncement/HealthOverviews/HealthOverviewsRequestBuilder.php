@@ -53,7 +53,7 @@ class HealthOverviewsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the serviceHealth resources from the healthOverviews navigation property. This operation provides the health report of all subscribed services for a tenant.
+     * Retrieve the serviceHealth resources from the healthOverviews navigation property. This operation provides the health report of all subscribed services for a tenant. This API is supported in the following national cloud deployments.
      * @param HealthOverviewsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/serviceannouncement-list-healthoverviews?view=graph-rest-1.0 Find more info here
@@ -91,7 +91,7 @@ class HealthOverviewsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the serviceHealth resources from the healthOverviews navigation property. This operation provides the health report of all subscribed services for a tenant.
+     * Retrieve the serviceHealth resources from the healthOverviews navigation property. This operation provides the health report of all subscribed services for a tenant. This API is supported in the following national cloud deployments.
      * @param HealthOverviewsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

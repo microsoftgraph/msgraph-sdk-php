@@ -8,6 +8,7 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\User;
 use Microsoft\Graph\Generated\Shares\Item\EscapedList\LastModifiedByUser\MailboxSettings\MailboxSettingsRequestBuilder;
+use Microsoft\Graph\Generated\Shares\Item\EscapedList\LastModifiedByUser\ServiceProvisioningErrors\ServiceProvisioningErrorsRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -23,6 +24,13 @@ class LastModifiedByUserRequestBuilder extends BaseRequestBuilder
     */
     public function mailboxSettings(): MailboxSettingsRequestBuilder {
         return new MailboxSettingsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * The serviceProvisioningErrors property
+    */
+    public function serviceProvisioningErrors(): ServiceProvisioningErrorsRequestBuilder {
+        return new ServiceProvisioningErrorsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

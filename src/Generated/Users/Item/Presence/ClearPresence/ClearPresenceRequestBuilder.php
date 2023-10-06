@@ -31,7 +31,7 @@ class ClearPresenceRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Clear the application's presence session for a user. If it is the user's only presence session, the user's presence will change to Offline/Offline. For details about presences sessions, see presence: setPresence.
+     * Clear the application's presence session for a user. If it is the user's only presence session, the user's presence will change to Offline/Offline. For details about presences sessions, see presence: setPresence. This API is supported in the following national cloud deployments.
      * @param ClearPresencePostRequestBody $body The request body
      * @param ClearPresenceRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -51,7 +51,7 @@ class ClearPresenceRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Clear the application's presence session for a user. If it is the user's only presence session, the user's presence will change to Offline/Offline. For details about presences sessions, see presence: setPresence.
+     * Clear the application's presence session for a user. If it is the user's only presence session, the user's presence will change to Offline/Offline. For details about presences sessions, see presence: setPresence. This API is supported in the following national cloud deployments.
      * @param ClearPresencePostRequestBody $body The request body
      * @param ClearPresenceRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

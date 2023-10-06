@@ -66,7 +66,7 @@ class FillRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents the fill format of a chart series, which includes background formating information. Read-only.
+     * Represents the fill format of a chart series, which includes background formatting information. Read-only.
      * @param FillRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -120,7 +120,7 @@ class FillRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents the fill format of a chart series, which includes background formating information. Read-only.
+     * Represents the fill format of a chart series, which includes background formatting information. Read-only.
      * @param FillRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

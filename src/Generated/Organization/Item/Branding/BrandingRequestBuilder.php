@@ -96,7 +96,7 @@ class BrandingRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete the default organizational branding object. To delete the organizationalBranding object, all images (Stream types) must first be removed from the object.
+     * Delete the default organizational branding object. To delete the organizationalBranding object, all images (Stream types) must first be removed from the object. This API is supported in the following national cloud deployments.
      * @param BrandingRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/organizationalbranding-delete?view=graph-rest-1.0 Find more info here
@@ -115,7 +115,7 @@ class BrandingRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the default organizational branding object, if the Accept-Language header is set to 0 or default. If no default organizational branding object exists, this method returns a 404 Not Found error. If the Accept-Language header is set to an existing locale identified by the value of its id, this method retrieves the branding for the specified locale. This method retrieves only non-Stream properties, for example, usernameHintText and signInPageText. To retrieve Stream types of the default branding, for example, bannerLogo and backgroundImage, use the GET organizationalBrandingLocalization method.
+     * Retrieve the default organizational branding object, if the Accept-Language header is set to 0 or default. If no default organizational branding object exists, this method returns a 404 Not Found error. If the Accept-Language header is set to an existing locale identified by the value of its id, this method retrieves the branding for the specified locale. This method retrieves only non-Stream properties, for example, usernameHintText and signInPageText. To retrieve Stream types of the default branding, for example, bannerLogo and backgroundImage, use the GET organizationalBrandingLocalization method. This API is supported in the following national cloud deployments.
      * @param BrandingRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/organizationalbranding-get?view=graph-rest-1.0 Find more info here
@@ -134,7 +134,7 @@ class BrandingRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of the default branding object specified by the organizationalBranding resource.
+     * Update the properties of the default branding object specified by the organizationalBranding resource. This API is supported in the following national cloud deployments.
      * @param OrganizationalBranding $body The request body
      * @param BrandingRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -154,7 +154,7 @@ class BrandingRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete the default organizational branding object. To delete the organizationalBranding object, all images (Stream types) must first be removed from the object.
+     * Delete the default organizational branding object. To delete the organizationalBranding object, all images (Stream types) must first be removed from the object. This API is supported in the following national cloud deployments.
      * @param BrandingRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -171,7 +171,7 @@ class BrandingRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the default organizational branding object, if the Accept-Language header is set to 0 or default. If no default organizational branding object exists, this method returns a 404 Not Found error. If the Accept-Language header is set to an existing locale identified by the value of its id, this method retrieves the branding for the specified locale. This method retrieves only non-Stream properties, for example, usernameHintText and signInPageText. To retrieve Stream types of the default branding, for example, bannerLogo and backgroundImage, use the GET organizationalBrandingLocalization method.
+     * Retrieve the default organizational branding object, if the Accept-Language header is set to 0 or default. If no default organizational branding object exists, this method returns a 404 Not Found error. If the Accept-Language header is set to an existing locale identified by the value of its id, this method retrieves the branding for the specified locale. This method retrieves only non-Stream properties, for example, usernameHintText and signInPageText. To retrieve Stream types of the default branding, for example, bannerLogo and backgroundImage, use the GET organizationalBrandingLocalization method. This API is supported in the following national cloud deployments.
      * @param BrandingRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -192,7 +192,7 @@ class BrandingRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of the default branding object specified by the organizationalBranding resource.
+     * Update the properties of the default branding object specified by the organizationalBranding resource. This API is supported in the following national cloud deployments.
      * @param OrganizationalBranding $body The request body
      * @param BrandingRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

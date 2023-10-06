@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Sites\Item\TermStore\Sets\Item\Relations;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the different relation of a [term] or [set] from the relations navigation property.
+ * Get the different relation of a term] or [set] from the relations navigation property. This API is supported in the following [national cloud deployments.
 */
 class RelationsRequestBuilderGetQueryParameters 
 {

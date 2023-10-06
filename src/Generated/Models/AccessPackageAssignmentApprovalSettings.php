@@ -71,7 +71,7 @@ class AccessPackageAssignmentApprovalSettings implements AdditionalDataHolder, B
     }
 
     /**
-     * Gets the isApprovalRequiredForAdd property value. If false, then approval is not required for new requests in this policy.
+     * Gets the isApprovalRequiredForAdd property value. If false, then approval isn't required for new requests in this policy.
      * @return bool|null
     */
     public function getIsApprovalRequiredForAdd(): ?bool {
@@ -83,7 +83,7 @@ class AccessPackageAssignmentApprovalSettings implements AdditionalDataHolder, B
     }
 
     /**
-     * Gets the isApprovalRequiredForUpdate property value. If false, then approval is not required for updates to requests in this policy.
+     * Gets the isApprovalRequiredForUpdate property value. If false, then approval isn't required for updates to requests in this policy.
      * @return bool|null
     */
     public function getIsApprovalRequiredForUpdate(): ?bool {
@@ -149,7 +149,7 @@ class AccessPackageAssignmentApprovalSettings implements AdditionalDataHolder, B
     }
 
     /**
-     * Sets the isApprovalRequiredForAdd property value. If false, then approval is not required for new requests in this policy.
+     * Sets the isApprovalRequiredForAdd property value. If false, then approval isn't required for new requests in this policy.
      * @param bool|null $value Value to set for the isApprovalRequiredForAdd property.
     */
     public function setIsApprovalRequiredForAdd(?bool $value): void {
@@ -157,7 +157,7 @@ class AccessPackageAssignmentApprovalSettings implements AdditionalDataHolder, B
     }
 
     /**
-     * Sets the isApprovalRequiredForUpdate property value. If false, then approval is not required for updates to requests in this policy.
+     * Sets the isApprovalRequiredForUpdate property value. If false, then approval isn't required for updates to requests in this policy.
      * @param bool|null $value Value to set for the isApprovalRequiredForUpdate property.
     */
     public function setIsApprovalRequiredForUpdate(?bool $value): void {

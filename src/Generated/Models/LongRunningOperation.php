@@ -26,6 +26,7 @@ class LongRunningOperation extends Entity implements Parsable
         if ($mappingValueNode !== null) {
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
+                case '#microsoft.graph.attackSimulationOperation': return new AttackSimulationOperation();
                 case '#microsoft.graph.richLongRunningOperation': return new RichLongRunningOperation();
             }
         }

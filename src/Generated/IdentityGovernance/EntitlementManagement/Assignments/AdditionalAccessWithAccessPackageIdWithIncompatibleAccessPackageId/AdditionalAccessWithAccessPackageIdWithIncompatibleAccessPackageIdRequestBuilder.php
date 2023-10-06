@@ -47,7 +47,7 @@ class AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdRequestB
                     '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
                     '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
             ];
-            return $this->requestAdapter->sendAsync($requestInfo, [AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+            return $this->requestAdapter->sendAsync($requestInfo, [AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }

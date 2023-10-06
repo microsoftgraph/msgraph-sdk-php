@@ -63,10 +63,10 @@ class ChartsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of chart objects.
+     * Retrieve a list of chart objects. This API is supported in the following national cloud deployments.
      * @param ChartsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://learn.microsoft.com/graph/api/worksheet-list-charts?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/chart-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?ChartsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -100,7 +100,7 @@ class ChartsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Use this API to create a new Chart.
+     * Use this API to create a new Chart. This API is supported in the following national cloud deployments.
      * @param WorkbookChart $body The request body
      * @param ChartsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -120,7 +120,7 @@ class ChartsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of chart objects.
+     * Retrieve a list of chart objects. This API is supported in the following national cloud deployments.
      * @param ChartsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -141,7 +141,7 @@ class ChartsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Use this API to create a new Chart.
+     * Use this API to create a new Chart. This API is supported in the following national cloud deployments.
      * @param WorkbookChart $body The request body
      * @param ChartsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

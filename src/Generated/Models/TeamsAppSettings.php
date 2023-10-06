@@ -25,7 +25,7 @@ class TeamsAppSettings extends Entity implements Parsable
     }
 
     /**
-     * Gets the allowUserRequestsForAppAccess property value. The allowUserRequestsForAppAccess property
+     * Gets the allowUserRequestsForAppAccess property value. Indicates whether users are allowed to request access to the unavailable Teams apps.
      * @return bool|null
     */
     public function getAllowUserRequestsForAppAccess(): ?bool {
@@ -57,7 +57,7 @@ class TeamsAppSettings extends Entity implements Parsable
     }
 
     /**
-     * Sets the allowUserRequestsForAppAccess property value. The allowUserRequestsForAppAccess property
+     * Sets the allowUserRequestsForAppAccess property value. Indicates whether users are allowed to request access to the unavailable Teams apps.
      * @param bool|null $value Value to set for the allowUserRequestsForAppAccess property.
     */
     public function setAllowUserRequestsForAppAccess(?bool $value): void {

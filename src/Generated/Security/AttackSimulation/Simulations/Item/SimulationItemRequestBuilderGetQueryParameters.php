@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\AttackSimulation\Simulations\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get an attack simulation campaign for a tenant.
+ * Get an attack simulation campaign for a tenant. This API is supported in the following national cloud deployments.
 */
 class SimulationItemRequestBuilderGetQueryParameters 
 {

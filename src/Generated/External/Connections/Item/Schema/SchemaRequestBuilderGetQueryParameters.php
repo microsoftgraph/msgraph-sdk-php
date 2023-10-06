@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\External\Connections\Item\Schema;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read the properties and relationships of a schema object.
+ * Read the properties and relationships of a schema object. This API is supported in the following national cloud deployments.
 */
 class SchemaRequestBuilderGetQueryParameters 
 {

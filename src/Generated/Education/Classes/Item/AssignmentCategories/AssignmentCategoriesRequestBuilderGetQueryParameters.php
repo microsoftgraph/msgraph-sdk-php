@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Education\Classes\Item\AssignmentCategories;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve a list of educationCategory objects. Only teachers can perform this operation.
+ * Retrieve a list of educationCategory objects. Only teachers can perform this operation. This API is supported in the following national cloud deployments.
 */
 class AssignmentCategoriesRequestBuilderGetQueryParameters 
 {

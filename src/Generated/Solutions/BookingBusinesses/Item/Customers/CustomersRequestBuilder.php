@@ -53,7 +53,7 @@ class CustomersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of bookingCustomer objects of a business.
+     * Get a list of bookingCustomer objects of a business. This API is supported in the following national cloud deployments.
      * @param CustomersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/bookingbusiness-list-customers?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class CustomersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new bookingCustomer object.
+     * Create a new bookingCustomer object. This API is supported in the following national cloud deployments.
      * @param BookingCustomerBase $body The request body
      * @param CustomersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class CustomersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of bookingCustomer objects of a business.
+     * Get a list of bookingCustomer objects of a business. This API is supported in the following national cloud deployments.
      * @param CustomersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class CustomersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new bookingCustomer object.
+     * Create a new bookingCustomer object. This API is supported in the following national cloud deployments.
      * @param BookingCustomerBase $body The request body
      * @param CustomersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

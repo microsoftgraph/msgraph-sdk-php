@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Operatio
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read the properties and relationships of a caseOperation object.
+ * Read the properties and relationships of a caseOperation object. This API is supported in the following national cloud deployments.
 */
 class CaseOperationItemRequestBuilderGetQueryParameters 
 {

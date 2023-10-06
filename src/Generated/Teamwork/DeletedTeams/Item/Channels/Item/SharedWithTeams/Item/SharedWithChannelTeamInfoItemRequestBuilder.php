@@ -48,7 +48,7 @@ class SharedWithChannelTeamInfoItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Unshare a channel with a team by deleting the corresponding sharedWithChannelTeamInfo resource. This operation is allowed only for channels with a membershipType value of shared.
+     * Unshare a channel with a team by deleting the corresponding sharedWithChannelTeamInfo resource. This operation is allowed only for channels with a membershipType value of shared. This API is supported in the following national cloud deployments.
      * @param SharedWithChannelTeamInfoItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/sharedwithchannelteaminfo-delete?view=graph-rest-1.0 Find more info here
@@ -67,7 +67,7 @@ class SharedWithChannelTeamInfoItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a team that has been shared with a specified channel. This operation is allowed only for channels with a membershipType value of shared.
+     * Get a team that has been shared with a specified channel. This operation is allowed only for channels with a membershipType value of shared. This API is supported in the following national cloud deployments.
      * @param SharedWithChannelTeamInfoItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/sharedwithchannelteaminfo-get?view=graph-rest-1.0 Find more info here
@@ -105,7 +105,7 @@ class SharedWithChannelTeamInfoItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Unshare a channel with a team by deleting the corresponding sharedWithChannelTeamInfo resource. This operation is allowed only for channels with a membershipType value of shared.
+     * Unshare a channel with a team by deleting the corresponding sharedWithChannelTeamInfo resource. This operation is allowed only for channels with a membershipType value of shared. This API is supported in the following national cloud deployments.
      * @param SharedWithChannelTeamInfoItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -122,7 +122,7 @@ class SharedWithChannelTeamInfoItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a team that has been shared with a specified channel. This operation is allowed only for channels with a membershipType value of shared.
+     * Get a team that has been shared with a specified channel. This operation is allowed only for channels with a membershipType value of shared. This API is supported in the following national cloud deployments.
      * @param SharedWithChannelTeamInfoItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

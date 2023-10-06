@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\Languages\Item\Ov
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the userFlowLanguagePage resources from the overridesPages navigation property. These pages are used to customize the values shown to the user during a user journey in a user flow.
+ * Get the userFlowLanguagePage resources from the overridesPages navigation property. These pages are used to customize the values shown to the user during a user journey in a user flow. This API is supported in the following national cloud deployments.
 */
 class OverridesPagesRequestBuilderGetQueryParameters 
 {

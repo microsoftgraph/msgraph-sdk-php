@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Teams\Item\InstalledApps\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the app installed in the specified team.
+ * Retrieve the app installed in the specified team. This API is supported in the following national cloud deployments.
 */
 class TeamsAppInstallationItemRequestBuilderGetQueryParameters 
 {

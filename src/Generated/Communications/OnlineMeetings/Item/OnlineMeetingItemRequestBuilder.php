@@ -8,6 +8,7 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Communications\OnlineMeetings\Item\AttendanceReports\AttendanceReportsRequestBuilder;
 use Microsoft\Graph\Generated\Communications\OnlineMeetings\Item\AttendeeReport\AttendeeReportRequestBuilder;
 use Microsoft\Graph\Generated\Communications\OnlineMeetings\Item\GetVirtualAppointmentJoinWebUrl\GetVirtualAppointmentJoinWebUrlRequestBuilder;
+use Microsoft\Graph\Generated\Communications\OnlineMeetings\Item\Transcripts\TranscriptsRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\OnlineMeeting;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -39,6 +40,13 @@ class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder
     */
     public function getVirtualAppointmentJoinWebUrl(): GetVirtualAppointmentJoinWebUrlRequestBuilder {
         return new GetVirtualAppointmentJoinWebUrlRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the transcripts property of the microsoft.graph.onlineMeeting entity.
+    */
+    public function transcripts(): TranscriptsRequestBuilder {
+        return new TranscriptsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

@@ -31,7 +31,7 @@ class QueryRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Runs the query specified in the request body. Search results are provided in the response.
+     * Runs the query specified in the request body. Search results are provided in the response. This API is supported in the following national cloud deployments.
      * @param QueryPostRequestBody $body The request body
      * @param QueryRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -44,14 +44,14 @@ class QueryRequestBuilder extends BaseRequestBuilder
                     '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
                     '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
             ];
-            return $this->requestAdapter->sendAsync($requestInfo, [QueryResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+            return $this->requestAdapter->sendAsync($requestInfo, [QueryPostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
     }
 
     /**
-     * Runs the query specified in the request body. Search results are provided in the response.
+     * Runs the query specified in the request body. Search results are provided in the response. This API is supported in the following national cloud deployments.
      * @param QueryPostRequestBody $body The request body
      * @param QueryRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

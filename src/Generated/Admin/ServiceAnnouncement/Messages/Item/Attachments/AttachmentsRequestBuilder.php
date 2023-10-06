@@ -53,7 +53,7 @@ class AttachmentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the list of attachments associated with a service message.
+     * Get the list of attachments associated with a service message. This API is supported in the following national cloud deployments.
      * @param AttachmentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/serviceupdatemessage-list-attachments?view=graph-rest-1.0 Find more info here
@@ -91,7 +91,7 @@ class AttachmentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the list of attachments associated with a service message.
+     * Get the list of attachments associated with a service message. This API is supported in the following national cloud deployments.
      * @param AttachmentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -71,7 +71,7 @@ class LocationConstraint implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the isRequired property value. The client requests the service to include in the response a meeting location for the meeting. If this is true and all the resources are busy, findMeetingTimes will not return any meeting time suggestions. If this is false and all the resources are busy, findMeetingTimes would still look for meeting times without locations.
+     * Gets the isRequired property value. The client requests the service to include in the response a meeting location for the meeting. If this is true and all the resources are busy, findMeetingTimes won't return any meeting time suggestions. If this is false and all the resources are busy, findMeetingTimes would still look for meeting times without locations.
      * @return bool|null
     */
     public function getIsRequired(): ?bool {
@@ -149,7 +149,7 @@ class LocationConstraint implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the isRequired property value. The client requests the service to include in the response a meeting location for the meeting. If this is true and all the resources are busy, findMeetingTimes will not return any meeting time suggestions. If this is false and all the resources are busy, findMeetingTimes would still look for meeting times without locations.
+     * Sets the isRequired property value. The client requests the service to include in the response a meeting location for the meeting. If this is true and all the resources are busy, findMeetingTimes won't return any meeting time suggestions. If this is false and all the resources are busy, findMeetingTimes would still look for meeting times without locations.
      * @param bool|null $value Value to set for the isRequired property.
     */
     public function setIsRequired(?bool $value): void {

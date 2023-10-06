@@ -52,7 +52,7 @@ class PhotosRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of profilePhoto objects.
+     * Retrieve a list of profilePhoto objects. This API is supported in the following national cloud deployments.
      * @param PhotosRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/group-list-photos?view=graph-rest-1.0 Find more info here
@@ -71,7 +71,7 @@ class PhotosRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of profilePhoto objects.
+     * Retrieve a list of profilePhoto objects. This API is supported in the following national cloud deployments.
      * @param PhotosRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

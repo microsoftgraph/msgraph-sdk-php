@@ -53,7 +53,7 @@ class ChecklistItemsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the checklistItem resources associated to a todoTask from the checklistItems navigation property.
+     * Get the checklistItem resources associated to a todoTask from the checklistItems navigation property. This API is supported in the following national cloud deployments.
      * @param ChecklistItemsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/todotask-list-checklistitems?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class ChecklistItemsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new checklistItem object.
+     * Create a new checklistItem object. This API is supported in the following national cloud deployments.
      * @param ChecklistItem $body The request body
      * @param ChecklistItemsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class ChecklistItemsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the checklistItem resources associated to a todoTask from the checklistItems navigation property.
+     * Get the checklistItem resources associated to a todoTask from the checklistItems navigation property. This API is supported in the following national cloud deployments.
      * @param ChecklistItemsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class ChecklistItemsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new checklistItem object.
+     * Create a new checklistItem object. This API is supported in the following national cloud deployments.
      * @param ChecklistItem $body The request body
      * @param ChecklistItemsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

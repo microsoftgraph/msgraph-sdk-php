@@ -98,7 +98,7 @@ class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder extends BaseReques
     }
 
     /**
-     * In PIM, read the details of a request for for a role eligibility request made through the unifiedRoleEligibilityScheduleRequest object.
+     * In PIM, read the details of a request for for a role eligibility request made through the unifiedRoleEligibilityScheduleRequest object. This API is supported in the following national cloud deployments.
      * @param UnifiedRoleEligibilityScheduleRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/unifiedroleeligibilityschedulerequest-get?view=graph-rest-1.0 Find more info here
@@ -153,7 +153,7 @@ class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder extends BaseReques
     }
 
     /**
-     * In PIM, read the details of a request for for a role eligibility request made through the unifiedRoleEligibilityScheduleRequest object.
+     * In PIM, read the details of a request for for a role eligibility request made through the unifiedRoleEligibilityScheduleRequest object. This API is supported in the following national cloud deployments.
      * @param UnifiedRoleEligibilityScheduleRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

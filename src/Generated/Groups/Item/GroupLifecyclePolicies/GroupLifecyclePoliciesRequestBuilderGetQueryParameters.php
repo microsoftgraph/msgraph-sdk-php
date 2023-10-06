@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\GroupLifecyclePolicies;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieves a list of groupLifecyclePolicy objects to which a group belongs.
+ * Retrieves a list of groupLifecyclePolicy objects to which a group belongs. This API is supported in the following national cloud deployments.
 */
 class GroupLifecyclePoliciesRequestBuilderGetQueryParameters 
 {

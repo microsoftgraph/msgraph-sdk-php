@@ -27,7 +27,7 @@ class ThreatIntelligence extends Entity implements Parsable
     }
 
     /**
-     * Gets the articleIndicators property value. Refers to indicators of threat or compromise highlighted in an microsoft.graph.security.article.Note: List retrieval is not yet supported.
+     * Gets the articleIndicators property value. Refers to indicators of threat or compromise highlighted in an article.Note: List retrieval is not yet supported.
      * @return array<ArticleIndicator>|null
     */
     public function getArticleIndicators(): ?array {
@@ -65,17 +65,23 @@ class ThreatIntelligence extends Entity implements Parsable
             'articles' => fn(ParseNode $n) => $o->setArticles($n->getCollectionOfObjectValues([Article::class, 'createFromDiscriminatorValue'])),
             'hostComponents' => fn(ParseNode $n) => $o->setHostComponents($n->getCollectionOfObjectValues([HostComponent::class, 'createFromDiscriminatorValue'])),
             'hostCookies' => fn(ParseNode $n) => $o->setHostCookies($n->getCollectionOfObjectValues([HostCookie::class, 'createFromDiscriminatorValue'])),
+            'hostPairs' => fn(ParseNode $n) => $o->setHostPairs($n->getCollectionOfObjectValues([HostPair::class, 'createFromDiscriminatorValue'])),
             'hosts' => fn(ParseNode $n) => $o->setHosts($n->getCollectionOfObjectValues([Host::class, 'createFromDiscriminatorValue'])),
+            'hostSslCertificates' => fn(ParseNode $n) => $o->setHostSslCertificates($n->getCollectionOfObjectValues([HostSslCertificate::class, 'createFromDiscriminatorValue'])),
             'hostTrackers' => fn(ParseNode $n) => $o->setHostTrackers($n->getCollectionOfObjectValues([HostTracker::class, 'createFromDiscriminatorValue'])),
             'intelligenceProfileIndicators' => fn(ParseNode $n) => $o->setIntelligenceProfileIndicators($n->getCollectionOfObjectValues([IntelligenceProfileIndicator::class, 'createFromDiscriminatorValue'])),
             'intelProfiles' => fn(ParseNode $n) => $o->setIntelProfiles($n->getCollectionOfObjectValues([IntelligenceProfile::class, 'createFromDiscriminatorValue'])),
             'passiveDnsRecords' => fn(ParseNode $n) => $o->setPassiveDnsRecords($n->getCollectionOfObjectValues([PassiveDnsRecord::class, 'createFromDiscriminatorValue'])),
+            'sslCertificates' => fn(ParseNode $n) => $o->setSslCertificates($n->getCollectionOfObjectValues([SslCertificate::class, 'createFromDiscriminatorValue'])),
+            'subdomains' => fn(ParseNode $n) => $o->setSubdomains($n->getCollectionOfObjectValues([Subdomain::class, 'createFromDiscriminatorValue'])),
             'vulnerabilities' => fn(ParseNode $n) => $o->setVulnerabilities($n->getCollectionOfObjectValues([Vulnerability::class, 'createFromDiscriminatorValue'])),
+            'whoisHistoryRecords' => fn(ParseNode $n) => $o->setWhoisHistoryRecords($n->getCollectionOfObjectValues([WhoisHistoryRecord::class, 'createFromDiscriminatorValue'])),
+            'whoisRecords' => fn(ParseNode $n) => $o->setWhoisRecords($n->getCollectionOfObjectValues([WhoisRecord::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
     /**
-     * Gets the hostComponents property value. Retrieve details about microsoft.graph.security.hostComponent objects.Note: List retrieval is not yet supported.
+     * Gets the hostComponents property value. Retrieve details about hostComponent objects.Note: List retrieval is not yet supported.
      * @return array<HostComponent>|null
     */
     public function getHostComponents(): ?array {
@@ -89,7 +95,7 @@ class ThreatIntelligence extends Entity implements Parsable
     }
 
     /**
-     * Gets the hostCookies property value. Retrieve details about microsoft.graph.security.hostCookie objects.Note: List retrieval is not yet supported.
+     * Gets the hostCookies property value. Retrieve details about hostCookie objects.Note: List retrieval is not yet supported.
      * @return array<HostCookie>|null
     */
     public function getHostCookies(): ?array {
@@ -103,7 +109,21 @@ class ThreatIntelligence extends Entity implements Parsable
     }
 
     /**
-     * Gets the hosts property value. Refers to microsoft.graph.security.host objects that Microsoft Threat Intelligence has observed.Note: List retrieval is not yet supported.
+     * Gets the hostPairs property value. Retrieve details about hostTracker objects.Note: List retrieval is not yet supported.
+     * @return array<HostPair>|null
+    */
+    public function getHostPairs(): ?array {
+        $val = $this->getBackingStore()->get('hostPairs');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, HostPair::class);
+            /** @var array<HostPair>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'hostPairs'");
+    }
+
+    /**
+     * Gets the hosts property value. Refers to host objects that Microsoft Threat Intelligence has observed.Note: List retrieval is not yet supported.
      * @return array<Host>|null
     */
     public function getHosts(): ?array {
@@ -117,7 +137,21 @@ class ThreatIntelligence extends Entity implements Parsable
     }
 
     /**
-     * Gets the hostTrackers property value. Retrieve details about microsoft.graph.security.hostTracker objects.Note: List retrieval is not yet supported.
+     * Gets the hostSslCertificates property value. Retrieve details about hostSslCertificate objects.Note: List retrieval is not yet supported.
+     * @return array<HostSslCertificate>|null
+    */
+    public function getHostSslCertificates(): ?array {
+        $val = $this->getBackingStore()->get('hostSslCertificates');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, HostSslCertificate::class);
+            /** @var array<HostSslCertificate>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'hostSslCertificates'");
+    }
+
+    /**
+     * Gets the hostTrackers property value. Retrieve details about hostTracker objects.Note: List retrieval is not yet supported.
      * @return array<HostTracker>|null
     */
     public function getHostTrackers(): ?array {
@@ -159,7 +193,7 @@ class ThreatIntelligence extends Entity implements Parsable
     }
 
     /**
-     * Gets the passiveDnsRecords property value. Retrieve details about microsoft.graph.security.passiveDnsRecord objects.Note: List retrieval is not yet supported.
+     * Gets the passiveDnsRecords property value. Retrieve details about passiveDnsRecord objects.Note: List retrieval is not yet supported.
      * @return array<PassiveDnsRecord>|null
     */
     public function getPassiveDnsRecords(): ?array {
@@ -173,7 +207,35 @@ class ThreatIntelligence extends Entity implements Parsable
     }
 
     /**
-     * Gets the vulnerabilities property value. Retrieve details about microsoft.graph.security.vulnerabilities.Note: List retrieval is not yet supported.
+     * Gets the sslCertificates property value. Retrieve details about sslCertificate objects.Note: List retrieval is not yet supported.
+     * @return array<SslCertificate>|null
+    */
+    public function getSslCertificates(): ?array {
+        $val = $this->getBackingStore()->get('sslCertificates');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, SslCertificate::class);
+            /** @var array<SslCertificate>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sslCertificates'");
+    }
+
+    /**
+     * Gets the subdomains property value. Retrieve details about the subdomain.Note: List retrieval is not yet supported.
+     * @return array<Subdomain>|null
+    */
+    public function getSubdomains(): ?array {
+        $val = $this->getBackingStore()->get('subdomains');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Subdomain::class);
+            /** @var array<Subdomain>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'subdomains'");
+    }
+
+    /**
+     * Gets the vulnerabilities property value. Retrieve details about vulnerabilities.Note: List retrieval is not yet supported.
      * @return array<Vulnerability>|null
     */
     public function getVulnerabilities(): ?array {
@@ -187,6 +249,34 @@ class ThreatIntelligence extends Entity implements Parsable
     }
 
     /**
+     * Gets the whoisHistoryRecords property value. Retrieve details about whoisHistoryRecord objects.Note: List retrieval is not yet supported.
+     * @return array<WhoisHistoryRecord>|null
+    */
+    public function getWhoisHistoryRecords(): ?array {
+        $val = $this->getBackingStore()->get('whoisHistoryRecords');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, WhoisHistoryRecord::class);
+            /** @var array<WhoisHistoryRecord>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'whoisHistoryRecords'");
+    }
+
+    /**
+     * Gets the whoisRecords property value. A list of whoisRecord objects.
+     * @return array<WhoisRecord>|null
+    */
+    public function getWhoisRecords(): ?array {
+        $val = $this->getBackingStore()->get('whoisRecords');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, WhoisRecord::class);
+            /** @var array<WhoisRecord>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'whoisRecords'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -196,16 +286,22 @@ class ThreatIntelligence extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('articles', $this->getArticles());
         $writer->writeCollectionOfObjectValues('hostComponents', $this->getHostComponents());
         $writer->writeCollectionOfObjectValues('hostCookies', $this->getHostCookies());
+        $writer->writeCollectionOfObjectValues('hostPairs', $this->getHostPairs());
         $writer->writeCollectionOfObjectValues('hosts', $this->getHosts());
+        $writer->writeCollectionOfObjectValues('hostSslCertificates', $this->getHostSslCertificates());
         $writer->writeCollectionOfObjectValues('hostTrackers', $this->getHostTrackers());
         $writer->writeCollectionOfObjectValues('intelligenceProfileIndicators', $this->getIntelligenceProfileIndicators());
         $writer->writeCollectionOfObjectValues('intelProfiles', $this->getIntelProfiles());
         $writer->writeCollectionOfObjectValues('passiveDnsRecords', $this->getPassiveDnsRecords());
+        $writer->writeCollectionOfObjectValues('sslCertificates', $this->getSslCertificates());
+        $writer->writeCollectionOfObjectValues('subdomains', $this->getSubdomains());
         $writer->writeCollectionOfObjectValues('vulnerabilities', $this->getVulnerabilities());
+        $writer->writeCollectionOfObjectValues('whoisHistoryRecords', $this->getWhoisHistoryRecords());
+        $writer->writeCollectionOfObjectValues('whoisRecords', $this->getWhoisRecords());
     }
 
     /**
-     * Sets the articleIndicators property value. Refers to indicators of threat or compromise highlighted in an microsoft.graph.security.article.Note: List retrieval is not yet supported.
+     * Sets the articleIndicators property value. Refers to indicators of threat or compromise highlighted in an article.Note: List retrieval is not yet supported.
      * @param array<ArticleIndicator>|null $value Value to set for the articleIndicators property.
     */
     public function setArticleIndicators(?array $value): void {
@@ -221,7 +317,7 @@ class ThreatIntelligence extends Entity implements Parsable
     }
 
     /**
-     * Sets the hostComponents property value. Retrieve details about microsoft.graph.security.hostComponent objects.Note: List retrieval is not yet supported.
+     * Sets the hostComponents property value. Retrieve details about hostComponent objects.Note: List retrieval is not yet supported.
      * @param array<HostComponent>|null $value Value to set for the hostComponents property.
     */
     public function setHostComponents(?array $value): void {
@@ -229,7 +325,7 @@ class ThreatIntelligence extends Entity implements Parsable
     }
 
     /**
-     * Sets the hostCookies property value. Retrieve details about microsoft.graph.security.hostCookie objects.Note: List retrieval is not yet supported.
+     * Sets the hostCookies property value. Retrieve details about hostCookie objects.Note: List retrieval is not yet supported.
      * @param array<HostCookie>|null $value Value to set for the hostCookies property.
     */
     public function setHostCookies(?array $value): void {
@@ -237,7 +333,15 @@ class ThreatIntelligence extends Entity implements Parsable
     }
 
     /**
-     * Sets the hosts property value. Refers to microsoft.graph.security.host objects that Microsoft Threat Intelligence has observed.Note: List retrieval is not yet supported.
+     * Sets the hostPairs property value. Retrieve details about hostTracker objects.Note: List retrieval is not yet supported.
+     * @param array<HostPair>|null $value Value to set for the hostPairs property.
+    */
+    public function setHostPairs(?array $value): void {
+        $this->getBackingStore()->set('hostPairs', $value);
+    }
+
+    /**
+     * Sets the hosts property value. Refers to host objects that Microsoft Threat Intelligence has observed.Note: List retrieval is not yet supported.
      * @param array<Host>|null $value Value to set for the hosts property.
     */
     public function setHosts(?array $value): void {
@@ -245,7 +349,15 @@ class ThreatIntelligence extends Entity implements Parsable
     }
 
     /**
-     * Sets the hostTrackers property value. Retrieve details about microsoft.graph.security.hostTracker objects.Note: List retrieval is not yet supported.
+     * Sets the hostSslCertificates property value. Retrieve details about hostSslCertificate objects.Note: List retrieval is not yet supported.
+     * @param array<HostSslCertificate>|null $value Value to set for the hostSslCertificates property.
+    */
+    public function setHostSslCertificates(?array $value): void {
+        $this->getBackingStore()->set('hostSslCertificates', $value);
+    }
+
+    /**
+     * Sets the hostTrackers property value. Retrieve details about hostTracker objects.Note: List retrieval is not yet supported.
      * @param array<HostTracker>|null $value Value to set for the hostTrackers property.
     */
     public function setHostTrackers(?array $value): void {
@@ -269,7 +381,7 @@ class ThreatIntelligence extends Entity implements Parsable
     }
 
     /**
-     * Sets the passiveDnsRecords property value. Retrieve details about microsoft.graph.security.passiveDnsRecord objects.Note: List retrieval is not yet supported.
+     * Sets the passiveDnsRecords property value. Retrieve details about passiveDnsRecord objects.Note: List retrieval is not yet supported.
      * @param array<PassiveDnsRecord>|null $value Value to set for the passiveDnsRecords property.
     */
     public function setPassiveDnsRecords(?array $value): void {
@@ -277,11 +389,43 @@ class ThreatIntelligence extends Entity implements Parsable
     }
 
     /**
-     * Sets the vulnerabilities property value. Retrieve details about microsoft.graph.security.vulnerabilities.Note: List retrieval is not yet supported.
+     * Sets the sslCertificates property value. Retrieve details about sslCertificate objects.Note: List retrieval is not yet supported.
+     * @param array<SslCertificate>|null $value Value to set for the sslCertificates property.
+    */
+    public function setSslCertificates(?array $value): void {
+        $this->getBackingStore()->set('sslCertificates', $value);
+    }
+
+    /**
+     * Sets the subdomains property value. Retrieve details about the subdomain.Note: List retrieval is not yet supported.
+     * @param array<Subdomain>|null $value Value to set for the subdomains property.
+    */
+    public function setSubdomains(?array $value): void {
+        $this->getBackingStore()->set('subdomains', $value);
+    }
+
+    /**
+     * Sets the vulnerabilities property value. Retrieve details about vulnerabilities.Note: List retrieval is not yet supported.
      * @param array<Vulnerability>|null $value Value to set for the vulnerabilities property.
     */
     public function setVulnerabilities(?array $value): void {
         $this->getBackingStore()->set('vulnerabilities', $value);
+    }
+
+    /**
+     * Sets the whoisHistoryRecords property value. Retrieve details about whoisHistoryRecord objects.Note: List retrieval is not yet supported.
+     * @param array<WhoisHistoryRecord>|null $value Value to set for the whoisHistoryRecords property.
+    */
+    public function setWhoisHistoryRecords(?array $value): void {
+        $this->getBackingStore()->set('whoisHistoryRecords', $value);
+    }
+
+    /**
+     * Sets the whoisRecords property value. A list of whoisRecord objects.
+     * @param array<WhoisRecord>|null $value Value to set for the whoisRecords property.
+    */
+    public function setWhoisRecords(?array $value): void {
+        $this->getBackingStore()->set('whoisRecords', $value);
     }
 
 }

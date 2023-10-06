@@ -53,7 +53,7 @@ class PassiveDnsRecordsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a passiveDnsRecord object.
+     * Read the properties and relationships of a passiveDnsRecord object. This API is supported in the following national cloud deployments.
      * @param PassiveDnsRecordsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -90,7 +90,7 @@ class PassiveDnsRecordsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a passiveDnsRecord object.
+     * Read the properties and relationships of a passiveDnsRecord object. This API is supported in the following national cloud deployments.
      * @param PassiveDnsRecordsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

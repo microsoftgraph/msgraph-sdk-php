@@ -27,7 +27,7 @@ class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod im
     }
 
     /**
-     * Gets the createdDateTime property value. The date and time that this app was registered. This property is null if the device is not registered for passwordless Phone Sign-In.
+     * Gets the createdDateTime property value. The date and time that this app was registered. This property is null if the device isn't registered for passwordless Phone Sign-In.
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
@@ -39,7 +39,7 @@ class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod im
     }
 
     /**
-     * Gets the device property value. The registered device on which Microsoft Authenticator resides. This property is null if the device is not registered for passwordless Phone Sign-In.
+     * Gets the device property value. The registered device on which Microsoft Authenticator resides. This property is null if the device isn't registered for passwordless Phone Sign-In.
      * @return Device|null
     */
     public function getDevice(): ?Device {
@@ -115,7 +115,7 @@ class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod im
     }
 
     /**
-     * Sets the createdDateTime property value. The date and time that this app was registered. This property is null if the device is not registered for passwordless Phone Sign-In.
+     * Sets the createdDateTime property value. The date and time that this app was registered. This property is null if the device isn't registered for passwordless Phone Sign-In.
      * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
@@ -123,7 +123,7 @@ class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod im
     }
 
     /**
-     * Sets the device property value. The registered device on which Microsoft Authenticator resides. This property is null if the device is not registered for passwordless Phone Sign-In.
+     * Sets the device property value. The registered device on which Microsoft Authenticator resides. This property is null if the device isn't registered for passwordless Phone Sign-In.
      * @param Device|null $value Value to set for the device property.
     */
     public function setDevice(?Device $value): void {

@@ -31,7 +31,7 @@ class TranslateExchangeIdsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Translate identifiers of Outlook-related resources between formats.
+     * Translate identifiers of Outlook-related resources between formats. This API is supported in the following national cloud deployments.
      * @param TranslateExchangeIdsPostRequestBody $body The request body
      * @param TranslateExchangeIdsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -44,14 +44,14 @@ class TranslateExchangeIdsRequestBuilder extends BaseRequestBuilder
                     '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
                     '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
             ];
-            return $this->requestAdapter->sendAsync($requestInfo, [TranslateExchangeIdsResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+            return $this->requestAdapter->sendAsync($requestInfo, [TranslateExchangeIdsPostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
     }
 
     /**
-     * Translate identifiers of Outlook-related resources between formats.
+     * Translate identifiers of Outlook-related resources between formats. This API is supported in the following national cloud deployments.
      * @param TranslateExchangeIdsPostRequestBody $body The request body
      * @param TranslateExchangeIdsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

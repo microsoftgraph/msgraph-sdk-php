@@ -229,6 +229,7 @@ class OnlineMeeting extends Entity implements Parsable
             'shareMeetingChatHistoryDefault' => fn(ParseNode $n) => $o->setShareMeetingChatHistoryDefault($n->getEnumValue(MeetingChatHistoryDefaultMode::class)),
             'startDateTime' => fn(ParseNode $n) => $o->setStartDateTime($n->getDateTimeValue()),
             'subject' => fn(ParseNode $n) => $o->setSubject($n->getStringValue()),
+            'transcripts' => fn(ParseNode $n) => $o->setTranscripts($n->getCollectionOfObjectValues([CallTranscript::class, 'createFromDiscriminatorValue'])),
             'videoTeleconferenceId' => fn(ParseNode $n) => $o->setVideoTeleconferenceId($n->getStringValue()),
             'watermarkProtection' => fn(ParseNode $n) => $o->setWatermarkProtection($n->getObjectValue([WatermarkProtectionValues::class, 'createFromDiscriminatorValue'])),
         ]);
@@ -367,6 +368,20 @@ class OnlineMeeting extends Entity implements Parsable
     }
 
     /**
+     * Gets the transcripts property value. The transcripts property
+     * @return array<CallTranscript>|null
+    */
+    public function getTranscripts(): ?array {
+        $val = $this->getBackingStore()->get('transcripts');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, CallTranscript::class);
+            /** @var array<CallTranscript>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'transcripts'");
+    }
+
+    /**
      * Gets the videoTeleconferenceId property value. The video teleconferencing ID. Read-only.
      * @return string|null
     */
@@ -421,6 +436,7 @@ class OnlineMeeting extends Entity implements Parsable
         $writer->writeEnumValue('shareMeetingChatHistoryDefault', $this->getShareMeetingChatHistoryDefault());
         $writer->writeDateTimeValue('startDateTime', $this->getStartDateTime());
         $writer->writeStringValue('subject', $this->getSubject());
+        $writer->writeCollectionOfObjectValues('transcripts', $this->getTranscripts());
         $writer->writeStringValue('videoTeleconferenceId', $this->getVideoTeleconferenceId());
         $writer->writeObjectValue('watermarkProtection', $this->getWatermarkProtection());
     }
@@ -623,6 +639,14 @@ class OnlineMeeting extends Entity implements Parsable
     */
     public function setSubject(?string $value): void {
         $this->getBackingStore()->set('subject', $value);
+    }
+
+    /**
+     * Sets the transcripts property value. The transcripts property
+     * @param array<CallTranscript>|null $value Value to set for the transcripts property.
+    */
+    public function setTranscripts(?array $value): void {
+        $this->getBackingStore()->set('transcripts', $value);
     }
 
     /**

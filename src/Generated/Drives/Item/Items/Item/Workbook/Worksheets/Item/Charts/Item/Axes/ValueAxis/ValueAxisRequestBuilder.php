@@ -82,7 +82,7 @@ class ValueAxisRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of chartaxis object.
+     * Retrieve the properties and relationships of chartaxis object. This API is supported in the following national cloud deployments.
      * @param ValueAxisRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/chartaxis-get?view=graph-rest-1.0 Find more info here
@@ -101,7 +101,7 @@ class ValueAxisRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of chartaxis object.
+     * Update the properties of chartaxis object. This API is supported in the following national cloud deployments.
      * @param WorkbookChartAxis $body The request body
      * @param ValueAxisRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -138,7 +138,7 @@ class ValueAxisRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of chartaxis object.
+     * Retrieve the properties and relationships of chartaxis object. This API is supported in the following national cloud deployments.
      * @param ValueAxisRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -159,7 +159,7 @@ class ValueAxisRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of chartaxis object.
+     * Update the properties of chartaxis object. This API is supported in the following national cloud deployments.
      * @param WorkbookChartAxis $body The request body
      * @param ValueAxisRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

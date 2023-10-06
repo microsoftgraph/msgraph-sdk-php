@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Communications\OnlineMeetings;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties and relationships of an onlineMeeting object. For example, you can: Teams live event attendee report is an online meeting artifact. For details, see Online meeting artifacts and permissions.
+ * Retrieve the properties and relationships of an onlineMeeting object. For example, you can: Teams live event attendee report is an online meeting artifact. For details, see Online meeting artifacts and permissions. This API is supported in the following national cloud deployments.
 */
 class OnlineMeetingsRequestBuilderGetQueryParameters 
 {

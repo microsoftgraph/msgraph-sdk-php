@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workfl
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read the properties and relationships of a workflowTemplate object.
+ * Read the properties and relationships of a workflowTemplate object. This API is supported in the following national cloud deployments.
 */
 class WorkflowTemplateItemRequestBuilderGetQueryParameters 
 {

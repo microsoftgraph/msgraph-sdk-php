@@ -158,7 +158,7 @@ class WorkbookRangeView extends Entity implements Parsable
     }
 
     /**
-     * Gets the text property value. Text values of the specified range. The Text value will not depend on the cell width. The # sign substitution that happens in Excel UI will not affect the text value returned by the API. Read-only.
+     * Gets the text property value. Text values of the specified range. The Text value won't depend on the cell width. The # sign substitution that happens in Excel UI won't affect the text value returned by the API. Read-only.
      * @return Json|null
     */
     public function getText(): ?Json {
@@ -170,7 +170,7 @@ class WorkbookRangeView extends Entity implements Parsable
     }
 
     /**
-     * Gets the values property value. Represents the raw values of the specified range view. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
+     * Gets the values property value. Represents the raw values of the specified range view. The data returned could be of type string, number, or a boolean. Cell that contains an error returns the error string.
      * @return Json|null
     */
     public function getValues(): ?Json {
@@ -286,7 +286,7 @@ class WorkbookRangeView extends Entity implements Parsable
     }
 
     /**
-     * Sets the text property value. Text values of the specified range. The Text value will not depend on the cell width. The # sign substitution that happens in Excel UI will not affect the text value returned by the API. Read-only.
+     * Sets the text property value. Text values of the specified range. The Text value won't depend on the cell width. The # sign substitution that happens in Excel UI won't affect the text value returned by the API. Read-only.
      * @param Json|null $value Value to set for the text property.
     */
     public function setText(?Json $value): void {
@@ -294,7 +294,7 @@ class WorkbookRangeView extends Entity implements Parsable
     }
 
     /**
-     * Sets the values property value. Represents the raw values of the specified range view. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
+     * Sets the values property value. Represents the raw values of the specified range view. The data returned could be of type string, number, or a boolean. Cell that contains an error returns the error string.
      * @param Json|null $value Value to set for the values property.
     */
     public function setValues(?Json $value): void {

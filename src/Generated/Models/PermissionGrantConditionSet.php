@@ -54,7 +54,7 @@ class PermissionGrantConditionSet extends Entity implements Parsable
     }
 
     /**
-     * Gets the clientApplicationsFromVerifiedPublisherOnly property value. Set to true to only match on client applications with a verified publisher. Set to false to match on any client app, even if it does not have a verified publisher. Default is false.
+     * Gets the clientApplicationsFromVerifiedPublisherOnly property value. Set to true to only match on client applications with a verified publisher. Set to false to match on any client app, even if it doesn't have a verified publisher. Default is false.
      * @return bool|null
     */
     public function getClientApplicationsFromVerifiedPublisherOnly(): ?bool {
@@ -126,7 +126,7 @@ class PermissionGrantConditionSet extends Entity implements Parsable
     }
 
     /**
-     * Gets the permissionClassification property value. The permission classification for the permission being granted, or all to match with any permission classification (including permissions which are not classified). Default is all.
+     * Gets the permissionClassification property value. The permission classification for the permission being granted, or all to match with any permission classification (including permissions that aren't classified). Default is all.
      * @return string|null
     */
     public function getPermissionClassification(): ?string {
@@ -152,7 +152,7 @@ class PermissionGrantConditionSet extends Entity implements Parsable
     }
 
     /**
-     * Gets the permissionType property value. The permission type of the permission being granted. Possible values: application for application permissions (e.g. app roles), or delegated for delegated permissions. The value delegatedUserConsentable indicates delegated permissions which have not been configured by the API publisher to require admin consent—this value may be used in built-in permission grant policies, but cannot be used in custom permission grant policies. Required.
+     * Gets the permissionType property value. The permission type of the permission being granted. Possible values: application for application permissions (for example app roles), or delegated for delegated permissions. The value delegatedUserConsentable indicates delegated permissions that haven't been configured by the API publisher to require admin consent—this value may be used in built-in permission grant policies, but can't be used in custom permission grant policies. Required.
      * @return PermissionType|null
     */
     public function getPermissionType(): ?PermissionType {
@@ -164,7 +164,7 @@ class PermissionGrantConditionSet extends Entity implements Parsable
     }
 
     /**
-     * Gets the resourceApplication property value. The appId of the resource application (e.g. the API) for which a permission is being granted, or any to match with any resource application or API. Default is any.
+     * Gets the resourceApplication property value. The appId of the resource application (for example the API) for which a permission is being granted, or any to match with any resource application or API. Default is any.
      * @return string|null
     */
     public function getResourceApplication(): ?string {
@@ -208,7 +208,7 @@ class PermissionGrantConditionSet extends Entity implements Parsable
     }
 
     /**
-     * Sets the clientApplicationsFromVerifiedPublisherOnly property value. Set to true to only match on client applications with a verified publisher. Set to false to match on any client app, even if it does not have a verified publisher. Default is false.
+     * Sets the clientApplicationsFromVerifiedPublisherOnly property value. Set to true to only match on client applications with a verified publisher. Set to false to match on any client app, even if it doesn't have a verified publisher. Default is false.
      * @param bool|null $value Value to set for the clientApplicationsFromVerifiedPublisherOnly property.
     */
     public function setClientApplicationsFromVerifiedPublisherOnly(?bool $value): void {
@@ -224,7 +224,7 @@ class PermissionGrantConditionSet extends Entity implements Parsable
     }
 
     /**
-     * Sets the permissionClassification property value. The permission classification for the permission being granted, or all to match with any permission classification (including permissions which are not classified). Default is all.
+     * Sets the permissionClassification property value. The permission classification for the permission being granted, or all to match with any permission classification (including permissions that aren't classified). Default is all.
      * @param string|null $value Value to set for the permissionClassification property.
     */
     public function setPermissionClassification(?string $value): void {
@@ -240,7 +240,7 @@ class PermissionGrantConditionSet extends Entity implements Parsable
     }
 
     /**
-     * Sets the permissionType property value. The permission type of the permission being granted. Possible values: application for application permissions (e.g. app roles), or delegated for delegated permissions. The value delegatedUserConsentable indicates delegated permissions which have not been configured by the API publisher to require admin consent—this value may be used in built-in permission grant policies, but cannot be used in custom permission grant policies. Required.
+     * Sets the permissionType property value. The permission type of the permission being granted. Possible values: application for application permissions (for example app roles), or delegated for delegated permissions. The value delegatedUserConsentable indicates delegated permissions that haven't been configured by the API publisher to require admin consent—this value may be used in built-in permission grant policies, but can't be used in custom permission grant policies. Required.
      * @param PermissionType|null $value Value to set for the permissionType property.
     */
     public function setPermissionType(?PermissionType $value): void {
@@ -248,7 +248,7 @@ class PermissionGrantConditionSet extends Entity implements Parsable
     }
 
     /**
-     * Sets the resourceApplication property value. The appId of the resource application (e.g. the API) for which a permission is being granted, or any to match with any resource application or API. Default is any.
+     * Sets the resourceApplication property value. The appId of the resource application (for example the API) for which a permission is being granted, or any to match with any resource application or API. Default is any.
      * @param string|null $value Value to set for the resourceApplication property.
     */
     public function setResourceApplication(?string $value): void {

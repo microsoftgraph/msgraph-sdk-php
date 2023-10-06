@@ -61,7 +61,7 @@ class ContactsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a contact collection from the default contacts folder of the signed-in user. There are two scenarios where an app can get contacts in another user's contact folder:
+     * Get a contact collection from the default contacts folder of the signed-in user. There are two scenarios where an app can get contacts in another user's contact folder: This API is supported in the following national cloud deployments.
      * @param ContactsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/user-list-contacts?view=graph-rest-1.0 Find more info here
@@ -80,7 +80,7 @@ class ContactsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Add a contact to the root Contacts folder or to the contacts endpoint of another contact folder.
+     * Add a contact to the root Contacts folder or to the contacts endpoint of another contact folder. This API is supported in the following national cloud deployments.
      * @param Contact $body The request body
      * @param ContactsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -100,7 +100,7 @@ class ContactsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a contact collection from the default contacts folder of the signed-in user. There are two scenarios where an app can get contacts in another user's contact folder:
+     * Get a contact collection from the default contacts folder of the signed-in user. There are two scenarios where an app can get contacts in another user's contact folder: This API is supported in the following national cloud deployments.
      * @param ContactsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -121,7 +121,7 @@ class ContactsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Add a contact to the root Contacts folder or to the contacts endpoint of another contact folder.
+     * Add a contact to the root Contacts folder or to the contacts endpoint of another contact folder. This API is supported in the following national cloud deployments.
      * @param Contact $body The request body
      * @param ContactsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

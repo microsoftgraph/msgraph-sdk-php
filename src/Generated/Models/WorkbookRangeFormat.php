@@ -40,7 +40,7 @@ class WorkbookRangeFormat extends Entity implements Parsable
     }
 
     /**
-     * Gets the columnWidth property value. Gets or sets the width of all colums within the range. If the column widths are not uniform, null will be returned.
+     * Gets the columnWidth property value. Gets or sets the width of all columns within the range. If the column widths aren't uniform, null will be returned.
      * @return float|null
     */
     public function getColumnWidth(): ?float {
@@ -119,7 +119,7 @@ class WorkbookRangeFormat extends Entity implements Parsable
     }
 
     /**
-     * Gets the rowHeight property value. Gets or sets the height of all rows in the range. If the row heights are not uniform null will be returned.
+     * Gets the rowHeight property value. Gets or sets the height of all rows in the range. If the row heights aren't uniform null will be returned.
      * @return float|null
     */
     public function getRowHeight(): ?float {
@@ -180,7 +180,7 @@ class WorkbookRangeFormat extends Entity implements Parsable
     }
 
     /**
-     * Sets the columnWidth property value. Gets or sets the width of all colums within the range. If the column widths are not uniform, null will be returned.
+     * Sets the columnWidth property value. Gets or sets the width of all columns within the range. If the column widths aren't uniform, null will be returned.
      * @param float|null $value Value to set for the columnWidth property.
     */
     public function setColumnWidth(?float $value): void {
@@ -220,7 +220,7 @@ class WorkbookRangeFormat extends Entity implements Parsable
     }
 
     /**
-     * Sets the rowHeight property value. Gets or sets the height of all rows in the range. If the row heights are not uniform null will be returned.
+     * Sets the rowHeight property value. Gets or sets the height of all rows in the range. If the row heights aren't uniform null will be returned.
      * @param float|null $value Value to set for the rowHeight property.
     */
     public function setRowHeight(?float $value): void {

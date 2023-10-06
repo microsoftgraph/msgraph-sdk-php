@@ -61,7 +61,7 @@ class ListsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the todoTaskList objects and their properties.
+     * Get a list of the todoTaskList objects and their properties. This API is supported in the following national cloud deployments.
      * @param ListsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/todo-list-lists?view=graph-rest-1.0 Find more info here
@@ -80,7 +80,7 @@ class ListsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new lists object.
+     * Create a new lists object. This API is supported in the following national cloud deployments.
      * @param TodoTaskList $body The request body
      * @param ListsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -100,7 +100,7 @@ class ListsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the todoTaskList objects and their properties.
+     * Get a list of the todoTaskList objects and their properties. This API is supported in the following national cloud deployments.
      * @param ListsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -121,7 +121,7 @@ class ListsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new lists object.
+     * Create a new lists object. This API is supported in the following national cloud deployments.
      * @param TodoTaskList $body The request body
      * @param ListsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

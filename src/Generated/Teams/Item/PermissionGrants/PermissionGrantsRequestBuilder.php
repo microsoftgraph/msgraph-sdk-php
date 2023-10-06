@@ -85,7 +85,7 @@ class PermissionGrantsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List all resource-specific permission grants on the team. This list specifies the Azure AD apps that have access to the team, along with each app's corresponding type of resource-specific access.
+     * List all resource-specific permission grants on the team. This list specifies the Azure AD apps that have access to the team, along with each app's corresponding type of resource-specific access. This API is supported in the following national cloud deployments.
      * @param PermissionGrantsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/team-list-permissiongrants?view=graph-rest-1.0 Find more info here
@@ -123,7 +123,7 @@ class PermissionGrantsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List all resource-specific permission grants on the team. This list specifies the Azure AD apps that have access to the team, along with each app's corresponding type of resource-specific access.
+     * List all resource-specific permission grants on the team. This list specifies the Azure AD apps that have access to the team, along with each app's corresponding type of resource-specific access. This API is supported in the following national cloud deployments.
      * @param PermissionGrantsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

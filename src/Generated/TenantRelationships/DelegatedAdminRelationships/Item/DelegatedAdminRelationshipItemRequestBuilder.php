@@ -56,7 +56,7 @@ class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a delegatedAdminRelationship object. A relationship can only be deleted if it's in the 'created' status. 
+     * Delete a delegatedAdminRelationship object. A relationship can only be deleted if it's in the 'created' status.  This API is supported in the following national cloud deployments.
      * @param DelegatedAdminRelationshipItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/delegatedadminrelationship-delete?view=graph-rest-1.0 Find more info here
@@ -75,7 +75,7 @@ class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties of a delegatedAdminRelationship object.
+     * Read the properties of a delegatedAdminRelationship object. This API is supported in the following national cloud deployments.
      * @param DelegatedAdminRelationshipItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/delegatedadminrelationship-get?view=graph-rest-1.0 Find more info here
@@ -94,7 +94,7 @@ class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a delegatedAdminRelationship object. A relationship can only be updated if it's in the created status.
+     * Update the properties of a delegatedAdminRelationship object. A relationship can only be updated if it's in the created status. This API is supported in the following national cloud deployments.
      * @param DelegatedAdminRelationship $body The request body
      * @param DelegatedAdminRelationshipItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -114,7 +114,7 @@ class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a delegatedAdminRelationship object. A relationship can only be deleted if it's in the 'created' status. 
+     * Delete a delegatedAdminRelationship object. A relationship can only be deleted if it's in the 'created' status.  This API is supported in the following national cloud deployments.
      * @param DelegatedAdminRelationshipItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -131,7 +131,7 @@ class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties of a delegatedAdminRelationship object.
+     * Read the properties of a delegatedAdminRelationship object. This API is supported in the following national cloud deployments.
      * @param DelegatedAdminRelationshipItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -152,7 +152,7 @@ class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a delegatedAdminRelationship object. A relationship can only be updated if it's in the created status.
+     * Update the properties of a delegatedAdminRelationship object. A relationship can only be updated if it's in the created status. This API is supported in the following national cloud deployments.
      * @param DelegatedAdminRelationship $body The request body
      * @param DelegatedAdminRelationshipItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

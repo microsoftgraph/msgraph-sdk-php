@@ -53,7 +53,7 @@ class GroupsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get an externalGroup object.
+     * Get an externalGroup object. This API is supported in the following national cloud deployments.
      * @param GroupsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -71,7 +71,7 @@ class GroupsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new externalGroup object.
+     * Create a new externalGroup object. This API is supported in the following national cloud deployments.
      * @param ExternalGroup $body The request body
      * @param GroupsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -91,7 +91,7 @@ class GroupsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get an externalGroup object.
+     * Get an externalGroup object. This API is supported in the following national cloud deployments.
      * @param GroupsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -112,7 +112,7 @@ class GroupsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new externalGroup object.
+     * Create a new externalGroup object. This API is supported in the following national cloud deployments.
      * @param ExternalGroup $body The request body
      * @param GroupsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

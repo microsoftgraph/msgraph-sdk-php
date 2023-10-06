@@ -52,7 +52,7 @@ class FollowedSitesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List the sites that have been followed by the signed in user.
+     * List the sites that have been followed by the signed in user. This API is supported in the following national cloud deployments.
      * @param FollowedSitesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/sites-list-followed?view=graph-rest-1.0 Find more info here
@@ -71,7 +71,7 @@ class FollowedSitesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List the sites that have been followed by the signed in user.
+     * List the sites that have been followed by the signed in user. This API is supported in the following national cloud deployments.
      * @param FollowedSitesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

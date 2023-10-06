@@ -53,7 +53,7 @@ class DefaultPagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Collection of pages with the default content to display in a user flow for a specified language. This collection does not allow any kind of modification.
+     * Collection of pages with the default content to display in a user flow for a specified language. This collection doesn't allow any kind of modification.
      * @param DefaultPagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -90,7 +90,7 @@ class DefaultPagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Collection of pages with the default content to display in a user flow for a specified language. This collection does not allow any kind of modification.
+     * Collection of pages with the default content to display in a user flow for a specified language. This collection doesn't allow any kind of modification.
      * @param DefaultPagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

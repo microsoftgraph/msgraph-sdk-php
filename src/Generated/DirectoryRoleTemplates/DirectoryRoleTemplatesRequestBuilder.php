@@ -85,7 +85,7 @@ class DirectoryRoleTemplatesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of directoryRoleTemplate objects.
+     * Retrieve a list of directoryRoleTemplate objects. This API is supported in the following national cloud deployments.
      * @param DirectoryRoleTemplatesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/directoryroletemplate-list?view=graph-rest-1.0 Find more info here
@@ -123,7 +123,7 @@ class DirectoryRoleTemplatesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of directoryRoleTemplate objects.
+     * Retrieve a list of directoryRoleTemplate objects. This API is supported in the following national cloud deployments.
      * @param DirectoryRoleTemplatesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

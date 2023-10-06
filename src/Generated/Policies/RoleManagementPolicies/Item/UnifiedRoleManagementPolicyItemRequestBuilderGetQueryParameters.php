@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Policies\RoleManagementPolicies\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the details of a role management policy.
+ * Retrieve the details of a role management policy. This API is supported in the following national cloud deployments.
 */
 class UnifiedRoleManagementPolicyItemRequestBuilderGetQueryParameters 
 {

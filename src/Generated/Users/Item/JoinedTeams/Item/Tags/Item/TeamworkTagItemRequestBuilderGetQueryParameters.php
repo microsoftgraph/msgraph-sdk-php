@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Tags\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read the properties and relationships of a tag object.
+ * Read the properties and relationships of a tag object. This API is supported in the following national cloud deployments.
 */
 class TeamworkTagItemRequestBuilderGetQueryParameters 
 {

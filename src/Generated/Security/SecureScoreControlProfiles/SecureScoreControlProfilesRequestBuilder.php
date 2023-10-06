@@ -53,7 +53,7 @@ class SecureScoreControlProfilesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a secureScoreControlProfiles object.
+     * Retrieve the properties and relationships of a secureScoreControlProfiles object. This API is supported in the following national cloud deployments.
      * @param SecureScoreControlProfilesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/security-list-securescorecontrolprofiles?view=graph-rest-1.0 Find more info here
@@ -91,7 +91,7 @@ class SecureScoreControlProfilesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a secureScoreControlProfiles object.
+     * Retrieve the properties and relationships of a secureScoreControlProfiles object. This API is supported in the following national cloud deployments.
      * @param SecureScoreControlProfilesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

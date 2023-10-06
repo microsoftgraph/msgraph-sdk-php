@@ -50,7 +50,7 @@ class AssignedToTaskBoardFormatRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a plannerAssignedToTaskBoardTaskFormat object.
+     * Retrieve the properties and relationships of a plannerAssignedToTaskBoardTaskFormat object. This API is supported in the following national cloud deployments.
      * @param AssignedToTaskBoardFormatRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/plannerassignedtotaskboardtaskformat-get?view=graph-rest-1.0 Find more info here
@@ -106,7 +106,7 @@ class AssignedToTaskBoardFormatRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a plannerAssignedToTaskBoardTaskFormat object.
+     * Retrieve the properties and relationships of a plannerAssignedToTaskBoardTaskFormat object. This API is supported in the following national cloud deployments.
      * @param AssignedToTaskBoardFormatRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

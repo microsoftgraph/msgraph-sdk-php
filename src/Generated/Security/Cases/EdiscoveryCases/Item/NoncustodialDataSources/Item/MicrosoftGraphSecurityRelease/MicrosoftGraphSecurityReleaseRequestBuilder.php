@@ -31,7 +31,7 @@ class MicrosoftGraphSecurityReleaseRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Release the non-custodial data source from the case.
+     * Release the non-custodial data source from the case. This API is supported in the following national cloud deployments.
      * @param MicrosoftGraphSecurityReleaseRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/security-ediscoverynoncustodialdatasource-release?view=graph-rest-1.0 Find more info here
@@ -50,7 +50,7 @@ class MicrosoftGraphSecurityReleaseRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Release the non-custodial data source from the case.
+     * Release the non-custodial data source from the case. This API is supported in the following national cloud deployments.
      * @param MicrosoftGraphSecurityReleaseRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

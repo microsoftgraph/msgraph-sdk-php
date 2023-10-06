@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\GroupSettings;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve a list of tenant-level or group-specific group settings objects.
+ * Retrieve a list of tenant-level or group-specific group settings objects. This API is supported in the following national cloud deployments.
 */
 class GroupSettingsRequestBuilderGetQueryParameters 
 {

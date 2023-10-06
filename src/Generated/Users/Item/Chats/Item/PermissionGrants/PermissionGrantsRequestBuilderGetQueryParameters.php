@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Chats\Item\PermissionGrants;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List all resource-specific permission grants on the chat. This list specifies the Azure AD apps that have access to the chat, along with the corresponding kind of resource-specific access that each app has.
+ * List all resource-specific permission grants on the chat. This list specifies the Azure AD apps that have access to the chat, along with the corresponding kind of resource-specific access that each app has. This API is supported in the following national cloud deployments.
 */
 class PermissionGrantsRequestBuilderGetQueryParameters 
 {

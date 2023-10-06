@@ -66,7 +66,7 @@ class ListItemVersionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the metadata for a specific version of a ListItem.
+     * Retrieve the metadata for a specific version of a ListItem. This API is supported in the following national cloud deployments.
      * @param ListItemVersionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/listitemversion-get?view=graph-rest-1.0 Find more info here
@@ -121,7 +121,7 @@ class ListItemVersionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the metadata for a specific version of a ListItem.
+     * Retrieve the metadata for a specific version of a ListItem. This API is supported in the following national cloud deployments.
      * @param ListItemVersionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -93,7 +93,7 @@ class BookingQuestionAssignment implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the questionId property value. Indicates whether it is mandatory to answer the custom question.
+     * Gets the questionId property value. Indicates whether it's mandatory to answer the custom question.
      * @return string|null
     */
     public function getQuestionId(): ?string {
@@ -148,7 +148,7 @@ class BookingQuestionAssignment implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Sets the questionId property value. Indicates whether it is mandatory to answer the custom question.
+     * Sets the questionId property value. Indicates whether it's mandatory to answer the custom question.
      * @param string|null $value Value to set for the questionId property.
     */
     public function setQuestionId(?string $value): void {

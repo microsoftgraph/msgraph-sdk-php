@@ -69,7 +69,7 @@ class Certification implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the certificationExpirationDateTime property value. The timestamp when the current certification for the application will expire.
+     * Gets the certificationExpirationDateTime property value. The timestamp when the current certification for the application expires.
      * @return DateTime|null
     */
     public function getCertificationExpirationDateTime(): ?DateTime {
@@ -181,7 +181,7 @@ class Certification implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the certificationExpirationDateTime property value. The timestamp when the current certification for the application will expire.
+     * Sets the certificationExpirationDateTime property value. The timestamp when the current certification for the application expires.
      * @param DateTime|null $value Value to set for the certificationExpirationDateTime property.
     */
     public function setCertificationExpirationDateTime(?DateTime $value): void {

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\EscapedPrint\Shares;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve a list of printerShares.
+ * Retrieve a list of printerShares. This API is supported in the following national cloud deployments.
 */
 class SharesRequestBuilderGetQueryParameters 
 {

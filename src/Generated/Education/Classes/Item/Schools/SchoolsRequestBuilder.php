@@ -52,7 +52,7 @@ class SchoolsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of schools in which the class is taught.
+     * Retrieve a list of schools in which the class is taught. This API is supported in the following national cloud deployments.
      * @param SchoolsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/educationclass-list-schools?view=graph-rest-1.0 Find more info here
@@ -71,7 +71,7 @@ class SchoolsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of schools in which the class is taught.
+     * Retrieve a list of schools in which the class is taught. This API is supported in the following national cloud deployments.
      * @param SchoolsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

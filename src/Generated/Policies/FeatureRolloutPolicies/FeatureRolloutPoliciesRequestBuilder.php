@@ -53,7 +53,7 @@ class FeatureRolloutPoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of featureRolloutPolicy objects.
+     * Retrieve a list of featureRolloutPolicy objects. This API is supported in the following national cloud deployments.
      * @param FeatureRolloutPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/featurerolloutpolicies-list?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class FeatureRolloutPoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new featureRolloutPolicy object.
+     * Create a new featureRolloutPolicy object. This API is supported in the following national cloud deployments.
      * @param FeatureRolloutPolicy $body The request body
      * @param FeatureRolloutPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class FeatureRolloutPoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of featureRolloutPolicy objects.
+     * Retrieve a list of featureRolloutPolicy objects. This API is supported in the following national cloud deployments.
      * @param FeatureRolloutPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class FeatureRolloutPoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new featureRolloutPolicy object.
+     * Create a new featureRolloutPolicy object. This API is supported in the following national cloud deployments.
      * @param FeatureRolloutPolicy $body The request body
      * @param FeatureRolloutPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

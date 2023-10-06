@@ -32,7 +32,7 @@ class InviteRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invite participants to the active call. For more information about how to handle operations, see commsOperation.
+     * Invite participants to the active call. For more information about how to handle operations, see commsOperation. This API is supported in the following national cloud deployments.
      * @param InvitePostRequestBody $body The request body
      * @param InviteRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -52,7 +52,7 @@ class InviteRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invite participants to the active call. For more information about how to handle operations, see commsOperation.
+     * Invite participants to the active call. For more information about how to handle operations, see commsOperation. This API is supported in the following national cloud deployments.
      * @param InvitePostRequestBody $body The request body
      * @param InviteRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

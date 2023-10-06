@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Calendars;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get all the user's calendars (/calendars navigation property), get the calendars from the default calendar group or from a specific calendar group. 
+ * Get all the user's calendars (/calendars navigation property), get the calendars from the default calendar group or from a specific calendar group.  This API is supported in the following national cloud deployments.
 */
 class CalendarsRequestBuilderGetQueryParameters 
 {

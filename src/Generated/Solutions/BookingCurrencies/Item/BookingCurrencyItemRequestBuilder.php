@@ -50,7 +50,7 @@ class BookingCurrencyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the properties of a bookingCurrency object that is available to a Microsoft Bookings business. Use the id property, which is the currency code, to specify the currency.
+     * Get the properties of a bookingCurrency object that is available to a Microsoft Bookings business. Use the id property, which is the currency code, to specify the currency. This API is supported in the following national cloud deployments.
      * @param BookingCurrencyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/bookingcurrency-get?view=graph-rest-1.0 Find more info here
@@ -105,7 +105,7 @@ class BookingCurrencyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the properties of a bookingCurrency object that is available to a Microsoft Bookings business. Use the id property, which is the currency code, to specify the currency.
+     * Get the properties of a bookingCurrency object that is available to a Microsoft Bookings business. Use the id property, which is the currency code, to specify the currency. This API is supported in the following national cloud deployments.
      * @param BookingCurrencyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

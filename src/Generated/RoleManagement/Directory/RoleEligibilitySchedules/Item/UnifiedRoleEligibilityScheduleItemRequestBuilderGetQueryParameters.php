@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\RoleManagement\Directory\RoleEligibilitySche
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the schedule for a role eligibility operation.
+ * Retrieve the schedule for a role eligibility operation. This API is supported in the following national cloud deployments.
 */
 class UnifiedRoleEligibilityScheduleItemRequestBuilderGetQueryParameters 
 {

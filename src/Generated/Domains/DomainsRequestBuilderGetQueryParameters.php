@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Domains;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve a list of domain objects.
+ * Retrieve a list of domain objects. This API is supported in the following national cloud deployments.
 */
 class DomainsRequestBuilderGetQueryParameters 
 {

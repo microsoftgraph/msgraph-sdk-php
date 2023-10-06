@@ -53,7 +53,7 @@ class InstalledAppsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List all app installations within a chat.
+     * List all app installations within a chat. This API is supported in the following national cloud deployments.
      * @param InstalledAppsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/chat-list-installedapps?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class InstalledAppsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Install a teamsApp to the specified chat.
+     * Install a teamsApp to the specified chat. This API is supported in the following national cloud deployments.
      * @param TeamsAppInstallation $body The request body
      * @param InstalledAppsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class InstalledAppsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List all app installations within a chat.
+     * List all app installations within a chat. This API is supported in the following national cloud deployments.
      * @param InstalledAppsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class InstalledAppsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Install a teamsApp to the specified chat.
+     * Install a teamsApp to the specified chat. This API is supported in the following national cloud deployments.
      * @param TeamsAppInstallation $body The request body
      * @param InstalledAppsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

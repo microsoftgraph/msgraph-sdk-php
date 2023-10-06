@@ -50,7 +50,7 @@ class SecureScoreItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a secureScore object.
+     * Retrieve the properties and relationships of a secureScore object. This API is supported in the following national cloud deployments.
      * @param SecureScoreItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/securescore-get?view=graph-rest-1.0 Find more info here
@@ -105,7 +105,7 @@ class SecureScoreItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a secureScore object.
+     * Retrieve the properties and relationships of a secureScore object. This API is supported in the following national cloud deployments.
      * @param SecureScoreItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

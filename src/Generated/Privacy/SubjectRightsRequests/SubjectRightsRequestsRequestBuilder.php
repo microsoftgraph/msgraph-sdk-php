@@ -53,7 +53,7 @@ class SubjectRightsRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of subjectRightsRequest objects and their properties.
+     * Get a list of subjectRightsRequest objects and their properties. This API is supported in the following national cloud deployments.
      * @param SubjectRightsRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/subjectrightsrequest-list?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class SubjectRightsRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new subjectRightsRequest object.
+     * Create a new subjectRightsRequest object. This API is supported in the following national cloud deployments.
      * @param SubjectRightsRequest $body The request body
      * @param SubjectRightsRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class SubjectRightsRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of subjectRightsRequest objects and their properties.
+     * Get a list of subjectRightsRequest objects and their properties. This API is supported in the following national cloud deployments.
      * @param SubjectRightsRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class SubjectRightsRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new subjectRightsRequest object.
+     * Create a new subjectRightsRequest object. This API is supported in the following national cloud deployments.
      * @param SubjectRightsRequest $body The request body
      * @param SubjectRightsRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Sites\Item\Lists\Item\Items\Item\DocumentSet
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a list of the versions of a document set item in a list.
+ * Get a list of the versions of a document set item in a list. This API is supported in the following national cloud deployments.
 */
 class DocumentSetVersionsRequestBuilderGetQueryParameters 
 {

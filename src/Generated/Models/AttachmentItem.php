@@ -68,7 +68,7 @@ class AttachmentItem implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the contentId property value. The CID or Content-Id of the attachment for referencing in case of in-line attachments using <img src='cid:contentId'> tag in HTML messages. Optional.
+     * Gets the contentId property value. The CID or Content-Id of the attachment for referencing for the in-line attachments using the <img src='cid:contentId'> tag in HTML messages. Optional.
      * @return string|null
     */
     public function getContentId(): ?string {
@@ -121,7 +121,7 @@ class AttachmentItem implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the name property value. The display name of the attachment. This can be a descriptive string and does not have to be the actual file name. Required.
+     * Gets the name property value. The display name of the attachment. This can be a descriptive string and doesn't have to be the actual file name. Required.
      * @return string|null
     */
     public function getName(): ?string {
@@ -196,7 +196,7 @@ class AttachmentItem implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the contentId property value. The CID or Content-Id of the attachment for referencing in case of in-line attachments using <img src='cid:contentId'> tag in HTML messages. Optional.
+     * Sets the contentId property value. The CID or Content-Id of the attachment for referencing for the in-line attachments using the <img src='cid:contentId'> tag in HTML messages. Optional.
      * @param string|null $value Value to set for the contentId property.
     */
     public function setContentId(?string $value): void {
@@ -220,7 +220,7 @@ class AttachmentItem implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the name property value. The display name of the attachment. This can be a descriptive string and does not have to be the actual file name. Required.
+     * Sets the name property value. The display name of the attachment. This can be a descriptive string and doesn't have to be the actual file name. Required.
      * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {

@@ -36,7 +36,7 @@ class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel impleme
     }
 
     /**
-     * Gets the createdBy property value. Identity of the user, device, and application which created the item. Read-only.
+     * Gets the createdBy property value. Identity of the user, device, and application that created the item. Read-only.
      * @return IdentitySet|null
     */
     public function getCreatedBy(): ?IdentitySet {
@@ -74,7 +74,7 @@ class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel impleme
     }
 
     /**
-     * Gets the lastModifiedBy property value. Identity of the user, device, and application which created the item. Read-only.
+     * Gets the lastModifiedBy property value. Identity of the user, device, and application that created the item. Read-only.
      * @return IdentitySet|null
     */
     public function getLastModifiedBy(): ?IdentitySet {
@@ -110,7 +110,7 @@ class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel impleme
     }
 
     /**
-     * Sets the createdBy property value. Identity of the user, device, and application which created the item. Read-only.
+     * Sets the createdBy property value. Identity of the user, device, and application that created the item. Read-only.
      * @param IdentitySet|null $value Value to set for the createdBy property.
     */
     public function setCreatedBy(?IdentitySet $value): void {
@@ -126,7 +126,7 @@ class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel impleme
     }
 
     /**
-     * Sets the lastModifiedBy property value. Identity of the user, device, and application which created the item. Read-only.
+     * Sets the lastModifiedBy property value. Identity of the user, device, and application that created the item. Read-only.
      * @param IdentitySet|null $value Value to set for the lastModifiedBy property.
     */
     public function setLastModifiedBy(?IdentitySet $value): void {

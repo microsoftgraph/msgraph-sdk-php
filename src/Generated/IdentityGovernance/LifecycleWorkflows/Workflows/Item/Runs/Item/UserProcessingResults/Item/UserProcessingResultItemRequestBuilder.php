@@ -48,7 +48,7 @@ class UserProcessingResultItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the user processing result of a user processing result of a run.
+     * Get the user processing result of a user processing result of a run. This API is supported in the following national cloud deployments.
      * @param UserProcessingResultItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/identitygovernance-userprocessingresult-get?view=graph-rest-1.0 Find more info here
@@ -67,7 +67,7 @@ class UserProcessingResultItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the user processing result of a user processing result of a run.
+     * Get the user processing result of a user processing result of a run. This API is supported in the following national cloud deployments.
      * @param UserProcessingResultItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

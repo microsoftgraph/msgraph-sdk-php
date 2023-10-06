@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Applications;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the list of applications in this organization.
+ * Get the list of applications in this organization. This API is supported in the following national cloud deployments.
 */
 class ApplicationsRequestBuilderGetQueryParameters 
 {

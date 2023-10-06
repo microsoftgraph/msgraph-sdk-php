@@ -48,7 +48,7 @@ class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Remove a accessPackageResourceRoleScope from an accessPackage list of resource role scopes.
+     * Remove a accessPackageResourceRoleScope from an accessPackage list of resource role scopes. This API is supported in the following national cloud deployments.
      * @param AccessPackageResourceRoleScopeItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/accesspackage-delete-resourcerolescopes?view=graph-rest-1.0 Find more info here
@@ -104,7 +104,7 @@ class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Remove a accessPackageResourceRoleScope from an accessPackage list of resource role scopes.
+     * Remove a accessPackageResourceRoleScope from an accessPackage list of resource role scopes. This API is supported in the following national cloud deployments.
      * @param AccessPackageResourceRoleScopeItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

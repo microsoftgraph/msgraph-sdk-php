@@ -31,7 +31,7 @@ class CloseSessionRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Use this API to close an existing workbook session.
+     * Use this API to close an existing workbook session. This API is supported in the following national cloud deployments.
      * @param CloseSessionRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/workbook-closesession?view=graph-rest-1.0 Find more info here
@@ -50,7 +50,7 @@ class CloseSessionRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Use this API to close an existing workbook session.
+     * Use this API to close an existing workbook session. This API is supported in the following national cloud deployments.
      * @param CloseSessionRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

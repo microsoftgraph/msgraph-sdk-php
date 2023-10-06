@@ -32,7 +32,7 @@ class MessageRuleItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete the specified messageRule object.
+     * Delete the specified messageRule object. This API is supported in the following national cloud deployments.
      * @param MessageRuleItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/messagerule-delete?view=graph-rest-1.0 Find more info here
@@ -51,7 +51,7 @@ class MessageRuleItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the properties and relationships of a messageRule object.
+     * Get the properties and relationships of a messageRule object. This API is supported in the following national cloud deployments.
      * @param MessageRuleItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/messagerule-get?view=graph-rest-1.0 Find more info here
@@ -70,7 +70,7 @@ class MessageRuleItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Change writable properties on a messageRule object and save the changes.
+     * Change writable properties on a messageRule object and save the changes. This API is supported in the following national cloud deployments.
      * @param MessageRule $body The request body
      * @param MessageRuleItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -90,7 +90,7 @@ class MessageRuleItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete the specified messageRule object.
+     * Delete the specified messageRule object. This API is supported in the following national cloud deployments.
      * @param MessageRuleItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -107,7 +107,7 @@ class MessageRuleItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the properties and relationships of a messageRule object.
+     * Get the properties and relationships of a messageRule object. This API is supported in the following national cloud deployments.
      * @param MessageRuleItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -128,7 +128,7 @@ class MessageRuleItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Change writable properties on a messageRule object and save the changes.
+     * Change writable properties on a messageRule object and save the changes. This API is supported in the following national cloud deployments.
      * @param MessageRule $body The request body
      * @param MessageRuleItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

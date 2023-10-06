@@ -63,7 +63,7 @@ class StagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the stages in a multi-stage access review instance.
+     * Retrieve the stages in a multi-stage access review instance. This API is supported in the following national cloud deployments.
      * @param StagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/accessreviewinstance-list-stages?view=graph-rest-1.0 Find more info here
@@ -101,7 +101,7 @@ class StagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the stages in a multi-stage access review instance.
+     * Retrieve the stages in a multi-stage access review instance. This API is supported in the following national cloud deployments.
      * @param StagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

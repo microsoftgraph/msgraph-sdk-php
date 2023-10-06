@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve a list of table objects.
+ * Retrieve a list of table objects. This API is supported in the following national cloud deployments.
 */
 class TablesRequestBuilderGetQueryParameters 
 {

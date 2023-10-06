@@ -40,7 +40,7 @@ class FilesFolderRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the metadata for the location where the files of a channel are stored. 
+     * Get the metadata for the location where the files of a channel are stored.  This API is supported in the following national cloud deployments.
      * @param FilesFolderRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/channel-get-filesfolder?view=graph-rest-1.0 Find more info here
@@ -59,7 +59,7 @@ class FilesFolderRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the metadata for the location where the files of a channel are stored. 
+     * Get the metadata for the location where the files of a channel are stored.  This API is supported in the following national cloud deployments.
      * @param FilesFolderRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

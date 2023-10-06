@@ -36,7 +36,7 @@ class AllowedValue extends Entity implements Parsable
     }
 
     /**
-     * Gets the isActive property value. Indicates whether the predefined value is active or deactivated. If set to false, this predefined value cannot be assigned to any additional supported directory objects.
+     * Gets the isActive property value. Indicates whether the predefined value is active or deactivated. If set to false, this predefined value can't be assigned to any other supported directory objects.
      * @return bool|null
     */
     public function getIsActive(): ?bool {
@@ -57,7 +57,7 @@ class AllowedValue extends Entity implements Parsable
     }
 
     /**
-     * Sets the isActive property value. Indicates whether the predefined value is active or deactivated. If set to false, this predefined value cannot be assigned to any additional supported directory objects.
+     * Sets the isActive property value. Indicates whether the predefined value is active or deactivated. If set to false, this predefined value can't be assigned to any other supported directory objects.
      * @param bool|null $value Value to set for the isActive property.
     */
     public function setIsActive(?bool $value): void {

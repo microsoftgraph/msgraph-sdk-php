@@ -120,7 +120,7 @@ class EventItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an event object.
+     * Delete an event object. This API is supported in the following national cloud deployments.
      * @param EventItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/group-delete-event?view=graph-rest-1.0 Find more info here
@@ -139,7 +139,7 @@ class EventItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get an event object.
+     * Get an event object. This API is supported in the following national cloud deployments.
      * @param EventItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/group-get-event?view=graph-rest-1.0 Find more info here
@@ -177,7 +177,7 @@ class EventItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an event object.
+     * Delete an event object. This API is supported in the following national cloud deployments.
      * @param EventItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -194,7 +194,7 @@ class EventItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get an event object.
+     * Get an event object. This API is supported in the following national cloud deployments.
      * @param EventItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

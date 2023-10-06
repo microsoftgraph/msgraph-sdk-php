@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Education\Classes\Item\Schools;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve a list of schools in which the class is taught.
+ * Retrieve a list of schools in which the class is taught. This API is supported in the following national cloud deployments.
 */
 class SchoolsRequestBuilderGetQueryParameters 
 {

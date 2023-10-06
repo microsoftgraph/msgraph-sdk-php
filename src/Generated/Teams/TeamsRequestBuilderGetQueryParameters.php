@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Teams;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List all teams in an organization.
+ * List all teams in an organization. This API is supported in the following national cloud deployments.
 */
 class TeamsRequestBuilderGetQueryParameters 
 {

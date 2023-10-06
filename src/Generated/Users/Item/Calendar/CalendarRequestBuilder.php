@@ -74,7 +74,7 @@ class CalendarRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the properties and relationships of a calendar object. The calendar can be one for a user, or the default calendar of a Microsoft 365 group. There are two scenarios where an app can get another user's calendar:
+     * Get the properties and relationships of a calendar object. The calendar can be one for a user, or the default calendar of a Microsoft 365 group. There are two scenarios where an app can get another user's calendar: This API is supported in the following national cloud deployments.
      * @param CalendarRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/calendar-get?view=graph-rest-1.0 Find more info here
@@ -93,7 +93,7 @@ class CalendarRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a calendar object. The calendar can be one for a user, or the default calendar of a Microsoft 365 group.
+     * Update the properties of a calendar object. The calendar can be one for a user, or the default calendar of a Microsoft 365 group. This API is supported in the following national cloud deployments.
      * @param Calendar $body The request body
      * @param CalendarRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -113,7 +113,7 @@ class CalendarRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the properties and relationships of a calendar object. The calendar can be one for a user, or the default calendar of a Microsoft 365 group. There are two scenarios where an app can get another user's calendar:
+     * Get the properties and relationships of a calendar object. The calendar can be one for a user, or the default calendar of a Microsoft 365 group. There are two scenarios where an app can get another user's calendar: This API is supported in the following national cloud deployments.
      * @param CalendarRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -134,7 +134,7 @@ class CalendarRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a calendar object. The calendar can be one for a user, or the default calendar of a Microsoft 365 group.
+     * Update the properties of a calendar object. The calendar can be one for a user, or the default calendar of a Microsoft 365 group. This API is supported in the following national cloud deployments.
      * @param Calendar $body The request body
      * @param CalendarRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

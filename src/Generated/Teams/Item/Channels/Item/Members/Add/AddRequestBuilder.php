@@ -31,7 +31,7 @@ class AddRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Add multiple members in a single request to a team. The response provides details about which memberships could and couldn't be created.
+     * Add multiple members in a single request to a team. The response provides details about which memberships could and couldn't be created. This API is supported in the following national cloud deployments.
      * @param AddPostRequestBody $body The request body
      * @param AddRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -44,14 +44,14 @@ class AddRequestBuilder extends BaseRequestBuilder
                     '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
                     '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
             ];
-            return $this->requestAdapter->sendAsync($requestInfo, [AddResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+            return $this->requestAdapter->sendAsync($requestInfo, [AddPostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
     }
 
     /**
-     * Add multiple members in a single request to a team. The response provides details about which memberships could and couldn't be created.
+     * Add multiple members in a single request to a team. The response provides details about which memberships could and couldn't be created. This API is supported in the following national cloud deployments.
      * @param AddPostRequestBody $body The request body
      * @param AddRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

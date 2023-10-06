@@ -32,7 +32,7 @@ class CopyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Copy a mailfolder and its contents to another mailfolder.
+     * Copy a mailfolder and its contents to another mailfolder. This API is supported in the following national cloud deployments.
      * @param CopyPostRequestBody $body The request body
      * @param CopyRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -52,7 +52,7 @@ class CopyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Copy a mailfolder and its contents to another mailfolder.
+     * Copy a mailfolder and its contents to another mailfolder. This API is supported in the following national cloud deployments.
      * @param CopyPostRequestBody $body The request body
      * @param CopyRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

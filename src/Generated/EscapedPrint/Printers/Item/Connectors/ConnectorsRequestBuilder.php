@@ -52,7 +52,7 @@ class ConnectorsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of printConnectors associated with the printer.
+     * Retrieve a list of printConnectors associated with the printer. This API is supported in the following national cloud deployments.
      * @param ConnectorsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/printer-list-connectors?view=graph-rest-1.0 Find more info here
@@ -71,7 +71,7 @@ class ConnectorsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of printConnectors associated with the printer.
+     * Retrieve a list of printConnectors associated with the printer. This API is supported in the following national cloud deployments.
      * @param ConnectorsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

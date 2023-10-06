@@ -52,7 +52,7 @@ class IndicatorsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of articleIndicator objects that represent indicators of threat or compromise related to the contents of an article.
+     * Get a list of articleIndicator objects that represent indicators of threat or compromise related to the contents of an article. This API is supported in the following national cloud deployments.
      * @param IndicatorsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/security-article-list-indicators?view=graph-rest-1.0 Find more info here
@@ -71,7 +71,7 @@ class IndicatorsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of articleIndicator objects that represent indicators of threat or compromise related to the contents of an article.
+     * Get a list of articleIndicator objects that represent indicators of threat or compromise related to the contents of an article. This API is supported in the following national cloud deployments.
      * @param IndicatorsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

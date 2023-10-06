@@ -31,7 +31,7 @@ class UndoSoftDeleteRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Undo soft deletion of a single chatMessage or a chat message reply in a channel or a chat.
+     * Undo soft deletion of a single chatMessage or a chat message reply in a channel or a chat. This API is supported in the following national cloud deployments.
      * @param UndoSoftDeleteRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/chatmessage-undosoftdelete?view=graph-rest-1.0 Find more info here
@@ -50,7 +50,7 @@ class UndoSoftDeleteRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Undo soft deletion of a single chatMessage or a chat message reply in a channel or a chat.
+     * Undo soft deletion of a single chatMessage or a chat message reply in a channel or a chat. This API is supported in the following national cloud deployments.
      * @param UndoSoftDeleteRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

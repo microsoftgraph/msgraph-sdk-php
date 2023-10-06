@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Identity\ApiConnectors;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read the properties of an identityApiConnector object.
+ * Read the properties of an identityApiConnector object. This API is supported in the following national cloud deployments.
 */
 class ApiConnectorsRequestBuilderGetQueryParameters 
 {

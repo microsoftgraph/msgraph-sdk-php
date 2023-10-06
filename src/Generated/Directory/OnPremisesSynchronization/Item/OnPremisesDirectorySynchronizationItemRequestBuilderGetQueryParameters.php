@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Directory\OnPremisesSynchronization\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read the properties and relationships of an onPremisesDirectorySynchronization object.
+ * Read the properties and relationships of an onPremisesDirectorySynchronization object. This API is supported in the following national cloud deployments.
 */
 class OnPremisesDirectorySynchronizationItemRequestBuilderGetQueryParameters 
 {

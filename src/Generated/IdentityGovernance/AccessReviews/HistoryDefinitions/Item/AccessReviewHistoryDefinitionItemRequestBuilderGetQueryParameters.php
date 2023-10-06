@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\HistoryDefi
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve an accessReviewHistoryDefinition object by its identifier. All the properties of the access review history definition object are returned. If the definition is 30 days or older, a 404 Not Found error is returned.
+ * Retrieve an accessReviewHistoryDefinition object by its identifier. All the properties of the access review history definition object are returned. If the definition is 30 days or older, a 404 Not Found error is returned. This API is supported in the following national cloud deployments.
 */
 class AccessReviewHistoryDefinitionItemRequestBuilderGetQueryParameters 
 {

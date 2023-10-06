@@ -31,7 +31,7 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a user from a school.
+     * Delete a user from a school. This API is supported in the following national cloud deployments.
      * @param RefRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/educationschool-delete-users?view=graph-rest-1.0 Find more info here
@@ -50,7 +50,7 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a user from a school.
+     * Delete a user from a school. This API is supported in the following national cloud deployments.
      * @param RefRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

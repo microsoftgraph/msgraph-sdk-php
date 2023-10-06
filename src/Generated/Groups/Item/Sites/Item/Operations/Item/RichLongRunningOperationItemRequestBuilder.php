@@ -50,7 +50,7 @@ class RichLongRunningOperationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the status of a rich long-running operation on a site or a list.
+     * Get the status of a rich long-running operation on a site or a list. This API is supported in the following national cloud deployments.
      * @param RichLongRunningOperationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/richlongrunningoperation-get?view=graph-rest-1.0 Find more info here
@@ -105,7 +105,7 @@ class RichLongRunningOperationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the status of a rich long-running operation on a site or a list.
+     * Get the status of a rich long-running operation on a site or a list. This API is supported in the following national cloud deployments.
      * @param RichLongRunningOperationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

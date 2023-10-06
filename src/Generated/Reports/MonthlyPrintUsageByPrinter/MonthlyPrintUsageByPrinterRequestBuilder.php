@@ -53,7 +53,7 @@ class MonthlyPrintUsageByPrinterRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of monthly print usage summaries, grouped by printer.
+     * Retrieve a list of monthly print usage summaries, grouped by printer. This API is supported in the following national cloud deployments.
      * @param MonthlyPrintUsageByPrinterRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/reportroot-list-monthlyprintusagebyprinter?view=graph-rest-1.0 Find more info here
@@ -91,7 +91,7 @@ class MonthlyPrintUsageByPrinterRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of monthly print usage summaries, grouped by printer.
+     * Retrieve a list of monthly print usage summaries, grouped by printer. This API is supported in the following national cloud deployments.
      * @param MonthlyPrintUsageByPrinterRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -103,7 +103,7 @@ class HostComponent extends Artifact implements Parsable
     }
 
     /**
-     * Gets the version property value. The component version running on the artifact, for example, v8.5. This should not be assumed to be strictly numerical.
+     * Gets the version property value. The component version running on the artifact, for example, v8.5. This shouldn't be assumed to be strictly numerical.
      * @return string|null
     */
     public function getVersion(): ?string {
@@ -169,7 +169,7 @@ class HostComponent extends Artifact implements Parsable
     }
 
     /**
-     * Sets the version property value. The component version running on the artifact, for example, v8.5. This should not be assumed to be strictly numerical.
+     * Sets the version property value. The component version running on the artifact, for example, v8.5. This shouldn't be assumed to be strictly numerical.
      * @param string|null $value Value to set for the version property.
     */
     public function setVersion(?string $value): void {

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Versions\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the metadata for a specific version of a DriveItem.
+ * Retrieve the metadata for a specific version of a DriveItem. This API is supported in the following national cloud deployments.
 */
 class DriveItemVersionItemRequestBuilderGetQueryParameters 
 {

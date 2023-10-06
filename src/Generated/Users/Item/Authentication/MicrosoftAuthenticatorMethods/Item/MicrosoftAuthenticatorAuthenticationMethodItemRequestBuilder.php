@@ -40,7 +40,7 @@ class MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder extends BaseR
     }
 
     /**
-     * Deletes a microsoftAuthenticatorAuthenticationMethod object.
+     * Deletes a microsoftAuthenticatorAuthenticationMethod object. This API is supported in the following national cloud deployments.
      * @param MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/microsoftauthenticatorauthenticationmethod-delete?view=graph-rest-1.0 Find more info here
@@ -59,7 +59,7 @@ class MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder extends BaseR
     }
 
     /**
-     * Read the properties and relationships of a microsoftAuthenticatorAuthenticationMethod object.
+     * Read the properties and relationships of a microsoftAuthenticatorAuthenticationMethod object. This API is supported in the following national cloud deployments.
      * @param MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/microsoftauthenticatorauthenticationmethod-get?view=graph-rest-1.0 Find more info here
@@ -78,7 +78,7 @@ class MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder extends BaseR
     }
 
     /**
-     * Deletes a microsoftAuthenticatorAuthenticationMethod object.
+     * Deletes a microsoftAuthenticatorAuthenticationMethod object. This API is supported in the following national cloud deployments.
      * @param MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -95,7 +95,7 @@ class MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder extends BaseR
     }
 
     /**
-     * Read the properties and relationships of a microsoftAuthenticatorAuthenticationMethod object.
+     * Read the properties and relationships of a microsoftAuthenticatorAuthenticationMethod object. This API is supported in the following national cloud deployments.
      * @param MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

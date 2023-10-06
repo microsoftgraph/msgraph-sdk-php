@@ -61,7 +61,7 @@ class MessagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get all the messages in the specified user's mailbox, or those messages in a specified folder in the mailbox.
+     * Get all the messages in the specified user's mailbox, or those messages in a specified folder in the mailbox. This API is supported in the following national cloud deployments.
      * @param MessagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/mailfolder-list-messages?view=graph-rest-1.0 Find more info here
@@ -80,7 +80,7 @@ class MessagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Use this API to create a new Message in a mailfolder.
+     * Use this API to create a new Message in a mailfolder. This API is supported in the following national cloud deployments.
      * @param Message $body The request body
      * @param MessagesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -100,7 +100,7 @@ class MessagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get all the messages in the specified user's mailbox, or those messages in a specified folder in the mailbox.
+     * Get all the messages in the specified user's mailbox, or those messages in a specified folder in the mailbox. This API is supported in the following national cloud deployments.
      * @param MessagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -121,7 +121,7 @@ class MessagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Use this API to create a new Message in a mailfolder.
+     * Use this API to create a new Message in a mailfolder. This API is supported in the following national cloud deployments.
      * @param Message $body The request body
      * @param MessagesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

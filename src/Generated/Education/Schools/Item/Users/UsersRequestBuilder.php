@@ -60,7 +60,7 @@ class UsersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the educationUser resources associated with an educationSchool.
+     * Get the educationUser resources associated with an educationSchool. This API is supported in the following national cloud deployments.
      * @param UsersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/educationschool-list-users?view=graph-rest-1.0 Find more info here
@@ -79,7 +79,7 @@ class UsersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the educationUser resources associated with an educationSchool.
+     * Get the educationUser resources associated with an educationSchool. This API is supported in the following national cloud deployments.
      * @param UsersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Applications\Item\Owners\Item\Ref;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Remove an owner from an application. As a recommended best practice, apps should have at least two owners.
+ * Remove an owner from an application. As a recommended best practice, apps should have at least two owners. This API is supported in the following national cloud deployments.
 */
 class RefRequestBuilderDeleteQueryParameters 
 {

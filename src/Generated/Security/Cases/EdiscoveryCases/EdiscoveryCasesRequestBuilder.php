@@ -53,7 +53,7 @@ class EdiscoveryCasesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the ediscoveryCase objects and their properties.
+     * Get a list of the ediscoveryCase objects and their properties. This API is supported in the following national cloud deployments.
      * @param EdiscoveryCasesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/security-casesroot-list-ediscoverycases?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class EdiscoveryCasesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new ediscoveryCase object.
+     * Create a new ediscoveryCase object. This API is supported in the following national cloud deployments.
      * @param EdiscoveryCase $body The request body
      * @param EdiscoveryCasesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class EdiscoveryCasesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the ediscoveryCase objects and their properties.
+     * Get a list of the ediscoveryCase objects and their properties. This API is supported in the following national cloud deployments.
      * @param EdiscoveryCasesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class EdiscoveryCasesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new ediscoveryCase object.
+     * Create a new ediscoveryCase object. This API is supported in the following national cloud deployments.
      * @param EdiscoveryCase $body The request body
      * @param EdiscoveryCasesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -31,7 +31,7 @@ class BatchRecordDecisionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Enables reviewers to review all accessReviewInstanceDecisionItem objects in batches by using principalId, resourceId, or neither.
+     * Enables reviewers to review all accessReviewInstanceDecisionItem objects in batches by using principalId, resourceId, or neither. This API is supported in the following national cloud deployments.
      * @param BatchRecordDecisionsPostRequestBody $body The request body
      * @param BatchRecordDecisionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -51,7 +51,7 @@ class BatchRecordDecisionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Enables reviewers to review all accessReviewInstanceDecisionItem objects in batches by using principalId, resourceId, or neither.
+     * Enables reviewers to review all accessReviewInstanceDecisionItem objects in batches by using principalId, resourceId, or neither. This API is supported in the following national cloud deployments.
      * @param BatchRecordDecisionsPostRequestBody $body The request body
      * @param BatchRecordDecisionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

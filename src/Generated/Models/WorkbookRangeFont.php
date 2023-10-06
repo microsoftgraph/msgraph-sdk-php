@@ -37,7 +37,7 @@ class WorkbookRangeFont extends Entity implements Parsable
     }
 
     /**
-     * Gets the color property value. HTML color code representation of the text color. E.g. #FF0000 represents Red.
+     * Gets the color property value. HTML color code representation of the text color. for example #FF0000 represents Red.
      * @return string|null
     */
     public function getColor(): ?string {
@@ -77,7 +77,7 @@ class WorkbookRangeFont extends Entity implements Parsable
     }
 
     /**
-     * Gets the name property value. Font name (e.g. 'Calibri')
+     * Gets the name property value. Font name (for example 'Calibri')
      * @return string|null
     */
     public function getName(): ?string {
@@ -135,7 +135,7 @@ class WorkbookRangeFont extends Entity implements Parsable
     }
 
     /**
-     * Sets the color property value. HTML color code representation of the text color. E.g. #FF0000 represents Red.
+     * Sets the color property value. HTML color code representation of the text color. for example #FF0000 represents Red.
      * @param string|null $value Value to set for the color property.
     */
     public function setColor(?string $value): void {
@@ -151,7 +151,7 @@ class WorkbookRangeFont extends Entity implements Parsable
     }
 
     /**
-     * Sets the name property value. Font name (e.g. 'Calibri')
+     * Sets the name property value. Font name (for example 'Calibri')
      * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {

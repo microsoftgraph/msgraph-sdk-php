@@ -112,7 +112,7 @@ class ContentTypeItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Remove a [content type][contentType] from a [list][] or a [site][].
+     * Remove a content type][contentType] from a [list][] or a [site][]. This API is supported in the following [national cloud deployments.
      * @param ContentTypeItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/contenttype-delete?view=graph-rest-1.0 Find more info here
@@ -131,7 +131,7 @@ class ContentTypeItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the metadata for a [content type][contentType] in a [site][] or a [list][].
+     * Retrieve the metadata for a content type][contentType] in a [site][] or a [list][]. This API is supported in the following [national cloud deployments.
      * @param ContentTypeItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/contenttype-get?view=graph-rest-1.0 Find more info here
@@ -150,7 +150,7 @@ class ContentTypeItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update a [content type][contentType].
+     * Update a content type][contentType]. This API is supported in the following [national cloud deployments.
      * @param ContentType $body The request body
      * @param ContentTypeItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -170,7 +170,7 @@ class ContentTypeItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Remove a [content type][contentType] from a [list][] or a [site][].
+     * Remove a content type][contentType] from a [list][] or a [site][]. This API is supported in the following [national cloud deployments.
      * @param ContentTypeItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -187,7 +187,7 @@ class ContentTypeItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the metadata for a [content type][contentType] in a [site][] or a [list][].
+     * Retrieve the metadata for a content type][contentType] in a [site][] or a [list][]. This API is supported in the following [national cloud deployments.
      * @param ContentTypeItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -208,7 +208,7 @@ class ContentTypeItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update a [content type][contentType].
+     * Update a content type][contentType]. This API is supported in the following [national cloud deployments.
      * @param ContentType $body The request body
      * @param ContentTypeItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

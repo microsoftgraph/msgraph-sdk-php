@@ -31,7 +31,7 @@ class GetPresencesByUserIdRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the presence information for multiple users.
+     * Get the presence information for multiple users. This API is supported in the following national cloud deployments.
      * @param GetPresencesByUserIdPostRequestBody $body The request body
      * @param GetPresencesByUserIdRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -44,14 +44,14 @@ class GetPresencesByUserIdRequestBuilder extends BaseRequestBuilder
                     '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
                     '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
             ];
-            return $this->requestAdapter->sendAsync($requestInfo, [GetPresencesByUserIdResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+            return $this->requestAdapter->sendAsync($requestInfo, [GetPresencesByUserIdPostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
     }
 
     /**
-     * Get the presence information for multiple users.
+     * Get the presence information for multiple users. This API is supported in the following national cloud deployments.
      * @param GetPresencesByUserIdPostRequestBody $body The request body
      * @param GetPresencesByUserIdRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

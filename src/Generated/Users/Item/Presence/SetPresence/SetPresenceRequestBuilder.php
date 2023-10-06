@@ -31,7 +31,7 @@ class SetPresenceRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Set the state of a user's presence session as an application.
+     * Set the state of a user's presence session as an application. This API is supported in the following national cloud deployments.
      * @param SetPresencePostRequestBody $body The request body
      * @param SetPresenceRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -51,7 +51,7 @@ class SetPresenceRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Set the state of a user's presence session as an application.
+     * Set the state of a user's presence session as an application. This API is supported in the following national cloud deployments.
      * @param SetPresencePostRequestBody $body The request body
      * @param SetPresenceRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -68,7 +68,7 @@ class SelfServiceSignUpAuthenticationFlowConfiguration implements AdditionalData
     }
 
     /**
-     * Gets the isEnabled property value. Indicates whether self-service sign-up flow is enabled or disabled. The default value is false. This property is not a key. Required.
+     * Gets the isEnabled property value. Indicates whether self-service sign-up flow is enabled or disabled. The default value is false. This property isn't a key. Required.
      * @return bool|null
     */
     public function getIsEnabled(): ?bool {
@@ -118,7 +118,7 @@ class SelfServiceSignUpAuthenticationFlowConfiguration implements AdditionalData
     }
 
     /**
-     * Sets the isEnabled property value. Indicates whether self-service sign-up flow is enabled or disabled. The default value is false. This property is not a key. Required.
+     * Sets the isEnabled property value. Indicates whether self-service sign-up flow is enabled or disabled. The default value is false. This property isn't a key. Required.
      * @param bool|null $value Value to set for the isEnabled property.
     */
     public function setIsEnabled(?bool $value): void {

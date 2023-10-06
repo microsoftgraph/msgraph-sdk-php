@@ -26,7 +26,7 @@ class IpEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the countryLetterCode property value. The two-letter country code according to ISO 3166 format, for example: US, UK, CA, etc..).
+     * Gets the countryLetterCode property value. The two-letter country code according to ISO 3166 format, for example: US, UK, CA, etc.
      * @return string|null
     */
     public function getCountryLetterCode(): ?string {
@@ -72,7 +72,7 @@ class IpEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the countryLetterCode property value. The two-letter country code according to ISO 3166 format, for example: US, UK, CA, etc..).
+     * Sets the countryLetterCode property value. The two-letter country code according to ISO 3166 format, for example: US, UK, CA, etc.
      * @param string|null $value Value to set for the countryLetterCode property.
     */
     public function setCountryLetterCode(?string $value): void {

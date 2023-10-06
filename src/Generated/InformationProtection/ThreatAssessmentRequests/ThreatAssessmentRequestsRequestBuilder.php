@@ -53,7 +53,7 @@ class ThreatAssessmentRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of threatAssessmentRequest objects. A threat assessment request can be one of the following types:
+     * Retrieve a list of threatAssessmentRequest objects. A threat assessment request can be one of the following types: This API is supported in the following national cloud deployments.
      * @param ThreatAssessmentRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/informationprotection-list-threatassessmentrequests?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class ThreatAssessmentRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new threat assessment request. A threat assessment request can be one of the following types:
+     * Create a new threat assessment request. A threat assessment request can be one of the following types: This API is supported in the following national cloud deployments.
      * @param ThreatAssessmentRequest $body The request body
      * @param ThreatAssessmentRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class ThreatAssessmentRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of threatAssessmentRequest objects. A threat assessment request can be one of the following types:
+     * Retrieve a list of threatAssessmentRequest objects. A threat assessment request can be one of the following types: This API is supported in the following national cloud deployments.
      * @param ThreatAssessmentRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class ThreatAssessmentRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new threat assessment request. A threat assessment request can be one of the following types:
+     * Create a new threat assessment request. A threat assessment request can be one of the following types: This API is supported in the following national cloud deployments.
      * @param ThreatAssessmentRequest $body The request body
      * @param ThreatAssessmentRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

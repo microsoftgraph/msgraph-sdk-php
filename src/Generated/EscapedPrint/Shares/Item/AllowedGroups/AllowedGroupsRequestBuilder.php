@@ -60,7 +60,7 @@ class AllowedGroupsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of groups that have been granted access to submit print jobs to the associated printerShare.
+     * Retrieve a list of groups that have been granted access to submit print jobs to the associated printerShare. This API is supported in the following national cloud deployments.
      * @param AllowedGroupsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/printershare-list-allowedgroups?view=graph-rest-1.0 Find more info here
@@ -79,7 +79,7 @@ class AllowedGroupsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of groups that have been granted access to submit print jobs to the associated printerShare.
+     * Retrieve a list of groups that have been granted access to submit print jobs to the associated printerShare. This API is supported in the following national cloud deployments.
      * @param AllowedGroupsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

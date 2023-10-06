@@ -105,7 +105,7 @@ class DirectoryDefinition extends Entity implements Parsable
     }
 
     /**
-     * Gets the version property value. Read only value that indicates version discovered. null if discovery has not yet occurred.
+     * Gets the version property value. Read only value that indicates version discovered. null if discovery hasn't yet occurred.
      * @return string|null
     */
     public function getVersion(): ?string {
@@ -171,7 +171,7 @@ class DirectoryDefinition extends Entity implements Parsable
     }
 
     /**
-     * Sets the version property value. Read only value that indicates version discovered. null if discovery has not yet occurred.
+     * Sets the version property value. Read only value that indicates version discovered. null if discovery hasn't yet occurred.
      * @param string|null $value Value to set for the version property.
     */
     public function setVersion(?string $value): void {

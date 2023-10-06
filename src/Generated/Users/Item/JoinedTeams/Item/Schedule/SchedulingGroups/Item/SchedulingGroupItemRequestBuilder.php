@@ -32,7 +32,7 @@ class SchedulingGroupItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Mark a schedulingGroup as inactive by setting its isActive property.This method does not remove the schedulingGroup from the schedule. Existing shift instances assigned to the scheduling group remain part of the group.
+     * Mark a schedulingGroup as inactive by setting its isActive property.This method does not remove the schedulingGroup from the schedule. Existing shift instances assigned to the scheduling group remain part of the group. This API is supported in the following national cloud deployments.
      * @param SchedulingGroupItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/schedulinggroup-delete?view=graph-rest-1.0 Find more info here
@@ -51,7 +51,7 @@ class SchedulingGroupItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a schedulingGroup by ID.
+     * Retrieve the properties and relationships of a schedulingGroup by ID. This API is supported in the following national cloud deployments.
      * @param SchedulingGroupItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/schedulinggroup-get?view=graph-rest-1.0 Find more info here
@@ -90,7 +90,7 @@ class SchedulingGroupItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Mark a schedulingGroup as inactive by setting its isActive property.This method does not remove the schedulingGroup from the schedule. Existing shift instances assigned to the scheduling group remain part of the group.
+     * Mark a schedulingGroup as inactive by setting its isActive property.This method does not remove the schedulingGroup from the schedule. Existing shift instances assigned to the scheduling group remain part of the group. This API is supported in the following national cloud deployments.
      * @param SchedulingGroupItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -107,7 +107,7 @@ class SchedulingGroupItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a schedulingGroup by ID.
+     * Retrieve the properties and relationships of a schedulingGroup by ID. This API is supported in the following national cloud deployments.
      * @param SchedulingGroupItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

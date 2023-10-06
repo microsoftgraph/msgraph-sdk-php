@@ -31,7 +31,7 @@ class MicrosoftGraphSecurityUpdateIndexRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Trigger an indexOperation to make a custodian and associated sources searchable.
+     * Trigger an indexOperation to make a custodian and associated sources searchable. This API is supported in the following national cloud deployments.
      * @param MicrosoftGraphSecurityUpdateIndexRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/security-ediscoverycustodian-updateindex?view=graph-rest-1.0 Find more info here
@@ -50,7 +50,7 @@ class MicrosoftGraphSecurityUpdateIndexRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Trigger an indexOperation to make a custodian and associated sources searchable.
+     * Trigger an indexOperation to make a custodian and associated sources searchable. This API is supported in the following national cloud deployments.
      * @param MicrosoftGraphSecurityUpdateIndexRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

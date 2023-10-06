@@ -53,7 +53,7 @@ class SimulationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of attack simulation campaigns for a tenant.
+     * Get a list of attack simulation campaigns for a tenant. This API is supported in the following national cloud deployments.
      * @param SimulationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/attacksimulationroot-list-simulations?view=graph-rest-1.0 Find more info here
@@ -91,7 +91,7 @@ class SimulationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of attack simulation campaigns for a tenant.
+     * Get a list of attack simulation campaigns for a tenant. This API is supported in the following national cloud deployments.
      * @param SimulationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

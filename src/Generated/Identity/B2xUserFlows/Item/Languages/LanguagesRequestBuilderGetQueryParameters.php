@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\Languages;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve a list of languages supported for customization in a B2X user flow.
+ * Retrieve a list of languages supported for customization in a B2X user flow. This API is supported in the following national cloud deployments.
 */
 class LanguagesRequestBuilderGetQueryParameters 
 {

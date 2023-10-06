@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the list of ediscoverySearch resources from an eDiscoveryCase object.
+ * Get the list of ediscoverySearch resources from an eDiscoveryCase object. This API is supported in the following national cloud deployments.
 */
 class SearchesRequestBuilderGetQueryParameters 
 {

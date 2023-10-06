@@ -88,7 +88,7 @@ class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an existing assignment. Only teachers within a class can delete assignments.
+     * Delete an existing assignment. Only teachers within a class can delete assignments. This API is supported in the following national cloud deployments.
      * @param EducationAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/educationassignment-delete?view=graph-rest-1.0 Find more info here
@@ -107,7 +107,7 @@ class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the properties and relationships of an assignment. Only teachers, students, and applications with application permissions can perform this operation. Students can only see assignments assigned to them; teachers and applications with application permissions can see all assignments in a class.
+     * Get the properties and relationships of an assignment. Only teachers, students, and applications with application permissions can perform this operation. Students can only see assignments assigned to them; teachers and applications with application permissions can see all assignments in a class. This API is supported in the following national cloud deployments.
      * @param EducationAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/educationassignment-get?view=graph-rest-1.0 Find more info here
@@ -126,7 +126,7 @@ class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update an educationAssignment object.  Only teachers can perform this action.  Alternatively, request to change the status of an assignment with publish action. Don't use a PATCH operation for this purpose.
+     * Update an educationAssignment object.  Only teachers can perform this action.  Alternatively, request to change the status of an assignment with publish action. Don't use a PATCH operation for this purpose. This API is supported in the following national cloud deployments.
      * @param EducationAssignment $body The request body
      * @param EducationAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -146,7 +146,7 @@ class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an existing assignment. Only teachers within a class can delete assignments.
+     * Delete an existing assignment. Only teachers within a class can delete assignments. This API is supported in the following national cloud deployments.
      * @param EducationAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -163,7 +163,7 @@ class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the properties and relationships of an assignment. Only teachers, students, and applications with application permissions can perform this operation. Students can only see assignments assigned to them; teachers and applications with application permissions can see all assignments in a class.
+     * Get the properties and relationships of an assignment. Only teachers, students, and applications with application permissions can perform this operation. Students can only see assignments assigned to them; teachers and applications with application permissions can see all assignments in a class. This API is supported in the following national cloud deployments.
      * @param EducationAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -184,7 +184,7 @@ class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update an educationAssignment object.  Only teachers can perform this action.  Alternatively, request to change the status of an assignment with publish action. Don't use a PATCH operation for this purpose.
+     * Update an educationAssignment object.  Only teachers can perform this action.  Alternatively, request to change the status of an assignment with publish action. Don't use a PATCH operation for this purpose. This API is supported in the following national cloud deployments.
      * @param EducationAssignment $body The request body
      * @param EducationAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

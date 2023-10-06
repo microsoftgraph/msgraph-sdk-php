@@ -76,7 +76,7 @@ class ActivityHistoryItemItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an existing history item for an existing user activity.
+     * Delete an existing history item for an existing user activity. This API is supported in the following national cloud deployments.
      * @param ActivityHistoryItem $body The request body
      * @param ActivityHistoryItemItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -134,7 +134,7 @@ class ActivityHistoryItemItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an existing history item for an existing user activity.
+     * Delete an existing history item for an existing user activity. This API is supported in the following national cloud deployments.
      * @param ActivityHistoryItem $body The request body
      * @param ActivityHistoryItemItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

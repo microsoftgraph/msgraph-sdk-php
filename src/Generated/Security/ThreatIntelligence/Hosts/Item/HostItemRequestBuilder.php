@@ -7,12 +7,18 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Security\Host;
+use Microsoft\Graph\Generated\Security\ThreatIntelligence\Hosts\Item\ChildHostPairs\ChildHostPairsRequestBuilder;
 use Microsoft\Graph\Generated\Security\ThreatIntelligence\Hosts\Item\Components\ComponentsRequestBuilder;
 use Microsoft\Graph\Generated\Security\ThreatIntelligence\Hosts\Item\Cookies\CookiesRequestBuilder;
+use Microsoft\Graph\Generated\Security\ThreatIntelligence\Hosts\Item\HostPairs\HostPairsRequestBuilder;
+use Microsoft\Graph\Generated\Security\ThreatIntelligence\Hosts\Item\ParentHostPairs\ParentHostPairsRequestBuilder;
 use Microsoft\Graph\Generated\Security\ThreatIntelligence\Hosts\Item\PassiveDns\PassiveDnsRequestBuilder;
 use Microsoft\Graph\Generated\Security\ThreatIntelligence\Hosts\Item\PassiveDnsReverse\PassiveDnsReverseRequestBuilder;
 use Microsoft\Graph\Generated\Security\ThreatIntelligence\Hosts\Item\Reputation\ReputationRequestBuilder;
+use Microsoft\Graph\Generated\Security\ThreatIntelligence\Hosts\Item\SslCertificates\SslCertificatesRequestBuilder;
+use Microsoft\Graph\Generated\Security\ThreatIntelligence\Hosts\Item\Subdomains\SubdomainsRequestBuilder;
 use Microsoft\Graph\Generated\Security\ThreatIntelligence\Hosts\Item\Trackers\TrackersRequestBuilder;
+use Microsoft\Graph\Generated\Security\ThreatIntelligence\Hosts\Item\Whois\WhoisRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -23,6 +29,13 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class HostItemRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to manage the childHostPairs property of the microsoft.graph.security.host entity.
+    */
+    public function childHostPairs(): ChildHostPairsRequestBuilder {
+        return new ChildHostPairsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Provides operations to manage the components property of the microsoft.graph.security.host entity.
     */
@@ -35,6 +48,20 @@ class HostItemRequestBuilder extends BaseRequestBuilder
     */
     public function cookies(): CookiesRequestBuilder {
         return new CookiesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the hostPairs property of the microsoft.graph.security.host entity.
+    */
+    public function hostPairs(): HostPairsRequestBuilder {
+        return new HostPairsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the parentHostPairs property of the microsoft.graph.security.host entity.
+    */
+    public function parentHostPairs(): ParentHostPairsRequestBuilder {
+        return new ParentHostPairsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -59,10 +86,31 @@ class HostItemRequestBuilder extends BaseRequestBuilder
     }
     
     /**
+     * Provides operations to manage the sslCertificates property of the microsoft.graph.security.host entity.
+    */
+    public function sslCertificates(): SslCertificatesRequestBuilder {
+        return new SslCertificatesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the subdomains property of the microsoft.graph.security.host entity.
+    */
+    public function subdomains(): SubdomainsRequestBuilder {
+        return new SubdomainsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to manage the trackers property of the microsoft.graph.security.host entity.
     */
     public function trackers(): TrackersRequestBuilder {
         return new TrackersRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the whois property of the microsoft.graph.security.host entity.
+    */
+    public function whois(): WhoisRequestBuilder {
+        return new WhoisRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -98,7 +146,7 @@ class HostItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a host object. The host resource is the abstract base type that returns an implementation. A host can be of one of the following types:
+     * Read the properties and relationships of a host object. The host resource is the abstract base type that returns an implementation. A host can be of one of the following types: This API is supported in the following national cloud deployments.
      * @param HostItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/security-host-get?view=graph-rest-1.0 Find more info here
@@ -153,7 +201,7 @@ class HostItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a host object. The host resource is the abstract base type that returns an implementation. A host can be of one of the following types:
+     * Read the properties and relationships of a host object. The host resource is the abstract base type that returns an implementation. A host can be of one of the following types: This API is supported in the following national cloud deployments.
      * @param HostItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

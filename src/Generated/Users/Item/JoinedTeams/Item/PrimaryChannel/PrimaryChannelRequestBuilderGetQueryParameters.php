@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the default channel, General, of a team.
+ * Get the default channel, General, of a team. This API is supported in the following national cloud deployments.
 */
 class PrimaryChannelRequestBuilderGetQueryParameters 
 {

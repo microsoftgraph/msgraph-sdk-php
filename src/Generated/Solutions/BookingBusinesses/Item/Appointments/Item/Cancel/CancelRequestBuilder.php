@@ -31,7 +31,7 @@ class CancelRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Cancel the specified bookingAppointment in the specified bookingBusiness and send a message to the involved customer and staff members.
+     * Cancel the specified bookingAppointment in the specified bookingBusiness and send a message to the involved customer and staff members. This API is supported in the following national cloud deployments.
      * @param CancelPostRequestBody $body The request body
      * @param CancelRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -51,7 +51,7 @@ class CancelRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Cancel the specified bookingAppointment in the specified bookingBusiness and send a message to the involved customer and staff members.
+     * Cancel the specified bookingAppointment in the specified bookingBusiness and send a message to the involved customer and staff members. This API is supported in the following national cloud deployments.
      * @param CancelPostRequestBody $body The request body
      * @param CancelRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

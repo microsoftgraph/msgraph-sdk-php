@@ -40,7 +40,7 @@ class ActivityBasedTimeoutPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an activityBasedTimeoutPolicy object.
+     * Delete an activityBasedTimeoutPolicy object. This API is supported in the following national cloud deployments.
      * @param ActivityBasedTimeoutPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/activitybasedtimeoutpolicy-delete?view=graph-rest-1.0 Find more info here
@@ -59,7 +59,7 @@ class ActivityBasedTimeoutPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the properties of an activityBasedTimeoutPolicy object.
+     * Get the properties of an activityBasedTimeoutPolicy object. This API is supported in the following national cloud deployments.
      * @param ActivityBasedTimeoutPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/activitybasedtimeoutpolicy-get?view=graph-rest-1.0 Find more info here
@@ -78,7 +78,7 @@ class ActivityBasedTimeoutPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an activityBasedTimeoutPolicy object.
+     * Update the properties of an activityBasedTimeoutPolicy object. This API is supported in the following national cloud deployments.
      * @param ActivityBasedTimeoutPolicy $body The request body
      * @param ActivityBasedTimeoutPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -98,7 +98,7 @@ class ActivityBasedTimeoutPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an activityBasedTimeoutPolicy object.
+     * Delete an activityBasedTimeoutPolicy object. This API is supported in the following national cloud deployments.
      * @param ActivityBasedTimeoutPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -115,7 +115,7 @@ class ActivityBasedTimeoutPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the properties of an activityBasedTimeoutPolicy object.
+     * Get the properties of an activityBasedTimeoutPolicy object. This API is supported in the following national cloud deployments.
      * @param ActivityBasedTimeoutPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -136,7 +136,7 @@ class ActivityBasedTimeoutPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an activityBasedTimeoutPolicy object.
+     * Update the properties of an activityBasedTimeoutPolicy object. This API is supported in the following national cloud deployments.
      * @param ActivityBasedTimeoutPolicy $body The request body
      * @param ActivityBasedTimeoutPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

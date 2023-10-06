@@ -111,7 +111,7 @@ class ResourceVisualization implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the mediaType property value. The item's media type. Can be used for filtering for a specific type of file based on supported IANA Media Mime Types. Note that not all Media Mime Types are supported.
+     * Gets the mediaType property value. The item's media type. Can be used for filtering for a specific type of file based on supported IANA Media Mime Types. Not all Media Mime Types are supported.
      * @return string|null
     */
     public function getMediaType(): ?string {
@@ -171,7 +171,7 @@ class ResourceVisualization implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the type property value. The item's media type. Can be used for filtering for a specific file based on a specific type. See below for supported types.
+     * Gets the type property value. The item's media type. Can be used for filtering for a specific file based on a specific type. See the section Type property values for supported types.
      * @return string|null
     */
     public function getType(): ?string {
@@ -240,7 +240,7 @@ class ResourceVisualization implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the mediaType property value. The item's media type. Can be used for filtering for a specific type of file based on supported IANA Media Mime Types. Note that not all Media Mime Types are supported.
+     * Sets the mediaType property value. The item's media type. Can be used for filtering for a specific type of file based on supported IANA Media Mime Types. Not all Media Mime Types are supported.
      * @param string|null $value Value to set for the mediaType property.
     */
     public function setMediaType(?string $value): void {
@@ -280,7 +280,7 @@ class ResourceVisualization implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the type property value. The item's media type. Can be used for filtering for a specific file based on a specific type. See below for supported types.
+     * Sets the type property value. The item's media type. Can be used for filtering for a specific file based on a specific type. See the section Type property values for supported types.
      * @param string|null $value Value to set for the type property.
     */
     public function setType(?string $value): void {

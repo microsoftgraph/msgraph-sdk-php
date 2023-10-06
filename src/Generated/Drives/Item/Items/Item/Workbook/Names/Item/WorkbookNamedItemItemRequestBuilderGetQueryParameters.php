@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Names\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties and relationships of nameditem object.
+ * Retrieve the properties and relationships of nameditem object. This API is supported in the following national cloud deployments.
 */
 class WorkbookNamedItemItemRequestBuilderGetQueryParameters 
 {

@@ -53,7 +53,7 @@ class BucketsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of plannerBucket objects contained by a plannerPlan object.
+     * Retrieve a list of plannerBucket objects contained by a plannerPlan object. This API is supported in the following national cloud deployments.
      * @param BucketsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/plannerplan-list-buckets?view=graph-rest-1.0 Find more info here
@@ -91,7 +91,7 @@ class BucketsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of plannerBucket objects contained by a plannerPlan object.
+     * Retrieve a list of plannerBucket objects contained by a plannerPlan object. This API is supported in the following national cloud deployments.
      * @param BucketsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

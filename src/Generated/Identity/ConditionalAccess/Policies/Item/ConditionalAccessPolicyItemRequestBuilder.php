@@ -32,7 +32,7 @@ class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a conditionalAccessPolicy object.
+     * Delete a conditionalAccessPolicy object. This API is supported in the following national cloud deployments.
      * @param ConditionalAccessPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/conditionalaccesspolicy-delete?view=graph-rest-1.0 Find more info here
@@ -51,7 +51,7 @@ class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a conditionalAccessPolicy object.
+     * Retrieve the properties and relationships of a conditionalAccessPolicy object. This API is supported in the following national cloud deployments.
      * @param ConditionalAccessPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/conditionalaccesspolicy-get?view=graph-rest-1.0 Find more info here
@@ -70,7 +70,7 @@ class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a conditionalAccessPolicy object.
+     * Update the properties of a conditionalAccessPolicy object. This API is supported in the following national cloud deployments.
      * @param ConditionalAccessPolicy $body The request body
      * @param ConditionalAccessPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -90,7 +90,7 @@ class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a conditionalAccessPolicy object.
+     * Delete a conditionalAccessPolicy object. This API is supported in the following national cloud deployments.
      * @param ConditionalAccessPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -107,7 +107,7 @@ class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a conditionalAccessPolicy object.
+     * Retrieve the properties and relationships of a conditionalAccessPolicy object. This API is supported in the following national cloud deployments.
      * @param ConditionalAccessPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -128,7 +128,7 @@ class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a conditionalAccessPolicy object.
+     * Update the properties of a conditionalAccessPolicy object. This API is supported in the following national cloud deployments.
      * @param ConditionalAccessPolicy $body The request body
      * @param ConditionalAccessPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

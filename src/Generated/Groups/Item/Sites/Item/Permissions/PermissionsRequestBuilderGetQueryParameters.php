@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\Permissions;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the permission resources from the permissions navigation property on a site.
+ * Get the permission resources from the permissions navigation property on a site. This API is supported in the following national cloud deployments.
 */
 class PermissionsRequestBuilderGetQueryParameters 
 {

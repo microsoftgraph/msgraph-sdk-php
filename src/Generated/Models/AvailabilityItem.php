@@ -95,7 +95,7 @@ class AvailabilityItem implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the serviceId property value. Indicates the service ID in case of 1:n appointments. If the appointment is of type 1:n, this field will be present, otherwise, null.
+     * Gets the serviceId property value. Indicates the service ID for 1:n appointments. If the appointment is of type 1:n, this field is present, otherwise, null.
      * @return string|null
     */
     public function getServiceId(): ?string {
@@ -176,7 +176,7 @@ class AvailabilityItem implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the serviceId property value. Indicates the service ID in case of 1:n appointments. If the appointment is of type 1:n, this field will be present, otherwise, null.
+     * Sets the serviceId property value. Indicates the service ID for 1:n appointments. If the appointment is of type 1:n, this field is present, otherwise, null.
      * @param string|null $value Value to set for the serviceId property.
     */
     public function setServiceId(?string $value): void {

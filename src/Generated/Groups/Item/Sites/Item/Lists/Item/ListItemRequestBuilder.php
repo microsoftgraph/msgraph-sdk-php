@@ -114,7 +114,7 @@ class ListItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of rich long-running operations associated with a list.
+     * Get a list of rich long-running operations associated with a list. This API is supported in the following national cloud deployments.
      * @param ListItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/list-list-operations?view=graph-rest-1.0 Find more info here
@@ -169,7 +169,7 @@ class ListItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of rich long-running operations associated with a list.
+     * Get a list of rich long-running operations associated with a list. This API is supported in the following national cloud deployments.
      * @param ListItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

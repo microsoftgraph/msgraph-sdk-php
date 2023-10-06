@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\Tasks\Item\Attach
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a list of the taskFileAttachment objects and their properties. The contentBytes property will not be returned in the response. Use the Get attachment API to view the contentBytes.
+ * Get a list of the taskFileAttachment objects and their properties. The contentBytes property will not be returned in the response. Use the Get attachment API to view the contentBytes. This API is supported in the following national cloud deployments.
 */
 class AttachmentsRequestBuilderGetQueryParameters 
 {

@@ -74,7 +74,7 @@ class EdiscoveryReviewSetItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of an ediscoveryReviewSet object.
+     * Read the properties and relationships of an ediscoveryReviewSet object. This API is supported in the following national cloud deployments.
      * @param EdiscoveryReviewSetItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/security-ediscoveryreviewset-get?view=graph-rest-1.0 Find more info here
@@ -129,7 +129,7 @@ class EdiscoveryReviewSetItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of an ediscoveryReviewSet object.
+     * Read the properties and relationships of an ediscoveryReviewSet object. This API is supported in the following national cloud deployments.
      * @param EdiscoveryReviewSetItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\SubscribedSkus\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a specific commercial subscription that an organization has acquired.
+ * Get a specific commercial subscription that an organization has acquired. This API is supported in the following national cloud deployments.
 */
 class SubscribedSkuItemRequestBuilderGetQueryParameters 
 {

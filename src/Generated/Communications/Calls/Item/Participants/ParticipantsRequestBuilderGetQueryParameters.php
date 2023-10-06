@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Communications\Calls\Item\Participants;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve a list of participant objects in the call.
+ * Retrieve a list of participant objects in the call. This API is supported in the following national cloud deployments.
 */
 class ParticipantsRequestBuilderGetQueryParameters 
 {

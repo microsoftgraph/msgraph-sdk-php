@@ -31,7 +31,7 @@ class MarkReadRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Mark a list of serviceUpdateMessages as read for the signed in user.
+     * Mark a list of serviceUpdateMessages as read for the signed in user. This API is supported in the following national cloud deployments.
      * @param MarkReadPostRequestBody $body The request body
      * @param MarkReadRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -44,14 +44,14 @@ class MarkReadRequestBuilder extends BaseRequestBuilder
                     '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
                     '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
             ];
-            return $this->requestAdapter->sendAsync($requestInfo, [MarkReadResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+            return $this->requestAdapter->sendAsync($requestInfo, [MarkReadPostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
     }
 
     /**
-     * Mark a list of serviceUpdateMessages as read for the signed in user.
+     * Mark a list of serviceUpdateMessages as read for the signed in user. This API is supported in the following national cloud deployments.
      * @param MarkReadPostRequestBody $body The request body
      * @param MarkReadRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

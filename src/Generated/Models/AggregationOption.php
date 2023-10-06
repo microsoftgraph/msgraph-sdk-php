@@ -106,7 +106,7 @@ class AggregationOption implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the size property value. The number of searchBucket resources to be returned. This is not required when the range is provided manually in the search request. Optional.
+     * Gets the size property value. The number of searchBucket resources to be returned. This isn't required when the range is provided manually in the search request. Optional.
      * @return int|null
     */
     public function getSize(): ?int {
@@ -170,7 +170,7 @@ class AggregationOption implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the size property value. The number of searchBucket resources to be returned. This is not required when the range is provided manually in the search request. Optional.
+     * Sets the size property value. The number of searchBucket resources to be returned. This isn't required when the range is provided manually in the search request. Optional.
      * @param int|null $value Value to set for the size property.
     */
     public function setSize(?int $value): void {

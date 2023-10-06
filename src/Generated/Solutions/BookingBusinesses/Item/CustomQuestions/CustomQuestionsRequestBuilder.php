@@ -53,7 +53,7 @@ class CustomQuestionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the bookingCustomQuestion resources associated with a bookingBusiness.
+     * Get the bookingCustomQuestion resources associated with a bookingBusiness. This API is supported in the following national cloud deployments.
      * @param CustomQuestionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/bookingbusiness-list-customquestions?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class CustomQuestionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new bookingCustomQuestion object.
+     * Create a new bookingCustomQuestion object. This API is supported in the following national cloud deployments.
      * @param BookingCustomQuestion $body The request body
      * @param CustomQuestionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class CustomQuestionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the bookingCustomQuestion resources associated with a bookingBusiness.
+     * Get the bookingCustomQuestion resources associated with a bookingBusiness. This API is supported in the following national cloud deployments.
      * @param CustomQuestionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class CustomQuestionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new bookingCustomQuestion object.
+     * Create a new bookingCustomQuestion object. This API is supported in the following national cloud deployments.
      * @param BookingCustomQuestion $body The request body
      * @param CustomQuestionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -38,6 +38,7 @@ use Microsoft\Graph\Generated\Groups\Item\Renew\RenewRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\ResetUnseenCount\ResetUnseenCountRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Restore\RestoreRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\RetryServiceProvisioning\RetryServiceProvisioningRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\ServiceProvisioningErrors\ServiceProvisioningErrorsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Settings\SettingsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\SitesRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\SubscribeByMail\SubscribeByMailRequestBuilder;
@@ -291,6 +292,13 @@ class GroupItemRequestBuilder extends BaseRequestBuilder
     }
     
     /**
+     * The serviceProvisioningErrors property
+    */
+    public function serviceProvisioningErrors(): ServiceProvisioningErrorsRequestBuilder {
+        return new ServiceProvisioningErrorsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to manage the settings property of the microsoft.graph.group entity.
     */
     public function settings(): SettingsRequestBuilder {
@@ -368,7 +376,7 @@ class GroupItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete group. When deleted, Microsoft 365 groups are moved to a temporary container and can be restored within 30 days. After that time, they're permanently deleted. This isn't applicable to Security groups and Distribution groups which are permanently deleted immediately. To learn more, see deletedItems.
+     * Delete group. When deleted, Microsoft 365 groups are moved to a temporary container and can be restored within 30 days. After that time, they're permanently deleted. This isn't applicable to Security groups and Distribution groups which are permanently deleted immediately. To learn more, see deletedItems. This API is supported in the following national cloud deployments.
      * @param GroupItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/group-delete?view=graph-rest-1.0 Find more info here
@@ -387,7 +395,7 @@ class GroupItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the properties and relationships of a group object. This operation returns by default only a subset of all the available properties, as noted in the Properties section. To get properties that are not returned by default, specify them in a $select OData query option. The hasMembersWithLicenseErrors and isArchived properties are an exception and are not returned in the $select query.
+     * Get the properties and relationships of a group object. This operation returns by default only a subset of all the available properties, as noted in the Properties section. To get properties that aren't_ returned by default, specify them in a $select OData query option. The hasMembersWithLicenseErrors and isArchived properties are an exception and aren't returned in the $select query. This API is supported in the following national cloud deployments.
      * @param GroupItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/group-get?view=graph-rest-1.0 Find more info here
@@ -406,11 +414,11 @@ class GroupItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a group object.
+     * Add a member to a security or Microsoft 365 group through the members navigation property. The following table shows the types of members that can be added to either security groups or Microsoft 365 groups. This API is supported in the following national cloud deployments.
      * @param Group $body The request body
      * @param GroupItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://learn.microsoft.com/graph/api/group-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/group-post-members?view=graph-rest-1.0 Find more info here
     */
     public function patch(Group $body, ?GroupItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -426,7 +434,7 @@ class GroupItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete group. When deleted, Microsoft 365 groups are moved to a temporary container and can be restored within 30 days. After that time, they're permanently deleted. This isn't applicable to Security groups and Distribution groups which are permanently deleted immediately. To learn more, see deletedItems.
+     * Delete group. When deleted, Microsoft 365 groups are moved to a temporary container and can be restored within 30 days. After that time, they're permanently deleted. This isn't applicable to Security groups and Distribution groups which are permanently deleted immediately. To learn more, see deletedItems. This API is supported in the following national cloud deployments.
      * @param GroupItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -443,7 +451,7 @@ class GroupItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the properties and relationships of a group object. This operation returns by default only a subset of all the available properties, as noted in the Properties section. To get properties that are not returned by default, specify them in a $select OData query option. The hasMembersWithLicenseErrors and isArchived properties are an exception and are not returned in the $select query.
+     * Get the properties and relationships of a group object. This operation returns by default only a subset of all the available properties, as noted in the Properties section. To get properties that aren't_ returned by default, specify them in a $select OData query option. The hasMembersWithLicenseErrors and isArchived properties are an exception and aren't returned in the $select query. This API is supported in the following national cloud deployments.
      * @param GroupItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -464,7 +472,7 @@ class GroupItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a group object.
+     * Add a member to a security or Microsoft 365 group through the members navigation property. The following table shows the types of members that can be added to either security groups or Microsoft 365 groups. This API is supported in the following national cloud deployments.
      * @param Group $body The request body
      * @param GroupItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

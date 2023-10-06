@@ -53,7 +53,7 @@ class ItemsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of an externalItem object.
+     * Read the properties and relationships of an externalItem object. This API is supported in the following national cloud deployments.
      * @param ItemsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -90,7 +90,7 @@ class ItemsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of an externalItem object.
+     * Read the properties and relationships of an externalItem object. This API is supported in the following national cloud deployments.
      * @param ItemsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

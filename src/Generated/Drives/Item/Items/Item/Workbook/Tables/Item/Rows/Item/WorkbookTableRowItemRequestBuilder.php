@@ -40,7 +40,7 @@ class WorkbookTableRowItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes the row from the table.
+     * Deletes the row from the table. This API is supported in the following national cloud deployments.
      * @param WorkbookTableRowItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/tablerow-delete?view=graph-rest-1.0 Find more info here
@@ -59,7 +59,7 @@ class WorkbookTableRowItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of tablerow object.
+     * Retrieve the properties and relationships of tablerow object. This API is supported in the following national cloud deployments.
      * @param WorkbookTableRowItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/tablerow-get?view=graph-rest-1.0 Find more info here
@@ -78,7 +78,7 @@ class WorkbookTableRowItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of tablerow object.
+     * Update the properties of tablerow object. This API is supported in the following national cloud deployments.
      * @param WorkbookTableRow $body The request body
      * @param WorkbookTableRowItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -98,7 +98,7 @@ class WorkbookTableRowItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes the row from the table.
+     * Deletes the row from the table. This API is supported in the following national cloud deployments.
      * @param WorkbookTableRowItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -115,7 +115,7 @@ class WorkbookTableRowItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of tablerow object.
+     * Retrieve the properties and relationships of tablerow object. This API is supported in the following national cloud deployments.
      * @param WorkbookTableRowItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -136,7 +136,7 @@ class WorkbookTableRowItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of tablerow object.
+     * Update the properties of tablerow object. This API is supported in the following national cloud deployments.
      * @param WorkbookTableRow $body The request body
      * @param WorkbookTableRowItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

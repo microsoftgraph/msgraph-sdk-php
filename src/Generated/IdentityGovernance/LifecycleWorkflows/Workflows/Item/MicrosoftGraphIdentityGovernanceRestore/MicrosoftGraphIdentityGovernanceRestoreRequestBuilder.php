@@ -32,7 +32,7 @@ class MicrosoftGraphIdentityGovernanceRestoreRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Restore a workflow that has been deleted. You can only restore a workflow that was deleted within the last 30 days before Azure AD automatically permanently deletes it.
+     * Restore a workflow that has been deleted. You can only restore a workflow that was deleted within the last 30 days before Azure AD automatically permanently deletes it. This API is supported in the following national cloud deployments.
      * @param MicrosoftGraphIdentityGovernanceRestoreRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/identitygovernance-workflow-restore?view=graph-rest-1.0 Find more info here
@@ -51,7 +51,7 @@ class MicrosoftGraphIdentityGovernanceRestoreRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Restore a workflow that has been deleted. You can only restore a workflow that was deleted within the last 30 days before Azure AD automatically permanently deletes it.
+     * Restore a workflow that has been deleted. You can only restore a workflow that was deleted within the last 30 days before Azure AD automatically permanently deletes it. This API is supported in the following national cloud deployments.
      * @param MicrosoftGraphIdentityGovernanceRestoreRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

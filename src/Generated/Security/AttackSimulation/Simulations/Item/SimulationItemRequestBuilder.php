@@ -7,6 +7,9 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Simulation;
+use Microsoft\Graph\Generated\Security\AttackSimulation\Simulations\Item\LandingPage\LandingPageRequestBuilder;
+use Microsoft\Graph\Generated\Security\AttackSimulation\Simulations\Item\LoginPage\LoginPageRequestBuilder;
+use Microsoft\Graph\Generated\Security\AttackSimulation\Simulations\Item\Payload\PayloadRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -17,6 +20,27 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class SimulationItemRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to manage the landingPage property of the microsoft.graph.simulation entity.
+    */
+    public function landingPage(): LandingPageRequestBuilder {
+        return new LandingPageRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the loginPage property of the microsoft.graph.simulation entity.
+    */
+    public function loginPage(): LoginPageRequestBuilder {
+        return new LoginPageRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the payload property of the microsoft.graph.simulation entity.
+    */
+    public function payload(): PayloadRequestBuilder {
+        return new PayloadRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Instantiates a new SimulationItemRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
@@ -50,7 +74,7 @@ class SimulationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get an attack simulation campaign for a tenant.
+     * Get an attack simulation campaign for a tenant. This API is supported in the following national cloud deployments.
      * @param SimulationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/simulation-get?view=graph-rest-1.0 Find more info here
@@ -105,7 +129,7 @@ class SimulationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get an attack simulation campaign for a tenant.
+     * Get an attack simulation campaign for a tenant. This API is supported in the following national cloud deployments.
      * @param SimulationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

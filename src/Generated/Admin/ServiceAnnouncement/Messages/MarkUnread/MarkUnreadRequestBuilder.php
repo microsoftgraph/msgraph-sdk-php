@@ -31,7 +31,7 @@ class MarkUnreadRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Mark a list of serviceUpdateMessages as unread for the signed in user.
+     * Mark a list of serviceUpdateMessages as unread for the signed in user. This API is supported in the following national cloud deployments.
      * @param MarkUnreadPostRequestBody $body The request body
      * @param MarkUnreadRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -44,14 +44,14 @@ class MarkUnreadRequestBuilder extends BaseRequestBuilder
                     '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
                     '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
             ];
-            return $this->requestAdapter->sendAsync($requestInfo, [MarkUnreadResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+            return $this->requestAdapter->sendAsync($requestInfo, [MarkUnreadPostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
     }
 
     /**
-     * Mark a list of serviceUpdateMessages as unread for the signed in user.
+     * Mark a list of serviceUpdateMessages as unread for the signed in user. This API is supported in the following national cloud deployments.
      * @param MarkUnreadPostRequestBody $body The request body
      * @param MarkUnreadRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

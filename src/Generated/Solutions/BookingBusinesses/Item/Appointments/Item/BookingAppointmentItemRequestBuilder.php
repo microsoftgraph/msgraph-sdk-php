@@ -40,7 +40,7 @@ class BookingAppointmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a bookingAppointment in the specified bookingBusiness.
+     * Delete a bookingAppointment in the specified bookingBusiness. This API is supported in the following national cloud deployments.
      * @param BookingAppointmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/bookingappointment-delete?view=graph-rest-1.0 Find more info here
@@ -59,7 +59,7 @@ class BookingAppointmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the properties and relationships of a bookingAppointment object in the specified bookingBusiness. The startDateTime and endDateTime properties are always returned in UTC.
+     * Get the properties and relationships of a bookingAppointment object in the specified bookingBusiness. The startDateTime and endDateTime properties are always returned in UTC. This API is supported in the following national cloud deployments.
      * @param BookingAppointmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/bookingappointment-get?view=graph-rest-1.0 Find more info here
@@ -78,7 +78,7 @@ class BookingAppointmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a bookingAppointment object in the specified bookingBusiness.
+     * Update the properties of a bookingAppointment object in the specified bookingBusiness. This API is supported in the following national cloud deployments.
      * @param BookingAppointment $body The request body
      * @param BookingAppointmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -98,7 +98,7 @@ class BookingAppointmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a bookingAppointment in the specified bookingBusiness.
+     * Delete a bookingAppointment in the specified bookingBusiness. This API is supported in the following national cloud deployments.
      * @param BookingAppointmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -115,7 +115,7 @@ class BookingAppointmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the properties and relationships of a bookingAppointment object in the specified bookingBusiness. The startDateTime and endDateTime properties are always returned in UTC.
+     * Get the properties and relationships of a bookingAppointment object in the specified bookingBusiness. The startDateTime and endDateTime properties are always returned in UTC. This API is supported in the following national cloud deployments.
      * @param BookingAppointmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -136,7 +136,7 @@ class BookingAppointmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a bookingAppointment object in the specified bookingBusiness.
+     * Update the properties of a bookingAppointment object in the specified bookingBusiness. This API is supported in the following national cloud deployments.
      * @param BookingAppointment $body The request body
      * @param BookingAppointmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

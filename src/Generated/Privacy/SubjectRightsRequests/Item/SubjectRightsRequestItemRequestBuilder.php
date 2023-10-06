@@ -98,7 +98,7 @@ class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a subjectRightsRequest object.
+     * Read the properties and relationships of a subjectRightsRequest object. This API is supported in the following national cloud deployments.
      * @param SubjectRightsRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/subjectrightsrequest-get?view=graph-rest-1.0 Find more info here
@@ -117,7 +117,7 @@ class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a subjectRightsRequest object.
+     * Update the properties of a subjectRightsRequest object. This API is supported in the following national cloud deployments.
      * @param SubjectRightsRequest $body The request body
      * @param SubjectRightsRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -154,7 +154,7 @@ class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a subjectRightsRequest object.
+     * Read the properties and relationships of a subjectRightsRequest object. This API is supported in the following national cloud deployments.
      * @param SubjectRightsRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -175,7 +175,7 @@ class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a subjectRightsRequest object.
+     * Update the properties of a subjectRightsRequest object. This API is supported in the following national cloud deployments.
      * @param SubjectRightsRequest $body The request body
      * @param SubjectRightsRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

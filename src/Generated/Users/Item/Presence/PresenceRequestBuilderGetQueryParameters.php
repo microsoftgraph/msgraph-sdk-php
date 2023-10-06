@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Presence;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a user's presence information.
+ * Get a user's presence information. This API is supported in the following national cloud deployments.
 */
 class PresenceRequestBuilderGetQueryParameters 
 {

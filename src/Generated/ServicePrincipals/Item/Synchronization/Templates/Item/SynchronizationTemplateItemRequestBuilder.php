@@ -58,7 +58,7 @@ class SynchronizationTemplateItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Pre-configured synchronization settings for a particular application.
+     * Preconfigured synchronization settings for a particular application.
      * @param SynchronizationTemplateItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -76,7 +76,7 @@ class SynchronizationTemplateItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update (override) the synchronization template associated with a given application.
+     * Update (override) the synchronization template associated with a given application. This API is supported in the following national cloud deployments.
      * @param SynchronizationTemplate $body The request body
      * @param SynchronizationTemplateItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -113,7 +113,7 @@ class SynchronizationTemplateItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Pre-configured synchronization settings for a particular application.
+     * Preconfigured synchronization settings for a particular application.
      * @param SynchronizationTemplateItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -134,7 +134,7 @@ class SynchronizationTemplateItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update (override) the synchronization template associated with a given application.
+     * Update (override) the synchronization template associated with a given application. This API is supported in the following national cloud deployments.
      * @param SynchronizationTemplate $body The request body
      * @param SynchronizationTemplateItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

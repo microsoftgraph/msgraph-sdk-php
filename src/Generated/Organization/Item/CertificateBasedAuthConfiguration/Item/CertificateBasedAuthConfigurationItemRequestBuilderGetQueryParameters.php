@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Organization\Item\CertificateBasedAuthConfig
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the properties of a certificateBasedAuthConfiguration object.
+ * Get the properties of a certificateBasedAuthConfiguration object. This API is supported in the following national cloud deployments.
 */
 class CertificateBasedAuthConfigurationItemRequestBuilderGetQueryParameters 
 {

@@ -7,8 +7,14 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\AttackSimulationRoot;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Security\AttackSimulation\EndUserNotifications\EndUserNotificationsRequestBuilder;
+use Microsoft\Graph\Generated\Security\AttackSimulation\LandingPages\LandingPagesRequestBuilder;
+use Microsoft\Graph\Generated\Security\AttackSimulation\LoginPages\LoginPagesRequestBuilder;
+use Microsoft\Graph\Generated\Security\AttackSimulation\Operations\OperationsRequestBuilder;
+use Microsoft\Graph\Generated\Security\AttackSimulation\Payloads\PayloadsRequestBuilder;
 use Microsoft\Graph\Generated\Security\AttackSimulation\SimulationAutomations\SimulationAutomationsRequestBuilder;
 use Microsoft\Graph\Generated\Security\AttackSimulation\Simulations\SimulationsRequestBuilder;
+use Microsoft\Graph\Generated\Security\AttackSimulation\Trainings\TrainingsRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -19,6 +25,41 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class AttackSimulationRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to manage the endUserNotifications property of the microsoft.graph.attackSimulationRoot entity.
+    */
+    public function endUserNotifications(): EndUserNotificationsRequestBuilder {
+        return new EndUserNotificationsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the landingPages property of the microsoft.graph.attackSimulationRoot entity.
+    */
+    public function landingPages(): LandingPagesRequestBuilder {
+        return new LandingPagesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the loginPages property of the microsoft.graph.attackSimulationRoot entity.
+    */
+    public function loginPages(): LoginPagesRequestBuilder {
+        return new LoginPagesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the operations property of the microsoft.graph.attackSimulationRoot entity.
+    */
+    public function operations(): OperationsRequestBuilder {
+        return new OperationsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the payloads property of the microsoft.graph.attackSimulationRoot entity.
+    */
+    public function payloads(): PayloadsRequestBuilder {
+        return new PayloadsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Provides operations to manage the simulationAutomations property of the microsoft.graph.attackSimulationRoot entity.
     */
@@ -31,6 +72,13 @@ class AttackSimulationRequestBuilder extends BaseRequestBuilder
     */
     public function simulations(): SimulationsRequestBuilder {
         return new SimulationsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the trainings property of the microsoft.graph.attackSimulationRoot entity.
+    */
+    public function trainings(): TrainingsRequestBuilder {
+        return new TrainingsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

@@ -48,7 +48,7 @@ class ContactFolderItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete contactFolder other than the default contactFolder.
+     * Delete contactFolder other than the default contactFolder. This API is supported in the following national cloud deployments.
      * @param ContactFolderItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/contactfolder-delete?view=graph-rest-1.0 Find more info here
@@ -67,7 +67,7 @@ class ContactFolderItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a contact folder by using the contact folder ID. There are two scenarios where an app can get another user's contact folder:
+     * Get a contact folder by using the contact folder ID. There are two scenarios where an app can get another user's contact folder: This API is supported in the following national cloud deployments.
      * @param ContactFolderItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/contactfolder-get?view=graph-rest-1.0 Find more info here
@@ -86,7 +86,7 @@ class ContactFolderItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of contactfolder object.
+     * Update the properties of contactfolder object. This API is supported in the following national cloud deployments.
      * @param ContactFolder $body The request body
      * @param ContactFolderItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -106,7 +106,7 @@ class ContactFolderItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete contactFolder other than the default contactFolder.
+     * Delete contactFolder other than the default contactFolder. This API is supported in the following national cloud deployments.
      * @param ContactFolderItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -123,7 +123,7 @@ class ContactFolderItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a contact folder by using the contact folder ID. There are two scenarios where an app can get another user's contact folder:
+     * Get a contact folder by using the contact folder ID. There are two scenarios where an app can get another user's contact folder: This API is supported in the following national cloud deployments.
      * @param ContactFolderItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -144,7 +144,7 @@ class ContactFolderItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of contactfolder object.
+     * Update the properties of contactfolder object. This API is supported in the following national cloud deployments.
      * @param ContactFolder $body The request body
      * @param ContactFolderItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

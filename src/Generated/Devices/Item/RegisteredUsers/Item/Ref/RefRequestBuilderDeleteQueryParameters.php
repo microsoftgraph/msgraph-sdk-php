@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Devices\Item\RegisteredUsers\Item\Ref;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Remove a user as a registered user of the device.
+ * Remove a user as a registered user of the device. This API is supported in the following national cloud deployments.
 */
 class RefRequestBuilderDeleteQueryParameters 
 {

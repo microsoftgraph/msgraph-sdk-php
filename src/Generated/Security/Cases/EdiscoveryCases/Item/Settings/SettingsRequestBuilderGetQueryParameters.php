@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Settings
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read the properties and relationships of an ediscoveryCaseSettings object.
+ * Read the properties and relationships of an ediscoveryCaseSettings object. This API is supported in the following national cloud deployments.
 */
 class SettingsRequestBuilderGetQueryParameters 
 {

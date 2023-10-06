@@ -48,7 +48,7 @@ class ExternalItemItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an externalItem object.
+     * Delete an externalItem object. This API is supported in the following national cloud deployments.
      * @param ExternalItemItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/externalconnectors-externalitem-delete?view=graph-rest-1.0 Find more info here
@@ -67,7 +67,7 @@ class ExternalItemItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of an externalItem object.
+     * Read the properties and relationships of an externalItem object. This API is supported in the following national cloud deployments.
      * @param ExternalItemItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/externalconnectors-externalitem-get?view=graph-rest-1.0 Find more info here
@@ -105,7 +105,7 @@ class ExternalItemItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an externalItem object.
+     * Delete an externalItem object. This API is supported in the following national cloud deployments.
      * @param ExternalItemItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -122,7 +122,7 @@ class ExternalItemItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of an externalItem object.
+     * Read the properties and relationships of an externalItem object. This API is supported in the following national cloud deployments.
      * @param ExternalItemItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

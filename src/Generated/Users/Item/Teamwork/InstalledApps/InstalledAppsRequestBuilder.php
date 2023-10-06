@@ -53,7 +53,7 @@ class InstalledAppsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the list of apps installed in the personal scope of the specified user.
+     * Retrieve the list of apps installed in the personal scope of the specified user. This API is supported in the following national cloud deployments.
      * @param InstalledAppsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/userteamwork-list-installedapps?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class InstalledAppsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Install an app in the personal scope of the specified user.
+     * Install an app in the personal scope of the specified user. This API is supported in the following national cloud deployments.
      * @param UserScopeTeamsAppInstallation $body The request body
      * @param InstalledAppsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class InstalledAppsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the list of apps installed in the personal scope of the specified user.
+     * Retrieve the list of apps installed in the personal scope of the specified user. This API is supported in the following national cloud deployments.
      * @param InstalledAppsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class InstalledAppsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Install an app in the personal scope of the specified user.
+     * Install an app in the personal scope of the specified user. This API is supported in the following national cloud deployments.
      * @param UserScopeTeamsAppInstallation $body The request body
      * @param InstalledAppsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

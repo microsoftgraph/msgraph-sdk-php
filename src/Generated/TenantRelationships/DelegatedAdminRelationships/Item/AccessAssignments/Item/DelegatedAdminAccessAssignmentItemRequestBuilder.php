@@ -32,7 +32,7 @@ class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Delete a delegatedAdminAccessAssignment object.
+     * Delete a delegatedAdminAccessAssignment object. This API is supported in the following national cloud deployments.
      * @param DelegatedAdminAccessAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/delegatedadminaccessassignment-delete?view=graph-rest-1.0 Find more info here
@@ -51,7 +51,7 @@ class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Read the properties of a delegatedAdminAccessAssignment object.
+     * Read the properties of a delegatedAdminAccessAssignment object. This API is supported in the following national cloud deployments.
      * @param DelegatedAdminAccessAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/delegatedadminaccessassignment-get?view=graph-rest-1.0 Find more info here
@@ -70,7 +70,7 @@ class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Update the properties of a delegatedAdminAccessAssignment object.
+     * Update the properties of a delegatedAdminAccessAssignment object. This API is supported in the following national cloud deployments.
      * @param DelegatedAdminAccessAssignment $body The request body
      * @param DelegatedAdminAccessAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -90,7 +90,7 @@ class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Delete a delegatedAdminAccessAssignment object.
+     * Delete a delegatedAdminAccessAssignment object. This API is supported in the following national cloud deployments.
      * @param DelegatedAdminAccessAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -107,7 +107,7 @@ class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Read the properties of a delegatedAdminAccessAssignment object.
+     * Read the properties of a delegatedAdminAccessAssignment object. This API is supported in the following national cloud deployments.
      * @param DelegatedAdminAccessAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -128,7 +128,7 @@ class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Update the properties of a delegatedAdminAccessAssignment object.
+     * Update the properties of a delegatedAdminAccessAssignment object. This API is supported in the following national cloud deployments.
      * @param DelegatedAdminAccessAssignment $body The request body
      * @param DelegatedAdminAccessAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

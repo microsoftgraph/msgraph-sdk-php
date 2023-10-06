@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Planner\Plans\Item\Buckets\Item\T
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties and relationships of a plannerTaskDetails object.
+ * Retrieve the properties and relationships of a plannerTaskDetails object. This API is supported in the following national cloud deployments.
 */
 class DetailsRequestBuilderGetQueryParameters 
 {

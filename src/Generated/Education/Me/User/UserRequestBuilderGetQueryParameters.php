@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Education\Me\User;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the simple directory user that corresponds to this educationUser.
+ * Retrieve the simple directory user that corresponds to this educationUser. This API is supported in the following national cloud deployments.
 */
 class UserRequestBuilderGetQueryParameters 
 {

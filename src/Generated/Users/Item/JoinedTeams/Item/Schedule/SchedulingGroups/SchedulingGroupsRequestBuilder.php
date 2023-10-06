@@ -53,7 +53,7 @@ class SchedulingGroupsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the list of schedulingGroups in this schedule.
+     * Get the list of schedulingGroups in this schedule. This API is supported in the following national cloud deployments.
      * @param SchedulingGroupsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/schedule-list-schedulinggroups?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class SchedulingGroupsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new schedulingGroup.
+     * Create a new schedulingGroup. This API is supported in the following national cloud deployments.
      * @param SchedulingGroup $body The request body
      * @param SchedulingGroupsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class SchedulingGroupsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the list of schedulingGroups in this schedule.
+     * Get the list of schedulingGroups in this schedule. This API is supported in the following national cloud deployments.
      * @param SchedulingGroupsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class SchedulingGroupsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new schedulingGroup.
+     * Create a new schedulingGroup. This API is supported in the following national cloud deployments.
      * @param SchedulingGroup $body The request body
      * @param SchedulingGroupsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

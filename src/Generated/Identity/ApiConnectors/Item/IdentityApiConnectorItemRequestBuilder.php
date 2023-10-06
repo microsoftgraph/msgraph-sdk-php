@@ -40,7 +40,7 @@ class IdentityApiConnectorItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an identityApiConnector object.
+     * Delete an identityApiConnector object. This API is supported in the following national cloud deployments.
      * @param IdentityApiConnectorItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/identityapiconnector-delete?view=graph-rest-1.0 Find more info here
@@ -59,7 +59,7 @@ class IdentityApiConnectorItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties of an identityApiConnector object.
+     * Read the properties of an identityApiConnector object. This API is supported in the following national cloud deployments.
      * @param IdentityApiConnectorItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/identityapiconnector-get?view=graph-rest-1.0 Find more info here
@@ -78,7 +78,7 @@ class IdentityApiConnectorItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an identityApiConnector object.
+     * Update the properties of an identityApiConnector object. This API is supported in the following national cloud deployments.
      * @param IdentityApiConnector $body The request body
      * @param IdentityApiConnectorItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -98,7 +98,7 @@ class IdentityApiConnectorItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an identityApiConnector object.
+     * Delete an identityApiConnector object. This API is supported in the following national cloud deployments.
      * @param IdentityApiConnectorItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -115,7 +115,7 @@ class IdentityApiConnectorItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties of an identityApiConnector object.
+     * Read the properties of an identityApiConnector object. This API is supported in the following national cloud deployments.
      * @param IdentityApiConnectorItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -136,7 +136,7 @@ class IdentityApiConnectorItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an identityApiConnector object.
+     * Update the properties of an identityApiConnector object. This API is supported in the following national cloud deployments.
      * @param IdentityApiConnector $body The request body
      * @param IdentityApiConnectorItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

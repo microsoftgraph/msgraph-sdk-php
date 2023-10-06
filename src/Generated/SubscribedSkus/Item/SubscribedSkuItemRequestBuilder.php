@@ -50,7 +50,7 @@ class SubscribedSkuItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a specific commercial subscription that an organization has acquired.
+     * Get a specific commercial subscription that an organization has acquired. This API is supported in the following national cloud deployments.
      * @param SubscribedSkuItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/subscribedsku-get?view=graph-rest-1.0 Find more info here
@@ -105,7 +105,7 @@ class SubscribedSkuItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a specific commercial subscription that an organization has acquired.
+     * Get a specific commercial subscription that an organization has acquired. This API is supported in the following national cloud deployments.
      * @param SubscribedSkuItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

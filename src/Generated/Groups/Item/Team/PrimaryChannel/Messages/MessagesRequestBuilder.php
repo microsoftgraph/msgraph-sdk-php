@@ -61,7 +61,7 @@ class MessagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the list of messages (without the replies) in a channel of a team.  To get the replies for a message, call the list message replies or the get message reply API.  This method supports federation. To list channel messages in application context, the request must be made from the tenant that the channel owner belongs to (represented by the tenantId property on the channel).
+     * Retrieve the list of messages (without the replies) in a channel of a team.  To get the replies for a message, call the list message replies or the get message reply API.  This method supports federation. To list channel messages in application context, the request must be made from the tenant that the channel owner belongs to (represented by the tenantId property on the channel). This API is supported in the following national cloud deployments.
      * @param MessagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/channel-list-messages?view=graph-rest-1.0 Find more info here
@@ -80,11 +80,11 @@ class MessagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Send a new chatMessage in the specified channel.
+     * Send a new chatMessage in the specified channel or a chat. This API is supported in the following national cloud deployments.
      * @param ChatMessage $body The request body
      * @param MessagesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://learn.microsoft.com/graph/api/channel-post-messages?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/chatmessage-post?view=graph-rest-1.0 Find more info here
     */
     public function post(ChatMessage $body, ?MessagesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -100,7 +100,7 @@ class MessagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the list of messages (without the replies) in a channel of a team.  To get the replies for a message, call the list message replies or the get message reply API.  This method supports federation. To list channel messages in application context, the request must be made from the tenant that the channel owner belongs to (represented by the tenantId property on the channel).
+     * Retrieve the list of messages (without the replies) in a channel of a team.  To get the replies for a message, call the list message replies or the get message reply API.  This method supports federation. To list channel messages in application context, the request must be made from the tenant that the channel owner belongs to (represented by the tenantId property on the channel). This API is supported in the following national cloud deployments.
      * @param MessagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -121,7 +121,7 @@ class MessagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Send a new chatMessage in the specified channel.
+     * Send a new chatMessage in the specified channel or a chat. This API is supported in the following national cloud deployments.
      * @param ChatMessage $body The request body
      * @param MessagesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

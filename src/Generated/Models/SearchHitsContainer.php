@@ -124,7 +124,7 @@ class SearchHitsContainer implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the total property value. The total number of results. Note this is not the number of results on the page, but the total number of results satisfying the query.
+     * Gets the total property value. The total number of results. Note this isn't the number of results on the page, but the total number of results satisfying the query.
      * @return int|null
     */
     public function getTotal(): ?int {
@@ -197,7 +197,7 @@ class SearchHitsContainer implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the total property value. The total number of results. Note this is not the number of results on the page, but the total number of results satisfying the query.
+     * Sets the total property value. The total number of results. Note this isn't the number of results on the page, but the total number of results satisfying the query.
      * @param int|null $value Value to set for the total property.
     */
     public function setTotal(?int $value): void {

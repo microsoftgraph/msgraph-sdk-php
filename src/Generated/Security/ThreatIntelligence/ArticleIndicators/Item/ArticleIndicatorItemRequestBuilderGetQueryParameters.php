@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\ThreatIntelligence\ArticleIndicator
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read the properties and relationships of an articleIndicator object.
+ * Read the properties and relationships of an articleIndicator object. This API is supported in the following national cloud deployments.
 */
 class ArticleIndicatorItemRequestBuilderGetQueryParameters 
 {

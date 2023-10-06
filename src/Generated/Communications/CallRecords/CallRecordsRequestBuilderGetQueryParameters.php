@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Communications\CallRecords;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties and relationships of a callRecord object. There are two ways to get the id of a callRecord: You can use the $expand query parameter to optionally include session and segment details, as shown in the Get full details example. When you expand session details, the maximum page size is 60 sessions.
+ * Retrieve the properties and relationships of a callRecord object. There are two ways to get the id of a callRecord: You can use the $expand query parameter to optionally include session and segment details, as shown in the Get full details example. When you expand session details, the maximum page size is 60 sessions. This API is supported in the following national cloud deployments.
 */
 class CallRecordsRequestBuilderGetQueryParameters 
 {

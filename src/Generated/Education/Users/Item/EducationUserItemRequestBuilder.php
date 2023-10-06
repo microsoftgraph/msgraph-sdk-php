@@ -80,7 +80,7 @@ class EducationUserItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a user.
+     * Delete a user. This API is supported in the following national cloud deployments.
      * @param EducationUserItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/educationuser-delete?view=graph-rest-1.0 Find more info here
@@ -99,7 +99,7 @@ class EducationUserItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of an educationUser object.
+     * Read the properties and relationships of an educationUser object. This API is supported in the following national cloud deployments.
      * @param EducationUserItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/educationuser-get?view=graph-rest-1.0 Find more info here
@@ -118,7 +118,7 @@ class EducationUserItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an educationUser object.
+     * Update the properties of an educationUser object. This API is supported in the following national cloud deployments.
      * @param EducationUser $body The request body
      * @param EducationUserItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -138,7 +138,7 @@ class EducationUserItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a user.
+     * Delete a user. This API is supported in the following national cloud deployments.
      * @param EducationUserItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -155,7 +155,7 @@ class EducationUserItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of an educationUser object.
+     * Read the properties and relationships of an educationUser object. This API is supported in the following national cloud deployments.
      * @param EducationUserItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -176,7 +176,7 @@ class EducationUserItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an educationUser object.
+     * Update the properties of an educationUser object. This API is supported in the following national cloud deployments.
      * @param EducationUser $body The request body
      * @param EducationUserItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

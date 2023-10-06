@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Acc
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Remove a group from the list of groups that have been marked as incompatible on an accessPackage.  
+ * Remove a group from the list of groups that have been marked as incompatible on an accessPackage.   This API is supported in the following national cloud deployments.
 */
 class RefRequestBuilderDeleteQueryParameters 
 {

@@ -61,7 +61,7 @@ class ContactFoldersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the contact folder collection in the default Contacts folder of the signed-in user.
+     * Get the contact folder collection in the default Contacts folder of the signed-in user. This API is supported in the following national cloud deployments.
      * @param ContactFoldersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/user-list-contactfolders?view=graph-rest-1.0 Find more info here
@@ -80,7 +80,7 @@ class ContactFoldersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new contactFolder under the user's default contacts folder. You can also create a new contactfolder as a child of any specified contact folder.
+     * Create a new contactFolder under the user's default contacts folder. You can also create a new contactfolder as a child of any specified contact folder. This API is supported in the following national cloud deployments.
      * @param ContactFolder $body The request body
      * @param ContactFoldersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -100,7 +100,7 @@ class ContactFoldersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the contact folder collection in the default Contacts folder of the signed-in user.
+     * Get the contact folder collection in the default Contacts folder of the signed-in user. This API is supported in the following national cloud deployments.
      * @param ContactFoldersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -121,7 +121,7 @@ class ContactFoldersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new contactFolder under the user's default contacts folder. You can also create a new contactfolder as a child of any specified contact folder.
+     * Create a new contactFolder under the user's default contacts folder. You can also create a new contactfolder as a child of any specified contact folder. This API is supported in the following national cloud deployments.
      * @param ContactFolder $body The request body
      * @param ContactFoldersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
