@@ -113,7 +113,7 @@ class SubscribedSku extends Entity
 
     /**
     * Gets the capabilityStatus
-    * Enabled indicates that the prepaidUnits property has at least one unit that is enabled. LockedOut indicates that the customer cancelled their subscription. Possible values are: Enabled, Warning, Suspended, Deleted, LockedOut.
+    * Enabled indicates that the prepaidUnits property has at least one unit that is enabled. LockedOut indicates that the customer canceled their subscription. Possible values are: Enabled, Warning, Suspended, Deleted, LockedOut.
     *
     * @return string|null The capabilityStatus
     */
@@ -128,7 +128,7 @@ class SubscribedSku extends Entity
 
     /**
     * Sets the capabilityStatus
-    * Enabled indicates that the prepaidUnits property has at least one unit that is enabled. LockedOut indicates that the customer cancelled their subscription. Possible values are: Enabled, Warning, Suspended, Deleted, LockedOut.
+    * Enabled indicates that the prepaidUnits property has at least one unit that is enabled. LockedOut indicates that the customer canceled their subscription. Possible values are: Enabled, Warning, Suspended, Deleted, LockedOut.
     *
     * @param string $val The capabilityStatus
     *
