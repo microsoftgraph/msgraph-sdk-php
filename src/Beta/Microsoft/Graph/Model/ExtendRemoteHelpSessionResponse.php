@@ -12,7 +12,6 @@
 * @link      https://graph.microsoft.com
 */
 namespace Beta\Microsoft\Graph\Model;
-
 /**
 * ExtendRemoteHelpSessionResponse class
 *
@@ -22,39 +21,8 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class ExtendRemoteHelpSessionResponse implements \JsonSerializable
+class ExtendRemoteHelpSessionResponse extends Entity
 {
-    /**
-    * The array of properties available
-    * to the model
-    *
-    * @var array $_propDict
-    */
-    protected $_propDict;
-
-    /**
-    * Construct a new ExtendRemoteHelpSessionResponse
-    *
-    * @param array $propDict A list of properties to set
-    */
-    function __construct($propDict = array())
-    {
-        if (!is_array($propDict)) {
-           $propDict = array();
-        }
-        $this->_propDict = $propDict;
-    }
-
-    /**
-    * Gets the property dictionary of the ExtendRemoteHelpSessionResponse
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-
     /**
     * Gets the acsHelperUserToken
     * Helper ACS User Token
@@ -74,7 +42,7 @@ class ExtendRemoteHelpSessionResponse implements \JsonSerializable
     * Sets the acsHelperUserToken
     * Helper ACS User Token
     *
-    * @param string $val The acsHelperUserToken
+    * @param string $val The value of the acsHelperUserToken
     *
     * @return ExtendRemoteHelpSessionResponse
     */
@@ -83,7 +51,6 @@ class ExtendRemoteHelpSessionResponse implements \JsonSerializable
         $this->_propDict["acsHelperUserToken"] = $val;
         return $this;
     }
-
     /**
     * Gets the pubSubHelperAccessUri
     * Azure Pubsub Group Id
@@ -103,7 +70,7 @@ class ExtendRemoteHelpSessionResponse implements \JsonSerializable
     * Sets the pubSubHelperAccessUri
     * Azure Pubsub Group Id
     *
-    * @param string $val The pubSubHelperAccessUri
+    * @param string $val The value of the pubSubHelperAccessUri
     *
     * @return ExtendRemoteHelpSessionResponse
     */
@@ -136,16 +103,15 @@ class ExtendRemoteHelpSessionResponse implements \JsonSerializable
     * Sets the sessionExpirationDateTime
     * Azure Pubsub Session Expiration Date Time.
     *
-    * @param \DateTime $val The sessionExpirationDateTime
+    * @param \DateTime $val The value to assign to the sessionExpirationDateTime
     *
-    * @return ExtendRemoteHelpSessionResponse
+    * @return ExtendRemoteHelpSessionResponse The ExtendRemoteHelpSessionResponse
     */
     public function setSessionExpirationDateTime($val)
     {
         $this->_propDict["sessionExpirationDateTime"] = $val;
-        return $this;
+         return $this;
     }
-
     /**
     * Gets the sessionKey
     * The unique identifier for a session
@@ -165,7 +131,7 @@ class ExtendRemoteHelpSessionResponse implements \JsonSerializable
     * Sets the sessionKey
     * The unique identifier for a session
     *
-    * @param string $val The sessionKey
+    * @param string $val The value of the sessionKey
     *
     * @return ExtendRemoteHelpSessionResponse
     */
@@ -173,55 +139,5 @@ class ExtendRemoteHelpSessionResponse implements \JsonSerializable
     {
         $this->_propDict["sessionKey"] = $val;
         return $this;
-    }
-
-    /**
-    * Gets the ODataType
-    *
-    * @return string|null The ODataType
-    */
-    public function getODataType()
-    {
-        if (array_key_exists('@odata.type', $this->_propDict)) {
-            return $this->_propDict["@odata.type"];
-        }
-        return null;
-    }
-
-    /**
-    * Sets the ODataType
-    *
-    * @param string $val The ODataType
-    *
-    * @return ExtendRemoteHelpSessionResponse
-    */
-    public function setODataType($val)
-    {
-        $this->_propDict["@odata.type"] = $val;
-        return $this;
-    }
-
-    /**
-    * Serializes the object by property array
-    * Manually serialize DateTime into RFC3339 format
-    *
-    * @return array The list of properties
-    */
-    #[\ReturnTypeWillChange]
-    public function jsonSerialize()
-    {
-        $serializableProperties = $this->getProperties();
-        foreach ($serializableProperties as $property => $val) {
-            if (is_a($val, "\DateTime")) {
-                $serializableProperties[$property] = $val->format(\DateTime::RFC3339);
-            } else if (is_a($val, "\Microsoft\Graph\Core\Enum")) {
-                $serializableProperties[$property] = $val->value();
-            } else if (is_a($val, "\Entity")) {
-                $serializableProperties[$property] = $val->jsonSerialize();
-            } else if (is_a($val, "\GuzzleHttp\Psr7\Stream")) {
-                $serializableProperties[$property] = (string) $val;
-            }
-        }
-        return $serializableProperties;
     }
 }

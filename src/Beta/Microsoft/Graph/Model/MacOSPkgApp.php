@@ -117,6 +117,72 @@ class MacOSPkgApp extends MobileLobApp
     }
 
     /**
+    * Gets the postInstallScript
+    * ComplexType macOSAppScript the contains the post-install script for the app. This will execute on the macOS device after the app is installed.
+    *
+    * @return MacOSAppScript|null The postInstallScript
+    */
+    public function getPostInstallScript()
+    {
+        if (array_key_exists("postInstallScript", $this->_propDict)) {
+            if (is_a($this->_propDict["postInstallScript"], "\Beta\Microsoft\Graph\Model\MacOSAppScript") || is_null($this->_propDict["postInstallScript"])) {
+                return $this->_propDict["postInstallScript"];
+            } else {
+                $this->_propDict["postInstallScript"] = new MacOSAppScript($this->_propDict["postInstallScript"]);
+                return $this->_propDict["postInstallScript"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the postInstallScript
+    * ComplexType macOSAppScript the contains the post-install script for the app. This will execute on the macOS device after the app is installed.
+    *
+    * @param MacOSAppScript $val The postInstallScript
+    *
+    * @return MacOSPkgApp
+    */
+    public function setPostInstallScript($val)
+    {
+        $this->_propDict["postInstallScript"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the preInstallScript
+    * ComplexType macOSAppScript the contains the post-install script for the app. This will execute on the macOS device after the app is installed.
+    *
+    * @return MacOSAppScript|null The preInstallScript
+    */
+    public function getPreInstallScript()
+    {
+        if (array_key_exists("preInstallScript", $this->_propDict)) {
+            if (is_a($this->_propDict["preInstallScript"], "\Beta\Microsoft\Graph\Model\MacOSAppScript") || is_null($this->_propDict["preInstallScript"])) {
+                return $this->_propDict["preInstallScript"];
+            } else {
+                $this->_propDict["preInstallScript"] = new MacOSAppScript($this->_propDict["preInstallScript"]);
+                return $this->_propDict["preInstallScript"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the preInstallScript
+    * ComplexType macOSAppScript the contains the post-install script for the app. This will execute on the macOS device after the app is installed.
+    *
+    * @param MacOSAppScript $val The preInstallScript
+    *
+    * @return MacOSPkgApp
+    */
+    public function setPreInstallScript($val)
+    {
+        $this->_propDict["preInstallScript"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the primaryBundleId
     * The primary CFBundleIdentifier of the .pkg.
     *

@@ -41,6 +41,7 @@ class CloudPcOnPremisesConnectionHealthCheckErrorType extends Enum
     const AD_JOIN_CHECK_CREDENTIALS_EXPIRED = "adJoinCheckCredentialsExpired";
     const AD_JOIN_CHECK_ACCOUNT_LOCKED_OR_DISABLED = "adJoinCheckAccountLockedOrDisabled";
     const AD_JOIN_CHECK_ACCOUNT_QUOTA_EXCEEDED = "adJoinCheckAccountQuotaExceeded";
+    const AD_JOIN_CHECK_SERVER_NOT_OPERATIONAL = "adJoinCheckServerNotOperational";
     const AD_JOIN_CHECK_UNKNOWN_ERROR = "adJoinCheckUnknownError";
     const ENDPOINT_CONNECTIVITY_CHECK_CLOUD_PC_URL_NOT_ALLOW_LISTED = "endpointConnectivityCheckCloudPcUrlNotAllowListed";
     const ENDPOINT_CONNECTIVITY_CHECK_WVD_URL_NOT_ALLOW_LISTED = "endpointConnectivityCheckWVDUrlNotAllowListed";

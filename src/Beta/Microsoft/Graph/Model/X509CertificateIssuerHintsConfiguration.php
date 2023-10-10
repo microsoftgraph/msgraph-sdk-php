@@ -26,6 +26,7 @@ class X509CertificateIssuerHintsConfiguration extends Entity
 
     /**
     * Gets the state
+    * The possible values are: disabled, enabled, unknownFutureValue.
     *
     * @return X509CertificateIssuerHintsState|null The state
     */
@@ -44,6 +45,7 @@ class X509CertificateIssuerHintsConfiguration extends Entity
 
     /**
     * Sets the state
+    * The possible values are: disabled, enabled, unknownFutureValue.
     *
     * @param X509CertificateIssuerHintsState $val The value to assign to the state
     *

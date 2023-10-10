@@ -64,7 +64,7 @@ class PlannerExternalBucketSource extends PlannerBucketCreation
     }
     /**
     * Gets the externalContextId
-    * Nullable. The id of the external entity's containing entity or context.
+    * Nullable. The ID of the external entity's containing entity or context.
     *
     * @return string|null The externalContextId
     */
@@ -79,7 +79,7 @@ class PlannerExternalBucketSource extends PlannerBucketCreation
 
     /**
     * Sets the externalContextId
-    * Nullable. The id of the external entity's containing entity or context.
+    * Nullable. The ID of the external entity's containing entity or context.
     *
     * @param string $val The value of the externalContextId
     *
@@ -92,7 +92,7 @@ class PlannerExternalBucketSource extends PlannerBucketCreation
     }
     /**
     * Gets the externalObjectId
-    * Nullable. The id of the entity that an external service associates with a bucket.
+    * Nullable. The ID of the entity that an external service associates with a bucket.
     *
     * @return string|null The externalObjectId
     */
@@ -107,7 +107,7 @@ class PlannerExternalBucketSource extends PlannerBucketCreation
 
     /**
     * Sets the externalObjectId
-    * Nullable. The id of the entity that an external service associates with a bucket.
+    * Nullable. The ID of the entity that an external service associates with a bucket.
     *
     * @param string $val The value of the externalObjectId
     *

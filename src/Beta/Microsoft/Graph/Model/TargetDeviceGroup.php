@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* CertificateBasedApplicationConfiguration File
+* TargetDeviceGroup File
 * PHP version 7
 *
 * @category  Library
@@ -14,7 +14,7 @@
 namespace Beta\Microsoft\Graph\Model;
 
 /**
-* CertificateBasedApplicationConfiguration class
+* TargetDeviceGroup class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,40 +22,10 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class CertificateBasedApplicationConfiguration extends TrustedCertificateAuthorityAsEntityBase
+class TargetDeviceGroup extends Entity
 {
     /**
-    * Gets the description
-    * The description of the trusted certificate authorities.
-    *
-    * @return string|null The description
-    */
-    public function getDescription()
-    {
-        if (array_key_exists("description", $this->_propDict)) {
-            return $this->_propDict["description"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the description
-    * The description of the trusted certificate authorities.
-    *
-    * @param string $val The description
-    *
-    * @return CertificateBasedApplicationConfiguration
-    */
-    public function setDescription($val)
-    {
-        $this->_propDict["description"] = $val;
-        return $this;
-    }
-
-    /**
     * Gets the displayName
-    * The display name of the trusted certificate authorities.
     *
     * @return string|null The displayName
     */
@@ -70,11 +40,10 @@ class CertificateBasedApplicationConfiguration extends TrustedCertificateAuthori
 
     /**
     * Sets the displayName
-    * The display name of the trusted certificate authorities.
     *
     * @param string $val The displayName
     *
-    * @return CertificateBasedApplicationConfiguration
+    * @return TargetDeviceGroup
     */
     public function setDisplayName($val)
     {

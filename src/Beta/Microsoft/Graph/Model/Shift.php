@@ -86,6 +86,7 @@ class Shift extends ChangeTrackedEntity
 
     /**
     * Gets the schedulingGroupId
+    * ID of the scheduling group the shift is part of. Required.
     *
     * @return string|null The schedulingGroupId
     */
@@ -100,6 +101,7 @@ class Shift extends ChangeTrackedEntity
 
     /**
     * Sets the schedulingGroupId
+    * ID of the scheduling group the shift is part of. Required.
     *
     * @param string $val The schedulingGroupId
     *
@@ -113,6 +115,7 @@ class Shift extends ChangeTrackedEntity
 
     /**
     * Gets the sharedShift
+    * The shared version of this shift that is viewable by both employees and managers. Required.
     *
     * @return ShiftItem|null The sharedShift
     */
@@ -131,6 +134,7 @@ class Shift extends ChangeTrackedEntity
 
     /**
     * Sets the sharedShift
+    * The shared version of this shift that is viewable by both employees and managers. Required.
     *
     * @param ShiftItem $val The sharedShift
     *
@@ -144,6 +148,7 @@ class Shift extends ChangeTrackedEntity
 
     /**
     * Gets the userId
+    * ID of the user assigned to the shift. Required.
     *
     * @return string|null The userId
     */
@@ -158,6 +163,7 @@ class Shift extends ChangeTrackedEntity
 
     /**
     * Sets the userId
+    * ID of the user assigned to the shift. Required.
     *
     * @param string $val The userId
     *

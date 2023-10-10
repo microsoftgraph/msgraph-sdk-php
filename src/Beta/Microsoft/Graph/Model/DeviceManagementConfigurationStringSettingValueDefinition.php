@@ -54,7 +54,7 @@ class DeviceManagementConfigurationStringSettingValueDefinition extends DeviceMa
 
     /**
     * Gets the format
-    * Pre-defined format of the string. Possible values are: none, email, guid, ip, base64, url, version, xml, date, time, binary, regEx, json, dateTime, surfaceHub.
+    * Pre-defined format of the string. Possible values are: none, email, guid, ip, base64, url, version, xml, date, time, binary, regEx, json, dateTime, surfaceHub, bashScript, unknownFutureValue.
     *
     * @return DeviceManagementConfigurationStringFormat|null The format
     */
@@ -73,7 +73,7 @@ class DeviceManagementConfigurationStringSettingValueDefinition extends DeviceMa
 
     /**
     * Sets the format
-    * Pre-defined format of the string. Possible values are: none, email, guid, ip, base64, url, version, xml, date, time, binary, regEx, json, dateTime, surfaceHub.
+    * Pre-defined format of the string. Possible values are: none, email, guid, ip, base64, url, version, xml, date, time, binary, regEx, json, dateTime, surfaceHub, bashScript, unknownFutureValue.
     *
     * @param DeviceManagementConfigurationStringFormat $val The value to assign to the format
     *
@@ -142,7 +142,7 @@ class DeviceManagementConfigurationStringSettingValueDefinition extends DeviceMa
     }
     /**
     * Gets the maximumLength
-    * Maximum length of string
+    * Maximum length of string. Valid values 0 to 87516
     *
     * @return int|null The maximumLength
     */
@@ -157,7 +157,7 @@ class DeviceManagementConfigurationStringSettingValueDefinition extends DeviceMa
 
     /**
     * Sets the maximumLength
-    * Maximum length of string
+    * Maximum length of string. Valid values 0 to 87516
     *
     * @param int $val The value of the maximumLength
     *
@@ -170,7 +170,7 @@ class DeviceManagementConfigurationStringSettingValueDefinition extends DeviceMa
     }
     /**
     * Gets the minimumLength
-    * Minimum length of string
+    * Minimum length of string. Valid values 0 to 87516
     *
     * @return int|null The minimumLength
     */
@@ -185,7 +185,7 @@ class DeviceManagementConfigurationStringSettingValueDefinition extends DeviceMa
 
     /**
     * Sets the minimumLength
-    * Minimum length of string
+    * Minimum length of string. Valid values 0 to 87516
     *
     * @param int $val The value of the minimumLength
     *

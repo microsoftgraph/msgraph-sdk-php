@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* RecycleBin File
+* MacOSAppScript File
 * PHP version 7
 *
 * @category  Library
@@ -12,9 +12,8 @@
 * @link      https://graph.microsoft.com
 */
 namespace Beta\Microsoft\Graph\Model;
-
 /**
-* RecycleBin class
+* MacOSAppScript class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,36 +21,34 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class RecycleBin extends BaseItem
+class MacOSAppScript extends Entity
 {
-
-     /**
-     * Gets the items
-    * List of the recycleBinItems deleted by a user.
-     *
-     * @return array|null The items
-     */
-    public function getItems()
+    /**
+    * Gets the scriptContent
+    * The base64 encoded shell script (.sh) that assists managing macOS apps.
+    *
+    * @return string|null The scriptContent
+    */
+    public function getScriptContent()
     {
-        if (array_key_exists("items", $this->_propDict)) {
-           return $this->_propDict["items"];
+        if (array_key_exists("scriptContent", $this->_propDict)) {
+            return $this->_propDict["scriptContent"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the items
-    * List of the recycleBinItems deleted by a user.
+    * Sets the scriptContent
+    * The base64 encoded shell script (.sh) that assists managing macOS apps.
     *
-    * @param RecycleBinItem[] $val The items
+    * @param string $val The value of the scriptContent
     *
-    * @return RecycleBin
+    * @return MacOSAppScript
     */
-    public function setItems($val)
+    public function setScriptContent($val)
     {
-        $this->_propDict["items"] = $val;
+        $this->_propDict["scriptContent"] = $val;
         return $this;
     }
-
 }

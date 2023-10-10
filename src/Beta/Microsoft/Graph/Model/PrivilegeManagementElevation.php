@@ -381,6 +381,126 @@ class PrivilegeManagementElevation extends Entity
     }
 
     /**
+    * Gets the parentProcessName
+    * The name of parent process associated with the elevated process. This is always populated for both parent and child process types
+    *
+    * @return string|null The parentProcessName
+    */
+    public function getParentProcessName()
+    {
+        if (array_key_exists("parentProcessName", $this->_propDict)) {
+            return $this->_propDict["parentProcessName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the parentProcessName
+    * The name of parent process associated with the elevated process. This is always populated for both parent and child process types
+    *
+    * @param string $val The parentProcessName
+    *
+    * @return PrivilegeManagementElevation
+    */
+    public function setParentProcessName($val)
+    {
+        $this->_propDict["parentProcessName"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the policyId
+    * Unique Identifier of the policy configured to run the application with elevated access
+    *
+    * @return string|null The policyId
+    */
+    public function getPolicyId()
+    {
+        if (array_key_exists("policyId", $this->_propDict)) {
+            return $this->_propDict["policyId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the policyId
+    * Unique Identifier of the policy configured to run the application with elevated access
+    *
+    * @param string $val The policyId
+    *
+    * @return PrivilegeManagementElevation
+    */
+    public function setPolicyId($val)
+    {
+        $this->_propDict["policyId"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the policyName
+    * The name of the policy configured to run the application in elevated access
+    *
+    * @return string|null The policyName
+    */
+    public function getPolicyName()
+    {
+        if (array_key_exists("policyName", $this->_propDict)) {
+            return $this->_propDict["policyName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the policyName
+    * The name of the policy configured to run the application in elevated access
+    *
+    * @param string $val The policyName
+    *
+    * @return PrivilegeManagementElevation
+    */
+    public function setPolicyName($val)
+    {
+        $this->_propDict["policyName"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the processType
+    * Indicates the type of process that is elevated. Possible values are `undefined`, `parent` and `child`
+    *
+    * @return PrivilegeManagementProcessType|null The processType
+    */
+    public function getProcessType()
+    {
+        if (array_key_exists("processType", $this->_propDict)) {
+            if (is_a($this->_propDict["processType"], "\Beta\Microsoft\Graph\Model\PrivilegeManagementProcessType") || is_null($this->_propDict["processType"])) {
+                return $this->_propDict["processType"];
+            } else {
+                $this->_propDict["processType"] = new PrivilegeManagementProcessType($this->_propDict["processType"]);
+                return $this->_propDict["processType"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the processType
+    * Indicates the type of process that is elevated. Possible values are `undefined`, `parent` and `child`
+    *
+    * @param PrivilegeManagementProcessType $val The processType
+    *
+    * @return PrivilegeManagementElevation
+    */
+    public function setProcessType($val)
+    {
+        $this->_propDict["processType"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the productName
     * The product name of the application. This value is set by the creator of the application. Example: `Visual Studio`
     *
@@ -435,6 +555,35 @@ class PrivilegeManagementElevation extends Entity
     public function setResult($val)
     {
         $this->_propDict["result"] = intval($val);
+        return $this;
+    }
+
+    /**
+    * Gets the ruleId
+    * Unique identifier of the rule configured to run the application with elevated access
+    *
+    * @return string|null The ruleId
+    */
+    public function getRuleId()
+    {
+        if (array_key_exists("ruleId", $this->_propDict)) {
+            return $this->_propDict["ruleId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the ruleId
+    * Unique identifier of the rule configured to run the application with elevated access
+    *
+    * @param string $val The ruleId
+    *
+    * @return PrivilegeManagementElevation
+    */
+    public function setRuleId($val)
+    {
+        $this->_propDict["ruleId"] = $val;
         return $this;
     }
 
