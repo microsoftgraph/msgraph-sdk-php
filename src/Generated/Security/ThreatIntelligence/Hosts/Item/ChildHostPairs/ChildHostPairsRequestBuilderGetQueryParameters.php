@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\ThreatIntelligence\Hosts\Item\Child
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the list of hostPair resources associated with a host, where that host is the *parent* and has an outgoing pairing to a *child*. 
+ * Get the list of hostPair resources associated with a host, where that host is the *parent* and has an outgoing pairing to a *child*.  This API is available in the following national cloud deployments.
 */
 class ChildHostPairsRequestBuilderGetQueryParameters 
 {

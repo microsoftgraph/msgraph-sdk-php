@@ -52,7 +52,7 @@ class SubdomainsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the list of subdomain resources associated with a host.
+     * Get the list of subdomain resources associated with a host. This API is available in the following national cloud deployments.
      * @param SubdomainsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/security-host-list-subdomains?view=graph-rest-1.0 Find more info here
@@ -71,7 +71,7 @@ class SubdomainsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the list of subdomain resources associated with a host.
+     * Get the list of subdomain resources associated with a host. This API is available in the following national cloud deployments.
      * @param SubdomainsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -67,7 +67,7 @@ class LearningProviderItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a learningProvider object. This API is supported in the following national cloud deployments.
+     * Read the properties and relationships of a learningProvider object. This API is available in the following national cloud deployments.
      * @param LearningProviderItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/learningprovider-get?view=graph-rest-1.0 Find more info here
@@ -86,7 +86,7 @@ class LearningProviderItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a learningProvider object. This API is supported in the following national cloud deployments.
+     * Update the properties of a learningProvider object. This API is available in the following national cloud deployments.
      * @param LearningProvider $body The request body
      * @param LearningProviderItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -123,7 +123,7 @@ class LearningProviderItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a learningProvider object. This API is supported in the following national cloud deployments.
+     * Read the properties and relationships of a learningProvider object. This API is available in the following national cloud deployments.
      * @param LearningProviderItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -144,7 +144,7 @@ class LearningProviderItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a learningProvider object. This API is supported in the following national cloud deployments.
+     * Update the properties of a learningProvider object. This API is available in the following national cloud deployments.
      * @param LearningProvider $body The request body
      * @param LearningProviderItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

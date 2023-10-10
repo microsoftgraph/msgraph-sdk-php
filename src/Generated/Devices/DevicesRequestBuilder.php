@@ -85,7 +85,7 @@ class DevicesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of device objects registered in the organization. This API is supported in the following national cloud deployments.
+     * Retrieve a list of device objects registered in the organization. This API is available in the following national cloud deployments.
      * @param DevicesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/device-list?view=graph-rest-1.0 Find more info here
@@ -104,7 +104,7 @@ class DevicesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create and register a new device in the organization. This API is supported in the following national cloud deployments.
+     * Create and register a new device in the organization. This API is available in the following national cloud deployments.
      * @param Device $body The request body
      * @param DevicesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -124,7 +124,7 @@ class DevicesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of device objects registered in the organization. This API is supported in the following national cloud deployments.
+     * Retrieve a list of device objects registered in the organization. This API is available in the following national cloud deployments.
      * @param DevicesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -145,7 +145,7 @@ class DevicesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create and register a new device in the organization. This API is supported in the following national cloud deployments.
+     * Create and register a new device in the organization. This API is available in the following national cloud deployments.
      * @param Device $body The request body
      * @param DevicesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

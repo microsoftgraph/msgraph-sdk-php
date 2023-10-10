@@ -80,7 +80,7 @@ class ChildFoldersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new mailSearchFolder in the specified user's mailbox. This API is supported in the following national cloud deployments.
+     * Create a new mailSearchFolder in the specified user's mailbox. This API is available in the following national cloud deployments.
      * @param MailFolder $body The request body
      * @param ChildFoldersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -121,7 +121,7 @@ class ChildFoldersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new mailSearchFolder in the specified user's mailbox. This API is supported in the following national cloud deployments.
+     * Create a new mailSearchFolder in the specified user's mailbox. This API is available in the following national cloud deployments.
      * @param MailFolder $body The request body
      * @param ChildFoldersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

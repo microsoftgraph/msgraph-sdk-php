@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\EscapedPrint\Printers;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the list of printers that are registered in the tenant. This API is supported in the following national cloud deployments.
+ * Retrieve the list of printers that are registered in the tenant. This API is available in the following national cloud deployments.
 */
 class PrintersRequestBuilderGetQueryParameters 
 {

@@ -31,7 +31,7 @@ class SnoozeReminderRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Postpone a reminder for an event in a user calendar until a new time. This API is supported in the following national cloud deployments.
+     * Postpone a reminder for an event in a user calendar until a new time. This API is available in the following national cloud deployments.
      * @param SnoozeReminderPostRequestBody $body The request body
      * @param SnoozeReminderRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -51,7 +51,7 @@ class SnoozeReminderRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Postpone a reminder for an event in a user calendar until a new time. This API is supported in the following national cloud deployments.
+     * Postpone a reminder for an event in a user calendar until a new time. This API is available in the following national cloud deployments.
      * @param SnoozeReminderPostRequestBody $body The request body
      * @param SnoozeReminderRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

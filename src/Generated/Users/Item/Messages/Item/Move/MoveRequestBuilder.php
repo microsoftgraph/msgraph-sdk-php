@@ -32,7 +32,7 @@ class MoveRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Move a message to another folder within the specified user's mailbox. This creates a new copy of the message in the destination folder and removes the original message. This API is supported in the following national cloud deployments.
+     * Move a message to another folder within the specified user's mailbox. This creates a new copy of the message in the destination folder and removes the original message. This API is available in the following national cloud deployments.
      * @param MovePostRequestBody $body The request body
      * @param MoveRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -52,7 +52,7 @@ class MoveRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Move a message to another folder within the specified user's mailbox. This creates a new copy of the message in the destination folder and removes the original message. This API is supported in the following national cloud deployments.
+     * Move a message to another folder within the specified user's mailbox. This creates a new copy of the message in the destination folder and removes the original message. This API is available in the following national cloud deployments.
      * @param MovePostRequestBody $body The request body
      * @param MoveRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

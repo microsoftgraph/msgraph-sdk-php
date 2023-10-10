@@ -53,10 +53,10 @@ class WhoisRecordsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of whoisRecord objects.
+     * Get a list of whoisRecord objects. This API is available in the following national cloud deployments.
      * @param WhoisRecordsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://learn.microsoft.com/graph/api/security-whoisrecord-list?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/security-threatintelligence-list-whoisrecords?view=graph-rest-1.0 Find more info here
     */
     public function get(?WhoisRecordsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -91,7 +91,7 @@ class WhoisRecordsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of whoisRecord objects.
+     * Get a list of whoisRecord objects. This API is available in the following national cloud deployments.
      * @param WhoisRecordsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -32,7 +32,7 @@ class ParseExpressionRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Parse a given string expression into an attributeMappingSource object. For more information about expressions, see Writing Expressions for Attribute Mappings in Azure Active Directory. This API is supported in the following national cloud deployments.
+     * Parse a given string expression into an attributeMappingSource object. For more information about expressions, see Writing Expressions for Attribute Mappings in Azure Active Directory. This API is available in the following national cloud deployments.
      * @param ParseExpressionPostRequestBody $body The request body
      * @param ParseExpressionRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -52,7 +52,7 @@ class ParseExpressionRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Parse a given string expression into an attributeMappingSource object. For more information about expressions, see Writing Expressions for Attribute Mappings in Azure Active Directory. This API is supported in the following national cloud deployments.
+     * Parse a given string expression into an attributeMappingSource object. For more information about expressions, see Writing Expressions for Attribute Mappings in Azure Active Directory. This API is available in the following national cloud deployments.
      * @param ParseExpressionPostRequestBody $body The request body
      * @param ParseExpressionRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

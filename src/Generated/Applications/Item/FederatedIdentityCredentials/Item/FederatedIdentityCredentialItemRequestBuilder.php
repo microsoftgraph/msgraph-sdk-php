@@ -32,7 +32,7 @@ class FederatedIdentityCredentialItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a federatedIdentityCredential object from an application. This API is supported in the following national cloud deployments.
+     * Delete a federatedIdentityCredential object from an application. This API is available in the following national cloud deployments.
      * @param FederatedIdentityCredentialItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/federatedidentitycredential-delete?view=graph-rest-1.0 Find more info here
@@ -51,7 +51,7 @@ class FederatedIdentityCredentialItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a federatedIdentityCredential object. This API is supported in the following national cloud deployments.
+     * Read the properties and relationships of a federatedIdentityCredential object. This API is available in the following national cloud deployments.
      * @param FederatedIdentityCredentialItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/federatedidentitycredential-get?view=graph-rest-1.0 Find more info here
@@ -70,7 +70,7 @@ class FederatedIdentityCredentialItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a federatedIdentityCredential object. This API is supported in the following national cloud deployments.
+     * Update the properties of a federatedIdentityCredential object. This API is available in the following national cloud deployments.
      * @param FederatedIdentityCredential $body The request body
      * @param FederatedIdentityCredentialItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -90,7 +90,7 @@ class FederatedIdentityCredentialItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a federatedIdentityCredential object from an application. This API is supported in the following national cloud deployments.
+     * Delete a federatedIdentityCredential object from an application. This API is available in the following national cloud deployments.
      * @param FederatedIdentityCredentialItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -107,7 +107,7 @@ class FederatedIdentityCredentialItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a federatedIdentityCredential object. This API is supported in the following national cloud deployments.
+     * Read the properties and relationships of a federatedIdentityCredential object. This API is available in the following national cloud deployments.
      * @param FederatedIdentityCredentialItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -128,7 +128,7 @@ class FederatedIdentityCredentialItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a federatedIdentityCredential object. This API is supported in the following national cloud deployments.
+     * Update the properties of a federatedIdentityCredential object. This API is available in the following national cloud deployments.
      * @param FederatedIdentityCredential $body The request body
      * @param FederatedIdentityCredentialItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

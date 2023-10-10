@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Teams\Item\Schedule\Shifts\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties and relationships of a shift object by ID. This API is supported in the following national cloud deployments.
+ * Retrieve the properties and relationships of a shift object by ID. This API is available in the following national cloud deployments.
 */
 class ShiftItemRequestBuilderGetQueryParameters 
 {

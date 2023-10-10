@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\ThreatIntelligence\HostPairs;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read the properties and relationships of a hostPair object.
+ * Read the properties and relationships of a hostPair object. This API is available in the following national cloud deployments.
 */
 class HostPairsRequestBuilderGetQueryParameters 
 {

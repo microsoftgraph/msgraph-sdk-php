@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Calendar\CalendarPermissions;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a collection of calendarPermission resources that describe the identity and roles of users with whom the specified calendar has been shared or delegated. Here, the calendar can be a user calendar or group calendar. This API is supported in the following national cloud deployments.
+ * Get a collection of calendarPermission resources that describe the identity and roles of users with whom the specified calendar has been shared or delegated. Here, the calendar can be a user calendar or group calendar. This API is available in the following national cloud deployments.
 */
 class CalendarPermissionsRequestBuilderGetQueryParameters 
 {

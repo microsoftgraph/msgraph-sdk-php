@@ -76,7 +76,7 @@ class SynchronizationTemplateItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update (override) the synchronization template associated with a given application. This API is supported in the following national cloud deployments.
+     * Update (override) the synchronization template associated with a given application. This API is available in the following national cloud deployments.
      * @param SynchronizationTemplate $body The request body
      * @param SynchronizationTemplateItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -134,7 +134,7 @@ class SynchronizationTemplateItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update (override) the synchronization template associated with a given application. This API is supported in the following national cloud deployments.
+     * Update (override) the synchronization template associated with a given application. This API is available in the following national cloud deployments.
      * @param SynchronizationTemplate $body The request body
      * @param SynchronizationTemplateItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

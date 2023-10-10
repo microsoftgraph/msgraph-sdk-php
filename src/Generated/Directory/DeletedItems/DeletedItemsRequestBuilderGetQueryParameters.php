@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Directory\DeletedItems;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties of a recently deleted application, group, servicePrincipal, administrative unit, or user object from deleted items. This API is supported in the following national cloud deployments.
+ * Retrieve the properties of a recently deleted application, group, servicePrincipal, administrative unit, or user object from deleted items. This API is available in the following national cloud deployments.
 */
 class DeletedItemsRequestBuilderGetQueryParameters 
 {

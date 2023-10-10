@@ -36,7 +36,7 @@ class CreateUploadSessionPostRequestBody implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
@@ -49,7 +49,7 @@ class CreateUploadSessionPostRequestBody implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Gets the attachmentItem property value. The AttachmentItem property
+     * Gets the AttachmentItem property value. The AttachmentItem property
      * @return AttachmentItem|null
     */
     public function getAttachmentItem(): ?AttachmentItem {
@@ -61,7 +61,7 @@ class CreateUploadSessionPostRequestBody implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Gets the backingStore property value. Stores model information.
+     * Gets the BackingStore property value. Stores model information.
      * @return BackingStore
     */
     public function getBackingStore(): BackingStore {
@@ -75,7 +75,7 @@ class CreateUploadSessionPostRequestBody implements AdditionalDataHolder, Backed
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'attachmentItem' => fn(ParseNode $n) => $o->setAttachmentItem($n->getObjectValue([AttachmentItem::class, 'createFromDiscriminatorValue'])),
+            'AttachmentItem' => fn(ParseNode $n) => $o->setAttachmentItem($n->getObjectValue([AttachmentItem::class, 'createFromDiscriminatorValue'])),
         ];
     }
 
@@ -84,29 +84,29 @@ class CreateUploadSessionPostRequestBody implements AdditionalDataHolder, Backed
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('attachmentItem', $this->getAttachmentItem());
+        $writer->writeObjectValue('AttachmentItem', $this->getAttachmentItem());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param array<string,mixed> $value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
-     * Sets the attachmentItem property value. The AttachmentItem property
-     * @param AttachmentItem|null $value Value to set for the attachmentItem property.
+     * Sets the AttachmentItem property value. The AttachmentItem property
+     * @param AttachmentItem|null $value Value to set for the AttachmentItem property.
     */
     public function setAttachmentItem(?AttachmentItem $value): void {
         $this->getBackingStore()->set('attachmentItem', $value);
     }
 
     /**
-     * Sets the backingStore property value. Stores model information.
-     * @param BackingStore $value Value to set for the backingStore property.
+     * Sets the BackingStore property value. Stores model information.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;

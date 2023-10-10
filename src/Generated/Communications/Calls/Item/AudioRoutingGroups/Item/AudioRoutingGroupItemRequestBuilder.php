@@ -32,7 +32,7 @@ class AudioRoutingGroupItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete the specified audioRoutingGroup. This API is supported in the following national cloud deployments.
+     * Delete the specified audioRoutingGroup. This API is available in the following national cloud deployments.
      * @param AudioRoutingGroupItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/audioroutinggroup-delete?view=graph-rest-1.0 Find more info here
@@ -51,7 +51,7 @@ class AudioRoutingGroupItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of an audioRoutingGroup object. This API is supported in the following national cloud deployments.
+     * Retrieve the properties and relationships of an audioRoutingGroup object. This API is available in the following national cloud deployments.
      * @param AudioRoutingGroupItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/audioroutinggroup-get?view=graph-rest-1.0 Find more info here
@@ -70,7 +70,7 @@ class AudioRoutingGroupItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Modify sources and receivers of an audioRoutingGroup. This API is supported in the following national cloud deployments.
+     * Modify sources and receivers of an audioRoutingGroup. This API is available in the following national cloud deployments.
      * @param AudioRoutingGroup $body The request body
      * @param AudioRoutingGroupItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -90,7 +90,7 @@ class AudioRoutingGroupItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete the specified audioRoutingGroup. This API is supported in the following national cloud deployments.
+     * Delete the specified audioRoutingGroup. This API is available in the following national cloud deployments.
      * @param AudioRoutingGroupItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -107,7 +107,7 @@ class AudioRoutingGroupItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of an audioRoutingGroup object. This API is supported in the following national cloud deployments.
+     * Retrieve the properties and relationships of an audioRoutingGroup object. This API is available in the following national cloud deployments.
      * @param AudioRoutingGroupItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -128,7 +128,7 @@ class AudioRoutingGroupItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Modify sources and receivers of an audioRoutingGroup. This API is supported in the following national cloud deployments.
+     * Modify sources and receivers of an audioRoutingGroup. This API is available in the following national cloud deployments.
      * @param AudioRoutingGroup $body The request body
      * @param AudioRoutingGroupItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -53,7 +53,7 @@ class MembersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the members of a standard tag in a team and their properties. This API is supported in the following national cloud deployments.
+     * Get a list of the members of a standard tag in a team and their properties. This API is available in the following national cloud deployments.
      * @param MembersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/teamworktagmember-list?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class MembersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new teamworkTagMember object in a team. This API is supported in the following national cloud deployments.
+     * Create a new teamworkTagMember object in a team. This API is available in the following national cloud deployments.
      * @param TeamworkTagMember $body The request body
      * @param MembersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class MembersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the members of a standard tag in a team and their properties. This API is supported in the following national cloud deployments.
+     * Get a list of the members of a standard tag in a team and their properties. This API is available in the following national cloud deployments.
      * @param MembersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class MembersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new teamworkTagMember object in a team. This API is supported in the following national cloud deployments.
+     * Create a new teamworkTagMember object in a team. This API is available in the following national cloud deployments.
      * @param TeamworkTagMember $body The request body
      * @param MembersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

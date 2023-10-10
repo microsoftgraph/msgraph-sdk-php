@@ -53,7 +53,7 @@ class TasksRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of plannertask objects. This API is supported in the following national cloud deployments.
+     * Retrieve a list of plannertask objects. This API is available in the following national cloud deployments.
      * @param TasksRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/planner-list-tasks?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class TasksRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new plannerTask. This API is supported in the following national cloud deployments.
+     * Create a new plannerTask. This API is available in the following national cloud deployments.
      * @param PlannerTask $body The request body
      * @param TasksRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class TasksRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of plannertask objects. This API is supported in the following national cloud deployments.
+     * Retrieve a list of plannertask objects. This API is available in the following national cloud deployments.
      * @param TasksRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class TasksRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new plannerTask. This API is supported in the following national cloud deployments.
+     * Create a new plannerTask. This API is available in the following national cloud deployments.
      * @param PlannerTask $body The request body
      * @param TasksRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

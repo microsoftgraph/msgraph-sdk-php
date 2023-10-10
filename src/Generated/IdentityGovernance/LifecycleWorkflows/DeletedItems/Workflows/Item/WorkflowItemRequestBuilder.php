@@ -120,7 +120,7 @@ class WorkflowItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a workflow object. This API is supported in the following national cloud deployments.
+     * Delete a workflow object. This API is available in the following national cloud deployments.
      * @param WorkflowItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/identitygovernance-deletedItemcontainer-delete?view=graph-rest-1.0 Find more info here
@@ -139,7 +139,7 @@ class WorkflowItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a deleted workflow object. This API is supported in the following national cloud deployments.
+     * Retrieve a deleted workflow object. This API is available in the following national cloud deployments.
      * @param WorkflowItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/identitygovernance-deleteditemcontainer-get?view=graph-rest-1.0 Find more info here
@@ -158,7 +158,7 @@ class WorkflowItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a workflow object. This API is supported in the following national cloud deployments.
+     * Delete a workflow object. This API is available in the following national cloud deployments.
      * @param WorkflowItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -175,7 +175,7 @@ class WorkflowItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a deleted workflow object. This API is supported in the following national cloud deployments.
+     * Retrieve a deleted workflow object. This API is available in the following national cloud deployments.
      * @param WorkflowItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

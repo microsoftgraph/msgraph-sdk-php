@@ -31,7 +31,7 @@ class RestoreFactoryDefaultsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Restore a printer's default settings to the values specified by the manufacturer. This API is supported in the following national cloud deployments.
+     * Restore a printer's default settings to the values specified by the manufacturer. This API is available in the following national cloud deployments.
      * @param RestoreFactoryDefaultsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/printer-restorefactorydefaults?view=graph-rest-1.0 Find more info here
@@ -50,7 +50,7 @@ class RestoreFactoryDefaultsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Restore a printer's default settings to the values specified by the manufacturer. This API is supported in the following national cloud deployments.
+     * Restore a printer's default settings to the values specified by the manufacturer. This API is available in the following national cloud deployments.
      * @param RestoreFactoryDefaultsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

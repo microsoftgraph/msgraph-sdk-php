@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Policies\AppManagementPolicies\Item\AppliesT
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List application and service principal objects that are assigned an appManagementPolicy policy object. This API is supported in the following national cloud deployments.
+ * List application and service principal objects that are assigned an appManagementPolicy policy object. This API is available in the following national cloud deployments.
 */
 class AppliesToRequestBuilderGetQueryParameters 
 {

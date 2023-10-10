@@ -50,7 +50,7 @@ class AuthorizationPolicyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties of an authorizationPolicy object. This API is supported in the following national cloud deployments.
+     * Retrieve the properties of an authorizationPolicy object. This API is available in the following national cloud deployments.
      * @param AuthorizationPolicyRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/authorizationpolicy-get?view=graph-rest-1.0 Find more info here
@@ -69,7 +69,7 @@ class AuthorizationPolicyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an authorizationPolicy object. This API is supported in the following national cloud deployments.
+     * Update the properties of an authorizationPolicy object. This API is available in the following national cloud deployments.
      * @param AuthorizationPolicy $body The request body
      * @param AuthorizationPolicyRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -106,7 +106,7 @@ class AuthorizationPolicyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties of an authorizationPolicy object. This API is supported in the following national cloud deployments.
+     * Retrieve the properties of an authorizationPolicy object. This API is available in the following national cloud deployments.
      * @param AuthorizationPolicyRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -127,7 +127,7 @@ class AuthorizationPolicyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an authorizationPolicy object. This API is supported in the following national cloud deployments.
+     * Update the properties of an authorizationPolicy object. This API is available in the following national cloud deployments.
      * @param AuthorizationPolicy $body The request body
      * @param AuthorizationPolicyRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

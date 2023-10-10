@@ -32,7 +32,7 @@ class ConvertToRangeRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Converts the table into a normal range of cells. All data is preserved. This API is supported in the following national cloud deployments.
+     * Converts the table into a normal range of cells. All data is preserved. This API is available in the following national cloud deployments.
      * @param ConvertToRangeRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/table-converttorange?view=graph-rest-1.0 Find more info here
@@ -51,7 +51,7 @@ class ConvertToRangeRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Converts the table into a normal range of cells. All data is preserved. This API is supported in the following national cloud deployments.
+     * Converts the table into a normal range of cells. All data is preserved. This API is available in the following national cloud deployments.
      * @param ConvertToRangeRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

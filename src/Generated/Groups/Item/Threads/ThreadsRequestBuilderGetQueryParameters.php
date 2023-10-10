@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Threads;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get all the threads of a group. This API is supported in the following national cloud deployments.
+ * Get all the threads of a group. This API is available in the following national cloud deployments.
 */
 class ThreadsRequestBuilderGetQueryParameters 
 {

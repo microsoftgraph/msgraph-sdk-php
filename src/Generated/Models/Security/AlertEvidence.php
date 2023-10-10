@@ -63,7 +63,6 @@ class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.security.processEvidence': return new ProcessEvidence();
                 case '#microsoft.graph.security.registryKeyEvidence': return new RegistryKeyEvidence();
                 case '#microsoft.graph.security.registryValueEvidence': return new RegistryValueEvidence();
-                case '#microsoft.graph.security.securityGroupEvidence': return new SecurityGroupEvidence();
                 case '#microsoft.graph.security.urlEvidence': return new UrlEvidence();
                 case '#microsoft.graph.security.userEvidence': return new UserEvidence();
             }
@@ -72,7 +71,7 @@ class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
@@ -85,7 +84,7 @@ class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the backingStore property value. Stores model information.
+     * Gets the BackingStore property value. Stores model information.
      * @return BackingStore
     */
     public function getBackingStore(): BackingStore {
@@ -243,16 +242,16 @@ class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param array<string,mixed> $value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
-     * Sets the backingStore property value. Stores model information.
-     * @param BackingStore $value Value to set for the backingStore property.
+     * Sets the BackingStore property value. Stores model information.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;

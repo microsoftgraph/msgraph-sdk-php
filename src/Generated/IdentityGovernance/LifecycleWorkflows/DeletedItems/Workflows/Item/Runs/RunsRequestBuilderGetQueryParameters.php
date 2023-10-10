@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Delete
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a list of the run objects and their properties for a lifecycle workflow. This API is supported in the following national cloud deployments.
+ * Get a list of the run objects and their properties for a lifecycle workflow. This API is available in the following national cloud deployments.
 */
 class RunsRequestBuilderGetQueryParameters 
 {

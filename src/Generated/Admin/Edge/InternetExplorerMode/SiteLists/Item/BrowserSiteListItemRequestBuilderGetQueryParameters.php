@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Admin\Edge\InternetExplorerMode\SiteLists\It
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a browserSiteList that contains browserSite and browserSharedCookie resources. This API is supported in the following national cloud deployments.
+ * Get a browserSiteList that contains browserSite and browserSharedCookie resources. This API is available in the following national cloud deployments.
 */
 class BrowserSiteListItemRequestBuilderGetQueryParameters 
 {

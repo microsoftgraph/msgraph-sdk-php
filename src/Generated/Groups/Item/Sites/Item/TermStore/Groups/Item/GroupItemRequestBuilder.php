@@ -40,7 +40,7 @@ class GroupItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a group object in a term store]. This API is supported in the following [national cloud deployments.
+     * Delete a group object in a term store]. This API is available in the following [national cloud deployments.
      * @param GroupItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/termstore-group-delete?view=graph-rest-1.0 Find more info here
@@ -59,7 +59,7 @@ class GroupItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a term store group object. This API is supported in the following national cloud deployments.
+     * Read the properties and relationships of a term store group object. This API is available in the following national cloud deployments.
      * @param GroupItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/termstore-group-get?view=graph-rest-1.0 Find more info here
@@ -97,7 +97,7 @@ class GroupItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a group object in a term store]. This API is supported in the following [national cloud deployments.
+     * Delete a group object in a term store]. This API is available in the following [national cloud deployments.
      * @param GroupItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -114,7 +114,7 @@ class GroupItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a term store group object. This API is supported in the following national cloud deployments.
+     * Read the properties and relationships of a term store group object. This API is available in the following national cloud deployments.
      * @param GroupItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

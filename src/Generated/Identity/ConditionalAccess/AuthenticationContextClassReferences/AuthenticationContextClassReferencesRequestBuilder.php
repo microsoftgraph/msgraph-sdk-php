@@ -53,7 +53,7 @@ class AuthenticationContextClassReferencesRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Retrieve a list of authenticationContextClassReference objects. This API is supported in the following national cloud deployments.
+     * Retrieve a list of authenticationContextClassReference objects. This API is available in the following national cloud deployments.
      * @param AuthenticationContextClassReferencesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/conditionalaccessroot-list-authenticationcontextclassreferences?view=graph-rest-1.0 Find more info here
@@ -91,7 +91,7 @@ class AuthenticationContextClassReferencesRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Retrieve a list of authenticationContextClassReference objects. This API is supported in the following national cloud deployments.
+     * Retrieve a list of authenticationContextClassReference objects. This API is available in the following national cloud deployments.
      * @param AuthenticationContextClassReferencesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

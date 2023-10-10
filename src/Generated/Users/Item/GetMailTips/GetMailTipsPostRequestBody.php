@@ -37,7 +37,7 @@ class GetMailTipsPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
@@ -50,7 +50,7 @@ class GetMailTipsPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the backingStore property value. Stores model information.
+     * Gets the BackingStore property value. Stores model information.
      * @return BackingStore
     */
     public function getBackingStore(): BackingStore {
@@ -58,7 +58,7 @@ class GetMailTipsPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the emailAddresses property value. The EmailAddresses property
+     * Gets the EmailAddresses property value. The EmailAddresses property
      * @return array<string>|null
     */
     public function getEmailAddresses(): ?array {
@@ -78,7 +78,7 @@ class GetMailTipsPostRequestBody implements AdditionalDataHolder, BackedModel, P
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'emailAddresses' => function (ParseNode $n) {
+            'EmailAddresses' => function (ParseNode $n) {
                 $val = $n->getCollectionOfPrimitiveValues();
                 if (is_array($val)) {
                     TypeUtils::validateCollectionValues($val, 'string');
@@ -86,12 +86,12 @@ class GetMailTipsPostRequestBody implements AdditionalDataHolder, BackedModel, P
                 /** @var array<string>|null $val */
                 $this->setEmailAddresses($val);
             },
-            'mailTipsOptions' => fn(ParseNode $n) => $o->setMailTipsOptions($n->getEnumValue(MailTipsType::class)),
+            'MailTipsOptions' => fn(ParseNode $n) => $o->setMailTipsOptions($n->getEnumValue(MailTipsType::class)),
         ];
     }
 
     /**
-     * Gets the mailTipsOptions property value. The MailTipsOptions property
+     * Gets the MailTipsOptions property value. The MailTipsOptions property
      * @return MailTipsType|null
     */
     public function getMailTipsOptions(): ?MailTipsType {
@@ -107,38 +107,38 @@ class GetMailTipsPostRequestBody implements AdditionalDataHolder, BackedModel, P
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeCollectionOfPrimitiveValues('emailAddresses', $this->getEmailAddresses());
-        $writer->writeEnumValue('mailTipsOptions', $this->getMailTipsOptions());
+        $writer->writeCollectionOfPrimitiveValues('EmailAddresses', $this->getEmailAddresses());
+        $writer->writeEnumValue('MailTipsOptions', $this->getMailTipsOptions());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param array<string,mixed> $value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
-     * Sets the backingStore property value. Stores model information.
-     * @param BackingStore $value Value to set for the backingStore property.
+     * Sets the BackingStore property value. Stores model information.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
     }
 
     /**
-     * Sets the emailAddresses property value. The EmailAddresses property
-     * @param array<string>|null $value Value to set for the emailAddresses property.
+     * Sets the EmailAddresses property value. The EmailAddresses property
+     * @param array<string>|null $value Value to set for the EmailAddresses property.
     */
     public function setEmailAddresses(?array $value): void {
         $this->getBackingStore()->set('emailAddresses', $value);
     }
 
     /**
-     * Sets the mailTipsOptions property value. The MailTipsOptions property
-     * @param MailTipsType|null $value Value to set for the mailTipsOptions property.
+     * Sets the MailTipsOptions property value. The MailTipsOptions property
+     * @param MailTipsType|null $value Value to set for the MailTipsOptions property.
     */
     public function setMailTipsOptions(?MailTipsType $value): void {
         $this->getBackingStore()->set('mailTipsOptions', $value);

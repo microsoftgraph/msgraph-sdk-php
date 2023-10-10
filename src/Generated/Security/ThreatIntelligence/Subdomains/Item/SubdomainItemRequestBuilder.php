@@ -58,7 +58,7 @@ class SubdomainItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a subdomain object.
+     * Read the properties and relationships of a subdomain object. This API is available in the following national cloud deployments.
      * @param SubdomainItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/security-subdomain-get?view=graph-rest-1.0 Find more info here
@@ -113,7 +113,7 @@ class SubdomainItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a subdomain object.
+     * Read the properties and relationships of a subdomain object. This API is available in the following national cloud deployments.
      * @param SubdomainItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Names;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve a list of nameditem objects. This API is supported in the following national cloud deployments.
+ * Retrieve a list of nameditem objects. This API is available in the following national cloud deployments.
 */
 class NamesRequestBuilderGetQueryParameters 
 {

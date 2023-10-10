@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Education\Me\Rubrics\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties and relationships of an educationRubric object. Only teachers and students can perform this operation. This API is supported in the following national cloud deployments.
+ * Retrieve the properties and relationships of an educationRubric object. Only teachers and students can perform this operation. This API is available in the following national cloud deployments.
 */
 class EducationRubricItemRequestBuilderGetQueryParameters 
 {

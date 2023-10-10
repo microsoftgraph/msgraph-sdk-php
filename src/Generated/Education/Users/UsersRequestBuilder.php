@@ -61,7 +61,7 @@ class UsersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the educationUser objects and their properties. This API is supported in the following national cloud deployments.
+     * Get a list of the educationUser objects and their properties. This API is available in the following national cloud deployments.
      * @param UsersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/educationuser-list?view=graph-rest-1.0 Find more info here
@@ -80,7 +80,7 @@ class UsersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new educationUser object. This API is supported in the following national cloud deployments.
+     * Create a new educationUser object. This API is available in the following national cloud deployments.
      * @param EducationUser $body The request body
      * @param UsersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -100,7 +100,7 @@ class UsersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the educationUser objects and their properties. This API is supported in the following national cloud deployments.
+     * Get a list of the educationUser objects and their properties. This API is available in the following national cloud deployments.
      * @param UsersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -121,7 +121,7 @@ class UsersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new educationUser object. This API is supported in the following national cloud deployments.
+     * Create a new educationUser object. This API is available in the following national cloud deployments.
      * @param EducationUser $body The request body
      * @param UsersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

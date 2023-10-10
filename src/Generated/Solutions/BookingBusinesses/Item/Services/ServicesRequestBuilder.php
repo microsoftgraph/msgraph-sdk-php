@@ -53,7 +53,7 @@ class ServicesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of bookingService objects in the specified bookingBusiness. This API is supported in the following national cloud deployments.
+     * Get a list of bookingService objects in the specified bookingBusiness. This API is available in the following national cloud deployments.
      * @param ServicesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/bookingbusiness-list-services?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class ServicesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new bookingService for the specified bookingBusiness. This API is supported in the following national cloud deployments.
+     * Create a new bookingService for the specified bookingBusiness. This API is available in the following national cloud deployments.
      * @param BookingService $body The request body
      * @param ServicesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class ServicesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of bookingService objects in the specified bookingBusiness. This API is supported in the following national cloud deployments.
+     * Get a list of bookingService objects in the specified bookingBusiness. This API is available in the following national cloud deployments.
      * @param ServicesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class ServicesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new bookingService for the specified bookingBusiness. This API is supported in the following national cloud deployments.
+     * Create a new bookingService for the specified bookingBusiness. This API is available in the following national cloud deployments.
      * @param BookingService $body The request body
      * @param ServicesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

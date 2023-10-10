@@ -54,7 +54,7 @@ class UserProcessingResultsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the userProcessingResult resources for a workflow. This API is supported in the following national cloud deployments.
+     * Get the userProcessingResult resources for a workflow. This API is available in the following national cloud deployments.
      * @param UserProcessingResultsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/identitygovernance-workflow-list-userprocessingresults?view=graph-rest-1.0 Find more info here
@@ -83,7 +83,7 @@ class UserProcessingResultsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the userProcessingResult resources for a workflow. This API is supported in the following national cloud deployments.
+     * Get the userProcessingResult resources for a workflow. This API is available in the following national cloud deployments.
      * @param UserProcessingResultsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

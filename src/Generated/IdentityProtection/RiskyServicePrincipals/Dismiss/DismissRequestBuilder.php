@@ -31,7 +31,7 @@ class DismissRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Dismiss the risk of one or more riskyServicePrincipal objects. This action sets the targeted service principal account's risk level to none. You can dismiss up to 60 service principal accounts in one request. This API is supported in the following national cloud deployments.
+     * Dismiss the risk of one or more riskyServicePrincipal objects. This action sets the targeted service principal account's risk level to none. You can dismiss up to 60 service principal accounts in one request. This API is available in the following national cloud deployments.
      * @param DismissPostRequestBody $body The request body
      * @param DismissRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -51,7 +51,7 @@ class DismissRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Dismiss the risk of one or more riskyServicePrincipal objects. This action sets the targeted service principal account's risk level to none. You can dismiss up to 60 service principal accounts in one request. This API is supported in the following national cloud deployments.
+     * Dismiss the risk of one or more riskyServicePrincipal objects. This action sets the targeted service principal account's risk level to none. You can dismiss up to 60 service principal accounts in one request. This API is available in the following national cloud deployments.
      * @param DismissPostRequestBody $body The request body
      * @param DismissRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

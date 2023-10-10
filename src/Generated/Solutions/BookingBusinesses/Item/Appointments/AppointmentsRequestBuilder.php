@@ -53,7 +53,7 @@ class AppointmentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of bookingAppointment objects for the specified bookingBusiness. This API is supported in the following national cloud deployments.
+     * Get a list of bookingAppointment objects for the specified bookingBusiness. This API is available in the following national cloud deployments.
      * @param AppointmentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/bookingbusiness-list-appointments?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class AppointmentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new bookingAppointment for the specified bookingBusiness. This API is supported in the following national cloud deployments.
+     * Create a new bookingAppointment for the specified bookingBusiness. This API is available in the following national cloud deployments.
      * @param BookingAppointment $body The request body
      * @param AppointmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class AppointmentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of bookingAppointment objects for the specified bookingBusiness. This API is supported in the following national cloud deployments.
+     * Get a list of bookingAppointment objects for the specified bookingBusiness. This API is available in the following national cloud deployments.
      * @param AppointmentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class AppointmentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new bookingAppointment for the specified bookingBusiness. This API is supported in the following national cloud deployments.
+     * Create a new bookingAppointment for the specified bookingBusiness. This API is available in the following national cloud deployments.
      * @param BookingAppointment $body The request body
      * @param AppointmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

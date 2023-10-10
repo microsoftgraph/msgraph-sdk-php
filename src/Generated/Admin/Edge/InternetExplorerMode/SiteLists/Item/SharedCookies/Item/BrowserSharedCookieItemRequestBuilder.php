@@ -32,7 +32,7 @@ class BrowserSharedCookieItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a browserSharedCookie from a browserSiteList. This API is supported in the following national cloud deployments.
+     * Delete a browserSharedCookie from a browserSiteList. This API is available in the following national cloud deployments.
      * @param BrowserSharedCookieItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/browsersitelist-delete-sharedcookies?view=graph-rest-1.0 Find more info here
@@ -51,7 +51,7 @@ class BrowserSharedCookieItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a session cookie that can be shared between a Microsoft Edge process and an Internet Explorer process, while using Internet Explorer mode. This API is supported in the following national cloud deployments.
+     * Get a session cookie that can be shared between a Microsoft Edge process and an Internet Explorer process, while using Internet Explorer mode. This API is available in the following national cloud deployments.
      * @param BrowserSharedCookieItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/browsersharedcookie-get?view=graph-rest-1.0 Find more info here
@@ -70,7 +70,7 @@ class BrowserSharedCookieItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a browserSharedCookie object. This API is supported in the following national cloud deployments.
+     * Update the properties of a browserSharedCookie object. This API is available in the following national cloud deployments.
      * @param BrowserSharedCookie $body The request body
      * @param BrowserSharedCookieItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -90,7 +90,7 @@ class BrowserSharedCookieItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a browserSharedCookie from a browserSiteList. This API is supported in the following national cloud deployments.
+     * Delete a browserSharedCookie from a browserSiteList. This API is available in the following national cloud deployments.
      * @param BrowserSharedCookieItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -107,7 +107,7 @@ class BrowserSharedCookieItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a session cookie that can be shared between a Microsoft Edge process and an Internet Explorer process, while using Internet Explorer mode. This API is supported in the following national cloud deployments.
+     * Get a session cookie that can be shared between a Microsoft Edge process and an Internet Explorer process, while using Internet Explorer mode. This API is available in the following national cloud deployments.
      * @param BrowserSharedCookieItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -128,7 +128,7 @@ class BrowserSharedCookieItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a browserSharedCookie object. This API is supported in the following national cloud deployments.
+     * Update the properties of a browserSharedCookie object. This API is available in the following national cloud deployments.
      * @param BrowserSharedCookie $body The request body
      * @param BrowserSharedCookieItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

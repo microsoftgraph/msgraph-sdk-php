@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Admin\Sharepoint\Settings;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the tenant-level settings for SharePoint and OneDrive. This API is supported in the following national cloud deployments.
+ * Get the tenant-level settings for SharePoint and OneDrive. This API is available in the following national cloud deployments.
 */
 class SettingsRequestBuilderGetQueryParameters 
 {

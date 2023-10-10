@@ -53,7 +53,7 @@ class PlansRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of plannerPlan objects owned by a group object. This API is supported in the following national cloud deployments.
+     * Retrieve a list of plannerPlan objects owned by a group object. This API is available in the following national cloud deployments.
      * @param PlansRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/plannergroup-list-plans?view=graph-rest-1.0 Find more info here
@@ -91,7 +91,7 @@ class PlansRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of plannerPlan objects owned by a group object. This API is supported in the following national cloud deployments.
+     * Retrieve a list of plannerPlan objects owned by a group object. This API is available in the following national cloud deployments.
      * @param PlansRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

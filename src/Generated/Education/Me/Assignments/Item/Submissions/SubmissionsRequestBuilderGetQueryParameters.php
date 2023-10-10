@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List all the submissions associated with an assignment. Only teachers, students, and applications with application permissions can perform this operation. A teacher or an application with application permissions can get all the submissions while a student can only get submissions that they are associated with. This API is supported in the following national cloud deployments.
+ * List all the submissions associated with an assignment. Only teachers, students, and applications with application permissions can perform this operation. A teacher or an application with application permissions can get all the submissions while a student can only get submissions that they are associated with. This API is available in the following national cloud deployments.
 */
 class SubmissionsRequestBuilderGetQueryParameters 
 {

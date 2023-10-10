@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Directory\AttributeSets;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a list of the attributeSet objects and their properties. This API is supported in the following national cloud deployments.
+ * Get a list of the attributeSet objects and their properties. This API is available in the following national cloud deployments.
 */
 class AttributeSetsRequestBuilderGetQueryParameters 
 {

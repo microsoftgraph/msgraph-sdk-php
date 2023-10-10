@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Team\Channels\Item\SharedWithTea
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the list of teams that has been shared a specified channel. This operation is allowed only for channels with a membershipType value of shared. This API is supported in the following national cloud deployments.
+ * Get the list of teams that has been shared a specified channel. This operation is allowed only for channels with a membershipType value of shared. This API is available in the following national cloud deployments.
 */
 class SharedWithTeamsRequestBuilderGetQueryParameters 
 {

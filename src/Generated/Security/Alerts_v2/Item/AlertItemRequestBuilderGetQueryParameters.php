@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\Alerts_v2\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the properties and relationships of an alert in an organization based on the specified alert id property. This API is supported in the following national cloud deployments.
+ * Get the properties and relationships of an alert in an organization based on the specified alert id property. This API is available in the following national cloud deployments.
 */
 class AlertItemRequestBuilderGetQueryParameters 
 {

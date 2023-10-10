@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Chats\Item\Tabs;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the list of tabs in the specified chat. This API is supported in the following national cloud deployments.
+ * Retrieve the list of tabs in the specified chat. This API is available in the following national cloud deployments.
 */
 class TabsRequestBuilderGetQueryParameters 
 {

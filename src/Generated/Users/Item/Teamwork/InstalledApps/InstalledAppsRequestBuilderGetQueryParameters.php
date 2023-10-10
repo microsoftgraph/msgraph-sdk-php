@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Teamwork\InstalledApps;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the list of apps installed in the personal scope of the specified user. This API is supported in the following national cloud deployments.
+ * Retrieve the list of apps installed in the personal scope of the specified user. This API is available in the following national cloud deployments.
 */
 class InstalledAppsRequestBuilderGetQueryParameters 
 {

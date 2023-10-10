@@ -80,7 +80,7 @@ class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Stop the synchronization job, and permanently delete all the state associated with it. Synchronized accounts are left as-is. This API is supported in the following national cloud deployments.
+     * Stop the synchronization job, and permanently delete all the state associated with it. Synchronized accounts are left as-is. This API is available in the following national cloud deployments.
      * @param SynchronizationJobItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/synchronization-synchronizationjob-delete?view=graph-rest-1.0 Find more info here
@@ -99,7 +99,7 @@ class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the existing synchronization job and its properties. This API is supported in the following national cloud deployments.
+     * Retrieve the existing synchronization job and its properties. This API is available in the following national cloud deployments.
      * @param SynchronizationJobItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/synchronization-synchronizationjob-get?view=graph-rest-1.0 Find more info here
@@ -137,7 +137,7 @@ class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Stop the synchronization job, and permanently delete all the state associated with it. Synchronized accounts are left as-is. This API is supported in the following national cloud deployments.
+     * Stop the synchronization job, and permanently delete all the state associated with it. Synchronized accounts are left as-is. This API is available in the following national cloud deployments.
      * @param SynchronizationJobItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -154,7 +154,7 @@ class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the existing synchronization job and its properties. This API is supported in the following national cloud deployments.
+     * Retrieve the existing synchronization job and its properties. This API is available in the following national cloud deployments.
      * @param SynchronizationJobItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

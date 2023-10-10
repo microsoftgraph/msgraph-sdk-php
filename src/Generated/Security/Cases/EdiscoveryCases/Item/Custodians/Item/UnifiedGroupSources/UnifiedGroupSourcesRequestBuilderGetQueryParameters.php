@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodia
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a list of the unifiedGroupSource objects associated with an ediscoveryCustodian. This API is supported in the following national cloud deployments.
+ * Get a list of the unifiedGroupSource objects associated with an ediscoveryCustodian. This API is available in the following national cloud deployments.
 */
 class UnifiedGroupSourcesRequestBuilderGetQueryParameters 
 {

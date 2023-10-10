@@ -53,7 +53,7 @@ class TimeOffReasonsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the list of timeOffReasons in a schedule. This API is supported in the following national cloud deployments.
+     * Get the list of timeOffReasons in a schedule. This API is available in the following national cloud deployments.
      * @param TimeOffReasonsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/schedule-list-timeoffreasons?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class TimeOffReasonsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new timeOffReason. This API is supported in the following national cloud deployments.
+     * Create a new timeOffReason. This API is available in the following national cloud deployments.
      * @param TimeOffReason $body The request body
      * @param TimeOffReasonsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class TimeOffReasonsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the list of timeOffReasons in a schedule. This API is supported in the following national cloud deployments.
+     * Get the list of timeOffReasons in a schedule. This API is available in the following national cloud deployments.
      * @param TimeOffReasonsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class TimeOffReasonsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new timeOffReason. This API is supported in the following national cloud deployments.
+     * Create a new timeOffReason. This API is available in the following national cloud deployments.
      * @param TimeOffReason $body The request body
      * @param TimeOffReasonsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

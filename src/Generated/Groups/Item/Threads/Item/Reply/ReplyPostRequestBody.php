@@ -36,7 +36,7 @@ class ReplyPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
@@ -49,7 +49,7 @@ class ReplyPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the backingStore property value. Stores model information.
+     * Gets the BackingStore property value. Stores model information.
      * @return BackingStore
     */
     public function getBackingStore(): BackingStore {
@@ -63,12 +63,12 @@ class ReplyPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'post' => fn(ParseNode $n) => $o->setPost($n->getObjectValue([Post::class, 'createFromDiscriminatorValue'])),
+            'Post' => fn(ParseNode $n) => $o->setPost($n->getObjectValue([Post::class, 'createFromDiscriminatorValue'])),
         ];
     }
 
     /**
-     * Gets the post property value. The Post property
+     * Gets the Post property value. The Post property
      * @return Post|null
     */
     public function getPost(): ?Post {
@@ -84,29 +84,29 @@ class ReplyPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('post', $this->getPost());
+        $writer->writeObjectValue('Post', $this->getPost());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param array<string,mixed> $value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
-     * Sets the backingStore property value. Stores model information.
-     * @param BackingStore $value Value to set for the backingStore property.
+     * Sets the BackingStore property value. Stores model information.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
     }
 
     /**
-     * Sets the post property value. The Post property
-     * @param Post|null $value Value to set for the post property.
+     * Sets the Post property value. The Post property
+     * @param Post|null $value Value to set for the Post property.
     */
     public function setPost(?Post $value): void {
         $this->getBackingStore()->set('post', $value);

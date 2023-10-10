@@ -53,7 +53,7 @@ class ExtensionPropertiesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the list of directory extension definitions, represented by extensionProperty objects on an application. This API is supported in the following national cloud deployments.
+     * Retrieve the list of directory extension definitions, represented by extensionProperty objects on an application. This API is available in the following national cloud deployments.
      * @param ExtensionPropertiesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/application-list-extensionproperty?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class ExtensionPropertiesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new directory extension definition, represented by an extensionProperty object. This API is supported in the following national cloud deployments.
+     * Create a new directory extension definition, represented by an extensionProperty object. This API is available in the following national cloud deployments.
      * @param ExtensionProperty $body The request body
      * @param ExtensionPropertiesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class ExtensionPropertiesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the list of directory extension definitions, represented by extensionProperty objects on an application. This API is supported in the following national cloud deployments.
+     * Retrieve the list of directory extension definitions, represented by extensionProperty objects on an application. This API is available in the following national cloud deployments.
      * @param ExtensionPropertiesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class ExtensionPropertiesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new directory extension definition, represented by an extensionProperty object. This API is supported in the following national cloud deployments.
+     * Create a new directory extension definition, represented by an extensionProperty object. This API is available in the following national cloud deployments.
      * @param ExtensionProperty $body The request body
      * @param ExtensionPropertiesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

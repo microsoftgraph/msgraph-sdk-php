@@ -52,7 +52,7 @@ class FollowingRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List the items that have been followed by the signed in user.This collection includes items that are in the user's drive as well as items they have access to from other drives. This API is supported in the following national cloud deployments.
+     * List the items that have been followed by the signed in user.This collection includes items that are in the user's drive as well as items they have access to from other drives. This API is available in the following national cloud deployments.
      * @param FollowingRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/drive-list-following?view=graph-rest-1.0 Find more info here
@@ -71,7 +71,7 @@ class FollowingRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List the items that have been followed by the signed in user.This collection includes items that are in the user's drive as well as items they have access to from other drives. This API is supported in the following national cloud deployments.
+     * List the items that have been followed by the signed in user.This collection includes items that are in the user's drive as well as items they have access to from other drives. This API is available in the following national cloud deployments.
      * @param FollowingRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

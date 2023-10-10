@@ -31,7 +31,7 @@ class ChangeScreenSharingRoleRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Allow applications to share screen content with the participants of a group call. This API is supported in the following national cloud deployments.
+     * Allow applications to share screen content with the participants of a group call. This API is available in the following national cloud deployments.
      * @param ChangeScreenSharingRolePostRequestBody $body The request body
      * @param ChangeScreenSharingRoleRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -51,7 +51,7 @@ class ChangeScreenSharingRoleRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Allow applications to share screen content with the participants of a group call. This API is supported in the following national cloud deployments.
+     * Allow applications to share screen content with the participants of a group call. This API is available in the following national cloud deployments.
      * @param ChangeScreenSharingRolePostRequestBody $body The request body
      * @param ChangeScreenSharingRoleRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

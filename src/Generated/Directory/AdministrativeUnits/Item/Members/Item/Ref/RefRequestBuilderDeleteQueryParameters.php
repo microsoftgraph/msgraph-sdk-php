@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Directory\AdministrativeUnits\Item\Members\I
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Use this API to remove a member (user, group, or device) from an administrative unit. This API is supported in the following national cloud deployments.
+ * Use this API to remove a member (user, group, or device) from an administrative unit. This API is available in the following national cloud deployments.
 */
 class RefRequestBuilderDeleteQueryParameters 
 {

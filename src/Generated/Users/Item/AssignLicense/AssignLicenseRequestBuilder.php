@@ -32,7 +32,7 @@ class AssignLicenseRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Add or remove subscriptions for the user. You can also enable and disable specific plans associated with a subscription. This API is supported in the following national cloud deployments.
+     * Add or remove subscriptions for the user. You can also enable and disable specific plans associated with a subscription. This API is available in the following national cloud deployments.
      * @param AssignLicensePostRequestBody $body The request body
      * @param AssignLicenseRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -52,7 +52,7 @@ class AssignLicenseRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Add or remove subscriptions for the user. You can also enable and disable specific plans associated with a subscription. This API is supported in the following national cloud deployments.
+     * Add or remove subscriptions for the user. You can also enable and disable specific plans associated with a subscription. This API is available in the following national cloud deployments.
      * @param AssignLicensePostRequestBody $body The request body
      * @param AssignLicenseRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

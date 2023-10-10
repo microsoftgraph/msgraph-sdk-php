@@ -53,7 +53,7 @@ class CalendarGroupsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the user's calendar groups. This API is supported in the following national cloud deployments.
+     * Get the user's calendar groups. This API is available in the following national cloud deployments.
      * @param CalendarGroupsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/user-list-calendargroups?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class CalendarGroupsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Use this API to create a new CalendarGroup. This API is supported in the following national cloud deployments.
+     * Use this API to create a new CalendarGroup. This API is available in the following national cloud deployments.
      * @param CalendarGroup $body The request body
      * @param CalendarGroupsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class CalendarGroupsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the user's calendar groups. This API is supported in the following national cloud deployments.
+     * Get the user's calendar groups. This API is available in the following national cloud deployments.
      * @param CalendarGroupsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class CalendarGroupsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Use this API to create a new CalendarGroup. This API is supported in the following national cloud deployments.
+     * Use this API to create a new CalendarGroup. This API is available in the following national cloud deployments.
      * @param CalendarGroup $body The request body
      * @param CalendarGroupsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

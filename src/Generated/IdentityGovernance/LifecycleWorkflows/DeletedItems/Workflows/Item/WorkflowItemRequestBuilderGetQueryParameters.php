@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Delete
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve a deleted workflow object. This API is supported in the following national cloud deployments.
+ * Retrieve a deleted workflow object. This API is available in the following national cloud deployments.
 */
 class WorkflowItemRequestBuilderGetQueryParameters 
 {

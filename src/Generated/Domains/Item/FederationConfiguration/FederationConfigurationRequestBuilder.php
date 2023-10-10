@@ -53,7 +53,7 @@ class FederationConfigurationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of an internalDomainFederation object. This API is supported in the following national cloud deployments.
+     * Read the properties and relationships of an internalDomainFederation object. This API is available in the following national cloud deployments.
      * @param FederationConfigurationRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -71,7 +71,7 @@ class FederationConfigurationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new internalDomainFederation object. This API is supported in the following national cloud deployments.
+     * Create a new internalDomainFederation object. This API is available in the following national cloud deployments.
      * @param InternalDomainFederation $body The request body
      * @param FederationConfigurationRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -91,7 +91,7 @@ class FederationConfigurationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of an internalDomainFederation object. This API is supported in the following national cloud deployments.
+     * Read the properties and relationships of an internalDomainFederation object. This API is available in the following national cloud deployments.
      * @param FederationConfigurationRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -112,7 +112,7 @@ class FederationConfigurationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new internalDomainFederation object. This API is supported in the following national cloud deployments.
+     * Create a new internalDomainFederation object. This API is available in the following national cloud deployments.
      * @param InternalDomainFederation $body The request body
      * @param FederationConfigurationRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

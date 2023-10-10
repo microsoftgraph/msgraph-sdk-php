@@ -36,7 +36,7 @@ class Erf_PrecisePostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
@@ -49,7 +49,7 @@ class Erf_PrecisePostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the backingStore property value. Stores model information.
+     * Gets the BackingStore property value. Stores model information.
      * @return BackingStore
     */
     public function getBackingStore(): BackingStore {
@@ -63,12 +63,12 @@ class Erf_PrecisePostRequestBody implements AdditionalDataHolder, BackedModel, P
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'x' => fn(ParseNode $n) => $o->setX($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
+            'X' => fn(ParseNode $n) => $o->setX($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
     }
 
     /**
-     * Gets the x property value. The X property
+     * Gets the X property value. The X property
      * @return Json|null
     */
     public function getX(): ?Json {
@@ -84,29 +84,29 @@ class Erf_PrecisePostRequestBody implements AdditionalDataHolder, BackedModel, P
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('x', $this->getX());
+        $writer->writeObjectValue('X', $this->getX());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param array<string,mixed> $value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
-     * Sets the backingStore property value. Stores model information.
-     * @param BackingStore $value Value to set for the backingStore property.
+     * Sets the BackingStore property value. Stores model information.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
     }
 
     /**
-     * Sets the x property value. The X property
-     * @param Json|null $value Value to set for the x property.
+     * Sets the X property value. The X property
+     * @param Json|null $value Value to set for the X property.
     */
     public function setX(?Json $value): void {
         $this->getBackingStore()->set('x', $value);

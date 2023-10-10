@@ -35,7 +35,7 @@ class AcceptPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
@@ -48,7 +48,7 @@ class AcceptPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the backingStore property value. Stores model information.
+     * Gets the BackingStore property value. Stores model information.
      * @return BackingStore
     */
     public function getBackingStore(): BackingStore {
@@ -56,7 +56,7 @@ class AcceptPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the comment property value. The Comment property
+     * Gets the Comment property value. The Comment property
      * @return string|null
     */
     public function getComment(): ?string {
@@ -74,13 +74,13 @@ class AcceptPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'comment' => fn(ParseNode $n) => $o->setComment($n->getStringValue()),
-            'sendResponse' => fn(ParseNode $n) => $o->setSendResponse($n->getBooleanValue()),
+            'Comment' => fn(ParseNode $n) => $o->setComment($n->getStringValue()),
+            'SendResponse' => fn(ParseNode $n) => $o->setSendResponse($n->getBooleanValue()),
         ];
     }
 
     /**
-     * Gets the sendResponse property value. The SendResponse property
+     * Gets the SendResponse property value. The SendResponse property
      * @return bool|null
     */
     public function getSendResponse(): ?bool {
@@ -96,38 +96,38 @@ class AcceptPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('comment', $this->getComment());
-        $writer->writeBooleanValue('sendResponse', $this->getSendResponse());
+        $writer->writeStringValue('Comment', $this->getComment());
+        $writer->writeBooleanValue('SendResponse', $this->getSendResponse());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param array<string,mixed> $value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
-     * Sets the backingStore property value. Stores model information.
-     * @param BackingStore $value Value to set for the backingStore property.
+     * Sets the BackingStore property value. Stores model information.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
     }
 
     /**
-     * Sets the comment property value. The Comment property
-     * @param string|null $value Value to set for the comment property.
+     * Sets the Comment property value. The Comment property
+     * @param string|null $value Value to set for the Comment property.
     */
     public function setComment(?string $value): void {
         $this->getBackingStore()->set('comment', $value);
     }
 
     /**
-     * Sets the sendResponse property value. The SendResponse property
-     * @param bool|null $value Value to set for the sendResponse property.
+     * Sets the SendResponse property value. The SendResponse property
+     * @param bool|null $value Value to set for the SendResponse property.
     */
     public function setSendResponse(?bool $value): void {
         $this->getBackingStore()->set('sendResponse', $value);

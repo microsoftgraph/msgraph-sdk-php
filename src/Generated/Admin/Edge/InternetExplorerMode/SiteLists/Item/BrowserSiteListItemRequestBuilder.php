@@ -56,7 +56,7 @@ class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a browserSiteList object. This API is supported in the following national cloud deployments.
+     * Delete a browserSiteList object. This API is available in the following national cloud deployments.
      * @param BrowserSiteListItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/internetexplorermode-delete-sitelists?view=graph-rest-1.0 Find more info here
@@ -75,7 +75,7 @@ class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a browserSiteList that contains browserSite and browserSharedCookie resources. This API is supported in the following national cloud deployments.
+     * Get a browserSiteList that contains browserSite and browserSharedCookie resources. This API is available in the following national cloud deployments.
      * @param BrowserSiteListItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/browsersitelist-get?view=graph-rest-1.0 Find more info here
@@ -94,7 +94,7 @@ class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a browserSiteList object. This API is supported in the following national cloud deployments.
+     * Update the properties of a browserSiteList object. This API is available in the following national cloud deployments.
      * @param BrowserSiteList $body The request body
      * @param BrowserSiteListItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -114,7 +114,7 @@ class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a browserSiteList object. This API is supported in the following national cloud deployments.
+     * Delete a browserSiteList object. This API is available in the following national cloud deployments.
      * @param BrowserSiteListItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -131,7 +131,7 @@ class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a browserSiteList that contains browserSite and browserSharedCookie resources. This API is supported in the following national cloud deployments.
+     * Get a browserSiteList that contains browserSite and browserSharedCookie resources. This API is available in the following national cloud deployments.
      * @param BrowserSiteListItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -152,7 +152,7 @@ class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a browserSiteList object. This API is supported in the following national cloud deployments.
+     * Update the properties of a browserSiteList object. This API is available in the following national cloud deployments.
      * @param BrowserSiteList $body The request body
      * @param BrowserSiteListItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

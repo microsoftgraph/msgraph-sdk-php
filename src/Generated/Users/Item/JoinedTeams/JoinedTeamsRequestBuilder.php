@@ -61,7 +61,7 @@ class JoinedTeamsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the teams in Microsoft Teams that the user is a direct member of. This API is supported in the following national cloud deployments.
+     * Get the teams in Microsoft Teams that the user is a direct member of. This API is available in the following national cloud deployments.
      * @param JoinedTeamsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/user-list-joinedteams?view=graph-rest-1.0 Find more info here
@@ -99,7 +99,7 @@ class JoinedTeamsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the teams in Microsoft Teams that the user is a direct member of. This API is supported in the following national cloud deployments.
+     * Get the teams in Microsoft Teams that the user is a direct member of. This API is available in the following national cloud deployments.
      * @param JoinedTeamsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

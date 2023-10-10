@@ -53,7 +53,7 @@ class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the federatedIdentityCredential objects and their properties. This API is supported in the following national cloud deployments.
+     * Get a list of the federatedIdentityCredential objects and their properties. This API is available in the following national cloud deployments.
      * @param FederatedIdentityCredentialsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/application-list-federatedidentitycredentials?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new federatedIdentityCredential object for an application. By configuring a trust relationship between your Azure AD application registration and the identity provider for your compute platform, you can use tokens issued by that platform to authenticate with Microsoft identity platform and call APIs in the Microsoft ecosystem. Maximum of 20 objects can be added to an application. This API is supported in the following national cloud deployments.
+     * Create a new federatedIdentityCredential object for an application. By configuring a trust relationship between your Azure AD application registration and the identity provider for your compute platform, you can use tokens issued by that platform to authenticate with Microsoft identity platform and call APIs in the Microsoft ecosystem. Maximum of 20 objects can be added to an application. This API is available in the following national cloud deployments.
      * @param FederatedIdentityCredential $body The request body
      * @param FederatedIdentityCredentialsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the federatedIdentityCredential objects and their properties. This API is supported in the following national cloud deployments.
+     * Get a list of the federatedIdentityCredential objects and their properties. This API is available in the following national cloud deployments.
      * @param FederatedIdentityCredentialsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new federatedIdentityCredential object for an application. By configuring a trust relationship between your Azure AD application registration and the identity provider for your compute platform, you can use tokens issued by that platform to authenticate with Microsoft identity platform and call APIs in the Microsoft ecosystem. Maximum of 20 objects can be added to an application. This API is supported in the following national cloud deployments.
+     * Create a new federatedIdentityCredential object for an application. By configuring a trust relationship between your Azure AD application registration and the identity provider for your compute platform, you can use tokens issued by that platform to authenticate with Microsoft identity platform and call APIs in the Microsoft ecosystem. Maximum of 20 objects can be added to an application. This API is available in the following national cloud deployments.
      * @param FederatedIdentityCredential $body The request body
      * @param FederatedIdentityCredentialsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\InferenceClassification\Overrides
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the overrides that a user has set up to always classify messages from certain senders in specific ways. Each override corresponds to an SMTP address of a sender. Initially, a user does not have any overrides. This API is supported in the following national cloud deployments.
+ * Get the overrides that a user has set up to always classify messages from certain senders in specific ways. Each override corresponds to an SMTP address of a sender. Initially, a user does not have any overrides. This API is available in the following national cloud deployments.
 */
 class OverridesRequestBuilderGetQueryParameters 
 {

@@ -52,7 +52,7 @@ class HostPairsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the list of hostPair resources associated with a host, where that host is *either* the *parent* or the *child*.
+     * Get the list of hostPair resources associated with a host, where that host is *either* the *parent* or the *child*. This API is available in the following national cloud deployments.
      * @param HostPairsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/security-host-list-hostpairs?view=graph-rest-1.0 Find more info here
@@ -71,7 +71,7 @@ class HostPairsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the list of hostPair resources associated with a host, where that host is *either* the *parent* or the *child*.
+     * Get the list of hostPair resources associated with a host, where that host is *either* the *parent* or the *child*. This API is available in the following national cloud deployments.
      * @param HostPairsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

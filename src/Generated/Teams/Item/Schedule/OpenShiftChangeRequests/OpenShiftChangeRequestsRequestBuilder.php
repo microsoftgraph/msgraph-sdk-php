@@ -53,7 +53,7 @@ class OpenShiftChangeRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of openShiftChangeRequest objects in a team. This API is supported in the following national cloud deployments.
+     * Retrieve a list of openShiftChangeRequest objects in a team. This API is available in the following national cloud deployments.
      * @param OpenShiftChangeRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/openshiftchangerequest-list?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class OpenShiftChangeRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create instance of an openShiftChangeRequest object. This API is supported in the following national cloud deployments.
+     * Create instance of an openShiftChangeRequest object. This API is available in the following national cloud deployments.
      * @param OpenShiftChangeRequest $body The request body
      * @param OpenShiftChangeRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class OpenShiftChangeRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of openShiftChangeRequest objects in a team. This API is supported in the following national cloud deployments.
+     * Retrieve a list of openShiftChangeRequest objects in a team. This API is available in the following national cloud deployments.
      * @param OpenShiftChangeRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class OpenShiftChangeRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create instance of an openShiftChangeRequest object. This API is supported in the following national cloud deployments.
+     * Create instance of an openShiftChangeRequest object. This API is available in the following national cloud deployments.
      * @param OpenShiftChangeRequest $body The request body
      * @param OpenShiftChangeRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

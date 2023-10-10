@@ -40,7 +40,7 @@ class PlannerBucketItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete plannerBucket. This API is supported in the following national cloud deployments.
+     * Delete plannerBucket. This API is available in the following national cloud deployments.
      * @param PlannerBucketItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/plannerbucket-delete?view=graph-rest-1.0 Find more info here
@@ -59,7 +59,7 @@ class PlannerBucketItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a plannerBucket object. This API is supported in the following national cloud deployments.
+     * Retrieve the properties and relationships of a plannerBucket object. This API is available in the following national cloud deployments.
      * @param PlannerBucketItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/plannerbucket-get?view=graph-rest-1.0 Find more info here
@@ -98,7 +98,7 @@ class PlannerBucketItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete plannerBucket. This API is supported in the following national cloud deployments.
+     * Delete plannerBucket. This API is available in the following national cloud deployments.
      * @param PlannerBucketItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -115,7 +115,7 @@ class PlannerBucketItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a plannerBucket object. This API is supported in the following national cloud deployments.
+     * Retrieve the properties and relationships of a plannerBucket object. This API is available in the following national cloud deployments.
      * @param PlannerBucketItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

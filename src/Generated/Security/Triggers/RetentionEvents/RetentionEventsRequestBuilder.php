@@ -53,7 +53,7 @@ class RetentionEventsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the retentionEvent objects and their properties. This API is supported in the following national cloud deployments.
+     * Get a list of the retentionEvent objects and their properties. This API is available in the following national cloud deployments.
      * @param RetentionEventsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/security-retentionevent-list?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class RetentionEventsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new retentionEvent object. This API is supported in the following national cloud deployments.
+     * Create a new retentionEvent object. This API is available in the following national cloud deployments.
      * @param RetentionEvent $body The request body
      * @param RetentionEventsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class RetentionEventsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the retentionEvent objects and their properties. This API is supported in the following national cloud deployments.
+     * Get a list of the retentionEvent objects and their properties. This API is available in the following national cloud deployments.
      * @param RetentionEventsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class RetentionEventsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new retentionEvent object. This API is supported in the following national cloud deployments.
+     * Create a new retentionEvent object. This API is available in the following national cloud deployments.
      * @param RetentionEvent $body The request body
      * @param RetentionEventsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

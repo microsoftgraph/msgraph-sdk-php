@@ -53,7 +53,7 @@ class RunsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the attack simulation automation runs for a tenant. This API is supported in the following national cloud deployments.
+     * Get a list of the attack simulation automation runs for a tenant. This API is available in the following national cloud deployments.
      * @param RunsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/simulationautomation-list-runs?view=graph-rest-1.0 Find more info here
@@ -91,7 +91,7 @@ class RunsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the attack simulation automation runs for a tenant. This API is supported in the following national cloud deployments.
+     * Get a list of the attack simulation automation runs for a tenant. This API is available in the following national cloud deployments.
      * @param RunsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -56,7 +56,7 @@ class EducationSchoolItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a school. This API is supported in the following national cloud deployments.
+     * Delete a school. This API is available in the following national cloud deployments.
      * @param EducationSchoolItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/educationschool-delete?view=graph-rest-1.0 Find more info here
@@ -75,7 +75,7 @@ class EducationSchoolItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of an educationSchool object. This API is supported in the following national cloud deployments.
+     * Read the properties and relationships of an educationSchool object. This API is available in the following national cloud deployments.
      * @param EducationSchoolItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/educationschool-get?view=graph-rest-1.0 Find more info here
@@ -94,7 +94,7 @@ class EducationSchoolItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an educationSchool object. This API is supported in the following national cloud deployments.
+     * Update the properties of an educationSchool object. This API is available in the following national cloud deployments.
      * @param EducationSchool $body The request body
      * @param EducationSchoolItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -114,7 +114,7 @@ class EducationSchoolItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a school. This API is supported in the following national cloud deployments.
+     * Delete a school. This API is available in the following national cloud deployments.
      * @param EducationSchoolItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -131,7 +131,7 @@ class EducationSchoolItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of an educationSchool object. This API is supported in the following national cloud deployments.
+     * Read the properties and relationships of an educationSchool object. This API is available in the following national cloud deployments.
      * @param EducationSchoolItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -152,7 +152,7 @@ class EducationSchoolItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an educationSchool object. This API is supported in the following national cloud deployments.
+     * Update the properties of an educationSchool object. This API is available in the following national cloud deployments.
      * @param EducationSchool $body The request body
      * @param EducationSchoolItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

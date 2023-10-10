@@ -40,7 +40,7 @@ class IdentityUserFlowAttributeAssignmentItemRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Delete an identityUserFlowAttributeAssignment object. This API is supported in the following national cloud deployments.
+     * Delete an identityUserFlowAttributeAssignment object. This API is available in the following national cloud deployments.
      * @param IdentityUserFlowAttributeAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/identityuserflowattributeassignment-delete?view=graph-rest-1.0 Find more info here
@@ -59,7 +59,7 @@ class IdentityUserFlowAttributeAssignmentItemRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Read the properties and relationships of an identityUserFlowAttributeAssignment object. This API is supported in the following national cloud deployments.
+     * Read the properties and relationships of an identityUserFlowAttributeAssignment object. This API is available in the following national cloud deployments.
      * @param IdentityUserFlowAttributeAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/identityuserflowattributeassignment-get?view=graph-rest-1.0 Find more info here
@@ -78,7 +78,7 @@ class IdentityUserFlowAttributeAssignmentItemRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Update the properties of a identityUserFlowAttributeAssignment object. This API is supported in the following national cloud deployments.
+     * Update the properties of a identityUserFlowAttributeAssignment object. This API is available in the following national cloud deployments.
      * @param IdentityUserFlowAttributeAssignment $body The request body
      * @param IdentityUserFlowAttributeAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -98,7 +98,7 @@ class IdentityUserFlowAttributeAssignmentItemRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Delete an identityUserFlowAttributeAssignment object. This API is supported in the following national cloud deployments.
+     * Delete an identityUserFlowAttributeAssignment object. This API is available in the following national cloud deployments.
      * @param IdentityUserFlowAttributeAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -115,7 +115,7 @@ class IdentityUserFlowAttributeAssignmentItemRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Read the properties and relationships of an identityUserFlowAttributeAssignment object. This API is supported in the following national cloud deployments.
+     * Read the properties and relationships of an identityUserFlowAttributeAssignment object. This API is available in the following national cloud deployments.
      * @param IdentityUserFlowAttributeAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -136,7 +136,7 @@ class IdentityUserFlowAttributeAssignmentItemRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Update the properties of a identityUserFlowAttributeAssignment object. This API is supported in the following national cloud deployments.
+     * Update the properties of a identityUserFlowAttributeAssignment object. This API is available in the following national cloud deployments.
      * @param IdentityUserFlowAttributeAssignment $body The request body
      * @param IdentityUserFlowAttributeAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

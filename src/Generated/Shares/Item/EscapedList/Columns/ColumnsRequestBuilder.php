@@ -53,7 +53,7 @@ class ColumnsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the collection of columns represented as columnDefinition][columnDefinition] resources in a [list][list]. This API is supported in the following [national cloud deployments.
+     * Get the collection of columns represented as columnDefinition][columnDefinition] resources in a [list][list]. This API is available in the following [national cloud deployments.
      * @param ColumnsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/list-list-columns?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class ColumnsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a column for a list][list] with a request that specifies a [columnDefinition][columnDefinition]. This API is supported in the following [national cloud deployments.
+     * Create a column for a list][list] with a request that specifies a [columnDefinition][columnDefinition]. This API is available in the following [national cloud deployments.
      * @param ColumnDefinition $body The request body
      * @param ColumnsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class ColumnsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the collection of columns represented as columnDefinition][columnDefinition] resources in a [list][list]. This API is supported in the following [national cloud deployments.
+     * Get the collection of columns represented as columnDefinition][columnDefinition] resources in a [list][list]. This API is available in the following [national cloud deployments.
      * @param ColumnsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class ColumnsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a column for a list][list] with a request that specifies a [columnDefinition][columnDefinition]. This API is supported in the following [national cloud deployments.
+     * Create a column for a list][list] with a request that specifies a [columnDefinition][columnDefinition]. This API is available in the following [national cloud deployments.
      * @param ColumnDefinition $body The request body
      * @param ColumnsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

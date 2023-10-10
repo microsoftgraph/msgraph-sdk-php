@@ -31,7 +31,7 @@ class SetOrderRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Set the order of identityUserFlowAttributeAssignments being collected within a user flow. This API is supported in the following national cloud deployments.
+     * Set the order of identityUserFlowAttributeAssignments being collected within a user flow. This API is available in the following national cloud deployments.
      * @param SetOrderPostRequestBody $body The request body
      * @param SetOrderRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -51,7 +51,7 @@ class SetOrderRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Set the order of identityUserFlowAttributeAssignments being collected within a user flow. This API is supported in the following national cloud deployments.
+     * Set the order of identityUserFlowAttributeAssignments being collected within a user flow. This API is available in the following national cloud deployments.
      * @param SetOrderPostRequestBody $body The request body
      * @param SetOrderRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

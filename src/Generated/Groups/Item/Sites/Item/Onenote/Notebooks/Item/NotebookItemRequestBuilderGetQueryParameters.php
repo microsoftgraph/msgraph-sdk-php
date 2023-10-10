@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\Notebooks\Ite
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties and relationships of a notebook object. This API is supported in the following national cloud deployments.
+ * Retrieve the properties and relationships of a notebook object. This API is available in the following national cloud deployments.
 */
 class NotebookItemRequestBuilderGetQueryParameters 
 {

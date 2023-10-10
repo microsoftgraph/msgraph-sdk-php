@@ -32,7 +32,7 @@ class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a custom identityUserFlowAttribute. This API is supported in the following national cloud deployments.
+     * Delete a custom identityUserFlowAttribute. This API is available in the following national cloud deployments.
      * @param IdentityUserFlowAttributeItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/identityuserflowattribute-delete?view=graph-rest-1.0 Find more info here
@@ -51,7 +51,7 @@ class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a identityUserFlowAttribute object. This API is supported in the following national cloud deployments.
+     * Retrieve the properties and relationships of a identityUserFlowAttribute object. This API is available in the following national cloud deployments.
      * @param IdentityUserFlowAttributeItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/identityuserflowattribute-get?view=graph-rest-1.0 Find more info here
@@ -70,7 +70,7 @@ class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a custom identityUserFlowAttribute object. This API is supported in the following national cloud deployments.
+     * Update the properties of a custom identityUserFlowAttribute object. This API is available in the following national cloud deployments.
      * @param IdentityUserFlowAttribute $body The request body
      * @param IdentityUserFlowAttributeItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -90,7 +90,7 @@ class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a custom identityUserFlowAttribute. This API is supported in the following national cloud deployments.
+     * Delete a custom identityUserFlowAttribute. This API is available in the following national cloud deployments.
      * @param IdentityUserFlowAttributeItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -107,7 +107,7 @@ class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a identityUserFlowAttribute object. This API is supported in the following national cloud deployments.
+     * Retrieve the properties and relationships of a identityUserFlowAttribute object. This API is available in the following national cloud deployments.
      * @param IdentityUserFlowAttributeItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -128,7 +128,7 @@ class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a custom identityUserFlowAttribute object. This API is supported in the following national cloud deployments.
+     * Update the properties of a custom identityUserFlowAttribute object. This API is available in the following national cloud deployments.
      * @param IdentityUserFlowAttribute $body The request body
      * @param IdentityUserFlowAttributeItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

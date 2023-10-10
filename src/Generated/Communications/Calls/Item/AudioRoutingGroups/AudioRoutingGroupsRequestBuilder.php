@@ -53,7 +53,7 @@ class AudioRoutingGroupsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of audioRoutingGroup objects. This API is supported in the following national cloud deployments.
+     * Retrieve a list of audioRoutingGroup objects. This API is available in the following national cloud deployments.
      * @param AudioRoutingGroupsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/call-list-audioroutinggroups?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class AudioRoutingGroupsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new audioRoutingGroup. This API is supported in the following national cloud deployments.
+     * Create a new audioRoutingGroup. This API is available in the following national cloud deployments.
      * @param AudioRoutingGroup $body The request body
      * @param AudioRoutingGroupsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class AudioRoutingGroupsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of audioRoutingGroup objects. This API is supported in the following national cloud deployments.
+     * Retrieve a list of audioRoutingGroup objects. This API is available in the following national cloud deployments.
      * @param AudioRoutingGroupsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class AudioRoutingGroupsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new audioRoutingGroup. This API is supported in the following national cloud deployments.
+     * Create a new audioRoutingGroup. This API is available in the following national cloud deployments.
      * @param AudioRoutingGroup $body The request body
      * @param AudioRoutingGroupsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

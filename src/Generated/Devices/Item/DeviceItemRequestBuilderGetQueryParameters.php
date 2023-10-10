@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Devices\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the properties and relationships of a device object. This API is supported in the following national cloud deployments.
+ * Get the properties and relationships of a device object. This API is available in the following national cloud deployments.
 */
 class DeviceItemRequestBuilderGetQueryParameters 
 {

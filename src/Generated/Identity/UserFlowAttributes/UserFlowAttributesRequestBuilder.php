@@ -53,7 +53,7 @@ class UserFlowAttributesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of identityUserFlowAttribute objects. This API is supported in the following national cloud deployments.
+     * Retrieve a list of identityUserFlowAttribute objects. This API is available in the following national cloud deployments.
      * @param UserFlowAttributesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/identityuserflowattribute-list?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class UserFlowAttributesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new custom identityUserFlowAttribute object. This API is supported in the following national cloud deployments.
+     * Create a new custom identityUserFlowAttribute object. This API is available in the following national cloud deployments.
      * @param IdentityUserFlowAttribute $body The request body
      * @param UserFlowAttributesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class UserFlowAttributesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of identityUserFlowAttribute objects. This API is supported in the following national cloud deployments.
+     * Retrieve a list of identityUserFlowAttribute objects. This API is available in the following national cloud deployments.
      * @param UserFlowAttributesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class UserFlowAttributesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new custom identityUserFlowAttribute object. This API is supported in the following national cloud deployments.
+     * Create a new custom identityUserFlowAttribute object. This API is available in the following national cloud deployments.
      * @param IdentityUserFlowAttribute $body The request body
      * @param UserFlowAttributesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

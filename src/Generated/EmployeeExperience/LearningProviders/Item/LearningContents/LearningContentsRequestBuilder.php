@@ -53,7 +53,7 @@ class LearningContentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the learningContent resources and their properties. This list represents the metadata of the specified provider's content in Viva Learning. This API is supported in the following national cloud deployments.
+     * Get a list of the learningContent resources and their properties. This list represents the metadata of the specified provider's content in Viva Learning. This API is available in the following national cloud deployments.
      * @param LearningContentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/learningprovider-list-learningcontents?view=graph-rest-1.0 Find more info here
@@ -91,7 +91,7 @@ class LearningContentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the learningContent resources and their properties. This list represents the metadata of the specified provider's content in Viva Learning. This API is supported in the following national cloud deployments.
+     * Get a list of the learningContent resources and their properties. This list represents the metadata of the specified provider's content in Viva Learning. This API is available in the following national cloud deployments.
      * @param LearningContentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

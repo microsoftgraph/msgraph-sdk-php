@@ -58,7 +58,7 @@ class TitleRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of charttitle object. This API is supported in the following national cloud deployments.
+     * Retrieve the properties and relationships of charttitle object. This API is available in the following national cloud deployments.
      * @param TitleRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/charttitle-get?view=graph-rest-1.0 Find more info here
@@ -77,7 +77,7 @@ class TitleRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of charttitle object. This API is supported in the following national cloud deployments.
+     * Update the properties of charttitle object. This API is available in the following national cloud deployments.
      * @param WorkbookChartTitle $body The request body
      * @param TitleRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -114,7 +114,7 @@ class TitleRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of charttitle object. This API is supported in the following national cloud deployments.
+     * Retrieve the properties and relationships of charttitle object. This API is available in the following national cloud deployments.
      * @param TitleRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -135,7 +135,7 @@ class TitleRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of charttitle object. This API is supported in the following national cloud deployments.
+     * Update the properties of charttitle object. This API is available in the following national cloud deployments.
      * @param WorkbookChartTitle $body The request body
      * @param TitleRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

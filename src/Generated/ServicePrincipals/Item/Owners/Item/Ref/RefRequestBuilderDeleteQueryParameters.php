@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\ServicePrincipals\Item\Owners\Item\Ref;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Remove an owner from a servicePrincipal object. As a recommended best practice, service principals should have at least two owners. This API is supported in the following national cloud deployments.
+ * Remove an owner from a servicePrincipal object. As a recommended best practice, service principals should have at least two owners. This API is available in the following national cloud deployments.
 */
 class RefRequestBuilderDeleteQueryParameters 
 {

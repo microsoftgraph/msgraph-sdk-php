@@ -82,7 +82,7 @@ class SchemaRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the schema for a given synchronization job or template. This API is supported in the following national cloud deployments.
+     * Retrieve the schema for a given synchronization job or template. This API is available in the following national cloud deployments.
      * @param SchemaRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/synchronization-synchronizationschema-get?view=graph-rest-1.0 Find more info here
@@ -138,7 +138,7 @@ class SchemaRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the schema for a given synchronization job or template. This API is supported in the following national cloud deployments.
+     * Retrieve the schema for a given synchronization job or template. This API is available in the following national cloud deployments.
      * @param SchemaRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

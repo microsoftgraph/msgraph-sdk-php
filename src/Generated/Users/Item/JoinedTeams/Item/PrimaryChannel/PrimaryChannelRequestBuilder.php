@@ -122,7 +122,7 @@ class PrimaryChannelRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the default channel, General, of a team. This API is supported in the following national cloud deployments.
+     * Get the default channel, General, of a team. This API is available in the following national cloud deployments.
      * @param PrimaryChannelRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/team-get-primarychannel?view=graph-rest-1.0 Find more info here
@@ -177,7 +177,7 @@ class PrimaryChannelRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the default channel, General, of a team. This API is supported in the following national cloud deployments.
+     * Get the default channel, General, of a team. This API is available in the following national cloud deployments.
      * @param PrimaryChannelRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

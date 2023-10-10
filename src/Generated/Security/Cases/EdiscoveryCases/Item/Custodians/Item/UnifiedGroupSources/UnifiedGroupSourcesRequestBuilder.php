@@ -53,7 +53,7 @@ class UnifiedGroupSourcesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the unifiedGroupSource objects associated with an ediscoveryCustodian. This API is supported in the following national cloud deployments.
+     * Get a list of the unifiedGroupSource objects associated with an ediscoveryCustodian. This API is available in the following national cloud deployments.
      * @param UnifiedGroupSourcesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/security-ediscoverycustodian-list-unifiedgroupsources?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class UnifiedGroupSourcesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new unifiedGroupSource object associated with an eDiscovery custodian. This API is supported in the following national cloud deployments.
+     * Create a new unifiedGroupSource object associated with an eDiscovery custodian. This API is available in the following national cloud deployments.
      * @param UnifiedGroupSource $body The request body
      * @param UnifiedGroupSourcesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class UnifiedGroupSourcesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the unifiedGroupSource objects associated with an ediscoveryCustodian. This API is supported in the following national cloud deployments.
+     * Get a list of the unifiedGroupSource objects associated with an ediscoveryCustodian. This API is available in the following national cloud deployments.
      * @param UnifiedGroupSourcesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class UnifiedGroupSourcesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new unifiedGroupSource object associated with an eDiscovery custodian. This API is supported in the following national cloud deployments.
+     * Create a new unifiedGroupSource object associated with an eDiscovery custodian. This API is available in the following national cloud deployments.
      * @param UnifiedGroupSource $body The request body
      * @param UnifiedGroupSourcesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

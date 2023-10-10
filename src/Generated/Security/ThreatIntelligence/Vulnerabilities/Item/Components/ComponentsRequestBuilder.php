@@ -53,7 +53,7 @@ class ComponentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of vulnerabilityComponent objects related to a known vulnerability. This API is supported in the following national cloud deployments.
+     * Get a list of vulnerabilityComponent objects related to a known vulnerability. This API is available in the following national cloud deployments.
      * @param ComponentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/security-vulnerability-list-components?view=graph-rest-1.0 Find more info here
@@ -91,7 +91,7 @@ class ComponentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of vulnerabilityComponent objects related to a known vulnerability. This API is supported in the following national cloud deployments.
+     * Get a list of vulnerabilityComponent objects related to a known vulnerability. This API is available in the following national cloud deployments.
      * @param ComponentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

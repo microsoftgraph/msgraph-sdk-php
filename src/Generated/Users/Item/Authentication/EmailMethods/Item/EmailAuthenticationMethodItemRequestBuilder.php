@@ -32,7 +32,7 @@ class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a user's emailAuthenticationMethod object. This API is supported in the following national cloud deployments.
+     * Deletes a user's emailAuthenticationMethod object. This API is available in the following national cloud deployments.
      * @param EmailAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/emailauthenticationmethod-delete?view=graph-rest-1.0 Find more info here
@@ -51,7 +51,7 @@ class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a user's single email authentication method object. This API is supported in the following national cloud deployments.
+     * Retrieve a user's single email authentication method object. This API is available in the following national cloud deployments.
      * @param EmailAuthenticationMethodItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/emailauthenticationmethod-get?view=graph-rest-1.0 Find more info here
@@ -70,7 +70,7 @@ class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update a user's email address represented by an emailAuthenticationMethod object. This API is supported in the following national cloud deployments.
+     * Update a user's email address represented by an emailAuthenticationMethod object. This API is available in the following national cloud deployments.
      * @param EmailAuthenticationMethod $body The request body
      * @param EmailAuthenticationMethodItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -90,7 +90,7 @@ class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a user's emailAuthenticationMethod object. This API is supported in the following national cloud deployments.
+     * Deletes a user's emailAuthenticationMethod object. This API is available in the following national cloud deployments.
      * @param EmailAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -107,7 +107,7 @@ class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a user's single email authentication method object. This API is supported in the following national cloud deployments.
+     * Retrieve a user's single email authentication method object. This API is available in the following national cloud deployments.
      * @param EmailAuthenticationMethodItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -128,7 +128,7 @@ class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update a user's email address represented by an emailAuthenticationMethod object. This API is supported in the following national cloud deployments.
+     * Update a user's email address represented by an emailAuthenticationMethod object. This API is available in the following national cloud deployments.
      * @param EmailAuthenticationMethod $body The request body
      * @param EmailAuthenticationMethodItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

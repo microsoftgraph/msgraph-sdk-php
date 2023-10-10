@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\Messages\Item\Repl
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve a single message or a message reply in a channel or a chat. This API is supported in the following national cloud deployments.
+ * Retrieve a single message or a message reply in a channel or a chat. This API is available in the following national cloud deployments.
 */
 class ChatMessageItemRequestBuilderGetQueryParameters 
 {

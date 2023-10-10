@@ -52,7 +52,7 @@ class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the signed-in user's agreementAcceptance objects. This API is supported in the following national cloud deployments.
+     * Retrieve the signed-in user's agreementAcceptance objects. This API is available in the following national cloud deployments.
      * @param AgreementAcceptancesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/user-list-agreementacceptances?view=graph-rest-1.0 Find more info here
@@ -71,7 +71,7 @@ class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the signed-in user's agreementAcceptance objects. This API is supported in the following national cloud deployments.
+     * Retrieve the signed-in user's agreementAcceptance objects. This API is available in the following national cloud deployments.
      * @param AgreementAcceptancesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

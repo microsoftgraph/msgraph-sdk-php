@@ -86,7 +86,7 @@ class PlannerTask extends Entity implements Parsable
     }
 
     /**
-     * Gets the bucketId property value. Bucket ID to which the task belongs. The bucket needs to be in the plan that the task is in. It is 28 characters long and case-sensitive. Format validation is done on the service.
+     * Gets the bucketId property value. Bucket ID to which the task belongs. The bucket needs to be in the plan that the task is in. It's 28 characters long and case-sensitive. Format validation is done on the service.
      * @return string|null
     */
     public function getBucketId(): ?string {
@@ -182,7 +182,7 @@ class PlannerTask extends Entity implements Parsable
     }
 
     /**
-     * Gets the details property value. Read-only. Nullable. Additional details about the task.
+     * Gets the details property value. Read-only. Nullable. More details about the task.
      * @return PlannerTaskDetails|null
     */
     public function getDetails(): ?PlannerTaskDetails {
@@ -241,7 +241,7 @@ class PlannerTask extends Entity implements Parsable
     }
 
     /**
-     * Gets the hasDescription property value. Read-only. Value is true if the details object of the task has a non-empty description and false otherwise.
+     * Gets the hasDescription property value. Read-only. Value is true if the details object of the task has a nonempty description and false otherwise.
      * @return bool|null
     */
     public function getHasDescription(): ?bool {
@@ -434,7 +434,7 @@ class PlannerTask extends Entity implements Parsable
     }
 
     /**
-     * Sets the bucketId property value. Bucket ID to which the task belongs. The bucket needs to be in the plan that the task is in. It is 28 characters long and case-sensitive. Format validation is done on the service.
+     * Sets the bucketId property value. Bucket ID to which the task belongs. The bucket needs to be in the plan that the task is in. It's 28 characters long and case-sensitive. Format validation is done on the service.
      * @param string|null $value Value to set for the bucketId property.
     */
     public function setBucketId(?string $value): void {
@@ -498,7 +498,7 @@ class PlannerTask extends Entity implements Parsable
     }
 
     /**
-     * Sets the details property value. Read-only. Nullable. Additional details about the task.
+     * Sets the details property value. Read-only. Nullable. More details about the task.
      * @param PlannerTaskDetails|null $value Value to set for the details property.
     */
     public function setDetails(?PlannerTaskDetails $value): void {
@@ -514,7 +514,7 @@ class PlannerTask extends Entity implements Parsable
     }
 
     /**
-     * Sets the hasDescription property value. Read-only. Value is true if the details object of the task has a non-empty description and false otherwise.
+     * Sets the hasDescription property value. Read-only. Value is true if the details object of the task has a nonempty description and false otherwise.
      * @param bool|null $value Value to set for the hasDescription property.
     */
     public function setHasDescription(?bool $value): void {

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Tags\Ite
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read the properties and relationships of an ediscoveryReviewTag object. This API is supported in the following national cloud deployments.
+ * Read the properties and relationships of an ediscoveryReviewTag object. This API is available in the following national cloud deployments.
 */
 class EdiscoveryReviewTagItemRequestBuilderGetQueryParameters 
 {

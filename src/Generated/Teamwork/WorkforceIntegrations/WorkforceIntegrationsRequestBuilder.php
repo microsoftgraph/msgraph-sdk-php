@@ -53,7 +53,7 @@ class WorkforceIntegrationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of workforceIntegration objects. This API is supported in the following national cloud deployments.
+     * Retrieve a list of workforceIntegration objects. This API is available in the following national cloud deployments.
      * @param WorkforceIntegrationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/workforceintegration-list?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class WorkforceIntegrationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new workforceIntegration object.You can set up which entities you want to receive Shifts synchronous change notifications on and set entities to configure filtering by WFM rules eligibility for, including swap requests. This API is supported in the following national cloud deployments.
+     * Create a new workforceIntegration object.You can set up which entities you want to receive Shifts synchronous change notifications on and set entities to configure filtering by WFM rules eligibility for, including swap requests. This API is available in the following national cloud deployments.
      * @param WorkforceIntegration $body The request body
      * @param WorkforceIntegrationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class WorkforceIntegrationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of workforceIntegration objects. This API is supported in the following national cloud deployments.
+     * Retrieve a list of workforceIntegration objects. This API is available in the following national cloud deployments.
      * @param WorkforceIntegrationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class WorkforceIntegrationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new workforceIntegration object.You can set up which entities you want to receive Shifts synchronous change notifications on and set entities to configure filtering by WFM rules eligibility for, including swap requests. This API is supported in the following national cloud deployments.
+     * Create a new workforceIntegration object.You can set up which entities you want to receive Shifts synchronous change notifications on and set entities to configure filtering by WFM rules eligibility for, including swap requests. This API is available in the following national cloud deployments.
      * @param WorkforceIntegration $body The request body
      * @param WorkforceIntegrationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

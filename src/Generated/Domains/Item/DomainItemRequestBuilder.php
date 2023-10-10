@@ -88,7 +88,7 @@ class DomainItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a domain from a tenant. This API is supported in the following national cloud deployments.
+     * Deletes a domain from a tenant. This API is available in the following national cloud deployments.
      * @param DomainItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/domain-delete?view=graph-rest-1.0 Find more info here
@@ -107,7 +107,7 @@ class DomainItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of domain object. This API is supported in the following national cloud deployments.
+     * Retrieve the properties and relationships of domain object. This API is available in the following national cloud deployments.
      * @param DomainItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/domain-get?view=graph-rest-1.0 Find more info here
@@ -126,7 +126,7 @@ class DomainItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of domain object. This API is supported in the following national cloud deployments.
+     * Update the properties of domain object. This API is available in the following national cloud deployments.
      * @param Domain $body The request body
      * @param DomainItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -146,7 +146,7 @@ class DomainItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a domain from a tenant. This API is supported in the following national cloud deployments.
+     * Deletes a domain from a tenant. This API is available in the following national cloud deployments.
      * @param DomainItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -163,7 +163,7 @@ class DomainItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of domain object. This API is supported in the following national cloud deployments.
+     * Retrieve the properties and relationships of domain object. This API is available in the following national cloud deployments.
      * @param DomainItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -184,7 +184,7 @@ class DomainItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of domain object. This API is supported in the following national cloud deployments.
+     * Update the properties of domain object. This API is available in the following national cloud deployments.
      * @param Domain $body The request body
      * @param DomainItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

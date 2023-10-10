@@ -64,7 +64,7 @@ class SetItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a set object. This API is supported in the following national cloud deployments.
+     * Delete a set object. This API is available in the following national cloud deployments.
      * @param SetItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/termstore-set-delete?view=graph-rest-1.0 Find more info here
@@ -83,7 +83,7 @@ class SetItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a set object. This API is supported in the following national cloud deployments.
+     * Read the properties and relationships of a set object. This API is available in the following national cloud deployments.
      * @param SetItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/termstore-set-get?view=graph-rest-1.0 Find more info here
@@ -102,7 +102,7 @@ class SetItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a set object. This API is supported in the following national cloud deployments.
+     * Update the properties of a set object. This API is available in the following national cloud deployments.
      * @param Set $body The request body
      * @param SetItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -122,7 +122,7 @@ class SetItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a set object. This API is supported in the following national cloud deployments.
+     * Delete a set object. This API is available in the following national cloud deployments.
      * @param SetItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -139,7 +139,7 @@ class SetItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a set object. This API is supported in the following national cloud deployments.
+     * Read the properties and relationships of a set object. This API is available in the following national cloud deployments.
      * @param SetItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -160,7 +160,7 @@ class SetItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a set object. This API is supported in the following national cloud deployments.
+     * Update the properties of a set object. This API is available in the following national cloud deployments.
      * @param Set $body The request body
      * @param SetItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

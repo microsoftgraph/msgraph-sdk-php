@@ -31,7 +31,7 @@ class UnfollowRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Unfollow a driveItem. This API is supported in the following national cloud deployments.
+     * Unfollow a driveItem. This API is available in the following national cloud deployments.
      * @param UnfollowRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/driveitem-unfollow?view=graph-rest-1.0 Find more info here
@@ -50,7 +50,7 @@ class UnfollowRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Unfollow a driveItem. This API is supported in the following national cloud deployments.
+     * Unfollow a driveItem. This API is available in the following national cloud deployments.
      * @param UnfollowRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

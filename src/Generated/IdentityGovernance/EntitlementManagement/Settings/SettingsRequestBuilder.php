@@ -50,7 +50,7 @@ class SettingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties of an entitlementManagementSettings object. This API is supported in the following national cloud deployments.
+     * Retrieve the properties of an entitlementManagementSettings object. This API is available in the following national cloud deployments.
      * @param SettingsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/entitlementmanagementsettings-get?view=graph-rest-1.0 Find more info here
@@ -69,7 +69,7 @@ class SettingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update an existing entitlementManagementSettings object to change one or more of its properties. This API is supported in the following national cloud deployments.
+     * Update an existing entitlementManagementSettings object to change one or more of its properties. This API is available in the following national cloud deployments.
      * @param EntitlementManagementSettings $body The request body
      * @param SettingsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -106,7 +106,7 @@ class SettingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties of an entitlementManagementSettings object. This API is supported in the following national cloud deployments.
+     * Retrieve the properties of an entitlementManagementSettings object. This API is available in the following national cloud deployments.
      * @param SettingsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -127,7 +127,7 @@ class SettingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update an existing entitlementManagementSettings object to change one or more of its properties. This API is supported in the following national cloud deployments.
+     * Update an existing entitlementManagementSettings object to change one or more of its properties. This API is available in the following national cloud deployments.
      * @param EntitlementManagementSettings $body The request body
      * @param SettingsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

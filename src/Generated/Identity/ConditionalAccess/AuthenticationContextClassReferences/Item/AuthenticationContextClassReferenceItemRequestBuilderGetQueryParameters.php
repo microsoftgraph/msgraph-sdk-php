@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Identity\ConditionalAccess\AuthenticationCon
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties and relationships of a authenticationContextClassReference object. This API is supported in the following national cloud deployments.
+ * Retrieve the properties and relationships of a authenticationContextClassReference object. This API is available in the following national cloud deployments.
 */
 class AuthenticationContextClassReferenceItemRequestBuilderGetQueryParameters 
 {

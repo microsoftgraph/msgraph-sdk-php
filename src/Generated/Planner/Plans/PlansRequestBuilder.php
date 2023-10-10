@@ -53,7 +53,7 @@ class PlansRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of plannerPlan objects. This API is supported in the following national cloud deployments.
+     * Get a list of plannerPlan objects. This API is available in the following national cloud deployments.
      * @param PlansRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/planner-list-plans?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class PlansRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Use this API to create a new plannerPlan. This API is supported in the following national cloud deployments.
+     * Use this API to create a new plannerPlan. This API is available in the following national cloud deployments.
      * @param PlannerPlan $body The request body
      * @param PlansRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class PlansRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of plannerPlan objects. This API is supported in the following national cloud deployments.
+     * Get a list of plannerPlan objects. This API is available in the following national cloud deployments.
      * @param PlansRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class PlansRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Use this API to create a new plannerPlan. This API is supported in the following national cloud deployments.
+     * Use this API to create a new plannerPlan. This API is available in the following national cloud deployments.
      * @param PlannerPlan $body The request body
      * @param PlansRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

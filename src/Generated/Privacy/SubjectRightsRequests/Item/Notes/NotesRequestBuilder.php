@@ -53,7 +53,7 @@ class NotesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the list of authored notes assoicated with a subject rights request.  This API is supported in the following national cloud deployments.
+     * Get the list of authored notes assoicated with a subject rights request.  This API is available in the following national cloud deployments.
      * @param NotesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/subjectrightsrequest-list-notes?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class NotesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new authoredNote object. This API is supported in the following national cloud deployments.
+     * Create a new authoredNote object. This API is available in the following national cloud deployments.
      * @param AuthoredNote $body The request body
      * @param NotesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class NotesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the list of authored notes assoicated with a subject rights request.  This API is supported in the following national cloud deployments.
+     * Get the list of authored notes assoicated with a subject rights request.  This API is available in the following national cloud deployments.
      * @param NotesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class NotesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new authoredNote object. This API is supported in the following national cloud deployments.
+     * Create a new authoredNote object. This API is available in the following national cloud deployments.
      * @param AuthoredNote $body The request body
      * @param NotesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

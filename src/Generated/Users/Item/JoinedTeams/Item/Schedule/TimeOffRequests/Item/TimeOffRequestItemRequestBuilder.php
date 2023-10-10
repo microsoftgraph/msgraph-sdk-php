@@ -32,7 +32,7 @@ class TimeOffRequestItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a timeOffRequest object. This API is supported in the following national cloud deployments.
+     * Delete a timeOffRequest object. This API is available in the following national cloud deployments.
      * @param TimeOffRequestItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/timeoffrequest-delete?view=graph-rest-1.0 Find more info here
@@ -51,7 +51,7 @@ class TimeOffRequestItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a timeoffrequest object. This API is supported in the following national cloud deployments.
+     * Retrieve the properties and relationships of a timeoffrequest object. This API is available in the following national cloud deployments.
      * @param TimeOffRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/timeoffrequest-get?view=graph-rest-1.0 Find more info here
@@ -89,7 +89,7 @@ class TimeOffRequestItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a timeOffRequest object. This API is supported in the following national cloud deployments.
+     * Delete a timeOffRequest object. This API is available in the following national cloud deployments.
      * @param TimeOffRequestItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -106,7 +106,7 @@ class TimeOffRequestItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a timeoffrequest object. This API is supported in the following national cloud deployments.
+     * Retrieve the properties and relationships of a timeoffrequest object. This API is available in the following national cloud deployments.
      * @param TimeOffRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

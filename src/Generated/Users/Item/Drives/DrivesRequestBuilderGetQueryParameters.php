@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Drives;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the list of Drive resources available for a target User, Group, or Site. This API is supported in the following national cloud deployments.
+ * Retrieve the list of Drive resources available for a target User, Group, or Site. This API is available in the following national cloud deployments.
 */
 class DrivesRequestBuilderGetQueryParameters 
 {

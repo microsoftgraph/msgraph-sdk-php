@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\GroupLifecyclePolicies;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List all the groupLifecyclePolicies. This API is supported in the following national cloud deployments.
+ * List all the groupLifecyclePolicies. This API is available in the following national cloud deployments.
 */
 class GroupLifecyclePoliciesRequestBuilderGetQueryParameters 
 {

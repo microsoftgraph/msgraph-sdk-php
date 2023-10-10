@@ -35,7 +35,7 @@ class CopyPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
@@ -48,7 +48,7 @@ class CopyPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the backingStore property value. Stores model information.
+     * Gets the BackingStore property value. Stores model information.
      * @return BackingStore
     */
     public function getBackingStore(): BackingStore {
@@ -56,7 +56,7 @@ class CopyPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the destinationId property value. The DestinationId property
+     * Gets the DestinationId property value. The DestinationId property
      * @return string|null
     */
     public function getDestinationId(): ?string {
@@ -74,7 +74,7 @@ class CopyPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'destinationId' => fn(ParseNode $n) => $o->setDestinationId($n->getStringValue()),
+            'DestinationId' => fn(ParseNode $n) => $o->setDestinationId($n->getStringValue()),
         ];
     }
 
@@ -83,29 +83,29 @@ class CopyPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('destinationId', $this->getDestinationId());
+        $writer->writeStringValue('DestinationId', $this->getDestinationId());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param array<string,mixed> $value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
-     * Sets the backingStore property value. Stores model information.
-     * @param BackingStore $value Value to set for the backingStore property.
+     * Sets the BackingStore property value. Stores model information.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
     }
 
     /**
-     * Sets the destinationId property value. The DestinationId property
-     * @param string|null $value Value to set for the destinationId property.
+     * Sets the DestinationId property value. The DestinationId property
+     * @param string|null $value Value to set for the DestinationId property.
     */
     public function setDestinationId(?string $value): void {
         $this->getBackingStore()->set('destinationId', $value);

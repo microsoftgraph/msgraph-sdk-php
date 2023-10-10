@@ -32,10 +32,10 @@ class WhoisRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the current whoisRecord resource for a host.
+     * Get the specified whoisRecord resource.  Specify the desired whoisRecord in one of the following two ways:- Identify a host and get its current whoisRecord. - Specify an id value to get the corresponding whoisRecord. This API is available in the following national cloud deployments.
      * @param WhoisRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://learn.microsoft.com/graph/api/security-host-get-whois?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/security-whoisrecord-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?WhoisRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -51,7 +51,7 @@ class WhoisRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the current whoisRecord resource for a host.
+     * Get the specified whoisRecord resource.  Specify the desired whoisRecord in one of the following two ways:- Identify a host and get its current whoisRecord. - Specify an id value to get the corresponding whoisRecord. This API is available in the following national cloud deployments.
      * @param WhoisRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

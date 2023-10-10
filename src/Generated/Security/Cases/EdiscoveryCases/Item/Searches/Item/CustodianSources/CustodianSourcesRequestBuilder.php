@@ -52,7 +52,7 @@ class CustodianSourcesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the list of custodial data sources associated with an eDiscovery search. This API is supported in the following national cloud deployments.
+     * Get the list of custodial data sources associated with an eDiscovery search. This API is available in the following national cloud deployments.
      * @param CustodianSourcesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/security-ediscoverysearch-list-custodiansources?view=graph-rest-1.0 Find more info here
@@ -71,7 +71,7 @@ class CustodianSourcesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the list of custodial data sources associated with an eDiscovery search. This API is supported in the following national cloud deployments.
+     * Get the list of custodial data sources associated with an eDiscovery search. This API is available in the following national cloud deployments.
      * @param CustodianSourcesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

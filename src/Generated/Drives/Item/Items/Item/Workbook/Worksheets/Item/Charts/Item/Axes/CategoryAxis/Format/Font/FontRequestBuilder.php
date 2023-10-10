@@ -50,7 +50,7 @@ class FontRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of chartfont object. This API is supported in the following national cloud deployments.
+     * Retrieve the properties and relationships of chartfont object. This API is available in the following national cloud deployments.
      * @param FontRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/chartfont-get?view=graph-rest-1.0 Find more info here
@@ -69,7 +69,7 @@ class FontRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of chartfont object. This API is supported in the following national cloud deployments.
+     * Update the properties of chartfont object. This API is available in the following national cloud deployments.
      * @param WorkbookChartFont $body The request body
      * @param FontRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -106,7 +106,7 @@ class FontRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of chartfont object. This API is supported in the following national cloud deployments.
+     * Retrieve the properties and relationships of chartfont object. This API is available in the following national cloud deployments.
      * @param FontRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -127,7 +127,7 @@ class FontRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of chartfont object. This API is supported in the following national cloud deployments.
+     * Update the properties of chartfont object. This API is available in the following national cloud deployments.
      * @param WorkbookChartFont $body The request body
      * @param FontRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

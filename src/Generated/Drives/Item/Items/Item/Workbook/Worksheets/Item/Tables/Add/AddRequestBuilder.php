@@ -32,7 +32,7 @@ class AddRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new table. The range source address determines the worksheet under which the table will be added. If the table can't be added (for example, because the address is invalid, or the table would overlap with another table), an error is generated. This API is supported in the following national cloud deployments.
+     * Create a new table. The range source address determines the worksheet under which the table will be added. If the table can't be added (for example, because the address is invalid, or the table would overlap with another table), an error is generated. This API is available in the following national cloud deployments.
      * @param AddPostRequestBody $body The request body
      * @param AddRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -52,7 +52,7 @@ class AddRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new table. The range source address determines the worksheet under which the table will be added. If the table can't be added (for example, because the address is invalid, or the table would overlap with another table), an error is generated. This API is supported in the following national cloud deployments.
+     * Create a new table. The range source address determines the worksheet under which the table will be added. If the table can't be added (for example, because the address is invalid, or the table would overlap with another table), an error is generated. This API is available in the following national cloud deployments.
      * @param AddPostRequestBody $body The request body
      * @param AddRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

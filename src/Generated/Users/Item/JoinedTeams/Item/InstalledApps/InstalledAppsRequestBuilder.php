@@ -53,7 +53,7 @@ class InstalledAppsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of apps installed in the specified team. This API is supported in the following national cloud deployments.
+     * Retrieve a list of apps installed in the specified team. This API is available in the following national cloud deployments.
      * @param InstalledAppsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/team-list-installedapps?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class InstalledAppsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Install an app to the specified team. This API is supported in the following national cloud deployments.
+     * Install an app to the specified team. This API is available in the following national cloud deployments.
      * @param TeamsAppInstallation $body The request body
      * @param InstalledAppsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class InstalledAppsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of apps installed in the specified team. This API is supported in the following national cloud deployments.
+     * Retrieve a list of apps installed in the specified team. This API is available in the following national cloud deployments.
      * @param InstalledAppsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class InstalledAppsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Install an app to the specified team. This API is supported in the following national cloud deployments.
+     * Install an app to the specified team. This API is available in the following national cloud deployments.
      * @param TeamsAppInstallation $body The request body
      * @param InstalledAppsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -58,7 +58,7 @@ class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of an authenticationMethodsPolicy object. This API is supported in the following national cloud deployments.
+     * Read the properties and relationships of an authenticationMethodsPolicy object. This API is available in the following national cloud deployments.
      * @param AuthenticationMethodsPolicyRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/authenticationmethodspolicy-get?view=graph-rest-1.0 Find more info here
@@ -77,7 +77,7 @@ class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an authenticationMethodsPolicy object. This API is supported in the following national cloud deployments.
+     * Update the properties of an authenticationMethodsPolicy object. This API is available in the following national cloud deployments.
      * @param AuthenticationMethodsPolicy $body The request body
      * @param AuthenticationMethodsPolicyRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -114,7 +114,7 @@ class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of an authenticationMethodsPolicy object. This API is supported in the following national cloud deployments.
+     * Read the properties and relationships of an authenticationMethodsPolicy object. This API is available in the following national cloud deployments.
      * @param AuthenticationMethodsPolicyRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -135,7 +135,7 @@ class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an authenticationMethodsPolicy object. This API is supported in the following national cloud deployments.
+     * Update the properties of an authenticationMethodsPolicy object. This API is available in the following national cloud deployments.
      * @param AuthenticationMethodsPolicy $body The request body
      * @param AuthenticationMethodsPolicyRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

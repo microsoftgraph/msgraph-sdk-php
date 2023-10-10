@@ -53,7 +53,7 @@ class ServicePrincipalRiskDetectionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties of a collection of servicePrincipalRiskDetection objects. This API is supported in the following national cloud deployments.
+     * Retrieve the properties of a collection of servicePrincipalRiskDetection objects. This API is available in the following national cloud deployments.
      * @param ServicePrincipalRiskDetectionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/identityprotectionroot-list-serviceprincipalriskdetections?view=graph-rest-1.0 Find more info here
@@ -91,7 +91,7 @@ class ServicePrincipalRiskDetectionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties of a collection of servicePrincipalRiskDetection objects. This API is supported in the following national cloud deployments.
+     * Retrieve the properties of a collection of servicePrincipalRiskDetection objects. This API is available in the following national cloud deployments.
      * @param ServicePrincipalRiskDetectionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

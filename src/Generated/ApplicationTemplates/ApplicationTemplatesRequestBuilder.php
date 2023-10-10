@@ -52,7 +52,7 @@ class ApplicationTemplatesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of applicationTemplate objects from the Azure AD application gallery. This API is supported in the following national cloud deployments.
+     * Retrieve a list of applicationTemplate objects from the Azure AD application gallery. This API is available in the following national cloud deployments.
      * @param ApplicationTemplatesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/applicationtemplate-list?view=graph-rest-1.0 Find more info here
@@ -71,7 +71,7 @@ class ApplicationTemplatesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of applicationTemplate objects from the Azure AD application gallery. This API is supported in the following national cloud deployments.
+     * Retrieve a list of applicationTemplate objects from the Azure AD application gallery. This API is available in the following national cloud deployments.
      * @param ApplicationTemplatesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

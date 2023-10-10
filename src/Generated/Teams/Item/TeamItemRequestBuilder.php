@@ -194,7 +194,7 @@ class TeamItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of the specified team. This API is supported in the following national cloud deployments.
+     * Retrieve the properties and relationships of the specified team. This API is available in the following national cloud deployments.
      * @param TeamItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/team-get?view=graph-rest-1.0 Find more info here
@@ -213,7 +213,7 @@ class TeamItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of the specified team. This API is supported in the following national cloud deployments.
+     * Update the properties of the specified team. This API is available in the following national cloud deployments.
      * @param Team $body The request body
      * @param TeamItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -250,7 +250,7 @@ class TeamItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of the specified team. This API is supported in the following national cloud deployments.
+     * Retrieve the properties and relationships of the specified team. This API is available in the following national cloud deployments.
      * @param TeamItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -271,7 +271,7 @@ class TeamItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of the specified team. This API is supported in the following national cloud deployments.
+     * Update the properties of the specified team. This API is available in the following national cloud deployments.
      * @param Team $body The request body
      * @param TeamItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

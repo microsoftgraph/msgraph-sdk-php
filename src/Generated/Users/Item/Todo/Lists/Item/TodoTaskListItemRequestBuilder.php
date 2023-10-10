@@ -48,7 +48,7 @@ class TodoTaskListItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a todoTaskList object. This API is supported in the following national cloud deployments.
+     * Deletes a todoTaskList object. This API is available in the following national cloud deployments.
      * @param TodoTaskListItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/todotasklist-delete?view=graph-rest-1.0 Find more info here
@@ -67,7 +67,7 @@ class TodoTaskListItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a todoTaskList object. This API is supported in the following national cloud deployments.
+     * Read the properties and relationships of a todoTaskList object. This API is available in the following national cloud deployments.
      * @param TodoTaskListItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/todotasklist-get?view=graph-rest-1.0 Find more info here
@@ -86,7 +86,7 @@ class TodoTaskListItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a todoTaskList object. This API is supported in the following national cloud deployments.
+     * Update the properties of a todoTaskList object. This API is available in the following national cloud deployments.
      * @param TodoTaskList $body The request body
      * @param TodoTaskListItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -106,7 +106,7 @@ class TodoTaskListItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a todoTaskList object. This API is supported in the following national cloud deployments.
+     * Deletes a todoTaskList object. This API is available in the following national cloud deployments.
      * @param TodoTaskListItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -123,7 +123,7 @@ class TodoTaskListItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a todoTaskList object. This API is supported in the following national cloud deployments.
+     * Read the properties and relationships of a todoTaskList object. This API is available in the following national cloud deployments.
      * @param TodoTaskListItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -144,7 +144,7 @@ class TodoTaskListItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a todoTaskList object. This API is supported in the following national cloud deployments.
+     * Update the properties of a todoTaskList object. This API is available in the following national cloud deployments.
      * @param TodoTaskList $body The request body
      * @param TodoTaskListItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

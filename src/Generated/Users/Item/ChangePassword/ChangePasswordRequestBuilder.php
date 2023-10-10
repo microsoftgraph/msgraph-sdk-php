@@ -31,7 +31,7 @@ class ChangePasswordRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Enable the user to update their password. Any user can update their password without belonging to any administrator role. This API is supported in the following national cloud deployments.
+     * Enable the user to update their password. Any user can update their password without belonging to any administrator role. This API is available in the following national cloud deployments.
      * @param ChangePasswordPostRequestBody $body The request body
      * @param ChangePasswordRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -51,7 +51,7 @@ class ChangePasswordRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Enable the user to update their password. Any user can update their password without belonging to any administrator role. This API is supported in the following national cloud deployments.
+     * Enable the user to update their password. Any user can update their password without belonging to any administrator role. This API is available in the following national cloud deployments.
      * @param ChangePasswordPostRequestBody $body The request body
      * @param ChangePasswordRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -32,7 +32,7 @@ class AddRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Creates a new chart. This API is supported in the following national cloud deployments.
+     * Creates a new chart. This API is available in the following national cloud deployments.
      * @param AddPostRequestBody $body The request body
      * @param AddRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -52,7 +52,7 @@ class AddRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Creates a new chart. This API is supported in the following national cloud deployments.
+     * Creates a new chart. This API is available in the following national cloud deployments.
      * @param AddPostRequestBody $body The request body
      * @param AddRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

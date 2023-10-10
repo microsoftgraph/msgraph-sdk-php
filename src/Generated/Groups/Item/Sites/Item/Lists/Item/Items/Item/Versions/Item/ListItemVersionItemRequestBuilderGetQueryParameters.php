@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\Items\Item
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the metadata for a specific version of a ListItem. This API is supported in the following national cloud deployments.
+ * Retrieve the metadata for a specific version of a ListItem. This API is available in the following national cloud deployments.
 */
 class ListItemVersionItemRequestBuilderGetQueryParameters 
 {

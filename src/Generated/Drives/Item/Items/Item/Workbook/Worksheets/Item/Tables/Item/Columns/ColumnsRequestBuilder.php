@@ -62,7 +62,7 @@ class ColumnsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of tablecolumn objects. This API is supported in the following national cloud deployments.
+     * Retrieve a list of tablecolumn objects. This API is available in the following national cloud deployments.
      * @param ColumnsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/tablecolumn-list?view=graph-rest-1.0 Find more info here
@@ -90,7 +90,7 @@ class ColumnsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Use this API to create a new TableColumn. This API is supported in the following national cloud deployments.
+     * Use this API to create a new TableColumn. This API is available in the following national cloud deployments.
      * @param WorkbookTableColumn $body The request body
      * @param ColumnsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -110,7 +110,7 @@ class ColumnsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of tablecolumn objects. This API is supported in the following national cloud deployments.
+     * Retrieve a list of tablecolumn objects. This API is available in the following national cloud deployments.
      * @param ColumnsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -131,7 +131,7 @@ class ColumnsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Use this API to create a new TableColumn. This API is supported in the following national cloud deployments.
+     * Use this API to create a new TableColumn. This API is available in the following national cloud deployments.
      * @param WorkbookTableColumn $body The request body
      * @param ColumnsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

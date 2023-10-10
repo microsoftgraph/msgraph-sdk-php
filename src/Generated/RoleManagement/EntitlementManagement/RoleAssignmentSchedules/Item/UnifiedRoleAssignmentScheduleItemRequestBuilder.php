@@ -90,7 +90,7 @@ class UnifiedRoleAssignmentScheduleItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the schedule for an active role assignment operation. This API is supported in the following national cloud deployments.
+     * Retrieve the schedule for an active role assignment operation. This API is available in the following national cloud deployments.
      * @param UnifiedRoleAssignmentScheduleItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/unifiedroleassignmentschedule-get?view=graph-rest-1.0 Find more info here
@@ -145,7 +145,7 @@ class UnifiedRoleAssignmentScheduleItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the schedule for an active role assignment operation. This API is supported in the following national cloud deployments.
+     * Retrieve the schedule for an active role assignment operation. This API is available in the following national cloud deployments.
      * @param UnifiedRoleAssignmentScheduleItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -31,7 +31,7 @@ class GrantRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Grant users access to a link represented by a permission][]. This API is supported in the following [national cloud deployments.
+     * Grant users access to a link represented by a permission][]. This API is available in the following [national cloud deployments.
      * @param GrantPostRequestBody $body The request body
      * @param GrantRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -51,7 +51,7 @@ class GrantRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Grant users access to a link represented by a permission][]. This API is supported in the following [national cloud deployments.
+     * Grant users access to a link represented by a permission][]. This API is available in the following [national cloud deployments.
      * @param GrantPostRequestBody $body The request body
      * @param GrantRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

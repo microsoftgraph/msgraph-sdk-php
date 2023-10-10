@@ -48,7 +48,7 @@ class DocumentSetVersionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a version of a document set in a list. This API is supported in the following national cloud deployments.
+     * Delete a version of a document set in a list. This API is available in the following national cloud deployments.
      * @param DocumentSetVersionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/documentsetversion-delete?view=graph-rest-1.0 Find more info here
@@ -67,7 +67,7 @@ class DocumentSetVersionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a documentSetVersion object. This API is supported in the following national cloud deployments.
+     * Read the properties and relationships of a documentSetVersion object. This API is available in the following national cloud deployments.
      * @param DocumentSetVersionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/documentsetversion-get?view=graph-rest-1.0 Find more info here
@@ -105,7 +105,7 @@ class DocumentSetVersionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a version of a document set in a list. This API is supported in the following national cloud deployments.
+     * Delete a version of a document set in a list. This API is available in the following national cloud deployments.
      * @param DocumentSetVersionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -122,7 +122,7 @@ class DocumentSetVersionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a documentSetVersion object. This API is supported in the following national cloud deployments.
+     * Read the properties and relationships of a documentSetVersion object. This API is available in the following national cloud deployments.
      * @param DocumentSetVersionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

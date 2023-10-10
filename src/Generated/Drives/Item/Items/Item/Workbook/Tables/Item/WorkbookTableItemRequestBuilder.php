@@ -120,7 +120,7 @@ class WorkbookTableItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes the table. This API is supported in the following national cloud deployments.
+     * Deletes the table. This API is available in the following national cloud deployments.
      * @param WorkbookTableItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/table-delete?view=graph-rest-1.0 Find more info here
@@ -139,7 +139,7 @@ class WorkbookTableItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of table object. This API is supported in the following national cloud deployments.
+     * Retrieve the properties and relationships of table object. This API is available in the following national cloud deployments.
      * @param WorkbookTableItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/table-get?view=graph-rest-1.0 Find more info here
@@ -158,7 +158,7 @@ class WorkbookTableItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of table object. This API is supported in the following national cloud deployments.
+     * Update the properties of table object. This API is available in the following national cloud deployments.
      * @param WorkbookTable $body The request body
      * @param WorkbookTableItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -178,7 +178,7 @@ class WorkbookTableItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes the table. This API is supported in the following national cloud deployments.
+     * Deletes the table. This API is available in the following national cloud deployments.
      * @param WorkbookTableItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -195,7 +195,7 @@ class WorkbookTableItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of table object. This API is supported in the following national cloud deployments.
+     * Retrieve the properties and relationships of table object. This API is available in the following national cloud deployments.
      * @param WorkbookTableItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -216,7 +216,7 @@ class WorkbookTableItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of table object. This API is supported in the following national cloud deployments.
+     * Update the properties of table object. This API is available in the following national cloud deployments.
      * @param WorkbookTable $body The request body
      * @param WorkbookTableItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

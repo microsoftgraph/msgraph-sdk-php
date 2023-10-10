@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Authentication\PasswordMethods\It
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve a password that's registered to a user, represented by a passwordAuthenticationMethod object. For security, the password itself will never be returned in the object and the password property is always null. This API is supported in the following national cloud deployments.
+ * Retrieve a password that's registered to a user, represented by a passwordAuthenticationMethod object. For security, the password itself will never be returned in the object and the password property is always null. This API is available in the following national cloud deployments.
 */
 class PasswordAuthenticationMethodItemRequestBuilderGetQueryParameters 
 {

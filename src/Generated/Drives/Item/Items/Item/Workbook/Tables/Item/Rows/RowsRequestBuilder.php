@@ -62,7 +62,7 @@ class RowsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of tablerow objects. This API is supported in the following national cloud deployments.
+     * Retrieve a list of tablerow objects. This API is available in the following national cloud deployments.
      * @param RowsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/tablerow-list?view=graph-rest-1.0 Find more info here
@@ -90,7 +90,7 @@ class RowsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Adds rows to the end of a table.  Note that this API can accept multiple rows of data. Adding one row at a time can affect performance. The recommended approach is to batch the rows together in a single call rather than inserting single rows. For best results, collect the rows to be inserted on the application side and perform a single row add operation. Experiment with the number of rows to determine the ideal number of rows to use in a single API call.  This request might occasionally result in a 504 HTTP error. The appropriate response to this error is to repeat the request. This API is supported in the following national cloud deployments.
+     * Adds rows to the end of a table.  Note that this API can accept multiple rows of data. Adding one row at a time can affect performance. The recommended approach is to batch the rows together in a single call rather than inserting single rows. For best results, collect the rows to be inserted on the application side and perform a single row add operation. Experiment with the number of rows to determine the ideal number of rows to use in a single API call.  This request might occasionally result in a 504 HTTP error. The appropriate response to this error is to repeat the request. This API is available in the following national cloud deployments.
      * @param WorkbookTableRow $body The request body
      * @param RowsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -110,7 +110,7 @@ class RowsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of tablerow objects. This API is supported in the following national cloud deployments.
+     * Retrieve a list of tablerow objects. This API is available in the following national cloud deployments.
      * @param RowsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -131,7 +131,7 @@ class RowsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Adds rows to the end of a table.  Note that this API can accept multiple rows of data. Adding one row at a time can affect performance. The recommended approach is to batch the rows together in a single call rather than inserting single rows. For best results, collect the rows to be inserted on the application side and perform a single row add operation. Experiment with the number of rows to determine the ideal number of rows to use in a single API call.  This request might occasionally result in a 504 HTTP error. The appropriate response to this error is to repeat the request. This API is supported in the following national cloud deployments.
+     * Adds rows to the end of a table.  Note that this API can accept multiple rows of data. Adding one row at a time can affect performance. The recommended approach is to batch the rows together in a single call rather than inserting single rows. For best results, collect the rows to be inserted on the application side and perform a single row add operation. Experiment with the number of rows to determine the ideal number of rows to use in a single API call.  This request might occasionally result in a 504 HTTP error. The appropriate response to this error is to repeat the request. This API is available in the following national cloud deployments.
      * @param WorkbookTableRow $body The request body
      * @param RowsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

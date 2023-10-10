@@ -32,7 +32,7 @@ class HeaderRowRangeRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Gets the range object associated with the header row of the column. This API is supported in the following national cloud deployments.
+     * Gets the range object associated with the header row of the column. This API is available in the following national cloud deployments.
      * @param HeaderRowRangeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/tablecolumn-headerrowrange?view=graph-rest-1.0 Find more info here
@@ -51,7 +51,7 @@ class HeaderRowRangeRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Gets the range object associated with the header row of the column. This API is supported in the following national cloud deployments.
+     * Gets the range object associated with the header row of the column. This API is available in the following national cloud deployments.
      * @param HeaderRowRangeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

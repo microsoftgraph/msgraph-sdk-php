@@ -31,7 +31,7 @@ class EnableSmsSignInRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Enable SMS sign-in for an existing mobile phone number registered to a user. To be successfully enabled: This API is supported in the following national cloud deployments.
+     * Enable SMS sign-in for an existing mobile phone number registered to a user. To be successfully enabled: This API is available in the following national cloud deployments.
      * @param EnableSmsSignInRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/phoneauthenticationmethod-enablesmssignin?view=graph-rest-1.0 Find more info here
@@ -50,7 +50,7 @@ class EnableSmsSignInRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Enable SMS sign-in for an existing mobile phone number registered to a user. To be successfully enabled: This API is supported in the following national cloud deployments.
+     * Enable SMS sign-in for an existing mobile phone number registered to a user. To be successfully enabled: This API is available in the following national cloud deployments.
      * @param EnableSmsSignInRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

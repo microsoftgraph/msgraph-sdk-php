@@ -53,7 +53,7 @@ class TagsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the tag objects and their properties. This API is supported in the following national cloud deployments.
+     * Get a list of the tag objects and their properties. This API is available in the following national cloud deployments.
      * @param TagsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/teamworktag-list?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class TagsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a standard tag for members in a team. This API is supported in the following national cloud deployments.
+     * Create a standard tag for members in a team. This API is available in the following national cloud deployments.
      * @param TeamworkTag $body The request body
      * @param TagsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class TagsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the tag objects and their properties. This API is supported in the following national cloud deployments.
+     * Get a list of the tag objects and their properties. This API is available in the following national cloud deployments.
      * @param TagsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class TagsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a standard tag for members in a team. This API is supported in the following national cloud deployments.
+     * Create a standard tag for members in a team. This API is available in the following national cloud deployments.
      * @param TeamworkTag $body The request body
      * @param TagsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
