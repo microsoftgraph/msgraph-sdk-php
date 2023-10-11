@@ -26,6 +26,7 @@ class CallTranscript extends Entity
 {
     /**
     * Gets the content
+    * The content of the transcript. Read-only.
     *
     * @return \GuzzleHttp\Psr7\Stream|null The content
     */
@@ -44,6 +45,7 @@ class CallTranscript extends Entity
 
     /**
     * Sets the content
+    * The content of the transcript. Read-only.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The content
     *
@@ -57,6 +59,7 @@ class CallTranscript extends Entity
 
     /**
     * Gets the createdDateTime
+    * Date and time at which the transcript was created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -75,6 +78,7 @@ class CallTranscript extends Entity
 
     /**
     * Sets the createdDateTime
+    * Date and time at which the transcript was created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -88,6 +92,7 @@ class CallTranscript extends Entity
 
     /**
     * Gets the meetingId
+    * The unique identifier of the online meeting related to this transcript. Read-only.
     *
     * @return string|null The meetingId
     */
@@ -102,6 +107,7 @@ class CallTranscript extends Entity
 
     /**
     * Sets the meetingId
+    * The unique identifier of the online meeting related to this transcript. Read-only.
     *
     * @param string $val The meetingId
     *
@@ -115,6 +121,7 @@ class CallTranscript extends Entity
 
     /**
     * Gets the meetingOrganizer
+    * The identity information of the organizer of the onlineMeeting related to this transcript. Read-only.
     *
     * @return IdentitySet|null The meetingOrganizer
     */
@@ -133,6 +140,7 @@ class CallTranscript extends Entity
 
     /**
     * Sets the meetingOrganizer
+    * The identity information of the organizer of the onlineMeeting related to this transcript. Read-only.
     *
     * @param IdentitySet $val The meetingOrganizer
     *
@@ -146,6 +154,7 @@ class CallTranscript extends Entity
 
     /**
     * Gets the metadataContent
+    * The time-aligned metadata of the utterances in the transcript. Read-only.
     *
     * @return \GuzzleHttp\Psr7\Stream|null The metadataContent
     */
@@ -164,6 +173,7 @@ class CallTranscript extends Entity
 
     /**
     * Sets the metadataContent
+    * The time-aligned metadata of the utterances in the transcript. Read-only.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The metadataContent
     *
@@ -177,6 +187,7 @@ class CallTranscript extends Entity
 
     /**
     * Gets the transcriptContentUrl
+    * The URL that can be used to access the content of the transcript. Read-only.
     *
     * @return string|null The transcriptContentUrl
     */
@@ -191,6 +202,7 @@ class CallTranscript extends Entity
 
     /**
     * Sets the transcriptContentUrl
+    * The URL that can be used to access the content of the transcript. Read-only.
     *
     * @param string $val The transcriptContentUrl
     *
