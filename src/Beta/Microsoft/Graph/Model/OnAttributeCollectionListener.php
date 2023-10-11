@@ -26,7 +26,7 @@ class OnAttributeCollectionListener extends AuthenticationEventListener
 {
     /**
     * Gets the handler
-    * Required. Configuration for what to invoke if the event resolves to this listener. This lets us define potential handler configurations per-event.
+    * Required. Configuration for what to invoke if the event resolves to this listener.
     *
     * @return OnAttributeCollectionHandler|null The handler
     */
@@ -45,7 +45,7 @@ class OnAttributeCollectionListener extends AuthenticationEventListener
 
     /**
     * Sets the handler
-    * Required. Configuration for what to invoke if the event resolves to this listener. This lets us define potential handler configurations per-event.
+    * Required. Configuration for what to invoke if the event resolves to this listener.
     *
     * @param OnAttributeCollectionHandler $val The handler
     *

@@ -55,7 +55,7 @@ class GraphList extends BaseItem
 
     /**
     * Gets the list
-    * Provides additional details about the list.
+    * Contains more details about the list.
     *
     * @return ListInfo|null The list
     */
@@ -74,7 +74,7 @@ class GraphList extends BaseItem
 
     /**
     * Sets the list
-    * Provides additional details about the list.
+    * Contains more details about the list.
     *
     * @param ListInfo $val The list
     *
@@ -88,6 +88,7 @@ class GraphList extends BaseItem
 
     /**
     * Gets the sharepointIds
+    * Returns identifiers useful for SharePoint REST compatibility. Read-only.
     *
     * @return SharepointIds|null The sharepointIds
     */
@@ -106,6 +107,7 @@ class GraphList extends BaseItem
 
     /**
     * Sets the sharepointIds
+    * Returns identifiers useful for SharePoint REST compatibility. Read-only.
     *
     * @param SharepointIds $val The sharepointIds
     *
@@ -119,7 +121,7 @@ class GraphList extends BaseItem
 
     /**
     * Gets the system
-    * If present, indicates that this is a system-managed list. Read-only.
+    * If present, indicates that the list is system-managed. Read-only.
     *
     * @return SystemFacet|null The system
     */
@@ -138,7 +140,7 @@ class GraphList extends BaseItem
 
     /**
     * Sets the system
-    * If present, indicates that this is a system-managed list. Read-only.
+    * If present, indicates that the list is system-managed. Read-only.
     *
     * @param SystemFacet $val The system
     *
@@ -183,6 +185,7 @@ class GraphList extends BaseItem
 
      /**
      * Gets the columns
+    * The collection of field definitions for this list.
      *
      * @return array|null The columns
      */
@@ -197,6 +200,7 @@ class GraphList extends BaseItem
 
     /**
     * Sets the columns
+    * The collection of field definitions for this list.
     *
     * @param ColumnDefinition[] $val The columns
     *
@@ -211,6 +215,7 @@ class GraphList extends BaseItem
 
      /**
      * Gets the contentTypes
+    * The collection of content types present in this list.
      *
      * @return array|null The contentTypes
      */
@@ -225,6 +230,7 @@ class GraphList extends BaseItem
 
     /**
     * Sets the contentTypes
+    * The collection of content types present in this list.
     *
     * @param ContentType[] $val The contentTypes
     *
@@ -238,7 +244,7 @@ class GraphList extends BaseItem
 
     /**
     * Gets the drive
-    * Only present on document libraries. Allows access to the list as a [drive][] resource with [driveItems][driveItem].
+    * Allows access to the list as a drive resource with driveItems. Only present on document libraries.
     *
     * @return Drive|null The drive
     */
@@ -257,7 +263,7 @@ class GraphList extends BaseItem
 
     /**
     * Sets the drive
-    * Only present on document libraries. Allows access to the list as a [drive][] resource with [driveItems][driveItem].
+    * Allows access to the list as a drive resource with driveItems. Only present on document libraries.
     *
     * @param Drive $val The drive
     *
@@ -302,7 +308,7 @@ class GraphList extends BaseItem
 
      /**
      * Gets the operations
-    * The collection of long running operations for the list.
+    * The collection of long-running operations on the list.
      *
      * @return array|null The operations
      */
@@ -317,7 +323,7 @@ class GraphList extends BaseItem
 
     /**
     * Sets the operations
-    * The collection of long running operations for the list.
+    * The collection of long-running operations on the list.
     *
     * @param RichLongRunningOperation[] $val The operations
     *

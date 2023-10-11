@@ -26,6 +26,7 @@ class RecycleBinItem extends BaseItem
 {
     /**
     * Gets the deletedDateTime
+    * Date and time when the item was deleted. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The deletedDateTime
     */
@@ -44,6 +45,7 @@ class RecycleBinItem extends BaseItem
 
     /**
     * Sets the deletedDateTime
+    * Date and time when the item was deleted. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The deletedDateTime
     *
@@ -57,6 +59,7 @@ class RecycleBinItem extends BaseItem
 
     /**
     * Gets the deletedFromLocation
+    * Relative URL of the list or folder that originally contained the item.
     *
     * @return string|null The deletedFromLocation
     */
@@ -71,6 +74,7 @@ class RecycleBinItem extends BaseItem
 
     /**
     * Sets the deletedFromLocation
+    * Relative URL of the list or folder that originally contained the item.
     *
     * @param string $val The deletedFromLocation
     *
@@ -84,6 +88,7 @@ class RecycleBinItem extends BaseItem
 
     /**
     * Gets the size
+    * Size of the item in bytes.
     *
     * @return int|null The size
     */
@@ -98,6 +103,7 @@ class RecycleBinItem extends BaseItem
 
     /**
     * Sets the size
+    * Size of the item in bytes.
     *
     * @param int $val The size
     *

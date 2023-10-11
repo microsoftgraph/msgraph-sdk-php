@@ -12,7 +12,6 @@
 * @link      https://graph.microsoft.com
 */
 namespace Beta\Microsoft\Graph\Model;
-
 /**
 * RetrieveRemoteHelpSessionResponse class
 *
@@ -22,39 +21,8 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class RetrieveRemoteHelpSessionResponse implements \JsonSerializable
+class RetrieveRemoteHelpSessionResponse extends Entity
 {
-    /**
-    * The array of properties available
-    * to the model
-    *
-    * @var array $_propDict
-    */
-    protected $_propDict;
-
-    /**
-    * Construct a new RetrieveRemoteHelpSessionResponse
-    *
-    * @param array $propDict A list of properties to set
-    */
-    function __construct($propDict = array())
-    {
-        if (!is_array($propDict)) {
-           $propDict = array();
-        }
-        $this->_propDict = $propDict;
-    }
-
-    /**
-    * Gets the property dictionary of the RetrieveRemoteHelpSessionResponse
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-
     /**
     * Gets the acsGroupId
     * ACS Group Id
@@ -74,7 +42,7 @@ class RetrieveRemoteHelpSessionResponse implements \JsonSerializable
     * Sets the acsGroupId
     * ACS Group Id
     *
-    * @param string $val The acsGroupId
+    * @param string $val The value of the acsGroupId
     *
     * @return RetrieveRemoteHelpSessionResponse
     */
@@ -83,7 +51,6 @@ class RetrieveRemoteHelpSessionResponse implements \JsonSerializable
         $this->_propDict["acsGroupId"] = $val;
         return $this;
     }
-
     /**
     * Gets the acsHelperUserId
     * Helper ACS User Id
@@ -103,7 +70,7 @@ class RetrieveRemoteHelpSessionResponse implements \JsonSerializable
     * Sets the acsHelperUserId
     * Helper ACS User Id
     *
-    * @param string $val The acsHelperUserId
+    * @param string $val The value of the acsHelperUserId
     *
     * @return RetrieveRemoteHelpSessionResponse
     */
@@ -112,7 +79,6 @@ class RetrieveRemoteHelpSessionResponse implements \JsonSerializable
         $this->_propDict["acsHelperUserId"] = $val;
         return $this;
     }
-
     /**
     * Gets the acsHelperUserToken
     * Helper ACS User Token
@@ -132,7 +98,7 @@ class RetrieveRemoteHelpSessionResponse implements \JsonSerializable
     * Sets the acsHelperUserToken
     * Helper ACS User Token
     *
-    * @param string $val The acsHelperUserToken
+    * @param string $val The value of the acsHelperUserToken
     *
     * @return RetrieveRemoteHelpSessionResponse
     */
@@ -141,7 +107,6 @@ class RetrieveRemoteHelpSessionResponse implements \JsonSerializable
         $this->_propDict["acsHelperUserToken"] = $val;
         return $this;
     }
-
     /**
     * Gets the acsSharerUserId
     * Sharer ACS User Id
@@ -161,7 +126,7 @@ class RetrieveRemoteHelpSessionResponse implements \JsonSerializable
     * Sets the acsSharerUserId
     * Sharer ACS User Id
     *
-    * @param string $val The acsSharerUserId
+    * @param string $val The value of the acsSharerUserId
     *
     * @return RetrieveRemoteHelpSessionResponse
     */
@@ -170,7 +135,6 @@ class RetrieveRemoteHelpSessionResponse implements \JsonSerializable
         $this->_propDict["acsSharerUserId"] = $val;
         return $this;
     }
-
     /**
     * Gets the deviceName
     * Android Device Name
@@ -190,7 +154,7 @@ class RetrieveRemoteHelpSessionResponse implements \JsonSerializable
     * Sets the deviceName
     * Android Device Name
     *
-    * @param string $val The deviceName
+    * @param string $val The value of the deviceName
     *
     * @return RetrieveRemoteHelpSessionResponse
     */
@@ -199,7 +163,6 @@ class RetrieveRemoteHelpSessionResponse implements \JsonSerializable
         $this->_propDict["deviceName"] = $val;
         return $this;
     }
-
     /**
     * Gets the pubSubGroupId
     * Azure Pubsub Group Id
@@ -219,7 +182,7 @@ class RetrieveRemoteHelpSessionResponse implements \JsonSerializable
     * Sets the pubSubGroupId
     * Azure Pubsub Group Id
     *
-    * @param string $val The pubSubGroupId
+    * @param string $val The value of the pubSubGroupId
     *
     * @return RetrieveRemoteHelpSessionResponse
     */
@@ -228,7 +191,6 @@ class RetrieveRemoteHelpSessionResponse implements \JsonSerializable
         $this->_propDict["pubSubGroupId"] = $val;
         return $this;
     }
-
     /**
     * Gets the pubSubHelperAccessUri
     * Azure Pubsub Group Id
@@ -248,7 +210,7 @@ class RetrieveRemoteHelpSessionResponse implements \JsonSerializable
     * Sets the pubSubHelperAccessUri
     * Azure Pubsub Group Id
     *
-    * @param string $val The pubSubHelperAccessUri
+    * @param string $val The value of the pubSubHelperAccessUri
     *
     * @return RetrieveRemoteHelpSessionResponse
     */
@@ -281,16 +243,15 @@ class RetrieveRemoteHelpSessionResponse implements \JsonSerializable
     * Sets the sessionExpirationDateTime
     * Azure Pubsub Session Expiration Date Time.
     *
-    * @param \DateTime $val The sessionExpirationDateTime
+    * @param \DateTime $val The value to assign to the sessionExpirationDateTime
     *
-    * @return RetrieveRemoteHelpSessionResponse
+    * @return RetrieveRemoteHelpSessionResponse The RetrieveRemoteHelpSessionResponse
     */
     public function setSessionExpirationDateTime($val)
     {
         $this->_propDict["sessionExpirationDateTime"] = $val;
-        return $this;
+         return $this;
     }
-
     /**
     * Gets the sessionKey
     * The unique identifier for a session
@@ -310,7 +271,7 @@ class RetrieveRemoteHelpSessionResponse implements \JsonSerializable
     * Sets the sessionKey
     * The unique identifier for a session
     *
-    * @param string $val The sessionKey
+    * @param string $val The value of the sessionKey
     *
     * @return RetrieveRemoteHelpSessionResponse
     */
@@ -318,55 +279,5 @@ class RetrieveRemoteHelpSessionResponse implements \JsonSerializable
     {
         $this->_propDict["sessionKey"] = $val;
         return $this;
-    }
-
-    /**
-    * Gets the ODataType
-    *
-    * @return string|null The ODataType
-    */
-    public function getODataType()
-    {
-        if (array_key_exists('@odata.type', $this->_propDict)) {
-            return $this->_propDict["@odata.type"];
-        }
-        return null;
-    }
-
-    /**
-    * Sets the ODataType
-    *
-    * @param string $val The ODataType
-    *
-    * @return RetrieveRemoteHelpSessionResponse
-    */
-    public function setODataType($val)
-    {
-        $this->_propDict["@odata.type"] = $val;
-        return $this;
-    }
-
-    /**
-    * Serializes the object by property array
-    * Manually serialize DateTime into RFC3339 format
-    *
-    * @return array The list of properties
-    */
-    #[\ReturnTypeWillChange]
-    public function jsonSerialize()
-    {
-        $serializableProperties = $this->getProperties();
-        foreach ($serializableProperties as $property => $val) {
-            if (is_a($val, "\DateTime")) {
-                $serializableProperties[$property] = $val->format(\DateTime::RFC3339);
-            } else if (is_a($val, "\Microsoft\Graph\Core\Enum")) {
-                $serializableProperties[$property] = $val->value();
-            } else if (is_a($val, "\Entity")) {
-                $serializableProperties[$property] = $val->jsonSerialize();
-            } else if (is_a($val, "\GuzzleHttp\Psr7\Stream")) {
-                $serializableProperties[$property] = (string) $val;
-            }
-        }
-        return $serializableProperties;
     }
 }

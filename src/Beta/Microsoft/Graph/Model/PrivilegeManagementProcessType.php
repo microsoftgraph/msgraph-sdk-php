@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* RecycleBin File
+* PrivilegeManagementProcessType File
 * PHP version 7
 *
 * @category  Library
@@ -13,8 +13,10 @@
 */
 namespace Beta\Microsoft\Graph\Model;
 
+use Microsoft\Graph\Core\Enum;
+
 /**
-* RecycleBin class
+* PrivilegeManagementProcessType class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,36 +24,13 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class RecycleBin extends BaseItem
+class PrivilegeManagementProcessType extends Enum
 {
-
-     /**
-     * Gets the items
-    * List of the recycleBinItems deleted by a user.
-     *
-     * @return array|null The items
-     */
-    public function getItems()
-    {
-        if (array_key_exists("items", $this->_propDict)) {
-           return $this->_propDict["items"];
-        } else {
-            return null;
-        }
-    }
-
     /**
-    * Sets the items
-    * List of the recycleBinItems deleted by a user.
-    *
-    * @param RecycleBinItem[] $val The items
-    *
-    * @return RecycleBin
+    * The Enum PrivilegeManagementProcessType
     */
-    public function setItems($val)
-    {
-        $this->_propDict["items"] = $val;
-        return $this;
-    }
-
+    const UNDEFINED = "undefined";
+    const PARENT = "parent";
+    const CHILD = "child";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

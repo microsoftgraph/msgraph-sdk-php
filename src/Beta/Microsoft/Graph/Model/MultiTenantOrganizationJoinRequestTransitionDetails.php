@@ -26,7 +26,7 @@ class MultiTenantOrganizationJoinRequestTransitionDetails extends Entity
 
     /**
     * Gets the desiredMemberState
-    * State of the tenant in the multi-tenant organization currently being processed. The possible values are: pending, active, removed, unknownFutureValue. Read-only.
+    * State of the tenant in the multitenant organization currently being processed. The possible values are: pending, active, removed, unknownFutureValue. Read-only.
     *
     * @return MultiTenantOrganizationMemberState|null The desiredMemberState
     */
@@ -45,7 +45,7 @@ class MultiTenantOrganizationJoinRequestTransitionDetails extends Entity
 
     /**
     * Sets the desiredMemberState
-    * State of the tenant in the multi-tenant organization currently being processed. The possible values are: pending, active, removed, unknownFutureValue. Read-only.
+    * State of the tenant in the multitenant organization currently being processed. The possible values are: pending, active, removed, unknownFutureValue. Read-only.
     *
     * @param MultiTenantOrganizationMemberState $val The value to assign to the desiredMemberState
     *

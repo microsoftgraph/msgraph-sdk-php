@@ -973,7 +973,7 @@ class Device extends DirectoryObject
 
     /**
     * Gets the manufacturer
-    * Manufacturer of the device. Read-only.
+    * Manufacturer of device. Only returned if user signs in with a Microsoft account as part of Project Rome.
     *
     * @return string|null The manufacturer
     */
@@ -988,7 +988,7 @@ class Device extends DirectoryObject
 
     /**
     * Sets the manufacturer
-    * Manufacturer of the device. Read-only.
+    * Manufacturer of device. Only returned if user signs in with a Microsoft account as part of Project Rome.
     *
     * @param string $val The manufacturer
     *
@@ -1002,7 +1002,7 @@ class Device extends DirectoryObject
 
     /**
     * Gets the model
-    * Model of the device. Read-only.
+    * Model of device. Only returned if user signs in with a Microsoft account as part of Project Rome.
     *
     * @return string|null The model
     */
@@ -1017,7 +1017,7 @@ class Device extends DirectoryObject
 
     /**
     * Sets the model
-    * Model of the device. Read-only.
+    * Model of device. Only returned if user signs in with a Microsoft account as part of Project Rome.
     *
     * @param string $val The model
     *

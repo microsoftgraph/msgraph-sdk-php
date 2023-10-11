@@ -1571,6 +1571,37 @@ class ServicePrincipal extends DirectoryObject
         return $this;
     }
 
+    /**
+    * Gets the remoteDesktopSecurityConfiguration
+    *
+    * @return RemoteDesktopSecurityConfiguration|null The remoteDesktopSecurityConfiguration
+    */
+    public function getRemoteDesktopSecurityConfiguration()
+    {
+        if (array_key_exists("remoteDesktopSecurityConfiguration", $this->_propDict)) {
+            if (is_a($this->_propDict["remoteDesktopSecurityConfiguration"], "\Beta\Microsoft\Graph\Model\RemoteDesktopSecurityConfiguration") || is_null($this->_propDict["remoteDesktopSecurityConfiguration"])) {
+                return $this->_propDict["remoteDesktopSecurityConfiguration"];
+            } else {
+                $this->_propDict["remoteDesktopSecurityConfiguration"] = new RemoteDesktopSecurityConfiguration($this->_propDict["remoteDesktopSecurityConfiguration"]);
+                return $this->_propDict["remoteDesktopSecurityConfiguration"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the remoteDesktopSecurityConfiguration
+    *
+    * @param RemoteDesktopSecurityConfiguration $val The remoteDesktopSecurityConfiguration
+    *
+    * @return ServicePrincipal
+    */
+    public function setRemoteDesktopSecurityConfiguration($val)
+    {
+        $this->_propDict["remoteDesktopSecurityConfiguration"] = $val;
+        return $this;
+    }
+
 
      /**
      * Gets the tokenIssuancePolicies

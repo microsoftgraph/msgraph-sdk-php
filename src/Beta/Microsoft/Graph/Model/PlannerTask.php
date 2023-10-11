@@ -435,7 +435,7 @@ class PlannerTask extends PlannerDelta
 
     /**
     * Gets the hasDescription
-    * Read-only. Value is true if the details object of the task has a non-empty description and false otherwise.
+    * Read-only. Value is true if the details object of the task has a nonempty description and false otherwise.
     *
     * @return bool|null The hasDescription
     */
@@ -450,7 +450,7 @@ class PlannerTask extends PlannerDelta
 
     /**
     * Sets the hasDescription
-    * Read-only. Value is true if the details object of the task has a non-empty description and false otherwise.
+    * Read-only. Value is true if the details object of the task has a nonempty description and false otherwise.
     *
     * @param bool $val The hasDescription
     *

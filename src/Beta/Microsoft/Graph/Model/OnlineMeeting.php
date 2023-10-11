@@ -266,7 +266,6 @@ class OnlineMeeting extends Entity
 
     /**
     * Gets the alternativeRecording
-    * The content stream of the alternative recording of a Microsoft Teams live event. Read-only.
     *
     * @return \GuzzleHttp\Psr7\Stream|null The alternativeRecording
     */
@@ -285,7 +284,6 @@ class OnlineMeeting extends Entity
 
     /**
     * Sets the alternativeRecording
-    * The content stream of the alternative recording of a Microsoft Teams live event. Read-only.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The alternativeRecording
     *
@@ -329,7 +327,6 @@ class OnlineMeeting extends Entity
 
     /**
     * Gets the attendeeReport
-    * The content stream of the attendee report of a Teams live event. Read-only.
     *
     * @return \GuzzleHttp\Psr7\Stream|null The attendeeReport
     */
@@ -348,7 +345,6 @@ class OnlineMeeting extends Entity
 
     /**
     * Sets the attendeeReport
-    * The content stream of the attendee report of a Teams live event. Read-only.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The attendeeReport
     *
@@ -426,7 +422,6 @@ class OnlineMeeting extends Entity
 
     /**
     * Gets the broadcastSettings
-    * Settings related to a live event.
     *
     * @return BroadcastMeetingSettings|null The broadcastSettings
     */
@@ -445,7 +440,6 @@ class OnlineMeeting extends Entity
 
     /**
     * Sets the broadcastSettings
-    * Settings related to a live event.
     *
     * @param BroadcastMeetingSettings $val The broadcastSettings
     *
@@ -646,7 +640,6 @@ class OnlineMeeting extends Entity
 
     /**
     * Gets the isBroadcast
-    * Indicates whether this is a Teams live event.
     *
     * @return bool|null The isBroadcast
     */
@@ -661,7 +654,6 @@ class OnlineMeeting extends Entity
 
     /**
     * Sets the isBroadcast
-    * Indicates whether this is a Teams live event.
     *
     * @param bool $val The isBroadcast
     *
@@ -670,6 +662,33 @@ class OnlineMeeting extends Entity
     public function setIsBroadcast($val)
     {
         $this->_propDict["isBroadcast"] = boolval($val);
+        return $this;
+    }
+
+    /**
+    * Gets the isEndToEndEncryptionEnabled
+    *
+    * @return bool|null The isEndToEndEncryptionEnabled
+    */
+    public function getIsEndToEndEncryptionEnabled()
+    {
+        if (array_key_exists("isEndToEndEncryptionEnabled", $this->_propDict)) {
+            return $this->_propDict["isEndToEndEncryptionEnabled"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isEndToEndEncryptionEnabled
+    *
+    * @param bool $val The isEndToEndEncryptionEnabled
+    *
+    * @return OnlineMeeting
+    */
+    public function setIsEndToEndEncryptionEnabled($val)
+    {
+        $this->_propDict["isEndToEndEncryptionEnabled"] = boolval($val);
         return $this;
     }
 
@@ -921,7 +940,6 @@ class OnlineMeeting extends Entity
 
     /**
     * Gets the recording
-    * The content stream of the recording of a Teams live event. Read-only.
     *
     * @return \GuzzleHttp\Psr7\Stream|null The recording
     */
@@ -940,7 +958,6 @@ class OnlineMeeting extends Entity
 
     /**
     * Sets the recording
-    * The content stream of the recording of a Teams live event. Read-only.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The recording
     *

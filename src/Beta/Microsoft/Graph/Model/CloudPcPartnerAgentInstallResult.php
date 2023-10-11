@@ -23,6 +23,32 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class CloudPcPartnerAgentInstallResult extends Entity
 {
+    /**
+    * Gets the errorMessage
+    *
+    * @return string|null The errorMessage
+    */
+    public function getErrorMessage()
+    {
+        if (array_key_exists("errorMessage", $this->_propDict)) {
+            return $this->_propDict["errorMessage"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the errorMessage
+    *
+    * @param string $val The value of the errorMessage
+    *
+    * @return CloudPcPartnerAgentInstallResult
+    */
+    public function setErrorMessage($val)
+    {
+        $this->_propDict["errorMessage"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the installStatus
