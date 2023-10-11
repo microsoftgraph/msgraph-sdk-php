@@ -37,6 +37,7 @@ class MicrosoftCustomTrainingSetting extends TrainingSetting
 
     /**
     * Gets the completionDateTime
+    * The completion date and time of the training. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The completionDateTime
     */
@@ -55,6 +56,7 @@ class MicrosoftCustomTrainingSetting extends TrainingSetting
 
     /**
     * Sets the completionDateTime
+    * The completion date and time of the training. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The value to assign to the completionDateTime
     *
@@ -68,6 +70,7 @@ class MicrosoftCustomTrainingSetting extends TrainingSetting
 
     /**
     * Gets the trainingAssignmentMappings
+    * The mapping details of the associated training.
     *
     * @return MicrosoftTrainingAssignmentMapping|null The trainingAssignmentMappings
     */
@@ -86,6 +89,7 @@ class MicrosoftCustomTrainingSetting extends TrainingSetting
 
     /**
     * Sets the trainingAssignmentMappings
+    * The mapping details of the associated training.
     *
     * @param MicrosoftTrainingAssignmentMapping $val The value to assign to the trainingAssignmentMappings
     *
@@ -99,6 +103,7 @@ class MicrosoftCustomTrainingSetting extends TrainingSetting
 
     /**
     * Gets the trainingCompletionDuration
+    * The training completion duration that needs to be provided before scheduling the training. Possible values are: week, fortnite, month, unknownFutureValue.
     *
     * @return TrainingCompletionDuration|null The trainingCompletionDuration
     */
@@ -117,6 +122,7 @@ class MicrosoftCustomTrainingSetting extends TrainingSetting
 
     /**
     * Sets the trainingCompletionDuration
+    * The training completion duration that needs to be provided before scheduling the training. Possible values are: week, fortnite, month, unknownFutureValue.
     *
     * @param TrainingCompletionDuration $val The value to assign to the trainingCompletionDuration
     *

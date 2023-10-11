@@ -87,7 +87,7 @@ class Synchronization extends Entity
 
      /**
      * Gets the templates
-    * Pre-configured synchronization settings for a particular application.
+    * Preconfigured synchronization settings for a particular application.
      *
      * @return array|null The templates
      */
@@ -102,7 +102,7 @@ class Synchronization extends Entity
 
     /**
     * Sets the templates
-    * Pre-configured synchronization settings for a particular application.
+    * Preconfigured synchronization settings for a particular application.
     *
     * @param SynchronizationTemplate[] $val The templates
     *

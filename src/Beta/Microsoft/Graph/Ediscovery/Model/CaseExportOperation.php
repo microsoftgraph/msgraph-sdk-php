@@ -113,7 +113,7 @@ class CaseExportOperation extends CaseOperation
 
     /**
     * Gets the exportOptions
-    * The options provided for the export. For more details, see reviewSet: export. Possible values are: originalFiles, text, pdfReplacement, fileInfo, tags.
+    * The options provided for the export. For more information, see reviewSet: export. Possible values are: originalFiles, text, pdfReplacement, fileInfo, tags.
     *
     * @return ExportOptions|null The exportOptions
     */
@@ -132,7 +132,7 @@ class CaseExportOperation extends CaseOperation
 
     /**
     * Sets the exportOptions
-    * The options provided for the export. For more details, see reviewSet: export. Possible values are: originalFiles, text, pdfReplacement, fileInfo, tags.
+    * The options provided for the export. For more information, see reviewSet: export. Possible values are: originalFiles, text, pdfReplacement, fileInfo, tags.
     *
     * @param ExportOptions $val The exportOptions
     *
@@ -146,7 +146,7 @@ class CaseExportOperation extends CaseOperation
 
     /**
     * Gets the exportStructure
-    * The options provided that specify the structure of the export. For more details, see reviewSet: export. Possible values are: none, directory, pst.
+    * The options provided specify the structure of the export. For more information, see reviewSet: export. Possible values are: none, directory, pst.
     *
     * @return ExportFileStructure|null The exportStructure
     */
@@ -165,7 +165,7 @@ class CaseExportOperation extends CaseOperation
 
     /**
     * Sets the exportStructure
-    * The options provided that specify the structure of the export. For more details, see reviewSet: export. Possible values are: none, directory, pst.
+    * The options provided specify the structure of the export. For more information, see reviewSet: export. Possible values are: none, directory, pst.
     *
     * @param ExportFileStructure $val The exportStructure
     *

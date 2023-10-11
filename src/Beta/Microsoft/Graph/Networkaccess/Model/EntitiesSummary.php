@@ -86,7 +86,7 @@ class EntitiesSummary extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the userCount
-    * Count of unique Azure Active Directoy users that were seen.
+    * Count of unique Azure Active Directory users that were seen.
     *
     * @return int|null The userCount
     */
@@ -101,7 +101,7 @@ class EntitiesSummary extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the userCount
-    * Count of unique Azure Active Directoy users that were seen.
+    * Count of unique Azure Active Directory users that were seen.
     *
     * @param int $val The value of the userCount
     *

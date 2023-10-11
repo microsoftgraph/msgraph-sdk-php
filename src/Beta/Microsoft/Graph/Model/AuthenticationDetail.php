@@ -53,7 +53,7 @@ class AuthenticationDetail extends Entity
     }
     /**
     * Gets the authenticationMethodDetail
-    * Details about the authentication method used to perform this authentication step. For example, phone number (for SMS and voice), device name (for Authenticator app), and password source (e.g. cloud, AD FS, PTA, PHS).
+    * Details about the authentication method used to perform this authentication step. For example, phone number (for SMS and voice), device name (for Authenticator app), and password source (for example, cloud, AD FS, PTA, PHS).
     *
     * @return string|null The authenticationMethodDetail
     */
@@ -68,7 +68,7 @@ class AuthenticationDetail extends Entity
 
     /**
     * Sets the authenticationMethodDetail
-    * Details about the authentication method used to perform this authentication step. For example, phone number (for SMS and voice), device name (for Authenticator app), and password source (e.g. cloud, AD FS, PTA, PHS).
+    * Details about the authentication method used to perform this authentication step. For example, phone number (for SMS and voice), device name (for Authenticator app), and password source (for example, cloud, AD FS, PTA, PHS).
     *
     * @param string $val The value of the authenticationMethodDetail
     *
@@ -114,7 +114,7 @@ class AuthenticationDetail extends Entity
     }
     /**
     * Gets the authenticationStepRequirement
-    * The step of authentication that this satisfied. For example, primary authentication, or multi-factor authentication.
+    * The step of authentication that this satisfied. For example, primary authentication, or multifactor authentication.
     *
     * @return string|null The authenticationStepRequirement
     */
@@ -129,7 +129,7 @@ class AuthenticationDetail extends Entity
 
     /**
     * Sets the authenticationStepRequirement
-    * The step of authentication that this satisfied. For example, primary authentication, or multi-factor authentication.
+    * The step of authentication that this satisfied. For example, primary authentication, or multifactor authentication.
     *
     * @param string $val The value of the authenticationStepRequirement
     *

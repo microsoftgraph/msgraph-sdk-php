@@ -55,7 +55,7 @@ class AuthenticationListener extends Entity
 
     /**
     * Gets the sourceFilter
-    * Filter based on the source of the authentication that is used to determine whether the listener is evaluated. This is currently limited to evaluations based on application the user is authenticating to.
+    * Filter based on the source of the authentication that is used to determine whether the listener is evaluated, and is currently limited to evaluations based on application the user is authenticating to.
     *
     * @return AuthenticationSourceFilter|null The sourceFilter
     */
@@ -74,7 +74,7 @@ class AuthenticationListener extends Entity
 
     /**
     * Sets the sourceFilter
-    * Filter based on the source of the authentication that is used to determine whether the listener is evaluated. This is currently limited to evaluations based on application the user is authenticating to.
+    * Filter based on the source of the authentication that is used to determine whether the listener is evaluated, and is currently limited to evaluations based on application the user is authenticating to.
     *
     * @param AuthenticationSourceFilter $val The sourceFilter
     *

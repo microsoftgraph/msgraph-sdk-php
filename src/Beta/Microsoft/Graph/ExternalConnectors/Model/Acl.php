@@ -124,7 +124,7 @@ class Acl extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the value
-    * The unique identifer of the identity. In case of Azure Active Directory identities, value is set to the object identifier of the user, group or tenant for types user, group and everyone (and everyoneExceptGuests) respectively. In case of external groups value is set to the ID of the externalGroup.
+    * The unique identifer of the identity. For Azure Active Directory identities, value is set to the object identifier of the user, group or tenant for types user, group and everyone (and everyoneExceptGuests) respectively. For external groups, value is set to the ID of the externalGroup.
     *
     * @return string|null The value
     */
@@ -139,7 +139,7 @@ class Acl extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the value
-    * The unique identifer of the identity. In case of Azure Active Directory identities, value is set to the object identifier of the user, group or tenant for types user, group and everyone (and everyoneExceptGuests) respectively. In case of external groups value is set to the ID of the externalGroup.
+    * The unique identifer of the identity. For Azure Active Directory identities, value is set to the object identifier of the user, group or tenant for types user, group and everyone (and everyoneExceptGuests) respectively. For external groups, value is set to the ID of the externalGroup.
     *
     * @param string $val The value of the value
     *

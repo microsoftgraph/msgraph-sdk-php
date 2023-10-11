@@ -277,6 +277,126 @@ class Simulation extends Entity
     }
 
     /**
+    * Gets the durationInDays
+    *
+    * @return int|null The durationInDays
+    */
+    public function getDurationInDays()
+    {
+        if (array_key_exists("durationInDays", $this->_propDict)) {
+            return $this->_propDict["durationInDays"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the durationInDays
+    *
+    * @param int $val The durationInDays
+    *
+    * @return Simulation
+    */
+    public function setDurationInDays($val)
+    {
+        $this->_propDict["durationInDays"] = intval($val);
+        return $this;
+    }
+
+    /**
+    * Gets the endUserNotificationSetting
+    *
+    * @return EndUserNotificationSetting|null The endUserNotificationSetting
+    */
+    public function getEndUserNotificationSetting()
+    {
+        if (array_key_exists("endUserNotificationSetting", $this->_propDict)) {
+            if (is_a($this->_propDict["endUserNotificationSetting"], "\Microsoft\Graph\Model\EndUserNotificationSetting") || is_null($this->_propDict["endUserNotificationSetting"])) {
+                return $this->_propDict["endUserNotificationSetting"];
+            } else {
+                $this->_propDict["endUserNotificationSetting"] = new EndUserNotificationSetting($this->_propDict["endUserNotificationSetting"]);
+                return $this->_propDict["endUserNotificationSetting"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the endUserNotificationSetting
+    *
+    * @param EndUserNotificationSetting $val The endUserNotificationSetting
+    *
+    * @return Simulation
+    */
+    public function setEndUserNotificationSetting($val)
+    {
+        $this->_propDict["endUserNotificationSetting"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the excludedAccountTarget
+    *
+    * @return AccountTargetContent|null The excludedAccountTarget
+    */
+    public function getExcludedAccountTarget()
+    {
+        if (array_key_exists("excludedAccountTarget", $this->_propDict)) {
+            if (is_a($this->_propDict["excludedAccountTarget"], "\Microsoft\Graph\Model\AccountTargetContent") || is_null($this->_propDict["excludedAccountTarget"])) {
+                return $this->_propDict["excludedAccountTarget"];
+            } else {
+                $this->_propDict["excludedAccountTarget"] = new AccountTargetContent($this->_propDict["excludedAccountTarget"]);
+                return $this->_propDict["excludedAccountTarget"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the excludedAccountTarget
+    *
+    * @param AccountTargetContent $val The excludedAccountTarget
+    *
+    * @return Simulation
+    */
+    public function setExcludedAccountTarget($val)
+    {
+        $this->_propDict["excludedAccountTarget"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the includedAccountTarget
+    *
+    * @return AccountTargetContent|null The includedAccountTarget
+    */
+    public function getIncludedAccountTarget()
+    {
+        if (array_key_exists("includedAccountTarget", $this->_propDict)) {
+            if (is_a($this->_propDict["includedAccountTarget"], "\Microsoft\Graph\Model\AccountTargetContent") || is_null($this->_propDict["includedAccountTarget"])) {
+                return $this->_propDict["includedAccountTarget"];
+            } else {
+                $this->_propDict["includedAccountTarget"] = new AccountTargetContent($this->_propDict["includedAccountTarget"]);
+                return $this->_propDict["includedAccountTarget"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the includedAccountTarget
+    *
+    * @param AccountTargetContent $val The includedAccountTarget
+    *
+    * @return Simulation
+    */
+    public function setIncludedAccountTarget($val)
+    {
+        $this->_propDict["includedAccountTarget"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the isAutomated
     * Flag that represents if the attack simulation and training campaign was created from a simulation automation flow. Supports $filter and $orderby.
     *
@@ -405,6 +525,37 @@ class Simulation extends Entity
     }
 
     /**
+    * Gets the oAuthConsentAppDetail
+    *
+    * @return OAuthConsentAppDetail|null The oAuthConsentAppDetail
+    */
+    public function getOAuthConsentAppDetail()
+    {
+        if (array_key_exists("oAuthConsentAppDetail", $this->_propDict)) {
+            if (is_a($this->_propDict["oAuthConsentAppDetail"], "\Microsoft\Graph\Model\OAuthConsentAppDetail") || is_null($this->_propDict["oAuthConsentAppDetail"])) {
+                return $this->_propDict["oAuthConsentAppDetail"];
+            } else {
+                $this->_propDict["oAuthConsentAppDetail"] = new OAuthConsentAppDetail($this->_propDict["oAuthConsentAppDetail"]);
+                return $this->_propDict["oAuthConsentAppDetail"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the oAuthConsentAppDetail
+    *
+    * @param OAuthConsentAppDetail $val The oAuthConsentAppDetail
+    *
+    * @return Simulation
+    */
+    public function setOAuthConsentAppDetail($val)
+    {
+        $this->_propDict["oAuthConsentAppDetail"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the payloadDeliveryPlatform
     * Method of delivery of the phishing payload used in the attack simulation and training campaign. Possible values are: unknown, sms, email, teams, unknownFutureValue.
     *
@@ -500,6 +651,130 @@ class Simulation extends Entity
     public function setStatus($val)
     {
         $this->_propDict["status"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the trainingSetting
+    *
+    * @return TrainingSetting|null The trainingSetting
+    */
+    public function getTrainingSetting()
+    {
+        if (array_key_exists("trainingSetting", $this->_propDict)) {
+            if (is_a($this->_propDict["trainingSetting"], "\Microsoft\Graph\Model\TrainingSetting") || is_null($this->_propDict["trainingSetting"])) {
+                return $this->_propDict["trainingSetting"];
+            } else {
+                $this->_propDict["trainingSetting"] = new TrainingSetting($this->_propDict["trainingSetting"]);
+                return $this->_propDict["trainingSetting"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the trainingSetting
+    *
+    * @param TrainingSetting $val The trainingSetting
+    *
+    * @return Simulation
+    */
+    public function setTrainingSetting($val)
+    {
+        $this->_propDict["trainingSetting"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the landingPage
+    *
+    * @return LandingPage|null The landingPage
+    */
+    public function getLandingPage()
+    {
+        if (array_key_exists("landingPage", $this->_propDict)) {
+            if (is_a($this->_propDict["landingPage"], "\Microsoft\Graph\Model\LandingPage") || is_null($this->_propDict["landingPage"])) {
+                return $this->_propDict["landingPage"];
+            } else {
+                $this->_propDict["landingPage"] = new LandingPage($this->_propDict["landingPage"]);
+                return $this->_propDict["landingPage"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the landingPage
+    *
+    * @param LandingPage $val The landingPage
+    *
+    * @return Simulation
+    */
+    public function setLandingPage($val)
+    {
+        $this->_propDict["landingPage"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the loginPage
+    *
+    * @return LoginPage|null The loginPage
+    */
+    public function getLoginPage()
+    {
+        if (array_key_exists("loginPage", $this->_propDict)) {
+            if (is_a($this->_propDict["loginPage"], "\Microsoft\Graph\Model\LoginPage") || is_null($this->_propDict["loginPage"])) {
+                return $this->_propDict["loginPage"];
+            } else {
+                $this->_propDict["loginPage"] = new LoginPage($this->_propDict["loginPage"]);
+                return $this->_propDict["loginPage"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the loginPage
+    *
+    * @param LoginPage $val The loginPage
+    *
+    * @return Simulation
+    */
+    public function setLoginPage($val)
+    {
+        $this->_propDict["loginPage"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the payload
+    *
+    * @return Payload|null The payload
+    */
+    public function getPayload()
+    {
+        if (array_key_exists("payload", $this->_propDict)) {
+            if (is_a($this->_propDict["payload"], "\Microsoft\Graph\Model\Payload") || is_null($this->_propDict["payload"])) {
+                return $this->_propDict["payload"];
+            } else {
+                $this->_propDict["payload"] = new Payload($this->_propDict["payload"]);
+                return $this->_propDict["payload"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the payload
+    *
+    * @param Payload $val The payload
+    *
+    * @return Simulation
+    */
+    public function setPayload($val)
+    {
+        $this->_propDict["payload"] = $val;
         return $this;
     }
 

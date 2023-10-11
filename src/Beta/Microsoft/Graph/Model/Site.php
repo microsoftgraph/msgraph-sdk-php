@@ -610,6 +610,39 @@ class Site extends BaseItem
         return $this;
     }
 
+    /**
+    * Gets the recycleBin
+    * The collection of recycleBinItems under this site.
+    *
+    * @return RecycleBin|null The recycleBin
+    */
+    public function getRecycleBin()
+    {
+        if (array_key_exists("recycleBin", $this->_propDict)) {
+            if (is_a($this->_propDict["recycleBin"], "\Beta\Microsoft\Graph\Model\RecycleBin") || is_null($this->_propDict["recycleBin"])) {
+                return $this->_propDict["recycleBin"];
+            } else {
+                $this->_propDict["recycleBin"] = new RecycleBin($this->_propDict["recycleBin"]);
+                return $this->_propDict["recycleBin"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the recycleBin
+    * The collection of recycleBinItems under this site.
+    *
+    * @param RecycleBin $val The recycleBin
+    *
+    * @return Site
+    */
+    public function setRecycleBin($val)
+    {
+        $this->_propDict["recycleBin"] = $val;
+        return $this;
+    }
+
 
      /**
      * Gets the sites

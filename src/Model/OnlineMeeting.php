@@ -208,7 +208,6 @@ class OnlineMeeting extends Entity
 
     /**
     * Gets the attendeeReport
-    * The content stream of the attendee report of a Microsoft Teams live event. Read-only.
     *
     * @return \GuzzleHttp\Psr7\Stream|null The attendeeReport
     */
@@ -227,7 +226,6 @@ class OnlineMeeting extends Entity
 
     /**
     * Sets the attendeeReport
-    * The content stream of the attendee report of a Microsoft Teams live event. Read-only.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The attendeeReport
     *
@@ -274,7 +272,6 @@ class OnlineMeeting extends Entity
 
     /**
     * Gets the broadcastSettings
-    * Settings related to a live event.
     *
     * @return BroadcastMeetingSettings|null The broadcastSettings
     */
@@ -293,7 +290,6 @@ class OnlineMeeting extends Entity
 
     /**
     * Sets the broadcastSettings
-    * Settings related to a live event.
     *
     * @param BroadcastMeetingSettings $val The broadcastSettings
     *
@@ -433,7 +429,6 @@ class OnlineMeeting extends Entity
 
     /**
     * Gets the isBroadcast
-    * Indicates if this is a Teams live event.
     *
     * @return bool|null The isBroadcast
     */
@@ -448,7 +443,6 @@ class OnlineMeeting extends Entity
 
     /**
     * Sets the isBroadcast
-    * Indicates if this is a Teams live event.
     *
     * @param bool $val The isBroadcast
     *
@@ -863,6 +857,36 @@ class OnlineMeeting extends Entity
     public function setAttendanceReports($val)
     {
         $this->_propDict["attendanceReports"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the transcripts
+    * The transcripts of an online meeting. Read-only.
+     *
+     * @return array|null The transcripts
+     */
+    public function getTranscripts()
+    {
+        if (array_key_exists("transcripts", $this->_propDict)) {
+           return $this->_propDict["transcripts"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the transcripts
+    * The transcripts of an online meeting. Read-only.
+    *
+    * @param CallTranscript[] $val The transcripts
+    *
+    * @return OnlineMeeting
+    */
+    public function setTranscripts($val)
+    {
+        $this->_propDict["transcripts"] = $val;
         return $this;
     }
 

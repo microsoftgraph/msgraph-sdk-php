@@ -26,7 +26,7 @@ class NetworkAccessRoot extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the logs
-    * Represnts network connections that are routed through Global Secure Access.
+    * Represents network connections that are routed through Global Secure Access.
     *
     * @return Logs|null The logs
     */
@@ -45,7 +45,7 @@ class NetworkAccessRoot extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the logs
-    * Represnts network connections that are routed through Global Secure Access.
+    * Represents network connections that are routed through Global Secure Access.
     *
     * @param Logs $val The logs
     *
@@ -126,7 +126,7 @@ class NetworkAccessRoot extends \Beta\Microsoft\Graph\Model\Entity
 
      /**
      * Gets the forwardingPolicies
-    * A forwarding policy defines the specific traffic that is routed through the Gloval Secure Access Service. It is then added to a forwarding profile.
+    * A forwarding policy defines the specific traffic that is routed through the Global Secure Access Service. It's then added to a forwarding profile.
      *
      * @return array|null The forwardingPolicies
      */
@@ -141,7 +141,7 @@ class NetworkAccessRoot extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the forwardingPolicies
-    * A forwarding policy defines the specific traffic that is routed through the Gloval Secure Access Service. It is then added to a forwarding profile.
+    * A forwarding policy defines the specific traffic that is routed through the Global Secure Access Service. It's then added to a forwarding profile.
     *
     * @param ForwardingPolicy[] $val The forwardingPolicies
     *

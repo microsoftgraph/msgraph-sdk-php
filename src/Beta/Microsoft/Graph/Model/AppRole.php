@@ -109,7 +109,7 @@ class AppRole extends Entity
     }
     /**
     * Gets the id
-    * Unique role identifier inside the appRoles collection. When creating a new app role, a new GUID identifier must be provided.
+    * Unique role identifier inside the appRoles collection. You must specify a new GUID identifier when you create a new app role.
     *
     * @return string|null The id
     */
@@ -124,7 +124,7 @@ class AppRole extends Entity
 
     /**
     * Sets the id
-    * Unique role identifier inside the appRoles collection. When creating a new app role, a new GUID identifier must be provided.
+    * Unique role identifier inside the appRoles collection. You must specify a new GUID identifier when you create a new app role.
     *
     * @param string $val The value of the id
     *
@@ -193,7 +193,7 @@ class AppRole extends Entity
     }
     /**
     * Gets the value
-    * Specifies the value to include in the roles claim in ID tokens and access tokens authenticating an assigned user or service principal. Must not exceed 120 characters in length. Allowed characters are : ! # $ % &amp; ' ( ) * + , - . / : ;  =  ? @ [ ] ^ + _  {  } ~, as well as characters in the ranges 0-9, A-Z and a-z. Any other character, including the space character, are not allowed. May not begin with ..
+    * Specifies the value to include in the roles claim in ID tokens and access tokens authenticating an assigned user or service principal. Must not exceed 120 characters in length. Allowed characters are : ! # $ % &amp; ' ( ) * + , - . / : ;  =  ? @ [ ] ^ + _  {  } ~, and characters in the ranges 0-9, A-Z and a-z. Any other character, including the space character, aren't allowed. May not begin with ..
     *
     * @return string|null The value
     */
@@ -208,7 +208,7 @@ class AppRole extends Entity
 
     /**
     * Sets the value
-    * Specifies the value to include in the roles claim in ID tokens and access tokens authenticating an assigned user or service principal. Must not exceed 120 characters in length. Allowed characters are : ! # $ % &amp; ' ( ) * + , - . / : ;  =  ? @ [ ] ^ + _  {  } ~, as well as characters in the ranges 0-9, A-Z and a-z. Any other character, including the space character, are not allowed. May not begin with ..
+    * Specifies the value to include in the roles claim in ID tokens and access tokens authenticating an assigned user or service principal. Must not exceed 120 characters in length. Allowed characters are : ! # $ % &amp; ' ( ) * + , - . / : ;  =  ? @ [ ] ^ + _  {  } ~, and characters in the ranges 0-9, A-Z and a-z. Any other character, including the space character, aren't allowed. May not begin with ..
     *
     * @param string $val The value of the value
     *

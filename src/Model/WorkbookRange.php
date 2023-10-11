@@ -432,7 +432,7 @@ class WorkbookRange extends Entity
 
     /**
     * Gets the text
-    * Text values of the specified range. The Text value won't depend on the cell width. The # sign substitution that happens in Excel UI won't affect the text value returned by the API. Read-only.
+    * Text values of the specified range. The Text value doesn't depend on the cell width. The # sign substitution that happens in Excel UI doesn't affect the text value returned by the API. Read-only.
     *
     * @return string|null The text
     */
@@ -447,7 +447,7 @@ class WorkbookRange extends Entity
 
     /**
     * Sets the text
-    * Text values of the specified range. The Text value won't depend on the cell width. The # sign substitution that happens in Excel UI won't affect the text value returned by the API. Read-only.
+    * Text values of the specified range. The Text value doesn't depend on the cell width. The # sign substitution that happens in Excel UI doesn't affect the text value returned by the API. Read-only.
     *
     * @param string $val The text
     *

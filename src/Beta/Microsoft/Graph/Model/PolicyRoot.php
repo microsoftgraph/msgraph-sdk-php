@@ -57,7 +57,7 @@ class PolicyRoot implements \JsonSerializable
 
     /**
     * Gets the authenticationMethodsPolicy
-    * The authentication methods and the users that are allowed to use them to sign in and perform multi-factor authentication (MFA) in Azure Active Directory (Azure AD).
+    * The authentication methods and the users that are allowed to use them to sign in and perform multifactor authentication (MFA) in Azure Active Directory (Azure AD).
     *
     * @return AuthenticationMethodsPolicy|null The authenticationMethodsPolicy
     */
@@ -76,7 +76,7 @@ class PolicyRoot implements \JsonSerializable
 
     /**
     * Sets the authenticationMethodsPolicy
-    * The authentication methods and the users that are allowed to use them to sign in and perform multi-factor authentication (MFA) in Azure Active Directory (Azure AD).
+    * The authentication methods and the users that are allowed to use them to sign in and perform multifactor authentication (MFA) in Azure Active Directory (Azure AD).
     *
     * @param AuthenticationMethodsPolicy $val The authenticationMethodsPolicy
     *
@@ -120,7 +120,7 @@ class PolicyRoot implements \JsonSerializable
 
     /**
     * Gets the authenticationFlowsPolicy
-    * The policy configuration of the self-service sign-up experience of external users.
+    * The policy configuration of the self-service sign-up experience of guests.
     *
     * @return AuthenticationFlowsPolicy|null The authenticationFlowsPolicy
     */
@@ -139,7 +139,7 @@ class PolicyRoot implements \JsonSerializable
 
     /**
     * Sets the authenticationFlowsPolicy
-    * The policy configuration of the self-service sign-up experience of external users.
+    * The policy configuration of the self-service sign-up experience of guests.
     *
     * @param AuthenticationFlowsPolicy $val The authenticationFlowsPolicy
     *
@@ -218,7 +218,7 @@ class PolicyRoot implements \JsonSerializable
 
      /**
      * Gets the activityBasedTimeoutPolicies
-    * The policy that controls the idle time out for web sessions for applications.
+    * The policy that controls the idle time-out for web sessions for applications.
      *
      * @return array|null The activityBasedTimeoutPolicies
      */
@@ -233,7 +233,7 @@ class PolicyRoot implements \JsonSerializable
 
     /**
     * Sets the activityBasedTimeoutPolicies
-    * The policy that controls the idle time out for web sessions for applications.
+    * The policy that controls the idle time-out for web sessions for applications.
     *
     * @param ActivityBasedTimeoutPolicy[] $val The activityBasedTimeoutPolicies
     *
@@ -403,7 +403,7 @@ class PolicyRoot implements \JsonSerializable
 
     /**
     * Gets the externalIdentitiesPolicy
-    * Represents the tenant-wide policy that controls whether external users can leave an Azure AD tenant via self-service controls.
+    * Represents the tenant-wide policy that controls whether guests can leave an Azure AD tenant via self-service controls.
     *
     * @return ExternalIdentitiesPolicy|null The externalIdentitiesPolicy
     */
@@ -422,7 +422,7 @@ class PolicyRoot implements \JsonSerializable
 
     /**
     * Sets the externalIdentitiesPolicy
-    * Represents the tenant-wide policy that controls whether external users can leave an Azure AD tenant via self-service controls.
+    * Represents the tenant-wide policy that controls whether guests can leave an Azure AD tenant via self-service controls.
     *
     * @param ExternalIdentitiesPolicy $val The externalIdentitiesPolicy
     *
@@ -806,7 +806,7 @@ class PolicyRoot implements \JsonSerializable
 
      /**
      * Gets the mobileAppManagementPolicies
-    * The policy that defines auto-enrollment configuration for a mobility management (MDM or MAM) application.
+    * The policy that defines autoenrollment configuration for a mobility management (MDM or MAM) application.
      *
      * @return array|null The mobileAppManagementPolicies
      */
@@ -821,7 +821,7 @@ class PolicyRoot implements \JsonSerializable
 
     /**
     * Sets the mobileAppManagementPolicies
-    * The policy that defines auto-enrollment configuration for a mobility management (MDM or MAM) application.
+    * The policy that defines autoenrollment configuration for a mobility management (MDM or MAM) application.
     *
     * @param MobilityManagementPolicy[] $val The mobileAppManagementPolicies
     *

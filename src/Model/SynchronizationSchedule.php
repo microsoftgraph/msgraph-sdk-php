@@ -26,7 +26,7 @@ class SynchronizationSchedule extends Entity
 
     /**
     * Gets the expiration
-    * Date and time when this job will expire. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * Date and time when this job expires. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The expiration
     */
@@ -45,7 +45,7 @@ class SynchronizationSchedule extends Entity
 
     /**
     * Sets the expiration
-    * Date and time when this job will expire. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * Date and time when this job expires. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The value to assign to the expiration
     *
@@ -59,7 +59,7 @@ class SynchronizationSchedule extends Entity
 
     /**
     * Gets the interval
-    * The interval between synchronization iterations. The value is represented in ISO 8601 format for durations. For example, PT1M represents a period of 1 month.
+    * The interval between synchronization iterations. The value is represented in ISO 8601 format for durations. For example, PT1M represents a period of one month.
     *
     * @return \DateInterval|null The interval
     */
@@ -78,7 +78,7 @@ class SynchronizationSchedule extends Entity
 
     /**
     * Sets the interval
-    * The interval between synchronization iterations. The value is represented in ISO 8601 format for durations. For example, PT1M represents a period of 1 month.
+    * The interval between synchronization iterations. The value is represented in ISO 8601 format for durations. For example, PT1M represents a period of one month.
     *
     * @param \DateInterval $val The value to assign to the interval
     *

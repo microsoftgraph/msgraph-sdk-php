@@ -59,7 +59,7 @@ class ReportSuspiciousActivitySettings extends Entity
 
     /**
     * Gets the state
-    * Specifies the state of the reportSuspiciousActivitySettings object. The possible values are: default, enabled, disabled, unknownFutureValue. Setting to default will result in a disabled state.
+    * Specifies the state of the reportSuspiciousActivitySettings object. The possible values are: default, enabled, disabled, unknownFutureValue. Setting to default results in a disabled state.
     *
     * @return AdvancedConfigState|null The state
     */
@@ -78,7 +78,7 @@ class ReportSuspiciousActivitySettings extends Entity
 
     /**
     * Sets the state
-    * Specifies the state of the reportSuspiciousActivitySettings object. The possible values are: default, enabled, disabled, unknownFutureValue. Setting to default will result in a disabled state.
+    * Specifies the state of the reportSuspiciousActivitySettings object. The possible values are: default, enabled, disabled, unknownFutureValue. Setting to default results in a disabled state.
     *
     * @param AdvancedConfigState $val The value to assign to the state
     *
@@ -91,7 +91,7 @@ class ReportSuspiciousActivitySettings extends Entity
     }
     /**
     * Gets the voiceReportingCode
-    * Specifies the number the user will enter on their phone to report the MFA prompt as suspicious.
+    * Specifies the number the user enters on their phone to report the MFA prompt as suspicious.
     *
     * @return int|null The voiceReportingCode
     */
@@ -106,7 +106,7 @@ class ReportSuspiciousActivitySettings extends Entity
 
     /**
     * Sets the voiceReportingCode
-    * Specifies the number the user will enter on their phone to report the MFA prompt as suspicious.
+    * Specifies the number the user enters on their phone to report the MFA prompt as suspicious.
     *
     * @param int $val The value of the voiceReportingCode
     *

@@ -26,7 +26,7 @@ class TeamsAppDefinition extends Entity
 {
     /**
     * Gets the allowedInstallationScopes
-    * A collection of scopes where the Teams app can be installed. Possible values are:team — Indicates that the Teams app can be installed within a team and is authorized to access that team's data. groupChat  — Indicates that the Teams app can be installed within a group chat and is authorized to access that group chat's data.  personal — Indicates that the Teams app can be installed in the personal scope of a user and is authorized to access that user's data.
+    * A collection of scopes where the Teams app can be installed. Possible values are:team—Indicates that the Teams app can be installed within a team and is authorized to access that team's data. groupChat—Indicates that the Teams app can be installed within a group chat and is authorized to access that group chat's data.  personal—Indicates that the Teams app can be installed in the personal scope of a user and is authorized to access that user's data.
     *
     * @return TeamsAppInstallationScopes|null The allowedInstallationScopes
     */
@@ -45,7 +45,7 @@ class TeamsAppDefinition extends Entity
 
     /**
     * Sets the allowedInstallationScopes
-    * A collection of scopes where the Teams app can be installed. Possible values are:team — Indicates that the Teams app can be installed within a team and is authorized to access that team's data. groupChat  — Indicates that the Teams app can be installed within a group chat and is authorized to access that group chat's data.  personal — Indicates that the Teams app can be installed in the personal scope of a user and is authorized to access that user's data.
+    * A collection of scopes where the Teams app can be installed. Possible values are:team—Indicates that the Teams app can be installed within a team and is authorized to access that team's data. groupChat—Indicates that the Teams app can be installed within a group chat and is authorized to access that group chat's data.  personal—Indicates that the Teams app can be installed in the personal scope of a user and is authorized to access that user's data.
     *
     * @param TeamsAppInstallationScopes $val The allowedInstallationScopes
     *
@@ -239,7 +239,7 @@ class TeamsAppDefinition extends Entity
 
     /**
     * Gets the publishingState
-    * The published status of a specific version of a Teams app. Possible values are:submitted — The specific version of the Teams app has been submitted and is under review. published  — The request to publish the specific version of the Teams app has been approved by the admin and the app is published.  rejected — The request to publish the specific version of the Teams app was rejected by the admin.
+    * The published status of a specific version of a Teams app. Possible values are:submitted—The specific version of the Teams app has been submitted and is under review. published—The request to publish the specific version of the Teams app has been approved by the admin and the app is published.  rejected — The request to publish the specific version of the Teams app was rejected by the admin.
     *
     * @return TeamsAppPublishingState|null The publishingState
     */
@@ -258,7 +258,7 @@ class TeamsAppDefinition extends Entity
 
     /**
     * Sets the publishingState
-    * The published status of a specific version of a Teams app. Possible values are:submitted — The specific version of the Teams app has been submitted and is under review. published  — The request to publish the specific version of the Teams app has been approved by the admin and the app is published.  rejected — The request to publish the specific version of the Teams app was rejected by the admin.
+    * The published status of a specific version of a Teams app. Possible values are:submitted—The specific version of the Teams app has been submitted and is under review. published—The request to publish the specific version of the Teams app has been approved by the admin and the app is published.  rejected — The request to publish the specific version of the Teams app was rejected by the admin.
     *
     * @param TeamsAppPublishingState $val The publishingState
     *

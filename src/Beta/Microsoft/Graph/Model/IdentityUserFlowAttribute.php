@@ -26,7 +26,7 @@ class IdentityUserFlowAttribute extends Entity
 {
     /**
     * Gets the dataType
-    * The data type of the user flow attribute. This cannot be modified after the custom user flow attribute is created. The supported values for dataType are: string , boolean , int64 , stringCollection , dateTime, unknownFutureValue.  Supports $filter (eq, ne).
+    * The data type of the user flow attribute. This can't be modified after the custom user flow attribute is created. The supported values for dataType are: string , boolean , int64 , stringCollection , dateTime, unknownFutureValue.  Supports $filter (eq, ne).
     *
     * @return IdentityUserFlowAttributeDataType|null The dataType
     */
@@ -45,7 +45,7 @@ class IdentityUserFlowAttribute extends Entity
 
     /**
     * Sets the dataType
-    * The data type of the user flow attribute. This cannot be modified after the custom user flow attribute is created. The supported values for dataType are: string , boolean , int64 , stringCollection , dateTime, unknownFutureValue.  Supports $filter (eq, ne).
+    * The data type of the user flow attribute. This can't be modified after the custom user flow attribute is created. The supported values for dataType are: string , boolean , int64 , stringCollection , dateTime, unknownFutureValue.  Supports $filter (eq, ne).
     *
     * @param IdentityUserFlowAttributeDataType $val The dataType
     *
@@ -117,7 +117,7 @@ class IdentityUserFlowAttribute extends Entity
 
     /**
     * Gets the userFlowAttributeType
-    * The type of the user flow attribute. This is a read-only attribute that is automatically set. Depending on the type of attribute, the values for this property will be builtIn, custom, required, unknownFutureValue.  Supports $filter (eq, ne).
+    * The type of the user flow attribute. This is a read-only attribute that is automatically set. Depending on the type of attribute, the values for this property are builtIn, custom, required, unknownFutureValue.  Supports $filter (eq, ne).
     *
     * @return IdentityUserFlowAttributeType|null The userFlowAttributeType
     */
@@ -136,7 +136,7 @@ class IdentityUserFlowAttribute extends Entity
 
     /**
     * Sets the userFlowAttributeType
-    * The type of the user flow attribute. This is a read-only attribute that is automatically set. Depending on the type of attribute, the values for this property will be builtIn, custom, required, unknownFutureValue.  Supports $filter (eq, ne).
+    * The type of the user flow attribute. This is a read-only attribute that is automatically set. Depending on the type of attribute, the values for this property are builtIn, custom, required, unknownFutureValue.  Supports $filter (eq, ne).
     *
     * @param IdentityUserFlowAttributeType $val The userFlowAttributeType
     *

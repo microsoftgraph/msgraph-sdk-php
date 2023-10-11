@@ -117,7 +117,7 @@ class SearchHitsContainer extends Entity
     }
     /**
     * Gets the total
-    * The total number of results. Note this is not the number of results on the page, but the total number of results satisfying the query.
+    * The total number of results. Note this isn't the number of results on the page, but the total number of results satisfying the query.
     *
     * @return int|null The total
     */
@@ -132,7 +132,7 @@ class SearchHitsContainer extends Entity
 
     /**
     * Sets the total
-    * The total number of results. Note this is not the number of results on the page, but the total number of results satisfying the query.
+    * The total number of results. Note this isn't the number of results on the page, but the total number of results satisfying the query.
     *
     * @param int $val The value of the total
     *

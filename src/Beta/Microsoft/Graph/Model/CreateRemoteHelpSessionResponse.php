@@ -12,7 +12,6 @@
 * @link      https://graph.microsoft.com
 */
 namespace Beta\Microsoft\Graph\Model;
-
 /**
 * CreateRemoteHelpSessionResponse class
 *
@@ -22,39 +21,8 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class CreateRemoteHelpSessionResponse implements \JsonSerializable
+class CreateRemoteHelpSessionResponse extends Entity
 {
-    /**
-    * The array of properties available
-    * to the model
-    *
-    * @var array $_propDict
-    */
-    protected $_propDict;
-
-    /**
-    * Construct a new CreateRemoteHelpSessionResponse
-    *
-    * @param array $propDict A list of properties to set
-    */
-    function __construct($propDict = array())
-    {
-        if (!is_array($propDict)) {
-           $propDict = array();
-        }
-        $this->_propDict = $propDict;
-    }
-
-    /**
-    * Gets the property dictionary of the CreateRemoteHelpSessionResponse
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-
     /**
     * Gets the sessionKey
     * The unique identifier for a session
@@ -74,7 +42,7 @@ class CreateRemoteHelpSessionResponse implements \JsonSerializable
     * Sets the sessionKey
     * The unique identifier for a session
     *
-    * @param string $val The sessionKey
+    * @param string $val The value of the sessionKey
     *
     * @return CreateRemoteHelpSessionResponse
     */
@@ -82,55 +50,5 @@ class CreateRemoteHelpSessionResponse implements \JsonSerializable
     {
         $this->_propDict["sessionKey"] = $val;
         return $this;
-    }
-
-    /**
-    * Gets the ODataType
-    *
-    * @return string|null The ODataType
-    */
-    public function getODataType()
-    {
-        if (array_key_exists('@odata.type', $this->_propDict)) {
-            return $this->_propDict["@odata.type"];
-        }
-        return null;
-    }
-
-    /**
-    * Sets the ODataType
-    *
-    * @param string $val The ODataType
-    *
-    * @return CreateRemoteHelpSessionResponse
-    */
-    public function setODataType($val)
-    {
-        $this->_propDict["@odata.type"] = $val;
-        return $this;
-    }
-
-    /**
-    * Serializes the object by property array
-    * Manually serialize DateTime into RFC3339 format
-    *
-    * @return array The list of properties
-    */
-    #[\ReturnTypeWillChange]
-    public function jsonSerialize()
-    {
-        $serializableProperties = $this->getProperties();
-        foreach ($serializableProperties as $property => $val) {
-            if (is_a($val, "\DateTime")) {
-                $serializableProperties[$property] = $val->format(\DateTime::RFC3339);
-            } else if (is_a($val, "\Microsoft\Graph\Core\Enum")) {
-                $serializableProperties[$property] = $val->value();
-            } else if (is_a($val, "\Entity")) {
-                $serializableProperties[$property] = $val->jsonSerialize();
-            } else if (is_a($val, "\GuzzleHttp\Psr7\Stream")) {
-                $serializableProperties[$property] = (string) $val;
-            }
-        }
-        return $serializableProperties;
     }
 }

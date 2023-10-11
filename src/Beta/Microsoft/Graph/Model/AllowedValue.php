@@ -26,7 +26,7 @@ class AllowedValue extends Entity
 {
     /**
     * Gets the isActive
-    * Indicates whether the predefined value is active or deactivated. If set to false, this predefined value cannot be assigned to any additional supported directory objects.
+    * Indicates whether the predefined value is active or deactivated. If set to false, this predefined value can't be assigned to any more supported directory objects.
     *
     * @return bool|null The isActive
     */
@@ -41,7 +41,7 @@ class AllowedValue extends Entity
 
     /**
     * Sets the isActive
-    * Indicates whether the predefined value is active or deactivated. If set to false, this predefined value cannot be assigned to any additional supported directory objects.
+    * Indicates whether the predefined value is active or deactivated. If set to false, this predefined value can't be assigned to any more supported directory objects.
     *
     * @param bool $val The isActive
     *

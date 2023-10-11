@@ -26,7 +26,7 @@ class MultiTenantOrganizationIdentitySyncPolicyTemplate extends Entity
 {
     /**
     * Gets the templateApplicationLevel
-    * Specifies whether the template will be applied to user synchronization settings of certain tenants. The possible values are: none, newPartners, existingPartners, unknownFutureValue. You can also specify multiple values like newPartners,existingPartners (default). none indicates the template is not applied to any new or existing partner tenants. newPartners indicates the template is applied to new partner tenants. existingPartners indicates the template is applied to existing partner tenants, those who already had partner-specific user synchronization settings in place.
+    * Specifies whether the template will be applied to user synchronization settings of certain tenants. The possible values are: none, newPartners, existingPartners, unknownFutureValue. You can also specify multiple values like newPartners,existingPartners (default). none indicates the template isn't applied to any new or existing partner tenants. newPartners indicates the template is applied to new partner tenants. existingPartners indicates the template is applied to existing partner tenants, those who already had partner-specific user synchronization settings in place.
     *
     * @return TemplateApplicationLevel|null The templateApplicationLevel
     */
@@ -45,7 +45,7 @@ class MultiTenantOrganizationIdentitySyncPolicyTemplate extends Entity
 
     /**
     * Sets the templateApplicationLevel
-    * Specifies whether the template will be applied to user synchronization settings of certain tenants. The possible values are: none, newPartners, existingPartners, unknownFutureValue. You can also specify multiple values like newPartners,existingPartners (default). none indicates the template is not applied to any new or existing partner tenants. newPartners indicates the template is applied to new partner tenants. existingPartners indicates the template is applied to existing partner tenants, those who already had partner-specific user synchronization settings in place.
+    * Specifies whether the template will be applied to user synchronization settings of certain tenants. The possible values are: none, newPartners, existingPartners, unknownFutureValue. You can also specify multiple values like newPartners,existingPartners (default). none indicates the template isn't applied to any new or existing partner tenants. newPartners indicates the template is applied to new partner tenants. existingPartners indicates the template is applied to existing partner tenants, those who already had partner-specific user synchronization settings in place.
     *
     * @param TemplateApplicationLevel $val The templateApplicationLevel
     *

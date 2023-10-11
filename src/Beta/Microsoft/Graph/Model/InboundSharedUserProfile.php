@@ -57,7 +57,7 @@ class InboundSharedUserProfile implements \JsonSerializable
 
     /**
     * Gets the displayName
-    * The name displayed in the address book for teh user at the time when the sharing record was created. Read-only.
+    * The name displayed in the address book for the user at the time when the sharing record was created. Read-only.
     *
     * @return string|null The displayName
     */
@@ -72,7 +72,7 @@ class InboundSharedUserProfile implements \JsonSerializable
 
     /**
     * Sets the displayName
-    * The name displayed in the address book for teh user at the time when the sharing record was created. Read-only.
+    * The name displayed in the address book for the user at the time when the sharing record was created. Read-only.
     *
     * @param string $val The displayName
     *

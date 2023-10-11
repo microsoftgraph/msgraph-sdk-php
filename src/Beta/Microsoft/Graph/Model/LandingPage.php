@@ -26,6 +26,7 @@ class LandingPage extends Entity
 {
     /**
     * Gets the createdBy
+    * Identity of the user who created the landing page.
     *
     * @return EmailIdentity|null The createdBy
     */
@@ -44,6 +45,7 @@ class LandingPage extends Entity
 
     /**
     * Sets the createdBy
+    * Identity of the user who created the landing page.
     *
     * @param EmailIdentity $val The createdBy
     *
@@ -57,6 +59,7 @@ class LandingPage extends Entity
 
     /**
     * Gets the createdDateTime
+    * Date and time when the landing page was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -75,6 +78,7 @@ class LandingPage extends Entity
 
     /**
     * Sets the createdDateTime
+    * Date and time when the landing page was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -88,6 +92,7 @@ class LandingPage extends Entity
 
     /**
     * Gets the description
+    * Description of the landing page as defined by the user.
     *
     * @return string|null The description
     */
@@ -102,6 +107,7 @@ class LandingPage extends Entity
 
     /**
     * Sets the description
+    * Description of the landing page as defined by the user.
     *
     * @param string $val The description
     *
@@ -115,6 +121,7 @@ class LandingPage extends Entity
 
     /**
     * Gets the displayName
+    * The display name of the landing page.
     *
     * @return string|null The displayName
     */
@@ -129,6 +136,7 @@ class LandingPage extends Entity
 
     /**
     * Sets the displayName
+    * The display name of the landing page.
     *
     * @param string $val The displayName
     *
@@ -142,6 +150,7 @@ class LandingPage extends Entity
 
     /**
     * Gets the lastModifiedBy
+    * Email identity of the user who last modified the landing page.
     *
     * @return EmailIdentity|null The lastModifiedBy
     */
@@ -160,6 +169,7 @@ class LandingPage extends Entity
 
     /**
     * Sets the lastModifiedBy
+    * Email identity of the user who last modified the landing page.
     *
     * @param EmailIdentity $val The lastModifiedBy
     *
@@ -173,6 +183,7 @@ class LandingPage extends Entity
 
     /**
     * Gets the lastModifiedDateTime
+    * Date and time when the landing page was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The lastModifiedDateTime
     */
@@ -191,6 +202,7 @@ class LandingPage extends Entity
 
     /**
     * Sets the lastModifiedDateTime
+    * Date and time when the landing page was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -204,6 +216,7 @@ class LandingPage extends Entity
 
     /**
     * Gets the locale
+    * Content locale.
     *
     * @return string|null The locale
     */
@@ -218,6 +231,7 @@ class LandingPage extends Entity
 
     /**
     * Sets the locale
+    * Content locale.
     *
     * @param string $val The locale
     *
@@ -231,6 +245,7 @@ class LandingPage extends Entity
 
     /**
     * Gets the source
+    * The source of the content. Possible values are: unknown, global, tenant, unknownFutureValue.
     *
     * @return SimulationContentSource|null The source
     */
@@ -249,6 +264,7 @@ class LandingPage extends Entity
 
     /**
     * Sets the source
+    * The source of the content. Possible values are: unknown, global, tenant, unknownFutureValue.
     *
     * @param SimulationContentSource $val The source
     *
@@ -262,6 +278,7 @@ class LandingPage extends Entity
 
     /**
     * Gets the status
+    * The status of the simulation. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
     *
     * @return SimulationContentStatus|null The status
     */
@@ -280,6 +297,7 @@ class LandingPage extends Entity
 
     /**
     * Sets the status
+    * The status of the simulation. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
     *
     * @param SimulationContentStatus $val The status
     *
@@ -293,6 +311,7 @@ class LandingPage extends Entity
 
     /**
     * Gets the supportedLocales
+    * Supported locales.
     *
     * @return array|null The supportedLocales
     */
@@ -307,6 +326,7 @@ class LandingPage extends Entity
 
     /**
     * Sets the supportedLocales
+    * Supported locales.
     *
     * @param string[] $val The supportedLocales
     *

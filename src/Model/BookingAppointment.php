@@ -85,7 +85,7 @@ class BookingAppointment extends Entity
 
      /**
      * Gets the customers
-    * A collection of customer properties for an appointment. An appointment will contain a list of customer information and each unit will indicate the properties of a customer who is part of that appointment. Optional.
+    * A collection of customer properties for an appointment. An appointment contains a list of customer information and each unit will indicate the properties of a customer who is part of that appointment. Optional.
      *
      * @return array|null The customers
      */
@@ -100,7 +100,7 @@ class BookingAppointment extends Entity
 
     /**
     * Sets the customers
-    * A collection of customer properties for an appointment. An appointment will contain a list of customer information and each unit will indicate the properties of a customer who is part of that appointment. Optional.
+    * A collection of customer properties for an appointment. An appointment contains a list of customer information and each unit will indicate the properties of a customer who is part of that appointment. Optional.
     *
     * @param BookingCustomerInformationBase[] $val The customers
     *
@@ -325,7 +325,7 @@ class BookingAppointment extends Entity
 
     /**
     * Gets the optOutOfCustomerEmail
-    * If true indicates that the bookingCustomer for this appointment does not wish to receive a confirmation for this appointment.
+    * If true indicates that the bookingCustomer for this appointment doesn't wish to receive a confirmation for this appointment.
     *
     * @return bool|null The optOutOfCustomerEmail
     */
@@ -340,7 +340,7 @@ class BookingAppointment extends Entity
 
     /**
     * Sets the optOutOfCustomerEmail
-    * If true indicates that the bookingCustomer for this appointment does not wish to receive a confirmation for this appointment.
+    * If true indicates that the bookingCustomer for this appointment doesn't wish to receive a confirmation for this appointment.
     *
     * @param bool $val The optOutOfCustomerEmail
     *

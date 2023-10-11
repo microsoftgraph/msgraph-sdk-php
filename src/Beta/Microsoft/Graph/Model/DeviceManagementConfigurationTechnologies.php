@@ -36,6 +36,7 @@ class DeviceManagementConfigurationTechnologies extends Enum
     const APPLE_REMOTE_MANAGEMENT = "appleRemoteManagement";
     const MICROSOFT_SENSE = "microsoftSense";
     const EXCHANGE_ONLINE = "exchangeOnline";
+    const MOBILE_APPLICATION_MANAGEMENT = "mobileApplicationManagement";
     const LINUX_MDM = "linuxMdm";
     const ENROLLMENT = "enrollment";
     const ENDPOINT_PRIVILEGE_MANAGEMENT = "endpointPrivilegeManagement";

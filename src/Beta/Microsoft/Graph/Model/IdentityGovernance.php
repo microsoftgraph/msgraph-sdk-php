@@ -211,6 +211,37 @@ class IdentityGovernance implements \JsonSerializable
     }
 
     /**
+    * Gets the permissionsManagement
+    *
+    * @return PermissionsManagement|null The permissionsManagement
+    */
+    public function getPermissionsManagement()
+    {
+        if (array_key_exists("permissionsManagement", $this->_propDict)) {
+            if (is_a($this->_propDict["permissionsManagement"], "\Beta\Microsoft\Graph\Model\PermissionsManagement") || is_null($this->_propDict["permissionsManagement"])) {
+                return $this->_propDict["permissionsManagement"];
+            } else {
+                $this->_propDict["permissionsManagement"] = new PermissionsManagement($this->_propDict["permissionsManagement"]);
+                return $this->_propDict["permissionsManagement"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the permissionsManagement
+    *
+    * @param PermissionsManagement $val The permissionsManagement
+    *
+    * @return IdentityGovernance
+    */
+    public function setPermissionsManagement($val)
+    {
+        $this->_propDict["permissionsManagement"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the privilegedAccess
     *
     * @return PrivilegedAccessRoot|null The privilegedAccess

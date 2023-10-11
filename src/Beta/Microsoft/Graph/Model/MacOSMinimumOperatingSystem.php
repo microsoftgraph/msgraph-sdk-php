@@ -359,4 +359,32 @@ class MacOSMinimumOperatingSystem extends Entity
         $this->_propDict["v130"] = $val;
         return $this;
     }
+    /**
+    * Gets the v14_0
+    * When TRUE, indicates macOS 14.0 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
+    *
+    * @return bool|null The v14_0
+    */
+    public function getV14_0()
+    {
+        if (array_key_exists("v140", $this->_propDict)) {
+            return $this->_propDict["v140"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the v14_0
+    * When TRUE, indicates macOS 14.0 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
+    *
+    * @param bool $val The value of the v14_0
+    *
+    * @return MacOSMinimumOperatingSystem
+    */
+    public function setV14_0($val)
+    {
+        $this->_propDict["v140"] = $val;
+        return $this;
+    }
 }

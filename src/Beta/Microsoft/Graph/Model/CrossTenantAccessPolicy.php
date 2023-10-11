@@ -116,4 +116,37 @@ class CrossTenantAccessPolicy extends TenantRelationshipAccessPolicyBase
         return $this;
     }
 
+    /**
+    * Gets the templates
+    * Represents the base policy in the directory for multi-tenant organization settings.
+    *
+    * @return PolicyTemplate|null The templates
+    */
+    public function getTemplates()
+    {
+        if (array_key_exists("templates", $this->_propDict)) {
+            if (is_a($this->_propDict["templates"], "\Beta\Microsoft\Graph\Model\PolicyTemplate") || is_null($this->_propDict["templates"])) {
+                return $this->_propDict["templates"];
+            } else {
+                $this->_propDict["templates"] = new PolicyTemplate($this->_propDict["templates"]);
+                return $this->_propDict["templates"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the templates
+    * Represents the base policy in the directory for multi-tenant organization settings.
+    *
+    * @param PolicyTemplate $val The templates
+    *
+    * @return CrossTenantAccessPolicy
+    */
+    public function setTemplates($val)
+    {
+        $this->_propDict["templates"] = $val;
+        return $this;
+    }
+
 }

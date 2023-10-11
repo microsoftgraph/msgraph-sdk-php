@@ -26,6 +26,7 @@ class EndUserNotificationSetting extends Entity
 
     /**
     * Gets the notificationPreference
+    * Notification preference. Possible values are: unknown, microsoft, custom, unknownFutureValue.
     *
     * @return EndUserNotificationPreference|null The notificationPreference
     */
@@ -44,6 +45,7 @@ class EndUserNotificationSetting extends Entity
 
     /**
     * Sets the notificationPreference
+    * Notification preference. Possible values are: unknown, microsoft, custom, unknownFutureValue.
     *
     * @param EndUserNotificationPreference $val The value to assign to the notificationPreference
     *
@@ -57,6 +59,7 @@ class EndUserNotificationSetting extends Entity
 
     /**
     * Gets the positiveReinforcement
+    * Positive reinforcement detail.
     *
     * @return PositiveReinforcementNotification|null The positiveReinforcement
     */
@@ -75,6 +78,7 @@ class EndUserNotificationSetting extends Entity
 
     /**
     * Sets the positiveReinforcement
+    * Positive reinforcement detail.
     *
     * @param PositiveReinforcementNotification $val The value to assign to the positiveReinforcement
     *
@@ -88,6 +92,7 @@ class EndUserNotificationSetting extends Entity
 
     /**
     * Gets the settingType
+    * End user notification type. Possible values are: unknown, noTraining, trainingSelected, noNotification, unknownFutureValue.
     *
     * @return EndUserNotificationSettingType|null The settingType
     */
@@ -106,6 +111,7 @@ class EndUserNotificationSetting extends Entity
 
     /**
     * Sets the settingType
+    * End user notification type. Possible values are: unknown, noTraining, trainingSelected, noNotification, unknownFutureValue.
     *
     * @param EndUserNotificationSettingType $val The value to assign to the settingType
     *

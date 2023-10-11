@@ -26,7 +26,7 @@ class PlannerAssignment extends Entity
 
     /**
     * Gets the assignedBy
-    * The identity of the user that performed the assignment of the task, i.e. the assignor.
+    * The identity of the user that performed the assignment of the task, that is, the assignor.
     *
     * @return IdentitySet|null The assignedBy
     */
@@ -45,7 +45,7 @@ class PlannerAssignment extends Entity
 
     /**
     * Sets the assignedBy
-    * The identity of the user that performed the assignment of the task, i.e. the assignor.
+    * The identity of the user that performed the assignment of the task, that is, the assignor.
     *
     * @param IdentitySet $val The value to assign to the assignedBy
     *

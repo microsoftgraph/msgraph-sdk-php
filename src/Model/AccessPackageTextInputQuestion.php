@@ -55,7 +55,7 @@ class AccessPackageTextInputQuestion extends AccessPackageQuestion
 
     /**
     * Gets the regexPattern
-    * The regular expression pattern which any answer to this question must match.
+    * The regular expression pattern that any answer to this question must match.
     *
     * @return string|null The regexPattern
     */
@@ -70,7 +70,7 @@ class AccessPackageTextInputQuestion extends AccessPackageQuestion
 
     /**
     * Sets the regexPattern
-    * The regular expression pattern which any answer to this question must match.
+    * The regular expression pattern that any answer to this question must match.
     *
     * @param string $val The regexPattern
     *

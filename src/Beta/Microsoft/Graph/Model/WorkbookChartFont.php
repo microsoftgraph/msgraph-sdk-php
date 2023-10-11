@@ -55,7 +55,7 @@ class WorkbookChartFont extends Entity
 
     /**
     * Gets the color
-    * HTML color code representation of the text color. E.g. #FF0000 represents Red.
+    * HTML color code representation of the text color. for example #FF0000 represents Red.
     *
     * @return string|null The color
     */
@@ -70,7 +70,7 @@ class WorkbookChartFont extends Entity
 
     /**
     * Sets the color
-    * HTML color code representation of the text color. E.g. #FF0000 represents Red.
+    * HTML color code representation of the text color. for example #FF0000 represents Red.
     *
     * @param string $val The color
     *
@@ -113,7 +113,7 @@ class WorkbookChartFont extends Entity
 
     /**
     * Gets the name
-    * Font name (e.g. 'Calibri')
+    * Font name (for example 'Calibri')
     *
     * @return string|null The name
     */
@@ -128,7 +128,7 @@ class WorkbookChartFont extends Entity
 
     /**
     * Sets the name
-    * Font name (e.g. 'Calibri')
+    * Font name (for example 'Calibri')
     *
     * @param string $val The name
     *
@@ -142,7 +142,7 @@ class WorkbookChartFont extends Entity
 
     /**
     * Gets the size
-    * Size of the font (e.g. 11)
+    * Size of the font (for example 11)
     *
     * @return float|null The size
     */
@@ -157,7 +157,7 @@ class WorkbookChartFont extends Entity
 
     /**
     * Sets the size
-    * Size of the font (e.g. 11)
+    * Size of the font (for example 11)
     *
     * @param float $val The size
     *

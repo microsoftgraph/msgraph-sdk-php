@@ -170,7 +170,7 @@ class AuthenticationAttributeCollectionInputConfiguration extends Entity
     }
     /**
     * Gets the label
-    * The label of the attribute field that will be displayed to end user, unless overridden.
+    * The label of the attribute field that is displayed to end user, unless overridden.
     *
     * @return string|null The label
     */
@@ -185,7 +185,7 @@ class AuthenticationAttributeCollectionInputConfiguration extends Entity
 
     /**
     * Sets the label
-    * The label of the attribute field that will be displayed to end user, unless overridden.
+    * The label of the attribute field that is displayed to end user, unless overridden.
     *
     * @param string $val The value of the label
     *
@@ -287,7 +287,7 @@ class AuthenticationAttributeCollectionInputConfiguration extends Entity
     }
     /**
     * Gets the writeToDirectory
-    * Whether the value collected will be stored.
+    * Whether the value collected is stored.
     *
     * @return bool|null The writeToDirectory
     */
@@ -302,7 +302,7 @@ class AuthenticationAttributeCollectionInputConfiguration extends Entity
 
     /**
     * Sets the writeToDirectory
-    * Whether the value collected will be stored.
+    * Whether the value collected is stored.
     *
     * @param bool $val The value of the writeToDirectory
     *

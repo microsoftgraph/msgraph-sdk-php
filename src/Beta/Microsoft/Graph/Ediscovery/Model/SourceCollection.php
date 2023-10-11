@@ -121,7 +121,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the dataSourceScopes
-    * When specified, the collection will span across a service for an entire workload. Possible values are: none, allTenantMailboxes, allTenantSites, allCaseCustodians, allCaseNoncustodialDataSources.
+    * When specified, the collection spans across a service for an entire workload. Possible values are: none, allTenantMailboxes, allTenantSites, allCaseCustodians, allCaseNoncustodialDataSources.
     *
     * @return DataSourceScopes|null The dataSourceScopes
     */
@@ -140,7 +140,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the dataSourceScopes
-    * When specified, the collection will span across a service for an entire workload. Possible values are: none, allTenantMailboxes, allTenantSites, allCaseCustodians, allCaseNoncustodialDataSources.
+    * When specified, the collection spans across a service for an entire workload. Possible values are: none, allTenantMailboxes, allTenantSites, allCaseCustodians, allCaseNoncustodialDataSources.
     *
     * @param DataSourceScopes $val The dataSourceScopes
     *

@@ -34,7 +34,6 @@ class ShiftWorkCloudPcAccessState extends Enum
     const ACTIVATION_FAILED = "activationFailed";
     const ACTIVE = "active";
     const ACTIVATING = "activating";
-    const WAITLISTED = "waitlisted";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
     const STANDBY_MODE = "standbyMode";
 }

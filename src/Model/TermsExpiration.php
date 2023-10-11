@@ -26,7 +26,7 @@ class TermsExpiration extends Entity
 
     /**
     * Gets the frequency
-    * Represents the frequency at which the terms will expire, after its first expiration as set in startDateTime. The value is represented in ISO 8601 format for durations. For example, PT1M represents a time period of 1 month.
+    * Represents the frequency at which the terms will expire, after its first expiration as set in startDateTime. The value is represented in ISO 8601 format for durations. For example, PT1M represents a time period of one month.
     *
     * @return \DateInterval|null The frequency
     */
@@ -45,7 +45,7 @@ class TermsExpiration extends Entity
 
     /**
     * Sets the frequency
-    * Represents the frequency at which the terms will expire, after its first expiration as set in startDateTime. The value is represented in ISO 8601 format for durations. For example, PT1M represents a time period of 1 month.
+    * Represents the frequency at which the terms will expire, after its first expiration as set in startDateTime. The value is represented in ISO 8601 format for durations. For example, PT1M represents a time period of one month.
     *
     * @param \DateInterval $val The value to assign to the frequency
     *

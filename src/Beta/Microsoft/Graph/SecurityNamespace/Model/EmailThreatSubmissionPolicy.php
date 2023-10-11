@@ -55,7 +55,7 @@ class EmailThreatSubmissionPolicy extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the customizedReportRecipientEmailAddress
-    * Specifies the destination where the reported messages from end users will land whenever they report something as phish, junk or not junk. The default value is null. Optional for creation.
+    * Specifies the destination where the reported messages from end users land whenever they report something as phish, junk or not junk. The default value is null. Optional for creation.
     *
     * @return string|null The customizedReportRecipientEmailAddress
     */
@@ -70,7 +70,7 @@ class EmailThreatSubmissionPolicy extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the customizedReportRecipientEmailAddress
-    * Specifies the destination where the reported messages from end users will land whenever they report something as phish, junk or not junk. The default value is null. Optional for creation.
+    * Specifies the destination where the reported messages from end users land whenever they report something as phish, junk or not junk. The default value is null. Optional for creation.
     *
     * @param string $val The customizedReportRecipientEmailAddress
     *
@@ -142,7 +142,7 @@ class EmailThreatSubmissionPolicy extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the isCustomizedMessageEnabled
-    * Indicates whether the email notifications sent to end users to inform them if an email is phish, spam or junk is customized or not. The default value is false. Optional for creation.
+    * Indicates whether the email notifications sent to end users to inform them if an email is a phish mail, spam or junk is customized or not. The default value is false. Optional for creation.
     *
     * @return bool|null The isCustomizedMessageEnabled
     */
@@ -157,7 +157,7 @@ class EmailThreatSubmissionPolicy extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the isCustomizedMessageEnabled
-    * Indicates whether the email notifications sent to end users to inform them if an email is phish, spam or junk is customized or not. The default value is false. Optional for creation.
+    * Indicates whether the email notifications sent to end users to inform them if an email is a phish mail, spam or junk is customized or not. The default value is false. Optional for creation.
     *
     * @param bool $val The isCustomizedMessageEnabled
     *
@@ -229,7 +229,7 @@ class EmailThreatSubmissionPolicy extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the isNeverReportEnabledForUsers
-    * Indicates whether end users can simply move the message from one folder to another based on the action of spam, phish or not junk without actually reporting it. The default value is true. Optional for creation.
+    * Indicates whether end users can move the message from one folder to another based on the action of spam, phish or not junk without actually reporting it. The default value is true. Optional for creation.
     *
     * @return bool|null The isNeverReportEnabledForUsers
     */
@@ -244,7 +244,7 @@ class EmailThreatSubmissionPolicy extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the isNeverReportEnabledForUsers
-    * Indicates whether end users can simply move the message from one folder to another based on the action of spam, phish or not junk without actually reporting it. The default value is true. Optional for creation.
+    * Indicates whether end users can move the message from one folder to another based on the action of spam, phish or not junk without actually reporting it. The default value is true. Optional for creation.
     *
     * @param bool $val The isNeverReportEnabledForUsers
     *
@@ -316,7 +316,7 @@ class EmailThreatSubmissionPolicy extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the isReportToCustomizedEmailAddressEnabled
-    * Indicates whether emails reported by end users should be send to the custom mailbox configured using customizedReportRecipientEmailAddress.  The default value is false. Optional for creation.
+    * Indicates whether emails reported by end users should be sent to the custom mailbox configured using customizedReportRecipientEmailAddress.  The default value is false. Optional for creation.
     *
     * @return bool|null The isReportToCustomizedEmailAddressEnabled
     */
@@ -331,7 +331,7 @@ class EmailThreatSubmissionPolicy extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the isReportToCustomizedEmailAddressEnabled
-    * Indicates whether emails reported by end users should be send to the custom mailbox configured using customizedReportRecipientEmailAddress.  The default value is false. Optional for creation.
+    * Indicates whether emails reported by end users should be sent to the custom mailbox configured using customizedReportRecipientEmailAddress.  The default value is false. Optional for creation.
     *
     * @param bool $val The isReportToCustomizedEmailAddressEnabled
     *
@@ -345,7 +345,7 @@ class EmailThreatSubmissionPolicy extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the isReportToMicrosoftEnabled
-    * If enabled, the email will be sent to Microsoft for analysis. The default value is false. Required for creation.
+    * If enabled, the email is sent to Microsoft for analysis. The default value is false. Required for creation.
     *
     * @return bool|null The isReportToMicrosoftEnabled
     */
@@ -360,7 +360,7 @@ class EmailThreatSubmissionPolicy extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the isReportToMicrosoftEnabled
-    * If enabled, the email will be sent to Microsoft for analysis. The default value is false. Required for creation.
+    * If enabled, the email is sent to Microsoft for analysis. The default value is false. Required for creation.
     *
     * @param bool $val The isReportToMicrosoftEnabled
     *

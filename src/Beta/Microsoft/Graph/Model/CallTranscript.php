@@ -121,6 +121,7 @@ class CallTranscript extends Entity
 
     /**
     * Gets the meetingOrganizer
+    * The identity information of the organizer of the onlineMeeting related to this transcript. Read-only.
     *
     * @return IdentitySet|null The meetingOrganizer
     */
@@ -139,6 +140,7 @@ class CallTranscript extends Entity
 
     /**
     * Sets the meetingOrganizer
+    * The identity information of the organizer of the onlineMeeting related to this transcript. Read-only.
     *
     * @param IdentitySet $val The meetingOrganizer
     *

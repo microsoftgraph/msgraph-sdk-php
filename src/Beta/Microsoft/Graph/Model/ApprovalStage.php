@@ -25,7 +25,7 @@ class ApprovalStage extends Entity
 {
     /**
     * Gets the approvalStageTimeOutInDays
-    * The number of days that a request can be pending a response before it is automatically denied.
+    * The number of days that a request can be pending a response before it's automatically denied.
     *
     * @return int|null The approvalStageTimeOutInDays
     */
@@ -40,7 +40,7 @@ class ApprovalStage extends Entity
 
     /**
     * Sets the approvalStageTimeOutInDays
-    * The number of days that a request can be pending a response before it is automatically denied.
+    * The number of days that a request can be pending a response before it's automatically denied.
     *
     * @param int $val The value of the approvalStageTimeOutInDays
     *
@@ -54,7 +54,7 @@ class ApprovalStage extends Entity
 
     /**
     * Gets the escalationApprovers
-    * If escalation is enabled and the primary approvers do not respond before the escalation time, the escalationApprovers are the users who will be asked to approve requests. This can be a collection of singleUser, groupMembers, requestorManager, internalSponsors and externalSponsors.  When creating or updating a policy, if there are no escalation approvers, or escalation approvers are not required for the stage, the value of this property should be an empty collection.
+    * If escalation is enabled and the primary approvers don't respond before the escalation time, the escalationApprovers are the users who will be asked to approve requests. This can be a collection of singleUser, groupMembers, requestorManager, internalSponsors and externalSponsors.  When creating or updating a policy, if there are no escalation approvers, or escalation approvers aren't required for the stage, the value of this property should be an empty collection.
     *
     * @return UserSet|null The escalationApprovers
     */
@@ -73,7 +73,7 @@ class ApprovalStage extends Entity
 
     /**
     * Sets the escalationApprovers
-    * If escalation is enabled and the primary approvers do not respond before the escalation time, the escalationApprovers are the users who will be asked to approve requests. This can be a collection of singleUser, groupMembers, requestorManager, internalSponsors and externalSponsors.  When creating or updating a policy, if there are no escalation approvers, or escalation approvers are not required for the stage, the value of this property should be an empty collection.
+    * If escalation is enabled and the primary approvers don't respond before the escalation time, the escalationApprovers are the users who will be asked to approve requests. This can be a collection of singleUser, groupMembers, requestorManager, internalSponsors and externalSponsors.  When creating or updating a policy, if there are no escalation approvers, or escalation approvers aren't required for the stage, the value of this property should be an empty collection.
     *
     * @param UserSet $val The value to assign to the escalationApprovers
     *
@@ -171,7 +171,7 @@ class ApprovalStage extends Entity
 
     /**
     * Gets the primaryApprovers
-    * The users who will be asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors, externalSponsors and targetUserSponsors. When creating or updating a policy, include at least one userSet in this collection.
+    * The users who are asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors, externalSponsors and targetUserSponsors. When creating or updating a policy, include at least one userSet in this collection.
     *
     * @return UserSet|null The primaryApprovers
     */
@@ -190,7 +190,7 @@ class ApprovalStage extends Entity
 
     /**
     * Sets the primaryApprovers
-    * The users who will be asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors, externalSponsors and targetUserSponsors. When creating or updating a policy, include at least one userSet in this collection.
+    * The users who are asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors, externalSponsors and targetUserSponsors. When creating or updating a policy, include at least one userSet in this collection.
     *
     * @param UserSet $val The value to assign to the primaryApprovers
     *

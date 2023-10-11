@@ -54,7 +54,7 @@ class UserRegistrationFeatureSummary extends Entity
 
     /**
     * Gets the userRegistrationFeatureCounts
-    * Number of users registered or capable for multi-factor authentication, self-service password reset, and passwordless authentication.
+    * Number of users registered or capable for multifactor authentication, self-service password reset, and passwordless authentication.
     *
     * @return UserRegistrationFeatureCount|null The userRegistrationFeatureCounts
     */
@@ -73,7 +73,7 @@ class UserRegistrationFeatureSummary extends Entity
 
     /**
     * Sets the userRegistrationFeatureCounts
-    * Number of users registered or capable for multi-factor authentication, self-service password reset, and passwordless authentication.
+    * Number of users registered or capable for multifactor authentication, self-service password reset, and passwordless authentication.
     *
     * @param UserRegistrationFeatureCount $val The value to assign to the userRegistrationFeatureCounts
     *

@@ -88,7 +88,7 @@ class DataSourceContainer extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the holdStatus
-    * The hold status of the dataSourceContainer.The possible values are: notApplied, applied, applying, removing, partial
+    * The hold status of the dataSourceContainer. The possible values are: notApplied, applied, applying, removing, partial
     *
     * @return DataSourceHoldStatus|null The holdStatus
     */
@@ -107,7 +107,7 @@ class DataSourceContainer extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the holdStatus
-    * The hold status of the dataSourceContainer.The possible values are: notApplied, applied, applying, removing, partial
+    * The hold status of the dataSourceContainer. The possible values are: notApplied, applied, applying, removing, partial
     *
     * @param DataSourceHoldStatus $val The holdStatus
     *

@@ -55,7 +55,7 @@ class OnPremisesAgent extends Entity
 
     /**
     * Gets the machineName
-    * The name of the machine that the aggent is running on. Read-only
+    * The name of the machine that the agent is running on. Read-only
     *
     * @return string|null The machineName
     */
@@ -70,7 +70,7 @@ class OnPremisesAgent extends Entity
 
     /**
     * Sets the machineName
-    * The name of the machine that the aggent is running on. Read-only
+    * The name of the machine that the agent is running on. Read-only
     *
     * @param string $val The machineName
     *

@@ -55,7 +55,7 @@ class GraphList extends BaseItem
 
     /**
     * Gets the list
-    * Provides additional details about the list.
+    * Contains more details about the list.
     *
     * @return ListInfo|null The list
     */
@@ -74,7 +74,7 @@ class GraphList extends BaseItem
 
     /**
     * Sets the list
-    * Provides additional details about the list.
+    * Contains more details about the list.
     *
     * @param ListInfo $val The list
     *
@@ -121,7 +121,7 @@ class GraphList extends BaseItem
 
     /**
     * Gets the system
-    * If present, indicates that this is a system-managed list. Read-only.
+    * If present, indicates that the list is system-managed. Read-only.
     *
     * @return SystemFacet|null The system
     */
@@ -140,7 +140,7 @@ class GraphList extends BaseItem
 
     /**
     * Sets the system
-    * If present, indicates that this is a system-managed list. Read-only.
+    * If present, indicates that the list is system-managed. Read-only.
     *
     * @param SystemFacet $val The system
     *
@@ -214,7 +214,7 @@ class GraphList extends BaseItem
 
     /**
     * Gets the drive
-    * Only present on document libraries. Allows access to the list as a [drive][] resource with [driveItems][driveItem].
+    * Allows access to the list as a drive resource with driveItems. Only present on document libraries.
     *
     * @return Drive|null The drive
     */
@@ -233,7 +233,7 @@ class GraphList extends BaseItem
 
     /**
     * Sets the drive
-    * Only present on document libraries. Allows access to the list as a [drive][] resource with [driveItems][driveItem].
+    * Allows access to the list as a drive resource with driveItems. Only present on document libraries.
     *
     * @param Drive $val The drive
     *

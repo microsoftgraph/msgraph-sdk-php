@@ -25,7 +25,7 @@ class CloudPcOnPremisesConnectionHealthCheck extends Entity
 {
     /**
     * Gets the additionalDetails
-    * Additional details about the health check or the recommended action.
+    * More details about the health check or the recommended action.
     *
     * @return string|null The additionalDetails
     */
@@ -40,7 +40,7 @@ class CloudPcOnPremisesConnectionHealthCheck extends Entity
 
     /**
     * Sets the additionalDetails
-    * Additional details about the health check or the recommended action.
+    * More details about the health check or the recommended action.
     *
     * @param string $val The value of the additionalDetails
     *

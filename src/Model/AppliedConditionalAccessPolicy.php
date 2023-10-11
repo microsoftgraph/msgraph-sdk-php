@@ -53,7 +53,7 @@ class AppliedConditionalAccessPolicy extends Entity
     }
     /**
     * Gets the enforcedGrantControls
-    * Refers to the grant controls enforced by the conditional access policy (example: 'Require multi-factor authentication').
+    * Refers to the grant controls enforced by the conditional access policy (example: 'Require multifactor authentication').
     *
     * @return string|null The enforcedGrantControls
     */
@@ -68,7 +68,7 @@ class AppliedConditionalAccessPolicy extends Entity
 
     /**
     * Sets the enforcedGrantControls
-    * Refers to the grant controls enforced by the conditional access policy (example: 'Require multi-factor authentication').
+    * Refers to the grant controls enforced by the conditional access policy (example: 'Require multifactor authentication').
     *
     * @param string $val The value of the enforcedGrantControls
     *

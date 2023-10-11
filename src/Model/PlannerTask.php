@@ -150,7 +150,7 @@ class PlannerTask extends Entity
 
     /**
     * Gets the bucketId
-    * Bucket ID to which the task belongs. The bucket needs to be in the plan that the task is in. It is 28 characters long and case-sensitive. Format validation is done on the service.
+    * Bucket ID to which the task belongs. The bucket needs to be in the plan that the task is in. It's 28 characters long and case-sensitive. Format validation is done on the service.
     *
     * @return string|null The bucketId
     */
@@ -165,7 +165,7 @@ class PlannerTask extends Entity
 
     /**
     * Sets the bucketId
-    * Bucket ID to which the task belongs. The bucket needs to be in the plan that the task is in. It is 28 characters long and case-sensitive. Format validation is done on the service.
+    * Bucket ID to which the task belongs. The bucket needs to be in the plan that the task is in. It's 28 characters long and case-sensitive. Format validation is done on the service.
     *
     * @param string $val The bucketId
     *
@@ -402,7 +402,7 @@ class PlannerTask extends Entity
 
     /**
     * Gets the hasDescription
-    * Read-only. Value is true if the details object of the task has a non-empty description and false otherwise.
+    * Read-only. Value is true if the details object of the task has a nonempty description and false otherwise.
     *
     * @return bool|null The hasDescription
     */
@@ -417,7 +417,7 @@ class PlannerTask extends Entity
 
     /**
     * Sets the hasDescription
-    * Read-only. Value is true if the details object of the task has a non-empty description and false otherwise.
+    * Read-only. Value is true if the details object of the task has a nonempty description and false otherwise.
     *
     * @param bool $val The hasDescription
     *
@@ -737,7 +737,7 @@ class PlannerTask extends Entity
 
     /**
     * Gets the details
-    * Read-only. Nullable. Additional details about the task.
+    * Read-only. Nullable. More details about the task.
     *
     * @return PlannerTaskDetails|null The details
     */
@@ -756,7 +756,7 @@ class PlannerTask extends Entity
 
     /**
     * Sets the details
-    * Read-only. Nullable. Additional details about the task.
+    * Read-only. Nullable. More details about the task.
     *
     * @param PlannerTaskDetails $val The details
     *

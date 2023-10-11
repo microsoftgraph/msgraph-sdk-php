@@ -26,7 +26,7 @@ class MultiTenantOrganization extends Entity
 {
     /**
     * Gets the createdDateTime
-    * Date when multi-tenant organization was created. Read-only.
+    * Date when multitenant organization was created. Read-only.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -45,7 +45,7 @@ class MultiTenantOrganization extends Entity
 
     /**
     * Sets the createdDateTime
-    * Date when multi-tenant organization was created. Read-only.
+    * Date when multitenant organization was created. Read-only.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -59,7 +59,7 @@ class MultiTenantOrganization extends Entity
 
     /**
     * Gets the description
-    * Description of the multi-tenant organization.
+    * Description of the multitenant organization.
     *
     * @return string|null The description
     */
@@ -74,7 +74,7 @@ class MultiTenantOrganization extends Entity
 
     /**
     * Sets the description
-    * Description of the multi-tenant organization.
+    * Description of the multitenant organization.
     *
     * @param string $val The description
     *
@@ -88,7 +88,7 @@ class MultiTenantOrganization extends Entity
 
     /**
     * Gets the displayName
-    * Display name of the multi-tenant organization.
+    * Display name of the multitenant organization.
     *
     * @return string|null The displayName
     */
@@ -103,7 +103,7 @@ class MultiTenantOrganization extends Entity
 
     /**
     * Sets the displayName
-    * Display name of the multi-tenant organization.
+    * Display name of the multitenant organization.
     *
     * @param string $val The displayName
     *
@@ -117,7 +117,7 @@ class MultiTenantOrganization extends Entity
 
     /**
     * Gets the state
-    * State of the multi-tenant organization. The possible values are: active, inactive, unknownFutureValue. active indicates the multi-tenant organization is created. inactive indicates the multi-tenant organization is not created. Read-only.
+    * State of the multitenant organization. The possible values are: active, inactive, unknownFutureValue. active indicates the multitenant organization is created. inactive indicates the multitenant organization isn't created. Read-only.
     *
     * @return MultiTenantOrganizationState|null The state
     */
@@ -136,7 +136,7 @@ class MultiTenantOrganization extends Entity
 
     /**
     * Sets the state
-    * State of the multi-tenant organization. The possible values are: active, inactive, unknownFutureValue. active indicates the multi-tenant organization is created. inactive indicates the multi-tenant organization is not created. Read-only.
+    * State of the multitenant organization. The possible values are: active, inactive, unknownFutureValue. active indicates the multitenant organization is created. inactive indicates the multitenant organization isn't created. Read-only.
     *
     * @param MultiTenantOrganizationState $val The state
     *
@@ -150,7 +150,7 @@ class MultiTenantOrganization extends Entity
 
     /**
     * Gets the joinRequest
-    * Defines the status of a tenant joining a multi-tenant organization.
+    * Defines the status of a tenant joining a multitenant organization.
     *
     * @return MultiTenantOrganizationJoinRequestRecord|null The joinRequest
     */
@@ -169,7 +169,7 @@ class MultiTenantOrganization extends Entity
 
     /**
     * Sets the joinRequest
-    * Defines the status of a tenant joining a multi-tenant organization.
+    * Defines the status of a tenant joining a multitenant organization.
     *
     * @param MultiTenantOrganizationJoinRequestRecord $val The joinRequest
     *
@@ -184,7 +184,7 @@ class MultiTenantOrganization extends Entity
 
      /**
      * Gets the tenants
-    * Defines tenants added to a multi-tenant organization.
+    * Defines tenants added to a multitenant organization.
      *
      * @return array|null The tenants
      */
@@ -199,7 +199,7 @@ class MultiTenantOrganization extends Entity
 
     /**
     * Sets the tenants
-    * Defines tenants added to a multi-tenant organization.
+    * Defines tenants added to a multitenant organization.
     *
     * @param MultiTenantOrganizationMember[] $val The tenants
     *

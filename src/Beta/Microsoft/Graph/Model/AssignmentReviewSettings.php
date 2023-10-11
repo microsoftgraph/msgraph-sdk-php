@@ -26,7 +26,7 @@ class AssignmentReviewSettings extends Entity
 
     /**
     * Gets the accessReviewTimeoutBehavior
-    * The default decision to apply if the request is not reviewed within the period specified in durationInDays. The possible values are: acceptAccessRecommendation, keepAccess, removeAccess, and unknownFutureValue.
+    * The default decision to apply if the request isn't reviewed within the period specified in durationInDays. The possible values are: acceptAccessRecommendation, keepAccess, removeAccess, and unknownFutureValue.
     *
     * @return AccessReviewTimeoutBehavior|null The accessReviewTimeoutBehavior
     */
@@ -45,7 +45,7 @@ class AssignmentReviewSettings extends Entity
 
     /**
     * Sets the accessReviewTimeoutBehavior
-    * The default decision to apply if the request is not reviewed within the period specified in durationInDays. The possible values are: acceptAccessRecommendation, keepAccess, removeAccess, and unknownFutureValue.
+    * The default decision to apply if the request isn't reviewed within the period specified in durationInDays. The possible values are: acceptAccessRecommendation, keepAccess, removeAccess, and unknownFutureValue.
     *
     * @param AccessReviewTimeoutBehavior $val The value to assign to the accessReviewTimeoutBehavior
     *

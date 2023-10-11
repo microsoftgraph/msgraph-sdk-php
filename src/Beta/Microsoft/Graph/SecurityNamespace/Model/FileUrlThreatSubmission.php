@@ -26,7 +26,7 @@ class FileUrlThreatSubmission extends FileThreatSubmission
 {
     /**
     * Gets the fileUrl
-    * It specifies the URL of the file which needs to be submitted.
+    * It specifies the URL of the file that needs to be submitted.
     *
     * @return string|null The fileUrl
     */
@@ -41,7 +41,7 @@ class FileUrlThreatSubmission extends FileThreatSubmission
 
     /**
     * Sets the fileUrl
-    * It specifies the URL of the file which needs to be submitted.
+    * It specifies the URL of the file that needs to be submitted.
     *
     * @param string $val The fileUrl
     *

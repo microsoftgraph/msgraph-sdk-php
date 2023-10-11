@@ -89,6 +89,7 @@ class X509CertificateAuthenticationMethodConfiguration extends AuthenticationMet
 
     /**
     * Gets the issuerHintsConfiguration
+    * Determines whether issuer(CA) hints are sent back to the client side to filter the certificates shown in certificate picker.
     *
     * @return X509CertificateIssuerHintsConfiguration|null The issuerHintsConfiguration
     */
@@ -107,6 +108,7 @@ class X509CertificateAuthenticationMethodConfiguration extends AuthenticationMet
 
     /**
     * Sets the issuerHintsConfiguration
+    * Determines whether issuer(CA) hints are sent back to the client side to filter the certificates shown in certificate picker.
     *
     * @param X509CertificateIssuerHintsConfiguration $val The issuerHintsConfiguration
     *

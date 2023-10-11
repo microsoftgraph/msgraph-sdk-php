@@ -180,7 +180,7 @@ class DirectoryDefinition extends Entity
 
     /**
     * Gets the version
-    * Read only value that indicates version discovered. null if discovery has not yet occurred.
+    * Read only value that indicates version discovered. null if discovery hasn't yet occurred.
     *
     * @return string|null The version
     */
@@ -195,7 +195,7 @@ class DirectoryDefinition extends Entity
 
     /**
     * Sets the version
-    * Read only value that indicates version discovered. null if discovery has not yet occurred.
+    * Read only value that indicates version discovered. null if discovery hasn't yet occurred.
     *
     * @param string $val The version
     *

@@ -26,7 +26,7 @@ class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity
 {
     /**
     * Gets the automaticUserConsentSettings
-    * Determines the partner-specific configuration for automatic user consent settings. Unless specifically configured, the inboundAllowed and outboundAllowed properties are null and inherit from the default settings, which is always false.
+    * Determines the partner-specific configuration for automatic user consent settings. Unless configured, the inboundAllowed and outboundAllowed properties are null and inherit from the default settings, which is always false.
     *
     * @return InboundOutboundPolicyConfiguration|null The automaticUserConsentSettings
     */
@@ -45,7 +45,7 @@ class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity
 
     /**
     * Sets the automaticUserConsentSettings
-    * Determines the partner-specific configuration for automatic user consent settings. Unless specifically configured, the inboundAllowed and outboundAllowed properties are null and inherit from the default settings, which is always false.
+    * Determines the partner-specific configuration for automatic user consent settings. Unless configured, the inboundAllowed and outboundAllowed properties are null and inherit from the default settings, which is always false.
     *
     * @param InboundOutboundPolicyConfiguration $val The automaticUserConsentSettings
     *
@@ -224,7 +224,7 @@ class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity
 
     /**
     * Gets the templateApplicationLevel
-    * Specifies whether the template will be applied to partner configuration settings of certain tenants. The possible values are: none, newPartners, existingPartners, unknownFutureValue. You can also specify multiple values like newPartners,existingPartners (default). none indicates the template is not applied to any new or existing partner tenants. newPartners indicates the template is applied to new partner tenants. existingPartners indicates the template is applied to existing partner tenants, those who already had partner-specific partner configurations in place.
+    * Specifies whether the template will be applied to partner configuration settings of certain tenants. The possible values are: none, newPartners, existingPartners, unknownFutureValue. You can also specify multiple values like newPartners,existingPartners (default). none indicates the template isn't applied to any new or existing partner tenants. newPartners indicates the template is applied to new partner tenants. existingPartners indicates the template is applied to existing partner tenants, those who already had partner-specific partner configurations in place.
     *
     * @return TemplateApplicationLevel|null The templateApplicationLevel
     */
@@ -243,7 +243,7 @@ class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity
 
     /**
     * Sets the templateApplicationLevel
-    * Specifies whether the template will be applied to partner configuration settings of certain tenants. The possible values are: none, newPartners, existingPartners, unknownFutureValue. You can also specify multiple values like newPartners,existingPartners (default). none indicates the template is not applied to any new or existing partner tenants. newPartners indicates the template is applied to new partner tenants. existingPartners indicates the template is applied to existing partner tenants, those who already had partner-specific partner configurations in place.
+    * Specifies whether the template will be applied to partner configuration settings of certain tenants. The possible values are: none, newPartners, existingPartners, unknownFutureValue. You can also specify multiple values like newPartners,existingPartners (default). none indicates the template isn't applied to any new or existing partner tenants. newPartners indicates the template is applied to new partner tenants. existingPartners indicates the template is applied to existing partner tenants, those who already had partner-specific partner configurations in place.
     *
     * @param TemplateApplicationLevel $val The templateApplicationLevel
     *

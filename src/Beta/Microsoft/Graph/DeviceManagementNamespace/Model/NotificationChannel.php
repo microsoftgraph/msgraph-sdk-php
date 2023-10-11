@@ -89,32 +89,4 @@ class NotificationChannel extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["notificationReceivers"] = $val;
          return $this;
     }
-    /**
-    * Gets the receivers
-    * The contact information about the notification receivers, such as email addresses. For portal notifications, receivers can be left blank. For email notifications, receivers consists of email addresses such as serena.davis@contoso.com.
-    *
-    * @return string|null The receivers
-    */
-    public function getReceivers()
-    {
-        if (array_key_exists("receivers", $this->_propDict)) {
-            return $this->_propDict["receivers"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the receivers
-    * The contact information about the notification receivers, such as email addresses. For portal notifications, receivers can be left blank. For email notifications, receivers consists of email addresses such as serena.davis@contoso.com.
-    *
-    * @param string $val The value of the receivers
-    *
-    * @return NotificationChannel
-    */
-    public function setReceivers($val)
-    {
-        $this->_propDict["receivers"] = $val;
-        return $this;
-    }
 }
