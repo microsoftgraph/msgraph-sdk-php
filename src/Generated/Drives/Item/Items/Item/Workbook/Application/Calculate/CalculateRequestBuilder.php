@@ -31,7 +31,7 @@ class CalculateRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Recalculate all currently opened workbooks in Excel. This API is supported in the following national cloud deployments.
+     * Recalculate all currently opened workbooks in Excel. This API is available in the following national cloud deployments.
      * @param CalculatePostRequestBody $body The request body
      * @param CalculateRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -51,7 +51,7 @@ class CalculateRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Recalculate all currently opened workbooks in Excel. This API is supported in the following national cloud deployments.
+     * Recalculate all currently opened workbooks in Excel. This API is available in the following national cloud deployments.
      * @param CalculatePostRequestBody $body The request body
      * @param CalculateRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -37,7 +37,7 @@ class AuthenticationMethodsRoot extends Entity implements Parsable
     }
 
     /**
-     * Gets the userRegistrationDetails property value. Represents the state of a user's authentication methods, including which methods are registered and which features the user is registered and capable of (such as multi-factor authentication, self-service password reset, and passwordless authentication).
+     * Gets the userRegistrationDetails property value. Represents the state of a user's authentication methods, including which methods are registered and which features the user is registered and capable of (such as multifactor authentication, self-service password reset, and passwordless authentication).
      * @return array<UserRegistrationDetails>|null
     */
     public function getUserRegistrationDetails(): ?array {
@@ -60,7 +60,7 @@ class AuthenticationMethodsRoot extends Entity implements Parsable
     }
 
     /**
-     * Sets the userRegistrationDetails property value. Represents the state of a user's authentication methods, including which methods are registered and which features the user is registered and capable of (such as multi-factor authentication, self-service password reset, and passwordless authentication).
+     * Sets the userRegistrationDetails property value. Represents the state of a user's authentication methods, including which methods are registered and which features the user is registered and capable of (such as multifactor authentication, self-service password reset, and passwordless authentication).
      * @param array<UserRegistrationDetails>|null $value Value to set for the userRegistrationDetails property.
     */
     public function setUserRegistrationDetails(?array $value): void {

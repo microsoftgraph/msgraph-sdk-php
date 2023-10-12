@@ -33,7 +33,7 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the educationUser resources associated with an educationSchool. This API is supported in the following national cloud deployments.
+     * Get the educationUser resources associated with an educationSchool. This API is available in the following national cloud deployments.
      * @param RefRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/educationschool-list-users?view=graph-rest-1.0 Find more info here
@@ -52,7 +52,7 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Add a user to a school. This API is supported in the following national cloud deployments.
+     * Add a user to a school. This API is available in the following national cloud deployments.
      * @param ReferenceCreate $body The request body
      * @param RefRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -72,7 +72,7 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the educationUser resources associated with an educationSchool. This API is supported in the following national cloud deployments.
+     * Get the educationUser resources associated with an educationSchool. This API is available in the following national cloud deployments.
      * @param RefRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -93,7 +93,7 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Add a user to a school. This API is supported in the following national cloud deployments.
+     * Add a user to a school. This API is available in the following national cloud deployments.
      * @param ReferenceCreate $body The request body
      * @param RefRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

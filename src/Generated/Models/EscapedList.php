@@ -67,7 +67,7 @@ class EscapedList extends BaseItem implements Parsable
     }
 
     /**
-     * Gets the drive property value. Only present on document libraries. Allows access to the list as a [drive][] resource with [driveItems][driveItem].
+     * Gets the drive property value. Allows access to the list as a drive resource with driveItems. Only present on document libraries.
      * @return Drive|null
     */
     public function getDrive(): ?Drive {
@@ -79,7 +79,7 @@ class EscapedList extends BaseItem implements Parsable
     }
 
     /**
-     * Gets the list property value. Provides additional details about the list.
+     * Gets the list property value. Contains more details about the list.
      * @return ListInfo|null
     */
     public function getEscapedList(): ?ListInfo {
@@ -165,7 +165,7 @@ class EscapedList extends BaseItem implements Parsable
     }
 
     /**
-     * Gets the system property value. If present, indicates that this is a system-managed list. Read-only.
+     * Gets the system property value. If present, indicates that the list is system-managed. Read-only.
      * @return SystemFacet|null
     */
     public function getSystem(): ?SystemFacet {
@@ -219,7 +219,7 @@ class EscapedList extends BaseItem implements Parsable
     }
 
     /**
-     * Sets the drive property value. Only present on document libraries. Allows access to the list as a [drive][] resource with [driveItems][driveItem].
+     * Sets the drive property value. Allows access to the list as a drive resource with driveItems. Only present on document libraries.
      * @param Drive|null $value Value to set for the drive property.
     */
     public function setDrive(?Drive $value): void {
@@ -227,7 +227,7 @@ class EscapedList extends BaseItem implements Parsable
     }
 
     /**
-     * Sets the list property value. Provides additional details about the list.
+     * Sets the list property value. Contains more details about the list.
      * @param ListInfo|null $value Value to set for the list property.
     */
     public function setEscapedList(?ListInfo $value): void {
@@ -267,7 +267,7 @@ class EscapedList extends BaseItem implements Parsable
     }
 
     /**
-     * Sets the system property value. If present, indicates that this is a system-managed list. Read-only.
+     * Sets the system property value. If present, indicates that the list is system-managed. Read-only.
      * @param SystemFacet|null $value Value to set for the system property.
     */
     public function setSystem(?SystemFacet $value): void {

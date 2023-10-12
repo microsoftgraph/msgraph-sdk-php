@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Applications\Item\AppManagementPolicies\Item
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Remove an appManagementPolicy policy object from an application or service principal object. When you remove the appManagementPolicy, the application or service principal adopts the tenant-wide tenantAppManagementPolicy setting.  This API is supported in the following national cloud deployments.
+ * Remove an appManagementPolicy policy object from an application or service principal object. When you remove the appManagementPolicy, the application or service principal adopts the tenant-wide tenantAppManagementPolicy setting.  This API is available in the following national cloud deployments.
 */
 class RefRequestBuilderDeleteQueryParameters 
 {

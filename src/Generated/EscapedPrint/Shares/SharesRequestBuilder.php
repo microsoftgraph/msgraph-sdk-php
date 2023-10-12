@@ -53,7 +53,7 @@ class SharesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of printerShares. This API is supported in the following national cloud deployments.
+     * Retrieve a list of printerShares. This API is available in the following national cloud deployments.
      * @param SharesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/print-list-shares?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class SharesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new printerShare for the specified printer. This API is supported in the following national cloud deployments.
+     * Create a new printerShare for the specified printer. This API is available in the following national cloud deployments.
      * @param PrinterShare $body The request body
      * @param SharesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class SharesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of printerShares. This API is supported in the following national cloud deployments.
+     * Retrieve a list of printerShares. This API is available in the following national cloud deployments.
      * @param SharesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class SharesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new printerShare for the specified printer. This API is supported in the following national cloud deployments.
+     * Create a new printerShare for the specified printer. This API is available in the following national cloud deployments.
      * @param PrinterShare $body The request body
      * @param SharesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

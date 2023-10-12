@@ -32,7 +32,7 @@ class IdentityProviderItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an existing identityProvider. This API is supported in the following national cloud deployments.
+     * Delete an existing identityProvider. This API is available in the following national cloud deployments.
      * @param IdentityProviderItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/identityprovider-delete?view=graph-rest-1.0 Find more info here
@@ -51,7 +51,7 @@ class IdentityProviderItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties of an existing identityProvider. This API is supported in the following national cloud deployments.
+     * Retrieve the properties of an existing identityProvider. This API is available in the following national cloud deployments.
      * @param IdentityProviderItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/identityprovider-get?view=graph-rest-1.0 Find more info here
@@ -70,7 +70,7 @@ class IdentityProviderItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update properties in an existing identityProvider. This API is supported in the following national cloud deployments.
+     * Update properties in an existing identityProvider. This API is available in the following national cloud deployments.
      * @param IdentityProvider $body The request body
      * @param IdentityProviderItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -90,7 +90,7 @@ class IdentityProviderItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an existing identityProvider. This API is supported in the following national cloud deployments.
+     * Delete an existing identityProvider. This API is available in the following national cloud deployments.
      * @param IdentityProviderItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -107,7 +107,7 @@ class IdentityProviderItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties of an existing identityProvider. This API is supported in the following national cloud deployments.
+     * Retrieve the properties of an existing identityProvider. This API is available in the following national cloud deployments.
      * @param IdentityProviderItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -128,7 +128,7 @@ class IdentityProviderItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update properties in an existing identityProvider. This API is supported in the following national cloud deployments.
+     * Update properties in an existing identityProvider. This API is available in the following national cloud deployments.
      * @param IdentityProvider $body The request body
      * @param IdentityProviderItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

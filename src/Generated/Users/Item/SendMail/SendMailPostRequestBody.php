@@ -36,7 +36,7 @@ class SendMailPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
@@ -49,7 +49,7 @@ class SendMailPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the backingStore property value. Stores model information.
+     * Gets the BackingStore property value. Stores model information.
      * @return BackingStore
     */
     public function getBackingStore(): BackingStore {
@@ -63,13 +63,13 @@ class SendMailPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'message' => fn(ParseNode $n) => $o->setMessage($n->getObjectValue([Message::class, 'createFromDiscriminatorValue'])),
-            'saveToSentItems' => fn(ParseNode $n) => $o->setSaveToSentItems($n->getBooleanValue()),
+            'Message' => fn(ParseNode $n) => $o->setMessage($n->getObjectValue([Message::class, 'createFromDiscriminatorValue'])),
+            'SaveToSentItems' => fn(ParseNode $n) => $o->setSaveToSentItems($n->getBooleanValue()),
         ];
     }
 
     /**
-     * Gets the message property value. The Message property
+     * Gets the Message property value. The Message property
      * @return Message|null
     */
     public function getMessage(): ?Message {
@@ -81,7 +81,7 @@ class SendMailPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the saveToSentItems property value. The SaveToSentItems property
+     * Gets the SaveToSentItems property value. The SaveToSentItems property
      * @return bool|null
     */
     public function getSaveToSentItems(): ?bool {
@@ -97,38 +97,38 @@ class SendMailPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('message', $this->getMessage());
-        $writer->writeBooleanValue('saveToSentItems', $this->getSaveToSentItems());
+        $writer->writeObjectValue('Message', $this->getMessage());
+        $writer->writeBooleanValue('SaveToSentItems', $this->getSaveToSentItems());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param array<string,mixed> $value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
-     * Sets the backingStore property value. Stores model information.
-     * @param BackingStore $value Value to set for the backingStore property.
+     * Sets the BackingStore property value. Stores model information.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
     }
 
     /**
-     * Sets the message property value. The Message property
-     * @param Message|null $value Value to set for the message property.
+     * Sets the Message property value. The Message property
+     * @param Message|null $value Value to set for the Message property.
     */
     public function setMessage(?Message $value): void {
         $this->getBackingStore()->set('message', $value);
     }
 
     /**
-     * Sets the saveToSentItems property value. The SaveToSentItems property
-     * @param bool|null $value Value to set for the saveToSentItems property.
+     * Sets the SaveToSentItems property value. The SaveToSentItems property
+     * @param bool|null $value Value to set for the SaveToSentItems property.
     */
     public function setSaveToSentItems(?bool $value): void {
         $this->getBackingStore()->set('saveToSentItems', $value);

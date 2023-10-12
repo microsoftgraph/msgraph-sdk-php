@@ -32,7 +32,7 @@ class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete the user synchronization policy for a partner-specific configuration. This API is supported in the following national cloud deployments.
+     * Delete the user synchronization policy for a partner-specific configuration. This API is available in the following national cloud deployments.
      * @param IdentitySynchronizationRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/crosstenantidentitysyncpolicypartner-delete?view=graph-rest-1.0 Find more info here
@@ -51,7 +51,7 @@ class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the user synchronization policy of a partner-specific configuration. This API is supported in the following national cloud deployments.
+     * Get the user synchronization policy of a partner-specific configuration. This API is available in the following national cloud deployments.
      * @param IdentitySynchronizationRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/crosstenantidentitysyncpolicypartner-get?view=graph-rest-1.0 Find more info here
@@ -89,7 +89,7 @@ class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete the user synchronization policy for a partner-specific configuration. This API is supported in the following national cloud deployments.
+     * Delete the user synchronization policy for a partner-specific configuration. This API is available in the following national cloud deployments.
      * @param IdentitySynchronizationRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -106,7 +106,7 @@ class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the user synchronization policy of a partner-specific configuration. This API is supported in the following national cloud deployments.
+     * Get the user synchronization policy of a partner-specific configuration. This API is available in the following national cloud deployments.
      * @param IdentitySynchronizationRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

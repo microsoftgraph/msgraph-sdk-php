@@ -53,7 +53,7 @@ class CertificateBasedAuthConfigurationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of certificateBasedAuthConfiguration objects. This API is supported in the following national cloud deployments.
+     * Get a list of certificateBasedAuthConfiguration objects. This API is available in the following national cloud deployments.
      * @param CertificateBasedAuthConfigurationRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/certificatebasedauthconfiguration-list?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class CertificateBasedAuthConfigurationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new certificateBasedAuthConfiguration object. This API is supported in the following national cloud deployments.
+     * Create a new certificateBasedAuthConfiguration object. This API is available in the following national cloud deployments.
      * @param CertificateBasedAuthConfiguration $body The request body
      * @param CertificateBasedAuthConfigurationRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class CertificateBasedAuthConfigurationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of certificateBasedAuthConfiguration objects. This API is supported in the following national cloud deployments.
+     * Get a list of certificateBasedAuthConfiguration objects. This API is available in the following national cloud deployments.
      * @param CertificateBasedAuthConfigurationRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class CertificateBasedAuthConfigurationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new certificateBasedAuthConfiguration object. This API is supported in the following national cloud deployments.
+     * Create a new certificateBasedAuthConfiguration object. This API is available in the following national cloud deployments.
      * @param CertificateBasedAuthConfiguration $body The request body
      * @param CertificateBasedAuthConfigurationRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -88,7 +88,7 @@ class AccessPackageItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an accessPackage object. You cannot delete an access package if it has any accessPackageAssignment. This API is supported in the following national cloud deployments.
+     * Delete an accessPackage object. You cannot delete an access package if it has any accessPackageAssignment. This API is available in the following national cloud deployments.
      * @param AccessPackageItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/accesspackage-delete?view=graph-rest-1.0 Find more info here
@@ -107,7 +107,7 @@ class AccessPackageItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve an access package with a list of accessPackageResourceRoleScope objects. These objects represent the resource roles that an access package assigns to each subject. Each object links to an accessPackageResourceRole and an accessPackageResourceScope. This API is supported in the following national cloud deployments.
+     * Retrieve an access package with a list of accessPackageResourceRoleScope objects. These objects represent the resource roles that an access package assigns to each subject. Each object links to an accessPackageResourceRole and an accessPackageResourceScope. This API is available in the following national cloud deployments.
      * @param AccessPackageItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/accesspackage-list-resourcerolescopes?view=graph-rest-1.0 Find more info here
@@ -126,7 +126,7 @@ class AccessPackageItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update an existing accessPackage object to change one or more of its properties, such as the display name or description. This API is supported in the following national cloud deployments.
+     * Update an existing accessPackage object to change one or more of its properties, such as the display name or description. This API is available in the following national cloud deployments.
      * @param AccessPackage $body The request body
      * @param AccessPackageItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -146,7 +146,7 @@ class AccessPackageItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an accessPackage object. You cannot delete an access package if it has any accessPackageAssignment. This API is supported in the following national cloud deployments.
+     * Delete an accessPackage object. You cannot delete an access package if it has any accessPackageAssignment. This API is available in the following national cloud deployments.
      * @param AccessPackageItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -163,7 +163,7 @@ class AccessPackageItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve an access package with a list of accessPackageResourceRoleScope objects. These objects represent the resource roles that an access package assigns to each subject. Each object links to an accessPackageResourceRole and an accessPackageResourceScope. This API is supported in the following national cloud deployments.
+     * Retrieve an access package with a list of accessPackageResourceRoleScope objects. These objects represent the resource roles that an access package assigns to each subject. Each object links to an accessPackageResourceRole and an accessPackageResourceScope. This API is available in the following national cloud deployments.
      * @param AccessPackageItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -184,7 +184,7 @@ class AccessPackageItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update an existing accessPackage object to change one or more of its properties, such as the display name or description. This API is supported in the following national cloud deployments.
+     * Update an existing accessPackage object to change one or more of its properties, such as the display name or description. This API is available in the following national cloud deployments.
      * @param AccessPackage $body The request body
      * @param AccessPackageItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Directory\AdministrativeUnits\Item\ScopedRol
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List Azure Active Directory (Azure AD) role assignments with administrative unit scope. This API is supported in the following national cloud deployments.
+ * List Azure Active Directory (Azure AD) role assignments with administrative unit scope. This API is available in the following national cloud deployments.
 */
 class ScopedRoleMembersRequestBuilderGetQueryParameters 
 {

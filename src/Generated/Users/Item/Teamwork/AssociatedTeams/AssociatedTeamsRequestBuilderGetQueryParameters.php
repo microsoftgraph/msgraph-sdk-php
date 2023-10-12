@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Teamwork\AssociatedTeams;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the list of teams in Microsoft Teams that a user is associated with.Currently, a user can be associated with a team in two different ways: This API is supported in the following national cloud deployments.
+ * Get the list of teams in Microsoft Teams that a user is associated with.Currently, a user can be associated with a team in two different ways: This API is available in the following national cloud deployments.
 */
 class AssociatedTeamsRequestBuilderGetQueryParameters 
 {

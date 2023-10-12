@@ -31,7 +31,7 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Remove an owner from an application. As a recommended best practice, apps should have at least two owners. This API is supported in the following national cloud deployments.
+     * Remove an owner from an application. As a recommended best practice, apps should have at least two owners. This API is available in the following national cloud deployments.
      * @param RefRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/application-delete-owners?view=graph-rest-1.0 Find more info here
@@ -50,7 +50,7 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Remove an owner from an application. As a recommended best practice, apps should have at least two owners. This API is supported in the following national cloud deployments.
+     * Remove an owner from an application. As a recommended best practice, apps should have at least two owners. This API is available in the following national cloud deployments.
      * @param RefRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

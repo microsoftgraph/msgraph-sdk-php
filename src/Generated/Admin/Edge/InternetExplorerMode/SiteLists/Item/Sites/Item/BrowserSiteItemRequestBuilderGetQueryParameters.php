@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Admin\Edge\InternetExplorerMode\SiteLists\It
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a browserSite that resides on a browserSiteList. This API is supported in the following national cloud deployments.
+ * Get a browserSite that resides on a browserSiteList. This API is available in the following national cloud deployments.
 */
 class BrowserSiteItemRequestBuilderGetQueryParameters 
 {

@@ -82,7 +82,7 @@ class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * In Azure AD entitlement management, retrieve the properties and relationships of an accessPackageAssignment object. This API is supported in the following national cloud deployments.
+     * In Azure AD entitlement management, retrieve the properties and relationships of an accessPackageAssignment object. This API is available in the following national cloud deployments.
      * @param AccessPackageAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/accesspackageassignment-get?view=graph-rest-1.0 Find more info here
@@ -137,7 +137,7 @@ class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * In Azure AD entitlement management, retrieve the properties and relationships of an accessPackageAssignment object. This API is supported in the following national cloud deployments.
+     * In Azure AD entitlement management, retrieve the properties and relationships of an accessPackageAssignment object. This API is available in the following national cloud deployments.
      * @param AccessPackageAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

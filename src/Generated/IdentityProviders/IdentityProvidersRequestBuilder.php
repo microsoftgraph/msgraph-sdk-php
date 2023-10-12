@@ -61,7 +61,7 @@ class IdentityProvidersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve all identityProviders in the directory. This API is supported in the following national cloud deployments.
+     * Retrieve all identityProviders in the directory. This API is available in the following national cloud deployments.
      * @param IdentityProvidersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/identityprovider-list?view=graph-rest-1.0 Find more info here
@@ -80,7 +80,7 @@ class IdentityProvidersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new identityProvider by specifying display name, identityProvider type, client ID, and client secret. This API is supported in the following national cloud deployments.
+     * Create a new identityProvider by specifying display name, identityProvider type, client ID, and client secret. This API is available in the following national cloud deployments.
      * @param IdentityProvider $body The request body
      * @param IdentityProvidersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -100,7 +100,7 @@ class IdentityProvidersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve all identityProviders in the directory. This API is supported in the following national cloud deployments.
+     * Retrieve all identityProviders in the directory. This API is available in the following national cloud deployments.
      * @param IdentityProvidersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -121,7 +121,7 @@ class IdentityProvidersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new identityProvider by specifying display name, identityProvider type, client ID, and client secret. This API is supported in the following national cloud deployments.
+     * Create a new identityProvider by specifying display name, identityProvider type, client ID, and client secret. This API is available in the following national cloud deployments.
      * @param IdentityProvider $body The request body
      * @param IdentityProvidersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

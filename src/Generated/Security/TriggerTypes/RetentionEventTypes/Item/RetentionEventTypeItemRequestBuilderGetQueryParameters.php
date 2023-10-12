@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\TriggerTypes\RetentionEventTypes\It
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read the properties and relationships of a retentionEventType object. This API is supported in the following national cloud deployments.
+ * Read the properties and relationships of a retentionEventType object. This API is available in the following national cloud deployments.
 */
 class RetentionEventTypeItemRequestBuilderGetQueryParameters 
 {

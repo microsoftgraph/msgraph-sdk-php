@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\ReviewSe
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a list of ediscoveryReviewSet objects associated with an eDiscovery case. This API is supported in the following national cloud deployments.
+ * Get a list of ediscoveryReviewSet objects associated with an eDiscovery case. This API is available in the following national cloud deployments.
 */
 class ReviewSetsRequestBuilderGetQueryParameters 
 {

@@ -32,7 +32,7 @@ class MoveRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Move a mailfolder and its contents to another mailfolder. This API is supported in the following national cloud deployments.
+     * Move a mailfolder and its contents to another mailfolder. This API is available in the following national cloud deployments.
      * @param MovePostRequestBody $body The request body
      * @param MoveRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -52,7 +52,7 @@ class MoveRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Move a mailfolder and its contents to another mailfolder. This API is supported in the following national cloud deployments.
+     * Move a mailfolder and its contents to another mailfolder. This API is available in the following national cloud deployments.
      * @param MovePostRequestBody $body The request body
      * @param MoveRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

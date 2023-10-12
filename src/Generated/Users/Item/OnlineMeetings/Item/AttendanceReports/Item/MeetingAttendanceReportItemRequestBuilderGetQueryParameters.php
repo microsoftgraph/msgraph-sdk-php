@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\OnlineMeetings\Item\AttendanceRep
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the meetingAttendanceReport for an onlineMeeting. Each time an online meeting ends, an attendance report will be generated for that session. This API is supported in the following national cloud deployments.
+ * Get the meetingAttendanceReport for an onlineMeeting. Each time an online meeting ends, an attendance report will be generated for that session. This API is available in the following national cloud deployments.
 */
 class MeetingAttendanceReportItemRequestBuilderGetQueryParameters 
 {

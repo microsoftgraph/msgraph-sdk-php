@@ -62,7 +62,7 @@ class SubscribedSku extends Entity implements Parsable
     }
 
     /**
-     * Gets the capabilityStatus property value. Enabled indicates that the prepaidUnits property has at least one unit that is enabled. LockedOut indicates that the customer cancelled their subscription. Possible values are: Enabled, Warning, Suspended, Deleted, LockedOut.
+     * Gets the capabilityStatus property value. Enabled indicates that the prepaidUnits property has at least one unit that is enabled. LockedOut indicates that the customer canceled their subscription. Possible values are: Enabled, Warning, Suspended, Deleted, LockedOut.
      * @return string|null
     */
     public function getCapabilityStatus(): ?string {
@@ -219,7 +219,7 @@ class SubscribedSku extends Entity implements Parsable
     }
 
     /**
-     * Sets the capabilityStatus property value. Enabled indicates that the prepaidUnits property has at least one unit that is enabled. LockedOut indicates that the customer cancelled their subscription. Possible values are: Enabled, Warning, Suspended, Deleted, LockedOut.
+     * Sets the capabilityStatus property value. Enabled indicates that the prepaidUnits property has at least one unit that is enabled. LockedOut indicates that the customer canceled their subscription. Possible values are: Enabled, Warning, Suspended, Deleted, LockedOut.
      * @param string|null $value Value to set for the capabilityStatus property.
     */
     public function setCapabilityStatus(?string $value): void {

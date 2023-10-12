@@ -31,7 +31,7 @@ class ResetDecisionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Resets all accessReviewInstanceDecisionItem objects on an accessReviewInstance to notReviewed. This API is supported in the following national cloud deployments.
+     * Resets all accessReviewInstanceDecisionItem objects on an accessReviewInstance to notReviewed. This API is available in the following national cloud deployments.
      * @param ResetDecisionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/accessreviewinstance-resetdecisions?view=graph-rest-1.0 Find more info here
@@ -50,7 +50,7 @@ class ResetDecisionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Resets all accessReviewInstanceDecisionItem objects on an accessReviewInstance to notReviewed. This API is supported in the following national cloud deployments.
+     * Resets all accessReviewInstanceDecisionItem objects on an accessReviewInstance to notReviewed. This API is available in the following national cloud deployments.
      * @param ResetDecisionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityProviders;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve all identityProviders in the directory. This API is supported in the following national cloud deployments.
+ * Retrieve all identityProviders in the directory. This API is available in the following national cloud deployments.
 */
 class IdentityProvidersRequestBuilderGetQueryParameters 
 {

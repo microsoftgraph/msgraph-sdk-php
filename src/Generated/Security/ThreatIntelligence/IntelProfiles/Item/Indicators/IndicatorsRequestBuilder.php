@@ -52,7 +52,7 @@ class IndicatorsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the intelligenceProfileIndicator resources from the indicators navigation property of an intelligenceProfile. This API is supported in the following national cloud deployments.
+     * Get the intelligenceProfileIndicator resources from the indicators navigation property of an intelligenceProfile. This API is available in the following national cloud deployments.
      * @param IndicatorsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/security-intelligenceprofile-list-indicators?view=graph-rest-1.0 Find more info here
@@ -71,7 +71,7 @@ class IndicatorsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the intelligenceProfileIndicator resources from the indicators navigation property of an intelligenceProfile. This API is supported in the following national cloud deployments.
+     * Get the intelligenceProfileIndicator resources from the indicators navigation property of an intelligenceProfile. This API is available in the following national cloud deployments.
      * @param IndicatorsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

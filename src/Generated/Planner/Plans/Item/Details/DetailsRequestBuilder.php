@@ -50,7 +50,7 @@ class DetailsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a plannerPlanDetails object. This API is supported in the following national cloud deployments.
+     * Retrieve the properties and relationships of a plannerPlanDetails object. This API is available in the following national cloud deployments.
      * @param DetailsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/plannerplandetails-get?view=graph-rest-1.0 Find more info here
@@ -106,7 +106,7 @@ class DetailsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a plannerPlanDetails object. This API is supported in the following national cloud deployments.
+     * Retrieve the properties and relationships of a plannerPlanDetails object. This API is available in the following national cloud deployments.
      * @param DetailsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

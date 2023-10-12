@@ -50,7 +50,7 @@ class AuthenticationFlowsPolicyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of an authenticationFlowsPolicy object. This API is supported in the following national cloud deployments.
+     * Read the properties and relationships of an authenticationFlowsPolicy object. This API is available in the following national cloud deployments.
      * @param AuthenticationFlowsPolicyRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/authenticationflowspolicy-get?view=graph-rest-1.0 Find more info here
@@ -69,7 +69,7 @@ class AuthenticationFlowsPolicyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the selfServiceSignUp property of an authenticationFlowsPolicy object. The properties id, type, and description cannot be modified. This API is supported in the following national cloud deployments.
+     * Update the selfServiceSignUp property of an authenticationFlowsPolicy object. The properties id, type, and description cannot be modified. This API is available in the following national cloud deployments.
      * @param AuthenticationFlowsPolicy $body The request body
      * @param AuthenticationFlowsPolicyRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -106,7 +106,7 @@ class AuthenticationFlowsPolicyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of an authenticationFlowsPolicy object. This API is supported in the following national cloud deployments.
+     * Read the properties and relationships of an authenticationFlowsPolicy object. This API is available in the following national cloud deployments.
      * @param AuthenticationFlowsPolicyRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -127,7 +127,7 @@ class AuthenticationFlowsPolicyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the selfServiceSignUp property of an authenticationFlowsPolicy object. The properties id, type, and description cannot be modified. This API is supported in the following national cloud deployments.
+     * Update the selfServiceSignUp property of an authenticationFlowsPolicy object. The properties id, type, and description cannot be modified. This API is available in the following national cloud deployments.
      * @param AuthenticationFlowsPolicy $body The request body
      * @param AuthenticationFlowsPolicyRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

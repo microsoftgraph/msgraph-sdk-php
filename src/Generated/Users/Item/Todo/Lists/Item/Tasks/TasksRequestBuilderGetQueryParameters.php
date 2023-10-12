@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\Tasks;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the todoTask resources from the tasks navigation property of a specified todoTaskList. This API is supported in the following national cloud deployments.
+ * Get the todoTask resources from the tasks navigation property of a specified todoTaskList. This API is available in the following national cloud deployments.
 */
 class TasksRequestBuilderGetQueryParameters 
 {

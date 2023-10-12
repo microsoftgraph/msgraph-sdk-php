@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Domains\Item\ServiceConfigurationRecords;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieves a list of domainDnsRecord objects needed to enable services for the domain. Use the returned list to add records to the zone file of the domain. This can be done through the domain registrar or DNS server configuration. This API is supported in the following national cloud deployments.
+ * Retrieves a list of domainDnsRecord objects needed to enable services for the domain. Use the returned list to add records to the zone file of the domain. This can be done through the domain registrar or DNS server configuration. This API is available in the following national cloud deployments.
 */
 class ServiceConfigurationRecordsRequestBuilderGetQueryParameters 
 {

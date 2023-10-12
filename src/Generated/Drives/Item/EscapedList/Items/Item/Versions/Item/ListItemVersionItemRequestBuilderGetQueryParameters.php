@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Drives\Item\EscapedList\Items\Item\Versions\
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the metadata for a specific version of a ListItem. This API is supported in the following national cloud deployments.
+ * Retrieve the metadata for a specific version of a ListItem. This API is available in the following national cloud deployments.
 */
 class ListItemVersionItemRequestBuilderGetQueryParameters 
 {

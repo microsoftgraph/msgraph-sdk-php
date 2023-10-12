@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\ThreatIntelligence\SslCertificates;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a list of sslCertificate objects and their properties.
+ * Get a list of sslCertificate objects and their properties. This API is available in the following national cloud deployments.
 */
 class SslCertificatesRequestBuilderGetQueryParameters 
 {

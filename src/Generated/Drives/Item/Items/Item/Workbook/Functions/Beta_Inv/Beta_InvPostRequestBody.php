@@ -36,7 +36,7 @@ class Beta_InvPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the a property value. The A property
+     * Gets the A property value. The A property
      * @return Json|null
     */
     public function getA(): ?Json {
@@ -48,7 +48,7 @@ class Beta_InvPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
@@ -73,7 +73,7 @@ class Beta_InvPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the b property value. The B property
+     * Gets the B property value. The B property
      * @return Json|null
     */
     public function getB(): ?Json {
@@ -85,7 +85,7 @@ class Beta_InvPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the backingStore property value. Stores model information.
+     * Gets the BackingStore property value. Stores model information.
      * @return BackingStore
     */
     public function getBackingStore(): BackingStore {
@@ -111,9 +111,9 @@ class Beta_InvPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'a' => fn(ParseNode $n) => $o->setA($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
+            'A' => fn(ParseNode $n) => $o->setA($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
             'alpha' => fn(ParseNode $n) => $o->setAlpha($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'b' => fn(ParseNode $n) => $o->setB($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
+            'B' => fn(ParseNode $n) => $o->setB($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
             'beta' => fn(ParseNode $n) => $o->setBeta($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
             'probability' => fn(ParseNode $n) => $o->setProbability($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
@@ -136,25 +136,25 @@ class Beta_InvPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('a', $this->getA());
+        $writer->writeObjectValue('A', $this->getA());
         $writer->writeObjectValue('alpha', $this->getAlpha());
-        $writer->writeObjectValue('b', $this->getB());
+        $writer->writeObjectValue('B', $this->getB());
         $writer->writeObjectValue('beta', $this->getBeta());
         $writer->writeObjectValue('probability', $this->getProbability());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
-     * Sets the a property value. The A property
-     * @param Json|null $value Value to set for the a property.
+     * Sets the A property value. The A property
+     * @param Json|null $value Value to set for the A property.
     */
     public function setA(?Json $value): void {
         $this->getBackingStore()->set('a', $value);
     }
 
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param array<string,mixed> $value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -169,16 +169,16 @@ class Beta_InvPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the b property value. The B property
-     * @param Json|null $value Value to set for the b property.
+     * Sets the B property value. The B property
+     * @param Json|null $value Value to set for the B property.
     */
     public function setB(?Json $value): void {
         $this->getBackingStore()->set('b', $value);
     }
 
     /**
-     * Sets the backingStore property value. Stores model information.
-     * @param BackingStore $value Value to set for the backingStore property.
+     * Sets the BackingStore property value. Stores model information.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;

@@ -37,7 +37,7 @@ class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder, Backe
     }
 
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
@@ -50,7 +50,7 @@ class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder, Backe
     }
 
     /**
-     * Gets the backingStore property value. Stores model information.
+     * Gets the BackingStore property value. Stores model information.
      * @return BackingStore
     */
     public function getBackingStore(): BackingStore {
@@ -64,7 +64,7 @@ class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder, Backe
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'inputIds' => function (ParseNode $n) {
+            'InputIds' => function (ParseNode $n) {
                 $val = $n->getCollectionOfPrimitiveValues();
                 if (is_array($val)) {
                     TypeUtils::validateCollectionValues($val, 'string');
@@ -72,13 +72,13 @@ class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder, Backe
                 /** @var array<string>|null $val */
                 $this->setInputIds($val);
             },
-            'sourceIdType' => fn(ParseNode $n) => $o->setSourceIdType($n->getEnumValue(ExchangeIdFormat::class)),
-            'targetIdType' => fn(ParseNode $n) => $o->setTargetIdType($n->getEnumValue(ExchangeIdFormat::class)),
+            'SourceIdType' => fn(ParseNode $n) => $o->setSourceIdType($n->getEnumValue(ExchangeIdFormat::class)),
+            'TargetIdType' => fn(ParseNode $n) => $o->setTargetIdType($n->getEnumValue(ExchangeIdFormat::class)),
         ];
     }
 
     /**
-     * Gets the inputIds property value. The InputIds property
+     * Gets the InputIds property value. The InputIds property
      * @return array<string>|null
     */
     public function getInputIds(): ?array {
@@ -92,7 +92,7 @@ class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder, Backe
     }
 
     /**
-     * Gets the sourceIdType property value. The SourceIdType property
+     * Gets the SourceIdType property value. The SourceIdType property
      * @return ExchangeIdFormat|null
     */
     public function getSourceIdType(): ?ExchangeIdFormat {
@@ -104,7 +104,7 @@ class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder, Backe
     }
 
     /**
-     * Gets the targetIdType property value. The TargetIdType property
+     * Gets the TargetIdType property value. The TargetIdType property
      * @return ExchangeIdFormat|null
     */
     public function getTargetIdType(): ?ExchangeIdFormat {
@@ -120,47 +120,47 @@ class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder, Backe
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeCollectionOfPrimitiveValues('inputIds', $this->getInputIds());
-        $writer->writeEnumValue('sourceIdType', $this->getSourceIdType());
-        $writer->writeEnumValue('targetIdType', $this->getTargetIdType());
+        $writer->writeCollectionOfPrimitiveValues('InputIds', $this->getInputIds());
+        $writer->writeEnumValue('SourceIdType', $this->getSourceIdType());
+        $writer->writeEnumValue('TargetIdType', $this->getTargetIdType());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param array<string,mixed> $value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
-     * Sets the backingStore property value. Stores model information.
-     * @param BackingStore $value Value to set for the backingStore property.
+     * Sets the BackingStore property value. Stores model information.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
     }
 
     /**
-     * Sets the inputIds property value. The InputIds property
-     * @param array<string>|null $value Value to set for the inputIds property.
+     * Sets the InputIds property value. The InputIds property
+     * @param array<string>|null $value Value to set for the InputIds property.
     */
     public function setInputIds(?array $value): void {
         $this->getBackingStore()->set('inputIds', $value);
     }
 
     /**
-     * Sets the sourceIdType property value. The SourceIdType property
-     * @param ExchangeIdFormat|null $value Value to set for the sourceIdType property.
+     * Sets the SourceIdType property value. The SourceIdType property
+     * @param ExchangeIdFormat|null $value Value to set for the SourceIdType property.
     */
     public function setSourceIdType(?ExchangeIdFormat $value): void {
         $this->getBackingStore()->set('sourceIdType', $value);
     }
 
     /**
-     * Sets the targetIdType property value. The TargetIdType property
-     * @param ExchangeIdFormat|null $value Value to set for the targetIdType property.
+     * Sets the TargetIdType property value. The TargetIdType property
+     * @param ExchangeIdFormat|null $value Value to set for the TargetIdType property.
     */
     public function setTargetIdType(?ExchangeIdFormat $value): void {
         $this->getBackingStore()->set('targetIdType', $value);

@@ -31,7 +31,7 @@ class AddFavoriteRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Add the group to the list of the current user's favorite groups. Supported for Microsoft 365 groups only. This API is supported in the following national cloud deployments.
+     * Add the group to the list of the current user's favorite groups. Supported for Microsoft 365 groups only. This API is available in the following national cloud deployments.
      * @param AddFavoriteRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/group-addfavorite?view=graph-rest-1.0 Find more info here
@@ -50,7 +50,7 @@ class AddFavoriteRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Add the group to the list of the current user's favorite groups. Supported for Microsoft 365 groups only. This API is supported in the following national cloud deployments.
+     * Add the group to the list of the current user's favorite groups. Supported for Microsoft 365 groups only. This API is available in the following national cloud deployments.
      * @param AddFavoriteRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -61,7 +61,7 @@ class AssignmentCategoriesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of educationCategory objects. Only teachers can perform this operation. This API is supported in the following national cloud deployments.
+     * Retrieve a list of educationCategory objects. Only teachers can perform this operation. This API is available in the following national cloud deployments.
      * @param AssignmentCategoriesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/educationclass-list-categories?view=graph-rest-1.0 Find more info here
@@ -80,7 +80,7 @@ class AssignmentCategoriesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new educationCategory on an educationClass. Only teachers can perform this operation. This API is supported in the following national cloud deployments.
+     * Create a new educationCategory on an educationClass. Only teachers can perform this operation. This API is available in the following national cloud deployments.
      * @param EducationCategory $body The request body
      * @param AssignmentCategoriesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -100,7 +100,7 @@ class AssignmentCategoriesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of educationCategory objects. Only teachers can perform this operation. This API is supported in the following national cloud deployments.
+     * Retrieve a list of educationCategory objects. Only teachers can perform this operation. This API is available in the following national cloud deployments.
      * @param AssignmentCategoriesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -121,7 +121,7 @@ class AssignmentCategoriesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new educationCategory on an educationClass. Only teachers can perform this operation. This API is supported in the following national cloud deployments.
+     * Create a new educationCategory on an educationClass. Only teachers can perform this operation. This API is available in the following national cloud deployments.
      * @param EducationCategory $body The request body
      * @param AssignmentCategoriesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

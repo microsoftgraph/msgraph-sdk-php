@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Channels\Item\Fi
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the metadata for the location where the files of a channel are stored.  This API is supported in the following national cloud deployments.
+ * Get the metadata for the location where the files of a channel are stored.  This API is available in the following national cloud deployments.
 */
 class FilesFolderRequestBuilderGetQueryParameters 
 {

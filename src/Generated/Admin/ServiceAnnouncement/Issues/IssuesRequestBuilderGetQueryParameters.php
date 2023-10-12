@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Issues;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve serviceHealthIssue resources from the issues navigation property. This operation retrieves information about all service health issues that exist for the tenant. This API is supported in the following national cloud deployments.
+ * Retrieve serviceHealthIssue resources from the issues navigation property. This operation retrieves information about all service health issues that exist for the tenant. This API is available in the following national cloud deployments.
 */
 class IssuesRequestBuilderGetQueryParameters 
 {

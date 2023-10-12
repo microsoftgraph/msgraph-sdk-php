@@ -74,7 +74,7 @@ class SimulationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get an attack simulation campaign for a tenant. This API is supported in the following national cloud deployments.
+     * Get an attack simulation campaign for a tenant. This API is available in the following national cloud deployments.
      * @param SimulationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/simulation-get?view=graph-rest-1.0 Find more info here
@@ -129,7 +129,7 @@ class SimulationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get an attack simulation campaign for a tenant. This API is supported in the following national cloud deployments.
+     * Get an attack simulation campaign for a tenant. This API is available in the following national cloud deployments.
      * @param SimulationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

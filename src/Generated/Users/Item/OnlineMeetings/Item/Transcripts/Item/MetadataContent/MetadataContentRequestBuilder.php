@@ -32,9 +32,10 @@ class MetadataContentRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get metadataContent for the navigation property transcripts from users
+     * The time-aligned metadata of the utterances in the transcript. Read-only.
      * @param MetadataContentRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://learn.microsoft.com/graph/api/onlinemeeting-list-transcripts?view=graph-rest-1.0 Find more info here
     */
     public function get(?MetadataContentRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -50,7 +51,7 @@ class MetadataContentRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update metadataContent for the navigation property transcripts in users
+     * The time-aligned metadata of the utterances in the transcript. Read-only.
      * @param StreamInterface $body Binary request body
      * @param MetadataContentRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -69,7 +70,7 @@ class MetadataContentRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get metadataContent for the navigation property transcripts from users
+     * The time-aligned metadata of the utterances in the transcript. Read-only.
      * @param MetadataContentRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -86,7 +87,7 @@ class MetadataContentRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update metadataContent for the navigation property transcripts in users
+     * The time-aligned metadata of the utterances in the transcript. Read-only.
      * @param StreamInterface $body Binary request body
      * @param MetadataContentRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

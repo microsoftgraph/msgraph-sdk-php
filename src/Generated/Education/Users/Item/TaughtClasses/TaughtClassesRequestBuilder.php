@@ -52,7 +52,7 @@ class TaughtClassesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the educationClass resources owned by an educationUser. This API is supported in the following national cloud deployments.
+     * Get the educationClass resources owned by an educationUser. This API is available in the following national cloud deployments.
      * @param TaughtClassesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/educationuser-list-taughtclasses?view=graph-rest-1.0 Find more info here
@@ -71,7 +71,7 @@ class TaughtClassesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the educationClass resources owned by an educationUser. This API is supported in the following national cloud deployments.
+     * Get the educationClass resources owned by an educationUser. This API is available in the following national cloud deployments.
      * @param TaughtClassesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

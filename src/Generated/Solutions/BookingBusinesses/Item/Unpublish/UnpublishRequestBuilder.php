@@ -31,7 +31,7 @@ class UnpublishRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Make the scheduling page of this business not available to external customers. Set the isPublished property to false, and the publicUrl property to null. This API is supported in the following national cloud deployments.
+     * Make the scheduling page of this business not available to external customers. Set the isPublished property to false, and the publicUrl property to null. This API is available in the following national cloud deployments.
      * @param UnpublishRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/bookingbusiness-unpublish?view=graph-rest-1.0 Find more info here
@@ -50,7 +50,7 @@ class UnpublishRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Make the scheduling page of this business not available to external customers. Set the isPublished property to false, and the publicUrl property to null. This API is supported in the following national cloud deployments.
+     * Make the scheduling page of this business not available to external customers. Set the isPublished property to false, and the publicUrl property to null. This API is available in the following national cloud deployments.
      * @param UnpublishRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

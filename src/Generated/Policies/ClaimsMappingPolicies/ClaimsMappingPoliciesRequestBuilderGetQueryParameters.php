@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Policies\ClaimsMappingPolicies;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a list of claimsMappingPolicy objects. This API is supported in the following national cloud deployments.
+ * Get a list of claimsMappingPolicy objects. This API is available in the following national cloud deployments.
 */
 class ClaimsMappingPoliciesRequestBuilderGetQueryParameters 
 {

@@ -36,7 +36,7 @@ class PresenceStatusMessage implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
@@ -49,7 +49,7 @@ class PresenceStatusMessage implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the backingStore property value. Stores model information.
+     * Gets the BackingStore property value. Stores model information.
      * @return BackingStore
     */
     public function getBackingStore(): BackingStore {
@@ -57,7 +57,7 @@ class PresenceStatusMessage implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the expiryDateTime property value. Time in which the status message expires.If not provided, the status message does not expire.expiryDateTime.dateTime should not include time zone.expiryDateTime is not available when you request the presence of another user.
+     * Gets the expiryDateTime property value. Time in which the status message expires.If not provided, the status message doesn't expire.expiryDateTime.dateTime shouldn't include time zone.expiryDateTime isn't available when you request the presence of another user.
      * @return DateTimeTimeZone|null
     */
     public function getExpiryDateTime(): ?DateTimeTimeZone {
@@ -107,7 +107,7 @@ class PresenceStatusMessage implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the publishedDateTime property value. Time in which the status message was published.Read-only.publishedDateTime is not available when you request the presence of another user.
+     * Gets the publishedDateTime property value. Time in which the status message was published.Read-only.publishedDateTime isn't available when you request the presence of another user.
      * @return DateTime|null
     */
     public function getPublishedDateTime(): ?DateTime {
@@ -131,23 +131,23 @@ class PresenceStatusMessage implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param array<string,mixed> $value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
-     * Sets the backingStore property value. Stores model information.
-     * @param BackingStore $value Value to set for the backingStore property.
+     * Sets the BackingStore property value. Stores model information.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
     }
 
     /**
-     * Sets the expiryDateTime property value. Time in which the status message expires.If not provided, the status message does not expire.expiryDateTime.dateTime should not include time zone.expiryDateTime is not available when you request the presence of another user.
+     * Sets the expiryDateTime property value. Time in which the status message expires.If not provided, the status message doesn't expire.expiryDateTime.dateTime shouldn't include time zone.expiryDateTime isn't available when you request the presence of another user.
      * @param DateTimeTimeZone|null $value Value to set for the expiryDateTime property.
     */
     public function setExpiryDateTime(?DateTimeTimeZone $value): void {
@@ -171,7 +171,7 @@ class PresenceStatusMessage implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the publishedDateTime property value. Time in which the status message was published.Read-only.publishedDateTime is not available when you request the presence of another user.
+     * Sets the publishedDateTime property value. Time in which the status message was published.Read-only.publishedDateTime isn't available when you request the presence of another user.
      * @param DateTime|null $value Value to set for the publishedDateTime property.
     */
     public function setPublishedDateTime(?DateTime $value): void {

@@ -53,7 +53,7 @@ class ChildrenRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the first level children of a set] or [term] resource using the children navigation property. This API is supported in the following [national cloud deployments.
+     * Get the first level children of a set] or [term] resource using the children navigation property. This API is available in the following [national cloud deployments.
      * @param ChildrenRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/termstore-term-list-children?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class ChildrenRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new term object. This API is supported in the following national cloud deployments.
+     * Create a new term object. This API is available in the following national cloud deployments.
      * @param Term $body The request body
      * @param ChildrenRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class ChildrenRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the first level children of a set] or [term] resource using the children navigation property. This API is supported in the following [national cloud deployments.
+     * Get the first level children of a set] or [term] resource using the children navigation property. This API is available in the following [national cloud deployments.
      * @param ChildrenRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class ChildrenRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new term object. This API is supported in the following national cloud deployments.
+     * Create a new term object. This API is available in the following national cloud deployments.
      * @param Term $body The request body
      * @param ChildrenRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Team\Schedule\OpenShifts;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List openShift objects in a team. This API is supported in the following national cloud deployments.
+ * List openShift objects in a team. This API is available in the following national cloud deployments.
 */
 class OpenShiftsRequestBuilderGetQueryParameters 
 {

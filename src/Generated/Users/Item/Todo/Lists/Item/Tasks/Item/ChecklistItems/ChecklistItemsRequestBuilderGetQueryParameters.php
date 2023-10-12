@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\Tasks\Item\Checkl
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the checklistItem resources associated to a todoTask from the checklistItems navigation property. This API is supported in the following national cloud deployments.
+ * Get the checklistItem resources associated to a todoTask from the checklistItems navigation property. This API is available in the following national cloud deployments.
 */
 class ChecklistItemsRequestBuilderGetQueryParameters 
 {

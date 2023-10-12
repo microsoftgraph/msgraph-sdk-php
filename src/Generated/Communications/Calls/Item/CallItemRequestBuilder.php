@@ -176,7 +176,7 @@ class CallItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete or hang up an active call. For group calls, this will only delete your call leg and the underlying group call will still continue. This API is supported in the following national cloud deployments.
+     * Delete or hang up an active call. For group calls, this will only delete your call leg and the underlying group call will still continue. This API is available in the following national cloud deployments.
      * @param CallItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/call-delete?view=graph-rest-1.0 Find more info here
@@ -195,7 +195,7 @@ class CallItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a call object. This API is supported in the following national cloud deployments.
+     * Retrieve the properties and relationships of a call object. This API is available in the following national cloud deployments.
      * @param CallItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/call-get?view=graph-rest-1.0 Find more info here
@@ -233,7 +233,7 @@ class CallItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete or hang up an active call. For group calls, this will only delete your call leg and the underlying group call will still continue. This API is supported in the following national cloud deployments.
+     * Delete or hang up an active call. For group calls, this will only delete your call leg and the underlying group call will still continue. This API is available in the following national cloud deployments.
      * @param CallItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -250,7 +250,7 @@ class CallItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a call object. This API is supported in the following national cloud deployments.
+     * Retrieve the properties and relationships of a call object. This API is available in the following national cloud deployments.
      * @param CallItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

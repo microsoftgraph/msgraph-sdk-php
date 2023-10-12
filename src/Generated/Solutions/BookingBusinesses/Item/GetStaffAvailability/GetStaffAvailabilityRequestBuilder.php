@@ -31,7 +31,7 @@ class GetStaffAvailabilityRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the availability information of staff members of a Microsoft Bookings calendar. This API is supported in the following national cloud deployments.
+     * Get the availability information of staff members of a Microsoft Bookings calendar. This API is available in the following national cloud deployments.
      * @param GetStaffAvailabilityPostRequestBody $body The request body
      * @param GetStaffAvailabilityRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -51,7 +51,7 @@ class GetStaffAvailabilityRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the availability information of staff members of a Microsoft Bookings calendar. This API is supported in the following national cloud deployments.
+     * Get the availability information of staff members of a Microsoft Bookings calendar. This API is available in the following national cloud deployments.
      * @param GetStaffAvailabilityPostRequestBody $body The request body
      * @param GetStaffAvailabilityRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

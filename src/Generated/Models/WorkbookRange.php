@@ -247,7 +247,7 @@ class WorkbookRange extends Entity implements Parsable
     }
 
     /**
-     * Gets the text property value. Text values of the specified range. The Text value won't depend on the cell width. The # sign substitution that happens in Excel UI won't affect the text value returned by the API. Read-only.
+     * Gets the text property value. Text values of the specified range. The Text value doesn't depend on the cell width. The # sign substitution that happens in Excel UI doesn't affect the text value returned by the API. Read-only.
      * @return Json|null
     */
     public function getText(): ?Json {
@@ -451,7 +451,7 @@ class WorkbookRange extends Entity implements Parsable
     }
 
     /**
-     * Sets the text property value. Text values of the specified range. The Text value won't depend on the cell width. The # sign substitution that happens in Excel UI won't affect the text value returned by the API. Read-only.
+     * Sets the text property value. Text values of the specified range. The Text value doesn't depend on the cell width. The # sign substitution that happens in Excel UI doesn't affect the text value returned by the API. Read-only.
      * @param Json|null $value Value to set for the text property.
     */
     public function setText(?Json $value): void {

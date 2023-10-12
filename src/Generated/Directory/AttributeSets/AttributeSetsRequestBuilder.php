@@ -53,7 +53,7 @@ class AttributeSetsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the attributeSet objects and their properties. This API is supported in the following national cloud deployments.
+     * Get a list of the attributeSet objects and their properties. This API is available in the following national cloud deployments.
      * @param AttributeSetsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/directory-list-attributesets?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class AttributeSetsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new attributeSet object. This API is supported in the following national cloud deployments.
+     * Create a new attributeSet object. This API is available in the following national cloud deployments.
      * @param AttributeSet $body The request body
      * @param AttributeSetsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class AttributeSetsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the attributeSet objects and their properties. This API is supported in the following national cloud deployments.
+     * Get a list of the attributeSet objects and their properties. This API is available in the following national cloud deployments.
      * @param AttributeSetsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class AttributeSetsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new attributeSet object. This API is supported in the following national cloud deployments.
+     * Create a new attributeSet object. This API is available in the following national cloud deployments.
      * @param AttributeSet $body The request body
      * @param AttributeSetsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

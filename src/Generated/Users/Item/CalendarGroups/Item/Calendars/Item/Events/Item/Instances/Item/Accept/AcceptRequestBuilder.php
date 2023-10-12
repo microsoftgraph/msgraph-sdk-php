@@ -31,7 +31,7 @@ class AcceptRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Accept the specified event in a user calendar. This API is supported in the following national cloud deployments.
+     * Accept the specified event in a user calendar. This API is available in the following national cloud deployments.
      * @param AcceptPostRequestBody $body The request body
      * @param AcceptRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -51,7 +51,7 @@ class AcceptRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Accept the specified event in a user calendar. This API is supported in the following national cloud deployments.
+     * Accept the specified event in a user calendar. This API is available in the following national cloud deployments.
      * @param AcceptPostRequestBody $body The request body
      * @param AcceptRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

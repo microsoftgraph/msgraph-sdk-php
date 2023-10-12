@@ -38,7 +38,7 @@ class ForwardPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
@@ -51,7 +51,7 @@ class ForwardPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the backingStore property value. Stores model information.
+     * Gets the BackingStore property value. Stores model information.
      * @return BackingStore
     */
     public function getBackingStore(): BackingStore {
@@ -59,7 +59,7 @@ class ForwardPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the comment property value. The Comment property
+     * Gets the Comment property value. The Comment property
      * @return string|null
     */
     public function getComment(): ?string {
@@ -77,14 +77,14 @@ class ForwardPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'comment' => fn(ParseNode $n) => $o->setComment($n->getStringValue()),
-            'message' => fn(ParseNode $n) => $o->setMessage($n->getObjectValue([Message::class, 'createFromDiscriminatorValue'])),
-            'toRecipients' => fn(ParseNode $n) => $o->setToRecipients($n->getCollectionOfObjectValues([Recipient::class, 'createFromDiscriminatorValue'])),
+            'Comment' => fn(ParseNode $n) => $o->setComment($n->getStringValue()),
+            'Message' => fn(ParseNode $n) => $o->setMessage($n->getObjectValue([Message::class, 'createFromDiscriminatorValue'])),
+            'ToRecipients' => fn(ParseNode $n) => $o->setToRecipients($n->getCollectionOfObjectValues([Recipient::class, 'createFromDiscriminatorValue'])),
         ];
     }
 
     /**
-     * Gets the message property value. The Message property
+     * Gets the Message property value. The Message property
      * @return Message|null
     */
     public function getMessage(): ?Message {
@@ -96,7 +96,7 @@ class ForwardPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the toRecipients property value. The ToRecipients property
+     * Gets the ToRecipients property value. The ToRecipients property
      * @return array<Recipient>|null
     */
     public function getToRecipients(): ?array {
@@ -114,47 +114,47 @@ class ForwardPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('comment', $this->getComment());
-        $writer->writeObjectValue('message', $this->getMessage());
-        $writer->writeCollectionOfObjectValues('toRecipients', $this->getToRecipients());
+        $writer->writeStringValue('Comment', $this->getComment());
+        $writer->writeObjectValue('Message', $this->getMessage());
+        $writer->writeCollectionOfObjectValues('ToRecipients', $this->getToRecipients());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param array<string,mixed> $value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
-     * Sets the backingStore property value. Stores model information.
-     * @param BackingStore $value Value to set for the backingStore property.
+     * Sets the BackingStore property value. Stores model information.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
     }
 
     /**
-     * Sets the comment property value. The Comment property
-     * @param string|null $value Value to set for the comment property.
+     * Sets the Comment property value. The Comment property
+     * @param string|null $value Value to set for the Comment property.
     */
     public function setComment(?string $value): void {
         $this->getBackingStore()->set('comment', $value);
     }
 
     /**
-     * Sets the message property value. The Message property
-     * @param Message|null $value Value to set for the message property.
+     * Sets the Message property value. The Message property
+     * @param Message|null $value Value to set for the Message property.
     */
     public function setMessage(?Message $value): void {
         $this->getBackingStore()->set('message', $value);
     }
 
     /**
-     * Sets the toRecipients property value. The ToRecipients property
-     * @param array<Recipient>|null $value Value to set for the toRecipients property.
+     * Sets the ToRecipients property value. The ToRecipients property
+     * @param array<Recipient>|null $value Value to set for the ToRecipients property.
     */
     public function setToRecipients(?array $value): void {
         $this->getBackingStore()->set('toRecipients', $value);

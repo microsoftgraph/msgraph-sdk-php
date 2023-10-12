@@ -32,7 +32,7 @@ class CalendarPermissionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete calendarPermission. This API is supported in the following national cloud deployments.
+     * Delete calendarPermission. This API is available in the following national cloud deployments.
      * @param CalendarPermissionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/calendarpermission-delete?view=graph-rest-1.0 Find more info here
@@ -51,7 +51,7 @@ class CalendarPermissionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the specified permissions object of a user or group calendar that has been shared. This API is supported in the following national cloud deployments.
+     * Get the specified permissions object of a user or group calendar that has been shared. This API is available in the following national cloud deployments.
      * @param CalendarPermissionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/calendarpermission-get?view=graph-rest-1.0 Find more info here
@@ -70,7 +70,7 @@ class CalendarPermissionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the permissions assigned to an existing share recipient or delegate, through the corresponding <b>calendarPermission</b> object for a calendar. This API is supported in the following national cloud deployments.
+     * Update the permissions assigned to an existing share recipient or delegate, through the corresponding <b>calendarPermission</b> object for a calendar. This API is available in the following national cloud deployments.
      * @param CalendarPermission $body The request body
      * @param CalendarPermissionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -90,7 +90,7 @@ class CalendarPermissionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete calendarPermission. This API is supported in the following national cloud deployments.
+     * Delete calendarPermission. This API is available in the following national cloud deployments.
      * @param CalendarPermissionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -107,7 +107,7 @@ class CalendarPermissionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the specified permissions object of a user or group calendar that has been shared. This API is supported in the following national cloud deployments.
+     * Get the specified permissions object of a user or group calendar that has been shared. This API is available in the following national cloud deployments.
      * @param CalendarPermissionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -128,7 +128,7 @@ class CalendarPermissionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the permissions assigned to an existing share recipient or delegate, through the corresponding <b>calendarPermission</b> object for a calendar. This API is supported in the following national cloud deployments.
+     * Update the permissions assigned to an existing share recipient or delegate, through the corresponding <b>calendarPermission</b> object for a calendar. This API is available in the following national cloud deployments.
      * @param CalendarPermission $body The request body
      * @param CalendarPermissionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

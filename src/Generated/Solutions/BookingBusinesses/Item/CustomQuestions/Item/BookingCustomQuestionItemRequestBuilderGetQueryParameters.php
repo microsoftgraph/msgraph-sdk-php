@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\CustomQuest
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read the properties and relationships of a bookingCustomQuestion object. This API is supported in the following national cloud deployments.
+ * Read the properties and relationships of a bookingCustomQuestion object. This API is available in the following national cloud deployments.
 */
 class BookingCustomQuestionItemRequestBuilderGetQueryParameters 
 {

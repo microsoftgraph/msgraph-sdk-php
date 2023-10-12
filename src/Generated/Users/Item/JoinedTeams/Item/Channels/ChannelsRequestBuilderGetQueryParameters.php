@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Channels;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the list of channels in this team. This API is supported in the following national cloud deployments.
+ * Retrieve the list of channels in this team. This API is available in the following national cloud deployments.
 */
 class ChannelsRequestBuilderGetQueryParameters 
 {

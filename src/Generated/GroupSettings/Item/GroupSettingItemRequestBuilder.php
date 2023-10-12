@@ -32,7 +32,7 @@ class GroupSettingItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a tenant-level or group-specific groupSetting object. This API is supported in the following national cloud deployments.
+     * Delete a tenant-level or group-specific groupSetting object. This API is available in the following national cloud deployments.
      * @param GroupSettingItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/groupsetting-delete?view=graph-rest-1.0 Find more info here
@@ -51,7 +51,7 @@ class GroupSettingItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties of a specific group setting object. The setting can be a tenant-level or group-specific setting. This API is supported in the following national cloud deployments.
+     * Retrieve the properties of a specific group setting object. The setting can be a tenant-level or group-specific setting. This API is available in the following national cloud deployments.
      * @param GroupSettingItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/groupsetting-get?view=graph-rest-1.0 Find more info here
@@ -70,7 +70,7 @@ class GroupSettingItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a groupSetting object for tenant-wide group settings or a specific group setting. This API is supported in the following national cloud deployments.
+     * Update the properties of a groupSetting object for tenant-wide group settings or a specific group setting. This API is available in the following national cloud deployments.
      * @param GroupSetting $body The request body
      * @param GroupSettingItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -90,7 +90,7 @@ class GroupSettingItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a tenant-level or group-specific groupSetting object. This API is supported in the following national cloud deployments.
+     * Delete a tenant-level or group-specific groupSetting object. This API is available in the following national cloud deployments.
      * @param GroupSettingItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -107,7 +107,7 @@ class GroupSettingItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties of a specific group setting object. The setting can be a tenant-level or group-specific setting. This API is supported in the following national cloud deployments.
+     * Retrieve the properties of a specific group setting object. The setting can be a tenant-level or group-specific setting. This API is available in the following national cloud deployments.
      * @param GroupSettingItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -128,7 +128,7 @@ class GroupSettingItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a groupSetting object for tenant-wide group settings or a specific group setting. This API is supported in the following national cloud deployments.
+     * Update the properties of a groupSetting object for tenant-wide group settings or a specific group setting. This API is available in the following national cloud deployments.
      * @param GroupSetting $body The request body
      * @param GroupSettingItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

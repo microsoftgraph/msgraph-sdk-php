@@ -32,7 +32,7 @@ class VerifyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Validates the ownership of the domain. This API is supported in the following national cloud deployments.
+     * Validates the ownership of the domain. This API is available in the following national cloud deployments.
      * @param VerifyRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/domain-verify?view=graph-rest-1.0 Find more info here
@@ -51,7 +51,7 @@ class VerifyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Validates the ownership of the domain. This API is supported in the following national cloud deployments.
+     * Validates the ownership of the domain. This API is available in the following national cloud deployments.
      * @param VerifyRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

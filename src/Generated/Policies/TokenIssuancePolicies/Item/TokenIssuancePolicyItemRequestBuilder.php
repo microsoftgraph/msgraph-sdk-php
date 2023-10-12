@@ -40,7 +40,7 @@ class TokenIssuancePolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a tokenIssuancePolicy object. This API is supported in the following national cloud deployments.
+     * Delete a tokenIssuancePolicy object. This API is available in the following national cloud deployments.
      * @param TokenIssuancePolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/tokenissuancepolicy-delete?view=graph-rest-1.0 Find more info here
@@ -77,7 +77,7 @@ class TokenIssuancePolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a tokenIssuancePolicy object. This API is supported in the following national cloud deployments.
+     * Update the properties of a tokenIssuancePolicy object. This API is available in the following national cloud deployments.
      * @param TokenIssuancePolicy $body The request body
      * @param TokenIssuancePolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -97,7 +97,7 @@ class TokenIssuancePolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a tokenIssuancePolicy object. This API is supported in the following national cloud deployments.
+     * Delete a tokenIssuancePolicy object. This API is available in the following national cloud deployments.
      * @param TokenIssuancePolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -135,7 +135,7 @@ class TokenIssuancePolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a tokenIssuancePolicy object. This API is supported in the following national cloud deployments.
+     * Update the properties of a tokenIssuancePolicy object. This API is available in the following national cloud deployments.
      * @param TokenIssuancePolicy $body The request body
      * @param TokenIssuancePolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

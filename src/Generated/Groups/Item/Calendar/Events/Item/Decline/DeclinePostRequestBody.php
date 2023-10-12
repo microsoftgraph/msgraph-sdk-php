@@ -36,7 +36,7 @@ class DeclinePostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
@@ -49,7 +49,7 @@ class DeclinePostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the backingStore property value. Stores model information.
+     * Gets the BackingStore property value. Stores model information.
      * @return BackingStore
     */
     public function getBackingStore(): BackingStore {
@@ -57,7 +57,7 @@ class DeclinePostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the comment property value. The Comment property
+     * Gets the Comment property value. The Comment property
      * @return string|null
     */
     public function getComment(): ?string {
@@ -75,14 +75,14 @@ class DeclinePostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'comment' => fn(ParseNode $n) => $o->setComment($n->getStringValue()),
-            'proposedNewTime' => fn(ParseNode $n) => $o->setProposedNewTime($n->getObjectValue([TimeSlot::class, 'createFromDiscriminatorValue'])),
-            'sendResponse' => fn(ParseNode $n) => $o->setSendResponse($n->getBooleanValue()),
+            'Comment' => fn(ParseNode $n) => $o->setComment($n->getStringValue()),
+            'ProposedNewTime' => fn(ParseNode $n) => $o->setProposedNewTime($n->getObjectValue([TimeSlot::class, 'createFromDiscriminatorValue'])),
+            'SendResponse' => fn(ParseNode $n) => $o->setSendResponse($n->getBooleanValue()),
         ];
     }
 
     /**
-     * Gets the proposedNewTime property value. The ProposedNewTime property
+     * Gets the ProposedNewTime property value. The ProposedNewTime property
      * @return TimeSlot|null
     */
     public function getProposedNewTime(): ?TimeSlot {
@@ -94,7 +94,7 @@ class DeclinePostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the sendResponse property value. The SendResponse property
+     * Gets the SendResponse property value. The SendResponse property
      * @return bool|null
     */
     public function getSendResponse(): ?bool {
@@ -110,47 +110,47 @@ class DeclinePostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('comment', $this->getComment());
-        $writer->writeObjectValue('proposedNewTime', $this->getProposedNewTime());
-        $writer->writeBooleanValue('sendResponse', $this->getSendResponse());
+        $writer->writeStringValue('Comment', $this->getComment());
+        $writer->writeObjectValue('ProposedNewTime', $this->getProposedNewTime());
+        $writer->writeBooleanValue('SendResponse', $this->getSendResponse());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param array<string,mixed> $value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
-     * Sets the backingStore property value. Stores model information.
-     * @param BackingStore $value Value to set for the backingStore property.
+     * Sets the BackingStore property value. Stores model information.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
     }
 
     /**
-     * Sets the comment property value. The Comment property
-     * @param string|null $value Value to set for the comment property.
+     * Sets the Comment property value. The Comment property
+     * @param string|null $value Value to set for the Comment property.
     */
     public function setComment(?string $value): void {
         $this->getBackingStore()->set('comment', $value);
     }
 
     /**
-     * Sets the proposedNewTime property value. The ProposedNewTime property
-     * @param TimeSlot|null $value Value to set for the proposedNewTime property.
+     * Sets the ProposedNewTime property value. The ProposedNewTime property
+     * @param TimeSlot|null $value Value to set for the ProposedNewTime property.
     */
     public function setProposedNewTime(?TimeSlot $value): void {
         $this->getBackingStore()->set('proposedNewTime', $value);
     }
 
     /**
-     * Sets the sendResponse property value. The SendResponse property
-     * @param bool|null $value Value to set for the sendResponse property.
+     * Sets the SendResponse property value. The SendResponse property
+     * @param bool|null $value Value to set for the SendResponse property.
     */
     public function setSendResponse(?bool $value): void {
         $this->getBackingStore()->set('sendResponse', $value);

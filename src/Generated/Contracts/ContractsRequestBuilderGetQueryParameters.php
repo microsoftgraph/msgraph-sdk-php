@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Contracts;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve a list of contract objects associated to a partner tenant. This API is supported in the following national cloud deployments.
+ * Retrieve a list of contract objects associated to a partner tenant. This API is available in the following national cloud deployments.
 */
 class ContractsRequestBuilderGetQueryParameters 
 {

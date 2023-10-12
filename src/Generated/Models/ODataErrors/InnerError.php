@@ -36,7 +36,7 @@ class InnerError implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
@@ -49,7 +49,7 @@ class InnerError implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the backingStore property value. Stores model information.
+     * Gets the BackingStore property value. Stores model information.
      * @return BackingStore
     */
     public function getBackingStore(): BackingStore {
@@ -69,7 +69,7 @@ class InnerError implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the date property value. Date when the error occured.
+     * Gets the Date property value. Date when the error occured.
      * @return DateTime|null
     */
     public function getDate(): ?DateTime {
@@ -88,7 +88,7 @@ class InnerError implements AdditionalDataHolder, BackedModel, Parsable
         $o = $this;
         return  [
             'client-request-id' => fn(ParseNode $n) => $o->setClientRequestId($n->getStringValue()),
-            'date' => fn(ParseNode $n) => $o->setDate($n->getDateTimeValue()),
+            'Date' => fn(ParseNode $n) => $o->setDate($n->getDateTimeValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'request-id' => fn(ParseNode $n) => $o->setRequestId($n->getStringValue()),
         ];
@@ -124,23 +124,23 @@ class InnerError implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('client-request-id', $this->getClientRequestId());
-        $writer->writeDateTimeValue('date', $this->getDate());
+        $writer->writeDateTimeValue('Date', $this->getDate());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('request-id', $this->getRequestId());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param array<string,mixed> $value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
-     * Sets the backingStore property value. Stores model information.
-     * @param BackingStore $value Value to set for the backingStore property.
+     * Sets the BackingStore property value. Stores model information.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -155,8 +155,8 @@ class InnerError implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the date property value. Date when the error occured.
-     * @param DateTime|null $value Value to set for the date property.
+     * Sets the Date property value. Date when the error occured.
+     * @param DateTime|null $value Value to set for the Date property.
     */
     public function setDate(?DateTime $value): void {
         $this->getBackingStore()->set('date', $value);

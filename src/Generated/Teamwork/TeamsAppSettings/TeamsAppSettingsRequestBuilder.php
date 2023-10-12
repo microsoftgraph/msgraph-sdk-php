@@ -50,7 +50,7 @@ class TeamsAppSettingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the tenant-wide teamsAppSettings for all Teams apps in the tenant. This API is supported in the following national cloud deployments.
+     * Get the tenant-wide teamsAppSettings for all Teams apps in the tenant. This API is available in the following national cloud deployments.
      * @param TeamsAppSettingsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/teamsappsettings-get?view=graph-rest-1.0 Find more info here
@@ -69,7 +69,7 @@ class TeamsAppSettingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the tenant-wide teamsAppSettings for all Teams apps in the tenant. This API is supported in the following national cloud deployments.
+     * Update the tenant-wide teamsAppSettings for all Teams apps in the tenant. This API is available in the following national cloud deployments.
      * @param TeamsAppSettings $body The request body
      * @param TeamsAppSettingsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -106,7 +106,7 @@ class TeamsAppSettingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the tenant-wide teamsAppSettings for all Teams apps in the tenant. This API is supported in the following national cloud deployments.
+     * Get the tenant-wide teamsAppSettings for all Teams apps in the tenant. This API is available in the following national cloud deployments.
      * @param TeamsAppSettingsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -127,7 +127,7 @@ class TeamsAppSettingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the tenant-wide teamsAppSettings for all Teams apps in the tenant. This API is supported in the following national cloud deployments.
+     * Update the tenant-wide teamsAppSettings for all Teams apps in the tenant. This API is available in the following national cloud deployments.
      * @param TeamsAppSettings $body The request body
      * @param TeamsAppSettingsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

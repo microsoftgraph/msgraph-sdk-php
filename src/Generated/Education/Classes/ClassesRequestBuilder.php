@@ -61,7 +61,7 @@ class ClassesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the educationClass objects and their properties. This API is supported in the following national cloud deployments.
+     * Get a list of the educationClass objects and their properties. This API is available in the following national cloud deployments.
      * @param ClassesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/educationclass-list?view=graph-rest-1.0 Find more info here
@@ -80,7 +80,7 @@ class ClassesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new educationClass object. This API is supported in the following national cloud deployments.
+     * Create a new educationClass object. This API is available in the following national cloud deployments.
      * @param EducationClass $body The request body
      * @param ClassesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -100,7 +100,7 @@ class ClassesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the educationClass objects and their properties. This API is supported in the following national cloud deployments.
+     * Get a list of the educationClass objects and their properties. This API is available in the following national cloud deployments.
      * @param ClassesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -121,7 +121,7 @@ class ClassesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new educationClass object. This API is supported in the following national cloud deployments.
+     * Create a new educationClass object. This API is available in the following national cloud deployments.
      * @param EducationClass $body The request body
      * @param ClassesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

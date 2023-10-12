@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\FollowedSites;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List the sites that have been followed by the signed in user. This API is supported in the following national cloud deployments.
+ * List the sites that have been followed by the signed in user. This API is available in the following national cloud deployments.
 */
 class FollowedSitesRequestBuilderGetQueryParameters 
 {

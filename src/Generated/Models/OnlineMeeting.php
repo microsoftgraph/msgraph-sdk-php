@@ -114,7 +114,7 @@ class OnlineMeeting extends Entity implements Parsable
     }
 
     /**
-     * Gets the attendeeReport property value. The content stream of the attendee report of a Microsoft Teams live event. Read-only.
+     * Gets the attendeeReport property value. The attendeeReport property
      * @return StreamInterface|null
     */
     public function getAttendeeReport(): ?StreamInterface {
@@ -138,7 +138,7 @@ class OnlineMeeting extends Entity implements Parsable
     }
 
     /**
-     * Gets the broadcastSettings property value. Settings related to a live event.
+     * Gets the broadcastSettings property value. The broadcastSettings property
      * @return BroadcastMeetingSettings|null
     */
     public function getBroadcastSettings(): ?BroadcastMeetingSettings {
@@ -236,7 +236,7 @@ class OnlineMeeting extends Entity implements Parsable
     }
 
     /**
-     * Gets the isBroadcast property value. Indicates if this is a Teams live event.
+     * Gets the isBroadcast property value. The isBroadcast property
      * @return bool|null
     */
     public function getIsBroadcast(): ?bool {
@@ -368,7 +368,7 @@ class OnlineMeeting extends Entity implements Parsable
     }
 
     /**
-     * Gets the transcripts property value. The transcripts property
+     * Gets the transcripts property value. The transcripts of an online meeting. Read-only.
      * @return array<CallTranscript>|null
     */
     public function getTranscripts(): ?array {
@@ -498,7 +498,7 @@ class OnlineMeeting extends Entity implements Parsable
     }
 
     /**
-     * Sets the attendeeReport property value. The content stream of the attendee report of a Microsoft Teams live event. Read-only.
+     * Sets the attendeeReport property value. The attendeeReport property
      * @param StreamInterface|null $value Value to set for the attendeeReport property.
     */
     public function setAttendeeReport(?StreamInterface $value): void {
@@ -514,7 +514,7 @@ class OnlineMeeting extends Entity implements Parsable
     }
 
     /**
-     * Sets the broadcastSettings property value. Settings related to a live event.
+     * Sets the broadcastSettings property value. The broadcastSettings property
      * @param BroadcastMeetingSettings|null $value Value to set for the broadcastSettings property.
     */
     public function setBroadcastSettings(?BroadcastMeetingSettings $value): void {
@@ -554,7 +554,7 @@ class OnlineMeeting extends Entity implements Parsable
     }
 
     /**
-     * Sets the isBroadcast property value. Indicates if this is a Teams live event.
+     * Sets the isBroadcast property value. The isBroadcast property
      * @param bool|null $value Value to set for the isBroadcast property.
     */
     public function setIsBroadcast(?bool $value): void {
@@ -642,7 +642,7 @@ class OnlineMeeting extends Entity implements Parsable
     }
 
     /**
-     * Sets the transcripts property value. The transcripts property
+     * Sets the transcripts property value. The transcripts of an online meeting. Read-only.
      * @param array<CallTranscript>|null $value Value to set for the transcripts property.
     */
     public function setTranscripts(?array $value): void {

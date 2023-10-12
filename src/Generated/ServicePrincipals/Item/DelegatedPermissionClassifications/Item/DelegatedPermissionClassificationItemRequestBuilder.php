@@ -32,7 +32,7 @@ class DelegatedPermissionClassificationItemRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * Deletes a delegatedPermissionClassification which had previously been set for a delegated permission. This API is supported in the following national cloud deployments.
+     * Deletes a delegatedPermissionClassification which had previously been set for a delegated permission. This API is available in the following national cloud deployments.
      * @param DelegatedPermissionClassificationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/serviceprincipal-delete-delegatedpermissionclassifications?view=graph-rest-1.0 Find more info here
@@ -88,7 +88,7 @@ class DelegatedPermissionClassificationItemRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * Deletes a delegatedPermissionClassification which had previously been set for a delegated permission. This API is supported in the following national cloud deployments.
+     * Deletes a delegatedPermissionClassification which had previously been set for a delegated permission. This API is available in the following national cloud deployments.
      * @param DelegatedPermissionClassificationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

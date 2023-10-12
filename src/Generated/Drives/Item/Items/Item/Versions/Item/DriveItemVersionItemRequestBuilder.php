@@ -66,7 +66,7 @@ class DriveItemVersionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the metadata for a specific version of a DriveItem. This API is supported in the following national cloud deployments.
+     * Retrieve the metadata for a specific version of a DriveItem. This API is available in the following national cloud deployments.
      * @param DriveItemVersionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/driveitemversion-get?view=graph-rest-1.0 Find more info here
@@ -121,7 +121,7 @@ class DriveItemVersionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the metadata for a specific version of a DriveItem. This API is supported in the following national cloud deployments.
+     * Retrieve the metadata for a specific version of a DriveItem. This API is available in the following national cloud deployments.
      * @param DriveItemVersionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

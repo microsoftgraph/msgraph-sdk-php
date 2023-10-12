@@ -53,7 +53,7 @@ class SwapShiftsChangeRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of swapShiftsChangeRequest objects in the team. This API is supported in the following national cloud deployments.
+     * Retrieve a list of swapShiftsChangeRequest objects in the team. This API is available in the following national cloud deployments.
      * @param SwapShiftsChangeRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/swapshiftschangerequest-list?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class SwapShiftsChangeRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create an instance of a swapShiftsChangeRequest object. This API is supported in the following national cloud deployments.
+     * Create an instance of a swapShiftsChangeRequest object. This API is available in the following national cloud deployments.
      * @param SwapShiftsChangeRequest $body The request body
      * @param SwapShiftsChangeRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class SwapShiftsChangeRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of swapShiftsChangeRequest objects in the team. This API is supported in the following national cloud deployments.
+     * Retrieve a list of swapShiftsChangeRequest objects in the team. This API is available in the following national cloud deployments.
      * @param SwapShiftsChangeRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class SwapShiftsChangeRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create an instance of a swapShiftsChangeRequest object. This API is supported in the following national cloud deployments.
+     * Create an instance of a swapShiftsChangeRequest object. This API is available in the following national cloud deployments.
      * @param SwapShiftsChangeRequest $body The request body
      * @param SwapShiftsChangeRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -50,7 +50,7 @@ class PrintUsageByUserItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a user's usage summary for a particular time period. For descriptions of each endpoint, see printUsageByUser. This API is supported in the following national cloud deployments.
+     * Retrieve a user's usage summary for a particular time period. For descriptions of each endpoint, see printUsageByUser. This API is available in the following national cloud deployments.
      * @param PrintUsageByUserItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/printusagebyuser-get?view=graph-rest-1.0 Find more info here
@@ -105,7 +105,7 @@ class PrintUsageByUserItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a user's usage summary for a particular time period. For descriptions of each endpoint, see printUsageByUser. This API is supported in the following national cloud deployments.
+     * Retrieve a user's usage summary for a particular time period. For descriptions of each endpoint, see printUsageByUser. This API is available in the following national cloud deployments.
      * @param PrintUsageByUserItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

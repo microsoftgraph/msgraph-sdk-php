@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Identity\B2xUserFlows\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties and relationships of a b2xIdentityUserFlow object. This API is supported in the following national cloud deployments.
+ * Retrieve the properties and relationships of a b2xIdentityUserFlow object. This API is available in the following national cloud deployments.
 */
 class B2xIdentityUserFlowItemRequestBuilderGetQueryParameters 
 {

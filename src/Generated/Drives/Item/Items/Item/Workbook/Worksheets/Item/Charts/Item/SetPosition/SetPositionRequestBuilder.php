@@ -31,7 +31,7 @@ class SetPositionRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Positions the chart relative to cells on the worksheet. This API is supported in the following national cloud deployments.
+     * Positions the chart relative to cells on the worksheet. This API is available in the following national cloud deployments.
      * @param SetPositionPostRequestBody $body The request body
      * @param SetPositionRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -51,7 +51,7 @@ class SetPositionRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Positions the chart relative to cells on the worksheet. This API is supported in the following national cloud deployments.
+     * Positions the chart relative to cells on the worksheet. This API is available in the following national cloud deployments.
      * @param SetPositionPostRequestBody $body The request body
      * @param SetPositionRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

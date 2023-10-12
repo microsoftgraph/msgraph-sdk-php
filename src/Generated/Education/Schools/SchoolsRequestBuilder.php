@@ -61,7 +61,7 @@ class SchoolsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the educationSchool objects and their properties. This API is supported in the following national cloud deployments.
+     * Get a list of the educationSchool objects and their properties. This API is available in the following national cloud deployments.
      * @param SchoolsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/educationschool-list?view=graph-rest-1.0 Find more info here
@@ -80,7 +80,7 @@ class SchoolsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new educationSchool object. This API is supported in the following national cloud deployments.
+     * Create a new educationSchool object. This API is available in the following national cloud deployments.
      * @param EducationSchool $body The request body
      * @param SchoolsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -100,7 +100,7 @@ class SchoolsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the educationSchool objects and their properties. This API is supported in the following national cloud deployments.
+     * Get a list of the educationSchool objects and their properties. This API is available in the following national cloud deployments.
      * @param SchoolsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -121,7 +121,7 @@ class SchoolsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new educationSchool object. This API is supported in the following national cloud deployments.
+     * Create a new educationSchool object. This API is available in the following national cloud deployments.
      * @param EducationSchool $body The request body
      * @param SchoolsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

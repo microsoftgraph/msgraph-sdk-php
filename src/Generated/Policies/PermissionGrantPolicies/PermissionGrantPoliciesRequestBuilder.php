@@ -53,7 +53,7 @@ class PermissionGrantPoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the list of permissionGrantPolicy objects. This API is supported in the following national cloud deployments.
+     * Retrieve the list of permissionGrantPolicy objects. This API is available in the following national cloud deployments.
      * @param PermissionGrantPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/permissiongrantpolicy-list?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class PermissionGrantPoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Creates a permissionGrantPolicy. A permission grant policy is used to describe the conditions under which permissions can be granted (for example, during application consent). After creating the permission grant policy, you can add include condition sets to add matching rules, and add exclude condition sets to add exclusion rules. This API is supported in the following national cloud deployments.
+     * Creates a permissionGrantPolicy. A permission grant policy is used to describe the conditions under which permissions can be granted (for example, during application consent). After creating the permission grant policy, you can add include condition sets to add matching rules, and add exclude condition sets to add exclusion rules. This API is available in the following national cloud deployments.
      * @param PermissionGrantPolicy $body The request body
      * @param PermissionGrantPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class PermissionGrantPoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the list of permissionGrantPolicy objects. This API is supported in the following national cloud deployments.
+     * Retrieve the list of permissionGrantPolicy objects. This API is available in the following national cloud deployments.
      * @param PermissionGrantPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class PermissionGrantPoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Creates a permissionGrantPolicy. A permission grant policy is used to describe the conditions under which permissions can be granted (for example, during application consent). After creating the permission grant policy, you can add include condition sets to add matching rules, and add exclude condition sets to add exclusion rules. This API is supported in the following national cloud deployments.
+     * Creates a permissionGrantPolicy. A permission grant policy is used to describe the conditions under which permissions can be granted (for example, during application consent). After creating the permission grant policy, you can add include condition sets to add matching rules, and add exclude condition sets to add exclusion rules. This API is available in the following national cloud deployments.
      * @param PermissionGrantPolicy $body The request body
      * @param PermissionGrantPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

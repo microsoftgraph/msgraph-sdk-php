@@ -31,7 +31,7 @@ class AssociateWithHubSitesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Associate a published content type][contentType] present in a content type hub with a list of hub sites. This API is supported in the following [national cloud deployments.
+     * Associate a published content type][contentType] present in a content type hub with a list of hub sites. This API is available in the following [national cloud deployments.
      * @param AssociateWithHubSitesPostRequestBody $body The request body
      * @param AssociateWithHubSitesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -51,7 +51,7 @@ class AssociateWithHubSitesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Associate a published content type][contentType] present in a content type hub with a list of hub sites. This API is supported in the following [national cloud deployments.
+     * Associate a published content type][contentType] present in a content type hub with a list of hub sites. This API is available in the following [national cloud deployments.
      * @param AssociateWithHubSitesPostRequestBody $body The request body
      * @param AssociateWithHubSitesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

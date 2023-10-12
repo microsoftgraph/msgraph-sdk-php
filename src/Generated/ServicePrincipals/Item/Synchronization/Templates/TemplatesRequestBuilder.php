@@ -53,7 +53,7 @@ class TemplatesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List the synchronization templates associated with a given application or service principal. This API is supported in the following national cloud deployments.
+     * List the synchronization templates associated with a given application or service principal. This API is available in the following national cloud deployments.
      * @param TemplatesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/synchronization-synchronization-list-templates?view=graph-rest-1.0 Find more info here
@@ -91,7 +91,7 @@ class TemplatesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List the synchronization templates associated with a given application or service principal. This API is supported in the following national cloud deployments.
+     * List the synchronization templates associated with a given application or service principal. This API is available in the following national cloud deployments.
      * @param TemplatesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -60,7 +60,7 @@ class ClassesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the educationClass resources owned by an educationSchool. This API is supported in the following national cloud deployments.
+     * Get the educationClass resources owned by an educationSchool. This API is available in the following national cloud deployments.
      * @param ClassesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/educationschool-list-classes?view=graph-rest-1.0 Find more info here
@@ -79,7 +79,7 @@ class ClassesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the educationClass resources owned by an educationSchool. This API is supported in the following national cloud deployments.
+     * Get the educationClass resources owned by an educationSchool. This API is available in the following national cloud deployments.
      * @param ClassesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

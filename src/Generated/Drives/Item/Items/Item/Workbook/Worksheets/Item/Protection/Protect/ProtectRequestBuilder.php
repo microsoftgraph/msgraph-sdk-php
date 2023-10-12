@@ -31,7 +31,7 @@ class ProtectRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Protect a worksheet. It throws if the worksheet has been protected. This API is supported in the following national cloud deployments.
+     * Protect a worksheet. It throws if the worksheet has been protected. This API is available in the following national cloud deployments.
      * @param ProtectPostRequestBody $body The request body
      * @param ProtectRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -51,7 +51,7 @@ class ProtectRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Protect a worksheet. It throws if the worksheet has been protected. This API is supported in the following national cloud deployments.
+     * Protect a worksheet. It throws if the worksheet has been protected. This API is available in the following national cloud deployments.
      * @param ProtectPostRequestBody $body The request body
      * @param ProtectRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -53,7 +53,7 @@ class DelegatedAdminRelationshipsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the delegatedAdminRelationship objects and their properties. This API is supported in the following national cloud deployments.
+     * Get a list of the delegatedAdminRelationship objects and their properties. This API is available in the following national cloud deployments.
      * @param DelegatedAdminRelationshipsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/tenantrelationship-list-delegatedadminrelationships?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class DelegatedAdminRelationshipsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new delegatedAdminRelationship object. This API is supported in the following national cloud deployments.
+     * Create a new delegatedAdminRelationship object. This API is available in the following national cloud deployments.
      * @param DelegatedAdminRelationship $body The request body
      * @param DelegatedAdminRelationshipsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class DelegatedAdminRelationshipsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the delegatedAdminRelationship objects and their properties. This API is supported in the following national cloud deployments.
+     * Get a list of the delegatedAdminRelationship objects and their properties. This API is available in the following national cloud deployments.
      * @param DelegatedAdminRelationshipsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class DelegatedAdminRelationshipsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new delegatedAdminRelationship object. This API is supported in the following national cloud deployments.
+     * Create a new delegatedAdminRelationship object. This API is available in the following national cloud deployments.
      * @param DelegatedAdminRelationship $body The request body
      * @param DelegatedAdminRelationshipsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

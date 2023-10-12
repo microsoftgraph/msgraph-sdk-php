@@ -31,7 +31,7 @@ class GetPresencesByUserIdRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the presence information for multiple users. This API is supported in the following national cloud deployments.
+     * Get the presence information for multiple users. This API is available in the following national cloud deployments.
      * @param GetPresencesByUserIdPostRequestBody $body The request body
      * @param GetPresencesByUserIdRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -51,7 +51,7 @@ class GetPresencesByUserIdRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the presence information for multiple users. This API is supported in the following national cloud deployments.
+     * Get the presence information for multiple users. This API is available in the following national cloud deployments.
      * @param GetPresencesByUserIdPostRequestBody $body The request body
      * @param GetPresencesByUserIdRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

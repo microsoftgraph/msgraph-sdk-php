@@ -184,10 +184,10 @@ class MobileAppItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a windowsUniversalAppX.
+     * Deletes a macOSOfficeSuiteApp.
      * @param MobileAppItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://learn.microsoft.com/graph/api/intune-apps-windowsuniversalappx-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-apps-macosofficesuiteapp-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?MobileAppItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -203,10 +203,10 @@ class MobileAppItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the macOSLobApp object.
+     * Read properties and relationships of the macOSOfficeSuiteApp object.
      * @param MobileAppItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://learn.microsoft.com/graph/api/intune-apps-macoslobapp-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-apps-macosofficesuiteapp-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?MobileAppItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -222,11 +222,11 @@ class MobileAppItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a macOSMicrosoftEdgeApp object.
+     * Update the properties of a windowsAppX object.
      * @param MobileApp $body The request body
      * @param MobileAppItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://learn.microsoft.com/graph/api/intune-apps-macosmicrosoftedgeapp-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-apps-windowsappx-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(MobileApp $body, ?MobileAppItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -242,7 +242,7 @@ class MobileAppItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a windowsUniversalAppX.
+     * Deletes a macOSOfficeSuiteApp.
      * @param MobileAppItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -259,7 +259,7 @@ class MobileAppItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the macOSLobApp object.
+     * Read properties and relationships of the macOSOfficeSuiteApp object.
      * @param MobileAppItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -280,7 +280,7 @@ class MobileAppItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a macOSMicrosoftEdgeApp object.
+     * Update the properties of a windowsAppX object.
      * @param MobileApp $body The request body
      * @param MobileAppItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

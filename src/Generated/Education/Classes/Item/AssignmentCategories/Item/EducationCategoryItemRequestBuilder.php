@@ -32,7 +32,7 @@ class EducationCategoryItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an existing category. Only teachers can perform this operation. This API is supported in the following national cloud deployments.
+     * Delete an existing category. Only teachers can perform this operation. This API is available in the following national cloud deployments.
      * @param EducationCategoryItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/educationcategory-delete?view=graph-rest-1.0 Find more info here
@@ -51,7 +51,7 @@ class EducationCategoryItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve an educationCategory object. Only teachers, students, and applications with application permissions can perform this operation. This API is supported in the following national cloud deployments.
+     * Retrieve an educationCategory object. Only teachers, students, and applications with application permissions can perform this operation. This API is available in the following national cloud deployments.
      * @param EducationCategoryItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/educationcategory-get?view=graph-rest-1.0 Find more info here
@@ -89,7 +89,7 @@ class EducationCategoryItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an existing category. Only teachers can perform this operation. This API is supported in the following national cloud deployments.
+     * Delete an existing category. Only teachers can perform this operation. This API is available in the following national cloud deployments.
      * @param EducationCategoryItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -106,7 +106,7 @@ class EducationCategoryItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve an educationCategory object. Only teachers, students, and applications with application permissions can perform this operation. This API is supported in the following national cloud deployments.
+     * Retrieve an educationCategory object. Only teachers, students, and applications with application permissions can perform this operation. This API is available in the following national cloud deployments.
      * @param EducationCategoryItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

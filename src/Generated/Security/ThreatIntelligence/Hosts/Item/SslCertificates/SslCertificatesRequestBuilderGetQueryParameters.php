@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\ThreatIntelligence\Hosts\Item\SslCe
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a list of hostSslCertificate objects from the host navigation property.
+ * Get a list of hostSslCertificate objects from the host navigation property. This API is available in the following national cloud deployments.
 */
 class SslCertificatesRequestBuilderGetQueryParameters 
 {

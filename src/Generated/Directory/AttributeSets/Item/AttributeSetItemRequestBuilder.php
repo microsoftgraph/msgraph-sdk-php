@@ -50,7 +50,7 @@ class AttributeSetItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of an attributeSet object. This API is supported in the following national cloud deployments.
+     * Read the properties and relationships of an attributeSet object. This API is available in the following national cloud deployments.
      * @param AttributeSetItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/attributeset-get?view=graph-rest-1.0 Find more info here
@@ -69,7 +69,7 @@ class AttributeSetItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an attributeSet object. This API is supported in the following national cloud deployments.
+     * Update the properties of an attributeSet object. This API is available in the following national cloud deployments.
      * @param AttributeSet $body The request body
      * @param AttributeSetItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -106,7 +106,7 @@ class AttributeSetItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of an attributeSet object. This API is supported in the following national cloud deployments.
+     * Read the properties and relationships of an attributeSet object. This API is available in the following national cloud deployments.
      * @param AttributeSetItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -127,7 +127,7 @@ class AttributeSetItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an attributeSet object. This API is supported in the following national cloud deployments.
+     * Update the properties of an attributeSet object. This API is available in the following national cloud deployments.
      * @param AttributeSet $body The request body
      * @param AttributeSetItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -32,7 +32,7 @@ class PublishRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Publish the specified browserSiteList for devices to download. This API is supported in the following national cloud deployments.
+     * Publish the specified browserSiteList for devices to download. This API is available in the following national cloud deployments.
      * @param PublishPostRequestBody $body The request body
      * @param PublishRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -52,7 +52,7 @@ class PublishRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Publish the specified browserSiteList for devices to download. This API is supported in the following national cloud deployments.
+     * Publish the specified browserSiteList for devices to download. This API is available in the following national cloud deployments.
      * @param PublishPostRequestBody $body The request body
      * @param PublishRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

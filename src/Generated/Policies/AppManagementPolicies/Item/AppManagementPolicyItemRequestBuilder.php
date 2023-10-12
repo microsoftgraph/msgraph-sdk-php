@@ -40,7 +40,7 @@ class AppManagementPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an appManagementPolicy object. This API is supported in the following national cloud deployments.
+     * Delete an appManagementPolicy object. This API is available in the following national cloud deployments.
      * @param AppManagementPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/appmanagementpolicy-delete?view=graph-rest-1.0 Find more info here
@@ -59,7 +59,7 @@ class AppManagementPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties of an appManagementPolicy object. This API is supported in the following national cloud deployments.
+     * Read the properties of an appManagementPolicy object. This API is available in the following national cloud deployments.
      * @param AppManagementPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/appmanagementpolicy-get?view=graph-rest-1.0 Find more info here
@@ -78,7 +78,7 @@ class AppManagementPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update an appManagementPolicy object. This API is supported in the following national cloud deployments.
+     * Update an appManagementPolicy object. This API is available in the following national cloud deployments.
      * @param AppManagementPolicy $body The request body
      * @param AppManagementPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -98,7 +98,7 @@ class AppManagementPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an appManagementPolicy object. This API is supported in the following national cloud deployments.
+     * Delete an appManagementPolicy object. This API is available in the following national cloud deployments.
      * @param AppManagementPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -115,7 +115,7 @@ class AppManagementPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties of an appManagementPolicy object. This API is supported in the following national cloud deployments.
+     * Read the properties of an appManagementPolicy object. This API is available in the following national cloud deployments.
      * @param AppManagementPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -136,7 +136,7 @@ class AppManagementPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update an appManagementPolicy object. This API is supported in the following national cloud deployments.
+     * Update an appManagementPolicy object. This API is available in the following national cloud deployments.
      * @param AppManagementPolicy $body The request body
      * @param AppManagementPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

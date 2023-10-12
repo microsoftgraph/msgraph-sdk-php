@@ -58,7 +58,7 @@ class RiskyServicePrincipalItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a riskyServicePrincipal object. This API is supported in the following national cloud deployments.
+     * Read the properties and relationships of a riskyServicePrincipal object. This API is available in the following national cloud deployments.
      * @param RiskyServicePrincipalItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/riskyserviceprincipal-get?view=graph-rest-1.0 Find more info here
@@ -113,7 +113,7 @@ class RiskyServicePrincipalItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a riskyServicePrincipal object. This API is supported in the following national cloud deployments.
+     * Read the properties and relationships of a riskyServicePrincipal object. This API is available in the following national cloud deployments.
      * @param RiskyServicePrincipalItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

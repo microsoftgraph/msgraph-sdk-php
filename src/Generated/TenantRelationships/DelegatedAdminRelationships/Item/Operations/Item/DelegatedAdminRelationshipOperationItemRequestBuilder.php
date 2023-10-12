@@ -50,7 +50,7 @@ class DelegatedAdminRelationshipOperationItemRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Read the properties of a delegatedAdminRelationshipOperation object. This API is supported in the following national cloud deployments.
+     * Read the properties of a delegatedAdminRelationshipOperation object. This API is available in the following national cloud deployments.
      * @param DelegatedAdminRelationshipOperationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/delegatedadminrelationshipoperation-get?view=graph-rest-1.0 Find more info here
@@ -105,7 +105,7 @@ class DelegatedAdminRelationshipOperationItemRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Read the properties of a delegatedAdminRelationshipOperation object. This API is supported in the following national cloud deployments.
+     * Read the properties of a delegatedAdminRelationshipOperation object. This API is available in the following national cloud deployments.
      * @param DelegatedAdminRelationshipOperationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

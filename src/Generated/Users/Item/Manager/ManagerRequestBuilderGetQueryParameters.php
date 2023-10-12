@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Manager;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Returns the user or organizational contact assigned as the user's manager. Optionally, you can expand the manager's chain up to the root node. This API is supported in the following national cloud deployments.
+ * Returns the user or organizational contact assigned as the user's manager. Optionally, you can expand the manager's chain up to the root node. This API is available in the following national cloud deployments.
 */
 class ManagerRequestBuilderGetQueryParameters 
 {

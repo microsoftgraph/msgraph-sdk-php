@@ -53,7 +53,7 @@ class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the authenticationStrengthPolicy objects and their properties. This API returns both built-in and custom policies. This API is supported in the following national cloud deployments.
+     * Get a list of the authenticationStrengthPolicy objects and their properties. This API returns both built-in and custom policies. This API is available in the following national cloud deployments.
      * @param AuthenticationStrengthPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/authenticationstrengthroot-list-policies?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new custom authenticationStrengthPolicy object. This API is supported in the following national cloud deployments.
+     * Create a new custom authenticationStrengthPolicy object. This API is available in the following national cloud deployments.
      * @param AuthenticationStrengthPolicy $body The request body
      * @param AuthenticationStrengthPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the authenticationStrengthPolicy objects and their properties. This API returns both built-in and custom policies. This API is supported in the following national cloud deployments.
+     * Get a list of the authenticationStrengthPolicy objects and their properties. This API returns both built-in and custom policies. This API is available in the following national cloud deployments.
      * @param AuthenticationStrengthPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new custom authenticationStrengthPolicy object. This API is supported in the following national cloud deployments.
+     * Create a new custom authenticationStrengthPolicy object. This API is available in the following national cloud deployments.
      * @param AuthenticationStrengthPolicy $body The request body
      * @param AuthenticationStrengthPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

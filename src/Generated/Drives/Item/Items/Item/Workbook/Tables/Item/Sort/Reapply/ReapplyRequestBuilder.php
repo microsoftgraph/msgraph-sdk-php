@@ -31,7 +31,7 @@ class ReapplyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Reapplies the current sorting parameters to the table. This API is supported in the following national cloud deployments.
+     * Reapplies the current sorting parameters to the table. This API is available in the following national cloud deployments.
      * @param ReapplyRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/tablesort-reapply?view=graph-rest-1.0 Find more info here
@@ -50,7 +50,7 @@ class ReapplyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Reapplies the current sorting parameters to the table. This API is supported in the following national cloud deployments.
+     * Reapplies the current sorting parameters to the table. This API is available in the following national cloud deployments.
      * @param ReapplyRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

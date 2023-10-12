@@ -32,7 +32,7 @@ class AddRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Adds a new column to the table. This API is supported in the following national cloud deployments.
+     * Adds a new column to the table. This API is available in the following national cloud deployments.
      * @param AddPostRequestBody $body The request body
      * @param AddRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -52,7 +52,7 @@ class AddRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Adds a new column to the table. This API is supported in the following national cloud deployments.
+     * Adds a new column to the table. This API is available in the following national cloud deployments.
      * @param AddPostRequestBody $body The request body
      * @param AddRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

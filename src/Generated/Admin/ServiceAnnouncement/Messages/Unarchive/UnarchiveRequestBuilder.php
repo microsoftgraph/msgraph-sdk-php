@@ -31,7 +31,7 @@ class UnarchiveRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Unarchive a list of serviceUpdateMessages for the signed in user. This API is supported in the following national cloud deployments.
+     * Unarchive a list of serviceUpdateMessages for the signed in user. This API is available in the following national cloud deployments.
      * @param UnarchivePostRequestBody $body The request body
      * @param UnarchiveRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -51,7 +51,7 @@ class UnarchiveRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Unarchive a list of serviceUpdateMessages for the signed in user. This API is supported in the following national cloud deployments.
+     * Unarchive a list of serviceUpdateMessages for the signed in user. This API is available in the following national cloud deployments.
      * @param UnarchivePostRequestBody $body The request body
      * @param UnarchiveRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

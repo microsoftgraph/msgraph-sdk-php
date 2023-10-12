@@ -104,7 +104,7 @@ class ChannelItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete the channel. This API is supported in the following national cloud deployments.
+     * Delete the channel. This API is available in the following national cloud deployments.
      * @param ChannelItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/channel-delete?view=graph-rest-1.0 Find more info here
@@ -123,7 +123,7 @@ class ChannelItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a channel. This method supports federation. Only a user who is a member of the shared channel can retrieve channel information. This API is supported in the following national cloud deployments.
+     * Retrieve the properties and relationships of a channel. This method supports federation. Only a user who is a member of the shared channel can retrieve channel information. This API is available in the following national cloud deployments.
      * @param ChannelItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/channel-get?view=graph-rest-1.0 Find more info here
@@ -142,7 +142,7 @@ class ChannelItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of the specified channel. This API is supported in the following national cloud deployments.
+     * Update the properties of the specified channel. This API is available in the following national cloud deployments.
      * @param Channel $body The request body
      * @param ChannelItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -162,7 +162,7 @@ class ChannelItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete the channel. This API is supported in the following national cloud deployments.
+     * Delete the channel. This API is available in the following national cloud deployments.
      * @param ChannelItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -179,7 +179,7 @@ class ChannelItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a channel. This method supports federation. Only a user who is a member of the shared channel can retrieve channel information. This API is supported in the following national cloud deployments.
+     * Retrieve the properties and relationships of a channel. This method supports federation. Only a user who is a member of the shared channel can retrieve channel information. This API is available in the following national cloud deployments.
      * @param ChannelItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -200,7 +200,7 @@ class ChannelItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of the specified channel. This API is supported in the following national cloud deployments.
+     * Update the properties of the specified channel. This API is available in the following national cloud deployments.
      * @param Channel $body The request body
      * @param ChannelItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

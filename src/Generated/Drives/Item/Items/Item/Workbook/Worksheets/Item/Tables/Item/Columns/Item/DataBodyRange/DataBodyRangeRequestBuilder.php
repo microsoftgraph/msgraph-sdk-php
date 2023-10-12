@@ -32,7 +32,7 @@ class DataBodyRangeRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Gets the range object associated with the data body of the column. This API is supported in the following national cloud deployments.
+     * Gets the range object associated with the data body of the column. This API is available in the following national cloud deployments.
      * @param DataBodyRangeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/tablecolumn-databodyrange?view=graph-rest-1.0 Find more info here
@@ -51,7 +51,7 @@ class DataBodyRangeRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Gets the range object associated with the data body of the column. This API is supported in the following national cloud deployments.
+     * Gets the range object associated with the data body of the column. This API is available in the following national cloud deployments.
      * @param DataBodyRangeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

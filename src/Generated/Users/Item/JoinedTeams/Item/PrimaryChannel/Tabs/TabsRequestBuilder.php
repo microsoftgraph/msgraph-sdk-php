@@ -53,7 +53,7 @@ class TabsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the list of tabs in the specified channel within a team.  This API is supported in the following national cloud deployments.
+     * Retrieve the list of tabs in the specified channel within a team.  This API is available in the following national cloud deployments.
      * @param TabsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/channel-list-tabs?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class TabsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Adds (pins) a tab to the specified channel within a team. The corresponding app must already be installed in the team. This API is supported in the following national cloud deployments.
+     * Adds (pins) a tab to the specified channel within a team. The corresponding app must already be installed in the team. This API is available in the following national cloud deployments.
      * @param TeamsTab $body The request body
      * @param TabsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class TabsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the list of tabs in the specified channel within a team.  This API is supported in the following national cloud deployments.
+     * Retrieve the list of tabs in the specified channel within a team.  This API is available in the following national cloud deployments.
      * @param TabsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class TabsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Adds (pins) a tab to the specified channel within a team. The corresponding app must already be installed in the team. This API is supported in the following national cloud deployments.
+     * Adds (pins) a tab to the specified channel within a team. The corresponding app must already be installed in the team. This API is available in the following national cloud deployments.
      * @param TeamsTab $body The request body
      * @param TabsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

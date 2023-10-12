@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Insights\Used;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Calculate and list the documents that a user has viewed or modified.  For the signed-in user:- This method includes documents that the user has modified; see example 1. - Using an $orderby query parameter on the lastAccessedDateTime property returns the most recently viewed documents that the user might or might not not have modified; see example 2. For other users, this method includes only documents that the user has modified. This API is supported in the following national cloud deployments.
+ * Calculate and list the documents that a user has viewed or modified.  For the signed-in user:- This method includes documents that the user has modified; see example 1. - Using an $orderby query parameter on the lastAccessedDateTime property returns the most recently viewed documents that the user might or might not not have modified; see example 2. For other users, this method includes only documents that the user has modified. This API is available in the following national cloud deployments.
 */
 class UsedRequestBuilderGetQueryParameters 
 {

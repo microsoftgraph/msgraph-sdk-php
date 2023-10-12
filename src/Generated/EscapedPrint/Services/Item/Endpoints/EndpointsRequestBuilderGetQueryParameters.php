@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\EscapedPrint\Services\Item\Endpoints;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve a list of endpoints exposed by a print service. This API is supported in the following national cloud deployments.
+ * Retrieve a list of endpoints exposed by a print service. This API is available in the following national cloud deployments.
 */
 class EndpointsRequestBuilderGetQueryParameters 
 {

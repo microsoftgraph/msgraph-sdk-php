@@ -50,7 +50,7 @@ class SettingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the tenant-level settings for SharePoint and OneDrive. This API is supported in the following national cloud deployments.
+     * Get the tenant-level settings for SharePoint and OneDrive. This API is available in the following national cloud deployments.
      * @param SettingsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/sharepointsettings-get?view=graph-rest-1.0 Find more info here
@@ -69,7 +69,7 @@ class SettingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update one or more tenant-level settings for SharePoint and OneDrive. This API is supported in the following national cloud deployments.
+     * Update one or more tenant-level settings for SharePoint and OneDrive. This API is available in the following national cloud deployments.
      * @param SharepointSettings $body The request body
      * @param SettingsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -106,7 +106,7 @@ class SettingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the tenant-level settings for SharePoint and OneDrive. This API is supported in the following national cloud deployments.
+     * Get the tenant-level settings for SharePoint and OneDrive. This API is available in the following national cloud deployments.
      * @param SettingsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -127,7 +127,7 @@ class SettingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update one or more tenant-level settings for SharePoint and OneDrive. This API is supported in the following national cloud deployments.
+     * Update one or more tenant-level settings for SharePoint and OneDrive. This API is available in the following national cloud deployments.
      * @param SharepointSettings $body The request body
      * @param SettingsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -53,7 +53,7 @@ class AdditionalSourcesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the list of additional sources associated with an eDiscovery search. This API is supported in the following national cloud deployments.
+     * Get the list of additional sources associated with an eDiscovery search. This API is available in the following national cloud deployments.
      * @param AdditionalSourcesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/security-ediscoverysearch-list-additionalsources?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class AdditionalSourcesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new additional source associated with an eDiscovery search. This API is supported in the following national cloud deployments.
+     * Create a new additional source associated with an eDiscovery search. This API is available in the following national cloud deployments.
      * @param DataSource $body The request body
      * @param AdditionalSourcesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class AdditionalSourcesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the list of additional sources associated with an eDiscovery search. This API is supported in the following national cloud deployments.
+     * Get the list of additional sources associated with an eDiscovery search. This API is available in the following national cloud deployments.
      * @param AdditionalSourcesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class AdditionalSourcesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new additional source associated with an eDiscovery search. This API is supported in the following national cloud deployments.
+     * Create a new additional source associated with an eDiscovery search. This API is available in the following national cloud deployments.
      * @param DataSource $body The request body
      * @param AdditionalSourcesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

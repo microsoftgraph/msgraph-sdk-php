@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Teamwork\DeletedTeams\Item\Channels\Item\Mes
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties and relationships of chatMessageHostedContent object. This API is supported in the following national cloud deployments.
+ * Retrieve the properties and relationships of chatMessageHostedContent object. This API is available in the following national cloud deployments.
 */
 class ChatMessageHostedContentItemRequestBuilderGetQueryParameters 
 {

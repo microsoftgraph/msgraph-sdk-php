@@ -31,7 +31,7 @@ class RefreshAllRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Refreshes the PivotTable within a given worksheet. This API is supported in the following national cloud deployments.
+     * Refreshes the PivotTable within a given worksheet. This API is available in the following national cloud deployments.
      * @param RefreshAllRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/workbookpivottable-refreshall?view=graph-rest-1.0 Find more info here
@@ -50,7 +50,7 @@ class RefreshAllRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Refreshes the PivotTable within a given worksheet. This API is supported in the following national cloud deployments.
+     * Refreshes the PivotTable within a given worksheet. This API is available in the following national cloud deployments.
      * @param RefreshAllRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

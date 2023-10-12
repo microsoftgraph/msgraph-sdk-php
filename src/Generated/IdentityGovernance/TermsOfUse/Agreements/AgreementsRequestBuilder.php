@@ -53,7 +53,7 @@ class AgreementsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of agreement objects. This API is supported in the following national cloud deployments.
+     * Retrieve a list of agreement objects. This API is available in the following national cloud deployments.
      * @param AgreementsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/termsofusecontainer-list-agreements?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class AgreementsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new agreement object. This API is supported in the following national cloud deployments.
+     * Create a new agreement object. This API is available in the following national cloud deployments.
      * @param Agreement $body The request body
      * @param AgreementsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class AgreementsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of agreement objects. This API is supported in the following national cloud deployments.
+     * Retrieve a list of agreement objects. This API is available in the following national cloud deployments.
      * @param AgreementsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class AgreementsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new agreement object. This API is supported in the following national cloud deployments.
+     * Create a new agreement object. This API is available in the following national cloud deployments.
      * @param Agreement $body The request body
      * @param AgreementsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -32,7 +32,7 @@ class ChatRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the chat of the specified user and Teams app. This API is supported in the following national cloud deployments.
+     * Retrieve the chat of the specified user and Teams app. This API is available in the following national cloud deployments.
      * @param ChatRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/userscopeteamsappinstallation-get-chat?view=graph-rest-1.0 Find more info here
@@ -51,7 +51,7 @@ class ChatRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the chat of the specified user and Teams app. This API is supported in the following national cloud deployments.
+     * Retrieve the chat of the specified user and Teams app. This API is available in the following national cloud deployments.
      * @param ChatRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

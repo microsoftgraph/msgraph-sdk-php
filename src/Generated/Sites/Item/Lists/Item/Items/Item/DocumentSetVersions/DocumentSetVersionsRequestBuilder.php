@@ -53,7 +53,7 @@ class DocumentSetVersionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the versions of a document set item in a list. This API is supported in the following national cloud deployments.
+     * Get a list of the versions of a document set item in a list. This API is available in the following national cloud deployments.
      * @param DocumentSetVersionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/listitem-list-documentsetversions?view=graph-rest-1.0 Find more info here
@@ -72,7 +72,7 @@ class DocumentSetVersionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new version of a document set item in a list. This API is supported in the following national cloud deployments.
+     * Create a new version of a document set item in a list. This API is available in the following national cloud deployments.
      * @param DocumentSetVersion $body The request body
      * @param DocumentSetVersionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +92,7 @@ class DocumentSetVersionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the versions of a document set item in a list. This API is supported in the following national cloud deployments.
+     * Get a list of the versions of a document set item in a list. This API is available in the following national cloud deployments.
      * @param DocumentSetVersionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class DocumentSetVersionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new version of a document set item in a list. This API is supported in the following national cloud deployments.
+     * Create a new version of a document set item in a list. This API is available in the following national cloud deployments.
      * @param DocumentSetVersion $body The request body
      * @param DocumentSetVersionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

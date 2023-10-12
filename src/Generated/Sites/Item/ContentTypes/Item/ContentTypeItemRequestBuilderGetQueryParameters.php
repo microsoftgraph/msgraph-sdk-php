@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Sites\Item\ContentTypes\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the metadata for a content type][contentType] in a [site][] or a [list][]. This API is supported in the following [national cloud deployments.
+ * Retrieve the metadata for a content type][contentType] in a [site][] or a [list][]. This API is available in the following [national cloud deployments.
 */
 class ContentTypeItemRequestBuilderGetQueryParameters 
 {

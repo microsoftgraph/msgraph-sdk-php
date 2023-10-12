@@ -53,7 +53,7 @@ class LanguagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of languages supported for customization in a B2X user flow. This API is supported in the following national cloud deployments.
+     * Retrieve a list of languages supported for customization in a B2X user flow. This API is available in the following national cloud deployments.
      * @param LanguagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/b2xidentityuserflow-list-languages?view=graph-rest-1.0 Find more info here
@@ -91,7 +91,7 @@ class LanguagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of languages supported for customization in a B2X user flow. This API is supported in the following national cloud deployments.
+     * Retrieve a list of languages supported for customization in a B2X user flow. This API is available in the following national cloud deployments.
      * @param LanguagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -32,7 +32,7 @@ class CopyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Asynchronously creates a copy of an driveItem][item-resource] (including any children), under a new parent item or with a new name. This API is supported in the following [national cloud deployments.
+     * Asynchronously creates a copy of an driveItem][item-resource] (including any children), under a new parent item or with a new name. This API is available in the following [national cloud deployments.
      * @param CopyPostRequestBody $body The request body
      * @param CopyRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -52,7 +52,7 @@ class CopyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Asynchronously creates a copy of an driveItem][item-resource] (including any children), under a new parent item or with a new name. This API is supported in the following [national cloud deployments.
+     * Asynchronously creates a copy of an driveItem][item-resource] (including any children), under a new parent item or with a new name. This API is available in the following [national cloud deployments.
      * @param CopyPostRequestBody $body The request body
      * @param CopyRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

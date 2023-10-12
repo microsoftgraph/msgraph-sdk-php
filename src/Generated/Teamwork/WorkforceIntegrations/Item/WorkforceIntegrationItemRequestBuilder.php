@@ -32,7 +32,7 @@ class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an instance of a workforceIntegration. This API is supported in the following national cloud deployments.
+     * Delete an instance of a workforceIntegration. This API is available in the following national cloud deployments.
      * @param WorkforceIntegrationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/workforceintegration-delete?view=graph-rest-1.0 Find more info here
@@ -51,7 +51,7 @@ class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a workforceIntegration object. This API is supported in the following national cloud deployments.
+     * Retrieve the properties and relationships of a workforceIntegration object. This API is available in the following national cloud deployments.
      * @param WorkforceIntegrationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/workforceintegration-get?view=graph-rest-1.0 Find more info here
@@ -70,7 +70,7 @@ class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a workforceIntegration object. This API is supported in the following national cloud deployments.
+     * Update the properties of a workforceIntegration object. This API is available in the following national cloud deployments.
      * @param WorkforceIntegration $body The request body
      * @param WorkforceIntegrationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -90,7 +90,7 @@ class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an instance of a workforceIntegration. This API is supported in the following national cloud deployments.
+     * Delete an instance of a workforceIntegration. This API is available in the following national cloud deployments.
      * @param WorkforceIntegrationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -107,7 +107,7 @@ class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a workforceIntegration object. This API is supported in the following national cloud deployments.
+     * Retrieve the properties and relationships of a workforceIntegration object. This API is available in the following national cloud deployments.
      * @param WorkforceIntegrationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -128,7 +128,7 @@ class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a workforceIntegration object. This API is supported in the following national cloud deployments.
+     * Update the properties of a workforceIntegration object. This API is available in the following national cloud deployments.
      * @param WorkforceIntegration $body The request body
      * @param WorkforceIntegrationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

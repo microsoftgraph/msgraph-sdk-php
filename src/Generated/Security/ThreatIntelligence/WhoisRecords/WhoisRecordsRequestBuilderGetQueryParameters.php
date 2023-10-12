@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\ThreatIntelligence\WhoisRecords;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a list of whoisRecord objects.
+ * Get a list of whoisRecord objects. This API is available in the following national cloud deployments.
 */
 class WhoisRecordsRequestBuilderGetQueryParameters 
 {

@@ -53,7 +53,7 @@ class InstancesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the instances of an access review history definition created in the last 30 days. This API is supported in the following national cloud deployments.
+     * Retrieve the instances of an access review history definition created in the last 30 days. This API is available in the following national cloud deployments.
      * @param InstancesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/accessreviewhistorydefinition-list-instances?view=graph-rest-1.0 Find more info here
@@ -91,7 +91,7 @@ class InstancesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the instances of an access review history definition created in the last 30 days. This API is supported in the following national cloud deployments.
+     * Retrieve the instances of an access review history definition created in the last 30 days. This API is available in the following national cloud deployments.
      * @param InstancesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
