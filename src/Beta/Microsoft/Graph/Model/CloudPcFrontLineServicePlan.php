@@ -26,6 +26,7 @@ class CloudPcFrontLineServicePlan extends Entity
 {
     /**
     * Gets the displayName
+    * The display name of the front-line service plan. For example, 2vCPU/8GB/128GB Front-line or 4vCPU/16GB/256GB Front-line.
     *
     * @return string|null The displayName
     */
@@ -40,6 +41,7 @@ class CloudPcFrontLineServicePlan extends Entity
 
     /**
     * Sets the displayName
+    * The display name of the front-line service plan. For example, 2vCPU/8GB/128GB Front-line or 4vCPU/16GB/256GB Front-line.
     *
     * @param string $val The displayName
     *
@@ -53,6 +55,7 @@ class CloudPcFrontLineServicePlan extends Entity
 
     /**
     * Gets the totalCount
+    * The total number of front-line service plans purchased by the customer.
     *
     * @return int|null The totalCount
     */
@@ -67,6 +70,7 @@ class CloudPcFrontLineServicePlan extends Entity
 
     /**
     * Sets the totalCount
+    * The total number of front-line service plans purchased by the customer.
     *
     * @param int $val The totalCount
     *
@@ -80,6 +84,7 @@ class CloudPcFrontLineServicePlan extends Entity
 
     /**
     * Gets the usedCount
+    * The number of service plans that have been used for the account.
     *
     * @return int|null The usedCount
     */
@@ -94,6 +99,7 @@ class CloudPcFrontLineServicePlan extends Entity
 
     /**
     * Sets the usedCount
+    * The number of service plans that have been used for the account.
     *
     * @param int $val The usedCount
     *

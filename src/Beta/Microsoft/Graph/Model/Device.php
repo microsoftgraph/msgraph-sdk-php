@@ -445,7 +445,7 @@ class Device extends DirectoryObject
 
     /**
     * Gets the hostnames
-    * List of hostNames for the device.
+    * List of host names for the device.
     *
     * @return array|null The hostnames
     */
@@ -460,7 +460,7 @@ class Device extends DirectoryObject
 
     /**
     * Sets the hostnames
-    * List of hostNames for the device.
+    * List of host names for the device.
     *
     * @param string[] $val The hostnames
     *
@@ -532,7 +532,7 @@ class Device extends DirectoryObject
 
     /**
     * Gets the isManagementRestricted
-    * true if the device is a member of a restricted management administrative unit, in which case it requires a role scoped to the restricted administrative unit to manage. Default value is false. Read-only.  To manage a device that's a member of a restricted administrative unit, the calling app must be assigned the Directory.Write.Restricted permission. For delegated scenarios, the administrators must also be explicitly assigned supported roles at the restricted administrative unit scope.
+    * Indicates whether the device is a member of a restricted management administrative unit, in which case it requires a role scoped to the restricted administrative unit to manage. The default value is false. Read-only.  To manage a device that's a member of a restricted administrative unit, the calling app must be assigned the Directory.Write.Restricted permission. For delegated scenarios, the administrators must also be explicitly assigned supported roles at the restricted administrative unit scope.
     *
     * @return bool|null The isManagementRestricted
     */
@@ -547,7 +547,7 @@ class Device extends DirectoryObject
 
     /**
     * Sets the isManagementRestricted
-    * true if the device is a member of a restricted management administrative unit, in which case it requires a role scoped to the restricted administrative unit to manage. Default value is false. Read-only.  To manage a device that's a member of a restricted administrative unit, the calling app must be assigned the Directory.Write.Restricted permission. For delegated scenarios, the administrators must also be explicitly assigned supported roles at the restricted administrative unit scope.
+    * Indicates whether the device is a member of a restricted management administrative unit, in which case it requires a role scoped to the restricted administrative unit to manage. The default value is false. Read-only.  To manage a device that's a member of a restricted administrative unit, the calling app must be assigned the Directory.Write.Restricted permission. For delegated scenarios, the administrators must also be explicitly assigned supported roles at the restricted administrative unit scope.
     *
     * @param bool $val The isManagementRestricted
     *
@@ -681,6 +681,7 @@ class Device extends DirectoryObject
 
     /**
     * Gets the onPremisesSecurityIdentifier
+    * The on-premises security identifier (SID) for the user who was synchronized from on-premises to the cloud. Read-only. Returned only on $select. Supports $filter (eq).
     *
     * @return string|null The onPremisesSecurityIdentifier
     */
@@ -695,6 +696,7 @@ class Device extends DirectoryObject
 
     /**
     * Sets the onPremisesSecurityIdentifier
+    * The on-premises security identifier (SID) for the user who was synchronized from on-premises to the cloud. Read-only. Returned only on $select. Supports $filter (eq).
     *
     * @param string $val The onPremisesSecurityIdentifier
     *
@@ -915,7 +917,7 @@ class Device extends DirectoryObject
 
     /**
     * Gets the trustType
-    * Type of trust for the joined device. Read-only. Possible values: Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory
+    * Type of trust for the joined device. Read-only. Possible values: Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory.
     *
     * @return string|null The trustType
     */
@@ -930,7 +932,7 @@ class Device extends DirectoryObject
 
     /**
     * Sets the trustType
-    * Type of trust for the joined device. Read-only. Possible values: Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory
+    * Type of trust for the joined device. Read-only. Possible values: Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory.
     *
     * @param string $val The trustType
     *
@@ -944,7 +946,7 @@ class Device extends DirectoryObject
 
     /**
     * Gets the kind
-    * Form factor of device. Only returned if user signs in with a Microsoft account as part of Project Rome.
+    * Form factor of the device. Only returned if the user signs in with a Microsoft account as part of Project Rome.
     *
     * @return string|null The kind
     */
@@ -959,7 +961,7 @@ class Device extends DirectoryObject
 
     /**
     * Sets the kind
-    * Form factor of device. Only returned if user signs in with a Microsoft account as part of Project Rome.
+    * Form factor of the device. Only returned if the user signs in with a Microsoft account as part of Project Rome.
     *
     * @param string $val The kind
     *
@@ -973,7 +975,7 @@ class Device extends DirectoryObject
 
     /**
     * Gets the manufacturer
-    * Manufacturer of device. Only returned if user signs in with a Microsoft account as part of Project Rome.
+    * Manufacturer of the device. Only returned if the user signs in with a Microsoft account as part of Project Rome.
     *
     * @return string|null The manufacturer
     */
@@ -988,7 +990,7 @@ class Device extends DirectoryObject
 
     /**
     * Sets the manufacturer
-    * Manufacturer of device. Only returned if user signs in with a Microsoft account as part of Project Rome.
+    * Manufacturer of the device. Only returned if the user signs in with a Microsoft account as part of Project Rome.
     *
     * @param string $val The manufacturer
     *
@@ -1002,7 +1004,7 @@ class Device extends DirectoryObject
 
     /**
     * Gets the model
-    * Model of device. Only returned if user signs in with a Microsoft account as part of Project Rome.
+    * Model of the device. Only returned if the user signs in with a Microsoft account as part of Project Rome.
     *
     * @return string|null The model
     */
@@ -1017,7 +1019,7 @@ class Device extends DirectoryObject
 
     /**
     * Sets the model
-    * Model of device. Only returned if user signs in with a Microsoft account as part of Project Rome.
+    * Model of the device. Only returned if the user signs in with a Microsoft account as part of Project Rome.
     *
     * @param string $val The model
     *
@@ -1031,7 +1033,7 @@ class Device extends DirectoryObject
 
     /**
     * Gets the name
-    * Friendly name of a device. Only returned if user signs in with a Microsoft account as part of Project Rome.
+    * Friendly name of the device. Only returned if user signs in with a Microsoft account as part of Project Rome.
     *
     * @return string|null The name
     */
@@ -1046,7 +1048,7 @@ class Device extends DirectoryObject
 
     /**
     * Sets the name
-    * Friendly name of a device. Only returned if user signs in with a Microsoft account as part of Project Rome.
+    * Friendly name of the device. Only returned if user signs in with a Microsoft account as part of Project Rome.
     *
     * @param string $val The name
     *
@@ -1060,7 +1062,7 @@ class Device extends DirectoryObject
 
     /**
     * Gets the platform
-    * Platform of device. Only returned if user signs in with a Microsoft account as part of Project Rome. Only returned if user signs in with a Microsoft account as part of Project Rome.
+    * Platform of device. Only returned if the user signs in with a Microsoft account as part of Project Rome.
     *
     * @return string|null The platform
     */
@@ -1075,7 +1077,7 @@ class Device extends DirectoryObject
 
     /**
     * Sets the platform
-    * Platform of device. Only returned if user signs in with a Microsoft account as part of Project Rome. Only returned if user signs in with a Microsoft account as part of Project Rome.
+    * Platform of device. Only returned if the user signs in with a Microsoft account as part of Project Rome.
     *
     * @param string $val The platform
     *

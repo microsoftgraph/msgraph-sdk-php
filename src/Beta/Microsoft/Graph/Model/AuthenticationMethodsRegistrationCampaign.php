@@ -91,7 +91,7 @@ class AuthenticationMethodsRegistrationCampaign extends Entity
     }
     /**
     * Gets the snoozeDurationInDays
-    * Specifies the number of days that the user sees a prompt again if they select 'Not now' and snoozes the prompt. Minimum 0 days. Maximum: 14 days. If the value is '0' – The user is prompted during every MFA attempt.
+    * Specifies the number of days that the user sees a prompt again if they select 'Not now' and snoozes the prompt. Minimum 0 days. Maximum: 14 days. If the value is 0 – The user is prompted during every MFA attempt.
     *
     * @return int|null The snoozeDurationInDays
     */
@@ -106,7 +106,7 @@ class AuthenticationMethodsRegistrationCampaign extends Entity
 
     /**
     * Sets the snoozeDurationInDays
-    * Specifies the number of days that the user sees a prompt again if they select 'Not now' and snoozes the prompt. Minimum 0 days. Maximum: 14 days. If the value is '0' – The user is prompted during every MFA attempt.
+    * Specifies the number of days that the user sees a prompt again if they select 'Not now' and snoozes the prompt. Minimum 0 days. Maximum: 14 days. If the value is 0 – The user is prompted during every MFA attempt.
     *
     * @param int $val The value of the snoozeDurationInDays
     *
