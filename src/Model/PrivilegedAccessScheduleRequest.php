@@ -26,6 +26,7 @@ class PrivilegedAccessScheduleRequest extends Request
 {
     /**
     * Gets the action
+    * Represents the type of operation on the group membership or ownership assignment request. The possible values are: adminAssign, adminUpdate, adminRemove, selfActivate, selfDeactivate, adminExtend, adminRenew. adminAssign: For administrators to assign group membership or ownership to principals.adminRemove: For administrators to remove principals from group membership or ownership. adminUpdate: For administrators to change existing group membership or ownership assignments.adminExtend: For administrators to extend expiring assignments.adminRenew: For administrators to renew expired assignments.selfActivate: For principals to activate their assignments.selfDeactivate: For principals to deactivate their active assignments.
     *
     * @return ScheduleRequestActions|null The action
     */
@@ -44,6 +45,7 @@ class PrivilegedAccessScheduleRequest extends Request
 
     /**
     * Sets the action
+    * Represents the type of operation on the group membership or ownership assignment request. The possible values are: adminAssign, adminUpdate, adminRemove, selfActivate, selfDeactivate, adminExtend, adminRenew. adminAssign: For administrators to assign group membership or ownership to principals.adminRemove: For administrators to remove principals from group membership or ownership. adminUpdate: For administrators to change existing group membership or ownership assignments.adminExtend: For administrators to extend expiring assignments.adminRenew: For administrators to renew expired assignments.selfActivate: For principals to activate their assignments.selfDeactivate: For principals to deactivate their active assignments.
     *
     * @param ScheduleRequestActions $val The action
     *
@@ -57,6 +59,7 @@ class PrivilegedAccessScheduleRequest extends Request
 
     /**
     * Gets the isValidationOnly
+    * Determines whether the call is a validation or an actual call. Only set this property if you want to check whether an activation is subject to additional rules like MFA before actually submitting the request.
     *
     * @return bool|null The isValidationOnly
     */
@@ -71,6 +74,7 @@ class PrivilegedAccessScheduleRequest extends Request
 
     /**
     * Sets the isValidationOnly
+    * Determines whether the call is a validation or an actual call. Only set this property if you want to check whether an activation is subject to additional rules like MFA before actually submitting the request.
     *
     * @param bool $val The isValidationOnly
     *
@@ -84,6 +88,7 @@ class PrivilegedAccessScheduleRequest extends Request
 
     /**
     * Gets the justification
+    * A message provided by users and administrators when create they create the privilegedAccessGroupAssignmentScheduleRequest object.
     *
     * @return string|null The justification
     */
@@ -98,6 +103,7 @@ class PrivilegedAccessScheduleRequest extends Request
 
     /**
     * Sets the justification
+    * A message provided by users and administrators when create they create the privilegedAccessGroupAssignmentScheduleRequest object.
     *
     * @param string $val The justification
     *
@@ -111,6 +117,7 @@ class PrivilegedAccessScheduleRequest extends Request
 
     /**
     * Gets the scheduleInfo
+    * The period of the group membership or ownership assignment. Recurring schedules are currently unsupported.
     *
     * @return RequestSchedule|null The scheduleInfo
     */
@@ -129,6 +136,7 @@ class PrivilegedAccessScheduleRequest extends Request
 
     /**
     * Sets the scheduleInfo
+    * The period of the group membership or ownership assignment. Recurring schedules are currently unsupported.
     *
     * @param RequestSchedule $val The scheduleInfo
     *
@@ -142,6 +150,7 @@ class PrivilegedAccessScheduleRequest extends Request
 
     /**
     * Gets the ticketInfo
+    * Ticket details linked to the group membership or ownership assignment request including details of the ticket number and ticket system.
     *
     * @return TicketInfo|null The ticketInfo
     */
@@ -160,6 +169,7 @@ class PrivilegedAccessScheduleRequest extends Request
 
     /**
     * Sets the ticketInfo
+    * Ticket details linked to the group membership or ownership assignment request including details of the ticket number and ticket system.
     *
     * @param TicketInfo $val The ticketInfo
     *
