@@ -82,9 +82,10 @@ class PrivilegedAccessGroupEligibilityScheduleRequestItemRequestBuilder extends 
     }
 
     /**
-     * Get eligibilityScheduleRequests from identityGovernance
+     * Read the properties and relationships of a privilegedAccessGroupEligibilityScheduleRequest object.
      * @param PrivilegedAccessGroupEligibilityScheduleRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://learn.microsoft.com/graph/api/privilegedaccessgroupeligibilityschedulerequest-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?PrivilegedAccessGroupEligibilityScheduleRequestItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -136,7 +137,7 @@ class PrivilegedAccessGroupEligibilityScheduleRequestItemRequestBuilder extends 
     }
 
     /**
-     * Get eligibilityScheduleRequests from identityGovernance
+     * Read the properties and relationships of a privilegedAccessGroupEligibilityScheduleRequest object.
      * @param PrivilegedAccessGroupEligibilityScheduleRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

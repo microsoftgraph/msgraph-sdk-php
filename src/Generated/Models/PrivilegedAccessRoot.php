@@ -36,7 +36,7 @@ class PrivilegedAccessRoot extends Entity implements Parsable
     }
 
     /**
-     * Gets the group property value. The group property
+     * Gets the group property value. A group that's governed through Privileged Identity Management (PIM).
      * @return PrivilegedAccessGroup|null
     */
     public function getGroup(): ?PrivilegedAccessGroup {
@@ -57,7 +57,7 @@ class PrivilegedAccessRoot extends Entity implements Parsable
     }
 
     /**
-     * Sets the group property value. The group property
+     * Sets the group property value. A group that's governed through Privileged Identity Management (PIM).
      * @param PrivilegedAccessGroup|null $value Value to set for the group property.
     */
     public function setGroup(?PrivilegedAccessGroup $value): void {

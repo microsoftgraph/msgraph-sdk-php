@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\SubjectRightsRequests\Item\Approver
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get approvers from security
+ * Collection of users who can approve the request. Currently only supported for requests of type delete.
 */
 class ApproversRequestBuilderGetQueryParameters 
 {

@@ -32,7 +32,7 @@ class TargetScheduleRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get targetSchedule from identityGovernance
+     * Schedule created by this request. Supports $expand.
      * @param TargetScheduleRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -50,7 +50,7 @@ class TargetScheduleRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get targetSchedule from identityGovernance
+     * Schedule created by this request. Supports $expand.
      * @param TargetScheduleRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -26,7 +26,7 @@ class PrivilegedAccessGroupAssignmentScheduleRequest extends PrivilegedAccessSch
     }
 
     /**
-     * Gets the accessId property value. The accessId property
+     * Gets the accessId property value. The identifier of a membership or ownership assignment relationship to the group. Required. The possible values are: owner, member, unknownFutureValue.
      * @return PrivilegedAccessGroupRelationships|null
     */
     public function getAccessId(): ?PrivilegedAccessGroupRelationships {
@@ -38,7 +38,7 @@ class PrivilegedAccessGroupAssignmentScheduleRequest extends PrivilegedAccessSch
     }
 
     /**
-     * Gets the activatedUsing property value. The activatedUsing property
+     * Gets the activatedUsing property value. When the request activates a membership or ownership assignment in PIM for groups, this object represents the eligibility policy for the group. Otherwise, it is null. Supports $expand.
      * @return PrivilegedAccessGroupEligibilitySchedule|null
     */
     public function getActivatedUsing(): ?PrivilegedAccessGroupEligibilitySchedule {
@@ -68,7 +68,7 @@ class PrivilegedAccessGroupAssignmentScheduleRequest extends PrivilegedAccessSch
     }
 
     /**
-     * Gets the group property value. The group property
+     * Gets the group property value. References the group that is the scope of the membership or ownership assignment request through PIM for groups. Supports $expand.
      * @return Group|null
     */
     public function getGroup(): ?Group {
@@ -80,7 +80,7 @@ class PrivilegedAccessGroupAssignmentScheduleRequest extends PrivilegedAccessSch
     }
 
     /**
-     * Gets the groupId property value. The groupId property
+     * Gets the groupId property value. The identifier of the group representing the scope of the membership or ownership assignment through PIM for groups. Required.
      * @return string|null
     */
     public function getGroupId(): ?string {
@@ -92,7 +92,7 @@ class PrivilegedAccessGroupAssignmentScheduleRequest extends PrivilegedAccessSch
     }
 
     /**
-     * Gets the principal property value. The principal property
+     * Gets the principal property value. References the principal that's in the scope of this membership or ownership assignment request through the group that's governed by PIM. Supports $expand.
      * @return DirectoryObject|null
     */
     public function getPrincipal(): ?DirectoryObject {
@@ -104,7 +104,7 @@ class PrivilegedAccessGroupAssignmentScheduleRequest extends PrivilegedAccessSch
     }
 
     /**
-     * Gets the principalId property value. The principalId property
+     * Gets the principalId property value. The identifier of the principal whose membership or ownership assignment to the group is managed through PIM for groups. Supports $filter (eq, ne).
      * @return string|null
     */
     public function getPrincipalId(): ?string {
@@ -116,7 +116,7 @@ class PrivilegedAccessGroupAssignmentScheduleRequest extends PrivilegedAccessSch
     }
 
     /**
-     * Gets the targetSchedule property value. The targetSchedule property
+     * Gets the targetSchedule property value. Schedule created by this request. Supports $expand.
      * @return PrivilegedAccessGroupEligibilitySchedule|null
     */
     public function getTargetSchedule(): ?PrivilegedAccessGroupEligibilitySchedule {
@@ -128,7 +128,7 @@ class PrivilegedAccessGroupAssignmentScheduleRequest extends PrivilegedAccessSch
     }
 
     /**
-     * Gets the targetScheduleId property value. The targetScheduleId property
+     * Gets the targetScheduleId property value. The identifier of the schedule that's created from the membership or ownership assignment request. Supports $filter (eq, ne).
      * @return string|null
     */
     public function getTargetScheduleId(): ?string {
@@ -156,7 +156,7 @@ class PrivilegedAccessGroupAssignmentScheduleRequest extends PrivilegedAccessSch
     }
 
     /**
-     * Sets the accessId property value. The accessId property
+     * Sets the accessId property value. The identifier of a membership or ownership assignment relationship to the group. Required. The possible values are: owner, member, unknownFutureValue.
      * @param PrivilegedAccessGroupRelationships|null $value Value to set for the accessId property.
     */
     public function setAccessId(?PrivilegedAccessGroupRelationships $value): void {
@@ -164,7 +164,7 @@ class PrivilegedAccessGroupAssignmentScheduleRequest extends PrivilegedAccessSch
     }
 
     /**
-     * Sets the activatedUsing property value. The activatedUsing property
+     * Sets the activatedUsing property value. When the request activates a membership or ownership assignment in PIM for groups, this object represents the eligibility policy for the group. Otherwise, it is null. Supports $expand.
      * @param PrivilegedAccessGroupEligibilitySchedule|null $value Value to set for the activatedUsing property.
     */
     public function setActivatedUsing(?PrivilegedAccessGroupEligibilitySchedule $value): void {
@@ -172,7 +172,7 @@ class PrivilegedAccessGroupAssignmentScheduleRequest extends PrivilegedAccessSch
     }
 
     /**
-     * Sets the group property value. The group property
+     * Sets the group property value. References the group that is the scope of the membership or ownership assignment request through PIM for groups. Supports $expand.
      * @param Group|null $value Value to set for the group property.
     */
     public function setGroup(?Group $value): void {
@@ -180,7 +180,7 @@ class PrivilegedAccessGroupAssignmentScheduleRequest extends PrivilegedAccessSch
     }
 
     /**
-     * Sets the groupId property value. The groupId property
+     * Sets the groupId property value. The identifier of the group representing the scope of the membership or ownership assignment through PIM for groups. Required.
      * @param string|null $value Value to set for the groupId property.
     */
     public function setGroupId(?string $value): void {
@@ -188,7 +188,7 @@ class PrivilegedAccessGroupAssignmentScheduleRequest extends PrivilegedAccessSch
     }
 
     /**
-     * Sets the principal property value. The principal property
+     * Sets the principal property value. References the principal that's in the scope of this membership or ownership assignment request through the group that's governed by PIM. Supports $expand.
      * @param DirectoryObject|null $value Value to set for the principal property.
     */
     public function setPrincipal(?DirectoryObject $value): void {
@@ -196,7 +196,7 @@ class PrivilegedAccessGroupAssignmentScheduleRequest extends PrivilegedAccessSch
     }
 
     /**
-     * Sets the principalId property value. The principalId property
+     * Sets the principalId property value. The identifier of the principal whose membership or ownership assignment to the group is managed through PIM for groups. Supports $filter (eq, ne).
      * @param string|null $value Value to set for the principalId property.
     */
     public function setPrincipalId(?string $value): void {
@@ -204,7 +204,7 @@ class PrivilegedAccessGroupAssignmentScheduleRequest extends PrivilegedAccessSch
     }
 
     /**
-     * Sets the targetSchedule property value. The targetSchedule property
+     * Sets the targetSchedule property value. Schedule created by this request. Supports $expand.
      * @param PrivilegedAccessGroupEligibilitySchedule|null $value Value to set for the targetSchedule property.
     */
     public function setTargetSchedule(?PrivilegedAccessGroupEligibilitySchedule $value): void {
@@ -212,7 +212,7 @@ class PrivilegedAccessGroupAssignmentScheduleRequest extends PrivilegedAccessSch
     }
 
     /**
-     * Sets the targetScheduleId property value. The targetScheduleId property
+     * Sets the targetScheduleId property value. The identifier of the schedule that's created from the membership or ownership assignment request. Supports $filter (eq, ne).
      * @param string|null $value Value to set for the targetScheduleId property.
     */
     public function setTargetScheduleId(?string $value): void {

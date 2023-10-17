@@ -34,7 +34,7 @@ class PrivilegedAccessScheduleInstance extends Entity implements Parsable
     }
 
     /**
-     * Gets the endDateTime property value. The endDateTime property
+     * Gets the endDateTime property value. When the schedule instance ends. Required.
      * @return DateTime|null
     */
     public function getEndDateTime(): ?DateTime {
@@ -58,7 +58,7 @@ class PrivilegedAccessScheduleInstance extends Entity implements Parsable
     }
 
     /**
-     * Gets the startDateTime property value. The startDateTime property
+     * Gets the startDateTime property value. When this instance starts. Required.
      * @return DateTime|null
     */
     public function getStartDateTime(): ?DateTime {
@@ -80,7 +80,7 @@ class PrivilegedAccessScheduleInstance extends Entity implements Parsable
     }
 
     /**
-     * Sets the endDateTime property value. The endDateTime property
+     * Sets the endDateTime property value. When the schedule instance ends. Required.
      * @param DateTime|null $value Value to set for the endDateTime property.
     */
     public function setEndDateTime(?DateTime $value): void {
@@ -88,7 +88,7 @@ class PrivilegedAccessScheduleInstance extends Entity implements Parsable
     }
 
     /**
-     * Sets the startDateTime property value. The startDateTime property
+     * Sets the startDateTime property value. When this instance starts. Required.
      * @param DateTime|null $value Value to set for the startDateTime property.
     */
     public function setStartDateTime(?DateTime $value): void {

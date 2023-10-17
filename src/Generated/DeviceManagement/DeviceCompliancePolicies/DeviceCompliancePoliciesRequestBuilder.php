@@ -53,10 +53,10 @@ class DeviceCompliancePoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the windows10MobileCompliancePolicy objects.
+     * List properties and relationships of the windows81CompliancePolicy objects.
      * @param DeviceCompliancePoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-windows10mobilecompliancepolicy-list?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-windows81compliancepolicy-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?DeviceCompliancePoliciesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -72,11 +72,11 @@ class DeviceCompliancePoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new macOSCompliancePolicy object.
+     * Create a new androidCompliancePolicy object.
      * @param DeviceCompliancePolicy $body The request body
      * @param DeviceCompliancePoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-macoscompliancepolicy-create?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-androidcompliancepolicy-create?view=graph-rest-1.0 Find more info here
     */
     public function post(DeviceCompliancePolicy $body, ?DeviceCompliancePoliciesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -92,7 +92,7 @@ class DeviceCompliancePoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the windows10MobileCompliancePolicy objects.
+     * List properties and relationships of the windows81CompliancePolicy objects.
      * @param DeviceCompliancePoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class DeviceCompliancePoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new macOSCompliancePolicy object.
+     * Create a new androidCompliancePolicy object.
      * @param DeviceCompliancePolicy $body The request body
      * @param DeviceCompliancePoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

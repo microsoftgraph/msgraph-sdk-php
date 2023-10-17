@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\PrivilegedAccess\Group\As
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get targetSchedule from identityGovernance
+ * Schedule created by this request. Supports $expand.
 */
 class TargetScheduleRequestBuilderGetQueryParameters 
 {

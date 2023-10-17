@@ -54,7 +54,6 @@ class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.security.kubernetesControllerEvidence': return new KubernetesControllerEvidence();
                 case '#microsoft.graph.security.kubernetesNamespaceEvidence': return new KubernetesNamespaceEvidence();
                 case '#microsoft.graph.security.kubernetesPodEvidence': return new KubernetesPodEvidence();
-                case '#microsoft.graph.security.kubernetesSecretEvidence': return new KubernetesSecretEvidence();
                 case '#microsoft.graph.security.kubernetesServiceAccountEvidence': return new KubernetesServiceAccountEvidence();
                 case '#microsoft.graph.security.kubernetesServiceEvidence': return new KubernetesServiceEvidence();
                 case '#microsoft.graph.security.mailboxEvidence': return new MailboxEvidence();
@@ -63,6 +62,7 @@ class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.security.processEvidence': return new ProcessEvidence();
                 case '#microsoft.graph.security.registryKeyEvidence': return new RegistryKeyEvidence();
                 case '#microsoft.graph.security.registryValueEvidence': return new RegistryValueEvidence();
+                case '#microsoft.graph.security.securityGroupEvidence': return new SecurityGroupEvidence();
                 case '#microsoft.graph.security.urlEvidence': return new UrlEvidence();
                 case '#microsoft.graph.security.userEvidence': return new UserEvidence();
             }

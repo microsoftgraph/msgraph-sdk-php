@@ -38,7 +38,7 @@ class AccessPackageTextInputQuestion extends AccessPackageQuestion implements Pa
     }
 
     /**
-     * Gets the isSingleLineQuestion property value. Indicates whether the answer will be in single or multiple line format.
+     * Gets the isSingleLineQuestion property value. Indicates whether the answer is in single or multiple line format.
      * @return bool|null
     */
     public function getIsSingleLineQuestion(): ?bool {
@@ -72,7 +72,7 @@ class AccessPackageTextInputQuestion extends AccessPackageQuestion implements Pa
     }
 
     /**
-     * Sets the isSingleLineQuestion property value. Indicates whether the answer will be in single or multiple line format.
+     * Sets the isSingleLineQuestion property value. Indicates whether the answer is in single or multiple line format.
      * @param bool|null $value Value to set for the isSingleLineQuestion property.
     */
     public function setIsSingleLineQuestion(?bool $value): void {

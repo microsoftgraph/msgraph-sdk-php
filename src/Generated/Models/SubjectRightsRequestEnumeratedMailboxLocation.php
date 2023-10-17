@@ -45,7 +45,7 @@ class SubjectRightsRequestEnumeratedMailboxLocation extends SubjectRightsRequest
     }
 
     /**
-     * Gets the userPrincipalNames property value. The userPrincipalNames property
+     * Gets the userPrincipalNames property value. Collection of mailboxes that should be included in the search. Includes the user principal name (UPN) of each mailbox, for example, Monica.Thompson@contoso.com.
      * @return array<string>|null
     */
     public function getUserPrincipalNames(): ?array {
@@ -68,7 +68,7 @@ class SubjectRightsRequestEnumeratedMailboxLocation extends SubjectRightsRequest
     }
 
     /**
-     * Sets the userPrincipalNames property value. The userPrincipalNames property
+     * Sets the userPrincipalNames property value. Collection of mailboxes that should be included in the search. Includes the user principal name (UPN) of each mailbox, for example, Monica.Thompson@contoso.com.
      * @param array<string>|null $value Value to set for the userPrincipalNames property.
     */
     public function setUserPrincipalNames(?array $value): void {

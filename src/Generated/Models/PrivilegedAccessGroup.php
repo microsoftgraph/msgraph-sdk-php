@@ -40,7 +40,7 @@ class PrivilegedAccessGroup extends Entity implements Parsable
     }
 
     /**
-     * Gets the assignmentScheduleInstances property value. The assignmentScheduleInstances property
+     * Gets the assignmentScheduleInstances property value. The instances of assignment schedules to activate a just-in-time access.
      * @return array<PrivilegedAccessGroupAssignmentScheduleInstance>|null
     */
     public function getAssignmentScheduleInstances(): ?array {
@@ -54,7 +54,7 @@ class PrivilegedAccessGroup extends Entity implements Parsable
     }
 
     /**
-     * Gets the assignmentScheduleRequests property value. The assignmentScheduleRequests property
+     * Gets the assignmentScheduleRequests property value. The schedule requests for operations to create, update, delete, extend, and renew an assignment.
      * @return array<PrivilegedAccessGroupAssignmentScheduleRequest>|null
     */
     public function getAssignmentScheduleRequests(): ?array {
@@ -68,7 +68,7 @@ class PrivilegedAccessGroup extends Entity implements Parsable
     }
 
     /**
-     * Gets the assignmentSchedules property value. The assignmentSchedules property
+     * Gets the assignmentSchedules property value. The assignment schedules to activate a just-in-time access.
      * @return array<PrivilegedAccessGroupAssignmentSchedule>|null
     */
     public function getAssignmentSchedules(): ?array {
@@ -82,7 +82,7 @@ class PrivilegedAccessGroup extends Entity implements Parsable
     }
 
     /**
-     * Gets the eligibilityScheduleInstances property value. The eligibilityScheduleInstances property
+     * Gets the eligibilityScheduleInstances property value. The instances of eligibility schedules to activate a just-in-time access.
      * @return array<PrivilegedAccessGroupEligibilityScheduleInstance>|null
     */
     public function getEligibilityScheduleInstances(): ?array {
@@ -96,7 +96,7 @@ class PrivilegedAccessGroup extends Entity implements Parsable
     }
 
     /**
-     * Gets the eligibilityScheduleRequests property value. The eligibilityScheduleRequests property
+     * Gets the eligibilityScheduleRequests property value. The schedule requests for operations to create, update, delete, extend, and renew an eligibility.
      * @return array<PrivilegedAccessGroupEligibilityScheduleRequest>|null
     */
     public function getEligibilityScheduleRequests(): ?array {
@@ -110,7 +110,7 @@ class PrivilegedAccessGroup extends Entity implements Parsable
     }
 
     /**
-     * Gets the eligibilitySchedules property value. The eligibilitySchedules property
+     * Gets the eligibilitySchedules property value. The eligibility schedules to activate a just-in-time access.
      * @return array<PrivilegedAccessGroupEligibilitySchedule>|null
     */
     public function getEligibilitySchedules(): ?array {
@@ -164,7 +164,7 @@ class PrivilegedAccessGroup extends Entity implements Parsable
     }
 
     /**
-     * Sets the assignmentScheduleInstances property value. The assignmentScheduleInstances property
+     * Sets the assignmentScheduleInstances property value. The instances of assignment schedules to activate a just-in-time access.
      * @param array<PrivilegedAccessGroupAssignmentScheduleInstance>|null $value Value to set for the assignmentScheduleInstances property.
     */
     public function setAssignmentScheduleInstances(?array $value): void {
@@ -172,7 +172,7 @@ class PrivilegedAccessGroup extends Entity implements Parsable
     }
 
     /**
-     * Sets the assignmentScheduleRequests property value. The assignmentScheduleRequests property
+     * Sets the assignmentScheduleRequests property value. The schedule requests for operations to create, update, delete, extend, and renew an assignment.
      * @param array<PrivilegedAccessGroupAssignmentScheduleRequest>|null $value Value to set for the assignmentScheduleRequests property.
     */
     public function setAssignmentScheduleRequests(?array $value): void {
@@ -180,7 +180,7 @@ class PrivilegedAccessGroup extends Entity implements Parsable
     }
 
     /**
-     * Sets the assignmentSchedules property value. The assignmentSchedules property
+     * Sets the assignmentSchedules property value. The assignment schedules to activate a just-in-time access.
      * @param array<PrivilegedAccessGroupAssignmentSchedule>|null $value Value to set for the assignmentSchedules property.
     */
     public function setAssignmentSchedules(?array $value): void {
@@ -188,7 +188,7 @@ class PrivilegedAccessGroup extends Entity implements Parsable
     }
 
     /**
-     * Sets the eligibilityScheduleInstances property value. The eligibilityScheduleInstances property
+     * Sets the eligibilityScheduleInstances property value. The instances of eligibility schedules to activate a just-in-time access.
      * @param array<PrivilegedAccessGroupEligibilityScheduleInstance>|null $value Value to set for the eligibilityScheduleInstances property.
     */
     public function setEligibilityScheduleInstances(?array $value): void {
@@ -196,7 +196,7 @@ class PrivilegedAccessGroup extends Entity implements Parsable
     }
 
     /**
-     * Sets the eligibilityScheduleRequests property value. The eligibilityScheduleRequests property
+     * Sets the eligibilityScheduleRequests property value. The schedule requests for operations to create, update, delete, extend, and renew an eligibility.
      * @param array<PrivilegedAccessGroupEligibilityScheduleRequest>|null $value Value to set for the eligibilityScheduleRequests property.
     */
     public function setEligibilityScheduleRequests(?array $value): void {
@@ -204,7 +204,7 @@ class PrivilegedAccessGroup extends Entity implements Parsable
     }
 
     /**
-     * Sets the eligibilitySchedules property value. The eligibilitySchedules property
+     * Sets the eligibilitySchedules property value. The eligibility schedules to activate a just-in-time access.
      * @param array<PrivilegedAccessGroupEligibilitySchedule>|null $value Value to set for the eligibilitySchedules property.
     */
     public function setEligibilitySchedules(?array $value): void {

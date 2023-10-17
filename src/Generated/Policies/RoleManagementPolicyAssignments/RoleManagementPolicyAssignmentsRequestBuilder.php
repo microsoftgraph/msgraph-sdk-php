@@ -53,7 +53,7 @@ class RoleManagementPolicyAssignmentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the details of all role management policy assignments including the policies and rules associated with the Azure AD roles. This API is available in the following national cloud deployments.
+     * Get the details of all role management policy assignments made in PIM for Azure AD roles and PIM for groups. This API is available in the following national cloud deployments.
      * @param RoleManagementPolicyAssignmentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/policyroot-list-rolemanagementpolicyassignments?view=graph-rest-1.0 Find more info here
@@ -91,7 +91,7 @@ class RoleManagementPolicyAssignmentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the details of all role management policy assignments including the policies and rules associated with the Azure AD roles. This API is available in the following national cloud deployments.
+     * Get the details of all role management policy assignments made in PIM for Azure AD roles and PIM for groups. This API is available in the following national cloud deployments.
      * @param RoleManagementPolicyAssignmentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
