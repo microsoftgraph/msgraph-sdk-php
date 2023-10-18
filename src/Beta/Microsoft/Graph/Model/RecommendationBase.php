@@ -553,7 +553,7 @@ class RecommendationBase extends Entity
 
     /**
     * Gets the releaseType
-    * The current release type of the recommendation. The possible values are: preview or generallyAvailable.
+    * The current release type of the recommendation. The possible values are: preview, generallyAvailable, unknownFutureValue.
     *
     * @return string|null The releaseType
     */
@@ -568,7 +568,7 @@ class RecommendationBase extends Entity
 
     /**
     * Sets the releaseType
-    * The current release type of the recommendation. The possible values are: preview or generallyAvailable.
+    * The current release type of the recommendation. The possible values are: preview, generallyAvailable, unknownFutureValue.
     *
     * @param string $val The releaseType
     *

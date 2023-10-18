@@ -205,7 +205,7 @@ class ServicePrincipal extends DirectoryObject
 
     /**
     * Gets the appId
-    * The unique identifier for the associated application (its appId property). Supports $filter (eq, ne, not, in, startsWith).
+    * The unique identifier for the associated application (its appId property). Alternate key. Supports $filter (eq, ne, not, in, startsWith).
     *
     * @return string|null The appId
     */
@@ -220,7 +220,7 @@ class ServicePrincipal extends DirectoryObject
 
     /**
     * Sets the appId
-    * The unique identifier for the associated application (its appId property). Supports $filter (eq, ne, not, in, startsWith).
+    * The unique identifier for the associated application (its appId property). Alternate key. Supports $filter (eq, ne, not, in, startsWith).
     *
     * @param string $val The appId
     *

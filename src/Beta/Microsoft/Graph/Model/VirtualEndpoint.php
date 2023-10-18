@@ -208,6 +208,7 @@ class VirtualEndpoint extends Entity
 
      /**
      * Gets the frontLineServicePlans
+    * Front-line service plans for a Cloud PC.
      *
      * @return array|null The frontLineServicePlans
      */
@@ -222,6 +223,7 @@ class VirtualEndpoint extends Entity
 
     /**
     * Sets the frontLineServicePlans
+    * Front-line service plans for a Cloud PC.
     *
     * @param CloudPcFrontLineServicePlan[] $val The frontLineServicePlans
     *
@@ -422,7 +424,6 @@ class VirtualEndpoint extends Entity
 
      /**
      * Gets the sharedUseServicePlans
-    * Cloud PC shared-use service plans.
      *
      * @return array|null The sharedUseServicePlans
      */
@@ -437,7 +438,6 @@ class VirtualEndpoint extends Entity
 
     /**
     * Sets the sharedUseServicePlans
-    * Cloud PC shared-use service plans.
     *
     * @param CloudPcSharedUseServicePlan[] $val The sharedUseServicePlans
     *

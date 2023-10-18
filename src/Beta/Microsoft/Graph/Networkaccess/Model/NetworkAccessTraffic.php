@@ -354,6 +354,60 @@ class NetworkAccessTraffic implements \JsonSerializable
     }
 
     /**
+    * Gets the filteringProfileId
+    *
+    * @return string|null The filteringProfileId
+    */
+    public function getFilteringProfileId()
+    {
+        if (array_key_exists("filteringProfileId", $this->_propDict)) {
+            return $this->_propDict["filteringProfileId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the filteringProfileId
+    *
+    * @param string $val The filteringProfileId
+    *
+    * @return NetworkAccessTraffic
+    */
+    public function setFilteringProfileId($val)
+    {
+        $this->_propDict["filteringProfileId"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the filteringProfileName
+    *
+    * @return string|null The filteringProfileName
+    */
+    public function getFilteringProfileName()
+    {
+        if (array_key_exists("filteringProfileName", $this->_propDict)) {
+            return $this->_propDict["filteringProfileName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the filteringProfileName
+    *
+    * @param string $val The filteringProfileName
+    *
+    * @return NetworkAccessTraffic
+    */
+    public function setFilteringProfileName($val)
+    {
+        $this->_propDict["filteringProfileName"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the headers
     * Represents the headers included in a network request or response. Supports $filter (eq) and $orderby.
     *
@@ -383,6 +437,33 @@ class NetworkAccessTraffic implements \JsonSerializable
     public function setHeaders($val)
     {
         $this->_propDict["headers"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the initiatingProcessName
+    *
+    * @return string|null The initiatingProcessName
+    */
+    public function getInitiatingProcessName()
+    {
+        if (array_key_exists("initiatingProcessName", $this->_propDict)) {
+            return $this->_propDict["initiatingProcessName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the initiatingProcessName
+    *
+    * @param string $val The initiatingProcessName
+    *
+    * @return NetworkAccessTraffic
+    */
+    public function setInitiatingProcessName($val)
+    {
+        $this->_propDict["initiatingProcessName"] = $val;
         return $this;
     }
 
@@ -449,6 +530,33 @@ class NetworkAccessTraffic implements \JsonSerializable
     }
 
     /**
+    * Gets the policyName
+    *
+    * @return string|null The policyName
+    */
+    public function getPolicyName()
+    {
+        if (array_key_exists("policyName", $this->_propDict)) {
+            return $this->_propDict["policyName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the policyName
+    *
+    * @param string $val The policyName
+    *
+    * @return NetworkAccessTraffic
+    */
+    public function setPolicyName($val)
+    {
+        $this->_propDict["policyName"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the policyRuleId
     * Represents a unique identifier assigned to a policy rule. Supports $filter (eq) and $orderby.
     *
@@ -478,6 +586,33 @@ class NetworkAccessTraffic implements \JsonSerializable
     }
 
     /**
+    * Gets the policyRuleName
+    *
+    * @return string|null The policyRuleName
+    */
+    public function getPolicyRuleName()
+    {
+        if (array_key_exists("policyRuleName", $this->_propDict)) {
+            return $this->_propDict["policyRuleName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the policyRuleName
+    *
+    * @param string $val The policyRuleName
+    *
+    * @return NetworkAccessTraffic
+    */
+    public function setPolicyRuleName($val)
+    {
+        $this->_propDict["policyRuleName"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the receivedBytes
     * Represents the total number of bytes received in a network communication or data transfer. Supports $filter (eq) and $orderby.
     *
@@ -503,6 +638,33 @@ class NetworkAccessTraffic implements \JsonSerializable
     public function setReceivedBytes($val)
     {
         $this->_propDict["receivedBytes"] = intval($val);
+        return $this;
+    }
+
+    /**
+    * Gets the resourceTenantId
+    *
+    * @return string|null The resourceTenantId
+    */
+    public function getResourceTenantId()
+    {
+        if (array_key_exists("resourceTenantId", $this->_propDict)) {
+            return $this->_propDict["resourceTenantId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the resourceTenantId
+    *
+    * @param string $val The resourceTenantId
+    *
+    * @return NetworkAccessTraffic
+    */
+    public function setResourceTenantId($val)
+    {
+        $this->_propDict["resourceTenantId"] = $val;
         return $this;
     }
 

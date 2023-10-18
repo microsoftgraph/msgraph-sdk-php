@@ -26,7 +26,7 @@ class PrivilegedAccessGroupEligibilitySchedule extends PrivilegedAccessSchedule
 {
     /**
     * Gets the accessId
-    * The identifier of the membership or ownership eligibility to the group that is governed by PIM. Required. The possible values are: owner, member.
+    * The identifier of the membership or ownership eligibility to the group that is governed by PIM. Required. The possible values are: owner, member. Supports $filter (eq).
     *
     * @return PrivilegedAccessGroupRelationships|null The accessId
     */
@@ -45,7 +45,7 @@ class PrivilegedAccessGroupEligibilitySchedule extends PrivilegedAccessSchedule
 
     /**
     * Sets the accessId
-    * The identifier of the membership or ownership eligibility to the group that is governed by PIM. Required. The possible values are: owner, member.
+    * The identifier of the membership or ownership eligibility to the group that is governed by PIM. Required. The possible values are: owner, member. Supports $filter (eq).
     *
     * @param PrivilegedAccessGroupRelationships $val The accessId
     *
@@ -59,7 +59,7 @@ class PrivilegedAccessGroupEligibilitySchedule extends PrivilegedAccessSchedule
 
     /**
     * Gets the groupId
-    * The identifier of the group representing the scope of the membership or ownership eligibility through PIM for groups. Required.
+    * The identifier of the group representing the scope of the membership or ownership eligibility through PIM for groups. Required. Supports $filter (eq).
     *
     * @return string|null The groupId
     */
@@ -74,7 +74,7 @@ class PrivilegedAccessGroupEligibilitySchedule extends PrivilegedAccessSchedule
 
     /**
     * Sets the groupId
-    * The identifier of the group representing the scope of the membership or ownership eligibility through PIM for groups. Required.
+    * The identifier of the group representing the scope of the membership or ownership eligibility through PIM for groups. Required. Supports $filter (eq).
     *
     * @param string $val The groupId
     *
@@ -88,7 +88,7 @@ class PrivilegedAccessGroupEligibilitySchedule extends PrivilegedAccessSchedule
 
     /**
     * Gets the memberType
-    * Indicates whether the assignment is derived from a group assignment. It can further imply whether the caller can manage the schedule. Required. The possible values are: direct, group, unknownFutureValue.
+    * Indicates whether the assignment is derived from a group assignment. It can further imply whether the caller can manage the schedule. Required. The possible values are: direct, group, unknownFutureValue. Supports $filter (eq).
     *
     * @return PrivilegedAccessGroupMemberType|null The memberType
     */
@@ -107,7 +107,7 @@ class PrivilegedAccessGroupEligibilitySchedule extends PrivilegedAccessSchedule
 
     /**
     * Sets the memberType
-    * Indicates whether the assignment is derived from a group assignment. It can further imply whether the caller can manage the schedule. Required. The possible values are: direct, group, unknownFutureValue.
+    * Indicates whether the assignment is derived from a group assignment. It can further imply whether the caller can manage the schedule. Required. The possible values are: direct, group, unknownFutureValue. Supports $filter (eq).
     *
     * @param PrivilegedAccessGroupMemberType $val The memberType
     *
@@ -121,7 +121,7 @@ class PrivilegedAccessGroupEligibilitySchedule extends PrivilegedAccessSchedule
 
     /**
     * Gets the principalId
-    * The identifier of the principal whose membership or ownership eligibility is granted through PIM for groups. Required.
+    * The identifier of the principal whose membership or ownership eligibility is granted through PIM for groups. Required. Supports $filter (eq).
     *
     * @return string|null The principalId
     */
@@ -136,7 +136,7 @@ class PrivilegedAccessGroupEligibilitySchedule extends PrivilegedAccessSchedule
 
     /**
     * Sets the principalId
-    * The identifier of the principal whose membership or ownership eligibility is granted through PIM for groups. Required.
+    * The identifier of the principal whose membership or ownership eligibility is granted through PIM for groups. Required. Supports $filter (eq).
     *
     * @param string $val The principalId
     *

@@ -59,7 +59,7 @@ class Application extends DirectoryObject
 
     /**
     * Gets the appId
-    * The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only. Supports $filter (eq).
+    * The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only. Alternate key. Supports $filter (eq).
     *
     * @return string|null The appId
     */
@@ -74,7 +74,7 @@ class Application extends DirectoryObject
 
     /**
     * Sets the appId
-    * The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only. Supports $filter (eq).
+    * The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only. Alternate key. Supports $filter (eq).
     *
     * @param string $val The appId
     *
