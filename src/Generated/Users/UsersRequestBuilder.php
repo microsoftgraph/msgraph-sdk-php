@@ -104,11 +104,11 @@ class UsersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new user object.
+     * Create a new user.The request body contains the user to create. At a minimum, you must specify the required properties for the user. You can optionally specify any other writable properties. This API is available in the following national cloud deployments.
      * @param User $body The request body
      * @param UsersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://learn.microsoft.com/graph/api/intune-mam-user-create?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/user-post-users?view=graph-rest-1.0 Find more info here
     */
     public function post(User $body, ?UsersRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -145,7 +145,7 @@ class UsersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new user object.
+     * Create a new user.The request body contains the user to create. At a minimum, you must specify the required properties for the user. You can optionally specify any other writable properties. This API is available in the following national cloud deployments.
      * @param User $body The request body
      * @param UsersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

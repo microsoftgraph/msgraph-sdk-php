@@ -33,7 +33,7 @@ class PrivilegedAccessScheduleRequest extends Request implements Parsable
     }
 
     /**
-     * Gets the action property value. The action property
+     * Gets the action property value. Represents the type of operation on the group membership or ownership assignment request. The possible values are: adminAssign, adminUpdate, adminRemove, selfActivate, selfDeactivate, adminExtend, adminRenew. adminAssign: For administrators to assign group membership or ownership to principals.adminRemove: For administrators to remove principals from group membership or ownership. adminUpdate: For administrators to change existing group membership or ownership assignments.adminExtend: For administrators to extend expiring assignments.adminRenew: For administrators to renew expired assignments.selfActivate: For principals to activate their assignments.selfDeactivate: For principals to deactivate their active assignments.
      * @return ScheduleRequestActions|null
     */
     public function getAction(): ?ScheduleRequestActions {
@@ -60,7 +60,7 @@ class PrivilegedAccessScheduleRequest extends Request implements Parsable
     }
 
     /**
-     * Gets the isValidationOnly property value. The isValidationOnly property
+     * Gets the isValidationOnly property value. Determines whether the call is a validation or an actual call. Only set this property if you want to check whether an activation is subject to additional rules like MFA before actually submitting the request.
      * @return bool|null
     */
     public function getIsValidationOnly(): ?bool {
@@ -72,7 +72,7 @@ class PrivilegedAccessScheduleRequest extends Request implements Parsable
     }
 
     /**
-     * Gets the justification property value. The justification property
+     * Gets the justification property value. A message provided by users and administrators when create they create the privilegedAccessGroupAssignmentScheduleRequest object.
      * @return string|null
     */
     public function getJustification(): ?string {
@@ -84,7 +84,7 @@ class PrivilegedAccessScheduleRequest extends Request implements Parsable
     }
 
     /**
-     * Gets the scheduleInfo property value. The scheduleInfo property
+     * Gets the scheduleInfo property value. The period of the group membership or ownership assignment. Recurring schedules are currently unsupported.
      * @return RequestSchedule|null
     */
     public function getScheduleInfo(): ?RequestSchedule {
@@ -96,7 +96,7 @@ class PrivilegedAccessScheduleRequest extends Request implements Parsable
     }
 
     /**
-     * Gets the ticketInfo property value. The ticketInfo property
+     * Gets the ticketInfo property value. Ticket details linked to the group membership or ownership assignment request including details of the ticket number and ticket system.
      * @return TicketInfo|null
     */
     public function getTicketInfo(): ?TicketInfo {
@@ -121,7 +121,7 @@ class PrivilegedAccessScheduleRequest extends Request implements Parsable
     }
 
     /**
-     * Sets the action property value. The action property
+     * Sets the action property value. Represents the type of operation on the group membership or ownership assignment request. The possible values are: adminAssign, adminUpdate, adminRemove, selfActivate, selfDeactivate, adminExtend, adminRenew. adminAssign: For administrators to assign group membership or ownership to principals.adminRemove: For administrators to remove principals from group membership or ownership. adminUpdate: For administrators to change existing group membership or ownership assignments.adminExtend: For administrators to extend expiring assignments.adminRenew: For administrators to renew expired assignments.selfActivate: For principals to activate their assignments.selfDeactivate: For principals to deactivate their active assignments.
      * @param ScheduleRequestActions|null $value Value to set for the action property.
     */
     public function setAction(?ScheduleRequestActions $value): void {
@@ -129,7 +129,7 @@ class PrivilegedAccessScheduleRequest extends Request implements Parsable
     }
 
     /**
-     * Sets the isValidationOnly property value. The isValidationOnly property
+     * Sets the isValidationOnly property value. Determines whether the call is a validation or an actual call. Only set this property if you want to check whether an activation is subject to additional rules like MFA before actually submitting the request.
      * @param bool|null $value Value to set for the isValidationOnly property.
     */
     public function setIsValidationOnly(?bool $value): void {
@@ -137,7 +137,7 @@ class PrivilegedAccessScheduleRequest extends Request implements Parsable
     }
 
     /**
-     * Sets the justification property value. The justification property
+     * Sets the justification property value. A message provided by users and administrators when create they create the privilegedAccessGroupAssignmentScheduleRequest object.
      * @param string|null $value Value to set for the justification property.
     */
     public function setJustification(?string $value): void {
@@ -145,7 +145,7 @@ class PrivilegedAccessScheduleRequest extends Request implements Parsable
     }
 
     /**
-     * Sets the scheduleInfo property value. The scheduleInfo property
+     * Sets the scheduleInfo property value. The period of the group membership or ownership assignment. Recurring schedules are currently unsupported.
      * @param RequestSchedule|null $value Value to set for the scheduleInfo property.
     */
     public function setScheduleInfo(?RequestSchedule $value): void {
@@ -153,7 +153,7 @@ class PrivilegedAccessScheduleRequest extends Request implements Parsable
     }
 
     /**
-     * Sets the ticketInfo property value. The ticketInfo property
+     * Sets the ticketInfo property value. Ticket details linked to the group membership or ownership assignment request including details of the ticket number and ticket system.
      * @param TicketInfo|null $value Value to set for the ticketInfo property.
     */
     public function setTicketInfo(?TicketInfo $value): void {

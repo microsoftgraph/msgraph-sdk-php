@@ -31,9 +31,10 @@ class CancelRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action cancel
+     * Cancel an eligibility assignment request to a group whose membership and ownership are governed by PIM.
      * @param CancelRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://learn.microsoft.com/graph/api/privilegedaccessgroupeligibilityschedulerequest-cancel?view=graph-rest-1.0 Find more info here
     */
     public function post(?CancelRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);
@@ -49,7 +50,7 @@ class CancelRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action cancel
+     * Cancel an eligibility assignment request to a group whose membership and ownership are governed by PIM.
      * @param CancelRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

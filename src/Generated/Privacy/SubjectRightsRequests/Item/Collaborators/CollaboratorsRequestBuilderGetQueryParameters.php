@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\Collabora
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get collaborators from privacy
+ * Collection of users who can collaborate on the request.
 */
 class CollaboratorsRequestBuilderGetQueryParameters 
 {

@@ -55,7 +55,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the appId property value. The unique identifier for the application that is assigned to an application by Azure AD. Not nullable. Read-only. Supports $filter (eq).
+     * Gets the appId property value. The unique identifier for the application that is assigned to an application by Azure AD. Not nullable. Read-only. Alternate key. Supports $filter (eq).
      * @return string|null
     */
     public function getAppId(): ?string {
@@ -735,7 +735,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the appId property value. The unique identifier for the application that is assigned to an application by Azure AD. Not nullable. Read-only. Supports $filter (eq).
+     * Sets the appId property value. The unique identifier for the application that is assigned to an application by Azure AD. Not nullable. Read-only. Alternate key. Supports $filter (eq).
      * @param string|null $value Value to set for the appId property.
     */
     public function setAppId(?string $value): void {

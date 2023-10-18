@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\PrivilegedAccess\Group\As
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get activatedUsing from identityGovernance
+ * When the request activates a membership or ownership assignment in PIM for groups, this object represents the eligibility policy for the group. Otherwise, it is null. Supports $expand.
 */
 class ActivatedUsingRequestBuilderGetQueryParameters 
 {

@@ -45,7 +45,7 @@ class SubjectRightsRequestEnumeratedSiteLocation extends SubjectRightsRequestSit
     }
 
     /**
-     * Gets the urls property value. The urls property
+     * Gets the urls property value. Collection of site URLs that should be included. Includes the URL of each site, for example, https://www.contoso.com/site1.
      * @return array<string>|null
     */
     public function getUrls(): ?array {
@@ -68,7 +68,7 @@ class SubjectRightsRequestEnumeratedSiteLocation extends SubjectRightsRequestSit
     }
 
     /**
-     * Sets the urls property value. The urls property
+     * Sets the urls property value. Collection of site URLs that should be included. Includes the URL of each site, for example, https://www.contoso.com/site1.
      * @param array<string>|null $value Value to set for the urls property.
     */
     public function setUrls(?array $value): void {

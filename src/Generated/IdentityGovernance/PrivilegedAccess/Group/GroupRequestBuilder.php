@@ -106,7 +106,7 @@ class GroupRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get group from identityGovernance
+     * A group that's governed through Privileged Identity Management (PIM).
      * @param GroupRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -160,7 +160,7 @@ class GroupRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get group from identityGovernance
+     * A group that's governed through Privileged Identity Management (PIM).
      * @param GroupRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

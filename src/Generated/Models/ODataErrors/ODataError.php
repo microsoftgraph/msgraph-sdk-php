@@ -81,6 +81,18 @@ class ODataError extends ApiException implements AdditionalDataHolder, BackedMod
     }
 
     /**
+     * The primary error message.
+     * @return string
+    */
+    public function getPrimaryErrorMessage(): string {
+        $primaryError = $this->getError();
+        if ($primaryError !== null) {
+            return $primaryError->getMessage() ?? '';
+        }
+        return '';
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */

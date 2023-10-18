@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\PrivilegedAccess\Group\As
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get group from identityGovernance
+ * References the group that is the scope of the membership or ownership assignment through PIM for groups. Supports $expand.
 */
 class GroupRequestBuilderGetQueryParameters 
 {

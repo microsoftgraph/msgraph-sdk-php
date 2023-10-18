@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\PrivilegedAccess\Group;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get group from identityGovernance
+ * A group that's governed through Privileged Identity Management (PIM).
 */
 class GroupRequestBuilderGetQueryParameters 
 {

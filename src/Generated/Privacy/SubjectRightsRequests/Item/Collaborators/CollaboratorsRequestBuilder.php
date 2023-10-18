@@ -52,7 +52,7 @@ class CollaboratorsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get collaborators from privacy
+     * Collection of users who can collaborate on the request.
      * @param CollaboratorsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -70,7 +70,7 @@ class CollaboratorsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get collaborators from privacy
+     * Collection of users who can collaborate on the request.
      * @param CollaboratorsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

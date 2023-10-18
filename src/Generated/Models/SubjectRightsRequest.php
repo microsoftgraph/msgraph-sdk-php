@@ -27,7 +27,7 @@ class SubjectRightsRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the approvers property value. The approvers property
+     * Gets the approvers property value. Collection of users who can approve the request. Currently only supported for requests of type delete.
      * @return array<User>|null
     */
     public function getApprovers(): ?array {
@@ -53,7 +53,7 @@ class SubjectRightsRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the closedDateTime property value. The date and time when the request was closed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Gets the closedDateTime property value. The date and time when the request was closed. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return DateTime|null
     */
     public function getClosedDateTime(): ?DateTime {
@@ -65,7 +65,7 @@ class SubjectRightsRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the collaborators property value. The collaborators property
+     * Gets the collaborators property value. Collection of users who can collaborate on the request.
      * @return array<User>|null
     */
     public function getCollaborators(): ?array {
@@ -79,7 +79,7 @@ class SubjectRightsRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the contentQuery property value. The contentQuery property
+     * Gets the contentQuery property value. KQL based content query that should be used for search. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      * @return string|null
     */
     public function getContentQuery(): ?string {
@@ -103,7 +103,7 @@ class SubjectRightsRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdDateTime property value. The date and time when the request was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Gets the createdDateTime property value. The date and time when the request was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
@@ -163,7 +163,7 @@ class SubjectRightsRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the externalId property value. The externalId property
+     * Gets the externalId property value. The external ID for the request that is immutable after creation and is used for tracking the request for the external system. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      * @return string|null
     */
     public function getExternalId(): ?string {
@@ -234,7 +234,7 @@ class SubjectRightsRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the includeAllVersions property value. The includeAllVersions property
+     * Gets the includeAllVersions property value. Include all versions of the documents. By default, the current copies of the documents are returned. If SharePoint sites have versioning enabled, including all versions includes the historical copies of the documents. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      * @return bool|null
     */
     public function getIncludeAllVersions(): ?bool {
@@ -246,7 +246,7 @@ class SubjectRightsRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the includeAuthoredContent property value. The includeAuthoredContent property
+     * Gets the includeAuthoredContent property value. Include content authored by the data subject. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      * @return bool|null
     */
     public function getIncludeAuthoredContent(): ?bool {
@@ -270,7 +270,7 @@ class SubjectRightsRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the internalDueDateTime property value. The date and time when the request is internally due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Gets the internalDueDateTime property value. The date and time when the request is internally due. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return DateTime|null
     */
     public function getInternalDueDateTime(): ?DateTime {
@@ -294,7 +294,7 @@ class SubjectRightsRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastModifiedDateTime property value. The date and time when the request was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Gets the lastModifiedDateTime property value. The date and time when the request was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
@@ -306,7 +306,7 @@ class SubjectRightsRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the mailboxLocations property value. The mailboxLocations property
+     * Gets the mailboxLocations property value. The mailbox locations that should be searched. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      * @return SubjectRightsRequestMailboxLocation|null
     */
     public function getMailboxLocations(): ?SubjectRightsRequestMailboxLocation {
@@ -332,7 +332,7 @@ class SubjectRightsRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the pauseAfterEstimate property value. The pauseAfterEstimate property
+     * Gets the pauseAfterEstimate property value. Pause the request after estimate has finished. By default, the data estimate runs and then pauses, allowing you to preview results and then select the option to retrieve data in the UI. You can set this property to false if you want it to perform the estimate and then automatically begin with the retrieval of the content. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      * @return bool|null
     */
     public function getPauseAfterEstimate(): ?bool {
@@ -344,7 +344,7 @@ class SubjectRightsRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the regulations property value. List of regulations that this request fulfills.
+     * Gets the regulations property value. List of regulations that this request fulfill.
      * @return array<string>|null
     */
     public function getRegulations(): ?array {
@@ -358,7 +358,7 @@ class SubjectRightsRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the siteLocations property value. The siteLocations property
+     * Gets the siteLocations property value. The SharePoint and OneDrive site locations that should be searched. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      * @return SubjectRightsRequestSiteLocation|null
     */
     public function getSiteLocations(): ?SubjectRightsRequestSiteLocation {
@@ -408,7 +408,7 @@ class SubjectRightsRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the type property value. The type of the request. Possible values are: export, delete,  access, tagForAction, unknownFutureValue.
+     * Gets the type property value. The type of the request. Possible values are: export, delete, access, tagForAction, unknownFutureValue.
      * @return SubjectRightsRequestType|null
     */
     public function getType(): ?SubjectRightsRequestType {
@@ -456,7 +456,7 @@ class SubjectRightsRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the approvers property value. The approvers property
+     * Sets the approvers property value. Collection of users who can approve the request. Currently only supported for requests of type delete.
      * @param array<User>|null $value Value to set for the approvers property.
     */
     public function setApprovers(?array $value): void {
@@ -472,7 +472,7 @@ class SubjectRightsRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the closedDateTime property value. The date and time when the request was closed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Sets the closedDateTime property value. The date and time when the request was closed. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param DateTime|null $value Value to set for the closedDateTime property.
     */
     public function setClosedDateTime(?DateTime $value): void {
@@ -480,7 +480,7 @@ class SubjectRightsRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the collaborators property value. The collaborators property
+     * Sets the collaborators property value. Collection of users who can collaborate on the request.
      * @param array<User>|null $value Value to set for the collaborators property.
     */
     public function setCollaborators(?array $value): void {
@@ -488,7 +488,7 @@ class SubjectRightsRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the contentQuery property value. The contentQuery property
+     * Sets the contentQuery property value. KQL based content query that should be used for search. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      * @param string|null $value Value to set for the contentQuery property.
     */
     public function setContentQuery(?string $value): void {
@@ -504,7 +504,7 @@ class SubjectRightsRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdDateTime property value. The date and time when the request was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Sets the createdDateTime property value. The date and time when the request was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
@@ -544,7 +544,7 @@ class SubjectRightsRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the externalId property value. The externalId property
+     * Sets the externalId property value. The external ID for the request that is immutable after creation and is used for tracking the request for the external system. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      * @param string|null $value Value to set for the externalId property.
     */
     public function setExternalId(?string $value): void {
@@ -560,7 +560,7 @@ class SubjectRightsRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the includeAllVersions property value. The includeAllVersions property
+     * Sets the includeAllVersions property value. Include all versions of the documents. By default, the current copies of the documents are returned. If SharePoint sites have versioning enabled, including all versions includes the historical copies of the documents. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      * @param bool|null $value Value to set for the includeAllVersions property.
     */
     public function setIncludeAllVersions(?bool $value): void {
@@ -568,7 +568,7 @@ class SubjectRightsRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the includeAuthoredContent property value. The includeAuthoredContent property
+     * Sets the includeAuthoredContent property value. Include content authored by the data subject. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      * @param bool|null $value Value to set for the includeAuthoredContent property.
     */
     public function setIncludeAuthoredContent(?bool $value): void {
@@ -584,7 +584,7 @@ class SubjectRightsRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the internalDueDateTime property value. The date and time when the request is internally due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Sets the internalDueDateTime property value. The date and time when the request is internally due. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param DateTime|null $value Value to set for the internalDueDateTime property.
     */
     public function setInternalDueDateTime(?DateTime $value): void {
@@ -600,7 +600,7 @@ class SubjectRightsRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastModifiedDateTime property value. The date and time when the request was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Sets the lastModifiedDateTime property value. The date and time when the request was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
@@ -608,7 +608,7 @@ class SubjectRightsRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the mailboxLocations property value. The mailboxLocations property
+     * Sets the mailboxLocations property value. The mailbox locations that should be searched. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      * @param SubjectRightsRequestMailboxLocation|null $value Value to set for the mailboxLocations property.
     */
     public function setMailboxLocations(?SubjectRightsRequestMailboxLocation $value): void {
@@ -624,7 +624,7 @@ class SubjectRightsRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the pauseAfterEstimate property value. The pauseAfterEstimate property
+     * Sets the pauseAfterEstimate property value. Pause the request after estimate has finished. By default, the data estimate runs and then pauses, allowing you to preview results and then select the option to retrieve data in the UI. You can set this property to false if you want it to perform the estimate and then automatically begin with the retrieval of the content. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      * @param bool|null $value Value to set for the pauseAfterEstimate property.
     */
     public function setPauseAfterEstimate(?bool $value): void {
@@ -632,7 +632,7 @@ class SubjectRightsRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the regulations property value. List of regulations that this request fulfills.
+     * Sets the regulations property value. List of regulations that this request fulfill.
      * @param array<string>|null $value Value to set for the regulations property.
     */
     public function setRegulations(?array $value): void {
@@ -640,7 +640,7 @@ class SubjectRightsRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the siteLocations property value. The siteLocations property
+     * Sets the siteLocations property value. The SharePoint and OneDrive site locations that should be searched. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      * @param SubjectRightsRequestSiteLocation|null $value Value to set for the siteLocations property.
     */
     public function setSiteLocations(?SubjectRightsRequestSiteLocation $value): void {
@@ -672,7 +672,7 @@ class SubjectRightsRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the type property value. The type of the request. Possible values are: export, delete,  access, tagForAction, unknownFutureValue.
+     * Sets the type property value. The type of the request. Possible values are: export, delete, access, tagForAction, unknownFutureValue.
      * @param SubjectRightsRequestType|null $value Value to set for the type property.
     */
     public function setType(?SubjectRightsRequestType $value): void {

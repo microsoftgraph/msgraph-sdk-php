@@ -52,7 +52,7 @@ class ApproversRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get approvers from security
+     * Collection of users who can approve the request. Currently only supported for requests of type delete.
      * @param ApproversRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -70,7 +70,7 @@ class ApproversRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get approvers from security
+     * Collection of users who can approve the request. Currently only supported for requests of type delete.
      * @param ApproversRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

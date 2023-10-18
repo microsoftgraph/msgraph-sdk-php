@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\PrivilegedAccess\Group\As
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get assignmentSchedules from identityGovernance
+ * Get a list of the privilegedAccessGroupAssignmentSchedule objects and their properties.
 */
 class AssignmentSchedulesRequestBuilderGetQueryParameters 
 {

@@ -63,9 +63,10 @@ class AssignmentScheduleRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get assignmentScheduleRequests from identityGovernance
+     * Get a list of the privilegedAccessGroupAssignmentScheduleRequest objects and their properties.
      * @param AssignmentScheduleRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://learn.microsoft.com/graph/api/privilegedaccessgroup-list-assignmentschedulerequests?view=graph-rest-1.0 Find more info here
     */
     public function get(?AssignmentScheduleRequestsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -81,10 +82,11 @@ class AssignmentScheduleRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to assignmentScheduleRequests for identityGovernance
+     * Create a new privilegedAccessGroupAssignmentScheduleRequest object.
      * @param PrivilegedAccessGroupAssignmentScheduleRequest $body The request body
      * @param AssignmentScheduleRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://learn.microsoft.com/graph/api/privilegedaccessgroup-post-assignmentschedulerequests?view=graph-rest-1.0 Find more info here
     */
     public function post(PrivilegedAccessGroupAssignmentScheduleRequest $body, ?AssignmentScheduleRequestsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -100,7 +102,7 @@ class AssignmentScheduleRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get assignmentScheduleRequests from identityGovernance
+     * Get a list of the privilegedAccessGroupAssignmentScheduleRequest objects and their properties.
      * @param AssignmentScheduleRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -121,7 +123,7 @@ class AssignmentScheduleRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to assignmentScheduleRequests for identityGovernance
+     * Create a new privilegedAccessGroupAssignmentScheduleRequest object.
      * @param PrivilegedAccessGroupAssignmentScheduleRequest $body The request body
      * @param AssignmentScheduleRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

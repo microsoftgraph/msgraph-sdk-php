@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Admin\Edge\EdgeRequestBuilder;
+use Microsoft\Graph\Generated\Admin\People\PeopleRequestBuilder;
 use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\ServiceAnnouncementRequestBuilder;
 use Microsoft\Graph\Generated\Admin\Sharepoint\SharepointRequestBuilder;
 use Microsoft\Graph\Generated\Models\Admin;
@@ -25,6 +26,13 @@ class AdminRequestBuilder extends BaseRequestBuilder
     */
     public function edge(): EdgeRequestBuilder {
         return new EdgeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the people property of the microsoft.graph.admin entity.
+    */
+    public function people(): PeopleRequestBuilder {
+        return new PeopleRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

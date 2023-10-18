@@ -556,6 +556,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.participantLeftNotification': return new ParticipantLeftNotification();
                 case '#microsoft.graph.passwordAuthenticationMethod': return new PasswordAuthenticationMethod();
                 case '#microsoft.graph.payload': return new Payload();
+                case '#microsoft.graph.peopleAdminSettings': return new PeopleAdminSettings();
                 case '#microsoft.graph.permission': return new Permission();
                 case '#microsoft.graph.permissionGrantConditionSet': return new PermissionGrantConditionSet();
                 case '#microsoft.graph.permissionGrantPolicy': return new PermissionGrantPolicy();
@@ -606,6 +607,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.privilegedAccessSchedule': return new PrivilegedAccessSchedule();
                 case '#microsoft.graph.privilegedAccessScheduleInstance': return new PrivilegedAccessScheduleInstance();
                 case '#microsoft.graph.privilegedAccessScheduleRequest': return new PrivilegedAccessScheduleRequest();
+                case '#microsoft.graph.profileCardProperty': return new ProfileCardProperty();
                 case '#microsoft.graph.profilePhoto': return new ProfilePhoto();
                 case '#microsoft.graph.provisioningObjectSummary': return new ProvisioningObjectSummary();
                 case '#microsoft.graph.rbacApplication': return new RbacApplication();

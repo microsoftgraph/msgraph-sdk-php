@@ -70,11 +70,11 @@ class CustomCalloutExtensionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an accessPackageAssignmentWorkflowExtension object.
+     * Update the properties of an accessPackageAssignmentRequestWorkflowExtension object.
      * @param CustomCalloutExtension $body The request body
      * @param CustomCalloutExtensionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://learn.microsoft.com/graph/api/accesspackageassignmentworkflowextension-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/accesspackageassignmentrequestworkflowextension-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(CustomCalloutExtension $body, ?CustomCalloutExtensionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -128,7 +128,7 @@ class CustomCalloutExtensionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an accessPackageAssignmentWorkflowExtension object.
+     * Update the properties of an accessPackageAssignmentRequestWorkflowExtension object.
      * @param CustomCalloutExtension $body The request body
      * @param CustomCalloutExtensionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

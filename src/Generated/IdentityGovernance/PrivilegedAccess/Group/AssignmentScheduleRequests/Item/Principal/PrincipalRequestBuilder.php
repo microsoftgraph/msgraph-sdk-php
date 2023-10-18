@@ -32,7 +32,7 @@ class PrincipalRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get principal from identityGovernance
+     * References the principal that's in the scope of this membership or ownership assignment request through the group that's governed by PIM. Supports $expand.
      * @param PrincipalRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -50,7 +50,7 @@ class PrincipalRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get principal from identityGovernance
+     * References the principal that's in the scope of this membership or ownership assignment request through the group that's governed by PIM. Supports $expand.
      * @param PrincipalRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

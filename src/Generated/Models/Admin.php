@@ -76,6 +76,7 @@ class Admin implements AdditionalDataHolder, BackedModel, Parsable
         return  [
             'edge' => fn(ParseNode $n) => $o->setEdge($n->getObjectValue([Edge::class, 'createFromDiscriminatorValue'])),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'people' => fn(ParseNode $n) => $o->setPeople($n->getObjectValue([PeopleAdminSettings::class, 'createFromDiscriminatorValue'])),
             'serviceAnnouncement' => fn(ParseNode $n) => $o->setServiceAnnouncement($n->getObjectValue([ServiceAnnouncement::class, 'createFromDiscriminatorValue'])),
             'sharepoint' => fn(ParseNode $n) => $o->setSharepoint($n->getObjectValue([Sharepoint::class, 'createFromDiscriminatorValue'])),
         ];
@@ -91,6 +92,18 @@ class Admin implements AdditionalDataHolder, BackedModel, Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
+    }
+
+    /**
+     * Gets the people property value. The people property
+     * @return PeopleAdminSettings|null
+    */
+    public function getPeople(): ?PeopleAdminSettings {
+        $val = $this->getBackingStore()->get('people');
+        if (is_null($val) || $val instanceof PeopleAdminSettings) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'people'");
     }
 
     /**
@@ -124,6 +137,7 @@ class Admin implements AdditionalDataHolder, BackedModel, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeObjectValue('edge', $this->getEdge());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeObjectValue('people', $this->getPeople());
         $writer->writeObjectValue('serviceAnnouncement', $this->getServiceAnnouncement());
         $writer->writeObjectValue('sharepoint', $this->getSharepoint());
         $writer->writeAdditionalData($this->getAdditionalData());
@@ -159,6 +173,14 @@ class Admin implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
+    }
+
+    /**
+     * Sets the people property value. The people property
+     * @param PeopleAdminSettings|null $value Value to set for the people property.
+    */
+    public function setPeople(?PeopleAdminSettings $value): void {
+        $this->getBackingStore()->set('people', $value);
     }
 
     /**

@@ -26,7 +26,7 @@ class PrivilegedAccessGroupEligibilitySchedule extends PrivilegedAccessSchedule 
     }
 
     /**
-     * Gets the accessId property value. The accessId property
+     * Gets the accessId property value. The identifier of the membership or ownership eligibility to the group that is governed by PIM. Required. The possible values are: owner, member. Supports $filter (eq).
      * @return PrivilegedAccessGroupRelationships|null
     */
     public function getAccessId(): ?PrivilegedAccessGroupRelationships {
@@ -54,7 +54,7 @@ class PrivilegedAccessGroupEligibilitySchedule extends PrivilegedAccessSchedule 
     }
 
     /**
-     * Gets the group property value. The group property
+     * Gets the group property value. References the group that is the scope of the membership or ownership eligibility through PIM for groups. Supports $expand.
      * @return Group|null
     */
     public function getGroup(): ?Group {
@@ -66,7 +66,7 @@ class PrivilegedAccessGroupEligibilitySchedule extends PrivilegedAccessSchedule 
     }
 
     /**
-     * Gets the groupId property value. The groupId property
+     * Gets the groupId property value. The identifier of the group representing the scope of the membership or ownership eligibility through PIM for groups. Required. Supports $filter (eq).
      * @return string|null
     */
     public function getGroupId(): ?string {
@@ -78,7 +78,7 @@ class PrivilegedAccessGroupEligibilitySchedule extends PrivilegedAccessSchedule 
     }
 
     /**
-     * Gets the memberType property value. The memberType property
+     * Gets the memberType property value. Indicates whether the assignment is derived from a group assignment. It can further imply whether the caller can manage the schedule. Required. The possible values are: direct, group, unknownFutureValue. Supports $filter (eq).
      * @return PrivilegedAccessGroupMemberType|null
     */
     public function getMemberType(): ?PrivilegedAccessGroupMemberType {
@@ -90,7 +90,7 @@ class PrivilegedAccessGroupEligibilitySchedule extends PrivilegedAccessSchedule 
     }
 
     /**
-     * Gets the principal property value. The principal property
+     * Gets the principal property value. References the principal that's in the scope of this membership or ownership eligibility request to the group that's governed by PIM. Supports $expand.
      * @return DirectoryObject|null
     */
     public function getPrincipal(): ?DirectoryObject {
@@ -102,7 +102,7 @@ class PrivilegedAccessGroupEligibilitySchedule extends PrivilegedAccessSchedule 
     }
 
     /**
-     * Gets the principalId property value. The principalId property
+     * Gets the principalId property value. The identifier of the principal whose membership or ownership eligibility is granted through PIM for groups. Required. Supports $filter (eq).
      * @return string|null
     */
     public function getPrincipalId(): ?string {
@@ -128,7 +128,7 @@ class PrivilegedAccessGroupEligibilitySchedule extends PrivilegedAccessSchedule 
     }
 
     /**
-     * Sets the accessId property value. The accessId property
+     * Sets the accessId property value. The identifier of the membership or ownership eligibility to the group that is governed by PIM. Required. The possible values are: owner, member. Supports $filter (eq).
      * @param PrivilegedAccessGroupRelationships|null $value Value to set for the accessId property.
     */
     public function setAccessId(?PrivilegedAccessGroupRelationships $value): void {
@@ -136,7 +136,7 @@ class PrivilegedAccessGroupEligibilitySchedule extends PrivilegedAccessSchedule 
     }
 
     /**
-     * Sets the group property value. The group property
+     * Sets the group property value. References the group that is the scope of the membership or ownership eligibility through PIM for groups. Supports $expand.
      * @param Group|null $value Value to set for the group property.
     */
     public function setGroup(?Group $value): void {
@@ -144,7 +144,7 @@ class PrivilegedAccessGroupEligibilitySchedule extends PrivilegedAccessSchedule 
     }
 
     /**
-     * Sets the groupId property value. The groupId property
+     * Sets the groupId property value. The identifier of the group representing the scope of the membership or ownership eligibility through PIM for groups. Required. Supports $filter (eq).
      * @param string|null $value Value to set for the groupId property.
     */
     public function setGroupId(?string $value): void {
@@ -152,7 +152,7 @@ class PrivilegedAccessGroupEligibilitySchedule extends PrivilegedAccessSchedule 
     }
 
     /**
-     * Sets the memberType property value. The memberType property
+     * Sets the memberType property value. Indicates whether the assignment is derived from a group assignment. It can further imply whether the caller can manage the schedule. Required. The possible values are: direct, group, unknownFutureValue. Supports $filter (eq).
      * @param PrivilegedAccessGroupMemberType|null $value Value to set for the memberType property.
     */
     public function setMemberType(?PrivilegedAccessGroupMemberType $value): void {
@@ -160,7 +160,7 @@ class PrivilegedAccessGroupEligibilitySchedule extends PrivilegedAccessSchedule 
     }
 
     /**
-     * Sets the principal property value. The principal property
+     * Sets the principal property value. References the principal that's in the scope of this membership or ownership eligibility request to the group that's governed by PIM. Supports $expand.
      * @param DirectoryObject|null $value Value to set for the principal property.
     */
     public function setPrincipal(?DirectoryObject $value): void {
@@ -168,7 +168,7 @@ class PrivilegedAccessGroupEligibilitySchedule extends PrivilegedAccessSchedule 
     }
 
     /**
-     * Sets the principalId property value. The principalId property
+     * Sets the principalId property value. The identifier of the principal whose membership or ownership eligibility is granted through PIM for groups. Required. Supports $filter (eq).
      * @param string|null $value Value to set for the principalId property.
     */
     public function setPrincipalId(?string $value): void {

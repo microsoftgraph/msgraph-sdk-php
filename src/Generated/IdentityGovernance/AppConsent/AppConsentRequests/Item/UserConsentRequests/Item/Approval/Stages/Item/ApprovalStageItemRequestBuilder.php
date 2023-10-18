@@ -50,7 +50,7 @@ class ApprovalStageItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * In Azure AD entitlement management, retrieve the properties of an approvalStage object. An approval stage is contained within an approval object. This API is available in the following national cloud deployments.
+     * Retrieve the properties of an approvalStage object. An approval stage is contained within an approval object. This API is available in the following national cloud deployments.
      * @param ApprovalStageItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/approvalstage-get?view=graph-rest-1.0 Find more info here
@@ -69,7 +69,7 @@ class ApprovalStageItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * In Azure AD entitlement management, approve or deny an approvalStage object in an approval. This API is available in the following national cloud deployments.
+     * Approve or deny an approvalStage object in an approval. This API is available in the following national cloud deployments.
      * @param ApprovalStage $body The request body
      * @param ApprovalStageItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -106,7 +106,7 @@ class ApprovalStageItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * In Azure AD entitlement management, retrieve the properties of an approvalStage object. An approval stage is contained within an approval object. This API is available in the following national cloud deployments.
+     * Retrieve the properties of an approvalStage object. An approval stage is contained within an approval object. This API is available in the following national cloud deployments.
      * @param ApprovalStageItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -127,7 +127,7 @@ class ApprovalStageItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * In Azure AD entitlement management, approve or deny an approvalStage object in an approval. This API is available in the following national cloud deployments.
+     * Approve or deny an approvalStage object in an approval. This API is available in the following national cloud deployments.
      * @param ApprovalStage $body The request body
      * @param ApprovalStageItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

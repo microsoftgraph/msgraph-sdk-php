@@ -64,7 +64,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity implements Parsable
     }
 
     /**
-     * Gets the roleDefinitionId property value. The identifier of the role definition object where the policy applies. If not specified, the policy applies to all roles. Supports $filter (eq).
+     * Gets the roleDefinitionId property value. For Azure AD roles policy, it's the identifier of the role definition object where the policy applies. For PIM for groups membership and ownership, it's either member or owner. Supports $filter (eq).
      * @return string|null
     */
     public function getRoleDefinitionId(): ?string {
@@ -88,7 +88,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity implements Parsable
     }
 
     /**
-     * Gets the scopeType property value. The type of the scope where the policy is assigned. One of Directory, DirectoryRole. Required.
+     * Gets the scopeType property value. The type of the scope where the policy is assigned. One of Directory, DirectoryRole, Group. Required.
      * @return string|null
     */
     public function getScopeType(): ?string {
@@ -129,7 +129,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity implements Parsable
     }
 
     /**
-     * Sets the roleDefinitionId property value. The identifier of the role definition object where the policy applies. If not specified, the policy applies to all roles. Supports $filter (eq).
+     * Sets the roleDefinitionId property value. For Azure AD roles policy, it's the identifier of the role definition object where the policy applies. For PIM for groups membership and ownership, it's either member or owner. Supports $filter (eq).
      * @param string|null $value Value to set for the roleDefinitionId property.
     */
     public function setRoleDefinitionId(?string $value): void {
@@ -145,7 +145,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity implements Parsable
     }
 
     /**
-     * Sets the scopeType property value. The type of the scope where the policy is assigned. One of Directory, DirectoryRole. Required.
+     * Sets the scopeType property value. The type of the scope where the policy is assigned. One of Directory, DirectoryRole, Group. Required.
      * @param string|null $value Value to set for the scopeType property.
     */
     public function setScopeType(?string $value): void {
