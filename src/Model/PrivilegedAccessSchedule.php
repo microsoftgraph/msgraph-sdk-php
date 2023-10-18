@@ -26,6 +26,7 @@ class PrivilegedAccessSchedule extends Entity
 {
     /**
     * Gets the createdDateTime
+    * When the schedule was created. Optional.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -44,6 +45,7 @@ class PrivilegedAccessSchedule extends Entity
 
     /**
     * Sets the createdDateTime
+    * When the schedule was created. Optional.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -57,6 +59,7 @@ class PrivilegedAccessSchedule extends Entity
 
     /**
     * Gets the createdUsing
+    * The identifier of the access assignment or eligibility request that created this schedule. Optional.
     *
     * @return string|null The createdUsing
     */
@@ -71,6 +74,7 @@ class PrivilegedAccessSchedule extends Entity
 
     /**
     * Sets the createdUsing
+    * The identifier of the access assignment or eligibility request that created this schedule. Optional.
     *
     * @param string $val The createdUsing
     *
@@ -84,6 +88,7 @@ class PrivilegedAccessSchedule extends Entity
 
     /**
     * Gets the modifiedDateTime
+    * When the schedule was last modified. Optional.
     *
     * @return \DateTime|null The modifiedDateTime
     */
@@ -102,6 +107,7 @@ class PrivilegedAccessSchedule extends Entity
 
     /**
     * Sets the modifiedDateTime
+    * When the schedule was last modified. Optional.
     *
     * @param \DateTime $val The modifiedDateTime
     *
@@ -115,6 +121,7 @@ class PrivilegedAccessSchedule extends Entity
 
     /**
     * Gets the scheduleInfo
+    * Represents the period of the access assignment or eligibility. The scheduleInfo can represent a single occurrence or multiple recurring instances. Required.
     *
     * @return RequestSchedule|null The scheduleInfo
     */
@@ -133,6 +140,7 @@ class PrivilegedAccessSchedule extends Entity
 
     /**
     * Sets the scheduleInfo
+    * Represents the period of the access assignment or eligibility. The scheduleInfo can represent a single occurrence or multiple recurring instances. Required.
     *
     * @param RequestSchedule $val The scheduleInfo
     *
@@ -146,6 +154,7 @@ class PrivilegedAccessSchedule extends Entity
 
     /**
     * Gets the status
+    * The status of the access assignment or eligibility request. The possible values are: Canceled, Denied, Failed, Granted, PendingAdminDecision, PendingApproval, PendingProvisioning, PendingScheduleCreation, Provisioned, Revoked, and ScheduleCreated. Not nullable. Optional.
     *
     * @return string|null The status
     */
@@ -160,6 +169,7 @@ class PrivilegedAccessSchedule extends Entity
 
     /**
     * Sets the status
+    * The status of the access assignment or eligibility request. The possible values are: Canceled, Denied, Failed, Granted, PendingAdminDecision, PendingApproval, PendingProvisioning, PendingScheduleCreation, Provisioned, Revoked, and ScheduleCreated. Not nullable. Optional.
     *
     * @param string $val The status
     *

@@ -26,6 +26,7 @@ class PrivilegedAccessGroupEligibilityScheduleRequest extends PrivilegedAccessSc
 {
     /**
     * Gets the accessId
+    * The identifier of membership or ownership eligibility relationship to the group. Required. The possible values are: owner, member, unknownFutureValue.
     *
     * @return PrivilegedAccessGroupRelationships|null The accessId
     */
@@ -44,6 +45,7 @@ class PrivilegedAccessGroupEligibilityScheduleRequest extends PrivilegedAccessSc
 
     /**
     * Sets the accessId
+    * The identifier of membership or ownership eligibility relationship to the group. Required. The possible values are: owner, member, unknownFutureValue.
     *
     * @param PrivilegedAccessGroupRelationships $val The accessId
     *
@@ -57,6 +59,7 @@ class PrivilegedAccessGroupEligibilityScheduleRequest extends PrivilegedAccessSc
 
     /**
     * Gets the groupId
+    * The identifier of the group representing the scope of the membership and ownership eligibility through PIM for groups. Required.
     *
     * @return string|null The groupId
     */
@@ -71,6 +74,7 @@ class PrivilegedAccessGroupEligibilityScheduleRequest extends PrivilegedAccessSc
 
     /**
     * Sets the groupId
+    * The identifier of the group representing the scope of the membership and ownership eligibility through PIM for groups. Required.
     *
     * @param string $val The groupId
     *
@@ -84,6 +88,7 @@ class PrivilegedAccessGroupEligibilityScheduleRequest extends PrivilegedAccessSc
 
     /**
     * Gets the principalId
+    * The identifier of the principal whose membership or ownership eligibility to the group is managed through PIM for groups. Required.
     *
     * @return string|null The principalId
     */
@@ -98,6 +103,7 @@ class PrivilegedAccessGroupEligibilityScheduleRequest extends PrivilegedAccessSc
 
     /**
     * Sets the principalId
+    * The identifier of the principal whose membership or ownership eligibility to the group is managed through PIM for groups. Required.
     *
     * @param string $val The principalId
     *
@@ -111,6 +117,7 @@ class PrivilegedAccessGroupEligibilityScheduleRequest extends PrivilegedAccessSc
 
     /**
     * Gets the targetScheduleId
+    * The identifier of the schedule that's created from the eligibility request. Optional.
     *
     * @return string|null The targetScheduleId
     */
@@ -125,6 +132,7 @@ class PrivilegedAccessGroupEligibilityScheduleRequest extends PrivilegedAccessSc
 
     /**
     * Sets the targetScheduleId
+    * The identifier of the schedule that's created from the eligibility request. Optional.
     *
     * @param string $val The targetScheduleId
     *
@@ -138,6 +146,7 @@ class PrivilegedAccessGroupEligibilityScheduleRequest extends PrivilegedAccessSc
 
     /**
     * Gets the group
+    * References the group that is the scope of the membership or ownership eligibility request through PIM for groups. Supports $expand.
     *
     * @return Group|null The group
     */
@@ -156,6 +165,7 @@ class PrivilegedAccessGroupEligibilityScheduleRequest extends PrivilegedAccessSc
 
     /**
     * Sets the group
+    * References the group that is the scope of the membership or ownership eligibility request through PIM for groups. Supports $expand.
     *
     * @param Group $val The group
     *
@@ -169,6 +179,7 @@ class PrivilegedAccessGroupEligibilityScheduleRequest extends PrivilegedAccessSc
 
     /**
     * Gets the principal
+    * References the principal that's in the scope of the membership or ownership eligibility request through the group that's governed by PIM. Supports $expand.
     *
     * @return DirectoryObject|null The principal
     */
@@ -187,6 +198,7 @@ class PrivilegedAccessGroupEligibilityScheduleRequest extends PrivilegedAccessSc
 
     /**
     * Sets the principal
+    * References the principal that's in the scope of the membership or ownership eligibility request through the group that's governed by PIM. Supports $expand.
     *
     * @param DirectoryObject $val The principal
     *
@@ -200,6 +212,7 @@ class PrivilegedAccessGroupEligibilityScheduleRequest extends PrivilegedAccessSc
 
     /**
     * Gets the targetSchedule
+    * Schedule created by this request.
     *
     * @return PrivilegedAccessGroupEligibilitySchedule|null The targetSchedule
     */
@@ -218,6 +231,7 @@ class PrivilegedAccessGroupEligibilityScheduleRequest extends PrivilegedAccessSc
 
     /**
     * Sets the targetSchedule
+    * Schedule created by this request.
     *
     * @param PrivilegedAccessGroupEligibilitySchedule $val The targetSchedule
     *

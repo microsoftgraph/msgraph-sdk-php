@@ -59,7 +59,7 @@ class SubjectRightsRequest extends Entity
 
     /**
     * Gets the closedDateTime
-    * The date and time when the request was closed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * The date and time when the request was closed. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The closedDateTime
     */
@@ -78,7 +78,7 @@ class SubjectRightsRequest extends Entity
 
     /**
     * Sets the closedDateTime
-    * The date and time when the request was closed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * The date and time when the request was closed. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The closedDateTime
     *
@@ -92,6 +92,7 @@ class SubjectRightsRequest extends Entity
 
     /**
     * Gets the contentQuery
+    * KQL based content query that should be used for search. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
     *
     * @return string|null The contentQuery
     */
@@ -106,6 +107,7 @@ class SubjectRightsRequest extends Entity
 
     /**
     * Sets the contentQuery
+    * KQL based content query that should be used for search. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
     *
     * @param string $val The contentQuery
     *
@@ -152,7 +154,7 @@ class SubjectRightsRequest extends Entity
 
     /**
     * Gets the createdDateTime
-    * The date and time when the request was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * The date and time when the request was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -171,7 +173,7 @@ class SubjectRightsRequest extends Entity
 
     /**
     * Sets the createdDateTime
-    * The date and time when the request was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * The date and time when the request was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -309,6 +311,7 @@ class SubjectRightsRequest extends Entity
 
     /**
     * Gets the externalId
+    * The external ID for the request that is immutable after creation and is used for tracking the request for the external system. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
     *
     * @return string|null The externalId
     */
@@ -323,6 +326,7 @@ class SubjectRightsRequest extends Entity
 
     /**
     * Sets the externalId
+    * The external ID for the request that is immutable after creation and is used for tracking the request for the external system. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
     *
     * @param string $val The externalId
     *
@@ -366,6 +370,7 @@ class SubjectRightsRequest extends Entity
 
     /**
     * Gets the includeAllVersions
+    * Include all versions of the documents. By default, the current copies of the documents are returned. If SharePoint sites have versioning enabled, including all versions includes the historical copies of the documents. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
     *
     * @return bool|null The includeAllVersions
     */
@@ -380,6 +385,7 @@ class SubjectRightsRequest extends Entity
 
     /**
     * Sets the includeAllVersions
+    * Include all versions of the documents. By default, the current copies of the documents are returned. If SharePoint sites have versioning enabled, including all versions includes the historical copies of the documents. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
     *
     * @param bool $val The includeAllVersions
     *
@@ -393,6 +399,7 @@ class SubjectRightsRequest extends Entity
 
     /**
     * Gets the includeAuthoredContent
+    * Include content authored by the data subject. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
     *
     * @return bool|null The includeAuthoredContent
     */
@@ -407,6 +414,7 @@ class SubjectRightsRequest extends Entity
 
     /**
     * Sets the includeAuthoredContent
+    * Include content authored by the data subject. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
     *
     * @param bool $val The includeAuthoredContent
     *
@@ -453,7 +461,7 @@ class SubjectRightsRequest extends Entity
 
     /**
     * Gets the internalDueDateTime
-    * The date and time when the request is internally due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * The date and time when the request is internally due. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The internalDueDateTime
     */
@@ -472,7 +480,7 @@ class SubjectRightsRequest extends Entity
 
     /**
     * Sets the internalDueDateTime
-    * The date and time when the request is internally due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * The date and time when the request is internally due. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The internalDueDateTime
     *
@@ -519,7 +527,7 @@ class SubjectRightsRequest extends Entity
 
     /**
     * Gets the lastModifiedDateTime
-    * The date and time when the request was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * The date and time when the request was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The lastModifiedDateTime
     */
@@ -538,7 +546,7 @@ class SubjectRightsRequest extends Entity
 
     /**
     * Sets the lastModifiedDateTime
-    * The date and time when the request was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * The date and time when the request was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -552,6 +560,7 @@ class SubjectRightsRequest extends Entity
 
     /**
     * Gets the mailboxLocations
+    * The mailbox locations that should be searched. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
     *
     * @return SubjectRightsRequestMailboxLocation|null The mailboxLocations
     */
@@ -570,6 +579,7 @@ class SubjectRightsRequest extends Entity
 
     /**
     * Sets the mailboxLocations
+    * The mailbox locations that should be searched. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
     *
     * @param SubjectRightsRequestMailboxLocation $val The mailboxLocations
     *
@@ -583,6 +593,7 @@ class SubjectRightsRequest extends Entity
 
     /**
     * Gets the pauseAfterEstimate
+    * Pause the request after estimate has finished. By default, the data estimate runs and then pauses, allowing you to preview results and then select the option to retrieve data in the UI. You can set this property to false if you want it to perform the estimate and then automatically begin with the retrieval of the content. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
     *
     * @return bool|null The pauseAfterEstimate
     */
@@ -597,6 +608,7 @@ class SubjectRightsRequest extends Entity
 
     /**
     * Sets the pauseAfterEstimate
+    * Pause the request after estimate has finished. By default, the data estimate runs and then pauses, allowing you to preview results and then select the option to retrieve data in the UI. You can set this property to false if you want it to perform the estimate and then automatically begin with the retrieval of the content. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
     *
     * @param bool $val The pauseAfterEstimate
     *
@@ -610,7 +622,7 @@ class SubjectRightsRequest extends Entity
 
     /**
     * Gets the regulations
-    * List of regulations that this request fulfills.
+    * List of regulations that this request fulfill.
     *
     * @return array|null The regulations
     */
@@ -625,7 +637,7 @@ class SubjectRightsRequest extends Entity
 
     /**
     * Sets the regulations
-    * List of regulations that this request fulfills.
+    * List of regulations that this request fulfill.
     *
     * @param string[] $val The regulations
     *
@@ -639,6 +651,7 @@ class SubjectRightsRequest extends Entity
 
     /**
     * Gets the siteLocations
+    * The SharePoint and OneDrive site locations that should be searched. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
     *
     * @return SubjectRightsRequestSiteLocation|null The siteLocations
     */
@@ -657,6 +670,7 @@ class SubjectRightsRequest extends Entity
 
     /**
     * Sets the siteLocations
+    * The SharePoint and OneDrive site locations that should be searched. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
     *
     * @param SubjectRightsRequestSiteLocation $val The siteLocations
     *
@@ -733,7 +747,7 @@ class SubjectRightsRequest extends Entity
 
     /**
     * Gets the type
-    * The type of the request. Possible values are: export, delete,  access, tagForAction, unknownFutureValue.
+    * The type of the request. Possible values are: export, delete, access, tagForAction, unknownFutureValue.
     *
     * @return SubjectRightsRequestType|null The type
     */
@@ -752,7 +766,7 @@ class SubjectRightsRequest extends Entity
 
     /**
     * Sets the type
-    * The type of the request. Possible values are: export, delete,  access, tagForAction, unknownFutureValue.
+    * The type of the request. Possible values are: export, delete, access, tagForAction, unknownFutureValue.
     *
     * @param SubjectRightsRequestType $val The type
     *
@@ -767,6 +781,7 @@ class SubjectRightsRequest extends Entity
 
      /**
      * Gets the approvers
+    * Collection of users who can approve the request. Currently only supported for requests of type delete.
      *
      * @return array|null The approvers
      */
@@ -781,6 +796,7 @@ class SubjectRightsRequest extends Entity
 
     /**
     * Sets the approvers
+    * Collection of users who can approve the request. Currently only supported for requests of type delete.
     *
     * @param User[] $val The approvers
     *
@@ -795,6 +811,7 @@ class SubjectRightsRequest extends Entity
 
      /**
      * Gets the collaborators
+    * Collection of users who can collaborate on the request.
      *
      * @return array|null The collaborators
      */
@@ -809,6 +826,7 @@ class SubjectRightsRequest extends Entity
 
     /**
     * Sets the collaborators
+    * Collection of users who can collaborate on the request.
     *
     * @param User[] $val The collaborators
     *

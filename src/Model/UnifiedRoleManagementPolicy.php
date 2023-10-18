@@ -208,7 +208,7 @@ class UnifiedRoleManagementPolicy extends Entity
 
     /**
     * Gets the scopeType
-    * The type of the scope where the policy is created. One of Directory, DirectoryRole. Required.
+    * The type of the scope where the policy is created. One of Directory, DirectoryRole, Group. Required.
     *
     * @return string|null The scopeType
     */
@@ -223,7 +223,7 @@ class UnifiedRoleManagementPolicy extends Entity
 
     /**
     * Sets the scopeType
-    * The type of the scope where the policy is created. One of Directory, DirectoryRole. Required.
+    * The type of the scope where the policy is created. One of Directory, DirectoryRole, Group. Required.
     *
     * @param string $val The scopeType
     *
