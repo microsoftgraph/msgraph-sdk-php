@@ -87,7 +87,7 @@ class OutboundSharedUserProfile implements \JsonSerializable
 
      /**
      * Gets the tenants
-    * The collection of external Azure AD tenants that the user has shared profile data with. Read-only.
+    * The collection of external Microsoft Entra tenants that the user has shared profile data with. Read-only.
      *
      * @return array|null The tenants
      */
@@ -102,7 +102,7 @@ class OutboundSharedUserProfile implements \JsonSerializable
 
     /**
     * Sets the tenants
-    * The collection of external Azure AD tenants that the user has shared profile data with. Read-only.
+    * The collection of external Microsoft Entra tenants that the user has shared profile data with. Read-only.
     *
     * @param TenantReference[] $val The tenants
     *

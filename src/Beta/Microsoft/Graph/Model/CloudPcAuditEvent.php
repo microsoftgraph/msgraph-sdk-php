@@ -183,7 +183,7 @@ class CloudPcAuditEvent extends Entity
 
     /**
     * Gets the actor
-    * Azure AD user and application associated with the audit event. Read-only.
+    * Microsoft Entra user and application associated with the audit event. Read-only.
     *
     * @return CloudPcAuditActor|null The actor
     */
@@ -202,7 +202,7 @@ class CloudPcAuditEvent extends Entity
 
     /**
     * Sets the actor
-    * Azure AD user and application associated with the audit event. Read-only.
+    * Microsoft Entra user and application associated with the audit event. Read-only.
     *
     * @param CloudPcAuditActor $val The actor
     *

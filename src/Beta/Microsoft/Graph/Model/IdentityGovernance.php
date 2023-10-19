@@ -211,6 +211,37 @@ class IdentityGovernance implements \JsonSerializable
     }
 
     /**
+    * Gets the permissionsAnalytics
+    *
+    * @return PermissionsAnalyticsAggregation|null The permissionsAnalytics
+    */
+    public function getPermissionsAnalytics()
+    {
+        if (array_key_exists("permissionsAnalytics", $this->_propDict)) {
+            if (is_a($this->_propDict["permissionsAnalytics"], "\Beta\Microsoft\Graph\Model\PermissionsAnalyticsAggregation") || is_null($this->_propDict["permissionsAnalytics"])) {
+                return $this->_propDict["permissionsAnalytics"];
+            } else {
+                $this->_propDict["permissionsAnalytics"] = new PermissionsAnalyticsAggregation($this->_propDict["permissionsAnalytics"]);
+                return $this->_propDict["permissionsAnalytics"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the permissionsAnalytics
+    *
+    * @param PermissionsAnalyticsAggregation $val The permissionsAnalytics
+    *
+    * @return IdentityGovernance
+    */
+    public function setPermissionsAnalytics($val)
+    {
+        $this->_propDict["permissionsAnalytics"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the permissionsManagement
     *
     * @return PermissionsManagement|null The permissionsManagement

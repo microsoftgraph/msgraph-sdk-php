@@ -55,7 +55,7 @@ class Agreement extends Entity
 
     /**
     * Gets the isPerDeviceAcceptanceRequired
-    * This setting enables you to require end users to accept this agreement on every device that they are accessing it from. The end user will be required to register their device in Azure AD, if they haven't already done so. Supports $filter (eq).
+    * This setting enables you to require end users to accept this agreement on every device that they are accessing it from. The end user will be required to register their device in Microsoft Entra ID, if they haven't already done so. Supports $filter (eq).
     *
     * @return bool|null The isPerDeviceAcceptanceRequired
     */
@@ -70,7 +70,7 @@ class Agreement extends Entity
 
     /**
     * Sets the isPerDeviceAcceptanceRequired
-    * This setting enables you to require end users to accept this agreement on every device that they are accessing it from. The end user will be required to register their device in Azure AD, if they haven't already done so. Supports $filter (eq).
+    * This setting enables you to require end users to accept this agreement on every device that they are accessing it from. The end user will be required to register their device in Microsoft Entra ID, if they haven't already done so. Supports $filter (eq).
     *
     * @param bool $val The isPerDeviceAcceptanceRequired
     *

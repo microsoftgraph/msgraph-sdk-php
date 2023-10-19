@@ -483,7 +483,7 @@ class SmsLogRow extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the userId
-    * The unique identifier (GUID) of the user in Azure Active Directory.
+    * The unique identifier (GUID) of the user in Microsoft Entra ID.
     *
     * @return string|null The userId
     */
@@ -498,7 +498,7 @@ class SmsLogRow extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the userId
-    * The unique identifier (GUID) of the user in Azure Active Directory.
+    * The unique identifier (GUID) of the user in Microsoft Entra ID.
     *
     * @param string $val The value of the userId
     *
@@ -511,7 +511,7 @@ class SmsLogRow extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the userPrincipalName
-    * The user principal name (sign-in name) in Azure Active Directory. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
+    * The user principal name (sign-in name) in Microsoft Entra ID. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
     *
     * @return string|null The userPrincipalName
     */
@@ -526,7 +526,7 @@ class SmsLogRow extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the userPrincipalName
-    * The user principal name (sign-in name) in Azure Active Directory. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
+    * The user principal name (sign-in name) in Microsoft Entra ID. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
     *
     * @param string $val The value of the userPrincipalName
     *

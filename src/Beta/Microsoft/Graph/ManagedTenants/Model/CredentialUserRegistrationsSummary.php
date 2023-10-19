@@ -291,7 +291,7 @@ class CredentialUserRegistrationsSummary extends \Beta\Microsoft\Graph\Model\Ent
 
     /**
     * Gets the tenantId
-    * The Azure Active Directory tenant identifier for the managed tenant. Required. Read-only.
+    * The Microsoft Entra tenant identifier for the managed tenant. Required. Read-only.
     *
     * @return string|null The tenantId
     */
@@ -306,7 +306,7 @@ class CredentialUserRegistrationsSummary extends \Beta\Microsoft\Graph\Model\Ent
 
     /**
     * Sets the tenantId
-    * The Azure Active Directory tenant identifier for the managed tenant. Required. Read-only.
+    * The Microsoft Entra tenant identifier for the managed tenant. Required. Read-only.
     *
     * @param string $val The tenantId
     *

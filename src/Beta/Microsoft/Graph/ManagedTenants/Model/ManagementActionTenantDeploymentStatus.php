@@ -85,7 +85,7 @@ class ManagementActionTenantDeploymentStatus extends \Beta\Microsoft\Graph\Model
 
     /**
     * Gets the tenantId
-    * The Azure Active Directory tenant identifier for the managed tenant. Required. Read-only.
+    * The Microsoft Entra tenant identifier for the managed tenant. Required. Read-only.
     *
     * @return string|null The tenantId
     */
@@ -100,7 +100,7 @@ class ManagementActionTenantDeploymentStatus extends \Beta\Microsoft\Graph\Model
 
     /**
     * Sets the tenantId
-    * The Azure Active Directory tenant identifier for the managed tenant. Required. Read-only.
+    * The Microsoft Entra tenant identifier for the managed tenant. Required. Read-only.
     *
     * @param string $val The tenantId
     *
