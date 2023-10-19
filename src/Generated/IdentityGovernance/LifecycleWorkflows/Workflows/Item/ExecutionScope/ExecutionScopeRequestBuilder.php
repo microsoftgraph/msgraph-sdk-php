@@ -52,7 +52,7 @@ class ExecutionScopeRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The unique identifier of the Azure AD identity that last modified the workflow object.
+     * The unique identifier of the Microsoft Entra identity that last modified the workflow object.
      * @param ExecutionScopeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -70,7 +70,7 @@ class ExecutionScopeRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The unique identifier of the Azure AD identity that last modified the workflow object.
+     * The unique identifier of the Microsoft Entra identity that last modified the workflow object.
      * @param ExecutionScopeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -79,7 +79,6 @@ class ExecutionScopeRequestBuilder extends BaseRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
-        $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
             $requestInfo->addHeaders($requestConfiguration->headers);
             if ($requestConfiguration->queryParameters !== null) {
@@ -87,6 +86,7 @@ class ExecutionScopeRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 

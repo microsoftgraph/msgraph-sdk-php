@@ -58,7 +58,7 @@ class UnifiedRoleManagementPolicyAssignmentItemRequestBuilder extends BaseReques
     }
 
     /**
-     * Get the details of a policy assignment in PIM that's assigned to Azure AD roles or group membership or ownership. This API is available in the following national cloud deployments.
+     * Get the details of a policy assignment in PIM that's assigned to Microsoft Entra roles or group membership or ownership. This API is available in the following national cloud deployments.
      * @param UnifiedRoleManagementPolicyAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/unifiedrolemanagementpolicyassignment-get?view=graph-rest-1.0 Find more info here
@@ -113,7 +113,7 @@ class UnifiedRoleManagementPolicyAssignmentItemRequestBuilder extends BaseReques
     }
 
     /**
-     * Get the details of a policy assignment in PIM that's assigned to Azure AD roles or group membership or ownership. This API is available in the following national cloud deployments.
+     * Get the details of a policy assignment in PIM that's assigned to Microsoft Entra roles or group membership or ownership. This API is available in the following national cloud deployments.
      * @param UnifiedRoleManagementPolicyAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -122,7 +122,6 @@ class UnifiedRoleManagementPolicyAssignmentItemRequestBuilder extends BaseReques
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
-        $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
             $requestInfo->addHeaders($requestConfiguration->headers);
             if ($requestConfiguration->queryParameters !== null) {
@@ -130,6 +129,7 @@ class UnifiedRoleManagementPolicyAssignmentItemRequestBuilder extends BaseReques
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
@@ -144,11 +144,11 @@ class UnifiedRoleManagementPolicyAssignmentItemRequestBuilder extends BaseReques
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
-        $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

@@ -60,7 +60,7 @@ class UserAccount implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the azureAdUserId property value. The user object identifier in Azure Active Directory (Azure AD).
+     * Gets the azureAdUserId property value. The user object identifier in Microsoft Entra ID.
      * @return string|null
     */
     public function getAzureAdUserId(): ?string {
@@ -80,7 +80,7 @@ class UserAccount implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the displayName property value. The user display name in Azure AD.
+     * Gets the displayName property value. The user display name in Microsoft Entra ID.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -133,7 +133,7 @@ class UserAccount implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the userPrincipalName property value. The user principal name of the account in Azure AD.
+     * Gets the userPrincipalName property value. The user principal name of the account in Microsoft Entra ID.
      * @return string|null
     */
     public function getUserPrincipalName(): ?string {
@@ -188,7 +188,7 @@ class UserAccount implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the azureAdUserId property value. The user object identifier in Azure Active Directory (Azure AD).
+     * Sets the azureAdUserId property value. The user object identifier in Microsoft Entra ID.
      * @param string|null $value Value to set for the azureAdUserId property.
     */
     public function setAzureAdUserId(?string $value): void {
@@ -204,7 +204,7 @@ class UserAccount implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the displayName property value. The user display name in Azure AD.
+     * Sets the displayName property value. The user display name in Microsoft Entra ID.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -228,7 +228,7 @@ class UserAccount implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the userPrincipalName property value. The user principal name of the account in Azure AD.
+     * Sets the userPrincipalName property value. The user principal name of the account in Microsoft Entra ID.
      * @param string|null $value Value to set for the userPrincipalName property.
     */
     public function setUserPrincipalName(?string $value): void {

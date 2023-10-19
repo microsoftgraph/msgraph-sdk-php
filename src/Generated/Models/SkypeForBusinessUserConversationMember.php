@@ -50,7 +50,7 @@ class SkypeForBusinessUserConversationMember extends ConversationMember implemen
     }
 
     /**
-     * Gets the userId property value. Azure Active Directory ID of the user.
+     * Gets the userId property value. Microsoft Entra ID of the user.
      * @return string|null
     */
     public function getUserId(): ?string {
@@ -80,7 +80,7 @@ class SkypeForBusinessUserConversationMember extends ConversationMember implemen
     }
 
     /**
-     * Sets the userId property value. Azure Active Directory ID of the user.
+     * Sets the userId property value. Microsoft Entra ID of the user.
      * @param string|null $value Value to set for the userId property.
     */
     public function setUserId(?string $value): void {

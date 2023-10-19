@@ -32,7 +32,7 @@ class FaviconRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A custom icon (favicon) to replace a default Microsoft product favicon on an Azure AD tenant.
+     * A custom icon (favicon) to replace a default Microsoft product favicon on a Microsoft Entra tenant.
      * @param FaviconRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/organizationalbranding-list-localizations?view=graph-rest-1.0 Find more info here
@@ -51,7 +51,7 @@ class FaviconRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A custom icon (favicon) to replace a default Microsoft product favicon on an Azure AD tenant.
+     * A custom icon (favicon) to replace a default Microsoft product favicon on a Microsoft Entra tenant.
      * @param StreamInterface $body Binary request body
      * @param FaviconRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -70,7 +70,7 @@ class FaviconRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A custom icon (favicon) to replace a default Microsoft product favicon on an Azure AD tenant.
+     * A custom icon (favicon) to replace a default Microsoft product favicon on a Microsoft Entra tenant.
      * @param FaviconRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -87,7 +87,7 @@ class FaviconRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A custom icon (favicon) to replace a default Microsoft product favicon on an Azure AD tenant.
+     * A custom icon (favicon) to replace a default Microsoft product favicon on a Microsoft Entra tenant.
      * @param StreamInterface $body Binary request body
      * @param FaviconRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

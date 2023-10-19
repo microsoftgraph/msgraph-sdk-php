@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Organization;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List properties and relationships of the organization objects.
+ * Retrieve a list of organization objects. There's only one organization object in the collection. This API is available in the following national cloud deployments.
 */
 class OrganizationRequestBuilderGetQueryParameters 
 {

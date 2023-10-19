@@ -40,7 +40,7 @@ class TermsOfUseContainer extends Entity implements Parsable
     }
 
     /**
-     * Gets the agreements property value. Represents a tenant's customizable terms of use agreement that's created and managed with Azure Active Directory (Azure AD).
+     * Gets the agreements property value. Represents a tenant's customizable terms of use agreement that's created and managed with Microsoft Entra ID Governance.
      * @return array<Agreement>|null
     */
     public function getAgreements(): ?array {
@@ -84,7 +84,7 @@ class TermsOfUseContainer extends Entity implements Parsable
     }
 
     /**
-     * Sets the agreements property value. Represents a tenant's customizable terms of use agreement that's created and managed with Azure Active Directory (Azure AD).
+     * Sets the agreements property value. Represents a tenant's customizable terms of use agreement that's created and managed with Microsoft Entra ID Governance.
      * @param array<Agreement>|null $value Value to set for the agreements property.
     */
     public function setAgreements(?array $value): void {

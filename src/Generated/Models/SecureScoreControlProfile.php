@@ -223,7 +223,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
     }
 
     /**
-     * Gets the service property value. Service that owns the control (Exchange, Sharepoint, Azure AD).
+     * Gets the service property value. Service that owns the control (Exchange, Sharepoint, Microsoft Entra ID).
      * @return string|null
     */
     public function getService(): ?string {
@@ -428,7 +428,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
     }
 
     /**
-     * Sets the service property value. Service that owns the control (Exchange, Sharepoint, Azure AD).
+     * Sets the service property value. Service that owns the control (Exchange, Sharepoint, Microsoft Entra ID).
      * @param string|null $value Value to set for the service property.
     */
     public function setService(?string $value): void {

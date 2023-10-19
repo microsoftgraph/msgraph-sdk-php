@@ -48,7 +48,7 @@ class AppIdentity implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the appId property value. Refers to the Unique GUID representing Application Id in the Azure Active Directory.
+     * Gets the appId property value. Refers to the unique ID representing application in Microsoft Entra ID.
      * @return string|null
     */
     public function getAppId(): ?string {
@@ -107,7 +107,7 @@ class AppIdentity implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the servicePrincipalId property value. Refers to the Unique GUID indicating Service Principal Id in Azure Active Directory for the corresponding App.
+     * Gets the servicePrincipalId property value. Refers to the unique ID for the service principal in Microsoft Entra ID.
      * @return string|null
     */
     public function getServicePrincipalId(): ?string {
@@ -152,7 +152,7 @@ class AppIdentity implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the appId property value. Refers to the Unique GUID representing Application Id in the Azure Active Directory.
+     * Sets the appId property value. Refers to the unique ID representing application in Microsoft Entra ID.
      * @param string|null $value Value to set for the appId property.
     */
     public function setAppId(?string $value): void {
@@ -184,7 +184,7 @@ class AppIdentity implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the servicePrincipalId property value. Refers to the Unique GUID indicating Service Principal Id in Azure Active Directory for the corresponding App.
+     * Sets the servicePrincipalId property value. Refers to the unique ID for the service principal in Microsoft Entra ID.
      * @param string|null $value Value to set for the servicePrincipalId property.
     */
     public function setServicePrincipalId(?string $value): void {

@@ -36,7 +36,7 @@ class SmsAuthenticationMethodTarget extends AuthenticationMethodTarget implement
     }
 
     /**
-     * Gets the isUsableForSignIn property value. Determines if users can use this authentication method to sign in to Azure AD. true if users can use this method for primary authentication, otherwise false.
+     * Gets the isUsableForSignIn property value. Determines if users can use this authentication method to sign in to Microsoft Entra ID. true if users can use this method for primary authentication, otherwise false.
      * @return bool|null
     */
     public function getIsUsableForSignIn(): ?bool {
@@ -57,7 +57,7 @@ class SmsAuthenticationMethodTarget extends AuthenticationMethodTarget implement
     }
 
     /**
-     * Sets the isUsableForSignIn property value. Determines if users can use this authentication method to sign in to Azure AD. true if users can use this method for primary authentication, otherwise false.
+     * Sets the isUsableForSignIn property value. Determines if users can use this authentication method to sign in to Microsoft Entra ID. true if users can use this method for primary authentication, otherwise false.
      * @param bool|null $value Value to set for the isUsableForSignIn property.
     */
     public function setIsUsableForSignIn(?bool $value): void {
