@@ -25,7 +25,7 @@ class PasswordResetResponse extends Entity
 {
     /**
     * Gets the newPassword
-    * The Azure AD-generated password.
+    * The Microsoft Entra ID-generated password.
     *
     * @return string|null The newPassword
     */
@@ -40,7 +40,7 @@ class PasswordResetResponse extends Entity
 
     /**
     * Sets the newPassword
-    * The Azure AD-generated password.
+    * The Microsoft Entra ID-generated password.
     *
     * @param string $val The value of the newPassword
     *

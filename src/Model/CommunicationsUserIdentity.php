@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* IdentitySecurityDefaultsEnforcementPolicy File
+* CommunicationsUserIdentity File
 * PHP version 7
 *
 * @category  Library
@@ -12,9 +12,8 @@
 * @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
-
 /**
-* IdentitySecurityDefaultsEnforcementPolicy class
+* CommunicationsUserIdentity class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,35 +21,32 @@ namespace Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class IdentitySecurityDefaultsEnforcementPolicy extends PolicyBase
+class CommunicationsUserIdentity extends Identity
 {
     /**
-    * Gets the isEnabled
-    * If set to true, Microsoft Entra security defaults are enabled for the tenant.
+    * Gets the tenantId
     *
-    * @return bool|null The isEnabled
+    * @return string|null The tenantId
     */
-    public function getIsEnabled()
+    public function getTenantId()
     {
-        if (array_key_exists("isEnabled", $this->_propDict)) {
-            return $this->_propDict["isEnabled"];
+        if (array_key_exists("tenantId", $this->_propDict)) {
+            return $this->_propDict["tenantId"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the isEnabled
-    * If set to true, Microsoft Entra security defaults are enabled for the tenant.
+    * Sets the tenantId
     *
-    * @param bool $val The isEnabled
+    * @param string $val The value of the tenantId
     *
-    * @return IdentitySecurityDefaultsEnforcementPolicy
+    * @return CommunicationsUserIdentity
     */
-    public function setIsEnabled($val)
+    public function setTenantId($val)
     {
-        $this->_propDict["isEnabled"] = boolval($val);
+        $this->_propDict["tenantId"] = $val;
         return $this;
     }
-
 }

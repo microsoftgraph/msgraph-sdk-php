@@ -25,7 +25,7 @@ class DeviceEvidence extends AlertEvidence
 {
     /**
     * Gets the azureAdDeviceId
-    * A unique identifier assigned to a device by Azure Active Directory (Azure AD) when device is Azure AD-joined.
+    * A unique identifier assigned to a device by Microsoft Entra ID when device is Microsoft Entra joined.
     *
     * @return string|null The azureAdDeviceId
     */
@@ -40,7 +40,7 @@ class DeviceEvidence extends AlertEvidence
 
     /**
     * Sets the azureAdDeviceId
-    * A unique identifier assigned to a device by Azure Active Directory (Azure AD) when device is Azure AD-joined.
+    * A unique identifier assigned to a device by Microsoft Entra ID when device is Microsoft Entra joined.
     *
     * @param string $val The value of the azureAdDeviceId
     *

@@ -409,7 +409,7 @@ class SecureScoreControlProfile extends Entity
 
     /**
     * Gets the service
-    * Service that owns the control (Exchange, Sharepoint, Azure AD).
+    * Service that owns the control (Exchange, Sharepoint, Microsoft Entra ID).
     *
     * @return string|null The service
     */
@@ -424,7 +424,7 @@ class SecureScoreControlProfile extends Entity
 
     /**
     * Sets the service
-    * Service that owns the control (Exchange, Sharepoint, Azure AD).
+    * Service that owns the control (Exchange, Sharepoint, Microsoft Entra ID).
     *
     * @param string $val The service
     *

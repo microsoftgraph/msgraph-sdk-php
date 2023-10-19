@@ -826,7 +826,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Gets the tenantId
-    * The Azure Active Directory tenant the alert was created in.
+    * The Microsoft Entra tenant the alert was created in.
     *
     * @return string|null The tenantId
     */
@@ -841,7 +841,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the tenantId
-    * The Azure Active Directory tenant the alert was created in.
+    * The Microsoft Entra tenant the alert was created in.
     *
     * @param string $val The tenantId
     *

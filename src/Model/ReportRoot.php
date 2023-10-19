@@ -57,7 +57,7 @@ class ReportRoot implements \JsonSerializable
 
     /**
     * Gets the authenticationMethods
-    * Container for navigation properties for Azure AD authentication methods resources.
+    * Container for navigation properties for Microsoft Entra authentication methods resources.
     *
     * @return AuthenticationMethodsRoot|null The authenticationMethods
     */
@@ -76,7 +76,7 @@ class ReportRoot implements \JsonSerializable
 
     /**
     * Sets the authenticationMethods
-    * Container for navigation properties for Azure AD authentication methods resources.
+    * Container for navigation properties for Microsoft Entra authentication methods resources.
     *
     * @param AuthenticationMethodsRoot $val The authenticationMethods
     *

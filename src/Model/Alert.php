@@ -141,7 +141,7 @@ class Alert extends Entity
 
     /**
     * Gets the azureTenantId
-    * Azure Active Directory tenant ID. Required.
+    * Microsoft Entra tenant ID. Required.
     *
     * @return string|null The azureTenantId
     */
@@ -156,7 +156,7 @@ class Alert extends Entity
 
     /**
     * Sets the azureTenantId
-    * Azure Active Directory tenant ID. Required.
+    * Microsoft Entra tenant ID. Required.
     *
     * @param string $val The azureTenantId
     *
