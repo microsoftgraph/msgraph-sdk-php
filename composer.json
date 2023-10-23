@@ -28,5 +28,10 @@
 		"psr-4": {
 			"Microsoft\\Graph\\Test\\": "tests/"
 		}
+	},
+	"config": {
+		"allow-plugins": {
+			"php-http/discovery": false
+		}
 	}
 }
