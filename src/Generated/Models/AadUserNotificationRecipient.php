@@ -37,7 +37,7 @@ class AadUserNotificationRecipient extends TeamworkNotificationRecipient impleme
     }
 
     /**
-     * Gets the userId property value. Azure AD user identifier. Use the List users method to get this ID.
+     * Gets the userId property value. Microsoft Entra user identifier. Use the List users method to get this ID.
      * @return string|null
     */
     public function getUserId(): ?string {
@@ -58,7 +58,7 @@ class AadUserNotificationRecipient extends TeamworkNotificationRecipient impleme
     }
 
     /**
-     * Sets the userId property value. Azure AD user identifier. Use the List users method to get this ID.
+     * Sets the userId property value. Microsoft Entra user identifier. Use the List users method to get this ID.
      * @param string|null $value Value to set for the userId property.
     */
     public function setUserId(?string $value): void {

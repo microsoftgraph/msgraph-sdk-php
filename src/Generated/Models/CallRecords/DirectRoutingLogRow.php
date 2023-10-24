@@ -57,7 +57,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the calleeNumber property value. Number of the user or bot who received the call. E.164 format, but may include other data.
+     * Gets the calleeNumber property value. Number of the user or bot who received the call. E.164 format, but might include other data.
      * @return string|null
     */
     public function getCalleeNumber(): ?string {
@@ -69,7 +69,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the callEndSubReason property value. In addition to the SIP codes, Microsoft has own subcodes that indicate the specific issue.
+     * Gets the callEndSubReason property value. In addition to the SIP codes, Microsoft has subcodes that indicate the specific issue.
      * @return int|null
     */
     public function getCallEndSubReason(): ?int {
@@ -81,7 +81,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the callerNumber property value. Number of the user or bot who made the call. E.164 format, but may include other data.
+     * Gets the callerNumber property value. Number of the user or bot who made the call. E.164 format, but might include other data.
      * @return string|null
     */
     public function getCallerNumber(): ?string {
@@ -185,7 +185,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the finalSipCode property value. The code with which the call ended, see RFC 3261.
+     * Gets the finalSipCode property value. The code with which the call ended. For more information, see RFC 3261.
      * @return int|null
     */
     public function getFinalSipCode(): ?int {
@@ -233,7 +233,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the mediaBypassEnabled property value. Indicates if the trunk was enabled for media bypass or not.
+     * Gets the mediaBypassEnabled property value. Indicates whether the trunk was enabled for media bypass.
      * @return bool|null
     */
     public function getMediaBypassEnabled(): ?bool {
@@ -245,7 +245,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the mediaPathLocation property value. The datacenter used for media path in nonbypass call.
+     * Gets the mediaPathLocation property value. The datacenter used for media path in a nonbypass call.
      * @return string|null
     */
     public function getMediaPathLocation(): ?string {
@@ -281,7 +281,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the startDateTime property value. Call start time.For failed and unanswered calls, this can be equal to invite or failure time.
+     * Gets the startDateTime property value. Call start time.For failed and unanswered calls, this can be equal to the invite or failure time.
      * @return DateTime|null
     */
     public function getStartDateTime(): ?DateTime {
@@ -329,7 +329,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the userId property value. Calling user's ID in Graph. This and other user info will be null/empty for bot call types. GUID.
+     * Gets the userId property value. Calling user's ID in Microsoft Graph. This and other user information is null/empty for bot call types. GUID.
      * @return string|null
     */
     public function getUserId(): ?string {
@@ -341,7 +341,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the userPrincipalName property value. UserPrincipalName (sign-in name) in Azure Active Directory. This is usually the same as user's SIP Address, and can be same as user's e-mail address.
+     * Gets the userPrincipalName property value. UserPrincipalName (sign-in name) in Microsoft Entra ID. This is usually the same as the user's SIP Address, and can be the same as the user's email address.
      * @return string|null
     */
     public function getUserPrincipalName(): ?string {
@@ -399,7 +399,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the calleeNumber property value. Number of the user or bot who received the call. E.164 format, but may include other data.
+     * Sets the calleeNumber property value. Number of the user or bot who received the call. E.164 format, but might include other data.
      * @param string|null $value Value to set for the calleeNumber property.
     */
     public function setCalleeNumber(?string $value): void {
@@ -407,7 +407,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the callEndSubReason property value. In addition to the SIP codes, Microsoft has own subcodes that indicate the specific issue.
+     * Sets the callEndSubReason property value. In addition to the SIP codes, Microsoft has subcodes that indicate the specific issue.
      * @param int|null $value Value to set for the callEndSubReason property.
     */
     public function setCallEndSubReason(?int $value): void {
@@ -415,7 +415,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the callerNumber property value. Number of the user or bot who made the call. E.164 format, but may include other data.
+     * Sets the callerNumber property value. Number of the user or bot who made the call. E.164 format, but might include other data.
      * @param string|null $value Value to set for the callerNumber property.
     */
     public function setCallerNumber(?string $value): void {
@@ -463,7 +463,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the finalSipCode property value. The code with which the call ended, see RFC 3261.
+     * Sets the finalSipCode property value. The code with which the call ended. For more information, see RFC 3261.
      * @param int|null $value Value to set for the finalSipCode property.
     */
     public function setFinalSipCode(?int $value): void {
@@ -495,7 +495,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the mediaBypassEnabled property value. Indicates if the trunk was enabled for media bypass or not.
+     * Sets the mediaBypassEnabled property value. Indicates whether the trunk was enabled for media bypass.
      * @param bool|null $value Value to set for the mediaBypassEnabled property.
     */
     public function setMediaBypassEnabled(?bool $value): void {
@@ -503,7 +503,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the mediaPathLocation property value. The datacenter used for media path in nonbypass call.
+     * Sets the mediaPathLocation property value. The datacenter used for media path in a nonbypass call.
      * @param string|null $value Value to set for the mediaPathLocation property.
     */
     public function setMediaPathLocation(?string $value): void {
@@ -527,7 +527,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the startDateTime property value. Call start time.For failed and unanswered calls, this can be equal to invite or failure time.
+     * Sets the startDateTime property value. Call start time.For failed and unanswered calls, this can be equal to the invite or failure time.
      * @param DateTime|null $value Value to set for the startDateTime property.
     */
     public function setStartDateTime(?DateTime $value): void {
@@ -559,7 +559,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the userId property value. Calling user's ID in Graph. This and other user info will be null/empty for bot call types. GUID.
+     * Sets the userId property value. Calling user's ID in Microsoft Graph. This and other user information is null/empty for bot call types. GUID.
      * @param string|null $value Value to set for the userId property.
     */
     public function setUserId(?string $value): void {
@@ -567,7 +567,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the userPrincipalName property value. UserPrincipalName (sign-in name) in Azure Active Directory. This is usually the same as user's SIP Address, and can be same as user's e-mail address.
+     * Sets the userPrincipalName property value. UserPrincipalName (sign-in name) in Microsoft Entra ID. This is usually the same as the user's SIP Address, and can be the same as the user's email address.
      * @param string|null $value Value to set for the userPrincipalName property.
     */
     public function setUserPrincipalName(?string $value): void {

@@ -54,10 +54,10 @@ class PointsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of chartpoints objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of chartpoint objects. This API is available in the following national cloud deployments.
      * @param PointsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://learn.microsoft.com/graph/api/chartseries-list-points?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/chartpoint-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?PointsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -102,7 +102,7 @@ class PointsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of chartpoints objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of chartpoint objects. This API is available in the following national cloud deployments.
      * @param PointsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -111,7 +111,6 @@ class PointsRequestBuilder extends BaseRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
-        $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
             $requestInfo->addHeaders($requestConfiguration->headers);
             if ($requestConfiguration->queryParameters !== null) {
@@ -119,6 +118,7 @@ class PointsRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
         return $requestInfo;
     }
 
@@ -133,11 +133,11 @@ class PointsRequestBuilder extends BaseRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
-        $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

@@ -7,6 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Add\AddRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Delta\DeltaRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\GetAllSites\GetAllSitesRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\SiteItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Remove\RemoveRequestBuilder;
@@ -34,6 +35,13 @@ class SitesRequestBuilder extends BaseRequestBuilder
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the delta method.
+    */
+    public function delta(): DeltaRequestBuilder {
+        return new DeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -103,7 +111,6 @@ class SitesRequestBuilder extends BaseRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
-        $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
             $requestInfo->addHeaders($requestConfiguration->headers);
             if ($requestConfiguration->queryParameters !== null) {
@@ -111,6 +118,7 @@ class SitesRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
         return $requestInfo;
     }
 

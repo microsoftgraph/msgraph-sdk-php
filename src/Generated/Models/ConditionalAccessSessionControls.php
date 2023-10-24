@@ -80,7 +80,7 @@ class ConditionalAccessSessionControls implements AdditionalDataHolder, BackedMo
     }
 
     /**
-     * Gets the disableResilienceDefaults property value. Session control that determines whether it is acceptable for Azure AD to extend existing sessions based on information collected prior to an outage or not.
+     * Gets the disableResilienceDefaults property value. Session control that determines whether it is acceptable for Microsoft Entra ID to extend existing sessions based on information collected prior to an outage or not.
      * @return bool|null
     */
     public function getDisableResilienceDefaults(): ?bool {
@@ -190,7 +190,7 @@ class ConditionalAccessSessionControls implements AdditionalDataHolder, BackedMo
     }
 
     /**
-     * Sets the disableResilienceDefaults property value. Session control that determines whether it is acceptable for Azure AD to extend existing sessions based on information collected prior to an outage or not.
+     * Sets the disableResilienceDefaults property value. Session control that determines whether it is acceptable for Microsoft Entra ID to extend existing sessions based on information collected prior to an outage or not.
      * @param bool|null $value Value to set for the disableResilienceDefaults property.
     */
     public function setDisableResilienceDefaults(?bool $value): void {

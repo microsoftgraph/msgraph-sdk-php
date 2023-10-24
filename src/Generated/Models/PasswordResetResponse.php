@@ -68,7 +68,7 @@ class PasswordResetResponse implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the newPassword property value. The Azure AD-generated password.
+     * Gets the newPassword property value. The Microsoft Entra ID-generated password.
      * @return string|null
     */
     public function getNewPassword(): ?string {
@@ -118,7 +118,7 @@ class PasswordResetResponse implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the newPassword property value. The Azure AD-generated password.
+     * Sets the newPassword property value. The Microsoft Entra ID-generated password.
      * @param string|null $value Value to set for the newPassword property.
     */
     public function setNewPassword(?string $value): void {

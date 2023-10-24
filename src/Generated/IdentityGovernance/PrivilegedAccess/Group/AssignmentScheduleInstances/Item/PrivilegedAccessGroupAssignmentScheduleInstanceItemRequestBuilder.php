@@ -74,7 +74,7 @@ class PrivilegedAccessGroupAssignmentScheduleInstanceItemRequestBuilder extends 
     }
 
     /**
-     * Read the properties and relationships of a privilegedAccessGroupAssignmentScheduleInstance object.
+     * Read the properties and relationships of a privilegedAccessGroupAssignmentScheduleInstance object. This API is available in the following national cloud deployments.
      * @param PrivilegedAccessGroupAssignmentScheduleInstanceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/privilegedaccessgroupassignmentscheduleinstance-get?view=graph-rest-1.0 Find more info here
@@ -125,11 +125,12 @@ class PrivilegedAccessGroupAssignmentScheduleInstanceItemRequestBuilder extends 
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
         return $requestInfo;
     }
 
     /**
-     * Read the properties and relationships of a privilegedAccessGroupAssignmentScheduleInstance object.
+     * Read the properties and relationships of a privilegedAccessGroupAssignmentScheduleInstance object. This API is available in the following national cloud deployments.
      * @param PrivilegedAccessGroupAssignmentScheduleInstanceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -138,7 +139,6 @@ class PrivilegedAccessGroupAssignmentScheduleInstanceItemRequestBuilder extends 
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
-        $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
             $requestInfo->addHeaders($requestConfiguration->headers);
             if ($requestConfiguration->queryParameters !== null) {
@@ -146,6 +146,7 @@ class PrivilegedAccessGroupAssignmentScheduleInstanceItemRequestBuilder extends 
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
         return $requestInfo;
     }
 
@@ -160,11 +161,11 @@ class PrivilegedAccessGroupAssignmentScheduleInstanceItemRequestBuilder extends 
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
-        $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

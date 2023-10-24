@@ -36,7 +36,7 @@ class Host extends Artifact implements Parsable
     }
 
     /**
-     * Gets the childHostPairs property value. The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a cihldHost.
+     * Gets the childHostPairs property value. The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a childHost.
      * @return array<HostPair>|null
     */
     public function getChildHostPairs(): ?array {
@@ -270,7 +270,7 @@ class Host extends Artifact implements Parsable
     }
 
     /**
-     * Sets the childHostPairs property value. The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a cihldHost.
+     * Sets the childHostPairs property value. The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a childHost.
      * @param array<HostPair>|null $value Value to set for the childHostPairs property.
     */
     public function setChildHostPairs(?array $value): void {
