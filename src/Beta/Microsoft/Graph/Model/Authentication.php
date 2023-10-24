@@ -297,6 +297,34 @@ class Authentication extends Entity
 
 
      /**
+     * Gets the platformCredentialMethods
+     *
+     * @return array|null The platformCredentialMethods
+     */
+    public function getPlatformCredentialMethods()
+    {
+        if (array_key_exists("platformCredentialMethods", $this->_propDict)) {
+           return $this->_propDict["platformCredentialMethods"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the platformCredentialMethods
+    *
+    * @param PlatformCredentialAuthenticationMethod[] $val The platformCredentialMethods
+    *
+    * @return Authentication
+    */
+    public function setPlatformCredentialMethods($val)
+    {
+        $this->_propDict["platformCredentialMethods"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the softwareOathMethods
      *
      * @return array|null The softwareOathMethods

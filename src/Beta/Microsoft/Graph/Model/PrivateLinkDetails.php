@@ -53,7 +53,7 @@ class PrivateLinkDetails extends Entity
     }
     /**
     * Gets the policyName
-    * The name of the Private Link policy in Azure AD.
+    * The name of the Private Link policy in Microsoft Entra ID.
     *
     * @return string|null The policyName
     */
@@ -68,7 +68,7 @@ class PrivateLinkDetails extends Entity
 
     /**
     * Sets the policyName
-    * The name of the Private Link policy in Azure AD.
+    * The name of the Private Link policy in Microsoft Entra ID.
     *
     * @param string $val The value of the policyName
     *
@@ -81,7 +81,7 @@ class PrivateLinkDetails extends Entity
     }
     /**
     * Gets the policyTenantId
-    * The tenant identifier of the Azure AD tenant the Private Link policy belongs to.
+    * The tenant identifier of the Microsoft Entra tenant the Private Link policy belongs to.
     *
     * @return string|null The policyTenantId
     */
@@ -96,7 +96,7 @@ class PrivateLinkDetails extends Entity
 
     /**
     * Sets the policyTenantId
-    * The tenant identifier of the Azure AD tenant the Private Link policy belongs to.
+    * The tenant identifier of the Microsoft Entra tenant the Private Link policy belongs to.
     *
     * @param string $val The value of the policyTenantId
     *

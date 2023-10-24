@@ -150,7 +150,7 @@ class EducationSynchronizationProfile extends Entity
 
     /**
     * Gets the identitySynchronizationConfiguration
-    * Determines how the Profile should [create new][fullsync] or [match existing][dirsync] AAD Users.
+    * Determines how the Profile should [create new][fullsync] or [match existing][dirsync] Microsoft Entra users.
     *
     * @return EducationIdentitySynchronizationConfiguration|null The identitySynchronizationConfiguration
     */
@@ -169,7 +169,7 @@ class EducationSynchronizationProfile extends Entity
 
     /**
     * Sets the identitySynchronizationConfiguration
-    * Determines how the Profile should [create new][fullsync] or [match existing][dirsync] AAD Users.
+    * Determines how the Profile should [create new][fullsync] or [match existing][dirsync] Microsoft Entra users.
     *
     * @param EducationIdentitySynchronizationConfiguration $val The identitySynchronizationConfiguration
     *

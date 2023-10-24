@@ -113,7 +113,7 @@ class UnifiedRoleManagementAlertDefinition extends Entity
 
     /**
     * Gets the isConfigurable
-    * true if the alert configuration can be customized in the tenant, and false otherwise. For example, the number and percentage thresholds of the 'There are too many global administrators' alert can be configured by users, while the 'This organization doesn't have Azure AD Premium P2' can't be configured, because the criteria are restricted.
+    * true if the alert configuration can be customized in the tenant, and false otherwise. For example, the number and percentage thresholds of the 'There are too many global administrators' alert can be configured by users, while the 'This organization doesn't have Microsoft Entra ID P2' can't be configured, because the criteria are restricted.
     *
     * @return bool|null The isConfigurable
     */
@@ -128,7 +128,7 @@ class UnifiedRoleManagementAlertDefinition extends Entity
 
     /**
     * Sets the isConfigurable
-    * true if the alert configuration can be customized in the tenant, and false otherwise. For example, the number and percentage thresholds of the 'There are too many global administrators' alert can be configured by users, while the 'This organization doesn't have Azure AD Premium P2' can't be configured, because the criteria are restricted.
+    * true if the alert configuration can be customized in the tenant, and false otherwise. For example, the number and percentage thresholds of the 'There are too many global administrators' alert can be configured by users, while the 'This organization doesn't have Microsoft Entra ID P2' can't be configured, because the criteria are restricted.
     *
     * @param bool $val The isConfigurable
     *
@@ -229,7 +229,7 @@ class UnifiedRoleManagementAlertDefinition extends Entity
 
     /**
     * Gets the scopeType
-    * The type of scope where the alert is created. DirectoryRole is the only currently supported scope type for Azure AD Roles.
+    * The type of scope where the alert is created. DirectoryRole is the only currently supported scope type for Microsoft Entra roles.
     *
     * @return string|null The scopeType
     */
@@ -244,7 +244,7 @@ class UnifiedRoleManagementAlertDefinition extends Entity
 
     /**
     * Sets the scopeType
-    * The type of scope where the alert is created. DirectoryRole is the only currently supported scope type for Azure AD Roles.
+    * The type of scope where the alert is created. DirectoryRole is the only currently supported scope type for Microsoft Entra roles.
     *
     * @param string $val The scopeType
     *

@@ -109,7 +109,7 @@ class AttackSimulationUser extends Entity
     }
     /**
     * Gets the userId
-    * The id property value of the user resource that represents the user in the Azure Active Directory tenant.
+    * The id property value of the user resource that represents the user in the Microsoft Entra tenant.
     *
     * @return string|null The userId
     */
@@ -124,7 +124,7 @@ class AttackSimulationUser extends Entity
 
     /**
     * Sets the userId
-    * The id property value of the user resource that represents the user in the Azure Active Directory tenant.
+    * The id property value of the user resource that represents the user in the Microsoft Entra tenant.
     *
     * @param string $val The value of the userId
     *

@@ -27,7 +27,7 @@ class AccessReviewSet extends Entity
 
      /**
      * Gets the decisions
-    * Represents an Azure AD access review decision on an instance of a review.
+    * Represents a Microsoft Entra access review decision on an instance of a review.
      *
      * @return array|null The decisions
      */
@@ -42,7 +42,7 @@ class AccessReviewSet extends Entity
 
     /**
     * Sets the decisions
-    * Represents an Azure AD access review decision on an instance of a review.
+    * Represents a Microsoft Entra access review decision on an instance of a review.
     *
     * @param AccessReviewInstanceDecisionItem[] $val The decisions
     *

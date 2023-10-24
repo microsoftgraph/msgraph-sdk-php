@@ -53,7 +53,7 @@ class ManagedTenantOperationError extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the tenantId
-    * The Azure Active Directory tenant identifier for the managed tenant.
+    * The Microsoft Entra tenant identifier for the managed tenant.
     *
     * @return string|null The tenantId
     */
@@ -68,7 +68,7 @@ class ManagedTenantOperationError extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the tenantId
-    * The Azure Active Directory tenant identifier for the managed tenant.
+    * The Microsoft Entra tenant identifier for the managed tenant.
     *
     * @param string $val The value of the tenantId
     *

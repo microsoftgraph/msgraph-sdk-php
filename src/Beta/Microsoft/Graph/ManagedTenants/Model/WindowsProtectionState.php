@@ -742,7 +742,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the tenantId
-    * The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
+    * The Microsoft Entra tenant identifier for the managed tenant. Optional. Read-only.
     *
     * @return string|null The tenantId
     */
@@ -757,7 +757,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the tenantId
-    * The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
+    * The Microsoft Entra tenant identifier for the managed tenant. Optional. Read-only.
     *
     * @param string $val The tenantId
     *

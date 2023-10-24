@@ -113,7 +113,7 @@ class ExtensionProperty extends DirectoryObject
 
     /**
     * Gets the isSyncedFromOnPremises
-    * Indicates if this extension property was synced from on-premises active directory using Azure AD Connect. Read-only.
+    * Indicates if this extension property was synced from on-premises active directory using Microsoft Entra Connect. Read-only.
     *
     * @return bool|null The isSyncedFromOnPremises
     */
@@ -128,7 +128,7 @@ class ExtensionProperty extends DirectoryObject
 
     /**
     * Sets the isSyncedFromOnPremises
-    * Indicates if this extension property was synced from on-premises active directory using Azure AD Connect. Read-only.
+    * Indicates if this extension property was synced from on-premises active directory using Microsoft Entra Connect. Read-only.
     *
     * @param bool $val The isSyncedFromOnPremises
     *

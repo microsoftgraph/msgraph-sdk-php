@@ -26,6 +26,7 @@ class RemoteDesktopSecurityConfiguration extends Entity
 {
     /**
     * Gets the isRemoteDesktopProtocolEnabled
+    * Determines if Microsoft Entra ID RDS authentication protocol for RDP is enabled.
     *
     * @return bool|null The isRemoteDesktopProtocolEnabled
     */
@@ -40,6 +41,7 @@ class RemoteDesktopSecurityConfiguration extends Entity
 
     /**
     * Sets the isRemoteDesktopProtocolEnabled
+    * Determines if Microsoft Entra ID RDS authentication protocol for RDP is enabled.
     *
     * @param bool $val The isRemoteDesktopProtocolEnabled
     *
@@ -54,6 +56,7 @@ class RemoteDesktopSecurityConfiguration extends Entity
 
      /**
      * Gets the targetDeviceGroups
+    * The collection of target device groups that are associated with the RDS security configuration that will be enabled for SSO when a client connects to the target device over RDP using the new Microsoft Entra ID RDS authentication protocol.
      *
      * @return array|null The targetDeviceGroups
      */
@@ -68,6 +71,7 @@ class RemoteDesktopSecurityConfiguration extends Entity
 
     /**
     * Sets the targetDeviceGroups
+    * The collection of target device groups that are associated with the RDS security configuration that will be enabled for SSO when a client connects to the target device over RDP using the new Microsoft Entra ID RDS authentication protocol.
     *
     * @param TargetDeviceGroup[] $val The targetDeviceGroups
     *

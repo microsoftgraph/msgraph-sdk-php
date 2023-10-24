@@ -26,7 +26,7 @@ class OpenIdConnectProvider extends IdentityProvider
 {
     /**
     * Gets the claimsMapping
-    * After the OIDC provider sends an ID token back to Azure AD, Azure AD needs to be able to map the claims from the received token to the claims that Azure AD recognizes and uses. This complex type captures that mapping. It's a required property.
+    * After the OIDC provider sends an ID token back to Microsoft Entra ID, Microsoft Entra ID needs to be able to map the claims from the received token to the claims that Microsoft Entra ID recognizes and uses. This complex type captures that mapping. It's a required property.
     *
     * @return ClaimsMapping|null The claimsMapping
     */
@@ -45,7 +45,7 @@ class OpenIdConnectProvider extends IdentityProvider
 
     /**
     * Sets the claimsMapping
-    * After the OIDC provider sends an ID token back to Azure AD, Azure AD needs to be able to map the claims from the received token to the claims that Azure AD recognizes and uses. This complex type captures that mapping. It's a required property.
+    * After the OIDC provider sends an ID token back to Microsoft Entra ID, Microsoft Entra ID needs to be able to map the claims from the received token to the claims that Microsoft Entra ID recognizes and uses. This complex type captures that mapping. It's a required property.
     *
     * @param ClaimsMapping $val The claimsMapping
     *

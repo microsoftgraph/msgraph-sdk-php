@@ -59,7 +59,7 @@ class CustomCalloutExtension extends Entity
 
     /**
     * Gets the clientConfiguration
-    * HTTP connection settings that define how long Azure AD can wait for a connection to a logic app, how many times you can retry a timed-out connection and the exception scenarios when retries are allowed.
+    * HTTP connection settings that define how long Microsoft Entra ID can wait for a connection to a logic app, how many times you can retry a timed-out connection and the exception scenarios when retries are allowed.
     *
     * @return CustomExtensionClientConfiguration|null The clientConfiguration
     */
@@ -78,7 +78,7 @@ class CustomCalloutExtension extends Entity
 
     /**
     * Sets the clientConfiguration
-    * HTTP connection settings that define how long Azure AD can wait for a connection to a logic app, how many times you can retry a timed-out connection and the exception scenarios when retries are allowed.
+    * HTTP connection settings that define how long Microsoft Entra ID can wait for a connection to a logic app, how many times you can retry a timed-out connection and the exception scenarios when retries are allowed.
     *
     * @param CustomExtensionClientConfiguration $val The clientConfiguration
     *

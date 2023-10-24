@@ -86,7 +86,7 @@ class ReportRoot extends Entity
 
     /**
     * Gets the authenticationMethods
-    * Container for navigation properties for Azure AD authentication methods resources.
+    * Container for navigation properties for Microsoft Entra authentication methods resources.
     *
     * @return AuthenticationMethodsRoot|null The authenticationMethods
     */
@@ -105,7 +105,7 @@ class ReportRoot extends Entity
 
     /**
     * Sets the authenticationMethods
-    * Container for navigation properties for Azure AD authentication methods resources.
+    * Container for navigation properties for Microsoft Entra authentication methods resources.
     *
     * @param AuthenticationMethodsRoot $val The authenticationMethods
     *

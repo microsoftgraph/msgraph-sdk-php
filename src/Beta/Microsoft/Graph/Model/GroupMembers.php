@@ -25,7 +25,7 @@ class GroupMembers extends UserSet
 {
     /**
     * Gets the description
-    * The name of the group in Azure AD. Read only.
+    * The name of the group in Microsoft Entra ID. Read only.
     *
     * @return string|null The description
     */
@@ -40,7 +40,7 @@ class GroupMembers extends UserSet
 
     /**
     * Sets the description
-    * The name of the group in Azure AD. Read only.
+    * The name of the group in Microsoft Entra ID. Read only.
     *
     * @param string $val The value of the description
     *
@@ -53,7 +53,7 @@ class GroupMembers extends UserSet
     }
     /**
     * Gets the id
-    * The ID of the group in Azure AD.
+    * The ID of the group in Microsoft Entra ID.
     *
     * @return string|null The id
     */
@@ -68,7 +68,7 @@ class GroupMembers extends UserSet
 
     /**
     * Sets the id
-    * The ID of the group in Azure AD.
+    * The ID of the group in Microsoft Entra ID.
     *
     * @param string $val The value of the id
     *
