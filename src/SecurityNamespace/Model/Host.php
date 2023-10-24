@@ -93,7 +93,7 @@ class Host extends Artifact
 
      /**
      * Gets the childHostPairs
-    * The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a cihldHost.
+    * The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a childHost.
      *
      * @return array|null The childHostPairs
      */
@@ -108,7 +108,7 @@ class Host extends Artifact
 
     /**
     * Sets the childHostPairs
-    * The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a cihldHost.
+    * The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a childHost.
     *
     * @param HostPair[] $val The childHostPairs
     *

@@ -91,6 +91,37 @@ class DelegatedAdminRelationship extends Entity
     }
 
     /**
+    * Gets the autoExtendDuration
+    *
+    * @return \DateInterval|null The autoExtendDuration
+    */
+    public function getAutoExtendDuration()
+    {
+        if (array_key_exists("autoExtendDuration", $this->_propDict)) {
+            if (is_a($this->_propDict["autoExtendDuration"], "\DateInterval") || is_null($this->_propDict["autoExtendDuration"])) {
+                return $this->_propDict["autoExtendDuration"];
+            } else {
+                $this->_propDict["autoExtendDuration"] = new \DateInterval($this->_propDict["autoExtendDuration"]);
+                return $this->_propDict["autoExtendDuration"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the autoExtendDuration
+    *
+    * @param \DateInterval $val The autoExtendDuration
+    *
+    * @return DelegatedAdminRelationship
+    */
+    public function setAutoExtendDuration($val)
+    {
+        $this->_propDict["autoExtendDuration"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the createdDateTime
     * The date and time in ISO 8601 format and in UTC time when the relationship was created. Read-only.
     *

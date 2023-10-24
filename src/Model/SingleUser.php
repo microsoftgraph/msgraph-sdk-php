@@ -36,7 +36,7 @@ class SingleUser extends SubjectSet
 
     /**
     * Gets the description
-    * The name of the user in Azure AD. Read only.
+    * The name of the user in Microsoft Entra ID. Read only.
     *
     * @return string|null The description
     */
@@ -51,7 +51,7 @@ class SingleUser extends SubjectSet
 
     /**
     * Sets the description
-    * The name of the user in Azure AD. Read only.
+    * The name of the user in Microsoft Entra ID. Read only.
     *
     * @param string $val The value of the description
     *
@@ -64,7 +64,7 @@ class SingleUser extends SubjectSet
     }
     /**
     * Gets the userId
-    * The ID of the user in Azure AD.
+    * The ID of the user in Microsoft Entra ID.
     *
     * @return string|null The userId
     */
@@ -79,7 +79,7 @@ class SingleUser extends SubjectSet
 
     /**
     * Sets the userId
-    * The ID of the user in Azure AD.
+    * The ID of the user in Microsoft Entra ID.
     *
     * @param string $val The value of the userId
     *

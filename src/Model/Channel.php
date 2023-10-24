@@ -208,7 +208,7 @@ class Channel extends Entity
 
     /**
     * Gets the tenantId
-    * The ID of the Azure Active Directory tenant.
+    * The ID of the Microsoft Entra tenant.
     *
     * @return string|null The tenantId
     */
@@ -223,7 +223,7 @@ class Channel extends Entity
 
     /**
     * Sets the tenantId
-    * The ID of the Azure Active Directory tenant.
+    * The ID of the Microsoft Entra tenant.
     *
     * @param string $val The tenantId
     *
