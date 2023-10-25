@@ -93,7 +93,7 @@ class Host extends Artifact
 
      /**
      * Gets the childHostPairs
-    * The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a cihldHost.
+    * The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a childHost.
      *
      * @return array|null The childHostPairs
      */
@@ -108,7 +108,7 @@ class Host extends Artifact
 
     /**
     * Sets the childHostPairs
-    * The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a cihldHost.
+    * The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a childHost.
     *
     * @param HostPair[] $val The childHostPairs
     *
@@ -297,6 +297,36 @@ class Host extends Artifact
     public function setPassiveDnsReverse($val)
     {
         $this->_propDict["passiveDnsReverse"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the ports
+    * The hostPorts associated with a host.
+     *
+     * @return array|null The ports
+     */
+    public function getPorts()
+    {
+        if (array_key_exists("ports", $this->_propDict)) {
+           return $this->_propDict["ports"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the ports
+    * The hostPorts associated with a host.
+    *
+    * @param HostPort[] $val The ports
+    *
+    * @return Host
+    */
+    public function setPorts($val)
+    {
+        $this->_propDict["ports"] = $val;
         return $this;
     }
 

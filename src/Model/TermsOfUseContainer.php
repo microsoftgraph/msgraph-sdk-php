@@ -57,7 +57,7 @@ class TermsOfUseContainer extends Entity
 
      /**
      * Gets the agreements
-    * Represents a tenant's customizable terms of use agreement that's created and managed with Azure Active Directory (Azure AD).
+    * Represents a tenant's customizable terms of use agreement that's created and managed with Microsoft Entra ID Governance.
      *
      * @return array|null The agreements
      */
@@ -72,7 +72,7 @@ class TermsOfUseContainer extends Entity
 
     /**
     * Sets the agreements
-    * Represents a tenant's customizable terms of use agreement that's created and managed with Azure Active Directory (Azure AD).
+    * Represents a tenant's customizable terms of use agreement that's created and managed with Microsoft Entra ID Governance.
     *
     * @param Agreement[] $val The agreements
     *

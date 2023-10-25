@@ -338,7 +338,7 @@ class WorkflowBase implements \JsonSerializable
 
     /**
     * Gets the lastModifiedBy
-    * The unique identifier of the Azure Active Directory identity that last modified the workflow.
+    * The unique identifier of the Microsoft Entra identity that last modified the workflow.
     *
     * @return \Microsoft\Graph\Model\User|null The lastModifiedBy
     */
@@ -357,7 +357,7 @@ class WorkflowBase implements \JsonSerializable
 
     /**
     * Sets the lastModifiedBy
-    * The unique identifier of the Azure Active Directory identity that last modified the workflow.
+    * The unique identifier of the Microsoft Entra identity that last modified the workflow.
     *
     * @param \Microsoft\Graph\Model\User $val The lastModifiedBy
     *

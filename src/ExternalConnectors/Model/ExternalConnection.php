@@ -91,6 +91,35 @@ class ExternalConnection extends \Microsoft\Graph\Model\Entity
     }
 
     /**
+    * Gets the connectorId
+    * The Teams app ID. Optional.
+    *
+    * @return string|null The connectorId
+    */
+    public function getConnectorId()
+    {
+        if (array_key_exists("connectorId", $this->_propDict)) {
+            return $this->_propDict["connectorId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the connectorId
+    * The Teams app ID. Optional.
+    *
+    * @param string $val The connectorId
+    *
+    * @return ExternalConnection
+    */
+    public function setConnectorId($val)
+    {
+        $this->_propDict["connectorId"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the description
     * Description of the connection displayed in the Microsoft 365 admin center. Optional.
     *

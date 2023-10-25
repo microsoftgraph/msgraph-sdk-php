@@ -26,7 +26,7 @@ class BitlockerRecoveryKey extends Entity
 {
     /**
     * Gets the createdDateTime
-    * The date and time when the key was originally backed up to Azure Active Directory. Not nullable.
+    * The date and time when the key was originally backed up to Microsoft Entra ID. Not nullable.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -45,7 +45,7 @@ class BitlockerRecoveryKey extends Entity
 
     /**
     * Sets the createdDateTime
-    * The date and time when the key was originally backed up to Azure Active Directory. Not nullable.
+    * The date and time when the key was originally backed up to Microsoft Entra ID. Not nullable.
     *
     * @param \DateTime $val The createdDateTime
     *

@@ -26,7 +26,7 @@ class DelegatedAdminCustomer extends Entity
 {
     /**
     * Gets the displayName
-    * The Azure AD display name of the customer tenant. Read-only. Supports $orderby.
+    * The Microsoft Entra ID display name of the customer tenant. Read-only. Supports $orderby.
     *
     * @return string|null The displayName
     */
@@ -41,7 +41,7 @@ class DelegatedAdminCustomer extends Entity
 
     /**
     * Sets the displayName
-    * The Azure AD display name of the customer tenant. Read-only. Supports $orderby.
+    * The Microsoft Entra ID display name of the customer tenant. Read-only. Supports $orderby.
     *
     * @param string $val The displayName
     *
@@ -55,7 +55,7 @@ class DelegatedAdminCustomer extends Entity
 
     /**
     * Gets the tenantId
-    * The Azure AD-assigned tenant ID of the customer. Read-only.
+    * The Microsoft Entra ID-assigned tenant ID of the customer. Read-only.
     *
     * @return string|null The tenantId
     */
@@ -70,7 +70,7 @@ class DelegatedAdminCustomer extends Entity
 
     /**
     * Sets the tenantId
-    * The Azure AD-assigned tenant ID of the customer. Read-only.
+    * The Microsoft Entra ID-assigned tenant ID of the customer. Read-only.
     *
     * @param string $val The tenantId
     *

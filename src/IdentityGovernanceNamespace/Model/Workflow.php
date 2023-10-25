@@ -151,7 +151,7 @@ class Workflow extends WorkflowBase
 
      /**
      * Gets the executionScope
-    * The unique identifier of the Azure AD identity that last modified the workflow object.
+    * The unique identifier of the Microsoft Entra identity that last modified the workflow object.
      *
      * @return array|null The executionScope
      */
@@ -166,7 +166,7 @@ class Workflow extends WorkflowBase
 
     /**
     * Sets the executionScope
-    * The unique identifier of the Azure AD identity that last modified the workflow object.
+    * The unique identifier of the Microsoft Entra identity that last modified the workflow object.
     *
     * @param UserProcessingResult[] $val The executionScope
     *
