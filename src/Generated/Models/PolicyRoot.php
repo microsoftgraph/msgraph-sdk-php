@@ -78,7 +78,7 @@ class PolicyRoot extends Entity implements Parsable
     }
 
     /**
-     * Gets the authenticationMethodsPolicy property value. The authentication methods and the users that are allowed to use them to sign in and perform multifactor authentication (MFA) in Azure Active Directory (Azure AD).
+     * Gets the authenticationMethodsPolicy property value. The authentication methods and the users that are allowed to use them to sign in and perform multifactor authentication (MFA) in Microsoft Entra ID.
      * @return AuthenticationMethodsPolicy|null
     */
     public function getAuthenticationMethodsPolicy(): ?AuthenticationMethodsPolicy {
@@ -90,7 +90,7 @@ class PolicyRoot extends Entity implements Parsable
     }
 
     /**
-     * Gets the authenticationStrengthPolicies property value. The authentication method combinations that are to be used in scenarios defined by Azure AD Conditional Access.
+     * Gets the authenticationStrengthPolicies property value. The authentication method combinations that are to be used in scenarios defined by Microsoft Entra Conditional Access.
      * @return array<AuthenticationStrengthPolicy>|null
     */
     public function getAuthenticationStrengthPolicies(): ?array {
@@ -104,7 +104,7 @@ class PolicyRoot extends Entity implements Parsable
     }
 
     /**
-     * Gets the authorizationPolicy property value. The policy that controls Azure AD authorization settings.
+     * Gets the authorizationPolicy property value. The policy that controls Microsoft Entra authorization settings.
      * @return AuthorizationPolicy|null
     */
     public function getAuthorizationPolicy(): ?AuthorizationPolicy {
@@ -144,7 +144,7 @@ class PolicyRoot extends Entity implements Parsable
     }
 
     /**
-     * Gets the crossTenantAccessPolicy property value. The custom rules that define an access scenario when interacting with external Azure AD tenants.
+     * Gets the crossTenantAccessPolicy property value. The custom rules that define an access scenario when interacting with external Microsoft Entra tenants.
      * @return CrossTenantAccessPolicy|null
     */
     public function getCrossTenantAccessPolicy(): ?CrossTenantAccessPolicy {
@@ -211,7 +211,7 @@ class PolicyRoot extends Entity implements Parsable
     }
 
     /**
-     * Gets the homeRealmDiscoveryPolicies property value. The policy to control Azure AD authentication behavior for federated users.
+     * Gets the homeRealmDiscoveryPolicies property value. The policy to control Microsoft Entra authentication behavior for federated users.
      * @return array<HomeRealmDiscoveryPolicy>|null
     */
     public function getHomeRealmDiscoveryPolicies(): ?array {
@@ -279,7 +279,7 @@ class PolicyRoot extends Entity implements Parsable
     }
 
     /**
-     * Gets the tokenIssuancePolicies property value. The policy that specifies the characteristics of SAML tokens issued by Azure AD.
+     * Gets the tokenIssuancePolicies property value. The policy that specifies the characteristics of SAML tokens issued by Microsoft Entra ID.
      * @return array<TokenIssuancePolicy>|null
     */
     public function getTokenIssuancePolicies(): ?array {
@@ -293,7 +293,7 @@ class PolicyRoot extends Entity implements Parsable
     }
 
     /**
-     * Gets the tokenLifetimePolicies property value. The policy that controls the lifetime of a JWT access token, an ID token, or a SAML 1.1/2.0 token issued by Azure AD.
+     * Gets the tokenLifetimePolicies property value. The policy that controls the lifetime of a JWT access token, an ID token, or a SAML 1.1/2.0 token issued by Microsoft Entra ID.
      * @return array<TokenLifetimePolicy>|null
     */
     public function getTokenLifetimePolicies(): ?array {
@@ -366,7 +366,7 @@ class PolicyRoot extends Entity implements Parsable
     }
 
     /**
-     * Sets the authenticationMethodsPolicy property value. The authentication methods and the users that are allowed to use them to sign in and perform multifactor authentication (MFA) in Azure Active Directory (Azure AD).
+     * Sets the authenticationMethodsPolicy property value. The authentication methods and the users that are allowed to use them to sign in and perform multifactor authentication (MFA) in Microsoft Entra ID.
      * @param AuthenticationMethodsPolicy|null $value Value to set for the authenticationMethodsPolicy property.
     */
     public function setAuthenticationMethodsPolicy(?AuthenticationMethodsPolicy $value): void {
@@ -374,7 +374,7 @@ class PolicyRoot extends Entity implements Parsable
     }
 
     /**
-     * Sets the authenticationStrengthPolicies property value. The authentication method combinations that are to be used in scenarios defined by Azure AD Conditional Access.
+     * Sets the authenticationStrengthPolicies property value. The authentication method combinations that are to be used in scenarios defined by Microsoft Entra Conditional Access.
      * @param array<AuthenticationStrengthPolicy>|null $value Value to set for the authenticationStrengthPolicies property.
     */
     public function setAuthenticationStrengthPolicies(?array $value): void {
@@ -382,7 +382,7 @@ class PolicyRoot extends Entity implements Parsable
     }
 
     /**
-     * Sets the authorizationPolicy property value. The policy that controls Azure AD authorization settings.
+     * Sets the authorizationPolicy property value. The policy that controls Microsoft Entra authorization settings.
      * @param AuthorizationPolicy|null $value Value to set for the authorizationPolicy property.
     */
     public function setAuthorizationPolicy(?AuthorizationPolicy $value): void {
@@ -406,7 +406,7 @@ class PolicyRoot extends Entity implements Parsable
     }
 
     /**
-     * Sets the crossTenantAccessPolicy property value. The custom rules that define an access scenario when interacting with external Azure AD tenants.
+     * Sets the crossTenantAccessPolicy property value. The custom rules that define an access scenario when interacting with external Microsoft Entra tenants.
      * @param CrossTenantAccessPolicy|null $value Value to set for the crossTenantAccessPolicy property.
     */
     public function setCrossTenantAccessPolicy(?CrossTenantAccessPolicy $value): void {
@@ -430,7 +430,7 @@ class PolicyRoot extends Entity implements Parsable
     }
 
     /**
-     * Sets the homeRealmDiscoveryPolicies property value. The policy to control Azure AD authentication behavior for federated users.
+     * Sets the homeRealmDiscoveryPolicies property value. The policy to control Microsoft Entra authentication behavior for federated users.
      * @param array<HomeRealmDiscoveryPolicy>|null $value Value to set for the homeRealmDiscoveryPolicies property.
     */
     public function setHomeRealmDiscoveryPolicies(?array $value): void {
@@ -470,7 +470,7 @@ class PolicyRoot extends Entity implements Parsable
     }
 
     /**
-     * Sets the tokenIssuancePolicies property value. The policy that specifies the characteristics of SAML tokens issued by Azure AD.
+     * Sets the tokenIssuancePolicies property value. The policy that specifies the characteristics of SAML tokens issued by Microsoft Entra ID.
      * @param array<TokenIssuancePolicy>|null $value Value to set for the tokenIssuancePolicies property.
     */
     public function setTokenIssuancePolicies(?array $value): void {
@@ -478,7 +478,7 @@ class PolicyRoot extends Entity implements Parsable
     }
 
     /**
-     * Sets the tokenLifetimePolicies property value. The policy that controls the lifetime of a JWT access token, an ID token, or a SAML 1.1/2.0 token issued by Azure AD.
+     * Sets the tokenLifetimePolicies property value. The policy that controls the lifetime of a JWT access token, an ID token, or a SAML 1.1/2.0 token issued by Microsoft Entra ID.
      * @param array<TokenLifetimePolicy>|null $value Value to set for the tokenLifetimePolicies property.
     */
     public function setTokenLifetimePolicies(?array $value): void {

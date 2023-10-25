@@ -65,6 +65,7 @@ class RefRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
         return $requestInfo;
     }
 

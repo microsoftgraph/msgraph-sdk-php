@@ -181,10 +181,10 @@ class MobileAppsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the windowsMicrosoftEdgeApp objects.
+     * List properties and relationships of the androidStoreApp objects.
      * @param MobileAppsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://learn.microsoft.com/graph/api/intune-apps-windowsmicrosoftedgeapp-list?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-apps-androidstoreapp-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?MobileAppsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -200,11 +200,11 @@ class MobileAppsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new windowsUniversalAppX object.
+     * Create a new windowsMicrosoftEdgeApp object.
      * @param MobileApp $body The request body
      * @param MobileAppsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://learn.microsoft.com/graph/api/intune-apps-windowsuniversalappx-create?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-apps-windowsmicrosoftedgeapp-create?view=graph-rest-1.0 Find more info here
     */
     public function post(MobileApp $body, ?MobileAppsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -220,7 +220,7 @@ class MobileAppsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the windowsMicrosoftEdgeApp objects.
+     * List properties and relationships of the androidStoreApp objects.
      * @param MobileAppsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -229,7 +229,6 @@ class MobileAppsRequestBuilder extends BaseRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
-        $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
             $requestInfo->addHeaders($requestConfiguration->headers);
             if ($requestConfiguration->queryParameters !== null) {
@@ -237,11 +236,12 @@ class MobileAppsRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
         return $requestInfo;
     }
 
     /**
-     * Create a new windowsUniversalAppX object.
+     * Create a new windowsMicrosoftEdgeApp object.
      * @param MobileApp $body The request body
      * @param MobileAppsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -251,11 +251,11 @@ class MobileAppsRequestBuilder extends BaseRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
-        $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

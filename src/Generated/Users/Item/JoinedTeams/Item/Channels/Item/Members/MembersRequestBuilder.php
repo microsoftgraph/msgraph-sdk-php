@@ -80,11 +80,11 @@ class MembersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Add a conversationMember to a channel. This operation is allowed only for channels with a membershipType value of private or shared. This API is available in the following national cloud deployments.
+     * Add a conversationMember to a channel. This API is available in the following national cloud deployments.
      * @param ConversationMember $body The request body
      * @param MembersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://learn.microsoft.com/graph/api/channel-post-members?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/conversationmember-add?view=graph-rest-1.0 Find more info here
     */
     public function post(ConversationMember $body, ?MembersRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -109,7 +109,6 @@ class MembersRequestBuilder extends BaseRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
-        $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
             $requestInfo->addHeaders($requestConfiguration->headers);
             if ($requestConfiguration->queryParameters !== null) {
@@ -117,11 +116,12 @@ class MembersRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
         return $requestInfo;
     }
 
     /**
-     * Add a conversationMember to a channel. This operation is allowed only for channels with a membershipType value of private or shared. This API is available in the following national cloud deployments.
+     * Add a conversationMember to a channel. This API is available in the following national cloud deployments.
      * @param ConversationMember $body The request body
      * @param MembersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -131,11 +131,11 @@ class MembersRequestBuilder extends BaseRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
-        $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

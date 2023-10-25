@@ -66,6 +66,7 @@ class ThreatIntelligence extends Entity implements Parsable
             'hostComponents' => fn(ParseNode $n) => $o->setHostComponents($n->getCollectionOfObjectValues([HostComponent::class, 'createFromDiscriminatorValue'])),
             'hostCookies' => fn(ParseNode $n) => $o->setHostCookies($n->getCollectionOfObjectValues([HostCookie::class, 'createFromDiscriminatorValue'])),
             'hostPairs' => fn(ParseNode $n) => $o->setHostPairs($n->getCollectionOfObjectValues([HostPair::class, 'createFromDiscriminatorValue'])),
+            'hostPorts' => fn(ParseNode $n) => $o->setHostPorts($n->getCollectionOfObjectValues([HostPort::class, 'createFromDiscriminatorValue'])),
             'hosts' => fn(ParseNode $n) => $o->setHosts($n->getCollectionOfObjectValues([Host::class, 'createFromDiscriminatorValue'])),
             'hostSslCertificates' => fn(ParseNode $n) => $o->setHostSslCertificates($n->getCollectionOfObjectValues([HostSslCertificate::class, 'createFromDiscriminatorValue'])),
             'hostTrackers' => fn(ParseNode $n) => $o->setHostTrackers($n->getCollectionOfObjectValues([HostTracker::class, 'createFromDiscriminatorValue'])),
@@ -120,6 +121,20 @@ class ThreatIntelligence extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'hostPairs'");
+    }
+
+    /**
+     * Gets the hostPorts property value. Retrieve details about hostPort objects.Note: List retrieval is not yet supported.
+     * @return array<HostPort>|null
+    */
+    public function getHostPorts(): ?array {
+        $val = $this->getBackingStore()->get('hostPorts');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, HostPort::class);
+            /** @var array<HostPort>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'hostPorts'");
     }
 
     /**
@@ -287,6 +302,7 @@ class ThreatIntelligence extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('hostComponents', $this->getHostComponents());
         $writer->writeCollectionOfObjectValues('hostCookies', $this->getHostCookies());
         $writer->writeCollectionOfObjectValues('hostPairs', $this->getHostPairs());
+        $writer->writeCollectionOfObjectValues('hostPorts', $this->getHostPorts());
         $writer->writeCollectionOfObjectValues('hosts', $this->getHosts());
         $writer->writeCollectionOfObjectValues('hostSslCertificates', $this->getHostSslCertificates());
         $writer->writeCollectionOfObjectValues('hostTrackers', $this->getHostTrackers());
@@ -338,6 +354,14 @@ class ThreatIntelligence extends Entity implements Parsable
     */
     public function setHostPairs(?array $value): void {
         $this->getBackingStore()->set('hostPairs', $value);
+    }
+
+    /**
+     * Sets the hostPorts property value. Retrieve details about hostPort objects.Note: List retrieval is not yet supported.
+     * @param array<HostPort>|null $value Value to set for the hostPorts property.
+    */
+    public function setHostPorts(?array $value): void {
+        $this->getBackingStore()->set('hostPorts', $value);
     }
 
     /**

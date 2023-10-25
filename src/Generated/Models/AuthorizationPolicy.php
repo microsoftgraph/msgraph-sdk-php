@@ -86,7 +86,7 @@ class AuthorizationPolicy extends PolicyBase implements Parsable
     }
 
     /**
-     * Gets the blockMsolPowerShell property value. To disable the use of MSOL PowerShell, set this property to true. This also disables user-based access to the legacy service endpoint used by MSOL PowerShell. This doesn't affect Azure Active Directory Connect or Microsoft Graph.
+     * Gets the blockMsolPowerShell property value. To disable the use of MSOL PowerShell, set this property to true. This also disables user-based access to the legacy service endpoint used by MSOL PowerShell. This doesn't affect Microsoft Entra Connect or Microsoft Graph.
      * @return bool|null
     */
     public function getBlockMsolPowerShell(): ?bool {
@@ -196,7 +196,7 @@ class AuthorizationPolicy extends PolicyBase implements Parsable
     }
 
     /**
-     * Sets the blockMsolPowerShell property value. To disable the use of MSOL PowerShell, set this property to true. This also disables user-based access to the legacy service endpoint used by MSOL PowerShell. This doesn't affect Azure Active Directory Connect or Microsoft Graph.
+     * Sets the blockMsolPowerShell property value. To disable the use of MSOL PowerShell, set this property to true. This also disables user-based access to the legacy service endpoint used by MSOL PowerShell. This doesn't affect Microsoft Entra Connect or Microsoft Graph.
      * @param bool|null $value Value to set for the blockMsolPowerShell property.
     */
     public function setBlockMsolPowerShell(?bool $value): void {

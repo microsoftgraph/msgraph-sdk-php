@@ -1,5 +1,5 @@
 {
-  "descriptionHash": "F33AFCD32A6BA97C831E8FCF676AFACF4A4BCD58C26D22772979400057A1639EA09039BDCDA5B19FC1191743D889B759606DEA235C2696393CD189BB830469B4",
+  "descriptionHash": "17B18784650CA4C7617EA56DE61CEFC4CCDEB3AED23DF24291D24BAF626C6A4D822F902F50327C39C1427A741A435CFB0185718CCDE02E0D3A3532960A1A2B01",
   "descriptionLocation": "/mnt/vss/_work/1/s/msgraph-metadata/clean_v10_openapi/openapi.yaml",
   "lockFileVersion": "1.0.0",
   "kiotaVersion": "1.8.0",
@@ -21,10 +21,10 @@
     "Microsoft.Kiota.Serialization.Form.FormParseNodeFactory"
   ],
   "structuredMimeTypes": [
-    "application/json",
-    "text/plain",
-    "application/x-www-form-urlencoded",
-    "multipart/form-data"
+    "application/json;q=1",
+    "text/plain;q=0.9",
+    "application/x-www-form-urlencoded;q=0.2",
+    "multipart/form-data;q=0.1"
   ],
   "includePatterns": [],
   "excludePatterns": [

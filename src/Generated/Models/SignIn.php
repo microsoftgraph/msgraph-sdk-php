@@ -39,7 +39,7 @@ class SignIn extends Entity implements Parsable
     }
 
     /**
-     * Gets the appId property value. Unique GUID representing the app ID in the Azure Active Directory.  Supports $filter (eq).
+     * Gets the appId property value. Unique GUID representing the app ID in the Microsoft Entra ID.  Supports $filter (eq).
      * @return string|null
     */
     public function getAppId(): ?string {
@@ -225,7 +225,7 @@ class SignIn extends Entity implements Parsable
     }
 
     /**
-     * Gets the riskDetail property value. Provides the 'reason' behind a specific state of a risky user, sign-in or a risk event. The possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far.  Supports $filter (eq).Note: Details for this property require an Azure AD Premium P2 license. Other licenses return the value hidden.
+     * Gets the riskDetail property value. Provides the 'reason' behind a specific state of a risky user, sign-in or a risk event. The possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far.  Supports $filter (eq).Note: Details for this property require a Microsoft Entra ID P2 license. Other licenses return the value hidden.
      * @return RiskDetail|null
     */
     public function getRiskDetail(): ?RiskDetail {
@@ -265,7 +265,7 @@ class SignIn extends Entity implements Parsable
     }
 
     /**
-     * Gets the riskLevelAggregated property value. Aggregated risk level. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in wasn't enabled for Azure AD Identity Protection.  Supports $filter (eq).  Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
+     * Gets the riskLevelAggregated property value. Aggregated risk level. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in wasn't enabled for Microsoft Entra ID Protection.  Supports $filter (eq).  Note: Details for this property are only available for Microsoft Entra ID P2 customers. All other customers are returned hidden.
      * @return RiskLevel|null
     */
     public function getRiskLevelAggregated(): ?RiskLevel {
@@ -277,7 +277,7 @@ class SignIn extends Entity implements Parsable
     }
 
     /**
-     * Gets the riskLevelDuringSignIn property value. Risk level during sign-in. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in wasn't enabled for Azure AD Identity Protection.  Supports $filter (eq).  Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
+     * Gets the riskLevelDuringSignIn property value. Risk level during sign-in. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in wasn't enabled for Microsoft Entra ID Protection.  Supports $filter (eq).  Note: Details for this property are only available for Microsoft Entra ID P2 customers. All other customers are returned hidden.
      * @return RiskLevel|null
     */
     public function getRiskLevelDuringSignIn(): ?RiskLevel {
@@ -388,7 +388,7 @@ class SignIn extends Entity implements Parsable
     }
 
     /**
-     * Sets the appId property value. Unique GUID representing the app ID in the Azure Active Directory.  Supports $filter (eq).
+     * Sets the appId property value. Unique GUID representing the app ID in the Microsoft Entra ID.  Supports $filter (eq).
      * @param string|null $value Value to set for the appId property.
     */
     public function setAppId(?string $value): void {
@@ -484,7 +484,7 @@ class SignIn extends Entity implements Parsable
     }
 
     /**
-     * Sets the riskDetail property value. Provides the 'reason' behind a specific state of a risky user, sign-in or a risk event. The possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far.  Supports $filter (eq).Note: Details for this property require an Azure AD Premium P2 license. Other licenses return the value hidden.
+     * Sets the riskDetail property value. Provides the 'reason' behind a specific state of a risky user, sign-in or a risk event. The possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far.  Supports $filter (eq).Note: Details for this property require a Microsoft Entra ID P2 license. Other licenses return the value hidden.
      * @param RiskDetail|null $value Value to set for the riskDetail property.
     */
     public function setRiskDetail(?RiskDetail $value): void {
@@ -508,7 +508,7 @@ class SignIn extends Entity implements Parsable
     }
 
     /**
-     * Sets the riskLevelAggregated property value. Aggregated risk level. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in wasn't enabled for Azure AD Identity Protection.  Supports $filter (eq).  Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
+     * Sets the riskLevelAggregated property value. Aggregated risk level. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in wasn't enabled for Microsoft Entra ID Protection.  Supports $filter (eq).  Note: Details for this property are only available for Microsoft Entra ID P2 customers. All other customers are returned hidden.
      * @param RiskLevel|null $value Value to set for the riskLevelAggregated property.
     */
     public function setRiskLevelAggregated(?RiskLevel $value): void {
@@ -516,7 +516,7 @@ class SignIn extends Entity implements Parsable
     }
 
     /**
-     * Sets the riskLevelDuringSignIn property value. Risk level during sign-in. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in wasn't enabled for Azure AD Identity Protection.  Supports $filter (eq).  Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
+     * Sets the riskLevelDuringSignIn property value. Risk level during sign-in. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in wasn't enabled for Microsoft Entra ID Protection.  Supports $filter (eq).  Note: Details for this property are only available for Microsoft Entra ID P2 customers. All other customers are returned hidden.
      * @param RiskLevel|null $value Value to set for the riskLevelDuringSignIn property.
     */
     public function setRiskLevelDuringSignIn(?RiskLevel $value): void {

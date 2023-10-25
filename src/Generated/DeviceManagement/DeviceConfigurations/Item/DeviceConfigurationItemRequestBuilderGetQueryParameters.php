@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read properties and relationships of the androidGeneralDeviceConfiguration object.
+ * Read properties and relationships of the windows10EnterpriseModernAppManagementConfiguration object.
 */
 class DeviceConfigurationItemRequestBuilderGetQueryParameters 
 {

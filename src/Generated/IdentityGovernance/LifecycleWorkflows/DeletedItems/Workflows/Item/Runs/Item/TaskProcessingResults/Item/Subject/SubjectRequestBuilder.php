@@ -48,7 +48,7 @@ class SubjectRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The unique identifier of the Azure AD user targeted for the task execution.Supports $filter(eq, ne) and $expand.
+     * The unique identifier of the Microsoft Entra user targeted for the task execution.Supports $filter(eq, ne) and $expand.
      * @param SubjectRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -66,7 +66,7 @@ class SubjectRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The unique identifier of the Azure AD user targeted for the task execution.Supports $filter(eq, ne) and $expand.
+     * The unique identifier of the Microsoft Entra user targeted for the task execution.Supports $filter(eq, ne) and $expand.
      * @param SubjectRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -75,7 +75,6 @@ class SubjectRequestBuilder extends BaseRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
-        $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
             $requestInfo->addHeaders($requestConfiguration->headers);
             if ($requestConfiguration->queryParameters !== null) {
@@ -83,6 +82,7 @@ class SubjectRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
         return $requestInfo;
     }
 

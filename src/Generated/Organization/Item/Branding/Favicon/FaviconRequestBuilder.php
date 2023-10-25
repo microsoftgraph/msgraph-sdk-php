@@ -32,7 +32,7 @@ class FaviconRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A custom icon (favicon) to replace a default Microsoft product favicon on an Azure AD tenant.
+     * A custom icon (favicon) to replace a default Microsoft product favicon on a Microsoft Entra tenant.
      * @param FaviconRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/organizationalbranding-get?view=graph-rest-1.0 Find more info here
@@ -51,7 +51,7 @@ class FaviconRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A custom icon (favicon) to replace a default Microsoft product favicon on an Azure AD tenant.
+     * A custom icon (favicon) to replace a default Microsoft product favicon on a Microsoft Entra tenant.
      * @param StreamInterface $body Binary request body
      * @param FaviconRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -70,7 +70,7 @@ class FaviconRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A custom icon (favicon) to replace a default Microsoft product favicon on an Azure AD tenant.
+     * A custom icon (favicon) to replace a default Microsoft product favicon on a Microsoft Entra tenant.
      * @param FaviconRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -83,11 +83,12 @@ class FaviconRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/octet-stream, application/json, application/json");
         return $requestInfo;
     }
 
     /**
-     * A custom icon (favicon) to replace a default Microsoft product favicon on an Azure AD tenant.
+     * A custom icon (favicon) to replace a default Microsoft product favicon on a Microsoft Entra tenant.
      * @param StreamInterface $body Binary request body
      * @param FaviconRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -101,7 +102,8 @@ class FaviconRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->setStreamContent($body);
+        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->setStreamContent($body, "application/octet-stream");
         return $requestInfo;
     }
 

@@ -190,7 +190,7 @@ class Channel extends Entity implements Parsable
     }
 
     /**
-     * Gets the tenantId property value. The ID of the Azure Active Directory tenant.
+     * Gets the tenantId property value. The ID of the Microsoft Entra tenant.
      * @return string|null
     */
     public function getTenantId(): ?string {
@@ -323,7 +323,7 @@ class Channel extends Entity implements Parsable
     }
 
     /**
-     * Sets the tenantId property value. The ID of the Azure Active Directory tenant.
+     * Sets the tenantId property value. The ID of the Microsoft Entra tenant.
      * @param string|null $value Value to set for the tenantId property.
     */
     public function setTenantId(?string $value): void {

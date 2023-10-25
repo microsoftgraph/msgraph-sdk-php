@@ -69,7 +69,7 @@ class ExcludeTarget implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the id property value. The object identifier of an Azure Active Directory user or group.
+     * Gets the id property value. The object identifier of a Microsoft Entra user or group.
      * @return string|null
     */
     public function getId(): ?string {
@@ -132,7 +132,7 @@ class ExcludeTarget implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the id property value. The object identifier of an Azure Active Directory user or group.
+     * Sets the id property value. The object identifier of a Microsoft Entra user or group.
      * @param string|null $value Value to set for the id property.
     */
     public function setId(?string $value): void {

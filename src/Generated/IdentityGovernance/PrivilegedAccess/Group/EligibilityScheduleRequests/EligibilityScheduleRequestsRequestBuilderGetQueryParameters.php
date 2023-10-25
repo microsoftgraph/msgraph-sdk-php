@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\PrivilegedAccess\Group\El
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a list of the privilegedAccessGroupEligibilityScheduleRequest objects and their properties.
+ * Get a list of the privilegedAccessGroupEligibilityScheduleRequest objects and their properties. This API is available in the following national cloud deployments.
 */
 class EligibilityScheduleRequestsRequestBuilderGetQueryParameters 
 {

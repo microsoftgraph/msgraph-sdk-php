@@ -76,7 +76,7 @@ class UnifiedRoleDefinition extends Entity implements Parsable
     }
 
     /**
-     * Gets the inheritsPermissionsFrom property value. Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles (isBuiltIn is true) support this attribute. Supports $expand.
+     * Gets the inheritsPermissionsFrom property value. Read-only collection of role definitions that the given role definition inherits from. Only Microsoft Entra built-in roles (isBuiltIn is true) support this attribute. Supports $expand.
      * @return array<UnifiedRoleDefinition>|null
     */
     public function getInheritsPermissionsFrom(): ?array {
@@ -90,7 +90,7 @@ class UnifiedRoleDefinition extends Entity implements Parsable
     }
 
     /**
-     * Gets the isBuiltIn property value. Flag indicating whether the role definition is part of the default set included in Azure Active Directory (Azure AD) or a custom definition. Read-only. Supports $filter (eq, in).
+     * Gets the isBuiltIn property value. Flag indicating whether the role definition is part of the default set included in Microsoft Entra or a custom definition. Read-only. Supports $filter (eq, in).
      * @return bool|null
     */
     public function getIsBuiltIn(): ?bool {
@@ -199,7 +199,7 @@ class UnifiedRoleDefinition extends Entity implements Parsable
     }
 
     /**
-     * Sets the inheritsPermissionsFrom property value. Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles (isBuiltIn is true) support this attribute. Supports $expand.
+     * Sets the inheritsPermissionsFrom property value. Read-only collection of role definitions that the given role definition inherits from. Only Microsoft Entra built-in roles (isBuiltIn is true) support this attribute. Supports $expand.
      * @param array<UnifiedRoleDefinition>|null $value Value to set for the inheritsPermissionsFrom property.
     */
     public function setInheritsPermissionsFrom(?array $value): void {
@@ -207,7 +207,7 @@ class UnifiedRoleDefinition extends Entity implements Parsable
     }
 
     /**
-     * Sets the isBuiltIn property value. Flag indicating whether the role definition is part of the default set included in Azure Active Directory (Azure AD) or a custom definition. Read-only. Supports $filter (eq, in).
+     * Sets the isBuiltIn property value. Flag indicating whether the role definition is part of the default set included in Microsoft Entra or a custom definition. Read-only. Supports $filter (eq, in).
      * @param bool|null $value Value to set for the isBuiltIn property.
     */
     public function setIsBuiltIn(?bool $value): void {

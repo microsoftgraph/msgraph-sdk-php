@@ -40,7 +40,7 @@ class UnifiedRoleDefinitionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a unifiedRoleDefinition object. You can't delete built-in roles. This feature requires an Azure AD Premium P1 or P2 license. This API is available in the following national cloud deployments.
+     * Delete a unifiedRoleDefinition object. You can't delete built-in roles. This feature requires a Microsoft Entra ID P1 or P2 license. This API is available in the following national cloud deployments.
      * @param UnifiedRoleDefinitionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/unifiedroledefinition-delete?view=graph-rest-1.0 Find more info here
@@ -78,7 +78,7 @@ class UnifiedRoleDefinitionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a unifiedRoleDefinition object. You cannot update built-in roles. This feature requires an Azure AD Premium P1 or P2 license. This API is available in the following national cloud deployments.
+     * Update the properties of a unifiedRoleDefinition object. You cannot update built-in roles. This feature requires a Microsoft Entra ID P1 or P2 license. This API is available in the following national cloud deployments.
      * @param UnifiedRoleDefinition $body The request body
      * @param UnifiedRoleDefinitionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -98,7 +98,7 @@ class UnifiedRoleDefinitionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a unifiedRoleDefinition object. You can't delete built-in roles. This feature requires an Azure AD Premium P1 or P2 license. This API is available in the following national cloud deployments.
+     * Delete a unifiedRoleDefinition object. You can't delete built-in roles. This feature requires a Microsoft Entra ID P1 or P2 license. This API is available in the following national cloud deployments.
      * @param UnifiedRoleDefinitionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -111,6 +111,7 @@ class UnifiedRoleDefinitionItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
         return $requestInfo;
     }
 
@@ -124,7 +125,6 @@ class UnifiedRoleDefinitionItemRequestBuilder extends BaseRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
-        $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
             $requestInfo->addHeaders($requestConfiguration->headers);
             if ($requestConfiguration->queryParameters !== null) {
@@ -132,11 +132,12 @@ class UnifiedRoleDefinitionItemRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
         return $requestInfo;
     }
 
     /**
-     * Update the properties of a unifiedRoleDefinition object. You cannot update built-in roles. This feature requires an Azure AD Premium P1 or P2 license. This API is available in the following national cloud deployments.
+     * Update the properties of a unifiedRoleDefinition object. You cannot update built-in roles. This feature requires a Microsoft Entra ID P1 or P2 license. This API is available in the following national cloud deployments.
      * @param UnifiedRoleDefinition $body The request body
      * @param UnifiedRoleDefinitionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -146,11 +147,11 @@ class UnifiedRoleDefinitionItemRequestBuilder extends BaseRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
-        $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

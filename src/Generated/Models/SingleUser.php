@@ -26,7 +26,7 @@ class SingleUser extends SubjectSet implements Parsable
     }
 
     /**
-     * Gets the description property value. The name of the user in Azure AD. Read only.
+     * Gets the description property value. The name of the user in Microsoft Entra ID. Read only.
      * @return string|null
     */
     public function getDescription(): ?string {
@@ -50,7 +50,7 @@ class SingleUser extends SubjectSet implements Parsable
     }
 
     /**
-     * Gets the userId property value. The ID of the user in Azure AD.
+     * Gets the userId property value. The ID of the user in Microsoft Entra ID.
      * @return string|null
     */
     public function getUserId(): ?string {
@@ -72,7 +72,7 @@ class SingleUser extends SubjectSet implements Parsable
     }
 
     /**
-     * Sets the description property value. The name of the user in Azure AD. Read only.
+     * Sets the description property value. The name of the user in Microsoft Entra ID. Read only.
      * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
@@ -80,7 +80,7 @@ class SingleUser extends SubjectSet implements Parsable
     }
 
     /**
-     * Sets the userId property value. The ID of the user in Azure AD.
+     * Sets the userId property value. The ID of the user in Microsoft Entra ID.
      * @param string|null $value Value to set for the userId property.
     */
     public function setUserId(?string $value): void {

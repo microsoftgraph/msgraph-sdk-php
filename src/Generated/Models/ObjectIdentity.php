@@ -70,7 +70,7 @@ class ObjectIdentity implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the issuer property value. Specifies the issuer of the identity, for example facebook.com.For local accounts (where signInType isn't federated), this property is the local B2C tenant default domain name, for example contoso.onmicrosoft.com.For guests from other Azure AD organization, this is the domain of the federated organization, for example contoso.com.Supports $filter. 512 character limit.
+     * Gets the issuer property value. Specifies the issuer of the identity, for example facebook.com.For local accounts (where signInType isn't federated), this property is the local B2C tenant default domain name, for example contoso.onmicrosoft.com.For guests from other Microsoft Entra organization, this is the domain of the federated organization, for example contoso.com.Supports $filter. 512 character limit.
      * @return string|null
     */
     public function getIssuer(): ?string {
@@ -146,7 +146,7 @@ class ObjectIdentity implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the issuer property value. Specifies the issuer of the identity, for example facebook.com.For local accounts (where signInType isn't federated), this property is the local B2C tenant default domain name, for example contoso.onmicrosoft.com.For guests from other Azure AD organization, this is the domain of the federated organization, for example contoso.com.Supports $filter. 512 character limit.
+     * Sets the issuer property value. Specifies the issuer of the identity, for example facebook.com.For local accounts (where signInType isn't federated), this property is the local B2C tenant default domain name, for example contoso.onmicrosoft.com.For guests from other Microsoft Entra organization, this is the domain of the federated organization, for example contoso.com.Supports $filter. 512 character limit.
      * @param string|null $value Value to set for the issuer property.
     */
     public function setIssuer(?string $value): void {

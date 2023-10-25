@@ -12,6 +12,7 @@ use Microsoft\Graph\Generated\Security\ThreatIntelligence\Articles\ArticlesReque
 use Microsoft\Graph\Generated\Security\ThreatIntelligence\HostComponents\HostComponentsRequestBuilder;
 use Microsoft\Graph\Generated\Security\ThreatIntelligence\HostCookies\HostCookiesRequestBuilder;
 use Microsoft\Graph\Generated\Security\ThreatIntelligence\HostPairs\HostPairsRequestBuilder;
+use Microsoft\Graph\Generated\Security\ThreatIntelligence\HostPorts\HostPortsRequestBuilder;
 use Microsoft\Graph\Generated\Security\ThreatIntelligence\Hosts\HostsRequestBuilder;
 use Microsoft\Graph\Generated\Security\ThreatIntelligence\HostSslCertificates\HostSslCertificatesRequestBuilder;
 use Microsoft\Graph\Generated\Security\ThreatIntelligence\HostTrackers\HostTrackersRequestBuilder;
@@ -66,6 +67,13 @@ class ThreatIntelligenceRequestBuilder extends BaseRequestBuilder
     */
     public function hostPairs(): HostPairsRequestBuilder {
         return new HostPairsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the hostPorts property of the microsoft.graph.security.threatIntelligence entity.
+    */
+    public function hostPorts(): HostPortsRequestBuilder {
+        return new HostPortsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -228,6 +236,7 @@ class ThreatIntelligenceRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
         return $requestInfo;
     }
 
@@ -241,7 +250,6 @@ class ThreatIntelligenceRequestBuilder extends BaseRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
-        $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
             $requestInfo->addHeaders($requestConfiguration->headers);
             if ($requestConfiguration->queryParameters !== null) {
@@ -249,6 +257,7 @@ class ThreatIntelligenceRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
         return $requestInfo;
     }
 
@@ -263,11 +272,11 @@ class ThreatIntelligenceRequestBuilder extends BaseRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
-        $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

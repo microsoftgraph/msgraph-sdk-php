@@ -31,7 +31,7 @@ class CancelRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Cancel an eligibility assignment request to a group whose membership and ownership are governed by PIM.
+     * Cancel an eligibility assignment request to a group whose membership and ownership are governed by PIM. This API is available in the following national cloud deployments.
      * @param CancelRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/privilegedaccessgroupeligibilityschedulerequest-cancel?view=graph-rest-1.0 Find more info here
@@ -50,7 +50,7 @@ class CancelRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Cancel an eligibility assignment request to a group whose membership and ownership are governed by PIM.
+     * Cancel an eligibility assignment request to a group whose membership and ownership are governed by PIM. This API is available in the following national cloud deployments.
      * @param CancelRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -63,6 +63,7 @@ class CancelRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
         return $requestInfo;
     }
 

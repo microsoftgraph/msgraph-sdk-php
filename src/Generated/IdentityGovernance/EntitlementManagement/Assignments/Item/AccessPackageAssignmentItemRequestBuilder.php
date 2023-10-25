@@ -82,7 +82,7 @@ class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * In Azure AD entitlement management, retrieve the properties and relationships of an accessPackageAssignment object. This API is available in the following national cloud deployments.
+     * In Microsoft Entra entitlement management, retrieve the properties and relationships of an accessPackageAssignment object. This API is available in the following national cloud deployments.
      * @param AccessPackageAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://learn.microsoft.com/graph/api/accesspackageassignment-get?view=graph-rest-1.0 Find more info here
@@ -133,11 +133,12 @@ class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
         return $requestInfo;
     }
 
     /**
-     * In Azure AD entitlement management, retrieve the properties and relationships of an accessPackageAssignment object. This API is available in the following national cloud deployments.
+     * In Microsoft Entra entitlement management, retrieve the properties and relationships of an accessPackageAssignment object. This API is available in the following national cloud deployments.
      * @param AccessPackageAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -146,7 +147,6 @@ class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
-        $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
             $requestInfo->addHeaders($requestConfiguration->headers);
             if ($requestConfiguration->queryParameters !== null) {
@@ -154,6 +154,7 @@ class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
         return $requestInfo;
     }
 
@@ -168,11 +169,11 @@ class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
-        $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

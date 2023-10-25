@@ -53,9 +53,10 @@ class FederationConfigurationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of an internalDomainFederation object. This API is available in the following national cloud deployments.
+     * Read the properties of the internalDomainFederation objects for the domain. This API returns only one object in the collection. This API is available in the following national cloud deployments.
      * @param FederationConfigurationRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://learn.microsoft.com/graph/api/domain-list-federationconfiguration?view=graph-rest-1.0 Find more info here
     */
     public function get(?FederationConfigurationRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -91,7 +92,7 @@ class FederationConfigurationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of an internalDomainFederation object. This API is available in the following national cloud deployments.
+     * Read the properties of the internalDomainFederation objects for the domain. This API returns only one object in the collection. This API is available in the following national cloud deployments.
      * @param FederationConfigurationRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -100,7 +101,6 @@ class FederationConfigurationRequestBuilder extends BaseRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
-        $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
             $requestInfo->addHeaders($requestConfiguration->headers);
             if ($requestConfiguration->queryParameters !== null) {
@@ -108,6 +108,7 @@ class FederationConfigurationRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
         return $requestInfo;
     }
 
@@ -122,11 +123,11 @@ class FederationConfigurationRequestBuilder extends BaseRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
-        $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

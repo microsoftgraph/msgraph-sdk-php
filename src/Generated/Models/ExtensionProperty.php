@@ -73,7 +73,7 @@ class ExtensionProperty extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the isSyncedFromOnPremises property value. Indicates if this extension property was synced from on-premises active directory using Azure AD Connect. Read-only.
+     * Gets the isSyncedFromOnPremises property value. Indicates if this extension property was synced from on-premises active directory using Microsoft Entra Connect. Read-only.
      * @return bool|null
     */
     public function getIsSyncedFromOnPremises(): ?bool {
@@ -140,7 +140,7 @@ class ExtensionProperty extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the isSyncedFromOnPremises property value. Indicates if this extension property was synced from on-premises active directory using Azure AD Connect. Read-only.
+     * Sets the isSyncedFromOnPremises property value. Indicates if this extension property was synced from on-premises active directory using Microsoft Entra Connect. Read-only.
      * @param bool|null $value Value to set for the isSyncedFromOnPremises property.
     */
     public function setIsSyncedFromOnPremises(?bool $value): void {

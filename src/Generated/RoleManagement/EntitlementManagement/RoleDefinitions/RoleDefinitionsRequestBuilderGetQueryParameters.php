@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleDef
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a list of unifiedRoleDefinition objects for the provider. The following RBAC providers are currently supported:- directory (Azure AD)- entitlement management (Azure AD) This API is available in the following national cloud deployments.
+ * Get a list of unifiedRoleDefinition objects for the provider. The following RBAC providers are currently supported:- directory (Microsoft Entra ID)- entitlement management (Microsoft Entra Entitlement Management) This API is available in the following national cloud deployments.
 */
 class RoleDefinitionsRequestBuilderGetQueryParameters 
 {

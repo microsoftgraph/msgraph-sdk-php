@@ -73,6 +73,18 @@ class DelegatedAdminRelationship extends Entity implements Parsable
     }
 
     /**
+     * Gets the autoExtendDuration property value. The autoExtendDuration property
+     * @return DateInterval|null
+    */
+    public function getAutoExtendDuration(): ?DateInterval {
+        $val = $this->getBackingStore()->get('autoExtendDuration');
+        if (is_null($val) || $val instanceof DateInterval) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'autoExtendDuration'");
+    }
+
+    /**
      * Gets the createdDateTime property value. The date and time in ISO 8601 format and in UTC time when the relationship was created. Read-only.
      * @return DateTime|null
     */
@@ -142,6 +154,7 @@ class DelegatedAdminRelationship extends Entity implements Parsable
             'accessAssignments' => fn(ParseNode $n) => $o->setAccessAssignments($n->getCollectionOfObjectValues([DelegatedAdminAccessAssignment::class, 'createFromDiscriminatorValue'])),
             'accessDetails' => fn(ParseNode $n) => $o->setAccessDetails($n->getObjectValue([DelegatedAdminAccessDetails::class, 'createFromDiscriminatorValue'])),
             'activatedDateTime' => fn(ParseNode $n) => $o->setActivatedDateTime($n->getDateTimeValue()),
+            'autoExtendDuration' => fn(ParseNode $n) => $o->setAutoExtendDuration($n->getDateIntervalValue()),
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'customer' => fn(ParseNode $n) => $o->setCustomer($n->getObjectValue([DelegatedAdminRelationshipCustomerParticipant::class, 'createFromDiscriminatorValue'])),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
@@ -215,6 +228,7 @@ class DelegatedAdminRelationship extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('accessAssignments', $this->getAccessAssignments());
         $writer->writeObjectValue('accessDetails', $this->getAccessDetails());
         $writer->writeDateTimeValue('activatedDateTime', $this->getActivatedDateTime());
+        $writer->writeDateIntervalValue('autoExtendDuration', $this->getAutoExtendDuration());
         $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
         $writer->writeObjectValue('customer', $this->getCustomer());
         $writer->writeStringValue('displayName', $this->getDisplayName());
@@ -248,6 +262,14 @@ class DelegatedAdminRelationship extends Entity implements Parsable
     */
     public function setActivatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('activatedDateTime', $value);
+    }
+
+    /**
+     * Sets the autoExtendDuration property value. The autoExtendDuration property
+     * @param DateInterval|null $value Value to set for the autoExtendDuration property.
+    */
+    public function setAutoExtendDuration(?DateInterval $value): void {
+        $this->getBackingStore()->set('autoExtendDuration', $value);
     }
 
     /**

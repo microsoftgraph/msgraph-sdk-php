@@ -53,6 +53,7 @@ use Microsoft\Graph\Generated\Models\Security\HostComponent;
 use Microsoft\Graph\Generated\Models\Security\HostCookie;
 use Microsoft\Graph\Generated\Models\Security\Hostname;
 use Microsoft\Graph\Generated\Models\Security\HostPair;
+use Microsoft\Graph\Generated\Models\Security\HostPort;
 use Microsoft\Graph\Generated\Models\Security\HostReputation;
 use Microsoft\Graph\Generated\Models\Security\HostSslCertificate;
 use Microsoft\Graph\Generated\Models\Security\HostTracker;
@@ -614,6 +615,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.recordOperation': return new RecordOperation();
                 case '#microsoft.graph.referenceAttachment': return new ReferenceAttachment();
                 case '#microsoft.graph.remoteAssistancePartner': return new RemoteAssistancePartner();
+                case '#microsoft.graph.remoteDesktopSecurityConfiguration': return new RemoteDesktopSecurityConfiguration();
                 case '#microsoft.graph.request': return new Request();
                 case '#microsoft.graph.resellerDelegatedAdminRelationship': return new ResellerDelegatedAdminRelationship();
                 case '#microsoft.graph.resourceOperation': return new ResourceOperation();
@@ -670,6 +672,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.security.hostCookie': return new HostCookie();
                 case '#microsoft.graph.security.hostname': return new Hostname();
                 case '#microsoft.graph.security.hostPair': return new HostPair();
+                case '#microsoft.graph.security.hostPort': return new HostPort();
                 case '#microsoft.graph.security.hostReputation': return new HostReputation();
                 case '#microsoft.graph.security.hostSslCertificate': return new HostSslCertificate();
                 case '#microsoft.graph.security.hostTracker': return new HostTracker();
@@ -741,6 +744,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.synchronizationJob': return new SynchronizationJob();
                 case '#microsoft.graph.synchronizationSchema': return new SynchronizationSchema();
                 case '#microsoft.graph.synchronizationTemplate': return new SynchronizationTemplate();
+                case '#microsoft.graph.targetDeviceGroup': return new TargetDeviceGroup();
                 case '#microsoft.graph.targetedManagedAppConfiguration': return new TargetedManagedAppConfiguration();
                 case '#microsoft.graph.targetedManagedAppPolicyAssignment': return new TargetedManagedAppPolicyAssignment();
                 case '#microsoft.graph.targetedManagedAppProtection': return new TargetedManagedAppProtection();

@@ -104,10 +104,10 @@ class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a iosCompliancePolicy.
+     * Deletes a windows81CompliancePolicy.
      * @param DeviceCompliancePolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-ioscompliancepolicy-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-windows81compliancepolicy-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?DeviceCompliancePolicyItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -123,10 +123,10 @@ class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the macOSCompliancePolicy object.
+     * Read properties and relationships of the androidWorkProfileCompliancePolicy object.
      * @param DeviceCompliancePolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-macoscompliancepolicy-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-androidworkprofilecompliancepolicy-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DeviceCompliancePolicyItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -162,7 +162,7 @@ class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a iosCompliancePolicy.
+     * Deletes a windows81CompliancePolicy.
      * @param DeviceCompliancePolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -175,11 +175,12 @@ class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
         return $requestInfo;
     }
 
     /**
-     * Read properties and relationships of the macOSCompliancePolicy object.
+     * Read properties and relationships of the androidWorkProfileCompliancePolicy object.
      * @param DeviceCompliancePolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -188,7 +189,6 @@ class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
-        $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
             $requestInfo->addHeaders($requestConfiguration->headers);
             if ($requestConfiguration->queryParameters !== null) {
@@ -196,6 +196,7 @@ class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
         return $requestInfo;
     }
 
@@ -210,11 +211,11 @@ class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
-        $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

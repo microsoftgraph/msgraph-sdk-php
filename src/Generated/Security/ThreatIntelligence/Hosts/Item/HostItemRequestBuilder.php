@@ -14,6 +14,7 @@ use Microsoft\Graph\Generated\Security\ThreatIntelligence\Hosts\Item\HostPairs\H
 use Microsoft\Graph\Generated\Security\ThreatIntelligence\Hosts\Item\ParentHostPairs\ParentHostPairsRequestBuilder;
 use Microsoft\Graph\Generated\Security\ThreatIntelligence\Hosts\Item\PassiveDns\PassiveDnsRequestBuilder;
 use Microsoft\Graph\Generated\Security\ThreatIntelligence\Hosts\Item\PassiveDnsReverse\PassiveDnsReverseRequestBuilder;
+use Microsoft\Graph\Generated\Security\ThreatIntelligence\Hosts\Item\Ports\PortsRequestBuilder;
 use Microsoft\Graph\Generated\Security\ThreatIntelligence\Hosts\Item\Reputation\ReputationRequestBuilder;
 use Microsoft\Graph\Generated\Security\ThreatIntelligence\Hosts\Item\SslCertificates\SslCertificatesRequestBuilder;
 use Microsoft\Graph\Generated\Security\ThreatIntelligence\Hosts\Item\Subdomains\SubdomainsRequestBuilder;
@@ -76,6 +77,13 @@ class HostItemRequestBuilder extends BaseRequestBuilder
     */
     public function passiveDnsReverse(): PassiveDnsReverseRequestBuilder {
         return new PassiveDnsReverseRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the ports property of the microsoft.graph.security.host entity.
+    */
+    public function ports(): PortsRequestBuilder {
+        return new PortsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -197,6 +205,7 @@ class HostItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
         return $requestInfo;
     }
 
@@ -210,7 +219,6 @@ class HostItemRequestBuilder extends BaseRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
-        $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
             $requestInfo->addHeaders($requestConfiguration->headers);
             if ($requestConfiguration->queryParameters !== null) {
@@ -218,6 +226,7 @@ class HostItemRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
         return $requestInfo;
     }
 
@@ -232,11 +241,11 @@ class HostItemRequestBuilder extends BaseRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
-        $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

@@ -36,7 +36,7 @@ class Host extends Artifact implements Parsable
     }
 
     /**
-     * Gets the childHostPairs property value. The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a cihldHost.
+     * Gets the childHostPairs property value. The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a childHost.
      * @return array<HostPair>|null
     */
     public function getChildHostPairs(): ?array {
@@ -93,6 +93,7 @@ class Host extends Artifact implements Parsable
             'parentHostPairs' => fn(ParseNode $n) => $o->setParentHostPairs($n->getCollectionOfObjectValues([HostPair::class, 'createFromDiscriminatorValue'])),
             'passiveDns' => fn(ParseNode $n) => $o->setPassiveDns($n->getCollectionOfObjectValues([PassiveDnsRecord::class, 'createFromDiscriminatorValue'])),
             'passiveDnsReverse' => fn(ParseNode $n) => $o->setPassiveDnsReverse($n->getCollectionOfObjectValues([PassiveDnsRecord::class, 'createFromDiscriminatorValue'])),
+            'ports' => fn(ParseNode $n) => $o->setPorts($n->getCollectionOfObjectValues([HostPort::class, 'createFromDiscriminatorValue'])),
             'reputation' => fn(ParseNode $n) => $o->setReputation($n->getObjectValue([HostReputation::class, 'createFromDiscriminatorValue'])),
             'sslCertificates' => fn(ParseNode $n) => $o->setSslCertificates($n->getCollectionOfObjectValues([HostSslCertificate::class, 'createFromDiscriminatorValue'])),
             'subdomains' => fn(ParseNode $n) => $o->setSubdomains($n->getCollectionOfObjectValues([Subdomain::class, 'createFromDiscriminatorValue'])),
@@ -182,6 +183,20 @@ class Host extends Artifact implements Parsable
     }
 
     /**
+     * Gets the ports property value. The hostPorts associated with a host.
+     * @return array<HostPort>|null
+    */
+    public function getPorts(): ?array {
+        $val = $this->getBackingStore()->get('ports');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, HostPort::class);
+            /** @var array<HostPort>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'ports'");
+    }
+
+    /**
      * Gets the reputation property value. Represents a calculated reputation of this host.
      * @return HostReputation|null
     */
@@ -262,6 +277,7 @@ class Host extends Artifact implements Parsable
         $writer->writeCollectionOfObjectValues('parentHostPairs', $this->getParentHostPairs());
         $writer->writeCollectionOfObjectValues('passiveDns', $this->getPassiveDns());
         $writer->writeCollectionOfObjectValues('passiveDnsReverse', $this->getPassiveDnsReverse());
+        $writer->writeCollectionOfObjectValues('ports', $this->getPorts());
         $writer->writeObjectValue('reputation', $this->getReputation());
         $writer->writeCollectionOfObjectValues('sslCertificates', $this->getSslCertificates());
         $writer->writeCollectionOfObjectValues('subdomains', $this->getSubdomains());
@@ -270,7 +286,7 @@ class Host extends Artifact implements Parsable
     }
 
     /**
-     * Sets the childHostPairs property value. The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a cihldHost.
+     * Sets the childHostPairs property value. The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a childHost.
      * @param array<HostPair>|null $value Value to set for the childHostPairs property.
     */
     public function setChildHostPairs(?array $value): void {
@@ -339,6 +355,14 @@ class Host extends Artifact implements Parsable
     */
     public function setPassiveDnsReverse(?array $value): void {
         $this->getBackingStore()->set('passiveDnsReverse', $value);
+    }
+
+    /**
+     * Sets the ports property value. The hostPorts associated with a host.
+     * @param array<HostPort>|null $value Value to set for the ports property.
+    */
+    public function setPorts(?array $value): void {
+        $this->getBackingStore()->set('ports', $value);
     }
 
     /**

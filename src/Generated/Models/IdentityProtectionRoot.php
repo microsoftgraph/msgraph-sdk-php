@@ -84,7 +84,7 @@ class IdentityProtectionRoot implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the riskDetections property value. Risk detection in Azure AD Identity Protection and the associated information about the detection.
+     * Gets the riskDetections property value. Risk detection in Microsoft Entra ID Protection and the associated information about the detection.
      * @return array<RiskDetection>|null
     */
     public function getRiskDetections(): ?array {
@@ -98,7 +98,7 @@ class IdentityProtectionRoot implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the riskyServicePrincipals property value. Azure AD service principals that are at risk.
+     * Gets the riskyServicePrincipals property value. Microsoft Entra service principals that are at risk.
      * @return array<RiskyServicePrincipal>|null
     */
     public function getRiskyServicePrincipals(): ?array {
@@ -112,7 +112,7 @@ class IdentityProtectionRoot implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the riskyUsers property value. Users that are flagged as at-risk by Azure AD Identity Protection.
+     * Gets the riskyUsers property value. Users that are flagged as at-risk by Microsoft Entra ID Protection.
      * @return array<RiskyUser>|null
     */
     public function getRiskyUsers(): ?array {
@@ -126,7 +126,7 @@ class IdentityProtectionRoot implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the servicePrincipalRiskDetections property value. Represents information about detected at-risk service principals in an Azure AD tenant.
+     * Gets the servicePrincipalRiskDetections property value. Represents information about detected at-risk service principals in a Microsoft Entra tenant.
      * @return array<ServicePrincipalRiskDetection>|null
     */
     public function getServicePrincipalRiskDetections(): ?array {
@@ -177,7 +177,7 @@ class IdentityProtectionRoot implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the riskDetections property value. Risk detection in Azure AD Identity Protection and the associated information about the detection.
+     * Sets the riskDetections property value. Risk detection in Microsoft Entra ID Protection and the associated information about the detection.
      * @param array<RiskDetection>|null $value Value to set for the riskDetections property.
     */
     public function setRiskDetections(?array $value): void {
@@ -185,7 +185,7 @@ class IdentityProtectionRoot implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the riskyServicePrincipals property value. Azure AD service principals that are at risk.
+     * Sets the riskyServicePrincipals property value. Microsoft Entra service principals that are at risk.
      * @param array<RiskyServicePrincipal>|null $value Value to set for the riskyServicePrincipals property.
     */
     public function setRiskyServicePrincipals(?array $value): void {
@@ -193,7 +193,7 @@ class IdentityProtectionRoot implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the riskyUsers property value. Users that are flagged as at-risk by Azure AD Identity Protection.
+     * Sets the riskyUsers property value. Users that are flagged as at-risk by Microsoft Entra ID Protection.
      * @param array<RiskyUser>|null $value Value to set for the riskyUsers property.
     */
     public function setRiskyUsers(?array $value): void {
@@ -201,7 +201,7 @@ class IdentityProtectionRoot implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the servicePrincipalRiskDetections property value. Represents information about detected at-risk service principals in an Azure AD tenant.
+     * Sets the servicePrincipalRiskDetections property value. Represents information about detected at-risk service principals in a Microsoft Entra tenant.
      * @param array<ServicePrincipalRiskDetection>|null $value Value to set for the servicePrincipalRiskDetections property.
     */
     public function setServicePrincipalRiskDetections(?array $value): void {
