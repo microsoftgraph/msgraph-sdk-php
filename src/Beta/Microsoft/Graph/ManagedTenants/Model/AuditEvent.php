@@ -349,7 +349,7 @@ class AuditEvent extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the tenantIds
-    * The collection of Azure Active Directory tenant identifiers for the managed tenants that were affected by a change, and is formatted as a list of comma-separated values. Required. Read-only.
+    * The collection of Microsoft Entra tenant identifiers for the managed tenants that were affected by a change, and is formatted as a list of comma-separated values. Required. Read-only.
     *
     * @return string|null The tenantIds
     */
@@ -364,7 +364,7 @@ class AuditEvent extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the tenantIds
-    * The collection of Azure Active Directory tenant identifiers for the managed tenants that were affected by a change, and is formatted as a list of comma-separated values. Required. Read-only.
+    * The collection of Microsoft Entra tenant identifiers for the managed tenants that were affected by a change, and is formatted as a list of comma-separated values. Required. Read-only.
     *
     * @param string $val The tenantIds
     *

@@ -64,7 +64,7 @@ class CrossCloudAzureActiveDirectoryTenant extends IdentitySource
     }
     /**
     * Gets the displayName
-    * The name of the Azure Active Directory tenant. Read only.
+    * The name of the Microsoft Entra tenant. Read only.
     *
     * @return string|null The displayName
     */
@@ -79,7 +79,7 @@ class CrossCloudAzureActiveDirectoryTenant extends IdentitySource
 
     /**
     * Sets the displayName
-    * The name of the Azure Active Directory tenant. Read only.
+    * The name of the Microsoft Entra tenant. Read only.
     *
     * @param string $val The value of the displayName
     *
@@ -92,7 +92,7 @@ class CrossCloudAzureActiveDirectoryTenant extends IdentitySource
     }
     /**
     * Gets the tenantId
-    * The ID of the Azure Active Directory tenant. Read only.
+    * The ID of the Microsoft Entra tenant. Read only.
     *
     * @return string|null The tenantId
     */
@@ -107,7 +107,7 @@ class CrossCloudAzureActiveDirectoryTenant extends IdentitySource
 
     /**
     * Sets the tenantId
-    * The ID of the Azure Active Directory tenant. Read only.
+    * The ID of the Microsoft Entra tenant. Read only.
     *
     * @param string $val The value of the tenantId
     *

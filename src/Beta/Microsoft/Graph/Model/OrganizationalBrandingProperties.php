@@ -208,7 +208,7 @@ class OrganizationalBrandingProperties extends Entity
 
     /**
     * Gets the contentCustomization
-    * Represents the various content options to be customized throughout the authentication flow for a tenant. NOTE: Supported by Azure Active Directory for customers tenants only.
+    * Represents the various content options to be customized throughout the authentication flow for a tenant. NOTE: Supported by Microsoft Entra ID for customers tenants only.
     *
     * @return ContentCustomization|null The contentCustomization
     */
@@ -227,7 +227,7 @@ class OrganizationalBrandingProperties extends Entity
 
     /**
     * Sets the contentCustomization
-    * Represents the various content options to be customized throughout the authentication flow for a tenant. NOTE: Supported by Azure Active Directory for customers tenants only.
+    * Represents the various content options to be customized throughout the authentication flow for a tenant. NOTE: Supported by Microsoft Entra ID for customers tenants only.
     *
     * @param ContentCustomization $val The contentCustomization
     *
@@ -564,7 +564,7 @@ class OrganizationalBrandingProperties extends Entity
 
     /**
     * Gets the favicon
-    * A custom icon (favicon) to replace a default Microsoft product favicon on an Azure AD tenant.
+    * A custom icon (favicon) to replace a default Microsoft product favicon on a Microsoft Entra tenant.
     *
     * @return \GuzzleHttp\Psr7\Stream|null The favicon
     */
@@ -583,7 +583,7 @@ class OrganizationalBrandingProperties extends Entity
 
     /**
     * Sets the favicon
-    * A custom icon (favicon) to replace a default Microsoft product favicon on an Azure AD tenant.
+    * A custom icon (favicon) to replace a default Microsoft product favicon on a Microsoft Entra tenant.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The favicon
     *

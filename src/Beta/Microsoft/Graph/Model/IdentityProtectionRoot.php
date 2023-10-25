@@ -58,7 +58,7 @@ class IdentityProtectionRoot implements \JsonSerializable
 
      /**
      * Gets the riskDetections
-    * Risk detection in Azure AD Identity Protection and the associated information about the detection.
+    * Risk detection in Microsoft Entra ID Protection and the associated information about the detection.
      *
      * @return array|null The riskDetections
      */
@@ -73,7 +73,7 @@ class IdentityProtectionRoot implements \JsonSerializable
 
     /**
     * Sets the riskDetections
-    * Risk detection in Azure AD Identity Protection and the associated information about the detection.
+    * Risk detection in Microsoft Entra ID Protection and the associated information about the detection.
     *
     * @param RiskDetection[] $val The riskDetections
     *
@@ -88,7 +88,7 @@ class IdentityProtectionRoot implements \JsonSerializable
 
      /**
      * Gets the riskyServicePrincipals
-    * Azure AD service principals that are at risk.
+    * Microsoft Entra service principals that are at risk.
      *
      * @return array|null The riskyServicePrincipals
      */
@@ -103,7 +103,7 @@ class IdentityProtectionRoot implements \JsonSerializable
 
     /**
     * Sets the riskyServicePrincipals
-    * Azure AD service principals that are at risk.
+    * Microsoft Entra service principals that are at risk.
     *
     * @param RiskyServicePrincipal[] $val The riskyServicePrincipals
     *
@@ -118,7 +118,7 @@ class IdentityProtectionRoot implements \JsonSerializable
 
      /**
      * Gets the riskyUsers
-    * Users that are flagged as at-risk by Azure AD Identity Protection.
+    * Users that are flagged as at-risk by Microsoft Entra ID Protection.
      *
      * @return array|null The riskyUsers
      */
@@ -133,7 +133,7 @@ class IdentityProtectionRoot implements \JsonSerializable
 
     /**
     * Sets the riskyUsers
-    * Users that are flagged as at-risk by Azure AD Identity Protection.
+    * Users that are flagged as at-risk by Microsoft Entra ID Protection.
     *
     * @param RiskyUser[] $val The riskyUsers
     *
@@ -148,7 +148,7 @@ class IdentityProtectionRoot implements \JsonSerializable
 
      /**
      * Gets the servicePrincipalRiskDetections
-    * Represents information about detected at-risk service principals in an Azure AD tenant.
+    * Represents information about detected at-risk service principals in a Microsoft Entra tenant.
      *
      * @return array|null The servicePrincipalRiskDetections
      */
@@ -163,7 +163,7 @@ class IdentityProtectionRoot implements \JsonSerializable
 
     /**
     * Sets the servicePrincipalRiskDetections
-    * Represents information about detected at-risk service principals in an Azure AD tenant.
+    * Represents information about detected at-risk service principals in a Microsoft Entra tenant.
     *
     * @param ServicePrincipalRiskDetection[] $val The servicePrincipalRiskDetections
     *

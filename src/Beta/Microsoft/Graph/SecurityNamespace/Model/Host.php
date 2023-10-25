@@ -303,6 +303,7 @@ class Host extends Artifact
 
      /**
      * Gets the ports
+    * The hostPorts associated with a host.
      *
      * @return array|null The ports
      */
@@ -317,6 +318,7 @@ class Host extends Artifact
 
     /**
     * Sets the ports
+    * The hostPorts associated with a host.
     *
     * @param HostPort[] $val The ports
     *

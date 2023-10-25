@@ -25,7 +25,7 @@ class X509CertificateUserBinding extends Entity
 {
     /**
     * Gets the priority
-    * The priority of the binding. Azure AD uses the binding with the highest priority. This value must be a non-negative integer and unique in the collection of objects in the certificateUserBindings property of an x509CertificateAuthenticationMethodConfiguration object. Required
+    * The priority of the binding. Microsoft Entra ID uses the binding with the highest priority. This value must be a non-negative integer and unique in the collection of objects in the certificateUserBindings property of an x509CertificateAuthenticationMethodConfiguration object. Required
     *
     * @return int|null The priority
     */
@@ -40,7 +40,7 @@ class X509CertificateUserBinding extends Entity
 
     /**
     * Sets the priority
-    * The priority of the binding. Azure AD uses the binding with the highest priority. This value must be a non-negative integer and unique in the collection of objects in the certificateUserBindings property of an x509CertificateAuthenticationMethodConfiguration object. Required
+    * The priority of the binding. Microsoft Entra ID uses the binding with the highest priority. This value must be a non-negative integer and unique in the collection of objects in the certificateUserBindings property of an x509CertificateAuthenticationMethodConfiguration object. Required
     *
     * @param int $val The value of the priority
     *
@@ -53,7 +53,7 @@ class X509CertificateUserBinding extends Entity
     }
     /**
     * Gets the userProperty
-    * Defines the Azure AD user property of the user object to use for the binding. The possible values are: userPrincipalName, onPremisesUserPrincipalName, email. Required.
+    * Defines the Microsoft Entra user property of the user object to use for the binding. The possible values are: userPrincipalName, onPremisesUserPrincipalName, email. Required.
     *
     * @return string|null The userProperty
     */
@@ -68,7 +68,7 @@ class X509CertificateUserBinding extends Entity
 
     /**
     * Sets the userProperty
-    * Defines the Azure AD user property of the user object to use for the binding. The possible values are: userPrincipalName, onPremisesUserPrincipalName, email. Required.
+    * Defines the Microsoft Entra user property of the user object to use for the binding. The possible values are: userPrincipalName, onPremisesUserPrincipalName, email. Required.
     *
     * @param string $val The value of the userProperty
     *

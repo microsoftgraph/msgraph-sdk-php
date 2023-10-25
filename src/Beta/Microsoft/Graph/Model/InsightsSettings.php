@@ -26,7 +26,7 @@ class InsightsSettings extends Entity
 {
     /**
     * Gets the disabledForGroup
-    * The ID of an Azure Active Directory group, of which the specified type of insights are disabled for its members. Default is empty. Optional.
+    * The ID of a Microsoft Entra group, of which the specified type of insights are disabled for its members. Default is empty. Optional.
     *
     * @return string|null The disabledForGroup
     */
@@ -41,7 +41,7 @@ class InsightsSettings extends Entity
 
     /**
     * Sets the disabledForGroup
-    * The ID of an Azure Active Directory group, of which the specified type of insights are disabled for its members. Default is empty. Optional.
+    * The ID of a Microsoft Entra group, of which the specified type of insights are disabled for its members. Default is empty. Optional.
     *
     * @param string $val The disabledForGroup
     *

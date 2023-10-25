@@ -242,7 +242,7 @@ class VirtualEventRegistration extends Entity
 
     /**
     * Gets the userId
-    * The registrant's ID in Azure Active Directory (Azure AD). Only appears when the registrant is registered in Azure AD.
+    * The registrant's ID in Microsoft Entra ID. Only appears when the registrant is registered in Microsoft Entra ID.
     *
     * @return string|null The userId
     */
@@ -257,7 +257,7 @@ class VirtualEventRegistration extends Entity
 
     /**
     * Sets the userId
-    * The registrant's ID in Azure Active Directory (Azure AD). Only appears when the registrant is registered in Azure AD.
+    * The registrant's ID in Microsoft Entra ID. Only appears when the registrant is registered in Microsoft Entra ID.
     *
     * @param string $val The userId
     *

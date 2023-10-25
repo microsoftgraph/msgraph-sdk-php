@@ -25,7 +25,7 @@ class TenantInformation extends Entity
 {
     /**
     * Gets the defaultDomainName
-    * Primary domain name of an Azure AD tenant.
+    * Primary domain name of a Microsoft Entra tenant.
     *
     * @return string|null The defaultDomainName
     */
@@ -40,7 +40,7 @@ class TenantInformation extends Entity
 
     /**
     * Sets the defaultDomainName
-    * Primary domain name of an Azure AD tenant.
+    * Primary domain name of a Microsoft Entra tenant.
     *
     * @param string $val The value of the defaultDomainName
     *
@@ -53,7 +53,7 @@ class TenantInformation extends Entity
     }
     /**
     * Gets the displayName
-    * Display name of an Azure AD tenant.
+    * Display name of a Microsoft Entra tenant.
     *
     * @return string|null The displayName
     */
@@ -68,7 +68,7 @@ class TenantInformation extends Entity
 
     /**
     * Sets the displayName
-    * Display name of an Azure AD tenant.
+    * Display name of a Microsoft Entra tenant.
     *
     * @param string $val The value of the displayName
     *
@@ -81,7 +81,7 @@ class TenantInformation extends Entity
     }
     /**
     * Gets the federationBrandName
-    * Name shown to users that sign in to an Azure AD tenant.
+    * Name shown to users that sign in to a Microsoft Entra tenant.
     *
     * @return string|null The federationBrandName
     */
@@ -96,7 +96,7 @@ class TenantInformation extends Entity
 
     /**
     * Sets the federationBrandName
-    * Name shown to users that sign in to an Azure AD tenant.
+    * Name shown to users that sign in to a Microsoft Entra tenant.
     *
     * @param string $val The value of the federationBrandName
     *
@@ -109,7 +109,7 @@ class TenantInformation extends Entity
     }
     /**
     * Gets the tenantId
-    * Unique identifier of an Azure AD tenant.
+    * Unique identifier of a Microsoft Entra tenant.
     *
     * @return string|null The tenantId
     */
@@ -124,7 +124,7 @@ class TenantInformation extends Entity
 
     /**
     * Sets the tenantId
-    * Unique identifier of an Azure AD tenant.
+    * Unique identifier of a Microsoft Entra tenant.
     *
     * @param string $val The value of the tenantId
     *

@@ -325,7 +325,7 @@ class Device extends DirectoryObject
 
     /**
     * Gets the domainName
-    * The on-premises domain name of Hybrid Azure AD joined devices. This property is set by Intune.
+    * The on-premises domain name of Microsoft Entra hybrid joined devices. This property is set by Intune.
     *
     * @return string|null The domainName
     */
@@ -340,7 +340,7 @@ class Device extends DirectoryObject
 
     /**
     * Sets the domainName
-    * The on-premises domain name of Hybrid Azure AD joined devices. This property is set by Intune.
+    * The on-premises domain name of Microsoft Entra hybrid joined devices. This property is set by Intune.
     *
     * @param string $val The domainName
     *
@@ -412,7 +412,7 @@ class Device extends DirectoryObject
 
     /**
     * Gets the extensionAttributes
-    * Contains extension attributes 1-15 for the device. The individual extension attributes are not selectable. These properties are mastered in cloud and can be set during creation or update of a device object in Azure AD. Supports $filter (eq, not, startsWith, and eq on null values).
+    * Contains extension attributes 1-15 for the device. The individual extension attributes are not selectable. These properties are mastered in cloud and can be set during creation or update of a device object in Microsoft Entra ID. Supports $filter (eq, not, startsWith, and eq on null values).
     *
     * @return OnPremisesExtensionAttributes|null The extensionAttributes
     */
@@ -431,7 +431,7 @@ class Device extends DirectoryObject
 
     /**
     * Sets the extensionAttributes
-    * Contains extension attributes 1-15 for the device. The individual extension attributes are not selectable. These properties are mastered in cloud and can be set during creation or update of a device object in Azure AD. Supports $filter (eq, not, startsWith, and eq on null values).
+    * Contains extension attributes 1-15 for the device. The individual extension attributes are not selectable. These properties are mastered in cloud and can be set during creation or update of a device object in Microsoft Entra ID. Supports $filter (eq, not, startsWith, and eq on null values).
     *
     * @param OnPremisesExtensionAttributes $val The extensionAttributes
     *
@@ -917,7 +917,7 @@ class Device extends DirectoryObject
 
     /**
     * Gets the trustType
-    * Type of trust for the joined device. Read-only. Possible values: Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory.
+    * Type of trust for the joined device. Read-only. Possible values: Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Microsoft Entra ID). For more details, see Introduction to device management in Microsoft Entra ID.
     *
     * @return string|null The trustType
     */
@@ -932,7 +932,7 @@ class Device extends DirectoryObject
 
     /**
     * Sets the trustType
-    * Type of trust for the joined device. Read-only. Possible values: Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory.
+    * Type of trust for the joined device. Read-only. Possible values: Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Microsoft Entra ID). For more details, see Introduction to device management in Microsoft Entra ID.
     *
     * @param string $val The trustType
     *

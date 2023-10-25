@@ -180,7 +180,7 @@ class AuthenticationStrengthPolicy extends Entity
 
     /**
     * Gets the policyType
-    * A descriptor of whether this policy is built into Azure AD or created by an admin for the tenant. The possible values are: builtIn, custom, unknownFutureValue. Supports $filter (eq, ne, not , and in).
+    * A descriptor of whether this policy is built into Microsoft Entra Conditional Access or created by an admin for the tenant. The possible values are: builtIn, custom, unknownFutureValue. Supports $filter (eq, ne, not , and in).
     *
     * @return AuthenticationStrengthPolicyType|null The policyType
     */
@@ -199,7 +199,7 @@ class AuthenticationStrengthPolicy extends Entity
 
     /**
     * Sets the policyType
-    * A descriptor of whether this policy is built into Azure AD or created by an admin for the tenant. The possible values are: builtIn, custom, unknownFutureValue. Supports $filter (eq, ne, not , and in).
+    * A descriptor of whether this policy is built into Microsoft Entra Conditional Access or created by an admin for the tenant. The possible values are: builtIn, custom, unknownFutureValue. Supports $filter (eq, ne, not , and in).
     *
     * @param AuthenticationStrengthPolicyType $val The policyType
     *

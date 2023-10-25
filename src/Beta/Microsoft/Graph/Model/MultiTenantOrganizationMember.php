@@ -216,7 +216,7 @@ class MultiTenantOrganizationMember extends DirectoryObject
 
     /**
     * Gets the tenantId
-    * Tenant ID of the Azure Active Directory tenant added to the multitenant organization. Set at the time tenant is added.Supports $filter. Key.
+    * Tenant ID of the Microsoft Entra tenant added to the multitenant organization. Set at the time tenant is added.Supports $filter. Key.
     *
     * @return string|null The tenantId
     */
@@ -231,7 +231,7 @@ class MultiTenantOrganizationMember extends DirectoryObject
 
     /**
     * Sets the tenantId
-    * Tenant ID of the Azure Active Directory tenant added to the multitenant organization. Set at the time tenant is added.Supports $filter. Key.
+    * Tenant ID of the Microsoft Entra tenant added to the multitenant organization. Set at the time tenant is added.Supports $filter. Key.
     *
     * @param string $val The tenantId
     *

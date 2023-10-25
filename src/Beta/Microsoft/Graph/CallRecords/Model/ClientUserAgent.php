@@ -25,7 +25,7 @@ class ClientUserAgent extends UserAgent
 {
     /**
     * Gets the azureADAppId
-    * The unique identifier of the Azure AD application used by this endpoint.
+    * The unique identifier of the Microsoft Entra application used by this endpoint.
     *
     * @return string|null The azureADAppId
     */
@@ -40,7 +40,7 @@ class ClientUserAgent extends UserAgent
 
     /**
     * Sets the azureADAppId
-    * The unique identifier of the Azure AD application used by this endpoint.
+    * The unique identifier of the Microsoft Entra application used by this endpoint.
     *
     * @param string $val The value of the azureADAppId
     *

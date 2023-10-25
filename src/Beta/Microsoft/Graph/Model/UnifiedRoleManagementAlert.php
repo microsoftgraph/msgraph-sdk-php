@@ -208,7 +208,7 @@ class UnifiedRoleManagementAlert extends Entity
 
     /**
     * Gets the scopeType
-    * The type of scope where the alert is created. DirectoryRole is the only currently supported scope type for Azure AD roles.
+    * The type of scope where the alert is created. DirectoryRole is the only currently supported scope type for Microsoft Entra roles.
     *
     * @return string|null The scopeType
     */
@@ -223,7 +223,7 @@ class UnifiedRoleManagementAlert extends Entity
 
     /**
     * Sets the scopeType
-    * The type of scope where the alert is created. DirectoryRole is the only currently supported scope type for Azure AD roles.
+    * The type of scope where the alert is created. DirectoryRole is the only currently supported scope type for Microsoft Entra roles.
     *
     * @param string $val The scopeType
     *
@@ -237,7 +237,7 @@ class UnifiedRoleManagementAlert extends Entity
 
     /**
     * Gets the alertConfiguration
-    * The configuration of the alert in PIM for Azure AD roles. Alert configurations are pre-defined and cannot be created or deleted, but some configurations can be modified. Supports $filter for the isEnabled property and $expand.
+    * The configuration of the alert in PIM for Microsoft Entra roles. Alert configurations are pre-defined and cannot be created or deleted, but some configurations can be modified. Supports $filter for the isEnabled property and $expand.
     *
     * @return UnifiedRoleManagementAlertConfiguration|null The alertConfiguration
     */
@@ -256,7 +256,7 @@ class UnifiedRoleManagementAlert extends Entity
 
     /**
     * Sets the alertConfiguration
-    * The configuration of the alert in PIM for Azure AD roles. Alert configurations are pre-defined and cannot be created or deleted, but some configurations can be modified. Supports $filter for the isEnabled property and $expand.
+    * The configuration of the alert in PIM for Microsoft Entra roles. Alert configurations are pre-defined and cannot be created or deleted, but some configurations can be modified. Supports $filter for the isEnabled property and $expand.
     *
     * @param UnifiedRoleManagementAlertConfiguration $val The alertConfiguration
     *
@@ -304,7 +304,7 @@ class UnifiedRoleManagementAlert extends Entity
 
      /**
      * Gets the alertIncidents
-    * Represents the incidents of this type of alert that have been triggered in Privileged Identity Management (PIM) for Azure AD roles in the tenant. Supports $expand.
+    * Represents the incidents of this type of alert that have been triggered in Privileged Identity Management (PIM) for Microsoft Entra roles in the tenant. Supports $expand.
      *
      * @return array|null The alertIncidents
      */
@@ -319,7 +319,7 @@ class UnifiedRoleManagementAlert extends Entity
 
     /**
     * Sets the alertIncidents
-    * Represents the incidents of this type of alert that have been triggered in Privileged Identity Management (PIM) for Azure AD roles in the tenant. Supports $expand.
+    * Represents the incidents of this type of alert that have been triggered in Privileged Identity Management (PIM) for Microsoft Entra roles in the tenant. Supports $expand.
     *
     * @param UnifiedRoleManagementAlertIncident[] $val The alertIncidents
     *

@@ -89,7 +89,7 @@ class ImpactedResource extends Entity
 
     /**
     * Gets the apiUrl
-    * The URL link to the corresponding Azure AD resource.
+    * The URL link to the corresponding Microsoft Entra resource.
     *
     * @return string|null The apiUrl
     */
@@ -104,7 +104,7 @@ class ImpactedResource extends Entity
 
     /**
     * Sets the apiUrl
-    * The URL link to the corresponding Azure AD resource.
+    * The URL link to the corresponding Microsoft Entra resource.
     *
     * @param string $val The apiUrl
     *
@@ -118,7 +118,7 @@ class ImpactedResource extends Entity
 
     /**
     * Gets the displayName
-    * Friendly name of the Azure AD resource.
+    * Friendly name of the Microsoft Entra resource.
     *
     * @return string|null The displayName
     */
@@ -133,7 +133,7 @@ class ImpactedResource extends Entity
 
     /**
     * Sets the displayName
-    * Friendly name of the Azure AD resource.
+    * Friendly name of the Microsoft Entra resource.
     *
     * @param string $val The displayName
     *
@@ -234,7 +234,7 @@ class ImpactedResource extends Entity
 
     /**
     * Gets the portalUrl
-    * The URL link to the corresponding Azure AD portal page of the resource.
+    * The URL link to the corresponding Microsoft Entra admin center page of the resource.
     *
     * @return string|null The portalUrl
     */
@@ -249,7 +249,7 @@ class ImpactedResource extends Entity
 
     /**
     * Sets the portalUrl
-    * The URL link to the corresponding Azure AD portal page of the resource.
+    * The URL link to the corresponding Microsoft Entra admin center page of the resource.
     *
     * @param string $val The portalUrl
     *
@@ -354,7 +354,7 @@ class ImpactedResource extends Entity
 
     /**
     * Gets the resourceType
-    * Indicates the type of Azure AD resource. Examples include user, application.
+    * Indicates the type of Microsoft Entra resource. Examples include user, application.
     *
     * @return string|null The resourceType
     */
@@ -369,7 +369,7 @@ class ImpactedResource extends Entity
 
     /**
     * Sets the resourceType
-    * Indicates the type of Azure AD resource. Examples include user, application.
+    * Indicates the type of Microsoft Entra resource. Examples include user, application.
     *
     * @param string $val The resourceType
     *

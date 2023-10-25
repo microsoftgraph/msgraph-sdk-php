@@ -26,6 +26,7 @@ class TargetDeviceGroup extends Entity
 {
     /**
     * Gets the displayName
+    * Display name for the target device group.
     *
     * @return string|null The displayName
     */
@@ -40,6 +41,7 @@ class TargetDeviceGroup extends Entity
 
     /**
     * Sets the displayName
+    * Display name for the target device group.
     *
     * @param string $val The displayName
     *
