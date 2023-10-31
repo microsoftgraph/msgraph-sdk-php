@@ -25,7 +25,7 @@ class DelegatedAdminAccessContainer extends Entity
 {
     /**
     * Gets the accessContainerId
-    * The identifier of the access container (for example, a security group). For 'securityGroup' access containers, this must be a valid ID of an Azure AD security group in the Microsoft partner's tenant.
+    * The identifier of the access container (for example, a security group). For 'securityGroup' access containers, this must be a valid ID of a Microsoft Entra security group in the Microsoft partner's tenant.
     *
     * @return string|null The accessContainerId
     */
@@ -40,7 +40,7 @@ class DelegatedAdminAccessContainer extends Entity
 
     /**
     * Sets the accessContainerId
-    * The identifier of the access container (for example, a security group). For 'securityGroup' access containers, this must be a valid ID of an Azure AD security group in the Microsoft partner's tenant.
+    * The identifier of the access container (for example, a security group). For 'securityGroup' access containers, this must be a valid ID of a Microsoft Entra security group in the Microsoft partner's tenant.
     *
     * @param string $val The value of the accessContainerId
     *

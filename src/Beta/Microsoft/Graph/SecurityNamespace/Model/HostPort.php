@@ -27,6 +27,7 @@ class HostPort extends \Beta\Microsoft\Graph\Model\Entity
 
      /**
      * Gets the banners
+    * The hostPortBanners retrieved from scanning the port.
      *
      * @return array|null The banners
      */
@@ -41,6 +42,7 @@ class HostPort extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the banners
+    * The hostPortBanners retrieved from scanning the port.
     *
     * @param HostPortBanner[] $val The banners
     *
@@ -54,6 +56,7 @@ class HostPort extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the firstSeenDateTime
+    * The first date and time when Microsoft Defender Threat Intelligence observed the hostPort. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The firstSeenDateTime
     */
@@ -72,6 +75,7 @@ class HostPort extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the firstSeenDateTime
+    * The first date and time when Microsoft Defender Threat Intelligence observed the hostPort. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The firstSeenDateTime
     *
@@ -85,6 +89,7 @@ class HostPort extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the lastScanDateTime
+    * The last date and time when Microsoft Defender Threat Intelligence scanned the hostPort. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The lastScanDateTime
     */
@@ -103,6 +108,7 @@ class HostPort extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the lastScanDateTime
+    * The last date and time when Microsoft Defender Threat Intelligence scanned the hostPort. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The lastScanDateTime
     *
@@ -116,6 +122,7 @@ class HostPort extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the lastSeenDateTime
+    * The last date and time when Microsoft Defender Threat Intelligence observed the hostPort. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The lastSeenDateTime
     */
@@ -134,6 +141,7 @@ class HostPort extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the lastSeenDateTime
+    * The last date and time when Microsoft Defender Threat Intelligence observed the hostPort. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The lastSeenDateTime
     *
@@ -147,6 +155,7 @@ class HostPort extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the port
+    * The numerical identifier of the port which is standardized across the internet.
     *
     * @return int|null The port
     */
@@ -161,6 +170,7 @@ class HostPort extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the port
+    * The numerical identifier of the port which is standardized across the internet.
     *
     * @param int $val The port
     *
@@ -174,6 +184,7 @@ class HostPort extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the protocol
+    * The general protocol used to scan the port. The possible values are: tcp, udp, unknownFutureValue.
     *
     * @return HostPortProtocol|null The protocol
     */
@@ -192,6 +203,7 @@ class HostPort extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the protocol
+    * The general protocol used to scan the port. The possible values are: tcp, udp, unknownFutureValue.
     *
     * @param HostPortProtocol $val The protocol
     *
@@ -206,6 +218,7 @@ class HostPort extends \Beta\Microsoft\Graph\Model\Entity
 
      /**
      * Gets the services
+    * The hostPortComponents retrieved from scanning the port.
      *
      * @return array|null The services
      */
@@ -220,6 +233,7 @@ class HostPort extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the services
+    * The hostPortComponents retrieved from scanning the port.
     *
     * @param HostPortComponent[] $val The services
     *
@@ -233,6 +247,7 @@ class HostPort extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the status
+    * The status of the port. The possible values are: open, filtered, closed, unknownFutureValue.
     *
     * @return HostPortStatus|null The status
     */
@@ -251,6 +266,7 @@ class HostPort extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the status
+    * The status of the port. The possible values are: open, filtered, closed, unknownFutureValue.
     *
     * @param HostPortStatus $val The status
     *
@@ -264,6 +280,7 @@ class HostPort extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the timesObserved
+    * The total amount of times that Microsoft Defender Threat Intelligence has observed the hostPort in all its scans.
     *
     * @return int|null The timesObserved
     */
@@ -278,6 +295,7 @@ class HostPort extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the timesObserved
+    * The total amount of times that Microsoft Defender Threat Intelligence has observed the hostPort in all its scans.
     *
     * @param int $val The timesObserved
     *
@@ -291,6 +309,7 @@ class HostPort extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the host
+    * The host related to this hostPort. This is a reverse navigation property. When you navigate to hostPorts from a host, assume that this is a return reference.
     *
     * @return Host|null The host
     */
@@ -309,6 +328,7 @@ class HostPort extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the host
+    * The host related to this hostPort. This is a reverse navigation property. When you navigate to hostPorts from a host, assume that this is a return reference.
     *
     * @param Host $val The host
     *
@@ -322,6 +342,7 @@ class HostPort extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the mostRecentSslCertificate
+    * The most recent sslCertificate used to communicate on the port.
     *
     * @return SslCertificate|null The mostRecentSslCertificate
     */
@@ -340,6 +361,7 @@ class HostPort extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the mostRecentSslCertificate
+    * The most recent sslCertificate used to communicate on the port.
     *
     * @param SslCertificate $val The mostRecentSslCertificate
     *

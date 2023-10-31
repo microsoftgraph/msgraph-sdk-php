@@ -27,7 +27,7 @@ class RoleManagementAlert extends Entity
 
      /**
      * Gets the alertConfigurations
-    * The various configurations of an alert for Azure AD roles. The configurations are predefined and can't be created or deleted, but some of the configurations can be modified.
+    * The various configurations of an alert for Microsoft Entra roles. The configurations are predefined and can't be created or deleted, but some of the configurations can be modified.
      *
      * @return array|null The alertConfigurations
      */
@@ -42,7 +42,7 @@ class RoleManagementAlert extends Entity
 
     /**
     * Sets the alertConfigurations
-    * The various configurations of an alert for Azure AD roles. The configurations are predefined and can't be created or deleted, but some of the configurations can be modified.
+    * The various configurations of an alert for Microsoft Entra roles. The configurations are predefined and can't be created or deleted, but some of the configurations can be modified.
     *
     * @param UnifiedRoleManagementAlertConfiguration[] $val The alertConfigurations
     *

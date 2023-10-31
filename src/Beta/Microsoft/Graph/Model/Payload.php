@@ -26,7 +26,7 @@ class Payload extends Entity
 {
     /**
     * Gets the brand
-    * The branch of a payload. Possible values are: unknown, other, americanExpress, capitalOne, dhl, docuSign, dropbox, facebook, firstAmerican, microsoft, netflix, scotiabank, stewartTitle, tesco, wellsFargo, syrinxCloud, adobe, teams, zoom, unknownFutureValue.
+    * The branch of a payload. Possible values are: unknown, other, americanExpress, capitalOne, dhl, docuSign, dropbox, facebook, firstAmerican, microsoft, netflix, scotiabank, sendGrid, stewartTitle, tesco, wellsFargo, syrinxCloud, adobe, teams, zoom, unknownFutureValue.
     *
     * @return PayloadBrand|null The brand
     */
@@ -45,7 +45,7 @@ class Payload extends Entity
 
     /**
     * Sets the brand
-    * The branch of a payload. Possible values are: unknown, other, americanExpress, capitalOne, dhl, docuSign, dropbox, facebook, firstAmerican, microsoft, netflix, scotiabank, stewartTitle, tesco, wellsFargo, syrinxCloud, adobe, teams, zoom, unknownFutureValue.
+    * The branch of a payload. Possible values are: unknown, other, americanExpress, capitalOne, dhl, docuSign, dropbox, facebook, firstAmerican, microsoft, netflix, scotiabank, sendGrid, stewartTitle, tesco, wellsFargo, syrinxCloud, adobe, teams, zoom, unknownFutureValue.
     *
     * @param PayloadBrand $val The brand
     *
@@ -59,7 +59,7 @@ class Payload extends Entity
 
     /**
     * Gets the complexity
-    * The complexity of a payload.Possible values are: unknown, low, medium, high, unknownFutureValue
+    * The complexity of a payload. Possible values are: unknown, low, medium, high, unknownFutureValue.
     *
     * @return PayloadComplexity|null The complexity
     */
@@ -78,7 +78,7 @@ class Payload extends Entity
 
     /**
     * Sets the complexity
-    * The complexity of a payload.Possible values are: unknown, low, medium, high, unknownFutureValue
+    * The complexity of a payload. Possible values are: unknown, low, medium, high, unknownFutureValue.
     *
     * @param PayloadComplexity $val The complexity
     *
@@ -125,7 +125,7 @@ class Payload extends Entity
 
     /**
     * Gets the createdDateTime
-    * Date and time when the attack simulation and training campaign payload.
+    * Date and time when the attack simulation and training campaign payload. The timestamp represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -144,7 +144,7 @@ class Payload extends Entity
 
     /**
     * Sets the createdDateTime
-    * Date and time when the attack simulation and training campaign payload.
+    * Date and time when the attack simulation and training campaign payload. The timestamp represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -431,7 +431,7 @@ class Payload extends Entity
 
     /**
     * Gets the lastModifiedDateTime
-    * Date and time when the attack simulation and training campaign payload was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * Date and time when the attack simulation and training campaign payload was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The lastModifiedDateTime
     */
@@ -450,7 +450,7 @@ class Payload extends Entity
 
     /**
     * Sets the lastModifiedDateTime
-    * Date and time when the attack simulation and training campaign payload was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * Date and time when the attack simulation and training campaign payload was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -588,7 +588,7 @@ class Payload extends Entity
 
     /**
     * Gets the source
-    * Simulation content source. Supports $filter and $orderby. Possible values are: unknown, tenant, global, unknownFutureValue. Inherited from simulation.
+    * Simulation content source. Supports $filter and $orderby. Possible values are: unknown, global, tenant, unknownFutureValue.
     *
     * @return SimulationContentSource|null The source
     */
@@ -607,7 +607,7 @@ class Payload extends Entity
 
     /**
     * Sets the source
-    * Simulation content source. Supports $filter and $orderby. Possible values are: unknown, tenant, global, unknownFutureValue. Inherited from simulation.
+    * Simulation content source. Supports $filter and $orderby. Possible values are: unknown, global, tenant, unknownFutureValue.
     *
     * @param SimulationContentSource $val The source
     *
@@ -621,7 +621,7 @@ class Payload extends Entity
 
     /**
     * Gets the status
-    * Simulation content status. Supports $filter and $orderby. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue. Inherited from simulation.
+    * Simulation content status. Supports $filter and $orderby. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
     *
     * @return SimulationContentStatus|null The status
     */
@@ -640,7 +640,7 @@ class Payload extends Entity
 
     /**
     * Sets the status
-    * Simulation content status. Supports $filter and $orderby. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue. Inherited from simulation.
+    * Simulation content status. Supports $filter and $orderby. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
     *
     * @param SimulationContentStatus $val The status
     *
@@ -654,7 +654,7 @@ class Payload extends Entity
 
     /**
     * Gets the technique
-    * The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue. For more information on the types of social engineering attack techniques, see simulations.
+    * The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue, oAuthConsentGrant. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: oAuthConsentGrant. For more information on the types of social engineering attack techniques, see simulations.
     *
     * @return SimulationAttackTechnique|null The technique
     */
@@ -673,7 +673,7 @@ class Payload extends Entity
 
     /**
     * Sets the technique
-    * The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue. For more information on the types of social engineering attack techniques, see simulations.
+    * The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue, oAuthConsentGrant. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: oAuthConsentGrant. For more information on the types of social engineering attack techniques, see simulations.
     *
     * @param SimulationAttackTechnique $val The technique
     *
@@ -687,7 +687,7 @@ class Payload extends Entity
 
     /**
     * Gets the theme
-    * The theme of a payload. Possible values are: unknown, other, accountActivation, accountVerification, billing, cleanUpMail, controversial, documentReceived, expense, incomingMessages, invoice, itemReceived, loginAlert, mailReceived, password, payment, payroll, personalizedOffer, quarantine, remoteWork, reviewMessage, securityUpdate, serviceSuspended, signatureRequired, upgradeMailboxStorage, verifyMailbox, voicemail, advertisement, employeeEngagement, unknownFutureValue.
+    * The theme of a payload. Possible values are: unknown, other, accountActivation, accountVerification, billing, cleanUpMail, controversial, documentReceived, expense, fax, financeReport, incomingMessages, invoice, itemReceived, loginAlert, mailReceived, password, payment, payroll, personalizedOffer, quarantine, remoteWork, reviewMessage, securityUpdate, serviceSuspended, signatureRequired, upgradeMailboxStorage, verifyMailbox, voicemail, advertisement, employeeEngagement, unknownFutureValue.
     *
     * @return PayloadTheme|null The theme
     */
@@ -706,7 +706,7 @@ class Payload extends Entity
 
     /**
     * Sets the theme
-    * The theme of a payload. Possible values are: unknown, other, accountActivation, accountVerification, billing, cleanUpMail, controversial, documentReceived, expense, incomingMessages, invoice, itemReceived, loginAlert, mailReceived, password, payment, payroll, personalizedOffer, quarantine, remoteWork, reviewMessage, securityUpdate, serviceSuspended, signatureRequired, upgradeMailboxStorage, verifyMailbox, voicemail, advertisement, employeeEngagement, unknownFutureValue.
+    * The theme of a payload. Possible values are: unknown, other, accountActivation, accountVerification, billing, cleanUpMail, controversial, documentReceived, expense, fax, financeReport, incomingMessages, invoice, itemReceived, loginAlert, mailReceived, password, payment, payroll, personalizedOffer, quarantine, remoteWork, reviewMessage, securityUpdate, serviceSuspended, signatureRequired, upgradeMailboxStorage, verifyMailbox, voicemail, advertisement, employeeEngagement, unknownFutureValue.
     *
     * @param PayloadTheme $val The theme
     *

@@ -116,7 +116,7 @@ class IdentityContainer implements \JsonSerializable
 
      /**
      * Gets the authenticationEventsFlows
-    * Represents the entry point for self-service sign up and sign in user flows in both Azure AD workforce and customer tenants.
+    * Represents the entry point for self-service sign up and sign in user flows in both Microsoft Entra workforce and customer tenants.
      *
      * @return array|null The authenticationEventsFlows
      */
@@ -131,7 +131,7 @@ class IdentityContainer implements \JsonSerializable
 
     /**
     * Sets the authenticationEventsFlows
-    * Represents the entry point for self-service sign up and sign in user flows in both Azure AD workforce and customer tenants.
+    * Represents the entry point for self-service sign up and sign in user flows in both Microsoft Entra workforce and customer tenants.
     *
     * @param AuthenticationEventsFlow[] $val The authenticationEventsFlows
     *

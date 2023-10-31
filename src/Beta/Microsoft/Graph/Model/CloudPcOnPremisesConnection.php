@@ -444,7 +444,7 @@ class CloudPcOnPremisesConnection extends Entity
 
     /**
     * Gets the type
-    * Specifies how the provisioned Cloud PC is joined to Azure Active Directory. Default value is hybridAzureADJoin. Possible values are: azureADJoin, hybridAzureADJoin, unknownFutureValue.
+    * Specifies how the provisioned Cloud PC is joined to Microsoft Entra ID. Default value is hybridAzureADJoin. Possible values are: azureADJoin, hybridAzureADJoin, unknownFutureValue.
     *
     * @return CloudPcOnPremisesConnectionType|null The type
     */
@@ -463,7 +463,7 @@ class CloudPcOnPremisesConnection extends Entity
 
     /**
     * Sets the type
-    * Specifies how the provisioned Cloud PC is joined to Azure Active Directory. Default value is hybridAzureADJoin. Possible values are: azureADJoin, hybridAzureADJoin, unknownFutureValue.
+    * Specifies how the provisioned Cloud PC is joined to Microsoft Entra ID. Default value is hybridAzureADJoin. Possible values are: azureADJoin, hybridAzureADJoin, unknownFutureValue.
     *
     * @param CloudPcOnPremisesConnectionType $val The type
     *

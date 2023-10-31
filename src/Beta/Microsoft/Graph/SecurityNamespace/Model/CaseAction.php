@@ -38,4 +38,6 @@ class CaseAction extends Enum
     const HOLD_UPDATE = "holdUpdate";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
     const PURGE_DATA = "purgeData";
+    const EXPORT_REPORT = "exportReport";
+    const EXPORT_RESULT = "exportResult";
 }

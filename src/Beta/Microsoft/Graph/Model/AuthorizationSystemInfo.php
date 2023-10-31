@@ -23,6 +23,37 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class AuthorizationSystemInfo extends Entity
 {
+
+    /**
+    * Gets the authorizationSystemType
+    *
+    * @return AuthorizationSystemType|null The authorizationSystemType
+    */
+    public function getAuthorizationSystemType()
+    {
+        if (array_key_exists("authorizationSystemType", $this->_propDict)) {
+            if (is_a($this->_propDict["authorizationSystemType"], "\Beta\Microsoft\Graph\Model\AuthorizationSystemType") || is_null($this->_propDict["authorizationSystemType"])) {
+                return $this->_propDict["authorizationSystemType"];
+            } else {
+                $this->_propDict["authorizationSystemType"] = new AuthorizationSystemType($this->_propDict["authorizationSystemType"]);
+                return $this->_propDict["authorizationSystemType"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the authorizationSystemType
+    *
+    * @param AuthorizationSystemType $val The value to assign to the authorizationSystemType
+    *
+    * @return AuthorizationSystemInfo The AuthorizationSystemInfo
+    */
+    public function setAuthorizationSystemType($val)
+    {
+        $this->_propDict["authorizationSystemType"] = $val;
+         return $this;
+    }
     /**
     * Gets the displayName
     *

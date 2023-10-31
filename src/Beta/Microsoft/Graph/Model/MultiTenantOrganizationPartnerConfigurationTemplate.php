@@ -59,7 +59,7 @@ class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity
 
     /**
     * Gets the b2bCollaborationInbound
-    * Defines your partner-specific configuration for users from other organizations accessing your resources via Azure AD B2B collaboration.
+    * Defines your partner-specific configuration for users from other organizations accessing your resources via Microsoft Entra B2B collaboration.
     *
     * @return CrossTenantAccessPolicyB2BSetting|null The b2bCollaborationInbound
     */
@@ -78,7 +78,7 @@ class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity
 
     /**
     * Sets the b2bCollaborationInbound
-    * Defines your partner-specific configuration for users from other organizations accessing your resources via Azure AD B2B collaboration.
+    * Defines your partner-specific configuration for users from other organizations accessing your resources via Microsoft Entra B2B collaboration.
     *
     * @param CrossTenantAccessPolicyB2BSetting $val The b2bCollaborationInbound
     *
@@ -92,7 +92,7 @@ class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity
 
     /**
     * Gets the b2bCollaborationOutbound
-    * Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B collaboration.
+    * Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Microsoft Entra B2B collaboration.
     *
     * @return CrossTenantAccessPolicyB2BSetting|null The b2bCollaborationOutbound
     */
@@ -111,7 +111,7 @@ class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity
 
     /**
     * Sets the b2bCollaborationOutbound
-    * Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B collaboration.
+    * Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Microsoft Entra B2B collaboration.
     *
     * @param CrossTenantAccessPolicyB2BSetting $val The b2bCollaborationOutbound
     *
@@ -158,7 +158,7 @@ class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity
 
     /**
     * Gets the b2bDirectConnectOutbound
-    * Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B direct connect.
+    * Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Microsoft Entra B2B direct connect.
     *
     * @return CrossTenantAccessPolicyB2BSetting|null The b2bDirectConnectOutbound
     */
@@ -177,7 +177,7 @@ class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity
 
     /**
     * Sets the b2bDirectConnectOutbound
-    * Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B direct connect.
+    * Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Microsoft Entra B2B direct connect.
     *
     * @param CrossTenantAccessPolicyB2BSetting $val The b2bDirectConnectOutbound
     *
@@ -191,7 +191,7 @@ class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity
 
     /**
     * Gets the inboundTrust
-    * Determines the partner-specific configuration for trusting other Conditional Access claims from external Azure AD organizations.
+    * Determines the partner-specific configuration for trusting other Conditional Access claims from external Microsoft Entra organizations.
     *
     * @return CrossTenantAccessPolicyInboundTrust|null The inboundTrust
     */
@@ -210,7 +210,7 @@ class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity
 
     /**
     * Sets the inboundTrust
-    * Determines the partner-specific configuration for trusting other Conditional Access claims from external Azure AD organizations.
+    * Determines the partner-specific configuration for trusting other Conditional Access claims from external Microsoft Entra organizations.
     *
     * @param CrossTenantAccessPolicyInboundTrust $val The inboundTrust
     *

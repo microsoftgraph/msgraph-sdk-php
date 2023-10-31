@@ -85,6 +85,32 @@ class RelatedPerson extends Entity
          return $this;
     }
     /**
+    * Gets the userId
+    *
+    * @return string|null The userId
+    */
+    public function getUserId()
+    {
+        if (array_key_exists("userId", $this->_propDict)) {
+            return $this->_propDict["userId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the userId
+    *
+    * @param string $val The value of the userId
+    *
+    * @return RelatedPerson
+    */
+    public function setUserId($val)
+    {
+        $this->_propDict["userId"] = $val;
+        return $this;
+    }
+    /**
     * Gets the userPrincipalName
     * Email address or reference to person within organization.
     *

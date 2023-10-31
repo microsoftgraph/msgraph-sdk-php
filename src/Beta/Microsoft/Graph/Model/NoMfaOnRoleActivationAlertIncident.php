@@ -26,7 +26,7 @@ class NoMfaOnRoleActivationAlertIncident extends UnifiedRoleManagementAlertIncid
 {
     /**
     * Gets the roleDisplayName
-    * The name of the Azure AD directory role.
+    * The name of the Microsoft Entra ID directory role.
     *
     * @return string|null The roleDisplayName
     */
@@ -41,7 +41,7 @@ class NoMfaOnRoleActivationAlertIncident extends UnifiedRoleManagementAlertIncid
 
     /**
     * Sets the roleDisplayName
-    * The name of the Azure AD directory role.
+    * The name of the Microsoft Entra ID directory role.
     *
     * @param string $val The roleDisplayName
     *

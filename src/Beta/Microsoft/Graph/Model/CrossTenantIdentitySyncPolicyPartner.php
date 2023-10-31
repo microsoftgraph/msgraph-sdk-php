@@ -57,7 +57,7 @@ class CrossTenantIdentitySyncPolicyPartner implements \JsonSerializable
 
     /**
     * Gets the displayName
-    * Display name for the cross-tenant user synchronization policy. Use the name of the partner Azure AD (Azure Active Directory) tenant to easily identify the policy. Optional.
+    * Display name for the cross-tenant user synchronization policy. Use the name of the partner Microsoft Entra tenant to easily identify the policy. Optional.
     *
     * @return string|null The displayName
     */
@@ -72,7 +72,7 @@ class CrossTenantIdentitySyncPolicyPartner implements \JsonSerializable
 
     /**
     * Sets the displayName
-    * Display name for the cross-tenant user synchronization policy. Use the name of the partner Azure AD (Azure Active Directory) tenant to easily identify the policy. Optional.
+    * Display name for the cross-tenant user synchronization policy. Use the name of the partner Microsoft Entra tenant to easily identify the policy. Optional.
     *
     * @param string $val The displayName
     *
@@ -86,7 +86,7 @@ class CrossTenantIdentitySyncPolicyPartner implements \JsonSerializable
 
     /**
     * Gets the tenantId
-    * Tenant identifier for the partner Azure AD organization. Read-only.
+    * Tenant identifier for the partner Microsoft Entra organization. Read-only.
     *
     * @return string|null The tenantId
     */
@@ -101,7 +101,7 @@ class CrossTenantIdentitySyncPolicyPartner implements \JsonSerializable
 
     /**
     * Sets the tenantId
-    * Tenant identifier for the partner Azure AD organization. Read-only.
+    * Tenant identifier for the partner Microsoft Entra organization. Read-only.
     *
     * @param string $val The tenantId
     *

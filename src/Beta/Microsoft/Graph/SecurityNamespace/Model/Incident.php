@@ -535,7 +535,7 @@ class Incident extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the tenantId
-    * The Azure Active Directory tenant in which the alert was created.
+    * The Microsoft Entra tenant in which the alert was created.
     *
     * @return string|null The tenantId
     */
@@ -550,7 +550,7 @@ class Incident extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the tenantId
-    * The Azure Active Directory tenant in which the alert was created.
+    * The Microsoft Entra tenant in which the alert was created.
     *
     * @param string $val The tenantId
     *

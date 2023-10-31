@@ -86,7 +86,7 @@ class OnPremisesPublishingProfile extends Entity
 
     /**
     * Gets the isEnabled
-    * Represents if Azure AD Application Proxy is enabled for the tenant.
+    * Represents if Microsoft Entra application proxy is enabled for the tenant.
     *
     * @return bool|null The isEnabled
     */
@@ -101,7 +101,7 @@ class OnPremisesPublishingProfile extends Entity
 
     /**
     * Sets the isEnabled
-    * Represents if Azure AD Application Proxy is enabled for the tenant.
+    * Represents if Microsoft Entra application proxy is enabled for the tenant.
     *
     * @param bool $val The isEnabled
     *

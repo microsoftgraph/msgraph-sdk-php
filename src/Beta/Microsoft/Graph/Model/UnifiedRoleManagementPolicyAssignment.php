@@ -55,7 +55,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity
 
     /**
     * Gets the roleDefinitionId
-    * For Azure AD roles policy, it's the identifier of the role definition object where the policy applies. For PIM for groups membership and ownership, it's either member or owner. Supports $filter (eq).
+    * For Microsoft Entra roles policy, it's the identifier of the role definition object where the policy applies. For PIM for groups membership and ownership, it's either member or owner. Supports $filter (eq).
     *
     * @return string|null The roleDefinitionId
     */
@@ -70,7 +70,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity
 
     /**
     * Sets the roleDefinitionId
-    * For Azure AD roles policy, it's the identifier of the role definition object where the policy applies. For PIM for groups membership and ownership, it's either member or owner. Supports $filter (eq).
+    * For Microsoft Entra roles policy, it's the identifier of the role definition object where the policy applies. For PIM for groups membership and ownership, it's either member or owner. Supports $filter (eq).
     *
     * @param string $val The roleDefinitionId
     *

@@ -53,7 +53,7 @@ class CloudPcAuditActor extends Entity
     }
     /**
     * Gets the applicationId
-    * Azure AD application ID.
+    * Microsoft Entra application ID.
     *
     * @return string|null The applicationId
     */
@@ -68,7 +68,7 @@ class CloudPcAuditActor extends Entity
 
     /**
     * Sets the applicationId
-    * Azure AD application ID.
+    * Microsoft Entra application ID.
     *
     * @param string $val The value of the applicationId
     *
@@ -226,7 +226,7 @@ class CloudPcAuditActor extends Entity
     }
     /**
     * Gets the userId
-    * Azure AD user ID.
+    * Microsoft Entra user ID.
     *
     * @return string|null The userId
     */
@@ -241,7 +241,7 @@ class CloudPcAuditActor extends Entity
 
     /**
     * Sets the userId
-    * Azure AD user ID.
+    * Microsoft Entra user ID.
     *
     * @param string $val The value of the userId
     *

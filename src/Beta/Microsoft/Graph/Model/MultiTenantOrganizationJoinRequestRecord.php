@@ -26,7 +26,7 @@ class MultiTenantOrganizationJoinRequestRecord extends Entity
 {
     /**
     * Gets the addedByTenantId
-    * Tenant ID of the Azure Active Directory tenant that added a tenant to the multi-tenant organization. To reset a failed join request, set addedByTenantId to 00000000-0000-0000-0000-000000000000. Required.
+    * Tenant ID of the Microsoft Entra tenant that added a tenant to the multi-tenant organization. To reset a failed join request, set addedByTenantId to 00000000-0000-0000-0000-000000000000. Required.
     *
     * @return string|null The addedByTenantId
     */
@@ -41,7 +41,7 @@ class MultiTenantOrganizationJoinRequestRecord extends Entity
 
     /**
     * Sets the addedByTenantId
-    * Tenant ID of the Azure Active Directory tenant that added a tenant to the multi-tenant organization. To reset a failed join request, set addedByTenantId to 00000000-0000-0000-0000-000000000000. Required.
+    * Tenant ID of the Microsoft Entra tenant that added a tenant to the multi-tenant organization. To reset a failed join request, set addedByTenantId to 00000000-0000-0000-0000-000000000000. Required.
     *
     * @param string $val The addedByTenantId
     *

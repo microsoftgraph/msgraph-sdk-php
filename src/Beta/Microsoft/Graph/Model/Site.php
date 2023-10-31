@@ -612,7 +612,7 @@ class Site extends BaseItem
 
     /**
     * Gets the recycleBin
-    * The collection of recycleBinItems under this site.
+    * A container for a collection of recycleBinItem resources in this site.
     *
     * @return RecycleBin|null The recycleBin
     */
@@ -631,7 +631,7 @@ class Site extends BaseItem
 
     /**
     * Sets the recycleBin
-    * The collection of recycleBinItems under this site.
+    * A container for a collection of recycleBinItem resources in this site.
     *
     * @param RecycleBin $val The recycleBin
     *

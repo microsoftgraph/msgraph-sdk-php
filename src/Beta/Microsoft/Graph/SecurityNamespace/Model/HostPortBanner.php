@@ -25,6 +25,7 @@ class HostPortBanner extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the banner
+    * The text response received from a web component when scanning a hostPort.
     *
     * @return string|null The banner
     */
@@ -39,6 +40,7 @@ class HostPortBanner extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the banner
+    * The text response received from a web component when scanning a hostPort.
     *
     * @param string $val The value of the banner
     *
@@ -52,6 +54,7 @@ class HostPortBanner extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the firstSeenDateTime
+    * The first date and time when Microsoft Defender Threat Intelligence observed the hostPortBanner. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The firstSeenDateTime
     */
@@ -70,6 +73,7 @@ class HostPortBanner extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the firstSeenDateTime
+    * The first date and time when Microsoft Defender Threat Intelligence observed the hostPortBanner. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The value to assign to the firstSeenDateTime
     *
@@ -83,6 +87,7 @@ class HostPortBanner extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the lastSeenDateTime
+    * The last date and time when Microsoft Defender Threat Intelligence observed the hostPortBanner. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The lastSeenDateTime
     */
@@ -101,6 +106,7 @@ class HostPortBanner extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the lastSeenDateTime
+    * The last date and time when Microsoft Defender Threat Intelligence observed the hostPortBanner. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The value to assign to the lastSeenDateTime
     *
@@ -113,6 +119,7 @@ class HostPortBanner extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the scanProtocol
+    * The specific protocol used to scan the hostPort.
     *
     * @return string|null The scanProtocol
     */
@@ -127,6 +134,7 @@ class HostPortBanner extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the scanProtocol
+    * The specific protocol used to scan the hostPort.
     *
     * @param string $val The value of the scanProtocol
     *
@@ -139,6 +147,7 @@ class HostPortBanner extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the timesObserved
+    * The total amount of times that Microsoft Defender Threat Intelligence has observed the hostPortBanner in all its scans.
     *
     * @return int|null The timesObserved
     */
@@ -153,6 +162,7 @@ class HostPortBanner extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the timesObserved
+    * The total amount of times that Microsoft Defender Threat Intelligence has observed the hostPortBanner in all its scans.
     *
     * @param int $val The value of the timesObserved
     *

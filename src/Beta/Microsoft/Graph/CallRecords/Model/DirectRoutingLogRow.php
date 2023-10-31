@@ -633,7 +633,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the userId
-    * The unique identifier (GUID) of the user in Azure Active Directory. This and other user info is null/empty for bot call types.
+    * The unique identifier (GUID) of the user in Microsoft Entra ID. This and other user info is null/empty for bot call types.
     *
     * @return string|null The userId
     */
@@ -648,7 +648,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the userId
-    * The unique identifier (GUID) of the user in Azure Active Directory. This and other user info is null/empty for bot call types.
+    * The unique identifier (GUID) of the user in Microsoft Entra ID. This and other user info is null/empty for bot call types.
     *
     * @param string $val The value of the userId
     *
@@ -661,7 +661,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the userPrincipalName
-    * The user principal name (sign-in name) in Azure Active Directory, is usually the same as the user's SIP address, and can be same as the user's e-mail address.
+    * The user principal name (sign-in name) in Microsoft Entra ID, is usually the same as the user's SIP address, and can be same as the user's e-mail address.
     *
     * @return string|null The userPrincipalName
     */
@@ -676,7 +676,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the userPrincipalName
-    * The user principal name (sign-in name) in Azure Active Directory, is usually the same as the user's SIP address, and can be same as the user's e-mail address.
+    * The user principal name (sign-in name) in Microsoft Entra ID, is usually the same as the user's SIP address, and can be same as the user's e-mail address.
     *
     * @param string $val The value of the userPrincipalName
     *
