@@ -4,7 +4,6 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions
 
 use Exception;
 use Http\Promise\Promise;
-use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\Stages\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\Stages\FilterByCurrentUserWithOn\FilterByCurrentUserWithOnRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\Stages\Item\AccessReviewStageItemRequestBuilder;
@@ -65,39 +64,33 @@ class StagesRequestBuilder extends BaseRequestBuilder
     /**
      * Retrieve the stages in a multi-stage access review instance. This API is available in the following national cloud deployments.
      * @param StagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise
+     * @return Promise<AccessReviewStageCollectionResponse|null>
+     * @throws Exception
      * @link https://learn.microsoft.com/graph/api/accessreviewinstance-list-stages?view=graph-rest-1.0 Find more info here
     */
     public function get(?StagesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
-        try {
-            $errorMappings = [
-                    '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                    '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-            ];
-            return $this->requestAdapter->sendAsync($requestInfo, [AccessReviewStageCollectionResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
-        } catch(Exception $ex) {
-            return new RejectedPromise($ex);
-        }
+        $errorMappings = [
+                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+        ];
+        return $this->requestAdapter->sendAsync($requestInfo, [AccessReviewStageCollectionResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**
      * Create new navigation property to stages for identityGovernance
      * @param AccessReviewStage $body The request body
      * @param StagesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise
+     * @return Promise<AccessReviewStage|null>
+     * @throws Exception
     */
     public function post(AccessReviewStage $body, ?StagesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
-        try {
-            $errorMappings = [
-                    '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                    '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-            ];
-            return $this->requestAdapter->sendAsync($requestInfo, [AccessReviewStage::class, 'createFromDiscriminatorValue'], $errorMappings);
-        } catch(Exception $ex) {
-            return new RejectedPromise($ex);
-        }
+        $errorMappings = [
+                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+        ];
+        return $this->requestAdapter->sendAsync($requestInfo, [AccessReviewStage::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**
@@ -110,7 +103,6 @@ class StagesRequestBuilder extends BaseRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
-        $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
             $requestInfo->addHeaders($requestConfiguration->headers);
             if ($requestConfiguration->queryParameters !== null) {
@@ -118,6 +110,7 @@ class StagesRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
         return $requestInfo;
     }
 
@@ -132,11 +125,11 @@ class StagesRequestBuilder extends BaseRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
-        $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

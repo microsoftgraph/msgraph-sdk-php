@@ -4,7 +4,6 @@ namespace Microsoft\Graph\Generated\Users\Item\Activities;
 
 use Exception;
 use Http\Promise\Promise;
-use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\UserActivity;
 use Microsoft\Graph\Generated\Models\UserActivityCollectionResponse;
@@ -63,39 +62,33 @@ class ActivitiesRequestBuilder extends BaseRequestBuilder
     /**
      * Get activities for a given user. Unlike the recent OData function, activities without histories will be returned. The permission UserActivity.ReadWrite.CreatedByApp will apply extra filtering to the response, so that only activities created by your application are returned. This server-side filtering might result in empty pages if the user is particularly active and other applications have created more recent activities. To get your application's activities, use the nextLink property to paginate. This API is available in the following national cloud deployments.
      * @param ActivitiesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise
+     * @return Promise<UserActivityCollectionResponse|null>
+     * @throws Exception
      * @link https://learn.microsoft.com/graph/api/projectrome-get-activities?view=graph-rest-1.0 Find more info here
     */
     public function get(?ActivitiesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
-        try {
-            $errorMappings = [
-                    '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                    '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-            ];
-            return $this->requestAdapter->sendAsync($requestInfo, [UserActivityCollectionResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
-        } catch(Exception $ex) {
-            return new RejectedPromise($ex);
-        }
+        $errorMappings = [
+                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+        ];
+        return $this->requestAdapter->sendAsync($requestInfo, [UserActivityCollectionResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**
      * Create new navigation property to activities for users
      * @param UserActivity $body The request body
      * @param ActivitiesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise
+     * @return Promise<UserActivity|null>
+     * @throws Exception
     */
     public function post(UserActivity $body, ?ActivitiesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
-        try {
-            $errorMappings = [
-                    '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                    '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-            ];
-            return $this->requestAdapter->sendAsync($requestInfo, [UserActivity::class, 'createFromDiscriminatorValue'], $errorMappings);
-        } catch(Exception $ex) {
-            return new RejectedPromise($ex);
-        }
+        $errorMappings = [
+                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+        ];
+        return $this->requestAdapter->sendAsync($requestInfo, [UserActivity::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**
@@ -108,7 +101,6 @@ class ActivitiesRequestBuilder extends BaseRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
-        $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
             $requestInfo->addHeaders($requestConfiguration->headers);
             if ($requestConfiguration->queryParameters !== null) {
@@ -116,6 +108,7 @@ class ActivitiesRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
         return $requestInfo;
     }
 
@@ -130,11 +123,11 @@ class ActivitiesRequestBuilder extends BaseRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
-        $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

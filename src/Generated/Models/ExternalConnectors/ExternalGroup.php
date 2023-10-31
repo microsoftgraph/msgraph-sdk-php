@@ -64,7 +64,7 @@ class ExternalGroup extends Entity implements Parsable
     }
 
     /**
-     * Gets the members property value. A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or an externalGroup as members.
+     * Gets the members property value. A member added to an externalGroup. You can add Microsoft Entra users, Microsoft Entra groups, or an externalGroup as members.
      * @return array<Identity>|null
     */
     public function getMembers(): ?array {
@@ -105,7 +105,7 @@ class ExternalGroup extends Entity implements Parsable
     }
 
     /**
-     * Sets the members property value. A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or an externalGroup as members.
+     * Sets the members property value. A member added to an externalGroup. You can add Microsoft Entra users, Microsoft Entra groups, or an externalGroup as members.
      * @param array<Identity>|null $value Value to set for the members property.
     */
     public function setMembers(?array $value): void {

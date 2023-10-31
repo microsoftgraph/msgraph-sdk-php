@@ -4,7 +4,6 @@ namespace Microsoft\Graph\Generated\Education\Classes\Item\AssignmentCategories;
 
 use Exception;
 use Http\Promise\Promise;
-use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Education\Classes\Item\AssignmentCategories\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Education\Classes\Item\AssignmentCategories\Delta\DeltaRequestBuilder;
 use Microsoft\Graph\Generated\Education\Classes\Item\AssignmentCategories\Item\EducationCategoryItemRequestBuilder;
@@ -63,40 +62,34 @@ class AssignmentCategoriesRequestBuilder extends BaseRequestBuilder
     /**
      * Retrieve a list of educationCategory objects. Only teachers can perform this operation. This API is available in the following national cloud deployments.
      * @param AssignmentCategoriesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise
+     * @return Promise<EducationCategoryCollectionResponse|null>
+     * @throws Exception
      * @link https://learn.microsoft.com/graph/api/educationclass-list-categories?view=graph-rest-1.0 Find more info here
     */
     public function get(?AssignmentCategoriesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
-        try {
-            $errorMappings = [
-                    '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                    '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-            ];
-            return $this->requestAdapter->sendAsync($requestInfo, [EducationCategoryCollectionResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
-        } catch(Exception $ex) {
-            return new RejectedPromise($ex);
-        }
+        $errorMappings = [
+                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+        ];
+        return $this->requestAdapter->sendAsync($requestInfo, [EducationCategoryCollectionResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**
      * Create a new educationCategory on an educationClass. Only teachers can perform this operation. This API is available in the following national cloud deployments.
      * @param EducationCategory $body The request body
      * @param AssignmentCategoriesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise
+     * @return Promise<EducationCategory|null>
+     * @throws Exception
      * @link https://learn.microsoft.com/graph/api/educationclass-post-category?view=graph-rest-1.0 Find more info here
     */
     public function post(EducationCategory $body, ?AssignmentCategoriesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
-        try {
-            $errorMappings = [
-                    '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                    '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-            ];
-            return $this->requestAdapter->sendAsync($requestInfo, [EducationCategory::class, 'createFromDiscriminatorValue'], $errorMappings);
-        } catch(Exception $ex) {
-            return new RejectedPromise($ex);
-        }
+        $errorMappings = [
+                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+        ];
+        return $this->requestAdapter->sendAsync($requestInfo, [EducationCategory::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**
@@ -109,7 +102,6 @@ class AssignmentCategoriesRequestBuilder extends BaseRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
-        $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
             $requestInfo->addHeaders($requestConfiguration->headers);
             if ($requestConfiguration->queryParameters !== null) {
@@ -117,6 +109,7 @@ class AssignmentCategoriesRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
         return $requestInfo;
     }
 
@@ -131,11 +124,11 @@ class AssignmentCategoriesRequestBuilder extends BaseRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
-        $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

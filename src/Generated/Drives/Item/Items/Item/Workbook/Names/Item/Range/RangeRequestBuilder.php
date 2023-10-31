@@ -4,7 +4,6 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Names\Item\R
 
 use Exception;
 use Http\Promise\Promise;
-use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\WorkbookRange;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -32,26 +31,23 @@ class RangeRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of range object. This API is available in the following national cloud deployments.
+     * Returns the range object that is associated with the name. Throws an exception if the named item's type is not a range. This API is available in the following national cloud deployments.
      * @param RangeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise
-     * @link https://learn.microsoft.com/graph/api/range-get?view=graph-rest-1.0 Find more info here
+     * @return Promise<WorkbookRange|null>
+     * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/nameditem-range?view=graph-rest-1.0 Find more info here
     */
     public function get(?RangeRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
-        try {
-            $errorMappings = [
-                    '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                    '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-            ];
-            return $this->requestAdapter->sendAsync($requestInfo, [WorkbookRange::class, 'createFromDiscriminatorValue'], $errorMappings);
-        } catch(Exception $ex) {
-            return new RejectedPromise($ex);
-        }
+        $errorMappings = [
+                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+        ];
+        return $this->requestAdapter->sendAsync($requestInfo, [WorkbookRange::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**
-     * Retrieve the properties and relationships of range object. This API is available in the following national cloud deployments.
+     * Returns the range object that is associated with the name. Throws an exception if the named item's type is not a range. This API is available in the following national cloud deployments.
      * @param RangeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -60,11 +56,11 @@ class RangeRequestBuilder extends BaseRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
-        $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
         return $requestInfo;
     }
 

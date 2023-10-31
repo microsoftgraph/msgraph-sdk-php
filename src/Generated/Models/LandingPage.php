@@ -27,7 +27,7 @@ class LandingPage extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdBy property value. The createdBy property
+     * Gets the createdBy property value. Identity of the user who created the landing page.
      * @return EmailIdentity|null
     */
     public function getCreatedBy(): ?EmailIdentity {
@@ -39,7 +39,7 @@ class LandingPage extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. Date and time when the landing page was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
@@ -51,7 +51,7 @@ class LandingPage extends Entity implements Parsable
     }
 
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. Description of the landing page as defined by the user.
      * @return string|null
     */
     public function getDescription(): ?string {
@@ -63,7 +63,7 @@ class LandingPage extends Entity implements Parsable
     }
 
     /**
-     * Gets the details property value. The details property
+     * Gets the details property value. The detail information for a landing page associated with a simulation during its creation.
      * @return array<LandingPageDetail>|null
     */
     public function getDetails(): ?array {
@@ -77,7 +77,7 @@ class LandingPage extends Entity implements Parsable
     }
 
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name of the landing page.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -117,7 +117,7 @@ class LandingPage extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastModifiedBy property value. The lastModifiedBy property
+     * Gets the lastModifiedBy property value. Email identity of the user who last modified the landing page.
      * @return EmailIdentity|null
     */
     public function getLastModifiedBy(): ?EmailIdentity {
@@ -129,7 +129,7 @@ class LandingPage extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Gets the lastModifiedDateTime property value. Date and time when the landing page was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
@@ -141,7 +141,7 @@ class LandingPage extends Entity implements Parsable
     }
 
     /**
-     * Gets the locale property value. The locale property
+     * Gets the locale property value. Content locale.
      * @return string|null
     */
     public function getLocale(): ?string {
@@ -153,7 +153,7 @@ class LandingPage extends Entity implements Parsable
     }
 
     /**
-     * Gets the source property value. The source property
+     * Gets the source property value. The source of the content. Possible values are: unknown, global, tenant, unknownFutureValue.
      * @return SimulationContentSource|null
     */
     public function getSource(): ?SimulationContentSource {
@@ -165,7 +165,7 @@ class LandingPage extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. The status property
+     * Gets the status property value. The status of the simulation. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
      * @return SimulationContentStatus|null
     */
     public function getStatus(): ?SimulationContentStatus {
@@ -177,7 +177,7 @@ class LandingPage extends Entity implements Parsable
     }
 
     /**
-     * Gets the supportedLocales property value. The supportedLocales property
+     * Gets the supportedLocales property value. Supported locales.
      * @return array<string>|null
     */
     public function getSupportedLocales(): ?array {
@@ -210,7 +210,7 @@ class LandingPage extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdBy property value. The createdBy property
+     * Sets the createdBy property value. Identity of the user who created the landing page.
      * @param EmailIdentity|null $value Value to set for the createdBy property.
     */
     public function setCreatedBy(?EmailIdentity $value): void {
@@ -218,7 +218,7 @@ class LandingPage extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. Date and time when the landing page was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
@@ -226,7 +226,7 @@ class LandingPage extends Entity implements Parsable
     }
 
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. Description of the landing page as defined by the user.
      * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
@@ -234,7 +234,7 @@ class LandingPage extends Entity implements Parsable
     }
 
     /**
-     * Sets the details property value. The details property
+     * Sets the details property value. The detail information for a landing page associated with a simulation during its creation.
      * @param array<LandingPageDetail>|null $value Value to set for the details property.
     */
     public function setDetails(?array $value): void {
@@ -242,7 +242,7 @@ class LandingPage extends Entity implements Parsable
     }
 
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name of the landing page.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -250,7 +250,7 @@ class LandingPage extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastModifiedBy property value. The lastModifiedBy property
+     * Sets the lastModifiedBy property value. Email identity of the user who last modified the landing page.
      * @param EmailIdentity|null $value Value to set for the lastModifiedBy property.
     */
     public function setLastModifiedBy(?EmailIdentity $value): void {
@@ -258,7 +258,7 @@ class LandingPage extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Sets the lastModifiedDateTime property value. Date and time when the landing page was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
@@ -266,7 +266,7 @@ class LandingPage extends Entity implements Parsable
     }
 
     /**
-     * Sets the locale property value. The locale property
+     * Sets the locale property value. Content locale.
      * @param string|null $value Value to set for the locale property.
     */
     public function setLocale(?string $value): void {
@@ -274,7 +274,7 @@ class LandingPage extends Entity implements Parsable
     }
 
     /**
-     * Sets the source property value. The source property
+     * Sets the source property value. The source of the content. Possible values are: unknown, global, tenant, unknownFutureValue.
      * @param SimulationContentSource|null $value Value to set for the source property.
     */
     public function setSource(?SimulationContentSource $value): void {
@@ -282,7 +282,7 @@ class LandingPage extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. The status property
+     * Sets the status property value. The status of the simulation. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
      * @param SimulationContentStatus|null $value Value to set for the status property.
     */
     public function setStatus(?SimulationContentStatus $value): void {
@@ -290,7 +290,7 @@ class LandingPage extends Entity implements Parsable
     }
 
     /**
-     * Sets the supportedLocales property value. The supportedLocales property
+     * Sets the supportedLocales property value. Supported locales.
      * @param array<string>|null $value Value to set for the supportedLocales property.
     */
     public function setSupportedLocales(?array $value): void {

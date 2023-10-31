@@ -26,7 +26,7 @@ class TrainingLanguageDetail extends Entity implements Parsable
     }
 
     /**
-     * Gets the content property value. The content property
+     * Gets the content property value. Language specific content for the training.
      * @return string|null
     */
     public function getContent(): ?string {
@@ -38,7 +38,7 @@ class TrainingLanguageDetail extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdBy property value. The createdBy property
+     * Gets the createdBy property value. Identity of the user who created the language details.
      * @return EmailIdentity|null
     */
     public function getCreatedBy(): ?EmailIdentity {
@@ -50,7 +50,7 @@ class TrainingLanguageDetail extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. Date and time when the language details were created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
@@ -62,7 +62,7 @@ class TrainingLanguageDetail extends Entity implements Parsable
     }
 
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. Description as defined by the user.
      * @return string|null
     */
     public function getDescription(): ?string {
@@ -74,7 +74,7 @@ class TrainingLanguageDetail extends Entity implements Parsable
     }
 
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. Display name as defined by the user.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -105,7 +105,7 @@ class TrainingLanguageDetail extends Entity implements Parsable
     }
 
     /**
-     * Gets the isDefaultLangauge property value. The isDefaultLangauge property
+     * Gets the isDefaultLangauge property value. Indicates whether the training has a default language.
      * @return bool|null
     */
     public function getIsDefaultLangauge(): ?bool {
@@ -117,7 +117,7 @@ class TrainingLanguageDetail extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastModifiedBy property value. The lastModifiedBy property
+     * Gets the lastModifiedBy property value. Identity of the user who last modified the details.
      * @return EmailIdentity|null
     */
     public function getLastModifiedBy(): ?EmailIdentity {
@@ -129,7 +129,7 @@ class TrainingLanguageDetail extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Gets the lastModifiedDateTime property value. Date and time when the trainingLanguageDetail was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
@@ -141,7 +141,7 @@ class TrainingLanguageDetail extends Entity implements Parsable
     }
 
     /**
-     * Gets the locale property value. The locale property
+     * Gets the locale property value. Content locale for the training detail.
      * @return string|null
     */
     public function getLocale(): ?string {
@@ -170,7 +170,7 @@ class TrainingLanguageDetail extends Entity implements Parsable
     }
 
     /**
-     * Sets the content property value. The content property
+     * Sets the content property value. Language specific content for the training.
      * @param string|null $value Value to set for the content property.
     */
     public function setContent(?string $value): void {
@@ -178,7 +178,7 @@ class TrainingLanguageDetail extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdBy property value. The createdBy property
+     * Sets the createdBy property value. Identity of the user who created the language details.
      * @param EmailIdentity|null $value Value to set for the createdBy property.
     */
     public function setCreatedBy(?EmailIdentity $value): void {
@@ -186,7 +186,7 @@ class TrainingLanguageDetail extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. Date and time when the language details were created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
@@ -194,7 +194,7 @@ class TrainingLanguageDetail extends Entity implements Parsable
     }
 
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. Description as defined by the user.
      * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
@@ -202,7 +202,7 @@ class TrainingLanguageDetail extends Entity implements Parsable
     }
 
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. Display name as defined by the user.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -210,7 +210,7 @@ class TrainingLanguageDetail extends Entity implements Parsable
     }
 
     /**
-     * Sets the isDefaultLangauge property value. The isDefaultLangauge property
+     * Sets the isDefaultLangauge property value. Indicates whether the training has a default language.
      * @param bool|null $value Value to set for the isDefaultLangauge property.
     */
     public function setIsDefaultLangauge(?bool $value): void {
@@ -218,7 +218,7 @@ class TrainingLanguageDetail extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastModifiedBy property value. The lastModifiedBy property
+     * Sets the lastModifiedBy property value. Identity of the user who last modified the details.
      * @param EmailIdentity|null $value Value to set for the lastModifiedBy property.
     */
     public function setLastModifiedBy(?EmailIdentity $value): void {
@@ -226,7 +226,7 @@ class TrainingLanguageDetail extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Sets the lastModifiedDateTime property value. Date and time when the trainingLanguageDetail was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
@@ -234,7 +234,7 @@ class TrainingLanguageDetail extends Entity implements Parsable
     }
 
     /**
-     * Sets the locale property value. The locale property
+     * Sets the locale property value. Content locale for the training detail.
      * @param string|null $value Value to set for the locale property.
     */
     public function setLocale(?string $value): void {

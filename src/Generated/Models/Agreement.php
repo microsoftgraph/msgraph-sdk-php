@@ -97,7 +97,7 @@ class Agreement extends Entity implements Parsable
     }
 
     /**
-     * Gets the isPerDeviceAcceptanceRequired property value. Indicates whether end users are required to accept this agreement on every device that they access it from. The end user is required to register their device in Azure AD, if they haven't already done so. Supports $filter (eq).
+     * Gets the isPerDeviceAcceptanceRequired property value. Indicates whether end users are required to accept this agreement on every device that they access it from. The end user is required to register their device in Microsoft Entra ID, if they haven't already done so. Supports $filter (eq).
      * @return bool|null
     */
     public function getIsPerDeviceAcceptanceRequired(): ?bool {
@@ -193,7 +193,7 @@ class Agreement extends Entity implements Parsable
     }
 
     /**
-     * Sets the isPerDeviceAcceptanceRequired property value. Indicates whether end users are required to accept this agreement on every device that they access it from. The end user is required to register their device in Azure AD, if they haven't already done so. Supports $filter (eq).
+     * Sets the isPerDeviceAcceptanceRequired property value. Indicates whether end users are required to accept this agreement on every device that they access it from. The end user is required to register their device in Microsoft Entra ID, if they haven't already done so. Supports $filter (eq).
      * @param bool|null $value Value to set for the isPerDeviceAcceptanceRequired property.
     */
     public function setIsPerDeviceAcceptanceRequired(?bool $value): void {

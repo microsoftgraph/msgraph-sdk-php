@@ -37,7 +37,7 @@ class IdentitySecurityDefaultsEnforcementPolicy extends PolicyBase implements Pa
     }
 
     /**
-     * Gets the isEnabled property value. If set to true, Azure Active Directory security defaults are enabled for the tenant.
+     * Gets the isEnabled property value. If set to true, Microsoft Entra security defaults are enabled for the tenant.
      * @return bool|null
     */
     public function getIsEnabled(): ?bool {
@@ -58,7 +58,7 @@ class IdentitySecurityDefaultsEnforcementPolicy extends PolicyBase implements Pa
     }
 
     /**
-     * Sets the isEnabled property value. If set to true, Azure Active Directory security defaults are enabled for the tenant.
+     * Sets the isEnabled property value. If set to true, Microsoft Entra security defaults are enabled for the tenant.
      * @param bool|null $value Value to set for the isEnabled property.
     */
     public function setIsEnabled(?bool $value): void {

@@ -25,7 +25,7 @@ class EndUserNotificationDetail extends Entity implements Parsable
     }
 
     /**
-     * Gets the emailContent property value. The emailContent property
+     * Gets the emailContent property value. Email HTML content.
      * @return string|null
     */
     public function getEmailContent(): ?string {
@@ -53,7 +53,7 @@ class EndUserNotificationDetail extends Entity implements Parsable
     }
 
     /**
-     * Gets the isDefaultLangauge property value. The isDefaultLangauge property
+     * Gets the isDefaultLangauge property value. Indicates whether this language is default.
      * @return bool|null
     */
     public function getIsDefaultLangauge(): ?bool {
@@ -65,7 +65,7 @@ class EndUserNotificationDetail extends Entity implements Parsable
     }
 
     /**
-     * Gets the language property value. The language property
+     * Gets the language property value. Notification language.
      * @return string|null
     */
     public function getLanguage(): ?string {
@@ -77,7 +77,7 @@ class EndUserNotificationDetail extends Entity implements Parsable
     }
 
     /**
-     * Gets the locale property value. The locale property
+     * Gets the locale property value. Notification locale.
      * @return string|null
     */
     public function getLocale(): ?string {
@@ -101,7 +101,7 @@ class EndUserNotificationDetail extends Entity implements Parsable
     }
 
     /**
-     * Gets the subject property value. The subject property
+     * Gets the subject property value. Mail subject.
      * @return string|null
     */
     public function getSubject(): ?string {
@@ -127,7 +127,7 @@ class EndUserNotificationDetail extends Entity implements Parsable
     }
 
     /**
-     * Sets the emailContent property value. The emailContent property
+     * Sets the emailContent property value. Email HTML content.
      * @param string|null $value Value to set for the emailContent property.
     */
     public function setEmailContent(?string $value): void {
@@ -135,7 +135,7 @@ class EndUserNotificationDetail extends Entity implements Parsable
     }
 
     /**
-     * Sets the isDefaultLangauge property value. The isDefaultLangauge property
+     * Sets the isDefaultLangauge property value. Indicates whether this language is default.
      * @param bool|null $value Value to set for the isDefaultLangauge property.
     */
     public function setIsDefaultLangauge(?bool $value): void {
@@ -143,7 +143,7 @@ class EndUserNotificationDetail extends Entity implements Parsable
     }
 
     /**
-     * Sets the language property value. The language property
+     * Sets the language property value. Notification language.
      * @param string|null $value Value to set for the language property.
     */
     public function setLanguage(?string $value): void {
@@ -151,7 +151,7 @@ class EndUserNotificationDetail extends Entity implements Parsable
     }
 
     /**
-     * Sets the locale property value. The locale property
+     * Sets the locale property value. Notification locale.
      * @param string|null $value Value to set for the locale property.
     */
     public function setLocale(?string $value): void {
@@ -167,7 +167,7 @@ class EndUserNotificationDetail extends Entity implements Parsable
     }
 
     /**
-     * Sets the subject property value. The subject property
+     * Sets the subject property value. Mail subject.
      * @param string|null $value Value to set for the subject property.
     */
     public function setSubject(?string $value): void {

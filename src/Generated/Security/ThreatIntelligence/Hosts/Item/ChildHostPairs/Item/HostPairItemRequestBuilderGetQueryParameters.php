@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\ThreatIntelligence\Hosts\Item\Child
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a cihldHost.
+ * The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a childHost.
 */
 class HostPairItemRequestBuilderGetQueryParameters 
 {

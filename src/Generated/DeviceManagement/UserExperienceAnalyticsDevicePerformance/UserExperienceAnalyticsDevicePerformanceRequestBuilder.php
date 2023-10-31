@@ -4,7 +4,6 @@ namespace Microsoft\Graph\Generated\DeviceManagement\UserExperienceAnalyticsDevi
 
 use Exception;
 use Http\Promise\Promise;
-use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceManagement\UserExperienceAnalyticsDevicePerformance\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\UserExperienceAnalyticsDevicePerformance\Item\UserExperienceAnalyticsDevicePerformanceItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\UserExperienceAnalyticsDevicePerformance\SummarizeDevicePerformanceDevicesWithSummarizeBy\SummarizeDevicePerformanceDevicesWithSummarizeByRequestBuilder;
@@ -56,38 +55,32 @@ class UserExperienceAnalyticsDevicePerformanceRequestBuilder extends BaseRequest
     /**
      * User experience analytics device performance
      * @param UserExperienceAnalyticsDevicePerformanceRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise
+     * @return Promise<UserExperienceAnalyticsDevicePerformanceCollectionResponse|null>
+     * @throws Exception
     */
     public function get(?UserExperienceAnalyticsDevicePerformanceRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
-        try {
-            $errorMappings = [
-                    '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                    '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-            ];
-            return $this->requestAdapter->sendAsync($requestInfo, [UserExperienceAnalyticsDevicePerformanceCollectionResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
-        } catch(Exception $ex) {
-            return new RejectedPromise($ex);
-        }
+        $errorMappings = [
+                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+        ];
+        return $this->requestAdapter->sendAsync($requestInfo, [UserExperienceAnalyticsDevicePerformanceCollectionResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**
      * Create new navigation property to userExperienceAnalyticsDevicePerformance for deviceManagement
      * @param UserExperienceAnalyticsDevicePerformance $body The request body
      * @param UserExperienceAnalyticsDevicePerformanceRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise
+     * @return Promise<UserExperienceAnalyticsDevicePerformance|null>
+     * @throws Exception
     */
     public function post(UserExperienceAnalyticsDevicePerformance $body, ?UserExperienceAnalyticsDevicePerformanceRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
-        try {
-            $errorMappings = [
-                    '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                    '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-            ];
-            return $this->requestAdapter->sendAsync($requestInfo, [UserExperienceAnalyticsDevicePerformance::class, 'createFromDiscriminatorValue'], $errorMappings);
-        } catch(Exception $ex) {
-            return new RejectedPromise($ex);
-        }
+        $errorMappings = [
+                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+        ];
+        return $this->requestAdapter->sendAsync($requestInfo, [UserExperienceAnalyticsDevicePerformance::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**
@@ -109,7 +102,6 @@ class UserExperienceAnalyticsDevicePerformanceRequestBuilder extends BaseRequest
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
-        $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
             $requestInfo->addHeaders($requestConfiguration->headers);
             if ($requestConfiguration->queryParameters !== null) {
@@ -117,6 +109,7 @@ class UserExperienceAnalyticsDevicePerformanceRequestBuilder extends BaseRequest
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
         return $requestInfo;
     }
 
@@ -131,11 +124,11 @@ class UserExperienceAnalyticsDevicePerformanceRequestBuilder extends BaseRequest
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
-        $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

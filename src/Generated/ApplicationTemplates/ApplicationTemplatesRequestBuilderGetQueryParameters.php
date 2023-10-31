@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\ApplicationTemplates;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve a list of applicationTemplate objects from the Azure AD application gallery. This API is available in the following national cloud deployments.
+ * Retrieve a list of applicationTemplate objects from the Microsoft Entra application gallery. This API is available in the following national cloud deployments.
 */
 class ApplicationTemplatesRequestBuilderGetQueryParameters 
 {

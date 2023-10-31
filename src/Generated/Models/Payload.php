@@ -27,7 +27,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Gets the brand property value. The brand property
+     * Gets the brand property value. The branch of a payload. Possible values are: unknown, other, americanExpress, capitalOne, dhl, docuSign, dropbox, facebook, firstAmerican, microsoft, netflix, scotiabank, sendGrid, stewartTitle, tesco, wellsFargo, syrinxCloud, adobe, teams, zoom, unknownFutureValue.
      * @return PayloadBrand|null
     */
     public function getBrand(): ?PayloadBrand {
@@ -39,7 +39,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Gets the complexity property value. The complexity property
+     * Gets the complexity property value. The complexity of a payload. Possible values are: unknown, low, medium, high, unknownFutureValue.
      * @return PayloadComplexity|null
     */
     public function getComplexity(): ?PayloadComplexity {
@@ -51,7 +51,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdBy property value. The createdBy property
+     * Gets the createdBy property value. Identity of the user who created the attack simulation and training campaign payload.
      * @return EmailIdentity|null
     */
     public function getCreatedBy(): ?EmailIdentity {
@@ -63,7 +63,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. Date and time when the attack simulation and training campaign payload. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
@@ -75,7 +75,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. Description of the attack simulation and training campaign payload.
      * @return string|null
     */
     public function getDescription(): ?string {
@@ -87,7 +87,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Gets the detail property value. The detail property
+     * Gets the detail property value. Additional details about the payload.
      * @return PayloadDetail|null
     */
     public function getDetail(): ?PayloadDetail {
@@ -99,7 +99,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. Display name of the attack simulation and training campaign payload. Supports $filter and $orderby.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -150,7 +150,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Gets the industry property value. The industry property
+     * Gets the industry property value. Industry of a payload. Possible values are: unknown, other, banking, businessServices, consumerServices, education, energy, construction, consulting, financialServices, government, hospitality, insurance, legal, courierServices, IT, healthcare, manufacturing, retail, telecom, realEstate, unknownFutureValue.
      * @return PayloadIndustry|null
     */
     public function getIndustry(): ?PayloadIndustry {
@@ -162,7 +162,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Gets the isAutomated property value. The isAutomated property
+     * Gets the isAutomated property value. Indicates whether the attack simulation and training campaign payload was created from an automation flow. Supports $filter and $orderby.
      * @return bool|null
     */
     public function getIsAutomated(): ?bool {
@@ -174,7 +174,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Gets the isControversial property value. The isControversial property
+     * Gets the isControversial property value. Indicates whether the payload is controversial.
      * @return bool|null
     */
     public function getIsControversial(): ?bool {
@@ -186,7 +186,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Gets the isCurrentEvent property value. The isCurrentEvent property
+     * Gets the isCurrentEvent property value. Indicates whether the payload is from any recent event.
      * @return bool|null
     */
     public function getIsCurrentEvent(): ?bool {
@@ -198,7 +198,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Gets the language property value. The language property
+     * Gets the language property value. Payload language.
      * @return string|null
     */
     public function getLanguage(): ?string {
@@ -210,7 +210,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastModifiedBy property value. The lastModifiedBy property
+     * Gets the lastModifiedBy property value. Identity of the user who most recently modified the attack simulation and training campaign payload.
      * @return EmailIdentity|null
     */
     public function getLastModifiedBy(): ?EmailIdentity {
@@ -222,7 +222,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Gets the lastModifiedDateTime property value. Date and time when the attack simulation and training campaign payload was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
@@ -234,7 +234,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Gets the payloadTags property value. The payloadTags property
+     * Gets the payloadTags property value. Free text tags for a payload.
      * @return array<string>|null
     */
     public function getPayloadTags(): ?array {
@@ -248,7 +248,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Gets the platform property value. The platform property
+     * Gets the platform property value. The payload delivery platform for a simulation. Possible values are: unknown, sms, email, teams, unknownFutureValue.
      * @return PayloadDeliveryPlatform|null
     */
     public function getPlatform(): ?PayloadDeliveryPlatform {
@@ -260,7 +260,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Gets the predictedCompromiseRate property value. The predictedCompromiseRate property
+     * Gets the predictedCompromiseRate property value. Predicted probability for a payload to phish a targeted user.
      * @return float|null
     */
     public function getPredictedCompromiseRate(): ?float {
@@ -272,7 +272,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Gets the simulationAttackType property value. The simulationAttackType property
+     * Gets the simulationAttackType property value. Attack type of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, social, cloud, endpoint, unknownFutureValue.
      * @return SimulationAttackType|null
     */
     public function getSimulationAttackType(): ?SimulationAttackType {
@@ -296,7 +296,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. The status property
+     * Gets the status property value. Simulation content status. Supports $filter and $orderby. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
      * @return SimulationContentStatus|null
     */
     public function getStatus(): ?SimulationContentStatus {
@@ -308,7 +308,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Gets the technique property value. The technique property
+     * Gets the technique property value. The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue, oAuthConsentGrant. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: oAuthConsentGrant. For more information on the types of social engineering attack techniques, see simulations.
      * @return SimulationAttackTechnique|null
     */
     public function getTechnique(): ?SimulationAttackTechnique {
@@ -320,7 +320,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Gets the theme property value. The theme property
+     * Gets the theme property value. The theme of a payload. Possible values are: unknown, other, accountActivation, accountVerification, billing, cleanUpMail, controversial, documentReceived, expense, fax, financeReport, incomingMessages, invoice, itemReceived, loginAlert, mailReceived, password, payment, payroll, personalizedOffer, quarantine, remoteWork, reviewMessage, securityUpdate, serviceSuspended, signatureRequired, upgradeMailboxStorage, verifyMailbox, voicemail, advertisement, employeeEngagement, unknownFutureValue.
      * @return PayloadTheme|null
     */
     public function getTheme(): ?PayloadTheme {
@@ -362,7 +362,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Sets the brand property value. The brand property
+     * Sets the brand property value. The branch of a payload. Possible values are: unknown, other, americanExpress, capitalOne, dhl, docuSign, dropbox, facebook, firstAmerican, microsoft, netflix, scotiabank, sendGrid, stewartTitle, tesco, wellsFargo, syrinxCloud, adobe, teams, zoom, unknownFutureValue.
      * @param PayloadBrand|null $value Value to set for the brand property.
     */
     public function setBrand(?PayloadBrand $value): void {
@@ -370,7 +370,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Sets the complexity property value. The complexity property
+     * Sets the complexity property value. The complexity of a payload. Possible values are: unknown, low, medium, high, unknownFutureValue.
      * @param PayloadComplexity|null $value Value to set for the complexity property.
     */
     public function setComplexity(?PayloadComplexity $value): void {
@@ -378,7 +378,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdBy property value. The createdBy property
+     * Sets the createdBy property value. Identity of the user who created the attack simulation and training campaign payload.
      * @param EmailIdentity|null $value Value to set for the createdBy property.
     */
     public function setCreatedBy(?EmailIdentity $value): void {
@@ -386,7 +386,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. Date and time when the attack simulation and training campaign payload. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
@@ -394,7 +394,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. Description of the attack simulation and training campaign payload.
      * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
@@ -402,7 +402,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Sets the detail property value. The detail property
+     * Sets the detail property value. Additional details about the payload.
      * @param PayloadDetail|null $value Value to set for the detail property.
     */
     public function setDetail(?PayloadDetail $value): void {
@@ -410,7 +410,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. Display name of the attack simulation and training campaign payload. Supports $filter and $orderby.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -418,7 +418,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Sets the industry property value. The industry property
+     * Sets the industry property value. Industry of a payload. Possible values are: unknown, other, banking, businessServices, consumerServices, education, energy, construction, consulting, financialServices, government, hospitality, insurance, legal, courierServices, IT, healthcare, manufacturing, retail, telecom, realEstate, unknownFutureValue.
      * @param PayloadIndustry|null $value Value to set for the industry property.
     */
     public function setIndustry(?PayloadIndustry $value): void {
@@ -426,7 +426,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Sets the isAutomated property value. The isAutomated property
+     * Sets the isAutomated property value. Indicates whether the attack simulation and training campaign payload was created from an automation flow. Supports $filter and $orderby.
      * @param bool|null $value Value to set for the isAutomated property.
     */
     public function setIsAutomated(?bool $value): void {
@@ -434,7 +434,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Sets the isControversial property value. The isControversial property
+     * Sets the isControversial property value. Indicates whether the payload is controversial.
      * @param bool|null $value Value to set for the isControversial property.
     */
     public function setIsControversial(?bool $value): void {
@@ -442,7 +442,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Sets the isCurrentEvent property value. The isCurrentEvent property
+     * Sets the isCurrentEvent property value. Indicates whether the payload is from any recent event.
      * @param bool|null $value Value to set for the isCurrentEvent property.
     */
     public function setIsCurrentEvent(?bool $value): void {
@@ -450,7 +450,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Sets the language property value. The language property
+     * Sets the language property value. Payload language.
      * @param string|null $value Value to set for the language property.
     */
     public function setLanguage(?string $value): void {
@@ -458,7 +458,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastModifiedBy property value. The lastModifiedBy property
+     * Sets the lastModifiedBy property value. Identity of the user who most recently modified the attack simulation and training campaign payload.
      * @param EmailIdentity|null $value Value to set for the lastModifiedBy property.
     */
     public function setLastModifiedBy(?EmailIdentity $value): void {
@@ -466,7 +466,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Sets the lastModifiedDateTime property value. Date and time when the attack simulation and training campaign payload was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
@@ -474,7 +474,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Sets the payloadTags property value. The payloadTags property
+     * Sets the payloadTags property value. Free text tags for a payload.
      * @param array<string>|null $value Value to set for the payloadTags property.
     */
     public function setPayloadTags(?array $value): void {
@@ -482,7 +482,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Sets the platform property value. The platform property
+     * Sets the platform property value. The payload delivery platform for a simulation. Possible values are: unknown, sms, email, teams, unknownFutureValue.
      * @param PayloadDeliveryPlatform|null $value Value to set for the platform property.
     */
     public function setPlatform(?PayloadDeliveryPlatform $value): void {
@@ -490,7 +490,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Sets the predictedCompromiseRate property value. The predictedCompromiseRate property
+     * Sets the predictedCompromiseRate property value. Predicted probability for a payload to phish a targeted user.
      * @param float|null $value Value to set for the predictedCompromiseRate property.
     */
     public function setPredictedCompromiseRate(?float $value): void {
@@ -498,7 +498,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Sets the simulationAttackType property value. The simulationAttackType property
+     * Sets the simulationAttackType property value. Attack type of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, social, cloud, endpoint, unknownFutureValue.
      * @param SimulationAttackType|null $value Value to set for the simulationAttackType property.
     */
     public function setSimulationAttackType(?SimulationAttackType $value): void {
@@ -514,7 +514,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. The status property
+     * Sets the status property value. Simulation content status. Supports $filter and $orderby. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
      * @param SimulationContentStatus|null $value Value to set for the status property.
     */
     public function setStatus(?SimulationContentStatus $value): void {
@@ -522,7 +522,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Sets the technique property value. The technique property
+     * Sets the technique property value. The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue, oAuthConsentGrant. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: oAuthConsentGrant. For more information on the types of social engineering attack techniques, see simulations.
      * @param SimulationAttackTechnique|null $value Value to set for the technique property.
     */
     public function setTechnique(?SimulationAttackTechnique $value): void {
@@ -530,7 +530,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Sets the theme property value. The theme property
+     * Sets the theme property value. The theme of a payload. Possible values are: unknown, other, accountActivation, accountVerification, billing, cleanUpMail, controversial, documentReceived, expense, fax, financeReport, incomingMessages, invoice, itemReceived, loginAlert, mailReceived, password, payment, payroll, personalizedOffer, quarantine, remoteWork, reviewMessage, securityUpdate, serviceSuspended, signatureRequired, upgradeMailboxStorage, verifyMailbox, voicemail, advertisement, employeeEngagement, unknownFutureValue.
      * @param PayloadTheme|null $value Value to set for the theme property.
     */
     public function setTheme(?PayloadTheme $value): void {

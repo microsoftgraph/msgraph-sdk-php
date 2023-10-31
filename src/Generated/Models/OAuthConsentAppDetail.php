@@ -48,7 +48,7 @@ class OAuthConsentAppDetail implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the appScope property value. The appScope property
+     * Gets the appScope property value. App scope. Possible values are: unknown, readCalendar, readContact, readMail, readAllChat, readAllFile, readAndWriteMail, sendMail, unknownFutureValue.
      * @return OAuthAppScope|null
     */
     public function getAppScope(): ?OAuthAppScope {
@@ -68,7 +68,7 @@ class OAuthConsentAppDetail implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the displayLogo property value. The displayLogo property
+     * Gets the displayLogo property value. App display logo.
      * @return string|null
     */
     public function getDisplayLogo(): ?string {
@@ -80,7 +80,7 @@ class OAuthConsentAppDetail implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. App name.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -138,7 +138,7 @@ class OAuthConsentAppDetail implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the appScope property value. The appScope property
+     * Sets the appScope property value. App scope. Possible values are: unknown, readCalendar, readContact, readMail, readAllChat, readAllFile, readAndWriteMail, sendMail, unknownFutureValue.
      * @param OAuthAppScope|null $value Value to set for the appScope property.
     */
     public function setAppScope(?OAuthAppScope $value): void {
@@ -154,7 +154,7 @@ class OAuthConsentAppDetail implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the displayLogo property value. The displayLogo property
+     * Sets the displayLogo property value. App display logo.
      * @param string|null $value Value to set for the displayLogo property.
     */
     public function setDisplayLogo(?string $value): void {
@@ -162,7 +162,7 @@ class OAuthConsentAppDetail implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. App name.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {

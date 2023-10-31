@@ -38,7 +38,7 @@ class AttackSimulationOperation extends LongRunningOperation implements Parsable
     }
 
     /**
-     * Gets the percentageCompleted property value. The percentageCompleted property
+     * Gets the percentageCompleted property value. Percentage of completion of the respective operation.
      * @return int|null
     */
     public function getPercentageCompleted(): ?int {
@@ -50,7 +50,7 @@ class AttackSimulationOperation extends LongRunningOperation implements Parsable
     }
 
     /**
-     * Gets the tenantId property value. The tenantId property
+     * Gets the tenantId property value. Tenant identifier.
      * @return string|null
     */
     public function getTenantId(): ?string {
@@ -62,7 +62,7 @@ class AttackSimulationOperation extends LongRunningOperation implements Parsable
     }
 
     /**
-     * Gets the type property value. The type property
+     * Gets the type property value. The attack simulation operation type. Possible values are: createSimulation, updateSimulation, unknownFutureValue.
      * @return AttackSimulationOperationType|null
     */
     public function getType(): ?AttackSimulationOperationType {
@@ -85,7 +85,7 @@ class AttackSimulationOperation extends LongRunningOperation implements Parsable
     }
 
     /**
-     * Sets the percentageCompleted property value. The percentageCompleted property
+     * Sets the percentageCompleted property value. Percentage of completion of the respective operation.
      * @param int|null $value Value to set for the percentageCompleted property.
     */
     public function setPercentageCompleted(?int $value): void {
@@ -93,7 +93,7 @@ class AttackSimulationOperation extends LongRunningOperation implements Parsable
     }
 
     /**
-     * Sets the tenantId property value. The tenantId property
+     * Sets the tenantId property value. Tenant identifier.
      * @param string|null $value Value to set for the tenantId property.
     */
     public function setTenantId(?string $value): void {
@@ -101,7 +101,7 @@ class AttackSimulationOperation extends LongRunningOperation implements Parsable
     }
 
     /**
-     * Sets the type property value. The type property
+     * Sets the type property value. The attack simulation operation type. Possible values are: createSimulation, updateSimulation, unknownFutureValue.
      * @param AttackSimulationOperationType|null $value Value to set for the type property.
     */
     public function setType(?AttackSimulationOperationType $value): void {

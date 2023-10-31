@@ -4,7 +4,6 @@ namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\GraphManagedI
 
 use Exception;
 use Http\Promise\Promise;
-use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\GraphManagedIOSLobApp\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Models\ManagedIOSLobAppCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -42,19 +41,16 @@ class GraphManagedIOSLobAppRequestBuilder extends BaseRequestBuilder
     /**
      * Get the items of type microsoft.graph.managedIOSLobApp in the microsoft.graph.mobileApp collection
      * @param GraphManagedIOSLobAppRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise
+     * @return Promise<ManagedIOSLobAppCollectionResponse|null>
+     * @throws Exception
     */
     public function get(?GraphManagedIOSLobAppRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
-        try {
-            $errorMappings = [
-                    '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                    '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-            ];
-            return $this->requestAdapter->sendAsync($requestInfo, [ManagedIOSLobAppCollectionResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
-        } catch(Exception $ex) {
-            return new RejectedPromise($ex);
-        }
+        $errorMappings = [
+                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+        ];
+        return $this->requestAdapter->sendAsync($requestInfo, [ManagedIOSLobAppCollectionResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**
@@ -67,7 +63,6 @@ class GraphManagedIOSLobAppRequestBuilder extends BaseRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
-        $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
             $requestInfo->addHeaders($requestConfiguration->headers);
             if ($requestConfiguration->queryParameters !== null) {
@@ -75,6 +70,7 @@ class GraphManagedIOSLobAppRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
         return $requestInfo;
     }
 

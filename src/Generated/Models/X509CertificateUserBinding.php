@@ -82,7 +82,7 @@ class X509CertificateUserBinding implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the priority property value. The priority of the binding. Azure AD uses the binding with the highest priority. This value must be a non-negative integer and unique in the collection of objects in the certificateUserBindings property of an x509CertificateAuthenticationMethodConfiguration object. Required
+     * Gets the priority property value. The priority of the binding. Microsoft Entra ID uses the binding with the highest priority. This value must be a non-negative integer and unique in the collection of objects in the certificateUserBindings property of an x509CertificateAuthenticationMethodConfiguration object. Required
      * @return int|null
     */
     public function getPriority(): ?int {
@@ -94,7 +94,7 @@ class X509CertificateUserBinding implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the userProperty property value. Defines the Azure AD user property of the user object to use for the binding. The possible values are: userPrincipalName, onPremisesUserPrincipalName, certificateUserIds. Required.
+     * Gets the userProperty property value. Defines the Microsoft Entra user property of the user object to use for the binding. The possible values are: userPrincipalName, onPremisesUserPrincipalName, certificateUserIds. Required.
      * @return string|null
     */
     public function getUserProperty(): ?string {
@@ -154,7 +154,7 @@ class X509CertificateUserBinding implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the priority property value. The priority of the binding. Azure AD uses the binding with the highest priority. This value must be a non-negative integer and unique in the collection of objects in the certificateUserBindings property of an x509CertificateAuthenticationMethodConfiguration object. Required
+     * Sets the priority property value. The priority of the binding. Microsoft Entra ID uses the binding with the highest priority. This value must be a non-negative integer and unique in the collection of objects in the certificateUserBindings property of an x509CertificateAuthenticationMethodConfiguration object. Required
      * @param int|null $value Value to set for the priority property.
     */
     public function setPriority(?int $value): void {
@@ -162,7 +162,7 @@ class X509CertificateUserBinding implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the userProperty property value. Defines the Azure AD user property of the user object to use for the binding. The possible values are: userPrincipalName, onPremisesUserPrincipalName, certificateUserIds. Required.
+     * Sets the userProperty property value. Defines the Microsoft Entra user property of the user object to use for the binding. The possible values are: userPrincipalName, onPremisesUserPrincipalName, certificateUserIds. Required.
      * @param string|null $value Value to set for the userProperty property.
     */
     public function setUserProperty(?string $value): void {

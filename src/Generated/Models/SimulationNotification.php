@@ -37,7 +37,7 @@ class SimulationNotification extends BaseEndUserNotification implements Parsable
     }
 
     /**
-     * Gets the targettedUserType property value. The targettedUserType property
+     * Gets the targettedUserType property value. Target user type. Possible values are: unknown, clicked, compromised, allUsers, unknownFutureValue.
      * @return TargettedUserType|null
     */
     public function getTargettedUserType(): ?TargettedUserType {
@@ -58,7 +58,7 @@ class SimulationNotification extends BaseEndUserNotification implements Parsable
     }
 
     /**
-     * Sets the targettedUserType property value. The targettedUserType property
+     * Sets the targettedUserType property value. Target user type. Possible values are: unknown, clicked, compromised, allUsers, unknownFutureValue.
      * @param TargettedUserType|null $value Value to set for the targettedUserType property.
     */
     public function setTargettedUserType(?TargettedUserType $value): void {

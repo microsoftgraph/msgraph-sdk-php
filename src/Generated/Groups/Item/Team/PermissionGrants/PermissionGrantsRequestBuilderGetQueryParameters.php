@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Team\PermissionGrants;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List all resource-specific permission grants on the team. This list specifies the Azure AD apps that have access to the team, along with each app's corresponding type of resource-specific access. This API is available in the following national cloud deployments.
+ * List all resource-specific permission grants on the team. This list specifies the Microsoft Entra apps that have access to the team, along with each app's corresponding type of resource-specific access. This API is available in the following national cloud deployments.
 */
 class PermissionGrantsRequestBuilderGetQueryParameters 
 {

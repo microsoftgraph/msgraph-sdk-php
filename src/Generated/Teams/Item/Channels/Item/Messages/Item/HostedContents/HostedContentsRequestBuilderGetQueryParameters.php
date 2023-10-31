@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Teams\Item\Channels\Item\Messages\Item\Hoste
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the list of chatMessageHostedContent objects from a message. This API only lists the hosted content objects. To get the content bytes, see get chatmessage hosted content This API is available in the following national cloud deployments.
+ * Retrieve the list of chatMessageHostedContent objects from a message. This API only lists the hosted content objects. To get the content bytes, see get chatmessage hosted content This API is available in the following national cloud deployments. The following tables show the least privileged permission or permissions required to call this API on each supported resource type. Follow best practices to request least privileged permissions. For details about delegated and application permissions, see Permission types. To learn more about these permissions, see the permissions reference.
 */
 class HostedContentsRequestBuilderGetQueryParameters 
 {

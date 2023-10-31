@@ -26,7 +26,7 @@ class GroupMembers extends SubjectSet implements Parsable
     }
 
     /**
-     * Gets the description property value. The name of the group in Azure AD. Read only.
+     * Gets the description property value. The name of the group in Microsoft Entra ID. Read only.
      * @return string|null
     */
     public function getDescription(): ?string {
@@ -50,7 +50,7 @@ class GroupMembers extends SubjectSet implements Parsable
     }
 
     /**
-     * Gets the groupId property value. The ID of the group in Azure AD.
+     * Gets the groupId property value. The ID of the group in Microsoft Entra ID.
      * @return string|null
     */
     public function getGroupId(): ?string {
@@ -72,7 +72,7 @@ class GroupMembers extends SubjectSet implements Parsable
     }
 
     /**
-     * Sets the description property value. The name of the group in Azure AD. Read only.
+     * Sets the description property value. The name of the group in Microsoft Entra ID. Read only.
      * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
@@ -80,7 +80,7 @@ class GroupMembers extends SubjectSet implements Parsable
     }
 
     /**
-     * Sets the groupId property value. The ID of the group in Azure AD.
+     * Sets the groupId property value. The ID of the group in Microsoft Entra ID.
      * @param string|null $value Value to set for the groupId property.
     */
     public function setGroupId(?string $value): void {

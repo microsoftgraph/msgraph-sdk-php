@@ -4,7 +4,6 @@ namespace Microsoft\Graph\Generated\Organization\Item\Branding\Favicon;
 
 use Exception;
 use Http\Promise\Promise;
-use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -32,45 +31,44 @@ class FaviconRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A custom icon (favicon) to replace a default Microsoft product favicon on an Azure AD tenant.
+     * A custom icon (favicon) to replace a default Microsoft product favicon on a Microsoft Entra tenant.
      * @param FaviconRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise
+     * @return Promise<StreamInterface|null>
+     * @throws Exception
      * @link https://learn.microsoft.com/graph/api/organizationalbranding-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?FaviconRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
-        try {
-            $errorMappings = [
-                    '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                    '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-            ];
-            return $this->requestAdapter->sendPrimitiveAsync($requestInfo, StreamInterface::class, $errorMappings);
-        } catch(Exception $ex) {
-            return new RejectedPromise($ex);
-        }
+        $errorMappings = [
+                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+        ];
+        /** @var Promise<StreamInterface|null> $result */
+        $result = $this->requestAdapter->sendPrimitiveAsync($requestInfo, StreamInterface::class, $errorMappings);
+        return $result;
     }
 
     /**
-     * A custom icon (favicon) to replace a default Microsoft product favicon on an Azure AD tenant.
+     * A custom icon (favicon) to replace a default Microsoft product favicon on a Microsoft Entra tenant.
      * @param StreamInterface $body Binary request body
+     * @param string $contentType 
      * @param FaviconRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise
+     * @return Promise<StreamInterface|null>
+     * @throws Exception
     */
-    public function put(StreamInterface $body, ?FaviconRequestBuilderPutRequestConfiguration $requestConfiguration = null): Promise {
+    public function put(StreamInterface $body, string $contentType, ?FaviconRequestBuilderPutRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPutRequestInformation($body, $requestConfiguration);
-        try {
-            $errorMappings = [
-                    '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                    '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-            ];
-            return $this->requestAdapter->sendPrimitiveAsync($requestInfo, StreamInterface::class, $errorMappings);
-        } catch(Exception $ex) {
-            return new RejectedPromise($ex);
-        }
+        $errorMappings = [
+                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+        ];
+        /** @var Promise<StreamInterface|null> $result */
+        $result = $this->requestAdapter->sendPrimitiveAsync($requestInfo, StreamInterface::class, $errorMappings);
+        return $result;
     }
 
     /**
-     * A custom icon (favicon) to replace a default Microsoft product favicon on an Azure AD tenant.
+     * A custom icon (favicon) to replace a default Microsoft product favicon on a Microsoft Entra tenant.
      * @param FaviconRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -83,16 +81,18 @@ class FaviconRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "image/bmp, image/jpg, image/jpeg, image/gif, image/vnd.microsoft.icon, image/png, image/tiff, application/json, application/json");
         return $requestInfo;
     }
 
     /**
-     * A custom icon (favicon) to replace a default Microsoft product favicon on an Azure AD tenant.
+     * A custom icon (favicon) to replace a default Microsoft product favicon on a Microsoft Entra tenant.
      * @param StreamInterface $body Binary request body
+     * @param string $contentType 
      * @param FaviconRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPutRequestInformation(StreamInterface $body, ?FaviconRequestBuilderPutRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPutRequestInformation(StreamInterface $body, string $contentType, ?FaviconRequestBuilderPutRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -101,7 +101,8 @@ class FaviconRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->setStreamContent($body);
+        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->setStreamContent($body, $contentType);
         return $requestInfo;
     }
 

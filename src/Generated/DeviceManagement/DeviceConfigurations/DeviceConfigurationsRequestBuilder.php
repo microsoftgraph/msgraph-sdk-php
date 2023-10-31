@@ -4,7 +4,6 @@ namespace Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations;
 
 use Exception;
 use Http\Promise\Promise;
-use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\DeviceConfigurationItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\DeviceConfiguration;
@@ -53,46 +52,40 @@ class DeviceConfigurationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the windows10CustomConfiguration objects.
+     * List properties and relationships of the iosGeneralDeviceConfiguration objects.
      * @param DeviceConfigurationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise
-     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-windows10customconfiguration-list?view=graph-rest-1.0 Find more info here
+     * @return Promise<DeviceConfigurationCollectionResponse|null>
+     * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-iosgeneraldeviceconfiguration-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?DeviceConfigurationsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
-        try {
-            $errorMappings = [
-                    '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                    '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-            ];
-            return $this->requestAdapter->sendAsync($requestInfo, [DeviceConfigurationCollectionResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
-        } catch(Exception $ex) {
-            return new RejectedPromise($ex);
-        }
+        $errorMappings = [
+                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+        ];
+        return $this->requestAdapter->sendAsync($requestInfo, [DeviceConfigurationCollectionResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**
-     * Create a new iosUpdateConfiguration object.
+     * Create a new windows10SecureAssessmentConfiguration object.
      * @param DeviceConfiguration $body The request body
      * @param DeviceConfigurationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise
-     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-iosupdateconfiguration-create?view=graph-rest-1.0 Find more info here
+     * @return Promise<DeviceConfiguration|null>
+     * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-windows10secureassessmentconfiguration-create?view=graph-rest-1.0 Find more info here
     */
     public function post(DeviceConfiguration $body, ?DeviceConfigurationsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
-        try {
-            $errorMappings = [
-                    '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                    '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-            ];
-            return $this->requestAdapter->sendAsync($requestInfo, [DeviceConfiguration::class, 'createFromDiscriminatorValue'], $errorMappings);
-        } catch(Exception $ex) {
-            return new RejectedPromise($ex);
-        }
+        $errorMappings = [
+                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+        ];
+        return $this->requestAdapter->sendAsync($requestInfo, [DeviceConfiguration::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**
-     * List properties and relationships of the windows10CustomConfiguration objects.
+     * List properties and relationships of the iosGeneralDeviceConfiguration objects.
      * @param DeviceConfigurationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -101,7 +94,6 @@ class DeviceConfigurationsRequestBuilder extends BaseRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
-        $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
             $requestInfo->addHeaders($requestConfiguration->headers);
             if ($requestConfiguration->queryParameters !== null) {
@@ -109,11 +101,12 @@ class DeviceConfigurationsRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
         return $requestInfo;
     }
 
     /**
-     * Create a new iosUpdateConfiguration object.
+     * Create a new windows10SecureAssessmentConfiguration object.
      * @param DeviceConfiguration $body The request body
      * @param DeviceConfigurationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -123,11 +116,11 @@ class DeviceConfigurationsRequestBuilder extends BaseRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
-        $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

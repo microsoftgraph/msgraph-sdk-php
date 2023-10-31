@@ -38,7 +38,7 @@ class TrainingNotificationSetting extends EndUserNotificationSetting implements 
     }
 
     /**
-     * Gets the trainingAssignment property value. The trainingAssignment property
+     * Gets the trainingAssignment property value. Training assignment details.
      * @return BaseEndUserNotification|null
     */
     public function getTrainingAssignment(): ?BaseEndUserNotification {
@@ -50,7 +50,7 @@ class TrainingNotificationSetting extends EndUserNotificationSetting implements 
     }
 
     /**
-     * Gets the trainingReminder property value. The trainingReminder property
+     * Gets the trainingReminder property value. Training reminder details.
      * @return TrainingReminderNotification|null
     */
     public function getTrainingReminder(): ?TrainingReminderNotification {
@@ -72,7 +72,7 @@ class TrainingNotificationSetting extends EndUserNotificationSetting implements 
     }
 
     /**
-     * Sets the trainingAssignment property value. The trainingAssignment property
+     * Sets the trainingAssignment property value. Training assignment details.
      * @param BaseEndUserNotification|null $value Value to set for the trainingAssignment property.
     */
     public function setTrainingAssignment(?BaseEndUserNotification $value): void {
@@ -80,7 +80,7 @@ class TrainingNotificationSetting extends EndUserNotificationSetting implements 
     }
 
     /**
-     * Sets the trainingReminder property value. The trainingReminder property
+     * Sets the trainingReminder property value. Training reminder details.
      * @param TrainingReminderNotification|null $value Value to set for the trainingReminder property.
     */
     public function setTrainingReminder(?TrainingReminderNotification $value): void {

@@ -4,7 +4,6 @@ namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\GraphIos
 
 use Exception;
 use Http\Promise\Promise;
-use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\GraphIosStoreApp\Assignments\AssignmentsRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\GraphIosStoreApp\Categories\CategoriesRequestBuilder;
 use Microsoft\Graph\Generated\Models\IosStoreApp;
@@ -50,19 +49,16 @@ class GraphIosStoreAppRequestBuilder extends BaseRequestBuilder
     /**
      * Get the item of type microsoft.graph.mobileApp as microsoft.graph.iosStoreApp
      * @param GraphIosStoreAppRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise
+     * @return Promise<IosStoreApp|null>
+     * @throws Exception
     */
     public function get(?GraphIosStoreAppRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
-        try {
-            $errorMappings = [
-                    '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                    '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-            ];
-            return $this->requestAdapter->sendAsync($requestInfo, [IosStoreApp::class, 'createFromDiscriminatorValue'], $errorMappings);
-        } catch(Exception $ex) {
-            return new RejectedPromise($ex);
-        }
+        $errorMappings = [
+                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+        ];
+        return $this->requestAdapter->sendAsync($requestInfo, [IosStoreApp::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**
@@ -75,7 +71,6 @@ class GraphIosStoreAppRequestBuilder extends BaseRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
-        $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
             $requestInfo->addHeaders($requestConfiguration->headers);
             if ($requestConfiguration->queryParameters !== null) {
@@ -83,6 +78,7 @@ class GraphIosStoreAppRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
         return $requestInfo;
     }
 

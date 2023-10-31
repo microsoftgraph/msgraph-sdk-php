@@ -78,7 +78,7 @@ class RiskyServicePrincipal extends Entity implements Parsable
     }
 
     /**
-     * Gets the history property value. Represents the risk history of Azure AD service principals.
+     * Gets the history property value. Represents the risk history of Microsoft Entra service principals.
      * @return array<RiskyServicePrincipalHistoryItem>|null
     */
     public function getHistory(): ?array {
@@ -104,7 +104,7 @@ class RiskyServicePrincipal extends Entity implements Parsable
     }
 
     /**
-     * Gets the isProcessing property value. Indicates whether Azure AD is currently processing the service principal's risky state.
+     * Gets the isProcessing property value. Indicates whether Microsoft Entra ID is currently processing the service principal's risky state.
      * @return bool|null
     */
     public function getIsProcessing(): ?bool {
@@ -164,7 +164,7 @@ class RiskyServicePrincipal extends Entity implements Parsable
     }
 
     /**
-     * Gets the servicePrincipalType property value. Identifies whether the service principal represents an Application, a ManagedIdentity, or a legacy application (socialIdp). This is set by Azure AD internally and is inherited from servicePrincipal.
+     * Gets the servicePrincipalType property value. Identifies whether the service principal represents an Application, a ManagedIdentity, or a legacy application (socialIdp). This is set by Microsoft Entra ID internally and is inherited from servicePrincipal.
      * @return string|null
     */
     public function getServicePrincipalType(): ?string {
@@ -210,7 +210,7 @@ class RiskyServicePrincipal extends Entity implements Parsable
     }
 
     /**
-     * Sets the history property value. Represents the risk history of Azure AD service principals.
+     * Sets the history property value. Represents the risk history of Microsoft Entra service principals.
      * @param array<RiskyServicePrincipalHistoryItem>|null $value Value to set for the history property.
     */
     public function setHistory(?array $value): void {
@@ -226,7 +226,7 @@ class RiskyServicePrincipal extends Entity implements Parsable
     }
 
     /**
-     * Sets the isProcessing property value. Indicates whether Azure AD is currently processing the service principal's risky state.
+     * Sets the isProcessing property value. Indicates whether Microsoft Entra ID is currently processing the service principal's risky state.
      * @param bool|null $value Value to set for the isProcessing property.
     */
     public function setIsProcessing(?bool $value): void {
@@ -266,7 +266,7 @@ class RiskyServicePrincipal extends Entity implements Parsable
     }
 
     /**
-     * Sets the servicePrincipalType property value. Identifies whether the service principal represents an Application, a ManagedIdentity, or a legacy application (socialIdp). This is set by Azure AD internally and is inherited from servicePrincipal.
+     * Sets the servicePrincipalType property value. Identifies whether the service principal represents an Application, a ManagedIdentity, or a legacy application (socialIdp). This is set by Microsoft Entra ID internally and is inherited from servicePrincipal.
      * @param string|null $value Value to set for the servicePrincipalType property.
     */
     public function setServicePrincipalType(?string $value): void {

@@ -88,7 +88,7 @@ class AccountTargetContent implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the type property value. The type property
+     * Gets the type property value. The type of account target content. Possible values are: unknown, includeAll, addressBook, unknownFutureValue.
      * @return AccountTargetContentType|null
     */
     public function getType(): ?AccountTargetContentType {
@@ -134,7 +134,7 @@ class AccountTargetContent implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the type property value. The type property
+     * Sets the type property value. The type of account target content. Possible values are: unknown, includeAll, addressBook, unknownFutureValue.
      * @param AccountTargetContentType|null $value Value to set for the type property.
     */
     public function setType(?AccountTargetContentType $value): void {

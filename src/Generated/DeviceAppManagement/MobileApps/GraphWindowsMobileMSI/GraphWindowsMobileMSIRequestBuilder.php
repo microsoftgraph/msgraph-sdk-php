@@ -4,7 +4,6 @@ namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\GraphWindowsM
 
 use Exception;
 use Http\Promise\Promise;
-use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\GraphWindowsMobileMSI\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\WindowsMobileMSICollectionResponse;
@@ -42,19 +41,16 @@ class GraphWindowsMobileMSIRequestBuilder extends BaseRequestBuilder
     /**
      * Get the items of type microsoft.graph.windowsMobileMSI in the microsoft.graph.mobileApp collection
      * @param GraphWindowsMobileMSIRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise
+     * @return Promise<WindowsMobileMSICollectionResponse|null>
+     * @throws Exception
     */
     public function get(?GraphWindowsMobileMSIRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
-        try {
-            $errorMappings = [
-                    '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                    '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-            ];
-            return $this->requestAdapter->sendAsync($requestInfo, [WindowsMobileMSICollectionResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
-        } catch(Exception $ex) {
-            return new RejectedPromise($ex);
-        }
+        $errorMappings = [
+                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+        ];
+        return $this->requestAdapter->sendAsync($requestInfo, [WindowsMobileMSICollectionResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**
@@ -67,7 +63,6 @@ class GraphWindowsMobileMSIRequestBuilder extends BaseRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
-        $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
             $requestInfo->addHeaders($requestConfiguration->headers);
             if ($requestConfiguration->queryParameters !== null) {
@@ -75,6 +70,7 @@ class GraphWindowsMobileMSIRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
         return $requestInfo;
     }
 

@@ -26,7 +26,7 @@ class TrainingReminderNotification extends BaseEndUserNotification implements Pa
     }
 
     /**
-     * Gets the deliveryFrequency property value. The deliveryFrequency property
+     * Gets the deliveryFrequency property value. Configurable frequency for the reminder email introduced during simulation creation. Possible values are: unknown, weekly, biWeekly, unknownFutureValue.
      * @return NotificationDeliveryFrequency|null
     */
     public function getDeliveryFrequency(): ?NotificationDeliveryFrequency {
@@ -58,7 +58,7 @@ class TrainingReminderNotification extends BaseEndUserNotification implements Pa
     }
 
     /**
-     * Sets the deliveryFrequency property value. The deliveryFrequency property
+     * Sets the deliveryFrequency property value. Configurable frequency for the reminder email introduced during simulation creation. Possible values are: unknown, weekly, biWeekly, unknownFutureValue.
      * @param NotificationDeliveryFrequency|null $value Value to set for the deliveryFrequency property.
     */
     public function setDeliveryFrequency(?NotificationDeliveryFrequency $value): void {

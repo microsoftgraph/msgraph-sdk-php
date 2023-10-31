@@ -40,7 +40,7 @@ class EmailPayloadDetail extends PayloadDetail implements Parsable
     }
 
     /**
-     * Gets the fromEmail property value. The fromEmail property
+     * Gets the fromEmail property value. Email address of the user.
      * @return string|null
     */
     public function getFromEmail(): ?string {
@@ -52,7 +52,7 @@ class EmailPayloadDetail extends PayloadDetail implements Parsable
     }
 
     /**
-     * Gets the fromName property value. The fromName property
+     * Gets the fromName property value. Display name of the user.
      * @return string|null
     */
     public function getFromName(): ?string {
@@ -64,7 +64,7 @@ class EmailPayloadDetail extends PayloadDetail implements Parsable
     }
 
     /**
-     * Gets the isExternalSender property value. The isExternalSender property
+     * Gets the isExternalSender property value. Indicates whether the sender isn't from the user's organization.
      * @return bool|null
     */
     public function getIsExternalSender(): ?bool {
@@ -76,7 +76,7 @@ class EmailPayloadDetail extends PayloadDetail implements Parsable
     }
 
     /**
-     * Gets the subject property value. The subject property
+     * Gets the subject property value. The subject of the email address sent to the user.
      * @return string|null
     */
     public function getSubject(): ?string {
@@ -100,7 +100,7 @@ class EmailPayloadDetail extends PayloadDetail implements Parsable
     }
 
     /**
-     * Sets the fromEmail property value. The fromEmail property
+     * Sets the fromEmail property value. Email address of the user.
      * @param string|null $value Value to set for the fromEmail property.
     */
     public function setFromEmail(?string $value): void {
@@ -108,7 +108,7 @@ class EmailPayloadDetail extends PayloadDetail implements Parsable
     }
 
     /**
-     * Sets the fromName property value. The fromName property
+     * Sets the fromName property value. Display name of the user.
      * @param string|null $value Value to set for the fromName property.
     */
     public function setFromName(?string $value): void {
@@ -116,7 +116,7 @@ class EmailPayloadDetail extends PayloadDetail implements Parsable
     }
 
     /**
-     * Sets the isExternalSender property value. The isExternalSender property
+     * Sets the isExternalSender property value. Indicates whether the sender isn't from the user's organization.
      * @param bool|null $value Value to set for the isExternalSender property.
     */
     public function setIsExternalSender(?bool $value): void {
@@ -124,7 +124,7 @@ class EmailPayloadDetail extends PayloadDetail implements Parsable
     }
 
     /**
-     * Sets the subject property value. The subject property
+     * Sets the subject property value. The subject of the email address sent to the user.
      * @param string|null $value Value to set for the subject property.
     */
     public function setSubject(?string $value): void {

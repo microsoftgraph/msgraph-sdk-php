@@ -26,7 +26,7 @@ class ClientUserAgent extends UserAgent implements Parsable
     }
 
     /**
-     * Gets the azureADAppId property value. The unique identifier of the Azure AD application used by this endpoint.
+     * Gets the azureADAppId property value. The unique identifier of the Microsoft Entra application used by this endpoint.
      * @return string|null
     */
     public function getAzureADAppId(): ?string {
@@ -100,7 +100,7 @@ class ClientUserAgent extends UserAgent implements Parsable
     }
 
     /**
-     * Sets the azureADAppId property value. The unique identifier of the Azure AD application used by this endpoint.
+     * Sets the azureADAppId property value. The unique identifier of the Microsoft Entra application used by this endpoint.
      * @param string|null $value Value to set for the azureADAppId property.
     */
     public function setAzureADAppId(?string $value): void {

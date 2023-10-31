@@ -49,7 +49,7 @@ class Configuration implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the authorizedAppIds property value. A collection of application IDs for registered Azure Active Directory apps that are allowed to manage the externalConnection and to index content in the externalConnection.
+     * Gets the authorizedAppIds property value. A collection of application IDs for registered Microsoft Entra apps that are allowed to manage the externalConnection and to index content in the externalConnection.
      * @return array<string>|null
     */
     public function getAuthorizedAppIds(): ?array {
@@ -120,7 +120,7 @@ class Configuration implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the authorizedAppIds property value. A collection of application IDs for registered Azure Active Directory apps that are allowed to manage the externalConnection and to index content in the externalConnection.
+     * Sets the authorizedAppIds property value. A collection of application IDs for registered Microsoft Entra apps that are allowed to manage the externalConnection and to index content in the externalConnection.
      * @param array<string>|null $value Value to set for the authorizedAppIds property.
     */
     public function setAuthorizedAppIds(?array $value): void {

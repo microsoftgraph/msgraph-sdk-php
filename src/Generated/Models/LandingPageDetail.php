@@ -25,7 +25,7 @@ class LandingPageDetail extends Entity implements Parsable
     }
 
     /**
-     * Gets the content property value. The content property
+     * Gets the content property value. Landing page detail content.
      * @return string|null
     */
     public function getContent(): ?string {
@@ -50,7 +50,7 @@ class LandingPageDetail extends Entity implements Parsable
     }
 
     /**
-     * Gets the isDefaultLangauge property value. The isDefaultLangauge property
+     * Gets the isDefaultLangauge property value. Indicates whether this language detail is default for the landing page.
      * @return bool|null
     */
     public function getIsDefaultLangauge(): ?bool {
@@ -62,7 +62,7 @@ class LandingPageDetail extends Entity implements Parsable
     }
 
     /**
-     * Gets the language property value. The language property
+     * Gets the language property value. The content language for the landing page.
      * @return string|null
     */
     public function getLanguage(): ?string {
@@ -85,7 +85,7 @@ class LandingPageDetail extends Entity implements Parsable
     }
 
     /**
-     * Sets the content property value. The content property
+     * Sets the content property value. Landing page detail content.
      * @param string|null $value Value to set for the content property.
     */
     public function setContent(?string $value): void {
@@ -93,7 +93,7 @@ class LandingPageDetail extends Entity implements Parsable
     }
 
     /**
-     * Sets the isDefaultLangauge property value. The isDefaultLangauge property
+     * Sets the isDefaultLangauge property value. Indicates whether this language detail is default for the landing page.
      * @param bool|null $value Value to set for the isDefaultLangauge property.
     */
     public function setIsDefaultLangauge(?bool $value): void {
@@ -101,7 +101,7 @@ class LandingPageDetail extends Entity implements Parsable
     }
 
     /**
-     * Sets the language property value. The language property
+     * Sets the language property value. The content language for the landing page.
      * @param string|null $value Value to set for the language property.
     */
     public function setLanguage(?string $value): void {

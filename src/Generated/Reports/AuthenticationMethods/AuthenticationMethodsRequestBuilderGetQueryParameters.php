@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Reports\AuthenticationMethods;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Container for navigation properties for Azure AD authentication methods resources.
+ * Container for navigation properties for Microsoft Entra authentication methods resources.
 */
 class AuthenticationMethodsRequestBuilderGetQueryParameters 
 {

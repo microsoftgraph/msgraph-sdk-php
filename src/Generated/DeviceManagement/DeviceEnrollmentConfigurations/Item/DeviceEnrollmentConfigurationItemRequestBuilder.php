@@ -4,7 +4,6 @@ namespace Microsoft\Graph\Generated\DeviceManagement\DeviceEnrollmentConfigurati
 
 use Exception;
 use Http\Promise\Promise;
-use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceEnrollmentConfigurations\Item\Assign\AssignRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceEnrollmentConfigurations\Item\Assignments\AssignmentsRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceEnrollmentConfigurations\Item\SetPriority\SetPriorityRequestBuilder;
@@ -56,65 +55,56 @@ class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a deviceEnrollmentPlatformRestrictionsConfiguration.
+     * Deletes a deviceEnrollmentLimitConfiguration.
      * @param DeviceEnrollmentConfigurationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise
-     * @link https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentplatformrestrictionsconfiguration-delete?view=graph-rest-1.0 Find more info here
+     * @return Promise<void|null>
+     * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentlimitconfiguration-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?DeviceEnrollmentConfigurationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
-        try {
-            $errorMappings = [
-                    '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                    '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-            ];
-            return $this->requestAdapter->sendNoContentAsync($requestInfo, $errorMappings);
-        } catch(Exception $ex) {
-            return new RejectedPromise($ex);
-        }
+        $errorMappings = [
+                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+        ];
+        return $this->requestAdapter->sendNoContentAsync($requestInfo, $errorMappings);
     }
 
     /**
      * Read properties and relationships of the deviceEnrollmentPlatformRestrictionsConfiguration object.
      * @param DeviceEnrollmentConfigurationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise
+     * @return Promise<DeviceEnrollmentConfiguration|null>
+     * @throws Exception
      * @link https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentplatformrestrictionsconfiguration-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DeviceEnrollmentConfigurationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
-        try {
-            $errorMappings = [
-                    '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                    '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-            ];
-            return $this->requestAdapter->sendAsync($requestInfo, [DeviceEnrollmentConfiguration::class, 'createFromDiscriminatorValue'], $errorMappings);
-        } catch(Exception $ex) {
-            return new RejectedPromise($ex);
-        }
+        $errorMappings = [
+                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+        ];
+        return $this->requestAdapter->sendAsync($requestInfo, [DeviceEnrollmentConfiguration::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**
-     * Update the properties of a deviceEnrollmentPlatformRestrictionsConfiguration object.
+     * Update the properties of a deviceEnrollmentWindowsHelloForBusinessConfiguration object.
      * @param DeviceEnrollmentConfiguration $body The request body
      * @param DeviceEnrollmentConfigurationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise
-     * @link https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentplatformrestrictionsconfiguration-update?view=graph-rest-1.0 Find more info here
+     * @return Promise<DeviceEnrollmentConfiguration|null>
+     * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentwindowshelloforbusinessconfiguration-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(DeviceEnrollmentConfiguration $body, ?DeviceEnrollmentConfigurationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
-        try {
-            $errorMappings = [
-                    '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                    '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-            ];
-            return $this->requestAdapter->sendAsync($requestInfo, [DeviceEnrollmentConfiguration::class, 'createFromDiscriminatorValue'], $errorMappings);
-        } catch(Exception $ex) {
-            return new RejectedPromise($ex);
-        }
+        $errorMappings = [
+                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+        ];
+        return $this->requestAdapter->sendAsync($requestInfo, [DeviceEnrollmentConfiguration::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**
-     * Deletes a deviceEnrollmentPlatformRestrictionsConfiguration.
+     * Deletes a deviceEnrollmentLimitConfiguration.
      * @param DeviceEnrollmentConfigurationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -127,6 +117,7 @@ class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
         return $requestInfo;
     }
 
@@ -140,7 +131,6 @@ class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
-        $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
             $requestInfo->addHeaders($requestConfiguration->headers);
             if ($requestConfiguration->queryParameters !== null) {
@@ -148,11 +138,12 @@ class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
         return $requestInfo;
     }
 
     /**
-     * Update the properties of a deviceEnrollmentPlatformRestrictionsConfiguration object.
+     * Update the properties of a deviceEnrollmentWindowsHelloForBusinessConfiguration object.
      * @param DeviceEnrollmentConfiguration $body The request body
      * @param DeviceEnrollmentConfigurationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -162,11 +153,11 @@ class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
-        $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
