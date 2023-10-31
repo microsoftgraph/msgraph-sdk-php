@@ -26,6 +26,7 @@ class LoginPage extends Entity
 {
     /**
     * Gets the content
+    * The HTML content of the login page.
     *
     * @return string|null The content
     */
@@ -40,6 +41,7 @@ class LoginPage extends Entity
 
     /**
     * Sets the content
+    * The HTML content of the login page.
     *
     * @param string $val The content
     *
@@ -53,6 +55,7 @@ class LoginPage extends Entity
 
     /**
     * Gets the createdBy
+    * Identity of the user who created the login page.
     *
     * @return EmailIdentity|null The createdBy
     */
@@ -71,6 +74,7 @@ class LoginPage extends Entity
 
     /**
     * Sets the createdBy
+    * Identity of the user who created the login page.
     *
     * @param EmailIdentity $val The createdBy
     *
@@ -84,6 +88,7 @@ class LoginPage extends Entity
 
     /**
     * Gets the createdDateTime
+    * Date and time when the login page was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -102,6 +107,7 @@ class LoginPage extends Entity
 
     /**
     * Sets the createdDateTime
+    * Date and time when the login page was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -115,6 +121,7 @@ class LoginPage extends Entity
 
     /**
     * Gets the description
+    * Description about the login page.
     *
     * @return string|null The description
     */
@@ -129,6 +136,7 @@ class LoginPage extends Entity
 
     /**
     * Sets the description
+    * Description about the login page.
     *
     * @param string $val The description
     *
@@ -142,6 +150,7 @@ class LoginPage extends Entity
 
     /**
     * Gets the displayName
+    * Display name of the login page.
     *
     * @return string|null The displayName
     */
@@ -156,6 +165,7 @@ class LoginPage extends Entity
 
     /**
     * Sets the displayName
+    * Display name of the login page.
     *
     * @param string $val The displayName
     *
@@ -169,6 +179,7 @@ class LoginPage extends Entity
 
     /**
     * Gets the language
+    * The content language of the login page.
     *
     * @return string|null The language
     */
@@ -183,6 +194,7 @@ class LoginPage extends Entity
 
     /**
     * Sets the language
+    * The content language of the login page.
     *
     * @param string $val The language
     *
@@ -196,6 +208,7 @@ class LoginPage extends Entity
 
     /**
     * Gets the lastModifiedBy
+    * Identity of the user who last modified the login page.
     *
     * @return EmailIdentity|null The lastModifiedBy
     */
@@ -214,6 +227,7 @@ class LoginPage extends Entity
 
     /**
     * Sets the lastModifiedBy
+    * Identity of the user who last modified the login page.
     *
     * @param EmailIdentity $val The lastModifiedBy
     *
@@ -227,6 +241,7 @@ class LoginPage extends Entity
 
     /**
     * Gets the lastModifiedDateTime
+    * Date and time when the login page was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The lastModifiedDateTime
     */
@@ -245,6 +260,7 @@ class LoginPage extends Entity
 
     /**
     * Sets the lastModifiedDateTime
+    * Date and time when the login page was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -258,6 +274,7 @@ class LoginPage extends Entity
 
     /**
     * Gets the source
+    * The source of the content. Possible values are: unknown, global, tenant, unknownFutureValue.
     *
     * @return SimulationContentSource|null The source
     */
@@ -276,6 +293,7 @@ class LoginPage extends Entity
 
     /**
     * Sets the source
+    * The source of the content. Possible values are: unknown, global, tenant, unknownFutureValue.
     *
     * @param SimulationContentSource $val The source
     *
@@ -289,6 +307,7 @@ class LoginPage extends Entity
 
     /**
     * Gets the status
+    * The login page status. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
     *
     * @return SimulationContentStatus|null The status
     */
@@ -307,6 +326,7 @@ class LoginPage extends Entity
 
     /**
     * Sets the status
+    * The login page status. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
     *
     * @param SimulationContentStatus $val The status
     *

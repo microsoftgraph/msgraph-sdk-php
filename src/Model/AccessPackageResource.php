@@ -150,7 +150,7 @@ class AccessPackageResource extends Entity
 
     /**
     * Gets the originId
-    * The unique identifier of the resource in the origin system. In the case of an Azure AD group, this is the identifier of the group.
+    * The unique identifier of the resource in the origin system. In the case of a Microsoft Entra group, this is the identifier of the group.
     *
     * @return string|null The originId
     */
@@ -165,7 +165,7 @@ class AccessPackageResource extends Entity
 
     /**
     * Sets the originId
-    * The unique identifier of the resource in the origin system. In the case of an Azure AD group, this is the identifier of the group.
+    * The unique identifier of the resource in the origin system. In the case of a Microsoft Entra group, this is the identifier of the group.
     *
     * @param string $val The originId
     *

@@ -26,7 +26,7 @@ class Simulation extends Entity
 {
     /**
     * Gets the attackTechnique
-    * The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue. For more information on the types of social engineering attack techniques, see simulations.
+    * The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue, oAuthConsentGrant. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: oAuthConsentGrant. For more information on the types of social engineering attack techniques, see simulations.
     *
     * @return SimulationAttackTechnique|null The attackTechnique
     */
@@ -45,7 +45,7 @@ class Simulation extends Entity
 
     /**
     * Sets the attackTechnique
-    * The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue. For more information on the types of social engineering attack techniques, see simulations.
+    * The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue, oAuthConsentGrant. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: oAuthConsentGrant. For more information on the types of social engineering attack techniques, see simulations.
     *
     * @param SimulationAttackTechnique $val The attackTechnique
     *
@@ -278,6 +278,7 @@ class Simulation extends Entity
 
     /**
     * Gets the durationInDays
+    * Simulation duration in days.
     *
     * @return int|null The durationInDays
     */
@@ -292,6 +293,7 @@ class Simulation extends Entity
 
     /**
     * Sets the durationInDays
+    * Simulation duration in days.
     *
     * @param int $val The durationInDays
     *
@@ -305,6 +307,7 @@ class Simulation extends Entity
 
     /**
     * Gets the endUserNotificationSetting
+    * Details about the end user notification setting.
     *
     * @return EndUserNotificationSetting|null The endUserNotificationSetting
     */
@@ -323,6 +326,7 @@ class Simulation extends Entity
 
     /**
     * Sets the endUserNotificationSetting
+    * Details about the end user notification setting.
     *
     * @param EndUserNotificationSetting $val The endUserNotificationSetting
     *
@@ -336,6 +340,7 @@ class Simulation extends Entity
 
     /**
     * Gets the excludedAccountTarget
+    * Users excluded from the simulation.
     *
     * @return AccountTargetContent|null The excludedAccountTarget
     */
@@ -354,6 +359,7 @@ class Simulation extends Entity
 
     /**
     * Sets the excludedAccountTarget
+    * Users excluded from the simulation.
     *
     * @param AccountTargetContent $val The excludedAccountTarget
     *
@@ -367,6 +373,7 @@ class Simulation extends Entity
 
     /**
     * Gets the includedAccountTarget
+    * Users targeted in the simulation.
     *
     * @return AccountTargetContent|null The includedAccountTarget
     */
@@ -385,6 +392,7 @@ class Simulation extends Entity
 
     /**
     * Sets the includedAccountTarget
+    * Users targeted in the simulation.
     *
     * @param AccountTargetContent $val The includedAccountTarget
     *
@@ -526,6 +534,7 @@ class Simulation extends Entity
 
     /**
     * Gets the oAuthConsentAppDetail
+    * OAuth app details for the OAuth technique.
     *
     * @return OAuthConsentAppDetail|null The oAuthConsentAppDetail
     */
@@ -544,6 +553,7 @@ class Simulation extends Entity
 
     /**
     * Sets the oAuthConsentAppDetail
+    * OAuth app details for the OAuth technique.
     *
     * @param OAuthConsentAppDetail $val The oAuthConsentAppDetail
     *
@@ -656,6 +666,7 @@ class Simulation extends Entity
 
     /**
     * Gets the trainingSetting
+    * Details about the training settings for a simulation.
     *
     * @return TrainingSetting|null The trainingSetting
     */
@@ -674,6 +685,7 @@ class Simulation extends Entity
 
     /**
     * Sets the trainingSetting
+    * Details about the training settings for a simulation.
     *
     * @param TrainingSetting $val The trainingSetting
     *
@@ -687,6 +699,7 @@ class Simulation extends Entity
 
     /**
     * Gets the landingPage
+    * The landing page associated with a simulation during its creation.
     *
     * @return LandingPage|null The landingPage
     */
@@ -705,6 +718,7 @@ class Simulation extends Entity
 
     /**
     * Sets the landingPage
+    * The landing page associated with a simulation during its creation.
     *
     * @param LandingPage $val The landingPage
     *
@@ -718,6 +732,7 @@ class Simulation extends Entity
 
     /**
     * Gets the loginPage
+    * The login page associated with a simulation during its creation.
     *
     * @return LoginPage|null The loginPage
     */
@@ -736,6 +751,7 @@ class Simulation extends Entity
 
     /**
     * Sets the loginPage
+    * The login page associated with a simulation during its creation.
     *
     * @param LoginPage $val The loginPage
     *
@@ -749,6 +765,7 @@ class Simulation extends Entity
 
     /**
     * Gets the payload
+    * The payload associated with a simulation during its creation.
     *
     * @return Payload|null The payload
     */
@@ -767,6 +784,7 @@ class Simulation extends Entity
 
     /**
     * Sets the payload
+    * The payload associated with a simulation during its creation.
     *
     * @param Payload $val The payload
     *

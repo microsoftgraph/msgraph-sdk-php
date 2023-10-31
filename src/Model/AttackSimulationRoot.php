@@ -27,6 +27,7 @@ class AttackSimulationRoot extends Entity
 
      /**
      * Gets the endUserNotifications
+    * Represents an end user's notification for an attack simulation training.
      *
      * @return array|null The endUserNotifications
      */
@@ -41,6 +42,7 @@ class AttackSimulationRoot extends Entity
 
     /**
     * Sets the endUserNotifications
+    * Represents an end user's notification for an attack simulation training.
     *
     * @param EndUserNotification[] $val The endUserNotifications
     *
@@ -55,6 +57,7 @@ class AttackSimulationRoot extends Entity
 
      /**
      * Gets the landingPages
+    * Represents an attack simulation training landing page.
      *
      * @return array|null The landingPages
      */
@@ -69,6 +72,7 @@ class AttackSimulationRoot extends Entity
 
     /**
     * Sets the landingPages
+    * Represents an attack simulation training landing page.
     *
     * @param LandingPage[] $val The landingPages
     *
@@ -83,6 +87,7 @@ class AttackSimulationRoot extends Entity
 
      /**
      * Gets the loginPages
+    * Represents an attack simulation training login page.
      *
      * @return array|null The loginPages
      */
@@ -97,6 +102,7 @@ class AttackSimulationRoot extends Entity
 
     /**
     * Sets the loginPages
+    * Represents an attack simulation training login page.
     *
     * @param LoginPage[] $val The loginPages
     *
@@ -111,6 +117,7 @@ class AttackSimulationRoot extends Entity
 
      /**
      * Gets the operations
+    * Represents an attack simulation training operation.
      *
      * @return array|null The operations
      */
@@ -125,6 +132,7 @@ class AttackSimulationRoot extends Entity
 
     /**
     * Sets the operations
+    * Represents an attack simulation training operation.
     *
     * @param AttackSimulationOperation[] $val The operations
     *
@@ -139,6 +147,7 @@ class AttackSimulationRoot extends Entity
 
      /**
      * Gets the payloads
+    * Represents an attack simulation training campaign payload in a tenant.
      *
      * @return array|null The payloads
      */
@@ -153,6 +162,7 @@ class AttackSimulationRoot extends Entity
 
     /**
     * Sets the payloads
+    * Represents an attack simulation training campaign payload in a tenant.
     *
     * @param Payload[] $val The payloads
     *
@@ -227,6 +237,7 @@ class AttackSimulationRoot extends Entity
 
      /**
      * Gets the trainings
+    * Represents details about attack simulation trainings.
      *
      * @return array|null The trainings
      */
@@ -241,6 +252,7 @@ class AttackSimulationRoot extends Entity
 
     /**
     * Sets the trainings
+    * Represents details about attack simulation trainings.
     *
     * @param Training[] $val The trainings
     *

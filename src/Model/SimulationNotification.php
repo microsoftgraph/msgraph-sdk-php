@@ -26,6 +26,7 @@ class SimulationNotification extends BaseEndUserNotification
 
     /**
     * Gets the targettedUserType
+    * Target user type. Possible values are: unknown, clicked, compromised, allUsers, unknownFutureValue.
     *
     * @return TargettedUserType|null The targettedUserType
     */
@@ -44,6 +45,7 @@ class SimulationNotification extends BaseEndUserNotification
 
     /**
     * Sets the targettedUserType
+    * Target user type. Possible values are: unknown, clicked, compromised, allUsers, unknownFutureValue.
     *
     * @param TargettedUserType $val The value to assign to the targettedUserType
     *

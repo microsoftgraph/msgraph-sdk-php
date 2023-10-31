@@ -27,7 +27,7 @@ class AgreementFileLocalization extends AgreementFileProperties
 
      /**
      * Gets the versions
-    * Read-only. Customized versions of the terms of use agreement in the Azure AD tenant.
+    * Read-only. Customized versions of the terms of use agreement in the Microsoft Entra tenant.
      *
      * @return array|null The versions
      */
@@ -42,7 +42,7 @@ class AgreementFileLocalization extends AgreementFileProperties
 
     /**
     * Sets the versions
-    * Read-only. Customized versions of the terms of use agreement in the Azure AD tenant.
+    * Read-only. Customized versions of the terms of use agreement in the Microsoft Entra tenant.
     *
     * @param AgreementFileVersion[] $val The versions
     *

@@ -113,7 +113,7 @@ class PermissionGrantConditionSet extends Entity
 
     /**
     * Gets the clientApplicationTenantIds
-    * A list of Azure Active Directory tenant IDs in which the client application is registered, or a list with the single value all to match with client apps registered in any tenant. Default is the single value all.
+    * A list of Microsoft Entra tenant IDs in which the client application is registered, or a list with the single value all to match with client apps registered in any tenant. Default is the single value all.
     *
     * @return array|null The clientApplicationTenantIds
     */
@@ -128,7 +128,7 @@ class PermissionGrantConditionSet extends Entity
 
     /**
     * Sets the clientApplicationTenantIds
-    * A list of Azure Active Directory tenant IDs in which the client application is registered, or a list with the single value all to match with client apps registered in any tenant. Default is the single value all.
+    * A list of Microsoft Entra tenant IDs in which the client application is registered, or a list with the single value all to match with client apps registered in any tenant. Default is the single value all.
     *
     * @param string[] $val The clientApplicationTenantIds
     *

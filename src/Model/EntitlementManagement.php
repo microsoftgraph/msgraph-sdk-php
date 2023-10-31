@@ -354,7 +354,7 @@ class EntitlementManagement extends Entity
 
     /**
     * Gets the settings
-    * The settings that control the behavior of Azure AD entitlement management.
+    * The settings that control the behavior of Microsoft Entra entitlement management.
     *
     * @return EntitlementManagementSettings|null The settings
     */
@@ -373,7 +373,7 @@ class EntitlementManagement extends Entity
 
     /**
     * Sets the settings
-    * The settings that control the behavior of Azure AD entitlement management.
+    * The settings that control the behavior of Microsoft Entra entitlement management.
     *
     * @param EntitlementManagementSettings $val The settings
     *

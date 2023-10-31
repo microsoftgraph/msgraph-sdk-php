@@ -207,8 +207,41 @@ class Channel extends Entity
     }
 
     /**
+    * Gets the summary
+    * Contains summary information about the channel, including number of owners, members, guests, and an indicator for members from other tenants. The summary property will only be returned if it is specified in the $select clause of the Get channel method.
+    *
+    * @return ChannelSummary|null The summary
+    */
+    public function getSummary()
+    {
+        if (array_key_exists("summary", $this->_propDict)) {
+            if (is_a($this->_propDict["summary"], "\Microsoft\Graph\Model\ChannelSummary") || is_null($this->_propDict["summary"])) {
+                return $this->_propDict["summary"];
+            } else {
+                $this->_propDict["summary"] = new ChannelSummary($this->_propDict["summary"]);
+                return $this->_propDict["summary"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the summary
+    * Contains summary information about the channel, including number of owners, members, guests, and an indicator for members from other tenants. The summary property will only be returned if it is specified in the $select clause of the Get channel method.
+    *
+    * @param ChannelSummary $val The summary
+    *
+    * @return Channel
+    */
+    public function setSummary($val)
+    {
+        $this->_propDict["summary"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the tenantId
-    * The ID of the Azure Active Directory tenant.
+    * The ID of the Microsoft Entra tenant.
     *
     * @return string|null The tenantId
     */
@@ -223,7 +256,7 @@ class Channel extends Entity
 
     /**
     * Sets the tenantId
-    * The ID of the Azure Active Directory tenant.
+    * The ID of the Microsoft Entra tenant.
     *
     * @param string $val The tenantId
     *

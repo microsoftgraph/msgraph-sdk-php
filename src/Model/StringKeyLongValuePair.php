@@ -25,7 +25,7 @@ class StringKeyLongValuePair extends Entity
 {
     /**
     * Gets the key
-    * The mapping of the user type from the source system to the target system. For example:User to User - For Azure AD to Azure AD synchronization worker to user - For Workday to Azure AD synchronization.
+    * The mapping of the user type from the source system to the target system. For example:User to User - For Microsoft Entra ID to Microsoft Entra ID synchronization worker to user - For Workday to Microsoft Entra synchronization.
     *
     * @return string|null The key
     */
@@ -40,7 +40,7 @@ class StringKeyLongValuePair extends Entity
 
     /**
     * Sets the key
-    * The mapping of the user type from the source system to the target system. For example:User to User - For Azure AD to Azure AD synchronization worker to user - For Workday to Azure AD synchronization.
+    * The mapping of the user type from the source system to the target system. For example:User to User - For Microsoft Entra ID to Microsoft Entra ID synchronization worker to user - For Workday to Microsoft Entra synchronization.
     *
     * @param string $val The value of the key
     *

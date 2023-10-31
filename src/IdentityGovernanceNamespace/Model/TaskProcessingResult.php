@@ -187,7 +187,7 @@ class TaskProcessingResult extends \Microsoft\Graph\Model\Entity
 
     /**
     * Gets the subject
-    * The unique identifier of the Azure AD user targeted for the task execution.Supports $filter(eq, ne) and $expand.
+    * The unique identifier of the Microsoft Entra user targeted for the task execution.Supports $filter(eq, ne) and $expand.
     *
     * @return \Microsoft\Graph\Model\User|null The subject
     */
@@ -206,7 +206,7 @@ class TaskProcessingResult extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the subject
-    * The unique identifier of the Azure AD user targeted for the task execution.Supports $filter(eq, ne) and $expand.
+    * The unique identifier of the Microsoft Entra user targeted for the task execution.Supports $filter(eq, ne) and $expand.
     *
     * @param \Microsoft\Graph\Model\User $val The subject
     *

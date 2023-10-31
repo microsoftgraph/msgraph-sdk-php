@@ -26,6 +26,7 @@ class TrainingLanguageDetail extends Entity
 {
     /**
     * Gets the content
+    * Language specific content for the training.
     *
     * @return string|null The content
     */
@@ -40,6 +41,7 @@ class TrainingLanguageDetail extends Entity
 
     /**
     * Sets the content
+    * Language specific content for the training.
     *
     * @param string $val The content
     *
@@ -53,6 +55,7 @@ class TrainingLanguageDetail extends Entity
 
     /**
     * Gets the createdBy
+    * Identity of the user who created the language details.
     *
     * @return EmailIdentity|null The createdBy
     */
@@ -71,6 +74,7 @@ class TrainingLanguageDetail extends Entity
 
     /**
     * Sets the createdBy
+    * Identity of the user who created the language details.
     *
     * @param EmailIdentity $val The createdBy
     *
@@ -84,6 +88,7 @@ class TrainingLanguageDetail extends Entity
 
     /**
     * Gets the createdDateTime
+    * Date and time when the language details were created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -102,6 +107,7 @@ class TrainingLanguageDetail extends Entity
 
     /**
     * Sets the createdDateTime
+    * Date and time when the language details were created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -115,6 +121,7 @@ class TrainingLanguageDetail extends Entity
 
     /**
     * Gets the description
+    * Description as defined by the user.
     *
     * @return string|null The description
     */
@@ -129,6 +136,7 @@ class TrainingLanguageDetail extends Entity
 
     /**
     * Sets the description
+    * Description as defined by the user.
     *
     * @param string $val The description
     *
@@ -142,6 +150,7 @@ class TrainingLanguageDetail extends Entity
 
     /**
     * Gets the displayName
+    * Display name as defined by the user.
     *
     * @return string|null The displayName
     */
@@ -156,6 +165,7 @@ class TrainingLanguageDetail extends Entity
 
     /**
     * Sets the displayName
+    * Display name as defined by the user.
     *
     * @param string $val The displayName
     *
@@ -169,6 +179,7 @@ class TrainingLanguageDetail extends Entity
 
     /**
     * Gets the isDefaultLangauge
+    * Indicates whether the training has a default language.
     *
     * @return bool|null The isDefaultLangauge
     */
@@ -183,6 +194,7 @@ class TrainingLanguageDetail extends Entity
 
     /**
     * Sets the isDefaultLangauge
+    * Indicates whether the training has a default language.
     *
     * @param bool $val The isDefaultLangauge
     *
@@ -196,6 +208,7 @@ class TrainingLanguageDetail extends Entity
 
     /**
     * Gets the lastModifiedBy
+    * Identity of the user who last modified the details.
     *
     * @return EmailIdentity|null The lastModifiedBy
     */
@@ -214,6 +227,7 @@ class TrainingLanguageDetail extends Entity
 
     /**
     * Sets the lastModifiedBy
+    * Identity of the user who last modified the details.
     *
     * @param EmailIdentity $val The lastModifiedBy
     *
@@ -227,6 +241,7 @@ class TrainingLanguageDetail extends Entity
 
     /**
     * Gets the lastModifiedDateTime
+    * Date and time when the trainingLanguageDetail was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The lastModifiedDateTime
     */
@@ -245,6 +260,7 @@ class TrainingLanguageDetail extends Entity
 
     /**
     * Sets the lastModifiedDateTime
+    * Date and time when the trainingLanguageDetail was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -258,6 +274,7 @@ class TrainingLanguageDetail extends Entity
 
     /**
     * Gets the locale
+    * Content locale for the training detail.
     *
     * @return string|null The locale
     */
@@ -272,6 +289,7 @@ class TrainingLanguageDetail extends Entity
 
     /**
     * Sets the locale
+    * Content locale for the training detail.
     *
     * @param string $val The locale
     *

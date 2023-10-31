@@ -55,7 +55,7 @@ class AuthorizationPolicy extends PolicyBase
 
     /**
     * Gets the allowedToUseSSPR
-    * Indicates whether users can use the Self-Serve Password Reset feature on the tenant.
+    * Indicates whether users can use the Self-Service Password Reset feature on the tenant.
     *
     * @return bool|null The allowedToUseSSPR
     */
@@ -70,7 +70,7 @@ class AuthorizationPolicy extends PolicyBase
 
     /**
     * Sets the allowedToUseSSPR
-    * Indicates whether users can use the Self-Serve Password Reset feature on the tenant.
+    * Indicates whether users can use the Self-Service Password Reset feature on the tenant.
     *
     * @param bool $val The allowedToUseSSPR
     *
@@ -175,7 +175,7 @@ class AuthorizationPolicy extends PolicyBase
 
     /**
     * Gets the blockMsolPowerShell
-    * To disable the use of MSOL PowerShell, set this property to true. This also disables user-based access to the legacy service endpoint used by MSOL PowerShell. This doesn't affect Azure Active Directory Connect or Microsoft Graph.
+    * To disable the use of MSOL PowerShell, set this property to true. This also disables user-based access to the legacy service endpoint used by MSOL PowerShell. This doesn't affect Microsoft Entra Connect or Microsoft Graph.
     *
     * @return bool|null The blockMsolPowerShell
     */
@@ -190,7 +190,7 @@ class AuthorizationPolicy extends PolicyBase
 
     /**
     * Sets the blockMsolPowerShell
-    * To disable the use of MSOL PowerShell, set this property to true. This also disables user-based access to the legacy service endpoint used by MSOL PowerShell. This doesn't affect Azure Active Directory Connect or Microsoft Graph.
+    * To disable the use of MSOL PowerShell, set this property to true. This also disables user-based access to the legacy service endpoint used by MSOL PowerShell. This doesn't affect Microsoft Entra Connect or Microsoft Graph.
     *
     * @param bool $val The blockMsolPowerShell
     *

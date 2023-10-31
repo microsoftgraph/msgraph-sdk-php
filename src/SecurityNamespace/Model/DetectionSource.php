@@ -48,4 +48,20 @@ class DetectionSource extends Enum
     const APP_GOVERNANCE_DETECTION = "appGovernanceDetection";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
     const MICROSOFT_DEFENDER_FOR_CLOUD = "microsoftDefenderForCloud";
+    const MICROSOFT_DEFENDER_FOR_IO_T = "microsoftDefenderForIoT";
+    const MICROSOFT_DEFENDER_FOR_SERVERS = "microsoftDefenderForServers";
+    const MICROSOFT_DEFENDER_FOR_STORAGE = "microsoftDefenderForStorage";
+    const MICROSOFT_DEFENDER_FOR_DNS = "microsoftDefenderForDNS";
+    const MICROSOFT_DEFENDER_FOR_DATABASES = "microsoftDefenderForDatabases";
+    const MICROSOFT_DEFENDER_FOR_CONTAINERS = "microsoftDefenderForContainers";
+    const MICROSOFT_DEFENDER_FOR_NETWORK = "microsoftDefenderForNetwork";
+    const MICROSOFT_DEFENDER_FOR_APP_SERVICE = "microsoftDefenderForAppService";
+    const MICROSOFT_DEFENDER_FOR_KEY_VAULT = "microsoftDefenderForKeyVault";
+    const MICROSOFT_DEFENDER_FOR_RESOURCE_MANAGER = "microsoftDefenderForResourceManager";
+    const MICROSOFT_DEFENDER_FOR_API_MANAGEMENT = "microsoftDefenderForApiManagement";
+    const NRT_ALERTS = "nrtAlerts";
+    const SCHEDULED_ALERTS = "scheduledAlerts";
+    const MICROSOFT_DEFENDER_THREAT_INTELLIGENCE_ANALYTICS = "microsoftDefenderThreatIntelligenceAnalytics";
+    const BUILT_IN_ML = "builtInMl";
+    const MICROSOFT_SENTINEL = "microsoftSentinel";
 }

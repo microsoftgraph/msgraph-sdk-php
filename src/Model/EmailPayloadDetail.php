@@ -36,6 +36,7 @@ class EmailPayloadDetail extends PayloadDetail
 
     /**
     * Gets the fromEmail
+    * Email address of the user.
     *
     * @return string|null The fromEmail
     */
@@ -50,6 +51,7 @@ class EmailPayloadDetail extends PayloadDetail
 
     /**
     * Sets the fromEmail
+    * Email address of the user.
     *
     * @param string $val The value of the fromEmail
     *
@@ -62,6 +64,7 @@ class EmailPayloadDetail extends PayloadDetail
     }
     /**
     * Gets the fromName
+    * Display name of the user.
     *
     * @return string|null The fromName
     */
@@ -76,6 +79,7 @@ class EmailPayloadDetail extends PayloadDetail
 
     /**
     * Sets the fromName
+    * Display name of the user.
     *
     * @param string $val The value of the fromName
     *
@@ -88,6 +92,7 @@ class EmailPayloadDetail extends PayloadDetail
     }
     /**
     * Gets the isExternalSender
+    * Indicates whether the sender isn't from the user's organization.
     *
     * @return bool|null The isExternalSender
     */
@@ -102,6 +107,7 @@ class EmailPayloadDetail extends PayloadDetail
 
     /**
     * Sets the isExternalSender
+    * Indicates whether the sender isn't from the user's organization.
     *
     * @param bool $val The value of the isExternalSender
     *
@@ -114,6 +120,7 @@ class EmailPayloadDetail extends PayloadDetail
     }
     /**
     * Gets the subject
+    * The subject of the email address sent to the user.
     *
     * @return string|null The subject
     */
@@ -128,6 +135,7 @@ class EmailPayloadDetail extends PayloadDetail
 
     /**
     * Sets the subject
+    * The subject of the email address sent to the user.
     *
     * @param string $val The value of the subject
     *

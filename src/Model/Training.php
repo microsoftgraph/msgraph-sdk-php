@@ -26,6 +26,7 @@ class Training extends Entity
 {
     /**
     * Gets the availabilityStatus
+    * Training availability status. Possible values are: unknown, notAvailable, available, archive, delete, unknownFutureValue.
     *
     * @return TrainingAvailabilityStatus|null The availabilityStatus
     */
@@ -44,6 +45,7 @@ class Training extends Entity
 
     /**
     * Sets the availabilityStatus
+    * Training availability status. Possible values are: unknown, notAvailable, available, archive, delete, unknownFutureValue.
     *
     * @param TrainingAvailabilityStatus $val The availabilityStatus
     *
@@ -57,6 +59,7 @@ class Training extends Entity
 
     /**
     * Gets the createdBy
+    * Identity of the user who created the training.
     *
     * @return EmailIdentity|null The createdBy
     */
@@ -75,6 +78,7 @@ class Training extends Entity
 
     /**
     * Sets the createdBy
+    * Identity of the user who created the training.
     *
     * @param EmailIdentity $val The createdBy
     *
@@ -88,6 +92,7 @@ class Training extends Entity
 
     /**
     * Gets the createdDateTime
+    * Date and time when the training was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -106,6 +111,7 @@ class Training extends Entity
 
     /**
     * Sets the createdDateTime
+    * Date and time when the training was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -119,6 +125,7 @@ class Training extends Entity
 
     /**
     * Gets the description
+    * The description for the training.
     *
     * @return string|null The description
     */
@@ -133,6 +140,7 @@ class Training extends Entity
 
     /**
     * Sets the description
+    * The description for the training.
     *
     * @param string $val The description
     *
@@ -146,6 +154,7 @@ class Training extends Entity
 
     /**
     * Gets the displayName
+    * The display name for the training.
     *
     * @return string|null The displayName
     */
@@ -160,6 +169,7 @@ class Training extends Entity
 
     /**
     * Sets the displayName
+    * The display name for the training.
     *
     * @param string $val The displayName
     *
@@ -173,6 +183,7 @@ class Training extends Entity
 
     /**
     * Gets the durationInMinutes
+    * Training duration.
     *
     * @return int|null The durationInMinutes
     */
@@ -187,6 +198,7 @@ class Training extends Entity
 
     /**
     * Sets the durationInMinutes
+    * Training duration.
     *
     * @param int $val The durationInMinutes
     *
@@ -200,6 +212,7 @@ class Training extends Entity
 
     /**
     * Gets the hasEvaluation
+    * Indicates whether the training has any evaluation.
     *
     * @return bool|null The hasEvaluation
     */
@@ -214,6 +227,7 @@ class Training extends Entity
 
     /**
     * Sets the hasEvaluation
+    * Indicates whether the training has any evaluation.
     *
     * @param bool $val The hasEvaluation
     *
@@ -227,6 +241,7 @@ class Training extends Entity
 
     /**
     * Gets the lastModifiedBy
+    * Identity of the user who last modified the training.
     *
     * @return EmailIdentity|null The lastModifiedBy
     */
@@ -245,6 +260,7 @@ class Training extends Entity
 
     /**
     * Sets the lastModifiedBy
+    * Identity of the user who last modified the training.
     *
     * @param EmailIdentity $val The lastModifiedBy
     *
@@ -258,6 +274,7 @@ class Training extends Entity
 
     /**
     * Gets the lastModifiedDateTime
+    * Date and time when the training was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The lastModifiedDateTime
     */
@@ -276,6 +293,7 @@ class Training extends Entity
 
     /**
     * Sets the lastModifiedDateTime
+    * Date and time when the training was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -289,6 +307,7 @@ class Training extends Entity
 
     /**
     * Gets the source
+    * Training content source. Possible values are: unknown, global, tenant, unknownFutureValue.
     *
     * @return SimulationContentSource|null The source
     */
@@ -307,6 +326,7 @@ class Training extends Entity
 
     /**
     * Sets the source
+    * Training content source. Possible values are: unknown, global, tenant, unknownFutureValue.
     *
     * @param SimulationContentSource $val The source
     *
@@ -320,6 +340,7 @@ class Training extends Entity
 
     /**
     * Gets the supportedLocales
+    * Supported locales for content for the associated training.
     *
     * @return array|null The supportedLocales
     */
@@ -334,6 +355,7 @@ class Training extends Entity
 
     /**
     * Sets the supportedLocales
+    * Supported locales for content for the associated training.
     *
     * @param string[] $val The supportedLocales
     *
@@ -347,6 +369,7 @@ class Training extends Entity
 
     /**
     * Gets the tags
+    * Training tags.
     *
     * @return array|null The tags
     */
@@ -361,6 +384,7 @@ class Training extends Entity
 
     /**
     * Sets the tags
+    * Training tags.
     *
     * @param string[] $val The tags
     *
@@ -374,6 +398,7 @@ class Training extends Entity
 
     /**
     * Gets the type
+    * The type of training. Possible values are: unknown, phishing, unknownFutureValue.
     *
     * @return TrainingType|null The type
     */
@@ -392,6 +417,7 @@ class Training extends Entity
 
     /**
     * Sets the type
+    * The type of training. Possible values are: unknown, phishing, unknownFutureValue.
     *
     * @param TrainingType $val The type
     *
@@ -406,6 +432,7 @@ class Training extends Entity
 
      /**
      * Gets the languageDetails
+    * Language specific details on a training.
      *
      * @return array|null The languageDetails
      */
@@ -420,6 +447,7 @@ class Training extends Entity
 
     /**
     * Sets the languageDetails
+    * Language specific details on a training.
     *
     * @param TrainingLanguageDetail[] $val The languageDetails
     *
