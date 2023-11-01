@@ -26,7 +26,7 @@ class ResourceSpecificPermissionGrant extends DirectoryObject implements Parsabl
     }
 
     /**
-     * Gets the clientAppId property value. ID of the service principal of the Azure AD app that has been granted access. Read-only.
+     * Gets the clientAppId property value. ID of the service principal of the Microsoft Entra app that has been granted access. Read-only.
      * @return string|null
     */
     public function getClientAppId(): ?string {
@@ -38,7 +38,7 @@ class ResourceSpecificPermissionGrant extends DirectoryObject implements Parsabl
     }
 
     /**
-     * Gets the clientId property value. ID of the Azure AD app that has been granted access. Read-only.
+     * Gets the clientId property value. ID of the Microsoft Entra app that has been granted access. Read-only.
      * @return string|null
     */
     public function getClientId(): ?string {
@@ -89,7 +89,7 @@ class ResourceSpecificPermissionGrant extends DirectoryObject implements Parsabl
     }
 
     /**
-     * Gets the resourceAppId property value. ID of the Azure AD app that is hosting the resource. Read-only.
+     * Gets the resourceAppId property value. ID of the Microsoft Entra app that is hosting the resource. Read-only.
      * @return string|null
     */
     public function getResourceAppId(): ?string {
@@ -114,7 +114,7 @@ class ResourceSpecificPermissionGrant extends DirectoryObject implements Parsabl
     }
 
     /**
-     * Sets the clientAppId property value. ID of the service principal of the Azure AD app that has been granted access. Read-only.
+     * Sets the clientAppId property value. ID of the service principal of the Microsoft Entra app that has been granted access. Read-only.
      * @param string|null $value Value to set for the clientAppId property.
     */
     public function setClientAppId(?string $value): void {
@@ -122,7 +122,7 @@ class ResourceSpecificPermissionGrant extends DirectoryObject implements Parsabl
     }
 
     /**
-     * Sets the clientId property value. ID of the Azure AD app that has been granted access. Read-only.
+     * Sets the clientId property value. ID of the Microsoft Entra app that has been granted access. Read-only.
      * @param string|null $value Value to set for the clientId property.
     */
     public function setClientId(?string $value): void {
@@ -146,7 +146,7 @@ class ResourceSpecificPermissionGrant extends DirectoryObject implements Parsabl
     }
 
     /**
-     * Sets the resourceAppId property value. ID of the Azure AD app that is hosting the resource. Read-only.
+     * Sets the resourceAppId property value. ID of the Microsoft Entra app that is hosting the resource. Read-only.
      * @param string|null $value Value to set for the resourceAppId property.
     */
     public function setResourceAppId(?string $value): void {

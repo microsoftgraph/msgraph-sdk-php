@@ -37,7 +37,7 @@ class NoTrainingNotificationSetting extends EndUserNotificationSetting implement
     }
 
     /**
-     * Gets the simulationNotification property value. The simulationNotification property
+     * Gets the simulationNotification property value. The notification for the user who is part of the simulation.
      * @return SimulationNotification|null
     */
     public function getSimulationNotification(): ?SimulationNotification {
@@ -58,7 +58,7 @@ class NoTrainingNotificationSetting extends EndUserNotificationSetting implement
     }
 
     /**
-     * Sets the simulationNotification property value. The simulationNotification property
+     * Sets the simulationNotification property value. The notification for the user who is part of the simulation.
      * @param SimulationNotification|null $value Value to set for the simulationNotification property.
     */
     public function setSimulationNotification(?SimulationNotification $value): void {

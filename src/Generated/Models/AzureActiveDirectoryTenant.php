@@ -26,7 +26,7 @@ class AzureActiveDirectoryTenant extends IdentitySource implements Parsable
     }
 
     /**
-     * Gets the displayName property value. The name of the Azure Active Directory tenant. Read only.
+     * Gets the displayName property value. The name of the Microsoft Entra tenant. Read only.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -50,7 +50,7 @@ class AzureActiveDirectoryTenant extends IdentitySource implements Parsable
     }
 
     /**
-     * Gets the tenantId property value. The ID of the Azure Active Directory tenant. Read only.
+     * Gets the tenantId property value. The ID of the Microsoft Entra tenant. Read only.
      * @return string|null
     */
     public function getTenantId(): ?string {
@@ -72,7 +72,7 @@ class AzureActiveDirectoryTenant extends IdentitySource implements Parsable
     }
 
     /**
-     * Sets the displayName property value. The name of the Azure Active Directory tenant. Read only.
+     * Sets the displayName property value. The name of the Microsoft Entra tenant. Read only.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -80,7 +80,7 @@ class AzureActiveDirectoryTenant extends IdentitySource implements Parsable
     }
 
     /**
-     * Sets the tenantId property value. The ID of the Azure Active Directory tenant. Read only.
+     * Sets the tenantId property value. The ID of the Microsoft Entra tenant. Read only.
      * @param string|null $value Value to set for the tenantId property.
     */
     public function setTenantId(?string $value): void {

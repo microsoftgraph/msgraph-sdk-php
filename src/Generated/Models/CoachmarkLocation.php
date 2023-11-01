@@ -70,7 +70,7 @@ class CoachmarkLocation implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the length property value. The length property
+     * Gets the length property value. Length of coachmark.
      * @return int|null
     */
     public function getLength(): ?int {
@@ -94,7 +94,7 @@ class CoachmarkLocation implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the offset property value. The offset property
+     * Gets the offset property value. Offset of coachmark.
      * @return int|null
     */
     public function getOffset(): ?int {
@@ -106,7 +106,7 @@ class CoachmarkLocation implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the type property value. The type property
+     * Gets the type property value. Type of coachmark location. The possible values are: unknown, fromEmail, subject, externalTag, displayName, messageBody, unknownFutureValue.
      * @return CoachmarkLocationType|null
     */
     public function getType(): ?CoachmarkLocationType {
@@ -146,7 +146,7 @@ class CoachmarkLocation implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the length property value. The length property
+     * Sets the length property value. Length of coachmark.
      * @param int|null $value Value to set for the length property.
     */
     public function setLength(?int $value): void {
@@ -162,7 +162,7 @@ class CoachmarkLocation implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the offset property value. The offset property
+     * Sets the offset property value. Offset of coachmark.
      * @param int|null $value Value to set for the offset property.
     */
     public function setOffset(?int $value): void {
@@ -170,7 +170,7 @@ class CoachmarkLocation implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the type property value. The type property
+     * Sets the type property value. Type of coachmark location. The possible values are: unknown, fromEmail, subject, externalTag, displayName, messageBody, unknownFutureValue.
      * @param CoachmarkLocationType|null $value Value to set for the type property.
     */
     public function setType(?CoachmarkLocationType $value): void {

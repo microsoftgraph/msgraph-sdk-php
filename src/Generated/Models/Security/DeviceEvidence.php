@@ -28,7 +28,7 @@ class DeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the azureAdDeviceId property value. A unique identifier assigned to a device by Azure Active Directory (Azure AD) when device is Azure AD-joined.
+     * Gets the azureAdDeviceId property value. A unique identifier assigned to a device by Microsoft Entra ID when device is Microsoft Entra joined.
      * @return string|null
     */
     public function getAzureAdDeviceId(): ?string {
@@ -281,7 +281,7 @@ class DeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the azureAdDeviceId property value. A unique identifier assigned to a device by Azure Active Directory (Azure AD) when device is Azure AD-joined.
+     * Sets the azureAdDeviceId property value. A unique identifier assigned to a device by Microsoft Entra ID when device is Microsoft Entra joined.
      * @param string|null $value Value to set for the azureAdDeviceId property.
     */
     public function setAzureAdDeviceId(?string $value): void {

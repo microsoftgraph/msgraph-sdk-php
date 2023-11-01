@@ -308,7 +308,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Gets the onPremisesInfo property value. Additional information used to associate the Azure Active Directory user with its Active Directory counterpart.
+     * Gets the onPremisesInfo property value. Additional information used to associate the Microsoft Entra user with its Active Directory counterpart.
      * @return EducationOnPremisesInfo|null
     */
     public function getOnPremisesInfo(): ?EducationOnPremisesInfo {
@@ -748,7 +748,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Sets the onPremisesInfo property value. Additional information used to associate the Azure Active Directory user with its Active Directory counterpart.
+     * Sets the onPremisesInfo property value. Additional information used to associate the Microsoft Entra user with its Active Directory counterpart.
      * @param EducationOnPremisesInfo|null $value Value to set for the onPremisesInfo property.
     */
     public function setOnPremisesInfo(?EducationOnPremisesInfo $value): void {

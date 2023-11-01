@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\AttackSimulation\Trainings\Item\Lan
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get languageDetails from security
+ * Language specific details on a training.
 */
 class LanguageDetailsRequestBuilderGetQueryParameters 
 {

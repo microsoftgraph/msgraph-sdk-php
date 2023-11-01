@@ -93,7 +93,7 @@ class ConditionalAccessFilter implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the rule property value. Rule syntax is similar to that used for membership rules for groups in Azure Active Directory (Azure AD). For details, see rules with multiple expressions
+     * Gets the rule property value. Rule syntax is similar to that used for membership rules for groups in Microsoft Entra ID. For details, see rules with multiple expressions
      * @return string|null
     */
     public function getRule(): ?string {
@@ -148,7 +148,7 @@ class ConditionalAccessFilter implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the rule property value. Rule syntax is similar to that used for membership rules for groups in Azure Active Directory (Azure AD). For details, see rules with multiple expressions
+     * Sets the rule property value. Rule syntax is similar to that used for membership rules for groups in Microsoft Entra ID. For details, see rules with multiple expressions
      * @param string|null $value Value to set for the rule property.
     */
     public function setRule(?string $value): void {

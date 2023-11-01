@@ -16,4 +16,5 @@ class ServiceSource extends Enum {
     public const DATA_LOSS_PREVENTION = 'dataLossPrevention';
     public const UNKNOWN_FUTURE_VALUE = 'unknownFutureValue';
     public const MICROSOFT_DEFENDER_FOR_CLOUD = 'microsoftDefenderForCloud';
+    public const MICROSOFT_SENTINEL = 'microsoftSentinel';
 }

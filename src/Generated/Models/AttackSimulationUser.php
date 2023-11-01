@@ -106,7 +106,7 @@ class AttackSimulationUser implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the userId property value. This is the id property value of the user resource that represents the user in the Azure Active Directory tenant.
+     * Gets the userId property value. This is the id property value of the user resource that represents the user in the Microsoft Entra tenant.
      * @return string|null
     */
     public function getUserId(): ?string {
@@ -170,7 +170,7 @@ class AttackSimulationUser implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the userId property value. This is the id property value of the user resource that represents the user in the Azure Active Directory tenant.
+     * Sets the userId property value. This is the id property value of the user resource that represents the user in the Microsoft Entra tenant.
      * @param string|null $value Value to set for the userId property.
     */
     public function setUserId(?string $value): void {

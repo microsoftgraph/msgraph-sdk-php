@@ -26,7 +26,7 @@ class InternalDomainFederation extends SamlOrWsFedProvider implements Parsable
     }
 
     /**
-     * Gets the activeSignInUri property value. URL of the endpoint used by active clients when authenticating with federated domains set up for single sign-on in Azure Active Directory (Azure AD). Corresponds to the ActiveLogOnUri property of the Set-MsolDomainFederationSettings MSOnline v1 PowerShell cmdlet.
+     * Gets the activeSignInUri property value. URL of the endpoint used by active clients when authenticating with federated domains set up for single sign-on in Microsoft Entra ID. Corresponds to the ActiveLogOnUri property of the Set-MsolDomainFederationSettings MSOnline v1 PowerShell cmdlet.
      * @return string|null
     */
     public function getActiveSignInUri(): ?string {
@@ -38,7 +38,7 @@ class InternalDomainFederation extends SamlOrWsFedProvider implements Parsable
     }
 
     /**
-     * Gets the federatedIdpMfaBehavior property value. Determines whether Azure AD accepts the MFA performed by the federated IdP when a federated user accesses an application that is governed by a conditional access policy that requires MFA. The possible values are: acceptIfMfaDoneByFederatedIdp, enforceMfaByFederatedIdp, rejectMfaByFederatedIdp, unknownFutureValue. For more information, see federatedIdpMfaBehavior values.
+     * Gets the federatedIdpMfaBehavior property value. Determines whether Microsoft Entra ID accepts the MFA performed by the federated IdP when a federated user accesses an application that is governed by a conditional access policy that requires MFA. The possible values are: acceptIfMfaDoneByFederatedIdp, enforceMfaByFederatedIdp, rejectMfaByFederatedIdp, unknownFutureValue. For more information, see federatedIdpMfaBehavior values.
      * @return FederatedIdpMfaBehavior|null
     */
     public function getFederatedIdpMfaBehavior(): ?FederatedIdpMfaBehavior {
@@ -67,7 +67,7 @@ class InternalDomainFederation extends SamlOrWsFedProvider implements Parsable
     }
 
     /**
-     * Gets the isSignedAuthenticationRequestRequired property value. If true, when SAML authentication requests are sent to the federated SAML IdP, Azure AD will sign those requests using the OrgID signing key. If false (default), the SAML authentication requests sent to the federated IdP are not signed.
+     * Gets the isSignedAuthenticationRequestRequired property value. If true, when SAML authentication requests are sent to the federated SAML IdP, Microsoft Entra ID will sign those requests using the OrgID signing key. If false (default), the SAML authentication requests sent to the federated IdP are not signed.
      * @return bool|null
     */
     public function getIsSignedAuthenticationRequestRequired(): ?bool {
@@ -115,7 +115,7 @@ class InternalDomainFederation extends SamlOrWsFedProvider implements Parsable
     }
 
     /**
-     * Gets the signOutUri property value. URI that clients are redirected to when they sign out of Azure AD services. Corresponds to the LogOffUri property of the Set-MsolDomainFederationSettings MSOnline v1 PowerShell cmdlet.
+     * Gets the signOutUri property value. URI that clients are redirected to when they sign out of Microsoft Entra services. Corresponds to the LogOffUri property of the Set-MsolDomainFederationSettings MSOnline v1 PowerShell cmdlet.
      * @return string|null
     */
     public function getSignOutUri(): ?string {
@@ -142,7 +142,7 @@ class InternalDomainFederation extends SamlOrWsFedProvider implements Parsable
     }
 
     /**
-     * Sets the activeSignInUri property value. URL of the endpoint used by active clients when authenticating with federated domains set up for single sign-on in Azure Active Directory (Azure AD). Corresponds to the ActiveLogOnUri property of the Set-MsolDomainFederationSettings MSOnline v1 PowerShell cmdlet.
+     * Sets the activeSignInUri property value. URL of the endpoint used by active clients when authenticating with federated domains set up for single sign-on in Microsoft Entra ID. Corresponds to the ActiveLogOnUri property of the Set-MsolDomainFederationSettings MSOnline v1 PowerShell cmdlet.
      * @param string|null $value Value to set for the activeSignInUri property.
     */
     public function setActiveSignInUri(?string $value): void {
@@ -150,7 +150,7 @@ class InternalDomainFederation extends SamlOrWsFedProvider implements Parsable
     }
 
     /**
-     * Sets the federatedIdpMfaBehavior property value. Determines whether Azure AD accepts the MFA performed by the federated IdP when a federated user accesses an application that is governed by a conditional access policy that requires MFA. The possible values are: acceptIfMfaDoneByFederatedIdp, enforceMfaByFederatedIdp, rejectMfaByFederatedIdp, unknownFutureValue. For more information, see federatedIdpMfaBehavior values.
+     * Sets the federatedIdpMfaBehavior property value. Determines whether Microsoft Entra ID accepts the MFA performed by the federated IdP when a federated user accesses an application that is governed by a conditional access policy that requires MFA. The possible values are: acceptIfMfaDoneByFederatedIdp, enforceMfaByFederatedIdp, rejectMfaByFederatedIdp, unknownFutureValue. For more information, see federatedIdpMfaBehavior values.
      * @param FederatedIdpMfaBehavior|null $value Value to set for the federatedIdpMfaBehavior property.
     */
     public function setFederatedIdpMfaBehavior(?FederatedIdpMfaBehavior $value): void {
@@ -158,7 +158,7 @@ class InternalDomainFederation extends SamlOrWsFedProvider implements Parsable
     }
 
     /**
-     * Sets the isSignedAuthenticationRequestRequired property value. If true, when SAML authentication requests are sent to the federated SAML IdP, Azure AD will sign those requests using the OrgID signing key. If false (default), the SAML authentication requests sent to the federated IdP are not signed.
+     * Sets the isSignedAuthenticationRequestRequired property value. If true, when SAML authentication requests are sent to the federated SAML IdP, Microsoft Entra ID will sign those requests using the OrgID signing key. If false (default), the SAML authentication requests sent to the federated IdP are not signed.
      * @param bool|null $value Value to set for the isSignedAuthenticationRequestRequired property.
     */
     public function setIsSignedAuthenticationRequestRequired(?bool $value): void {
@@ -190,7 +190,7 @@ class InternalDomainFederation extends SamlOrWsFedProvider implements Parsable
     }
 
     /**
-     * Sets the signOutUri property value. URI that clients are redirected to when they sign out of Azure AD services. Corresponds to the LogOffUri property of the Set-MsolDomainFederationSettings MSOnline v1 PowerShell cmdlet.
+     * Sets the signOutUri property value. URI that clients are redirected to when they sign out of Microsoft Entra services. Corresponds to the LogOffUri property of the Set-MsolDomainFederationSettings MSOnline v1 PowerShell cmdlet.
      * @param string|null $value Value to set for the signOutUri property.
     */
     public function setSignOutUri(?string $value): void {

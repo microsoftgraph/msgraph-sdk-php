@@ -24,4 +24,20 @@ class DetectionSource extends Enum {
     public const APP_GOVERNANCE_DETECTION = 'appGovernanceDetection';
     public const UNKNOWN_FUTURE_VALUE = 'unknownFutureValue';
     public const MICROSOFT_DEFENDER_FOR_CLOUD = 'microsoftDefenderForCloud';
+    public const MICROSOFT_DEFENDER_FOR_IO_T = 'microsoftDefenderForIoT';
+    public const MICROSOFT_DEFENDER_FOR_SERVERS = 'microsoftDefenderForServers';
+    public const MICROSOFT_DEFENDER_FOR_STORAGE = 'microsoftDefenderForStorage';
+    public const MICROSOFT_DEFENDER_FOR_D_N_S = 'microsoftDefenderForDNS';
+    public const MICROSOFT_DEFENDER_FOR_DATABASES = 'microsoftDefenderForDatabases';
+    public const MICROSOFT_DEFENDER_FOR_CONTAINERS = 'microsoftDefenderForContainers';
+    public const MICROSOFT_DEFENDER_FOR_NETWORK = 'microsoftDefenderForNetwork';
+    public const MICROSOFT_DEFENDER_FOR_APP_SERVICE = 'microsoftDefenderForAppService';
+    public const MICROSOFT_DEFENDER_FOR_KEY_VAULT = 'microsoftDefenderForKeyVault';
+    public const MICROSOFT_DEFENDER_FOR_RESOURCE_MANAGER = 'microsoftDefenderForResourceManager';
+    public const MICROSOFT_DEFENDER_FOR_API_MANAGEMENT = 'microsoftDefenderForApiManagement';
+    public const NRT_ALERTS = 'nrtAlerts';
+    public const SCHEDULED_ALERTS = 'scheduledAlerts';
+    public const MICROSOFT_DEFENDER_THREAT_INTELLIGENCE_ANALYTICS = 'microsoftDefenderThreatIntelligenceAnalytics';
+    public const BUILT_IN_ML = 'builtInMl';
+    public const MICROSOFT_SENTINEL = 'microsoftSentinel';
 }

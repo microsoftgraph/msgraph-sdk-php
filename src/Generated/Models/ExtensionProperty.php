@@ -59,6 +59,7 @@ class ExtensionProperty extends DirectoryObject implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'appDisplayName' => fn(ParseNode $n) => $o->setAppDisplayName($n->getStringValue()),
             'dataType' => fn(ParseNode $n) => $o->setDataType($n->getStringValue()),
+            'isMultiValued' => fn(ParseNode $n) => $o->setIsMultiValued($n->getBooleanValue()),
             'isSyncedFromOnPremises' => fn(ParseNode $n) => $o->setIsSyncedFromOnPremises($n->getBooleanValue()),
             'name' => fn(ParseNode $n) => $o->setName($n->getStringValue()),
             'targetObjects' => function (ParseNode $n) {
@@ -73,7 +74,19 @@ class ExtensionProperty extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the isSyncedFromOnPremises property value. Indicates if this extension property was synced from on-premises active directory using Azure AD Connect. Read-only.
+     * Gets the isMultiValued property value. The isMultiValued property
+     * @return bool|null
+    */
+    public function getIsMultiValued(): ?bool {
+        $val = $this->getBackingStore()->get('isMultiValued');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isMultiValued'");
+    }
+
+    /**
+     * Gets the isSyncedFromOnPremises property value. Indicates if this extension property was synced from on-premises active directory using Microsoft Entra Connect. Read-only.
      * @return bool|null
     */
     public function getIsSyncedFromOnPremises(): ?bool {
@@ -118,6 +131,7 @@ class ExtensionProperty extends DirectoryObject implements Parsable
         parent::serialize($writer);
         $writer->writeStringValue('appDisplayName', $this->getAppDisplayName());
         $writer->writeStringValue('dataType', $this->getDataType());
+        $writer->writeBooleanValue('isMultiValued', $this->getIsMultiValued());
         $writer->writeBooleanValue('isSyncedFromOnPremises', $this->getIsSyncedFromOnPremises());
         $writer->writeStringValue('name', $this->getName());
         $writer->writeCollectionOfPrimitiveValues('targetObjects', $this->getTargetObjects());
@@ -140,7 +154,15 @@ class ExtensionProperty extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the isSyncedFromOnPremises property value. Indicates if this extension property was synced from on-premises active directory using Azure AD Connect. Read-only.
+     * Sets the isMultiValued property value. The isMultiValued property
+     * @param bool|null $value Value to set for the isMultiValued property.
+    */
+    public function setIsMultiValued(?bool $value): void {
+        $this->getBackingStore()->set('isMultiValued', $value);
+    }
+
+    /**
+     * Sets the isSyncedFromOnPremises property value. Indicates if this extension property was synced from on-premises active directory using Microsoft Entra Connect. Read-only.
      * @param bool|null $value Value to set for the isSyncedFromOnPremises property.
     */
     public function setIsSyncedFromOnPremises(?bool $value): void {

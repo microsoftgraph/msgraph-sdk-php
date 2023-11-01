@@ -64,7 +64,7 @@ class PayloadDetail implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the coachmarks property value. The coachmarks property
+     * Gets the coachmarks property value. Payload coachmark details.
      * @return array<PayloadCoachmark>|null
     */
     public function getCoachmarks(): ?array {
@@ -78,7 +78,7 @@ class PayloadDetail implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the content property value. The content property
+     * Gets the content property value. Payload content details.
      * @return string|null
     */
     public function getContent(): ?string {
@@ -116,7 +116,7 @@ class PayloadDetail implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the phishingUrl property value. The phishingUrl property
+     * Gets the phishingUrl property value. The phishing URL used to target a user.
      * @return string|null
     */
     public function getPhishingUrl(): ?string {
@@ -156,7 +156,7 @@ class PayloadDetail implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the coachmarks property value. The coachmarks property
+     * Sets the coachmarks property value. Payload coachmark details.
      * @param array<PayloadCoachmark>|null $value Value to set for the coachmarks property.
     */
     public function setCoachmarks(?array $value): void {
@@ -164,7 +164,7 @@ class PayloadDetail implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the content property value. The content property
+     * Sets the content property value. Payload content details.
      * @param string|null $value Value to set for the content property.
     */
     public function setContent(?string $value): void {
@@ -180,7 +180,7 @@ class PayloadDetail implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the phishingUrl property value. The phishingUrl property
+     * Sets the phishingUrl property value. The phishing URL used to target a user.
      * @param string|null $value Value to set for the phishingUrl property.
     */
     public function setPhishingUrl(?string $value): void {

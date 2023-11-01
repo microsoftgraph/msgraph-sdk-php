@@ -56,7 +56,7 @@ class TenantInformation implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the defaultDomainName property value. Primary domain name of an Azure AD tenant.
+     * Gets the defaultDomainName property value. Primary domain name of a Microsoft Entra tenant.
      * @return string|null
     */
     public function getDefaultDomainName(): ?string {
@@ -68,7 +68,7 @@ class TenantInformation implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the displayName property value. Display name of an Azure AD tenant.
+     * Gets the displayName property value. Display name of a Microsoft Entra tenant.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -80,7 +80,7 @@ class TenantInformation implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the federationBrandName property value. Name shown to users that sign in to an Azure AD tenant.
+     * Gets the federationBrandName property value. Name shown to users that sign in to a Microsoft Entra tenant.
      * @return string|null
     */
     public function getFederationBrandName(): ?string {
@@ -119,7 +119,7 @@ class TenantInformation implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the tenantId property value. Unique identifier of an Azure AD tenant.
+     * Gets the tenantId property value. Unique identifier of a Microsoft Entra tenant.
      * @return string|null
     */
     public function getTenantId(): ?string {
@@ -160,7 +160,7 @@ class TenantInformation implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the defaultDomainName property value. Primary domain name of an Azure AD tenant.
+     * Sets the defaultDomainName property value. Primary domain name of a Microsoft Entra tenant.
      * @param string|null $value Value to set for the defaultDomainName property.
     */
     public function setDefaultDomainName(?string $value): void {
@@ -168,7 +168,7 @@ class TenantInformation implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the displayName property value. Display name of an Azure AD tenant.
+     * Sets the displayName property value. Display name of a Microsoft Entra tenant.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -176,7 +176,7 @@ class TenantInformation implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the federationBrandName property value. Name shown to users that sign in to an Azure AD tenant.
+     * Sets the federationBrandName property value. Name shown to users that sign in to a Microsoft Entra tenant.
      * @param string|null $value Value to set for the federationBrandName property.
     */
     public function setFederationBrandName(?string $value): void {
@@ -192,7 +192,7 @@ class TenantInformation implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the tenantId property value. Unique identifier of an Azure AD tenant.
+     * Sets the tenantId property value. Unique identifier of a Microsoft Entra tenant.
      * @param string|null $value Value to set for the tenantId property.
     */
     public function setTenantId(?string $value): void {

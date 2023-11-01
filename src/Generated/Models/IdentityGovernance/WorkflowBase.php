@@ -185,7 +185,7 @@ class WorkflowBase implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the lastModifiedBy property value. The unique identifier of the Azure Active Directory identity that last modified the workflow.
+     * Gets the lastModifiedBy property value. The unique identifier of the Microsoft Entra identity that last modified the workflow.
      * @return User|null
     */
     public function getLastModifiedBy(): ?User {
@@ -335,7 +335,7 @@ class WorkflowBase implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the lastModifiedBy property value. The unique identifier of the Azure Active Directory identity that last modified the workflow.
+     * Sets the lastModifiedBy property value. The unique identifier of the Microsoft Entra identity that last modified the workflow.
      * @param User|null $value Value to set for the lastModifiedBy property.
     */
     public function setLastModifiedBy(?User $value): void {

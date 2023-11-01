@@ -27,7 +27,7 @@ class MicrosoftManagedTrainingSetting extends TrainingSetting implements Parsabl
     }
 
     /**
-     * Gets the completionDateTime property value. The completionDateTime property
+     * Gets the completionDateTime property value. The completion date for the training. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return DateTime|null
     */
     public function getCompletionDateTime(): ?DateTime {
@@ -51,7 +51,7 @@ class MicrosoftManagedTrainingSetting extends TrainingSetting implements Parsabl
     }
 
     /**
-     * Gets the trainingCompletionDuration property value. The trainingCompletionDuration property
+     * Gets the trainingCompletionDuration property value. The training completion duration that needs to be provided before scheduling the training. The possible values are: week, fortnite, month, unknownFutureValue.
      * @return TrainingCompletionDuration|null
     */
     public function getTrainingCompletionDuration(): ?TrainingCompletionDuration {
@@ -73,7 +73,7 @@ class MicrosoftManagedTrainingSetting extends TrainingSetting implements Parsabl
     }
 
     /**
-     * Sets the completionDateTime property value. The completionDateTime property
+     * Sets the completionDateTime property value. The completion date for the training. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param DateTime|null $value Value to set for the completionDateTime property.
     */
     public function setCompletionDateTime(?DateTime $value): void {
@@ -81,7 +81,7 @@ class MicrosoftManagedTrainingSetting extends TrainingSetting implements Parsabl
     }
 
     /**
-     * Sets the trainingCompletionDuration property value. The trainingCompletionDuration property
+     * Sets the trainingCompletionDuration property value. The training completion duration that needs to be provided before scheduling the training. The possible values are: week, fortnite, month, unknownFutureValue.
      * @param TrainingCompletionDuration|null $value Value to set for the trainingCompletionDuration property.
     */
     public function setTrainingCompletionDuration(?TrainingCompletionDuration $value): void {

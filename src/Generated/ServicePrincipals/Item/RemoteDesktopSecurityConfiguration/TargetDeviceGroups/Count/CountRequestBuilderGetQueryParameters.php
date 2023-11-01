@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Photos\Count;
+namespace Microsoft\Graph\Generated\ServicePrincipals\Item\RemoteDesktopSecurityConfiguration\TargetDeviceGroups\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
@@ -16,11 +16,19 @@ class CountRequestBuilderGetQueryParameters
     public ?string $filter = null;
     
     /**
+     * @QueryParameter("%24search")
+     * @var string|null $search Search items by search phrases
+    */
+    public ?string $search = null;
+    
+    /**
      * Instantiates a new CountRequestBuilderGetQueryParameters and sets the default values.
      * @param string|null $filter Filter items by property values
+     * @param string|null $search Search items by search phrases
     */
-    public function __construct(?string $filter = null) {
+    public function __construct(?string $filter = null, ?string $search = null) {
         $this->filter = $filter;
+        $this->search = $search;
     }
 
 }

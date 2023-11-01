@@ -26,7 +26,7 @@ class AttackSimulationRoot extends Entity implements Parsable
     }
 
     /**
-     * Gets the endUserNotifications property value. The endUserNotifications property
+     * Gets the endUserNotifications property value. Represents an end user's notification for an attack simulation training.
      * @return array<EndUserNotification>|null
     */
     public function getEndUserNotifications(): ?array {
@@ -58,7 +58,7 @@ class AttackSimulationRoot extends Entity implements Parsable
     }
 
     /**
-     * Gets the landingPages property value. The landingPages property
+     * Gets the landingPages property value. Represents an attack simulation training landing page.
      * @return array<LandingPage>|null
     */
     public function getLandingPages(): ?array {
@@ -72,7 +72,7 @@ class AttackSimulationRoot extends Entity implements Parsable
     }
 
     /**
-     * Gets the loginPages property value. The loginPages property
+     * Gets the loginPages property value. Represents an attack simulation training login page.
      * @return array<LoginPage>|null
     */
     public function getLoginPages(): ?array {
@@ -86,7 +86,7 @@ class AttackSimulationRoot extends Entity implements Parsable
     }
 
     /**
-     * Gets the operations property value. The operations property
+     * Gets the operations property value. Represents an attack simulation training operation.
      * @return array<AttackSimulationOperation>|null
     */
     public function getOperations(): ?array {
@@ -100,7 +100,7 @@ class AttackSimulationRoot extends Entity implements Parsable
     }
 
     /**
-     * Gets the payloads property value. The payloads property
+     * Gets the payloads property value. Represents an attack simulation training campaign payload in a tenant.
      * @return array<Payload>|null
     */
     public function getPayloads(): ?array {
@@ -142,7 +142,7 @@ class AttackSimulationRoot extends Entity implements Parsable
     }
 
     /**
-     * Gets the trainings property value. The trainings property
+     * Gets the trainings property value. Represents details about attack simulation trainings.
      * @return array<Training>|null
     */
     public function getTrainings(): ?array {
@@ -172,7 +172,7 @@ class AttackSimulationRoot extends Entity implements Parsable
     }
 
     /**
-     * Sets the endUserNotifications property value. The endUserNotifications property
+     * Sets the endUserNotifications property value. Represents an end user's notification for an attack simulation training.
      * @param array<EndUserNotification>|null $value Value to set for the endUserNotifications property.
     */
     public function setEndUserNotifications(?array $value): void {
@@ -180,7 +180,7 @@ class AttackSimulationRoot extends Entity implements Parsable
     }
 
     /**
-     * Sets the landingPages property value. The landingPages property
+     * Sets the landingPages property value. Represents an attack simulation training landing page.
      * @param array<LandingPage>|null $value Value to set for the landingPages property.
     */
     public function setLandingPages(?array $value): void {
@@ -188,7 +188,7 @@ class AttackSimulationRoot extends Entity implements Parsable
     }
 
     /**
-     * Sets the loginPages property value. The loginPages property
+     * Sets the loginPages property value. Represents an attack simulation training login page.
      * @param array<LoginPage>|null $value Value to set for the loginPages property.
     */
     public function setLoginPages(?array $value): void {
@@ -196,7 +196,7 @@ class AttackSimulationRoot extends Entity implements Parsable
     }
 
     /**
-     * Sets the operations property value. The operations property
+     * Sets the operations property value. Represents an attack simulation training operation.
      * @param array<AttackSimulationOperation>|null $value Value to set for the operations property.
     */
     public function setOperations(?array $value): void {
@@ -204,7 +204,7 @@ class AttackSimulationRoot extends Entity implements Parsable
     }
 
     /**
-     * Sets the payloads property value. The payloads property
+     * Sets the payloads property value. Represents an attack simulation training campaign payload in a tenant.
      * @param array<Payload>|null $value Value to set for the payloads property.
     */
     public function setPayloads(?array $value): void {
@@ -228,7 +228,7 @@ class AttackSimulationRoot extends Entity implements Parsable
     }
 
     /**
-     * Sets the trainings property value. The trainings property
+     * Sets the trainings property value. Represents details about attack simulation trainings.
      * @param array<Training>|null $value Value to set for the trainings property.
     */
     public function setTrainings(?array $value): void {

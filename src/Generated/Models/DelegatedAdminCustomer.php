@@ -26,7 +26,7 @@ class DelegatedAdminCustomer extends Entity implements Parsable
     }
 
     /**
-     * Gets the displayName property value. The Azure AD display name of the customer tenant. Read-only. Supports $orderby.
+     * Gets the displayName property value. The Microsoft Entra ID display name of the customer tenant. Read-only. Supports $orderby.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -65,7 +65,7 @@ class DelegatedAdminCustomer extends Entity implements Parsable
     }
 
     /**
-     * Gets the tenantId property value. The Azure AD-assigned tenant ID of the customer. Read-only.
+     * Gets the tenantId property value. The Microsoft Entra ID-assigned tenant ID of the customer. Read-only.
      * @return string|null
     */
     public function getTenantId(): ?string {
@@ -88,7 +88,7 @@ class DelegatedAdminCustomer extends Entity implements Parsable
     }
 
     /**
-     * Sets the displayName property value. The Azure AD display name of the customer tenant. Read-only. Supports $orderby.
+     * Sets the displayName property value. The Microsoft Entra ID display name of the customer tenant. Read-only. Supports $orderby.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -104,7 +104,7 @@ class DelegatedAdminCustomer extends Entity implements Parsable
     }
 
     /**
-     * Sets the tenantId property value. The Azure AD-assigned tenant ID of the customer. Read-only.
+     * Sets the tenantId property value. The Microsoft Entra ID-assigned tenant ID of the customer. Read-only.
      * @param string|null $value Value to set for the tenantId property.
     */
     public function setTenantId(?string $value): void {

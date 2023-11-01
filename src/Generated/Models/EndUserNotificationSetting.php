@@ -78,7 +78,7 @@ class EndUserNotificationSetting implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the notificationPreference property value. The notificationPreference property
+     * Gets the notificationPreference property value. Notification preference. Possible values are: unknown, microsoft, custom, unknownFutureValue.
      * @return EndUserNotificationPreference|null
     */
     public function getNotificationPreference(): ?EndUserNotificationPreference {
@@ -102,7 +102,7 @@ class EndUserNotificationSetting implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the positiveReinforcement property value. The positiveReinforcement property
+     * Gets the positiveReinforcement property value. Positive reinforcement detail.
      * @return PositiveReinforcementNotification|null
     */
     public function getPositiveReinforcement(): ?PositiveReinforcementNotification {
@@ -114,7 +114,7 @@ class EndUserNotificationSetting implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the settingType property value. The settingType property
+     * Gets the settingType property value. End user notification type. Possible values are: unknown, noTraining, trainingSelected, noNotification, unknownFutureValue.
      * @return EndUserNotificationSettingType|null
     */
     public function getSettingType(): ?EndUserNotificationSettingType {
@@ -154,7 +154,7 @@ class EndUserNotificationSetting implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the notificationPreference property value. The notificationPreference property
+     * Sets the notificationPreference property value. Notification preference. Possible values are: unknown, microsoft, custom, unknownFutureValue.
      * @param EndUserNotificationPreference|null $value Value to set for the notificationPreference property.
     */
     public function setNotificationPreference(?EndUserNotificationPreference $value): void {
@@ -170,7 +170,7 @@ class EndUserNotificationSetting implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the positiveReinforcement property value. The positiveReinforcement property
+     * Sets the positiveReinforcement property value. Positive reinforcement detail.
      * @param PositiveReinforcementNotification|null $value Value to set for the positiveReinforcement property.
     */
     public function setPositiveReinforcement(?PositiveReinforcementNotification $value): void {
@@ -178,7 +178,7 @@ class EndUserNotificationSetting implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the settingType property value. The settingType property
+     * Sets the settingType property value. End user notification type. Possible values are: unknown, noTraining, trainingSelected, noNotification, unknownFutureValue.
      * @param EndUserNotificationSettingType|null $value Value to set for the settingType property.
     */
     public function setSettingType(?EndUserNotificationSettingType $value): void {
