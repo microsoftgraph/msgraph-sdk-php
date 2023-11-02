@@ -59,7 +59,7 @@ class Application extends DirectoryObject
 
     /**
     * Gets the appId
-    * The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only. Supports $filter (eq).
+    * The unique identifier for the application that is assigned by Microsoft Entra ID. Not nullable. Read-only. Alternate key. Supports $filter (eq).
     *
     * @return string|null The appId
     */
@@ -74,7 +74,7 @@ class Application extends DirectoryObject
 
     /**
     * Sets the appId
-    * The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only. Supports $filter (eq).
+    * The unique identifier for the application that is assigned by Microsoft Entra ID. Not nullable. Read-only. Alternate key. Supports $filter (eq).
     *
     * @param string $val The appId
     *
@@ -217,7 +217,7 @@ class Application extends DirectoryObject
 
     /**
     * Gets the defaultRedirectUri
-    * The default redirect URI. If specified and there is no explicit redirect URI in the sign-in request for SAML and OIDC flows, Azure AD sends the token to this redirect URI. Azure AD also sends the token to this default URI in SAML IdP-initiated single sign-on. The value must match one of the configured redirect URIs for the application.
+    * The default redirect URI. If specified and there is no explicit redirect URI in the sign-in request for SAML and OIDC flows, Microsoft Entra ID sends the token to this redirect URI. Microsoft Entra ID also sends the token to this default URI in SAML IdP-initiated single sign-on. The value must match one of the configured redirect URIs for the application.
     *
     * @return string|null The defaultRedirectUri
     */
@@ -232,7 +232,7 @@ class Application extends DirectoryObject
 
     /**
     * Sets the defaultRedirectUri
-    * The default redirect URI. If specified and there is no explicit redirect URI in the sign-in request for SAML and OIDC flows, Azure AD sends the token to this redirect URI. Azure AD also sends the token to this default URI in SAML IdP-initiated single sign-on. The value must match one of the configured redirect URIs for the application.
+    * The default redirect URI. If specified and there is no explicit redirect URI in the sign-in request for SAML and OIDC flows, Microsoft Entra ID sends the token to this redirect URI. Microsoft Entra ID also sends the token to this default URI in SAML IdP-initiated single sign-on. The value must match one of the configured redirect URIs for the application.
     *
     * @param string $val The defaultRedirectUri
     *
@@ -333,7 +333,7 @@ class Application extends DirectoryObject
 
     /**
     * Gets the groupMembershipClaims
-    * Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of).
+    * Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following string values: None, SecurityGroup (for security groups and Microsoft Entra roles), All (this gets all security groups, distribution groups, and Microsoft Entra directory roles that the signed-in user is a member of).
     *
     * @return string|null The groupMembershipClaims
     */
@@ -348,7 +348,7 @@ class Application extends DirectoryObject
 
     /**
     * Sets the groupMembershipClaims
-    * Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of).
+    * Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following string values: None, SecurityGroup (for security groups and Microsoft Entra roles), All (this gets all security groups, distribution groups, and Microsoft Entra directory roles that the signed-in user is a member of).
     *
     * @param string $val The groupMembershipClaims
     *
@@ -362,7 +362,7 @@ class Application extends DirectoryObject
 
     /**
     * Gets the identifierUris
-    * Also known as App ID URI, this value is set when an application is used as a resource app. The identifierUris acts as the prefix for the scopes you'll reference in your API's code, and it must be globally unique. You can use the default value provided, which is in the form api://&amp;lt;application-client-id&amp;gt;, or specify a more readable URI like https://contoso.com/api. For more information on valid identifierUris patterns and best practices, see Azure AD application registration security best practices. Not nullable. Supports $filter (eq, ne, ge, le, startsWith).
+    * Also known as App ID URI, this value is set when an application is used as a resource app. The identifierUris acts as the prefix for the scopes you'll reference in your API's code, and it must be globally unique. You can use the default value provided, which is in the form api://&amp;lt;application-client-id&amp;gt;, or specify a more readable URI like https://contoso.com/api. For more information on valid identifierUris patterns and best practices, see Microsoft Entra application registration security best practices. Not nullable. Supports $filter (eq, ne, ge, le, startsWith).
     *
     * @return array|null The identifierUris
     */
@@ -377,7 +377,7 @@ class Application extends DirectoryObject
 
     /**
     * Sets the identifierUris
-    * Also known as App ID URI, this value is set when an application is used as a resource app. The identifierUris acts as the prefix for the scopes you'll reference in your API's code, and it must be globally unique. You can use the default value provided, which is in the form api://&amp;lt;application-client-id&amp;gt;, or specify a more readable URI like https://contoso.com/api. For more information on valid identifierUris patterns and best practices, see Azure AD application registration security best practices. Not nullable. Supports $filter (eq, ne, ge, le, startsWith).
+    * Also known as App ID URI, this value is set when an application is used as a resource app. The identifierUris acts as the prefix for the scopes you'll reference in your API's code, and it must be globally unique. You can use the default value provided, which is in the form api://&amp;lt;application-client-id&amp;gt;, or specify a more readable URI like https://contoso.com/api. For more information on valid identifierUris patterns and best practices, see Microsoft Entra application registration security best practices. Not nullable. Supports $filter (eq, ne, ge, le, startsWith).
     *
     * @param string[] $val The identifierUris
     *
@@ -391,7 +391,7 @@ class Application extends DirectoryObject
 
     /**
     * Gets the info
-    * Basic profile information of the application, such as it's marketing, support, terms of service, and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more information, see How to: Add Terms of service and privacy statement for registered Azure AD apps. Supports $filter (eq, ne, not, ge, le, and eq on null values).
+    * Basic profile information of the application, such as it's marketing, support, terms of service, and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more information, see How to: Add Terms of service and privacy statement for registered Microsoft Entra apps. Supports $filter (eq, ne, not, ge, le, and eq on null values).
     *
     * @return InformationalUrl|null The info
     */
@@ -410,7 +410,7 @@ class Application extends DirectoryObject
 
     /**
     * Sets the info
-    * Basic profile information of the application, such as it's marketing, support, terms of service, and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more information, see How to: Add Terms of service and privacy statement for registered Azure AD apps. Supports $filter (eq, ne, not, ge, le, and eq on null values).
+    * Basic profile information of the application, such as it's marketing, support, terms of service, and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more information, see How to: Add Terms of service and privacy statement for registered Microsoft Entra apps. Supports $filter (eq, ne, not, ge, le, and eq on null values).
     *
     * @param InformationalUrl $val The info
     *
@@ -453,7 +453,7 @@ class Application extends DirectoryObject
 
     /**
     * Gets the isFallbackPublicClient
-    * Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Azure AD cannot determine the client application type. For example, the ROPC flow where the application is configured without specifying a redirect URI. In those cases Azure AD interprets the application type based on the value of this property.
+    * Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Microsoft Entra ID cannot determine the client application type. For example, the ROPC flow where the application is configured without specifying a redirect URI. In those cases Microsoft Entra ID interprets the application type based on the value of this property.
     *
     * @return bool|null The isFallbackPublicClient
     */
@@ -468,7 +468,7 @@ class Application extends DirectoryObject
 
     /**
     * Sets the isFallbackPublicClient
-    * Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Azure AD cannot determine the client application type. For example, the ROPC flow where the application is configured without specifying a redirect URI. In those cases Azure AD interprets the application type based on the value of this property.
+    * Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Microsoft Entra ID cannot determine the client application type. For example, the ROPC flow where the application is configured without specifying a redirect URI. In those cases Microsoft Entra ID interprets the application type based on the value of this property.
     *
     * @param bool $val The isFallbackPublicClient
     *
@@ -574,7 +574,7 @@ class Application extends DirectoryObject
 
     /**
     * Gets the optionalClaims
-    * Application developers can configure optional claims in their Azure AD applications to specify the claims that are sent to their application by the Microsoft security token service. For more information, see How to: Provide optional claims to your app.
+    * Application developers can configure optional claims in their Microsoft Entra applications to specify the claims that are sent to their application by the Microsoft security token service. For more information, see How to: Provide optional claims to your app.
     *
     * @return OptionalClaims|null The optionalClaims
     */
@@ -593,7 +593,7 @@ class Application extends DirectoryObject
 
     /**
     * Sets the optionalClaims
-    * Application developers can configure optional claims in their Azure AD applications to specify the claims that are sent to their application by the Microsoft security token service. For more information, see How to: Provide optional claims to your app.
+    * Application developers can configure optional claims in their Microsoft Entra applications to specify the claims that are sent to their application by the Microsoft security token service. For more information, see How to: Provide optional claims to your app.
     *
     * @param OptionalClaims $val The optionalClaims
     *
@@ -732,7 +732,7 @@ class Application extends DirectoryObject
 
     /**
     * Gets the requestSignatureVerification
-    * Specifies whether this application requires Azure AD to verify the signed authentication requests.
+    * Specifies whether this application requires Microsoft Entra ID to verify the signed authentication requests.
     *
     * @return RequestSignatureVerification|null The requestSignatureVerification
     */
@@ -751,7 +751,7 @@ class Application extends DirectoryObject
 
     /**
     * Sets the requestSignatureVerification
-    * Specifies whether this application requires Azure AD to verify the signed authentication requests.
+    * Specifies whether this application requires Microsoft Entra ID to verify the signed authentication requests.
     *
     * @param RequestSignatureVerification $val The requestSignatureVerification
     *
@@ -977,7 +977,7 @@ class Application extends DirectoryObject
 
     /**
     * Gets the tokenEncryptionKeyId
-    * Specifies the keyId of a public key from the keyCredentials collection. When configured, Azure AD encrypts all the tokens it emits by using the key this property points to. The application code that receives the encrypted token must use the matching private key to decrypt the token before it can be used for the signed-in user.
+    * Specifies the keyId of a public key from the keyCredentials collection. When configured, Microsoft Entra ID encrypts all the tokens it emits by using the key this property points to. The application code that receives the encrypted token must use the matching private key to decrypt the token before it can be used for the signed-in user.
     *
     * @return string|null The tokenEncryptionKeyId
     */
@@ -992,7 +992,7 @@ class Application extends DirectoryObject
 
     /**
     * Sets the tokenEncryptionKeyId
-    * Specifies the keyId of a public key from the keyCredentials collection. When configured, Azure AD encrypts all the tokens it emits by using the key this property points to. The application code that receives the encrypted token must use the matching private key to decrypt the token before it can be used for the signed-in user.
+    * Specifies the keyId of a public key from the keyCredentials collection. When configured, Microsoft Entra ID encrypts all the tokens it emits by using the key this property points to. The application code that receives the encrypted token must use the matching private key to decrypt the token before it can be used for the signed-in user.
     *
     * @param string $val The tokenEncryptionKeyId
     *
@@ -1406,7 +1406,7 @@ class Application extends DirectoryObject
 
     /**
     * Gets the connectorGroup
-    * The connectorGroup the application is using with Azure AD Application Proxy. Nullable.
+    * The connectorGroup the application is using with Microsoft Entra application proxy. Nullable.
     *
     * @return ConnectorGroup|null The connectorGroup
     */
@@ -1425,7 +1425,7 @@ class Application extends DirectoryObject
 
     /**
     * Sets the connectorGroup
-    * The connectorGroup the application is using with Azure AD Application Proxy. Nullable.
+    * The connectorGroup the application is using with Microsoft Entra application proxy. Nullable.
     *
     * @param ConnectorGroup $val The connectorGroup
     *
@@ -1439,7 +1439,7 @@ class Application extends DirectoryObject
 
     /**
     * Gets the synchronization
-    * Represents the capability for Azure Active Directory (Azure AD) identity synchronization through the Microsoft Graph API.
+    * Represents the capability for Microsoft Entra identity synchronization through the Microsoft Graph API.
     *
     * @return Synchronization|null The synchronization
     */
@@ -1458,7 +1458,7 @@ class Application extends DirectoryObject
 
     /**
     * Sets the synchronization
-    * Represents the capability for Azure Active Directory (Azure AD) identity synchronization through the Microsoft Graph API.
+    * Represents the capability for Microsoft Entra identity synchronization through the Microsoft Graph API.
     *
     * @param Synchronization $val The synchronization
     *

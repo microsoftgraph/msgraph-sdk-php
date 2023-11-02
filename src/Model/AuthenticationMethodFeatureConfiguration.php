@@ -92,7 +92,7 @@ class AuthenticationMethodFeatureConfiguration extends Entity
 
     /**
     * Gets the state
-    * Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Azure AD for the setting. The default value is disabled.
+    * Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Microsoft Entra ID for the setting. The default value is disabled.
     *
     * @return AdvancedConfigState|null The state
     */
@@ -111,7 +111,7 @@ class AuthenticationMethodFeatureConfiguration extends Entity
 
     /**
     * Sets the state
-    * Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Azure AD for the setting. The default value is disabled.
+    * Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Microsoft Entra ID for the setting. The default value is disabled.
     *
     * @param AdvancedConfigState $val The value to assign to the state
     *

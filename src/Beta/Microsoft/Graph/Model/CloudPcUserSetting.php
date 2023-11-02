@@ -242,7 +242,7 @@ class CloudPcUserSetting extends Entity
 
      /**
      * Gets the assignments
-    * Represents the set of Microsoft 365 groups and security groups in Azure Active Directory that have cloudPCUserSetting assigned. Returned only on $expand. For an example, see Get cloudPcUserSettingample.
+    * Represents the set of Microsoft 365 groups and security groups in Microsoft Entra ID that have cloudPCUserSetting assigned. Returned only on $expand. For an example, see Get cloudPcUserSettingample.
      *
      * @return array|null The assignments
      */
@@ -257,7 +257,7 @@ class CloudPcUserSetting extends Entity
 
     /**
     * Sets the assignments
-    * Represents the set of Microsoft 365 groups and security groups in Azure Active Directory that have cloudPCUserSetting assigned. Returned only on $expand. For an example, see Get cloudPcUserSettingample.
+    * Represents the set of Microsoft 365 groups and security groups in Microsoft Entra ID that have cloudPCUserSetting assigned. Returned only on $expand. For an example, see Get cloudPcUserSettingample.
     *
     * @param CloudPcUserSettingAssignment[] $val The assignments
     *

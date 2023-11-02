@@ -82,7 +82,7 @@ class AggregatedInboundStatistics extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the matchedPeopleByRole
-    * The aggregate count of active people matched to an Azure Active Directory user, by role.
+    * The aggregate count of active people matched to a Microsoft Entra user, by role.
     *
     * @return IndustryDataRunRoleCountMetric|null The matchedPeopleByRole
     */
@@ -101,7 +101,7 @@ class AggregatedInboundStatistics extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the matchedPeopleByRole
-    * The aggregate count of active people matched to an Azure Active Directory user, by role.
+    * The aggregate count of active people matched to a Microsoft Entra user, by role.
     *
     * @param IndustryDataRunRoleCountMetric $val The value to assign to the matchedPeopleByRole
     *
@@ -199,7 +199,7 @@ class AggregatedInboundStatistics extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the unmatchedPeopleByRole
-    * The aggregate count of active people not matched to an Azure Active Directory user, by role.
+    * The aggregate count of active people not matched to a Microsoft Entra user, by role.
     *
     * @return IndustryDataRunRoleCountMetric|null The unmatchedPeopleByRole
     */
@@ -218,7 +218,7 @@ class AggregatedInboundStatistics extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the unmatchedPeopleByRole
-    * The aggregate count of active people not matched to an Azure Active Directory user, by role.
+    * The aggregate count of active people not matched to a Microsoft Entra user, by role.
     *
     * @param IndustryDataRunRoleCountMetric $val The value to assign to the unmatchedPeopleByRole
     *

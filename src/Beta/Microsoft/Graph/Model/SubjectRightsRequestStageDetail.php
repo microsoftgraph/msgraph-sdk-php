@@ -59,7 +59,7 @@ class SubjectRightsRequestStageDetail extends Entity
 
     /**
     * Gets the stage
-    * The stage of the subject rights request. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue, approval.
+    * The stage of the subject rights request. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue, approval. You must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: approval.
     *
     * @return SubjectRightsRequestStage|null The stage
     */
@@ -78,7 +78,7 @@ class SubjectRightsRequestStageDetail extends Entity
 
     /**
     * Sets the stage
-    * The stage of the subject rights request. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue, approval.
+    * The stage of the subject rights request. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue, approval. You must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: approval.
     *
     * @param SubjectRightsRequestStage $val The value to assign to the stage
     *

@@ -177,6 +177,7 @@ class ThreatIntelligence extends \Beta\Microsoft\Graph\Model\Entity
 
      /**
      * Gets the hostPorts
+    * Retrieve details about hostPort objects.Note: List retrieval is not yet supported.
      *
      * @return array|null The hostPorts
      */
@@ -191,6 +192,7 @@ class ThreatIntelligence extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the hostPorts
+    * Retrieve details about hostPort objects.Note: List retrieval is not yet supported.
     *
     * @param HostPort[] $val The hostPorts
     *

@@ -265,7 +265,7 @@ class ProvisioningObjectSummary extends Entity
 
     /**
     * Gets the provisioningAction
-    * Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Azure AD activity list. Supports $filter (eq, contains).
+    * Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Microsoft Entra activity list. Supports $filter (eq, contains).
     *
     * @return ProvisioningAction|null The provisioningAction
     */
@@ -284,7 +284,7 @@ class ProvisioningObjectSummary extends Entity
 
     /**
     * Sets the provisioningAction
-    * Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Azure AD activity list. Supports $filter (eq, contains).
+    * Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Microsoft Entra activity list. Supports $filter (eq, contains).
     *
     * @param ProvisioningAction $val The provisioningAction
     *
@@ -557,7 +557,7 @@ class ProvisioningObjectSummary extends Entity
 
     /**
     * Gets the tenantId
-    * Unique Azure AD tenant ID. Supports $filter (eq, contains).
+    * Unique Microsoft Entra tenant ID. Supports $filter (eq, contains).
     *
     * @return string|null The tenantId
     */
@@ -572,7 +572,7 @@ class ProvisioningObjectSummary extends Entity
 
     /**
     * Sets the tenantId
-    * Unique Azure AD tenant ID. Supports $filter (eq, contains).
+    * Unique Microsoft Entra tenant ID. Supports $filter (eq, contains).
     *
     * @param string $val The tenantId
     *

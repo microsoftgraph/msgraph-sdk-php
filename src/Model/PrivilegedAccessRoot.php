@@ -26,6 +26,7 @@ class PrivilegedAccessRoot extends Entity
 {
     /**
     * Gets the group
+    * A group that's governed through Privileged Identity Management (PIM).
     *
     * @return PrivilegedAccessGroup|null The group
     */
@@ -44,6 +45,7 @@ class PrivilegedAccessRoot extends Entity
 
     /**
     * Sets the group
+    * A group that's governed through Privileged Identity Management (PIM).
     *
     * @param PrivilegedAccessGroup $val The group
     *

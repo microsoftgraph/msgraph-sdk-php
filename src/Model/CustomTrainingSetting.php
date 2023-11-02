@@ -37,6 +37,7 @@ class CustomTrainingSetting extends TrainingSetting
 
     /**
     * Gets the assignedTo
+    * A user collection that specifies to whom the training should be assigned. Possible values are: none, allUsers, clickedPayload, compromised, reportedPhish, readButNotClicked, didNothing, unknownFutureValue.
     *
     * @return TrainingAssignedTo|null The assignedTo
     */
@@ -55,6 +56,7 @@ class CustomTrainingSetting extends TrainingSetting
 
     /**
     * Sets the assignedTo
+    * A user collection that specifies to whom the training should be assigned. Possible values are: none, allUsers, clickedPayload, compromised, reportedPhish, readButNotClicked, didNothing, unknownFutureValue.
     *
     * @param TrainingAssignedTo $val The value to assign to the assignedTo
     *
@@ -67,6 +69,7 @@ class CustomTrainingSetting extends TrainingSetting
     }
     /**
     * Gets the description
+    * The description of the custom training setting.
     *
     * @return string|null The description
     */
@@ -81,6 +84,7 @@ class CustomTrainingSetting extends TrainingSetting
 
     /**
     * Sets the description
+    * The description of the custom training setting.
     *
     * @param string $val The value of the description
     *
@@ -93,6 +97,7 @@ class CustomTrainingSetting extends TrainingSetting
     }
     /**
     * Gets the displayName
+    * The display name of the custom training setting.
     *
     * @return string|null The displayName
     */
@@ -107,6 +112,7 @@ class CustomTrainingSetting extends TrainingSetting
 
     /**
     * Sets the displayName
+    * The display name of the custom training setting.
     *
     * @param string $val The value of the displayName
     *
@@ -119,6 +125,7 @@ class CustomTrainingSetting extends TrainingSetting
     }
     /**
     * Gets the durationInMinutes
+    * Training duration.
     *
     * @return int|null The durationInMinutes
     */
@@ -133,6 +140,7 @@ class CustomTrainingSetting extends TrainingSetting
 
     /**
     * Sets the durationInMinutes
+    * Training duration.
     *
     * @param int $val The value of the durationInMinutes
     *
@@ -145,6 +153,7 @@ class CustomTrainingSetting extends TrainingSetting
     }
     /**
     * Gets the url
+    * The training URL.
     *
     * @return string|null The url
     */
@@ -159,6 +168,7 @@ class CustomTrainingSetting extends TrainingSetting
 
     /**
     * Sets the url
+    * The training URL.
     *
     * @param string $val The value of the url
     *

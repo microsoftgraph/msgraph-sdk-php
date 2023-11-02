@@ -531,7 +531,7 @@ class OrganizationalBrandingProperties extends Entity
 
     /**
     * Gets the favicon
-    * A custom icon (favicon) to replace a default Microsoft product favicon on an Azure AD tenant.
+    * A custom icon (favicon) to replace a default Microsoft product favicon on a Microsoft Entra tenant.
     *
     * @return \GuzzleHttp\Psr7\Stream|null The favicon
     */
@@ -550,7 +550,7 @@ class OrganizationalBrandingProperties extends Entity
 
     /**
     * Sets the favicon
-    * A custom icon (favicon) to replace a default Microsoft product favicon on an Azure AD tenant.
+    * A custom icon (favicon) to replace a default Microsoft product favicon on a Microsoft Entra tenant.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The favicon
     *

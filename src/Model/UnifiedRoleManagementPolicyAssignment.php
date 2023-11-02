@@ -55,7 +55,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity
 
     /**
     * Gets the roleDefinitionId
-    * The identifier of the role definition object where the policy applies. If not specified, the policy applies to all roles. Supports $filter (eq).
+    * For Microsoft Entra roles policy, it's the identifier of the role definition object where the policy applies. For PIM for groups membership and ownership, it's either member or owner. Supports $filter (eq).
     *
     * @return string|null The roleDefinitionId
     */
@@ -70,7 +70,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity
 
     /**
     * Sets the roleDefinitionId
-    * The identifier of the role definition object where the policy applies. If not specified, the policy applies to all roles. Supports $filter (eq).
+    * For Microsoft Entra roles policy, it's the identifier of the role definition object where the policy applies. For PIM for groups membership and ownership, it's either member or owner. Supports $filter (eq).
     *
     * @param string $val The roleDefinitionId
     *
@@ -113,7 +113,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity
 
     /**
     * Gets the scopeType
-    * The type of the scope where the policy is assigned. One of Directory, DirectoryRole. Required.
+    * The type of the scope where the policy is assigned. One of Directory, DirectoryRole, Group. Required.
     *
     * @return string|null The scopeType
     */
@@ -128,7 +128,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity
 
     /**
     * Sets the scopeType
-    * The type of the scope where the policy is assigned. One of Directory, DirectoryRole. Required.
+    * The type of the scope where the policy is assigned. One of Directory, DirectoryRole, Group. Required.
     *
     * @param string $val The scopeType
     *

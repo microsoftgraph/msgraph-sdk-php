@@ -532,7 +532,7 @@ class EducationUser extends Entity
 
     /**
     * Gets the onPremisesInfo
-    * Additional information used to associate the Azure Active Directory user with its Active Directory counterpart.
+    * Additional information used to associate the Microsoft Entra user with its Active Directory counterpart.
     *
     * @return EducationOnPremisesInfo|null The onPremisesInfo
     */
@@ -551,7 +551,7 @@ class EducationUser extends Entity
 
     /**
     * Sets the onPremisesInfo
-    * Additional information used to associate the Azure Active Directory user with its Active Directory counterpart.
+    * Additional information used to associate the Microsoft Entra user with its Active Directory counterpart.
     *
     * @param EducationOnPremisesInfo $val The onPremisesInfo
     *

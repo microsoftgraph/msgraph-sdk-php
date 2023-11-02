@@ -81,7 +81,7 @@ class OnPremisesDirectorySynchronizationFeature extends Entity
     }
     /**
     * Gets the bypassDirSyncOverridesEnabled
-    * When true, persists the values of Mobile and OtherMobile in on-premises AD during sync cycles instead of values of MobilePhone or AlternateMobilePhones in Azure AD.
+    * When true, persists the values of Mobile and OtherMobile in on-premises AD during sync cycles instead of values of MobilePhone or AlternateMobilePhones in Microsoft Entra ID.
     *
     * @return bool|null The bypassDirSyncOverridesEnabled
     */
@@ -96,7 +96,7 @@ class OnPremisesDirectorySynchronizationFeature extends Entity
 
     /**
     * Sets the bypassDirSyncOverridesEnabled
-    * When true, persists the values of Mobile and OtherMobile in on-premises AD during sync cycles instead of values of MobilePhone or AlternateMobilePhones in Azure AD.
+    * When true, persists the values of Mobile and OtherMobile in on-premises AD during sync cycles instead of values of MobilePhone or AlternateMobilePhones in Microsoft Entra ID.
     *
     * @param bool $val The value of the bypassDirSyncOverridesEnabled
     *
@@ -221,7 +221,7 @@ class OnPremisesDirectorySynchronizationFeature extends Entity
     }
     /**
     * Gets the directoryExtensionsEnabled
-    * Used to indicate that directory extensions are being synced from on-premises AD to Azure AD.
+    * Used to indicate that directory extensions are being synced from on-premises AD to Microsoft Entra ID.
     *
     * @return bool|null The directoryExtensionsEnabled
     */
@@ -236,7 +236,7 @@ class OnPremisesDirectorySynchronizationFeature extends Entity
 
     /**
     * Sets the directoryExtensionsEnabled
-    * Used to indicate that directory extensions are being synced from on-premises AD to Azure AD.
+    * Used to indicate that directory extensions are being synced from on-premises AD to Microsoft Entra ID.
     *
     * @param bool $val The value of the directoryExtensionsEnabled
     *
@@ -333,7 +333,7 @@ class OnPremisesDirectorySynchronizationFeature extends Entity
     }
     /**
     * Gets the passwordWritebackEnabled
-    * Used to indicate that writeback of password resets from Azure AD to on-premises AD is enabled.
+    * Used to indicate that writeback of password resets from Microsoft Entra ID to on-premises AD is enabled.
     *
     * @return bool|null The passwordWritebackEnabled
     */
@@ -348,7 +348,7 @@ class OnPremisesDirectorySynchronizationFeature extends Entity
 
     /**
     * Sets the passwordWritebackEnabled
-    * Used to indicate that writeback of password resets from Azure AD to on-premises AD is enabled.
+    * Used to indicate that writeback of password resets from Microsoft Entra ID to on-premises AD is enabled.
     *
     * @param bool $val The value of the passwordWritebackEnabled
     *

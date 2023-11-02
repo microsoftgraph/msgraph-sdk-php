@@ -341,6 +341,7 @@ class LandingPage extends Entity
 
      /**
      * Gets the details
+    * The detail information for a landing page associated with a simulation during its creation.
      *
      * @return array|null The details
      */
@@ -355,6 +356,7 @@ class LandingPage extends Entity
 
     /**
     * Sets the details
+    * The detail information for a landing page associated with a simulation during its creation.
     *
     * @param LandingPageDetail[] $val The details
     *

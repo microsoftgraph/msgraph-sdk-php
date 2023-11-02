@@ -26,7 +26,7 @@ class CloudPC extends Entity
 {
     /**
     * Gets the aadDeviceId
-    * The Azure Active Directory (Azure AD) device ID of the Cloud PC.
+    * The Microsoft Entra device ID of the Cloud PC.
     *
     * @return string|null The aadDeviceId
     */
@@ -41,7 +41,7 @@ class CloudPC extends Entity
 
     /**
     * Sets the aadDeviceId
-    * The Azure Active Directory (Azure AD) device ID of the Cloud PC.
+    * The Microsoft Entra device ID of the Cloud PC.
     *
     * @param string $val The aadDeviceId
     *

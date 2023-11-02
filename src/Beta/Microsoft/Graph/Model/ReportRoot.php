@@ -86,7 +86,7 @@ class ReportRoot extends Entity
 
     /**
     * Gets the authenticationMethods
-    * Container for navigation properties for Azure AD authentication methods resources.
+    * Container for navigation properties for Microsoft Entra authentication methods resources.
     *
     * @return AuthenticationMethodsRoot|null The authenticationMethods
     */
@@ -105,7 +105,7 @@ class ReportRoot extends Entity
 
     /**
     * Sets the authenticationMethods
-    * Container for navigation properties for Azure AD authentication methods resources.
+    * Container for navigation properties for Microsoft Entra authentication methods resources.
     *
     * @param AuthenticationMethodsRoot $val The authenticationMethods
     *
@@ -237,6 +237,37 @@ class ReportRoot extends Entity
     public function setUserCredentialUsageDetails($val)
     {
         $this->_propDict["userCredentialUsageDetails"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the userInsights
+    *
+    * @return UserInsightsRoot|null The userInsights
+    */
+    public function getUserInsights()
+    {
+        if (array_key_exists("userInsights", $this->_propDict)) {
+            if (is_a($this->_propDict["userInsights"], "\Beta\Microsoft\Graph\Model\UserInsightsRoot") || is_null($this->_propDict["userInsights"])) {
+                return $this->_propDict["userInsights"];
+            } else {
+                $this->_propDict["userInsights"] = new UserInsightsRoot($this->_propDict["userInsights"]);
+                return $this->_propDict["userInsights"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the userInsights
+    *
+    * @param UserInsightsRoot $val The userInsights
+    *
+    * @return ReportRoot
+    */
+    public function setUserInsights($val)
+    {
+        $this->_propDict["userInsights"] = $val;
         return $this;
     }
 
@@ -502,7 +533,7 @@ class ReportRoot extends Entity
 
     /**
     * Gets the security
-    * Provides the ability to launch a realistic simulated phishing attack that organizations can learn from.
+    * Provides the ability to launch a realistically simulated phishing attack that organizations can learn from.
     *
     * @return SecurityReportsRoot|null The security
     */
@@ -521,7 +552,7 @@ class ReportRoot extends Entity
 
     /**
     * Sets the security
-    * Provides the ability to launch a realistic simulated phishing attack that organizations can learn from.
+    * Provides the ability to launch a realistically simulated phishing attack that organizations can learn from.
     *
     * @param SecurityReportsRoot $val The security
     *

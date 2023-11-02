@@ -25,7 +25,7 @@ class CustomExtensionClientConfiguration extends Entity
 {
     /**
     * Gets the maximumRetries
-    * The max number of retries that Azure AD makes to the external API. Values of 0 or 1 are supported. If null, the default for the service applies.
+    * The max number of retries that Microsoft Entra ID makes to the external API. Values of 0 or 1 are supported. If null, the default for the service applies.
     *
     * @return int|null The maximumRetries
     */
@@ -40,7 +40,7 @@ class CustomExtensionClientConfiguration extends Entity
 
     /**
     * Sets the maximumRetries
-    * The max number of retries that Azure AD makes to the external API. Values of 0 or 1 are supported. If null, the default for the service applies.
+    * The max number of retries that Microsoft Entra ID makes to the external API. Values of 0 or 1 are supported. If null, the default for the service applies.
     *
     * @param int $val The value of the maximumRetries
     *
@@ -53,7 +53,7 @@ class CustomExtensionClientConfiguration extends Entity
     }
     /**
     * Gets the timeoutInMilliseconds
-    * The max duration in milliseconds that Azure AD waits for a response from the external app before it shuts down the connection. The valid range is between 200 and 2000 milliseconds. If null, the default for the service applies.
+    * The max duration in milliseconds that Microsoft Entra ID waits for a response from the external app before it shuts down the connection. The valid range is between 200 and 2000 milliseconds. If null, the default for the service applies.
     *
     * @return int|null The timeoutInMilliseconds
     */
@@ -68,7 +68,7 @@ class CustomExtensionClientConfiguration extends Entity
 
     /**
     * Sets the timeoutInMilliseconds
-    * The max duration in milliseconds that Azure AD waits for a response from the external app before it shuts down the connection. The valid range is between 200 and 2000 milliseconds. If null, the default for the service applies.
+    * The max duration in milliseconds that Microsoft Entra ID waits for a response from the external app before it shuts down the connection. The valid range is between 200 and 2000 milliseconds. If null, the default for the service applies.
     *
     * @param int $val The value of the timeoutInMilliseconds
     *

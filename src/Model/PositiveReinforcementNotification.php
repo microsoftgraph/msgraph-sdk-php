@@ -26,6 +26,7 @@ class PositiveReinforcementNotification extends BaseEndUserNotification
 
     /**
     * Gets the deliveryPreference
+    * Delivery preference. Possible values are: unknown, deliverImmedietly, deliverAfterCampaignEnd, unknownFutureValue.
     *
     * @return NotificationDeliveryPreference|null The deliveryPreference
     */
@@ -44,6 +45,7 @@ class PositiveReinforcementNotification extends BaseEndUserNotification
 
     /**
     * Sets the deliveryPreference
+    * Delivery preference. Possible values are: unknown, deliverImmedietly, deliverAfterCampaignEnd, unknownFutureValue.
     *
     * @param NotificationDeliveryPreference $val The value to assign to the deliveryPreference
     *

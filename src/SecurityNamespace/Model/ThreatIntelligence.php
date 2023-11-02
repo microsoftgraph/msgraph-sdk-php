@@ -176,6 +176,36 @@ class ThreatIntelligence extends \Microsoft\Graph\Model\Entity
 
 
      /**
+     * Gets the hostPorts
+    * Retrieve details about hostPort objects.Note: List retrieval is not yet supported.
+     *
+     * @return array|null The hostPorts
+     */
+    public function getHostPorts()
+    {
+        if (array_key_exists("hostPorts", $this->_propDict)) {
+           return $this->_propDict["hostPorts"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the hostPorts
+    * Retrieve details about hostPort objects.Note: List retrieval is not yet supported.
+    *
+    * @param HostPort[] $val The hostPorts
+    *
+    * @return ThreatIntelligence
+    */
+    public function setHostPorts($val)
+    {
+        $this->_propDict["hostPorts"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the hosts
     * Refers to host objects that Microsoft Threat Intelligence has observed.Note: List retrieval is not yet supported.
      *

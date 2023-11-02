@@ -115,34 +115,4 @@ class Fido2AuthenticationMethodConfiguration extends AuthenticationMethodConfigu
         return $this;
     }
 
-
-     /**
-     * Gets the includeTargets
-    * A collection of groups that are enabled to use the authentication method.
-     *
-     * @return array|null The includeTargets
-     */
-    public function getIncludeTargets()
-    {
-        if (array_key_exists("includeTargets", $this->_propDict)) {
-           return $this->_propDict["includeTargets"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the includeTargets
-    * A collection of groups that are enabled to use the authentication method.
-    *
-    * @param AuthenticationMethodTarget[] $val The includeTargets
-    *
-    * @return Fido2AuthenticationMethodConfiguration
-    */
-    public function setIncludeTargets($val)
-    {
-        $this->_propDict["includeTargets"] = $val;
-        return $this;
-    }
-
 }

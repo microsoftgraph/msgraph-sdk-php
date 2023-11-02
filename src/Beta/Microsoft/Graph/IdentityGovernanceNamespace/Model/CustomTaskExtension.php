@@ -125,7 +125,7 @@ class CustomTaskExtension extends \Beta\Microsoft\Graph\Model\CustomCalloutExten
 
     /**
     * Gets the createdBy
-    * The unique identifier of the Azure AD user that created the custom task extension.Supports $filter(eq, ne) and $expand.
+    * The unique identifier of the Microsoft Entra user that created the custom task extension.Supports $filter(eq, ne) and $expand.
     *
     * @return \Beta\Microsoft\Graph\Model\User|null The createdBy
     */
@@ -144,7 +144,7 @@ class CustomTaskExtension extends \Beta\Microsoft\Graph\Model\CustomCalloutExten
 
     /**
     * Sets the createdBy
-    * The unique identifier of the Azure AD user that created the custom task extension.Supports $filter(eq, ne) and $expand.
+    * The unique identifier of the Microsoft Entra user that created the custom task extension.Supports $filter(eq, ne) and $expand.
     *
     * @param \Beta\Microsoft\Graph\Model\User $val The createdBy
     *
@@ -158,7 +158,7 @@ class CustomTaskExtension extends \Beta\Microsoft\Graph\Model\CustomCalloutExten
 
     /**
     * Gets the lastModifiedBy
-    * The unique identifier of the Azure AD user that modified the custom task extension last.Supports $filter(eq, ne) and $expand.
+    * The unique identifier of the Microsoft Entra user that modified the custom task extension last.Supports $filter(eq, ne) and $expand.
     *
     * @return \Beta\Microsoft\Graph\Model\User|null The lastModifiedBy
     */
@@ -177,7 +177,7 @@ class CustomTaskExtension extends \Beta\Microsoft\Graph\Model\CustomCalloutExten
 
     /**
     * Sets the lastModifiedBy
-    * The unique identifier of the Azure AD user that modified the custom task extension last.Supports $filter(eq, ne) and $expand.
+    * The unique identifier of the Microsoft Entra user that modified the custom task extension last.Supports $filter(eq, ne) and $expand.
     *
     * @param \Beta\Microsoft\Graph\Model\User $val The lastModifiedBy
     *

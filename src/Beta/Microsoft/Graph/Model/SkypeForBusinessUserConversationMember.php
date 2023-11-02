@@ -55,7 +55,7 @@ class SkypeForBusinessUserConversationMember extends ConversationMember
 
     /**
     * Gets the userId
-    * Azure Active Directory ID of the user.
+    * Microsoft Entra ID of the user.
     *
     * @return string|null The userId
     */
@@ -70,7 +70,7 @@ class SkypeForBusinessUserConversationMember extends ConversationMember
 
     /**
     * Sets the userId
-    * Azure Active Directory ID of the user.
+    * Microsoft Entra ID of the user.
     *
     * @param string $val The userId
     *

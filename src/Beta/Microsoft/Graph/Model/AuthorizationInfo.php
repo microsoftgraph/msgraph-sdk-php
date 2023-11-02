@@ -25,7 +25,7 @@ class AuthorizationInfo extends Entity
 {
     /**
     * Gets the certificateUserIds
-    * The collection of unique identifiers that can be associated with a user and can be used to bind the Azure AD user to a certificate for authentication and authorization into non-Azure AD environments. The identifiers must be unique in the tenant.
+    * The collection of unique identifiers that can be associated with a user and can be used to bind the Microsoft Entra user to a certificate for authentication and authorization into non-Azure AD environments. The identifiers must be unique in the tenant.
     *
     * @return string|null The certificateUserIds
     */
@@ -40,7 +40,7 @@ class AuthorizationInfo extends Entity
 
     /**
     * Sets the certificateUserIds
-    * The collection of unique identifiers that can be associated with a user and can be used to bind the Azure AD user to a certificate for authentication and authorization into non-Azure AD environments. The identifiers must be unique in the tenant.
+    * The collection of unique identifiers that can be associated with a user and can be used to bind the Microsoft Entra user to a certificate for authentication and authorization into non-Azure AD environments. The identifiers must be unique in the tenant.
     *
     * @param string $val The value of the certificateUserIds
     *

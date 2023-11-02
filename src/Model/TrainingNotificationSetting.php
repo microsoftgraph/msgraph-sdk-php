@@ -37,6 +37,7 @@ class TrainingNotificationSetting extends EndUserNotificationSetting
 
     /**
     * Gets the trainingAssignment
+    * Training assignment details.
     *
     * @return BaseEndUserNotification|null The trainingAssignment
     */
@@ -55,6 +56,7 @@ class TrainingNotificationSetting extends EndUserNotificationSetting
 
     /**
     * Sets the trainingAssignment
+    * Training assignment details.
     *
     * @param BaseEndUserNotification $val The value to assign to the trainingAssignment
     *
@@ -68,6 +70,7 @@ class TrainingNotificationSetting extends EndUserNotificationSetting
 
     /**
     * Gets the trainingReminder
+    * Training reminder details.
     *
     * @return TrainingReminderNotification|null The trainingReminder
     */
@@ -86,6 +89,7 @@ class TrainingNotificationSetting extends EndUserNotificationSetting
 
     /**
     * Sets the trainingReminder
+    * Training reminder details.
     *
     * @param TrainingReminderNotification $val The value to assign to the trainingReminder
     *

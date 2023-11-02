@@ -113,7 +113,7 @@ class UnifiedRoleManagementAlertConfiguration extends Entity
 
     /**
     * Gets the scopeType
-    * The type of scope where the alert is created. DirectoryRole is the only currently supported scope type for Azure AD roles.
+    * The type of scope where the alert is created. DirectoryRole is the only currently supported scope type for Microsoft Entra roles.
     *
     * @return string|null The scopeType
     */
@@ -128,7 +128,7 @@ class UnifiedRoleManagementAlertConfiguration extends Entity
 
     /**
     * Sets the scopeType
-    * The type of scope where the alert is created. DirectoryRole is the only currently supported scope type for Azure AD roles.
+    * The type of scope where the alert is created. DirectoryRole is the only currently supported scope type for Microsoft Entra roles.
     *
     * @param string $val The scopeType
     *

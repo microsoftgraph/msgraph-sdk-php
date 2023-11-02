@@ -108,6 +108,32 @@ class CrossTenantSummary extends \Beta\Microsoft\Graph\Model\Entity
         return $this;
     }
     /**
+    * Gets the rarelyUsedTenantCount
+    *
+    * @return int|null The rarelyUsedTenantCount
+    */
+    public function getRarelyUsedTenantCount()
+    {
+        if (array_key_exists("rarelyUsedTenantCount", $this->_propDict)) {
+            return $this->_propDict["rarelyUsedTenantCount"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the rarelyUsedTenantCount
+    *
+    * @param int $val The value of the rarelyUsedTenantCount
+    *
+    * @return CrossTenantSummary
+    */
+    public function setRarelyUsedTenantCount($val)
+    {
+        $this->_propDict["rarelyUsedTenantCount"] = $val;
+        return $this;
+    }
+    /**
     * Gets the tenantCount
     * Count of unique tenants that were accessed, that are different from the device's home tenant, in the time frame between startDateTime and endDateTime.
     *

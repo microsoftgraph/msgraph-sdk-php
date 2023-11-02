@@ -36,6 +36,7 @@ class SubjectRightsRequestEnumeratedMailboxLocation extends SubjectRightsRequest
 
     /**
     * Gets the userPrincipalNames
+    * Collection of mailboxes that should be included in the search. Includes the user principal name (UPN) of each mailbox, for example, Monica.Thompson@contoso.com.
     *
     * @return string|null The userPrincipalNames
     */
@@ -50,6 +51,7 @@ class SubjectRightsRequestEnumeratedMailboxLocation extends SubjectRightsRequest
 
     /**
     * Sets the userPrincipalNames
+    * Collection of mailboxes that should be included in the search. Includes the user principal name (UPN) of each mailbox, for example, Monica.Thompson@contoso.com.
     *
     * @param string $val The value of the userPrincipalNames
     *

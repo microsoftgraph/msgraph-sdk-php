@@ -25,7 +25,7 @@ class CrossTenantAccessPolicyInboundTrust extends Entity
 {
     /**
     * Gets the isCompliantDeviceAccepted
-    * Specifies whether compliant devices from external Azure AD organizations are trusted.
+    * Specifies whether compliant devices from external Microsoft Entra organizations are trusted.
     *
     * @return bool|null The isCompliantDeviceAccepted
     */
@@ -40,7 +40,7 @@ class CrossTenantAccessPolicyInboundTrust extends Entity
 
     /**
     * Sets the isCompliantDeviceAccepted
-    * Specifies whether compliant devices from external Azure AD organizations are trusted.
+    * Specifies whether compliant devices from external Microsoft Entra organizations are trusted.
     *
     * @param bool $val The value of the isCompliantDeviceAccepted
     *
@@ -53,7 +53,7 @@ class CrossTenantAccessPolicyInboundTrust extends Entity
     }
     /**
     * Gets the isHybridAzureADJoinedDeviceAccepted
-    * Specifies whether hybrid Azure AD joined devices from external Azure AD organizations are trusted.
+    * Specifies whether Microsoft Entra hybrid joined devices from external Microsoft Entra organizations are trusted.
     *
     * @return bool|null The isHybridAzureADJoinedDeviceAccepted
     */
@@ -68,7 +68,7 @@ class CrossTenantAccessPolicyInboundTrust extends Entity
 
     /**
     * Sets the isHybridAzureADJoinedDeviceAccepted
-    * Specifies whether hybrid Azure AD joined devices from external Azure AD organizations are trusted.
+    * Specifies whether Microsoft Entra hybrid joined devices from external Microsoft Entra organizations are trusted.
     *
     * @param bool $val The value of the isHybridAzureADJoinedDeviceAccepted
     *
@@ -81,7 +81,7 @@ class CrossTenantAccessPolicyInboundTrust extends Entity
     }
     /**
     * Gets the isMfaAccepted
-    * Specifies whether MFA from external Azure AD organizations is trusted.
+    * Specifies whether MFA from external Microsoft Entra organizations is trusted.
     *
     * @return bool|null The isMfaAccepted
     */
@@ -96,7 +96,7 @@ class CrossTenantAccessPolicyInboundTrust extends Entity
 
     /**
     * Sets the isMfaAccepted
-    * Specifies whether MFA from external Azure AD organizations is trusted.
+    * Specifies whether MFA from external Microsoft Entra organizations is trusted.
     *
     * @param bool $val The value of the isMfaAccepted
     *

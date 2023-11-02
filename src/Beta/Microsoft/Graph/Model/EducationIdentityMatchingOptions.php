@@ -114,7 +114,7 @@ class EducationIdentityMatchingOptions extends Entity
     }
     /**
     * Gets the targetPropertyName
-    * The name of the target property, which should be a valid property in Azure AD. This property is case-sensitive.
+    * The name of the target property, which should be a valid property in Microsoft Entra ID. This property is case-sensitive.
     *
     * @return string|null The targetPropertyName
     */
@@ -129,7 +129,7 @@ class EducationIdentityMatchingOptions extends Entity
 
     /**
     * Sets the targetPropertyName
-    * The name of the target property, which should be a valid property in Azure AD. This property is case-sensitive.
+    * The name of the target property, which should be a valid property in Microsoft Entra ID. This property is case-sensitive.
     *
     * @param string $val The value of the targetPropertyName
     *

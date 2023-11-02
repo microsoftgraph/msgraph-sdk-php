@@ -26,7 +26,7 @@ class ExternalMeetingRegistrant extends MeetingRegistrantBase
 {
     /**
     * Gets the tenantId
-    * The tenant ID of this registrant if in Azure Active Directory.
+    * The tenant ID of this registrant if in Microsoft Entra ID.
     *
     * @return string|null The tenantId
     */
@@ -41,7 +41,7 @@ class ExternalMeetingRegistrant extends MeetingRegistrantBase
 
     /**
     * Sets the tenantId
-    * The tenant ID of this registrant if in Azure Active Directory.
+    * The tenant ID of this registrant if in Microsoft Entra ID.
     *
     * @param string $val The tenantId
     *
@@ -55,7 +55,7 @@ class ExternalMeetingRegistrant extends MeetingRegistrantBase
 
     /**
     * Gets the userId
-    * The user ID of this registrant if in Azure Active Directory.
+    * The user ID of this registrant if in Microsoft Entra ID.
     *
     * @return string|null The userId
     */
@@ -70,7 +70,7 @@ class ExternalMeetingRegistrant extends MeetingRegistrantBase
 
     /**
     * Sets the userId
-    * The user ID of this registrant if in Azure Active Directory.
+    * The user ID of this registrant if in Microsoft Entra ID.
     *
     * @param string $val The userId
     *

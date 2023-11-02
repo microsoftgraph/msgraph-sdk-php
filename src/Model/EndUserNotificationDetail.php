@@ -26,6 +26,7 @@ class EndUserNotificationDetail extends Entity
 {
     /**
     * Gets the emailContent
+    * Email HTML content.
     *
     * @return string|null The emailContent
     */
@@ -40,6 +41,7 @@ class EndUserNotificationDetail extends Entity
 
     /**
     * Sets the emailContent
+    * Email HTML content.
     *
     * @param string $val The emailContent
     *
@@ -53,6 +55,7 @@ class EndUserNotificationDetail extends Entity
 
     /**
     * Gets the isDefaultLangauge
+    * Indicates whether this language is default.
     *
     * @return bool|null The isDefaultLangauge
     */
@@ -67,6 +70,7 @@ class EndUserNotificationDetail extends Entity
 
     /**
     * Sets the isDefaultLangauge
+    * Indicates whether this language is default.
     *
     * @param bool $val The isDefaultLangauge
     *
@@ -80,6 +84,7 @@ class EndUserNotificationDetail extends Entity
 
     /**
     * Gets the language
+    * Notification language.
     *
     * @return string|null The language
     */
@@ -94,6 +99,7 @@ class EndUserNotificationDetail extends Entity
 
     /**
     * Sets the language
+    * Notification language.
     *
     * @param string $val The language
     *
@@ -107,6 +113,7 @@ class EndUserNotificationDetail extends Entity
 
     /**
     * Gets the locale
+    * Notification locale.
     *
     * @return string|null The locale
     */
@@ -121,6 +128,7 @@ class EndUserNotificationDetail extends Entity
 
     /**
     * Sets the locale
+    * Notification locale.
     *
     * @param string $val The locale
     *
@@ -134,6 +142,7 @@ class EndUserNotificationDetail extends Entity
 
     /**
     * Gets the sentFrom
+    * Email details of the sender.
     *
     * @return EmailIdentity|null The sentFrom
     */
@@ -152,6 +161,7 @@ class EndUserNotificationDetail extends Entity
 
     /**
     * Sets the sentFrom
+    * Email details of the sender.
     *
     * @param EmailIdentity $val The sentFrom
     *
@@ -165,6 +175,7 @@ class EndUserNotificationDetail extends Entity
 
     /**
     * Gets the subject
+    * Mail subject.
     *
     * @return string|null The subject
     */
@@ -179,6 +190,7 @@ class EndUserNotificationDetail extends Entity
 
     /**
     * Sets the subject
+    * Mail subject.
     *
     * @param string $val The subject
     *

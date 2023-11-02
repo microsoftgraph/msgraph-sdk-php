@@ -37,7 +37,7 @@ class OrganizerMeetingInfo extends MeetingInfo
 
     /**
     * Gets the organizer
-    * The organizer Azure Active Directory identity.
+    * The organizer Microsoft Entra identity.
     *
     * @return IdentitySet|null The organizer
     */
@@ -56,7 +56,7 @@ class OrganizerMeetingInfo extends MeetingInfo
 
     /**
     * Sets the organizer
-    * The organizer Azure Active Directory identity.
+    * The organizer Microsoft Entra identity.
     *
     * @param IdentitySet $val The value to assign to the organizer
     *

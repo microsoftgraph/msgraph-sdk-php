@@ -85,7 +85,7 @@ class DeviceLocalCredentialInfo extends Entity
 
     /**
     * Gets the lastBackupDateTime
-    * When the local administrator account credential was backed up to Azure Active Directory.
+    * When the local administrator account credential was backed up to Microsoft Entra ID.
     *
     * @return \DateTime|null The lastBackupDateTime
     */
@@ -104,7 +104,7 @@ class DeviceLocalCredentialInfo extends Entity
 
     /**
     * Sets the lastBackupDateTime
-    * When the local administrator account credential was backed up to Azure Active Directory.
+    * When the local administrator account credential was backed up to Microsoft Entra ID.
     *
     * @param \DateTime $val The lastBackupDateTime
     *
@@ -118,7 +118,7 @@ class DeviceLocalCredentialInfo extends Entity
 
     /**
     * Gets the refreshDateTime
-    * When the local administrator account credential will be refreshed and backed up to Azure Active Directory.
+    * When the local administrator account credential will be refreshed and backed up to Microsoft Entra ID.
     *
     * @return \DateTime|null The refreshDateTime
     */
@@ -137,7 +137,7 @@ class DeviceLocalCredentialInfo extends Entity
 
     /**
     * Sets the refreshDateTime
-    * When the local administrator account credential will be refreshed and backed up to Azure Active Directory.
+    * When the local administrator account credential will be refreshed and backed up to Microsoft Entra ID.
     *
     * @param \DateTime $val The refreshDateTime
     *

@@ -635,6 +635,33 @@ class Alert extends \Beta\Microsoft\Graph\Model\Entity
     }
 
     /**
+    * Gets the productName
+    *
+    * @return string|null The productName
+    */
+    public function getProductName()
+    {
+        if (array_key_exists("productName", $this->_propDict)) {
+            return $this->_propDict["productName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the productName
+    *
+    * @param string $val The productName
+    *
+    * @return Alert
+    */
+    public function setProductName($val)
+    {
+        $this->_propDict["productName"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the providerAlertId
     * The ID of the alert as it appears in the security provider product that generated the alert.
     *
@@ -853,7 +880,7 @@ class Alert extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the tenantId
-    * The Azure Active Directory tenant the alert was created in.
+    * The Microsoft Entra tenant the alert was created in.
     *
     * @return string|null The tenantId
     */
@@ -868,7 +895,7 @@ class Alert extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the tenantId
-    * The Azure Active Directory tenant the alert was created in.
+    * The Microsoft Entra tenant the alert was created in.
     *
     * @param string $val The tenantId
     *

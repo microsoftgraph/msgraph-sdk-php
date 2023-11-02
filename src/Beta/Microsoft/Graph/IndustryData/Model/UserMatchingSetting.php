@@ -26,7 +26,7 @@ class UserMatchingSetting extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the matchTarget
-    * The RefUserMatchTarget for matching a user from the source with an Azure Active Directory user object.
+    * The RefUserMatchTarget for matching a user from the source with a Microsoft Entra user object.
     *
     * @return UserMatchTargetReferenceValue|null The matchTarget
     */
@@ -45,7 +45,7 @@ class UserMatchingSetting extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the matchTarget
-    * The RefUserMatchTarget for matching a user from the source with an Azure Active Directory user object.
+    * The RefUserMatchTarget for matching a user from the source with a Microsoft Entra user object.
     *
     * @param UserMatchTargetReferenceValue $val The value to assign to the matchTarget
     *

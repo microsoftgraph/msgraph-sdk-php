@@ -25,7 +25,7 @@ class DirectRoutingLogRow extends \Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the calleeNumber
-    * Number of the user or bot who received the call. E.164 format, but may include other data.
+    * Number of the user or bot who received the call. E.164 format, but might include other data.
     *
     * @return string|null The calleeNumber
     */
@@ -40,7 +40,7 @@ class DirectRoutingLogRow extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the calleeNumber
-    * Number of the user or bot who received the call. E.164 format, but may include other data.
+    * Number of the user or bot who received the call. E.164 format, but might include other data.
     *
     * @param string $val The value of the calleeNumber
     *
@@ -53,7 +53,7 @@ class DirectRoutingLogRow extends \Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the callEndSubReason
-    * In addition to the SIP codes, Microsoft has own subcodes that indicate the specific issue.
+    * In addition to the SIP codes, Microsoft has subcodes that indicate the specific issue.
     *
     * @return int|null The callEndSubReason
     */
@@ -68,7 +68,7 @@ class DirectRoutingLogRow extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the callEndSubReason
-    * In addition to the SIP codes, Microsoft has own subcodes that indicate the specific issue.
+    * In addition to the SIP codes, Microsoft has subcodes that indicate the specific issue.
     *
     * @param int $val The value of the callEndSubReason
     *
@@ -81,7 +81,7 @@ class DirectRoutingLogRow extends \Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the callerNumber
-    * Number of the user or bot who made the call. E.164 format, but may include other data.
+    * Number of the user or bot who made the call. E.164 format, but might include other data.
     *
     * @return string|null The callerNumber
     */
@@ -96,7 +96,7 @@ class DirectRoutingLogRow extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the callerNumber
-    * Number of the user or bot who made the call. E.164 format, but may include other data.
+    * Number of the user or bot who made the call. E.164 format, but might include other data.
     *
     * @param string $val The value of the callerNumber
     *
@@ -259,7 +259,7 @@ class DirectRoutingLogRow extends \Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the finalSipCode
-    * The code with which the call ended, see RFC 3261.
+    * The code with which the call ended. For more information, see RFC 3261.
     *
     * @return int|null The finalSipCode
     */
@@ -274,7 +274,7 @@ class DirectRoutingLogRow extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the finalSipCode
-    * The code with which the call ended, see RFC 3261.
+    * The code with which the call ended. For more information, see RFC 3261.
     *
     * @param int $val The value of the finalSipCode
     *
@@ -376,7 +376,7 @@ class DirectRoutingLogRow extends \Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the mediaBypassEnabled
-    * Indicates if the trunk was enabled for media bypass or not.
+    * Indicates whether the trunk was enabled for media bypass.
     *
     * @return bool|null The mediaBypassEnabled
     */
@@ -391,7 +391,7 @@ class DirectRoutingLogRow extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the mediaBypassEnabled
-    * Indicates if the trunk was enabled for media bypass or not.
+    * Indicates whether the trunk was enabled for media bypass.
     *
     * @param bool $val The value of the mediaBypassEnabled
     *
@@ -404,7 +404,7 @@ class DirectRoutingLogRow extends \Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the mediaPathLocation
-    * The datacenter used for media path in nonbypass call.
+    * The datacenter used for media path in a nonbypass call.
     *
     * @return string|null The mediaPathLocation
     */
@@ -419,7 +419,7 @@ class DirectRoutingLogRow extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the mediaPathLocation
-    * The datacenter used for media path in nonbypass call.
+    * The datacenter used for media path in a nonbypass call.
     *
     * @param string $val The value of the mediaPathLocation
     *
@@ -461,7 +461,7 @@ class DirectRoutingLogRow extends \Microsoft\Graph\Model\Entity
 
     /**
     * Gets the startDateTime
-    * Call start time.For failed and unanswered calls, this can be equal to invite or failure time.
+    * Call start time.For failed and unanswered calls, this can be equal to the invite or failure time.
     *
     * @return \DateTime|null The startDateTime
     */
@@ -480,7 +480,7 @@ class DirectRoutingLogRow extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the startDateTime
-    * Call start time.For failed and unanswered calls, this can be equal to invite or failure time.
+    * Call start time.For failed and unanswered calls, this can be equal to the invite or failure time.
     *
     * @param \DateTime $val The value to assign to the startDateTime
     *
@@ -577,7 +577,7 @@ class DirectRoutingLogRow extends \Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the userId
-    * Calling user's ID in Graph. This and other user info will be null/empty for bot call types. GUID.
+    * Calling user's ID in Microsoft Graph. This and other user information is null/empty for bot call types. GUID.
     *
     * @return string|null The userId
     */
@@ -592,7 +592,7 @@ class DirectRoutingLogRow extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the userId
-    * Calling user's ID in Graph. This and other user info will be null/empty for bot call types. GUID.
+    * Calling user's ID in Microsoft Graph. This and other user information is null/empty for bot call types. GUID.
     *
     * @param string $val The value of the userId
     *
@@ -605,7 +605,7 @@ class DirectRoutingLogRow extends \Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the userPrincipalName
-    * UserPrincipalName (sign-in name) in Azure Active Directory. This is usually the same as user's SIP Address, and can be same as user's e-mail address.
+    * UserPrincipalName (sign-in name) in Microsoft Entra ID. This is usually the same as the user's SIP Address, and can be the same as the user's email address.
     *
     * @return string|null The userPrincipalName
     */
@@ -620,7 +620,7 @@ class DirectRoutingLogRow extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the userPrincipalName
-    * UserPrincipalName (sign-in name) in Azure Active Directory. This is usually the same as user's SIP Address, and can be same as user's e-mail address.
+    * UserPrincipalName (sign-in name) in Microsoft Entra ID. This is usually the same as the user's SIP Address, and can be the same as the user's email address.
     *
     * @param string $val The value of the userPrincipalName
     *

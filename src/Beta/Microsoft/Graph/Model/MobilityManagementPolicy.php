@@ -234,7 +234,7 @@ class MobilityManagementPolicy extends Entity
 
      /**
      * Gets the includedGroups
-    * Azure AD groups under the scope of the mobility management application if appliesTo is selected
+    * Microsoft Entra groups under the scope of the mobility management application if appliesTo is selected
      *
      * @return array|null The includedGroups
      */
@@ -249,7 +249,7 @@ class MobilityManagementPolicy extends Entity
 
     /**
     * Sets the includedGroups
-    * Azure AD groups under the scope of the mobility management application if appliesTo is selected
+    * Microsoft Entra groups under the scope of the mobility management application if appliesTo is selected
     *
     * @param Group[] $val The includedGroups
     *

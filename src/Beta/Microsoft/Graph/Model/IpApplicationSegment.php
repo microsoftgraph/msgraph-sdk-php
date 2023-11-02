@@ -52,6 +52,37 @@ class IpApplicationSegment extends ApplicationSegment
     }
 
     /**
+    * Gets the destinationType
+    *
+    * @return PrivateNetworkDestinationType|null The destinationType
+    */
+    public function getDestinationType()
+    {
+        if (array_key_exists("destinationType", $this->_propDict)) {
+            if (is_a($this->_propDict["destinationType"], "\Beta\Microsoft\Graph\Model\PrivateNetworkDestinationType") || is_null($this->_propDict["destinationType"])) {
+                return $this->_propDict["destinationType"];
+            } else {
+                $this->_propDict["destinationType"] = new PrivateNetworkDestinationType($this->_propDict["destinationType"]);
+                return $this->_propDict["destinationType"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the destinationType
+    *
+    * @param PrivateNetworkDestinationType $val The destinationType
+    *
+    * @return IpApplicationSegment
+    */
+    public function setDestinationType($val)
+    {
+        $this->_propDict["destinationType"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the port
     *
     * @return int|null The port
@@ -102,6 +133,37 @@ class IpApplicationSegment extends ApplicationSegment
     public function setPorts($val)
     {
         $this->_propDict["ports"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the protocol
+    *
+    * @return PrivateNetworkProtocol|null The protocol
+    */
+    public function getProtocol()
+    {
+        if (array_key_exists("protocol", $this->_propDict)) {
+            if (is_a($this->_propDict["protocol"], "\Beta\Microsoft\Graph\Model\PrivateNetworkProtocol") || is_null($this->_propDict["protocol"])) {
+                return $this->_propDict["protocol"];
+            } else {
+                $this->_propDict["protocol"] = new PrivateNetworkProtocol($this->_propDict["protocol"]);
+                return $this->_propDict["protocol"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the protocol
+    *
+    * @param PrivateNetworkProtocol $val The protocol
+    *
+    * @return IpApplicationSegment
+    */
+    public function setProtocol($val)
+    {
+        $this->_propDict["protocol"] = $val;
         return $this;
     }
 
