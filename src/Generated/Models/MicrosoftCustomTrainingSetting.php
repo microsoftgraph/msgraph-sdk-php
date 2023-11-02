@@ -28,7 +28,7 @@ class MicrosoftCustomTrainingSetting extends TrainingSetting implements Parsable
     }
 
     /**
-     * Gets the completionDateTime property value. The completionDateTime property
+     * Gets the completionDateTime property value. The completion date and time of the training. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return DateTime|null
     */
     public function getCompletionDateTime(): ?DateTime {
@@ -53,7 +53,7 @@ class MicrosoftCustomTrainingSetting extends TrainingSetting implements Parsable
     }
 
     /**
-     * Gets the trainingAssignmentMappings property value. The trainingAssignmentMappings property
+     * Gets the trainingAssignmentMappings property value. The mapping details of the associated training.
      * @return array<MicrosoftTrainingAssignmentMapping>|null
     */
     public function getTrainingAssignmentMappings(): ?array {
@@ -67,7 +67,7 @@ class MicrosoftCustomTrainingSetting extends TrainingSetting implements Parsable
     }
 
     /**
-     * Gets the trainingCompletionDuration property value. The trainingCompletionDuration property
+     * Gets the trainingCompletionDuration property value. The training completion duration that needs to be provided before scheduling the training. Possible values are: week, fortnite, month, unknownFutureValue.
      * @return TrainingCompletionDuration|null
     */
     public function getTrainingCompletionDuration(): ?TrainingCompletionDuration {
@@ -90,7 +90,7 @@ class MicrosoftCustomTrainingSetting extends TrainingSetting implements Parsable
     }
 
     /**
-     * Sets the completionDateTime property value. The completionDateTime property
+     * Sets the completionDateTime property value. The completion date and time of the training. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param DateTime|null $value Value to set for the completionDateTime property.
     */
     public function setCompletionDateTime(?DateTime $value): void {
@@ -98,7 +98,7 @@ class MicrosoftCustomTrainingSetting extends TrainingSetting implements Parsable
     }
 
     /**
-     * Sets the trainingAssignmentMappings property value. The trainingAssignmentMappings property
+     * Sets the trainingAssignmentMappings property value. The mapping details of the associated training.
      * @param array<MicrosoftTrainingAssignmentMapping>|null $value Value to set for the trainingAssignmentMappings property.
     */
     public function setTrainingAssignmentMappings(?array $value): void {
@@ -106,7 +106,7 @@ class MicrosoftCustomTrainingSetting extends TrainingSetting implements Parsable
     }
 
     /**
-     * Sets the trainingCompletionDuration property value. The trainingCompletionDuration property
+     * Sets the trainingCompletionDuration property value. The training completion duration that needs to be provided before scheduling the training. Possible values are: week, fortnite, month, unknownFutureValue.
      * @param TrainingCompletionDuration|null $value Value to set for the trainingCompletionDuration property.
     */
     public function setTrainingCompletionDuration(?TrainingCompletionDuration $value): void {

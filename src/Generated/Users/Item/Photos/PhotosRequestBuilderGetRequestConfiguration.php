@@ -28,7 +28,6 @@ class PhotosRequestBuilderGetRequestConfiguration extends BaseRequestConfigurati
 
     /**
      * Instantiates a new photosRequestBuilderGetQueryParameters.
-     * @param bool|null $count Include count of items
      * @param string|null $filter Filter items by property values
      * @param array<string>|null $orderby Order items by property values
      * @param array<string>|null $select Select properties to be returned
@@ -36,8 +35,8 @@ class PhotosRequestBuilderGetRequestConfiguration extends BaseRequestConfigurati
      * @param int|null $top Show only the first n items
      * @return PhotosRequestBuilderGetQueryParameters
     */
-    public static function createQueryParameters(?bool $count = null, ?string $filter = null, ?array $orderby = null, ?array $select = null, ?int $skip = null, ?int $top = null): PhotosRequestBuilderGetQueryParameters {
-        return new PhotosRequestBuilderGetQueryParameters($count, $filter, $orderby, $select, $skip, $top);
+    public static function createQueryParameters(?string $filter = null, ?array $orderby = null, ?array $select = null, ?int $skip = null, ?int $top = null): PhotosRequestBuilderGetQueryParameters {
+        return new PhotosRequestBuilderGetQueryParameters($filter, $orderby, $select, $skip, $top);
     }
 
 }

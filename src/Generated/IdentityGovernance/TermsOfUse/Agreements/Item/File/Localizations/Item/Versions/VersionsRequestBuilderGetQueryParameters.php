@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\Agreements\Ite
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read-only. Customized versions of the terms of use agreement in the Azure AD tenant.
+ * Read-only. Customized versions of the terms of use agreement in the Microsoft Entra tenant.
 */
 class VersionsRequestBuilderGetQueryParameters 
 {

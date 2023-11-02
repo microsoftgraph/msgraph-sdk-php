@@ -65,7 +65,7 @@ class BaseEndUserNotification implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the defaultLanguage property value. The defaultLanguage property
+     * Gets the defaultLanguage property value. The default language for the end user notification.
      * @return string|null
     */
     public function getDefaultLanguage(): ?string {
@@ -141,7 +141,7 @@ class BaseEndUserNotification implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the defaultLanguage property value. The defaultLanguage property
+     * Sets the defaultLanguage property value. The default language for the end user notification.
      * @param string|null $value Value to set for the defaultLanguage property.
     */
     public function setDefaultLanguage(?string $value): void {

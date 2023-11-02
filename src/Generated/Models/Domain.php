@@ -26,7 +26,7 @@ class Domain extends Entity implements Parsable
     }
 
     /**
-     * Gets the authenticationType property value. Indicates the configured authentication type for the domain. The value is either Managed or Federated. Managed indicates a cloud managed domain where Azure AD performs user authentication. Federated indicates authentication is federated with an identity provider such as the tenant's on-premises Active Directory via Active Directory Federation Services. Not nullable.
+     * Gets the authenticationType property value. Indicates the configured authentication type for the domain. The value is either Managed or Federated. Managed indicates a cloud managed domain where Microsoft Entra ID performs user authentication. Federated indicates authentication is federated with an identity provider such as the tenant's on-premises Active Directory via Active Directory Federation Services. Not nullable.
      * @return string|null
     */
     public function getAuthenticationType(): ?string {
@@ -64,7 +64,7 @@ class Domain extends Entity implements Parsable
     }
 
     /**
-     * Gets the federationConfiguration property value. Domain settings configured by a customer when federated with Azure AD. Supports $expand.
+     * Gets the federationConfiguration property value. Domain settings configured by a customer when federated with Microsoft Entra ID. Supports $expand.
      * @return array<InternalDomainFederation>|null
     */
     public function getFederationConfiguration(): ?array {
@@ -260,7 +260,7 @@ class Domain extends Entity implements Parsable
     }
 
     /**
-     * Gets the verificationDnsRecords property value. DNS records that the customer adds to the DNS zone file of the domain before the customer can complete domain ownership verification with Azure AD. Read-only, Nullable. Supports $expand.
+     * Gets the verificationDnsRecords property value. DNS records that the customer adds to the DNS zone file of the domain before the customer can complete domain ownership verification with Microsoft Entra ID. Read-only, Nullable. Supports $expand.
      * @return array<DomainDnsRecord>|null
     */
     public function getVerificationDnsRecords(): ?array {
@@ -299,7 +299,7 @@ class Domain extends Entity implements Parsable
     }
 
     /**
-     * Sets the authenticationType property value. Indicates the configured authentication type for the domain. The value is either Managed or Federated. Managed indicates a cloud managed domain where Azure AD performs user authentication. Federated indicates authentication is federated with an identity provider such as the tenant's on-premises Active Directory via Active Directory Federation Services. Not nullable.
+     * Sets the authenticationType property value. Indicates the configured authentication type for the domain. The value is either Managed or Federated. Managed indicates a cloud managed domain where Microsoft Entra ID performs user authentication. Federated indicates authentication is federated with an identity provider such as the tenant's on-premises Active Directory via Active Directory Federation Services. Not nullable.
      * @param string|null $value Value to set for the authenticationType property.
     */
     public function setAuthenticationType(?string $value): void {
@@ -323,7 +323,7 @@ class Domain extends Entity implements Parsable
     }
 
     /**
-     * Sets the federationConfiguration property value. Domain settings configured by a customer when federated with Azure AD. Supports $expand.
+     * Sets the federationConfiguration property value. Domain settings configured by a customer when federated with Microsoft Entra ID. Supports $expand.
      * @param array<InternalDomainFederation>|null $value Value to set for the federationConfiguration property.
     */
     public function setFederationConfiguration(?array $value): void {
@@ -427,7 +427,7 @@ class Domain extends Entity implements Parsable
     }
 
     /**
-     * Sets the verificationDnsRecords property value. DNS records that the customer adds to the DNS zone file of the domain before the customer can complete domain ownership verification with Azure AD. Read-only, Nullable. Supports $expand.
+     * Sets the verificationDnsRecords property value. DNS records that the customer adds to the DNS zone file of the domain before the customer can complete domain ownership verification with Microsoft Entra ID. Read-only, Nullable. Supports $expand.
      * @param array<DomainDnsRecord>|null $value Value to set for the verificationDnsRecords property.
     */
     public function setVerificationDnsRecords(?array $value): void {

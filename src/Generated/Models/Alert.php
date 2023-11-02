@@ -77,7 +77,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Gets the azureTenantId property value. Azure Active Directory tenant ID. Required.
+     * Gets the azureTenantId property value. Microsoft Entra tenant ID. Required.
      * @return string|null
     */
     public function getAzureTenantId(): ?string {
@@ -709,7 +709,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Sets the azureTenantId property value. Azure Active Directory tenant ID. Required.
+     * Sets the azureTenantId property value. Microsoft Entra tenant ID. Required.
      * @param string|null $value Value to set for the azureTenantId property.
     */
     public function setAzureTenantId(?string $value): void {

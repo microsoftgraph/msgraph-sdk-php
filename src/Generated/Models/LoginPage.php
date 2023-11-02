@@ -26,7 +26,7 @@ class LoginPage extends Entity implements Parsable
     }
 
     /**
-     * Gets the content property value. The content property
+     * Gets the content property value. The HTML content of the login page.
      * @return string|null
     */
     public function getContent(): ?string {
@@ -38,7 +38,7 @@ class LoginPage extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdBy property value. The createdBy property
+     * Gets the createdBy property value. Identity of the user who created the login page.
      * @return EmailIdentity|null
     */
     public function getCreatedBy(): ?EmailIdentity {
@@ -50,7 +50,7 @@ class LoginPage extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. Date and time when the login page was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
@@ -62,7 +62,7 @@ class LoginPage extends Entity implements Parsable
     }
 
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. Description about the login page.
      * @return string|null
     */
     public function getDescription(): ?string {
@@ -74,7 +74,7 @@ class LoginPage extends Entity implements Parsable
     }
 
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. Display name of the login page.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -106,7 +106,7 @@ class LoginPage extends Entity implements Parsable
     }
 
     /**
-     * Gets the language property value. The language property
+     * Gets the language property value. The content language of the login page.
      * @return string|null
     */
     public function getLanguage(): ?string {
@@ -118,7 +118,7 @@ class LoginPage extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastModifiedBy property value. The lastModifiedBy property
+     * Gets the lastModifiedBy property value. Identity of the user who last modified the login page.
      * @return EmailIdentity|null
     */
     public function getLastModifiedBy(): ?EmailIdentity {
@@ -130,7 +130,7 @@ class LoginPage extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Gets the lastModifiedDateTime property value. Date and time when the login page was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
@@ -142,7 +142,7 @@ class LoginPage extends Entity implements Parsable
     }
 
     /**
-     * Gets the source property value. The source property
+     * Gets the source property value. The source of the content. Possible values are: unknown, global, tenant, unknownFutureValue.
      * @return SimulationContentSource|null
     */
     public function getSource(): ?SimulationContentSource {
@@ -154,7 +154,7 @@ class LoginPage extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. The status property
+     * Gets the status property value. The login page status. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
      * @return SimulationContentStatus|null
     */
     public function getStatus(): ?SimulationContentStatus {
@@ -184,7 +184,7 @@ class LoginPage extends Entity implements Parsable
     }
 
     /**
-     * Sets the content property value. The content property
+     * Sets the content property value. The HTML content of the login page.
      * @param string|null $value Value to set for the content property.
     */
     public function setContent(?string $value): void {
@@ -192,7 +192,7 @@ class LoginPage extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdBy property value. The createdBy property
+     * Sets the createdBy property value. Identity of the user who created the login page.
      * @param EmailIdentity|null $value Value to set for the createdBy property.
     */
     public function setCreatedBy(?EmailIdentity $value): void {
@@ -200,7 +200,7 @@ class LoginPage extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. Date and time when the login page was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
@@ -208,7 +208,7 @@ class LoginPage extends Entity implements Parsable
     }
 
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. Description about the login page.
      * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
@@ -216,7 +216,7 @@ class LoginPage extends Entity implements Parsable
     }
 
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. Display name of the login page.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -224,7 +224,7 @@ class LoginPage extends Entity implements Parsable
     }
 
     /**
-     * Sets the language property value. The language property
+     * Sets the language property value. The content language of the login page.
      * @param string|null $value Value to set for the language property.
     */
     public function setLanguage(?string $value): void {
@@ -232,7 +232,7 @@ class LoginPage extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastModifiedBy property value. The lastModifiedBy property
+     * Sets the lastModifiedBy property value. Identity of the user who last modified the login page.
      * @param EmailIdentity|null $value Value to set for the lastModifiedBy property.
     */
     public function setLastModifiedBy(?EmailIdentity $value): void {
@@ -240,7 +240,7 @@ class LoginPage extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Sets the lastModifiedDateTime property value. Date and time when the login page was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
@@ -248,7 +248,7 @@ class LoginPage extends Entity implements Parsable
     }
 
     /**
-     * Sets the source property value. The source property
+     * Sets the source property value. The source of the content. Possible values are: unknown, global, tenant, unknownFutureValue.
      * @param SimulationContentSource|null $value Value to set for the source property.
     */
     public function setSource(?SimulationContentSource $value): void {
@@ -256,7 +256,7 @@ class LoginPage extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. The status property
+     * Sets the status property value. The login page status. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
      * @param SimulationContentStatus|null $value Value to set for the status property.
     */
     public function setStatus(?SimulationContentStatus $value): void {

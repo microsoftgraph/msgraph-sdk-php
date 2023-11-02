@@ -27,7 +27,7 @@ class AddressBookAccountTargetContent extends AccountTargetContent implements Pa
     }
 
     /**
-     * Gets the accountTargetEmails property value. The accountTargetEmails property
+     * Gets the accountTargetEmails property value. List of user emails targeted for an attack simulation training campaign.
      * @return array<string>|null
     */
     public function getAccountTargetEmails(): ?array {
@@ -68,7 +68,7 @@ class AddressBookAccountTargetContent extends AccountTargetContent implements Pa
     }
 
     /**
-     * Sets the accountTargetEmails property value. The accountTargetEmails property
+     * Sets the accountTargetEmails property value. List of user emails targeted for an attack simulation training campaign.
      * @param array<string>|null $value Value to set for the accountTargetEmails property.
     */
     public function setAccountTargetEmails(?array $value): void {

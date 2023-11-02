@@ -42,7 +42,7 @@ class CustomTaskExtension extends CustomCalloutExtension implements Parsable
     }
 
     /**
-     * Gets the createdBy property value. The unique identifier of the Azure AD user that created the custom task extension.Supports $filter(eq, ne) and $expand.
+     * Gets the createdBy property value. The unique identifier of the Microsoft Entra user that created the custom task extension.Supports $filter(eq, ne) and $expand.
      * @return User|null
     */
     public function getCreatedBy(): ?User {
@@ -81,7 +81,7 @@ class CustomTaskExtension extends CustomCalloutExtension implements Parsable
     }
 
     /**
-     * Gets the lastModifiedBy property value. The unique identifier of the Azure AD user that modified the custom task extension last.Supports $filter(eq, ne) and $expand.
+     * Gets the lastModifiedBy property value. The unique identifier of the Microsoft Entra user that modified the custom task extension last.Supports $filter(eq, ne) and $expand.
      * @return User|null
     */
     public function getLastModifiedBy(): ?User {
@@ -126,7 +126,7 @@ class CustomTaskExtension extends CustomCalloutExtension implements Parsable
     }
 
     /**
-     * Sets the createdBy property value. The unique identifier of the Azure AD user that created the custom task extension.Supports $filter(eq, ne) and $expand.
+     * Sets the createdBy property value. The unique identifier of the Microsoft Entra user that created the custom task extension.Supports $filter(eq, ne) and $expand.
      * @param User|null $value Value to set for the createdBy property.
     */
     public function setCreatedBy(?User $value): void {
@@ -142,7 +142,7 @@ class CustomTaskExtension extends CustomCalloutExtension implements Parsable
     }
 
     /**
-     * Sets the lastModifiedBy property value. The unique identifier of the Azure AD user that modified the custom task extension last.Supports $filter(eq, ne) and $expand.
+     * Sets the lastModifiedBy property value. The unique identifier of the Microsoft Entra user that modified the custom task extension last.Supports $filter(eq, ne) and $expand.
      * @param User|null $value Value to set for the lastModifiedBy property.
     */
     public function setLastModifiedBy(?User $value): void {

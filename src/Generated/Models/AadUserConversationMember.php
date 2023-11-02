@@ -52,7 +52,7 @@ class AadUserConversationMember extends ConversationMember implements Parsable
     }
 
     /**
-     * Gets the tenantId property value. TenantId which the Azure AD user belongs to.
+     * Gets the tenantId property value. TenantId which the Microsoft Entra user belongs to.
      * @return string|null
     */
     public function getTenantId(): ?string {
@@ -108,7 +108,7 @@ class AadUserConversationMember extends ConversationMember implements Parsable
     }
 
     /**
-     * Sets the tenantId property value. TenantId which the Azure AD user belongs to.
+     * Sets the tenantId property value. TenantId which the Microsoft Entra user belongs to.
      * @param string|null $value Value to set for the tenantId property.
     */
     public function setTenantId(?string $value): void {

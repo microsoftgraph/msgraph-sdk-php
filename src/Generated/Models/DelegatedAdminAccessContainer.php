@@ -35,7 +35,7 @@ class DelegatedAdminAccessContainer implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Gets the accessContainerId property value. The identifier of the access container (for example, a security group). For 'securityGroup' access containers, this must be a valid ID of an Azure AD security group in the Microsoft partner's tenant.
+     * Gets the accessContainerId property value. The identifier of the access container (for example, a security group). For 'securityGroup' access containers, this must be a valid ID of a Microsoft Entra security group in the Microsoft partner's tenant.
      * @return string|null
     */
     public function getAccessContainerId(): ?string {
@@ -116,7 +116,7 @@ class DelegatedAdminAccessContainer implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Sets the accessContainerId property value. The identifier of the access container (for example, a security group). For 'securityGroup' access containers, this must be a valid ID of an Azure AD security group in the Microsoft partner's tenant.
+     * Sets the accessContainerId property value. The identifier of the access container (for example, a security group). For 'securityGroup' access containers, this must be a valid ID of a Microsoft Entra security group in the Microsoft partner's tenant.
      * @param string|null $value Value to set for the accessContainerId property.
     */
     public function setAccessContainerId(?string $value): void {

@@ -56,7 +56,7 @@ class PayloadCoachmark implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the coachmarkLocation property value. The coachmarkLocation property
+     * Gets the coachmarkLocation property value. The coachmark location.
      * @return CoachmarkLocation|null
     */
     public function getCoachmarkLocation(): ?CoachmarkLocation {
@@ -68,7 +68,7 @@ class PayloadCoachmark implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. The description about the coachmark.
      * @return string|null
     */
     public function getDescription(): ?string {
@@ -97,7 +97,7 @@ class PayloadCoachmark implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the indicator property value. The indicator property
+     * Gets the indicator property value. The coachmark indicator.
      * @return string|null
     */
     public function getIndicator(): ?string {
@@ -109,7 +109,7 @@ class PayloadCoachmark implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the isValid property value. The isValid property
+     * Gets the isValid property value. Indicates whether the coachmark is valid or not.
      * @return bool|null
     */
     public function getIsValid(): ?bool {
@@ -121,7 +121,7 @@ class PayloadCoachmark implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the language property value. The language property
+     * Gets the language property value. The coachmark language.
      * @return string|null
     */
     public function getLanguage(): ?string {
@@ -145,7 +145,7 @@ class PayloadCoachmark implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the order property value. The order property
+     * Gets the order property value. The coachmark order.
      * @return string|null
     */
     public function getOrder(): ?string {
@@ -188,7 +188,7 @@ class PayloadCoachmark implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the coachmarkLocation property value. The coachmarkLocation property
+     * Sets the coachmarkLocation property value. The coachmark location.
      * @param CoachmarkLocation|null $value Value to set for the coachmarkLocation property.
     */
     public function setCoachmarkLocation(?CoachmarkLocation $value): void {
@@ -196,7 +196,7 @@ class PayloadCoachmark implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. The description about the coachmark.
      * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
@@ -204,7 +204,7 @@ class PayloadCoachmark implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the indicator property value. The indicator property
+     * Sets the indicator property value. The coachmark indicator.
      * @param string|null $value Value to set for the indicator property.
     */
     public function setIndicator(?string $value): void {
@@ -212,7 +212,7 @@ class PayloadCoachmark implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the isValid property value. The isValid property
+     * Sets the isValid property value. Indicates whether the coachmark is valid or not.
      * @param bool|null $value Value to set for the isValid property.
     */
     public function setIsValid(?bool $value): void {
@@ -220,7 +220,7 @@ class PayloadCoachmark implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the language property value. The language property
+     * Sets the language property value. The coachmark language.
      * @param string|null $value Value to set for the language property.
     */
     public function setLanguage(?string $value): void {
@@ -236,7 +236,7 @@ class PayloadCoachmark implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the order property value. The order property
+     * Sets the order property value. The coachmark order.
      * @param string|null $value Value to set for the order property.
     */
     public function setOrder(?string $value): void {

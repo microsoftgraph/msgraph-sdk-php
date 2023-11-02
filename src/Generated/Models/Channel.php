@@ -91,6 +91,7 @@ class Channel extends Entity implements Parsable
             'membershipType' => fn(ParseNode $n) => $o->setMembershipType($n->getEnumValue(ChannelMembershipType::class)),
             'messages' => fn(ParseNode $n) => $o->setMessages($n->getCollectionOfObjectValues([ChatMessage::class, 'createFromDiscriminatorValue'])),
             'sharedWithTeams' => fn(ParseNode $n) => $o->setSharedWithTeams($n->getCollectionOfObjectValues([SharedWithChannelTeamInfo::class, 'createFromDiscriminatorValue'])),
+            'summary' => fn(ParseNode $n) => $o->setSummary($n->getObjectValue([ChannelSummary::class, 'createFromDiscriminatorValue'])),
             'tabs' => fn(ParseNode $n) => $o->setTabs($n->getCollectionOfObjectValues([TeamsTab::class, 'createFromDiscriminatorValue'])),
             'tenantId' => fn(ParseNode $n) => $o->setTenantId($n->getStringValue()),
             'webUrl' => fn(ParseNode $n) => $o->setWebUrl($n->getStringValue()),
@@ -176,6 +177,18 @@ class Channel extends Entity implements Parsable
     }
 
     /**
+     * Gets the summary property value. Contains summary information about the channel, including number of owners, members, guests, and an indicator for members from other tenants. The summary property will only be returned if it is specified in the $select clause of the Get channel method.
+     * @return ChannelSummary|null
+    */
+    public function getSummary(): ?ChannelSummary {
+        $val = $this->getBackingStore()->get('summary');
+        if (is_null($val) || $val instanceof ChannelSummary) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'summary'");
+    }
+
+    /**
      * Gets the tabs property value. A collection of all the tabs in the channel. A navigation property.
      * @return array<TeamsTab>|null
     */
@@ -190,7 +203,7 @@ class Channel extends Entity implements Parsable
     }
 
     /**
-     * Gets the tenantId property value. The ID of the Azure Active Directory tenant.
+     * Gets the tenantId property value. The ID of the Microsoft Entra tenant.
      * @return string|null
     */
     public function getTenantId(): ?string {
@@ -229,6 +242,7 @@ class Channel extends Entity implements Parsable
         $writer->writeEnumValue('membershipType', $this->getMembershipType());
         $writer->writeCollectionOfObjectValues('messages', $this->getMessages());
         $writer->writeCollectionOfObjectValues('sharedWithTeams', $this->getSharedWithTeams());
+        $writer->writeObjectValue('summary', $this->getSummary());
         $writer->writeCollectionOfObjectValues('tabs', $this->getTabs());
         $writer->writeStringValue('tenantId', $this->getTenantId());
         $writer->writeStringValue('webUrl', $this->getWebUrl());
@@ -315,6 +329,14 @@ class Channel extends Entity implements Parsable
     }
 
     /**
+     * Sets the summary property value. Contains summary information about the channel, including number of owners, members, guests, and an indicator for members from other tenants. The summary property will only be returned if it is specified in the $select clause of the Get channel method.
+     * @param ChannelSummary|null $value Value to set for the summary property.
+    */
+    public function setSummary(?ChannelSummary $value): void {
+        $this->getBackingStore()->set('summary', $value);
+    }
+
+    /**
      * Sets the tabs property value. A collection of all the tabs in the channel. A navigation property.
      * @param array<TeamsTab>|null $value Value to set for the tabs property.
     */
@@ -323,7 +345,7 @@ class Channel extends Entity implements Parsable
     }
 
     /**
-     * Sets the tenantId property value. The ID of the Azure Active Directory tenant.
+     * Sets the tenantId property value. The ID of the Microsoft Entra tenant.
      * @param string|null $value Value to set for the tenantId property.
     */
     public function setTenantId(?string $value): void {

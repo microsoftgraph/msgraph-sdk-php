@@ -51,6 +51,18 @@ class ExternalConnection extends Entity implements Parsable
     }
 
     /**
+     * Gets the connectorId property value. The Teams app ID. Optional.
+     * @return string|null
+    */
+    public function getConnectorId(): ?string {
+        $val = $this->getBackingStore()->get('connectorId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'connectorId'");
+    }
+
+    /**
      * Gets the description property value. Description of the connection displayed in the Microsoft 365 admin center. Optional.
      * @return string|null
     */
@@ -71,6 +83,7 @@ class ExternalConnection extends Entity implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'activitySettings' => fn(ParseNode $n) => $o->setActivitySettings($n->getObjectValue([ActivitySettings::class, 'createFromDiscriminatorValue'])),
             'configuration' => fn(ParseNode $n) => $o->setConfiguration($n->getObjectValue([Configuration::class, 'createFromDiscriminatorValue'])),
+            'connectorId' => fn(ParseNode $n) => $o->setConnectorId($n->getStringValue()),
             'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
             'groups' => fn(ParseNode $n) => $o->setGroups($n->getCollectionOfObjectValues([ExternalGroup::class, 'createFromDiscriminatorValue'])),
             'items' => fn(ParseNode $n) => $o->setItems($n->getCollectionOfObjectValues([ExternalItem::class, 'createFromDiscriminatorValue'])),
@@ -180,6 +193,7 @@ class ExternalConnection extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeObjectValue('activitySettings', $this->getActivitySettings());
         $writer->writeObjectValue('configuration', $this->getConfiguration());
+        $writer->writeStringValue('connectorId', $this->getConnectorId());
         $writer->writeStringValue('description', $this->getDescription());
         $writer->writeCollectionOfObjectValues('groups', $this->getGroups());
         $writer->writeCollectionOfObjectValues('items', $this->getItems());
@@ -203,6 +217,14 @@ class ExternalConnection extends Entity implements Parsable
     */
     public function setConfiguration(?Configuration $value): void {
         $this->getBackingStore()->set('configuration', $value);
+    }
+
+    /**
+     * Sets the connectorId property value. The Teams app ID. Optional.
+     * @param string|null $value Value to set for the connectorId property.
+    */
+    public function setConnectorId(?string $value): void {
+        $this->getBackingStore()->set('connectorId', $value);
     }
 
     /**

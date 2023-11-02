@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\AttackSimulation\Simulations\Item\P
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get payload from security
+ * The payload associated with a simulation during its creation.
 */
 class PayloadRequestBuilderGetQueryParameters 
 {

@@ -66,7 +66,7 @@ class PermissionGrantConditionSet extends Entity implements Parsable
     }
 
     /**
-     * Gets the clientApplicationTenantIds property value. A list of Azure Active Directory tenant IDs in which the client application is registered, or a list with the single value all to match with client apps registered in any tenant. Default is the single value all.
+     * Gets the clientApplicationTenantIds property value. A list of Microsoft Entra tenant IDs in which the client application is registered, or a list with the single value all to match with client apps registered in any tenant. Default is the single value all.
      * @return array<string>|null
     */
     public function getClientApplicationTenantIds(): ?array {
@@ -216,7 +216,7 @@ class PermissionGrantConditionSet extends Entity implements Parsable
     }
 
     /**
-     * Sets the clientApplicationTenantIds property value. A list of Azure Active Directory tenant IDs in which the client application is registered, or a list with the single value all to match with client apps registered in any tenant. Default is the single value all.
+     * Sets the clientApplicationTenantIds property value. A list of Microsoft Entra tenant IDs in which the client application is registered, or a list with the single value all to match with client apps registered in any tenant. Default is the single value all.
      * @param array<string>|null $value Value to set for the clientApplicationTenantIds property.
     */
     public function setClientApplicationTenantIds(?array $value): void {

@@ -4,7 +4,6 @@ namespace Microsoft\Graph\Generated\Applications\Item\AddPassword;
 
 use Exception;
 use Http\Promise\Promise;
-use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\PasswordCredential;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -35,20 +34,17 @@ class AddPasswordRequestBuilder extends BaseRequestBuilder
      * Adds a strong password or secret to an application. This API is available in the following national cloud deployments.
      * @param AddPasswordPostRequestBody $body The request body
      * @param AddPasswordRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise
+     * @return Promise<PasswordCredential|null>
+     * @throws Exception
      * @link https://learn.microsoft.com/graph/api/application-addpassword?view=graph-rest-1.0 Find more info here
     */
     public function post(AddPasswordPostRequestBody $body, ?AddPasswordRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
-        try {
-            $errorMappings = [
-                    '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                    '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-            ];
-            return $this->requestAdapter->sendAsync($requestInfo, [PasswordCredential::class, 'createFromDiscriminatorValue'], $errorMappings);
-        } catch(Exception $ex) {
-            return new RejectedPromise($ex);
-        }
+        $errorMappings = [
+                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+        ];
+        return $this->requestAdapter->sendAsync($requestInfo, [PasswordCredential::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**
@@ -62,11 +58,11 @@ class AddPasswordRequestBuilder extends BaseRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
-        $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

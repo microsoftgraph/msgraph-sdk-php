@@ -60,7 +60,7 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
     }
 
     /**
-     * Gets the b2bCollaborationInbound property value. Defines your partner-specific configuration for users from other organizations accessing your resources via Azure AD B2B collaboration.
+     * Gets the b2bCollaborationInbound property value. Defines your partner-specific configuration for users from other organizations accessing your resources via Microsoft Entra B2B collaboration.
      * @return CrossTenantAccessPolicyB2BSetting|null
     */
     public function getB2bCollaborationInbound(): ?CrossTenantAccessPolicyB2BSetting {
@@ -72,7 +72,7 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
     }
 
     /**
-     * Gets the b2bCollaborationOutbound property value. Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B collaboration.
+     * Gets the b2bCollaborationOutbound property value. Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Microsoft Entra B2B collaboration.
      * @return CrossTenantAccessPolicyB2BSetting|null
     */
     public function getB2bCollaborationOutbound(): ?CrossTenantAccessPolicyB2BSetting {
@@ -96,7 +96,7 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
     }
 
     /**
-     * Gets the b2bDirectConnectOutbound property value. Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B direct connect.
+     * Gets the b2bDirectConnectOutbound property value. Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Microsoft Entra B2B direct connect.
      * @return CrossTenantAccessPolicyB2BSetting|null
     */
     public function getB2bDirectConnectOutbound(): ?CrossTenantAccessPolicyB2BSetting {
@@ -148,7 +148,7 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
     }
 
     /**
-     * Gets the inboundTrust property value. Determines the partner-specific configuration for trusting other Conditional Access claims from external Azure AD organizations.
+     * Gets the inboundTrust property value. Determines the partner-specific configuration for trusting other Conditional Access claims from external Microsoft Entra organizations.
      * @return CrossTenantAccessPolicyInboundTrust|null
     */
     public function getInboundTrust(): ?CrossTenantAccessPolicyInboundTrust {
@@ -184,7 +184,7 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
     }
 
     /**
-     * Gets the tenantId property value. The tenant identifier for the partner Azure AD organization. Read-only. Key.
+     * Gets the tenantId property value. The tenant identifier for the partner Microsoft Entra organization. Read-only. Key.
      * @return string|null
     */
     public function getTenantId(): ?string {
@@ -230,7 +230,7 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
     }
 
     /**
-     * Sets the b2bCollaborationInbound property value. Defines your partner-specific configuration for users from other organizations accessing your resources via Azure AD B2B collaboration.
+     * Sets the b2bCollaborationInbound property value. Defines your partner-specific configuration for users from other organizations accessing your resources via Microsoft Entra B2B collaboration.
      * @param CrossTenantAccessPolicyB2BSetting|null $value Value to set for the b2bCollaborationInbound property.
     */
     public function setB2bCollaborationInbound(?CrossTenantAccessPolicyB2BSetting $value): void {
@@ -238,7 +238,7 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
     }
 
     /**
-     * Sets the b2bCollaborationOutbound property value. Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B collaboration.
+     * Sets the b2bCollaborationOutbound property value. Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Microsoft Entra B2B collaboration.
      * @param CrossTenantAccessPolicyB2BSetting|null $value Value to set for the b2bCollaborationOutbound property.
     */
     public function setB2bCollaborationOutbound(?CrossTenantAccessPolicyB2BSetting $value): void {
@@ -254,7 +254,7 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
     }
 
     /**
-     * Sets the b2bDirectConnectOutbound property value. Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B direct connect.
+     * Sets the b2bDirectConnectOutbound property value. Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Microsoft Entra B2B direct connect.
      * @param CrossTenantAccessPolicyB2BSetting|null $value Value to set for the b2bDirectConnectOutbound property.
     */
     public function setB2bDirectConnectOutbound(?CrossTenantAccessPolicyB2BSetting $value): void {
@@ -278,7 +278,7 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
     }
 
     /**
-     * Sets the inboundTrust property value. Determines the partner-specific configuration for trusting other Conditional Access claims from external Azure AD organizations.
+     * Sets the inboundTrust property value. Determines the partner-specific configuration for trusting other Conditional Access claims from external Microsoft Entra organizations.
      * @param CrossTenantAccessPolicyInboundTrust|null $value Value to set for the inboundTrust property.
     */
     public function setInboundTrust(?CrossTenantAccessPolicyInboundTrust $value): void {
@@ -302,7 +302,7 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
     }
 
     /**
-     * Sets the tenantId property value. The tenant identifier for the partner Azure AD organization. Read-only. Key.
+     * Sets the tenantId property value. The tenant identifier for the partner Microsoft Entra organization. Read-only. Key.
      * @param string|null $value Value to set for the tenantId property.
     */
     public function setTenantId(?string $value): void {

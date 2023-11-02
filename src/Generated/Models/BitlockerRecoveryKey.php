@@ -26,7 +26,7 @@ class BitlockerRecoveryKey extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdDateTime property value. The date and time when the key was originally backed up to Azure Active Directory. Not nullable.
+     * Gets the createdDateTime property value. The date and time when the key was originally backed up to Microsoft Entra ID. Not nullable.
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
@@ -100,7 +100,7 @@ class BitlockerRecoveryKey extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdDateTime property value. The date and time when the key was originally backed up to Azure Active Directory. Not nullable.
+     * Sets the createdDateTime property value. The date and time when the key was originally backed up to Microsoft Entra ID. Not nullable.
      * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\AttackSimulation\EndUserNotificatio
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get endUserNotifications from security
+ * Represents an end user's notification for an attack simulation training.
 */
 class EndUserNotificationItemRequestBuilderGetQueryParameters 
 {

@@ -4,7 +4,6 @@ namespace Microsoft\Graph\Generated\Applications\Item\Synchronization\AcquireAcc
 
 use Exception;
 use Http\Promise\Promise;
-use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -31,27 +30,24 @@ class AcquireAccessTokenRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Acquire an OAuth access token to authorize the Azure AD provisioning service to provision users into an application. This API is available in the following national cloud deployments.
+     * Acquire an OAuth access token to authorize the Microsoft Entra provisioning service to provision users into an application. This API is available in the following national cloud deployments.
      * @param AcquireAccessTokenPostRequestBody $body The request body
      * @param AcquireAccessTokenRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise
+     * @return Promise<void|null>
+     * @throws Exception
      * @link https://learn.microsoft.com/graph/api/synchronization-synchronization-acquireaccesstoken?view=graph-rest-1.0 Find more info here
     */
     public function post(AcquireAccessTokenPostRequestBody $body, ?AcquireAccessTokenRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
-        try {
-            $errorMappings = [
-                    '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                    '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-            ];
-            return $this->requestAdapter->sendNoContentAsync($requestInfo, $errorMappings);
-        } catch(Exception $ex) {
-            return new RejectedPromise($ex);
-        }
+        $errorMappings = [
+                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+        ];
+        return $this->requestAdapter->sendNoContentAsync($requestInfo, $errorMappings);
     }
 
     /**
-     * Acquire an OAuth access token to authorize the Azure AD provisioning service to provision users into an application. This API is available in the following national cloud deployments.
+     * Acquire an OAuth access token to authorize the Microsoft Entra provisioning service to provision users into an application. This API is available in the following national cloud deployments.
      * @param AcquireAccessTokenPostRequestBody $body The request body
      * @param AcquireAccessTokenRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -65,6 +61,7 @@ class AcquireAccessTokenRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

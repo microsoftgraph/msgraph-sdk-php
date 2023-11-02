@@ -82,6 +82,20 @@ class Directory extends Entity implements Parsable
     }
 
     /**
+     * Gets the deviceLocalCredentials property value. The credentials of the device's local administrator account backed up to Microsoft Entra ID.
+     * @return array<DeviceLocalCredentialInfo>|null
+    */
+    public function getDeviceLocalCredentials(): ?array {
+        $val = $this->getBackingStore()->get('deviceLocalCredentials');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, DeviceLocalCredentialInfo::class);
+            /** @var array<DeviceLocalCredentialInfo>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deviceLocalCredentials'");
+    }
+
+    /**
      * Gets the federationConfigurations property value. Configure domain federation with organizations whose identity provider (IdP) supports either the SAML or WS-Fed protocol.
      * @return array<IdentityProviderBase>|null
     */
@@ -106,6 +120,7 @@ class Directory extends Entity implements Parsable
             'attributeSets' => fn(ParseNode $n) => $o->setAttributeSets($n->getCollectionOfObjectValues([AttributeSet::class, 'createFromDiscriminatorValue'])),
             'customSecurityAttributeDefinitions' => fn(ParseNode $n) => $o->setCustomSecurityAttributeDefinitions($n->getCollectionOfObjectValues([CustomSecurityAttributeDefinition::class, 'createFromDiscriminatorValue'])),
             'deletedItems' => fn(ParseNode $n) => $o->setDeletedItems($n->getCollectionOfObjectValues([DirectoryObject::class, 'createFromDiscriminatorValue'])),
+            'deviceLocalCredentials' => fn(ParseNode $n) => $o->setDeviceLocalCredentials($n->getCollectionOfObjectValues([DeviceLocalCredentialInfo::class, 'createFromDiscriminatorValue'])),
             'federationConfigurations' => fn(ParseNode $n) => $o->setFederationConfigurations($n->getCollectionOfObjectValues([IdentityProviderBase::class, 'createFromDiscriminatorValue'])),
             'onPremisesSynchronization' => fn(ParseNode $n) => $o->setOnPremisesSynchronization($n->getCollectionOfObjectValues([OnPremisesDirectorySynchronization::class, 'createFromDiscriminatorValue'])),
         ]);
@@ -135,6 +150,7 @@ class Directory extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('attributeSets', $this->getAttributeSets());
         $writer->writeCollectionOfObjectValues('customSecurityAttributeDefinitions', $this->getCustomSecurityAttributeDefinitions());
         $writer->writeCollectionOfObjectValues('deletedItems', $this->getDeletedItems());
+        $writer->writeCollectionOfObjectValues('deviceLocalCredentials', $this->getDeviceLocalCredentials());
         $writer->writeCollectionOfObjectValues('federationConfigurations', $this->getFederationConfigurations());
         $writer->writeCollectionOfObjectValues('onPremisesSynchronization', $this->getOnPremisesSynchronization());
     }
@@ -169,6 +185,14 @@ class Directory extends Entity implements Parsable
     */
     public function setDeletedItems(?array $value): void {
         $this->getBackingStore()->set('deletedItems', $value);
+    }
+
+    /**
+     * Sets the deviceLocalCredentials property value. The credentials of the device's local administrator account backed up to Microsoft Entra ID.
+     * @param array<DeviceLocalCredentialInfo>|null $value Value to set for the deviceLocalCredentials property.
+    */
+    public function setDeviceLocalCredentials(?array $value): void {
+        $this->getBackingStore()->set('deviceLocalCredentials', $value);
     }
 
     /**

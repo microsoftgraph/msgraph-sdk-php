@@ -27,7 +27,7 @@ class Training extends Entity implements Parsable
     }
 
     /**
-     * Gets the availabilityStatus property value. The availabilityStatus property
+     * Gets the availabilityStatus property value. Training availability status. Possible values are: unknown, notAvailable, available, archive, delete, unknownFutureValue.
      * @return TrainingAvailabilityStatus|null
     */
     public function getAvailabilityStatus(): ?TrainingAvailabilityStatus {
@@ -39,7 +39,7 @@ class Training extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdBy property value. The createdBy property
+     * Gets the createdBy property value. Identity of the user who created the training.
      * @return EmailIdentity|null
     */
     public function getCreatedBy(): ?EmailIdentity {
@@ -51,7 +51,7 @@ class Training extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. Date and time when the training was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
@@ -63,7 +63,7 @@ class Training extends Entity implements Parsable
     }
 
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. The description for the training.
      * @return string|null
     */
     public function getDescription(): ?string {
@@ -75,7 +75,7 @@ class Training extends Entity implements Parsable
     }
 
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name for the training.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -87,7 +87,7 @@ class Training extends Entity implements Parsable
     }
 
     /**
-     * Gets the durationInMinutes property value. The durationInMinutes property
+     * Gets the durationInMinutes property value. Training duration.
      * @return int|null
     */
     public function getDurationInMinutes(): ?int {
@@ -137,7 +137,7 @@ class Training extends Entity implements Parsable
     }
 
     /**
-     * Gets the hasEvaluation property value. The hasEvaluation property
+     * Gets the hasEvaluation property value. Indicates whether the training has any evaluation.
      * @return bool|null
     */
     public function getHasEvaluation(): ?bool {
@@ -149,7 +149,7 @@ class Training extends Entity implements Parsable
     }
 
     /**
-     * Gets the languageDetails property value. The languageDetails property
+     * Gets the languageDetails property value. Language specific details on a training.
      * @return array<TrainingLanguageDetail>|null
     */
     public function getLanguageDetails(): ?array {
@@ -163,7 +163,7 @@ class Training extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastModifiedBy property value. The lastModifiedBy property
+     * Gets the lastModifiedBy property value. Identity of the user who last modified the training.
      * @return EmailIdentity|null
     */
     public function getLastModifiedBy(): ?EmailIdentity {
@@ -175,7 +175,7 @@ class Training extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Gets the lastModifiedDateTime property value. Date and time when the training was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
@@ -187,7 +187,7 @@ class Training extends Entity implements Parsable
     }
 
     /**
-     * Gets the source property value. The source property
+     * Gets the source property value. Training content source. Possible values are: unknown, global, tenant, unknownFutureValue.
      * @return SimulationContentSource|null
     */
     public function getSource(): ?SimulationContentSource {
@@ -199,7 +199,7 @@ class Training extends Entity implements Parsable
     }
 
     /**
-     * Gets the supportedLocales property value. The supportedLocales property
+     * Gets the supportedLocales property value. Supported locales for content for the associated training.
      * @return array<string>|null
     */
     public function getSupportedLocales(): ?array {
@@ -213,7 +213,7 @@ class Training extends Entity implements Parsable
     }
 
     /**
-     * Gets the tags property value. The tags property
+     * Gets the tags property value. Training tags.
      * @return array<string>|null
     */
     public function getTags(): ?array {
@@ -227,7 +227,7 @@ class Training extends Entity implements Parsable
     }
 
     /**
-     * Gets the type property value. The type property
+     * Gets the type property value. The type of training. Possible values are: unknown, phishing, unknownFutureValue.
      * @return TrainingType|null
     */
     public function getType(): ?TrainingType {
@@ -261,7 +261,7 @@ class Training extends Entity implements Parsable
     }
 
     /**
-     * Sets the availabilityStatus property value. The availabilityStatus property
+     * Sets the availabilityStatus property value. Training availability status. Possible values are: unknown, notAvailable, available, archive, delete, unknownFutureValue.
      * @param TrainingAvailabilityStatus|null $value Value to set for the availabilityStatus property.
     */
     public function setAvailabilityStatus(?TrainingAvailabilityStatus $value): void {
@@ -269,7 +269,7 @@ class Training extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdBy property value. The createdBy property
+     * Sets the createdBy property value. Identity of the user who created the training.
      * @param EmailIdentity|null $value Value to set for the createdBy property.
     */
     public function setCreatedBy(?EmailIdentity $value): void {
@@ -277,7 +277,7 @@ class Training extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. Date and time when the training was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
@@ -285,7 +285,7 @@ class Training extends Entity implements Parsable
     }
 
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. The description for the training.
      * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
@@ -293,7 +293,7 @@ class Training extends Entity implements Parsable
     }
 
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name for the training.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -301,7 +301,7 @@ class Training extends Entity implements Parsable
     }
 
     /**
-     * Sets the durationInMinutes property value. The durationInMinutes property
+     * Sets the durationInMinutes property value. Training duration.
      * @param int|null $value Value to set for the durationInMinutes property.
     */
     public function setDurationInMinutes(?int $value): void {
@@ -309,7 +309,7 @@ class Training extends Entity implements Parsable
     }
 
     /**
-     * Sets the hasEvaluation property value. The hasEvaluation property
+     * Sets the hasEvaluation property value. Indicates whether the training has any evaluation.
      * @param bool|null $value Value to set for the hasEvaluation property.
     */
     public function setHasEvaluation(?bool $value): void {
@@ -317,7 +317,7 @@ class Training extends Entity implements Parsable
     }
 
     /**
-     * Sets the languageDetails property value. The languageDetails property
+     * Sets the languageDetails property value. Language specific details on a training.
      * @param array<TrainingLanguageDetail>|null $value Value to set for the languageDetails property.
     */
     public function setLanguageDetails(?array $value): void {
@@ -325,7 +325,7 @@ class Training extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastModifiedBy property value. The lastModifiedBy property
+     * Sets the lastModifiedBy property value. Identity of the user who last modified the training.
      * @param EmailIdentity|null $value Value to set for the lastModifiedBy property.
     */
     public function setLastModifiedBy(?EmailIdentity $value): void {
@@ -333,7 +333,7 @@ class Training extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Sets the lastModifiedDateTime property value. Date and time when the training was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
@@ -341,7 +341,7 @@ class Training extends Entity implements Parsable
     }
 
     /**
-     * Sets the source property value. The source property
+     * Sets the source property value. Training content source. Possible values are: unknown, global, tenant, unknownFutureValue.
      * @param SimulationContentSource|null $value Value to set for the source property.
     */
     public function setSource(?SimulationContentSource $value): void {
@@ -349,7 +349,7 @@ class Training extends Entity implements Parsable
     }
 
     /**
-     * Sets the supportedLocales property value. The supportedLocales property
+     * Sets the supportedLocales property value. Supported locales for content for the associated training.
      * @param array<string>|null $value Value to set for the supportedLocales property.
     */
     public function setSupportedLocales(?array $value): void {
@@ -357,7 +357,7 @@ class Training extends Entity implements Parsable
     }
 
     /**
-     * Sets the tags property value. The tags property
+     * Sets the tags property value. Training tags.
      * @param array<string>|null $value Value to set for the tags property.
     */
     public function setTags(?array $value): void {
@@ -365,7 +365,7 @@ class Training extends Entity implements Parsable
     }
 
     /**
-     * Sets the type property value. The type property
+     * Sets the type property value. The type of training. Possible values are: unknown, phishing, unknownFutureValue.
      * @param TrainingType|null $value Value to set for the type property.
     */
     public function setType(?TrainingType $value): void {

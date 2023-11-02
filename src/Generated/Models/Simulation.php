@@ -26,7 +26,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Gets the attackTechnique property value. The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue. For more information on the types of social engineering attack techniques, see simulations.
+     * Gets the attackTechnique property value. The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue, oAuthConsentGrant. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: oAuthConsentGrant. For more information on the types of social engineering attack techniques, see simulations.
      * @return SimulationAttackTechnique|null
     */
     public function getAttackTechnique(): ?SimulationAttackTechnique {
@@ -122,7 +122,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Gets the durationInDays property value. The durationInDays property
+     * Gets the durationInDays property value. Simulation duration in days.
      * @return int|null
     */
     public function getDurationInDays(): ?int {
@@ -134,7 +134,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Gets the endUserNotificationSetting property value. The endUserNotificationSetting property
+     * Gets the endUserNotificationSetting property value. Details about the end user notification setting.
      * @return EndUserNotificationSetting|null
     */
     public function getEndUserNotificationSetting(): ?EndUserNotificationSetting {
@@ -146,7 +146,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Gets the excludedAccountTarget property value. The excludedAccountTarget property
+     * Gets the excludedAccountTarget property value. Users excluded from the simulation.
      * @return AccountTargetContent|null
     */
     public function getExcludedAccountTarget(): ?AccountTargetContent {
@@ -192,7 +192,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Gets the includedAccountTarget property value. The includedAccountTarget property
+     * Gets the includedAccountTarget property value. Users targeted in the simulation.
      * @return AccountTargetContent|null
     */
     public function getIncludedAccountTarget(): ?AccountTargetContent {
@@ -216,7 +216,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Gets the landingPage property value. The landingPage property
+     * Gets the landingPage property value. The landing page associated with a simulation during its creation.
      * @return LandingPage|null
     */
     public function getLandingPage(): ?LandingPage {
@@ -264,7 +264,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Gets the loginPage property value. The loginPage property
+     * Gets the loginPage property value. The login page associated with a simulation during its creation.
      * @return LoginPage|null
     */
     public function getLoginPage(): ?LoginPage {
@@ -276,7 +276,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Gets the oAuthConsentAppDetail property value. The oAuthConsentAppDetail property
+     * Gets the oAuthConsentAppDetail property value. OAuth app details for the OAuth technique.
      * @return OAuthConsentAppDetail|null
     */
     public function getOAuthConsentAppDetail(): ?OAuthConsentAppDetail {
@@ -288,7 +288,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Gets the payload property value. The payload property
+     * Gets the payload property value. The payload associated with a simulation during its creation.
      * @return Payload|null
     */
     public function getPayload(): ?Payload {
@@ -336,7 +336,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Gets the trainingSetting property value. The trainingSetting property
+     * Gets the trainingSetting property value. Details about the training settings for a simulation.
      * @return TrainingSetting|null
     */
     public function getTrainingSetting(): ?TrainingSetting {
@@ -380,7 +380,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Sets the attackTechnique property value. The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue. For more information on the types of social engineering attack techniques, see simulations.
+     * Sets the attackTechnique property value. The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue, oAuthConsentGrant. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: oAuthConsentGrant. For more information on the types of social engineering attack techniques, see simulations.
      * @param SimulationAttackTechnique|null $value Value to set for the attackTechnique property.
     */
     public function setAttackTechnique(?SimulationAttackTechnique $value): void {
@@ -444,7 +444,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Sets the durationInDays property value. The durationInDays property
+     * Sets the durationInDays property value. Simulation duration in days.
      * @param int|null $value Value to set for the durationInDays property.
     */
     public function setDurationInDays(?int $value): void {
@@ -452,7 +452,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Sets the endUserNotificationSetting property value. The endUserNotificationSetting property
+     * Sets the endUserNotificationSetting property value. Details about the end user notification setting.
      * @param EndUserNotificationSetting|null $value Value to set for the endUserNotificationSetting property.
     */
     public function setEndUserNotificationSetting(?EndUserNotificationSetting $value): void {
@@ -460,7 +460,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Sets the excludedAccountTarget property value. The excludedAccountTarget property
+     * Sets the excludedAccountTarget property value. Users excluded from the simulation.
      * @param AccountTargetContent|null $value Value to set for the excludedAccountTarget property.
     */
     public function setExcludedAccountTarget(?AccountTargetContent $value): void {
@@ -468,7 +468,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Sets the includedAccountTarget property value. The includedAccountTarget property
+     * Sets the includedAccountTarget property value. Users targeted in the simulation.
      * @param AccountTargetContent|null $value Value to set for the includedAccountTarget property.
     */
     public function setIncludedAccountTarget(?AccountTargetContent $value): void {
@@ -484,7 +484,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Sets the landingPage property value. The landingPage property
+     * Sets the landingPage property value. The landing page associated with a simulation during its creation.
      * @param LandingPage|null $value Value to set for the landingPage property.
     */
     public function setLandingPage(?LandingPage $value): void {
@@ -516,7 +516,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Sets the loginPage property value. The loginPage property
+     * Sets the loginPage property value. The login page associated with a simulation during its creation.
      * @param LoginPage|null $value Value to set for the loginPage property.
     */
     public function setLoginPage(?LoginPage $value): void {
@@ -524,7 +524,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Sets the oAuthConsentAppDetail property value. The oAuthConsentAppDetail property
+     * Sets the oAuthConsentAppDetail property value. OAuth app details for the OAuth technique.
      * @param OAuthConsentAppDetail|null $value Value to set for the oAuthConsentAppDetail property.
     */
     public function setOAuthConsentAppDetail(?OAuthConsentAppDetail $value): void {
@@ -532,7 +532,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Sets the payload property value. The payload property
+     * Sets the payload property value. The payload associated with a simulation during its creation.
      * @param Payload|null $value Value to set for the payload property.
     */
     public function setPayload(?Payload $value): void {
@@ -564,7 +564,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Sets the trainingSetting property value. The trainingSetting property
+     * Sets the trainingSetting property value. Details about the training settings for a simulation.
      * @param TrainingSetting|null $value Value to set for the trainingSetting property.
     */
     public function setTrainingSetting(?TrainingSetting $value): void {

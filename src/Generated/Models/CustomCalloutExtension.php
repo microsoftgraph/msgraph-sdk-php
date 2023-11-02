@@ -47,7 +47,7 @@ class CustomCalloutExtension extends Entity implements Parsable
     }
 
     /**
-     * Gets the clientConfiguration property value. HTTP connection settings that define how long Azure AD can wait for a connection to a logic app, how many times you can retry a timed-out connection and the exception scenarios when retries are allowed.
+     * Gets the clientConfiguration property value. HTTP connection settings that define how long Microsoft Entra ID can wait for a connection to a logic app, how many times you can retry a timed-out connection and the exception scenarios when retries are allowed.
      * @return CustomExtensionClientConfiguration|null
     */
     public function getClientConfiguration(): ?CustomExtensionClientConfiguration {
@@ -131,7 +131,7 @@ class CustomCalloutExtension extends Entity implements Parsable
     }
 
     /**
-     * Sets the clientConfiguration property value. HTTP connection settings that define how long Azure AD can wait for a connection to a logic app, how many times you can retry a timed-out connection and the exception scenarios when retries are allowed.
+     * Sets the clientConfiguration property value. HTTP connection settings that define how long Microsoft Entra ID can wait for a connection to a logic app, how many times you can retry a timed-out connection and the exception scenarios when retries are allowed.
      * @param CustomExtensionClientConfiguration|null $value Value to set for the clientConfiguration property.
     */
     public function setClientConfiguration(?CustomExtensionClientConfiguration $value): void {
