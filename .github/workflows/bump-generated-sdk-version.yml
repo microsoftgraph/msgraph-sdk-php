@@ -28,7 +28,7 @@ jobs:
         git config --global user.email "GraphTooling@service.microsoft.com"
         git config --global user.name "Microsoft Graph DevX Tooling"
     - name: Run increment script
-      run: php scripts/BumpPreviewSdkVersion.php
+      run: php scripts/BumpStableSdkVersion.php
 
     - name: Commit and push changes if any
       run: if git commit -am "Bump SDK version"; then git push origin $GITHUB_REF; fi
