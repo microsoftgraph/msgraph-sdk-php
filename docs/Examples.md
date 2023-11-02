@@ -305,6 +305,8 @@ The SDK provides a `LargeFileUpload` task that slices your file into bytes and p
 To add a large attachment to an Outlook message:
 
 ```php
+use Psr\Http\Client\NetworkExceptionInterface;
+
 
 // create a file stream
 $file = Utils::streamFor(fopen('fileName', 'r'));
@@ -324,9 +326,23 @@ $uploadSession = $graphServiceClient->users()->byUserId(USER_ID)->messages()->by
 $largeFileUpload = new LargeFileUploadTask($uploadSession, $graphServiceClient->getRequestAdapter(), $file);
 try {
     $uploadSession = $largeFileUpload->upload()->wait();
-} catch (\Psr\Http\Client\NetworkExceptionInterface $ex) {
+} catch (NetworkExceptionInterface $ex) {
     // resume upload in case of network errors
-    $uploadSession = $largeFileUpload->resume()->wait();
+    $retries = 0;
+    $maxRetries = 3;
+    while ($retries < $maxRetries) {
+        try {
+            $uploadSession = $largeFileUpload->resume()->wait();
+            if ($uploadSession) {
+                break;
+            }
+        } catch (NetworkExceptionInterface $ex) {
+            $retries ++;
+        }
+    }
+    if ($retries >= $maxRetries && !$uploadSession) {
+        $cancelledUploadSession = $largeFileUpload->cancel();
+    }
 }
 
 ```
