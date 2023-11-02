@@ -340,9 +340,7 @@ try {
             $retries ++;
         }
     }
-    if ($retries >= $maxRetries && !$uploadSession) {
-        $cancelledUploadSession = $largeFileUpload->cancel();
-    }
+    throw $ex;
 }
 
 ```
