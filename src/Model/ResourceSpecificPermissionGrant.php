@@ -26,7 +26,7 @@ class ResourceSpecificPermissionGrant extends DirectoryObject
 {
     /**
     * Gets the clientAppId
-    * ID of the service principal of the Azure AD app that has been granted access. Read-only.
+    * ID of the service principal of the Microsoft Entra app that has been granted access. Read-only.
     *
     * @return string|null The clientAppId
     */
@@ -41,7 +41,7 @@ class ResourceSpecificPermissionGrant extends DirectoryObject
 
     /**
     * Sets the clientAppId
-    * ID of the service principal of the Azure AD app that has been granted access. Read-only.
+    * ID of the service principal of the Microsoft Entra app that has been granted access. Read-only.
     *
     * @param string $val The clientAppId
     *
@@ -55,7 +55,7 @@ class ResourceSpecificPermissionGrant extends DirectoryObject
 
     /**
     * Gets the clientId
-    * ID of the Azure AD app that has been granted access. Read-only.
+    * ID of the Microsoft Entra app that has been granted access. Read-only.
     *
     * @return string|null The clientId
     */
@@ -70,7 +70,7 @@ class ResourceSpecificPermissionGrant extends DirectoryObject
 
     /**
     * Sets the clientId
-    * ID of the Azure AD app that has been granted access. Read-only.
+    * ID of the Microsoft Entra app that has been granted access. Read-only.
     *
     * @param string $val The clientId
     *
@@ -142,7 +142,7 @@ class ResourceSpecificPermissionGrant extends DirectoryObject
 
     /**
     * Gets the resourceAppId
-    * ID of the Azure AD app that is hosting the resource. Read-only.
+    * ID of the Microsoft Entra app that is hosting the resource. Read-only.
     *
     * @return string|null The resourceAppId
     */
@@ -157,7 +157,7 @@ class ResourceSpecificPermissionGrant extends DirectoryObject
 
     /**
     * Sets the resourceAppId
-    * ID of the Azure AD app that is hosting the resource. Read-only.
+    * ID of the Microsoft Entra app that is hosting the resource. Read-only.
     *
     * @param string $val The resourceAppId
     *

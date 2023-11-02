@@ -37,6 +37,7 @@ class MicrosoftTrainingAssignmentMapping extends TrainingSetting
 
     /**
     * Gets the assignedTo
+    * A user collection that specifies to whom the training should be assigned. Possible values are: none, allUsers, clickedPayload, compromised, reportedPhish, readButNotClicked, didNothing, unknownFutureValue.
     *
     * @return TrainingAssignedTo|null The assignedTo
     */
@@ -55,6 +56,7 @@ class MicrosoftTrainingAssignmentMapping extends TrainingSetting
 
     /**
     * Sets the assignedTo
+    * A user collection that specifies to whom the training should be assigned. Possible values are: none, allUsers, clickedPayload, compromised, reportedPhish, readButNotClicked, didNothing, unknownFutureValue.
     *
     * @param TrainingAssignedTo $val The value to assign to the assignedTo
     *

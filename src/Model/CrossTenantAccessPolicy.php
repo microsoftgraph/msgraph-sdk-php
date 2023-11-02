@@ -55,7 +55,7 @@ class CrossTenantAccessPolicy extends PolicyBase
 
     /**
     * Gets the default
-    * Defines the default configuration for how your organization interacts with external Azure Active Directory organizations.
+    * Defines the default configuration for how your organization interacts with external Microsoft Entra organizations.
     *
     * @return CrossTenantAccessPolicyConfigurationDefault|null The default
     */
@@ -74,7 +74,7 @@ class CrossTenantAccessPolicy extends PolicyBase
 
     /**
     * Sets the default
-    * Defines the default configuration for how your organization interacts with external Azure Active Directory organizations.
+    * Defines the default configuration for how your organization interacts with external Microsoft Entra organizations.
     *
     * @param CrossTenantAccessPolicyConfigurationDefault $val The default
     *
@@ -89,7 +89,7 @@ class CrossTenantAccessPolicy extends PolicyBase
 
      /**
      * Gets the partners
-    * Defines partner-specific configurations for external Azure Active Directory organizations.
+    * Defines partner-specific configurations for external Microsoft Entra organizations.
      *
      * @return array|null The partners
      */
@@ -104,7 +104,7 @@ class CrossTenantAccessPolicy extends PolicyBase
 
     /**
     * Sets the partners
-    * Defines partner-specific configurations for external Azure Active Directory organizations.
+    * Defines partner-specific configurations for external Microsoft Entra organizations.
     *
     * @param CrossTenantAccessPolicyConfigurationPartner[] $val The partners
     *

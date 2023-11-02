@@ -25,6 +25,7 @@ class BaseEndUserNotification extends Entity
 {
     /**
     * Gets the defaultLanguage
+    * The default language for the end user notification.
     *
     * @return string|null The defaultLanguage
     */
@@ -39,6 +40,7 @@ class BaseEndUserNotification extends Entity
 
     /**
     * Sets the defaultLanguage
+    * The default language for the end user notification.
     *
     * @param string $val The value of the defaultLanguage
     *

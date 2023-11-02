@@ -26,6 +26,7 @@ class EndUserNotification extends Entity
 {
     /**
     * Gets the createdBy
+    * Identity of the user who created the notification.
     *
     * @return EmailIdentity|null The createdBy
     */
@@ -44,6 +45,7 @@ class EndUserNotification extends Entity
 
     /**
     * Sets the createdBy
+    * Identity of the user who created the notification.
     *
     * @param EmailIdentity $val The createdBy
     *
@@ -57,6 +59,7 @@ class EndUserNotification extends Entity
 
     /**
     * Gets the createdDateTime
+    * Date and time when the notification was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -75,6 +78,7 @@ class EndUserNotification extends Entity
 
     /**
     * Sets the createdDateTime
+    * Date and time when the notification was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -88,6 +92,7 @@ class EndUserNotification extends Entity
 
     /**
     * Gets the description
+    * Description of the notification as defined by the user.
     *
     * @return string|null The description
     */
@@ -102,6 +107,7 @@ class EndUserNotification extends Entity
 
     /**
     * Sets the description
+    * Description of the notification as defined by the user.
     *
     * @param string $val The description
     *
@@ -115,6 +121,7 @@ class EndUserNotification extends Entity
 
     /**
     * Gets the displayName
+    * Name of the notification as defined by the user.
     *
     * @return string|null The displayName
     */
@@ -129,6 +136,7 @@ class EndUserNotification extends Entity
 
     /**
     * Sets the displayName
+    * Name of the notification as defined by the user.
     *
     * @param string $val The displayName
     *
@@ -142,6 +150,7 @@ class EndUserNotification extends Entity
 
     /**
     * Gets the lastModifiedBy
+    * Identity of the user who last modified the notification.
     *
     * @return EmailIdentity|null The lastModifiedBy
     */
@@ -160,6 +169,7 @@ class EndUserNotification extends Entity
 
     /**
     * Sets the lastModifiedBy
+    * Identity of the user who last modified the notification.
     *
     * @param EmailIdentity $val The lastModifiedBy
     *
@@ -173,6 +183,7 @@ class EndUserNotification extends Entity
 
     /**
     * Gets the lastModifiedDateTime
+    * Date and time when the notification was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The lastModifiedDateTime
     */
@@ -191,6 +202,7 @@ class EndUserNotification extends Entity
 
     /**
     * Sets the lastModifiedDateTime
+    * Date and time when the notification was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -204,6 +216,7 @@ class EndUserNotification extends Entity
 
     /**
     * Gets the notificationType
+    * Type of notification. Possible values are: unknown, positiveReinforcement, noTraining, trainingAssignment, trainingReminder, unknownFutureValue.
     *
     * @return EndUserNotificationType|null The notificationType
     */
@@ -222,6 +235,7 @@ class EndUserNotification extends Entity
 
     /**
     * Sets the notificationType
+    * Type of notification. Possible values are: unknown, positiveReinforcement, noTraining, trainingAssignment, trainingReminder, unknownFutureValue.
     *
     * @param EndUserNotificationType $val The notificationType
     *
@@ -235,6 +249,7 @@ class EndUserNotification extends Entity
 
     /**
     * Gets the source
+    * The source of the content. Possible values are: unknown, global, tenant, unknownFutureValue.
     *
     * @return SimulationContentSource|null The source
     */
@@ -253,6 +268,7 @@ class EndUserNotification extends Entity
 
     /**
     * Sets the source
+    * The source of the content. Possible values are: unknown, global, tenant, unknownFutureValue.
     *
     * @param SimulationContentSource $val The source
     *
@@ -266,6 +282,7 @@ class EndUserNotification extends Entity
 
     /**
     * Gets the status
+    * The status of the notification. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
     *
     * @return SimulationContentStatus|null The status
     */
@@ -284,6 +301,7 @@ class EndUserNotification extends Entity
 
     /**
     * Sets the status
+    * The status of the notification. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
     *
     * @param SimulationContentStatus $val The status
     *
@@ -297,6 +315,7 @@ class EndUserNotification extends Entity
 
     /**
     * Gets the supportedLocales
+    * Supported locales for endUserNotification content.
     *
     * @return array|null The supportedLocales
     */
@@ -311,6 +330,7 @@ class EndUserNotification extends Entity
 
     /**
     * Sets the supportedLocales
+    * Supported locales for endUserNotification content.
     *
     * @param string[] $val The supportedLocales
     *

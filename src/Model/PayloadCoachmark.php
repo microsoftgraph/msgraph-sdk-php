@@ -26,6 +26,7 @@ class PayloadCoachmark extends Entity
 
     /**
     * Gets the coachmarkLocation
+    * The coachmark location.
     *
     * @return CoachmarkLocation|null The coachmarkLocation
     */
@@ -44,6 +45,7 @@ class PayloadCoachmark extends Entity
 
     /**
     * Sets the coachmarkLocation
+    * The coachmark location.
     *
     * @param CoachmarkLocation $val The value to assign to the coachmarkLocation
     *
@@ -56,6 +58,7 @@ class PayloadCoachmark extends Entity
     }
     /**
     * Gets the description
+    * The description about the coachmark.
     *
     * @return string|null The description
     */
@@ -70,6 +73,7 @@ class PayloadCoachmark extends Entity
 
     /**
     * Sets the description
+    * The description about the coachmark.
     *
     * @param string $val The value of the description
     *
@@ -82,6 +86,7 @@ class PayloadCoachmark extends Entity
     }
     /**
     * Gets the indicator
+    * The coachmark indicator.
     *
     * @return string|null The indicator
     */
@@ -96,6 +101,7 @@ class PayloadCoachmark extends Entity
 
     /**
     * Sets the indicator
+    * The coachmark indicator.
     *
     * @param string $val The value of the indicator
     *
@@ -108,6 +114,7 @@ class PayloadCoachmark extends Entity
     }
     /**
     * Gets the isValid
+    * Indicates whether the coachmark is valid or not.
     *
     * @return bool|null The isValid
     */
@@ -122,6 +129,7 @@ class PayloadCoachmark extends Entity
 
     /**
     * Sets the isValid
+    * Indicates whether the coachmark is valid or not.
     *
     * @param bool $val The value of the isValid
     *
@@ -134,6 +142,7 @@ class PayloadCoachmark extends Entity
     }
     /**
     * Gets the language
+    * The coachmark language.
     *
     * @return string|null The language
     */
@@ -148,6 +157,7 @@ class PayloadCoachmark extends Entity
 
     /**
     * Sets the language
+    * The coachmark language.
     *
     * @param string $val The value of the language
     *
@@ -160,6 +170,7 @@ class PayloadCoachmark extends Entity
     }
     /**
     * Gets the order
+    * The coachmark order.
     *
     * @return string|null The order
     */
@@ -174,6 +185,7 @@ class PayloadCoachmark extends Entity
 
     /**
     * Sets the order
+    * The coachmark order.
     *
     * @param string $val The value of the order
     *

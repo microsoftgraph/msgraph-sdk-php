@@ -25,6 +25,7 @@ class CoachmarkLocation extends Entity
 {
     /**
     * Gets the length
+    * Length of coachmark.
     *
     * @return int|null The length
     */
@@ -39,6 +40,7 @@ class CoachmarkLocation extends Entity
 
     /**
     * Sets the length
+    * Length of coachmark.
     *
     * @param int $val The value of the length
     *
@@ -51,6 +53,7 @@ class CoachmarkLocation extends Entity
     }
     /**
     * Gets the offset
+    * Offset of coachmark.
     *
     * @return int|null The offset
     */
@@ -65,6 +68,7 @@ class CoachmarkLocation extends Entity
 
     /**
     * Sets the offset
+    * Offset of coachmark.
     *
     * @param int $val The value of the offset
     *
@@ -78,6 +82,7 @@ class CoachmarkLocation extends Entity
 
     /**
     * Gets the type
+    * Type of coachmark location. The possible values are: unknown, fromEmail, subject, externalTag, displayName, messageBody, unknownFutureValue.
     *
     * @return CoachmarkLocationType|null The type
     */
@@ -96,6 +101,7 @@ class CoachmarkLocation extends Entity
 
     /**
     * Sets the type
+    * Type of coachmark location. The possible values are: unknown, fromEmail, subject, externalTag, displayName, messageBody, unknownFutureValue.
     *
     * @param CoachmarkLocationType $val The value to assign to the type
     *

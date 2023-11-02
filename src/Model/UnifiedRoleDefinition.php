@@ -84,7 +84,7 @@ class UnifiedRoleDefinition extends Entity
 
     /**
     * Gets the isBuiltIn
-    * Flag indicating whether the role definition is part of the default set included in Azure Active Directory (Azure AD) or a custom definition. Read-only. Supports $filter (eq, in).
+    * Flag indicating whether the role definition is part of the default set included in Microsoft Entra or a custom definition. Read-only. Supports $filter (eq, in).
     *
     * @return bool|null The isBuiltIn
     */
@@ -99,7 +99,7 @@ class UnifiedRoleDefinition extends Entity
 
     /**
     * Sets the isBuiltIn
-    * Flag indicating whether the role definition is part of the default set included in Azure Active Directory (Azure AD) or a custom definition. Read-only. Supports $filter (eq, in).
+    * Flag indicating whether the role definition is part of the default set included in Microsoft Entra or a custom definition. Read-only. Supports $filter (eq, in).
     *
     * @param bool $val The isBuiltIn
     *
@@ -260,7 +260,7 @@ class UnifiedRoleDefinition extends Entity
 
      /**
      * Gets the inheritsPermissionsFrom
-    * Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles (isBuiltIn is true) support this attribute. Supports $expand.
+    * Read-only collection of role definitions that the given role definition inherits from. Only Microsoft Entra built-in roles (isBuiltIn is true) support this attribute. Supports $expand.
      *
      * @return array|null The inheritsPermissionsFrom
      */
@@ -275,7 +275,7 @@ class UnifiedRoleDefinition extends Entity
 
     /**
     * Sets the inheritsPermissionsFrom
-    * Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles (isBuiltIn is true) support this attribute. Supports $expand.
+    * Read-only collection of role definitions that the given role definition inherits from. Only Microsoft Entra built-in roles (isBuiltIn is true) support this attribute. Supports $expand.
     *
     * @param UnifiedRoleDefinition[] $val The inheritsPermissionsFrom
     *

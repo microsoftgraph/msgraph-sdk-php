@@ -55,7 +55,7 @@ class AadUserConversationMember extends ConversationMember
 
     /**
     * Gets the tenantId
-    * TenantId which the Azure AD user belongs to.
+    * TenantId which the Microsoft Entra user belongs to.
     *
     * @return string|null The tenantId
     */
@@ -70,7 +70,7 @@ class AadUserConversationMember extends ConversationMember
 
     /**
     * Sets the tenantId
-    * TenantId which the Azure AD user belongs to.
+    * TenantId which the Microsoft Entra user belongs to.
     *
     * @param string $val The tenantId
     *

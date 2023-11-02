@@ -36,6 +36,7 @@ class AddressBookAccountTargetContent extends AccountTargetContent
 
     /**
     * Gets the accountTargetEmails
+    * List of user emails targeted for an attack simulation training campaign.
     *
     * @return string|null The accountTargetEmails
     */
@@ -50,6 +51,7 @@ class AddressBookAccountTargetContent extends AccountTargetContent
 
     /**
     * Sets the accountTargetEmails
+    * List of user emails targeted for an attack simulation training campaign.
     *
     * @param string $val The value of the accountTargetEmails
     *

@@ -26,7 +26,7 @@ class PolicyRoot extends Entity
 {
     /**
     * Gets the authenticationMethodsPolicy
-    * The authentication methods and the users that are allowed to use them to sign in and perform multifactor authentication (MFA) in Azure Active Directory (Azure AD).
+    * The authentication methods and the users that are allowed to use them to sign in and perform multifactor authentication (MFA) in Microsoft Entra ID.
     *
     * @return AuthenticationMethodsPolicy|null The authenticationMethodsPolicy
     */
@@ -45,7 +45,7 @@ class PolicyRoot extends Entity
 
     /**
     * Sets the authenticationMethodsPolicy
-    * The authentication methods and the users that are allowed to use them to sign in and perform multifactor authentication (MFA) in Azure Active Directory (Azure AD).
+    * The authentication methods and the users that are allowed to use them to sign in and perform multifactor authentication (MFA) in Microsoft Entra ID.
     *
     * @param AuthenticationMethodsPolicy $val The authenticationMethodsPolicy
     *
@@ -60,7 +60,7 @@ class PolicyRoot extends Entity
 
      /**
      * Gets the authenticationStrengthPolicies
-    * The authentication method combinations that are to be used in scenarios defined by Azure AD Conditional Access.
+    * The authentication method combinations that are to be used in scenarios defined by Microsoft Entra Conditional Access.
      *
      * @return array|null The authenticationStrengthPolicies
      */
@@ -75,7 +75,7 @@ class PolicyRoot extends Entity
 
     /**
     * Sets the authenticationStrengthPolicies
-    * The authentication method combinations that are to be used in scenarios defined by Azure AD Conditional Access.
+    * The authentication method combinations that are to be used in scenarios defined by Microsoft Entra Conditional Access.
     *
     * @param AuthenticationStrengthPolicy[] $val The authenticationStrengthPolicies
     *
@@ -182,7 +182,7 @@ class PolicyRoot extends Entity
 
     /**
     * Gets the authorizationPolicy
-    * The policy that controls Azure AD authorization settings.
+    * The policy that controls Microsoft Entra authorization settings.
     *
     * @return AuthorizationPolicy|null The authorizationPolicy
     */
@@ -201,7 +201,7 @@ class PolicyRoot extends Entity
 
     /**
     * Sets the authorizationPolicy
-    * The policy that controls Azure AD authorization settings.
+    * The policy that controls Microsoft Entra authorization settings.
     *
     * @param AuthorizationPolicy $val The authorizationPolicy
     *
@@ -245,7 +245,7 @@ class PolicyRoot extends Entity
 
     /**
     * Gets the crossTenantAccessPolicy
-    * The custom rules that define an access scenario when interacting with external Azure AD tenants.
+    * The custom rules that define an access scenario when interacting with external Microsoft Entra tenants.
     *
     * @return CrossTenantAccessPolicy|null The crossTenantAccessPolicy
     */
@@ -264,7 +264,7 @@ class PolicyRoot extends Entity
 
     /**
     * Sets the crossTenantAccessPolicy
-    * The custom rules that define an access scenario when interacting with external Azure AD tenants.
+    * The custom rules that define an access scenario when interacting with external Microsoft Entra tenants.
     *
     * @param CrossTenantAccessPolicy $val The crossTenantAccessPolicy
     *
@@ -312,7 +312,7 @@ class PolicyRoot extends Entity
 
      /**
      * Gets the homeRealmDiscoveryPolicies
-    * The policy to control Azure AD authentication behavior for federated users.
+    * The policy to control Microsoft Entra authentication behavior for federated users.
      *
      * @return array|null The homeRealmDiscoveryPolicies
      */
@@ -327,7 +327,7 @@ class PolicyRoot extends Entity
 
     /**
     * Sets the homeRealmDiscoveryPolicies
-    * The policy to control Azure AD authentication behavior for federated users.
+    * The policy to control Microsoft Entra authentication behavior for federated users.
     *
     * @param HomeRealmDiscoveryPolicy[] $val The homeRealmDiscoveryPolicies
     *
@@ -372,7 +372,7 @@ class PolicyRoot extends Entity
 
      /**
      * Gets the tokenIssuancePolicies
-    * The policy that specifies the characteristics of SAML tokens issued by Azure AD.
+    * The policy that specifies the characteristics of SAML tokens issued by Microsoft Entra ID.
      *
      * @return array|null The tokenIssuancePolicies
      */
@@ -387,7 +387,7 @@ class PolicyRoot extends Entity
 
     /**
     * Sets the tokenIssuancePolicies
-    * The policy that specifies the characteristics of SAML tokens issued by Azure AD.
+    * The policy that specifies the characteristics of SAML tokens issued by Microsoft Entra ID.
     *
     * @param TokenIssuancePolicy[] $val The tokenIssuancePolicies
     *
@@ -402,7 +402,7 @@ class PolicyRoot extends Entity
 
      /**
      * Gets the tokenLifetimePolicies
-    * The policy that controls the lifetime of a JWT access token, an ID token, or a SAML 1.1/2.0 token issued by Azure AD.
+    * The policy that controls the lifetime of a JWT access token, an ID token, or a SAML 1.1/2.0 token issued by Microsoft Entra ID.
      *
      * @return array|null The tokenLifetimePolicies
      */
@@ -417,7 +417,7 @@ class PolicyRoot extends Entity
 
     /**
     * Sets the tokenLifetimePolicies
-    * The policy that controls the lifetime of a JWT access token, an ID token, or a SAML 1.1/2.0 token issued by Azure AD.
+    * The policy that controls the lifetime of a JWT access token, an ID token, or a SAML 1.1/2.0 token issued by Microsoft Entra ID.
     *
     * @param TokenLifetimePolicy[] $val The tokenLifetimePolicies
     *
