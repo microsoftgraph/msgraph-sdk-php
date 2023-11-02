@@ -146,6 +146,58 @@ class PositionDetail extends Entity
         return $this;
     }
     /**
+    * Gets the layer
+    *
+    * @return int|null The layer
+    */
+    public function getLayer()
+    {
+        if (array_key_exists("layer", $this->_propDict)) {
+            return $this->_propDict["layer"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the layer
+    *
+    * @param int $val The value of the layer
+    *
+    * @return PositionDetail
+    */
+    public function setLayer($val)
+    {
+        $this->_propDict["layer"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the level
+    *
+    * @return string|null The level
+    */
+    public function getLevel()
+    {
+        if (array_key_exists("level", $this->_propDict)) {
+            return $this->_propDict["level"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the level
+    *
+    * @param string $val The value of the level
+    *
+    * @return PositionDetail
+    */
+    public function setLevel($val)
+    {
+        $this->_propDict["level"] = $val;
+        return $this;
+    }
+    /**
     * Gets the role
     * The role the position entailed.
     *

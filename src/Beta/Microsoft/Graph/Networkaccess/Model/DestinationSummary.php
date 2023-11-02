@@ -79,4 +79,35 @@ class DestinationSummary extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["destination"] = $val;
         return $this;
     }
+
+    /**
+    * Gets the trafficType
+    *
+    * @return TrafficType|null The trafficType
+    */
+    public function getTrafficType()
+    {
+        if (array_key_exists("trafficType", $this->_propDict)) {
+            if (is_a($this->_propDict["trafficType"], "\Beta\Microsoft\Graph\Networkaccess\Model\TrafficType") || is_null($this->_propDict["trafficType"])) {
+                return $this->_propDict["trafficType"];
+            } else {
+                $this->_propDict["trafficType"] = new TrafficType($this->_propDict["trafficType"]);
+                return $this->_propDict["trafficType"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the trafficType
+    *
+    * @param TrafficType $val The value to assign to the trafficType
+    *
+    * @return DestinationSummary The DestinationSummary
+    */
+    public function setTrafficType($val)
+    {
+        $this->_propDict["trafficType"] = $val;
+         return $this;
+    }
 }

@@ -55,7 +55,7 @@ class SignIn extends Entity
 
     /**
     * Gets the appId
-    * The application identifier in Azure Active Directory.  Supports $filter (eq).
+    * The application identifier in Microsoft Entra ID.  Supports $filter (eq).
     *
     * @return string|null The appId
     */
@@ -70,7 +70,7 @@ class SignIn extends Entity
 
     /**
     * Sets the appId
-    * The application identifier in Azure Active Directory.  Supports $filter (eq).
+    * The application identifier in Microsoft Entra ID.  Supports $filter (eq).
     *
     * @param string $val The appId
     *
@@ -85,7 +85,7 @@ class SignIn extends Entity
 
      /**
      * Gets the appliedConditionalAccessPolicies
-    * A list of conditional access policies that are triggered by the corresponding sign-in activity.
+    * A list of conditional access policies that are triggered by the corresponding sign-in activity. Apps need additional Conditional Access-related privileges to read the details of this property. For more information, see Viewing applied conditional access (CA) policies in sign-ins.
      *
      * @return array|null The appliedConditionalAccessPolicies
      */
@@ -100,7 +100,7 @@ class SignIn extends Entity
 
     /**
     * Sets the appliedConditionalAccessPolicies
-    * A list of conditional access policies that are triggered by the corresponding sign-in activity.
+    * A list of conditional access policies that are triggered by the corresponding sign-in activity. Apps need additional Conditional Access-related privileges to read the details of this property. For more information, see Viewing applied conditional access (CA) policies in sign-ins.
     *
     * @param AppliedConditionalAccessPolicy[] $val The appliedConditionalAccessPolicies
     *
@@ -175,7 +175,7 @@ class SignIn extends Entity
 
     /**
     * Gets the authenticationAppDeviceDetails
-    * Provides details about the app and device used during an Azure AD authentication step.
+    * Provides details about the app and device used during a Microsoft Entra authentication step.
     *
     * @return AuthenticationAppDeviceDetails|null The authenticationAppDeviceDetails
     */
@@ -194,7 +194,7 @@ class SignIn extends Entity
 
     /**
     * Sets the authenticationAppDeviceDetails
-    * Provides details about the app and device used during an Azure AD authentication step.
+    * Provides details about the app and device used during a Microsoft Entra authentication step.
     *
     * @param AuthenticationAppDeviceDetails $val The authenticationAppDeviceDetails
     *
@@ -209,7 +209,7 @@ class SignIn extends Entity
 
      /**
      * Gets the authenticationAppPolicyEvaluationDetails
-    * Provides details of the Azure AD policies applied to a user and client authentication app during an authentication step.
+    * Provides details of the Microsoft Entra policies applied to a user and client authentication app during an authentication step.
      *
      * @return array|null The authenticationAppPolicyEvaluationDetails
      */
@@ -224,7 +224,7 @@ class SignIn extends Entity
 
     /**
     * Sets the authenticationAppPolicyEvaluationDetails
-    * Provides details of the Azure AD policies applied to a user and client authentication app during an authentication step.
+    * Provides details of the Microsoft Entra policies applied to a user and client authentication app during an authentication step.
     *
     * @param AuthenticationAppPolicyDetails[] $val The authenticationAppPolicyEvaluationDetails
     *
@@ -328,7 +328,7 @@ class SignIn extends Entity
 
      /**
      * Gets the authenticationProcessingDetails
-    * Extra authentication processing details, such as the agent name for PTA/PHS or Server/farm name for federated authentication.
+    * More authentication processing details, such as the agent name for  PTA and PHS, or a server or farm name for federated authentication.
      *
      * @return array|null The authenticationProcessingDetails
      */
@@ -343,7 +343,7 @@ class SignIn extends Entity
 
     /**
     * Sets the authenticationProcessingDetails
-    * Extra authentication processing details, such as the agent name for PTA/PHS or Server/farm name for federated authentication.
+    * More authentication processing details, such as the agent name for  PTA and PHS, or a server or farm name for federated authentication.
     *
     * @param KeyValue[] $val The authenticationProcessingDetails
     *
@@ -357,7 +357,7 @@ class SignIn extends Entity
 
     /**
     * Gets the authenticationProtocol
-    * Lists the protocol type or grant type used in the authentication. The possible values are: none, oAuth2, ropc, wsFederation, saml20, deviceCode, unknownFutureValue. For authentications that use protocols other than the possible values listed, the protocol type is listed as none.
+    * Lists the protocol type or grant type used in the authentication. The possible values are: oAuth2, ropc, wsFederation, saml20, deviceCode, unknownFutureValue, authenticationTransfer, and none. Use none for all authentications that do not have a specific value in that list.
     *
     * @return ProtocolType|null The authenticationProtocol
     */
@@ -376,7 +376,7 @@ class SignIn extends Entity
 
     /**
     * Sets the authenticationProtocol
-    * Lists the protocol type or grant type used in the authentication. The possible values are: none, oAuth2, ropc, wsFederation, saml20, deviceCode, unknownFutureValue. For authentications that use protocols other than the possible values listed, the protocol type is listed as none.
+    * Lists the protocol type or grant type used in the authentication. The possible values are: oAuth2, ropc, wsFederation, saml20, deviceCode, unknownFutureValue, authenticationTransfer, and none. Use none for all authentications that do not have a specific value in that list.
     *
     * @param ProtocolType $val The authenticationProtocol
     *
@@ -536,7 +536,7 @@ class SignIn extends Entity
 
     /**
     * Gets the clientCredentialType
-    * Describes the credential type that a user client or service principal provided to Azure AD to authenticate itself. You may wish to review clientCredentialType to track and eliminate less secure credential types or to watch for clients and service principals using anomalous credential types. The possible values are: none, clientSecret, clientAssertion, federatedIdentityCredential, managedIdentity, certificate, unknownFutureValue.
+    * Describes the credential type that a user client or service principal provided to Microsoft Entra ID to authenticate itself. You may wish to review clientCredentialType to track and eliminate less secure credential types or to watch for clients and service principals using anomalous credential types. The possible values are: none, clientSecret, clientAssertion, federatedIdentityCredential, managedIdentity, certificate, unknownFutureValue.
     *
     * @return ClientCredentialType|null The clientCredentialType
     */
@@ -555,7 +555,7 @@ class SignIn extends Entity
 
     /**
     * Sets the clientCredentialType
-    * Describes the credential type that a user client or service principal provided to Azure AD to authenticate itself. You may wish to review clientCredentialType to track and eliminate less secure credential types or to watch for clients and service principals using anomalous credential types. The possible values are: none, clientSecret, clientAssertion, federatedIdentityCredential, managedIdentity, certificate, unknownFutureValue.
+    * Describes the credential type that a user client or service principal provided to Microsoft Entra ID to authenticate itself. You may wish to review clientCredentialType to track and eliminate less secure credential types or to watch for clients and service principals using anomalous credential types. The possible values are: none, clientSecret, clientAssertion, federatedIdentityCredential, managedIdentity, certificate, unknownFutureValue.
     *
     * @param ClientCredentialType $val The clientCredentialType
     *
@@ -817,7 +817,7 @@ class SignIn extends Entity
 
     /**
     * Gets the homeTenantName
-    * For user sign ins, the identifier of the tenant that the user is a member of. Only populated in cases where the home tenant has provided affirmative consent to Azure AD to show the tenant content.
+    * For user sign ins, the identifier of the tenant that the user is a member of. Only populated in cases where the home tenant has provided affirmative consent to Microsoft Entra ID to show the tenant content.
     *
     * @return string|null The homeTenantName
     */
@@ -832,7 +832,7 @@ class SignIn extends Entity
 
     /**
     * Sets the homeTenantName
-    * For user sign ins, the identifier of the tenant that the user is a member of. Only populated in cases where the home tenant has provided affirmative consent to Azure AD to show the tenant content.
+    * For user sign ins, the identifier of the tenant that the user is a member of. Only populated in cases where the home tenant has provided affirmative consent to Microsoft Entra ID to show the tenant content.
     *
     * @param string $val The homeTenantName
     *
@@ -846,7 +846,7 @@ class SignIn extends Entity
 
     /**
     * Gets the incomingTokenType
-    * Indicates the token types that were presented to Azure AD to authenticate the actor in the sign in. The possible values are: none, primaryRefreshToken, saml11, saml20, unknownFutureValue, remoteDesktopToken.  NOTE Azure AD may have also used token types not listed in this Enum type to authenticate the actor. Don't infer the lack of a token if it isn't one of the types listed. Also, please note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: remoteDesktopToken.
+    * Indicates the token types that were presented to Microsoft Entra ID to authenticate the actor in the sign in. The possible values are: none, primaryRefreshToken, saml11, saml20, unknownFutureValue, remoteDesktopToken.  NOTE Microsoft Entra ID may have also used token types not listed in this Enum type to authenticate the actor. Don't infer the lack of a token if it isn't one of the types listed. Also, please note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: remoteDesktopToken.
     *
     * @return IncomingTokenType|null The incomingTokenType
     */
@@ -865,7 +865,7 @@ class SignIn extends Entity
 
     /**
     * Sets the incomingTokenType
-    * Indicates the token types that were presented to Azure AD to authenticate the actor in the sign in. The possible values are: none, primaryRefreshToken, saml11, saml20, unknownFutureValue, remoteDesktopToken.  NOTE Azure AD may have also used token types not listed in this Enum type to authenticate the actor. Don't infer the lack of a token if it isn't one of the types listed. Also, please note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: remoteDesktopToken.
+    * Indicates the token types that were presented to Microsoft Entra ID to authenticate the actor in the sign in. The possible values are: none, primaryRefreshToken, saml11, saml20, unknownFutureValue, remoteDesktopToken.  NOTE Microsoft Entra ID may have also used token types not listed in this Enum type to authenticate the actor. Don't infer the lack of a token if it isn't one of the types listed. Also, please note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: remoteDesktopToken.
     *
     * @param IncomingTokenType $val The incomingTokenType
     *
@@ -937,7 +937,7 @@ class SignIn extends Entity
 
     /**
     * Gets the isInteractive
-    * Indicates whether a user sign in is interactive. In interactive sign in, the user provides an authentication factor to Azure AD. These factors include passwords, responses to MFA challenges, biometric factors, or QR codes that a user provides to Azure AD or an associated app. In non-interactive sign in, the user doesn't provide an authentication factor. Instead, the client app uses a token or code to authenticate or access a resource on behalf of a user. Non-interactive sign ins are commonly used for a client to sign in on a user's behalf in a process transparent to the user.
+    * Indicates whether a user sign in is interactive. In interactive sign in, the user provides an authentication factor to Microsoft Entra ID. These factors include passwords, responses to MFA challenges, biometric factors, or QR codes that a user provides to Microsoft Entra ID or an associated app. In non-interactive sign in, the user doesn't provide an authentication factor. Instead, the client app uses a token or code to authenticate or access a resource on behalf of a user. Non-interactive sign ins are commonly used for a client to sign in on a user's behalf in a process transparent to the user.
     *
     * @return bool|null The isInteractive
     */
@@ -952,7 +952,7 @@ class SignIn extends Entity
 
     /**
     * Sets the isInteractive
-    * Indicates whether a user sign in is interactive. In interactive sign in, the user provides an authentication factor to Azure AD. These factors include passwords, responses to MFA challenges, biometric factors, or QR codes that a user provides to Azure AD or an associated app. In non-interactive sign in, the user doesn't provide an authentication factor. Instead, the client app uses a token or code to authenticate or access a resource on behalf of a user. Non-interactive sign ins are commonly used for a client to sign in on a user's behalf in a process transparent to the user.
+    * Indicates whether a user sign in is interactive. In interactive sign in, the user provides an authentication factor to Microsoft Entra ID. These factors include passwords, responses to MFA challenges, biometric factors, or QR codes that a user provides to Microsoft Entra ID or an associated app. In non-interactive sign in, the user doesn't provide an authentication factor. Instead, the client app uses a token or code to authenticate or access a resource on behalf of a user. Non-interactive sign ins are commonly used for a client to sign in on a user's behalf in a process transparent to the user.
     *
     * @param bool $val The isInteractive
     *
@@ -966,7 +966,7 @@ class SignIn extends Entity
 
     /**
     * Gets the isTenantRestricted
-    * Shows whether the sign in event was subject to an Azure AD tenant restriction policy.
+    * Shows whether the sign in event was subject to a Microsoft Entra tenant restriction policy.
     *
     * @return bool|null The isTenantRestricted
     */
@@ -981,7 +981,7 @@ class SignIn extends Entity
 
     /**
     * Sets the isTenantRestricted
-    * Shows whether the sign in event was subject to an Azure AD tenant restriction policy.
+    * Shows whether the sign in event was subject to a Microsoft Entra tenant restriction policy.
     *
     * @param bool $val The isTenantRestricted
     *
@@ -1184,7 +1184,7 @@ class SignIn extends Entity
 
     /**
     * Gets the privateLinkDetails
-    * Contains information about the Azure AD Private Link policy that is associated with the sign in event.
+    * Contains information about the Microsoft Entra Private Link policy that is associated with the sign in event.
     *
     * @return PrivateLinkDetails|null The privateLinkDetails
     */
@@ -1203,7 +1203,7 @@ class SignIn extends Entity
 
     /**
     * Sets the privateLinkDetails
-    * Contains information about the Azure AD Private Link policy that is associated with the sign in event.
+    * Contains information about the Microsoft Entra Private Link policy that is associated with the sign in event.
     *
     * @param PrivateLinkDetails $val The privateLinkDetails
     *
@@ -1362,7 +1362,7 @@ class SignIn extends Entity
 
     /**
     * Gets the riskDetail
-    * The reason behind a specific state of a risky user, sign-in, or a risk event. Possible values: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, or unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far.  Supports $filter (eq). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
+    * The reason behind a specific state of a risky user, sign-in, or a risk event. Possible values: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, or unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far.  Supports $filter (eq). Note: Details for this property are only available for Microsoft Entra ID P2 customers. All other customers are returned hidden.
     *
     * @return RiskDetail|null The riskDetail
     */
@@ -1381,7 +1381,7 @@ class SignIn extends Entity
 
     /**
     * Sets the riskDetail
-    * The reason behind a specific state of a risky user, sign-in, or a risk event. Possible values: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, or unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far.  Supports $filter (eq). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
+    * The reason behind a specific state of a risky user, sign-in, or a risk event. Possible values: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, or unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far.  Supports $filter (eq). Note: Details for this property are only available for Microsoft Entra ID P2 customers. All other customers are returned hidden.
     *
     * @param RiskDetail $val The riskDetail
     *
@@ -1424,7 +1424,7 @@ class SignIn extends Entity
 
     /**
     * Gets the riskLevelAggregated
-    * The aggregated risk level. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection.  Supports $filter (eq). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
+    * The aggregated risk level. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in was not enabled for Microsoft Entra ID Protection.  Supports $filter (eq). Note: Details for this property are only available for Microsoft Entra ID P2 customers. All other customers are returned hidden.
     *
     * @return RiskLevel|null The riskLevelAggregated
     */
@@ -1443,7 +1443,7 @@ class SignIn extends Entity
 
     /**
     * Sets the riskLevelAggregated
-    * The aggregated risk level. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection.  Supports $filter (eq). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
+    * The aggregated risk level. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in was not enabled for Microsoft Entra ID Protection.  Supports $filter (eq). Note: Details for this property are only available for Microsoft Entra ID P2 customers. All other customers are returned hidden.
     *
     * @param RiskLevel $val The riskLevelAggregated
     *
@@ -1457,7 +1457,7 @@ class SignIn extends Entity
 
     /**
     * Gets the riskLevelDuringSignIn
-    * The risk level during sign-in. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in wasn't enabled for Azure AD Identity Protection.  Supports $filter (eq). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
+    * The risk level during sign-in. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in wasn't enabled for Microsoft Entra ID Protection.  Supports $filter (eq). Note: Details for this property are only available for Microsoft Entra ID P2 customers. All other customers are returned hidden.
     *
     * @return RiskLevel|null The riskLevelDuringSignIn
     */
@@ -1476,7 +1476,7 @@ class SignIn extends Entity
 
     /**
     * Sets the riskLevelDuringSignIn
-    * The risk level during sign-in. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in wasn't enabled for Azure AD Identity Protection.  Supports $filter (eq). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
+    * The risk level during sign-in. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in wasn't enabled for Microsoft Entra ID Protection.  Supports $filter (eq). Note: Details for this property are only available for Microsoft Entra ID P2 customers. All other customers are returned hidden.
     *
     * @param RiskLevel $val The riskLevelDuringSignIn
     *
@@ -1888,7 +1888,7 @@ class SignIn extends Entity
 
     /**
     * Gets the uniqueTokenIdentifier
-    * A unique base64 encoded request identifier used to track tokens issued by Azure AD as they're redeemed at resource providers.
+    * A unique base64 encoded request identifier used to track tokens issued by Microsoft Entra ID as they're redeemed at resource providers.
     *
     * @return string|null The uniqueTokenIdentifier
     */
@@ -1903,7 +1903,7 @@ class SignIn extends Entity
 
     /**
     * Sets the uniqueTokenIdentifier
-    * A unique base64 encoded request identifier used to track tokens issued by Azure AD as they're redeemed at resource providers.
+    * A unique base64 encoded request identifier used to track tokens issued by Microsoft Entra ID as they're redeemed at resource providers.
     *
     * @param string $val The uniqueTokenIdentifier
     *

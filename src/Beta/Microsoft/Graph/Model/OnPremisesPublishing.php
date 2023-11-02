@@ -251,6 +251,32 @@ class OnPremisesPublishing extends Entity
         return $this;
     }
     /**
+    * Gets the isDnsResolutionEnabled
+    *
+    * @return bool|null The isDnsResolutionEnabled
+    */
+    public function getIsDnsResolutionEnabled()
+    {
+        if (array_key_exists("isDnsResolutionEnabled", $this->_propDict)) {
+            return $this->_propDict["isDnsResolutionEnabled"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isDnsResolutionEnabled
+    *
+    * @param bool $val The value of the isDnsResolutionEnabled
+    *
+    * @return OnPremisesPublishing
+    */
+    public function setIsDnsResolutionEnabled($val)
+    {
+        $this->_propDict["isDnsResolutionEnabled"] = $val;
+        return $this;
+    }
+    /**
     * Gets the isHttpOnlyCookieEnabled
     * Indicates if the HTTPOnly cookie flag should be set in the HTTP response headers. Set this value to true to have Application Proxy cookies include the HTTPOnly flag in the HTTP response headers. If using Remote Desktop Services, set this value to False. Default value is false.
     *
@@ -308,7 +334,7 @@ class OnPremisesPublishing extends Entity
     }
     /**
     * Gets the isPersistentCookieEnabled
-    * Indicates if the Persistent cookie flag should be set in the HTTP response headers. Keep this value set to false. Only use this setting for applications that can't share cookies between processes. For more information about cookie settings, see Cookie settings for accessing on-premises applications in Azure Active Directory. Default value is false.
+    * Indicates if the Persistent cookie flag should be set in the HTTP response headers. Keep this value set to false. Only use this setting for applications that can't share cookies between processes. For more information about cookie settings, see Cookie settings for accessing on-premises applications in Microsoft Entra ID. Default value is false.
     *
     * @return bool|null The isPersistentCookieEnabled
     */
@@ -323,7 +349,7 @@ class OnPremisesPublishing extends Entity
 
     /**
     * Sets the isPersistentCookieEnabled
-    * Indicates if the Persistent cookie flag should be set in the HTTP response headers. Keep this value set to false. Only use this setting for applications that can't share cookies between processes. For more information about cookie settings, see Cookie settings for accessing on-premises applications in Azure Active Directory. Default value is false.
+    * Indicates if the Persistent cookie flag should be set in the HTTP response headers. Keep this value set to false. Only use this setting for applications that can't share cookies between processes. For more information about cookie settings, see Cookie settings for accessing on-premises applications in Microsoft Entra ID. Default value is false.
     *
     * @param bool $val The value of the isPersistentCookieEnabled
     *
@@ -480,7 +506,7 @@ class OnPremisesPublishing extends Entity
 
     /**
     * Gets the segmentsConfiguration
-    * Represents the collection of application segments for an on-premises wildcard application that's published through Azure AD Application Proxy.
+    * Represents the collection of application segments for an on-premises wildcard application that's published through Microsoft Entra application proxy.
     *
     * @return SegmentConfiguration|null The segmentsConfiguration
     */
@@ -499,7 +525,7 @@ class OnPremisesPublishing extends Entity
 
     /**
     * Sets the segmentsConfiguration
-    * Represents the collection of application segments for an on-premises wildcard application that's published through Azure AD Application Proxy.
+    * Represents the collection of application segments for an on-premises wildcard application that's published through Microsoft Entra application proxy.
     *
     * @param SegmentConfiguration $val The value to assign to the segmentsConfiguration
     *

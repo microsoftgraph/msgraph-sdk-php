@@ -25,6 +25,33 @@ namespace Beta\Microsoft\Graph\Model;
 class InactiveUsersByApplicationMetricBase extends Entity
 {
     /**
+    * Gets the appId
+    *
+    * @return string|null The appId
+    */
+    public function getAppId()
+    {
+        if (array_key_exists("appId", $this->_propDict)) {
+            return $this->_propDict["appId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the appId
+    *
+    * @param string $val The appId
+    *
+    * @return InactiveUsersByApplicationMetricBase
+    */
+    public function setAppId($val)
+    {
+        $this->_propDict["appId"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the factDate
     *
     * @return \DateTime|null The factDate

@@ -26,7 +26,7 @@ class Training extends Entity
 {
     /**
     * Gets the availabilityStatus
-    * Training availability status.Possible values are: unknown, notAvailable, available, archive, delete, unknownFutureValue.
+    * Training availability status. Possible values are: unknown, notAvailable, available, archive, delete, unknownFutureValue.
     *
     * @return TrainingAvailabilityStatus|null The availabilityStatus
     */
@@ -45,7 +45,7 @@ class Training extends Entity
 
     /**
     * Sets the availabilityStatus
-    * Training availability status.Possible values are: unknown, notAvailable, available, archive, delete, unknownFutureValue.
+    * Training availability status. Possible values are: unknown, notAvailable, available, archive, delete, unknownFutureValue.
     *
     * @param TrainingAvailabilityStatus $val The availabilityStatus
     *

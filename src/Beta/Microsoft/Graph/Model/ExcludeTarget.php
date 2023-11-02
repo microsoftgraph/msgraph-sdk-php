@@ -25,7 +25,7 @@ class ExcludeTarget extends Entity
 {
     /**
     * Gets the id
-    * The object identifier of an Azure AD group.
+    * The object identifier of a Microsoft Entra group.
     *
     * @return string|null The id
     */
@@ -40,7 +40,7 @@ class ExcludeTarget extends Entity
 
     /**
     * Sets the id
-    * The object identifier of an Azure AD group.
+    * The object identifier of a Microsoft Entra group.
     *
     * @param string $val The value of the id
     *

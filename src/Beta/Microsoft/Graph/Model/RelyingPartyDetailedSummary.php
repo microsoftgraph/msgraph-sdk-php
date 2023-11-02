@@ -55,7 +55,7 @@ class RelyingPartyDetailedSummary extends Entity
 
     /**
     * Gets the migrationStatus
-    * Indication of whether the application can be moved to Azure AD or require more investigation. Possible values are: ready, needsReview, additionalStepsRequired, unknownFutureValue.
+    * Indication of whether the application can be moved to Microsoft Entra ID or require more investigation. Possible values are: ready, needsReview, additionalStepsRequired, unknownFutureValue.
     *
     * @return MigrationStatus|null The migrationStatus
     */
@@ -74,7 +74,7 @@ class RelyingPartyDetailedSummary extends Entity
 
     /**
     * Sets the migrationStatus
-    * Indication of whether the application can be moved to Azure AD or require more investigation. Possible values are: ready, needsReview, additionalStepsRequired, unknownFutureValue.
+    * Indication of whether the application can be moved to Microsoft Entra ID or require more investigation. Possible values are: ready, needsReview, additionalStepsRequired, unknownFutureValue.
     *
     * @param MigrationStatus $val The migrationStatus
     *
@@ -89,7 +89,7 @@ class RelyingPartyDetailedSummary extends Entity
 
      /**
      * Gets the migrationValidationDetails
-    * Specifies all the validations check done on applications configuration details to evaluate if the application is ready to be moved to Azure AD.
+    * Specifies all the validations check done on applications configuration details to evaluate if the application is ready to be moved to Microsoft Entra ID.
      *
      * @return array|null The migrationValidationDetails
      */
@@ -104,7 +104,7 @@ class RelyingPartyDetailedSummary extends Entity
 
     /**
     * Sets the migrationValidationDetails
-    * Specifies all the validations check done on applications configuration details to evaluate if the application is ready to be moved to Azure AD.
+    * Specifies all the validations check done on applications configuration details to evaluate if the application is ready to be moved to Microsoft Entra ID.
     *
     * @param KeyValuePair[] $val The migrationValidationDetails
     *

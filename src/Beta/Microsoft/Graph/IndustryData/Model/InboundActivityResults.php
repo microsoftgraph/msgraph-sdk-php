@@ -87,7 +87,7 @@ class InboundActivityResults extends IndustryDataActivityStatistics
 
     /**
     * Gets the matchedPeopleByRole
-    * Number of people matched to an Azure Active Directory user, by role.
+    * Number of people matched to a Microsoft Entra user, by role.
     *
     * @return IndustryDataRunRoleCountMetric|null The matchedPeopleByRole
     */
@@ -106,7 +106,7 @@ class InboundActivityResults extends IndustryDataActivityStatistics
 
     /**
     * Sets the matchedPeopleByRole
-    * Number of people matched to an Azure Active Directory user, by role.
+    * Number of people matched to a Microsoft Entra user, by role.
     *
     * @param IndustryDataRunRoleCountMetric $val The value to assign to the matchedPeopleByRole
     *
@@ -219,7 +219,7 @@ class InboundActivityResults extends IndustryDataActivityStatistics
 
     /**
     * Gets the unmatchedPeopleByRole
-    * Number of people not matched to an Azure Active Directory user, by role.
+    * Number of people not matched to a Microsoft Entra user, by role.
     *
     * @return IndustryDataRunRoleCountMetric|null The unmatchedPeopleByRole
     */
@@ -238,7 +238,7 @@ class InboundActivityResults extends IndustryDataActivityStatistics
 
     /**
     * Sets the unmatchedPeopleByRole
-    * Number of people not matched to an Azure Active Directory user, by role.
+    * Number of people not matched to a Microsoft Entra user, by role.
     *
     * @param IndustryDataRunRoleCountMetric $val The value to assign to the unmatchedPeopleByRole
     *

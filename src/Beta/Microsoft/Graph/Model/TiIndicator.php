@@ -117,7 +117,7 @@ class TiIndicator extends Entity
 
     /**
     * Gets the azureTenantId
-    * Stamped by the system when the indicator is ingested. The Azure Active Directory tenant id of submitting client. Required.
+    * Stamped by the system when the indicator is ingested. The Microsoft Entra tenant id of submitting client. Required.
     *
     * @return string|null The azureTenantId
     */
@@ -132,7 +132,7 @@ class TiIndicator extends Entity
 
     /**
     * Sets the azureTenantId
-    * Stamped by the system when the indicator is ingested. The Azure Active Directory tenant id of submitting client. Required.
+    * Stamped by the system when the indicator is ingested. The Microsoft Entra tenant id of submitting client. Required.
     *
     * @param string $val The azureTenantId
     *

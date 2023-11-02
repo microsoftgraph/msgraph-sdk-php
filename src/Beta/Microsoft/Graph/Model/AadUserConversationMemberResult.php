@@ -25,7 +25,7 @@ class AadUserConversationMemberResult extends ActionResultPart
 {
     /**
     * Gets the userId
-    * The user object ID of the Azure AD user that was being added as part of the bulk operation.
+    * The user object ID of the Microsoft Entra user that was being added as part of the bulk operation.
     *
     * @return string|null The userId
     */
@@ -40,7 +40,7 @@ class AadUserConversationMemberResult extends ActionResultPart
 
     /**
     * Sets the userId
-    * The user object ID of the Azure AD user that was being added as part of the bulk operation.
+    * The user object ID of the Microsoft Entra user that was being added as part of the bulk operation.
     *
     * @param string $val The value of the userId
     *

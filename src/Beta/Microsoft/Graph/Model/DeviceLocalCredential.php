@@ -93,7 +93,7 @@ class DeviceLocalCredential extends Entity
 
     /**
     * Gets the backupDateTime
-    * When the local adminstrator account credential for the device object was backed up to Azure Active Directory.
+    * When the local adminstrator account credential for the device object was backed up to Microsoft Entra ID.
     *
     * @return \DateTime|null The backupDateTime
     */
@@ -112,7 +112,7 @@ class DeviceLocalCredential extends Entity
 
     /**
     * Sets the backupDateTime
-    * When the local adminstrator account credential for the device object was backed up to Azure Active Directory.
+    * When the local adminstrator account credential for the device object was backed up to Microsoft Entra ID.
     *
     * @param \DateTime $val The value to assign to the backupDateTime
     *
@@ -125,7 +125,7 @@ class DeviceLocalCredential extends Entity
     }
     /**
     * Gets the passwordBase64
-    * The password for the local administrator account that is backed up to Azure Active Directory and returned as a base 64 encoded value.
+    * The password for the local administrator account that is backed up to Microsoft Entra ID and returned as a base 64 encoded value.
     *
     * @return string|null The passwordBase64
     */
@@ -140,7 +140,7 @@ class DeviceLocalCredential extends Entity
 
     /**
     * Sets the passwordBase64
-    * The password for the local administrator account that is backed up to Azure Active Directory and returned as a base 64 encoded value.
+    * The password for the local administrator account that is backed up to Microsoft Entra ID and returned as a base 64 encoded value.
     *
     * @param string $val The value of the passwordBase64
     *

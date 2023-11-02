@@ -23,6 +23,34 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class AuthenticationMethodsRegistrationCampaign extends Entity
 {
+    /**
+    * Gets the enforceRegistrationAfterAllowedSnoozes
+    * Specifies whether a user is required to perform registration after snoozing 3 times. If true, the user is required to register after 3 snoozes. If false, the user can snooze indefinitely. The default value is true.
+    *
+    * @return bool|null The enforceRegistrationAfterAllowedSnoozes
+    */
+    public function getEnforceRegistrationAfterAllowedSnoozes()
+    {
+        if (array_key_exists("enforceRegistrationAfterAllowedSnoozes", $this->_propDict)) {
+            return $this->_propDict["enforceRegistrationAfterAllowedSnoozes"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the enforceRegistrationAfterAllowedSnoozes
+    * Specifies whether a user is required to perform registration after snoozing 3 times. If true, the user is required to register after 3 snoozes. If false, the user can snooze indefinitely. The default value is true.
+    *
+    * @param bool $val The value of the enforceRegistrationAfterAllowedSnoozes
+    *
+    * @return AuthenticationMethodsRegistrationCampaign
+    */
+    public function setEnforceRegistrationAfterAllowedSnoozes($val)
+    {
+        $this->_propDict["enforceRegistrationAfterAllowedSnoozes"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the excludeTargets
@@ -120,7 +148,7 @@ class AuthenticationMethodsRegistrationCampaign extends Entity
 
     /**
     * Gets the state
-    * Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Azure AD for the setting. The default value is disabled.
+    * Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Microsoft Entra ID for the setting. The default value is disabled.
     *
     * @return AdvancedConfigState|null The state
     */
@@ -139,7 +167,7 @@ class AuthenticationMethodsRegistrationCampaign extends Entity
 
     /**
     * Sets the state
-    * Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Azure AD for the setting. The default value is disabled.
+    * Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Microsoft Entra ID for the setting. The default value is disabled.
     *
     * @param AdvancedConfigState $val The value to assign to the state
     *

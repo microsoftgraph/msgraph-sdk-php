@@ -84,6 +84,36 @@ class Directory extends Entity
 
 
      /**
+     * Gets the deviceLocalCredentials
+    * The credentials of the device's local administrator account backed up to Microsoft Entra ID.
+     *
+     * @return array|null The deviceLocalCredentials
+     */
+    public function getDeviceLocalCredentials()
+    {
+        if (array_key_exists("deviceLocalCredentials", $this->_propDict)) {
+           return $this->_propDict["deviceLocalCredentials"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the deviceLocalCredentials
+    * The credentials of the device's local administrator account backed up to Microsoft Entra ID.
+    *
+    * @param DeviceLocalCredentialInfo[] $val The deviceLocalCredentials
+    *
+    * @return Directory
+    */
+    public function setDeviceLocalCredentials($val)
+    {
+        $this->_propDict["deviceLocalCredentials"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the administrativeUnits
     * Conceptual container for user and group directory objects.
      *

@@ -25,7 +25,7 @@ class EvaluateDynamicMembershipResult extends Entity
 {
     /**
     * Gets the membershipRule
-    * If a group ID is provided, the value is the membership rule for the group. If a group ID isn't provided, the value is the membership rule that was provided as a parameter. For more information, see Dynamic membership rules for groups in Azure Active Directory.
+    * If a group ID is provided, the value is the membership rule for the group. If a group ID isn't provided, the value is the membership rule that was provided as a parameter. For more information, see Dynamic membership rules for groups in Microsoft Entra ID.
     *
     * @return string|null The membershipRule
     */
@@ -40,7 +40,7 @@ class EvaluateDynamicMembershipResult extends Entity
 
     /**
     * Sets the membershipRule
-    * If a group ID is provided, the value is the membership rule for the group. If a group ID isn't provided, the value is the membership rule that was provided as a parameter. For more information, see Dynamic membership rules for groups in Azure Active Directory.
+    * If a group ID is provided, the value is the membership rule for the group. If a group ID isn't provided, the value is the membership rule that was provided as a parameter. For more information, see Dynamic membership rules for groups in Microsoft Entra ID.
     *
     * @param string $val The value of the membershipRule
     *
