@@ -145,21 +145,27 @@ We call `iterate()` while passing a callback to be executed. If the callback ret
 Iteration can be resumed by calling `iterate()` again.
 
 ```php
+use Microsoft\Graph\Core\Tasks\PageIterator;
+use Microsoft\Graph\Generated\Models\Message;
+use DateTimeInterface;
 
 $messages = $graphServiceClient->users()->byUserId(USER_ID)->messages()->get()->wait();
 
 $pageIterator = new PageIterator($messages, $graphServiceClient->getRequestAdapter());
 
-$callback = function (Message $message) {
-    echo "Message ID: {$message->getId()}";
-    return ($message->getId() !== 5);
+$counter = 0;
+$callback = function (Message $message) use (&$counter) {
+    echo "Subject: {$message->getSubject()}, Received at: {$message->getReceivedDateTime()->format(DateTimeInterface::RFC2822)}\n";
+    $counter ++;
+    return ($counter % 5 != 0);
+};
+
+while ($pageIterator->hasNext()) {
+    // iteration pauses and resumes after every 5 messages
+    $pageIterator->iterate($callback);
+
+    echo "\nPaused iteration...Total messages: {$counter}\n\n";
 }
-
-// iteration will pause at message ID 5
-$pageIterator->iterate($callback);
-
-// resumes iteration from next message (ID 6)
-$pageIterator->iterate($callback);
 
 ```
 
@@ -299,6 +305,8 @@ The SDK provides a `LargeFileUpload` task that slices your file into bytes and p
 To add a large attachment to an Outlook message:
 
 ```php
+use Psr\Http\Client\NetworkExceptionInterface;
+
 
 // create a file stream
 $file = Utils::streamFor(fopen('fileName', 'r'));
@@ -312,16 +320,27 @@ $attachmentItem->setSize($file->getSize());
 $uploadSessionRequestBody = new CreateUploadSessionPostRequestBody();
 $uploadSessionRequestBody->setAttachmentItem($attachmentItem);
 
-/** @var UploadSession $uploadSession */
 $uploadSession = $graphServiceClient->users()->byUserId(USER_ID)->messages()->byMessageId('[id]')->attachments()->createUploadSession()->post($uploadSessionRequestBody)->wait();
 
 // upload
 $largeFileUpload = new LargeFileUploadTask($uploadSession, $graphServiceClient->getRequestAdapter(), $file);
-try{
+try {
     $uploadSession = $largeFileUpload->upload()->wait();
-} catch (\Psr\Http\Client\NetworkExceptionInterface $ex) {
+} catch (NetworkExceptionInterface $ex) {
     // resume upload in case of network errors
-    $uploadSession = $largeFileUpload->resume()->wait();
+    $retries = 0;
+    $maxRetries = 3;
+    while ($retries < $maxRetries) {
+        try {
+            $uploadSession = $largeFileUpload->resume()->wait();
+            if ($uploadSession) {
+                break;
+            }
+        } catch (NetworkExceptionInterface $ex) {
+            $retries ++;
+        }
+    }
+    throw $ex;
 }
 
 ```
@@ -429,7 +448,6 @@ use Microsoft\Graph\BatchRequestBuilder;
 use Microsoft\Graph\Core\Requests\BatchResponseItem;
 
 $requestBuilder = new BatchRequestBuilder($graphServiceClient->getRequestAdapter());
-/** @var BatchResponseContent $batchResponse  */
 $batchResponse = $requestBuilder->postAsync($batchRequestContent)->wait();
 
 ```
