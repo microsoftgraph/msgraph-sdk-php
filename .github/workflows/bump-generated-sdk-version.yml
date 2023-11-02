@@ -1,0 +1,34 @@
+# Copyright (c) Microsoft Corporation. All rights reserved.
+# Licensed under the MIT License.
+
+name: "Bump SDK version in generated pull request"
+
+# Controls when the action will run. Triggers the workflow on push
+# events but only for branches with the following branch spec: kiota/v1.0/pipelinebuild/*
+on:
+  push:
+    branches:
+      - "kiota/v1.0/pipelinebuild/*"
+    paths:
+      - 'src/Generated/**'
+
+defaults:
+  run:
+    shell: bash
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  bump-sdk-version:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Git config user
+      run: |
+        git config --global user.email "GraphTooling@service.microsoft.com"
+        git config --global user.name "Microsoft Graph DevX Tooling"
+    - name: Run increment script
+      run: php scripts/BumpStableSdkVersion.php
+
+    - name: Commit and push changes if any
+      run: if git commit -am "Bump SDK version"; then git push origin $GITHUB_REF; fi
