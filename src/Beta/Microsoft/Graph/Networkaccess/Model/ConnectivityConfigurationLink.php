@@ -26,6 +26,7 @@ class ConnectivityConfigurationLink extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the displayName
+    * Specifies the name of the link.
     *
     * @return string|null The displayName
     */
@@ -40,6 +41,7 @@ class ConnectivityConfigurationLink extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the displayName
+    * Specifies the name of the link.
     *
     * @param string $val The displayName
     *
@@ -54,6 +56,7 @@ class ConnectivityConfigurationLink extends \Beta\Microsoft\Graph\Model\Entity
 
      /**
      * Gets the localConfigurations
+    * Specifies Microsoft's end of the tunnel configuration for a device link.
      *
      * @return array|null The localConfigurations
      */
@@ -68,6 +71,7 @@ class ConnectivityConfigurationLink extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the localConfigurations
+    * Specifies Microsoft's end of the tunnel configuration for a device link.
     *
     * @param LocalConnectivityConfiguration[] $val The localConfigurations
     *
@@ -81,6 +85,7 @@ class ConnectivityConfigurationLink extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the peerConfiguration
+    * Specifies the customer's end of the tunnel configuration for a device link.
     *
     * @return PeerConnectivityConfiguration|null The peerConfiguration
     */
@@ -99,6 +104,7 @@ class ConnectivityConfigurationLink extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the peerConfiguration
+    * Specifies the customer's end of the tunnel configuration for a device link.
     *
     * @param PeerConnectivityConfiguration $val The peerConfiguration
     *

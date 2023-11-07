@@ -1379,6 +1379,39 @@ class ManagedAppProtection extends ManagedAppPolicy
     }
 
     /**
+    * Gets the protectedMessagingRedirectAppType
+    * Defines how app messaging redirection is protected by an App Protection Policy. Default is anyApp.
+    *
+    * @return MessagingRedirectAppType|null The protectedMessagingRedirectAppType
+    */
+    public function getProtectedMessagingRedirectAppType()
+    {
+        if (array_key_exists("protectedMessagingRedirectAppType", $this->_propDict)) {
+            if (is_a($this->_propDict["protectedMessagingRedirectAppType"], "\Beta\Microsoft\Graph\Model\MessagingRedirectAppType") || is_null($this->_propDict["protectedMessagingRedirectAppType"])) {
+                return $this->_propDict["protectedMessagingRedirectAppType"];
+            } else {
+                $this->_propDict["protectedMessagingRedirectAppType"] = new MessagingRedirectAppType($this->_propDict["protectedMessagingRedirectAppType"]);
+                return $this->_propDict["protectedMessagingRedirectAppType"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the protectedMessagingRedirectAppType
+    * Defines how app messaging redirection is protected by an App Protection Policy. Default is anyApp.
+    *
+    * @param MessagingRedirectAppType $val The protectedMessagingRedirectAppType
+    *
+    * @return ManagedAppProtection
+    */
+    public function setProtectedMessagingRedirectAppType($val)
+    {
+        $this->_propDict["protectedMessagingRedirectAppType"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the saveAsBlocked
     * Indicates whether users may use the 'Save As' menu item to save a copy of protected files.
     *

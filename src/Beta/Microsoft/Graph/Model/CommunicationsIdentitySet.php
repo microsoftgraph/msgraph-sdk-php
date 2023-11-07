@@ -158,7 +158,7 @@ class CommunicationsIdentitySet extends IdentitySet
 
     /**
     * Gets the endpointType
-    * Type of endpoint the participant is using. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone and unknownFutureValue.
+    * Type of endpoint the participant uses. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone and unknownFutureValue.
     *
     * @return EndpointType|null The endpointType
     */
@@ -177,7 +177,7 @@ class CommunicationsIdentitySet extends IdentitySet
 
     /**
     * Sets the endpointType
-    * Type of endpoint the participant is using. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone and unknownFutureValue.
+    * Type of endpoint the participant uses. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone and unknownFutureValue.
     *
     * @param EndpointType $val The value to assign to the endpointType
     *
@@ -224,7 +224,7 @@ class CommunicationsIdentitySet extends IdentitySet
 
     /**
     * Gets the onPremises
-    * The Skype for Business On-Premises user associated with this action.
+    * The Skype for Business on-premises user associated with this action.
     *
     * @return Identity|null The onPremises
     */
@@ -243,7 +243,7 @@ class CommunicationsIdentitySet extends IdentitySet
 
     /**
     * Sets the onPremises
-    * The Skype for Business On-Premises user associated with this action.
+    * The Skype for Business on-premises user associated with this action.
     *
     * @param Identity $val The value to assign to the onPremises
     *
@@ -257,7 +257,7 @@ class CommunicationsIdentitySet extends IdentitySet
 
     /**
     * Gets the phone
-    * Inherited from identitySet. The phone user associated with this action.
+    * The phone user associated with this action.
     *
     * @return Identity|null The phone
     */
@@ -276,7 +276,7 @@ class CommunicationsIdentitySet extends IdentitySet
 
     /**
     * Sets the phone
-    * Inherited from identitySet. The phone user associated with this action.
+    * The phone user associated with this action.
     *
     * @param Identity $val The value to assign to the phone
     *

@@ -36,6 +36,39 @@ class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings
 
 
     /**
+    * Gets the autoUpdateSettings
+    * The auto-update settings to apply for this app assignment.
+    *
+    * @return Win32LobAppAutoUpdateSettings|null The autoUpdateSettings
+    */
+    public function getAutoUpdateSettings()
+    {
+        if (array_key_exists("autoUpdateSettings", $this->_propDict)) {
+            if (is_a($this->_propDict["autoUpdateSettings"], "\Beta\Microsoft\Graph\Model\Win32LobAppAutoUpdateSettings") || is_null($this->_propDict["autoUpdateSettings"])) {
+                return $this->_propDict["autoUpdateSettings"];
+            } else {
+                $this->_propDict["autoUpdateSettings"] = new Win32LobAppAutoUpdateSettings($this->_propDict["autoUpdateSettings"]);
+                return $this->_propDict["autoUpdateSettings"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the autoUpdateSettings
+    * The auto-update settings to apply for this app assignment.
+    *
+    * @param Win32LobAppAutoUpdateSettings $val The value to assign to the autoUpdateSettings
+    *
+    * @return Win32LobAppAssignmentSettings The Win32LobAppAssignmentSettings
+    */
+    public function setAutoUpdateSettings($val)
+    {
+        $this->_propDict["autoUpdateSettings"] = $val;
+         return $this;
+    }
+
+    /**
     * Gets the deliveryOptimizationPriority
     * The delivery optimization priority for this app assignment. This setting is not supported in National Cloud environments. Possible values are: notConfigured, foreground.
     *

@@ -147,6 +147,39 @@ class ReportRoot extends Entity
         return $this;
     }
 
+    /**
+    * Gets the serviceActivity
+    * A placeholder to the Microsoft Entra service activity.
+    *
+    * @return ServiceActivity|null The serviceActivity
+    */
+    public function getServiceActivity()
+    {
+        if (array_key_exists("serviceActivity", $this->_propDict)) {
+            if (is_a($this->_propDict["serviceActivity"], "\Beta\Microsoft\Graph\Model\ServiceActivity") || is_null($this->_propDict["serviceActivity"])) {
+                return $this->_propDict["serviceActivity"];
+            } else {
+                $this->_propDict["serviceActivity"] = new ServiceActivity($this->_propDict["serviceActivity"]);
+                return $this->_propDict["serviceActivity"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the serviceActivity
+    * A placeholder to the Microsoft Entra service activity.
+    *
+    * @param ServiceActivity $val The serviceActivity
+    *
+    * @return ReportRoot
+    */
+    public function setServiceActivity($val)
+    {
+        $this->_propDict["serviceActivity"] = $val;
+        return $this;
+    }
+
 
      /**
      * Gets the servicePrincipalSignInActivities

@@ -26,7 +26,7 @@ class CrossTenantAccessPolicyConfigurationDefault extends Entity
 {
     /**
     * Gets the automaticUserConsentSettings
-    * Determines the default configuration for automatic user consent settings. The inboundAllowed and outboundAllowed properties are always false and cannot be updated in the default configuration. Read-only.
+    * Determines the default configuration for automatic user consent settings. The inboundAllowed and outboundAllowed properties are always false and can't be updated in the default configuration. Read-only.
     *
     * @return InboundOutboundPolicyConfiguration|null The automaticUserConsentSettings
     */
@@ -45,7 +45,7 @@ class CrossTenantAccessPolicyConfigurationDefault extends Entity
 
     /**
     * Sets the automaticUserConsentSettings
-    * Determines the default configuration for automatic user consent settings. The inboundAllowed and outboundAllowed properties are always false and cannot be updated in the default configuration. Read-only.
+    * Determines the default configuration for automatic user consent settings. The inboundAllowed and outboundAllowed properties are always false and can't be updated in the default configuration. Read-only.
     *
     * @param InboundOutboundPolicyConfiguration $val The automaticUserConsentSettings
     *
@@ -224,6 +224,7 @@ class CrossTenantAccessPolicyConfigurationDefault extends Entity
 
     /**
     * Gets the invitationRedemptionIdentityProviderConfiguration
+    * Defines the priority order based on which an identity provider is selected during invitation redemption for a guest user.
     *
     * @return DefaultInvitationRedemptionIdentityProviderConfiguration|null The invitationRedemptionIdentityProviderConfiguration
     */
@@ -242,6 +243,7 @@ class CrossTenantAccessPolicyConfigurationDefault extends Entity
 
     /**
     * Sets the invitationRedemptionIdentityProviderConfiguration
+    * Defines the priority order based on which an identity provider is selected during invitation redemption for a guest user.
     *
     * @param DefaultInvitationRedemptionIdentityProviderConfiguration $val The invitationRedemptionIdentityProviderConfiguration
     *
@@ -255,7 +257,7 @@ class CrossTenantAccessPolicyConfigurationDefault extends Entity
 
     /**
     * Gets the isServiceDefault
-    * If true, the default configuration is set to the system default configuration. If false, the default settings have been customized.
+    * If true, the default configuration is set to the system default configuration. If false, the default settings are customized.
     *
     * @return bool|null The isServiceDefault
     */
@@ -270,7 +272,7 @@ class CrossTenantAccessPolicyConfigurationDefault extends Entity
 
     /**
     * Sets the isServiceDefault
-    * If true, the default configuration is set to the system default configuration. If false, the default settings have been customized.
+    * If true, the default configuration is set to the system default configuration. If false, the default settings are customized.
     *
     * @param bool $val The isServiceDefault
     *

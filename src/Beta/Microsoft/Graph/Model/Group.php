@@ -144,7 +144,7 @@ class Group extends DirectoryObject
 
     /**
     * Gets the createdDateTime
-    * Timestamp of when the group was created. The value cannot be modified and is automatically populated when the group is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Read-only.
+    * Timestamp of when the group was created. The value can't be modified and is automatically populated when the group is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Read-only.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -163,7 +163,7 @@ class Group extends DirectoryObject
 
     /**
     * Sets the createdDateTime
-    * Timestamp of when the group was created. The value cannot be modified and is automatically populated when the group is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Read-only.
+    * Timestamp of when the group was created. The value can't be modified and is automatically populated when the group is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Read-only.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -235,7 +235,7 @@ class Group extends DirectoryObject
 
     /**
     * Gets the expirationDateTime
-    * Timestamp of when the group is set to expire. Is null for security groups but for Microsoft 365 groups, it represents when the group is set to expire as defined in the groupLifecyclePolicy. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Supports $filter (eq, ne, not, ge, le, in). Read-only.
+    * Timestamp of when the group is set to expire. It is null for security groups, but for Microsoft 365 groups, it represents when the group is set to expire as defined in the groupLifecyclePolicy. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Supports $filter (eq, ne, not, ge, le, in). Read-only.
     *
     * @return \DateTime|null The expirationDateTime
     */
@@ -254,7 +254,7 @@ class Group extends DirectoryObject
 
     /**
     * Sets the expirationDateTime
-    * Timestamp of when the group is set to expire. Is null for security groups but for Microsoft 365 groups, it represents when the group is set to expire as defined in the groupLifecyclePolicy. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Supports $filter (eq, ne, not, ge, le, in). Read-only.
+    * Timestamp of when the group is set to expire. It is null for security groups, but for Microsoft 365 groups, it represents when the group is set to expire as defined in the groupLifecyclePolicy. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Supports $filter (eq, ne, not, ge, le, in). Read-only.
     *
     * @param \DateTime $val The expirationDateTime
     *
@@ -268,7 +268,7 @@ class Group extends DirectoryObject
 
     /**
     * Gets the groupTypes
-    * Specifies the group type and its membership. If the collection contains Unified, the group is a Microsoft 365 group; otherwise, it's either a security group or distribution group. For details, see groups overview.If the collection includes DynamicMembership, the group has dynamic membership; otherwise, membership is static. Returned by default. Supports $filter (eq, not).
+    * Specifies the group type and its membership. If the collection contains Unified, the group is a Microsoft 365 group; otherwise, it's either a security group or a distribution group. For details, see groups overview.If the collection includes DynamicMembership, the group has dynamic membership; otherwise, membership is static. Returned by default. Supports $filter (eq, not).
     *
     * @return array|null The groupTypes
     */
@@ -283,7 +283,7 @@ class Group extends DirectoryObject
 
     /**
     * Sets the groupTypes
-    * Specifies the group type and its membership. If the collection contains Unified, the group is a Microsoft 365 group; otherwise, it's either a security group or distribution group. For details, see groups overview.If the collection includes DynamicMembership, the group has dynamic membership; otherwise, membership is static. Returned by default. Supports $filter (eq, not).
+    * Specifies the group type and its membership. If the collection contains Unified, the group is a Microsoft 365 group; otherwise, it's either a security group or a distribution group. For details, see groups overview.If the collection includes DynamicMembership, the group has dynamic membership; otherwise, membership is static. Returned by default. Supports $filter (eq, not).
     *
     * @param string[] $val The groupTypes
     *
@@ -355,7 +355,7 @@ class Group extends DirectoryObject
 
     /**
     * Gets the isAssignableToRole
-    * Indicates whether this group can be assigned to a Microsoft Entra role. Optional. This property can only be set while creating the group and is immutable. If set to true, the securityEnabled property must also be set to true,  visibility must be Hidden, and the group cannot be a dynamic group (that is, groupTypes cannot contain DynamicMembership). Only callers in Global Administrator and Privileged Role Administrator roles can set this property. The caller must also be assigned the RoleManagement.ReadWrite.Directory permission to set this property or update the membership of such groups. For more, see Using a group to manage Microsoft Entra role assignmentsUsing this feature requires a Microsoft Entra ID P1 license. Returned by default. Supports $filter (eq, ne, not).
+    * Indicates whether this group can be assigned to a Microsoft Entra role. Optional. This property can only be set while creating the group and is immutable. If set to true, the securityEnabled property must also be set to true,  visibility must be Hidden, and the group cannot be a dynamic group (that is, groupTypes can't contain DynamicMembership). Only callers in Global Administrator and Privileged Role Administrator roles can set this property. The caller must also be assigned the RoleManagement.ReadWrite.Directory permission to set this property or update the membership of such groups. For more, see Using a group to manage Microsoft Entra role assignmentsUsing this feature requires a Microsoft Entra ID P1 license. Returned by default. Supports $filter (eq, ne, not).
     *
     * @return bool|null The isAssignableToRole
     */
@@ -370,7 +370,7 @@ class Group extends DirectoryObject
 
     /**
     * Sets the isAssignableToRole
-    * Indicates whether this group can be assigned to a Microsoft Entra role. Optional. This property can only be set while creating the group and is immutable. If set to true, the securityEnabled property must also be set to true,  visibility must be Hidden, and the group cannot be a dynamic group (that is, groupTypes cannot contain DynamicMembership). Only callers in Global Administrator and Privileged Role Administrator roles can set this property. The caller must also be assigned the RoleManagement.ReadWrite.Directory permission to set this property or update the membership of such groups. For more, see Using a group to manage Microsoft Entra role assignmentsUsing this feature requires a Microsoft Entra ID P1 license. Returned by default. Supports $filter (eq, ne, not).
+    * Indicates whether this group can be assigned to a Microsoft Entra role. Optional. This property can only be set while creating the group and is immutable. If set to true, the securityEnabled property must also be set to true,  visibility must be Hidden, and the group cannot be a dynamic group (that is, groupTypes can't contain DynamicMembership). Only callers in Global Administrator and Privileged Role Administrator roles can set this property. The caller must also be assigned the RoleManagement.ReadWrite.Directory permission to set this property or update the membership of such groups. For more, see Using a group to manage Microsoft Entra role assignmentsUsing this feature requires a Microsoft Entra ID P1 license. Returned by default. Supports $filter (eq, ne, not).
     *
     * @param bool $val The isAssignableToRole
     *
@@ -384,7 +384,7 @@ class Group extends DirectoryObject
 
     /**
     * Gets the isManagementRestricted
-    * Indicates whether the group is a member of a restricted management administrative unit, in which case it requires a role scoped to the restricted administrative unit to manage. Default value is false. Read-only.  To manage a group that's a member of a restricted administrative unit, the calling app must be assigned the Directory.Write.Restricted permission. For delegated scenarios, the administrators must also be explicitly assigned supported roles at the restricted administrative unit scope.
+    * Indicates whether the group is a member of a restricted management administrative unit, in which case it requires a role scoped to the restricted administrative unit to manage. The default value is false. Read-only.  To manage a group member of a restricted administrative unit, the calling app must be assigned the Directory.Write.Restricted permission. For delegated scenarios, the administrators must also be explicitly assigned supported roles at the restricted administrative unit scope.
     *
     * @return bool|null The isManagementRestricted
     */
@@ -399,7 +399,7 @@ class Group extends DirectoryObject
 
     /**
     * Sets the isManagementRestricted
-    * Indicates whether the group is a member of a restricted management administrative unit, in which case it requires a role scoped to the restricted administrative unit to manage. Default value is false. Read-only.  To manage a group that's a member of a restricted administrative unit, the calling app must be assigned the Directory.Write.Restricted permission. For delegated scenarios, the administrators must also be explicitly assigned supported roles at the restricted administrative unit scope.
+    * Indicates whether the group is a member of a restricted management administrative unit, in which case it requires a role scoped to the restricted administrative unit to manage. The default value is false. Read-only.  To manage a group member of a restricted administrative unit, the calling app must be assigned the Directory.Write.Restricted permission. For delegated scenarios, the administrators must also be explicitly assigned supported roles at the restricted administrative unit scope.
     *
     * @param bool $val The isManagementRestricted
     *
@@ -413,7 +413,7 @@ class Group extends DirectoryObject
 
     /**
     * Gets the licenseProcessingState
-    * Indicates status of the group license assignment to all members of the group. Possible values: QueuedForProcessing, ProcessingInProgress, and ProcessingComplete. Returned only on $select. Read-only.
+    * Indicates the status of the group license assignment to all group members. Possible values: QueuedForProcessing, ProcessingInProgress, and ProcessingComplete. Returned only on $select. Read-only.
     *
     * @return LicenseProcessingState|null The licenseProcessingState
     */
@@ -432,7 +432,7 @@ class Group extends DirectoryObject
 
     /**
     * Sets the licenseProcessingState
-    * Indicates status of the group license assignment to all members of the group. Possible values: QueuedForProcessing, ProcessingInProgress, and ProcessingComplete. Returned only on $select. Read-only.
+    * Indicates the status of the group license assignment to all group members. Possible values: QueuedForProcessing, ProcessingInProgress, and ProcessingComplete. Returned only on $select. Read-only.
     *
     * @param LicenseProcessingState $val The licenseProcessingState
     *
@@ -591,7 +591,7 @@ class Group extends DirectoryObject
 
     /**
     * Gets the onPremisesDomainName
-    * Contains the on-premises domain FQDN, also called dnsDomainName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Microsoft Entra ID via Microsoft Entra Connect.Returned by default. Read-only.
+    * Contains the on-premises domain FQDN, also called dnsDomainName synchronized from the on-premises directory. The property is only populated for customers synchronizing their on-premises directory to Microsoft Entra ID via Microsoft Entra Connect.Returned by default. Read-only.
     *
     * @return string|null The onPremisesDomainName
     */
@@ -606,7 +606,7 @@ class Group extends DirectoryObject
 
     /**
     * Sets the onPremisesDomainName
-    * Contains the on-premises domain FQDN, also called dnsDomainName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Microsoft Entra ID via Microsoft Entra Connect.Returned by default. Read-only.
+    * Contains the on-premises domain FQDN, also called dnsDomainName synchronized from the on-premises directory. The property is only populated for customers synchronizing their on-premises directory to Microsoft Entra ID via Microsoft Entra Connect.Returned by default. Read-only.
     *
     * @param string $val The onPremisesDomainName
     *
@@ -620,7 +620,7 @@ class Group extends DirectoryObject
 
     /**
     * Gets the onPremisesLastSyncDateTime
-    * Indicates the last time at which the group was synced with the on-premises directory.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Read-only. Supports $filter (eq, ne, not, ge, le, in).
+    * Indicates the last time at which the group was synced with the on-premises directory.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Read-only. Supports $filter (eq, ne, not, ge, le, in).
     *
     * @return \DateTime|null The onPremisesLastSyncDateTime
     */
@@ -639,7 +639,7 @@ class Group extends DirectoryObject
 
     /**
     * Sets the onPremisesLastSyncDateTime
-    * Indicates the last time at which the group was synced with the on-premises directory.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Read-only. Supports $filter (eq, ne, not, ge, le, in).
+    * Indicates the last time at which the group was synced with the on-premises directory.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Read-only. Supports $filter (eq, ne, not, ge, le, in).
     *
     * @param \DateTime $val The onPremisesLastSyncDateTime
     *
@@ -653,7 +653,7 @@ class Group extends DirectoryObject
 
     /**
     * Gets the onPremisesNetBiosName
-    * Contains the on-premises netBios name synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Microsoft Entra ID via Microsoft Entra Connect.Returned by default. Read-only.
+    * Contains the on-premises netBios name synchronized from the on-premises directory. The property is only populated for customers synchronizing their on-premises directory to Microsoft Entra ID via Microsoft Entra Connect.Returned by default. Read-only.
     *
     * @return string|null The onPremisesNetBiosName
     */
@@ -668,7 +668,7 @@ class Group extends DirectoryObject
 
     /**
     * Sets the onPremisesNetBiosName
-    * Contains the on-premises netBios name synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Microsoft Entra ID via Microsoft Entra Connect.Returned by default. Read-only.
+    * Contains the on-premises netBios name synchronized from the on-premises directory. The property is only populated for customers synchronizing their on-premises directory to Microsoft Entra ID via Microsoft Entra Connect.Returned by default. Read-only.
     *
     * @param string $val The onPremisesNetBiosName
     *
@@ -712,7 +712,7 @@ class Group extends DirectoryObject
 
     /**
     * Gets the onPremisesSamAccountName
-    * Contains the on-premises SAM account name synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Microsoft Entra ID via Microsoft Entra Connect.Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith). Read-only.
+    * Contains the on-premises SAM account name synchronized from the on-premises directory. The property is only populated for customers synchronizing their on-premises directory to Microsoft Entra ID via Microsoft Entra Connect.Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith). Read-only.
     *
     * @return string|null The onPremisesSamAccountName
     */
@@ -727,7 +727,7 @@ class Group extends DirectoryObject
 
     /**
     * Sets the onPremisesSamAccountName
-    * Contains the on-premises SAM account name synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Microsoft Entra ID via Microsoft Entra Connect.Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith). Read-only.
+    * Contains the on-premises SAM account name synchronized from the on-premises directory. The property is only populated for customers synchronizing their on-premises directory to Microsoft Entra ID via Microsoft Entra Connect.Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith). Read-only.
     *
     * @param string $val The onPremisesSamAccountName
     *
@@ -741,7 +741,7 @@ class Group extends DirectoryObject
 
     /**
     * Gets the onPremisesSecurityIdentifier
-    * Contains the on-premises security identifier (SID) for the group that was synchronized from on-premises to the cloud. Returned by default. Supports $filter (eq including on null values). Read-only.
+    * Contains the on-premises security identifier (SID) for the group synchronized from on-premises to the cloud. Returned by default. Supports $filter (eq including on null values). Read-only.
     *
     * @return string|null The onPremisesSecurityIdentifier
     */
@@ -756,7 +756,7 @@ class Group extends DirectoryObject
 
     /**
     * Sets the onPremisesSecurityIdentifier
-    * Contains the on-premises security identifier (SID) for the group that was synchronized from on-premises to the cloud. Returned by default. Supports $filter (eq including on null values). Read-only.
+    * Contains the on-premises security identifier (SID) for the group synchronized from on-premises to the cloud. Returned by default. Supports $filter (eq including on null values). Read-only.
     *
     * @param string $val The onPremisesSecurityIdentifier
     *
@@ -826,7 +826,7 @@ class Group extends DirectoryObject
 
     /**
     * Gets the preferredDataLocation
-    * The preferred data location for the Microsoft 365 group. By default, the group inherits the group creator's preferred data location. To set this property, the calling app must be granted the Directory.ReadWrite.All permission and the user be assigned one of the following Microsoft Entra roles:  Global Administrator  User Account Administrator Directory Writer  Exchange Administrator  SharePoint Administrator  For more information about this property, see OneDrive Online Multi-Geo and and Create a Microsoft 365 group with a specific PDL. Nullable. Returned by default.
+    * The preferred data location for the Microsoft 365 group. By default, the group inherits the group creator's preferred data location. To set this property, the calling app must be granted the Directory.ReadWrite.All permission and the user be assigned one of the following Microsoft Entra roles:  Global Administrator  User Account Administrator Directory Writer  Exchange Administrator  SharePoint Administrator  For more information about this property, see OneDrive Online Multi-Geo and Create a Microsoft 365 group with a specific PDL. Nullable. Returned by default.
     *
     * @return string|null The preferredDataLocation
     */
@@ -841,7 +841,7 @@ class Group extends DirectoryObject
 
     /**
     * Sets the preferredDataLocation
-    * The preferred data location for the Microsoft 365 group. By default, the group inherits the group creator's preferred data location. To set this property, the calling app must be granted the Directory.ReadWrite.All permission and the user be assigned one of the following Microsoft Entra roles:  Global Administrator  User Account Administrator Directory Writer  Exchange Administrator  SharePoint Administrator  For more information about this property, see OneDrive Online Multi-Geo and and Create a Microsoft 365 group with a specific PDL. Nullable. Returned by default.
+    * The preferred data location for the Microsoft 365 group. By default, the group inherits the group creator's preferred data location. To set this property, the calling app must be granted the Directory.ReadWrite.All permission and the user be assigned one of the following Microsoft Entra roles:  Global Administrator  User Account Administrator Directory Writer  Exchange Administrator  SharePoint Administrator  For more information about this property, see OneDrive Online Multi-Geo and Create a Microsoft 365 group with a specific PDL. Nullable. Returned by default.
     *
     * @param string $val The preferredDataLocation
     *
@@ -855,7 +855,7 @@ class Group extends DirectoryObject
 
     /**
     * Gets the preferredLanguage
-    * The preferred language for a Microsoft 365 group. Should follow ISO 639-1 Code; for example en-US. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
+    * The preferred language for a Microsoft 365 group. Should follow ISO 639-1 Code; for example, en-US. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
     *
     * @return string|null The preferredLanguage
     */
@@ -870,7 +870,7 @@ class Group extends DirectoryObject
 
     /**
     * Sets the preferredLanguage
-    * The preferred language for a Microsoft 365 group. Should follow ISO 639-1 Code; for example en-US. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
+    * The preferred language for a Microsoft 365 group. Should follow ISO 639-1 Code; for example, en-US. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
     *
     * @param string $val The preferredLanguage
     *
@@ -913,7 +913,7 @@ class Group extends DirectoryObject
 
     /**
     * Gets the renewedDateTime
-    * Timestamp of when the group was last renewed. This cannot be modified directly and is only updated via the renew service action. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Supports $filter (eq, ne, not, ge, le, in). Read-only.
+    * Timestamp of when the group was last renewed. This cannot be modified directly and is only updated via the renew service action. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Supports $filter (eq, ne, not, ge, le, in). Read-only.
     *
     * @return \DateTime|null The renewedDateTime
     */
@@ -932,7 +932,7 @@ class Group extends DirectoryObject
 
     /**
     * Sets the renewedDateTime
-    * Timestamp of when the group was last renewed. This cannot be modified directly and is only updated via the renew service action. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Supports $filter (eq, ne, not, ge, le, in). Read-only.
+    * Timestamp of when the group was last renewed. This cannot be modified directly and is only updated via the renew service action. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Supports $filter (eq, ne, not, ge, le, in). Read-only.
     *
     * @param \DateTime $val The renewedDateTime
     *
@@ -975,7 +975,7 @@ class Group extends DirectoryObject
 
     /**
     * Gets the resourceProvisioningOptions
-    * Specifies the group resources that are provisioned as part of Microsoft 365 group creation, that are not normally part of default group creation. Possible value is Team. For more information, see Set Microsoft 365 group behaviors and provisioning options. Returned by default. Supports $filter (eq, not, startsWith.
+    * Specifies the group resources that are provisioned as part of Microsoft 365 group creation that isn't normally part of default group creation. The possible value is Team. For more information, see Set Microsoft 365 group behaviors and provisioning options. Returned by default. Supports $filter (eq, not, startsWith.
     *
     * @return array|null The resourceProvisioningOptions
     */
@@ -990,7 +990,7 @@ class Group extends DirectoryObject
 
     /**
     * Sets the resourceProvisioningOptions
-    * Specifies the group resources that are provisioned as part of Microsoft 365 group creation, that are not normally part of default group creation. Possible value is Team. For more information, see Set Microsoft 365 group behaviors and provisioning options. Returned by default. Supports $filter (eq, not, startsWith.
+    * Specifies the group resources that are provisioned as part of Microsoft 365 group creation that isn't normally part of default group creation. The possible value is Team. For more information, see Set Microsoft 365 group behaviors and provisioning options. Returned by default. Supports $filter (eq, not, startsWith.
     *
     * @param string[] $val The resourceProvisioningOptions
     *
@@ -1063,7 +1063,7 @@ class Group extends DirectoryObject
 
      /**
      * Gets the serviceProvisioningErrors
-    * Errors published by a federated service describing a non-transient, service-specific error regarding the properties or link from a group object .  Supports $filter (eq, not, for isResolved and serviceInstance).
+    * Errors published by a federated service describing a non-transient, service-specific error regarding the properties or link from a group object.  Supports $filter (eq, not, for isResolved and serviceInstance).
      *
      * @return array|null The serviceProvisioningErrors
      */
@@ -1078,7 +1078,7 @@ class Group extends DirectoryObject
 
     /**
     * Sets the serviceProvisioningErrors
-    * Errors published by a federated service describing a non-transient, service-specific error regarding the properties or link from a group object .  Supports $filter (eq, not, for isResolved and serviceInstance).
+    * Errors published by a federated service describing a non-transient, service-specific error regarding the properties or link from a group object.  Supports $filter (eq, not, for isResolved and serviceInstance).
     *
     * @param ServiceProvisioningError[] $val The serviceProvisioningErrors
     *
@@ -1148,7 +1148,7 @@ class Group extends DirectoryObject
 
     /**
     * Gets the visibility
-    * Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or HiddenMembership. HiddenMembership can be set only for Microsoft 365 groups, when the groups are created. It can't be updated later. Other values of visibility can be updated after group creation. If visibility value is not specified during group creation on Microsoft Graph, a security group is created as Private by default and Microsoft 365 group is Public. Groups assignable to roles are always Private. To learn more, see group visibility options. Returned by default. Nullable.
+    * Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or HiddenMembership. HiddenMembership can be set only for Microsoft 365 groups when the groups are created. It can't be updated later. Other values of visibility can be updated after group creation. If visibility value isn't specified during group creation on Microsoft Graph, a security group is created as Private by default, and Microsoft 365 group is Public. Groups assignable to roles are always Private. To learn more, see group visibility options. Returned by default. Nullable.
     *
     * @return string|null The visibility
     */
@@ -1163,7 +1163,7 @@ class Group extends DirectoryObject
 
     /**
     * Sets the visibility
-    * Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or HiddenMembership. HiddenMembership can be set only for Microsoft 365 groups, when the groups are created. It can't be updated later. Other values of visibility can be updated after group creation. If visibility value is not specified during group creation on Microsoft Graph, a security group is created as Private by default and Microsoft 365 group is Public. Groups assignable to roles are always Private. To learn more, see group visibility options. Returned by default. Nullable.
+    * Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or HiddenMembership. HiddenMembership can be set only for Microsoft 365 groups when the groups are created. It can't be updated later. Other values of visibility can be updated after group creation. If visibility value isn't specified during group creation on Microsoft Graph, a security group is created as Private by default, and Microsoft 365 group is Public. Groups assignable to roles are always Private. To learn more, see group visibility options. Returned by default. Nullable.
     *
     * @param string $val The visibility
     *
@@ -1177,7 +1177,7 @@ class Group extends DirectoryObject
 
     /**
     * Gets the writebackConfiguration
-    * Specifies whether or not a group is configured to write back group object properties to on-premise Active Directory. These properties are used when group writeback is configured in the Microsoft Entra Connect sync client.
+    * Specifies whether or not a group is configured to write back group object properties to on-premises Active Directory. These properties are used when group writeback is configured in the Microsoft Entra Connect sync client.
     *
     * @return GroupWritebackConfiguration|null The writebackConfiguration
     */
@@ -1196,7 +1196,7 @@ class Group extends DirectoryObject
 
     /**
     * Sets the writebackConfiguration
-    * Specifies whether or not a group is configured to write back group object properties to on-premise Active Directory. These properties are used when group writeback is configured in the Microsoft Entra Connect sync client.
+    * Specifies whether or not a group is configured to write back group object properties to on-premises Active Directory. These properties are used when group writeback is configured in the Microsoft Entra Connect sync client.
     *
     * @param GroupWritebackConfiguration $val The writebackConfiguration
     *
@@ -1241,7 +1241,7 @@ class Group extends DirectoryObject
 
     /**
     * Gets the allowExternalSenders
-    * Indicates if people external to the organization can send messages to the group. Default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
+    * Indicates if people external to the organization can send messages to the group. The default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
     *
     * @return bool|null The allowExternalSenders
     */
@@ -1256,7 +1256,7 @@ class Group extends DirectoryObject
 
     /**
     * Sets the allowExternalSenders
-    * Indicates if people external to the organization can send messages to the group. Default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
+    * Indicates if people external to the organization can send messages to the group. The default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
     *
     * @param bool $val The allowExternalSenders
     *
@@ -1270,7 +1270,7 @@ class Group extends DirectoryObject
 
     /**
     * Gets the autoSubscribeNewMembers
-    * Indicates if new members added to the group will be auto-subscribed to receive email notifications. You can set this property in a PATCH request for the group; do not set it in the initial POST request that creates the group. Default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
+    * Indicates if new members added to the group are auto-subscribed to receive email notifications. You can set this property in a PATCH request for the group; don't set it in the initial POST request that creates the group. Default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
     *
     * @return bool|null The autoSubscribeNewMembers
     */
@@ -1285,7 +1285,7 @@ class Group extends DirectoryObject
 
     /**
     * Sets the autoSubscribeNewMembers
-    * Indicates if new members added to the group will be auto-subscribed to receive email notifications. You can set this property in a PATCH request for the group; do not set it in the initial POST request that creates the group. Default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
+    * Indicates if new members added to the group are auto-subscribed to receive email notifications. You can set this property in a PATCH request for the group; don't set it in the initial POST request that creates the group. Default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
     *
     * @param bool $val The autoSubscribeNewMembers
     *
@@ -1299,7 +1299,7 @@ class Group extends DirectoryObject
 
     /**
     * Gets the hideFromAddressLists
-    * true if the group is not displayed in certain parts of the Outlook user interface: in the Address Book, in address lists for selecting message recipients, and in the Browse Groups dialog for searching groups; false otherwise. Default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
+    * true if the group isn't displayed in certain parts of the Outlook user interface: in the Address Book, in address lists for selecting message recipients, and in the Browse Groups dialog for searching groups; false otherwise. The default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
     *
     * @return bool|null The hideFromAddressLists
     */
@@ -1314,7 +1314,7 @@ class Group extends DirectoryObject
 
     /**
     * Sets the hideFromAddressLists
-    * true if the group is not displayed in certain parts of the Outlook user interface: in the Address Book, in address lists for selecting message recipients, and in the Browse Groups dialog for searching groups; false otherwise. Default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
+    * true if the group isn't displayed in certain parts of the Outlook user interface: in the Address Book, in address lists for selecting message recipients, and in the Browse Groups dialog for searching groups; false otherwise. The default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
     *
     * @param bool $val The hideFromAddressLists
     *
@@ -1328,7 +1328,7 @@ class Group extends DirectoryObject
 
     /**
     * Gets the hideFromOutlookClients
-    * true if the group is not displayed in Outlook clients, such as Outlook for Windows and Outlook on the web, false otherwise. Default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
+    * true if the group isn't displayed in Outlook clients, such as Outlook for Windows and Outlook on the web, false otherwise. The default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
     *
     * @return bool|null The hideFromOutlookClients
     */
@@ -1343,7 +1343,7 @@ class Group extends DirectoryObject
 
     /**
     * Sets the hideFromOutlookClients
-    * true if the group is not displayed in Outlook clients, such as Outlook for Windows and Outlook on the web, false otherwise. Default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
+    * true if the group isn't displayed in Outlook clients, such as Outlook for Windows and Outlook on the web, false otherwise. The default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
     *
     * @param bool $val The hideFromOutlookClients
     *
@@ -1384,7 +1384,7 @@ class Group extends DirectoryObject
 
     /**
     * Gets the isSubscribedByMail
-    * Indicates whether the signed-in user is subscribed to receive email conversations. Default value is true. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
+    * Indicates whether the signed-in user is subscribed to receive email conversations. The default value is true. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
     *
     * @return bool|null The isSubscribedByMail
     */
@@ -1399,7 +1399,7 @@ class Group extends DirectoryObject
 
     /**
     * Sets the isSubscribedByMail
-    * Indicates whether the signed-in user is subscribed to receive email conversations. Default value is true. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
+    * Indicates whether the signed-in user is subscribed to receive email conversations. The default value is true. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
     *
     * @param bool $val The isSubscribedByMail
     *
@@ -1413,7 +1413,7 @@ class Group extends DirectoryObject
 
     /**
     * Gets the unseenConversationsCount
-    * Count of conversations that have been delivered one or more new posts since the signed-in user's last visit to the group. This property is the same as unseenCount. Returned only on $select.
+    * Count of conversations delivered one or more new posts since the signed-in user's last visit to the group. This property is the same as unseenCount. Returned only on $select.
     *
     * @return int|null The unseenConversationsCount
     */
@@ -1428,7 +1428,7 @@ class Group extends DirectoryObject
 
     /**
     * Sets the unseenConversationsCount
-    * Count of conversations that have been delivered one or more new posts since the signed-in user's last visit to the group. This property is the same as unseenCount. Returned only on $select.
+    * Count of conversations delivered one or more new posts since the signed-in user's last visit to the group. This property is the same as unseenCount. Returned only on $select.
     *
     * @param int $val The unseenConversationsCount
     *
@@ -1500,7 +1500,7 @@ class Group extends DirectoryObject
 
     /**
     * Gets the membershipRuleProcessingStatus
-    * Describes the processing status for rules-based dynamic groups. The property is null for non-rule based dynamic groups or if the dynamic group processing has been paused. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}). Read-only.
+    * Describes the processing status for rules-based dynamic groups. The property is null for non-rule-based dynamic groups or if the dynamic group processing has been paused. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}). Read-only.
     *
     * @return MembershipRuleProcessingStatus|null The membershipRuleProcessingStatus
     */
@@ -1519,7 +1519,7 @@ class Group extends DirectoryObject
 
     /**
     * Sets the membershipRuleProcessingStatus
-    * Describes the processing status for rules-based dynamic groups. The property is null for non-rule based dynamic groups or if the dynamic group processing has been paused. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}). Read-only.
+    * Describes the processing status for rules-based dynamic groups. The property is null for non-rule-based dynamic groups or if the dynamic group processing has been paused. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}). Read-only.
     *
     * @param MembershipRuleProcessingStatus $val The membershipRuleProcessingStatus
     *
@@ -1592,7 +1592,7 @@ class Group extends DirectoryObject
 
     /**
     * Gets the createdOnBehalfOf
-    * The user (or application) that created the group. Note: This is not set if the user is an administrator. Read-only.
+    * The user (or application) that created the group. Note: This isn't set if the user is an administrator. Read-only.
     *
     * @return DirectoryObject|null The createdOnBehalfOf
     */
@@ -1611,7 +1611,7 @@ class Group extends DirectoryObject
 
     /**
     * Sets the createdOnBehalfOf
-    * The user (or application) that created the group. Note: This is not set if the user is an administrator. Read-only.
+    * The user (or application) that created the group. Note: This isn't set if the user is an administrator. Read-only.
     *
     * @param DirectoryObject $val The createdOnBehalfOf
     *
@@ -1686,7 +1686,7 @@ class Group extends DirectoryObject
 
      /**
      * Gets the members
-    * Direct members of this group, who can be users, devices, other groups, or service principals. Supports the List members, Add member, and Remove member operations. Nullable. Supports $expand including nested $select. For example, /groups?$filter=startsWith(displayName,'Role')&amp;$select=id,displayName&amp;$expand=members($select=id,userPrincipalName,displayName).
+    * Direct group members, who can be users, devices, other groups, or service principals. Supports the List members, Add member, and Remove member operations. Nullable. Supports $expand including nested $select. For example, /groups?$filter=startsWith(displayName,'Role')&amp;$select=id,displayName&amp;$expand=members($select=id,userPrincipalName,displayName).
      *
      * @return array|null The members
      */
@@ -1701,7 +1701,7 @@ class Group extends DirectoryObject
 
     /**
     * Sets the members
-    * Direct members of this group, who can be users, devices, other groups, or service principals. Supports the List members, Add member, and Remove member operations. Nullable. Supports $expand including nested $select. For example, /groups?$filter=startsWith(displayName,'Role')&amp;$select=id,displayName&amp;$expand=members($select=id,userPrincipalName,displayName).
+    * Direct group members, who can be users, devices, other groups, or service principals. Supports the List members, Add member, and Remove member operations. Nullable. Supports $expand including nested $select. For example, /groups?$filter=startsWith(displayName,'Role')&amp;$select=id,displayName&amp;$expand=members($select=id,userPrincipalName,displayName).
     *
     * @param DirectoryObject[] $val The members
     *
@@ -1746,7 +1746,7 @@ class Group extends DirectoryObject
 
      /**
      * Gets the owners
-    * The owners of the group who can be users or service principals. Nullable. If this property is not specified when creating a Microsoft 365 group, the calling user is automatically assigned as the group owner.  Supports $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1); Supports $expand including nested $select. For example, /groups?$filter=startsWith(displayName,'Role')&amp;$select=id,displayName&amp;$expand=owners($select=id,userPrincipalName,displayName).
+    * The owners of the group who can be users or service principals. Nullable. If this property isn't specified when creating a Microsoft 365 group, the calling user is automatically assigned as the group owner.  Supports $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1); Supports $expand including nested $select. For example, /groups?$filter=startsWith(displayName,'Role')&amp;$select=id,displayName&amp;$expand=owners($select=id,userPrincipalName,displayName).
      *
      * @return array|null The owners
      */
@@ -1761,7 +1761,7 @@ class Group extends DirectoryObject
 
     /**
     * Sets the owners
-    * The owners of the group who can be users or service principals. Nullable. If this property is not specified when creating a Microsoft 365 group, the calling user is automatically assigned as the group owner.  Supports $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1); Supports $expand including nested $select. For example, /groups?$filter=startsWith(displayName,'Role')&amp;$select=id,displayName&amp;$expand=owners($select=id,userPrincipalName,displayName).
+    * The owners of the group who can be users or service principals. Nullable. If this property isn't specified when creating a Microsoft 365 group, the calling user is automatically assigned as the group owner.  Supports $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1); Supports $expand including nested $select. For example, /groups?$filter=startsWith(displayName,'Role')&amp;$select=id,displayName&amp;$expand=owners($select=id,userPrincipalName,displayName).
     *
     * @param DirectoryObject[] $val The owners
     *
@@ -1776,7 +1776,7 @@ class Group extends DirectoryObject
 
      /**
      * Gets the permissionGrants
-    * The permissions that have been granted for a group to a specific application. Supports $expand.
+    * The permissions granted for a group to a specific application. Supports $expand.
      *
      * @return array|null The permissionGrants
      */
@@ -1791,7 +1791,7 @@ class Group extends DirectoryObject
 
     /**
     * Sets the permissionGrants
-    * The permissions that have been granted for a group to a specific application. Supports $expand.
+    * The permissions granted for a group to a specific application. Supports $expand.
     *
     * @param ResourceSpecificPermissionGrant[] $val The permissionGrants
     *
@@ -1836,7 +1836,7 @@ class Group extends DirectoryObject
 
      /**
      * Gets the transitiveMemberOf
-    * The groups that a group is a member of, either directly and through nested membership. Nullable.
+    * The groups a group is a member of, either directly or through nested membership. Nullable.
      *
      * @return array|null The transitiveMemberOf
      */
@@ -1851,7 +1851,7 @@ class Group extends DirectoryObject
 
     /**
     * Sets the transitiveMemberOf
-    * The groups that a group is a member of, either directly and through nested membership. Nullable.
+    * The groups a group is a member of, either directly or through nested membership. Nullable.
     *
     * @param DirectoryObject[] $val The transitiveMemberOf
     *
@@ -1896,7 +1896,7 @@ class Group extends DirectoryObject
 
      /**
      * Gets the acceptedSenders
-    * The list of users or groups that are allowed to create post's or calendar events in this group. If this list is non-empty then only users or groups listed here are allowed to post.
+    * The list of users or groups allowed to create posts or calendar events in this group. If this list is non-empty, then only users or groups listed here can post.
      *
      * @return array|null The acceptedSenders
      */
@@ -1911,7 +1911,7 @@ class Group extends DirectoryObject
 
     /**
     * Sets the acceptedSenders
-    * The list of users or groups that are allowed to create post's or calendar events in this group. If this list is non-empty then only users or groups listed here are allowed to post.
+    * The list of users or groups allowed to create posts or calendar events in this group. If this list is non-empty, then only users or groups listed here can post.
     *
     * @param DirectoryObject[] $val The acceptedSenders
     *
@@ -2049,7 +2049,7 @@ class Group extends DirectoryObject
 
      /**
      * Gets the rejectedSenders
-    * The list of users or groups that are not allowed to create posts or calendar events in this group. Nullable
+    * The list of users or groups not allowed to create posts or calendar events in this group. Nullable
      *
      * @return array|null The rejectedSenders
      */
@@ -2064,7 +2064,7 @@ class Group extends DirectoryObject
 
     /**
     * Sets the rejectedSenders
-    * The list of users or groups that are not allowed to create posts or calendar events in this group. Nullable
+    * The list of users or groups not allowed to create posts or calendar events in this group. Nullable
     *
     * @param DirectoryObject[] $val The rejectedSenders
     *

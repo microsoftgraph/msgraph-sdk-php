@@ -51,4 +51,30 @@ class ExpediteSettings extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["isExpedited"] = $val;
         return $this;
     }
+    /**
+    * Gets the isReadinessTest
+    *
+    * @return bool|null The isReadinessTest
+    */
+    public function getIsReadinessTest()
+    {
+        if (array_key_exists("isReadinessTest", $this->_propDict)) {
+            return $this->_propDict["isReadinessTest"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isReadinessTest
+    *
+    * @param bool $val The value of the isReadinessTest
+    *
+    * @return ExpediteSettings
+    */
+    public function setIsReadinessTest($val)
+    {
+        $this->_propDict["isReadinessTest"] = $val;
+        return $this;
+    }
 }

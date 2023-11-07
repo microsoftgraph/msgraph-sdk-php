@@ -1058,6 +1058,93 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     }
 
     /**
+    * Gets the messagingRedirectAppDisplayName
+    * When a specific app redirection is enforced by protectedMessagingRedirectAppType in an App Protection Policy, this value defines the app name which are allowed to be used.
+    *
+    * @return string|null The messagingRedirectAppDisplayName
+    */
+    public function getMessagingRedirectAppDisplayName()
+    {
+        if (array_key_exists("messagingRedirectAppDisplayName", $this->_propDict)) {
+            return $this->_propDict["messagingRedirectAppDisplayName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the messagingRedirectAppDisplayName
+    * When a specific app redirection is enforced by protectedMessagingRedirectAppType in an App Protection Policy, this value defines the app name which are allowed to be used.
+    *
+    * @param string $val The messagingRedirectAppDisplayName
+    *
+    * @return DefaultManagedAppProtection
+    */
+    public function setMessagingRedirectAppDisplayName($val)
+    {
+        $this->_propDict["messagingRedirectAppDisplayName"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the messagingRedirectAppPackageId
+    * When a specific app redirection is enforced by protectedMessagingRedirectAppType in an App Protection Policy, this value defines the app package ids which are allowed to be used.
+    *
+    * @return string|null The messagingRedirectAppPackageId
+    */
+    public function getMessagingRedirectAppPackageId()
+    {
+        if (array_key_exists("messagingRedirectAppPackageId", $this->_propDict)) {
+            return $this->_propDict["messagingRedirectAppPackageId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the messagingRedirectAppPackageId
+    * When a specific app redirection is enforced by protectedMessagingRedirectAppType in an App Protection Policy, this value defines the app package ids which are allowed to be used.
+    *
+    * @param string $val The messagingRedirectAppPackageId
+    *
+    * @return DefaultManagedAppProtection
+    */
+    public function setMessagingRedirectAppPackageId($val)
+    {
+        $this->_propDict["messagingRedirectAppPackageId"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the messagingRedirectAppUrlScheme
+    * When a specific app redirection is enforced by protectedMessagingRedirectAppType in an App Protection Policy, this value defines the app url redirect schemes which are allowed to be used.
+    *
+    * @return string|null The messagingRedirectAppUrlScheme
+    */
+    public function getMessagingRedirectAppUrlScheme()
+    {
+        if (array_key_exists("messagingRedirectAppUrlScheme", $this->_propDict)) {
+            return $this->_propDict["messagingRedirectAppUrlScheme"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the messagingRedirectAppUrlScheme
+    * When a specific app redirection is enforced by protectedMessagingRedirectAppType in an App Protection Policy, this value defines the app url redirect schemes which are allowed to be used.
+    *
+    * @param string $val The messagingRedirectAppUrlScheme
+    *
+    * @return DefaultManagedAppProtection
+    */
+    public function setMessagingRedirectAppUrlScheme($val)
+    {
+        $this->_propDict["messagingRedirectAppUrlScheme"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the minimumRequiredCompanyPortalVersion
     * Minimum version of the Company portal that must be installed on the device or app access will be blocked
     *

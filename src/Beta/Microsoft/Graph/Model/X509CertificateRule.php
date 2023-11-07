@@ -87,7 +87,7 @@ class X509CertificateRule extends Entity
 
     /**
     * Gets the x509CertificateRuleType
-    * The type of the X.509 certificate mode configuration rule. The possible values are: issuerSubject, policyOID, unknownFutureValue. Required.
+    * The type of the X.509 certificate mode configuration rule. The possible values are: issuerSubject, policyOID, unknownFutureValue, issuerSubjectAndPolicyOID. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: issuerSubjectAndPolicyOID. Required.
     *
     * @return X509CertificateRuleType|null The x509CertificateRuleType
     */
@@ -106,7 +106,7 @@ class X509CertificateRule extends Entity
 
     /**
     * Sets the x509CertificateRuleType
-    * The type of the X.509 certificate mode configuration rule. The possible values are: issuerSubject, policyOID, unknownFutureValue. Required.
+    * The type of the X.509 certificate mode configuration rule. The possible values are: issuerSubject, policyOID, unknownFutureValue, issuerSubjectAndPolicyOID. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: issuerSubjectAndPolicyOID. Required.
     *
     * @param X509CertificateRuleType $val The value to assign to the x509CertificateRuleType
     *

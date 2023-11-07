@@ -25,7 +25,7 @@ class CommunicationsApplicationInstanceIdentity extends Identity
 {
     /**
     * Gets the hidden
-    * True if the participant wouldn't like to be shown in other participants' rosters.
+    * True if the participant shouldn't be shown in other participants' rosters.
     *
     * @return bool|null The hidden
     */
@@ -40,7 +40,7 @@ class CommunicationsApplicationInstanceIdentity extends Identity
 
     /**
     * Sets the hidden
-    * True if the participant wouldn't like to be shown in other participants' rosters.
+    * True if the participant shouldn't be shown in other participants' rosters.
     *
     * @param bool $val The value of the hidden
     *
@@ -53,7 +53,7 @@ class CommunicationsApplicationInstanceIdentity extends Identity
     }
     /**
     * Gets the tenantId
-    * The application's tenant ID.
+    * The tenant ID of the application.
     *
     * @return string|null The tenantId
     */
@@ -68,7 +68,7 @@ class CommunicationsApplicationInstanceIdentity extends Identity
 
     /**
     * Sets the tenantId
-    * The application's tenant ID.
+    * The tenant ID of the application.
     *
     * @param string $val The value of the tenantId
     *

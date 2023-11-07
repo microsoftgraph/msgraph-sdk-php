@@ -25,6 +25,7 @@ class PeerConnectivityConfiguration extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the asn
+    * Specifies ASN of one end of IPSec tunnel (local or peer).
     *
     * @return int|null The asn
     */
@@ -39,6 +40,7 @@ class PeerConnectivityConfiguration extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the asn
+    * Specifies ASN of one end of IPSec tunnel (local or peer).
     *
     * @param int $val The value of the asn
     *
@@ -51,6 +53,7 @@ class PeerConnectivityConfiguration extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the bgpAddress
+    * Specifies BGP IPv4 address of one end of IPSec tunnel (local or peer).
     *
     * @return string|null The bgpAddress
     */
@@ -65,6 +68,7 @@ class PeerConnectivityConfiguration extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the bgpAddress
+    * Specifies BGP IPv4 address of one end of IPSec tunnel (local or peer).
     *
     * @param string $val The value of the bgpAddress
     *
@@ -77,6 +81,7 @@ class PeerConnectivityConfiguration extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the endpoint
+    * Specifies public IPv4 address of one end of IPSec tunnel (local or peer).
     *
     * @return string|null The endpoint
     */
@@ -91,6 +96,7 @@ class PeerConnectivityConfiguration extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the endpoint
+    * Specifies public IPv4 address of one end of IPSec tunnel (local or peer).
     *
     * @param string $val The value of the endpoint
     *

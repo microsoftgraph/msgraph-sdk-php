@@ -382,6 +382,35 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
     }
 
     /**
+    * Gets the messagingRedirectAppUrlScheme
+    * When a specific app redirection is enforced by protectedMessagingRedirectAppType in an App Protection Policy, this value defines the app url redirect schemes which are allowed to be used.
+    *
+    * @return string|null The messagingRedirectAppUrlScheme
+    */
+    public function getMessagingRedirectAppUrlScheme()
+    {
+        if (array_key_exists("messagingRedirectAppUrlScheme", $this->_propDict)) {
+            return $this->_propDict["messagingRedirectAppUrlScheme"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the messagingRedirectAppUrlScheme
+    * When a specific app redirection is enforced by protectedMessagingRedirectAppType in an App Protection Policy, this value defines the app url redirect schemes which are allowed to be used.
+    *
+    * @param string $val The messagingRedirectAppUrlScheme
+    *
+    * @return IosManagedAppProtection
+    */
+    public function setMessagingRedirectAppUrlScheme($val)
+    {
+        $this->_propDict["messagingRedirectAppUrlScheme"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the minimumRequiredSdkVersion
     * Versions less than the specified version will block the managed app from accessing company data.
     *

@@ -327,6 +327,64 @@ class MobileAppContentFile extends Entity
     }
 
     /**
+    * Gets the sizeEncryptedInBytes
+    * Indicates the size of the file after encryption, in bytes.
+    *
+    * @return int|null The sizeEncryptedInBytes
+    */
+    public function getSizeEncryptedInBytes()
+    {
+        if (array_key_exists("sizeEncryptedInBytes", $this->_propDict)) {
+            return $this->_propDict["sizeEncryptedInBytes"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the sizeEncryptedInBytes
+    * Indicates the size of the file after encryption, in bytes.
+    *
+    * @param int $val The sizeEncryptedInBytes
+    *
+    * @return MobileAppContentFile
+    */
+    public function setSizeEncryptedInBytes($val)
+    {
+        $this->_propDict["sizeEncryptedInBytes"] = intval($val);
+        return $this;
+    }
+
+    /**
+    * Gets the sizeInBytes
+    * Indicates the original size of the file, in bytes.
+    *
+    * @return int|null The sizeInBytes
+    */
+    public function getSizeInBytes()
+    {
+        if (array_key_exists("sizeInBytes", $this->_propDict)) {
+            return $this->_propDict["sizeInBytes"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the sizeInBytes
+    * Indicates the original size of the file, in bytes.
+    *
+    * @param int $val The sizeInBytes
+    *
+    * @return MobileAppContentFile
+    */
+    public function setSizeInBytes($val)
+    {
+        $this->_propDict["sizeInBytes"] = intval($val);
+        return $this;
+    }
+
+    /**
     * Gets the uploadState
     * The state of the current upload request. Possible values are: success, transientError, error, unknown, azureStorageUriRequestSuccess, azureStorageUriRequestPending, azureStorageUriRequestFailed, azureStorageUriRequestTimedOut, azureStorageUriRenewalSuccess, azureStorageUriRenewalPending, azureStorageUriRenewalFailed, azureStorageUriRenewalTimedOut, commitFileSuccess, commitFilePending, commitFileFailed, commitFileTimedOut.
     *

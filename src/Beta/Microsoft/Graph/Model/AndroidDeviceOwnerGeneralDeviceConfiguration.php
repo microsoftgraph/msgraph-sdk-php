@@ -565,6 +565,39 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     }
 
     /**
+    * Gets the deviceLocationMode
+    * Indicates the location setting configuration for fully managed devices (COBO) and corporate owned devices with a work profile (COPE)
+    *
+    * @return AndroidDeviceOwnerLocationMode|null The deviceLocationMode
+    */
+    public function getDeviceLocationMode()
+    {
+        if (array_key_exists("deviceLocationMode", $this->_propDict)) {
+            if (is_a($this->_propDict["deviceLocationMode"], "\Beta\Microsoft\Graph\Model\AndroidDeviceOwnerLocationMode") || is_null($this->_propDict["deviceLocationMode"])) {
+                return $this->_propDict["deviceLocationMode"];
+            } else {
+                $this->_propDict["deviceLocationMode"] = new AndroidDeviceOwnerLocationMode($this->_propDict["deviceLocationMode"]);
+                return $this->_propDict["deviceLocationMode"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the deviceLocationMode
+    * Indicates the location setting configuration for fully managed devices (COBO) and corporate owned devices with a work profile (COPE)
+    *
+    * @param AndroidDeviceOwnerLocationMode $val The deviceLocationMode
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setDeviceLocationMode($val)
+    {
+        $this->_propDict["deviceLocationMode"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the deviceOwnerLockScreenMessage
     * Represents the customized lock screen message provided to users when they attempt to modify managed settings on their device.
     *
@@ -3215,6 +3248,35 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     public function setSecurityRequireVerifyApps($val)
     {
         $this->_propDict["securityRequireVerifyApps"] = boolval($val);
+        return $this;
+    }
+
+    /**
+    * Gets the shareDeviceLocationDisabled
+    * Indicates whether or not location sharing is disabled for fully managed devices (COBO), and corporate owned devices with a work profile (COPE)
+    *
+    * @return bool|null The shareDeviceLocationDisabled
+    */
+    public function getShareDeviceLocationDisabled()
+    {
+        if (array_key_exists("shareDeviceLocationDisabled", $this->_propDict)) {
+            return $this->_propDict["shareDeviceLocationDisabled"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the shareDeviceLocationDisabled
+    * Indicates whether or not location sharing is disabled for fully managed devices (COBO), and corporate owned devices with a work profile (COPE)
+    *
+    * @param bool $val The shareDeviceLocationDisabled
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setShareDeviceLocationDisabled($val)
+    {
+        $this->_propDict["shareDeviceLocationDisabled"] = boolval($val);
         return $this;
     }
 

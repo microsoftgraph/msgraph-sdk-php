@@ -88,7 +88,7 @@ class User extends DirectoryObject
 
     /**
     * Gets the ageGroup
-    * Sets the age group of the user. Allowed values: null, Minor, NotAdult and Adult. For more information, see legal age group property definitions. Supports $filter (eq, ne, not, and in).
+    * Sets the age group of the user. Allowed values: null, Minor, NotAdult, and Adult. For more information, see legal age group property definitions. Supports $filter (eq, ne, not, and in).
     *
     * @return string|null The ageGroup
     */
@@ -103,7 +103,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the ageGroup
-    * Sets the age group of the user. Allowed values: null, Minor, NotAdult and Adult. For more information, see legal age group property definitions. Supports $filter (eq, ne, not, and in).
+    * Sets the age group of the user. Allowed values: null, Minor, NotAdult, and Adult. For more information, see legal age group property definitions. Supports $filter (eq, ne, not, and in).
     *
     * @param string $val The ageGroup
     *
@@ -118,7 +118,7 @@ class User extends DirectoryObject
 
      /**
      * Gets the assignedLicenses
-    * The licenses that are assigned to the user, including inherited (group-based) licenses. This property doesn't differentiate directly assigned and inherited licenses. Use the licenseAssignmentStates property to identify the directly assigned and inherited licenses. Not nullable. Supports $filter (eq, not, /$count eq 0, /$count ne 0).
+    * The licenses that are assigned to the user, including inherited (group-based) licenses. This property doesn't differentiate between directly assigned and inherited licenses. Use the licenseAssignmentStates property to identify the directly assigned and inherited licenses. Not nullable. Supports $filter (eq, not, /$count eq 0, /$count ne 0).
      *
      * @return array|null The assignedLicenses
      */
@@ -133,7 +133,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the assignedLicenses
-    * The licenses that are assigned to the user, including inherited (group-based) licenses. This property doesn't differentiate directly assigned and inherited licenses. Use the licenseAssignmentStates property to identify the directly assigned and inherited licenses. Not nullable. Supports $filter (eq, not, /$count eq 0, /$count ne 0).
+    * The licenses that are assigned to the user, including inherited (group-based) licenses. This property doesn't differentiate between directly assigned and inherited licenses. Use the licenseAssignmentStates property to identify the directly assigned and inherited licenses. Not nullable. Supports $filter (eq, not, /$count eq 0, /$count ne 0).
     *
     * @param AssignedLicense[] $val The assignedLicenses
     *
@@ -177,7 +177,7 @@ class User extends DirectoryObject
 
     /**
     * Gets the authorizationInfo
-    * Identifiers that can be used to identify and authenticate a user in non-Azure AD environments. This property can be used to store identifiers for smartcard-based certificates that a user uses for access to on-premises Active Directory deployments or for federated access. It can also be used to store the Subject Alternate Name (SAN) that's associated with a Common Access Card (CAC). Nullable.Supports $filter (eq and startsWith).
+    * Identifiers that can be used to identify and authenticate a user in non-Azure AD environments. This property can store identifiers for smartcard-based certificates that users use to access on-premises Active Directory deployments or federated access. It can also be used to store the Subject Alternate Name (SAN) that's associated with a Common Access Card (CAC). Nullable.Supports $filter (eq and startsWith).
     *
     * @return AuthorizationInfo|null The authorizationInfo
     */
@@ -196,7 +196,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the authorizationInfo
-    * Identifiers that can be used to identify and authenticate a user in non-Azure AD environments. This property can be used to store identifiers for smartcard-based certificates that a user uses for access to on-premises Active Directory deployments or for federated access. It can also be used to store the Subject Alternate Name (SAN) that's associated with a Common Access Card (CAC). Nullable.Supports $filter (eq and startsWith).
+    * Identifiers that can be used to identify and authenticate a user in non-Azure AD environments. This property can store identifiers for smartcard-based certificates that users use to access on-premises Active Directory deployments or federated access. It can also be used to store the Subject Alternate Name (SAN) that's associated with a Common Access Card (CAC). Nullable.Supports $filter (eq and startsWith).
     *
     * @param AuthorizationInfo $val The authorizationInfo
     *
@@ -301,7 +301,7 @@ class User extends DirectoryObject
 
     /**
     * Gets the companyName
-    * The name of the company that the user is associated with. This property can be useful for describing the company that an external user comes from. The maximum length is 64 characters.Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
+    * The name of the company the user is associated with. This property can be useful for describing the company that an external user comes from. The maximum length is 64 characters.Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
     *
     * @return string|null The companyName
     */
@@ -316,7 +316,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the companyName
-    * The name of the company that the user is associated with. This property can be useful for describing the company that an external user comes from. The maximum length is 64 characters.Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
+    * The name of the company the user is associated with. This property can be useful for describing the company that an external user comes from. The maximum length is 64 characters.Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
     *
     * @param string $val The companyName
     *
@@ -388,7 +388,7 @@ class User extends DirectoryObject
 
     /**
     * Gets the createdDateTime
-    * The date and time the user was created, in ISO 8601 format and in UTC time. The value cannot be modified and is automatically populated when the entity is created. Nullable. For on-premises users, the value represents when they were first created in Microsoft Entra ID. Property is null for some users created before June 2018 and on-premises users that were synced to Microsoft Entra ID before June 2018. Read-only. Supports $filter (eq, ne, not , ge, le, in).
+    * The date and time the user was created in ISO 8601 format and UTC. The value cannot be modified and is automatically populated when the entity is created. Nullable. For on-premises users, the value represents when they were first created in Microsoft Entra ID. Property is null for some users created before June 2018 and on-premises users synced to Microsoft Entra ID before June 2018. Read-only. Supports $filter (eq, ne, not , ge, le, in).
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -407,7 +407,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the createdDateTime
-    * The date and time the user was created, in ISO 8601 format and in UTC time. The value cannot be modified and is automatically populated when the entity is created. Nullable. For on-premises users, the value represents when they were first created in Microsoft Entra ID. Property is null for some users created before June 2018 and on-premises users that were synced to Microsoft Entra ID before June 2018. Read-only. Supports $filter (eq, ne, not , ge, le, in).
+    * The date and time the user was created in ISO 8601 format and UTC. The value cannot be modified and is automatically populated when the entity is created. Nullable. For on-premises users, the value represents when they were first created in Microsoft Entra ID. Property is null for some users created before June 2018 and on-premises users synced to Microsoft Entra ID before June 2018. Read-only. Supports $filter (eq, ne, not , ge, le, in).
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -450,7 +450,7 @@ class User extends DirectoryObject
 
     /**
     * Gets the customSecurityAttributes
-    * An open complex type that holds the value of a custom security attribute that is assigned to a directory object. Nullable. Returned only on $select. Supports $filter (eq, ne, not, startsWith). Filter value is case sensitive.
+    * An open complex type that holds the value of a custom security attribute that is assigned to a directory object. Nullable. Returned only on $select. Supports $filter (eq, ne, not, startsWith). The filter value is case-sensitive.
     *
     * @return CustomSecurityAttributeValue|null The customSecurityAttributes
     */
@@ -469,7 +469,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the customSecurityAttributes
-    * An open complex type that holds the value of a custom security attribute that is assigned to a directory object. Nullable. Returned only on $select. Supports $filter (eq, ne, not, startsWith). Filter value is case sensitive.
+    * An open complex type that holds the value of a custom security attribute that is assigned to a directory object. Nullable. Returned only on $select. Supports $filter (eq, ne, not, startsWith). The filter value is case-sensitive.
     *
     * @param CustomSecurityAttributeValue $val The customSecurityAttributes
     *
@@ -483,7 +483,7 @@ class User extends DirectoryObject
 
     /**
     * Gets the department
-    * The name for the department in which the user works. Maximum length is 64 characters.Supports $filter (eq, ne, not , ge, le, in, and eq on null values).
+    * The name of the department where the user works. Maximum length is 64 characters.Supports $filter (eq, ne, not , ge, le, in, and eq on null values).
     *
     * @return string|null The department
     */
@@ -498,7 +498,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the department
-    * The name for the department in which the user works. Maximum length is 64 characters.Supports $filter (eq, ne, not , ge, le, in, and eq on null values).
+    * The name of the department where the user works. Maximum length is 64 characters.Supports $filter (eq, ne, not , ge, le, in, and eq on null values).
     *
     * @param string $val The department
     *
@@ -540,7 +540,7 @@ class User extends DirectoryObject
 
     /**
     * Gets the displayName
-    * The name displayed in the address book for the user. This value is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created and it cannot be cleared during updates. Maximum length is 256 characters. Supports $filter (eq, ne, not , ge, le, in, startsWith, and eq on null values), $orderby, and $search.
+    * The name displayed in the address book for the user. This value is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created, and it cannot be cleared during updates. Maximum length is 256 characters. Supports $filter (eq, ne, not , ge, le, in, startsWith, and eq on null values), $orderby, and $search.
     *
     * @return string|null The displayName
     */
@@ -555,7 +555,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the displayName
-    * The name displayed in the address book for the user. This value is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created and it cannot be cleared during updates. Maximum length is 256 characters. Supports $filter (eq, ne, not , ge, le, in, startsWith, and eq on null values), $orderby, and $search.
+    * The name displayed in the address book for the user. This value is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created, and it cannot be cleared during updates. Maximum length is 256 characters. Supports $filter (eq, ne, not , ge, le, in, startsWith, and eq on null values), $orderby, and $search.
     *
     * @param string $val The displayName
     *
@@ -569,7 +569,7 @@ class User extends DirectoryObject
 
     /**
     * Gets the employeeHireDate
-    * The date and time when the user was hired or will start work in case of a future hire. Supports $filter (eq, ne, not , ge, le, in).
+    * The date and time when the user was hired or will start work if there is a future hire. Supports $filter (eq, ne, not , ge, le, in).
     *
     * @return \DateTime|null The employeeHireDate
     */
@@ -588,7 +588,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the employeeHireDate
-    * The date and time when the user was hired or will start work in case of a future hire. Supports $filter (eq, ne, not , ge, le, in).
+    * The date and time when the user was hired or will start work if there is a future hire. Supports $filter (eq, ne, not , ge, le, in).
     *
     * @param \DateTime $val The employeeHireDate
     *
@@ -843,7 +843,7 @@ class User extends DirectoryObject
 
      /**
      * Gets the identities
-    * Represents the identities that can be used to sign in to this user account. An identity can be provided by Microsoft (also known as a local account), by organizations, or by social identity providers such as Facebook, Google, and Microsoft, and tied to a user account. May contain multiple items with the same signInType value. Supports $filter (eq) including on null values, only where the signInType is not userPrincipalName.
+    * Represents the identities that can be used to sign in to this user account. An identity can be provided by Microsoft (also known as a local account), by organizations, or by social identity providers such as Facebook, Google, and Microsoft and tied to a user account. It may contain multiple items with the same signInType value. Supports $filter (eq) including on null values, only where the signInType is not userPrincipalName.
      *
      * @return array|null The identities
      */
@@ -858,7 +858,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the identities
-    * Represents the identities that can be used to sign in to this user account. An identity can be provided by Microsoft (also known as a local account), by organizations, or by social identity providers such as Facebook, Google, and Microsoft, and tied to a user account. May contain multiple items with the same signInType value. Supports $filter (eq) including on null values, only where the signInType is not userPrincipalName.
+    * Represents the identities that can be used to sign in to this user account. An identity can be provided by Microsoft (also known as a local account), by organizations, or by social identity providers such as Facebook, Google, and Microsoft and tied to a user account. It may contain multiple items with the same signInType value. Supports $filter (eq) including on null values, only where the signInType is not userPrincipalName.
     *
     * @param ObjectIdentity[] $val The identities
     *
@@ -872,7 +872,7 @@ class User extends DirectoryObject
 
     /**
     * Gets the imAddresses
-    * The instant message voice over IP (VOIP) session initiation protocol (SIP) addresses for the user. Read-only. Supports $filter (eq, not, ge, le, startsWith).
+    * The instant message voice-over IP (VOIP) session initiation protocol (SIP) addresses for the user. Read-only. Supports $filter (eq, not, ge, le, startsWith).
     *
     * @return array|null The imAddresses
     */
@@ -887,7 +887,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the imAddresses
-    * The instant message voice over IP (VOIP) session initiation protocol (SIP) addresses for the user. Read-only. Supports $filter (eq, not, ge, le, startsWith).
+    * The instant message voice-over IP (VOIP) session initiation protocol (SIP) addresses for the user. Read-only. Supports $filter (eq, not, ge, le, startsWith).
     *
     * @param string[] $val The imAddresses
     *
@@ -959,7 +959,7 @@ class User extends DirectoryObject
 
     /**
     * Gets the isManagementRestricted
-    * true if the user is a member of a restricted management administrative unit, in which case it requires a role scoped to the restricted administrative unit to manage. Default value is false. Read-only.  To manage a user who is a member of a restricted administrative unit, the calling app must be assigned the Directory.Write.Restricted permission. For delegated scenarios, the administrators must also be explicitly assigned supported roles at the restricted administrative unit scope.
+    * true if the user is a member of a restricted management administrative unit, which requires a role scoped to the restricted administrative unit to manage. Default value is false. Read-only.  To manage a user who is a member of a restricted administrative unit, the calling app must be assigned the Directory.Write.Restricted permission. For delegated scenarios, the administrators must also be explicitly assigned supported roles at the restricted administrative unit scope.
     *
     * @return bool|null The isManagementRestricted
     */
@@ -974,7 +974,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the isManagementRestricted
-    * true if the user is a member of a restricted management administrative unit, in which case it requires a role scoped to the restricted administrative unit to manage. Default value is false. Read-only.  To manage a user who is a member of a restricted administrative unit, the calling app must be assigned the Directory.Write.Restricted permission. For delegated scenarios, the administrators must also be explicitly assigned supported roles at the restricted administrative unit scope.
+    * true if the user is a member of a restricted management administrative unit, which requires a role scoped to the restricted administrative unit to manage. Default value is false. Read-only.  To manage a user who is a member of a restricted administrative unit, the calling app must be assigned the Directory.Write.Restricted permission. For delegated scenarios, the administrators must also be explicitly assigned supported roles at the restricted administrative unit scope.
     *
     * @param bool $val The isManagementRestricted
     *
@@ -1046,7 +1046,7 @@ class User extends DirectoryObject
 
     /**
     * Gets the lastPasswordChangeDateTime
-    * The time when this Microsoft Entra user last changed their password or when their password was created, whichever date the latest action was performed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Returned only on $select.
+    * When this Microsoft Entra user last changed their password or when their password was created, whichever date the latest action was performed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Returned only on $select.
     *
     * @return \DateTime|null The lastPasswordChangeDateTime
     */
@@ -1065,7 +1065,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the lastPasswordChangeDateTime
-    * The time when this Microsoft Entra user last changed their password or when their password was created, whichever date the latest action was performed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Returned only on $select.
+    * When this Microsoft Entra user last changed their password or when their password was created, whichever date the latest action was performed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Returned only on $select.
     *
     * @param \DateTime $val The lastPasswordChangeDateTime
     *
@@ -1079,7 +1079,7 @@ class User extends DirectoryObject
 
     /**
     * Gets the legalAgeGroupClassification
-    * Used by enterprise applications to determine the legal age group of the user. This property is read-only and calculated based on ageGroup and consentProvidedForMinor properties. Allowed values: null, MinorWithOutParentalConsent, MinorWithParentalConsent, MinorNoParentalConsentRequired, NotAdult and Adult. For more information, see legal age group property definitions. Returned only on $select.
+    * Used by enterprise applications to determine the legal age group of the user. This property is read-only and calculated based on ageGroup and consentProvidedForMinor properties. Allowed values: null, MinorWithOutParentalConsent, MinorWithParentalConsent, MinorNoParentalConsentRequired, NotAdult, and Adult. For more information, see legal age group property definitions. Returned only on $select.
     *
     * @return string|null The legalAgeGroupClassification
     */
@@ -1094,7 +1094,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the legalAgeGroupClassification
-    * Used by enterprise applications to determine the legal age group of the user. This property is read-only and calculated based on ageGroup and consentProvidedForMinor properties. Allowed values: null, MinorWithOutParentalConsent, MinorWithParentalConsent, MinorNoParentalConsentRequired, NotAdult and Adult. For more information, see legal age group property definitions. Returned only on $select.
+    * Used by enterprise applications to determine the legal age group of the user. This property is read-only and calculated based on ageGroup and consentProvidedForMinor properties. Allowed values: null, MinorWithOutParentalConsent, MinorWithParentalConsent, MinorNoParentalConsentRequired, NotAdult, and Adult. For more information, see legal age group property definitions. Returned only on $select.
     *
     * @param string $val The legalAgeGroupClassification
     *
@@ -1109,7 +1109,7 @@ class User extends DirectoryObject
 
      /**
      * Gets the licenseAssignmentStates
-    * State of license assignments for this user. Also indicates licenses that are directly assigned and those that the user has inherited through group memberships. Read-only. Returned only on $select.
+    * State of license assignments for this user. It also indicates licenses that are directly assigned and the ones the user inherited through group memberships. Read-only. Returned only on $select.
      *
      * @return array|null The licenseAssignmentStates
      */
@@ -1124,7 +1124,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the licenseAssignmentStates
-    * State of license assignments for this user. Also indicates licenses that are directly assigned and those that the user has inherited through group memberships. Read-only. Returned only on $select.
+    * State of license assignments for this user. It also indicates licenses that are directly assigned and the ones the user inherited through group memberships. Read-only. Returned only on $select.
     *
     * @param LicenseAssignmentState[] $val The licenseAssignmentStates
     *
@@ -1138,7 +1138,7 @@ class User extends DirectoryObject
 
     /**
     * Gets the mail
-    * The SMTP address for the user, for example, admin@contoso.com. Changes to this property also updates the user's proxyAddresses collection to include the value as an SMTP address. This property can't contain accent characters.  NOTE: We don't recommend updating this property for Azure AD B2C user profiles. Use the otherMails property instead.  Supports $filter (eq, ne, not, ge, le, in, startsWith, endsWith, and eq on null values).
+    * The SMTP address for the user, for example, admin@contoso.com. Changes to this property also update the user's proxyAddresses collection to include the value as an SMTP address. This property can't contain accent characters.  NOTE: We don't recommend updating this property for Azure AD B2C user profiles. Use the otherMails property instead.  Supports $filter (eq, ne, not, ge, le, in, startsWith, endsWith, and eq on null values).
     *
     * @return string|null The mail
     */
@@ -1153,7 +1153,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the mail
-    * The SMTP address for the user, for example, admin@contoso.com. Changes to this property also updates the user's proxyAddresses collection to include the value as an SMTP address. This property can't contain accent characters.  NOTE: We don't recommend updating this property for Azure AD B2C user profiles. Use the otherMails property instead.  Supports $filter (eq, ne, not, ge, le, in, startsWith, endsWith, and eq on null values).
+    * The SMTP address for the user, for example, admin@contoso.com. Changes to this property also update the user's proxyAddresses collection to include the value as an SMTP address. This property can't contain accent characters.  NOTE: We don't recommend updating this property for Azure AD B2C user profiles. Use the otherMails property instead.  Supports $filter (eq, ne, not, ge, le, in, startsWith, endsWith, and eq on null values).
     *
     * @param string $val The mail
     *
@@ -1196,7 +1196,7 @@ class User extends DirectoryObject
 
     /**
     * Gets the mobilePhone
-    * The primary cellular telephone number for the user. Read-only for users synced from on-premises directory.  Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values) and $search.
+    * The primary cellular telephone number for the user. Read-only for users synced from the on-premises directory.  Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values) and $search.
     *
     * @return string|null The mobilePhone
     */
@@ -1211,7 +1211,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the mobilePhone
-    * The primary cellular telephone number for the user. Read-only for users synced from on-premises directory.  Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values) and $search.
+    * The primary cellular telephone number for the user. Read-only for users synced from the on-premises directory.  Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values) and $search.
     *
     * @param string $val The mobilePhone
     *
@@ -1254,7 +1254,7 @@ class User extends DirectoryObject
 
     /**
     * Gets the onPremisesDistinguishedName
-    * Contains the on-premises Active Directory distinguished name or DN. The property is only populated for customers who are synchronizing their on-premises directory to Microsoft Entra ID via Microsoft Entra Connect. Read-only.
+    * Contains the on-premises Active Directory distinguished name or DN. The property is only populated for customers synchronizing their on-premises directory to Microsoft Entra ID via Microsoft Entra Connect. Read-only.
     *
     * @return string|null The onPremisesDistinguishedName
     */
@@ -1269,7 +1269,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the onPremisesDistinguishedName
-    * Contains the on-premises Active Directory distinguished name or DN. The property is only populated for customers who are synchronizing their on-premises directory to Microsoft Entra ID via Microsoft Entra Connect. Read-only.
+    * Contains the on-premises Active Directory distinguished name or DN. The property is only populated for customers synchronizing their on-premises directory to Microsoft Entra ID via Microsoft Entra Connect. Read-only.
     *
     * @param string $val The onPremisesDistinguishedName
     *
@@ -1283,7 +1283,7 @@ class User extends DirectoryObject
 
     /**
     * Gets the onPremisesDomainName
-    * Contains the on-premises domainFQDN, also called dnsDomainName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Microsoft Entra ID via Microsoft Entra Connect. Read-only.
+    * Contains the on-premises domainFQDN, also called dnsDomainName synchronized from the on-premises directory. The property is only populated for customers synchronizing their on-premises directory to Microsoft Entra ID via Microsoft Entra Connect. Read-only.
     *
     * @return string|null The onPremisesDomainName
     */
@@ -1298,7 +1298,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the onPremisesDomainName
-    * Contains the on-premises domainFQDN, also called dnsDomainName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Microsoft Entra ID via Microsoft Entra Connect. Read-only.
+    * Contains the on-premises domainFQDN, also called dnsDomainName synchronized from the on-premises directory. The property is only populated for customers synchronizing their on-premises directory to Microsoft Entra ID via Microsoft Entra Connect. Read-only.
     *
     * @param string $val The onPremisesDomainName
     *
@@ -1312,7 +1312,7 @@ class User extends DirectoryObject
 
     /**
     * Gets the onPremisesExtensionAttributes
-    * Contains extensionAttributes1-15 for the user. These extension attributes are also known as Exchange custom attributes 1-15. For an onPremisesSyncEnabled user, the source of authority for this set of properties is the on-premises and is read-only. For a cloud-only user (where onPremisesSyncEnabled is false), these properties can be set during creation or update of a user object.  For a cloud-only user previously synced from on-premises Active Directory, these properties are read-only in Microsoft Graph but can be fully managed through the Exchange Admin Center or the Exchange Online V2 module in PowerShell. Supports $filter (eq, ne, not, in).
+    * Contains extensionAttributes1-15 for the user. These extension attributes are also known as Exchange custom attributes 1-15. For an onPremisesSyncEnabled user, the source of authority for this set of properties is the on-premises and is read-only. For a cloud-only user (where onPremisesSyncEnabled is false), these properties can be set during the creation or update of a user object.  For a cloud-only user previously synced from on-premises Active Directory, these properties are read-only in Microsoft Graph but can be fully managed through the Exchange Admin Center or the Exchange Online V2 module in PowerShell. Supports $filter (eq, ne, not, in).
     *
     * @return OnPremisesExtensionAttributes|null The onPremisesExtensionAttributes
     */
@@ -1331,7 +1331,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the onPremisesExtensionAttributes
-    * Contains extensionAttributes1-15 for the user. These extension attributes are also known as Exchange custom attributes 1-15. For an onPremisesSyncEnabled user, the source of authority for this set of properties is the on-premises and is read-only. For a cloud-only user (where onPremisesSyncEnabled is false), these properties can be set during creation or update of a user object.  For a cloud-only user previously synced from on-premises Active Directory, these properties are read-only in Microsoft Graph but can be fully managed through the Exchange Admin Center or the Exchange Online V2 module in PowerShell. Supports $filter (eq, ne, not, in).
+    * Contains extensionAttributes1-15 for the user. These extension attributes are also known as Exchange custom attributes 1-15. For an onPremisesSyncEnabled user, the source of authority for this set of properties is the on-premises and is read-only. For a cloud-only user (where onPremisesSyncEnabled is false), these properties can be set during the creation or update of a user object.  For a cloud-only user previously synced from on-premises Active Directory, these properties are read-only in Microsoft Graph but can be fully managed through the Exchange Admin Center or the Exchange Online V2 module in PowerShell. Supports $filter (eq, ne, not, in).
     *
     * @param OnPremisesExtensionAttributes $val The onPremisesExtensionAttributes
     *
@@ -1345,7 +1345,7 @@ class User extends DirectoryObject
 
     /**
     * Gets the onPremisesImmutableId
-    * This property is used to associate an on-premises Active Directory user account to their Microsoft Entra user object. This property must be specified when creating a new user account in the Graph if you're using a federated domain for the user's userPrincipalName (UPN) property. Note: The $ and _ characters can't be used when specifying this property. Supports $filter (eq, ne, not, ge, le, in).
+    * This property associates an on-premises Active Directory user account to their Microsoft Entra user object. This property must be specified when creating a new user account in the Graph if you're using a federated domain for the user's userPrincipalName (UPN) property. Note: The $ and _ characters can't be used when specifying this property. Supports $filter (eq, ne, not, ge, le, in).
     *
     * @return string|null The onPremisesImmutableId
     */
@@ -1360,7 +1360,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the onPremisesImmutableId
-    * This property is used to associate an on-premises Active Directory user account to their Microsoft Entra user object. This property must be specified when creating a new user account in the Graph if you're using a federated domain for the user's userPrincipalName (UPN) property. Note: The $ and _ characters can't be used when specifying this property. Supports $filter (eq, ne, not, ge, le, in).
+    * This property associates an on-premises Active Directory user account to their Microsoft Entra user object. This property must be specified when creating a new user account in the Graph if you're using a federated domain for the user's userPrincipalName (UPN) property. Note: The $ and _ characters can't be used when specifying this property. Supports $filter (eq, ne, not, ge, le, in).
     *
     * @param string $val The onPremisesImmutableId
     *
@@ -1374,7 +1374,7 @@ class User extends DirectoryObject
 
     /**
     * Gets the onPremisesLastSyncDateTime
-    * Indicates the last time at which the object was synced with the on-premises directory; for example: '2013-02-16T03:04:54Z'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Supports $filter (eq, ne, not, ge, le, in).
+    * Indicates the last time at which the object was synced with the on-premises directory; for example: '2013-02-16T03:04:54Z'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Supports $filter (eq, ne, not, ge, le, in).
     *
     * @return \DateTime|null The onPremisesLastSyncDateTime
     */
@@ -1393,7 +1393,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the onPremisesLastSyncDateTime
-    * Indicates the last time at which the object was synced with the on-premises directory; for example: '2013-02-16T03:04:54Z'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Supports $filter (eq, ne, not, ge, le, in).
+    * Indicates the last time at which the object was synced with the on-premises directory; for example: '2013-02-16T03:04:54Z'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Supports $filter (eq, ne, not, ge, le, in).
     *
     * @param \DateTime $val The onPremisesLastSyncDateTime
     *
@@ -1437,7 +1437,7 @@ class User extends DirectoryObject
 
     /**
     * Gets the onPremisesSamAccountName
-    * Contains the on-premises sAMAccountName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Microsoft Entra ID via Microsoft Entra Connect. Read-only. Supports $filter (eq, ne, not, ge, le, in, startsWith).
+    * Contains the on-premises sAMAccountName synchronized from the on-premises directory. The property is only populated for customers synchronizing their on-premises directory to Microsoft Entra ID via Microsoft Entra Connect. Read-only. Supports $filter (eq, ne, not, ge, le, in, startsWith).
     *
     * @return string|null The onPremisesSamAccountName
     */
@@ -1452,7 +1452,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the onPremisesSamAccountName
-    * Contains the on-premises sAMAccountName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Microsoft Entra ID via Microsoft Entra Connect. Read-only. Supports $filter (eq, ne, not, ge, le, in, startsWith).
+    * Contains the on-premises sAMAccountName synchronized from the on-premises directory. The property is only populated for customers synchronizing their on-premises directory to Microsoft Entra ID via Microsoft Entra Connect. Read-only. Supports $filter (eq, ne, not, ge, le, in, startsWith).
     *
     * @param string $val The onPremisesSamAccountName
     *
@@ -1466,7 +1466,7 @@ class User extends DirectoryObject
 
     /**
     * Gets the onPremisesSecurityIdentifier
-    * Contains the on-premises security identifier (SID) for the user that was synchronized from on-premises to the cloud. Read-only. Supports $filter (eq including on null values).
+    * Contains the on-premises security identifier (SID) for the user synchronized from on-premises to the cloud. Read-only. Supports $filter (eq including on null values).
     *
     * @return string|null The onPremisesSecurityIdentifier
     */
@@ -1481,7 +1481,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the onPremisesSecurityIdentifier
-    * Contains the on-premises security identifier (SID) for the user that was synchronized from on-premises to the cloud. Read-only. Supports $filter (eq including on null values).
+    * Contains the on-premises security identifier (SID) for the user synchronized from on-premises to the cloud. Read-only. Supports $filter (eq including on null values).
     *
     * @param string $val The onPremisesSecurityIdentifier
     *
@@ -1528,7 +1528,7 @@ class User extends DirectoryObject
 
     /**
     * Gets the onPremisesSyncEnabled
-    * true if this user object is currently being synced from an on-premises Active Directory (AD); otherwise the user isn't being synced and can be managed in Microsoft Entra ID. Read-only. Supports $filter (eq, ne, not, in, and eq on null values).
+    * true if this user object is currently being synced from an on-premises Active Directory (AD); otherwise, the user isn't being synced and can be managed in Microsoft Entra ID. Read-only. Supports $filter (eq, ne, not, in, and eq on null values).
     *
     * @return bool|null The onPremisesSyncEnabled
     */
@@ -1543,7 +1543,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the onPremisesSyncEnabled
-    * true if this user object is currently being synced from an on-premises Active Directory (AD); otherwise the user isn't being synced and can be managed in Microsoft Entra ID. Read-only. Supports $filter (eq, ne, not, in, and eq on null values).
+    * true if this user object is currently being synced from an on-premises Active Directory (AD); otherwise, the user isn't being synced and can be managed in Microsoft Entra ID. Read-only. Supports $filter (eq, ne, not, in, and eq on null values).
     *
     * @param bool $val The onPremisesSyncEnabled
     *
@@ -1557,7 +1557,7 @@ class User extends DirectoryObject
 
     /**
     * Gets the onPremisesUserPrincipalName
-    * Contains the on-premises userPrincipalName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Microsoft Entra ID via Microsoft Entra Connect. Read-only. Supports $filter (eq, ne, not, ge, le, in, startsWith).
+    * Contains the on-premises userPrincipalName synchronized from the on-premises directory. The property is only populated for customers synchronizing their on-premises directory to Microsoft Entra ID via Microsoft Entra Connect. Read-only. Supports $filter (eq, ne, not, ge, le, in, startsWith).
     *
     * @return string|null The onPremisesUserPrincipalName
     */
@@ -1572,7 +1572,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the onPremisesUserPrincipalName
-    * Contains the on-premises userPrincipalName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Microsoft Entra ID via Microsoft Entra Connect. Read-only. Supports $filter (eq, ne, not, ge, le, in, startsWith).
+    * Contains the on-premises userPrincipalName synchronized from the on-premises directory. The property is only populated for customers synchronizing their on-premises directory to Microsoft Entra ID via Microsoft Entra Connect. Read-only. Supports $filter (eq, ne, not, ge, le, in, startsWith).
     *
     * @param string $val The onPremisesUserPrincipalName
     *
@@ -1735,7 +1735,7 @@ class User extends DirectoryObject
 
     /**
     * Gets the preferredLanguage
-    * The preferred language for the user. The preferred language format is based on RFC 4646. The name is a combination of an ISO 639 two-letter lowercase culture code associated with the language, and an ISO 3166 two-letter uppercase subculture code associated with the country or region. Example: 'en-US', or 'es-ES'. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
+    * The preferred language for the user. The preferred language format is based on RFC 4646. The name combines an ISO 639 two-letter lowercase culture code associated with the language and an ISO 3166 two-letter uppercase subculture code associated with the country or region. Example: 'en-US', or 'es-ES'. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
     *
     * @return string|null The preferredLanguage
     */
@@ -1750,7 +1750,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the preferredLanguage
-    * The preferred language for the user. The preferred language format is based on RFC 4646. The name is a combination of an ISO 639 two-letter lowercase culture code associated with the language, and an ISO 3166 two-letter uppercase subculture code associated with the country or region. Example: 'en-US', or 'es-ES'. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
+    * The preferred language for the user. The preferred language format is based on RFC 4646. The name combines an ISO 639 two-letter lowercase culture code associated with the language and an ISO 3166 two-letter uppercase subculture code associated with the country or region. Example: 'en-US', or 'es-ES'. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
     *
     * @param string $val The preferredLanguage
     *
@@ -1794,7 +1794,7 @@ class User extends DirectoryObject
 
     /**
     * Gets the proxyAddresses
-    * For example: ['SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com']. Changes to the mail property will also update this collection to include the value as an SMTP address. For more information, see mail and proxyAddresses properties. The proxy address prefixed with SMTP (capitalized) is the primary proxy address while those prefixed with smtp are the secondary proxy addresses. For Azure AD B2C accounts, this property has a limit of 10 unique addresses. Read-only in Microsoft Graph; you can update this property only through the Microsoft 365 admin center. Not nullable. Supports $filter (eq, not, ge, le, startsWith, endsWith, /$count eq 0, /$count ne 0).
+    * For example: ['SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com']. Changes to the mail property also update this collection to include the value as an SMTP address. For more information, see mail and proxyAddresses properties. The proxy address prefixed with SMTP (capitalized) is the primary proxy address, while the ones prefixed with smtp are the secondary proxy addresses. For Azure AD B2C accounts, this property has a limit of 10 unique addresses. Read-only in Microsoft Graph; you can update this property only through the Microsoft 365 admin center. Not nullable. Supports $filter (eq, not, ge, le, startsWith, endsWith, /$count eq 0, /$count ne 0).
     *
     * @return array|null The proxyAddresses
     */
@@ -1809,7 +1809,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the proxyAddresses
-    * For example: ['SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com']. Changes to the mail property will also update this collection to include the value as an SMTP address. For more information, see mail and proxyAddresses properties. The proxy address prefixed with SMTP (capitalized) is the primary proxy address while those prefixed with smtp are the secondary proxy addresses. For Azure AD B2C accounts, this property has a limit of 10 unique addresses. Read-only in Microsoft Graph; you can update this property only through the Microsoft 365 admin center. Not nullable. Supports $filter (eq, not, ge, le, startsWith, endsWith, /$count eq 0, /$count ne 0).
+    * For example: ['SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com']. Changes to the mail property also update this collection to include the value as an SMTP address. For more information, see mail and proxyAddresses properties. The proxy address prefixed with SMTP (capitalized) is the primary proxy address, while the ones prefixed with smtp are the secondary proxy addresses. For Azure AD B2C accounts, this property has a limit of 10 unique addresses. Read-only in Microsoft Graph; you can update this property only through the Microsoft 365 admin center. Not nullable. Supports $filter (eq, not, ge, le, startsWith, endsWith, /$count eq 0, /$count ne 0).
     *
     * @param string[] $val The proxyAddresses
     *
@@ -1823,7 +1823,7 @@ class User extends DirectoryObject
 
     /**
     * Gets the refreshTokensValidFromDateTime
-    * Any refresh tokens or sessions tokens (session cookies) issued before this time are invalid, and applications get an error when using an invalid refresh or sessions token to acquire a delegated access token (to access APIs such as Microsoft Graph).  If this happens, the application needs to acquire a new refresh token by making a request to the authorize endpoint. Read-only. Use invalidateAllRefreshTokens to reset.
+    * Any refresh tokens or sessions tokens (session cookies) issued before this time are invalid, and applications get an error when using an invalid refresh or sessions token to acquire a delegated access token (to access APIs such as Microsoft Graph).  If it happens, the application must acquire a new refresh token by requesting the authorized endpoint. Read-only. Use invalidateAllRefreshTokens to reset.
     *
     * @return \DateTime|null The refreshTokensValidFromDateTime
     */
@@ -1842,7 +1842,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the refreshTokensValidFromDateTime
-    * Any refresh tokens or sessions tokens (session cookies) issued before this time are invalid, and applications get an error when using an invalid refresh or sessions token to acquire a delegated access token (to access APIs such as Microsoft Graph).  If this happens, the application needs to acquire a new refresh token by making a request to the authorize endpoint. Read-only. Use invalidateAllRefreshTokens to reset.
+    * Any refresh tokens or sessions tokens (session cookies) issued before this time are invalid, and applications get an error when using an invalid refresh or sessions token to acquire a delegated access token (to access APIs such as Microsoft Graph).  If it happens, the application must acquire a new refresh token by requesting the authorized endpoint. Read-only. Use invalidateAllRefreshTokens to reset.
     *
     * @param \DateTime $val The refreshTokensValidFromDateTime
     *
@@ -1944,7 +1944,7 @@ class User extends DirectoryObject
 
     /**
     * Gets the signInSessionsValidFromDateTime
-    * Any refresh tokens or sessions tokens (session cookies) issued before this time are invalid, and applications get an error when using an invalid refresh or sessions token to acquire a delegated access token (to access APIs such as Microsoft Graph).  If this happens, the application needs to acquire a new refresh token by making a request to the authorize endpoint. Read-only. Use revokeSignInSessions to reset.
+    * Any refresh tokens or sessions tokens (session cookies) issued before this time are invalid, and applications get an error when using an invalid refresh or sessions token to acquire a delegated access token (to access APIs such as Microsoft Graph).  If this happens, the application must acquire a new refresh token by requesting the authorized endpoint. Read-only. Use revokeSignInSessions to reset.
     *
     * @return \DateTime|null The signInSessionsValidFromDateTime
     */
@@ -1963,7 +1963,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the signInSessionsValidFromDateTime
-    * Any refresh tokens or sessions tokens (session cookies) issued before this time are invalid, and applications get an error when using an invalid refresh or sessions token to acquire a delegated access token (to access APIs such as Microsoft Graph).  If this happens, the application needs to acquire a new refresh token by making a request to the authorize endpoint. Read-only. Use revokeSignInSessions to reset.
+    * Any refresh tokens or sessions tokens (session cookies) issued before this time are invalid, and applications get an error when using an invalid refresh or sessions token to acquire a delegated access token (to access APIs such as Microsoft Graph).  If this happens, the application must acquire a new refresh token by requesting the authorized endpoint. Read-only. Use revokeSignInSessions to reset.
     *
     * @param \DateTime $val The signInSessionsValidFromDateTime
     *
@@ -2064,7 +2064,7 @@ class User extends DirectoryObject
 
     /**
     * Gets the usageLocation
-    * A two letter country code (ISO standard 3166). Required for users that are assigned licenses due to legal requirement to check for availability of services in countries.  Examples include: US, JP, and GB. Not nullable. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
+    * A two-letter country code (ISO standard 3166). Required for users that are assigned licenses due to legal requirements to check for availability of services in countries.  Examples include: US, JP, and GB. Not nullable. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
     *
     * @return string|null The usageLocation
     */
@@ -2079,7 +2079,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the usageLocation
-    * A two letter country code (ISO standard 3166). Required for users that are assigned licenses due to legal requirement to check for availability of services in countries.  Examples include: US, JP, and GB. Not nullable. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
+    * A two-letter country code (ISO standard 3166). Required for users that are assigned licenses due to legal requirements to check for availability of services in countries.  Examples include: US, JP, and GB. Not nullable. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
     *
     * @param string $val The usageLocation
     *
@@ -2093,7 +2093,7 @@ class User extends DirectoryObject
 
     /**
     * Gets the userPrincipalName
-    * The user principal name (UPN) of the user. The UPN is an Internet-style sign-in name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant's collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization.NOTE: This property can't contain accent characters. Only the following characters are allowed A - Z, a - z, 0 - 9, ' . - _ ! # ^ ~. For the complete list of allowed characters, see username policies. Supports $filter (eq, ne, not, ge, le, in, startsWith, endsWith) and $orderby.
+    * The user principal name (UPN) of the user. The UPN is an Internet-style sign-in name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where the domain must be present in the tenant's verified domain collection. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization.NOTE: This property can't contain accent characters. Only the following characters are allowed A - Z, a - z, 0 - 9, ' . - _ ! # ^ ~. For the complete list of allowed characters, see username policies. Supports $filter (eq, ne, not, ge, le, in, startsWith, endsWith) and $orderby.
     *
     * @return string|null The userPrincipalName
     */
@@ -2108,7 +2108,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the userPrincipalName
-    * The user principal name (UPN) of the user. The UPN is an Internet-style sign-in name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant's collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization.NOTE: This property can't contain accent characters. Only the following characters are allowed A - Z, a - z, 0 - 9, ' . - _ ! # ^ ~. For the complete list of allowed characters, see username policies. Supports $filter (eq, ne, not, ge, le, in, startsWith, endsWith) and $orderby.
+    * The user principal name (UPN) of the user. The UPN is an Internet-style sign-in name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where the domain must be present in the tenant's verified domain collection. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization.NOTE: This property can't contain accent characters. Only the following characters are allowed A - Z, a - z, 0 - 9, ' . - _ ! # ^ ~. For the complete list of allowed characters, see username policies. Supports $filter (eq, ne, not, ge, le, in, startsWith, endsWith) and $orderby.
     *
     * @param string $val The userPrincipalName
     *
@@ -2244,7 +2244,7 @@ class User extends DirectoryObject
 
     /**
     * Gets the aboutMe
-    * A freeform text entry field for the user to describe themselves. Returned only on $select.
+    * A freeform text entry field for users to describe themselves. Returned only on $select.
     *
     * @return string|null The aboutMe
     */
@@ -2259,7 +2259,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the aboutMe
-    * A freeform text entry field for the user to describe themselves. Returned only on $select.
+    * A freeform text entry field for users to describe themselves. Returned only on $select.
     *
     * @param string $val The aboutMe
     *
@@ -2273,7 +2273,7 @@ class User extends DirectoryObject
 
     /**
     * Gets the birthday
-    * The birthday of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z Returned only on $select.
+    * The birthday of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z Returned only on $select.
     *
     * @return \DateTime|null The birthday
     */
@@ -2292,7 +2292,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the birthday
-    * The birthday of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z Returned only on $select.
+    * The birthday of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z Returned only on $select.
     *
     * @param \DateTime $val The birthday
     *
@@ -2306,7 +2306,7 @@ class User extends DirectoryObject
 
     /**
     * Gets the hireDate
-    * The hire date of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  Returned only on $select.  Note: This property is specific to SharePoint Online. We recommend using the native employeeHireDate property to set and update hire date values using Microsoft Graph APIs.
+    * The hire date of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  Returned only on $select.  Note: This property is specific to SharePoint Online. We recommend using the native employeeHireDate property to set and update hire date values using Microsoft Graph APIs.
     *
     * @return \DateTime|null The hireDate
     */
@@ -2325,7 +2325,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the hireDate
-    * The hire date of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  Returned only on $select.  Note: This property is specific to SharePoint Online. We recommend using the native employeeHireDate property to set and update hire date values using Microsoft Graph APIs.
+    * The hire date of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  Returned only on $select.  Note: This property is specific to SharePoint Online. We recommend using the native employeeHireDate property to set and update hire date values using Microsoft Graph APIs.
     *
     * @param \DateTime $val The hireDate
     *
@@ -2339,7 +2339,7 @@ class User extends DirectoryObject
 
     /**
     * Gets the interests
-    * A list for the user to describe their interests. Returned only on $select.
+    * A list for users to describe their interests. Returned only on $select.
     *
     * @return array|null The interests
     */
@@ -2354,7 +2354,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the interests
-    * A list for the user to describe their interests. Returned only on $select.
+    * A list for users to describe their interests. Returned only on $select.
     *
     * @param string[] $val The interests
     *
@@ -2368,7 +2368,7 @@ class User extends DirectoryObject
 
     /**
     * Gets the mySite
-    * The URL for the user's personal site. Returned only on $select.
+    * The URL for the user's site. Returned only on $select.
     *
     * @return string|null The mySite
     */
@@ -2383,7 +2383,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the mySite
-    * The URL for the user's personal site. Returned only on $select.
+    * The URL for the user's site. Returned only on $select.
     *
     * @param string $val The mySite
     *
@@ -2397,7 +2397,7 @@ class User extends DirectoryObject
 
     /**
     * Gets the pastProjects
-    * A list for the user to enumerate their past projects. Returned only on $select.
+    * A list for users to enumerate their past projects. Returned only on $select.
     *
     * @return array|null The pastProjects
     */
@@ -2412,7 +2412,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the pastProjects
-    * A list for the user to enumerate their past projects. Returned only on $select.
+    * A list for users to enumerate their past projects. Returned only on $select.
     *
     * @param string[] $val The pastProjects
     *
@@ -2751,7 +2751,7 @@ class User extends DirectoryObject
 
      /**
      * Gets the directReports
-    * The users and contacts that report to the user. (The users and contacts that have their manager property set to this user.) Read-only. Nullable. Supports $expand.
+    * The users and contacts that report to the user. (The users and contacts with their manager property set to this user.) Read-only. Nullable. Supports $expand.
      *
      * @return array|null The directReports
      */
@@ -2766,7 +2766,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the directReports
-    * The users and contacts that report to the user. (The users and contacts that have their manager property set to this user.) Read-only. Nullable. Supports $expand.
+    * The users and contacts that report to the user. (The users and contacts with their manager property set to this user.) Read-only. Nullable. Supports $expand.
     *
     * @param DirectoryObject[] $val The directReports
     *
@@ -2842,7 +2842,7 @@ class User extends DirectoryObject
 
      /**
      * Gets the memberOf
-    * The groups, directory roles and administrative units that the user is a member of. Read-only. Nullable. Supports $expand.
+    * The groups, directory roles, and administrative units that the user is a member of. Read-only. Nullable. Supports $expand.
      *
      * @return array|null The memberOf
      */
@@ -2857,7 +2857,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the memberOf
-    * The groups, directory roles and administrative units that the user is a member of. Read-only. Nullable. Supports $expand.
+    * The groups, directory roles, and administrative units that the user is a member of. Read-only. Nullable. Supports $expand.
     *
     * @param DirectoryObject[] $val The memberOf
     *
@@ -2900,7 +2900,7 @@ class User extends DirectoryObject
 
      /**
      * Gets the ownedDevices
-    * Devices that are owned by the user. Read-only. Nullable. Supports $expand.
+    * Devices owned by the user. Read-only. Nullable. Supports $expand.
      *
      * @return array|null The ownedDevices
      */
@@ -2915,7 +2915,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the ownedDevices
-    * Devices that are owned by the user. Read-only. Nullable. Supports $expand.
+    * Devices owned by the user. Read-only. Nullable. Supports $expand.
     *
     * @param DirectoryObject[] $val The ownedDevices
     *
@@ -2930,7 +2930,7 @@ class User extends DirectoryObject
 
      /**
      * Gets the ownedObjects
-    * Directory objects that are owned by the user. Read-only. Nullable. Supports $expand, $select nested in $expand, and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
+    * Directory objects owned by the user. Read-only. Nullable. Supports $expand, $select nested in $expand, and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
      *
      * @return array|null The ownedObjects
      */
@@ -2945,7 +2945,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the ownedObjects
-    * Directory objects that are owned by the user. Read-only. Nullable. Supports $expand, $select nested in $expand, and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
+    * Directory objects owned by the user. Read-only. Nullable. Supports $expand, $select nested in $expand, and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
     *
     * @param DirectoryObject[] $val The ownedObjects
     *
@@ -3020,7 +3020,7 @@ class User extends DirectoryObject
 
      /**
      * Gets the sponsors
-    * The users and groups that are responsible for this guest user's privileges in the tenant and keep the guest user's information and access updated. (HTTP Methods: GET, POST, DELETE.). Supports $expand.
+    * The users and groups responsible for this guest user's privileges in the tenant and keep the guest user's information and access updated. (HTTP Methods: GET, POST, DELETE.). Supports $expand.
      *
      * @return array|null The sponsors
      */
@@ -3035,7 +3035,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the sponsors
-    * The users and groups that are responsible for this guest user's privileges in the tenant and keep the guest user's information and access updated. (HTTP Methods: GET, POST, DELETE.). Supports $expand.
+    * The users and groups responsible for this guest user's privileges in the tenant and keep the guest user's information and access updated. (HTTP Methods: GET, POST, DELETE.). Supports $expand.
     *
     * @param DirectoryObject[] $val The sponsors
     *
@@ -3050,7 +3050,7 @@ class User extends DirectoryObject
 
      /**
      * Gets the transitiveMemberOf
-    * The groups, including nested groups, and directory roles that a user is a member of. Nullable.
+    * The groups, including nested groups and directory roles that a user is a member of. Nullable.
      *
      * @return array|null The transitiveMemberOf
      */
@@ -3065,7 +3065,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the transitiveMemberOf
-    * The groups, including nested groups, and directory roles that a user is a member of. Nullable.
+    * The groups, including nested groups and directory roles that a user is a member of. Nullable.
     *
     * @param DirectoryObject[] $val The transitiveMemberOf
     *
@@ -3293,7 +3293,7 @@ class User extends DirectoryObject
 
      /**
      * Gets the events
-    * The user's events. Default is to show events under the Default Calendar. Read-only. Nullable.
+    * The user's events. The default is to show events under the Default Calendar. Read-only. Nullable.
      *
      * @return array|null The events
      */
@@ -3308,7 +3308,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the events
-    * The user's events. Default is to show events under the Default Calendar. Read-only. Nullable.
+    * The user's events. The default is to show events under the Default Calendar. Read-only. Nullable.
     *
     * @param Event[] $val The events
     *
@@ -3477,7 +3477,7 @@ class User extends DirectoryObject
 
      /**
      * Gets the people
-    * Read-only. The most relevant people to the user. The collection is ordered by their relevance to the user, which is determined by the user's communication, collaboration and business relationships. A person is an aggregation of information from across mail, contacts and social networks.
+    * Read-only. The most relevant people to the user. The collection is ordered by their relevance to the user, which is determined by the user's communication, collaboration, and business relationships. A person aggregates information from mail, contacts, and social networks.
      *
      * @return array|null The people
      */
@@ -3492,7 +3492,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the people
-    * Read-only. The most relevant people to the user. The collection is ordered by their relevance to the user, which is determined by the user's communication, collaboration and business relationships. A person is an aggregation of information from across mail, contacts and social networks.
+    * Read-only. The most relevant people to the user. The collection is ordered by their relevance to the user, which is determined by the user's communication, collaboration, and business relationships. A person aggregates information from mail, contacts, and social networks.
     *
     * @param Person[] $val The people
     *
@@ -3684,7 +3684,7 @@ class User extends DirectoryObject
 
      /**
      * Gets the pendingAccessReviewInstances
-    * Navigation property to get list of access reviews pending approval by reviewer.
+    * Navigation property to get a list of access reviews pending approval by the reviewer.
      *
      * @return array|null The pendingAccessReviewInstances
      */
@@ -3699,7 +3699,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the pendingAccessReviewInstances
-    * Navigation property to get list of access reviews pending approval by reviewer.
+    * Navigation property to get a list of access reviews pending approval by the reviewer.
     *
     * @param AccessReviewInstance[] $val The pendingAccessReviewInstances
     *
@@ -4172,6 +4172,7 @@ class User extends DirectoryObject
 
      /**
      * Gets the photos
+    * The collection of the user's profile photos in different sizes. Read-only.
      *
      * @return array|null The photos
      */
@@ -4186,6 +4187,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the photos
+    * The collection of the user's profile photos in different sizes. Read-only.
     *
     * @param ProfilePhoto[] $val The photos
     *
@@ -4291,7 +4293,7 @@ class User extends DirectoryObject
 
      /**
      * Gets the onlineMeetings
-    * Information about a meeting, including the URL used to join a meeting, the attendees' list, and the description.
+    * Information about a meeting, including the URL used to join a meeting, the attendees list, and the description.
      *
      * @return array|null The onlineMeetings
      */
@@ -4306,7 +4308,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the onlineMeetings
-    * Information about a meeting, including the URL used to join a meeting, the attendees' list, and the description.
+    * Information about a meeting, including the URL used to join a meeting, the attendees list, and the description.
     *
     * @param OnlineMeeting[] $val The onlineMeetings
     *
@@ -4444,7 +4446,7 @@ class User extends DirectoryObject
 
      /**
      * Gets the joinedTeams
-    * The Microsoft Teams teams that the user is a member of. Read-only. Nullable.
+    * The Microsoft Teams teams the user is a member of. Read-only. Nullable.
      *
      * @return array|null The joinedTeams
      */
@@ -4459,7 +4461,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the joinedTeams
-    * The Microsoft Teams teams that the user is a member of. Read-only. Nullable.
+    * The Microsoft Teams teams the user is a member of. Read-only. Nullable.
     *
     * @param Team[] $val The joinedTeams
     *

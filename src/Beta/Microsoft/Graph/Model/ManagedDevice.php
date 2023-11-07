@@ -667,6 +667,39 @@ class ManagedDevice extends Entity
     }
 
     /**
+    * Gets the deviceIdentityAttestationDetail
+    * Indicates the attestation status of the managed device. And in which way. Default: Unknown.
+    *
+    * @return DeviceIdentityAttestationDetail|null The deviceIdentityAttestationDetail
+    */
+    public function getDeviceIdentityAttestationDetail()
+    {
+        if (array_key_exists("deviceIdentityAttestationDetail", $this->_propDict)) {
+            if (is_a($this->_propDict["deviceIdentityAttestationDetail"], "\Beta\Microsoft\Graph\Model\DeviceIdentityAttestationDetail") || is_null($this->_propDict["deviceIdentityAttestationDetail"])) {
+                return $this->_propDict["deviceIdentityAttestationDetail"];
+            } else {
+                $this->_propDict["deviceIdentityAttestationDetail"] = new DeviceIdentityAttestationDetail($this->_propDict["deviceIdentityAttestationDetail"]);
+                return $this->_propDict["deviceIdentityAttestationDetail"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the deviceIdentityAttestationDetail
+    * Indicates the attestation status of the managed device. And in which way. Default: Unknown.
+    *
+    * @param DeviceIdentityAttestationDetail $val The deviceIdentityAttestationDetail
+    *
+    * @return ManagedDevice
+    */
+    public function setDeviceIdentityAttestationDetail($val)
+    {
+        $this->_propDict["deviceIdentityAttestationDetail"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the deviceName
     * Name of the device. This property is read-only.
     *

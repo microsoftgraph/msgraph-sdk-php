@@ -25,6 +25,7 @@ class LocalConnectivityConfiguration extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the asn
+    * Specifies ASN of one end of IPSec tunnel (local or peer).
     *
     * @return int|null The asn
     */
@@ -39,6 +40,7 @@ class LocalConnectivityConfiguration extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the asn
+    * Specifies ASN of one end of IPSec tunnel (local or peer).
     *
     * @param int $val The value of the asn
     *
@@ -51,6 +53,7 @@ class LocalConnectivityConfiguration extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the bgpAddress
+    * Specifies BGP IPv4 address of one end of IPSec tunnel (local or peer).
     *
     * @return string|null The bgpAddress
     */
@@ -65,6 +68,7 @@ class LocalConnectivityConfiguration extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the bgpAddress
+    * Specifies BGP IPv4 address of one end of IPSec tunnel (local or peer).
     *
     * @param string $val The value of the bgpAddress
     *
@@ -77,6 +81,7 @@ class LocalConnectivityConfiguration extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the endpoint
+    * Specifies public IPv4 address of one end of IPSec tunnel (local or peer).
     *
     * @return string|null The endpoint
     */
@@ -91,6 +96,7 @@ class LocalConnectivityConfiguration extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the endpoint
+    * Specifies public IPv4 address of one end of IPSec tunnel (local or peer).
     *
     * @param string $val The value of the endpoint
     *
@@ -104,6 +110,7 @@ class LocalConnectivityConfiguration extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the region
+    * Specifies the region in which the Microsoft end of the tunnel exists. Not applicable for peer configuration. The possible values are: eastUS, eastUS2, westUS, westUS2, westUS3, centralUS, northCentralUS, southCentralUS, northEurope, westEurope, franceCentral, germanyWestCentral, switzerlandNorth, ukSouth, canadaEast, canadaCentral, southAfricaWest, southAfricaNorth, uaeNorth,unknownFutureValue.
     *
     * @return Region|null The region
     */
@@ -122,6 +129,7 @@ class LocalConnectivityConfiguration extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the region
+    * Specifies the region in which the Microsoft end of the tunnel exists. Not applicable for peer configuration. The possible values are: eastUS, eastUS2, westUS, westUS2, westUS3, centralUS, northCentralUS, southCentralUS, northEurope, westEurope, franceCentral, germanyWestCentral, switzerlandNorth, ukSouth, canadaEast, canadaCentral, southAfricaWest, southAfricaNorth, uaeNorth,unknownFutureValue.
     *
     * @param Region $val The value to assign to the region
     *

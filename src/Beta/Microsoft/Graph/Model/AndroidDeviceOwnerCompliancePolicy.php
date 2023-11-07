@@ -559,6 +559,35 @@ class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy
     }
 
     /**
+    * Gets the requireNoPendingSystemUpdates
+    * Require device to have no pending Android system updates.
+    *
+    * @return bool|null The requireNoPendingSystemUpdates
+    */
+    public function getRequireNoPendingSystemUpdates()
+    {
+        if (array_key_exists("requireNoPendingSystemUpdates", $this->_propDict)) {
+            return $this->_propDict["requireNoPendingSystemUpdates"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the requireNoPendingSystemUpdates
+    * Require device to have no pending Android system updates.
+    *
+    * @param bool $val The requireNoPendingSystemUpdates
+    *
+    * @return AndroidDeviceOwnerCompliancePolicy
+    */
+    public function setRequireNoPendingSystemUpdates($val)
+    {
+        $this->_propDict["requireNoPendingSystemUpdates"] = boolval($val);
+        return $this;
+    }
+
+    /**
     * Gets the securityRequireIntuneAppIntegrity
     * If setting is set to true, checks that the Intune app installed on fully managed, dedicated, or corporate-owned work profile Android Enterprise enrolled devices, is the one provided by Microsoft from the Managed Google Playstore. If the check fails, the device will be reported as non-compliant.
     *

@@ -451,7 +451,7 @@ class DriveItem extends BaseItem
 
     /**
     * Gets the pendingOperations
-    * If present, indicates that indicates that one or more operations that may affect the state of the driveItem are pending completion. Read-only.
+    * If present, indicates that indicates that one or more operations that might affect the state of the driveItem are pending completion. Read-only.
     *
     * @return PendingOperations|null The pendingOperations
     */
@@ -470,7 +470,7 @@ class DriveItem extends BaseItem
 
     /**
     * Sets the pendingOperations
-    * If present, indicates that indicates that one or more operations that may affect the state of the driveItem are pending completion. Read-only.
+    * If present, indicates that indicates that one or more operations that might affect the state of the driveItem are pending completion. Read-only.
     *
     * @param PendingOperations $val The pendingOperations
     *
@@ -649,7 +649,7 @@ class DriveItem extends BaseItem
 
     /**
     * Gets the shared
-    * Indicates that the item has been shared with others and provides information about the shared state of the item. Read-only.
+    * Indicates that the item was shared with others and provides information about the shared state of the item. Read-only.
     *
     * @return Shared|null The shared
     */
@@ -668,7 +668,7 @@ class DriveItem extends BaseItem
 
     /**
     * Sets the shared
-    * Indicates that the item has been shared with others and provides information about the shared state of the item. Read-only.
+    * Indicates that the item was shared with others and provides information about the shared state of the item. Read-only.
     *
     * @param Shared $val The shared
     *
@@ -1125,7 +1125,7 @@ class DriveItem extends BaseItem
 
      /**
      * Gets the thumbnails
-    * Collection containing [ThumbnailSet][] objects associated with the item. For more info, see [getting thumbnails][]. Read-only. Nullable.
+    * Collection of [thumbnailSet][] objects associated with the item. For more information, see [getting thumbnails][]. Read-only. Nullable.
      *
      * @return array|null The thumbnails
      */
@@ -1140,7 +1140,7 @@ class DriveItem extends BaseItem
 
     /**
     * Sets the thumbnails
-    * Collection containing [ThumbnailSet][] objects associated with the item. For more info, see [getting thumbnails][]. Read-only. Nullable.
+    * Collection of [thumbnailSet][] objects associated with the item. For more information, see [getting thumbnails][]. Read-only. Nullable.
     *
     * @param ThumbnailSet[] $val The thumbnails
     *

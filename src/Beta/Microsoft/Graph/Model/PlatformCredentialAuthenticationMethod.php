@@ -26,6 +26,7 @@ class PlatformCredentialAuthenticationMethod extends AuthenticationMethod
 {
     /**
     * Gets the createdDateTime
+    * The date and time that this Platform Credential Key was registered.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -44,6 +45,7 @@ class PlatformCredentialAuthenticationMethod extends AuthenticationMethod
 
     /**
     * Sets the createdDateTime
+    * The date and time that this Platform Credential Key was registered.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -57,6 +59,7 @@ class PlatformCredentialAuthenticationMethod extends AuthenticationMethod
 
     /**
     * Gets the displayName
+    * The name of the device on which Platform Credential is registered.
     *
     * @return string|null The displayName
     */
@@ -71,6 +74,7 @@ class PlatformCredentialAuthenticationMethod extends AuthenticationMethod
 
     /**
     * Sets the displayName
+    * The name of the device on which Platform Credential is registered.
     *
     * @param string $val The displayName
     *
@@ -84,6 +88,7 @@ class PlatformCredentialAuthenticationMethod extends AuthenticationMethod
 
     /**
     * Gets the keyStrength
+    * Key strength of this Platform Credential key. Possible values are: normal, weak, unknown.
     *
     * @return AuthenticationMethodKeyStrength|null The keyStrength
     */
@@ -102,6 +107,7 @@ class PlatformCredentialAuthenticationMethod extends AuthenticationMethod
 
     /**
     * Sets the keyStrength
+    * Key strength of this Platform Credential key. Possible values are: normal, weak, unknown.
     *
     * @param AuthenticationMethodKeyStrength $val The keyStrength
     *
@@ -115,6 +121,7 @@ class PlatformCredentialAuthenticationMethod extends AuthenticationMethod
 
     /**
     * Gets the platform
+    * Platform on which this Platform Credential key is present. Possible values are: unknown, windows, macOS,iOS, android, linux.
     *
     * @return AuthenticationMethodPlatform|null The platform
     */
@@ -133,6 +140,7 @@ class PlatformCredentialAuthenticationMethod extends AuthenticationMethod
 
     /**
     * Sets the platform
+    * Platform on which this Platform Credential key is present. Possible values are: unknown, windows, macOS,iOS, android, linux.
     *
     * @param AuthenticationMethodPlatform $val The platform
     *
@@ -146,6 +154,7 @@ class PlatformCredentialAuthenticationMethod extends AuthenticationMethod
 
     /**
     * Gets the device
+    * The registered device on which this Platform Credential resides. Supports $expand. When you get a user's Platform Credential registration information, this property is returned only on a single GET and when you specify ?$expand. For example, GET /users/admin@contoso.com/authentication/platformCredentialAuthenticationMethod/_jpuR-TGZtk6aQCLF3BQjA2?$expand=device.
     *
     * @return Device|null The device
     */
@@ -164,6 +173,7 @@ class PlatformCredentialAuthenticationMethod extends AuthenticationMethod
 
     /**
     * Sets the device
+    * The registered device on which this Platform Credential resides. Supports $expand. When you get a user's Platform Credential registration information, this property is returned only on a single GET and when you specify ?$expand. For example, GET /users/admin@contoso.com/authentication/platformCredentialAuthenticationMethod/_jpuR-TGZtk6aQCLF3BQjA2?$expand=device.
     *
     * @param Device $val The device
     *

@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* AndroidDeviceOwnerEnrollmentTokenType File
+* Win32LobAppAutoUpdateSupersededApps File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Beta\Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* AndroidDeviceOwnerEnrollmentTokenType class
+* Win32LobAppAutoUpdateSupersededApps class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,12 +24,12 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class AndroidDeviceOwnerEnrollmentTokenType extends Enum
+class Win32LobAppAutoUpdateSupersededApps extends Enum
 {
     /**
-    * The Enum AndroidDeviceOwnerEnrollmentTokenType
+    * The Enum Win32LobAppAutoUpdateSupersededApps
     */
-    const GRAPHDEFAULT = "default";
-    const CORPORATE_OWNED_DEDICATED_DEVICE_WITH_AZURE_AD_SHARED_MODE = "corporateOwnedDedicatedDeviceWithAzureADSharedMode";
-    const DEVICE_STAGING = "deviceStaging";
+    const NOT_CONFIGURED = "notConfigured";
+    const ENABLED = "enabled";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

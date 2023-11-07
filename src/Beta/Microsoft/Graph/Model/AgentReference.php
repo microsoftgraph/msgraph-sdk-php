@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* AndroidDeviceOwnerEnrollmentTokenType File
+* AgentReference File
 * PHP version 7
 *
 * @category  Library
@@ -12,11 +12,8 @@
 * @link      https://graph.microsoft.com
 */
 namespace Beta\Microsoft\Graph\Model;
-
-use Microsoft\Graph\Core\Enum;
-
 /**
-* AndroidDeviceOwnerEnrollmentTokenType class
+* AgentReference class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,12 +21,32 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class AndroidDeviceOwnerEnrollmentTokenType extends Enum
+class AgentReference extends Entity
 {
     /**
-    * The Enum AndroidDeviceOwnerEnrollmentTokenType
+    * Gets the path
+    *
+    * @return string|null The path
     */
-    const GRAPHDEFAULT = "default";
-    const CORPORATE_OWNED_DEDICATED_DEVICE_WITH_AZURE_AD_SHARED_MODE = "corporateOwnedDedicatedDeviceWithAzureADSharedMode";
-    const DEVICE_STAGING = "deviceStaging";
+    public function getPath()
+    {
+        if (array_key_exists("path", $this->_propDict)) {
+            return $this->_propDict["path"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the path
+    *
+    * @param string $val The value of the path
+    *
+    * @return AgentReference
+    */
+    public function setPath($val)
+    {
+        $this->_propDict["path"] = $val;
+        return $this;
+    }
 }

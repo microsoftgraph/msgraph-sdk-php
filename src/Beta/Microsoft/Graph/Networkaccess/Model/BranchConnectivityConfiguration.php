@@ -57,6 +57,7 @@ class BranchConnectivityConfiguration implements \JsonSerializable
 
     /**
     * Gets the branchId
+    * Unique identifier or a specific reference assigned to a branchSite. Key.
     *
     * @return string|null The branchId
     */
@@ -71,6 +72,7 @@ class BranchConnectivityConfiguration implements \JsonSerializable
 
     /**
     * Sets the branchId
+    * Unique identifier or a specific reference assigned to a branchSite. Key.
     *
     * @param string $val The branchId
     *
@@ -84,6 +86,7 @@ class BranchConnectivityConfiguration implements \JsonSerializable
 
     /**
     * Gets the branchName
+    * Display name assigned to a branchSite.
     *
     * @return string|null The branchName
     */
@@ -98,6 +101,7 @@ class BranchConnectivityConfiguration implements \JsonSerializable
 
     /**
     * Sets the branchName
+    * Display name assigned to a branchSite.
     *
     * @param string $val The branchName
     *
@@ -112,6 +116,7 @@ class BranchConnectivityConfiguration implements \JsonSerializable
 
      /**
      * Gets the links
+    * List of connectivity configurations for deviceLink objects.
      *
      * @return array|null The links
      */
@@ -126,6 +131,7 @@ class BranchConnectivityConfiguration implements \JsonSerializable
 
     /**
     * Sets the links
+    * List of connectivity configurations for deviceLink objects.
     *
     * @param ConnectivityConfigurationLink[] $val The links
     *

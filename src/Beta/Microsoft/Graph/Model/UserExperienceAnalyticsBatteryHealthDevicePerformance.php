@@ -53,6 +53,36 @@ class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entity
         return $this;
     }
 
+
+     /**
+     * Gets the deviceBatteriesDetails
+    * Properties (maxCapacity and cycleCount) related to all batteries of the device.
+     *
+     * @return array|null The deviceBatteriesDetails
+     */
+    public function getDeviceBatteriesDetails()
+    {
+        if (array_key_exists("deviceBatteriesDetails", $this->_propDict)) {
+           return $this->_propDict["deviceBatteriesDetails"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the deviceBatteriesDetails
+    * Properties (maxCapacity and cycleCount) related to all batteries of the device.
+    *
+    * @param UserExperienceAnalyticsDeviceBatteryDetail[] $val The deviceBatteriesDetails
+    *
+    * @return UserExperienceAnalyticsBatteryHealthDevicePerformance
+    */
+    public function setDeviceBatteriesDetails($val)
+    {
+        $this->_propDict["deviceBatteriesDetails"] = $val;
+        return $this;
+    }
+
     /**
     * Gets the deviceBatteryCount
     * Number of batteries in a user device. Valid values 1 to 2147483647

@@ -26,6 +26,7 @@ class InvitationRedemptionIdentityProviderConfiguration extends Entity
 
     /**
     * Gets the fallbackIdentityProvider
+    * The fallback identity provider to be used in case no primary identity provider can be used for guest invitation redemption. Possible values are: defaultConfiguredIdp, emailOneTimePasscode, or microsoftAccount.
     *
     * @return B2bIdentityProvidersType|null The fallbackIdentityProvider
     */
@@ -44,6 +45,7 @@ class InvitationRedemptionIdentityProviderConfiguration extends Entity
 
     /**
     * Sets the fallbackIdentityProvider
+    * The fallback identity provider to be used in case no primary identity provider can be used for guest invitation redemption. Possible values are: defaultConfiguredIdp, emailOneTimePasscode, or microsoftAccount.
     *
     * @param B2bIdentityProvidersType $val The value to assign to the fallbackIdentityProvider
     *
@@ -57,6 +59,7 @@ class InvitationRedemptionIdentityProviderConfiguration extends Entity
 
     /**
     * Gets the primaryIdentityProviderPrecedenceOrder
+    * Collection of identity providers in priority order of preference to be used for guest invitation redemption. Possible values are: azureActiveDirectory, externalFederation, or socialIdentityProviders.
     *
     * @return B2bIdentityProvidersType|null The primaryIdentityProviderPrecedenceOrder
     */
@@ -75,6 +78,7 @@ class InvitationRedemptionIdentityProviderConfiguration extends Entity
 
     /**
     * Sets the primaryIdentityProviderPrecedenceOrder
+    * Collection of identity providers in priority order of preference to be used for guest invitation redemption. Possible values are: azureActiveDirectory, externalFederation, or socialIdentityProviders.
     *
     * @param B2bIdentityProvidersType $val The value to assign to the primaryIdentityProviderPrecedenceOrder
     *

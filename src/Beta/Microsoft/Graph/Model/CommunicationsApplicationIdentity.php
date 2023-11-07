@@ -25,7 +25,7 @@ class CommunicationsApplicationIdentity extends Identity
 {
     /**
     * Gets the applicationType
-    * First party Microsoft application presenting this identity.
+    * First-party Microsoft application that presents this identity.
     *
     * @return string|null The applicationType
     */
@@ -40,7 +40,7 @@ class CommunicationsApplicationIdentity extends Identity
 
     /**
     * Sets the applicationType
-    * First party Microsoft application presenting this identity.
+    * First-party Microsoft application that presents this identity.
     *
     * @param string $val The value of the applicationType
     *
@@ -53,7 +53,7 @@ class CommunicationsApplicationIdentity extends Identity
     }
     /**
     * Gets the hidden
-    * True if the participant wouldn't like to be shown in other participants' rosters.
+    * True if the participant shouldn't be shown in other participants' rosters.
     *
     * @return bool|null The hidden
     */
@@ -68,7 +68,7 @@ class CommunicationsApplicationIdentity extends Identity
 
     /**
     * Sets the hidden
-    * True if the participant wouldn't like to be shown in other participants' rosters.
+    * True if the participant shouldn't be shown in other participants' rosters.
     *
     * @param bool $val The value of the hidden
     *

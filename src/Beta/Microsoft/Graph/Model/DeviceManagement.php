@@ -4413,6 +4413,36 @@ class DeviceManagement extends Entity
 
 
      /**
+     * Gets the elevationRequests
+    * List of elevation requests
+     *
+     * @return array|null The elevationRequests
+     */
+    public function getElevationRequests()
+    {
+        if (array_key_exists("elevationRequests", $this->_propDict)) {
+           return $this->_propDict["elevationRequests"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the elevationRequests
+    * List of elevation requests
+    *
+    * @param PrivilegeManagementElevationRequest[] $val The elevationRequests
+    *
+    * @return DeviceManagement
+    */
+    public function setElevationRequests($val)
+    {
+        $this->_propDict["elevationRequests"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the zebraFotaArtifacts
     * The Collection of ZebraFotaArtifacts.
      *

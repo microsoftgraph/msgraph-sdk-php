@@ -54,7 +54,7 @@ class ProfileCardAnnotation extends Entity
 
     /**
     * Gets the localizations
-    * Each resource in this collection represents the localized value of the attribute name for a given language, used as the default label for that locale. For example, a user with a no-NB client gets 'Kostnads Senter' as the attribute label, rather than 'Cost Center.'
+    * Each resource in this collection represents the localized value of the attribute name for a given language, used as the default label for that locale. For example, a user with a nb-NO client gets 'Kostnadssenter' as the attribute label, rather than 'Cost Center.'
     *
     * @return DisplayNameLocalization|null The localizations
     */
@@ -73,7 +73,7 @@ class ProfileCardAnnotation extends Entity
 
     /**
     * Sets the localizations
-    * Each resource in this collection represents the localized value of the attribute name for a given language, used as the default label for that locale. For example, a user with a no-NB client gets 'Kostnads Senter' as the attribute label, rather than 'Cost Center.'
+    * Each resource in this collection represents the localized value of the attribute name for a given language, used as the default label for that locale. For example, a user with a nb-NO client gets 'Kostnadssenter' as the attribute label, rather than 'Cost Center.'
     *
     * @param DisplayNameLocalization $val The value to assign to the localizations
     *

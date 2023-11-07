@@ -311,6 +311,7 @@ class Admin implements \JsonSerializable
 
     /**
     * Gets the people
+    * Represents a setting to control people-related admin settings in the tenant.
     *
     * @return PeopleAdminSettings|null The people
     */
@@ -329,6 +330,7 @@ class Admin implements \JsonSerializable
 
     /**
     * Sets the people
+    * Represents a setting to control people-related admin settings in the tenant.
     *
     * @param PeopleAdminSettings $val The people
     *
