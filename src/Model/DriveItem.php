@@ -125,7 +125,7 @@ class DriveItem extends BaseItem
 
     /**
     * Gets the cTag
-    * An eTag for the content of the item. This eTag is not changed if only the metadata is changed. Note This property is not returned if the item is a folder. Read-only.
+    * An eTag for the content of the item. This eTag isn't changed if only the metadata is changed. Note This property isn't returned if the item is a folder. Read-only.
     *
     * @return string|null The cTag
     */
@@ -140,7 +140,7 @@ class DriveItem extends BaseItem
 
     /**
     * Sets the cTag
-    * An eTag for the content of the item. This eTag is not changed if only the metadata is changed. Note This property is not returned if the item is a folder. Read-only.
+    * An eTag for the content of the item. This eTag isn't changed if only the metadata is changed. Note This property isn't returned if the item is a folder. Read-only.
     *
     * @param string $val The cTag
     *
@@ -484,7 +484,7 @@ class DriveItem extends BaseItem
 
     /**
     * Gets the publication
-    * Provides information about the published or checked-out state of an item, in locations that support such actions. This property is not returned by default. Read-only.
+    * Provides information about the published or checked-out state of an item, in locations that support such actions. This property isn't returned by default. Read-only.
     *
     * @return PublicationFacet|null The publication
     */
@@ -503,7 +503,7 @@ class DriveItem extends BaseItem
 
     /**
     * Sets the publication
-    * Provides information about the published or checked-out state of an item, in locations that support such actions. This property is not returned by default. Read-only.
+    * Provides information about the published or checked-out state of an item, in locations that support such actions. This property isn't returned by default. Read-only.
     *
     * @param PublicationFacet $val The publication
     *
@@ -616,7 +616,7 @@ class DriveItem extends BaseItem
 
     /**
     * Gets the shared
-    * Indicates that the item has been shared with others and provides information about the shared state of the item. Read-only.
+    * Indicates that the item was shared with others and provides information about the shared state of the item. Read-only.
     *
     * @return Shared|null The shared
     */
@@ -635,7 +635,7 @@ class DriveItem extends BaseItem
 
     /**
     * Sets the shared
-    * Indicates that the item has been shared with others and provides information about the shared state of the item. Read-only.
+    * Indicates that the item was shared with others and provides information about the shared state of the item. Read-only.
     *
     * @param Shared $val The shared
     *
@@ -806,7 +806,7 @@ class DriveItem extends BaseItem
 
     /**
     * Gets the workbook
-    * For files that are Excel spreadsheets, accesses the workbook API to work with the spreadsheet's contents. Nullable.
+    * For files that are Excel spreadsheets, access to the workbook API to work with the spreadsheet's contents. Nullable.
     *
     * @return Workbook|null The workbook
     */
@@ -825,7 +825,7 @@ class DriveItem extends BaseItem
 
     /**
     * Sets the workbook
-    * For files that are Excel spreadsheets, accesses the workbook API to work with the spreadsheet's contents. Nullable.
+    * For files that are Excel spreadsheets, access to the workbook API to work with the spreadsheet's contents. Nullable.
     *
     * @param Workbook $val The workbook
     *
@@ -996,7 +996,7 @@ class DriveItem extends BaseItem
 
      /**
      * Gets the thumbnails
-    * Collection containing [ThumbnailSet][] objects associated with the item. For more info, see [getting thumbnails][]. Read-only. Nullable.
+    * Collection of [thumbnailSet][] objects associated with the item. For more information, see [getting thumbnails][]. Read-only. Nullable.
      *
      * @return array|null The thumbnails
      */
@@ -1011,7 +1011,7 @@ class DriveItem extends BaseItem
 
     /**
     * Sets the thumbnails
-    * Collection containing [ThumbnailSet][] objects associated with the item. For more info, see [getting thumbnails][]. Read-only. Nullable.
+    * Collection of [thumbnailSet][] objects associated with the item. For more information, see [getting thumbnails][]. Read-only. Nullable.
     *
     * @param ThumbnailSet[] $val The thumbnails
     *

@@ -27,6 +27,7 @@ class PeopleAdminSettings extends Entity
 
      /**
      * Gets the profileCardProperties
+    * Contains a collection of the properties an administrator has defined as visible on the Microsoft 365 profile card.
      *
      * @return array|null The profileCardProperties
      */
@@ -41,6 +42,7 @@ class PeopleAdminSettings extends Entity
 
     /**
     * Sets the profileCardProperties
+    * Contains a collection of the properties an administrator has defined as visible on the Microsoft 365 profile card.
     *
     * @param ProfileCardProperty[] $val The profileCardProperties
     *

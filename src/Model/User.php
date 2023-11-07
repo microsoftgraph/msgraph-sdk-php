@@ -3455,6 +3455,7 @@ class User extends DirectoryObject
 
      /**
      * Gets the photos
+    * The collection of the user's profile photos in different sizes. Read-only.
      *
      * @return array|null The photos
      */
@@ -3469,6 +3470,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the photos
+    * The collection of the user's profile photos in different sizes. Read-only.
     *
     * @param ProfilePhoto[] $val The photos
     *

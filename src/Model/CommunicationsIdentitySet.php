@@ -26,6 +26,7 @@ class CommunicationsIdentitySet extends IdentitySet
 
     /**
     * Gets the applicationInstance
+    * The application instance associated with this action.
     *
     * @return Identity|null The applicationInstance
     */
@@ -44,6 +45,7 @@ class CommunicationsIdentitySet extends IdentitySet
 
     /**
     * Sets the applicationInstance
+    * The application instance associated with this action.
     *
     * @param Identity $val The value to assign to the applicationInstance
     *
@@ -57,6 +59,7 @@ class CommunicationsIdentitySet extends IdentitySet
 
     /**
     * Gets the assertedIdentity
+    * An identity the participant would like to present itself as to the other participants in the call.
     *
     * @return Identity|null The assertedIdentity
     */
@@ -75,6 +78,7 @@ class CommunicationsIdentitySet extends IdentitySet
 
     /**
     * Sets the assertedIdentity
+    * An identity the participant would like to present itself as to the other participants in the call.
     *
     * @param Identity $val The value to assign to the assertedIdentity
     *
@@ -88,6 +92,7 @@ class CommunicationsIdentitySet extends IdentitySet
 
     /**
     * Gets the azureCommunicationServicesUser
+    * The Azure Communication Services user associated with this action.
     *
     * @return Identity|null The azureCommunicationServicesUser
     */
@@ -106,6 +111,7 @@ class CommunicationsIdentitySet extends IdentitySet
 
     /**
     * Sets the azureCommunicationServicesUser
+    * The Azure Communication Services user associated with this action.
     *
     * @param Identity $val The value to assign to the azureCommunicationServicesUser
     *
@@ -119,6 +125,7 @@ class CommunicationsIdentitySet extends IdentitySet
 
     /**
     * Gets the encrypted
+    * The encrypted user associated with this action.
     *
     * @return Identity|null The encrypted
     */
@@ -137,6 +144,7 @@ class CommunicationsIdentitySet extends IdentitySet
 
     /**
     * Sets the encrypted
+    * The encrypted user associated with this action.
     *
     * @param Identity $val The value to assign to the encrypted
     *
@@ -150,6 +158,7 @@ class CommunicationsIdentitySet extends IdentitySet
 
     /**
     * Gets the endpointType
+    * Type of endpoint that the participant uses. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone, unknownFutureValue.
     *
     * @return EndpointType|null The endpointType
     */
@@ -168,6 +177,7 @@ class CommunicationsIdentitySet extends IdentitySet
 
     /**
     * Sets the endpointType
+    * Type of endpoint that the participant uses. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone, unknownFutureValue.
     *
     * @param EndpointType $val The value to assign to the endpointType
     *
@@ -181,6 +191,7 @@ class CommunicationsIdentitySet extends IdentitySet
 
     /**
     * Gets the guest
+    * The guest user associated with this action.
     *
     * @return Identity|null The guest
     */
@@ -199,6 +210,7 @@ class CommunicationsIdentitySet extends IdentitySet
 
     /**
     * Sets the guest
+    * The guest user associated with this action.
     *
     * @param Identity $val The value to assign to the guest
     *
@@ -212,6 +224,7 @@ class CommunicationsIdentitySet extends IdentitySet
 
     /**
     * Gets the onPremises
+    * The Skype for Business on-premises user associated with this action.
     *
     * @return Identity|null The onPremises
     */
@@ -230,6 +243,7 @@ class CommunicationsIdentitySet extends IdentitySet
 
     /**
     * Sets the onPremises
+    * The Skype for Business on-premises user associated with this action.
     *
     * @param Identity $val The value to assign to the onPremises
     *
@@ -243,6 +257,7 @@ class CommunicationsIdentitySet extends IdentitySet
 
     /**
     * Gets the phone
+    * The phone user associated with this action.
     *
     * @return Identity|null The phone
     */
@@ -261,6 +276,7 @@ class CommunicationsIdentitySet extends IdentitySet
 
     /**
     * Sets the phone
+    * The phone user associated with this action.
     *
     * @param Identity $val The value to assign to the phone
     *
