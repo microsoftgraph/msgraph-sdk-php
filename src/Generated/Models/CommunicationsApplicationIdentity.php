@@ -26,7 +26,7 @@ class CommunicationsApplicationIdentity extends Identity implements Parsable
     }
 
     /**
-     * Gets the applicationType property value. The applicationType property
+     * Gets the applicationType property value. First-party Microsoft application that presents this identity.
      * @return string|null
     */
     public function getApplicationType(): ?string {
@@ -50,7 +50,7 @@ class CommunicationsApplicationIdentity extends Identity implements Parsable
     }
 
     /**
-     * Gets the hidden property value. The hidden property
+     * Gets the hidden property value. True if the participant shouldn't be shown in other participants' rosters.
      * @return bool|null
     */
     public function getHidden(): ?bool {
@@ -72,7 +72,7 @@ class CommunicationsApplicationIdentity extends Identity implements Parsable
     }
 
     /**
-     * Sets the applicationType property value. The applicationType property
+     * Sets the applicationType property value. First-party Microsoft application that presents this identity.
      * @param string|null $value Value to set for the applicationType property.
     */
     public function setApplicationType(?string $value): void {
@@ -80,7 +80,7 @@ class CommunicationsApplicationIdentity extends Identity implements Parsable
     }
 
     /**
-     * Sets the hidden property value. The hidden property
+     * Sets the hidden property value. True if the participant shouldn't be shown in other participants' rosters.
      * @param bool|null $value Value to set for the hidden property.
     */
     public function setHidden(?bool $value): void {

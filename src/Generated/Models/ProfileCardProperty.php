@@ -26,7 +26,7 @@ class ProfileCardProperty extends Entity implements Parsable
     }
 
     /**
-     * Gets the annotations property value. The annotations property
+     * Gets the annotations property value. Allows an administrator to set a custom display label for the directory property and localize it for the users in their tenant.
      * @return array<ProfileCardAnnotation>|null
     */
     public function getAnnotations(): ?array {
@@ -40,7 +40,7 @@ class ProfileCardProperty extends Entity implements Parsable
     }
 
     /**
-     * Gets the directoryPropertyName property value. The directoryPropertyName property
+     * Gets the directoryPropertyName property value. Identifies a profileCardProperty resource in Get, Update, or Delete operations. Allows an administrator to surface hidden Microsoft Entra ID properties on the Microsoft 365 profile card within their tenant. When present, the Microsoft Entra ID field referenced in this property is visible to all users in your tenant on the contact pane of the profile card. Allowed values for this field are: UserPrincipalName, Fax, StreetAddress, PostalCode, StateOrProvince, Alias, CustomAttribute1,  CustomAttribute2, CustomAttribute3, CustomAttribute4, CustomAttribute5, CustomAttribute6, CustomAttribute7, CustomAttribute8, CustomAttribute9, CustomAttribute10, CustomAttribute11, CustomAttribute12, CustomAttribute13, CustomAttribute14, CustomAttribute15.
      * @return string|null
     */
     public function getDirectoryPropertyName(): ?string {
@@ -74,7 +74,7 @@ class ProfileCardProperty extends Entity implements Parsable
     }
 
     /**
-     * Sets the annotations property value. The annotations property
+     * Sets the annotations property value. Allows an administrator to set a custom display label for the directory property and localize it for the users in their tenant.
      * @param array<ProfileCardAnnotation>|null $value Value to set for the annotations property.
     */
     public function setAnnotations(?array $value): void {
@@ -82,7 +82,7 @@ class ProfileCardProperty extends Entity implements Parsable
     }
 
     /**
-     * Sets the directoryPropertyName property value. The directoryPropertyName property
+     * Sets the directoryPropertyName property value. Identifies a profileCardProperty resource in Get, Update, or Delete operations. Allows an administrator to surface hidden Microsoft Entra ID properties on the Microsoft 365 profile card within their tenant. When present, the Microsoft Entra ID field referenced in this property is visible to all users in your tenant on the contact pane of the profile card. Allowed values for this field are: UserPrincipalName, Fax, StreetAddress, PostalCode, StateOrProvince, Alias, CustomAttribute1,  CustomAttribute2, CustomAttribute3, CustomAttribute4, CustomAttribute5, CustomAttribute6, CustomAttribute7, CustomAttribute8, CustomAttribute9, CustomAttribute10, CustomAttribute11, CustomAttribute12, CustomAttribute13, CustomAttribute14, CustomAttribute15.
      * @param string|null $value Value to set for the directoryPropertyName property.
     */
     public function setDirectoryPropertyName(?string $value): void {

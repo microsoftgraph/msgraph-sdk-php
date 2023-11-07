@@ -90,7 +90,7 @@ class DriveItem extends BaseItem implements Parsable
     }
 
     /**
-     * Gets the cTag property value. An eTag for the content of the item. This eTag is not changed if only the metadata is changed. Note This property is not returned if the item is a folder. Read-only.
+     * Gets the cTag property value. An eTag for the content of the item. This eTag isn't changed if only the metadata is changed. Note This property isn't returned if the item is a folder. Read-only.
      * @return string|null
     */
     public function getCTag(): ?string {
@@ -290,7 +290,7 @@ class DriveItem extends BaseItem implements Parsable
     }
 
     /**
-     * Gets the publication property value. Provides information about the published or checked-out state of an item, in locations that support such actions. This property is not returned by default. Read-only.
+     * Gets the publication property value. Provides information about the published or checked-out state of an item, in locations that support such actions. This property isn't returned by default. Read-only.
      * @return PublicationFacet|null
     */
     public function getPublication(): ?PublicationFacet {
@@ -338,7 +338,7 @@ class DriveItem extends BaseItem implements Parsable
     }
 
     /**
-     * Gets the shared property value. Indicates that the item has been shared with others and provides information about the shared state of the item. Read-only.
+     * Gets the shared property value. Indicates that the item was shared with others and provides information about the shared state of the item. Read-only.
      * @return Shared|null
     */
     public function getShared(): ?Shared {
@@ -400,7 +400,7 @@ class DriveItem extends BaseItem implements Parsable
     }
 
     /**
-     * Gets the thumbnails property value. Collection containing [ThumbnailSet][] objects associated with the item. For more info, see [getting thumbnails][]. Read-only. Nullable.
+     * Gets the thumbnails property value. Collection of [thumbnailSet][] objects associated with the item. For more information, see [getting thumbnails][]. Read-only. Nullable.
      * @return array<ThumbnailSet>|null
     */
     public function getThumbnails(): ?array {
@@ -452,7 +452,7 @@ class DriveItem extends BaseItem implements Parsable
     }
 
     /**
-     * Gets the workbook property value. For files that are Excel spreadsheets, accesses the workbook API to work with the spreadsheet's contents. Nullable.
+     * Gets the workbook property value. For files that are Excel spreadsheets, access to the workbook API to work with the spreadsheet's contents. Nullable.
      * @return Workbook|null
     */
     public function getWorkbook(): ?Workbook {
@@ -544,7 +544,7 @@ class DriveItem extends BaseItem implements Parsable
     }
 
     /**
-     * Sets the cTag property value. An eTag for the content of the item. This eTag is not changed if only the metadata is changed. Note This property is not returned if the item is a folder. Read-only.
+     * Sets the cTag property value. An eTag for the content of the item. This eTag isn't changed if only the metadata is changed. Note This property isn't returned if the item is a folder. Read-only.
      * @param string|null $value Value to set for the cTag property.
     */
     public function setCTag(?string $value): void {
@@ -648,7 +648,7 @@ class DriveItem extends BaseItem implements Parsable
     }
 
     /**
-     * Sets the publication property value. Provides information about the published or checked-out state of an item, in locations that support such actions. This property is not returned by default. Read-only.
+     * Sets the publication property value. Provides information about the published or checked-out state of an item, in locations that support such actions. This property isn't returned by default. Read-only.
      * @param PublicationFacet|null $value Value to set for the publication property.
     */
     public function setPublication(?PublicationFacet $value): void {
@@ -680,7 +680,7 @@ class DriveItem extends BaseItem implements Parsable
     }
 
     /**
-     * Sets the shared property value. Indicates that the item has been shared with others and provides information about the shared state of the item. Read-only.
+     * Sets the shared property value. Indicates that the item was shared with others and provides information about the shared state of the item. Read-only.
      * @param Shared|null $value Value to set for the shared property.
     */
     public function setShared(?Shared $value): void {
@@ -720,7 +720,7 @@ class DriveItem extends BaseItem implements Parsable
     }
 
     /**
-     * Sets the thumbnails property value. Collection containing [ThumbnailSet][] objects associated with the item. For more info, see [getting thumbnails][]. Read-only. Nullable.
+     * Sets the thumbnails property value. Collection of [thumbnailSet][] objects associated with the item. For more information, see [getting thumbnails][]. Read-only. Nullable.
      * @param array<ThumbnailSet>|null $value Value to set for the thumbnails property.
     */
     public function setThumbnails(?array $value): void {
@@ -752,7 +752,7 @@ class DriveItem extends BaseItem implements Parsable
     }
 
     /**
-     * Sets the workbook property value. For files that are Excel spreadsheets, accesses the workbook API to work with the spreadsheet's contents. Nullable.
+     * Sets the workbook property value. For files that are Excel spreadsheets, access to the workbook API to work with the spreadsheet's contents. Nullable.
      * @param Workbook|null $value Value to set for the workbook property.
     */
     public function setWorkbook(?Workbook $value): void {

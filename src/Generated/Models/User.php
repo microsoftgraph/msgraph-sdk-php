@@ -1441,7 +1441,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the photos property value. The photos property
+     * Gets the photos property value. The collection of the user's profile photos in different sizes. Read-only.
      * @return array<ProfilePhoto>|null
     */
     public function getPhotos(): ?array {
@@ -2701,7 +2701,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the photos property value. The photos property
+     * Sets the photos property value. The collection of the user's profile photos in different sizes. Read-only.
      * @param array<ProfilePhoto>|null $value Value to set for the photos property.
     */
     public function setPhotos(?array $value): void {

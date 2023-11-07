@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * For files that are Excel spreadsheets, accesses the workbook API to work with the spreadsheet's contents. Nullable.
+ * For files that are Excel spreadsheets, access to the workbook API to work with the spreadsheet's contents. Nullable.
 */
 class WorkbookRequestBuilderGetQueryParameters 
 {

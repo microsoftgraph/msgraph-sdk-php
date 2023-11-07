@@ -68,12 +68,12 @@ class AssignmentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new iosVppEBookAssignment object.
+     * Create a new managedEBookAssignment object.
      * @param ManagedEBookAssignment $body The request body
      * @param AssignmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ManagedEBookAssignment|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-books-iosvppebookassignment-create?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-books-managedebookassignment-create?view=graph-rest-1.0 Find more info here
     */
     public function post(ManagedEBookAssignment $body, ?AssignmentsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -106,7 +106,7 @@ class AssignmentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new iosVppEBookAssignment object.
+     * Create a new managedEBookAssignment object.
      * @param ManagedEBookAssignment $body The request body
      * @param AssignmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

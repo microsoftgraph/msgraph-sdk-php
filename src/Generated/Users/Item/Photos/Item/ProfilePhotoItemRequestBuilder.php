@@ -39,7 +39,7 @@ class ProfilePhotoItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get photos from users
+     * The collection of the user's profile photos in different sizes. Read-only.
      * @param ProfilePhotoItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ProfilePhoto|null>
      * @throws Exception
@@ -54,7 +54,7 @@ class ProfilePhotoItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get photos from users
+     * The collection of the user's profile photos in different sizes. Read-only.
      * @param ProfilePhotoItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

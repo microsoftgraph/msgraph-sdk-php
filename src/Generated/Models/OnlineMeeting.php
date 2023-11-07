@@ -226,6 +226,7 @@ class OnlineMeeting extends Entity implements Parsable
             'lobbyBypassSettings' => fn(ParseNode $n) => $o->setLobbyBypassSettings($n->getObjectValue([LobbyBypassSettings::class, 'createFromDiscriminatorValue'])),
             'participants' => fn(ParseNode $n) => $o->setParticipants($n->getObjectValue([MeetingParticipants::class, 'createFromDiscriminatorValue'])),
             'recordAutomatically' => fn(ParseNode $n) => $o->setRecordAutomatically($n->getBooleanValue()),
+            'recordings' => fn(ParseNode $n) => $o->setRecordings($n->getCollectionOfObjectValues([CallRecording::class, 'createFromDiscriminatorValue'])),
             'shareMeetingChatHistoryDefault' => fn(ParseNode $n) => $o->setShareMeetingChatHistoryDefault($n->getEnumValue(MeetingChatHistoryDefaultMode::class)),
             'startDateTime' => fn(ParseNode $n) => $o->setStartDateTime($n->getDateTimeValue()),
             'subject' => fn(ParseNode $n) => $o->setSubject($n->getStringValue()),
@@ -332,6 +333,20 @@ class OnlineMeeting extends Entity implements Parsable
     }
 
     /**
+     * Gets the recordings property value. The recordings property
+     * @return array<CallRecording>|null
+    */
+    public function getRecordings(): ?array {
+        $val = $this->getBackingStore()->get('recordings');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, CallRecording::class);
+            /** @var array<CallRecording>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'recordings'");
+    }
+
+    /**
      * Gets the shareMeetingChatHistoryDefault property value. Specifies whether meeting chat history is shared with participants. Possible values are: all, none, unknownFutureValue.
      * @return MeetingChatHistoryDefaultMode|null
     */
@@ -433,6 +448,7 @@ class OnlineMeeting extends Entity implements Parsable
         $writer->writeObjectValue('lobbyBypassSettings', $this->getLobbyBypassSettings());
         $writer->writeObjectValue('participants', $this->getParticipants());
         $writer->writeBooleanValue('recordAutomatically', $this->getRecordAutomatically());
+        $writer->writeCollectionOfObjectValues('recordings', $this->getRecordings());
         $writer->writeEnumValue('shareMeetingChatHistoryDefault', $this->getShareMeetingChatHistoryDefault());
         $writer->writeDateTimeValue('startDateTime', $this->getStartDateTime());
         $writer->writeStringValue('subject', $this->getSubject());
@@ -615,6 +631,14 @@ class OnlineMeeting extends Entity implements Parsable
     */
     public function setRecordAutomatically(?bool $value): void {
         $this->getBackingStore()->set('recordAutomatically', $value);
+    }
+
+    /**
+     * Sets the recordings property value. The recordings property
+     * @param array<CallRecording>|null $value Value to set for the recordings property.
+    */
+    public function setRecordings(?array $value): void {
+        $this->getBackingStore()->set('recordings', $value);
     }
 
     /**

@@ -7,6 +7,7 @@ use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Communications\OnlineMeetings\Item\AttendanceReports\AttendanceReportsRequestBuilder;
 use Microsoft\Graph\Generated\Communications\OnlineMeetings\Item\AttendeeReport\AttendeeReportRequestBuilder;
 use Microsoft\Graph\Generated\Communications\OnlineMeetings\Item\GetVirtualAppointmentJoinWebUrl\GetVirtualAppointmentJoinWebUrlRequestBuilder;
+use Microsoft\Graph\Generated\Communications\OnlineMeetings\Item\Recordings\RecordingsRequestBuilder;
 use Microsoft\Graph\Generated\Communications\OnlineMeetings\Item\Transcripts\TranscriptsRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\OnlineMeeting;
@@ -39,6 +40,13 @@ class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder
     */
     public function getVirtualAppointmentJoinWebUrl(): GetVirtualAppointmentJoinWebUrlRequestBuilder {
         return new GetVirtualAppointmentJoinWebUrlRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the recordings property of the microsoft.graph.onlineMeeting entity.
+    */
+    public function recordings(): RecordingsRequestBuilder {
+        return new RecordingsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
