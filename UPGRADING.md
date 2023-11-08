@@ -75,7 +75,7 @@ For performance reasons, collections of entities are often split into pages and 
 See [this example](docs/Examples.md#paging-through-a-collection)
 
 ## Support for Batch Requests
-Combine multiple requests in a single call with ease. Up to 20 individual requests can be batched together to reduce network latency of making each request separately. The `BatchRequestBuilder` allows you to make requests to the /$batch endpoint of the Microsoft Graph API.
+Combine multiple requests in a single call with ease. Up to 20 individual requests can be batched together to reduce network latency of making each request separately. The `BatchRequestBuilder` allows you to make requests to the `/$batch` endpoint of the Microsoft Graph API.
 
 See [this example](docs/Examples.md#batching-requests)
 
