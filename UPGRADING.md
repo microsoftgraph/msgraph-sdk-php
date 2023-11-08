@@ -80,7 +80,7 @@ Combine multiple requests in a single call with ease. Up to 20 individual reques
 See [this example](docs/Examples.md#batching-requests)
 
 ## Support for resumable large file uploads
-To upload files larger than 3MB, Microsoft Graph API supports uploads using resumable upload sessions where several bytes are uploaded at a time. The SDK provides a LargeFileUpload task that slices your file into bytes and progressively uploads them until completion.
+To upload files larger than 3MB, Microsoft Graph API supports uploads using resumable upload sessions where several bytes are uploaded at a time. The SDK provides a LargeFileUpload task that slices your file into chunks and progressively uploads them until completion.
 
 See [this example](docs/Examples.md#uploading-large-files)
 
