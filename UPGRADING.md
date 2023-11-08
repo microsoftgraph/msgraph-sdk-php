@@ -3,7 +3,7 @@
 This guide highlights breaking changes, bug fixes and new features introduced during major upgrades.
 
 
-# Upgrading to 2.0.0-RC5
+# Upgrading to 2.0.0
 - [New Features](#new-features)
 - [Breaking Changes](#breaking-changes)
 - [Bug Fixes](#bug-fixes)
@@ -28,7 +28,7 @@ $graph->createRequest('GET', '/me')
         ->setAccessToken(getAccessToken()) //after initial token expires
         ...
 
-// v2.0-RC
+// v2.0
 $tokenRequestContext = new AuthorizationCodeContext(
     'tenantId',
     'clientId',
@@ -37,7 +37,7 @@ $tokenRequestContext = new AuthorizationCodeContext(
     'redirectUri'
 );
 $scopes = ['User.Read', 'Mail.Read'];
-$authProvider = new PhpLeagueAuthenticationProvider($tokenRequestContext, $scopes);
+$authProvider = new GraphPhpLeagueAuthenticationProvider($tokenRequestContext, $scopes);
 
 ```
 
@@ -54,8 +54,8 @@ $response = $graphClient->createRequest('GET', '/users/userId/messages')
                         ->setReturnType(Model\User::class)
                         ->execute();
 
-// v2.0-RC
-$response = $graphServiceClient->usersById('userId')->messages()->get()->wait();
+// v2.0
+$response = $graphServiceClient->users()->byUserId('userId')->messages()->get()->wait();
 ```
 
 Hopefully this makes it more intuitive to work with the SDK and reduces time checking reference docs. Your feedback would be appreciated on your preferred experience or whether we should support both scenarios.
@@ -68,6 +68,21 @@ respects the `Retry-After` header values. It also exponentially backs-off should
 This would be mostly helpful for handling [throttling scenarios](https://docs.microsoft.com/en-us/graph/throttling) on the Microsoft Graph API.
 
 See [this example](docs/Examples.md#customizing-middleware-configuration) on how to customize middleware.
+
+## Improved support for paged collections
+For performance reasons, collections of entities are often split into pages and each page is returned with a URL to the next page. The `PageIterator` class simplifies consuming of paged collections. `PageIterator` handles enumerating the current page and requesting subsequent pages automatically.
+
+See [this example](docs/Examples.md#paging-through-a-collection)
+
+## Support for Batch Requests
+Combine multiple requests in a single call with ease. Up to 20 individual requests can be batched together to reduce network latency of making each request separately. The `BatchRequestBuilder` allows you to make requests to the /$batch endpoint of the Microsoft Graph API.
+
+See [this example](docs/Examples.md#batching-requests)
+
+## Support for resumable large file uploads
+To upload files larger than 3MB, Microsoft Graph API supports uploads using resumable upload sessions where several bytes are uploaded at a time. The SDK provides a LargeFileUpload task that slices your file into bytes and progressively uploads them until completion.
+
+See [this example](docs/Examples.md#uploading-large-files)
 
 # Breaking Changes
 The following breaking changes were introduced in v2.0.0 with more detailed upgrade steps in the following section:
@@ -85,15 +100,7 @@ Version 2 removes our Beta models from the current package to allow us to adhere
 from merging breaking Beta model updates weekly. Users of the Beta models can now use the Beta SDK by requiring it in your `composer.json`:
 ```php
  "require": {
-    "microsoft/microsoft-graph-beta": "^2.0.0-RC6",
-    "microsoft/microsoft-graph-core": "@RC"
-}
-```
-OR
-```php
-"minimum-stability": "RC"
-"require": {
-    "microsoft/microsoft-graph-beta": "^2.0.0-RC6"
+    "microsoft/microsoft-graph-beta": "^2.0.0",
 }
 ```
 Moving forward, the current package (`microsoft/microsoft-graph`) will only contain v1 models that match the [Microsoft Graph v1 API metadata](https://graph.microsoft.com/v1.0/$metadata)
@@ -109,16 +116,14 @@ $graph->setBaseUrl('https://graph.microsoft.com/')
       ->setApiVersion('v1.0')
       ->setAccessToken('xyz');
 
-// 2.0-RC
+// 2.0
 $tokenRequestContext = new ClientCredentialContext(
     'tenantId',
     'clientId',
     'clientSecret'
 );
-$scopes = ['https://graph.microsoft.com/.default'];
-$authProvider = new PhpLeagueAuthenticationProvider($tokenRequestContext, $scopes);
-$requestAdapter = new GraphRequestAdapter($authProvider);
-$graphServiceClient = new GraphServiceClient($requestAdapter);
+// uses https://graph.microsoft.com/.default scopes
+$graphServiceClient = new GraphServiceClient($tokenRequestContext);
 
 ```
 With version 2's configuration, all your requests are authenticated without additional effort.
@@ -158,7 +163,7 @@ The error response payload can be retrieved using `getError()` on the exception 
 
 try {
 
-} catch (ApiException $ex) {
+} catch (ODataError $ex) {
     echo "{$ex->getError()->getCode()} : {$ex->getError()->getMessage()}";
 
 }
