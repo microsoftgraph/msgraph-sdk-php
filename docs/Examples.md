@@ -173,15 +173,19 @@ To get the raw response:
 ```php
 
 // PHP 7
+$nativeResponseHandler = new NativeResponseHandler();
 $config = new MeRequestBuilderGetRequestConfiguration();
-$config->options = [new ResponsehandlerOption(new NativeResponseHandler())];
-$user = $graphServiceClient->me()->get($config)->wait()->wait();
+$config->options = [new ResponseHandlerOption($nativeResponseHandler)];
+$result = $graphServiceClient->me()->get($config)->wait();
+$rawResponse = $result->getResponse();
 
 
 // PHP 8
-$user = $graphServiceClient->me()->get(new MeRequestBuilderGetRequestConfiguration(
-    options: [new ResponseHandlerOption(new NativeResponseHandler())]
-))->wait()->wait();
+$nativeResponseHandler = new NativeResponseHandler();
+$result = $graphServiceClient->me()->get(new MeRequestBuilderGetRequestConfiguration(
+    options: [new ResponseHandlerOption($nativeResponseHandler)]
+))->wait();
+$rawResponse = $result->getResponse();
 ```
 
 ## Send an email
