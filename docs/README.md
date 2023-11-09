@@ -15,7 +15,6 @@ View the [getting started steps](../README.md#get-started-with-microsoft-graph) 
 
 ## Using the SDK
 - [Usage Examples](Examples.md)
-- [Documentation](index.html)
 
 To make calls to the Beta Microsoft Graph API, check out our [Microsoft Graph Beta SDK](https://packagist.org/packages/microsoft/microsoft-graph-beta).
 ## Support

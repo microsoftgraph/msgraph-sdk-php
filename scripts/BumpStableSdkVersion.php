@@ -13,4 +13,3 @@ $bumpedSdkVersion = incrementVersion($packagistVersion);
 echo "Version after increment: {$bumpedSdkVersion}\n";
 updateGraphConstants(GRAPH_CONSTANTS_FILEPATH, $bumpedSdkVersion);
 updateReadme($bumpedSdkVersion);
-updateDocs($packagistVersion, $bumpedSdkVersion);
