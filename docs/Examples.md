@@ -179,15 +179,19 @@ To get the raw response:
 ```php
 
 // PHP 7
+$nativeResponseHandler = new NativeResponseHandler();
 $config = new MeRequestBuilderGetRequestConfiguration();
-$config->options = [new ResponsehandlerOption(new NativeResponseHandler())];
-$user = $graphServiceClient->me()->get($config)->wait()->wait();
+$config->options = [new ResponseHandlerOption($nativeResponseHandler)];
+$result = $graphServiceClient->me()->get($config)->wait();
+$rawResponse = $result->getResponse();
 
 
 // PHP 8
-$user = $graphServiceClient->me()->get(new MeRequestBuilderGetRequestConfiguration(
-    options: [new ResponseHandlerOption(new NativeResponseHandler())]
-))->wait()->wait();
+$nativeResponseHandler = new NativeResponseHandler();
+$result = $graphServiceClient->me()->get(new MeRequestBuilderGetRequestConfiguration(
+    options: [new ResponseHandlerOption($nativeResponseHandler)]
+))->wait();
+$rawResponse = $result->getResponse();
 ```
 
 ## Send an email
@@ -476,12 +480,8 @@ However, you can deserialize a `BatchResponseItem` to a `Parsable` (model) imple
 ```php
 use Microsoft\Graph\Generated\Models\Message;
 
-$message = $batchResponse->getResponseBody($batchRequests[0]->getId(), Message::class);
-echo "Initial subject: {$message->getSubject()}\n";
-
-// patched message
-$updatedMessage = $batchResponse->getResponseBody($batchRequests[1]->getId(), Message::class);
-echo "Updated subject: {$updatedMessage->getSubject()}\n";
+$message = $batchResponse->getResponseBody($batchRequests[1]->getId(), Message::class);
+echo "Created message subject: {$message->getSubject()}\n";
 ```
 
 If you would like fine-grained control over each request in the batch, you can initialise `BatchRequestItem` objects and set dependencies betweeen requests etc.

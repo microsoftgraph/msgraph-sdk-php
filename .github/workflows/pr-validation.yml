@@ -24,7 +24,7 @@ jobs:
       uses: shivammathur/setup-php@v2
       with:
         php-version: ${{ matrix.php-versions }}
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Validate composer file
       run: |
         composer validate
@@ -37,3 +37,17 @@ jobs:
     - name: Run static analysis
       run: |
         vendor/bin/phpstan analyse --memory-limit=8G --error-format=github
+
+  # The check-php-version-matrix returns success if all matrix jobs in build are successful; otherwise, it returns a failure.
+  # Use this as a PR status check for GitHub Policy Service instead of individual matrix entry checks.
+  check-php-version-matrix:
+    runs-on: ubuntu-latest
+    needs: validate-pull-request
+    if: always()
+    steps:
+      - name: All build matrix options are successful
+        if: ${{ !(contains(needs.*.result, 'failure')) }}
+        run: exit 0
+      - name: One or more build matrix options failed
+        if: ${{ contains(needs.*.result, 'failure') }}
+        run: exit 1
