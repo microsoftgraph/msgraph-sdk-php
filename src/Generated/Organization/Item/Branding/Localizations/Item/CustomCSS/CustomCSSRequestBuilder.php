@@ -51,7 +51,7 @@ class CustomCSSRequestBuilder extends BaseRequestBuilder
     /**
      * CSS styling that appears on the sign-in page. The allowed format is .css format only and not larger than 25 KB.
      * @param StreamInterface $body Binary request body
-     * @param string $contentType 
+     * @param string $contentType The request body content type.
      * @param CustomCSSRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
@@ -88,7 +88,7 @@ class CustomCSSRequestBuilder extends BaseRequestBuilder
     /**
      * CSS styling that appears on the sign-in page. The allowed format is .css format only and not larger than 25 KB.
      * @param StreamInterface $body Binary request body
-     * @param string $contentType 
+     * @param string $contentType The request body content type.
      * @param CustomCSSRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

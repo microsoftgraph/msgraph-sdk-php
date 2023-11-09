@@ -119,11 +119,11 @@ class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the windows10MobileCompliancePolicy object.
+     * Read properties and relationships of the androidCompliancePolicy object.
      * @param DeviceCompliancePolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceCompliancePolicy|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-windows10mobilecompliancepolicy-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-androidcompliancepolicy-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DeviceCompliancePolicyItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -170,7 +170,7 @@ class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the windows10MobileCompliancePolicy object.
+     * Read properties and relationships of the androidCompliancePolicy object.
      * @param DeviceCompliancePolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

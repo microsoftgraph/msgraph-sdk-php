@@ -51,7 +51,7 @@ class HeaderLogoRequestBuilder extends BaseRequestBuilder
     /**
      * A company logo that appears in the header of the sign-in page. The allowed types are PNG or JPEG not larger than 36 × 245 pixels. We recommend using a transparent image with no padding around the logo.
      * @param StreamInterface $body Binary request body
-     * @param string $contentType 
+     * @param string $contentType The request body content type.
      * @param HeaderLogoRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
@@ -88,7 +88,7 @@ class HeaderLogoRequestBuilder extends BaseRequestBuilder
     /**
      * A company logo that appears in the header of the sign-in page. The allowed types are PNG or JPEG not larger than 36 × 245 pixels. We recommend using a transparent image with no padding around the logo.
      * @param StreamInterface $body Binary request body
-     * @param string $contentType 
+     * @param string $contentType The request body content type.
      * @param HeaderLogoRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

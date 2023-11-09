@@ -234,6 +234,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.calendarPermission': return new CalendarPermission();
                 case '#microsoft.graph.calendarSharingMessage': return new CalendarSharingMessage();
                 case '#microsoft.graph.call': return new Call();
+                case '#microsoft.graph.callRecording': return new CallRecording();
                 case '#microsoft.graph.callRecords.callRecord': return new CallRecord();
                 case '#microsoft.graph.callRecords.segment': return new Segment();
                 case '#microsoft.graph.callRecords.session': return new Session();

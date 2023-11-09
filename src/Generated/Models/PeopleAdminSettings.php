@@ -37,7 +37,7 @@ class PeopleAdminSettings extends Entity implements Parsable
     }
 
     /**
-     * Gets the profileCardProperties property value. The profileCardProperties property
+     * Gets the profileCardProperties property value. Contains a collection of the properties an administrator has defined as visible on the Microsoft 365 profile card.
      * @return array<ProfileCardProperty>|null
     */
     public function getProfileCardProperties(): ?array {
@@ -60,7 +60,7 @@ class PeopleAdminSettings extends Entity implements Parsable
     }
 
     /**
-     * Sets the profileCardProperties property value. The profileCardProperties property
+     * Sets the profileCardProperties property value. Contains a collection of the properties an administrator has defined as visible on the Microsoft 365 profile card.
      * @param array<ProfileCardProperty>|null $value Value to set for the profileCardProperties property.
     */
     public function setProfileCardProperties(?array $value): void {

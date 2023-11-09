@@ -26,7 +26,7 @@ class AzureCommunicationServicesUserIdentity extends Identity implements Parsabl
     }
 
     /**
-     * Gets the azureCommunicationServicesResourceId property value. The azureCommunicationServicesResourceId property
+     * Gets the azureCommunicationServicesResourceId property value. The Azure Communication Services resource ID associated with the user.
      * @return string|null
     */
     public function getAzureCommunicationServicesResourceId(): ?string {
@@ -58,7 +58,7 @@ class AzureCommunicationServicesUserIdentity extends Identity implements Parsabl
     }
 
     /**
-     * Sets the azureCommunicationServicesResourceId property value. The azureCommunicationServicesResourceId property
+     * Sets the azureCommunicationServicesResourceId property value. The Azure Communication Services resource ID associated with the user.
      * @param string|null $value Value to set for the azureCommunicationServicesResourceId property.
     */
     public function setAzureCommunicationServicesResourceId(?string $value): void {

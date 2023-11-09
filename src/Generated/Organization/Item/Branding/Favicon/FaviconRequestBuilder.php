@@ -51,7 +51,7 @@ class FaviconRequestBuilder extends BaseRequestBuilder
     /**
      * A custom icon (favicon) to replace a default Microsoft product favicon on a Microsoft Entra tenant.
      * @param StreamInterface $body Binary request body
-     * @param string $contentType 
+     * @param string $contentType The request body content type.
      * @param FaviconRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
@@ -88,7 +88,7 @@ class FaviconRequestBuilder extends BaseRequestBuilder
     /**
      * A custom icon (favicon) to replace a default Microsoft product favicon on a Microsoft Entra tenant.
      * @param StreamInterface $body Binary request body
-     * @param string $contentType 
+     * @param string $contentType The request body content type.
      * @param FaviconRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
