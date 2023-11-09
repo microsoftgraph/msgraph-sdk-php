@@ -1,4 +1,4 @@
-# Copyright (c) Microsoft Corporation. 
+# Copyright (c) Microsoft Corporation.
 # Licensed under the MIT License.
 
 # File initially created using https://github.com/MIchaelMainer/policyservicetoolkit/blob/main/branch_protection_export.ps1.
@@ -35,7 +35,7 @@ configuration:
     requiresLinearHistory: false
     # Required status checks to pass before merging. Values can be any string, but if the value does not correspond to any existing status check, the status check will be stuck on pending for status since nothing exists to push an actual status
     requiredStatusChecks:
-    #- validate-pull-request #TODO: add this back once we are using Kiota
+    - check-php-version-matrix
     # Require branches to be up to date before merging. Requires requiredStatusChecks. boolean
     requiresStrictStatusChecks: true
     # Indicates whether there are restrictions on who can push. boolean. Should be set with whoCanPush.
@@ -69,7 +69,7 @@ configuration:
     requiresLinearHistory: false
     # Required status checks to pass before merging. Values can be any string, but if the value does not correspond to any existing status check, the status check will be stuck on pending for status since nothing exists to push an actual status
     requiredStatusChecks:
-    #- validate-pull-request #TODO: add this back once we are using Kiota
+    - check-php-version-matrix
     # Require branches to be up to date before merging. Requires requiredStatusChecks. boolean
     requiresStrictStatusChecks: true
     # Indicates whether there are restrictions on who can push. boolean. Should be set with whoCanPush.
