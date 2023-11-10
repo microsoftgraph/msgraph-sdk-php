@@ -13,7 +13,7 @@ jobs:
     outputs:
       SDK_VERSION: ${{ steps.tag-step.outputs.SDK_VERSION }}
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
     - name: Get SDK version and set environment variable
       run: |
