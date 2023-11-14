@@ -127,11 +127,11 @@ class MessageItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a message in the specified user's mailbox, or delete a relationship of the message. This API is available in the following national cloud deployments.
+     * Delete eventMessage. This API is available in the following national cloud deployments.
      * @param MessageItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/message-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/eventmessage-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?MessageItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -147,7 +147,7 @@ class MessageItemRequestBuilder extends BaseRequestBuilder
      * @param MessageItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Message|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/singlevaluelegacyextendedproperty-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/opentypeextension-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?MessageItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -176,7 +176,7 @@ class MessageItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a message in the specified user's mailbox, or delete a relationship of the message. This API is available in the following national cloud deployments.
+     * Delete eventMessage. This API is available in the following national cloud deployments.
      * @param MessageItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -189,7 +189,7 @@ class MessageItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
@@ -210,7 +210,7 @@ class MessageItemRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
@@ -229,7 +229,7 @@ class MessageItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

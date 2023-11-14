@@ -37,7 +37,7 @@ class CommunicationsUserIdentity extends Identity implements Parsable
     }
 
     /**
-     * Gets the tenantId property value. The tenantId property
+     * Gets the tenantId property value. The user's tenant ID.
      * @return string|null
     */
     public function getTenantId(): ?string {
@@ -58,7 +58,7 @@ class CommunicationsUserIdentity extends Identity implements Parsable
     }
 
     /**
-     * Sets the tenantId property value. The tenantId property
+     * Sets the tenantId property value. The user's tenant ID.
      * @param string|null $value Value to set for the tenantId property.
     */
     public function setTenantId(?string $value): void {

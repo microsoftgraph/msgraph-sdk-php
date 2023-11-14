@@ -234,6 +234,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.calendarPermission': return new CalendarPermission();
                 case '#microsoft.graph.calendarSharingMessage': return new CalendarSharingMessage();
                 case '#microsoft.graph.call': return new Call();
+                case '#microsoft.graph.callRecording': return new CallRecording();
                 case '#microsoft.graph.callRecords.callRecord': return new CallRecord();
                 case '#microsoft.graph.callRecords.segment': return new Segment();
                 case '#microsoft.graph.callRecords.session': return new Session();
@@ -450,6 +451,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.itemActivityStat': return new ItemActivityStat();
                 case '#microsoft.graph.itemAnalytics': return new ItemAnalytics();
                 case '#microsoft.graph.itemAttachment': return new ItemAttachment();
+                case '#microsoft.graph.itemRetentionLabel': return new ItemRetentionLabel();
                 case '#microsoft.graph.landingPage': return new LandingPage();
                 case '#microsoft.graph.landingPageDetail': return new LandingPageDetail();
                 case '#microsoft.graph.learningAssignment': return new LearningAssignment();
@@ -539,6 +541,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.onenoteResource': return new OnenoteResource();
                 case '#microsoft.graph.onenoteSection': return new OnenoteSection();
                 case '#microsoft.graph.onlineMeeting': return new OnlineMeeting();
+                case '#microsoft.graph.onlineMeetingBase': return new OnlineMeetingBase();
                 case '#microsoft.graph.onPremisesConditionalAccessSettings': return new OnPremisesConditionalAccessSettings();
                 case '#microsoft.graph.onPremisesDirectorySynchronization': return new OnPremisesDirectorySynchronization();
                 case '#microsoft.graph.openShift': return new OpenShift();
@@ -850,6 +853,11 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.userSettings': return new UserSettings();
                 case '#microsoft.graph.userSignInInsight': return new UserSignInInsight();
                 case '#microsoft.graph.userTeamwork': return new UserTeamwork();
+                case '#microsoft.graph.virtualEvent': return new VirtualEvent();
+                case '#microsoft.graph.virtualEventRegistration': return new VirtualEventRegistration();
+                case '#microsoft.graph.virtualEventSession': return new VirtualEventSession();
+                case '#microsoft.graph.virtualEventsRoot': return new VirtualEventsRoot();
+                case '#microsoft.graph.virtualEventWebinar': return new VirtualEventWebinar();
                 case '#microsoft.graph.voiceAuthenticationMethodConfiguration': return new VoiceAuthenticationMethodConfiguration();
                 case '#microsoft.graph.vppToken': return new VppToken();
                 case '#microsoft.graph.webApp': return new WebApp();

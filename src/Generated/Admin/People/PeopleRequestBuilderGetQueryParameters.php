@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Admin\People;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get people from admin
+ * Retrieve the properties and relationships of a peopleAdminSettings object.
 */
 class PeopleRequestBuilderGetQueryParameters 
 {
