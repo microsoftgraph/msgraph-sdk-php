@@ -21,7 +21,7 @@ class DeltaRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/users/{user%2Did}/mailFolders/{mailFolder%2Did}/messages/delta(){?%24top,%24skip,%24search,%24filter,%24count,%24select,%24orderby}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/users/{user%2Did}/mailFolders/{mailFolder%2Did}/messages/delta(){?changeType*,%24top,%24skip,%24search,%24filter,%24count,%24select,%24orderby}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -62,7 +62,7 @@ class DeltaRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 

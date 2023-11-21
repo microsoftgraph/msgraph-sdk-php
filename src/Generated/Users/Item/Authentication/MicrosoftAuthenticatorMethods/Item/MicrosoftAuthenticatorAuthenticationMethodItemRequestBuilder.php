@@ -84,7 +84,7 @@ class MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder extends BaseR
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
@@ -105,7 +105,7 @@ class MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder extends BaseR
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 

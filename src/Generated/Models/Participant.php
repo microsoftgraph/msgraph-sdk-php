@@ -38,7 +38,9 @@ class Participant extends Entity implements Parsable
             'mediaStreams' => fn(ParseNode $n) => $o->setMediaStreams($n->getCollectionOfObjectValues([MediaStream::class, 'createFromDiscriminatorValue'])),
             'metadata' => fn(ParseNode $n) => $o->setMetadata($n->getStringValue()),
             'recordingInfo' => fn(ParseNode $n) => $o->setRecordingInfo($n->getObjectValue([RecordingInfo::class, 'createFromDiscriminatorValue'])),
+            'removedState' => fn(ParseNode $n) => $o->setRemovedState($n->getObjectValue([RemovedState::class, 'createFromDiscriminatorValue'])),
             'restrictedExperience' => fn(ParseNode $n) => $o->setRestrictedExperience($n->getObjectValue([OnlineMeetingRestricted::class, 'createFromDiscriminatorValue'])),
+            'rosterSequenceNumber' => fn(ParseNode $n) => $o->setRosterSequenceNumber($n->getIntegerValue()),
         ]);
     }
 
@@ -117,6 +119,18 @@ class Participant extends Entity implements Parsable
     }
 
     /**
+     * Gets the removedState property value. The removedState property
+     * @return RemovedState|null
+    */
+    public function getRemovedState(): ?RemovedState {
+        $val = $this->getBackingStore()->get('removedState');
+        if (is_null($val) || $val instanceof RemovedState) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'removedState'");
+    }
+
+    /**
      * Gets the restrictedExperience property value. Indicates the reason or reasons media content from this participant is restricted.
      * @return OnlineMeetingRestricted|null
     */
@@ -126,6 +140,18 @@ class Participant extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'restrictedExperience'");
+    }
+
+    /**
+     * Gets the rosterSequenceNumber property value. The rosterSequenceNumber property
+     * @return int|null
+    */
+    public function getRosterSequenceNumber(): ?int {
+        $val = $this->getBackingStore()->get('rosterSequenceNumber');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'rosterSequenceNumber'");
     }
 
     /**
@@ -140,7 +166,9 @@ class Participant extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('mediaStreams', $this->getMediaStreams());
         $writer->writeStringValue('metadata', $this->getMetadata());
         $writer->writeObjectValue('recordingInfo', $this->getRecordingInfo());
+        $writer->writeObjectValue('removedState', $this->getRemovedState());
         $writer->writeObjectValue('restrictedExperience', $this->getRestrictedExperience());
+        $writer->writeIntegerValue('rosterSequenceNumber', $this->getRosterSequenceNumber());
     }
 
     /**
@@ -192,11 +220,27 @@ class Participant extends Entity implements Parsable
     }
 
     /**
+     * Sets the removedState property value. The removedState property
+     * @param RemovedState|null $value Value to set for the removedState property.
+    */
+    public function setRemovedState(?RemovedState $value): void {
+        $this->getBackingStore()->set('removedState', $value);
+    }
+
+    /**
      * Sets the restrictedExperience property value. Indicates the reason or reasons media content from this participant is restricted.
      * @param OnlineMeetingRestricted|null $value Value to set for the restrictedExperience property.
     */
     public function setRestrictedExperience(?OnlineMeetingRestricted $value): void {
         $this->getBackingStore()->set('restrictedExperience', $value);
+    }
+
+    /**
+     * Sets the rosterSequenceNumber property value. The rosterSequenceNumber property
+     * @param int|null $value Value to set for the rosterSequenceNumber property.
+    */
+    public function setRosterSequenceNumber(?int $value): void {
+        $this->getBackingStore()->set('rosterSequenceNumber', $value);
     }
 
 }

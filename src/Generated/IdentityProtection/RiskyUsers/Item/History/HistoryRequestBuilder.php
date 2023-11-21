@@ -52,11 +52,11 @@ class HistoryRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the riskyUserHistoryItems from the history navigation property. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a riskyUserHistoryItem object. This API is available in the following national cloud deployments.
      * @param HistoryRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<RiskyUserHistoryItemCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/riskyuser-list-history?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/riskyuser-get-riskyuserhistoryitem?view=graph-rest-1.0 Find more info here
     */
     public function get(?HistoryRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -84,7 +84,7 @@ class HistoryRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the riskyUserHistoryItems from the history navigation property. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a riskyUserHistoryItem object. This API is available in the following national cloud deployments.
      * @param HistoryRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -100,7 +100,7 @@ class HistoryRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
@@ -119,7 +119,7 @@ class HistoryRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

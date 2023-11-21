@@ -32,7 +32,7 @@ class ContentRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get content for the navigation property recordings from communications
+     * The content of the recording. Read-only.
      * @param ContentRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
@@ -49,7 +49,7 @@ class ContentRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update content for the navigation property recordings in communications
+     * The content of the recording. Read-only.
      * @param StreamInterface $body Binary request body
      * @param ContentRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CallRecording|null>
@@ -65,7 +65,7 @@ class ContentRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get content for the navigation property recordings from communications
+     * The content of the recording. Read-only.
      * @param ContentRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -78,12 +78,12 @@ class ContentRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/octet-stream, application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/octet-stream, application/json");
         return $requestInfo;
     }
 
     /**
-     * Update content for the navigation property recordings in communications
+     * The content of the recording. Read-only.
      * @param StreamInterface $body Binary request body
      * @param ContentRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -97,7 +97,7 @@ class ContentRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setStreamContent($body, "application/octet-stream");
         return $requestInfo;
     }

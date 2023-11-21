@@ -65,7 +65,7 @@ class ColumnsRequestBuilder extends BaseRequestBuilder
      * @param ColumnsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookTableColumnCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/tablecolumn-list?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/table-list-columns?view=graph-rest-1.0 Find more info here
     */
     public function get(?ColumnsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -119,7 +119,7 @@ class ColumnsRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
@@ -138,7 +138,7 @@ class ColumnsRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

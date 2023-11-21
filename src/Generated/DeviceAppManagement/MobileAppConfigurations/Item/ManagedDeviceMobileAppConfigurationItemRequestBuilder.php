@@ -95,11 +95,11 @@ class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Read properties and relationships of the iosMobileAppConfiguration object.
+     * Read properties and relationships of the managedDeviceMobileAppConfiguration object.
      * @param ManagedDeviceMobileAppConfigurationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ManagedDeviceMobileAppConfiguration|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-apps-iosmobileappconfiguration-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfiguration-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ManagedDeviceMobileAppConfigurationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -141,12 +141,12 @@ class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseRequestB
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Read properties and relationships of the iosMobileAppConfiguration object.
+     * Read properties and relationships of the managedDeviceMobileAppConfiguration object.
      * @param ManagedDeviceMobileAppConfigurationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -162,7 +162,7 @@ class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseRequestB
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
@@ -181,7 +181,7 @@ class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseRequestB
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

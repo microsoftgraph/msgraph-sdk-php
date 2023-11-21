@@ -76,12 +76,12 @@ class RepliesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new reply to a chatMessage in a specified channel. This API is available in the following national cloud deployments.
+     * Send a new reply to a chatMessage in a specified channel. This API is available in the following national cloud deployments.
      * @param ChatMessage $body The request body
      * @param RepliesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ChatMessage|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/channel-post-messagereply?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/chatmessage-post-replies?view=graph-rest-1.0 Find more info here
     */
     public function post(ChatMessage $body, ?RepliesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -109,12 +109,12 @@ class RepliesRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Create a new reply to a chatMessage in a specified channel. This API is available in the following national cloud deployments.
+     * Send a new reply to a chatMessage in a specified channel. This API is available in the following national cloud deployments.
      * @param ChatMessage $body The request body
      * @param RepliesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -128,7 +128,7 @@ class RepliesRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

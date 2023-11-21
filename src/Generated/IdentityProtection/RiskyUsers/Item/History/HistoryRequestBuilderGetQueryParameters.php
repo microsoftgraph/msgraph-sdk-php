@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityProtection\RiskyUsers\Item\History;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the riskyUserHistoryItems from the history navigation property. This API is available in the following national cloud deployments.
+ * Read the properties and relationships of a riskyUserHistoryItem object. This API is available in the following national cloud deployments.
 */
 class HistoryRequestBuilderGetQueryParameters 
 {
