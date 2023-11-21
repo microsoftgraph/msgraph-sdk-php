@@ -11,10 +11,16 @@ This guide highlights breaking changes, bug fixes and new features introduced du
 
 # New Features
 
-## Authentication Provider support
-Version 2 introduces an Authentication Provider that handles the fetching, caching and refreshing of tokens ensuring all your requests are always authenticated.
+## Authentication and Access Token Management
+Version 2 handles the fetching, caching and refreshing of tokens ensuring all your requests are always authenticated.
 
-The Authentication Provider provided wraps around PHP League's [OAuth 2.0 client](https://oauth2-client.thephpleague.com/) hence its name - `PhpLeagueAuthenticationProvider`. The `PhpLeagueAuthenticationProvider` currently supports the `client_credentials`, `authorization_code` and `on_behalf_of` OAuth 2.0 flows. It also supports using certificate-based client authentication alongside secret-based client authentication.
+A `TokenRequestContext` object is provided for the various OAuth 2.0 flows: `client_credentials`(for application permissions), `authorization_code`(for delegated permissions) and `on_behalf_of` with the device code flow soon to be added.
+
+When initialising the Graph client, a `TokenRequestContext` object for your desired OAuth flow needs to be initialised and passed to the `GraphServiceClient` constructor alongside an optional list of scopes.
+
+The scopes default to `https://graph.microsoft.com/.default`.
+
+The token is cached and refreshed when needed.
 
 ```php
 
@@ -37,11 +43,10 @@ $tokenRequestContext = new AuthorizationCodeContext(
     'redirectUri'
 );
 $scopes = ['User.Read', 'Mail.Read'];
-$authProvider = new GraphPhpLeagueAuthenticationProvider($tokenRequestContext, $scopes);
+
+$graphServiceClient = new GraphServiceClient($tokenRequestContext, $scopes);
 
 ```
-
-See more [code samples](README.md#create-an-authentication-provider-object) on how to initialise the Authentication Provider.
 
 ## Fluent Request Builder Pattern
 Version 2 provides a fluent experience when making requests to the Graph. This is a break
