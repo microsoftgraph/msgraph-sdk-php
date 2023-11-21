@@ -1,8 +1,8 @@
 {
-  "descriptionHash": "72F313C963CA6547BA876157FF9206BFEC0F94A27510D2E038054F24E31BD5F7011E1D40B873910D20D6FF6D91B22842F550B34B7A297E972BC0EEB40943CC35",
+  "descriptionHash": "AF87CAE79D7CEB70FE7C38A6DEEA63EC4C104D71E93EE8BE09257A6516CA3BECEB145C4AF9688626D8B4380FDB59997E3A999DD4FED236FF20CA2111F7E6C333",
   "descriptionLocation": "../../msgraph-metadata/clean_v10_openapi/openapi.yaml",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.8.0",
+  "kiotaVersion": "1.9.0",
   "clientClassName": "BaseGraphClient",
   "clientNamespaceName": "Microsoft\\Graph\\Generated",
   "language": "PHP",
@@ -21,7 +21,7 @@
     "Microsoft.Kiota.Serialization.Form.FormParseNodeFactory"
   ],
   "structuredMimeTypes": [
-    "application/json;q=1",
+    "application/json",
     "text/plain;q=0.9",
     "application/x-www-form-urlencoded;q=0.2",
     "multipart/form-data;q=0.1"

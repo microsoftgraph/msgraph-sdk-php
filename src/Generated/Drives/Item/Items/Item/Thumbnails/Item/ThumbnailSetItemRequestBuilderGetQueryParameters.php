@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Thumbnails\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Collection containing [ThumbnailSet][] objects associated with the item. For more info, see [getting thumbnails][]. Read-only. Nullable.
+ * Collection of [thumbnailSet][] objects associated with the item. For more information, see [getting thumbnails][]. Read-only. Nullable.
 */
 class ThumbnailSetItemRequestBuilderGetQueryParameters 
 {

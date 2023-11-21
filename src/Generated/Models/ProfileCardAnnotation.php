@@ -57,7 +57,7 @@ class ProfileCardAnnotation implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. If present, the value of this field is used by the profile card as the default property label in the experience (for example, 'Cost Center').
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -82,7 +82,7 @@ class ProfileCardAnnotation implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the localizations property value. The localizations property
+     * Gets the localizations property value. Each resource in this collection represents the localized value of the attribute name for a given language, used as the default label for that locale. For example, a user with a nb-NO client gets 'Kostnadssenter' as the attribute label, rather than 'Cost Center.'
      * @return array<DisplayNameLocalization>|null
     */
     public function getLocalizations(): ?array {
@@ -135,7 +135,7 @@ class ProfileCardAnnotation implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. If present, the value of this field is used by the profile card as the default property label in the experience (for example, 'Cost Center').
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -143,7 +143,7 @@ class ProfileCardAnnotation implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the localizations property value. The localizations property
+     * Sets the localizations property value. Each resource in this collection represents the localized value of the attribute name for a given language, used as the default label for that locale. For example, a user with a nb-NO client gets 'Kostnadssenter' as the attribute label, rather than 'Cost Center.'
      * @param array<DisplayNameLocalization>|null $value Value to set for the localizations property.
     */
     public function setLocalizations(?array $value): void {

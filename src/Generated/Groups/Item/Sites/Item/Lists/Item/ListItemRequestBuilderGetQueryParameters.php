@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Returns the metadata for a list][]. This API is available in the following [national cloud deployments.
+ * Get a list of rich long-running operations associated with a list. This API is available in the following national cloud deployments.
 */
 class ListItemRequestBuilderGetQueryParameters 
 {

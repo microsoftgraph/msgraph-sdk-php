@@ -10,6 +10,11 @@ use Microsoft\Kiota\Abstractions\QueryParameter;
 class DeltaRequestBuilderGetQueryParameters 
 {
     /**
+     * @var string|null $changeType A custom query option to filter the delta response based on the type of change. Supported values are created, updated or deleted.
+    */
+    public ?string $changeType = null;
+    
+    /**
      * @QueryParameter("%24count")
      * @var bool|null $count Include count of items
     */
@@ -53,6 +58,7 @@ class DeltaRequestBuilderGetQueryParameters
     
     /**
      * Instantiates a new deltaRequestBuilderGetQueryParameters and sets the default values.
+     * @param string|null $changeType A custom query option to filter the delta response based on the type of change. Supported values are created, updated or deleted.
      * @param bool|null $count Include count of items
      * @param string|null $filter Filter items by property values
      * @param array<string>|null $orderby Order items by property values
@@ -61,7 +67,8 @@ class DeltaRequestBuilderGetQueryParameters
      * @param int|null $skip Skip the first n items
      * @param int|null $top Show only the first n items
     */
-    public function __construct(?bool $count = null, ?string $filter = null, ?array $orderby = null, ?string $search = null, ?array $select = null, ?int $skip = null, ?int $top = null) {
+    public function __construct(?string $changeType = null, ?bool $count = null, ?string $filter = null, ?array $orderby = null, ?string $search = null, ?array $select = null, ?int $skip = null, ?int $top = null) {
+        $this->changeType = $changeType;
         $this->count = $count;
         $this->filter = $filter;
         $this->orderby = $orderby;
