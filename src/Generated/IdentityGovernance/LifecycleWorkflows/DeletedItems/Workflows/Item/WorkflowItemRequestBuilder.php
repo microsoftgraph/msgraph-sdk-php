@@ -119,7 +119,7 @@ class WorkflowItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a workflow object. This API is available in the following national cloud deployments.
+     * Delete a workflow object.
      * @param WorkflowItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -135,7 +135,7 @@ class WorkflowItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a deleted workflow object. This API is available in the following national cloud deployments.
+     * Retrieve a deleted workflow object.
      * @param WorkflowItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Workflow|null>
      * @throws Exception
@@ -151,7 +151,7 @@ class WorkflowItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a workflow object. This API is available in the following national cloud deployments.
+     * Delete a workflow object.
      * @param WorkflowItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -164,12 +164,12 @@ class WorkflowItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Retrieve a deleted workflow object. This API is available in the following national cloud deployments.
+     * Retrieve a deleted workflow object.
      * @param WorkflowItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -185,7 +185,7 @@ class WorkflowItemRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 

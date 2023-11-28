@@ -53,7 +53,7 @@ class PointsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of chartpoints objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of chartpoints objects.
      * @param PointsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookChartPointCollectionResponse|null>
      * @throws Exception
@@ -78,7 +78,7 @@ class PointsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Use this API to create a new ChartPoints. This API is available in the following national cloud deployments.
+     * Use this API to create a new ChartPoints.
      * @param WorkbookChartPoint $body The request body
      * @param PointsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookChartPoint|null>
@@ -95,7 +95,7 @@ class PointsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of chartpoints objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of chartpoints objects.
      * @param PointsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -111,12 +111,12 @@ class PointsRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Use this API to create a new ChartPoints. This API is available in the following national cloud deployments.
+     * Use this API to create a new ChartPoints.
      * @param WorkbookChartPoint $body The request body
      * @param PointsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -130,7 +130,7 @@ class PointsRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

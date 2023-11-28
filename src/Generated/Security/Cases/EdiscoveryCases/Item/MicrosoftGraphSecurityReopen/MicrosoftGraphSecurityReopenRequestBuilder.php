@@ -30,7 +30,7 @@ class MicrosoftGraphSecurityReopenRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Reopen an eDiscovery case that was closed. For details, see Reopen a closed case. This API is available in the following national cloud deployments.
+     * Reopen an eDiscovery case that was closed. For details, see Reopen a closed case.
      * @param MicrosoftGraphSecurityReopenRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -46,7 +46,7 @@ class MicrosoftGraphSecurityReopenRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Reopen an eDiscovery case that was closed. For details, see Reopen a closed case. This API is available in the following national cloud deployments.
+     * Reopen an eDiscovery case that was closed. For details, see Reopen a closed case.
      * @param MicrosoftGraphSecurityReopenRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -59,7 +59,7 @@ class MicrosoftGraphSecurityReopenRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 

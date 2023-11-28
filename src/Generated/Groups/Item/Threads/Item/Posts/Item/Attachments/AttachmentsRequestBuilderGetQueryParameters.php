@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\Attachme
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve a list of attachment objects attached to a post. This API is available in the following national cloud deployments.
+ * Retrieve a list of attachment objects attached to a post.
 */
 class AttachmentsRequestBuilderGetQueryParameters 
 {

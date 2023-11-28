@@ -54,7 +54,7 @@ class LineRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of chartlineformat object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of chartlineformat object.
      * @param LineRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookChartLineFormat|null>
      * @throws Exception
@@ -70,7 +70,7 @@ class LineRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of chartlineformat object. This API is available in the following national cloud deployments.
+     * Update the properties of chartlineformat object.
      * @param WorkbookChartLineFormat $body The request body
      * @param LineRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookChartLineFormat|null>
@@ -100,12 +100,12 @@ class LineRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Retrieve the properties and relationships of chartlineformat object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of chartlineformat object.
      * @param LineRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -121,12 +121,12 @@ class LineRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Update the properties of chartlineformat object. This API is available in the following national cloud deployments.
+     * Update the properties of chartlineformat object.
      * @param WorkbookChartLineFormat $body The request body
      * @param LineRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -140,7 +140,7 @@ class LineRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

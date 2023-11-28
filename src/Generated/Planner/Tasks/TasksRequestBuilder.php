@@ -52,7 +52,7 @@ class TasksRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of plannertask objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of plannertask objects.
      * @param TasksRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PlannerTaskCollectionResponse|null>
      * @throws Exception
@@ -68,7 +68,7 @@ class TasksRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new plannerTask. This API is available in the following national cloud deployments.
+     * Create a new plannerTask.
      * @param PlannerTask $body The request body
      * @param TasksRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PlannerTask|null>
@@ -85,7 +85,7 @@ class TasksRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of plannertask objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of plannertask objects.
      * @param TasksRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -101,12 +101,12 @@ class TasksRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Create a new plannerTask. This API is available in the following national cloud deployments.
+     * Create a new plannerTask.
      * @param PlannerTask $body The request body
      * @param TasksRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -120,7 +120,7 @@ class TasksRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

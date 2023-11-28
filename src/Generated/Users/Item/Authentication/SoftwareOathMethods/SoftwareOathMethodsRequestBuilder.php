@@ -51,7 +51,7 @@ class SoftwareOathMethodsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of a user's software OATH token authentication method objects and their properties. This API is available in the following national cloud deployments.
+     * Retrieve a list of a user's software OATH token authentication method objects and their properties.
      * @param SoftwareOathMethodsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SoftwareOathAuthenticationMethodCollectionResponse|null>
      * @throws Exception
@@ -67,7 +67,7 @@ class SoftwareOathMethodsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of a user's software OATH token authentication method objects and their properties. This API is available in the following national cloud deployments.
+     * Retrieve a list of a user's software OATH token authentication method objects and their properties.
      * @param SoftwareOathMethodsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -83,7 +83,7 @@ class SoftwareOathMethodsRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 

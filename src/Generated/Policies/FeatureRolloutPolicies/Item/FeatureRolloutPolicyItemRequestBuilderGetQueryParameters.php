@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Policies\FeatureRolloutPolicies\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties and relationships of a featureRolloutPolicy object. This API is available in the following national cloud deployments.
+ * Retrieve the properties and relationships of a featureRolloutPolicy object.
 */
 class FeatureRolloutPolicyItemRequestBuilderGetQueryParameters 
 {

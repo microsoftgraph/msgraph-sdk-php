@@ -79,7 +79,7 @@ class EducationUserItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a user. This API is available in the following national cloud deployments.
+     * Delete a user.
      * @param EducationUserItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -95,7 +95,7 @@ class EducationUserItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of an educationUser object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an educationUser object.
      * @param EducationUserItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EducationUser|null>
      * @throws Exception
@@ -111,7 +111,7 @@ class EducationUserItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an educationUser object. This API is available in the following national cloud deployments.
+     * Update the properties of an educationUser object.
      * @param EducationUser $body The request body
      * @param EducationUserItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EducationUser|null>
@@ -128,7 +128,7 @@ class EducationUserItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a user. This API is available in the following national cloud deployments.
+     * Delete a user.
      * @param EducationUserItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -141,12 +141,12 @@ class EducationUserItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Read the properties and relationships of an educationUser object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an educationUser object.
      * @param EducationUserItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -162,12 +162,12 @@ class EducationUserItemRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Update the properties of an educationUser object. This API is available in the following national cloud deployments.
+     * Update the properties of an educationUser object.
      * @param EducationUser $body The request body
      * @param EducationUserItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -181,7 +181,7 @@ class EducationUserItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

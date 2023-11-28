@@ -78,7 +78,7 @@ class UnifiedRoleEligibilityScheduleItemRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Retrieve the schedule for a role eligibility operation. This API is available in the following national cloud deployments.
+     * Retrieve the schedule for a role eligibility operation.
      * @param UnifiedRoleEligibilityScheduleItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UnifiedRoleEligibilitySchedule|null>
      * @throws Exception
@@ -123,12 +123,12 @@ class UnifiedRoleEligibilityScheduleItemRequestBuilder extends BaseRequestBuilde
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Retrieve the schedule for a role eligibility operation. This API is available in the following national cloud deployments.
+     * Retrieve the schedule for a role eligibility operation.
      * @param UnifiedRoleEligibilityScheduleItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -144,7 +144,7 @@ class UnifiedRoleEligibilityScheduleItemRequestBuilder extends BaseRequestBuilde
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
@@ -163,7 +163,7 @@ class UnifiedRoleEligibilityScheduleItemRequestBuilder extends BaseRequestBuilde
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

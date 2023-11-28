@@ -30,7 +30,7 @@ class ConfirmCompromisedRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Confirm one or more riskyUser objects as compromised. This action sets the targeted user's risk level to high. This API is available in the following national cloud deployments.
+     * Confirm one or more riskyUser objects as compromised. This action sets the targeted user's risk level to high.
      * @param ConfirmCompromisedPostRequestBody $body The request body
      * @param ConfirmCompromisedRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
@@ -47,7 +47,7 @@ class ConfirmCompromisedRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Confirm one or more riskyUser objects as compromised. This action sets the targeted user's risk level to high. This API is available in the following national cloud deployments.
+     * Confirm one or more riskyUser objects as compromised. This action sets the targeted user's risk level to high.
      * @param ConfirmCompromisedPostRequestBody $body The request body
      * @param ConfirmCompromisedRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -61,7 +61,7 @@ class ConfirmCompromisedRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

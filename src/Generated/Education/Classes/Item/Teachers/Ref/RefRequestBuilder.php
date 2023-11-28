@@ -32,7 +32,7 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of teachers for a class. Delegated tokens must be members of the class to get the teacher list. This API is available in the following national cloud deployments.
+     * Retrieve a list of teachers for a class. Delegated tokens must be members of the class to get the teacher list.
      * @param RefRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StringCollectionResponse|null>
      * @throws Exception
@@ -48,7 +48,7 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Add a teacher to a class. This API is available in the following national cloud deployments.
+     * Add a teacher to a class.
      * @param ReferenceCreate $body The request body
      * @param RefRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
@@ -65,7 +65,7 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of teachers for a class. Delegated tokens must be members of the class to get the teacher list. This API is available in the following national cloud deployments.
+     * Retrieve a list of teachers for a class. Delegated tokens must be members of the class to get the teacher list.
      * @param RefRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -81,12 +81,12 @@ class RefRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Add a teacher to a class. This API is available in the following national cloud deployments.
+     * Add a teacher to a class.
      * @param ReferenceCreate $body The request body
      * @param RefRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -100,7 +100,7 @@ class RefRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

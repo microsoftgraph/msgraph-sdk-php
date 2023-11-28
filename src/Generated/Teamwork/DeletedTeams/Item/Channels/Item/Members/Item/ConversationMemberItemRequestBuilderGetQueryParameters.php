@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Teamwork\DeletedTeams\Item\Channels\Item\Mem
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a conversationMember from a channel. This API is available in the following national cloud deployments.
+ * Get a conversationMember from a channel.
 */
 class ConversationMemberItemRequestBuilderGetQueryParameters 
 {

@@ -51,7 +51,7 @@ class ApplicationTemplatesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of applicationTemplate objects from the Microsoft Entra application gallery. This API is available in the following national cloud deployments.
+     * Retrieve a list of applicationTemplate objects from the Microsoft Entra application gallery.
      * @param ApplicationTemplatesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ApplicationTemplateCollectionResponse|null>
      * @throws Exception
@@ -67,7 +67,7 @@ class ApplicationTemplatesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of applicationTemplate objects from the Microsoft Entra application gallery. This API is available in the following national cloud deployments.
+     * Retrieve a list of applicationTemplate objects from the Microsoft Entra application gallery.
      * @param ApplicationTemplatesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -83,7 +83,7 @@ class ApplicationTemplatesRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 

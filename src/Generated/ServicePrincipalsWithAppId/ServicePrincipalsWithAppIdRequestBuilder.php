@@ -34,7 +34,7 @@ class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a servicePrincipal object. This API is available in the following national cloud deployments.
+     * Delete a servicePrincipal object.
      * @param ServicePrincipalsWithAppIdRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -50,7 +50,7 @@ class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a servicePrincipal object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a servicePrincipal object.
      * @param ServicePrincipalsWithAppIdRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ServicePrincipal|null>
      * @throws Exception
@@ -82,7 +82,7 @@ class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a servicePrincipal object. This API is available in the following national cloud deployments.
+     * Delete a servicePrincipal object.
      * @param ServicePrincipalsWithAppIdRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -95,12 +95,12 @@ class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Retrieve the properties and relationships of a servicePrincipal object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a servicePrincipal object.
      * @param ServicePrincipalsWithAppIdRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -116,7 +116,7 @@ class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
@@ -135,7 +135,7 @@ class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

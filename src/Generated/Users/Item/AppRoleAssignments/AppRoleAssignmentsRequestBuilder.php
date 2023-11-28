@@ -68,7 +68,7 @@ class AppRoleAssignmentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Use this API to assign an app role to a user. To grant an app role assignment to a user, you need three identifiers: This API is available in the following national cloud deployments.
+     * Use this API to assign an app role to a user. To grant an app role assignment to a user, you need three identifiers:
      * @param AppRoleAssignment $body The request body
      * @param AppRoleAssignmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AppRoleAssignment|null>
@@ -101,12 +101,12 @@ class AppRoleAssignmentsRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Use this API to assign an app role to a user. To grant an app role assignment to a user, you need three identifiers: This API is available in the following national cloud deployments.
+     * Use this API to assign an app role to a user. To grant an app role assignment to a user, you need three identifiers:
      * @param AppRoleAssignment $body The request body
      * @param AppRoleAssignmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -120,7 +120,7 @@ class AppRoleAssignmentsRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

@@ -31,7 +31,7 @@ class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Delete a delegatedAdminAccessAssignment object. This API is available in the following national cloud deployments.
+     * Delete a delegatedAdminAccessAssignment object.
      * @param DelegatedAdminAccessAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -47,7 +47,7 @@ class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Read the properties of a delegatedAdminAccessAssignment object. This API is available in the following national cloud deployments.
+     * Read the properties of a delegatedAdminAccessAssignment object.
      * @param DelegatedAdminAccessAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DelegatedAdminAccessAssignment|null>
      * @throws Exception
@@ -63,7 +63,7 @@ class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Update the properties of a delegatedAdminAccessAssignment object. This API is available in the following national cloud deployments.
+     * Update the properties of a delegatedAdminAccessAssignment object.
      * @param DelegatedAdminAccessAssignment $body The request body
      * @param DelegatedAdminAccessAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DelegatedAdminAccessAssignment|null>
@@ -80,7 +80,7 @@ class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Delete a delegatedAdminAccessAssignment object. This API is available in the following national cloud deployments.
+     * Delete a delegatedAdminAccessAssignment object.
      * @param DelegatedAdminAccessAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -93,12 +93,12 @@ class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseRequestBuilde
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Read the properties of a delegatedAdminAccessAssignment object. This API is available in the following national cloud deployments.
+     * Read the properties of a delegatedAdminAccessAssignment object.
      * @param DelegatedAdminAccessAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -114,12 +114,12 @@ class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseRequestBuilde
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Update the properties of a delegatedAdminAccessAssignment object. This API is available in the following national cloud deployments.
+     * Update the properties of a delegatedAdminAccessAssignment object.
      * @param DelegatedAdminAccessAssignment $body The request body
      * @param DelegatedAdminAccessAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -133,7 +133,7 @@ class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseRequestBuilde
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

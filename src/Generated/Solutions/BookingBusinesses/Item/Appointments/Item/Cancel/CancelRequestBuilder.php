@@ -30,7 +30,7 @@ class CancelRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Cancel the specified bookingAppointment in the specified bookingBusiness and send a message to the involved customer and staff members. This API is available in the following national cloud deployments.
+     * Cancel the specified bookingAppointment in the specified bookingBusiness and send a message to the involved customer and staff members.
      * @param CancelPostRequestBody $body The request body
      * @param CancelRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
@@ -47,7 +47,7 @@ class CancelRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Cancel the specified bookingAppointment in the specified bookingBusiness and send a message to the involved customer and staff members. This API is available in the following national cloud deployments.
+     * Cancel the specified bookingAppointment in the specified bookingBusiness and send a message to the involved customer and staff members.
      * @param CancelPostRequestBody $body The request body
      * @param CancelRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -61,7 +61,7 @@ class CancelRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

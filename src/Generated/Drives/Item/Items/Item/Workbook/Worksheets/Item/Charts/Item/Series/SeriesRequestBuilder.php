@@ -53,11 +53,11 @@ class SeriesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of chartseries objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of chartseries objects.
      * @param SeriesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookChartSeriesCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/chart-list-series?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/chartseries-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?SeriesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -78,7 +78,7 @@ class SeriesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Use this API to create a new ChartSeries. This API is available in the following national cloud deployments.
+     * Use this API to create a new ChartSeries.
      * @param WorkbookChartSeries $body The request body
      * @param SeriesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookChartSeries|null>
@@ -95,7 +95,7 @@ class SeriesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of chartseries objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of chartseries objects.
      * @param SeriesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -111,12 +111,12 @@ class SeriesRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Use this API to create a new ChartSeries. This API is available in the following national cloud deployments.
+     * Use this API to create a new ChartSeries.
      * @param WorkbookChartSeries $body The request body
      * @param SeriesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -130,7 +130,7 @@ class SeriesRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

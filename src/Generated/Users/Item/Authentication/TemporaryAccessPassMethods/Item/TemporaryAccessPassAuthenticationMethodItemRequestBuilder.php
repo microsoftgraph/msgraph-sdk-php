@@ -31,7 +31,7 @@ class TemporaryAccessPassAuthenticationMethodItemRequestBuilder extends BaseRequ
     }
 
     /**
-     * Delete a users's temporaryAccessPassAuthenticationMethod object. This API is available in the following national cloud deployments.
+     * Delete a users's temporaryAccessPassAuthenticationMethod object.
      * @param TemporaryAccessPassAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -47,7 +47,7 @@ class TemporaryAccessPassAuthenticationMethodItemRequestBuilder extends BaseRequ
     }
 
     /**
-     * Retrieve a user's single temporaryAccessPassAuthenticationMethod object. This API is available in the following national cloud deployments.
+     * Retrieve a user's single temporaryAccessPassAuthenticationMethod object.
      * @param TemporaryAccessPassAuthenticationMethodItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TemporaryAccessPassAuthenticationMethod|null>
      * @throws Exception
@@ -63,7 +63,7 @@ class TemporaryAccessPassAuthenticationMethodItemRequestBuilder extends BaseRequ
     }
 
     /**
-     * Delete a users's temporaryAccessPassAuthenticationMethod object. This API is available in the following national cloud deployments.
+     * Delete a users's temporaryAccessPassAuthenticationMethod object.
      * @param TemporaryAccessPassAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -76,12 +76,12 @@ class TemporaryAccessPassAuthenticationMethodItemRequestBuilder extends BaseRequ
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Retrieve a user's single temporaryAccessPassAuthenticationMethod object. This API is available in the following national cloud deployments.
+     * Retrieve a user's single temporaryAccessPassAuthenticationMethod object.
      * @param TemporaryAccessPassAuthenticationMethodItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -97,7 +97,7 @@ class TemporaryAccessPassAuthenticationMethodItemRequestBuilder extends BaseRequ
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 

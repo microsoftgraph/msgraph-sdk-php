@@ -52,7 +52,7 @@ class SharesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of printerShares. This API is available in the following national cloud deployments.
+     * Retrieve a list of printerShares.
      * @param SharesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PrinterShareCollectionResponse|null>
      * @throws Exception
@@ -68,7 +68,7 @@ class SharesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new printerShare for the specified printer. This API is available in the following national cloud deployments.
+     * Create a new printerShare for the specified printer.
      * @param PrinterShare $body The request body
      * @param SharesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PrinterShare|null>
@@ -85,7 +85,7 @@ class SharesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of printerShares. This API is available in the following national cloud deployments.
+     * Retrieve a list of printerShares.
      * @param SharesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -101,12 +101,12 @@ class SharesRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Create a new printerShare for the specified printer. This API is available in the following national cloud deployments.
+     * Create a new printerShare for the specified printer.
      * @param PrinterShare $body The request body
      * @param SharesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -120,7 +120,7 @@ class SharesRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

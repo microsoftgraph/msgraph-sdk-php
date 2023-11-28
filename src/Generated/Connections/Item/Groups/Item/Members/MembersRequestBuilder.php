@@ -67,7 +67,7 @@ class MembersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create an identity resource for a new member in an externalGroup. This API is available in the following national cloud deployments.
+     * Create an identity resource for a new member in an externalGroup.
      * @param Identity $body The request body
      * @param MembersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Identity|null>
@@ -100,12 +100,12 @@ class MembersRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Create an identity resource for a new member in an externalGroup. This API is available in the following national cloud deployments.
+     * Create an identity resource for a new member in an externalGroup.
      * @param Identity $body The request body
      * @param MembersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -119,7 +119,7 @@ class MembersRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

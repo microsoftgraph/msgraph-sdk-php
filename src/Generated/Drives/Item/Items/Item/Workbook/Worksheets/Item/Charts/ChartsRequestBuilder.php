@@ -62,11 +62,11 @@ class ChartsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of chart objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of chart objects.
      * @param ChartsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookChartCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/chart-list?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/worksheet-list-charts?view=graph-rest-1.0 Find more info here
     */
     public function get(?ChartsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -96,7 +96,7 @@ class ChartsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Use this API to create a new Chart. This API is available in the following national cloud deployments.
+     * Use this API to create a new Chart.
      * @param WorkbookChart $body The request body
      * @param ChartsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookChart|null>
@@ -113,7 +113,7 @@ class ChartsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of chart objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of chart objects.
      * @param ChartsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -129,12 +129,12 @@ class ChartsRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Use this API to create a new Chart. This API is available in the following national cloud deployments.
+     * Use this API to create a new Chart.
      * @param WorkbookChart $body The request body
      * @param ChartsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -148,7 +148,7 @@ class ChartsRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

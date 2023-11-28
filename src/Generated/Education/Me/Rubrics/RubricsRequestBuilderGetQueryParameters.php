@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Education\Me\Rubrics;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve a list of educationRubric objects. This API is available in the following national cloud deployments.
+ * Retrieve a list of educationRubric objects.
 */
 class RubricsRequestBuilderGetQueryParameters 
 {

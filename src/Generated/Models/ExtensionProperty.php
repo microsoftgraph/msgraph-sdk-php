@@ -74,7 +74,7 @@ class ExtensionProperty extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the isMultiValued property value. The isMultiValued property
+     * Gets the isMultiValued property value. Defines the directory extension as a multi-valued property. When true, the directory extension property can store a collection of objects of the dataType; for example, a collection of integers. The default value is false. Supports $filter (eq).
      * @return bool|null
     */
     public function getIsMultiValued(): ?bool {
@@ -154,7 +154,7 @@ class ExtensionProperty extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the isMultiValued property value. The isMultiValued property
+     * Sets the isMultiValued property value. Defines the directory extension as a multi-valued property. When true, the directory extension property can store a collection of objects of the dataType; for example, a collection of integers. The default value is false. Supports $filter (eq).
      * @param bool|null $value Value to set for the isMultiValued property.
     */
     public function setIsMultiValued(?bool $value): void {

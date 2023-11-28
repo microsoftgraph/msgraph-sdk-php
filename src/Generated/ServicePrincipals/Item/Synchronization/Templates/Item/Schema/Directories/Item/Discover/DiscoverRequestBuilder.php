@@ -31,7 +31,7 @@ class DiscoverRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Discover the latest schema definition for provisioning to an application.  This API is available in the following national cloud deployments.
+     * Discover the latest schema definition for provisioning to an application. 
      * @param DiscoverRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DirectoryDefinition|null>
      * @throws Exception
@@ -47,7 +47,7 @@ class DiscoverRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Discover the latest schema definition for provisioning to an application.  This API is available in the following national cloud deployments.
+     * Discover the latest schema definition for provisioning to an application. 
      * @param DiscoverRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -60,7 +60,7 @@ class DiscoverRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 

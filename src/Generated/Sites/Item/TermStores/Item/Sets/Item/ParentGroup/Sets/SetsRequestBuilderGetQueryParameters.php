@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Sites\Item\TermStores\Item\Sets\Item\ParentG
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a list of the set objects and their properties. This API is available in the following national cloud deployments.
+ * Get a list of the set objects and their properties.
 */
 class SetsRequestBuilderGetQueryParameters 
 {

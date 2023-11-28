@@ -62,7 +62,7 @@ class UserConsentRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a collection of userConsentRequest objects and their properties. This API is available in the following national cloud deployments.
+     * Retrieve a collection of userConsentRequest objects and their properties.
      * @param UserConsentRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UserConsentRequestCollectionResponse|null>
      * @throws Exception
@@ -94,7 +94,7 @@ class UserConsentRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a collection of userConsentRequest objects and their properties. This API is available in the following national cloud deployments.
+     * Retrieve a collection of userConsentRequest objects and their properties.
      * @param UserConsentRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -110,7 +110,7 @@ class UserConsentRequestsRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
@@ -129,7 +129,7 @@ class UserConsentRequestsRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

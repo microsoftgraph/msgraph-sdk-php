@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\CalendarGroups\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties and relationships of a calendar group object. This API is available in the following national cloud deployments.
+ * Retrieve the properties and relationships of a calendar group object.
 */
 class CalendarGroupItemRequestBuilderGetQueryParameters 
 {

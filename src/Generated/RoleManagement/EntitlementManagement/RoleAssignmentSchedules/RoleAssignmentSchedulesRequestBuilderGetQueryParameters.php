@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleAss
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the schedules for active role assignment operations. This API is available in the following national cloud deployments.
+ * Get the schedules for active role assignment operations.
 */
 class RoleAssignmentSchedulesRequestBuilderGetQueryParameters 
 {

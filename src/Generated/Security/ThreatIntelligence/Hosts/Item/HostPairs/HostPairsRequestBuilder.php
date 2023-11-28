@@ -51,7 +51,7 @@ class HostPairsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the list of hostPair resources associated with a host, where that host is *either* the *parent* or the *child*. This API is available in the following national cloud deployments.
+     * Get the list of hostPair resources associated with a host, where that host is *either* the *parent* or the *child*.
      * @param HostPairsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<HostPairCollectionResponse|null>
      * @throws Exception
@@ -67,7 +67,7 @@ class HostPairsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the list of hostPair resources associated with a host, where that host is *either* the *parent* or the *child*. This API is available in the following national cloud deployments.
+     * Get the list of hostPair resources associated with a host, where that host is *either* the *parent* or the *child*.
      * @param HostPairsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -83,7 +83,7 @@ class HostPairsRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 

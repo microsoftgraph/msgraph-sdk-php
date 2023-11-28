@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\Customers;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a list of bookingCustomer objects of a business. This API is available in the following national cloud deployments.
+ * Get a list of bookingCustomer objects of a business.
 */
 class CustomersRequestBuilderGetQueryParameters 
 {

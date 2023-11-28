@@ -69,12 +69,12 @@ class ActivityHistoryItemItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an existing history item for an existing user activity. This API is available in the following national cloud deployments.
+     * Create a new or replace an existing history item for an existing user activity.
      * @param ActivityHistoryItem $body The request body
      * @param ActivityHistoryItemItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ActivityHistoryItem|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/projectrome-delete-historyitem?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/projectrome-put-historyitem?view=graph-rest-1.0 Find more info here
     */
     public function patch(ActivityHistoryItem $body, ?ActivityHistoryItemItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -99,7 +99,7 @@ class ActivityHistoryItemItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
@@ -120,12 +120,12 @@ class ActivityHistoryItemItemRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Delete an existing history item for an existing user activity. This API is available in the following national cloud deployments.
+     * Create a new or replace an existing history item for an existing user activity.
      * @param ActivityHistoryItem $body The request body
      * @param ActivityHistoryItemItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -139,7 +139,7 @@ class ActivityHistoryItemItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

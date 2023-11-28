@@ -31,7 +31,7 @@ class AuthenticationCombinationConfigurationItemRequestBuilder extends BaseReque
     }
 
     /**
-     * Delete an authenticationCombinationConfiguration  for a custom authenticationStrengthPolicy object. This API is available in the following national cloud deployments.
+     * Delete an authenticationCombinationConfiguration  for a custom authenticationStrengthPolicy object.
      * @param AuthenticationCombinationConfigurationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -47,7 +47,7 @@ class AuthenticationCombinationConfigurationItemRequestBuilder extends BaseReque
     }
 
     /**
-     * Read the properties and relationships of an authenticationCombinationConfiguration object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an authenticationCombinationConfiguration object.
      * @param AuthenticationCombinationConfigurationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthenticationCombinationConfiguration|null>
      * @throws Exception
@@ -63,7 +63,7 @@ class AuthenticationCombinationConfigurationItemRequestBuilder extends BaseReque
     }
 
     /**
-     * Update the properties of an authenticationCombinationConfiguration object. In use, only fido2combinationConfigurations may be updated as they're the only type of authenticationCombinationConfiguration that may be created. This API is available in the following national cloud deployments.
+     * Update the properties of an authenticationCombinationConfiguration object. In use, only fido2combinationConfigurations may be updated as they're the only type of authenticationCombinationConfiguration that may be created.
      * @param AuthenticationCombinationConfiguration $body The request body
      * @param AuthenticationCombinationConfigurationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthenticationCombinationConfiguration|null>
@@ -80,7 +80,7 @@ class AuthenticationCombinationConfigurationItemRequestBuilder extends BaseReque
     }
 
     /**
-     * Delete an authenticationCombinationConfiguration  for a custom authenticationStrengthPolicy object. This API is available in the following national cloud deployments.
+     * Delete an authenticationCombinationConfiguration  for a custom authenticationStrengthPolicy object.
      * @param AuthenticationCombinationConfigurationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -93,12 +93,12 @@ class AuthenticationCombinationConfigurationItemRequestBuilder extends BaseReque
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Read the properties and relationships of an authenticationCombinationConfiguration object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an authenticationCombinationConfiguration object.
      * @param AuthenticationCombinationConfigurationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -114,12 +114,12 @@ class AuthenticationCombinationConfigurationItemRequestBuilder extends BaseReque
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Update the properties of an authenticationCombinationConfiguration object. In use, only fido2combinationConfigurations may be updated as they're the only type of authenticationCombinationConfiguration that may be created. This API is available in the following national cloud deployments.
+     * Update the properties of an authenticationCombinationConfiguration object. In use, only fido2combinationConfigurations may be updated as they're the only type of authenticationCombinationConfiguration that may be created.
      * @param AuthenticationCombinationConfiguration $body The request body
      * @param AuthenticationCombinationConfigurationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -133,7 +133,7 @@ class AuthenticationCombinationConfigurationItemRequestBuilder extends BaseReque
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

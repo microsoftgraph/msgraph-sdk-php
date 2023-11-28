@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\Tasks\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read the properties and relationships of a todoTask object. This API is available in the following national cloud deployments.
+ * Read the properties and relationships of a todoTask object.
 */
 class TodoTaskItemRequestBuilderGetQueryParameters 
 {

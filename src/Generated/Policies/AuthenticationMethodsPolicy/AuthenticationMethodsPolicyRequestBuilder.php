@@ -54,7 +54,7 @@ class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of an authenticationMethodsPolicy object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an authenticationMethodsPolicy object.
      * @param AuthenticationMethodsPolicyRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthenticationMethodsPolicy|null>
      * @throws Exception
@@ -70,7 +70,7 @@ class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an authenticationMethodsPolicy object. This API is available in the following national cloud deployments.
+     * Update the properties of an authenticationMethodsPolicy object.
      * @param AuthenticationMethodsPolicy $body The request body
      * @param AuthenticationMethodsPolicyRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthenticationMethodsPolicy|null>
@@ -100,12 +100,12 @@ class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Read the properties and relationships of an authenticationMethodsPolicy object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an authenticationMethodsPolicy object.
      * @param AuthenticationMethodsPolicyRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -121,12 +121,12 @@ class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Update the properties of an authenticationMethodsPolicy object. This API is available in the following national cloud deployments.
+     * Update the properties of an authenticationMethodsPolicy object.
      * @param AuthenticationMethodsPolicy $body The request body
      * @param AuthenticationMethodsPolicyRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -140,7 +140,7 @@ class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

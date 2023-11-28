@@ -31,7 +31,7 @@ class DelegatedPermissionClassificationItemRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * Deletes a delegatedPermissionClassification which had previously been set for a delegated permission. This API is available in the following national cloud deployments.
+     * Deletes a delegatedPermissionClassification which had previously been set for a delegated permission.
      * @param DelegatedPermissionClassificationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -78,7 +78,7 @@ class DelegatedPermissionClassificationItemRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * Deletes a delegatedPermissionClassification which had previously been set for a delegated permission. This API is available in the following national cloud deployments.
+     * Deletes a delegatedPermissionClassification which had previously been set for a delegated permission.
      * @param DelegatedPermissionClassificationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -91,7 +91,7 @@ class DelegatedPermissionClassificationItemRequestBuilder extends BaseRequestBui
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
@@ -112,7 +112,7 @@ class DelegatedPermissionClassificationItemRequestBuilder extends BaseRequestBui
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
@@ -131,7 +131,7 @@ class DelegatedPermissionClassificationItemRequestBuilder extends BaseRequestBui
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

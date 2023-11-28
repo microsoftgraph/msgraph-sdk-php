@@ -31,7 +31,7 @@ class Fido2AuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a user's FIDO2 Security Key Authentication Method object. This API is available in the following national cloud deployments.
+     * Deletes a user's FIDO2 Security Key Authentication Method object.
      * @param Fido2AuthenticationMethodItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -47,7 +47,7 @@ class Fido2AuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a user's single FIDO2 Security Key Authentication Method object. This API is available in the following national cloud deployments.
+     * Retrieve a user's single FIDO2 Security Key Authentication Method object.
      * @param Fido2AuthenticationMethodItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Fido2AuthenticationMethod|null>
      * @throws Exception
@@ -63,7 +63,7 @@ class Fido2AuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a user's FIDO2 Security Key Authentication Method object. This API is available in the following national cloud deployments.
+     * Deletes a user's FIDO2 Security Key Authentication Method object.
      * @param Fido2AuthenticationMethodItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -76,12 +76,12 @@ class Fido2AuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Retrieve a user's single FIDO2 Security Key Authentication Method object. This API is available in the following national cloud deployments.
+     * Retrieve a user's single FIDO2 Security Key Authentication Method object.
      * @param Fido2AuthenticationMethodItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -97,7 +97,7 @@ class Fido2AuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 

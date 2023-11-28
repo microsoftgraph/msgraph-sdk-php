@@ -51,7 +51,7 @@ class TrackersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of hostTracker resources. This API is available in the following national cloud deployments.
+     * Get a list of hostTracker resources.
      * @param TrackersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<HostTrackerCollectionResponse|null>
      * @throws Exception
@@ -67,7 +67,7 @@ class TrackersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of hostTracker resources. This API is available in the following national cloud deployments.
+     * Get a list of hostTracker resources.
      * @param TrackersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -83,7 +83,7 @@ class TrackersRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 

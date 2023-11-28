@@ -60,7 +60,7 @@ class AdministrativeUnitsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of administrativeUnit objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of administrativeUnit objects.
      * @param AdministrativeUnitsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AdministrativeUnitCollectionResponse|null>
      * @throws Exception
@@ -76,7 +76,7 @@ class AdministrativeUnitsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Use this API to create a new administrativeUnit. This API is available in the following national cloud deployments.
+     * Use this API to create a new administrativeUnit.
      * @param AdministrativeUnit $body The request body
      * @param AdministrativeUnitsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AdministrativeUnit|null>
@@ -93,7 +93,7 @@ class AdministrativeUnitsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of administrativeUnit objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of administrativeUnit objects.
      * @param AdministrativeUnitsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -109,12 +109,12 @@ class AdministrativeUnitsRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Use this API to create a new administrativeUnit. This API is available in the following national cloud deployments.
+     * Use this API to create a new administrativeUnit.
      * @param AdministrativeUnit $body The request body
      * @param AdministrativeUnitsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -128,7 +128,7 @@ class AdministrativeUnitsRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

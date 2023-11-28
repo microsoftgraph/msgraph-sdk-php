@@ -51,7 +51,7 @@ class Fido2MethodsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of a user's FIDO2 Security Key Authentication Method objects and their properties. This API is available in the following national cloud deployments.
+     * Retrieve a list of a user's FIDO2 Security Key Authentication Method objects and their properties.
      * @param Fido2MethodsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Fido2AuthenticationMethodCollectionResponse|null>
      * @throws Exception
@@ -67,7 +67,7 @@ class Fido2MethodsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of a user's FIDO2 Security Key Authentication Method objects and their properties. This API is available in the following national cloud deployments.
+     * Retrieve a list of a user's FIDO2 Security Key Authentication Method objects and their properties.
      * @param Fido2MethodsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -83,7 +83,7 @@ class Fido2MethodsRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 

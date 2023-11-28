@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\SchemaExtensions\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * This API is available in the following national cloud deployments.
+ * Get schemaExtension
 */
 class SchemaExtensionItemRequestBuilderGetQueryParameters 
 {

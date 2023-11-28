@@ -52,7 +52,7 @@ class EndpointsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of endpoints exposed by a print service. This API is available in the following national cloud deployments.
+     * Retrieve a list of endpoints exposed by a print service.
      * @param EndpointsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PrintServiceEndpointCollectionResponse|null>
      * @throws Exception
@@ -84,7 +84,7 @@ class EndpointsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of endpoints exposed by a print service. This API is available in the following national cloud deployments.
+     * Retrieve a list of endpoints exposed by a print service.
      * @param EndpointsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -100,7 +100,7 @@ class EndpointsRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
@@ -119,7 +119,7 @@ class EndpointsRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

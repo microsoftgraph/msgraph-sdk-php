@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Policies\AuthenticationStrengthPolicies\Item
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read the properties and relationships of an authenticationCombinationConfiguration object. This API is available in the following national cloud deployments.
+ * Read the properties and relationships of an authenticationCombinationConfiguration object.
 */
 class AuthenticationCombinationConfigurationItemRequestBuilderGetQueryParameters 
 {

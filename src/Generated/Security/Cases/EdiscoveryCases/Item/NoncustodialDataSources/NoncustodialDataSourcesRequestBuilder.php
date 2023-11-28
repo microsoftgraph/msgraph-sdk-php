@@ -83,7 +83,7 @@ class NoncustodialDataSourcesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new ediscoveryNoncustodialDataSource object. This API is available in the following national cloud deployments.
+     * Create a new ediscoveryNoncustodialDataSource object.
      * @param EdiscoveryNoncustodialDataSource $body The request body
      * @param NoncustodialDataSourcesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EdiscoveryNoncustodialDataSource|null>
@@ -116,12 +116,12 @@ class NoncustodialDataSourcesRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Create a new ediscoveryNoncustodialDataSource object. This API is available in the following national cloud deployments.
+     * Create a new ediscoveryNoncustodialDataSource object.
      * @param EdiscoveryNoncustodialDataSource $body The request body
      * @param NoncustodialDataSourcesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -135,7 +135,7 @@ class NoncustodialDataSourcesRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

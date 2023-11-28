@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\ContactFolders\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a contact folder by using the contact folder ID. There are two scenarios where an app can get another user's contact folder: This API is available in the following national cloud deployments.
+ * Get a contact folder by using the contact folder ID. There are two scenarios where an app can get another user's contact folder:
 */
 class ContactFolderItemRequestBuilderGetQueryParameters 
 {

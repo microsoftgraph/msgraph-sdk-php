@@ -60,7 +60,7 @@ class TasksRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the todoTask resources from the tasks navigation property of a specified todoTaskList. This API is available in the following national cloud deployments.
+     * Get the todoTask resources from the tasks navigation property of a specified todoTaskList.
      * @param TasksRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TodoTaskCollectionResponse|null>
      * @throws Exception
@@ -76,7 +76,7 @@ class TasksRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new task object in a specified todoTaskList. This API is available in the following national cloud deployments.
+     * Create a new task object in a specified todoTaskList.
      * @param TodoTask $body The request body
      * @param TasksRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TodoTask|null>
@@ -93,7 +93,7 @@ class TasksRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the todoTask resources from the tasks navigation property of a specified todoTaskList. This API is available in the following national cloud deployments.
+     * Get the todoTask resources from the tasks navigation property of a specified todoTaskList.
      * @param TasksRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -109,12 +109,12 @@ class TasksRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Create a new task object in a specified todoTaskList. This API is available in the following national cloud deployments.
+     * Create a new task object in a specified todoTaskList.
      * @param TodoTask $body The request body
      * @param TasksRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -128,7 +128,7 @@ class TasksRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

@@ -46,7 +46,7 @@ class OnPremisesDirectorySynchronizationItemRequestBuilder extends BaseRequestBu
     }
 
     /**
-     * Read the properties and relationships of an onPremisesDirectorySynchronization object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an onPremisesDirectorySynchronization object.
      * @param OnPremisesDirectorySynchronizationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<OnPremisesDirectorySynchronization|null>
      * @throws Exception
@@ -62,7 +62,7 @@ class OnPremisesDirectorySynchronizationItemRequestBuilder extends BaseRequestBu
     }
 
     /**
-     * Update the properties of an onPremisesDirectorySynchronization object. This API is available in the following national cloud deployments.
+     * Update the properties of an onPremisesDirectorySynchronization object.
      * @param OnPremisesDirectorySynchronization $body The request body
      * @param OnPremisesDirectorySynchronizationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<OnPremisesDirectorySynchronization|null>
@@ -92,12 +92,12 @@ class OnPremisesDirectorySynchronizationItemRequestBuilder extends BaseRequestBu
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Read the properties and relationships of an onPremisesDirectorySynchronization object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an onPremisesDirectorySynchronization object.
      * @param OnPremisesDirectorySynchronizationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,12 +113,12 @@ class OnPremisesDirectorySynchronizationItemRequestBuilder extends BaseRequestBu
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Update the properties of an onPremisesDirectorySynchronization object. This API is available in the following national cloud deployments.
+     * Update the properties of an onPremisesDirectorySynchronization object.
      * @param OnPremisesDirectorySynchronization $body The request body
      * @param OnPremisesDirectorySynchronizationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -132,7 +132,7 @@ class OnPremisesDirectorySynchronizationItemRequestBuilder extends BaseRequestBu
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

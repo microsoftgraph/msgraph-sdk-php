@@ -31,7 +31,7 @@ class ConversationMemberItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Remove a conversationMember from a chat. This API is available in the following national cloud deployments.
+     * Remove a conversationMember from a chat.
      * @param ConversationMemberItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -47,11 +47,11 @@ class ConversationMemberItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a conversationMember from a chat or channel. This API is available in the following national cloud deployments.
+     * Retrieve a conversationMember from a chat.
      * @param ConversationMemberItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ConversationMember|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/conversationmember-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/chat-get-members?view=graph-rest-1.0 Find more info here
     */
     public function get(?ConversationMemberItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -79,7 +79,7 @@ class ConversationMemberItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Remove a conversationMember from a chat. This API is available in the following national cloud deployments.
+     * Remove a conversationMember from a chat.
      * @param ConversationMemberItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -92,12 +92,12 @@ class ConversationMemberItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Retrieve a conversationMember from a chat or channel. This API is available in the following national cloud deployments.
+     * Retrieve a conversationMember from a chat.
      * @param ConversationMemberItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class ConversationMemberItemRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
@@ -132,7 +132,7 @@ class ConversationMemberItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

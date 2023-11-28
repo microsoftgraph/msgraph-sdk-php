@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignmentSched
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the schedule for an active role assignment operation. This API is available in the following national cloud deployments.
+ * Retrieve the schedule for an active role assignment operation.
 */
 class UnifiedRoleAssignmentScheduleItemRequestBuilderGetQueryParameters 
 {

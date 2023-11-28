@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Education\Classes\Item\Teachers\Item\Ref;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Remove a teacher from an educationClass. This API is available in the following national cloud deployments.
+ * Remove a teacher from an educationClass.
 */
 class RefRequestBuilderDeleteQueryParameters 
 {

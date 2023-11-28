@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Settings;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read the user and organization userSettings object.To learn how to update the properties of the userSettings object, see update user settings. This API is available in the following national cloud deployments.
+ * Read the user and organization userSettings object.To learn how to update the properties of the userSettings object, see update user settings.
 */
 class SettingsRequestBuilderGetQueryParameters 
 {

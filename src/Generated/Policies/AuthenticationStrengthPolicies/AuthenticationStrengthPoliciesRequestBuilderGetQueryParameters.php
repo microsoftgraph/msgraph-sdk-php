@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Policies\AuthenticationStrengthPolicies;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a list of the authenticationStrengthPolicy objects and their properties. This API returns both built-in and custom policies. This API is available in the following national cloud deployments.
+ * Get a list of the authenticationStrengthPolicy objects and their properties. This API returns both built-in and custom policies.
 */
 class AuthenticationStrengthPoliciesRequestBuilderGetQueryParameters 
 {

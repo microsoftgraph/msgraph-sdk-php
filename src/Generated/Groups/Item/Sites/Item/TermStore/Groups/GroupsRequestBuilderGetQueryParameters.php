@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStore\Groups;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a list of group objects in a term store. This API is available in the following national cloud deployments.
+ * Get a list of group objects in a term store.
 */
 class GroupsRequestBuilderGetQueryParameters 
 {

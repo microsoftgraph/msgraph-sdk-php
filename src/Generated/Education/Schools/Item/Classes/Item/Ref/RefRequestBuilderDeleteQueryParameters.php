@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Education\Schools\Item\Classes\Item\Ref;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Delete a class from a school. This API is available in the following national cloud deployments.
+ * Delete a class from a school.
 */
 class RefRequestBuilderDeleteQueryParameters 
 {

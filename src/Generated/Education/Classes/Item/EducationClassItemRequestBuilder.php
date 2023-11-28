@@ -95,7 +95,7 @@ class EducationClassItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an educationClass. Because a class is also a universal group, deleting a class deletes the group. This API is available in the following national cloud deployments.
+     * Delete an educationClass. Because a class is also a universal group, deleting a class deletes the group.
      * @param EducationClassItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -111,7 +111,7 @@ class EducationClassItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a class from the system. A class is a universal group with a special property that indicates to the system that the group is a class. Group members represent the students; group admins represent the teachers in the class. If you're using the delegated token, the user will only see classes in which they are members. This API is available in the following national cloud deployments.
+     * Retrieve a class from the system. A class is a universal group with a special property that indicates to the system that the group is a class. Group members represent the students; group admins represent the teachers in the class. If you're using the delegated token, the user will only see classes in which they are members.
      * @param EducationClassItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EducationClass|null>
      * @throws Exception
@@ -127,7 +127,7 @@ class EducationClassItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an educationClass object. This API is available in the following national cloud deployments.
+     * Update the properties of an educationClass object.
      * @param EducationClass $body The request body
      * @param EducationClassItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EducationClass|null>
@@ -144,7 +144,7 @@ class EducationClassItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an educationClass. Because a class is also a universal group, deleting a class deletes the group. This API is available in the following national cloud deployments.
+     * Delete an educationClass. Because a class is also a universal group, deleting a class deletes the group.
      * @param EducationClassItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -157,12 +157,12 @@ class EducationClassItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Retrieve a class from the system. A class is a universal group with a special property that indicates to the system that the group is a class. Group members represent the students; group admins represent the teachers in the class. If you're using the delegated token, the user will only see classes in which they are members. This API is available in the following national cloud deployments.
+     * Retrieve a class from the system. A class is a universal group with a special property that indicates to the system that the group is a class. Group members represent the students; group admins represent the teachers in the class. If you're using the delegated token, the user will only see classes in which they are members.
      * @param EducationClassItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -178,12 +178,12 @@ class EducationClassItemRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Update the properties of an educationClass object. This API is available in the following national cloud deployments.
+     * Update the properties of an educationClass object.
      * @param EducationClass $body The request body
      * @param EducationClassItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -197,7 +197,7 @@ class EducationClassItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

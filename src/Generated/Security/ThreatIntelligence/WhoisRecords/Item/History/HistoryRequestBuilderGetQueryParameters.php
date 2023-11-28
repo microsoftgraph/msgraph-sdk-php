@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\ThreatIntelligence\WhoisRecords\Ite
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the history for a whoisRecord, as represented by a collection of whoisHistoryRecord resources. This API is available in the following national cloud deployments.
+ * Get the history for a whoisRecord, as represented by a collection of whoisHistoryRecord resources.
 */
 class HistoryRequestBuilderGetQueryParameters 
 {

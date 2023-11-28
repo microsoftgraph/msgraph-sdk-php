@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\I
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties and relationships of tablesort object. This API is available in the following national cloud deployments.
+ * Retrieve the properties and relationships of tablesort object.
 */
 class SortRequestBuilderGetQueryParameters 
 {

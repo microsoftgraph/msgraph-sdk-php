@@ -30,7 +30,7 @@ class ApplyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Apply the given filter criteria on the given column. This API is available in the following national cloud deployments.
+     * Apply the given filter criteria on the given column.
      * @param ApplyPostRequestBody $body The request body
      * @param ApplyRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
@@ -47,7 +47,7 @@ class ApplyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Apply the given filter criteria on the given column. This API is available in the following national cloud deployments.
+     * Apply the given filter criteria on the given column.
      * @param ApplyPostRequestBody $body The request body
      * @param ApplyRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -61,7 +61,7 @@ class ApplyRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

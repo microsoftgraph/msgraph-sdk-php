@@ -46,7 +46,7 @@ class SecureScoreControlProfileItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of an securescorecontrolprofile object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an securescorecontrolprofile object.
      * @param SecureScoreControlProfileItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SecureScoreControlProfile|null>
      * @throws Exception
@@ -62,7 +62,7 @@ class SecureScoreControlProfileItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update an editable secureScoreControlProfile object within any integrated solution to change various properties, such as assignedTo or tenantNote. This API is available in the following national cloud deployments.
+     * Update an editable secureScoreControlProfile object within any integrated solution to change various properties, such as assignedTo or tenantNote.
      * @param SecureScoreControlProfile $body The request body
      * @param SecureScoreControlProfileItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SecureScoreControlProfile|null>
@@ -92,12 +92,12 @@ class SecureScoreControlProfileItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Retrieve the properties and relationships of an securescorecontrolprofile object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an securescorecontrolprofile object.
      * @param SecureScoreControlProfileItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,12 +113,12 @@ class SecureScoreControlProfileItemRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Update an editable secureScoreControlProfile object within any integrated solution to change various properties, such as assignedTo or tenantNote. This API is available in the following national cloud deployments.
+     * Update an editable secureScoreControlProfile object within any integrated solution to change various properties, such as assignedTo or tenantNote.
      * @param SecureScoreControlProfile $body The request body
      * @param SecureScoreControlProfileItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -132,7 +132,7 @@ class SecureScoreControlProfileItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

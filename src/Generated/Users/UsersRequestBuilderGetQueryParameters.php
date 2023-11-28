@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve a list of user objects. This API is available in the following national cloud deployments.
+ * List properties and relationships of the user objects.
 */
 class UsersRequestBuilderGetQueryParameters 
 {

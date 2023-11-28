@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Messages;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the serviceUpdateMessage resources from the messages navigation property. This operation retrieves all service update messages that exist for the tenant. This API is available in the following national cloud deployments.
+ * Retrieve the serviceUpdateMessage resources from the messages navigation property. This operation retrieves all service update messages that exist for the tenant.
 */
 class MessagesRequestBuilderGetQueryParameters 
 {
