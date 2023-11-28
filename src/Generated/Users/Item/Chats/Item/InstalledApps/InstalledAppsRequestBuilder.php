@@ -52,7 +52,7 @@ class InstalledAppsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List all app installations within a chat. This API is available in the following national cloud deployments.
+     * List all app installations within a chat.
      * @param InstalledAppsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TeamsAppInstallationCollectionResponse|null>
      * @throws Exception
@@ -68,7 +68,7 @@ class InstalledAppsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Install a teamsApp to the specified chat. This API is available in the following national cloud deployments.
+     * Install a teamsApp to the specified chat.
      * @param TeamsAppInstallation $body The request body
      * @param InstalledAppsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TeamsAppInstallation|null>
@@ -85,7 +85,7 @@ class InstalledAppsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List all app installations within a chat. This API is available in the following national cloud deployments.
+     * List all app installations within a chat.
      * @param InstalledAppsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -101,12 +101,12 @@ class InstalledAppsRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Install a teamsApp to the specified chat. This API is available in the following national cloud deployments.
+     * Install a teamsApp to the specified chat.
      * @param TeamsAppInstallation $body The request body
      * @param InstalledAppsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -120,7 +120,7 @@ class InstalledAppsRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

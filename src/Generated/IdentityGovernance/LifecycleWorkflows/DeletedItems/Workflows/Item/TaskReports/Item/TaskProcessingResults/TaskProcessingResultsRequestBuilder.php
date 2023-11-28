@@ -51,7 +51,7 @@ class TaskProcessingResultsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the task processing result resources from the taskReport. This API is available in the following national cloud deployments.
+     * Get the task processing result resources from the taskReport.
      * @param TaskProcessingResultsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TaskProcessingResultCollectionResponse|null>
      * @throws Exception
@@ -67,7 +67,7 @@ class TaskProcessingResultsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the task processing result resources from the taskReport. This API is available in the following national cloud deployments.
+     * Get the task processing result resources from the taskReport.
      * @param TaskProcessingResultsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -83,7 +83,7 @@ class TaskProcessingResultsRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 

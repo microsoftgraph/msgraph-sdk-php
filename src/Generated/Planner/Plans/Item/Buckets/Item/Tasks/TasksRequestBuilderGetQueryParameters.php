@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Planner\Plans\Item\Buckets\Item\Tasks;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve a list of plannerTask objects associated to a plannerBucket object. This API is available in the following national cloud deployments.
+ * Retrieve a list of plannerTask objects associated to a plannerBucket object.
 */
 class TasksRequestBuilderGetQueryParameters 
 {

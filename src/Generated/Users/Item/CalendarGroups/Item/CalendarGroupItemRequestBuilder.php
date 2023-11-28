@@ -39,7 +39,7 @@ class CalendarGroupItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a calendar group other than the default calendar group. This API is available in the following national cloud deployments.
+     * Delete a calendar group other than the default calendar group.
      * @param CalendarGroupItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -55,7 +55,7 @@ class CalendarGroupItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a calendar group object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a calendar group object.
      * @param CalendarGroupItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CalendarGroup|null>
      * @throws Exception
@@ -71,7 +71,7 @@ class CalendarGroupItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of calendargroup object. This API is available in the following national cloud deployments.
+     * Update the properties of calendargroup object.
      * @param CalendarGroup $body The request body
      * @param CalendarGroupItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CalendarGroup|null>
@@ -88,7 +88,7 @@ class CalendarGroupItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a calendar group other than the default calendar group. This API is available in the following national cloud deployments.
+     * Delete a calendar group other than the default calendar group.
      * @param CalendarGroupItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -101,12 +101,12 @@ class CalendarGroupItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Retrieve the properties and relationships of a calendar group object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a calendar group object.
      * @param CalendarGroupItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -122,12 +122,12 @@ class CalendarGroupItemRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Update the properties of calendargroup object. This API is available in the following national cloud deployments.
+     * Update the properties of calendargroup object.
      * @param CalendarGroup $body The request body
      * @param CalendarGroupItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -141,7 +141,7 @@ class CalendarGroupItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

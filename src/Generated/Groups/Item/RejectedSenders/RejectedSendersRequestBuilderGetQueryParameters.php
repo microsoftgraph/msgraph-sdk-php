@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\RejectedSenders;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Users in the rejected senders list can't post to conversations of the group (identified in the GET request URL). Make sure you don't specify the same user or group in the rejected senders and accepted senders lists, otherwise you get an error. This API is available in the following national cloud deployments.
+ * Users in the rejected senders list can't post to conversations of the group (identified in the GET request URL). Make sure you don't specify the same user or group in the rejected senders and accepted senders lists, otherwise you get an error.
 */
 class RejectedSendersRequestBuilderGetQueryParameters 
 {

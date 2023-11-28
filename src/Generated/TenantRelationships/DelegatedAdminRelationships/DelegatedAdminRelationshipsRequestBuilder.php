@@ -52,7 +52,7 @@ class DelegatedAdminRelationshipsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the delegatedAdminRelationship objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the delegatedAdminRelationship objects and their properties.
      * @param DelegatedAdminRelationshipsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DelegatedAdminRelationshipCollectionResponse|null>
      * @throws Exception
@@ -68,7 +68,7 @@ class DelegatedAdminRelationshipsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new delegatedAdminRelationship object. This API is available in the following national cloud deployments.
+     * Create a new delegatedAdminRelationship object.
      * @param DelegatedAdminRelationship $body The request body
      * @param DelegatedAdminRelationshipsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DelegatedAdminRelationship|null>
@@ -85,7 +85,7 @@ class DelegatedAdminRelationshipsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the delegatedAdminRelationship objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the delegatedAdminRelationship objects and their properties.
      * @param DelegatedAdminRelationshipsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -101,12 +101,12 @@ class DelegatedAdminRelationshipsRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Create a new delegatedAdminRelationship object. This API is available in the following national cloud deployments.
+     * Create a new delegatedAdminRelationship object.
      * @param DelegatedAdminRelationship $body The request body
      * @param DelegatedAdminRelationshipsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -120,7 +120,7 @@ class DelegatedAdminRelationshipsRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

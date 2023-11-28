@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Outlook\SupportedLanguages;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the list of locales and languages that are supported for the user, as configured on the user's mailbox server. When setting up an Outlook client, the user selects the preferred language from this supported list. You can subsequently get the preferred language bygetting the user's mailbox settings. This API is available in the following national cloud deployments.
+ * Get the list of locales and languages that are supported for the user, as configured on the user's mailbox server. When setting up an Outlook client, the user selects the preferred language from this supported list. You can subsequently get the preferred language bygetting the user's mailbox settings.
 */
 class SupportedLanguagesRequestBuilderGetQueryParameters 
 {

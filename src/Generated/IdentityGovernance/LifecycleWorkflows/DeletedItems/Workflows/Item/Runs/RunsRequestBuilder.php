@@ -53,7 +53,7 @@ class RunsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the run objects and their properties for a lifecycle workflow. This API is available in the following national cloud deployments.
+     * Get a list of the run objects and their properties for a lifecycle workflow.
      * @param RunsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<RunCollectionResponse|null>
      * @throws Exception
@@ -79,7 +79,7 @@ class RunsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the run objects and their properties for a lifecycle workflow. This API is available in the following national cloud deployments.
+     * Get a list of the run objects and their properties for a lifecycle workflow.
      * @param RunsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -95,7 +95,7 @@ class RunsRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 

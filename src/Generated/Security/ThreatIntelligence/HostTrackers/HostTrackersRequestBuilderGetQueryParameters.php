@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\ThreatIntelligence\HostTrackers;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read the properties and relationships of a hostTracker object. This API is available in the following national cloud deployments.
+ * Read the properties and relationships of a hostTracker object.
 */
 class HostTrackersRequestBuilderGetQueryParameters 
 {

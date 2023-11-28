@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Contacts\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties and relationships of a contact object. There are two scenarios where an app can get a contact in another user's contact folder: This API is available in the following national cloud deployments.
+ * Retrieve the properties and relationships of a contact object. There are two scenarios where an app can get a contact in another user's contact folder:
 */
 class ContactItemRequestBuilderGetQueryParameters 
 {

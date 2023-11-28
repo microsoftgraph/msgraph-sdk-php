@@ -30,7 +30,7 @@ class GetStaffAvailabilityRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the availability information of staff members of a Microsoft Bookings calendar. This API is available in the following national cloud deployments.
+     * Get the availability information of staff members of a Microsoft Bookings calendar.
      * @param GetStaffAvailabilityPostRequestBody $body The request body
      * @param GetStaffAvailabilityRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GetStaffAvailabilityPostResponse|null>
@@ -47,7 +47,7 @@ class GetStaffAvailabilityRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the availability information of staff members of a Microsoft Bookings calendar. This API is available in the following national cloud deployments.
+     * Get the availability information of staff members of a Microsoft Bookings calendar.
      * @param GetStaffAvailabilityPostRequestBody $body The request body
      * @param GetStaffAvailabilityRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -61,7 +61,7 @@ class GetStaffAvailabilityRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

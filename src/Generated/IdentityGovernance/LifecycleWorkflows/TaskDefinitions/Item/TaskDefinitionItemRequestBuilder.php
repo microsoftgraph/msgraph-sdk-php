@@ -31,7 +31,7 @@ class TaskDefinitionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the details of a built-in workflow task. This API is available in the following national cloud deployments.
+     * Read the details of a built-in workflow task.
      * @param TaskDefinitionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TaskDefinition|null>
      * @throws Exception
@@ -47,7 +47,7 @@ class TaskDefinitionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the details of a built-in workflow task. This API is available in the following national cloud deployments.
+     * Read the details of a built-in workflow task.
      * @param TaskDefinitionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -63,7 +63,7 @@ class TaskDefinitionItemRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 

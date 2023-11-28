@@ -8,7 +8,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 /**
- * Represents a Microsot Bookings Business.
+ * Represents a Microsoft Bookings Business.
 */
 class BookingBusiness extends Entity implements Parsable 
 {

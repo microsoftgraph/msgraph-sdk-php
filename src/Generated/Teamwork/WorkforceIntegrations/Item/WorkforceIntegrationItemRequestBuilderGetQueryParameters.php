@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Teamwork\WorkforceIntegrations\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties and relationships of a workforceIntegration object. This API is available in the following national cloud deployments.
+ * Retrieve the properties and relationships of a workforceIntegration object.
 */
 class WorkforceIntegrationItemRequestBuilderGetQueryParameters 
 {

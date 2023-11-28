@@ -59,7 +59,7 @@ class ClaimsMappingPoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List the claimsMappingPolicy objects that are assigned to a servicePrincipal. This API is available in the following national cloud deployments.
+     * List the claimsMappingPolicy objects that are assigned to a servicePrincipal.
      * @param ClaimsMappingPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ClaimsMappingPolicyCollectionResponse|null>
      * @throws Exception
@@ -75,7 +75,7 @@ class ClaimsMappingPoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List the claimsMappingPolicy objects that are assigned to a servicePrincipal. This API is available in the following national cloud deployments.
+     * List the claimsMappingPolicy objects that are assigned to a servicePrincipal.
      * @param ClaimsMappingPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -91,7 +91,7 @@ class ClaimsMappingPoliciesRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 

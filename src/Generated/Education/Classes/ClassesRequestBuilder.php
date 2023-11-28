@@ -60,7 +60,7 @@ class ClassesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the educationClass objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the educationClass objects and their properties.
      * @param ClassesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EducationClassCollectionResponse|null>
      * @throws Exception
@@ -76,7 +76,7 @@ class ClassesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new educationClass object. This API is available in the following national cloud deployments.
+     * Create a new educationClass object.
      * @param EducationClass $body The request body
      * @param ClassesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EducationClass|null>
@@ -93,7 +93,7 @@ class ClassesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the educationClass objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the educationClass objects and their properties.
      * @param ClassesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -109,12 +109,12 @@ class ClassesRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Create a new educationClass object. This API is available in the following national cloud deployments.
+     * Create a new educationClass object.
      * @param EducationClass $body The request body
      * @param ClassesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -128,7 +128,7 @@ class ClassesRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

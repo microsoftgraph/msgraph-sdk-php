@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Settin
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read the properties and relationships of a lifecycleManagementSettings object. This API is available in the following national cloud deployments.
+ * Read the properties and relationships of a lifecycleManagementSettings object.
 */
 class SettingsRequestBuilderGetQueryParameters 
 {

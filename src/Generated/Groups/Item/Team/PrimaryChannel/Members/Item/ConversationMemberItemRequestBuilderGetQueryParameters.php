@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\Members\Item
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a conversationMember from a channel. This API is available in the following national cloud deployments.
+ * Get a conversationMember from a channel.
 */
 class ConversationMemberItemRequestBuilderGetQueryParameters 
 {

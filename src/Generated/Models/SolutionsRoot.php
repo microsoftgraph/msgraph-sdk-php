@@ -94,6 +94,7 @@ class SolutionsRoot implements AdditionalDataHolder, BackedModel, Parsable
             'bookingBusinesses' => fn(ParseNode $n) => $o->setBookingBusinesses($n->getCollectionOfObjectValues([BookingBusiness::class, 'createFromDiscriminatorValue'])),
             'bookingCurrencies' => fn(ParseNode $n) => $o->setBookingCurrencies($n->getCollectionOfObjectValues([BookingCurrency::class, 'createFromDiscriminatorValue'])),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'virtualEvents' => fn(ParseNode $n) => $o->setVirtualEvents($n->getObjectValue([VirtualEventsRoot::class, 'createFromDiscriminatorValue'])),
         ];
     }
 
@@ -110,6 +111,18 @@ class SolutionsRoot implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
+     * Gets the virtualEvents property value. The virtualEvents property
+     * @return VirtualEventsRoot|null
+    */
+    public function getVirtualEvents(): ?VirtualEventsRoot {
+        $val = $this->getBackingStore()->get('virtualEvents');
+        if (is_null($val) || $val instanceof VirtualEventsRoot) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'virtualEvents'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -117,6 +130,7 @@ class SolutionsRoot implements AdditionalDataHolder, BackedModel, Parsable
         $writer->writeCollectionOfObjectValues('bookingBusinesses', $this->getBookingBusinesses());
         $writer->writeCollectionOfObjectValues('bookingCurrencies', $this->getBookingCurrencies());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeObjectValue('virtualEvents', $this->getVirtualEvents());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -158,6 +172,14 @@ class SolutionsRoot implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
+    }
+
+    /**
+     * Sets the virtualEvents property value. The virtualEvents property
+     * @param VirtualEventsRoot|null $value Value to set for the virtualEvents property.
+    */
+    public function setVirtualEvents(?VirtualEventsRoot $value): void {
+        $this->getBackingStore()->set('virtualEvents', $value);
     }
 
 }

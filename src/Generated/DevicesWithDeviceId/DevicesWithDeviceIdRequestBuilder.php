@@ -34,7 +34,7 @@ class DevicesWithDeviceIdRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a registered device. This API is available in the following national cloud deployments.
+     * Delete a registered device.
      * @param DevicesWithDeviceIdRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -50,7 +50,7 @@ class DevicesWithDeviceIdRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the properties and relationships of a device object. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of a device object.
      * @param DevicesWithDeviceIdRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Device|null>
      * @throws Exception
@@ -66,7 +66,7 @@ class DevicesWithDeviceIdRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a registered device. Only certain properties of a device can be updated through approved Mobile Device Managment (MDM) apps. This API is available in the following national cloud deployments.
+     * Update the properties of a registered device. Only certain properties of a device can be updated through approved Mobile Device Managment (MDM) apps.
      * @param Device $body The request body
      * @param DevicesWithDeviceIdRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Device|null>
@@ -83,7 +83,7 @@ class DevicesWithDeviceIdRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a registered device. This API is available in the following national cloud deployments.
+     * Delete a registered device.
      * @param DevicesWithDeviceIdRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -96,12 +96,12 @@ class DevicesWithDeviceIdRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Get the properties and relationships of a device object. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of a device object.
      * @param DevicesWithDeviceIdRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -117,12 +117,12 @@ class DevicesWithDeviceIdRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Update the properties of a registered device. Only certain properties of a device can be updated through approved Mobile Device Managment (MDM) apps. This API is available in the following national cloud deployments.
+     * Update the properties of a registered device. Only certain properties of a device can be updated through approved Mobile Device Managment (MDM) apps.
      * @param Device $body The request body
      * @param DevicesWithDeviceIdRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -136,7 +136,7 @@ class DevicesWithDeviceIdRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

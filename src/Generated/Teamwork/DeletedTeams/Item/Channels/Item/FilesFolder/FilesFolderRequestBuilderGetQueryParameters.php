@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Teamwork\DeletedTeams\Item\Channels\Item\Fil
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the metadata for the location where the files of a channel are stored.  This API is available in the following national cloud deployments.
+ * Get the metadata for the location where the files of a channel are stored. 
 */
 class FilesFolderRequestBuilderGetQueryParameters 
 {

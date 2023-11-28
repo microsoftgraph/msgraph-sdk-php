@@ -52,7 +52,7 @@ class TokenIssuancePoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of tokenIssuancePolicy objects. This API is available in the following national cloud deployments.
+     * Get a list of tokenIssuancePolicy objects.
      * @param TokenIssuancePoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TokenIssuancePolicyCollectionResponse|null>
      * @throws Exception
@@ -68,7 +68,7 @@ class TokenIssuancePoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new tokenIssuancePolicy object. This API is available in the following national cloud deployments.
+     * Create a new tokenIssuancePolicy object.
      * @param TokenIssuancePolicy $body The request body
      * @param TokenIssuancePoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TokenIssuancePolicy|null>
@@ -85,7 +85,7 @@ class TokenIssuancePoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of tokenIssuancePolicy objects. This API is available in the following national cloud deployments.
+     * Get a list of tokenIssuancePolicy objects.
      * @param TokenIssuancePoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -101,12 +101,12 @@ class TokenIssuancePoliciesRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Create a new tokenIssuancePolicy object. This API is available in the following national cloud deployments.
+     * Create a new tokenIssuancePolicy object.
      * @param TokenIssuancePolicy $body The request body
      * @param TokenIssuancePoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -120,7 +120,7 @@ class TokenIssuancePoliciesRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

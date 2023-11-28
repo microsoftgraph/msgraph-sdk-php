@@ -52,7 +52,7 @@ class CustomQuestionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the bookingCustomQuestion resources associated with a bookingBusiness. This API is available in the following national cloud deployments.
+     * Get the bookingCustomQuestion resources associated with a bookingBusiness.
      * @param CustomQuestionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<BookingCustomQuestionCollectionResponse|null>
      * @throws Exception
@@ -68,7 +68,7 @@ class CustomQuestionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new bookingCustomQuestion object. This API is available in the following national cloud deployments.
+     * Create a new bookingCustomQuestion object.
      * @param BookingCustomQuestion $body The request body
      * @param CustomQuestionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<BookingCustomQuestion|null>
@@ -85,7 +85,7 @@ class CustomQuestionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the bookingCustomQuestion resources associated with a bookingBusiness. This API is available in the following national cloud deployments.
+     * Get the bookingCustomQuestion resources associated with a bookingBusiness.
      * @param CustomQuestionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -101,12 +101,12 @@ class CustomQuestionsRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Create a new bookingCustomQuestion object. This API is available in the following national cloud deployments.
+     * Create a new bookingCustomQuestion object.
      * @param BookingCustomQuestion $body The request body
      * @param CustomQuestionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -120,7 +120,7 @@ class CustomQuestionsRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

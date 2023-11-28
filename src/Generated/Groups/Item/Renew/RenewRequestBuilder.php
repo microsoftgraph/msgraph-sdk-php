@@ -30,7 +30,7 @@ class RenewRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Renews a group's expiration. When a group is renewed, the group expiration is extended by the number of days defined in the policy. This API is available in the following national cloud deployments.
+     * Renews a group's expiration. When a group is renewed, the group expiration is extended by the number of days defined in the policy.
      * @param RenewRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -46,7 +46,7 @@ class RenewRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Renews a group's expiration. When a group is renewed, the group expiration is extended by the number of days defined in the policy. This API is available in the following national cloud deployments.
+     * Renews a group's expiration. When a group is renewed, the group expiration is extended by the number of days defined in the policy.
      * @param RenewRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -59,7 +59,7 @@ class RenewRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 

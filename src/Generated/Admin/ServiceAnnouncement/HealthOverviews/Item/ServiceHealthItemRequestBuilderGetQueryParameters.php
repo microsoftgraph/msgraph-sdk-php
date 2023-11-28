@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Admin\ServiceAnnouncement\HealthOverviews\It
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties and relationships of a serviceHealth object. This operation provides the health information of a specified service for a tenant. This API is available in the following national cloud deployments.
+ * Retrieve the properties and relationships of a serviceHealth object. This operation provides the health information of a specified service for a tenant.
 */
 class ServiceHealthItemRequestBuilderGetQueryParameters 
 {

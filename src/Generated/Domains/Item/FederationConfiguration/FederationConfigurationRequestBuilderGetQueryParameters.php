@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Domains\Item\FederationConfiguration;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read the properties of the internalDomainFederation objects for the domain. This API returns only one object in the collection. This API is available in the following national cloud deployments.
+ * Read the properties of the internalDomainFederation objects for the domain. This API returns only one object in the collection.
 */
 class FederationConfigurationRequestBuilderGetQueryParameters 
 {

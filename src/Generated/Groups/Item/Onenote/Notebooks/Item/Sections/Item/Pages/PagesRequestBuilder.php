@@ -52,7 +52,7 @@ class PagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of page objects from the specified section. This API is available in the following national cloud deployments.
+     * Retrieve a list of page objects from the specified section.
      * @param PagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<OnenotePageCollectionResponse|null>
      * @throws Exception
@@ -68,7 +68,7 @@ class PagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new page in the specified section. This API is available in the following national cloud deployments.
+     * Create a new page in the specified section.
      * @param OnenotePage $body The request body
      * @param PagesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<OnenotePage|null>
@@ -85,7 +85,7 @@ class PagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of page objects from the specified section. This API is available in the following national cloud deployments.
+     * Retrieve a list of page objects from the specified section.
      * @param PagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -101,12 +101,12 @@ class PagesRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Create a new page in the specified section. This API is available in the following national cloud deployments.
+     * Create a new page in the specified section.
      * @param OnenotePage $body The request body
      * @param PagesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -120,7 +120,7 @@ class PagesRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

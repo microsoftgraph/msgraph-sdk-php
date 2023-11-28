@@ -43,7 +43,7 @@ class PhotosRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of profilePhoto objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of profilePhoto objects.
      * @param PhotosRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ProfilePhotoCollectionResponse|null>
      * @throws Exception
@@ -59,7 +59,7 @@ class PhotosRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of profilePhoto objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of profilePhoto objects.
      * @param PhotosRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -75,7 +75,7 @@ class PhotosRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 

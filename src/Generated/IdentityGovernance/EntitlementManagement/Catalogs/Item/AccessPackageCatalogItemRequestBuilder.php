@@ -71,7 +71,7 @@ class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an accessPackageCatalog. This API is available in the following national cloud deployments.
+     * Delete an accessPackageCatalog.
      * @param AccessPackageCatalogItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -87,7 +87,7 @@ class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of an accessPackageCatalog object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an accessPackageCatalog object.
      * @param AccessPackageCatalogItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AccessPackageCatalog|null>
      * @throws Exception
@@ -103,7 +103,7 @@ class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update an existing accessPackageCatalog object to change one or more of its properties, such as the display name or description. This API is available in the following national cloud deployments.
+     * Update an existing accessPackageCatalog object to change one or more of its properties, such as the display name or description.
      * @param AccessPackageCatalog $body The request body
      * @param AccessPackageCatalogItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AccessPackageCatalog|null>
@@ -120,7 +120,7 @@ class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an accessPackageCatalog. This API is available in the following national cloud deployments.
+     * Delete an accessPackageCatalog.
      * @param AccessPackageCatalogItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -133,12 +133,12 @@ class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Retrieve the properties and relationships of an accessPackageCatalog object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an accessPackageCatalog object.
      * @param AccessPackageCatalogItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -154,12 +154,12 @@ class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Update an existing accessPackageCatalog object to change one or more of its properties, such as the display name or description. This API is available in the following national cloud deployments.
+     * Update an existing accessPackageCatalog object to change one or more of its properties, such as the display name or description.
      * @param AccessPackageCatalog $body The request body
      * @param AccessPackageCatalogItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -173,7 +173,7 @@ class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

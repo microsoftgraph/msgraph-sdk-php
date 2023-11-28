@@ -55,7 +55,7 @@ class TeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Uninstalls an app from the specified team. This API is available in the following national cloud deployments.
+     * Uninstalls an app from the specified team.
      * @param TeamsAppInstallationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -71,7 +71,7 @@ class TeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the app installed in the specified team. This API is available in the following national cloud deployments.
+     * Retrieve the app installed in the specified team.
      * @param TeamsAppInstallationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TeamsAppInstallation|null>
      * @throws Exception
@@ -103,7 +103,7 @@ class TeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Uninstalls an app from the specified team. This API is available in the following national cloud deployments.
+     * Uninstalls an app from the specified team.
      * @param TeamsAppInstallationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -116,12 +116,12 @@ class TeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Retrieve the app installed in the specified team. This API is available in the following national cloud deployments.
+     * Retrieve the app installed in the specified team.
      * @param TeamsAppInstallationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -137,7 +137,7 @@ class TeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
@@ -156,7 +156,7 @@ class TeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

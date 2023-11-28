@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Tags\Item\Member
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the properties and relationships of a member of a standard tag in a team. This API is available in the following national cloud deployments.
+ * Get the properties and relationships of a member of a standard tag in a team.
 */
 class TeamworkTagMemberItemRequestBuilderGetQueryParameters 
 {

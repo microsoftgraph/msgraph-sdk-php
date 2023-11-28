@@ -39,7 +39,7 @@ class WorkflowTemplateItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a workflowTemplate object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a workflowTemplate object.
      * @param WorkflowTemplateItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkflowTemplate|null>
      * @throws Exception
@@ -55,7 +55,7 @@ class WorkflowTemplateItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a workflowTemplate object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a workflowTemplate object.
      * @param WorkflowTemplateItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -71,7 +71,7 @@ class WorkflowTemplateItemRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 

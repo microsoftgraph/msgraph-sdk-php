@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Drives\Item\Following;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List the items that have been followed by the signed in user.This collection includes items that are in the user's drive as well as items they have access to from other drives. This API is available in the following national cloud deployments.
+ * List the items that have been followed by the signed in user.This collection includes items that are in the user's drive as well as items they have access to from other drives.
 */
 class FollowingRequestBuilderGetQueryParameters 
 {

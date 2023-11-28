@@ -63,7 +63,7 @@ class ExternalConnectionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes an externalConnection object. This API is available in the following national cloud deployments.
+     * Deletes an externalConnection object.
      * @param ExternalConnectionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -79,7 +79,7 @@ class ExternalConnectionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of an externalConnection object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an externalConnection object.
      * @param ExternalConnectionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ExternalConnection|null>
      * @throws Exception
@@ -95,7 +95,7 @@ class ExternalConnectionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an externalConnection object. This API is available in the following national cloud deployments.
+     * Update the properties of an externalConnection object.
      * @param ExternalConnection $body The request body
      * @param ExternalConnectionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ExternalConnection|null>
@@ -112,7 +112,7 @@ class ExternalConnectionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes an externalConnection object. This API is available in the following national cloud deployments.
+     * Deletes an externalConnection object.
      * @param ExternalConnectionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -125,12 +125,12 @@ class ExternalConnectionItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Read the properties and relationships of an externalConnection object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an externalConnection object.
      * @param ExternalConnectionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -146,12 +146,12 @@ class ExternalConnectionItemRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Update the properties of an externalConnection object. This API is available in the following national cloud deployments.
+     * Update the properties of an externalConnection object.
      * @param ExternalConnection $body The request body
      * @param ExternalConnectionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -165,7 +165,7 @@ class ExternalConnectionItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

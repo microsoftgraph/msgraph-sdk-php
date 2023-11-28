@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Reports\AuthenticationMethods\UserRegistrati
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read the properties and relationships of a userRegistrationDetails object. This API is available in the following national cloud deployments.
+ * Read the properties and relationships of a userRegistrationDetails object.
 */
 class UserRegistrationDetailsItemRequestBuilderGetQueryParameters 
 {

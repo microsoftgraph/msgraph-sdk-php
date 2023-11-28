@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Planner\Buckets;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve a list of plannerbucket objects. This API is available in the following national cloud deployments.
+ * Retrieve a list of plannerbucket objects.
 */
 class BucketsRequestBuilderGetQueryParameters 
 {

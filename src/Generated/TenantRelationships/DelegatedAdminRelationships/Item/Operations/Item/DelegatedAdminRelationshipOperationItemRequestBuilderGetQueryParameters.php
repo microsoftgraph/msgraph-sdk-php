@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\TenantRelationships\DelegatedAdminRelationsh
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read the properties of a delegatedAdminRelationshipOperation object. This API is available in the following national cloud deployments.
+ * Read the properties of a delegatedAdminRelationshipOperation object.
 */
 class DelegatedAdminRelationshipOperationItemRequestBuilderGetQueryParameters 
 {

@@ -52,7 +52,7 @@ class SwapShiftsChangeRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of swapShiftsChangeRequest objects in the team. This API is available in the following national cloud deployments.
+     * Retrieve a list of swapShiftsChangeRequest objects in the team.
      * @param SwapShiftsChangeRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SwapShiftsChangeRequestCollectionResponse|null>
      * @throws Exception
@@ -68,7 +68,7 @@ class SwapShiftsChangeRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create an instance of a swapShiftsChangeRequest object. This API is available in the following national cloud deployments.
+     * Create an instance of a swapShiftsChangeRequest object.
      * @param SwapShiftsChangeRequest $body The request body
      * @param SwapShiftsChangeRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SwapShiftsChangeRequest|null>
@@ -85,7 +85,7 @@ class SwapShiftsChangeRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of swapShiftsChangeRequest objects in the team. This API is available in the following national cloud deployments.
+     * Retrieve a list of swapShiftsChangeRequest objects in the team.
      * @param SwapShiftsChangeRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -101,12 +101,12 @@ class SwapShiftsChangeRequestsRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Create an instance of a swapShiftsChangeRequest object. This API is available in the following national cloud deployments.
+     * Create an instance of a swapShiftsChangeRequest object.
      * @param SwapShiftsChangeRequest $body The request body
      * @param SwapShiftsChangeRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -120,7 +120,7 @@ class SwapShiftsChangeRequestsRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

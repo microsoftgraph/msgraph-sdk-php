@@ -39,7 +39,7 @@ class TeamworkTagItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a tag object permanently. This API is available in the following national cloud deployments.
+     * Delete a tag object permanently.
      * @param TeamworkTagItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -55,7 +55,7 @@ class TeamworkTagItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a tag object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a tag object.
      * @param TeamworkTagItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TeamworkTag|null>
      * @throws Exception
@@ -71,7 +71,7 @@ class TeamworkTagItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a tag object. This API is available in the following national cloud deployments.
+     * Update the properties of a tag object.
      * @param TeamworkTag $body The request body
      * @param TeamworkTagItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TeamworkTag|null>
@@ -88,7 +88,7 @@ class TeamworkTagItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a tag object permanently. This API is available in the following national cloud deployments.
+     * Delete a tag object permanently.
      * @param TeamworkTagItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -101,12 +101,12 @@ class TeamworkTagItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Read the properties and relationships of a tag object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a tag object.
      * @param TeamworkTagItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -122,12 +122,12 @@ class TeamworkTagItemRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Update the properties of a tag object. This API is available in the following national cloud deployments.
+     * Update the properties of a tag object.
      * @param TeamworkTag $body The request body
      * @param TeamworkTagItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -141,7 +141,7 @@ class TeamworkTagItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

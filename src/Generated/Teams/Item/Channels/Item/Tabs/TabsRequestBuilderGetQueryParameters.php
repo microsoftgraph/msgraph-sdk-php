@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Teams\Item\Channels\Item\Tabs;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the list of tabs in the specified channel within a team.  This API is available in the following national cloud deployments.
+ * Retrieve the list of tabs in the specified channel within a team. 
 */
 class TabsRequestBuilderGetQueryParameters 
 {

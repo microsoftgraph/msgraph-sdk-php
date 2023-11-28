@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Teams\Item\IncomingChannels;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the list of incoming channels (channels shared with a team). This API is available in the following national cloud deployments.
+ * Get the list of incoming channels (channels shared with a team).
 */
 class IncomingChannelsRequestBuilderGetQueryParameters 
 {

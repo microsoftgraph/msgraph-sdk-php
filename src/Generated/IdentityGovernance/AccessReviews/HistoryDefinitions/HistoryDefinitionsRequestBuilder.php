@@ -52,7 +52,7 @@ class HistoryDefinitionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the accessReviewHistoryDefinition objects created in the last 30 days, including all nested properties. This API is available in the following national cloud deployments.
+     * Retrieve the accessReviewHistoryDefinition objects created in the last 30 days, including all nested properties.
      * @param HistoryDefinitionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AccessReviewHistoryDefinitionCollectionResponse|null>
      * @throws Exception
@@ -68,7 +68,7 @@ class HistoryDefinitionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new accessReviewHistoryDefinition object. This API is available in the following national cloud deployments.
+     * Create a new accessReviewHistoryDefinition object.
      * @param AccessReviewHistoryDefinition $body The request body
      * @param HistoryDefinitionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AccessReviewHistoryDefinition|null>
@@ -85,7 +85,7 @@ class HistoryDefinitionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the accessReviewHistoryDefinition objects created in the last 30 days, including all nested properties. This API is available in the following national cloud deployments.
+     * Retrieve the accessReviewHistoryDefinition objects created in the last 30 days, including all nested properties.
      * @param HistoryDefinitionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -101,12 +101,12 @@ class HistoryDefinitionsRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Create a new accessReviewHistoryDefinition object. This API is available in the following national cloud deployments.
+     * Create a new accessReviewHistoryDefinition object.
      * @param AccessReviewHistoryDefinition $body The request body
      * @param HistoryDefinitionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -120,7 +120,7 @@ class HistoryDefinitionsRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

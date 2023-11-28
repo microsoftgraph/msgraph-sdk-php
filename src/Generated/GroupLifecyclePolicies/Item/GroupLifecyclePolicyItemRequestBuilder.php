@@ -47,7 +47,7 @@ class GroupLifecyclePolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a groupLifecyclePolicy. This API is available in the following national cloud deployments.
+     * Delete a groupLifecyclePolicy.
      * @param GroupLifecyclePolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -63,7 +63,7 @@ class GroupLifecyclePolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a groupLifecyclePolicies object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a groupLifecyclePolicies object.
      * @param GroupLifecyclePolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GroupLifecyclePolicy|null>
      * @throws Exception
@@ -79,7 +79,7 @@ class GroupLifecyclePolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a groupLifecyclePolicygroupLifecyclePolicy resource type object. This API is available in the following national cloud deployments.
+     * Update the properties of a groupLifecyclePolicygroupLifecyclePolicy resource type object.
      * @param GroupLifecyclePolicy $body The request body
      * @param GroupLifecyclePolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GroupLifecyclePolicy|null>
@@ -96,7 +96,7 @@ class GroupLifecyclePolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a groupLifecyclePolicy. This API is available in the following national cloud deployments.
+     * Delete a groupLifecyclePolicy.
      * @param GroupLifecyclePolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -109,12 +109,12 @@ class GroupLifecyclePolicyItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Retrieve the properties and relationships of a groupLifecyclePolicies object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a groupLifecyclePolicies object.
      * @param GroupLifecyclePolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -130,12 +130,12 @@ class GroupLifecyclePolicyItemRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Update the properties of a groupLifecyclePolicygroupLifecyclePolicy resource type object. This API is available in the following national cloud deployments.
+     * Update the properties of a groupLifecyclePolicygroupLifecyclePolicy resource type object.
      * @param GroupLifecyclePolicy $body The request body
      * @param GroupLifecyclePolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -149,7 +149,7 @@ class GroupLifecyclePolicyItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

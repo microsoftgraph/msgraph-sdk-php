@@ -60,7 +60,7 @@ class DeletedTeamsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the deletedTeam objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the deletedTeam objects and their properties.
      * @param DeletedTeamsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeletedTeamCollectionResponse|null>
      * @throws Exception
@@ -92,7 +92,7 @@ class DeletedTeamsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the deletedTeam objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the deletedTeam objects and their properties.
      * @param DeletedTeamsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -108,7 +108,7 @@ class DeletedTeamsRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
@@ -127,7 +127,7 @@ class DeletedTeamsRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

@@ -30,7 +30,7 @@ class CloseSessionRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Use this API to close an existing workbook session. This API is available in the following national cloud deployments.
+     * Use this API to close an existing workbook session.
      * @param CloseSessionRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -46,7 +46,7 @@ class CloseSessionRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Use this API to close an existing workbook session. This API is available in the following national cloud deployments.
+     * Use this API to close an existing workbook session.
      * @param CloseSessionRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -59,7 +59,7 @@ class CloseSessionRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 

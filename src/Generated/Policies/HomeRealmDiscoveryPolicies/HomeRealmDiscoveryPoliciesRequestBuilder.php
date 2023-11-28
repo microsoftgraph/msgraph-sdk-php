@@ -52,7 +52,7 @@ class HomeRealmDiscoveryPoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of homeRealmDiscoveryPolicy objects. This API is available in the following national cloud deployments.
+     * Get a list of homeRealmDiscoveryPolicy objects.
      * @param HomeRealmDiscoveryPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<HomeRealmDiscoveryPolicyCollectionResponse|null>
      * @throws Exception
@@ -68,7 +68,7 @@ class HomeRealmDiscoveryPoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new homeRealmDiscoveryPolicy object. This API is available in the following national cloud deployments.
+     * Create a new homeRealmDiscoveryPolicy object.
      * @param HomeRealmDiscoveryPolicy $body The request body
      * @param HomeRealmDiscoveryPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<HomeRealmDiscoveryPolicy|null>
@@ -85,7 +85,7 @@ class HomeRealmDiscoveryPoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of homeRealmDiscoveryPolicy objects. This API is available in the following national cloud deployments.
+     * Get a list of homeRealmDiscoveryPolicy objects.
      * @param HomeRealmDiscoveryPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -101,12 +101,12 @@ class HomeRealmDiscoveryPoliciesRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Create a new homeRealmDiscoveryPolicy object. This API is available in the following national cloud deployments.
+     * Create a new homeRealmDiscoveryPolicy object.
      * @param HomeRealmDiscoveryPolicy $body The request body
      * @param HomeRealmDiscoveryPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -120,7 +120,7 @@ class HomeRealmDiscoveryPoliciesRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

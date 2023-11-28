@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Delete
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the task processing result from a userProcessingResult either directly or through a run. This API is available in the following national cloud deployments.
+ * Get the task processing result from a userProcessingResult either directly or through a run.
 */
 class TaskProcessingResultsRequestBuilderGetQueryParameters 
 {

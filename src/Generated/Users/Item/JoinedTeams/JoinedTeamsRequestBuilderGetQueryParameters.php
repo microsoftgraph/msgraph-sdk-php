@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the teams in Microsoft Teams that the user is a direct member of. This API is available in the following national cloud deployments.
+ * Get the teams in Microsoft Teams that the user is a direct member of.
 */
 class JoinedTeamsRequestBuilderGetQueryParameters 
 {

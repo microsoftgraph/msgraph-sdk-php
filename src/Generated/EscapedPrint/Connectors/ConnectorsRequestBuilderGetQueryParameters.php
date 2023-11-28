@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\EscapedPrint\Connectors;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve a list of print connectors. This API is available in the following national cloud deployments.
+ * Retrieve a list of print connectors.
 */
 class ConnectorsRequestBuilderGetQueryParameters 
 {

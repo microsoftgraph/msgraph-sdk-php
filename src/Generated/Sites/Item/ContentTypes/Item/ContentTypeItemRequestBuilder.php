@@ -111,7 +111,7 @@ class ContentTypeItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Remove a content type][contentType] from a [list][] or a [site][]. This API is available in the following [national cloud deployments.
+     * Remove a [content type][contentType] from a [list][] or a [site][].
      * @param ContentTypeItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -127,7 +127,7 @@ class ContentTypeItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the metadata for a content type][contentType] in a [site][] or a [list][]. This API is available in the following [national cloud deployments.
+     * Retrieve the metadata for a [content type][contentType] in a [site][] or a [list][].
      * @param ContentTypeItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ContentType|null>
      * @throws Exception
@@ -143,7 +143,7 @@ class ContentTypeItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update a content type][contentType]. This API is available in the following [national cloud deployments.
+     * Update a [content type][contentType].
      * @param ContentType $body The request body
      * @param ContentTypeItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ContentType|null>
@@ -160,7 +160,7 @@ class ContentTypeItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Remove a content type][contentType] from a [list][] or a [site][]. This API is available in the following [national cloud deployments.
+     * Remove a [content type][contentType] from a [list][] or a [site][].
      * @param ContentTypeItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -173,12 +173,12 @@ class ContentTypeItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Retrieve the metadata for a content type][contentType] in a [site][] or a [list][]. This API is available in the following [national cloud deployments.
+     * Retrieve the metadata for a [content type][contentType] in a [site][] or a [list][].
      * @param ContentTypeItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -194,12 +194,12 @@ class ContentTypeItemRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Update a content type][contentType]. This API is available in the following [national cloud deployments.
+     * Update a [content type][contentType].
      * @param ContentType $body The request body
      * @param ContentTypeItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -213,7 +213,7 @@ class ContentTypeItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

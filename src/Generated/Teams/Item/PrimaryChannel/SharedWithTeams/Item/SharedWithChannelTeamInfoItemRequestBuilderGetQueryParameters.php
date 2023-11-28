@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\SharedWithTeams\It
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a team that has been shared with a specified channel. This operation is allowed only for channels with a membershipType value of shared. This API is available in the following national cloud deployments.
+ * Get a team that has been shared with a specified channel. This operation is allowed only for channels with a membershipType value of shared.
 */
 class SharedWithChannelTeamInfoItemRequestBuilderGetQueryParameters 
 {

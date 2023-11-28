@@ -52,7 +52,7 @@ class RelationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the different relation of a term] or [set] from the relations navigation property. This API is available in the following [national cloud deployments.
+     * Get the different relation of a [term] or [set] from the relations navigation property.
      * @param RelationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<RelationCollectionResponse|null>
      * @throws Exception
@@ -84,7 +84,7 @@ class RelationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the different relation of a term] or [set] from the relations navigation property. This API is available in the following [national cloud deployments.
+     * Get the different relation of a [term] or [set] from the relations navigation property.
      * @param RelationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -100,7 +100,7 @@ class RelationsRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
@@ -119,7 +119,7 @@ class RelationsRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

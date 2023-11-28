@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Communications\Calls\Item\AudioRoutingGroups
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties and relationships of an audioRoutingGroup object. This API is available in the following national cloud deployments.
+ * Retrieve the properties and relationships of an audioRoutingGroup object.
 */
 class AudioRoutingGroupItemRequestBuilderGetQueryParameters 
 {

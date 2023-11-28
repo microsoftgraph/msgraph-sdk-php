@@ -30,7 +30,7 @@ class PromoteRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Promote a verified subdomain to the root domain. A verified domain has its isVerified property set to true. This API is available in the following national cloud deployments.
+     * Promote a verified subdomain to the root domain. A verified domain has its isVerified property set to true.
      * @param PromoteRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PromotePostResponse|null>
      * @throws Exception
@@ -46,7 +46,7 @@ class PromoteRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Promote a verified subdomain to the root domain. A verified domain has its isVerified property set to true. This API is available in the following national cloud deployments.
+     * Promote a verified subdomain to the root domain. A verified domain has its isVerified property set to true.
      * @param PromoteRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -59,7 +59,7 @@ class PromoteRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 

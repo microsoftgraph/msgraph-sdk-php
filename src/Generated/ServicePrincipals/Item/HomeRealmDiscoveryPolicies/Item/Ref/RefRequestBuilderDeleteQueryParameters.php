@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\ServicePrincipals\Item\HomeRealmDiscoveryPol
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Remove a homeRealmDiscoveryPolicy from a servicePrincipal. This API is available in the following national cloud deployments.
+ * Remove a homeRealmDiscoveryPolicy from a servicePrincipal.
 */
 class RefRequestBuilderDeleteQueryParameters 
 {

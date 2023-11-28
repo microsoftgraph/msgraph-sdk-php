@@ -31,7 +31,7 @@ class AuthenticationContextClassReferenceItemRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Delete an authenticationContextClassReference object that's not published or used by a conditional access policy. This API is available in the following national cloud deployments.
+     * Delete an authenticationContextClassReference object that's not published or used by a conditional access policy.
      * @param AuthenticationContextClassReferenceItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -47,7 +47,7 @@ class AuthenticationContextClassReferenceItemRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Retrieve the properties and relationships of a authenticationContextClassReference object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a authenticationContextClassReference object.
      * @param AuthenticationContextClassReferenceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthenticationContextClassReference|null>
      * @throws Exception
@@ -63,7 +63,7 @@ class AuthenticationContextClassReferenceItemRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Create an authenticationContextClassReference object, if the ID has not been used. If ID has been used, this call updates the authenticationContextClassReference object. This API is available in the following national cloud deployments.
+     * Create an authenticationContextClassReference object, if the ID has not been used. If ID has been used, this call updates the authenticationContextClassReference object.
      * @param AuthenticationContextClassReference $body The request body
      * @param AuthenticationContextClassReferenceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthenticationContextClassReference|null>
@@ -80,7 +80,7 @@ class AuthenticationContextClassReferenceItemRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Delete an authenticationContextClassReference object that's not published or used by a conditional access policy. This API is available in the following national cloud deployments.
+     * Delete an authenticationContextClassReference object that's not published or used by a conditional access policy.
      * @param AuthenticationContextClassReferenceItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -93,12 +93,12 @@ class AuthenticationContextClassReferenceItemRequestBuilder extends BaseRequestB
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Retrieve the properties and relationships of a authenticationContextClassReference object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a authenticationContextClassReference object.
      * @param AuthenticationContextClassReferenceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -114,12 +114,12 @@ class AuthenticationContextClassReferenceItemRequestBuilder extends BaseRequestB
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Create an authenticationContextClassReference object, if the ID has not been used. If ID has been used, this call updates the authenticationContextClassReference object. This API is available in the following national cloud deployments.
+     * Create an authenticationContextClassReference object, if the ID has not been used. If ID has been used, this call updates the authenticationContextClassReference object.
      * @param AuthenticationContextClassReference $body The request body
      * @param AuthenticationContextClassReferenceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -133,7 +133,7 @@ class AuthenticationContextClassReferenceItemRequestBuilder extends BaseRequestB
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

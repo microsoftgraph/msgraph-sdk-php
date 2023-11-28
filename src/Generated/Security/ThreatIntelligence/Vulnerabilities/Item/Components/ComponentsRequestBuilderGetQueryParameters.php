@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\ThreatIntelligence\Vulnerabilities\
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a list of vulnerabilityComponent objects related to a known vulnerability. This API is available in the following national cloud deployments.
+ * Get a list of vulnerabilityComponent objects related to a known vulnerability.
 */
 class ComponentsRequestBuilderGetQueryParameters 
 {
