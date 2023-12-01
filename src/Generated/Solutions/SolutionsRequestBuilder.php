@@ -8,6 +8,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\SolutionsRoot;
 use Microsoft\Graph\Generated\Solutions\BookingBusinesses\BookingBusinessesRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BookingCurrencies\BookingCurrenciesRequestBuilder;
+use Microsoft\Graph\Generated\Solutions\VirtualEvents\VirtualEventsRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -30,6 +31,13 @@ class SolutionsRequestBuilder extends BaseRequestBuilder
     */
     public function bookingCurrencies(): BookingCurrenciesRequestBuilder {
         return new BookingCurrenciesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the virtualEvents property of the microsoft.graph.solutionsRoot entity.
+    */
+    public function virtualEvents(): VirtualEventsRequestBuilder {
+        return new VirtualEventsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -94,7 +102,7 @@ class SolutionsRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
@@ -113,7 +121,7 @@ class SolutionsRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

@@ -30,7 +30,7 @@ class MicrosoftGraphSecurityEstimateStatisticsRequestBuilder extends BaseRequest
     }
 
     /**
-     * Run an estimate of the number of emails and documents in the eDiscovery search. To learn more about searches in eDiscovery, see Collect data for a case in eDiscovery (Premium). This API is available in the following national cloud deployments.
+     * Run an estimate of the number of emails and documents in the eDiscovery search. To learn more about searches in eDiscovery, see Collect data for a case in eDiscovery (Premium).
      * @param MicrosoftGraphSecurityEstimateStatisticsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -46,7 +46,7 @@ class MicrosoftGraphSecurityEstimateStatisticsRequestBuilder extends BaseRequest
     }
 
     /**
-     * Run an estimate of the number of emails and documents in the eDiscovery search. To learn more about searches in eDiscovery, see Collect data for a case in eDiscovery (Premium). This API is available in the following national cloud deployments.
+     * Run an estimate of the number of emails and documents in the eDiscovery search. To learn more about searches in eDiscovery, see Collect data for a case in eDiscovery (Premium).
      * @param MicrosoftGraphSecurityEstimateStatisticsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -59,7 +59,7 @@ class MicrosoftGraphSecurityEstimateStatisticsRequestBuilder extends BaseRequest
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 

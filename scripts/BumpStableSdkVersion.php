@@ -2,7 +2,7 @@
 
 include_once 'SdkVersionUtils.php';
 
-const GRAPH_CONSTANTS_FILEPATH = "./src/Core/GraphConstants.php";
+const GRAPH_CONSTANTS_FILEPATH = "./src/GraphConstants.php";
 
 $packagistVersion = getLatestPackagistVersion();
 if (!$packagistVersion) {

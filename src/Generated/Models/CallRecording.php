@@ -27,7 +27,7 @@ class CallRecording extends Entity implements Parsable
     }
 
     /**
-     * Gets the content property value. The content property
+     * Gets the content property value. The content of the recording. Read-only.
      * @return StreamInterface|null
     */
     public function getContent(): ?StreamInterface {
@@ -39,7 +39,7 @@ class CallRecording extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. Date and time at which the recording was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
@@ -66,7 +66,7 @@ class CallRecording extends Entity implements Parsable
     }
 
     /**
-     * Gets the meetingId property value. The meetingId property
+     * Gets the meetingId property value. The unique identifier of the onlineMeeting related to this recording. Read-only.
      * @return string|null
     */
     public function getMeetingId(): ?string {
@@ -78,7 +78,7 @@ class CallRecording extends Entity implements Parsable
     }
 
     /**
-     * Gets the meetingOrganizer property value. The meetingOrganizer property
+     * Gets the meetingOrganizer property value. The identity information of the organizer of the onlineMeeting related to this recording. Read-only.
      * @return IdentitySet|null
     */
     public function getMeetingOrganizer(): ?IdentitySet {
@@ -90,7 +90,7 @@ class CallRecording extends Entity implements Parsable
     }
 
     /**
-     * Gets the recordingContentUrl property value. The recordingContentUrl property
+     * Gets the recordingContentUrl property value. The URL that can be used to access the content of the recording. Read-only.
      * @return string|null
     */
     public function getRecordingContentUrl(): ?string {
@@ -115,7 +115,7 @@ class CallRecording extends Entity implements Parsable
     }
 
     /**
-     * Sets the content property value. The content property
+     * Sets the content property value. The content of the recording. Read-only.
      * @param StreamInterface|null $value Value to set for the content property.
     */
     public function setContent(?StreamInterface $value): void {
@@ -123,7 +123,7 @@ class CallRecording extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. Date and time at which the recording was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
@@ -131,7 +131,7 @@ class CallRecording extends Entity implements Parsable
     }
 
     /**
-     * Sets the meetingId property value. The meetingId property
+     * Sets the meetingId property value. The unique identifier of the onlineMeeting related to this recording. Read-only.
      * @param string|null $value Value to set for the meetingId property.
     */
     public function setMeetingId(?string $value): void {
@@ -139,7 +139,7 @@ class CallRecording extends Entity implements Parsable
     }
 
     /**
-     * Sets the meetingOrganizer property value. The meetingOrganizer property
+     * Sets the meetingOrganizer property value. The identity information of the organizer of the onlineMeeting related to this recording. Read-only.
      * @param IdentitySet|null $value Value to set for the meetingOrganizer property.
     */
     public function setMeetingOrganizer(?IdentitySet $value): void {
@@ -147,7 +147,7 @@ class CallRecording extends Entity implements Parsable
     }
 
     /**
-     * Sets the recordingContentUrl property value. The recordingContentUrl property
+     * Sets the recordingContentUrl property value. The URL that can be used to access the content of the recording. Read-only.
      * @param string|null $value Value to set for the recordingContentUrl property.
     */
     public function setRecordingContentUrl(?string $value): void {

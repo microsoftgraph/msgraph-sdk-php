@@ -39,7 +39,7 @@ class BookingAppointmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a bookingAppointment in the specified bookingBusiness. This API is available in the following national cloud deployments.
+     * Delete a bookingAppointment in the specified bookingBusiness.
      * @param BookingAppointmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -55,7 +55,7 @@ class BookingAppointmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the properties and relationships of a bookingAppointment object in the specified bookingBusiness. The startDateTime and endDateTime properties are always returned in UTC. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of a bookingAppointment object in the specified bookingBusiness. The startDateTime and endDateTime properties are always returned in UTC.
      * @param BookingAppointmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<BookingAppointment|null>
      * @throws Exception
@@ -71,7 +71,7 @@ class BookingAppointmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a bookingAppointment object in the specified bookingBusiness. This API is available in the following national cloud deployments.
+     * Update the properties of a bookingAppointment object in the specified bookingBusiness.
      * @param BookingAppointment $body The request body
      * @param BookingAppointmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<BookingAppointment|null>
@@ -88,7 +88,7 @@ class BookingAppointmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a bookingAppointment in the specified bookingBusiness. This API is available in the following national cloud deployments.
+     * Delete a bookingAppointment in the specified bookingBusiness.
      * @param BookingAppointmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -101,12 +101,12 @@ class BookingAppointmentItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Get the properties and relationships of a bookingAppointment object in the specified bookingBusiness. The startDateTime and endDateTime properties are always returned in UTC. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of a bookingAppointment object in the specified bookingBusiness. The startDateTime and endDateTime properties are always returned in UTC.
      * @param BookingAppointmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -122,12 +122,12 @@ class BookingAppointmentItemRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Update the properties of a bookingAppointment object in the specified bookingBusiness. This API is available in the following national cloud deployments.
+     * Update the properties of a bookingAppointment object in the specified bookingBusiness.
      * @param BookingAppointment $body The request body
      * @param BookingAppointmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -141,7 +141,7 @@ class BookingAppointmentItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

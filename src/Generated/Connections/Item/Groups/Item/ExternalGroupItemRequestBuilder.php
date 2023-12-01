@@ -39,7 +39,7 @@ class ExternalGroupItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an externalGroup object. This API is available in the following national cloud deployments.
+     * Delete an externalGroup object.
      * @param ExternalGroupItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -55,7 +55,7 @@ class ExternalGroupItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get an externalGroup object. This API is available in the following national cloud deployments.
+     * Get an externalGroup object.
      * @param ExternalGroupItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ExternalGroup|null>
      * @throws Exception
@@ -71,7 +71,7 @@ class ExternalGroupItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an externalGroup object. This API is available in the following national cloud deployments.
+     * Update the properties of an externalGroup object.
      * @param ExternalGroup $body The request body
      * @param ExternalGroupItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ExternalGroup|null>
@@ -88,7 +88,7 @@ class ExternalGroupItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an externalGroup object. This API is available in the following national cloud deployments.
+     * Delete an externalGroup object.
      * @param ExternalGroupItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -101,12 +101,12 @@ class ExternalGroupItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Get an externalGroup object. This API is available in the following national cloud deployments.
+     * Get an externalGroup object.
      * @param ExternalGroupItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -122,12 +122,12 @@ class ExternalGroupItemRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Update the properties of an externalGroup object. This API is available in the following national cloud deployments.
+     * Update the properties of an externalGroup object.
      * @param ExternalGroup $body The request body
      * @param ExternalGroupItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -141,7 +141,7 @@ class ExternalGroupItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

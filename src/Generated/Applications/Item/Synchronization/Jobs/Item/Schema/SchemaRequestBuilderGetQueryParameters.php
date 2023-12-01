@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Applications\Item\Synchronization\Jobs\Item\
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the schema for a given synchronization job or template. This API is available in the following national cloud deployments.
+ * Retrieve the schema for a given synchronization job or template.
 */
 class SchemaRequestBuilderGetQueryParameters 
 {

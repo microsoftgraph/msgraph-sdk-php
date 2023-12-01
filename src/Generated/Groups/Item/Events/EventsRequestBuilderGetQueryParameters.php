@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Events;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve a list of event objects. This API is available in the following national cloud deployments.
+ * Retrieve a list of event objects.
 */
 class EventsRequestBuilderGetQueryParameters 
 {

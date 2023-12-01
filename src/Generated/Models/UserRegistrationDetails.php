@@ -174,7 +174,7 @@ class UserRegistrationDetails extends Entity implements Parsable
     }
 
     /**
-     * Gets the methodsRegistered property value. Collection of authentication methods registered, such as mobilePhone, email, fido2. Supports $filter (any with eq).
+     * Gets the methodsRegistered property value. Collection of authentication methods registered, such as mobilePhone, email, passKeyDeviceBound. Supports $filter (any with eq).
      * @return array<string>|null
     */
     public function getMethodsRegistered(): ?array {
@@ -345,7 +345,7 @@ class UserRegistrationDetails extends Entity implements Parsable
     }
 
     /**
-     * Sets the methodsRegistered property value. Collection of authentication methods registered, such as mobilePhone, email, fido2. Supports $filter (any with eq).
+     * Sets the methodsRegistered property value. Collection of authentication methods registered, such as mobilePhone, email, passKeyDeviceBound. Supports $filter (any with eq).
      * @param array<string>|null $value Value to set for the methodsRegistered property.
     */
     public function setMethodsRegistered(?array $value): void {

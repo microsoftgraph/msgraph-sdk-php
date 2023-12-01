@@ -30,7 +30,7 @@ class RemovePasswordRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Remove a password from a servicePrincipal object. This API is available in the following national cloud deployments.
+     * Remove a password from a servicePrincipal object.
      * @param RemovePasswordPostRequestBody $body The request body
      * @param RemovePasswordRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
@@ -47,7 +47,7 @@ class RemovePasswordRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Remove a password from a servicePrincipal object. This API is available in the following national cloud deployments.
+     * Remove a password from a servicePrincipal object.
      * @param RemovePasswordPostRequestBody $body The request body
      * @param RemovePasswordRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -61,7 +61,7 @@ class RemovePasswordRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

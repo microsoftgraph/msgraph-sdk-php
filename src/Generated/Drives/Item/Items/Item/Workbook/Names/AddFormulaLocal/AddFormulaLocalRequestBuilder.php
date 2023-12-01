@@ -31,7 +31,7 @@ class AddFormulaLocalRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Adds a new name to the collection of the given scope using the user's locale for the formula. This API is available in the following national cloud deployments.
+     * Adds a new name to the collection of the given scope using the user's locale for the formula.
      * @param AddFormulaLocalPostRequestBody $body The request body
      * @param AddFormulaLocalRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookNamedItem|null>
@@ -48,7 +48,7 @@ class AddFormulaLocalRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Adds a new name to the collection of the given scope using the user's locale for the formula. This API is available in the following national cloud deployments.
+     * Adds a new name to the collection of the given scope using the user's locale for the formula.
      * @param AddFormulaLocalPostRequestBody $body The request body
      * @param AddFormulaLocalRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -62,7 +62,7 @@ class AddFormulaLocalRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

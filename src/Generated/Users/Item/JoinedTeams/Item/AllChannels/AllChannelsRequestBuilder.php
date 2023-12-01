@@ -51,7 +51,7 @@ class AllChannelsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the list of channels either in this team or shared with this team (incoming channels). This API is available in the following national cloud deployments.
+     * Get the list of channels either in this team or shared with this team (incoming channels).
      * @param AllChannelsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ChannelCollectionResponse|null>
      * @throws Exception
@@ -67,7 +67,7 @@ class AllChannelsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the list of channels either in this team or shared with this team (incoming channels). This API is available in the following national cloud deployments.
+     * Get the list of channels either in this team or shared with this team (incoming channels).
      * @param AllChannelsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -83,7 +83,7 @@ class AllChannelsRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 

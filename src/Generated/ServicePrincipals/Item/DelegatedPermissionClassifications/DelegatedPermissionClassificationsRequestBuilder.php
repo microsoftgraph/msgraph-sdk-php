@@ -52,7 +52,7 @@ class DelegatedPermissionClassificationsRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Retrieve the list of delegatedPermissionClassification currently configured for the delegated permissions exposed by an API. This API is available in the following national cloud deployments.
+     * Retrieve the list of delegatedPermissionClassification currently configured for the delegated permissions exposed by an API.
      * @param DelegatedPermissionClassificationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DelegatedPermissionClassificationCollectionResponse|null>
      * @throws Exception
@@ -68,7 +68,7 @@ class DelegatedPermissionClassificationsRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Classify a delegated permission by adding a delegatedPermissionClassification to the servicePrincipal representing the API. This API is available in the following national cloud deployments.
+     * Classify a delegated permission by adding a delegatedPermissionClassification to the servicePrincipal representing the API.
      * @param DelegatedPermissionClassification $body The request body
      * @param DelegatedPermissionClassificationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DelegatedPermissionClassification|null>
@@ -85,7 +85,7 @@ class DelegatedPermissionClassificationsRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Retrieve the list of delegatedPermissionClassification currently configured for the delegated permissions exposed by an API. This API is available in the following national cloud deployments.
+     * Retrieve the list of delegatedPermissionClassification currently configured for the delegated permissions exposed by an API.
      * @param DelegatedPermissionClassificationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -101,12 +101,12 @@ class DelegatedPermissionClassificationsRequestBuilder extends BaseRequestBuilde
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Classify a delegated permission by adding a delegatedPermissionClassification to the servicePrincipal representing the API. This API is available in the following national cloud deployments.
+     * Classify a delegated permission by adding a delegatedPermissionClassification to the servicePrincipal representing the API.
      * @param DelegatedPermissionClassification $body The request body
      * @param DelegatedPermissionClassificationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -120,7 +120,7 @@ class DelegatedPermissionClassificationsRequestBuilder extends BaseRequestBuilde
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

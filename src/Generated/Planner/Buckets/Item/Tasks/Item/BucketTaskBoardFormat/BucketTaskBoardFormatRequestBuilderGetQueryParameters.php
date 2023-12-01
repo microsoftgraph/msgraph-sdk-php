@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Planner\Buckets\Item\Tasks\Item\BucketTaskBo
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties and relationships of plannerBucketTaskBoardTaskFormat object. This API is available in the following national cloud deployments.
+ * Retrieve the properties and relationships of plannerBucketTaskBoardTaskFormat object.
 */
 class BucketTaskBoardFormatRequestBuilderGetQueryParameters 
 {

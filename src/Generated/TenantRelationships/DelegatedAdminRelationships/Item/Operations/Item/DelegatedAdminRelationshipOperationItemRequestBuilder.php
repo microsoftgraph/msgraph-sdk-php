@@ -46,7 +46,7 @@ class DelegatedAdminRelationshipOperationItemRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Read the properties of a delegatedAdminRelationshipOperation object. This API is available in the following national cloud deployments.
+     * Read the properties of a delegatedAdminRelationshipOperation object.
      * @param DelegatedAdminRelationshipOperationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DelegatedAdminRelationshipOperation|null>
      * @throws Exception
@@ -91,12 +91,12 @@ class DelegatedAdminRelationshipOperationItemRequestBuilder extends BaseRequestB
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Read the properties of a delegatedAdminRelationshipOperation object. This API is available in the following national cloud deployments.
+     * Read the properties of a delegatedAdminRelationshipOperation object.
      * @param DelegatedAdminRelationshipOperationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -112,7 +112,7 @@ class DelegatedAdminRelationshipOperationItemRequestBuilder extends BaseRequestB
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
@@ -131,7 +131,7 @@ class DelegatedAdminRelationshipOperationItemRequestBuilder extends BaseRequestB
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

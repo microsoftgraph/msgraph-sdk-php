@@ -52,7 +52,7 @@ class OpenShiftsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List openShift objects in a team. This API is available in the following national cloud deployments.
+     * List openShift objects in a team.
      * @param OpenShiftsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<OpenShiftCollectionResponse|null>
      * @throws Exception
@@ -68,7 +68,7 @@ class OpenShiftsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create an instance of an openShift object. This API is available in the following national cloud deployments.
+     * Create an instance of an openShift object.
      * @param OpenShift $body The request body
      * @param OpenShiftsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<OpenShift|null>
@@ -85,7 +85,7 @@ class OpenShiftsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List openShift objects in a team. This API is available in the following national cloud deployments.
+     * List openShift objects in a team.
      * @param OpenShiftsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -101,12 +101,12 @@ class OpenShiftsRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Create an instance of an openShift object. This API is available in the following national cloud deployments.
+     * Create an instance of an openShift object.
      * @param OpenShift $body The request body
      * @param OpenShiftsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -120,7 +120,7 @@ class OpenShiftsRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

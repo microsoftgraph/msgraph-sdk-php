@@ -46,7 +46,7 @@ class ApprovalStageItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties of an approvalStage object. An approval stage is contained within an approval object. This API is available in the following national cloud deployments.
+     * Retrieve the properties of an approvalStage object. An approval stage is contained within an approval object.
      * @param ApprovalStageItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ApprovalStage|null>
      * @throws Exception
@@ -62,7 +62,7 @@ class ApprovalStageItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Approve or deny an approvalStage object in an approval. This API is available in the following national cloud deployments.
+     * Approve or deny an approvalStage object in an approval.
      * @param ApprovalStage $body The request body
      * @param ApprovalStageItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ApprovalStage|null>
@@ -92,12 +92,12 @@ class ApprovalStageItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Retrieve the properties of an approvalStage object. An approval stage is contained within an approval object. This API is available in the following national cloud deployments.
+     * Retrieve the properties of an approvalStage object. An approval stage is contained within an approval object.
      * @param ApprovalStageItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,12 +113,12 @@ class ApprovalStageItemRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Approve or deny an approvalStage object in an approval. This API is available in the following national cloud deployments.
+     * Approve or deny an approvalStage object in an approval.
      * @param ApprovalStage $body The request body
      * @param ApprovalStageItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -132,7 +132,7 @@ class ApprovalStageItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

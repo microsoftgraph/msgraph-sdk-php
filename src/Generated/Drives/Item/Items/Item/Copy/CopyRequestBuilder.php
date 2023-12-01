@@ -31,7 +31,7 @@ class CopyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Asynchronously creates a copy of an driveItem][item-resource] (including any children), under a new parent item or with a new name. This API is available in the following [national cloud deployments.
+     * Asynchronously creates a copy of an [driveItem][item-resource] (including any children), under a new parent item or with a new name.
      * @param CopyPostRequestBody $body The request body
      * @param CopyRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DriveItem|null>
@@ -48,7 +48,7 @@ class CopyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Asynchronously creates a copy of an driveItem][item-resource] (including any children), under a new parent item or with a new name. This API is available in the following [national cloud deployments.
+     * Asynchronously creates a copy of an [driveItem][item-resource] (including any children), under a new parent item or with a new name.
      * @param CopyPostRequestBody $body The request body
      * @param CopyRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -62,7 +62,7 @@ class CopyRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

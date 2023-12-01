@@ -84,7 +84,7 @@ class ApplicationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the list of applications in this organization. This API is available in the following national cloud deployments.
+     * Get the list of applications in this organization.
      * @param ApplicationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ApplicationCollectionResponse|null>
      * @throws Exception
@@ -100,7 +100,7 @@ class ApplicationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new application object. This API is available in the following national cloud deployments.
+     * Create a new application object.
      * @param Application $body The request body
      * @param ApplicationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Application|null>
@@ -117,7 +117,7 @@ class ApplicationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the list of applications in this organization. This API is available in the following national cloud deployments.
+     * Get the list of applications in this organization.
      * @param ApplicationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -133,12 +133,12 @@ class ApplicationsRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Create a new application object. This API is available in the following national cloud deployments.
+     * Create a new application object.
      * @param Application $body The request body
      * @param ApplicationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -152,7 +152,7 @@ class ApplicationsRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

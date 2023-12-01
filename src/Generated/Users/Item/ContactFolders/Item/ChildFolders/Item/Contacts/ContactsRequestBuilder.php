@@ -60,7 +60,7 @@ class ContactsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a contact collection from the default Contacts folder of the signed-in user (.../me/contacts), or from the specified contact folder. This API is available in the following national cloud deployments.
+     * Get a contact collection from the default Contacts folder of the signed-in user (.../me/contacts), or from the specified contact folder.
      * @param ContactsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ContactCollectionResponse|null>
      * @throws Exception
@@ -76,7 +76,7 @@ class ContactsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Add a contact to the root Contacts folder or to the contacts endpoint of another contact folder. This API is available in the following national cloud deployments.
+     * Add a contact to the root Contacts folder or to the contacts endpoint of another contact folder.
      * @param Contact $body The request body
      * @param ContactsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Contact|null>
@@ -93,7 +93,7 @@ class ContactsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a contact collection from the default Contacts folder of the signed-in user (.../me/contacts), or from the specified contact folder. This API is available in the following national cloud deployments.
+     * Get a contact collection from the default Contacts folder of the signed-in user (.../me/contacts), or from the specified contact folder.
      * @param ContactsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -109,12 +109,12 @@ class ContactsRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Add a contact to the root Contacts folder or to the contacts endpoint of another contact folder. This API is available in the following national cloud deployments.
+     * Add a contact to the root Contacts folder or to the contacts endpoint of another contact folder.
      * @param Contact $body The request body
      * @param ContactsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -128,7 +128,7 @@ class ContactsRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

@@ -52,7 +52,7 @@ class AdditionalSourcesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the list of additional sources associated with an eDiscovery search. This API is available in the following national cloud deployments.
+     * Get the list of additional sources associated with an eDiscovery search.
      * @param AdditionalSourcesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DataSourceCollectionResponse|null>
      * @throws Exception
@@ -68,7 +68,7 @@ class AdditionalSourcesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new additional source associated with an eDiscovery search. This API is available in the following national cloud deployments.
+     * Create a new additional source associated with an eDiscovery search.
      * @param DataSource $body The request body
      * @param AdditionalSourcesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DataSource|null>
@@ -85,7 +85,7 @@ class AdditionalSourcesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the list of additional sources associated with an eDiscovery search. This API is available in the following national cloud deployments.
+     * Get the list of additional sources associated with an eDiscovery search.
      * @param AdditionalSourcesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -101,12 +101,12 @@ class AdditionalSourcesRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Create a new additional source associated with an eDiscovery search. This API is available in the following national cloud deployments.
+     * Create a new additional source associated with an eDiscovery search.
      * @param DataSource $body The request body
      * @param AdditionalSourcesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -120,7 +120,7 @@ class AdditionalSourcesRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

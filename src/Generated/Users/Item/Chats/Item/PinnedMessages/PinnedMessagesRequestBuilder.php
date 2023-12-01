@@ -52,7 +52,7 @@ class PinnedMessagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of pinnedChatMessages in a chat. This API is available in the following national cloud deployments.
+     * Get a list of pinnedChatMessages in a chat.
      * @param PinnedMessagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PinnedChatMessageInfoCollectionResponse|null>
      * @throws Exception
@@ -68,7 +68,7 @@ class PinnedMessagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Pin a chat message in the specified chat. This API cannot create a new chat; you must use the list chats method to retrieve the ID of an existing chat before you can pin a chat message. This API is available in the following national cloud deployments.
+     * Pin a chat message in the specified chat. This API cannot create a new chat; you must use the list chats method to retrieve the ID of an existing chat before you can pin a chat message.
      * @param PinnedChatMessageInfo $body The request body
      * @param PinnedMessagesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PinnedChatMessageInfo|null>
@@ -85,7 +85,7 @@ class PinnedMessagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of pinnedChatMessages in a chat. This API is available in the following national cloud deployments.
+     * Get a list of pinnedChatMessages in a chat.
      * @param PinnedMessagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -101,12 +101,12 @@ class PinnedMessagesRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Pin a chat message in the specified chat. This API cannot create a new chat; you must use the list chats method to retrieve the ID of an existing chat before you can pin a chat message. This API is available in the following national cloud deployments.
+     * Pin a chat message in the specified chat. This API cannot create a new chat; you must use the list chats method to retrieve the ID of an existing chat before you can pin a chat message.
      * @param PinnedChatMessageInfo $body The request body
      * @param PinnedMessagesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -120,7 +120,7 @@ class PinnedMessagesRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

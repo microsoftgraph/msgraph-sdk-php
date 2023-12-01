@@ -52,7 +52,7 @@ class PermissionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the permission resources from the permissions navigation property on a site. This API is available in the following national cloud deployments.
+     * Get the permission resources from the permissions navigation property on a site.
      * @param PermissionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PermissionCollectionResponse|null>
      * @throws Exception
@@ -68,7 +68,7 @@ class PermissionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new permission object on a site.  This API is available in the following national cloud deployments.
+     * Create a new permission object on a site. 
      * @param Permission $body The request body
      * @param PermissionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Permission|null>
@@ -85,7 +85,7 @@ class PermissionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the permission resources from the permissions navigation property on a site. This API is available in the following national cloud deployments.
+     * Get the permission resources from the permissions navigation property on a site.
      * @param PermissionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -101,12 +101,12 @@ class PermissionsRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Create a new permission object on a site.  This API is available in the following national cloud deployments.
+     * Create a new permission object on a site. 
      * @param Permission $body The request body
      * @param PermissionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -120,7 +120,7 @@ class PermissionsRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

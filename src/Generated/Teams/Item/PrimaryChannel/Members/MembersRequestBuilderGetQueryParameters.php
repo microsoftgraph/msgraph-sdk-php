@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\Members;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve a list of conversationMembers from a channel. This method supports federation. Only a user who is a member of the shared channel can retrieve the channel member list. This API is available in the following national cloud deployments.
+ * Retrieve a list of conversationMembers from a channel. This method supports federation. Only a user who is a member of the shared channel can retrieve the channel member list.
 */
 class MembersRequestBuilderGetQueryParameters 
 {

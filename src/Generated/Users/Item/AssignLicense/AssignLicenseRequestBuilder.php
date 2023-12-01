@@ -31,7 +31,7 @@ class AssignLicenseRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Add or remove subscriptions for the user. You can also enable and disable specific plans associated with a subscription. This API is available in the following national cloud deployments.
+     * Add or remove subscriptions for the user. You can also enable and disable specific plans associated with a subscription.
      * @param AssignLicensePostRequestBody $body The request body
      * @param AssignLicenseRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<User|null>
@@ -48,7 +48,7 @@ class AssignLicenseRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Add or remove subscriptions for the user. You can also enable and disable specific plans associated with a subscription. This API is available in the following national cloud deployments.
+     * Add or remove subscriptions for the user. You can also enable and disable specific plans associated with a subscription.
      * @param AssignLicensePostRequestBody $body The request body
      * @param AssignLicenseRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -62,7 +62,7 @@ class AssignLicenseRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

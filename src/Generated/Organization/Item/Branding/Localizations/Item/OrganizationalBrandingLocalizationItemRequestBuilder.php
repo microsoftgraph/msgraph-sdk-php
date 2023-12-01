@@ -87,7 +87,7 @@ class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRequestBu
     }
 
     /**
-     * Delete a localized branding object. To delete the organizationalBrandingLocalization object, all images (Stream types) must first be removed from the object. This API is available in the following national cloud deployments.
+     * Delete a localized branding object. To delete the organizationalBrandingLocalization object, all images (Stream types) must first be removed from the object.
      * @param OrganizationalBrandingLocalizationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -103,7 +103,7 @@ class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRequestBu
     }
 
     /**
-     * Read the properties and relationships of an organizationalBrandingLocalization object. To retrieve a localization branding object, specify the value of id in the URL. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an organizationalBrandingLocalization object. To retrieve a localization branding object, specify the value of id in the URL.
      * @param OrganizationalBrandingLocalizationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<OrganizationalBrandingLocalization|null>
      * @throws Exception
@@ -119,7 +119,7 @@ class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRequestBu
     }
 
     /**
-     * Update the properties of an organizationalBrandingLocalization object for a specific localization. This API is available in the following national cloud deployments.
+     * Update the properties of an organizationalBrandingLocalization object for a specific localization.
      * @param OrganizationalBrandingLocalization $body The request body
      * @param OrganizationalBrandingLocalizationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<OrganizationalBrandingLocalization|null>
@@ -136,7 +136,7 @@ class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRequestBu
     }
 
     /**
-     * Delete a localized branding object. To delete the organizationalBrandingLocalization object, all images (Stream types) must first be removed from the object. This API is available in the following national cloud deployments.
+     * Delete a localized branding object. To delete the organizationalBrandingLocalization object, all images (Stream types) must first be removed from the object.
      * @param OrganizationalBrandingLocalizationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -149,12 +149,12 @@ class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRequestBu
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Read the properties and relationships of an organizationalBrandingLocalization object. To retrieve a localization branding object, specify the value of id in the URL. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an organizationalBrandingLocalization object. To retrieve a localization branding object, specify the value of id in the URL.
      * @param OrganizationalBrandingLocalizationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -170,12 +170,12 @@ class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRequestBu
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Update the properties of an organizationalBrandingLocalization object for a specific localization. This API is available in the following national cloud deployments.
+     * Update the properties of an organizationalBrandingLocalization object for a specific localization.
      * @param OrganizationalBrandingLocalization $body The request body
      * @param OrganizationalBrandingLocalizationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -189,7 +189,7 @@ class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRequestBu
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

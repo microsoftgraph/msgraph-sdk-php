@@ -39,7 +39,7 @@ class AttachmentBaseItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a taskFileAttachment object from a todoTask resource. This API is available in the following national cloud deployments.
+     * Delete a taskFileAttachment object from a todoTask resource.
      * @param AttachmentBaseItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -55,7 +55,7 @@ class AttachmentBaseItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a taskFileAttachment object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a taskFileAttachment object.
      * @param AttachmentBaseItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AttachmentBase|null>
      * @throws Exception
@@ -71,7 +71,7 @@ class AttachmentBaseItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a taskFileAttachment object from a todoTask resource. This API is available in the following national cloud deployments.
+     * Delete a taskFileAttachment object from a todoTask resource.
      * @param AttachmentBaseItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -84,12 +84,12 @@ class AttachmentBaseItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Read the properties and relationships of a taskFileAttachment object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a taskFileAttachment object.
      * @param AttachmentBaseItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -105,7 +105,7 @@ class AttachmentBaseItemRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 

@@ -52,7 +52,7 @@ class FederationConfigurationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties of the internalDomainFederation objects for the domain. This API returns only one object in the collection. This API is available in the following national cloud deployments.
+     * Read the properties of the internalDomainFederation objects for the domain. This API returns only one object in the collection.
      * @param FederationConfigurationRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<InternalDomainFederationCollectionResponse|null>
      * @throws Exception
@@ -68,7 +68,7 @@ class FederationConfigurationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new internalDomainFederation object. This API is available in the following national cloud deployments.
+     * Create a new internalDomainFederation object.
      * @param InternalDomainFederation $body The request body
      * @param FederationConfigurationRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<InternalDomainFederation|null>
@@ -85,7 +85,7 @@ class FederationConfigurationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties of the internalDomainFederation objects for the domain. This API returns only one object in the collection. This API is available in the following national cloud deployments.
+     * Read the properties of the internalDomainFederation objects for the domain. This API returns only one object in the collection.
      * @param FederationConfigurationRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -101,12 +101,12 @@ class FederationConfigurationRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Create a new internalDomainFederation object. This API is available in the following national cloud deployments.
+     * Create a new internalDomainFederation object.
      * @param InternalDomainFederation $body The request body
      * @param FederationConfigurationRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -120,7 +120,7 @@ class FederationConfigurationRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

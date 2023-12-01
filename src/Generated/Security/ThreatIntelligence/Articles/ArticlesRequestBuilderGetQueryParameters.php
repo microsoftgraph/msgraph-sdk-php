@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\ThreatIntelligence\Articles;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a list of article objects, including their properties and relationships. This API is available in the following national cloud deployments.
+ * Get a list of article objects, including their properties and relationships.
 */
 class ArticlesRequestBuilderGetQueryParameters 
 {

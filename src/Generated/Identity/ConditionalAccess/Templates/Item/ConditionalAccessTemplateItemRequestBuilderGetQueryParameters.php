@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Identity\ConditionalAccess\Templates\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read the properties and relationships of a conditionalAccessTemplate object. This API is available in the following national cloud deployments.
+ * Read the properties and relationships of a conditionalAccessTemplate object.
 */
 class ConditionalAccessTemplateItemRequestBuilderGetQueryParameters 
 {

@@ -52,7 +52,7 @@ class ExcludesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the condition sets which are *excluded* in a permissionGrantPolicy. This API is available in the following national cloud deployments.
+     * Retrieve the condition sets which are *excluded* in a permissionGrantPolicy.
      * @param ExcludesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PermissionGrantConditionSetCollectionResponse|null>
      * @throws Exception
@@ -68,7 +68,7 @@ class ExcludesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Add conditions under which a permission grant event is *excluded* in a permission grant policy. You do this by adding a permissionGrantConditionSet to the excludes collection of a  permissionGrantPolicy. This API is available in the following national cloud deployments.
+     * Add conditions under which a permission grant event is *excluded* in a permission grant policy. You do this by adding a permissionGrantConditionSet to the excludes collection of a  permissionGrantPolicy.
      * @param PermissionGrantConditionSet $body The request body
      * @param ExcludesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PermissionGrantConditionSet|null>
@@ -85,7 +85,7 @@ class ExcludesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the condition sets which are *excluded* in a permissionGrantPolicy. This API is available in the following national cloud deployments.
+     * Retrieve the condition sets which are *excluded* in a permissionGrantPolicy.
      * @param ExcludesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -101,12 +101,12 @@ class ExcludesRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Add conditions under which a permission grant event is *excluded* in a permission grant policy. You do this by adding a permissionGrantConditionSet to the excludes collection of a  permissionGrantPolicy. This API is available in the following national cloud deployments.
+     * Add conditions under which a permission grant event is *excluded* in a permission grant policy. You do this by adding a permissionGrantConditionSet to the excludes collection of a  permissionGrantPolicy.
      * @param PermissionGrantConditionSet $body The request body
      * @param ExcludesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -120,7 +120,7 @@ class ExcludesRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

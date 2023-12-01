@@ -52,7 +52,7 @@ class AppointmentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of bookingAppointment objects for the specified bookingBusiness. This API is available in the following national cloud deployments.
+     * Get a list of bookingAppointment objects for the specified bookingBusiness.
      * @param AppointmentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<BookingAppointmentCollectionResponse|null>
      * @throws Exception
@@ -68,7 +68,7 @@ class AppointmentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new bookingAppointment for the specified bookingBusiness. This API is available in the following national cloud deployments.
+     * Create a new bookingAppointment for the specified bookingBusiness.
      * @param BookingAppointment $body The request body
      * @param AppointmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<BookingAppointment|null>
@@ -85,7 +85,7 @@ class AppointmentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of bookingAppointment objects for the specified bookingBusiness. This API is available in the following national cloud deployments.
+     * Get a list of bookingAppointment objects for the specified bookingBusiness.
      * @param AppointmentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -101,12 +101,12 @@ class AppointmentsRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Create a new bookingAppointment for the specified bookingBusiness. This API is available in the following national cloud deployments.
+     * Create a new bookingAppointment for the specified bookingBusiness.
      * @param BookingAppointment $body The request body
      * @param AppointmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -120,7 +120,7 @@ class AppointmentsRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

@@ -31,7 +31,7 @@ class ChatRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the chat of the specified user and Teams app. This API is available in the following national cloud deployments.
+     * Retrieve the chat of the specified user and Teams app.
      * @param ChatRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Chat|null>
      * @throws Exception
@@ -47,7 +47,7 @@ class ChatRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the chat of the specified user and Teams app. This API is available in the following national cloud deployments.
+     * Retrieve the chat of the specified user and Teams app.
      * @param ChatRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -63,7 +63,7 @@ class ChatRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 

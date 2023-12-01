@@ -67,7 +67,7 @@ class InvitationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Use this API to create a new invitation. Invitation adds an external user to the organization. When creating a new invitation, you have several options available: This API is available in the following national cloud deployments.
+     * Use this API to create a new invitation. Invitation adds an external user to the organization. When creating a new invitation, you have several options available:
      * @param Invitation $body The request body
      * @param InvitationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Invitation|null>
@@ -100,12 +100,12 @@ class InvitationsRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Use this API to create a new invitation. Invitation adds an external user to the organization. When creating a new invitation, you have several options available: This API is available in the following national cloud deployments.
+     * Use this API to create a new invitation. Invitation adds an external user to the organization. When creating a new invitation, you have several options available:
      * @param Invitation $body The request body
      * @param InvitationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -119,7 +119,7 @@ class InvitationsRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

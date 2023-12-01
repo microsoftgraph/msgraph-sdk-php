@@ -31,7 +31,7 @@ class LastIndexOperationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the ediscoveryIndexOperations associated with an ediscoveryCustodian. This API is available in the following national cloud deployments.
+     * Get a list of the ediscoveryIndexOperations associated with an ediscoveryCustodian.
      * @param LastIndexOperationRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EdiscoveryIndexOperation|null>
      * @throws Exception
@@ -47,7 +47,7 @@ class LastIndexOperationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the ediscoveryIndexOperations associated with an ediscoveryCustodian. This API is available in the following national cloud deployments.
+     * Get a list of the ediscoveryIndexOperations associated with an ediscoveryCustodian.
      * @param LastIndexOperationRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -63,7 +63,7 @@ class LastIndexOperationRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 

@@ -103,7 +103,7 @@ class BookingBusinessItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a bookingBusiness object. This API is available in the following national cloud deployments.
+     * Delete a bookingBusiness object.
      * @param BookingBusinessItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -119,7 +119,7 @@ class BookingBusinessItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the properties and relationships of a bookingBusiness object. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of a bookingBusiness object.
      * @param BookingBusinessItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<BookingBusiness|null>
      * @throws Exception
@@ -135,7 +135,7 @@ class BookingBusinessItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a bookingBusiness object. This API is available in the following national cloud deployments.
+     * Update the properties of a bookingBusiness object.
      * @param BookingBusiness $body The request body
      * @param BookingBusinessItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<BookingBusiness|null>
@@ -152,7 +152,7 @@ class BookingBusinessItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a bookingBusiness object. This API is available in the following national cloud deployments.
+     * Delete a bookingBusiness object.
      * @param BookingBusinessItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -165,12 +165,12 @@ class BookingBusinessItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Get the properties and relationships of a bookingBusiness object. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of a bookingBusiness object.
      * @param BookingBusinessItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -186,12 +186,12 @@ class BookingBusinessItemRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Update the properties of a bookingBusiness object. This API is available in the following national cloud deployments.
+     * Update the properties of a bookingBusiness object.
      * @param BookingBusiness $body The request body
      * @param BookingBusinessItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -205,7 +205,7 @@ class BookingBusinessItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

@@ -46,7 +46,7 @@ class SettingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties of an entitlementManagementSettings object. This API is available in the following national cloud deployments.
+     * Retrieve the properties of an entitlementManagementSettings object.
      * @param SettingsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EntitlementManagementSettings|null>
      * @throws Exception
@@ -62,7 +62,7 @@ class SettingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update an existing entitlementManagementSettings object to change one or more of its properties. This API is available in the following national cloud deployments.
+     * Update an existing entitlementManagementSettings object to change one or more of its properties.
      * @param EntitlementManagementSettings $body The request body
      * @param SettingsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EntitlementManagementSettings|null>
@@ -92,12 +92,12 @@ class SettingsRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Retrieve the properties of an entitlementManagementSettings object. This API is available in the following national cloud deployments.
+     * Retrieve the properties of an entitlementManagementSettings object.
      * @param SettingsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,12 +113,12 @@ class SettingsRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Update an existing entitlementManagementSettings object to change one or more of its properties. This API is available in the following national cloud deployments.
+     * Update an existing entitlementManagementSettings object to change one or more of its properties.
      * @param EntitlementManagementSettings $body The request body
      * @param SettingsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -132,7 +132,7 @@ class SettingsRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

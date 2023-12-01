@@ -52,7 +52,7 @@ class RetentionEventsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the retentionEvent objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the retentionEvent objects and their properties.
      * @param RetentionEventsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<RetentionEventCollectionResponse|null>
      * @throws Exception
@@ -68,7 +68,7 @@ class RetentionEventsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new retentionEvent object. This API is available in the following national cloud deployments.
+     * Create a new retentionEvent object.
      * @param RetentionEvent $body The request body
      * @param RetentionEventsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<RetentionEvent|null>
@@ -85,7 +85,7 @@ class RetentionEventsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the retentionEvent objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the retentionEvent objects and their properties.
      * @param RetentionEventsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -101,12 +101,12 @@ class RetentionEventsRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Create a new retentionEvent object. This API is available in the following national cloud deployments.
+     * Create a new retentionEvent object.
      * @param RetentionEvent $body The request body
      * @param RetentionEventsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -120,7 +120,7 @@ class RetentionEventsRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

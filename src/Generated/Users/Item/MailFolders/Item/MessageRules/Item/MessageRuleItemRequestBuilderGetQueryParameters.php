@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\MailFolders\Item\MessageRules\Ite
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the properties and relationships of a messageRule object. This API is available in the following national cloud deployments.
+ * Get the properties and relationships of a messageRule object.
 */
 class MessageRuleItemRequestBuilderGetQueryParameters 
 {

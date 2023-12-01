@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\AgreementAcceptances;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the signed-in user's agreementAcceptance objects. This API is available in the following national cloud deployments.
+ * Retrieve the signed-in user's agreementAcceptance objects.
 */
 class AgreementAcceptancesRequestBuilderGetQueryParameters 
 {

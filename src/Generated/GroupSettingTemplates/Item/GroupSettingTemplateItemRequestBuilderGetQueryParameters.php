@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\GroupSettingTemplates\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * A group setting template represents a template of settings from which settings may be created within a tenant. This operation allows retrieval of the properties of the groupSettingTemplate object, including the available settings and their defaults. This API is available in the following national cloud deployments.
+ * A group setting template represents a template of settings from which settings may be created within a tenant. This operation allows retrieval of the properties of the groupSettingTemplate object, including the available settings and their defaults.
 */
 class GroupSettingTemplateItemRequestBuilderGetQueryParameters 
 {

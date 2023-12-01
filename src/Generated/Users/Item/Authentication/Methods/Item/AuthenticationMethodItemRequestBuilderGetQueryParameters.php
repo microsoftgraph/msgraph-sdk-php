@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Authentication\Methods\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties and relationships of an authenticationMethod object. This API is available in the following national cloud deployments.
+ * Retrieve the properties and relationships of an authenticationMethod object.
 */
 class AuthenticationMethodItemRequestBuilderGetQueryParameters 
 {

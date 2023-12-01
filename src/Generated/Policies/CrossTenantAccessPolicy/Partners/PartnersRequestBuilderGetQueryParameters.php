@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Policies\CrossTenantAccessPolicy\Partners;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a list of all partner configurations within a cross-tenant access policy. You can also use the $expand parameter to list the user synchronization policy for all partner configurations. This API is available in the following national cloud deployments.
+ * Get a list of all partner configurations within a cross-tenant access policy. You can also use the $expand parameter to list the user synchronization policy for all partner configurations.
 */
 class PartnersRequestBuilderGetQueryParameters 
 {

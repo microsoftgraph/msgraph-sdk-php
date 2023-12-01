@@ -31,7 +31,7 @@ class RangeRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Returns the range object that is associated with the name. Throws an exception if the named item's type is not a range. This API is available in the following national cloud deployments.
+     * Returns the range object that is associated with the name. Throws an exception if the named item's type is not a range.
      * @param RangeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookRange|null>
      * @throws Exception
@@ -47,7 +47,7 @@ class RangeRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Returns the range object that is associated with the name. Throws an exception if the named item's type is not a range. This API is available in the following national cloud deployments.
+     * Returns the range object that is associated with the name. Throws an exception if the named item's type is not a range.
      * @param RangeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -60,7 +60,7 @@ class RangeRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 

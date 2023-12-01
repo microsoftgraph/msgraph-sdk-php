@@ -71,7 +71,7 @@ class WorkbookTableColumnItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes the column from the table. This API is available in the following national cloud deployments.
+     * Deletes the column from the table.
      * @param WorkbookTableColumnItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -87,7 +87,7 @@ class WorkbookTableColumnItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of tablecolumn object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of tablecolumn object.
      * @param WorkbookTableColumnItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookTableColumn|null>
      * @throws Exception
@@ -103,7 +103,7 @@ class WorkbookTableColumnItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of tablecolumn object. This API is available in the following national cloud deployments.
+     * Update the properties of tablecolumn object.
      * @param WorkbookTableColumn $body The request body
      * @param WorkbookTableColumnItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookTableColumn|null>
@@ -120,7 +120,7 @@ class WorkbookTableColumnItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes the column from the table. This API is available in the following national cloud deployments.
+     * Deletes the column from the table.
      * @param WorkbookTableColumnItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -133,12 +133,12 @@ class WorkbookTableColumnItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Retrieve the properties and relationships of tablecolumn object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of tablecolumn object.
      * @param WorkbookTableColumnItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -154,12 +154,12 @@ class WorkbookTableColumnItemRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Update the properties of tablecolumn object. This API is available in the following national cloud deployments.
+     * Update the properties of tablecolumn object.
      * @param WorkbookTableColumn $body The request body
      * @param WorkbookTableColumnItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -173,7 +173,7 @@ class WorkbookTableColumnItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

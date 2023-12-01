@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\Tabs\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties and relationships of the specified tab in a channel within a team.  This API is available in the following national cloud deployments.
+ * Retrieve the properties and relationships of the specified tab in a channel within a team. 
 */
 class TeamsTabItemRequestBuilderGetQueryParameters 
 {

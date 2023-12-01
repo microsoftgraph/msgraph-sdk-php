@@ -39,7 +39,7 @@ class ConversationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * This API is available in the following national cloud deployments.
+     * Delete conversation.
      * @param ConversationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -55,7 +55,7 @@ class ConversationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * This API is available in the following national cloud deployments.
+     * The group's conversations.
      * @param ConversationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Conversation|null>
      * @throws Exception
@@ -71,7 +71,7 @@ class ConversationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * This API is available in the following national cloud deployments.
+     * Delete conversation.
      * @param ConversationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -84,12 +84,12 @@ class ConversationItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * This API is available in the following national cloud deployments.
+     * The group's conversations.
      * @param ConversationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -105,7 +105,7 @@ class ConversationItemRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 

@@ -47,7 +47,7 @@ class CustomTaskExtensionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a customTaskExtension object. A custom task extension  can only be deleted if it is not referenced in any task objects in a lifecycle workflow. This API is available in the following national cloud deployments.
+     * Delete a customTaskExtension object. A custom task extension  can only be deleted if it is not referenced in any task objects in a lifecycle workflow.
      * @param CustomTaskExtensionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -63,7 +63,7 @@ class CustomTaskExtensionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a customTaskExtension object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a customTaskExtension object.
      * @param CustomTaskExtensionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CustomTaskExtension|null>
      * @throws Exception
@@ -79,7 +79,7 @@ class CustomTaskExtensionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a customTaskExtension object. This API is available in the following national cloud deployments.
+     * Update the properties of a customTaskExtension object.
      * @param CustomTaskExtension $body The request body
      * @param CustomTaskExtensionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CustomTaskExtension|null>
@@ -96,7 +96,7 @@ class CustomTaskExtensionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a customTaskExtension object. A custom task extension  can only be deleted if it is not referenced in any task objects in a lifecycle workflow. This API is available in the following national cloud deployments.
+     * Delete a customTaskExtension object. A custom task extension  can only be deleted if it is not referenced in any task objects in a lifecycle workflow.
      * @param CustomTaskExtensionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -109,12 +109,12 @@ class CustomTaskExtensionItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Read the properties and relationships of a customTaskExtension object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a customTaskExtension object.
      * @param CustomTaskExtensionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -130,12 +130,12 @@ class CustomTaskExtensionItemRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Update the properties of a customTaskExtension object. This API is available in the following national cloud deployments.
+     * Update the properties of a customTaskExtension object.
      * @param CustomTaskExtension $body The request body
      * @param CustomTaskExtensionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -149,7 +149,7 @@ class CustomTaskExtensionItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

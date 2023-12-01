@@ -39,7 +39,7 @@ class MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder extends BaseR
     }
 
     /**
-     * Deletes a microsoftAuthenticatorAuthenticationMethod object. This API is available in the following national cloud deployments.
+     * Deletes a microsoftAuthenticatorAuthenticationMethod object.
      * @param MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -55,7 +55,7 @@ class MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder extends BaseR
     }
 
     /**
-     * Read the properties and relationships of a microsoftAuthenticatorAuthenticationMethod object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a microsoftAuthenticatorAuthenticationMethod object.
      * @param MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MicrosoftAuthenticatorAuthenticationMethod|null>
      * @throws Exception
@@ -71,7 +71,7 @@ class MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder extends BaseR
     }
 
     /**
-     * Deletes a microsoftAuthenticatorAuthenticationMethod object. This API is available in the following national cloud deployments.
+     * Deletes a microsoftAuthenticatorAuthenticationMethod object.
      * @param MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -84,12 +84,12 @@ class MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder extends BaseR
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Read the properties and relationships of a microsoftAuthenticatorAuthenticationMethod object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a microsoftAuthenticatorAuthenticationMethod object.
      * @param MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -105,7 +105,7 @@ class MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder extends BaseR
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 

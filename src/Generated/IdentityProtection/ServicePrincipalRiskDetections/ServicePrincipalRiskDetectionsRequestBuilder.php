@@ -52,7 +52,7 @@ class ServicePrincipalRiskDetectionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties of a collection of servicePrincipalRiskDetection objects. This API is available in the following national cloud deployments.
+     * Retrieve the properties of a collection of servicePrincipalRiskDetection objects.
      * @param ServicePrincipalRiskDetectionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ServicePrincipalRiskDetectionCollectionResponse|null>
      * @throws Exception
@@ -84,7 +84,7 @@ class ServicePrincipalRiskDetectionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties of a collection of servicePrincipalRiskDetection objects. This API is available in the following national cloud deployments.
+     * Retrieve the properties of a collection of servicePrincipalRiskDetection objects.
      * @param ServicePrincipalRiskDetectionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -100,7 +100,7 @@ class ServicePrincipalRiskDetectionsRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
@@ -119,7 +119,7 @@ class ServicePrincipalRiskDetectionsRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

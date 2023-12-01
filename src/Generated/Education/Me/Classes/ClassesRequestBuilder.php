@@ -51,7 +51,7 @@ class ClassesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the educationClass resources an educationUser is a member of. This API is available in the following national cloud deployments.
+     * Get the educationClass resources an educationUser is a member of.
      * @param ClassesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EducationClassCollectionResponse|null>
      * @throws Exception
@@ -67,7 +67,7 @@ class ClassesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the educationClass resources an educationUser is a member of. This API is available in the following national cloud deployments.
+     * Get the educationClass resources an educationUser is a member of.
      * @param ClassesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -83,7 +83,7 @@ class ClassesRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 

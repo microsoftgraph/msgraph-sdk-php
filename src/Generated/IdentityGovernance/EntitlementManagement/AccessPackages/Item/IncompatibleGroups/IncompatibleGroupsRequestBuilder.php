@@ -59,7 +59,7 @@ class IncompatibleGroupsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of the group objects that have been marked as incompatible on an accessPackage.   This API is available in the following national cloud deployments.
+     * Retrieve a list of the group objects that have been marked as incompatible on an accessPackage.  
      * @param IncompatibleGroupsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GroupCollectionResponse|null>
      * @throws Exception
@@ -75,7 +75,7 @@ class IncompatibleGroupsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of the group objects that have been marked as incompatible on an accessPackage.   This API is available in the following national cloud deployments.
+     * Retrieve a list of the group objects that have been marked as incompatible on an accessPackage.  
      * @param IncompatibleGroupsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -91,7 +91,7 @@ class IncompatibleGroupsRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 

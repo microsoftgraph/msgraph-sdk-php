@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the posts of the specified thread. You can specify both the parent conversation and the thread, or, you can specify the thread without referencing the parent conversation. This API is available in the following national cloud deployments.
+ * Get the posts of the specified thread. You can specify both the parent conversation and the thread, or, you can specify the thread without referencing the parent conversation.
 */
 class PostsRequestBuilderGetQueryParameters 
 {

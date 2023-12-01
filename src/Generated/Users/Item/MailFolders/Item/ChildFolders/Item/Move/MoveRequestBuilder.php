@@ -31,7 +31,7 @@ class MoveRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Move a mailfolder and its contents to another mailfolder. This API is available in the following national cloud deployments.
+     * Move a mailfolder and its contents to another mailfolder.
      * @param MovePostRequestBody $body The request body
      * @param MoveRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MailFolder|null>
@@ -48,7 +48,7 @@ class MoveRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Move a mailfolder and its contents to another mailfolder. This API is available in the following national cloud deployments.
+     * Move a mailfolder and its contents to another mailfolder.
      * @param MovePostRequestBody $body The request body
      * @param MoveRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -62,7 +62,7 @@ class MoveRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

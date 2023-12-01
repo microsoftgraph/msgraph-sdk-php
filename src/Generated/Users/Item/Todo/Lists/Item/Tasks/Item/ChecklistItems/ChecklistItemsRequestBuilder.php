@@ -52,7 +52,7 @@ class ChecklistItemsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the checklistItem resources associated to a todoTask from the checklistItems navigation property. This API is available in the following national cloud deployments.
+     * Get the checklistItem resources associated to a todoTask from the checklistItems navigation property.
      * @param ChecklistItemsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ChecklistItemCollectionResponse|null>
      * @throws Exception
@@ -68,7 +68,7 @@ class ChecklistItemsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new checklistItem object. This API is available in the following national cloud deployments.
+     * Create a new checklistItem object.
      * @param ChecklistItem $body The request body
      * @param ChecklistItemsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ChecklistItem|null>
@@ -85,7 +85,7 @@ class ChecklistItemsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the checklistItem resources associated to a todoTask from the checklistItems navigation property. This API is available in the following national cloud deployments.
+     * Get the checklistItem resources associated to a todoTask from the checklistItems navigation property.
      * @param ChecklistItemsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -101,12 +101,12 @@ class ChecklistItemsRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Create a new checklistItem object. This API is available in the following national cloud deployments.
+     * Create a new checklistItem object.
      * @param ChecklistItem $body The request body
      * @param ChecklistItemsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -120,7 +120,7 @@ class ChecklistItemsRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

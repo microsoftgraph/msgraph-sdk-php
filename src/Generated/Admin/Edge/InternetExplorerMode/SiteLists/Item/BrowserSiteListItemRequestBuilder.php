@@ -55,7 +55,7 @@ class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a browserSiteList object. This API is available in the following national cloud deployments.
+     * Delete a browserSiteList object.
      * @param BrowserSiteListItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -71,7 +71,7 @@ class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a browserSiteList that contains browserSite and browserSharedCookie resources. This API is available in the following national cloud deployments.
+     * Get a browserSiteList that contains browserSite and browserSharedCookie resources.
      * @param BrowserSiteListItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<BrowserSiteList|null>
      * @throws Exception
@@ -87,7 +87,7 @@ class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a browserSiteList object. This API is available in the following national cloud deployments.
+     * Update the properties of a browserSiteList object.
      * @param BrowserSiteList $body The request body
      * @param BrowserSiteListItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<BrowserSiteList|null>
@@ -104,7 +104,7 @@ class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a browserSiteList object. This API is available in the following national cloud deployments.
+     * Delete a browserSiteList object.
      * @param BrowserSiteListItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -117,12 +117,12 @@ class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Get a browserSiteList that contains browserSite and browserSharedCookie resources. This API is available in the following national cloud deployments.
+     * Get a browserSiteList that contains browserSite and browserSharedCookie resources.
      * @param BrowserSiteListItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -138,12 +138,12 @@ class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Update the properties of a browserSiteList object. This API is available in the following national cloud deployments.
+     * Update the properties of a browserSiteList object.
      * @param BrowserSiteList $body The request body
      * @param BrowserSiteListItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -157,7 +157,7 @@ class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

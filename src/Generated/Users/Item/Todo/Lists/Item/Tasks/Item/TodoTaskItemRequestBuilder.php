@@ -71,7 +71,7 @@ class TodoTaskItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a todoTask object. This API is available in the following national cloud deployments.
+     * Deletes a todoTask object.
      * @param TodoTaskItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -87,7 +87,7 @@ class TodoTaskItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a todoTask object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a todoTask object.
      * @param TodoTaskItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TodoTask|null>
      * @throws Exception
@@ -103,7 +103,7 @@ class TodoTaskItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a todoTask object. This API is available in the following national cloud deployments.
+     * Update the properties of a todoTask object.
      * @param TodoTask $body The request body
      * @param TodoTaskItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TodoTask|null>
@@ -120,7 +120,7 @@ class TodoTaskItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a todoTask object. This API is available in the following national cloud deployments.
+     * Deletes a todoTask object.
      * @param TodoTaskItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -133,12 +133,12 @@ class TodoTaskItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Read the properties and relationships of a todoTask object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a todoTask object.
      * @param TodoTaskItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -154,12 +154,12 @@ class TodoTaskItemRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Update the properties of a todoTask object. This API is available in the following national cloud deployments.
+     * Update the properties of a todoTask object.
      * @param TodoTask $body The request body
      * @param TodoTaskItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -173,7 +173,7 @@ class TodoTaskItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

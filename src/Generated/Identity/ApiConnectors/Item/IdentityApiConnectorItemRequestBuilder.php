@@ -39,7 +39,7 @@ class IdentityApiConnectorItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an identityApiConnector object. This API is available in the following national cloud deployments.
+     * Delete an identityApiConnector object.
      * @param IdentityApiConnectorItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -55,7 +55,7 @@ class IdentityApiConnectorItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties of an identityApiConnector object. This API is available in the following national cloud deployments.
+     * Read the properties of an identityApiConnector object.
      * @param IdentityApiConnectorItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<IdentityApiConnector|null>
      * @throws Exception
@@ -71,7 +71,7 @@ class IdentityApiConnectorItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an identityApiConnector object. This API is available in the following national cloud deployments.
+     * Update the properties of an identityApiConnector object.
      * @param IdentityApiConnector $body The request body
      * @param IdentityApiConnectorItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<IdentityApiConnector|null>
@@ -88,7 +88,7 @@ class IdentityApiConnectorItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an identityApiConnector object. This API is available in the following national cloud deployments.
+     * Delete an identityApiConnector object.
      * @param IdentityApiConnectorItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -101,12 +101,12 @@ class IdentityApiConnectorItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Read the properties of an identityApiConnector object. This API is available in the following national cloud deployments.
+     * Read the properties of an identityApiConnector object.
      * @param IdentityApiConnectorItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -122,12 +122,12 @@ class IdentityApiConnectorItemRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Update the properties of an identityApiConnector object. This API is available in the following national cloud deployments.
+     * Update the properties of an identityApiConnector object.
      * @param IdentityApiConnector $body The request body
      * @param IdentityApiConnectorItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -141,7 +141,7 @@ class IdentityApiConnectorItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

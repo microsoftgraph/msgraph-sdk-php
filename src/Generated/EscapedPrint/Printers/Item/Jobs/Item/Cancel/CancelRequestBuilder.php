@@ -30,7 +30,7 @@ class CancelRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Cancel a print job. Print jobs can be canceled only on behalf of a user, using delegated permissions. This API is available in the following national cloud deployments.
+     * Cancel a print job. Print jobs can be canceled only on behalf of a user, using delegated permissions.
      * @param CancelRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -46,7 +46,7 @@ class CancelRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Cancel a print job. Print jobs can be canceled only on behalf of a user, using delegated permissions. This API is available in the following national cloud deployments.
+     * Cancel a print job. Print jobs can be canceled only on behalf of a user, using delegated permissions.
      * @param CancelRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -59,7 +59,7 @@ class CancelRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 

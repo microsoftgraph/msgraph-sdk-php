@@ -47,7 +47,7 @@ class AccessReviewScheduleDefinitionItemRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Deletes an accessReviewScheduleDefinition object. This API is available in the following national cloud deployments.
+     * Deletes an accessReviewScheduleDefinition object.
      * @param AccessReviewScheduleDefinitionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -63,7 +63,7 @@ class AccessReviewScheduleDefinitionItemRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Read the properties and relationships of an accessReviewScheduleDefinition object. To retrieve the instances of the access review series, use the list accessReviewInstance API. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an accessReviewScheduleDefinition object. To retrieve the instances of the access review series, use the list accessReviewInstance API.
      * @param AccessReviewScheduleDefinitionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AccessReviewScheduleDefinition|null>
      * @throws Exception
@@ -96,7 +96,7 @@ class AccessReviewScheduleDefinitionItemRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Deletes an accessReviewScheduleDefinition object. This API is available in the following national cloud deployments.
+     * Deletes an accessReviewScheduleDefinition object.
      * @param AccessReviewScheduleDefinitionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -109,12 +109,12 @@ class AccessReviewScheduleDefinitionItemRequestBuilder extends BaseRequestBuilde
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Read the properties and relationships of an accessReviewScheduleDefinition object. To retrieve the instances of the access review series, use the list accessReviewInstance API. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an accessReviewScheduleDefinition object. To retrieve the instances of the access review series, use the list accessReviewInstance API.
      * @param AccessReviewScheduleDefinitionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -130,7 +130,7 @@ class AccessReviewScheduleDefinitionItemRequestBuilder extends BaseRequestBuilde
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
@@ -149,7 +149,7 @@ class AccessReviewScheduleDefinitionItemRequestBuilder extends BaseRequestBuilde
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

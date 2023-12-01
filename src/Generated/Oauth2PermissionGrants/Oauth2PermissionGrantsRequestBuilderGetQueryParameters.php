@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Oauth2PermissionGrants;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve a list of oAuth2PermissionGrant objects, representing delegated permissions which have been granted for client applications to access APIs on behalf of signed-in users. This API is available in the following national cloud deployments.
+ * Retrieve a list of oAuth2PermissionGrant objects, representing delegated permissions which have been granted for client applications to access APIs on behalf of signed-in users.
 */
 class Oauth2PermissionGrantsRequestBuilderGetQueryParameters 
 {

@@ -47,7 +47,7 @@ class UserRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the simple directory user that corresponds to this educationUser. This API is available in the following national cloud deployments.
+     * Retrieve the simple directory user that corresponds to this educationUser.
      * @param UserRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<User|null>
      * @throws Exception
@@ -63,7 +63,7 @@ class UserRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the simple directory user that corresponds to this educationUser. This API is available in the following national cloud deployments.
+     * Retrieve the simple directory user that corresponds to this educationUser.
      * @param UserRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -79,7 +79,7 @@ class UserRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 

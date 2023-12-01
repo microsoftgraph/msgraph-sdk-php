@@ -78,7 +78,7 @@ class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder extends BaseReque
     }
 
     /**
-     * Get the instance of a role eligibility. This API is available in the following national cloud deployments.
+     * Get the instance of a role eligibility.
      * @param UnifiedRoleEligibilityScheduleInstanceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UnifiedRoleEligibilityScheduleInstance|null>
      * @throws Exception
@@ -123,12 +123,12 @@ class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder extends BaseReque
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Get the instance of a role eligibility. This API is available in the following national cloud deployments.
+     * Get the instance of a role eligibility.
      * @param UnifiedRoleEligibilityScheduleInstanceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -144,7 +144,7 @@ class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder extends BaseReque
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
@@ -163,7 +163,7 @@ class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder extends BaseReque
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

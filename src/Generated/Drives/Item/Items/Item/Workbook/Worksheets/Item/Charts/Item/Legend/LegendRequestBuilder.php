@@ -54,7 +54,7 @@ class LegendRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of chartlegend object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of chartlegend object.
      * @param LegendRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookChartLegend|null>
      * @throws Exception
@@ -70,7 +70,7 @@ class LegendRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of chartlegend object. This API is available in the following national cloud deployments.
+     * Update the properties of chartlegend object.
      * @param WorkbookChartLegend $body The request body
      * @param LegendRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookChartLegend|null>
@@ -100,12 +100,12 @@ class LegendRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Retrieve the properties and relationships of chartlegend object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of chartlegend object.
      * @param LegendRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -121,12 +121,12 @@ class LegendRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Update the properties of chartlegend object. This API is available in the following national cloud deployments.
+     * Update the properties of chartlegend object.
      * @param WorkbookChartLegend $body The request body
      * @param LegendRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -140,7 +140,7 @@ class LegendRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

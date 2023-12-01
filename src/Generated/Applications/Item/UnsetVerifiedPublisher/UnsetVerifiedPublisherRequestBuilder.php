@@ -30,7 +30,7 @@ class UnsetVerifiedPublisherRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Unset the verifiedPublisher previously set on an application, removing all verified publisher properties. For more information, see Publisher verification. This API is available in the following national cloud deployments.
+     * Unset the verifiedPublisher previously set on an application, removing all verified publisher properties. For more information, see Publisher verification.
      * @param UnsetVerifiedPublisherRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -46,7 +46,7 @@ class UnsetVerifiedPublisherRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Unset the verifiedPublisher previously set on an application, removing all verified publisher properties. For more information, see Publisher verification. This API is available in the following national cloud deployments.
+     * Unset the verifiedPublisher previously set on an application, removing all verified publisher properties. For more information, see Publisher verification.
      * @param UnsetVerifiedPublisherRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -59,7 +59,7 @@ class UnsetVerifiedPublisherRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 

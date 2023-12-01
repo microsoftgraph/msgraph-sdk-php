@@ -52,7 +52,7 @@ class SectionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of onenoteSection objects from the specified notebook. This API is available in the following national cloud deployments.
+     * Retrieve a list of onenoteSection objects from the specified notebook.
      * @param SectionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<OnenoteSectionCollectionResponse|null>
      * @throws Exception
@@ -68,7 +68,7 @@ class SectionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new onenoteSection in the specified notebook. This API is available in the following national cloud deployments.
+     * Create a new onenoteSection in the specified notebook.
      * @param OnenoteSection $body The request body
      * @param SectionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<OnenoteSection|null>
@@ -85,7 +85,7 @@ class SectionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of onenoteSection objects from the specified notebook. This API is available in the following national cloud deployments.
+     * Retrieve a list of onenoteSection objects from the specified notebook.
      * @param SectionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -101,12 +101,12 @@ class SectionsRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Create a new onenoteSection in the specified notebook. This API is available in the following national cloud deployments.
+     * Create a new onenoteSection in the specified notebook.
      * @param OnenoteSection $body The request body
      * @param SectionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -120,7 +120,7 @@ class SectionsRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

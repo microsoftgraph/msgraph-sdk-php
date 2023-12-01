@@ -31,7 +31,7 @@ class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a user's emailAuthenticationMethod object. This API is available in the following national cloud deployments.
+     * Deletes a user's emailAuthenticationMethod object.
      * @param EmailAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -47,7 +47,7 @@ class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a user's single email authentication method object. This API is available in the following national cloud deployments.
+     * Retrieve a user's single email authentication method object.
      * @param EmailAuthenticationMethodItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EmailAuthenticationMethod|null>
      * @throws Exception
@@ -63,7 +63,7 @@ class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update a user's email address represented by an emailAuthenticationMethod object. This API is available in the following national cloud deployments.
+     * Update a user's email address represented by an emailAuthenticationMethod object.
      * @param EmailAuthenticationMethod $body The request body
      * @param EmailAuthenticationMethodItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EmailAuthenticationMethod|null>
@@ -80,7 +80,7 @@ class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a user's emailAuthenticationMethod object. This API is available in the following national cloud deployments.
+     * Deletes a user's emailAuthenticationMethod object.
      * @param EmailAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -93,12 +93,12 @@ class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Retrieve a user's single email authentication method object. This API is available in the following national cloud deployments.
+     * Retrieve a user's single email authentication method object.
      * @param EmailAuthenticationMethodItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -114,12 +114,12 @@ class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Update a user's email address represented by an emailAuthenticationMethod object. This API is available in the following national cloud deployments.
+     * Update a user's email address represented by an emailAuthenticationMethod object.
      * @param EmailAuthenticationMethod $body The request body
      * @param EmailAuthenticationMethodItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -133,7 +133,7 @@ class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

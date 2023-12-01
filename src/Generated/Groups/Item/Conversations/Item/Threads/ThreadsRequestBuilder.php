@@ -52,7 +52,7 @@ class ThreadsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get all the threads in a group conversation. Note: You can also get all the threads of a group. This API is available in the following national cloud deployments.
+     * Get all the threads in a group conversation. Note: You can also get all the threads of a group.
      * @param ThreadsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ConversationThreadCollectionResponse|null>
      * @throws Exception
@@ -68,7 +68,7 @@ class ThreadsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new thread in the specified conversation.  A thread and post are created as specified. Use reply thread to further post to that thread. Or, if you get the post ID, you can also reply to that post in that thread. Note: You can also start a new conversation by first creating a thread. This API is available in the following national cloud deployments.
+     * Create a new thread in the specified conversation.  A thread and post are created as specified. Use reply thread to further post to that thread. Or, if you get the post ID, you can also reply to that post in that thread. Note: You can also start a new conversation by first creating a thread.
      * @param ConversationThread $body The request body
      * @param ThreadsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ConversationThread|null>
@@ -85,7 +85,7 @@ class ThreadsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get all the threads in a group conversation. Note: You can also get all the threads of a group. This API is available in the following national cloud deployments.
+     * Get all the threads in a group conversation. Note: You can also get all the threads of a group.
      * @param ThreadsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -101,12 +101,12 @@ class ThreadsRequestBuilder extends BaseRequestBuilder
             }
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Create a new thread in the specified conversation.  A thread and post are created as specified. Use reply thread to further post to that thread. Or, if you get the post ID, you can also reply to that post in that thread. Note: You can also start a new conversation by first creating a thread. This API is available in the following national cloud deployments.
+     * Create a new thread in the specified conversation.  A thread and post are created as specified. Use reply thread to further post to that thread. Or, if you get the post ID, you can also reply to that post in that thread. Note: You can also start a new conversation by first creating a thread.
      * @param ConversationThread $body The request body
      * @param ThreadsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -120,7 +120,7 @@ class ThreadsRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json;q=1");
+        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
