@@ -35,7 +35,7 @@ class AllowedUsersRequestBuilder extends BaseRequestBuilder
     
     /**
      * Gets an item from the Microsoft/Graph/Generated.print.shares.item.allowedUsers.item collection
-     * @param string $userId Unique identifier of the item
+     * @param string $userId The unique identifier of user
      * @return UserItemRequestBuilder
     */
     public function byUserId(string $userId): UserItemRequestBuilder {

@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Drives\Item\EscapedList\Items\Item\Analytics\AnalyticsRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\EscapedList\Items\Item\CreatedByUser\CreatedByUserRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\EscapedList\Items\Item\CreateLink\CreateLinkRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\EscapedList\Items\Item\DocumentSetVersions\DocumentSetVersionsRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\EscapedList\Items\Item\DriveItem\DriveItemRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\EscapedList\Items\Item\Fields\FieldsRequestBuilder;
@@ -37,6 +38,13 @@ class ListItemItemRequestBuilder extends BaseRequestBuilder
     */
     public function createdByUser(): CreatedByUserRequestBuilder {
         return new CreatedByUserRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the createLink method.
+    */
+    public function createLink(): CreateLinkRequestBuilder {
+        return new CreateLinkRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

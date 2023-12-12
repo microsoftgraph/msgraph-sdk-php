@@ -35,7 +35,7 @@ class UserFlowIdentityProvidersRequestBuilder extends BaseRequestBuilder
     
     /**
      * Gets an item from the Microsoft/Graph/Generated.identity.b2xUserFlows.item.userFlowIdentityProviders.item collection
-     * @param string $identityProviderBaseId Unique identifier of the item
+     * @param string $identityProviderBaseId The unique identifier of identityProviderBase
      * @return IdentityProviderBaseItemRequestBuilder
     */
     public function byIdentityProviderBaseId(string $identityProviderBaseId): IdentityProviderBaseItemRequestBuilder {

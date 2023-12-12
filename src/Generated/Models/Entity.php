@@ -615,6 +615,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.privilegedAccessScheduleRequest': return new PrivilegedAccessScheduleRequest();
                 case '#microsoft.graph.profileCardProperty': return new ProfileCardProperty();
                 case '#microsoft.graph.profilePhoto': return new ProfilePhoto();
+                case '#microsoft.graph.pronounsSettings': return new PronounsSettings();
                 case '#microsoft.graph.provisioningObjectSummary': return new ProvisioningObjectSummary();
                 case '#microsoft.graph.rbacApplication': return new RbacApplication();
                 case '#microsoft.graph.recordOperation': return new RecordOperation();
@@ -854,6 +855,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.userSettings': return new UserSettings();
                 case '#microsoft.graph.userSignInInsight': return new UserSignInInsight();
                 case '#microsoft.graph.userTeamwork': return new UserTeamwork();
+                case '#microsoft.graph.virtualEndpoint': return new VirtualEndpoint();
                 case '#microsoft.graph.virtualEvent': return new VirtualEvent();
                 case '#microsoft.graph.virtualEventRegistration': return new VirtualEventRegistration();
                 case '#microsoft.graph.virtualEventSession': return new VirtualEventSession();

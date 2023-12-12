@@ -35,7 +35,7 @@ class AppManagementPoliciesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Gets an item from the Microsoft/Graph/Generated.applications.item.appManagementPolicies.item collection
-     * @param string $appManagementPolicyId Unique identifier of the item
+     * @param string $appManagementPolicyId The unique identifier of appManagementPolicy
      * @return AppManagementPolicyItemRequestBuilder
     */
     public function byAppManagementPolicyId(string $appManagementPolicyId): AppManagementPolicyItemRequestBuilder {
