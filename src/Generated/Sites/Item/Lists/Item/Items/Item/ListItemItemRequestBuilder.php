@@ -8,6 +8,7 @@ use Microsoft\Graph\Generated\Models\ListItem;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Sites\Item\Lists\Item\Items\Item\Analytics\AnalyticsRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Lists\Item\Items\Item\CreatedByUser\CreatedByUserRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\Lists\Item\Items\Item\CreateLink\CreateLinkRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Lists\Item\Items\Item\DocumentSetVersions\DocumentSetVersionsRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Lists\Item\Items\Item\DriveItem\DriveItemRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Lists\Item\Items\Item\Fields\FieldsRequestBuilder;
@@ -37,6 +38,13 @@ class ListItemItemRequestBuilder extends BaseRequestBuilder
     */
     public function createdByUser(): CreatedByUserRequestBuilder {
         return new CreatedByUserRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the createLink method.
+    */
+    public function createLink(): CreateLinkRequestBuilder {
+        return new CreateLinkRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

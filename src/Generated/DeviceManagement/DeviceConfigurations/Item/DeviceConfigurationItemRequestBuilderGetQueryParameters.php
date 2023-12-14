@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read properties and relationships of the iosCertificateProfile object.
+ * Read properties and relationships of the appleDeviceFeaturesConfigurationBase object.
 */
 class DeviceConfigurationItemRequestBuilderGetQueryParameters 
 {

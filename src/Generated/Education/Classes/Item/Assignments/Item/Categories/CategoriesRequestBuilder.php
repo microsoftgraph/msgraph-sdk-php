@@ -44,7 +44,7 @@ class CategoriesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Gets an item from the Microsoft/Graph/Generated.education.classes.item.assignments.item.categories.item collection
-     * @param string $educationCategoryId Unique identifier of the item
+     * @param string $educationCategoryId The unique identifier of educationCategory
      * @return EducationCategoryItemRequestBuilder
     */
     public function byEducationCategoryId(string $educationCategoryId): EducationCategoryItemRequestBuilder {

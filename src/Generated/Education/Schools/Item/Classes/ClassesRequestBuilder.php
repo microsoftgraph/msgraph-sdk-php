@@ -35,7 +35,7 @@ class ClassesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Gets an item from the Microsoft/Graph/Generated.education.schools.item.classes.item collection
-     * @param string $educationClassId Unique identifier of the item
+     * @param string $educationClassId The unique identifier of educationClass
      * @return EducationClassItemRequestBuilder
     */
     public function byEducationClassId(string $educationClassId): EducationClassItemRequestBuilder {
