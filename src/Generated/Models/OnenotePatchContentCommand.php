@@ -89,7 +89,7 @@ class OnenotePatchContentCommand implements AdditionalDataHolder, BackedModel, P
             'action' => fn(ParseNode $n) => $o->setAction($n->getEnumValue(OnenotePatchActionType::class)),
             'content' => fn(ParseNode $n) => $o->setContent($n->getStringValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
-            'position' => fn(ParseNode $n) => $o->setPosition($n->getEnumValue(OnenotePatchInsertPosition::class)),
+            'position' => fn(ParseNode $n) => $o->setPosition($n->getEnumValue(OnenotePatchContentCommand_position::class)),
             'target' => fn(ParseNode $n) => $o->setTarget($n->getStringValue()),
         ];
     }
@@ -108,11 +108,11 @@ class OnenotePatchContentCommand implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Gets the position property value. The location to add the supplied content, relative to the target element. The possible values are: after (default) or before.
-     * @return OnenotePatchInsertPosition|null
+     * @return OnenotePatchContentCommand_position|null
     */
-    public function getPosition(): ?OnenotePatchInsertPosition {
+    public function getPosition(): ?OnenotePatchContentCommand_position {
         $val = $this->getBackingStore()->get('position');
-        if (is_null($val) || $val instanceof OnenotePatchInsertPosition) {
+        if (is_null($val) || $val instanceof OnenotePatchContentCommand_position) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'position'");
@@ -185,9 +185,9 @@ class OnenotePatchContentCommand implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the position property value. The location to add the supplied content, relative to the target element. The possible values are: after (default) or before.
-     * @param OnenotePatchInsertPosition|null $value Value to set for the position property.
+     * @param OnenotePatchContentCommand_position|null $value Value to set for the position property.
     */
-    public function setPosition(?OnenotePatchInsertPosition $value): void {
+    public function setPosition(?OnenotePatchContentCommand_position $value): void {
         $this->getBackingStore()->set('position', $value);
     }
 

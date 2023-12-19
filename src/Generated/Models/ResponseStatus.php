@@ -64,7 +64,7 @@ class ResponseStatus implements AdditionalDataHolder, BackedModel, Parsable
         $o = $this;
         return  [
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
-            'response' => fn(ParseNode $n) => $o->setResponse($n->getEnumValue(ResponseType::class)),
+            'response' => fn(ParseNode $n) => $o->setResponse($n->getEnumValue(ResponseStatus_response::class)),
             'time' => fn(ParseNode $n) => $o->setTime($n->getDateTimeValue()),
         ];
     }
@@ -83,11 +83,11 @@ class ResponseStatus implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the response property value. The response type. Possible values are: none, organizer, tentativelyAccepted, accepted, declined, notResponded.To differentiate between none and notResponded:  none – from organizer's perspective. This value is used when the status of an attendee/participant is reported to the organizer of a meeting.  notResponded – from attendee's perspective. Indicates the attendee has not responded to the meeting request.  Clients can treat notResponded == none.  As an example, if attendee Alex hasn't responded to a meeting request, getting Alex' response status for that event in Alex' calendar returns notResponded. Getting Alex' response from the calendar of any other attendee or the organizer's returns none. Getting the organizer's response for the event in anybody's calendar also returns none.
-     * @return ResponseType|null
+     * @return ResponseStatus_response|null
     */
-    public function getResponse(): ?ResponseType {
+    public function getResponse(): ?ResponseStatus_response {
         $val = $this->getBackingStore()->get('response');
-        if (is_null($val) || $val instanceof ResponseType) {
+        if (is_null($val) || $val instanceof ResponseStatus_response) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'response'");
@@ -142,9 +142,9 @@ class ResponseStatus implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the response property value. The response type. Possible values are: none, organizer, tentativelyAccepted, accepted, declined, notResponded.To differentiate between none and notResponded:  none – from organizer's perspective. This value is used when the status of an attendee/participant is reported to the organizer of a meeting.  notResponded – from attendee's perspective. Indicates the attendee has not responded to the meeting request.  Clients can treat notResponded == none.  As an example, if attendee Alex hasn't responded to a meeting request, getting Alex' response status for that event in Alex' calendar returns notResponded. Getting Alex' response from the calendar of any other attendee or the organizer's returns none. Getting the organizer's response for the event in anybody's calendar also returns none.
-     * @param ResponseType|null $value Value to set for the response property.
+     * @param ResponseStatus_response|null $value Value to set for the response property.
     */
-    public function setResponse(?ResponseType $value): void {
+    public function setResponse(?ResponseStatus_response $value): void {
         $this->getBackingStore()->set('response', $value);
     }
 

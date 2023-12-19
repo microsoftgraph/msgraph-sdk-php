@@ -69,11 +69,11 @@ class EducationItemBody implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the contentType property value. The contentType property
-     * @return BodyType|null
+     * @return EducationItemBody_contentType|null
     */
-    public function getContentType(): ?BodyType {
+    public function getContentType(): ?EducationItemBody_contentType {
         $val = $this->getBackingStore()->get('contentType');
-        if (is_null($val) || $val instanceof BodyType) {
+        if (is_null($val) || $val instanceof EducationItemBody_contentType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'contentType'");
@@ -87,7 +87,7 @@ class EducationItemBody implements AdditionalDataHolder, BackedModel, Parsable
         $o = $this;
         return  [
             'content' => fn(ParseNode $n) => $o->setContent($n->getStringValue()),
-            'contentType' => fn(ParseNode $n) => $o->setContentType($n->getEnumValue(BodyType::class)),
+            'contentType' => fn(ParseNode $n) => $o->setContentType($n->getEnumValue(EducationItemBody_contentType::class)),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
@@ -141,9 +141,9 @@ class EducationItemBody implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the contentType property value. The contentType property
-     * @param BodyType|null $value Value to set for the contentType property.
+     * @param EducationItemBody_contentType|null $value Value to set for the contentType property.
     */
-    public function setContentType(?BodyType $value): void {
+    public function setContentType(?EducationItemBody_contentType $value): void {
         $this->getBackingStore()->set('contentType', $value);
     }
 

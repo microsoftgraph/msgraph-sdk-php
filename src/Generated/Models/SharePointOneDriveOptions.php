@@ -62,18 +62,18 @@ class SharePointOneDriveOptions implements AdditionalDataHolder, BackedModel, Pa
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'includeContent' => fn(ParseNode $n) => $o->setIncludeContent($n->getEnumValue(SearchContent::class)),
+            'includeContent' => fn(ParseNode $n) => $o->setIncludeContent($n->getEnumValue(SharePointOneDriveOptions_includeContent::class)),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 
     /**
      * Gets the includeContent property value. The type of search content. The possible values are: sharedContent, privateContent, unknownFutureValue. Read-only.
-     * @return SearchContent|null
+     * @return SharePointOneDriveOptions_includeContent|null
     */
-    public function getIncludeContent(): ?SearchContent {
+    public function getIncludeContent(): ?SharePointOneDriveOptions_includeContent {
         $val = $this->getBackingStore()->get('includeContent');
-        if (is_null($val) || $val instanceof SearchContent) {
+        if (is_null($val) || $val instanceof SharePointOneDriveOptions_includeContent) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'includeContent'");
@@ -119,9 +119,9 @@ class SharePointOneDriveOptions implements AdditionalDataHolder, BackedModel, Pa
 
     /**
      * Sets the includeContent property value. The type of search content. The possible values are: sharedContent, privateContent, unknownFutureValue. Read-only.
-     * @param SearchContent|null $value Value to set for the includeContent property.
+     * @param SharePointOneDriveOptions_includeContent|null $value Value to set for the includeContent property.
     */
-    public function setIncludeContent(?SearchContent $value): void {
+    public function setIncludeContent(?SharePointOneDriveOptions_includeContent $value): void {
         $this->getBackingStore()->set('includeContent', $value);
     }
 

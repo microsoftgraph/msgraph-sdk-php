@@ -203,7 +203,7 @@ class Organization extends DirectoryObject implements Parsable
             'mobileDeviceManagementAuthority' => fn(ParseNode $n) => $o->setMobileDeviceManagementAuthority($n->getEnumValue(MdmAuthority::class)),
             'onPremisesLastSyncDateTime' => fn(ParseNode $n) => $o->setOnPremisesLastSyncDateTime($n->getDateTimeValue()),
             'onPremisesSyncEnabled' => fn(ParseNode $n) => $o->setOnPremisesSyncEnabled($n->getBooleanValue()),
-            'partnerTenantType' => fn(ParseNode $n) => $o->setPartnerTenantType($n->getEnumValue(PartnerTenantType::class)),
+            'partnerTenantType' => fn(ParseNode $n) => $o->setPartnerTenantType($n->getEnumValue(Organization_partnerTenantType::class)),
             'postalCode' => fn(ParseNode $n) => $o->setPostalCode($n->getStringValue()),
             'preferredLanguage' => fn(ParseNode $n) => $o->setPreferredLanguage($n->getStringValue()),
             'privacyProfile' => fn(ParseNode $n) => $o->setPrivacyProfile($n->getObjectValue([PrivacyProfile::class, 'createFromDiscriminatorValue'])),
@@ -291,11 +291,11 @@ class Organization extends DirectoryObject implements Parsable
 
     /**
      * Gets the partnerTenantType property value. The type of partnership this tenant has with Microsoft. The possible values are: microsoftSupport, syndicatePartner, breadthPartner, breadthPartnerDelegatedAdmin, resellerPartnerDelegatedAdmin, valueAddedResellerPartnerDelegatedAdmin, unknownFutureValue. Nullable. For more information about the possible types, see partnerTenantType values.
-     * @return PartnerTenantType|null
+     * @return Organization_partnerTenantType|null
     */
-    public function getPartnerTenantType(): ?PartnerTenantType {
+    public function getPartnerTenantType(): ?Organization_partnerTenantType {
         $val = $this->getBackingStore()->get('partnerTenantType');
-        if (is_null($val) || $val instanceof PartnerTenantType) {
+        if (is_null($val) || $val instanceof Organization_partnerTenantType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'partnerTenantType'");
@@ -600,9 +600,9 @@ class Organization extends DirectoryObject implements Parsable
 
     /**
      * Sets the partnerTenantType property value. The type of partnership this tenant has with Microsoft. The possible values are: microsoftSupport, syndicatePartner, breadthPartner, breadthPartnerDelegatedAdmin, resellerPartnerDelegatedAdmin, valueAddedResellerPartnerDelegatedAdmin, unknownFutureValue. Nullable. For more information about the possible types, see partnerTenantType values.
-     * @param PartnerTenantType|null $value Value to set for the partnerTenantType property.
+     * @param Organization_partnerTenantType|null $value Value to set for the partnerTenantType property.
     */
-    public function setPartnerTenantType(?PartnerTenantType $value): void {
+    public function setPartnerTenantType(?Organization_partnerTenantType $value): void {
         $this->getBackingStore()->set('partnerTenantType', $value);
     }
 

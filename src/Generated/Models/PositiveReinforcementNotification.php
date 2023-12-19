@@ -27,11 +27,11 @@ class PositiveReinforcementNotification extends BaseEndUserNotification implemen
 
     /**
      * Gets the deliveryPreference property value. Delivery preference. Possible values are: unknown, deliverImmedietly, deliverAfterCampaignEnd, unknownFutureValue.
-     * @return NotificationDeliveryPreference|null
+     * @return PositiveReinforcementNotification_deliveryPreference|null
     */
-    public function getDeliveryPreference(): ?NotificationDeliveryPreference {
+    public function getDeliveryPreference(): ?PositiveReinforcementNotification_deliveryPreference {
         $val = $this->getBackingStore()->get('deliveryPreference');
-        if (is_null($val) || $val instanceof NotificationDeliveryPreference) {
+        if (is_null($val) || $val instanceof PositiveReinforcementNotification_deliveryPreference) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'deliveryPreference'");
@@ -44,7 +44,7 @@ class PositiveReinforcementNotification extends BaseEndUserNotification implemen
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'deliveryPreference' => fn(ParseNode $n) => $o->setDeliveryPreference($n->getEnumValue(NotificationDeliveryPreference::class)),
+            'deliveryPreference' => fn(ParseNode $n) => $o->setDeliveryPreference($n->getEnumValue(PositiveReinforcementNotification_deliveryPreference::class)),
         ]);
     }
 
@@ -59,9 +59,9 @@ class PositiveReinforcementNotification extends BaseEndUserNotification implemen
 
     /**
      * Sets the deliveryPreference property value. Delivery preference. Possible values are: unknown, deliverImmedietly, deliverAfterCampaignEnd, unknownFutureValue.
-     * @param NotificationDeliveryPreference|null $value Value to set for the deliveryPreference property.
+     * @param PositiveReinforcementNotification_deliveryPreference|null $value Value to set for the deliveryPreference property.
     */
-    public function setDeliveryPreference(?NotificationDeliveryPreference $value): void {
+    public function setDeliveryPreference(?PositiveReinforcementNotification_deliveryPreference $value): void {
         $this->getBackingStore()->set('deliveryPreference', $value);
     }
 

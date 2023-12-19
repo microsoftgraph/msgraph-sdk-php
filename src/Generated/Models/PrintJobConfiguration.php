@@ -70,11 +70,11 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Gets the colorMode property value. The color mode the printer should use to print the job. Valid values are described in the table below. Read-only.
-     * @return PrintColorMode|null
+     * @return PrintJobConfiguration_colorMode|null
     */
-    public function getColorMode(): ?PrintColorMode {
+    public function getColorMode(): ?PrintJobConfiguration_colorMode {
         $val = $this->getBackingStore()->get('colorMode');
-        if (is_null($val) || $val instanceof PrintColorMode) {
+        if (is_null($val) || $val instanceof PrintJobConfiguration_colorMode) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'colorMode'");
@@ -106,11 +106,11 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Gets the duplexMode property value. The duplex mode the printer should use when printing the job. Valid values are described in the table below. Read-only.
-     * @return PrintDuplexMode|null
+     * @return PrintJobConfiguration_duplexMode|null
     */
-    public function getDuplexMode(): ?PrintDuplexMode {
+    public function getDuplexMode(): ?PrintJobConfiguration_duplexMode {
         $val = $this->getBackingStore()->get('duplexMode');
-        if (is_null($val) || $val instanceof PrintDuplexMode) {
+        if (is_null($val) || $val instanceof PrintJobConfiguration_duplexMode) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'duplexMode'");
@@ -118,11 +118,11 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Gets the feedOrientation property value. The orientation to use when feeding media into the printer. Valid values are described in the following table. Read-only.
-     * @return PrinterFeedOrientation|null
+     * @return PrintJobConfiguration_feedOrientation|null
     */
-    public function getFeedOrientation(): ?PrinterFeedOrientation {
+    public function getFeedOrientation(): ?PrintJobConfiguration_feedOrientation {
         $val = $this->getBackingStore()->get('feedOrientation');
-        if (is_null($val) || $val instanceof PrinterFeedOrientation) {
+        if (is_null($val) || $val instanceof PrintJobConfiguration_feedOrientation) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'feedOrientation'");
@@ -136,37 +136,37 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
         $o = $this;
         return  [
             'collate' => fn(ParseNode $n) => $o->setCollate($n->getBooleanValue()),
-            'colorMode' => fn(ParseNode $n) => $o->setColorMode($n->getEnumValue(PrintColorMode::class)),
+            'colorMode' => fn(ParseNode $n) => $o->setColorMode($n->getEnumValue(PrintJobConfiguration_colorMode::class)),
             'copies' => fn(ParseNode $n) => $o->setCopies($n->getIntegerValue()),
             'dpi' => fn(ParseNode $n) => $o->setDpi($n->getIntegerValue()),
-            'duplexMode' => fn(ParseNode $n) => $o->setDuplexMode($n->getEnumValue(PrintDuplexMode::class)),
-            'feedOrientation' => fn(ParseNode $n) => $o->setFeedOrientation($n->getEnumValue(PrinterFeedOrientation::class)),
-            'finishings' => fn(ParseNode $n) => $o->setFinishings($n->getCollectionOfEnumValues(PrintFinishing::class)),
+            'duplexMode' => fn(ParseNode $n) => $o->setDuplexMode($n->getEnumValue(PrintJobConfiguration_duplexMode::class)),
+            'feedOrientation' => fn(ParseNode $n) => $o->setFeedOrientation($n->getEnumValue(PrintJobConfiguration_feedOrientation::class)),
+            'finishings' => fn(ParseNode $n) => $o->setFinishings($n->getCollectionOfEnumValues(PrintJobConfiguration_finishings::class)),
             'fitPdfToPage' => fn(ParseNode $n) => $o->setFitPdfToPage($n->getBooleanValue()),
             'inputBin' => fn(ParseNode $n) => $o->setInputBin($n->getStringValue()),
             'margin' => fn(ParseNode $n) => $o->setMargin($n->getObjectValue([PrintMargin::class, 'createFromDiscriminatorValue'])),
             'mediaSize' => fn(ParseNode $n) => $o->setMediaSize($n->getStringValue()),
             'mediaType' => fn(ParseNode $n) => $o->setMediaType($n->getStringValue()),
-            'multipageLayout' => fn(ParseNode $n) => $o->setMultipageLayout($n->getEnumValue(PrintMultipageLayout::class)),
+            'multipageLayout' => fn(ParseNode $n) => $o->setMultipageLayout($n->getEnumValue(PrintJobConfiguration_multipageLayout::class)),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
-            'orientation' => fn(ParseNode $n) => $o->setOrientation($n->getEnumValue(PrintOrientation::class)),
+            'orientation' => fn(ParseNode $n) => $o->setOrientation($n->getEnumValue(PrintJobConfiguration_orientation::class)),
             'outputBin' => fn(ParseNode $n) => $o->setOutputBin($n->getStringValue()),
             'pageRanges' => fn(ParseNode $n) => $o->setPageRanges($n->getCollectionOfObjectValues([IntegerRange::class, 'createFromDiscriminatorValue'])),
             'pagesPerSheet' => fn(ParseNode $n) => $o->setPagesPerSheet($n->getIntegerValue()),
-            'quality' => fn(ParseNode $n) => $o->setQuality($n->getEnumValue(PrintQuality::class)),
-            'scaling' => fn(ParseNode $n) => $o->setScaling($n->getEnumValue(PrintScaling::class)),
+            'quality' => fn(ParseNode $n) => $o->setQuality($n->getEnumValue(PrintJobConfiguration_quality::class)),
+            'scaling' => fn(ParseNode $n) => $o->setScaling($n->getEnumValue(PrintJobConfiguration_scaling::class)),
         ];
     }
 
     /**
      * Gets the finishings property value. Finishing processes to use when printing.
-     * @return array<PrintFinishing>|null
+     * @return array<PrintJobConfiguration_finishings>|null
     */
     public function getFinishings(): ?array {
         $val = $this->getBackingStore()->get('finishings');
         if (is_array($val) || is_null($val)) {
-            TypeUtils::validateCollectionValues($val, PrintFinishing::class);
-            /** @var array<PrintFinishing>|null $val */
+            TypeUtils::validateCollectionValues($val, PrintJobConfiguration_finishings::class);
+            /** @var array<PrintJobConfiguration_finishings>|null $val */
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'finishings'");
@@ -234,11 +234,11 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Gets the multipageLayout property value. The multipageLayout property
-     * @return PrintMultipageLayout|null
+     * @return PrintJobConfiguration_multipageLayout|null
     */
-    public function getMultipageLayout(): ?PrintMultipageLayout {
+    public function getMultipageLayout(): ?PrintJobConfiguration_multipageLayout {
         $val = $this->getBackingStore()->get('multipageLayout');
-        if (is_null($val) || $val instanceof PrintMultipageLayout) {
+        if (is_null($val) || $val instanceof PrintJobConfiguration_multipageLayout) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'multipageLayout'");
@@ -258,11 +258,11 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Gets the orientation property value. The orientation property
-     * @return PrintOrientation|null
+     * @return PrintJobConfiguration_orientation|null
     */
-    public function getOrientation(): ?PrintOrientation {
+    public function getOrientation(): ?PrintJobConfiguration_orientation {
         $val = $this->getBackingStore()->get('orientation');
-        if (is_null($val) || $val instanceof PrintOrientation) {
+        if (is_null($val) || $val instanceof PrintJobConfiguration_orientation) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'orientation'");
@@ -308,11 +308,11 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Gets the quality property value. The quality property
-     * @return PrintQuality|null
+     * @return PrintJobConfiguration_quality|null
     */
-    public function getQuality(): ?PrintQuality {
+    public function getQuality(): ?PrintJobConfiguration_quality {
         $val = $this->getBackingStore()->get('quality');
-        if (is_null($val) || $val instanceof PrintQuality) {
+        if (is_null($val) || $val instanceof PrintJobConfiguration_quality) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'quality'");
@@ -320,11 +320,11 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Gets the scaling property value. The scaling property
-     * @return PrintScaling|null
+     * @return PrintJobConfiguration_scaling|null
     */
-    public function getScaling(): ?PrintScaling {
+    public function getScaling(): ?PrintJobConfiguration_scaling {
         $val = $this->getBackingStore()->get('scaling');
-        if (is_null($val) || $val instanceof PrintScaling) {
+        if (is_null($val) || $val instanceof PrintJobConfiguration_scaling) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'scaling'");
@@ -384,9 +384,9 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the colorMode property value. The color mode the printer should use to print the job. Valid values are described in the table below. Read-only.
-     * @param PrintColorMode|null $value Value to set for the colorMode property.
+     * @param PrintJobConfiguration_colorMode|null $value Value to set for the colorMode property.
     */
-    public function setColorMode(?PrintColorMode $value): void {
+    public function setColorMode(?PrintJobConfiguration_colorMode $value): void {
         $this->getBackingStore()->set('colorMode', $value);
     }
 
@@ -408,23 +408,23 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the duplexMode property value. The duplex mode the printer should use when printing the job. Valid values are described in the table below. Read-only.
-     * @param PrintDuplexMode|null $value Value to set for the duplexMode property.
+     * @param PrintJobConfiguration_duplexMode|null $value Value to set for the duplexMode property.
     */
-    public function setDuplexMode(?PrintDuplexMode $value): void {
+    public function setDuplexMode(?PrintJobConfiguration_duplexMode $value): void {
         $this->getBackingStore()->set('duplexMode', $value);
     }
 
     /**
      * Sets the feedOrientation property value. The orientation to use when feeding media into the printer. Valid values are described in the following table. Read-only.
-     * @param PrinterFeedOrientation|null $value Value to set for the feedOrientation property.
+     * @param PrintJobConfiguration_feedOrientation|null $value Value to set for the feedOrientation property.
     */
-    public function setFeedOrientation(?PrinterFeedOrientation $value): void {
+    public function setFeedOrientation(?PrintJobConfiguration_feedOrientation $value): void {
         $this->getBackingStore()->set('feedOrientation', $value);
     }
 
     /**
      * Sets the finishings property value. Finishing processes to use when printing.
-     * @param array<PrintFinishing>|null $value Value to set for the finishings property.
+     * @param array<PrintJobConfiguration_finishings>|null $value Value to set for the finishings property.
     */
     public function setFinishings(?array $value): void {
         $this->getBackingStore()->set('finishings', $value);
@@ -472,9 +472,9 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the multipageLayout property value. The multipageLayout property
-     * @param PrintMultipageLayout|null $value Value to set for the multipageLayout property.
+     * @param PrintJobConfiguration_multipageLayout|null $value Value to set for the multipageLayout property.
     */
-    public function setMultipageLayout(?PrintMultipageLayout $value): void {
+    public function setMultipageLayout(?PrintJobConfiguration_multipageLayout $value): void {
         $this->getBackingStore()->set('multipageLayout', $value);
     }
 
@@ -488,9 +488,9 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the orientation property value. The orientation property
-     * @param PrintOrientation|null $value Value to set for the orientation property.
+     * @param PrintJobConfiguration_orientation|null $value Value to set for the orientation property.
     */
-    public function setOrientation(?PrintOrientation $value): void {
+    public function setOrientation(?PrintJobConfiguration_orientation $value): void {
         $this->getBackingStore()->set('orientation', $value);
     }
 
@@ -520,17 +520,17 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the quality property value. The quality property
-     * @param PrintQuality|null $value Value to set for the quality property.
+     * @param PrintJobConfiguration_quality|null $value Value to set for the quality property.
     */
-    public function setQuality(?PrintQuality $value): void {
+    public function setQuality(?PrintJobConfiguration_quality $value): void {
         $this->getBackingStore()->set('quality', $value);
     }
 
     /**
      * Sets the scaling property value. The scaling property
-     * @param PrintScaling|null $value Value to set for the scaling property.
+     * @param PrintJobConfiguration_scaling|null $value Value to set for the scaling property.
     */
-    public function setScaling(?PrintScaling $value): void {
+    public function setScaling(?PrintJobConfiguration_scaling $value): void {
         $this->getBackingStore()->set('scaling', $value);
     }
 

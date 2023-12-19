@@ -62,7 +62,7 @@ class ObjectMappingMetadataEntry implements AdditionalDataHolder, BackedModel, P
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'key' => fn(ParseNode $n) => $o->setKey($n->getEnumValue(ObjectMappingMetadata::class)),
+            'key' => fn(ParseNode $n) => $o->setKey($n->getEnumValue(ObjectMappingMetadataEntry_key::class)),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'value' => fn(ParseNode $n) => $o->setValue($n->getStringValue()),
         ];
@@ -70,11 +70,11 @@ class ObjectMappingMetadataEntry implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Gets the key property value. Possible values are: EscrowBehavior, DisableMonitoringForChanges, OriginalJoiningProperty, Disposition, IsCustomerDefined, ExcludeFromReporting, Unsynchronized.
-     * @return ObjectMappingMetadata|null
+     * @return ObjectMappingMetadataEntry_key|null
     */
-    public function getKey(): ?ObjectMappingMetadata {
+    public function getKey(): ?ObjectMappingMetadataEntry_key {
         $val = $this->getBackingStore()->get('key');
-        if (is_null($val) || $val instanceof ObjectMappingMetadata) {
+        if (is_null($val) || $val instanceof ObjectMappingMetadataEntry_key) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'key'");
@@ -133,9 +133,9 @@ class ObjectMappingMetadataEntry implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the key property value. Possible values are: EscrowBehavior, DisableMonitoringForChanges, OriginalJoiningProperty, Disposition, IsCustomerDefined, ExcludeFromReporting, Unsynchronized.
-     * @param ObjectMappingMetadata|null $value Value to set for the key property.
+     * @param ObjectMappingMetadataEntry_key|null $value Value to set for the key property.
     */
-    public function setKey(?ObjectMappingMetadata $value): void {
+    public function setKey(?ObjectMappingMetadataEntry_key $value): void {
         $this->getBackingStore()->set('key', $value);
     }
 

@@ -36,11 +36,11 @@ class CalendarSharingMessageAction implements AdditionalDataHolder, BackedModel,
 
     /**
      * Gets the action property value. The action property
-     * @return CalendarSharingAction|null
+     * @return CalendarSharingMessageAction_action|null
     */
-    public function getAction(): ?CalendarSharingAction {
+    public function getAction(): ?CalendarSharingMessageAction_action {
         $val = $this->getBackingStore()->get('action');
-        if (is_null($val) || $val instanceof CalendarSharingAction) {
+        if (is_null($val) || $val instanceof CalendarSharingMessageAction_action) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'action'");
@@ -48,11 +48,11 @@ class CalendarSharingMessageAction implements AdditionalDataHolder, BackedModel,
 
     /**
      * Gets the actionType property value. The actionType property
-     * @return CalendarSharingActionType|null
+     * @return CalendarSharingMessageAction_actionType|null
     */
-    public function getActionType(): ?CalendarSharingActionType {
+    public function getActionType(): ?CalendarSharingMessageAction_actionType {
         $val = $this->getBackingStore()->get('actionType');
-        if (is_null($val) || $val instanceof CalendarSharingActionType) {
+        if (is_null($val) || $val instanceof CalendarSharingMessageAction_actionType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'actionType'");
@@ -86,20 +86,20 @@ class CalendarSharingMessageAction implements AdditionalDataHolder, BackedModel,
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'action' => fn(ParseNode $n) => $o->setAction($n->getEnumValue(CalendarSharingAction::class)),
-            'actionType' => fn(ParseNode $n) => $o->setActionType($n->getEnumValue(CalendarSharingActionType::class)),
-            'importance' => fn(ParseNode $n) => $o->setImportance($n->getEnumValue(CalendarSharingActionImportance::class)),
+            'action' => fn(ParseNode $n) => $o->setAction($n->getEnumValue(CalendarSharingMessageAction_action::class)),
+            'actionType' => fn(ParseNode $n) => $o->setActionType($n->getEnumValue(CalendarSharingMessageAction_actionType::class)),
+            'importance' => fn(ParseNode $n) => $o->setImportance($n->getEnumValue(CalendarSharingMessageAction_importance::class)),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 
     /**
      * Gets the importance property value. The importance property
-     * @return CalendarSharingActionImportance|null
+     * @return CalendarSharingMessageAction_importance|null
     */
-    public function getImportance(): ?CalendarSharingActionImportance {
+    public function getImportance(): ?CalendarSharingMessageAction_importance {
         $val = $this->getBackingStore()->get('importance');
-        if (is_null($val) || $val instanceof CalendarSharingActionImportance) {
+        if (is_null($val) || $val instanceof CalendarSharingMessageAction_importance) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'importance'");
@@ -131,17 +131,17 @@ class CalendarSharingMessageAction implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the action property value. The action property
-     * @param CalendarSharingAction|null $value Value to set for the action property.
+     * @param CalendarSharingMessageAction_action|null $value Value to set for the action property.
     */
-    public function setAction(?CalendarSharingAction $value): void {
+    public function setAction(?CalendarSharingMessageAction_action $value): void {
         $this->getBackingStore()->set('action', $value);
     }
 
     /**
      * Sets the actionType property value. The actionType property
-     * @param CalendarSharingActionType|null $value Value to set for the actionType property.
+     * @param CalendarSharingMessageAction_actionType|null $value Value to set for the actionType property.
     */
-    public function setActionType(?CalendarSharingActionType $value): void {
+    public function setActionType(?CalendarSharingMessageAction_actionType $value): void {
         $this->getBackingStore()->set('actionType', $value);
     }
 
@@ -163,9 +163,9 @@ class CalendarSharingMessageAction implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the importance property value. The importance property
-     * @param CalendarSharingActionImportance|null $value Value to set for the importance property.
+     * @param CalendarSharingMessageAction_importance|null $value Value to set for the importance property.
     */
-    public function setImportance(?CalendarSharingActionImportance $value): void {
+    public function setImportance(?CalendarSharingMessageAction_importance $value): void {
         $this->getBackingStore()->set('importance', $value);
     }
 

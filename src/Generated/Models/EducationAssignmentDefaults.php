@@ -27,11 +27,11 @@ class EducationAssignmentDefaults extends Entity implements Parsable
 
     /**
      * Gets the addedStudentAction property value. Class-level default behavior for handling students who are added after the assignment is published. Possible values are: none, assignIfOpen.
-     * @return EducationAddedStudentAction|null
+     * @return EducationAssignmentDefaults_addedStudentAction|null
     */
-    public function getAddedStudentAction(): ?EducationAddedStudentAction {
+    public function getAddedStudentAction(): ?EducationAssignmentDefaults_addedStudentAction {
         $val = $this->getBackingStore()->get('addedStudentAction');
-        if (is_null($val) || $val instanceof EducationAddedStudentAction) {
+        if (is_null($val) || $val instanceof EducationAssignmentDefaults_addedStudentAction) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'addedStudentAction'");
@@ -39,11 +39,11 @@ class EducationAssignmentDefaults extends Entity implements Parsable
 
     /**
      * Gets the addToCalendarAction property value. Optional field to control adding assignments to students' and teachers' calendars when the assignment is published. The possible values are: none, studentsAndPublisher, studentsAndTeamOwners, unknownFutureValue, and studentsOnly. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: studentsOnly. The default value is none.
-     * @return EducationAddToCalendarOptions|null
+     * @return EducationAssignmentDefaults_addToCalendarAction|null
     */
-    public function getAddToCalendarAction(): ?EducationAddToCalendarOptions {
+    public function getAddToCalendarAction(): ?EducationAssignmentDefaults_addToCalendarAction {
         $val = $this->getBackingStore()->get('addToCalendarAction');
-        if (is_null($val) || $val instanceof EducationAddToCalendarOptions) {
+        if (is_null($val) || $val instanceof EducationAssignmentDefaults_addToCalendarAction) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'addToCalendarAction'");
@@ -68,8 +68,8 @@ class EducationAssignmentDefaults extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'addedStudentAction' => fn(ParseNode $n) => $o->setAddedStudentAction($n->getEnumValue(EducationAddedStudentAction::class)),
-            'addToCalendarAction' => fn(ParseNode $n) => $o->setAddToCalendarAction($n->getEnumValue(EducationAddToCalendarOptions::class)),
+            'addedStudentAction' => fn(ParseNode $n) => $o->setAddedStudentAction($n->getEnumValue(EducationAssignmentDefaults_addedStudentAction::class)),
+            'addToCalendarAction' => fn(ParseNode $n) => $o->setAddToCalendarAction($n->getEnumValue(EducationAssignmentDefaults_addToCalendarAction::class)),
             'dueTime' => fn(ParseNode $n) => $o->setDueTime($n->getTimeValue()),
             'notificationChannelUrl' => fn(ParseNode $n) => $o->setNotificationChannelUrl($n->getStringValue()),
         ]);
@@ -101,17 +101,17 @@ class EducationAssignmentDefaults extends Entity implements Parsable
 
     /**
      * Sets the addedStudentAction property value. Class-level default behavior for handling students who are added after the assignment is published. Possible values are: none, assignIfOpen.
-     * @param EducationAddedStudentAction|null $value Value to set for the addedStudentAction property.
+     * @param EducationAssignmentDefaults_addedStudentAction|null $value Value to set for the addedStudentAction property.
     */
-    public function setAddedStudentAction(?EducationAddedStudentAction $value): void {
+    public function setAddedStudentAction(?EducationAssignmentDefaults_addedStudentAction $value): void {
         $this->getBackingStore()->set('addedStudentAction', $value);
     }
 
     /**
      * Sets the addToCalendarAction property value. Optional field to control adding assignments to students' and teachers' calendars when the assignment is published. The possible values are: none, studentsAndPublisher, studentsAndTeamOwners, unknownFutureValue, and studentsOnly. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: studentsOnly. The default value is none.
-     * @param EducationAddToCalendarOptions|null $value Value to set for the addToCalendarAction property.
+     * @param EducationAssignmentDefaults_addToCalendarAction|null $value Value to set for the addToCalendarAction property.
     */
-    public function setAddToCalendarAction(?EducationAddToCalendarOptions $value): void {
+    public function setAddToCalendarAction(?EducationAssignmentDefaults_addToCalendarAction $value): void {
         $this->getBackingStore()->set('addToCalendarAction', $value);
     }
 

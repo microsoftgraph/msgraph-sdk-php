@@ -62,7 +62,7 @@ class AttributeDefinitionMetadataEntry implements AdditionalDataHolder, BackedMo
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'key' => fn(ParseNode $n) => $o->setKey($n->getEnumValue(AttributeDefinitionMetadata::class)),
+            'key' => fn(ParseNode $n) => $o->setKey($n->getEnumValue(AttributeDefinitionMetadataEntry_key::class)),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'value' => fn(ParseNode $n) => $o->setValue($n->getStringValue()),
         ];
@@ -70,11 +70,11 @@ class AttributeDefinitionMetadataEntry implements AdditionalDataHolder, BackedMo
 
     /**
      * Gets the key property value. Possible values are: BaseAttributeName, ComplexObjectDefinition, IsContainer, IsCustomerDefined, IsDomainQualified, LinkPropertyNames, LinkTypeName, MaximumLength, ReferencedProperty.
-     * @return AttributeDefinitionMetadata|null
+     * @return AttributeDefinitionMetadataEntry_key|null
     */
-    public function getKey(): ?AttributeDefinitionMetadata {
+    public function getKey(): ?AttributeDefinitionMetadataEntry_key {
         $val = $this->getBackingStore()->get('key');
-        if (is_null($val) || $val instanceof AttributeDefinitionMetadata) {
+        if (is_null($val) || $val instanceof AttributeDefinitionMetadataEntry_key) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'key'");
@@ -133,9 +133,9 @@ class AttributeDefinitionMetadataEntry implements AdditionalDataHolder, BackedMo
 
     /**
      * Sets the key property value. Possible values are: BaseAttributeName, ComplexObjectDefinition, IsContainer, IsCustomerDefined, IsDomainQualified, LinkPropertyNames, LinkTypeName, MaximumLength, ReferencedProperty.
-     * @param AttributeDefinitionMetadata|null $value Value to set for the key property.
+     * @param AttributeDefinitionMetadataEntry_key|null $value Value to set for the key property.
     */
-    public function setKey(?AttributeDefinitionMetadata $value): void {
+    public function setKey(?AttributeDefinitionMetadataEntry_key $value): void {
         $this->getBackingStore()->set('key', $value);
     }
 

@@ -103,7 +103,7 @@ class CustomExtensionCalloutInstance implements AdditionalDataHolder, BackedMode
             'externalCorrelationId' => fn(ParseNode $n) => $o->setExternalCorrelationId($n->getStringValue()),
             'id' => fn(ParseNode $n) => $o->setId($n->getStringValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
-            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(CustomExtensionCalloutInstanceStatus::class)),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(CustomExtensionCalloutInstance_status::class)),
         ];
     }
 
@@ -133,11 +133,11 @@ class CustomExtensionCalloutInstance implements AdditionalDataHolder, BackedMode
 
     /**
      * Gets the status property value. The status of the request to the custom extension. The possible values are: calloutSent, callbackReceived, calloutFailed, callbackTimedOut, waitingForCallback, unknownFutureValue.
-     * @return CustomExtensionCalloutInstanceStatus|null
+     * @return CustomExtensionCalloutInstance_status|null
     */
-    public function getStatus(): ?CustomExtensionCalloutInstanceStatus {
+    public function getStatus(): ?CustomExtensionCalloutInstance_status {
         $val = $this->getBackingStore()->get('status');
-        if (is_null($val) || $val instanceof CustomExtensionCalloutInstanceStatus) {
+        if (is_null($val) || $val instanceof CustomExtensionCalloutInstance_status) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
@@ -215,9 +215,9 @@ class CustomExtensionCalloutInstance implements AdditionalDataHolder, BackedMode
 
     /**
      * Sets the status property value. The status of the request to the custom extension. The possible values are: calloutSent, callbackReceived, calloutFailed, callbackTimedOut, waitingForCallback, unknownFutureValue.
-     * @param CustomExtensionCalloutInstanceStatus|null $value Value to set for the status property.
+     * @param CustomExtensionCalloutInstance_status|null $value Value to set for the status property.
     */
-    public function setStatus(?CustomExtensionCalloutInstanceStatus $value): void {
+    public function setStatus(?CustomExtensionCalloutInstance_status $value): void {
         $this->getBackingStore()->set('status', $value);
     }
 

@@ -58,11 +58,11 @@ class RiskUserActivity implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the detail property value. Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
-     * @return RiskDetail|null
+     * @return RiskUserActivity_detail|null
     */
-    public function getDetail(): ?RiskDetail {
+    public function getDetail(): ?RiskUserActivity_detail {
         $val = $this->getBackingStore()->get('detail');
-        if (is_null($val) || $val instanceof RiskDetail) {
+        if (is_null($val) || $val instanceof RiskUserActivity_detail) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'detail'");
@@ -75,7 +75,7 @@ class RiskUserActivity implements AdditionalDataHolder, BackedModel, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'detail' => fn(ParseNode $n) => $o->setDetail($n->getEnumValue(RiskDetail::class)),
+            'detail' => fn(ParseNode $n) => $o->setDetail($n->getEnumValue(RiskUserActivity_detail::class)),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'riskEventTypes' => function (ParseNode $n) {
                 $val = $n->getCollectionOfPrimitiveValues();
@@ -143,9 +143,9 @@ class RiskUserActivity implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the detail property value. Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
-     * @param RiskDetail|null $value Value to set for the detail property.
+     * @param RiskUserActivity_detail|null $value Value to set for the detail property.
     */
-    public function setDetail(?RiskDetail $value): void {
+    public function setDetail(?RiskUserActivity_detail $value): void {
         $this->getBackingStore()->set('detail', $value);
     }
 

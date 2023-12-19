@@ -88,7 +88,7 @@ class AccessPackageAssignment extends Entity implements Parsable
             'customExtensionCalloutInstances' => fn(ParseNode $n) => $o->setCustomExtensionCalloutInstances($n->getCollectionOfObjectValues([CustomExtensionCalloutInstance::class, 'createFromDiscriminatorValue'])),
             'expiredDateTime' => fn(ParseNode $n) => $o->setExpiredDateTime($n->getDateTimeValue()),
             'schedule' => fn(ParseNode $n) => $o->setSchedule($n->getObjectValue([EntitlementManagementSchedule::class, 'createFromDiscriminatorValue'])),
-            'state' => fn(ParseNode $n) => $o->setState($n->getEnumValue(AccessPackageAssignmentState::class)),
+            'state' => fn(ParseNode $n) => $o->setState($n->getEnumValue(AccessPackageAssignment_state::class)),
             'status' => fn(ParseNode $n) => $o->setStatus($n->getStringValue()),
             'target' => fn(ParseNode $n) => $o->setTarget($n->getObjectValue([AccessPackageSubject::class, 'createFromDiscriminatorValue'])),
         ]);
@@ -108,11 +108,11 @@ class AccessPackageAssignment extends Entity implements Parsable
 
     /**
      * Gets the state property value. The state of the access package assignment. The possible values are: delivering, partiallyDelivered, delivered, expired, deliveryFailed, unknownFutureValue. Read-only. Supports $filter (eq).
-     * @return AccessPackageAssignmentState|null
+     * @return AccessPackageAssignment_state|null
     */
-    public function getState(): ?AccessPackageAssignmentState {
+    public function getState(): ?AccessPackageAssignment_state {
         $val = $this->getBackingStore()->get('state');
-        if (is_null($val) || $val instanceof AccessPackageAssignmentState) {
+        if (is_null($val) || $val instanceof AccessPackageAssignment_state) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'state'");
@@ -200,9 +200,9 @@ class AccessPackageAssignment extends Entity implements Parsable
 
     /**
      * Sets the state property value. The state of the access package assignment. The possible values are: delivering, partiallyDelivered, delivered, expired, deliveryFailed, unknownFutureValue. Read-only. Supports $filter (eq).
-     * @param AccessPackageAssignmentState|null $value Value to set for the state property.
+     * @param AccessPackageAssignment_state|null $value Value to set for the state property.
     */
-    public function setState(?AccessPackageAssignmentState $value): void {
+    public function setState(?AccessPackageAssignment_state $value): void {
         $this->getBackingStore()->set('state', $value);
     }
 

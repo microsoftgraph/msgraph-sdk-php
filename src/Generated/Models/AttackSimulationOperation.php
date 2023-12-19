@@ -33,7 +33,7 @@ class AttackSimulationOperation extends LongRunningOperation implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'percentageCompleted' => fn(ParseNode $n) => $o->setPercentageCompleted($n->getIntegerValue()),
             'tenantId' => fn(ParseNode $n) => $o->setTenantId($n->getStringValue()),
-            'type' => fn(ParseNode $n) => $o->setType($n->getEnumValue(AttackSimulationOperationType::class)),
+            'type' => fn(ParseNode $n) => $o->setType($n->getEnumValue(AttackSimulationOperation_type::class)),
         ]);
     }
 
@@ -63,11 +63,11 @@ class AttackSimulationOperation extends LongRunningOperation implements Parsable
 
     /**
      * Gets the type property value. The attack simulation operation type. Possible values are: createSimulation, updateSimulation, unknownFutureValue.
-     * @return AttackSimulationOperationType|null
+     * @return AttackSimulationOperation_type|null
     */
-    public function getType(): ?AttackSimulationOperationType {
+    public function getType(): ?AttackSimulationOperation_type {
         $val = $this->getBackingStore()->get('type');
-        if (is_null($val) || $val instanceof AttackSimulationOperationType) {
+        if (is_null($val) || $val instanceof AttackSimulationOperation_type) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'type'");
@@ -102,9 +102,9 @@ class AttackSimulationOperation extends LongRunningOperation implements Parsable
 
     /**
      * Sets the type property value. The attack simulation operation type. Possible values are: createSimulation, updateSimulation, unknownFutureValue.
-     * @param AttackSimulationOperationType|null $value Value to set for the type property.
+     * @param AttackSimulationOperation_type|null $value Value to set for the type property.
     */
-    public function setType(?AttackSimulationOperationType $value): void {
+    public function setType(?AttackSimulationOperation_type $value): void {
         $this->getBackingStore()->set('type', $value);
     }
 

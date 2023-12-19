@@ -49,11 +49,11 @@ class AttachmentInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the attachmentType property value. The type of the attachment. The possible values are: file, item, reference. Required.
-     * @return AttachmentType|null
+     * @return AttachmentInfo_attachmentType|null
     */
-    public function getAttachmentType(): ?AttachmentType {
+    public function getAttachmentType(): ?AttachmentInfo_attachmentType {
         $val = $this->getBackingStore()->get('attachmentType');
-        if (is_null($val) || $val instanceof AttachmentType) {
+        if (is_null($val) || $val instanceof AttachmentInfo_attachmentType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'attachmentType'");
@@ -86,7 +86,7 @@ class AttachmentInfo implements AdditionalDataHolder, BackedModel, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'attachmentType' => fn(ParseNode $n) => $o->setAttachmentType($n->getEnumValue(AttachmentType::class)),
+            'attachmentType' => fn(ParseNode $n) => $o->setAttachmentType($n->getEnumValue(AttachmentInfo_attachmentType::class)),
             'contentType' => fn(ParseNode $n) => $o->setContentType($n->getStringValue()),
             'name' => fn(ParseNode $n) => $o->setName($n->getStringValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
@@ -153,9 +153,9 @@ class AttachmentInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the attachmentType property value. The type of the attachment. The possible values are: file, item, reference. Required.
-     * @param AttachmentType|null $value Value to set for the attachmentType property.
+     * @param AttachmentInfo_attachmentType|null $value Value to set for the attachmentType property.
     */
-    public function setAttachmentType(?AttachmentType $value): void {
+    public function setAttachmentType(?AttachmentInfo_attachmentType $value): void {
         $this->getBackingStore()->set('attachmentType', $value);
     }
 

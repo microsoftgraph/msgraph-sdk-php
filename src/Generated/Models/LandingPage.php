@@ -103,8 +103,8 @@ class LandingPage extends Entity implements Parsable
             'lastModifiedBy' => fn(ParseNode $n) => $o->setLastModifiedBy($n->getObjectValue([EmailIdentity::class, 'createFromDiscriminatorValue'])),
             'lastModifiedDateTime' => fn(ParseNode $n) => $o->setLastModifiedDateTime($n->getDateTimeValue()),
             'locale' => fn(ParseNode $n) => $o->setLocale($n->getStringValue()),
-            'source' => fn(ParseNode $n) => $o->setSource($n->getEnumValue(SimulationContentSource::class)),
-            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(SimulationContentStatus::class)),
+            'source' => fn(ParseNode $n) => $o->setSource($n->getEnumValue(LandingPage_source::class)),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(LandingPage_status::class)),
             'supportedLocales' => function (ParseNode $n) {
                 $val = $n->getCollectionOfPrimitiveValues();
                 if (is_array($val)) {
@@ -154,11 +154,11 @@ class LandingPage extends Entity implements Parsable
 
     /**
      * Gets the source property value. The source of the content. Possible values are: unknown, global, tenant, unknownFutureValue.
-     * @return SimulationContentSource|null
+     * @return LandingPage_source|null
     */
-    public function getSource(): ?SimulationContentSource {
+    public function getSource(): ?LandingPage_source {
         $val = $this->getBackingStore()->get('source');
-        if (is_null($val) || $val instanceof SimulationContentSource) {
+        if (is_null($val) || $val instanceof LandingPage_source) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'source'");
@@ -166,11 +166,11 @@ class LandingPage extends Entity implements Parsable
 
     /**
      * Gets the status property value. The status of the simulation. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
-     * @return SimulationContentStatus|null
+     * @return LandingPage_status|null
     */
-    public function getStatus(): ?SimulationContentStatus {
+    public function getStatus(): ?LandingPage_status {
         $val = $this->getBackingStore()->get('status');
-        if (is_null($val) || $val instanceof SimulationContentStatus) {
+        if (is_null($val) || $val instanceof LandingPage_status) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
@@ -275,17 +275,17 @@ class LandingPage extends Entity implements Parsable
 
     /**
      * Sets the source property value. The source of the content. Possible values are: unknown, global, tenant, unknownFutureValue.
-     * @param SimulationContentSource|null $value Value to set for the source property.
+     * @param LandingPage_source|null $value Value to set for the source property.
     */
-    public function setSource(?SimulationContentSource $value): void {
+    public function setSource(?LandingPage_source $value): void {
         $this->getBackingStore()->set('source', $value);
     }
 
     /**
      * Sets the status property value. The status of the simulation. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
-     * @param SimulationContentStatus|null $value Value to set for the status property.
+     * @param LandingPage_status|null $value Value to set for the status property.
     */
-    public function setStatus(?SimulationContentStatus $value): void {
+    public function setStatus(?LandingPage_status $value): void {
         $this->getBackingStore()->set('status', $value);
     }
 

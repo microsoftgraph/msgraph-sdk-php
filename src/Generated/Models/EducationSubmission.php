@@ -41,7 +41,7 @@ class EducationSubmission extends Entity implements Parsable
             'resourcesFolderUrl' => fn(ParseNode $n) => $o->setResourcesFolderUrl($n->getStringValue()),
             'returnedBy' => fn(ParseNode $n) => $o->setReturnedBy($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
             'returnedDateTime' => fn(ParseNode $n) => $o->setReturnedDateTime($n->getDateTimeValue()),
-            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(EducationSubmissionStatus::class)),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(EducationSubmission_status::class)),
             'submittedBy' => fn(ParseNode $n) => $o->setSubmittedBy($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
             'submittedDateTime' => fn(ParseNode $n) => $o->setSubmittedDateTime($n->getDateTimeValue()),
             'submittedResources' => fn(ParseNode $n) => $o->setSubmittedResources($n->getCollectionOfObjectValues([EducationSubmissionResource::class, 'createFromDiscriminatorValue'])),
@@ -152,11 +152,11 @@ class EducationSubmission extends Entity implements Parsable
 
     /**
      * Gets the status property value. Read-only. Possible values are: working, submitted, returned, and reassigned. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: reassigned.
-     * @return EducationSubmissionStatus|null
+     * @return EducationSubmission_status|null
     */
-    public function getStatus(): ?EducationSubmissionStatus {
+    public function getStatus(): ?EducationSubmission_status {
         $val = $this->getBackingStore()->get('status');
-        if (is_null($val) || $val instanceof EducationSubmissionStatus) {
+        if (is_null($val) || $val instanceof EducationSubmission_status) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
@@ -302,9 +302,9 @@ class EducationSubmission extends Entity implements Parsable
 
     /**
      * Sets the status property value. Read-only. Possible values are: working, submitted, returned, and reassigned. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: reassigned.
-     * @param EducationSubmissionStatus|null $value Value to set for the status property.
+     * @param EducationSubmission_status|null $value Value to set for the status property.
     */
-    public function setStatus(?EducationSubmissionStatus $value): void {
+    public function setStatus(?EducationSubmission_status $value): void {
         $this->getBackingStore()->set('status', $value);
     }
 

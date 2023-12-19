@@ -75,7 +75,7 @@ class UserTrainingEventInfo implements AdditionalDataHolder, BackedModel, Parsab
         $o = $this;
         return  [
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
-            'latestTrainingStatus' => fn(ParseNode $n) => $o->setLatestTrainingStatus($n->getEnumValue(TrainingStatus::class)),
+            'latestTrainingStatus' => fn(ParseNode $n) => $o->setLatestTrainingStatus($n->getEnumValue(UserTrainingEventInfo_latestTrainingStatus::class)),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'trainingAssignedProperties' => fn(ParseNode $n) => $o->setTrainingAssignedProperties($n->getObjectValue([UserTrainingContentEventInfo::class, 'createFromDiscriminatorValue'])),
             'trainingCompletedProperties' => fn(ParseNode $n) => $o->setTrainingCompletedProperties($n->getObjectValue([UserTrainingContentEventInfo::class, 'createFromDiscriminatorValue'])),
@@ -85,11 +85,11 @@ class UserTrainingEventInfo implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Gets the latestTrainingStatus property value. Latest status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
-     * @return TrainingStatus|null
+     * @return UserTrainingEventInfo_latestTrainingStatus|null
     */
-    public function getLatestTrainingStatus(): ?TrainingStatus {
+    public function getLatestTrainingStatus(): ?UserTrainingEventInfo_latestTrainingStatus {
         $val = $this->getBackingStore()->get('latestTrainingStatus');
-        if (is_null($val) || $val instanceof TrainingStatus) {
+        if (is_null($val) || $val instanceof UserTrainingEventInfo_latestTrainingStatus) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'latestTrainingStatus'");
@@ -183,9 +183,9 @@ class UserTrainingEventInfo implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the latestTrainingStatus property value. Latest status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
-     * @param TrainingStatus|null $value Value to set for the latestTrainingStatus property.
+     * @param UserTrainingEventInfo_latestTrainingStatus|null $value Value to set for the latestTrainingStatus property.
     */
-    public function setLatestTrainingStatus(?TrainingStatus $value): void {
+    public function setLatestTrainingStatus(?UserTrainingEventInfo_latestTrainingStatus $value): void {
         $this->getBackingStore()->set('latestTrainingStatus', $value);
     }
 

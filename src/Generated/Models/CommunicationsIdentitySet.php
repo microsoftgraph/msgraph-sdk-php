@@ -75,11 +75,11 @@ class CommunicationsIdentitySet extends IdentitySet implements Parsable
 
     /**
      * Gets the endpointType property value. Type of endpoint that the participant uses. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone, unknownFutureValue.
-     * @return EndpointType|null
+     * @return CommunicationsIdentitySet_endpointType|null
     */
-    public function getEndpointType(): ?EndpointType {
+    public function getEndpointType(): ?CommunicationsIdentitySet_endpointType {
         $val = $this->getBackingStore()->get('endpointType');
-        if (is_null($val) || $val instanceof EndpointType) {
+        if (is_null($val) || $val instanceof CommunicationsIdentitySet_endpointType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'endpointType'");
@@ -96,7 +96,7 @@ class CommunicationsIdentitySet extends IdentitySet implements Parsable
             'assertedIdentity' => fn(ParseNode $n) => $o->setAssertedIdentity($n->getObjectValue([Identity::class, 'createFromDiscriminatorValue'])),
             'azureCommunicationServicesUser' => fn(ParseNode $n) => $o->setAzureCommunicationServicesUser($n->getObjectValue([Identity::class, 'createFromDiscriminatorValue'])),
             'encrypted' => fn(ParseNode $n) => $o->setEncrypted($n->getObjectValue([Identity::class, 'createFromDiscriminatorValue'])),
-            'endpointType' => fn(ParseNode $n) => $o->setEndpointType($n->getEnumValue(EndpointType::class)),
+            'endpointType' => fn(ParseNode $n) => $o->setEndpointType($n->getEnumValue(CommunicationsIdentitySet_endpointType::class)),
             'guest' => fn(ParseNode $n) => $o->setGuest($n->getObjectValue([Identity::class, 'createFromDiscriminatorValue'])),
             'onPremises' => fn(ParseNode $n) => $o->setOnPremises($n->getObjectValue([Identity::class, 'createFromDiscriminatorValue'])),
             'phone' => fn(ParseNode $n) => $o->setPhone($n->getObjectValue([Identity::class, 'createFromDiscriminatorValue'])),
@@ -189,9 +189,9 @@ class CommunicationsIdentitySet extends IdentitySet implements Parsable
 
     /**
      * Sets the endpointType property value. Type of endpoint that the participant uses. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone, unknownFutureValue.
-     * @param EndpointType|null $value Value to set for the endpointType property.
+     * @param CommunicationsIdentitySet_endpointType|null $value Value to set for the endpointType property.
     */
-    public function setEndpointType(?EndpointType $value): void {
+    public function setEndpointType(?CommunicationsIdentitySet_endpointType $value): void {
         $this->getBackingStore()->set('endpointType', $value);
     }
 

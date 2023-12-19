@@ -42,11 +42,11 @@ class AccessPackageCatalog extends Entity implements Parsable
 
     /**
      * Gets the catalogType property value. Whether the catalog is created by a user or entitlement management. The possible values are: userManaged, serviceDefault, serviceManaged, unknownFutureValue.
-     * @return AccessPackageCatalogType|null
+     * @return AccessPackageCatalog_catalogType|null
     */
-    public function getCatalogType(): ?AccessPackageCatalogType {
+    public function getCatalogType(): ?AccessPackageCatalog_catalogType {
         $val = $this->getBackingStore()->get('catalogType');
-        if (is_null($val) || $val instanceof AccessPackageCatalogType) {
+        if (is_null($val) || $val instanceof AccessPackageCatalog_catalogType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'catalogType'");
@@ -110,7 +110,7 @@ class AccessPackageCatalog extends Entity implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'accessPackages' => fn(ParseNode $n) => $o->setAccessPackages($n->getCollectionOfObjectValues([AccessPackage::class, 'createFromDiscriminatorValue'])),
-            'catalogType' => fn(ParseNode $n) => $o->setCatalogType($n->getEnumValue(AccessPackageCatalogType::class)),
+            'catalogType' => fn(ParseNode $n) => $o->setCatalogType($n->getEnumValue(AccessPackageCatalog_catalogType::class)),
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'customWorkflowExtensions' => fn(ParseNode $n) => $o->setCustomWorkflowExtensions($n->getCollectionOfObjectValues([CustomCalloutExtension::class, 'createFromDiscriminatorValue'])),
             'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
@@ -120,7 +120,7 @@ class AccessPackageCatalog extends Entity implements Parsable
             'resourceRoles' => fn(ParseNode $n) => $o->setResourceRoles($n->getCollectionOfObjectValues([AccessPackageResourceRole::class, 'createFromDiscriminatorValue'])),
             'resources' => fn(ParseNode $n) => $o->setResources($n->getCollectionOfObjectValues([AccessPackageResource::class, 'createFromDiscriminatorValue'])),
             'resourceScopes' => fn(ParseNode $n) => $o->setResourceScopes($n->getCollectionOfObjectValues([AccessPackageResourceScope::class, 'createFromDiscriminatorValue'])),
-            'state' => fn(ParseNode $n) => $o->setState($n->getEnumValue(AccessPackageCatalogState::class)),
+            'state' => fn(ParseNode $n) => $o->setState($n->getEnumValue(AccessPackageCatalog_state::class)),
         ]);
     }
 
@@ -192,11 +192,11 @@ class AccessPackageCatalog extends Entity implements Parsable
 
     /**
      * Gets the state property value. Has the value published if the access packages are available for management. The possible values are: unpublished, published, unknownFutureValue.
-     * @return AccessPackageCatalogState|null
+     * @return AccessPackageCatalog_state|null
     */
-    public function getState(): ?AccessPackageCatalogState {
+    public function getState(): ?AccessPackageCatalog_state {
         $val = $this->getBackingStore()->get('state');
-        if (is_null($val) || $val instanceof AccessPackageCatalogState) {
+        if (is_null($val) || $val instanceof AccessPackageCatalog_state) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'state'");
@@ -232,9 +232,9 @@ class AccessPackageCatalog extends Entity implements Parsable
 
     /**
      * Sets the catalogType property value. Whether the catalog is created by a user or entitlement management. The possible values are: userManaged, serviceDefault, serviceManaged, unknownFutureValue.
-     * @param AccessPackageCatalogType|null $value Value to set for the catalogType property.
+     * @param AccessPackageCatalog_catalogType|null $value Value to set for the catalogType property.
     */
-    public function setCatalogType(?AccessPackageCatalogType $value): void {
+    public function setCatalogType(?AccessPackageCatalog_catalogType $value): void {
         $this->getBackingStore()->set('catalogType', $value);
     }
 
@@ -312,9 +312,9 @@ class AccessPackageCatalog extends Entity implements Parsable
 
     /**
      * Sets the state property value. Has the value published if the access packages are available for management. The possible values are: unpublished, published, unknownFutureValue.
-     * @param AccessPackageCatalogState|null $value Value to set for the state property.
+     * @param AccessPackageCatalog_state|null $value Value to set for the state property.
     */
-    public function setState(?AccessPackageCatalogState $value): void {
+    public function setState(?AccessPackageCatalog_state $value): void {
         $this->getBackingStore()->set('state', $value);
     }
 

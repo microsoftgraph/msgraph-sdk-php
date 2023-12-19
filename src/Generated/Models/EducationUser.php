@@ -146,11 +146,11 @@ class EducationUser extends Entity implements Parsable
 
     /**
      * Gets the externalSource property value. Where this user was created from. Possible values are: sis, manual.
-     * @return EducationExternalSource|null
+     * @return EducationUser_externalSource|null
     */
-    public function getExternalSource(): ?EducationExternalSource {
+    public function getExternalSource(): ?EducationUser_externalSource {
         $val = $this->getBackingStore()->get('externalSource');
-        if (is_null($val) || $val instanceof EducationExternalSource) {
+        if (is_null($val) || $val instanceof EducationUser_externalSource) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'externalSource'");
@@ -191,7 +191,7 @@ class EducationUser extends Entity implements Parsable
             'createdBy' => fn(ParseNode $n) => $o->setCreatedBy($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
             'department' => fn(ParseNode $n) => $o->setDepartment($n->getStringValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
-            'externalSource' => fn(ParseNode $n) => $o->setExternalSource($n->getEnumValue(EducationExternalSource::class)),
+            'externalSource' => fn(ParseNode $n) => $o->setExternalSource($n->getEnumValue(EducationUser_externalSource::class)),
             'externalSourceDetail' => fn(ParseNode $n) => $o->setExternalSourceDetail($n->getStringValue()),
             'givenName' => fn(ParseNode $n) => $o->setGivenName($n->getStringValue()),
             'mail' => fn(ParseNode $n) => $o->setMail($n->getStringValue()),
@@ -677,9 +677,9 @@ class EducationUser extends Entity implements Parsable
 
     /**
      * Sets the externalSource property value. Where this user was created from. Possible values are: sis, manual.
-     * @param EducationExternalSource|null $value Value to set for the externalSource property.
+     * @param EducationUser_externalSource|null $value Value to set for the externalSource property.
     */
-    public function setExternalSource(?EducationExternalSource $value): void {
+    public function setExternalSource(?EducationUser_externalSource $value): void {
         $this->getBackingStore()->set('externalSource', $value);
     }
 

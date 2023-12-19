@@ -97,11 +97,11 @@ class AlertHistoryState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the feedback property value. The feedback property
-     * @return AlertFeedback|null
+     * @return AlertHistoryState_feedback|null
     */
-    public function getFeedback(): ?AlertFeedback {
+    public function getFeedback(): ?AlertHistoryState_feedback {
         $val = $this->getBackingStore()->get('feedback');
-        if (is_null($val) || $val instanceof AlertFeedback) {
+        if (is_null($val) || $val instanceof AlertHistoryState_feedback) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'feedback'");
@@ -124,9 +124,9 @@ class AlertHistoryState implements AdditionalDataHolder, BackedModel, Parsable
                 /** @var array<string>|null $val */
                 $this->setComments($val);
             },
-            'feedback' => fn(ParseNode $n) => $o->setFeedback($n->getEnumValue(AlertFeedback::class)),
+            'feedback' => fn(ParseNode $n) => $o->setFeedback($n->getEnumValue(AlertHistoryState_feedback::class)),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
-            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(AlertStatus::class)),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(AlertHistoryState_status::class)),
             'updatedDateTime' => fn(ParseNode $n) => $o->setUpdatedDateTime($n->getDateTimeValue()),
             'user' => fn(ParseNode $n) => $o->setUser($n->getStringValue()),
         ];
@@ -146,11 +146,11 @@ class AlertHistoryState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the status property value. The status property
-     * @return AlertStatus|null
+     * @return AlertHistoryState_status|null
     */
-    public function getStatus(): ?AlertStatus {
+    public function getStatus(): ?AlertHistoryState_status {
         $val = $this->getBackingStore()->get('status');
-        if (is_null($val) || $val instanceof AlertStatus) {
+        if (is_null($val) || $val instanceof AlertHistoryState_status) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
@@ -238,9 +238,9 @@ class AlertHistoryState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the feedback property value. The feedback property
-     * @param AlertFeedback|null $value Value to set for the feedback property.
+     * @param AlertHistoryState_feedback|null $value Value to set for the feedback property.
     */
-    public function setFeedback(?AlertFeedback $value): void {
+    public function setFeedback(?AlertHistoryState_feedback $value): void {
         $this->getBackingStore()->set('feedback', $value);
     }
 
@@ -254,9 +254,9 @@ class AlertHistoryState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the status property value. The status property
-     * @param AlertStatus|null $value Value to set for the status property.
+     * @param AlertHistoryState_status|null $value Value to set for the status property.
     */
-    public function setStatus(?AlertStatus $value): void {
+    public function setStatus(?AlertHistoryState_status $value): void {
         $this->getBackingStore()->set('status', $value);
     }
 

@@ -2,8 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\ReviewSets\Item\Queries\Item\MicrosoftGraphSecurityExport;
 
-use Microsoft\Graph\Generated\Models\Security\ExportFileStructure;
-use Microsoft\Graph\Generated\Models\Security\ExportOptions;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -71,11 +69,11 @@ class ExportPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Gets the exportOptions property value. The exportOptions property
-     * @return ExportOptions|null
+     * @return ExportPostRequestBody_exportOptions|null
     */
-    public function getExportOptions(): ?ExportOptions {
+    public function getExportOptions(): ?ExportPostRequestBody_exportOptions {
         $val = $this->getBackingStore()->get('exportOptions');
-        if (is_null($val) || $val instanceof ExportOptions) {
+        if (is_null($val) || $val instanceof ExportPostRequestBody_exportOptions) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'exportOptions'");
@@ -83,11 +81,11 @@ class ExportPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Gets the exportStructure property value. The exportStructure property
-     * @return ExportFileStructure|null
+     * @return ExportPostRequestBody_exportStructure|null
     */
-    public function getExportStructure(): ?ExportFileStructure {
+    public function getExportStructure(): ?ExportPostRequestBody_exportStructure {
         $val = $this->getBackingStore()->get('exportStructure');
-        if (is_null($val) || $val instanceof ExportFileStructure) {
+        if (is_null($val) || $val instanceof ExportPostRequestBody_exportStructure) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'exportStructure'");
@@ -101,8 +99,8 @@ class ExportPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
         $o = $this;
         return  [
             'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
-            'exportOptions' => fn(ParseNode $n) => $o->setExportOptions($n->getEnumValue(ExportOptions::class)),
-            'exportStructure' => fn(ParseNode $n) => $o->setExportStructure($n->getEnumValue(ExportFileStructure::class)),
+            'exportOptions' => fn(ParseNode $n) => $o->setExportOptions($n->getEnumValue(ExportPostRequestBody_exportOptions::class)),
+            'exportStructure' => fn(ParseNode $n) => $o->setExportStructure($n->getEnumValue(ExportPostRequestBody_exportStructure::class)),
             'outputName' => fn(ParseNode $n) => $o->setOutputName($n->getStringValue()),
         ];
     }
@@ -157,17 +155,17 @@ class ExportPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the exportOptions property value. The exportOptions property
-     * @param ExportOptions|null $value Value to set for the exportOptions property.
+     * @param ExportPostRequestBody_exportOptions|null $value Value to set for the exportOptions property.
     */
-    public function setExportOptions(?ExportOptions $value): void {
+    public function setExportOptions(?ExportPostRequestBody_exportOptions $value): void {
         $this->getBackingStore()->set('exportOptions', $value);
     }
 
     /**
      * Sets the exportStructure property value. The exportStructure property
-     * @param ExportFileStructure|null $value Value to set for the exportStructure property.
+     * @param ExportPostRequestBody_exportStructure|null $value Value to set for the exportStructure property.
     */
-    public function setExportStructure(?ExportFileStructure $value): void {
+    public function setExportStructure(?ExportPostRequestBody_exportStructure $value): void {
         $this->getBackingStore()->set('exportStructure', $value);
     }
 

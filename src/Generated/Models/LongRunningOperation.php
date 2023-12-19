@@ -55,7 +55,7 @@ class LongRunningOperation extends Entity implements Parsable
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'lastActionDateTime' => fn(ParseNode $n) => $o->setLastActionDateTime($n->getDateTimeValue()),
             'resourceLocation' => fn(ParseNode $n) => $o->setResourceLocation($n->getStringValue()),
-            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(LongRunningOperationStatus::class)),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(LongRunningOperation_status::class)),
             'statusDetail' => fn(ParseNode $n) => $o->setStatusDetail($n->getStringValue()),
         ]);
     }
@@ -86,11 +86,11 @@ class LongRunningOperation extends Entity implements Parsable
 
     /**
      * Gets the status property value. The status of the operation. The possible values are: notStarted, running, succeeded, failed, unknownFutureValue.
-     * @return LongRunningOperationStatus|null
+     * @return LongRunningOperation_status|null
     */
-    public function getStatus(): ?LongRunningOperationStatus {
+    public function getStatus(): ?LongRunningOperation_status {
         $val = $this->getBackingStore()->get('status');
-        if (is_null($val) || $val instanceof LongRunningOperationStatus) {
+        if (is_null($val) || $val instanceof LongRunningOperation_status) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
@@ -147,9 +147,9 @@ class LongRunningOperation extends Entity implements Parsable
 
     /**
      * Sets the status property value. The status of the operation. The possible values are: notStarted, running, succeeded, failed, unknownFutureValue.
-     * @param LongRunningOperationStatus|null $value Value to set for the status property.
+     * @param LongRunningOperation_status|null $value Value to set for the status property.
     */
-    public function setStatus(?LongRunningOperationStatus $value): void {
+    public function setStatus(?LongRunningOperation_status $value): void {
         $this->getBackingStore()->set('status', $value);
     }
 

@@ -27,13 +27,13 @@ class Calendar extends Entity implements Parsable
 
     /**
      * Gets the allowedOnlineMeetingProviders property value. Represent the online meeting service providers that can be used to create online meetings in this calendar. Possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness.
-     * @return array<OnlineMeetingProviderType>|null
+     * @return array<Calendar_allowedOnlineMeetingProviders>|null
     */
     public function getAllowedOnlineMeetingProviders(): ?array {
         $val = $this->getBackingStore()->get('allowedOnlineMeetingProviders');
         if (is_array($val) || is_null($val)) {
-            TypeUtils::validateCollectionValues($val, OnlineMeetingProviderType::class);
-            /** @var array<OnlineMeetingProviderType>|null $val */
+            TypeUtils::validateCollectionValues($val, Calendar_allowedOnlineMeetingProviders::class);
+            /** @var array<Calendar_allowedOnlineMeetingProviders>|null $val */
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'allowedOnlineMeetingProviders'");
@@ -117,11 +117,11 @@ class Calendar extends Entity implements Parsable
 
     /**
      * Gets the color property value. Specifies the color theme to distinguish the calendar from other calendars in a UI. The property values are: auto, lightBlue, lightGreen, lightOrange, lightGray, lightYellow, lightTeal, lightPink, lightBrown, lightRed, maxColor.
-     * @return CalendarColor|null
+     * @return Calendar_color|null
     */
-    public function getColor(): ?CalendarColor {
+    public function getColor(): ?Calendar_color {
         $val = $this->getBackingStore()->get('color');
-        if (is_null($val) || $val instanceof CalendarColor) {
+        if (is_null($val) || $val instanceof Calendar_color) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'color'");
@@ -129,11 +129,11 @@ class Calendar extends Entity implements Parsable
 
     /**
      * Gets the defaultOnlineMeetingProvider property value. The default online meeting provider for meetings sent from this calendar. Possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness.
-     * @return OnlineMeetingProviderType|null
+     * @return Calendar_defaultOnlineMeetingProvider|null
     */
-    public function getDefaultOnlineMeetingProvider(): ?OnlineMeetingProviderType {
+    public function getDefaultOnlineMeetingProvider(): ?Calendar_defaultOnlineMeetingProvider {
         $val = $this->getBackingStore()->get('defaultOnlineMeetingProvider');
-        if (is_null($val) || $val instanceof OnlineMeetingProviderType) {
+        if (is_null($val) || $val instanceof Calendar_defaultOnlineMeetingProvider) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'defaultOnlineMeetingProvider'");
@@ -160,15 +160,15 @@ class Calendar extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'allowedOnlineMeetingProviders' => fn(ParseNode $n) => $o->setAllowedOnlineMeetingProviders($n->getCollectionOfEnumValues(OnlineMeetingProviderType::class)),
+            'allowedOnlineMeetingProviders' => fn(ParseNode $n) => $o->setAllowedOnlineMeetingProviders($n->getCollectionOfEnumValues(Calendar_allowedOnlineMeetingProviders::class)),
             'calendarPermissions' => fn(ParseNode $n) => $o->setCalendarPermissions($n->getCollectionOfObjectValues([CalendarPermission::class, 'createFromDiscriminatorValue'])),
             'calendarView' => fn(ParseNode $n) => $o->setCalendarView($n->getCollectionOfObjectValues([Event::class, 'createFromDiscriminatorValue'])),
             'canEdit' => fn(ParseNode $n) => $o->setCanEdit($n->getBooleanValue()),
             'canShare' => fn(ParseNode $n) => $o->setCanShare($n->getBooleanValue()),
             'canViewPrivateItems' => fn(ParseNode $n) => $o->setCanViewPrivateItems($n->getBooleanValue()),
             'changeKey' => fn(ParseNode $n) => $o->setChangeKey($n->getStringValue()),
-            'color' => fn(ParseNode $n) => $o->setColor($n->getEnumValue(CalendarColor::class)),
-            'defaultOnlineMeetingProvider' => fn(ParseNode $n) => $o->setDefaultOnlineMeetingProvider($n->getEnumValue(OnlineMeetingProviderType::class)),
+            'color' => fn(ParseNode $n) => $o->setColor($n->getEnumValue(Calendar_color::class)),
+            'defaultOnlineMeetingProvider' => fn(ParseNode $n) => $o->setDefaultOnlineMeetingProvider($n->getEnumValue(Calendar_defaultOnlineMeetingProvider::class)),
             'events' => fn(ParseNode $n) => $o->setEvents($n->getCollectionOfObjectValues([Event::class, 'createFromDiscriminatorValue'])),
             'hexColor' => fn(ParseNode $n) => $o->setHexColor($n->getStringValue()),
             'isDefaultCalendar' => fn(ParseNode $n) => $o->setIsDefaultCalendar($n->getBooleanValue()),
@@ -309,7 +309,7 @@ class Calendar extends Entity implements Parsable
 
     /**
      * Sets the allowedOnlineMeetingProviders property value. Represent the online meeting service providers that can be used to create online meetings in this calendar. Possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness.
-     * @param array<OnlineMeetingProviderType>|null $value Value to set for the allowedOnlineMeetingProviders property.
+     * @param array<Calendar_allowedOnlineMeetingProviders>|null $value Value to set for the allowedOnlineMeetingProviders property.
     */
     public function setAllowedOnlineMeetingProviders(?array $value): void {
         $this->getBackingStore()->set('allowedOnlineMeetingProviders', $value);
@@ -365,17 +365,17 @@ class Calendar extends Entity implements Parsable
 
     /**
      * Sets the color property value. Specifies the color theme to distinguish the calendar from other calendars in a UI. The property values are: auto, lightBlue, lightGreen, lightOrange, lightGray, lightYellow, lightTeal, lightPink, lightBrown, lightRed, maxColor.
-     * @param CalendarColor|null $value Value to set for the color property.
+     * @param Calendar_color|null $value Value to set for the color property.
     */
-    public function setColor(?CalendarColor $value): void {
+    public function setColor(?Calendar_color $value): void {
         $this->getBackingStore()->set('color', $value);
     }
 
     /**
      * Sets the defaultOnlineMeetingProvider property value. The default online meeting provider for meetings sent from this calendar. Possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness.
-     * @param OnlineMeetingProviderType|null $value Value to set for the defaultOnlineMeetingProvider property.
+     * @param Calendar_defaultOnlineMeetingProvider|null $value Value to set for the defaultOnlineMeetingProvider property.
     */
-    public function setDefaultOnlineMeetingProvider(?OnlineMeetingProviderType $value): void {
+    public function setDefaultOnlineMeetingProvider(?Calendar_defaultOnlineMeetingProvider $value): void {
         $this->getBackingStore()->set('defaultOnlineMeetingProvider', $value);
     }
 

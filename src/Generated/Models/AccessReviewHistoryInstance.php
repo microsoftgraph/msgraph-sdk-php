@@ -62,7 +62,7 @@ class AccessReviewHistoryInstance extends Entity implements Parsable
             'reviewHistoryPeriodEndDateTime' => fn(ParseNode $n) => $o->setReviewHistoryPeriodEndDateTime($n->getDateTimeValue()),
             'reviewHistoryPeriodStartDateTime' => fn(ParseNode $n) => $o->setReviewHistoryPeriodStartDateTime($n->getDateTimeValue()),
             'runDateTime' => fn(ParseNode $n) => $o->setRunDateTime($n->getDateTimeValue()),
-            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(AccessReviewHistoryStatus::class)),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(AccessReviewHistoryInstance_status::class)),
         ]);
     }
 
@@ -116,11 +116,11 @@ class AccessReviewHistoryInstance extends Entity implements Parsable
 
     /**
      * Gets the status property value. Represents the status of the review history data collection. The possible values are: done, inProgress, error, requested, unknownFutureValue. Once the status has been marked as done, a link can be generated to retrieve the instance's data by calling generateDownloadUri method.
-     * @return AccessReviewHistoryStatus|null
+     * @return AccessReviewHistoryInstance_status|null
     */
-    public function getStatus(): ?AccessReviewHistoryStatus {
+    public function getStatus(): ?AccessReviewHistoryInstance_status {
         $val = $this->getBackingStore()->get('status');
-        if (is_null($val) || $val instanceof AccessReviewHistoryStatus) {
+        if (is_null($val) || $val instanceof AccessReviewHistoryInstance_status) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
@@ -191,9 +191,9 @@ class AccessReviewHistoryInstance extends Entity implements Parsable
 
     /**
      * Sets the status property value. Represents the status of the review history data collection. The possible values are: done, inProgress, error, requested, unknownFutureValue. Once the status has been marked as done, a link can be generated to retrieve the instance's data by calling generateDownloadUri method.
-     * @param AccessReviewHistoryStatus|null $value Value to set for the status property.
+     * @param AccessReviewHistoryInstance_status|null $value Value to set for the status property.
     */
-    public function setStatus(?AccessReviewHistoryStatus $value): void {
+    public function setStatus(?AccessReviewHistoryInstance_status $value): void {
         $this->getBackingStore()->set('status', $value);
     }
 

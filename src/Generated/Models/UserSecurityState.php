@@ -94,11 +94,11 @@ class UserSecurityState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the emailRole property value. For email-related alerts - user account's email 'role'. Possible values are: unknown, sender, recipient.
-     * @return EmailRole|null
+     * @return UserSecurityState_emailRole|null
     */
-    public function getEmailRole(): ?EmailRole {
+    public function getEmailRole(): ?UserSecurityState_emailRole {
         $val = $this->getBackingStore()->get('emailRole');
-        if (is_null($val) || $val instanceof EmailRole) {
+        if (is_null($val) || $val instanceof UserSecurityState_emailRole) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'emailRole'");
@@ -114,17 +114,17 @@ class UserSecurityState implements AdditionalDataHolder, BackedModel, Parsable
             'aadUserId' => fn(ParseNode $n) => $o->setAadUserId($n->getStringValue()),
             'accountName' => fn(ParseNode $n) => $o->setAccountName($n->getStringValue()),
             'domainName' => fn(ParseNode $n) => $o->setDomainName($n->getStringValue()),
-            'emailRole' => fn(ParseNode $n) => $o->setEmailRole($n->getEnumValue(EmailRole::class)),
+            'emailRole' => fn(ParseNode $n) => $o->setEmailRole($n->getEnumValue(UserSecurityState_emailRole::class)),
             'isVpn' => fn(ParseNode $n) => $o->setIsVpn($n->getBooleanValue()),
             'logonDateTime' => fn(ParseNode $n) => $o->setLogonDateTime($n->getDateTimeValue()),
             'logonId' => fn(ParseNode $n) => $o->setLogonId($n->getStringValue()),
             'logonIp' => fn(ParseNode $n) => $o->setLogonIp($n->getStringValue()),
             'logonLocation' => fn(ParseNode $n) => $o->setLogonLocation($n->getStringValue()),
-            'logonType' => fn(ParseNode $n) => $o->setLogonType($n->getEnumValue(LogonType::class)),
+            'logonType' => fn(ParseNode $n) => $o->setLogonType($n->getEnumValue(UserSecurityState_logonType::class)),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'onPremisesSecurityIdentifier' => fn(ParseNode $n) => $o->setOnPremisesSecurityIdentifier($n->getStringValue()),
             'riskScore' => fn(ParseNode $n) => $o->setRiskScore($n->getStringValue()),
-            'userAccountType' => fn(ParseNode $n) => $o->setUserAccountType($n->getEnumValue(UserAccountSecurityType::class)),
+            'userAccountType' => fn(ParseNode $n) => $o->setUserAccountType($n->getEnumValue(UserSecurityState_userAccountType::class)),
             'userPrincipalName' => fn(ParseNode $n) => $o->setUserPrincipalName($n->getStringValue()),
         ];
     }
@@ -191,11 +191,11 @@ class UserSecurityState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the logonType property value. Method of user sign in. Possible values are: unknown, interactive, remoteInteractive, network, batch, service.
-     * @return LogonType|null
+     * @return UserSecurityState_logonType|null
     */
-    public function getLogonType(): ?LogonType {
+    public function getLogonType(): ?UserSecurityState_logonType {
         $val = $this->getBackingStore()->get('logonType');
-        if (is_null($val) || $val instanceof LogonType) {
+        if (is_null($val) || $val instanceof UserSecurityState_logonType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'logonType'");
@@ -239,11 +239,11 @@ class UserSecurityState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the userAccountType property value. User account type (group membership), per Windows definition. Possible values are: unknown, standard, power, administrator.
-     * @return UserAccountSecurityType|null
+     * @return UserSecurityState_userAccountType|null
     */
-    public function getUserAccountType(): ?UserAccountSecurityType {
+    public function getUserAccountType(): ?UserSecurityState_userAccountType {
         $val = $this->getBackingStore()->get('userAccountType');
-        if (is_null($val) || $val instanceof UserAccountSecurityType) {
+        if (is_null($val) || $val instanceof UserSecurityState_userAccountType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'userAccountType'");
@@ -326,9 +326,9 @@ class UserSecurityState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the emailRole property value. For email-related alerts - user account's email 'role'. Possible values are: unknown, sender, recipient.
-     * @param EmailRole|null $value Value to set for the emailRole property.
+     * @param UserSecurityState_emailRole|null $value Value to set for the emailRole property.
     */
-    public function setEmailRole(?EmailRole $value): void {
+    public function setEmailRole(?UserSecurityState_emailRole $value): void {
         $this->getBackingStore()->set('emailRole', $value);
     }
 
@@ -374,9 +374,9 @@ class UserSecurityState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the logonType property value. Method of user sign in. Possible values are: unknown, interactive, remoteInteractive, network, batch, service.
-     * @param LogonType|null $value Value to set for the logonType property.
+     * @param UserSecurityState_logonType|null $value Value to set for the logonType property.
     */
-    public function setLogonType(?LogonType $value): void {
+    public function setLogonType(?UserSecurityState_logonType $value): void {
         $this->getBackingStore()->set('logonType', $value);
     }
 
@@ -406,9 +406,9 @@ class UserSecurityState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the userAccountType property value. User account type (group membership), per Windows definition. Possible values are: unknown, standard, power, administrator.
-     * @param UserAccountSecurityType|null $value Value to set for the userAccountType property.
+     * @param UserSecurityState_userAccountType|null $value Value to set for the userAccountType property.
     */
-    public function setUserAccountType(?UserAccountSecurityType $value): void {
+    public function setUserAccountType(?UserSecurityState_userAccountType $value): void {
         $this->getBackingStore()->set('userAccountType', $value);
     }
 

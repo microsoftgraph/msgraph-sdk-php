@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Policies\AuthenticationStrengthPolicies\Item\UpdateAllowedCombinations;
 
-use Microsoft\Graph\Generated\Models\AuthenticationMethodModes;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -51,13 +50,13 @@ class UpdateAllowedCombinationsPostRequestBody implements AdditionalDataHolder, 
 
     /**
      * Gets the allowedCombinations property value. The allowedCombinations property
-     * @return array<AuthenticationMethodModes>|null
+     * @return array<UpdateAllowedCombinationsPostRequestBody_allowedCombinations>|null
     */
     public function getAllowedCombinations(): ?array {
         $val = $this->getBackingStore()->get('allowedCombinations');
         if (is_array($val) || is_null($val)) {
-            TypeUtils::validateCollectionValues($val, AuthenticationMethodModes::class);
-            /** @var array<AuthenticationMethodModes>|null $val */
+            TypeUtils::validateCollectionValues($val, UpdateAllowedCombinationsPostRequestBody_allowedCombinations::class);
+            /** @var array<UpdateAllowedCombinationsPostRequestBody_allowedCombinations>|null $val */
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'allowedCombinations'");
@@ -78,7 +77,7 @@ class UpdateAllowedCombinationsPostRequestBody implements AdditionalDataHolder, 
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'allowedCombinations' => fn(ParseNode $n) => $o->setAllowedCombinations($n->getCollectionOfEnumValues(AuthenticationMethodModes::class)),
+            'allowedCombinations' => fn(ParseNode $n) => $o->setAllowedCombinations($n->getCollectionOfEnumValues(UpdateAllowedCombinationsPostRequestBody_allowedCombinations::class)),
         ];
     }
 
@@ -101,7 +100,7 @@ class UpdateAllowedCombinationsPostRequestBody implements AdditionalDataHolder, 
 
     /**
      * Sets the allowedCombinations property value. The allowedCombinations property
-     * @param array<AuthenticationMethodModes>|null $value Value to set for the allowedCombinations property.
+     * @param array<UpdateAllowedCombinationsPostRequestBody_allowedCombinations>|null $value Value to set for the allowedCombinations property.
     */
     public function setAllowedCombinations(?array $value): void {
         $this->getBackingStore()->set('allowedCombinations', $value);

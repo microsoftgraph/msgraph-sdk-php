@@ -707,6 +707,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.security.whoisHistoryRecord': return new WhoisHistoryRecord();
                 case '#microsoft.graph.security.whoisRecord': return new WhoisRecord();
                 case '#microsoft.graph.securityReportsRoot': return new SecurityReportsRoot();
+                case '#microsoft.graph.sendDtmfTonesOperation': return new SendDtmfTonesOperation();
                 case '#microsoft.graph.serviceAnnouncement': return new ServiceAnnouncement();
                 case '#microsoft.graph.serviceAnnouncementAttachment': return new ServiceAnnouncementAttachment();
                 case '#microsoft.graph.serviceAnnouncementBase': return new ServiceAnnouncementBase();

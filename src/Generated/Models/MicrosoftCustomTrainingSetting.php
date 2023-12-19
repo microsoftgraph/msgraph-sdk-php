@@ -48,7 +48,7 @@ class MicrosoftCustomTrainingSetting extends TrainingSetting implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'completionDateTime' => fn(ParseNode $n) => $o->setCompletionDateTime($n->getDateTimeValue()),
             'trainingAssignmentMappings' => fn(ParseNode $n) => $o->setTrainingAssignmentMappings($n->getCollectionOfObjectValues([MicrosoftTrainingAssignmentMapping::class, 'createFromDiscriminatorValue'])),
-            'trainingCompletionDuration' => fn(ParseNode $n) => $o->setTrainingCompletionDuration($n->getEnumValue(TrainingCompletionDuration::class)),
+            'trainingCompletionDuration' => fn(ParseNode $n) => $o->setTrainingCompletionDuration($n->getEnumValue(MicrosoftCustomTrainingSetting_trainingCompletionDuration::class)),
         ]);
     }
 
@@ -68,11 +68,11 @@ class MicrosoftCustomTrainingSetting extends TrainingSetting implements Parsable
 
     /**
      * Gets the trainingCompletionDuration property value. The training completion duration that needs to be provided before scheduling the training. Possible values are: week, fortnite, month, unknownFutureValue.
-     * @return TrainingCompletionDuration|null
+     * @return MicrosoftCustomTrainingSetting_trainingCompletionDuration|null
     */
-    public function getTrainingCompletionDuration(): ?TrainingCompletionDuration {
+    public function getTrainingCompletionDuration(): ?MicrosoftCustomTrainingSetting_trainingCompletionDuration {
         $val = $this->getBackingStore()->get('trainingCompletionDuration');
-        if (is_null($val) || $val instanceof TrainingCompletionDuration) {
+        if (is_null($val) || $val instanceof MicrosoftCustomTrainingSetting_trainingCompletionDuration) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'trainingCompletionDuration'");
@@ -107,9 +107,9 @@ class MicrosoftCustomTrainingSetting extends TrainingSetting implements Parsable
 
     /**
      * Sets the trainingCompletionDuration property value. The training completion duration that needs to be provided before scheduling the training. Possible values are: week, fortnite, month, unknownFutureValue.
-     * @param TrainingCompletionDuration|null $value Value to set for the trainingCompletionDuration property.
+     * @param MicrosoftCustomTrainingSetting_trainingCompletionDuration|null $value Value to set for the trainingCompletionDuration property.
     */
-    public function setTrainingCompletionDuration(?TrainingCompletionDuration $value): void {
+    public function setTrainingCompletionDuration(?MicrosoftCustomTrainingSetting_trainingCompletionDuration $value): void {
         $this->getBackingStore()->set('trainingCompletionDuration', $value);
     }
 

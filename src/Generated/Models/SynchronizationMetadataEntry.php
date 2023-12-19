@@ -62,7 +62,7 @@ class SynchronizationMetadataEntry implements AdditionalDataHolder, BackedModel,
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'key' => fn(ParseNode $n) => $o->setKey($n->getEnumValue(SynchronizationMetadata::class)),
+            'key' => fn(ParseNode $n) => $o->setKey($n->getEnumValue(SynchronizationMetadataEntry_key::class)),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'value' => fn(ParseNode $n) => $o->setValue($n->getStringValue()),
         ];
@@ -70,11 +70,11 @@ class SynchronizationMetadataEntry implements AdditionalDataHolder, BackedModel,
 
     /**
      * Gets the key property value. Possible values are: GalleryApplicationIdentifier, GalleryApplicationKey, IsOAuthEnabled, IsSynchronizationAgentAssignmentRequired, IsSynchronizationAgentRequired, IsSynchronizationInPreview, OAuthSettings, SynchronizationLearnMoreIbizaFwLink, ConfigurationFields.
-     * @return SynchronizationMetadata|null
+     * @return SynchronizationMetadataEntry_key|null
     */
-    public function getKey(): ?SynchronizationMetadata {
+    public function getKey(): ?SynchronizationMetadataEntry_key {
         $val = $this->getBackingStore()->get('key');
-        if (is_null($val) || $val instanceof SynchronizationMetadata) {
+        if (is_null($val) || $val instanceof SynchronizationMetadataEntry_key) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'key'");
@@ -133,9 +133,9 @@ class SynchronizationMetadataEntry implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the key property value. Possible values are: GalleryApplicationIdentifier, GalleryApplicationKey, IsOAuthEnabled, IsSynchronizationAgentAssignmentRequired, IsSynchronizationAgentRequired, IsSynchronizationInPreview, OAuthSettings, SynchronizationLearnMoreIbizaFwLink, ConfigurationFields.
-     * @param SynchronizationMetadata|null $value Value to set for the key property.
+     * @param SynchronizationMetadataEntry_key|null $value Value to set for the key property.
     */
-    public function setKey(?SynchronizationMetadata $value): void {
+    public function setKey(?SynchronizationMetadataEntry_key $value): void {
         $this->getBackingStore()->set('key', $value);
     }
 

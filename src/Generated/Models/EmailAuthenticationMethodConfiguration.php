@@ -28,11 +28,11 @@ class EmailAuthenticationMethodConfiguration extends AuthenticationMethodConfigu
 
     /**
      * Gets the allowExternalIdToUseEmailOtp property value. Determines whether email OTP is usable by external users for authentication. Possible values are: default, enabled, disabled, unknownFutureValue. Tenants in the default state who didn't use public preview have email OTP enabled beginning in October 2021.
-     * @return ExternalEmailOtpState|null
+     * @return EmailAuthenticationMethodConfiguration_allowExternalIdToUseEmailOtp|null
     */
-    public function getAllowExternalIdToUseEmailOtp(): ?ExternalEmailOtpState {
+    public function getAllowExternalIdToUseEmailOtp(): ?EmailAuthenticationMethodConfiguration_allowExternalIdToUseEmailOtp {
         $val = $this->getBackingStore()->get('allowExternalIdToUseEmailOtp');
-        if (is_null($val) || $val instanceof ExternalEmailOtpState) {
+        if (is_null($val) || $val instanceof EmailAuthenticationMethodConfiguration_allowExternalIdToUseEmailOtp) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'allowExternalIdToUseEmailOtp'");
@@ -45,7 +45,7 @@ class EmailAuthenticationMethodConfiguration extends AuthenticationMethodConfigu
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'allowExternalIdToUseEmailOtp' => fn(ParseNode $n) => $o->setAllowExternalIdToUseEmailOtp($n->getEnumValue(ExternalEmailOtpState::class)),
+            'allowExternalIdToUseEmailOtp' => fn(ParseNode $n) => $o->setAllowExternalIdToUseEmailOtp($n->getEnumValue(EmailAuthenticationMethodConfiguration_allowExternalIdToUseEmailOtp::class)),
             'includeTargets' => fn(ParseNode $n) => $o->setIncludeTargets($n->getCollectionOfObjectValues([AuthenticationMethodTarget::class, 'createFromDiscriminatorValue'])),
         ]);
     }
@@ -76,9 +76,9 @@ class EmailAuthenticationMethodConfiguration extends AuthenticationMethodConfigu
 
     /**
      * Sets the allowExternalIdToUseEmailOtp property value. Determines whether email OTP is usable by external users for authentication. Possible values are: default, enabled, disabled, unknownFutureValue. Tenants in the default state who didn't use public preview have email OTP enabled beginning in October 2021.
-     * @param ExternalEmailOtpState|null $value Value to set for the allowExternalIdToUseEmailOtp property.
+     * @param EmailAuthenticationMethodConfiguration_allowExternalIdToUseEmailOtp|null $value Value to set for the allowExternalIdToUseEmailOtp property.
     */
-    public function setAllowExternalIdToUseEmailOtp(?ExternalEmailOtpState $value): void {
+    public function setAllowExternalIdToUseEmailOtp(?EmailAuthenticationMethodConfiguration_allowExternalIdToUseEmailOtp $value): void {
         $this->getBackingStore()->set('allowExternalIdToUseEmailOtp', $value);
     }
 

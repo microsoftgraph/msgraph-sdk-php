@@ -78,7 +78,7 @@ class AvailabilityItem implements AdditionalDataHolder, BackedModel, Parsable
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'serviceId' => fn(ParseNode $n) => $o->setServiceId($n->getStringValue()),
             'startDateTime' => fn(ParseNode $n) => $o->setStartDateTime($n->getObjectValue([DateTimeTimeZone::class, 'createFromDiscriminatorValue'])),
-            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(BookingsAvailabilityStatus::class)),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(AvailabilityItem_status::class)),
         ];
     }
 
@@ -120,11 +120,11 @@ class AvailabilityItem implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the status property value. The status of the staff member. Possible values are: available, busy, slotsAvailable, outOfOffice, unknownFutureValue.
-     * @return BookingsAvailabilityStatus|null
+     * @return AvailabilityItem_status|null
     */
-    public function getStatus(): ?BookingsAvailabilityStatus {
+    public function getStatus(): ?AvailabilityItem_status {
         $val = $this->getBackingStore()->get('status');
-        if (is_null($val) || $val instanceof BookingsAvailabilityStatus) {
+        if (is_null($val) || $val instanceof AvailabilityItem_status) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
@@ -193,9 +193,9 @@ class AvailabilityItem implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the status property value. The status of the staff member. Possible values are: available, busy, slotsAvailable, outOfOffice, unknownFutureValue.
-     * @param BookingsAvailabilityStatus|null $value Value to set for the status property.
+     * @param AvailabilityItem_status|null $value Value to set for the status property.
     */
-    public function setStatus(?BookingsAvailabilityStatus $value): void {
+    public function setStatus(?AvailabilityItem_status $value): void {
         $this->getBackingStore()->set('status', $value);
     }
 

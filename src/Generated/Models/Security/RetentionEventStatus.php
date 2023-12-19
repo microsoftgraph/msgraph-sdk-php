@@ -77,7 +77,7 @@ class RetentionEventStatus implements AdditionalDataHolder, BackedModel, Parsabl
         return  [
             'error' => fn(ParseNode $n) => $o->setError($n->getObjectValue([PublicError::class, 'createFromDiscriminatorValue'])),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
-            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(EventStatusType::class)),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(RetentionEventStatus_status::class)),
         ];
     }
 
@@ -95,11 +95,11 @@ class RetentionEventStatus implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Gets the status property value. The status of the distribution. The possible values are: pending, error, success, notAvaliable.
-     * @return EventStatusType|null
+     * @return RetentionEventStatus_status|null
     */
-    public function getStatus(): ?EventStatusType {
+    public function getStatus(): ?RetentionEventStatus_status {
         $val = $this->getBackingStore()->get('status');
-        if (is_null($val) || $val instanceof EventStatusType) {
+        if (is_null($val) || $val instanceof RetentionEventStatus_status) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
@@ -150,9 +150,9 @@ class RetentionEventStatus implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the status property value. The status of the distribution. The possible values are: pending, error, success, notAvaliable.
-     * @param EventStatusType|null $value Value to set for the status property.
+     * @param RetentionEventStatus_status|null $value Value to set for the status property.
     */
-    public function setStatus(?EventStatusType $value): void {
+    public function setStatus(?RetentionEventStatus_status $value): void {
         $this->getBackingStore()->set('status', $value);
     }
 

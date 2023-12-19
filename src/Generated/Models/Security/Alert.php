@@ -89,11 +89,11 @@ class Alert extends Entity implements Parsable
 
     /**
      * Gets the classification property value. Specifies whether the alert represents a true threat. Possible values are: unknown, falsePositive, truePositive, informationalExpectedActivity, unknownFutureValue.
-     * @return AlertClassification|null
+     * @return Alert_classification|null
     */
-    public function getClassification(): ?AlertClassification {
+    public function getClassification(): ?Alert_classification {
         $val = $this->getBackingStore()->get('classification');
-        if (is_null($val) || $val instanceof AlertClassification) {
+        if (is_null($val) || $val instanceof Alert_classification) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'classification'");
@@ -139,11 +139,11 @@ class Alert extends Entity implements Parsable
 
     /**
      * Gets the detectionSource property value. Detection technology or sensor that identified the notable component or activity. Possible values are: unknown, microsoftDefenderForEndpoint, antivirus, smartScreen, customTi, microsoftDefenderForOffice365, automatedInvestigation, microsoftThreatExperts, customDetection, microsoftDefenderForIdentity, cloudAppSecurity, microsoft365Defender, azureAdIdentityProtection, manual, microsoftDataLossPrevention, appGovernancePolicy, appGovernanceDetection, unknownFutureValue, microsoftDefenderForCloud, microsoftDefenderForIoT, microsoftDefenderForServers, microsoftDefenderForStorage, microsoftDefenderForDNS, microsoftDefenderForDatabases, microsoftDefenderForContainers, microsoftDefenderForNetwork, microsoftDefenderForAppService, microsoftDefenderForKeyVault, microsoftDefenderForResourceManager, microsoftDefenderForApiManagement. You must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: microsoftDefenderForCloud, microsoftDefenderForIoT, microsoftDefenderForServers, microsoftDefenderForStorage, microsoftDefenderForDNS, microsoftDefenderForDatabases, microsoftDefenderForContainers, microsoftDefenderForNetwork, microsoftDefenderForAppService, microsoftDefenderForKeyVault, microsoftDefenderForResourceManager, microsoftDefenderForApiManagement.
-     * @return DetectionSource|null
+     * @return Alert_detectionSource|null
     */
-    public function getDetectionSource(): ?DetectionSource {
+    public function getDetectionSource(): ?Alert_detectionSource {
         $val = $this->getBackingStore()->get('detectionSource');
-        if (is_null($val) || $val instanceof DetectionSource) {
+        if (is_null($val) || $val instanceof Alert_detectionSource) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'detectionSource'");
@@ -163,11 +163,11 @@ class Alert extends Entity implements Parsable
 
     /**
      * Gets the determination property value. Specifies the result of the investigation, whether the alert represents a true attack and if so, the nature of the attack. Possible values are: unknown, apt, malware, securityPersonnel, securityTesting, unwantedSoftware, other, multiStagedAttack, compromisedUser, phishing, maliciousUserActivity, clean, insufficientData, confirmedUserActivity, lineOfBusinessApplication, unknownFutureValue.
-     * @return AlertDetermination|null
+     * @return Alert_determination|null
     */
-    public function getDetermination(): ?AlertDetermination {
+    public function getDetermination(): ?Alert_determination {
         $val = $this->getBackingStore()->get('determination');
-        if (is_null($val) || $val instanceof AlertDetermination) {
+        if (is_null($val) || $val instanceof Alert_determination) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'determination'");
@@ -199,13 +199,13 @@ class Alert extends Entity implements Parsable
             'alertWebUrl' => fn(ParseNode $n) => $o->setAlertWebUrl($n->getStringValue()),
             'assignedTo' => fn(ParseNode $n) => $o->setAssignedTo($n->getStringValue()),
             'category' => fn(ParseNode $n) => $o->setCategory($n->getStringValue()),
-            'classification' => fn(ParseNode $n) => $o->setClassification($n->getEnumValue(AlertClassification::class)),
+            'classification' => fn(ParseNode $n) => $o->setClassification($n->getEnumValue(Alert_classification::class)),
             'comments' => fn(ParseNode $n) => $o->setComments($n->getCollectionOfObjectValues([AlertComment::class, 'createFromDiscriminatorValue'])),
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
-            'detectionSource' => fn(ParseNode $n) => $o->setDetectionSource($n->getEnumValue(DetectionSource::class)),
+            'detectionSource' => fn(ParseNode $n) => $o->setDetectionSource($n->getEnumValue(Alert_detectionSource::class)),
             'detectorId' => fn(ParseNode $n) => $o->setDetectorId($n->getStringValue()),
-            'determination' => fn(ParseNode $n) => $o->setDetermination($n->getEnumValue(AlertDetermination::class)),
+            'determination' => fn(ParseNode $n) => $o->setDetermination($n->getEnumValue(Alert_determination::class)),
             'evidence' => fn(ParseNode $n) => $o->setEvidence($n->getCollectionOfObjectValues([AlertEvidence::class, 'createFromDiscriminatorValue'])),
             'firstActivityDateTime' => fn(ParseNode $n) => $o->setFirstActivityDateTime($n->getDateTimeValue()),
             'incidentId' => fn(ParseNode $n) => $o->setIncidentId($n->getStringValue()),
@@ -520,9 +520,9 @@ class Alert extends Entity implements Parsable
 
     /**
      * Sets the classification property value. Specifies whether the alert represents a true threat. Possible values are: unknown, falsePositive, truePositive, informationalExpectedActivity, unknownFutureValue.
-     * @param AlertClassification|null $value Value to set for the classification property.
+     * @param Alert_classification|null $value Value to set for the classification property.
     */
-    public function setClassification(?AlertClassification $value): void {
+    public function setClassification(?Alert_classification $value): void {
         $this->getBackingStore()->set('classification', $value);
     }
 
@@ -552,9 +552,9 @@ class Alert extends Entity implements Parsable
 
     /**
      * Sets the detectionSource property value. Detection technology or sensor that identified the notable component or activity. Possible values are: unknown, microsoftDefenderForEndpoint, antivirus, smartScreen, customTi, microsoftDefenderForOffice365, automatedInvestigation, microsoftThreatExperts, customDetection, microsoftDefenderForIdentity, cloudAppSecurity, microsoft365Defender, azureAdIdentityProtection, manual, microsoftDataLossPrevention, appGovernancePolicy, appGovernanceDetection, unknownFutureValue, microsoftDefenderForCloud, microsoftDefenderForIoT, microsoftDefenderForServers, microsoftDefenderForStorage, microsoftDefenderForDNS, microsoftDefenderForDatabases, microsoftDefenderForContainers, microsoftDefenderForNetwork, microsoftDefenderForAppService, microsoftDefenderForKeyVault, microsoftDefenderForResourceManager, microsoftDefenderForApiManagement. You must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: microsoftDefenderForCloud, microsoftDefenderForIoT, microsoftDefenderForServers, microsoftDefenderForStorage, microsoftDefenderForDNS, microsoftDefenderForDatabases, microsoftDefenderForContainers, microsoftDefenderForNetwork, microsoftDefenderForAppService, microsoftDefenderForKeyVault, microsoftDefenderForResourceManager, microsoftDefenderForApiManagement.
-     * @param DetectionSource|null $value Value to set for the detectionSource property.
+     * @param Alert_detectionSource|null $value Value to set for the detectionSource property.
     */
-    public function setDetectionSource(?DetectionSource $value): void {
+    public function setDetectionSource(?Alert_detectionSource $value): void {
         $this->getBackingStore()->set('detectionSource', $value);
     }
 
@@ -568,9 +568,9 @@ class Alert extends Entity implements Parsable
 
     /**
      * Sets the determination property value. Specifies the result of the investigation, whether the alert represents a true attack and if so, the nature of the attack. Possible values are: unknown, apt, malware, securityPersonnel, securityTesting, unwantedSoftware, other, multiStagedAttack, compromisedUser, phishing, maliciousUserActivity, clean, insufficientData, confirmedUserActivity, lineOfBusinessApplication, unknownFutureValue.
-     * @param AlertDetermination|null $value Value to set for the determination property.
+     * @param Alert_determination|null $value Value to set for the determination property.
     */
-    public function setDetermination(?AlertDetermination $value): void {
+    public function setDetermination(?Alert_determination $value): void {
         $this->getBackingStore()->set('determination', $value);
     }
 

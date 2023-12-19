@@ -89,7 +89,7 @@ class Website implements AdditionalDataHolder, BackedModel, Parsable
             'address' => fn(ParseNode $n) => $o->setAddress($n->getStringValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
-            'type' => fn(ParseNode $n) => $o->setType($n->getEnumValue(WebsiteType::class)),
+            'type' => fn(ParseNode $n) => $o->setType($n->getEnumValue(Website_type::class)),
         ];
     }
 
@@ -107,11 +107,11 @@ class Website implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the type property value. The possible values are: other, home, work, blog, profile.
-     * @return WebsiteType|null
+     * @return Website_type|null
     */
-    public function getType(): ?WebsiteType {
+    public function getType(): ?Website_type {
         $val = $this->getBackingStore()->get('type');
-        if (is_null($val) || $val instanceof WebsiteType) {
+        if (is_null($val) || $val instanceof Website_type) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'type'");
@@ -171,9 +171,9 @@ class Website implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the type property value. The possible values are: other, home, work, blog, profile.
-     * @param WebsiteType|null $value Value to set for the type property.
+     * @param Website_type|null $value Value to set for the type property.
     */
-    public function setType(?WebsiteType $value): void {
+    public function setType(?Website_type $value): void {
         $this->getBackingStore()->set('type', $value);
     }
 

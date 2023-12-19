@@ -122,7 +122,7 @@ class AppliedConditionalAccessPolicy implements AdditionalDataHolder, BackedMode
             },
             'id' => fn(ParseNode $n) => $o->setId($n->getStringValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
-            'result' => fn(ParseNode $n) => $o->setResult($n->getEnumValue(AppliedConditionalAccessPolicyResult::class)),
+            'result' => fn(ParseNode $n) => $o->setResult($n->getEnumValue(AppliedConditionalAccessPolicy_result::class)),
         ];
     }
 
@@ -152,11 +152,11 @@ class AppliedConditionalAccessPolicy implements AdditionalDataHolder, BackedMode
 
     /**
      * Gets the result property value. Indicates the result of the CA policy that was triggered. Possible values are: success, failure, notApplied (Policy isn't applied because policy conditions weren't met),notEnabled (This is due to the policy in disabled state), unknown, unknownFutureValue.
-     * @return AppliedConditionalAccessPolicyResult|null
+     * @return AppliedConditionalAccessPolicy_result|null
     */
-    public function getResult(): ?AppliedConditionalAccessPolicyResult {
+    public function getResult(): ?AppliedConditionalAccessPolicy_result {
         $val = $this->getBackingStore()->get('result');
-        if (is_null($val) || $val instanceof AppliedConditionalAccessPolicyResult) {
+        if (is_null($val) || $val instanceof AppliedConditionalAccessPolicy_result) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'result'");
@@ -234,9 +234,9 @@ class AppliedConditionalAccessPolicy implements AdditionalDataHolder, BackedMode
 
     /**
      * Sets the result property value. Indicates the result of the CA policy that was triggered. Possible values are: success, failure, notApplied (Policy isn't applied because policy conditions weren't met),notEnabled (This is due to the policy in disabled state), unknown, unknownFutureValue.
-     * @param AppliedConditionalAccessPolicyResult|null $value Value to set for the result property.
+     * @param AppliedConditionalAccessPolicy_result|null $value Value to set for the result property.
     */
-    public function setResult(?AppliedConditionalAccessPolicyResult $value): void {
+    public function setResult(?AppliedConditionalAccessPolicy_result $value): void {
         $this->getBackingStore()->set('result', $value);
     }
 

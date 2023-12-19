@@ -58,18 +58,18 @@ class AccessPackageAssignmentRequestCallbackData extends CustomExtensionData imp
         return array_merge(parent::getFieldDeserializers(), [
             'customExtensionStageInstanceDetail' => fn(ParseNode $n) => $o->setCustomExtensionStageInstanceDetail($n->getStringValue()),
             'customExtensionStageInstanceId' => fn(ParseNode $n) => $o->setCustomExtensionStageInstanceId($n->getStringValue()),
-            'stage' => fn(ParseNode $n) => $o->setStage($n->getEnumValue(AccessPackageCustomExtensionStage::class)),
+            'stage' => fn(ParseNode $n) => $o->setStage($n->getEnumValue(AccessPackageAssignmentRequestCallbackData_stage::class)),
             'state' => fn(ParseNode $n) => $o->setState($n->getStringValue()),
         ]);
     }
 
     /**
      * Gets the stage property value. Indicates the stage at which the custom callout extension is executed. The possible values are: assignmentRequestCreated, assignmentRequestApproved, assignmentRequestGranted, assignmentRequestRemoved, assignmentFourteenDaysBeforeExpiration, assignmentOneDayBeforeExpiration, unknownFutureValue.
-     * @return AccessPackageCustomExtensionStage|null
+     * @return AccessPackageAssignmentRequestCallbackData_stage|null
     */
-    public function getStage(): ?AccessPackageCustomExtensionStage {
+    public function getStage(): ?AccessPackageAssignmentRequestCallbackData_stage {
         $val = $this->getBackingStore()->get('stage');
-        if (is_null($val) || $val instanceof AccessPackageCustomExtensionStage) {
+        if (is_null($val) || $val instanceof AccessPackageAssignmentRequestCallbackData_stage) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'stage'");
@@ -117,9 +117,9 @@ class AccessPackageAssignmentRequestCallbackData extends CustomExtensionData imp
 
     /**
      * Sets the stage property value. Indicates the stage at which the custom callout extension is executed. The possible values are: assignmentRequestCreated, assignmentRequestApproved, assignmentRequestGranted, assignmentRequestRemoved, assignmentFourteenDaysBeforeExpiration, assignmentOneDayBeforeExpiration, unknownFutureValue.
-     * @param AccessPackageCustomExtensionStage|null $value Value to set for the stage property.
+     * @param AccessPackageAssignmentRequestCallbackData_stage|null $value Value to set for the stage property.
     */
-    public function setStage(?AccessPackageCustomExtensionStage $value): void {
+    public function setStage(?AccessPackageAssignmentRequestCallbackData_stage $value): void {
         $this->getBackingStore()->set('stage', $value);
     }
 

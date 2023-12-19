@@ -57,11 +57,11 @@ class AutomaticRepliesSetting implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Gets the externalAudience property value. The set of audience external to the signed-in user's organization who will receive the ExternalReplyMessage, if Status is AlwaysEnabled or Scheduled. The possible values are: none, contactsOnly, all.
-     * @return ExternalAudienceScope|null
+     * @return AutomaticRepliesSetting_externalAudience|null
     */
-    public function getExternalAudience(): ?ExternalAudienceScope {
+    public function getExternalAudience(): ?AutomaticRepliesSetting_externalAudience {
         $val = $this->getBackingStore()->get('externalAudience');
-        if (is_null($val) || $val instanceof ExternalAudienceScope) {
+        if (is_null($val) || $val instanceof AutomaticRepliesSetting_externalAudience) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'externalAudience'");
@@ -86,13 +86,13 @@ class AutomaticRepliesSetting implements AdditionalDataHolder, BackedModel, Pars
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'externalAudience' => fn(ParseNode $n) => $o->setExternalAudience($n->getEnumValue(ExternalAudienceScope::class)),
+            'externalAudience' => fn(ParseNode $n) => $o->setExternalAudience($n->getEnumValue(AutomaticRepliesSetting_externalAudience::class)),
             'externalReplyMessage' => fn(ParseNode $n) => $o->setExternalReplyMessage($n->getStringValue()),
             'internalReplyMessage' => fn(ParseNode $n) => $o->setInternalReplyMessage($n->getStringValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'scheduledEndDateTime' => fn(ParseNode $n) => $o->setScheduledEndDateTime($n->getObjectValue([DateTimeTimeZone::class, 'createFromDiscriminatorValue'])),
             'scheduledStartDateTime' => fn(ParseNode $n) => $o->setScheduledStartDateTime($n->getObjectValue([DateTimeTimeZone::class, 'createFromDiscriminatorValue'])),
-            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(AutomaticRepliesStatus::class)),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(AutomaticRepliesSetting_status::class)),
         ];
     }
 
@@ -146,11 +146,11 @@ class AutomaticRepliesSetting implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Gets the status property value. Configurations status for automatic replies. The possible values are: disabled, alwaysEnabled, scheduled.
-     * @return AutomaticRepliesStatus|null
+     * @return AutomaticRepliesSetting_status|null
     */
-    public function getStatus(): ?AutomaticRepliesStatus {
+    public function getStatus(): ?AutomaticRepliesSetting_status {
         $val = $this->getBackingStore()->get('status');
-        if (is_null($val) || $val instanceof AutomaticRepliesStatus) {
+        if (is_null($val) || $val instanceof AutomaticRepliesSetting_status) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
@@ -189,9 +189,9 @@ class AutomaticRepliesSetting implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the externalAudience property value. The set of audience external to the signed-in user's organization who will receive the ExternalReplyMessage, if Status is AlwaysEnabled or Scheduled. The possible values are: none, contactsOnly, all.
-     * @param ExternalAudienceScope|null $value Value to set for the externalAudience property.
+     * @param AutomaticRepliesSetting_externalAudience|null $value Value to set for the externalAudience property.
     */
-    public function setExternalAudience(?ExternalAudienceScope $value): void {
+    public function setExternalAudience(?AutomaticRepliesSetting_externalAudience $value): void {
         $this->getBackingStore()->set('externalAudience', $value);
     }
 
@@ -237,9 +237,9 @@ class AutomaticRepliesSetting implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the status property value. Configurations status for automatic replies. The possible values are: disabled, alwaysEnabled, scheduled.
-     * @param AutomaticRepliesStatus|null $value Value to set for the status property.
+     * @param AutomaticRepliesSetting_status|null $value Value to set for the status property.
     */
-    public function setStatus(?AutomaticRepliesStatus $value): void {
+    public function setStatus(?AutomaticRepliesSetting_status $value): void {
         $this->getBackingStore()->set('status', $value);
     }
 

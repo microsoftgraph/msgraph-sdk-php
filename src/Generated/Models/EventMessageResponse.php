@@ -33,7 +33,7 @@ class EventMessageResponse extends EventMessage implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'proposedNewTime' => fn(ParseNode $n) => $o->setProposedNewTime($n->getObjectValue([TimeSlot::class, 'createFromDiscriminatorValue'])),
-            'responseType' => fn(ParseNode $n) => $o->setResponseType($n->getEnumValue(ResponseType::class)),
+            'responseType' => fn(ParseNode $n) => $o->setResponseType($n->getEnumValue(EventMessageResponse_responseType::class)),
         ]);
     }
 
@@ -51,11 +51,11 @@ class EventMessageResponse extends EventMessage implements Parsable
 
     /**
      * Gets the responseType property value. The responseType property
-     * @return ResponseType|null
+     * @return EventMessageResponse_responseType|null
     */
-    public function getResponseType(): ?ResponseType {
+    public function getResponseType(): ?EventMessageResponse_responseType {
         $val = $this->getBackingStore()->get('responseType');
-        if (is_null($val) || $val instanceof ResponseType) {
+        if (is_null($val) || $val instanceof EventMessageResponse_responseType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'responseType'");
@@ -81,9 +81,9 @@ class EventMessageResponse extends EventMessage implements Parsable
 
     /**
      * Sets the responseType property value. The responseType property
-     * @param ResponseType|null $value Value to set for the responseType property.
+     * @param EventMessageResponse_responseType|null $value Value to set for the responseType property.
     */
-    public function setResponseType(?ResponseType $value): void {
+    public function setResponseType(?EventMessageResponse_responseType $value): void {
         $this->getBackingStore()->set('responseType', $value);
     }
 

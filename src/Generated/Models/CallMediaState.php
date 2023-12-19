@@ -49,11 +49,11 @@ class CallMediaState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the audio property value. The audio media state. Possible values are: active, inactive, unknownFutureValue.
-     * @return MediaState|null
+     * @return CallMediaState_audio|null
     */
-    public function getAudio(): ?MediaState {
+    public function getAudio(): ?CallMediaState_audio {
         $val = $this->getBackingStore()->get('audio');
-        if (is_null($val) || $val instanceof MediaState) {
+        if (is_null($val) || $val instanceof CallMediaState_audio) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'audio'");
@@ -74,7 +74,7 @@ class CallMediaState implements AdditionalDataHolder, BackedModel, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'audio' => fn(ParseNode $n) => $o->setAudio($n->getEnumValue(MediaState::class)),
+            'audio' => fn(ParseNode $n) => $o->setAudio($n->getEnumValue(CallMediaState_audio::class)),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
@@ -111,9 +111,9 @@ class CallMediaState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the audio property value. The audio media state. Possible values are: active, inactive, unknownFutureValue.
-     * @param MediaState|null $value Value to set for the audio property.
+     * @param CallMediaState_audio|null $value Value to set for the audio property.
     */
-    public function setAudio(?MediaState $value): void {
+    public function setAudio(?CallMediaState_audio $value): void {
         $this->getBackingStore()->set('audio', $value);
     }
 

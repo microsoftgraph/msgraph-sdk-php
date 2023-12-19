@@ -88,7 +88,7 @@ class Channel extends Entity implements Parsable
             'filesFolder' => fn(ParseNode $n) => $o->setFilesFolder($n->getObjectValue([DriveItem::class, 'createFromDiscriminatorValue'])),
             'isFavoriteByDefault' => fn(ParseNode $n) => $o->setIsFavoriteByDefault($n->getBooleanValue()),
             'members' => fn(ParseNode $n) => $o->setMembers($n->getCollectionOfObjectValues([ConversationMember::class, 'createFromDiscriminatorValue'])),
-            'membershipType' => fn(ParseNode $n) => $o->setMembershipType($n->getEnumValue(ChannelMembershipType::class)),
+            'membershipType' => fn(ParseNode $n) => $o->setMembershipType($n->getEnumValue(Channel_membershipType::class)),
             'messages' => fn(ParseNode $n) => $o->setMessages($n->getCollectionOfObjectValues([ChatMessage::class, 'createFromDiscriminatorValue'])),
             'sharedWithTeams' => fn(ParseNode $n) => $o->setSharedWithTeams($n->getCollectionOfObjectValues([SharedWithChannelTeamInfo::class, 'createFromDiscriminatorValue'])),
             'summary' => fn(ParseNode $n) => $o->setSummary($n->getObjectValue([ChannelSummary::class, 'createFromDiscriminatorValue'])),
@@ -138,11 +138,11 @@ class Channel extends Entity implements Parsable
 
     /**
      * Gets the membershipType property value. The type of the channel. Can be set during creation and can't be changed. The possible values are: standard, private, unknownFutureValue, shared. The default value is standard. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: shared.
-     * @return ChannelMembershipType|null
+     * @return Channel_membershipType|null
     */
-    public function getMembershipType(): ?ChannelMembershipType {
+    public function getMembershipType(): ?Channel_membershipType {
         $val = $this->getBackingStore()->get('membershipType');
-        if (is_null($val) || $val instanceof ChannelMembershipType) {
+        if (is_null($val) || $val instanceof Channel_membershipType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'membershipType'");
@@ -306,9 +306,9 @@ class Channel extends Entity implements Parsable
 
     /**
      * Sets the membershipType property value. The type of the channel. Can be set during creation and can't be changed. The possible values are: standard, private, unknownFutureValue, shared. The default value is standard. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: shared.
-     * @param ChannelMembershipType|null $value Value to set for the membershipType property.
+     * @param Channel_membershipType|null $value Value to set for the membershipType property.
     */
-    public function setMembershipType(?ChannelMembershipType $value): void {
+    public function setMembershipType(?Channel_membershipType $value): void {
         $this->getBackingStore()->set('membershipType', $value);
     }
 

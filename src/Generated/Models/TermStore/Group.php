@@ -74,7 +74,7 @@ class Group extends Entity implements Parsable
             'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'parentSiteId' => fn(ParseNode $n) => $o->setParentSiteId($n->getStringValue()),
-            'scope' => fn(ParseNode $n) => $o->setScope($n->getEnumValue(TermGroupScope::class)),
+            'scope' => fn(ParseNode $n) => $o->setScope($n->getEnumValue(Group_scope::class)),
             'sets' => fn(ParseNode $n) => $o->setSets($n->getCollectionOfObjectValues([Set::class, 'createFromDiscriminatorValue'])),
         ]);
     }
@@ -93,11 +93,11 @@ class Group extends Entity implements Parsable
 
     /**
      * Gets the scope property value. Returns the type of the group. Possible values are: global, system, and siteCollection.
-     * @return TermGroupScope|null
+     * @return Group_scope|null
     */
-    public function getScope(): ?TermGroupScope {
+    public function getScope(): ?Group_scope {
         $val = $this->getBackingStore()->get('scope');
-        if (is_null($val) || $val instanceof TermGroupScope) {
+        if (is_null($val) || $val instanceof Group_scope) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'scope'");
@@ -165,9 +165,9 @@ class Group extends Entity implements Parsable
 
     /**
      * Sets the scope property value. Returns the type of the group. Possible values are: global, system, and siteCollection.
-     * @param TermGroupScope|null $value Value to set for the scope property.
+     * @param Group_scope|null $value Value to set for the scope property.
     */
-    public function setScope(?TermGroupScope $value): void {
+    public function setScope(?Group_scope $value): void {
         $this->getBackingStore()->set('scope', $value);
     }
 

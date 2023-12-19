@@ -64,7 +64,7 @@ class EventQuery implements AdditionalDataHolder, BackedModel, Parsable
         return  [
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'query' => fn(ParseNode $n) => $o->setQuery($n->getStringValue()),
-            'queryType' => fn(ParseNode $n) => $o->setQueryType($n->getEnumValue(QueryType::class)),
+            'queryType' => fn(ParseNode $n) => $o->setQueryType($n->getEnumValue(EventQuery_queryType::class)),
         ];
     }
 
@@ -94,11 +94,11 @@ class EventQuery implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the queryType property value. Represents the type of query associated with an event. 'files' for SPO and ODB and 'messages' for EXO.The possible values are: files, messages, unknownFutureValue.
-     * @return QueryType|null
+     * @return EventQuery_queryType|null
     */
-    public function getQueryType(): ?QueryType {
+    public function getQueryType(): ?EventQuery_queryType {
         $val = $this->getBackingStore()->get('queryType');
-        if (is_null($val) || $val instanceof QueryType) {
+        if (is_null($val) || $val instanceof EventQuery_queryType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'queryType'");
@@ -149,9 +149,9 @@ class EventQuery implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the queryType property value. Represents the type of query associated with an event. 'files' for SPO and ODB and 'messages' for EXO.The possible values are: files, messages, unknownFutureValue.
-     * @param QueryType|null $value Value to set for the queryType property.
+     * @param EventQuery_queryType|null $value Value to set for the queryType property.
     */
-    public function setQueryType(?QueryType $value): void {
+    public function setQueryType(?EventQuery_queryType $value): void {
         $this->getBackingStore()->set('queryType', $value);
     }
 

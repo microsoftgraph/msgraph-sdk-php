@@ -39,11 +39,11 @@ class InternalDomainFederation extends SamlOrWsFedProvider implements Parsable
 
     /**
      * Gets the federatedIdpMfaBehavior property value. Determines whether Microsoft Entra ID accepts the MFA performed by the federated IdP when a federated user accesses an application that is governed by a conditional access policy that requires MFA. The possible values are: acceptIfMfaDoneByFederatedIdp, enforceMfaByFederatedIdp, rejectMfaByFederatedIdp, unknownFutureValue. For more information, see federatedIdpMfaBehavior values.
-     * @return FederatedIdpMfaBehavior|null
+     * @return InternalDomainFederation_federatedIdpMfaBehavior|null
     */
-    public function getFederatedIdpMfaBehavior(): ?FederatedIdpMfaBehavior {
+    public function getFederatedIdpMfaBehavior(): ?InternalDomainFederation_federatedIdpMfaBehavior {
         $val = $this->getBackingStore()->get('federatedIdpMfaBehavior');
-        if (is_null($val) || $val instanceof FederatedIdpMfaBehavior) {
+        if (is_null($val) || $val instanceof InternalDomainFederation_federatedIdpMfaBehavior) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'federatedIdpMfaBehavior'");
@@ -57,10 +57,10 @@ class InternalDomainFederation extends SamlOrWsFedProvider implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'activeSignInUri' => fn(ParseNode $n) => $o->setActiveSignInUri($n->getStringValue()),
-            'federatedIdpMfaBehavior' => fn(ParseNode $n) => $o->setFederatedIdpMfaBehavior($n->getEnumValue(FederatedIdpMfaBehavior::class)),
+            'federatedIdpMfaBehavior' => fn(ParseNode $n) => $o->setFederatedIdpMfaBehavior($n->getEnumValue(InternalDomainFederation_federatedIdpMfaBehavior::class)),
             'isSignedAuthenticationRequestRequired' => fn(ParseNode $n) => $o->setIsSignedAuthenticationRequestRequired($n->getBooleanValue()),
             'nextSigningCertificate' => fn(ParseNode $n) => $o->setNextSigningCertificate($n->getStringValue()),
-            'promptLoginBehavior' => fn(ParseNode $n) => $o->setPromptLoginBehavior($n->getEnumValue(PromptLoginBehavior::class)),
+            'promptLoginBehavior' => fn(ParseNode $n) => $o->setPromptLoginBehavior($n->getEnumValue(InternalDomainFederation_promptLoginBehavior::class)),
             'signingCertificateUpdateStatus' => fn(ParseNode $n) => $o->setSigningCertificateUpdateStatus($n->getObjectValue([SigningCertificateUpdateStatus::class, 'createFromDiscriminatorValue'])),
             'signOutUri' => fn(ParseNode $n) => $o->setSignOutUri($n->getStringValue()),
         ]);
@@ -92,11 +92,11 @@ class InternalDomainFederation extends SamlOrWsFedProvider implements Parsable
 
     /**
      * Gets the promptLoginBehavior property value. Sets the preferred behavior for the sign-in prompt. The possible values are: translateToFreshPasswordAuthentication, nativeSupport, disabled, unknownFutureValue.
-     * @return PromptLoginBehavior|null
+     * @return InternalDomainFederation_promptLoginBehavior|null
     */
-    public function getPromptLoginBehavior(): ?PromptLoginBehavior {
+    public function getPromptLoginBehavior(): ?InternalDomainFederation_promptLoginBehavior {
         $val = $this->getBackingStore()->get('promptLoginBehavior');
-        if (is_null($val) || $val instanceof PromptLoginBehavior) {
+        if (is_null($val) || $val instanceof InternalDomainFederation_promptLoginBehavior) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'promptLoginBehavior'");
@@ -151,9 +151,9 @@ class InternalDomainFederation extends SamlOrWsFedProvider implements Parsable
 
     /**
      * Sets the federatedIdpMfaBehavior property value. Determines whether Microsoft Entra ID accepts the MFA performed by the federated IdP when a federated user accesses an application that is governed by a conditional access policy that requires MFA. The possible values are: acceptIfMfaDoneByFederatedIdp, enforceMfaByFederatedIdp, rejectMfaByFederatedIdp, unknownFutureValue. For more information, see federatedIdpMfaBehavior values.
-     * @param FederatedIdpMfaBehavior|null $value Value to set for the federatedIdpMfaBehavior property.
+     * @param InternalDomainFederation_federatedIdpMfaBehavior|null $value Value to set for the federatedIdpMfaBehavior property.
     */
-    public function setFederatedIdpMfaBehavior(?FederatedIdpMfaBehavior $value): void {
+    public function setFederatedIdpMfaBehavior(?InternalDomainFederation_federatedIdpMfaBehavior $value): void {
         $this->getBackingStore()->set('federatedIdpMfaBehavior', $value);
     }
 
@@ -175,9 +175,9 @@ class InternalDomainFederation extends SamlOrWsFedProvider implements Parsable
 
     /**
      * Sets the promptLoginBehavior property value. Sets the preferred behavior for the sign-in prompt. The possible values are: translateToFreshPasswordAuthentication, nativeSupport, disabled, unknownFutureValue.
-     * @param PromptLoginBehavior|null $value Value to set for the promptLoginBehavior property.
+     * @param InternalDomainFederation_promptLoginBehavior|null $value Value to set for the promptLoginBehavior property.
     */
-    public function setPromptLoginBehavior(?PromptLoginBehavior $value): void {
+    public function setPromptLoginBehavior(?InternalDomainFederation_promptLoginBehavior $value): void {
         $this->getBackingStore()->set('promptLoginBehavior', $value);
     }
 

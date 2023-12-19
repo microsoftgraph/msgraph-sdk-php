@@ -91,7 +91,7 @@ class ExternalConnection extends Entity implements Parsable
             'operations' => fn(ParseNode $n) => $o->setOperations($n->getCollectionOfObjectValues([ConnectionOperation::class, 'createFromDiscriminatorValue'])),
             'schema' => fn(ParseNode $n) => $o->setSchema($n->getObjectValue([Schema::class, 'createFromDiscriminatorValue'])),
             'searchSettings' => fn(ParseNode $n) => $o->setSearchSettings($n->getObjectValue([SearchSettings::class, 'createFromDiscriminatorValue'])),
-            'state' => fn(ParseNode $n) => $o->setState($n->getEnumValue(ConnectionState::class)),
+            'state' => fn(ParseNode $n) => $o->setState($n->getEnumValue(ExternalConnection_state::class)),
         ]);
     }
 
@@ -175,11 +175,11 @@ class ExternalConnection extends Entity implements Parsable
 
     /**
      * Gets the state property value. Indicates the current state of the connection. Possible values are: draft, ready, obsolete, limitExceeded, unknownFutureValue.
-     * @return ConnectionState|null
+     * @return ExternalConnection_state|null
     */
-    public function getState(): ?ConnectionState {
+    public function getState(): ?ExternalConnection_state {
         $val = $this->getBackingStore()->get('state');
-        if (is_null($val) || $val instanceof ConnectionState) {
+        if (is_null($val) || $val instanceof ExternalConnection_state) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'state'");
@@ -285,9 +285,9 @@ class ExternalConnection extends Entity implements Parsable
 
     /**
      * Sets the state property value. Indicates the current state of the connection. Possible values are: draft, ready, obsolete, limitExceeded, unknownFutureValue.
-     * @param ConnectionState|null $value Value to set for the state property.
+     * @param ExternalConnection_state|null $value Value to set for the state property.
     */
-    public function setState(?ConnectionState $value): void {
+    public function setState(?ExternalConnection_state $value): void {
         $this->getBackingStore()->set('state', $value);
     }
 

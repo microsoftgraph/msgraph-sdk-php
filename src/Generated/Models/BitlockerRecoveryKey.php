@@ -59,7 +59,7 @@ class BitlockerRecoveryKey extends Entity implements Parsable
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'deviceId' => fn(ParseNode $n) => $o->setDeviceId($n->getStringValue()),
             'key' => fn(ParseNode $n) => $o->setKey($n->getStringValue()),
-            'volumeType' => fn(ParseNode $n) => $o->setVolumeType($n->getEnumValue(VolumeType::class)),
+            'volumeType' => fn(ParseNode $n) => $o->setVolumeType($n->getEnumValue(BitlockerRecoveryKey_volumeType::class)),
         ]);
     }
 
@@ -77,11 +77,11 @@ class BitlockerRecoveryKey extends Entity implements Parsable
 
     /**
      * Gets the volumeType property value. Indicates the type of volume the BitLocker key is associated with. The possible values are: 1 (for operatingSystemVolume), 2 (for fixedDataVolume), 3 (for removableDataVolume), and 4 (for unknownFutureValue).
-     * @return VolumeType|null
+     * @return BitlockerRecoveryKey_volumeType|null
     */
-    public function getVolumeType(): ?VolumeType {
+    public function getVolumeType(): ?BitlockerRecoveryKey_volumeType {
         $val = $this->getBackingStore()->get('volumeType');
-        if (is_null($val) || $val instanceof VolumeType) {
+        if (is_null($val) || $val instanceof BitlockerRecoveryKey_volumeType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'volumeType'");
@@ -125,9 +125,9 @@ class BitlockerRecoveryKey extends Entity implements Parsable
 
     /**
      * Sets the volumeType property value. Indicates the type of volume the BitLocker key is associated with. The possible values are: 1 (for operatingSystemVolume), 2 (for fixedDataVolume), 3 (for removableDataVolume), and 4 (for unknownFutureValue).
-     * @param VolumeType|null $value Value to set for the volumeType property.
+     * @param BitlockerRecoveryKey_volumeType|null $value Value to set for the volumeType property.
     */
-    public function setVolumeType(?VolumeType $value): void {
+    public function setVolumeType(?BitlockerRecoveryKey_volumeType $value): void {
         $this->getBackingStore()->set('volumeType', $value);
     }
 

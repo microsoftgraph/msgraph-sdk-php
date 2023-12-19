@@ -63,7 +63,7 @@ class SynchronizationJobRestartCriteria implements AdditionalDataHolder, BackedM
         $o = $this;
         return  [
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
-            'resetScope' => fn(ParseNode $n) => $o->setResetScope($n->getEnumValue(SynchronizationJobRestartScope::class)),
+            'resetScope' => fn(ParseNode $n) => $o->setResetScope($n->getEnumValue(SynchronizationJobRestartCriteria_resetScope::class)),
         ];
     }
 
@@ -81,11 +81,11 @@ class SynchronizationJobRestartCriteria implements AdditionalDataHolder, BackedM
 
     /**
      * Gets the resetScope property value. Comma-separated combination of the following values: None, ConnectorDataStore, Escrows, Watermark, QuarantineState, Full, ForceDeletes. The property can also be empty.   None: Starts a paused or quarantined provisioning job. DO NOT USE. Use the Start synchronizationJob API instead.ConnectorDataStore - Clears the underlying cache for all users. DO NOT USE. Contact Microsoft Support for guidance.Escrows - Provisioning failures are marked as escrows and retried. Clearing escrows will stop the service from retrying failures.Watermark - Removing the watermark causes the service to reevaluate all the users again, rather than just processing changes.QuarantineState - Temporarily lifts the quarantine.Use Full if you want all of the options.ForceDeletes - Forces the system to delete the pending deleted users when using the accidental deletions prevention feature and the deletion threshold is exceeded. Leaving this property empty emulates the Restart provisioning option in the Microsoft Entra admin center. It is similar to setting the resetScope to include QuarantineState, Watermark, and Escrows. This option meets most customer needs.
-     * @return SynchronizationJobRestartScope|null
+     * @return SynchronizationJobRestartCriteria_resetScope|null
     */
-    public function getResetScope(): ?SynchronizationJobRestartScope {
+    public function getResetScope(): ?SynchronizationJobRestartCriteria_resetScope {
         $val = $this->getBackingStore()->get('resetScope');
-        if (is_null($val) || $val instanceof SynchronizationJobRestartScope) {
+        if (is_null($val) || $val instanceof SynchronizationJobRestartCriteria_resetScope) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'resetScope'");
@@ -127,9 +127,9 @@ class SynchronizationJobRestartCriteria implements AdditionalDataHolder, BackedM
 
     /**
      * Sets the resetScope property value. Comma-separated combination of the following values: None, ConnectorDataStore, Escrows, Watermark, QuarantineState, Full, ForceDeletes. The property can also be empty.   None: Starts a paused or quarantined provisioning job. DO NOT USE. Use the Start synchronizationJob API instead.ConnectorDataStore - Clears the underlying cache for all users. DO NOT USE. Contact Microsoft Support for guidance.Escrows - Provisioning failures are marked as escrows and retried. Clearing escrows will stop the service from retrying failures.Watermark - Removing the watermark causes the service to reevaluate all the users again, rather than just processing changes.QuarantineState - Temporarily lifts the quarantine.Use Full if you want all of the options.ForceDeletes - Forces the system to delete the pending deleted users when using the accidental deletions prevention feature and the deletion threshold is exceeded. Leaving this property empty emulates the Restart provisioning option in the Microsoft Entra admin center. It is similar to setting the resetScope to include QuarantineState, Watermark, and Escrows. This option meets most customer needs.
-     * @param SynchronizationJobRestartScope|null $value Value to set for the resetScope property.
+     * @param SynchronizationJobRestartCriteria_resetScope|null $value Value to set for the resetScope property.
     */
-    public function setResetScope(?SynchronizationJobRestartScope $value): void {
+    public function setResetScope(?SynchronizationJobRestartCriteria_resetScope $value): void {
         $this->getBackingStore()->set('resetScope', $value);
     }
 

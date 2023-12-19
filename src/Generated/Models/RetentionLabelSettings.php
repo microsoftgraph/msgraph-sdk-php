@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Models;
 
-use Microsoft\Graph\Generated\Models\Security\BehaviorDuringRetentionPeriod;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -58,11 +57,11 @@ class RetentionLabelSettings implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Gets the behaviorDuringRetentionPeriod property value. Describes the item behavior during retention period. Possible values are: doNotRetain, retain, retainAsRecord, retainAsRegulatoryRecord, unknownFutureValue. Read-only.
-     * @return BehaviorDuringRetentionPeriod|null
+     * @return RetentionLabelSettings_behaviorDuringRetentionPeriod|null
     */
-    public function getBehaviorDuringRetentionPeriod(): ?BehaviorDuringRetentionPeriod {
+    public function getBehaviorDuringRetentionPeriod(): ?RetentionLabelSettings_behaviorDuringRetentionPeriod {
         $val = $this->getBackingStore()->get('behaviorDuringRetentionPeriod');
-        if (is_null($val) || $val instanceof BehaviorDuringRetentionPeriod) {
+        if (is_null($val) || $val instanceof RetentionLabelSettings_behaviorDuringRetentionPeriod) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'behaviorDuringRetentionPeriod'");
@@ -75,7 +74,7 @@ class RetentionLabelSettings implements AdditionalDataHolder, BackedModel, Parsa
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'behaviorDuringRetentionPeriod' => fn(ParseNode $n) => $o->setBehaviorDuringRetentionPeriod($n->getEnumValue(BehaviorDuringRetentionPeriod::class)),
+            'behaviorDuringRetentionPeriod' => fn(ParseNode $n) => $o->setBehaviorDuringRetentionPeriod($n->getEnumValue(RetentionLabelSettings_behaviorDuringRetentionPeriod::class)),
             'isContentUpdateAllowed' => fn(ParseNode $n) => $o->setIsContentUpdateAllowed($n->getBooleanValue()),
             'isDeleteAllowed' => fn(ParseNode $n) => $o->setIsDeleteAllowed($n->getBooleanValue()),
             'isLabelUpdateAllowed' => fn(ParseNode $n) => $o->setIsLabelUpdateAllowed($n->getBooleanValue()),
@@ -190,9 +189,9 @@ class RetentionLabelSettings implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the behaviorDuringRetentionPeriod property value. Describes the item behavior during retention period. Possible values are: doNotRetain, retain, retainAsRecord, retainAsRegulatoryRecord, unknownFutureValue. Read-only.
-     * @param BehaviorDuringRetentionPeriod|null $value Value to set for the behaviorDuringRetentionPeriod property.
+     * @param RetentionLabelSettings_behaviorDuringRetentionPeriod|null $value Value to set for the behaviorDuringRetentionPeriod property.
     */
-    public function setBehaviorDuringRetentionPeriod(?BehaviorDuringRetentionPeriod $value): void {
+    public function setBehaviorDuringRetentionPeriod(?RetentionLabelSettings_behaviorDuringRetentionPeriod $value): void {
         $this->getBackingStore()->set('behaviorDuringRetentionPeriod', $value);
     }
 

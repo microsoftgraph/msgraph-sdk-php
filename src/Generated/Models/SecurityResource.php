@@ -64,7 +64,7 @@ class SecurityResource implements AdditionalDataHolder, BackedModel, Parsable
         return  [
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'resource' => fn(ParseNode $n) => $o->setResource($n->getStringValue()),
-            'resourceType' => fn(ParseNode $n) => $o->setResourceType($n->getEnumValue(SecurityResourceType::class)),
+            'resourceType' => fn(ParseNode $n) => $o->setResourceType($n->getEnumValue(SecurityResource_resourceType::class)),
         ];
     }
 
@@ -94,11 +94,11 @@ class SecurityResource implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the resourceType property value. Represents type of security resources related to an alert. Possible values are: attacked, related.
-     * @return SecurityResourceType|null
+     * @return SecurityResource_resourceType|null
     */
-    public function getResourceType(): ?SecurityResourceType {
+    public function getResourceType(): ?SecurityResource_resourceType {
         $val = $this->getBackingStore()->get('resourceType');
-        if (is_null($val) || $val instanceof SecurityResourceType) {
+        if (is_null($val) || $val instanceof SecurityResource_resourceType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'resourceType'");
@@ -149,9 +149,9 @@ class SecurityResource implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the resourceType property value. Represents type of security resources related to an alert. Possible values are: attacked, related.
-     * @param SecurityResourceType|null $value Value to set for the resourceType property.
+     * @param SecurityResource_resourceType|null $value Value to set for the resourceType property.
     */
-    public function setResourceType(?SecurityResourceType $value): void {
+    public function setResourceType(?SecurityResource_resourceType $value): void {
         $this->getBackingStore()->set('resourceType', $value);
     }
 

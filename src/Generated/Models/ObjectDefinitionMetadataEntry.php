@@ -62,7 +62,7 @@ class ObjectDefinitionMetadataEntry implements AdditionalDataHolder, BackedModel
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'key' => fn(ParseNode $n) => $o->setKey($n->getEnumValue(ObjectDefinitionMetadata::class)),
+            'key' => fn(ParseNode $n) => $o->setKey($n->getEnumValue(ObjectDefinitionMetadataEntry_key::class)),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'value' => fn(ParseNode $n) => $o->setValue($n->getStringValue()),
         ];
@@ -70,11 +70,11 @@ class ObjectDefinitionMetadataEntry implements AdditionalDataHolder, BackedModel
 
     /**
      * Gets the key property value. Possible values are: PropertyNameAccountEnabled, PropertyNameSoftDeleted, IsSoftDeletionSupported, IsSynchronizeAllSupported, ConnectorDataStorageRequired, Extensions, LinkTypeName.
-     * @return ObjectDefinitionMetadata|null
+     * @return ObjectDefinitionMetadataEntry_key|null
     */
-    public function getKey(): ?ObjectDefinitionMetadata {
+    public function getKey(): ?ObjectDefinitionMetadataEntry_key {
         $val = $this->getBackingStore()->get('key');
-        if (is_null($val) || $val instanceof ObjectDefinitionMetadata) {
+        if (is_null($val) || $val instanceof ObjectDefinitionMetadataEntry_key) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'key'");
@@ -133,9 +133,9 @@ class ObjectDefinitionMetadataEntry implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the key property value. Possible values are: PropertyNameAccountEnabled, PropertyNameSoftDeleted, IsSoftDeletionSupported, IsSynchronizeAllSupported, ConnectorDataStorageRequired, Extensions, LinkTypeName.
-     * @param ObjectDefinitionMetadata|null $value Value to set for the key property.
+     * @param ObjectDefinitionMetadataEntry_key|null $value Value to set for the key property.
     */
-    public function setKey(?ObjectDefinitionMetadata $value): void {
+    public function setKey(?ObjectDefinitionMetadataEntry_key $value): void {
         $this->getBackingStore()->set('key', $value);
     }
 

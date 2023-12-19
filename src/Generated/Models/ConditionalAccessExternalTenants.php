@@ -70,18 +70,18 @@ class ConditionalAccessExternalTenants implements AdditionalDataHolder, BackedMo
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'membershipKind' => fn(ParseNode $n) => $o->setMembershipKind($n->getEnumValue(ConditionalAccessExternalTenantsMembershipKind::class)),
+            'membershipKind' => fn(ParseNode $n) => $o->setMembershipKind($n->getEnumValue(ConditionalAccessExternalTenants_membershipKind::class)),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 
     /**
      * Gets the membershipKind property value. The membership kind. Possible values are: all, enumerated, unknownFutureValue. The enumerated member references an conditionalAccessEnumeratedExternalTenants object.
-     * @return ConditionalAccessExternalTenantsMembershipKind|null
+     * @return ConditionalAccessExternalTenants_membershipKind|null
     */
-    public function getMembershipKind(): ?ConditionalAccessExternalTenantsMembershipKind {
+    public function getMembershipKind(): ?ConditionalAccessExternalTenants_membershipKind {
         $val = $this->getBackingStore()->get('membershipKind');
-        if (is_null($val) || $val instanceof ConditionalAccessExternalTenantsMembershipKind) {
+        if (is_null($val) || $val instanceof ConditionalAccessExternalTenants_membershipKind) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'membershipKind'");
@@ -127,9 +127,9 @@ class ConditionalAccessExternalTenants implements AdditionalDataHolder, BackedMo
 
     /**
      * Sets the membershipKind property value. The membership kind. Possible values are: all, enumerated, unknownFutureValue. The enumerated member references an conditionalAccessEnumeratedExternalTenants object.
-     * @param ConditionalAccessExternalTenantsMembershipKind|null $value Value to set for the membershipKind property.
+     * @param ConditionalAccessExternalTenants_membershipKind|null $value Value to set for the membershipKind property.
     */
-    public function setMembershipKind(?ConditionalAccessExternalTenantsMembershipKind $value): void {
+    public function setMembershipKind(?ConditionalAccessExternalTenants_membershipKind $value): void {
         $this->getBackingStore()->set('membershipKind', $value);
     }
 

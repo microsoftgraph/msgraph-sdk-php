@@ -62,27 +62,27 @@ class RegistryKeyState implements AdditionalDataHolder, BackedModel, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'hive' => fn(ParseNode $n) => $o->setHive($n->getEnumValue(RegistryHive::class)),
+            'hive' => fn(ParseNode $n) => $o->setHive($n->getEnumValue(RegistryKeyState_hive::class)),
             'key' => fn(ParseNode $n) => $o->setKey($n->getStringValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'oldKey' => fn(ParseNode $n) => $o->setOldKey($n->getStringValue()),
             'oldValueData' => fn(ParseNode $n) => $o->setOldValueData($n->getStringValue()),
             'oldValueName' => fn(ParseNode $n) => $o->setOldValueName($n->getStringValue()),
-            'operation' => fn(ParseNode $n) => $o->setOperation($n->getEnumValue(RegistryOperation::class)),
+            'operation' => fn(ParseNode $n) => $o->setOperation($n->getEnumValue(RegistryKeyState_operation::class)),
             'processId' => fn(ParseNode $n) => $o->setProcessId($n->getIntegerValue()),
             'valueData' => fn(ParseNode $n) => $o->setValueData($n->getStringValue()),
             'valueName' => fn(ParseNode $n) => $o->setValueName($n->getStringValue()),
-            'valueType' => fn(ParseNode $n) => $o->setValueType($n->getEnumValue(RegistryValueType::class)),
+            'valueType' => fn(ParseNode $n) => $o->setValueType($n->getEnumValue(RegistryKeyState_valueType::class)),
         ];
     }
 
     /**
      * Gets the hive property value. A Windows registry hive : HKEYCURRENTCONFIG HKEYCURRENTUSER HKEYLOCALMACHINE/SAM HKEYLOCALMACHINE/Security HKEYLOCALMACHINE/Software HKEYLOCALMACHINE/System HKEY_USERS/.Default. Possible values are: unknown, currentConfig, currentUser, localMachineSam, localMachineSecurity, localMachineSoftware, localMachineSystem, usersDefault.
-     * @return RegistryHive|null
+     * @return RegistryKeyState_hive|null
     */
-    public function getHive(): ?RegistryHive {
+    public function getHive(): ?RegistryKeyState_hive {
         $val = $this->getBackingStore()->get('hive');
-        if (is_null($val) || $val instanceof RegistryHive) {
+        if (is_null($val) || $val instanceof RegistryKeyState_hive) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'hive'");
@@ -150,11 +150,11 @@ class RegistryKeyState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the operation property value. Operation that changed the registry key name and/or value. Possible values are: unknown, create, modify, delete.
-     * @return RegistryOperation|null
+     * @return RegistryKeyState_operation|null
     */
-    public function getOperation(): ?RegistryOperation {
+    public function getOperation(): ?RegistryKeyState_operation {
         $val = $this->getBackingStore()->get('operation');
-        if (is_null($val) || $val instanceof RegistryOperation) {
+        if (is_null($val) || $val instanceof RegistryKeyState_operation) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'operation'");
@@ -198,11 +198,11 @@ class RegistryKeyState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the valueType property value. Registry key value type REGBINARY REGDWORD REGDWORDLITTLEENDIAN REGDWORDBIGENDIANREGEXPANDSZ REGLINK REGMULTISZ REGNONE REGQWORD REGQWORDLITTLEENDIAN REG_SZ Possible values are: unknown, binary, dword, dwordLittleEndian, dwordBigEndian, expandSz, link, multiSz, none, qword, qwordlittleEndian, sz.
-     * @return RegistryValueType|null
+     * @return RegistryKeyState_valueType|null
     */
-    public function getValueType(): ?RegistryValueType {
+    public function getValueType(): ?RegistryKeyState_valueType {
         $val = $this->getBackingStore()->get('valueType');
-        if (is_null($val) || $val instanceof RegistryValueType) {
+        if (is_null($val) || $val instanceof RegistryKeyState_valueType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'valueType'");
@@ -245,9 +245,9 @@ class RegistryKeyState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the hive property value. A Windows registry hive : HKEYCURRENTCONFIG HKEYCURRENTUSER HKEYLOCALMACHINE/SAM HKEYLOCALMACHINE/Security HKEYLOCALMACHINE/Software HKEYLOCALMACHINE/System HKEY_USERS/.Default. Possible values are: unknown, currentConfig, currentUser, localMachineSam, localMachineSecurity, localMachineSoftware, localMachineSystem, usersDefault.
-     * @param RegistryHive|null $value Value to set for the hive property.
+     * @param RegistryKeyState_hive|null $value Value to set for the hive property.
     */
-    public function setHive(?RegistryHive $value): void {
+    public function setHive(?RegistryKeyState_hive $value): void {
         $this->getBackingStore()->set('hive', $value);
     }
 
@@ -293,9 +293,9 @@ class RegistryKeyState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the operation property value. Operation that changed the registry key name and/or value. Possible values are: unknown, create, modify, delete.
-     * @param RegistryOperation|null $value Value to set for the operation property.
+     * @param RegistryKeyState_operation|null $value Value to set for the operation property.
     */
-    public function setOperation(?RegistryOperation $value): void {
+    public function setOperation(?RegistryKeyState_operation $value): void {
         $this->getBackingStore()->set('operation', $value);
     }
 
@@ -325,9 +325,9 @@ class RegistryKeyState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the valueType property value. Registry key value type REGBINARY REGDWORD REGDWORDLITTLEENDIAN REGDWORDBIGENDIANREGEXPANDSZ REGLINK REGMULTISZ REGNONE REGQWORD REGQWORDLITTLEENDIAN REG_SZ Possible values are: unknown, binary, dword, dwordLittleEndian, dwordBigEndian, expandSz, link, multiSz, none, qword, qwordlittleEndian, sz.
-     * @param RegistryValueType|null $value Value to set for the valueType property.
+     * @param RegistryKeyState_valueType|null $value Value to set for the valueType property.
     */
-    public function setValueType(?RegistryValueType $value): void {
+    public function setValueType(?RegistryKeyState_valueType $value): void {
         $this->getBackingStore()->set('valueType', $value);
     }
 

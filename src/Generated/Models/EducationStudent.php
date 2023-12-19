@@ -89,7 +89,7 @@ class EducationStudent implements AdditionalDataHolder, BackedModel, Parsable
         return  [
             'birthDate' => fn(ParseNode $n) => $o->setBirthDate($n->getDateValue()),
             'externalId' => fn(ParseNode $n) => $o->setExternalId($n->getStringValue()),
-            'gender' => fn(ParseNode $n) => $o->setGender($n->getEnumValue(EducationGender::class)),
+            'gender' => fn(ParseNode $n) => $o->setGender($n->getEnumValue(EducationStudent_gender::class)),
             'grade' => fn(ParseNode $n) => $o->setGrade($n->getStringValue()),
             'graduationYear' => fn(ParseNode $n) => $o->setGraduationYear($n->getStringValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
@@ -99,11 +99,11 @@ class EducationStudent implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the gender property value. The possible values are: female, male, other, unknownFutureValue.
-     * @return EducationGender|null
+     * @return EducationStudent_gender|null
     */
-    public function getGender(): ?EducationGender {
+    public function getGender(): ?EducationStudent_gender {
         $val = $this->getBackingStore()->get('gender');
-        if (is_null($val) || $val instanceof EducationGender) {
+        if (is_null($val) || $val instanceof EducationStudent_gender) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'gender'");
@@ -206,9 +206,9 @@ class EducationStudent implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the gender property value. The possible values are: female, male, other, unknownFutureValue.
-     * @param EducationGender|null $value Value to set for the gender property.
+     * @param EducationStudent_gender|null $value Value to set for the gender property.
     */
-    public function setGender(?EducationGender $value): void {
+    public function setGender(?EducationStudent_gender $value): void {
         $this->getBackingStore()->set('gender', $value);
     }
 

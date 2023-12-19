@@ -65,7 +65,7 @@ class EventPropagationResult implements AdditionalDataHolder, BackedModel, Parsa
             'location' => fn(ParseNode $n) => $o->setLocation($n->getStringValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'serviceName' => fn(ParseNode $n) => $o->setServiceName($n->getStringValue()),
-            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(EventPropagationStatus::class)),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(EventPropagationResult_status::class)),
             'statusInformation' => fn(ParseNode $n) => $o->setStatusInformation($n->getStringValue()),
         ];
     }
@@ -108,11 +108,11 @@ class EventPropagationResult implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Gets the status property value. Indicates the status of the event creation request. The possible values are: none, inProcessing, failed, success, unknownFutureValue.
-     * @return EventPropagationStatus|null
+     * @return EventPropagationResult_status|null
     */
-    public function getStatus(): ?EventPropagationStatus {
+    public function getStatus(): ?EventPropagationResult_status {
         $val = $this->getBackingStore()->get('status');
-        if (is_null($val) || $val instanceof EventPropagationStatus) {
+        if (is_null($val) || $val instanceof EventPropagationResult_status) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
@@ -185,9 +185,9 @@ class EventPropagationResult implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the status property value. Indicates the status of the event creation request. The possible values are: none, inProcessing, failed, success, unknownFutureValue.
-     * @param EventPropagationStatus|null $value Value to set for the status property.
+     * @param EventPropagationResult_status|null $value Value to set for the status property.
     */
-    public function setStatus(?EventPropagationStatus $value): void {
+    public function setStatus(?EventPropagationResult_status $value): void {
         $this->getBackingStore()->set('status', $value);
     }
 

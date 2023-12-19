@@ -30,11 +30,11 @@ class BookingCustomQuestion extends Entity implements Parsable
 
     /**
      * Gets the answerInputType property value. The expected answer type. The possible values are: text, radioButton, unknownFutureValue.
-     * @return AnswerInputType|null
+     * @return BookingCustomQuestion_answerInputType|null
     */
-    public function getAnswerInputType(): ?AnswerInputType {
+    public function getAnswerInputType(): ?BookingCustomQuestion_answerInputType {
         $val = $this->getBackingStore()->get('answerInputType');
-        if (is_null($val) || $val instanceof AnswerInputType) {
+        if (is_null($val) || $val instanceof BookingCustomQuestion_answerInputType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'answerInputType'");
@@ -73,7 +73,7 @@ class BookingCustomQuestion extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'answerInputType' => fn(ParseNode $n) => $o->setAnswerInputType($n->getEnumValue(AnswerInputType::class)),
+            'answerInputType' => fn(ParseNode $n) => $o->setAnswerInputType($n->getEnumValue(BookingCustomQuestion_answerInputType::class)),
             'answerOptions' => function (ParseNode $n) {
                 $val = $n->getCollectionOfPrimitiveValues();
                 if (is_array($val)) {
@@ -99,9 +99,9 @@ class BookingCustomQuestion extends Entity implements Parsable
 
     /**
      * Sets the answerInputType property value. The expected answer type. The possible values are: text, radioButton, unknownFutureValue.
-     * @param AnswerInputType|null $value Value to set for the answerInputType property.
+     * @param BookingCustomQuestion_answerInputType|null $value Value to set for the answerInputType property.
     */
-    public function setAnswerInputType(?AnswerInputType $value): void {
+    public function setAnswerInputType(?BookingCustomQuestion_answerInputType $value): void {
         $this->getBackingStore()->set('answerInputType', $value);
     }
 

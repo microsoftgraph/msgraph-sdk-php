@@ -49,11 +49,11 @@ class OAuthConsentAppDetail implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Gets the appScope property value. App scope. Possible values are: unknown, readCalendar, readContact, readMail, readAllChat, readAllFile, readAndWriteMail, sendMail, unknownFutureValue.
-     * @return OAuthAppScope|null
+     * @return OAuthConsentAppDetail_appScope|null
     */
-    public function getAppScope(): ?OAuthAppScope {
+    public function getAppScope(): ?OAuthConsentAppDetail_appScope {
         $val = $this->getBackingStore()->get('appScope');
-        if (is_null($val) || $val instanceof OAuthAppScope) {
+        if (is_null($val) || $val instanceof OAuthConsentAppDetail_appScope) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'appScope'");
@@ -98,7 +98,7 @@ class OAuthConsentAppDetail implements AdditionalDataHolder, BackedModel, Parsab
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'appScope' => fn(ParseNode $n) => $o->setAppScope($n->getEnumValue(OAuthAppScope::class)),
+            'appScope' => fn(ParseNode $n) => $o->setAppScope($n->getEnumValue(OAuthConsentAppDetail_appScope::class)),
             'displayLogo' => fn(ParseNode $n) => $o->setDisplayLogo($n->getStringValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
@@ -139,9 +139,9 @@ class OAuthConsentAppDetail implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the appScope property value. App scope. Possible values are: unknown, readCalendar, readContact, readMail, readAllChat, readAllFile, readAndWriteMail, sendMail, unknownFutureValue.
-     * @param OAuthAppScope|null $value Value to set for the appScope property.
+     * @param OAuthConsentAppDetail_appScope|null $value Value to set for the appScope property.
     */
-    public function setAppScope(?OAuthAppScope $value): void {
+    public function setAppScope(?OAuthConsentAppDetail_appScope $value): void {
         $this->getBackingStore()->set('appScope', $value);
     }
 

@@ -26,11 +26,11 @@ class DelegatedPermissionClassification extends Entity implements Parsable
 
     /**
      * Gets the classification property value. The classification value being given. Possible value: low. Doesn't support $filter.
-     * @return PermissionClassificationType|null
+     * @return DelegatedPermissionClassification_classification|null
     */
-    public function getClassification(): ?PermissionClassificationType {
+    public function getClassification(): ?DelegatedPermissionClassification_classification {
         $val = $this->getBackingStore()->get('classification');
-        if (is_null($val) || $val instanceof PermissionClassificationType) {
+        if (is_null($val) || $val instanceof DelegatedPermissionClassification_classification) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'classification'");
@@ -43,7 +43,7 @@ class DelegatedPermissionClassification extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'classification' => fn(ParseNode $n) => $o->setClassification($n->getEnumValue(PermissionClassificationType::class)),
+            'classification' => fn(ParseNode $n) => $o->setClassification($n->getEnumValue(DelegatedPermissionClassification_classification::class)),
             'permissionId' => fn(ParseNode $n) => $o->setPermissionId($n->getStringValue()),
             'permissionName' => fn(ParseNode $n) => $o->setPermissionName($n->getStringValue()),
         ]);
@@ -86,9 +86,9 @@ class DelegatedPermissionClassification extends Entity implements Parsable
 
     /**
      * Sets the classification property value. The classification value being given. Possible value: low. Doesn't support $filter.
-     * @param PermissionClassificationType|null $value Value to set for the classification property.
+     * @param DelegatedPermissionClassification_classification|null $value Value to set for the classification property.
     */
-    public function setClassification(?PermissionClassificationType $value): void {
+    public function setClassification(?DelegatedPermissionClassification_classification $value): void {
         $this->getBackingStore()->set('classification', $value);
     }
 

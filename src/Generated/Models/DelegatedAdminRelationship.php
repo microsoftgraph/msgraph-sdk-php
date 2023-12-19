@@ -163,7 +163,7 @@ class DelegatedAdminRelationship extends Entity implements Parsable
             'lastModifiedDateTime' => fn(ParseNode $n) => $o->setLastModifiedDateTime($n->getDateTimeValue()),
             'operations' => fn(ParseNode $n) => $o->setOperations($n->getCollectionOfObjectValues([DelegatedAdminRelationshipOperation::class, 'createFromDiscriminatorValue'])),
             'requests' => fn(ParseNode $n) => $o->setRequests($n->getCollectionOfObjectValues([DelegatedAdminRelationshipRequest::class, 'createFromDiscriminatorValue'])),
-            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(DelegatedAdminRelationshipStatus::class)),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(DelegatedAdminRelationship_status::class)),
         ]);
     }
 
@@ -209,11 +209,11 @@ class DelegatedAdminRelationship extends Entity implements Parsable
 
     /**
      * Gets the status property value. The status of the relationship. Read Only. The possible values are: activating, active, approvalPending, approved, created, expired, expiring, terminated, terminating, terminationRequested, unknownFutureValue. Supports $orderby.
-     * @return DelegatedAdminRelationshipStatus|null
+     * @return DelegatedAdminRelationship_status|null
     */
-    public function getStatus(): ?DelegatedAdminRelationshipStatus {
+    public function getStatus(): ?DelegatedAdminRelationship_status {
         $val = $this->getBackingStore()->get('status');
-        if (is_null($val) || $val instanceof DelegatedAdminRelationshipStatus) {
+        if (is_null($val) || $val instanceof DelegatedAdminRelationship_status) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
@@ -338,9 +338,9 @@ class DelegatedAdminRelationship extends Entity implements Parsable
 
     /**
      * Sets the status property value. The status of the relationship. Read Only. The possible values are: activating, active, approvalPending, approved, created, expired, expiring, terminated, terminating, terminationRequested, unknownFutureValue. Supports $orderby.
-     * @param DelegatedAdminRelationshipStatus|null $value Value to set for the status property.
+     * @param DelegatedAdminRelationship_status|null $value Value to set for the status property.
     */
-    public function setStatus(?DelegatedAdminRelationshipStatus $value): void {
+    public function setStatus(?DelegatedAdminRelationship_status $value): void {
         $this->getBackingStore()->set('status', $value);
     }
 

@@ -64,7 +64,7 @@ class CrossTenantAccessPolicyTarget implements AdditionalDataHolder, BackedModel
         return  [
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'target' => fn(ParseNode $n) => $o->setTarget($n->getStringValue()),
-            'targetType' => fn(ParseNode $n) => $o->setTargetType($n->getEnumValue(CrossTenantAccessPolicyTargetType::class)),
+            'targetType' => fn(ParseNode $n) => $o->setTargetType($n->getEnumValue(CrossTenantAccessPolicyTarget_targetType::class)),
         ];
     }
 
@@ -94,11 +94,11 @@ class CrossTenantAccessPolicyTarget implements AdditionalDataHolder, BackedModel
 
     /**
      * Gets the targetType property value. The type of resource that you want to target. The possible values are: user, group, application, unknownFutureValue.
-     * @return CrossTenantAccessPolicyTargetType|null
+     * @return CrossTenantAccessPolicyTarget_targetType|null
     */
-    public function getTargetType(): ?CrossTenantAccessPolicyTargetType {
+    public function getTargetType(): ?CrossTenantAccessPolicyTarget_targetType {
         $val = $this->getBackingStore()->get('targetType');
-        if (is_null($val) || $val instanceof CrossTenantAccessPolicyTargetType) {
+        if (is_null($val) || $val instanceof CrossTenantAccessPolicyTarget_targetType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'targetType'");
@@ -149,9 +149,9 @@ class CrossTenantAccessPolicyTarget implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the targetType property value. The type of resource that you want to target. The possible values are: user, group, application, unknownFutureValue.
-     * @param CrossTenantAccessPolicyTargetType|null $value Value to set for the targetType property.
+     * @param CrossTenantAccessPolicyTarget_targetType|null $value Value to set for the targetType property.
     */
-    public function setTargetType(?CrossTenantAccessPolicyTargetType $value): void {
+    public function setTargetType(?CrossTenantAccessPolicyTarget_targetType $value): void {
         $this->getBackingStore()->set('targetType', $value);
     }
 

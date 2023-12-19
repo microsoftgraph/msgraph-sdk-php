@@ -93,11 +93,11 @@ class MailboxSettings implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the delegateMeetingMessageDeliveryOptions property value. If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. Possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly.
-     * @return DelegateMeetingMessageDeliveryOptions|null
+     * @return MailboxSettings_delegateMeetingMessageDeliveryOptions|null
     */
-    public function getDelegateMeetingMessageDeliveryOptions(): ?DelegateMeetingMessageDeliveryOptions {
+    public function getDelegateMeetingMessageDeliveryOptions(): ?MailboxSettings_delegateMeetingMessageDeliveryOptions {
         $val = $this->getBackingStore()->get('delegateMeetingMessageDeliveryOptions');
-        if (is_null($val) || $val instanceof DelegateMeetingMessageDeliveryOptions) {
+        if (is_null($val) || $val instanceof MailboxSettings_delegateMeetingMessageDeliveryOptions) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'delegateMeetingMessageDeliveryOptions'");
@@ -113,12 +113,12 @@ class MailboxSettings implements AdditionalDataHolder, BackedModel, Parsable
             'archiveFolder' => fn(ParseNode $n) => $o->setArchiveFolder($n->getStringValue()),
             'automaticRepliesSetting' => fn(ParseNode $n) => $o->setAutomaticRepliesSetting($n->getObjectValue([AutomaticRepliesSetting::class, 'createFromDiscriminatorValue'])),
             'dateFormat' => fn(ParseNode $n) => $o->setDateFormat($n->getStringValue()),
-            'delegateMeetingMessageDeliveryOptions' => fn(ParseNode $n) => $o->setDelegateMeetingMessageDeliveryOptions($n->getEnumValue(DelegateMeetingMessageDeliveryOptions::class)),
+            'delegateMeetingMessageDeliveryOptions' => fn(ParseNode $n) => $o->setDelegateMeetingMessageDeliveryOptions($n->getEnumValue(MailboxSettings_delegateMeetingMessageDeliveryOptions::class)),
             'language' => fn(ParseNode $n) => $o->setLanguage($n->getObjectValue([LocaleInfo::class, 'createFromDiscriminatorValue'])),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'timeFormat' => fn(ParseNode $n) => $o->setTimeFormat($n->getStringValue()),
             'timeZone' => fn(ParseNode $n) => $o->setTimeZone($n->getStringValue()),
-            'userPurpose' => fn(ParseNode $n) => $o->setUserPurpose($n->getEnumValue(UserPurpose::class)),
+            'userPurpose' => fn(ParseNode $n) => $o->setUserPurpose($n->getEnumValue(MailboxSettings_userPurpose::class)),
             'workingHours' => fn(ParseNode $n) => $o->setWorkingHours($n->getObjectValue([WorkingHours::class, 'createFromDiscriminatorValue'])),
         ];
     }
@@ -173,11 +173,11 @@ class MailboxSettings implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the userPurpose property value. The purpose of the mailbox. Differentiates a mailbox for a single user from a shared mailbox and equipment mailbox in Exchange Online. Possible values are: user, linked, shared, room, equipment, others, unknownFutureValue. Read-only.
-     * @return UserPurpose|null
+     * @return MailboxSettings_userPurpose|null
     */
-    public function getUserPurpose(): ?UserPurpose {
+    public function getUserPurpose(): ?MailboxSettings_userPurpose {
         $val = $this->getBackingStore()->get('userPurpose');
-        if (is_null($val) || $val instanceof UserPurpose) {
+        if (is_null($val) || $val instanceof MailboxSettings_userPurpose) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'userPurpose'");
@@ -255,9 +255,9 @@ class MailboxSettings implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the delegateMeetingMessageDeliveryOptions property value. If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. Possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly.
-     * @param DelegateMeetingMessageDeliveryOptions|null $value Value to set for the delegateMeetingMessageDeliveryOptions property.
+     * @param MailboxSettings_delegateMeetingMessageDeliveryOptions|null $value Value to set for the delegateMeetingMessageDeliveryOptions property.
     */
-    public function setDelegateMeetingMessageDeliveryOptions(?DelegateMeetingMessageDeliveryOptions $value): void {
+    public function setDelegateMeetingMessageDeliveryOptions(?MailboxSettings_delegateMeetingMessageDeliveryOptions $value): void {
         $this->getBackingStore()->set('delegateMeetingMessageDeliveryOptions', $value);
     }
 
@@ -295,9 +295,9 @@ class MailboxSettings implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the userPurpose property value. The purpose of the mailbox. Differentiates a mailbox for a single user from a shared mailbox and equipment mailbox in Exchange Online. Possible values are: user, linked, shared, room, equipment, others, unknownFutureValue. Read-only.
-     * @param UserPurpose|null $value Value to set for the userPurpose property.
+     * @param MailboxSettings_userPurpose|null $value Value to set for the userPurpose property.
     */
-    public function setUserPurpose(?UserPurpose $value): void {
+    public function setUserPurpose(?MailboxSettings_userPurpose $value): void {
         $this->getBackingStore()->set('userPurpose', $value);
     }
 

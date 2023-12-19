@@ -64,7 +64,7 @@ class FeatureTarget implements AdditionalDataHolder, BackedModel, Parsable
         return  [
             'id' => fn(ParseNode $n) => $o->setId($n->getStringValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
-            'targetType' => fn(ParseNode $n) => $o->setTargetType($n->getEnumValue(FeatureTargetType::class)),
+            'targetType' => fn(ParseNode $n) => $o->setTargetType($n->getEnumValue(FeatureTarget_targetType::class)),
         ];
     }
 
@@ -94,11 +94,11 @@ class FeatureTarget implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the targetType property value. The kind of entity that's targeted. The possible values are: group, administrativeUnit, role, unknownFutureValue.
-     * @return FeatureTargetType|null
+     * @return FeatureTarget_targetType|null
     */
-    public function getTargetType(): ?FeatureTargetType {
+    public function getTargetType(): ?FeatureTarget_targetType {
         $val = $this->getBackingStore()->get('targetType');
-        if (is_null($val) || $val instanceof FeatureTargetType) {
+        if (is_null($val) || $val instanceof FeatureTarget_targetType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'targetType'");
@@ -149,9 +149,9 @@ class FeatureTarget implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the targetType property value. The kind of entity that's targeted. The possible values are: group, administrativeUnit, role, unknownFutureValue.
-     * @param FeatureTargetType|null $value Value to set for the targetType property.
+     * @param FeatureTarget_targetType|null $value Value to set for the targetType property.
     */
-    public function setTargetType(?FeatureTargetType $value): void {
+    public function setTargetType(?FeatureTarget_targetType $value): void {
         $this->getBackingStore()->set('targetType', $value);
     }
 

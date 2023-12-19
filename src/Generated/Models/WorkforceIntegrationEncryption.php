@@ -63,7 +63,7 @@ class WorkforceIntegrationEncryption implements AdditionalDataHolder, BackedMode
         $o = $this;
         return  [
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
-            'protocol' => fn(ParseNode $n) => $o->setProtocol($n->getEnumValue(WorkforceIntegrationEncryptionProtocol::class)),
+            'protocol' => fn(ParseNode $n) => $o->setProtocol($n->getEnumValue(WorkforceIntegrationEncryption_protocol::class)),
             'secret' => fn(ParseNode $n) => $o->setSecret($n->getStringValue()),
         ];
     }
@@ -82,11 +82,11 @@ class WorkforceIntegrationEncryption implements AdditionalDataHolder, BackedMode
 
     /**
      * Gets the protocol property value. Possible values are: sharedSecret, unknownFutureValue.
-     * @return WorkforceIntegrationEncryptionProtocol|null
+     * @return WorkforceIntegrationEncryption_protocol|null
     */
-    public function getProtocol(): ?WorkforceIntegrationEncryptionProtocol {
+    public function getProtocol(): ?WorkforceIntegrationEncryption_protocol {
         $val = $this->getBackingStore()->get('protocol');
-        if (is_null($val) || $val instanceof WorkforceIntegrationEncryptionProtocol) {
+        if (is_null($val) || $val instanceof WorkforceIntegrationEncryption_protocol) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'protocol'");
@@ -141,9 +141,9 @@ class WorkforceIntegrationEncryption implements AdditionalDataHolder, BackedMode
 
     /**
      * Sets the protocol property value. Possible values are: sharedSecret, unknownFutureValue.
-     * @param WorkforceIntegrationEncryptionProtocol|null $value Value to set for the protocol property.
+     * @param WorkforceIntegrationEncryption_protocol|null $value Value to set for the protocol property.
     */
-    public function setProtocol(?WorkforceIntegrationEncryptionProtocol $value): void {
+    public function setProtocol(?WorkforceIntegrationEncryption_protocol $value): void {
         $this->getBackingStore()->set('protocol', $value);
     }
 

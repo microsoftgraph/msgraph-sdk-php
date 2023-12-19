@@ -59,9 +59,9 @@ class UserRegistrationDetails extends Entity implements Parsable
                 $this->setSystemPreferredAuthenticationMethods($val);
             },
             'userDisplayName' => fn(ParseNode $n) => $o->setUserDisplayName($n->getStringValue()),
-            'userPreferredMethodForSecondaryAuthentication' => fn(ParseNode $n) => $o->setUserPreferredMethodForSecondaryAuthentication($n->getEnumValue(UserDefaultAuthenticationMethod::class)),
+            'userPreferredMethodForSecondaryAuthentication' => fn(ParseNode $n) => $o->setUserPreferredMethodForSecondaryAuthentication($n->getEnumValue(UserRegistrationDetails_userPreferredMethodForSecondaryAuthentication::class)),
             'userPrincipalName' => fn(ParseNode $n) => $o->setUserPrincipalName($n->getStringValue()),
-            'userType' => fn(ParseNode $n) => $o->setUserType($n->getEnumValue(SignInUserType::class)),
+            'userType' => fn(ParseNode $n) => $o->setUserType($n->getEnumValue(UserRegistrationDetails_userType::class)),
         ]);
     }
 
@@ -215,11 +215,11 @@ class UserRegistrationDetails extends Entity implements Parsable
 
     /**
      * Gets the userPreferredMethodForSecondaryAuthentication property value. The method the user selected as the default second-factor for performing multifactor authentication. Possible values are: push, oath, voiceMobile, voiceAlternateMobile, voiceOffice, sms, none, unknownFutureValue. This property is used as preferred MFA method when isSystemPreferredAuthenticationMethodEnabled is false. Supports $filter (any with eq).
-     * @return UserDefaultAuthenticationMethod|null
+     * @return UserRegistrationDetails_userPreferredMethodForSecondaryAuthentication|null
     */
-    public function getUserPreferredMethodForSecondaryAuthentication(): ?UserDefaultAuthenticationMethod {
+    public function getUserPreferredMethodForSecondaryAuthentication(): ?UserRegistrationDetails_userPreferredMethodForSecondaryAuthentication {
         $val = $this->getBackingStore()->get('userPreferredMethodForSecondaryAuthentication');
-        if (is_null($val) || $val instanceof UserDefaultAuthenticationMethod) {
+        if (is_null($val) || $val instanceof UserRegistrationDetails_userPreferredMethodForSecondaryAuthentication) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'userPreferredMethodForSecondaryAuthentication'");
@@ -239,11 +239,11 @@ class UserRegistrationDetails extends Entity implements Parsable
 
     /**
      * Gets the userType property value. Identifies whether the user is a member or guest in the tenant. The possible values are: member, guest, unknownFutureValue.
-     * @return SignInUserType|null
+     * @return UserRegistrationDetails_userType|null
     */
-    public function getUserType(): ?SignInUserType {
+    public function getUserType(): ?UserRegistrationDetails_userType {
         $val = $this->getBackingStore()->get('userType');
-        if (is_null($val) || $val instanceof SignInUserType) {
+        if (is_null($val) || $val instanceof UserRegistrationDetails_userType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'userType'");
@@ -370,9 +370,9 @@ class UserRegistrationDetails extends Entity implements Parsable
 
     /**
      * Sets the userPreferredMethodForSecondaryAuthentication property value. The method the user selected as the default second-factor for performing multifactor authentication. Possible values are: push, oath, voiceMobile, voiceAlternateMobile, voiceOffice, sms, none, unknownFutureValue. This property is used as preferred MFA method when isSystemPreferredAuthenticationMethodEnabled is false. Supports $filter (any with eq).
-     * @param UserDefaultAuthenticationMethod|null $value Value to set for the userPreferredMethodForSecondaryAuthentication property.
+     * @param UserRegistrationDetails_userPreferredMethodForSecondaryAuthentication|null $value Value to set for the userPreferredMethodForSecondaryAuthentication property.
     */
-    public function setUserPreferredMethodForSecondaryAuthentication(?UserDefaultAuthenticationMethod $value): void {
+    public function setUserPreferredMethodForSecondaryAuthentication(?UserRegistrationDetails_userPreferredMethodForSecondaryAuthentication $value): void {
         $this->getBackingStore()->set('userPreferredMethodForSecondaryAuthentication', $value);
     }
 
@@ -386,9 +386,9 @@ class UserRegistrationDetails extends Entity implements Parsable
 
     /**
      * Sets the userType property value. Identifies whether the user is a member or guest in the tenant. The possible values are: member, guest, unknownFutureValue.
-     * @param SignInUserType|null $value Value to set for the userType property.
+     * @param UserRegistrationDetails_userType|null $value Value to set for the userType property.
     */
-    public function setUserType(?SignInUserType $value): void {
+    public function setUserType(?UserRegistrationDetails_userType $value): void {
         $this->getBackingStore()->set('userType', $value);
     }
 

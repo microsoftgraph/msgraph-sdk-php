@@ -40,7 +40,7 @@ class Notebook extends OnenoteEntityHierarchyModel implements Parsable
             'sectionGroupsUrl' => fn(ParseNode $n) => $o->setSectionGroupsUrl($n->getStringValue()),
             'sections' => fn(ParseNode $n) => $o->setSections($n->getCollectionOfObjectValues([OnenoteSection::class, 'createFromDiscriminatorValue'])),
             'sectionsUrl' => fn(ParseNode $n) => $o->setSectionsUrl($n->getStringValue()),
-            'userRole' => fn(ParseNode $n) => $o->setUserRole($n->getEnumValue(OnenoteUserRole::class)),
+            'userRole' => fn(ParseNode $n) => $o->setUserRole($n->getEnumValue(Notebook_userRole::class)),
         ]);
     }
 
@@ -134,11 +134,11 @@ class Notebook extends OnenoteEntityHierarchyModel implements Parsable
 
     /**
      * Gets the userRole property value. Possible values are: Owner, Contributor, Reader, None. Owner represents owner-level access to the notebook. Contributor represents read/write access to the notebook. Reader represents read-only access to the notebook. Read-only.
-     * @return OnenoteUserRole|null
+     * @return Notebook_userRole|null
     */
-    public function getUserRole(): ?OnenoteUserRole {
+    public function getUserRole(): ?Notebook_userRole {
         $val = $this->getBackingStore()->get('userRole');
-        if (is_null($val) || $val instanceof OnenoteUserRole) {
+        if (is_null($val) || $val instanceof Notebook_userRole) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'userRole'");
@@ -218,9 +218,9 @@ class Notebook extends OnenoteEntityHierarchyModel implements Parsable
 
     /**
      * Sets the userRole property value. Possible values are: Owner, Contributor, Reader, None. Owner represents owner-level access to the notebook. Contributor represents read/write access to the notebook. Reader represents read-only access to the notebook. Read-only.
-     * @param OnenoteUserRole|null $value Value to set for the userRole property.
+     * @param Notebook_userRole|null $value Value to set for the userRole property.
     */
-    public function setUserRole(?OnenoteUserRole $value): void {
+    public function setUserRole(?Notebook_userRole $value): void {
         $this->getBackingStore()->set('userRole', $value);
     }
 

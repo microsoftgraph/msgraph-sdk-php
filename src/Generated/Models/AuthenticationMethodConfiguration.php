@@ -61,17 +61,17 @@ class AuthenticationMethodConfiguration extends Entity implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'excludeTargets' => fn(ParseNode $n) => $o->setExcludeTargets($n->getCollectionOfObjectValues([ExcludeTarget::class, 'createFromDiscriminatorValue'])),
-            'state' => fn(ParseNode $n) => $o->setState($n->getEnumValue(AuthenticationMethodState::class)),
+            'state' => fn(ParseNode $n) => $o->setState($n->getEnumValue(AuthenticationMethodConfiguration_state::class)),
         ]);
     }
 
     /**
      * Gets the state property value. The state of the policy. Possible values are: enabled, disabled.
-     * @return AuthenticationMethodState|null
+     * @return AuthenticationMethodConfiguration_state|null
     */
-    public function getState(): ?AuthenticationMethodState {
+    public function getState(): ?AuthenticationMethodConfiguration_state {
         $val = $this->getBackingStore()->get('state');
-        if (is_null($val) || $val instanceof AuthenticationMethodState) {
+        if (is_null($val) || $val instanceof AuthenticationMethodConfiguration_state) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'state'");
@@ -97,9 +97,9 @@ class AuthenticationMethodConfiguration extends Entity implements Parsable
 
     /**
      * Sets the state property value. The state of the policy. Possible values are: enabled, disabled.
-     * @param AuthenticationMethodState|null $value Value to set for the state property.
+     * @param AuthenticationMethodConfiguration_state|null $value Value to set for the state property.
     */
-    public function setState(?AuthenticationMethodState $value): void {
+    public function setState(?AuthenticationMethodConfiguration_state $value): void {
         $this->getBackingStore()->set('state', $value);
     }
 

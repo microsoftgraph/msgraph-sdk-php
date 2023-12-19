@@ -28,11 +28,11 @@ class ServicePrincipalRiskDetection extends Entity implements Parsable
 
     /**
      * Gets the activity property value. Indicates the activity type the detected risk is linked to.  The possible values are: signin, servicePrincipal. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: servicePrincipal.
-     * @return ActivityType|null
+     * @return ServicePrincipalRiskDetection_activity|null
     */
-    public function getActivity(): ?ActivityType {
+    public function getActivity(): ?ServicePrincipalRiskDetection_activity {
         $val = $this->getBackingStore()->get('activity');
-        if (is_null($val) || $val instanceof ActivityType) {
+        if (is_null($val) || $val instanceof ServicePrincipalRiskDetection_activity) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'activity'");
@@ -100,11 +100,11 @@ class ServicePrincipalRiskDetection extends Entity implements Parsable
 
     /**
      * Gets the detectionTimingType property value. Timing of the detected risk , whether real-time or offline. The possible values are: notDefined, realtime, nearRealtime, offline, unknownFutureValue.
-     * @return RiskDetectionTimingType|null
+     * @return ServicePrincipalRiskDetection_detectionTimingType|null
     */
-    public function getDetectionTimingType(): ?RiskDetectionTimingType {
+    public function getDetectionTimingType(): ?ServicePrincipalRiskDetection_detectionTimingType {
         $val = $this->getBackingStore()->get('detectionTimingType');
-        if (is_null($val) || $val instanceof RiskDetectionTimingType) {
+        if (is_null($val) || $val instanceof ServicePrincipalRiskDetection_detectionTimingType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'detectionTimingType'");
@@ -117,13 +117,13 @@ class ServicePrincipalRiskDetection extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'activity' => fn(ParseNode $n) => $o->setActivity($n->getEnumValue(ActivityType::class)),
+            'activity' => fn(ParseNode $n) => $o->setActivity($n->getEnumValue(ServicePrincipalRiskDetection_activity::class)),
             'activityDateTime' => fn(ParseNode $n) => $o->setActivityDateTime($n->getDateTimeValue()),
             'additionalInfo' => fn(ParseNode $n) => $o->setAdditionalInfo($n->getStringValue()),
             'appId' => fn(ParseNode $n) => $o->setAppId($n->getStringValue()),
             'correlationId' => fn(ParseNode $n) => $o->setCorrelationId($n->getStringValue()),
             'detectedDateTime' => fn(ParseNode $n) => $o->setDetectedDateTime($n->getDateTimeValue()),
-            'detectionTimingType' => fn(ParseNode $n) => $o->setDetectionTimingType($n->getEnumValue(RiskDetectionTimingType::class)),
+            'detectionTimingType' => fn(ParseNode $n) => $o->setDetectionTimingType($n->getEnumValue(ServicePrincipalRiskDetection_detectionTimingType::class)),
             'ipAddress' => fn(ParseNode $n) => $o->setIpAddress($n->getStringValue()),
             'keyIds' => function (ParseNode $n) {
                 $val = $n->getCollectionOfPrimitiveValues();
@@ -136,14 +136,14 @@ class ServicePrincipalRiskDetection extends Entity implements Parsable
             'lastUpdatedDateTime' => fn(ParseNode $n) => $o->setLastUpdatedDateTime($n->getDateTimeValue()),
             'location' => fn(ParseNode $n) => $o->setLocation($n->getObjectValue([SignInLocation::class, 'createFromDiscriminatorValue'])),
             'requestId' => fn(ParseNode $n) => $o->setRequestId($n->getStringValue()),
-            'riskDetail' => fn(ParseNode $n) => $o->setRiskDetail($n->getEnumValue(RiskDetail::class)),
+            'riskDetail' => fn(ParseNode $n) => $o->setRiskDetail($n->getEnumValue(ServicePrincipalRiskDetection_riskDetail::class)),
             'riskEventType' => fn(ParseNode $n) => $o->setRiskEventType($n->getStringValue()),
-            'riskLevel' => fn(ParseNode $n) => $o->setRiskLevel($n->getEnumValue(RiskLevel::class)),
-            'riskState' => fn(ParseNode $n) => $o->setRiskState($n->getEnumValue(RiskState::class)),
+            'riskLevel' => fn(ParseNode $n) => $o->setRiskLevel($n->getEnumValue(ServicePrincipalRiskDetection_riskLevel::class)),
+            'riskState' => fn(ParseNode $n) => $o->setRiskState($n->getEnumValue(ServicePrincipalRiskDetection_riskState::class)),
             'servicePrincipalDisplayName' => fn(ParseNode $n) => $o->setServicePrincipalDisplayName($n->getStringValue()),
             'servicePrincipalId' => fn(ParseNode $n) => $o->setServicePrincipalId($n->getStringValue()),
             'source' => fn(ParseNode $n) => $o->setSource($n->getStringValue()),
-            'tokenIssuerType' => fn(ParseNode $n) => $o->setTokenIssuerType($n->getEnumValue(TokenIssuerType::class)),
+            'tokenIssuerType' => fn(ParseNode $n) => $o->setTokenIssuerType($n->getEnumValue(ServicePrincipalRiskDetection_tokenIssuerType::class)),
         ]);
     }
 
@@ -211,11 +211,11 @@ class ServicePrincipalRiskDetection extends Entity implements Parsable
 
     /**
      * Gets the riskDetail property value. Details of the detected risk. Note: Details for this property are only available for Workload Identities Premium customers. Events in tenants without this license will be returned hidden. The possible values are: none, hidden, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: adminConfirmedServicePrincipalCompromised , adminDismissedAllRiskForServicePrincipal.
-     * @return RiskDetail|null
+     * @return ServicePrincipalRiskDetection_riskDetail|null
     */
-    public function getRiskDetail(): ?RiskDetail {
+    public function getRiskDetail(): ?ServicePrincipalRiskDetection_riskDetail {
         $val = $this->getBackingStore()->get('riskDetail');
-        if (is_null($val) || $val instanceof RiskDetail) {
+        if (is_null($val) || $val instanceof ServicePrincipalRiskDetection_riskDetail) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'riskDetail'");
@@ -235,11 +235,11 @@ class ServicePrincipalRiskDetection extends Entity implements Parsable
 
     /**
      * Gets the riskLevel property value. Level of the detected risk. Note: Details for this property are only available for Workload Identities Premium customers. Events in tenants without this license will be returned hidden. The possible values are: low, medium, high, hidden, none.
-     * @return RiskLevel|null
+     * @return ServicePrincipalRiskDetection_riskLevel|null
     */
-    public function getRiskLevel(): ?RiskLevel {
+    public function getRiskLevel(): ?ServicePrincipalRiskDetection_riskLevel {
         $val = $this->getBackingStore()->get('riskLevel');
-        if (is_null($val) || $val instanceof RiskLevel) {
+        if (is_null($val) || $val instanceof ServicePrincipalRiskDetection_riskLevel) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'riskLevel'");
@@ -247,11 +247,11 @@ class ServicePrincipalRiskDetection extends Entity implements Parsable
 
     /**
      * Gets the riskState property value. The state of a detected risky service principal or sign-in activity. The possible values are: none, dismissed, atRisk, confirmedCompromised.
-     * @return RiskState|null
+     * @return ServicePrincipalRiskDetection_riskState|null
     */
-    public function getRiskState(): ?RiskState {
+    public function getRiskState(): ?ServicePrincipalRiskDetection_riskState {
         $val = $this->getBackingStore()->get('riskState');
-        if (is_null($val) || $val instanceof RiskState) {
+        if (is_null($val) || $val instanceof ServicePrincipalRiskDetection_riskState) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'riskState'");
@@ -295,11 +295,11 @@ class ServicePrincipalRiskDetection extends Entity implements Parsable
 
     /**
      * Gets the tokenIssuerType property value. Indicates the type of token issuer for the detected sign-in risk. The possible values are: AzureAD.
-     * @return TokenIssuerType|null
+     * @return ServicePrincipalRiskDetection_tokenIssuerType|null
     */
-    public function getTokenIssuerType(): ?TokenIssuerType {
+    public function getTokenIssuerType(): ?ServicePrincipalRiskDetection_tokenIssuerType {
         $val = $this->getBackingStore()->get('tokenIssuerType');
-        if (is_null($val) || $val instanceof TokenIssuerType) {
+        if (is_null($val) || $val instanceof ServicePrincipalRiskDetection_tokenIssuerType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'tokenIssuerType'");
@@ -335,9 +335,9 @@ class ServicePrincipalRiskDetection extends Entity implements Parsable
 
     /**
      * Sets the activity property value. Indicates the activity type the detected risk is linked to.  The possible values are: signin, servicePrincipal. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: servicePrincipal.
-     * @param ActivityType|null $value Value to set for the activity property.
+     * @param ServicePrincipalRiskDetection_activity|null $value Value to set for the activity property.
     */
-    public function setActivity(?ActivityType $value): void {
+    public function setActivity(?ServicePrincipalRiskDetection_activity $value): void {
         $this->getBackingStore()->set('activity', $value);
     }
 
@@ -383,9 +383,9 @@ class ServicePrincipalRiskDetection extends Entity implements Parsable
 
     /**
      * Sets the detectionTimingType property value. Timing of the detected risk , whether real-time or offline. The possible values are: notDefined, realtime, nearRealtime, offline, unknownFutureValue.
-     * @param RiskDetectionTimingType|null $value Value to set for the detectionTimingType property.
+     * @param ServicePrincipalRiskDetection_detectionTimingType|null $value Value to set for the detectionTimingType property.
     */
-    public function setDetectionTimingType(?RiskDetectionTimingType $value): void {
+    public function setDetectionTimingType(?ServicePrincipalRiskDetection_detectionTimingType $value): void {
         $this->getBackingStore()->set('detectionTimingType', $value);
     }
 
@@ -431,9 +431,9 @@ class ServicePrincipalRiskDetection extends Entity implements Parsable
 
     /**
      * Sets the riskDetail property value. Details of the detected risk. Note: Details for this property are only available for Workload Identities Premium customers. Events in tenants without this license will be returned hidden. The possible values are: none, hidden, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: adminConfirmedServicePrincipalCompromised , adminDismissedAllRiskForServicePrincipal.
-     * @param RiskDetail|null $value Value to set for the riskDetail property.
+     * @param ServicePrincipalRiskDetection_riskDetail|null $value Value to set for the riskDetail property.
     */
-    public function setRiskDetail(?RiskDetail $value): void {
+    public function setRiskDetail(?ServicePrincipalRiskDetection_riskDetail $value): void {
         $this->getBackingStore()->set('riskDetail', $value);
     }
 
@@ -447,17 +447,17 @@ class ServicePrincipalRiskDetection extends Entity implements Parsable
 
     /**
      * Sets the riskLevel property value. Level of the detected risk. Note: Details for this property are only available for Workload Identities Premium customers. Events in tenants without this license will be returned hidden. The possible values are: low, medium, high, hidden, none.
-     * @param RiskLevel|null $value Value to set for the riskLevel property.
+     * @param ServicePrincipalRiskDetection_riskLevel|null $value Value to set for the riskLevel property.
     */
-    public function setRiskLevel(?RiskLevel $value): void {
+    public function setRiskLevel(?ServicePrincipalRiskDetection_riskLevel $value): void {
         $this->getBackingStore()->set('riskLevel', $value);
     }
 
     /**
      * Sets the riskState property value. The state of a detected risky service principal or sign-in activity. The possible values are: none, dismissed, atRisk, confirmedCompromised.
-     * @param RiskState|null $value Value to set for the riskState property.
+     * @param ServicePrincipalRiskDetection_riskState|null $value Value to set for the riskState property.
     */
-    public function setRiskState(?RiskState $value): void {
+    public function setRiskState(?ServicePrincipalRiskDetection_riskState $value): void {
         $this->getBackingStore()->set('riskState', $value);
     }
 
@@ -487,9 +487,9 @@ class ServicePrincipalRiskDetection extends Entity implements Parsable
 
     /**
      * Sets the tokenIssuerType property value. Indicates the type of token issuer for the detected sign-in risk. The possible values are: AzureAD.
-     * @param TokenIssuerType|null $value Value to set for the tokenIssuerType property.
+     * @param ServicePrincipalRiskDetection_tokenIssuerType|null $value Value to set for the tokenIssuerType property.
     */
-    public function setTokenIssuerType(?TokenIssuerType $value): void {
+    public function setTokenIssuerType(?ServicePrincipalRiskDetection_tokenIssuerType $value): void {
         $this->getBackingStore()->set('tokenIssuerType', $value);
     }
 

@@ -109,11 +109,11 @@ class Location implements AdditionalDataHolder, BackedModel, Parsable
             'coordinates' => fn(ParseNode $n) => $o->setCoordinates($n->getObjectValue([OutlookGeoCoordinates::class, 'createFromDiscriminatorValue'])),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'locationEmailAddress' => fn(ParseNode $n) => $o->setLocationEmailAddress($n->getStringValue()),
-            'locationType' => fn(ParseNode $n) => $o->setLocationType($n->getEnumValue(LocationType::class)),
+            'locationType' => fn(ParseNode $n) => $o->setLocationType($n->getEnumValue(Location_locationType::class)),
             'locationUri' => fn(ParseNode $n) => $o->setLocationUri($n->getStringValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'uniqueId' => fn(ParseNode $n) => $o->setUniqueId($n->getStringValue()),
-            'uniqueIdType' => fn(ParseNode $n) => $o->setUniqueIdType($n->getEnumValue(LocationUniqueIdType::class)),
+            'uniqueIdType' => fn(ParseNode $n) => $o->setUniqueIdType($n->getEnumValue(Location_uniqueIdType::class)),
         ];
     }
 
@@ -131,11 +131,11 @@ class Location implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the locationType property value. The type of location. The possible values are: default, conferenceRoom, homeAddress, businessAddress,geoCoordinates, streetAddress, hotel, restaurant, localBusiness, postalAddress. Read-only.
-     * @return LocationType|null
+     * @return Location_locationType|null
     */
-    public function getLocationType(): ?LocationType {
+    public function getLocationType(): ?Location_locationType {
         $val = $this->getBackingStore()->get('locationType');
-        if (is_null($val) || $val instanceof LocationType) {
+        if (is_null($val) || $val instanceof Location_locationType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'locationType'");
@@ -179,11 +179,11 @@ class Location implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the uniqueIdType property value. For internal use only.
-     * @return LocationUniqueIdType|null
+     * @return Location_uniqueIdType|null
     */
-    public function getUniqueIdType(): ?LocationUniqueIdType {
+    public function getUniqueIdType(): ?Location_uniqueIdType {
         $val = $this->getBackingStore()->get('uniqueIdType');
-        if (is_null($val) || $val instanceof LocationUniqueIdType) {
+        if (is_null($val) || $val instanceof Location_uniqueIdType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'uniqueIdType'");
@@ -256,9 +256,9 @@ class Location implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the locationType property value. The type of location. The possible values are: default, conferenceRoom, homeAddress, businessAddress,geoCoordinates, streetAddress, hotel, restaurant, localBusiness, postalAddress. Read-only.
-     * @param LocationType|null $value Value to set for the locationType property.
+     * @param Location_locationType|null $value Value to set for the locationType property.
     */
-    public function setLocationType(?LocationType $value): void {
+    public function setLocationType(?Location_locationType $value): void {
         $this->getBackingStore()->set('locationType', $value);
     }
 
@@ -288,9 +288,9 @@ class Location implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the uniqueIdType property value. For internal use only.
-     * @param LocationUniqueIdType|null $value Value to set for the uniqueIdType property.
+     * @param Location_uniqueIdType|null $value Value to set for the uniqueIdType property.
     */
-    public function setUniqueIdType(?LocationUniqueIdType $value): void {
+    public function setUniqueIdType(?Location_uniqueIdType $value): void {
         $this->getBackingStore()->set('uniqueIdType', $value);
     }
 

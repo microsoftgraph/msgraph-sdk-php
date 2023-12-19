@@ -28,11 +28,11 @@ class EducationAssignment extends Entity implements Parsable
 
     /**
      * Gets the addedStudentAction property value. Optional field to control the assignment behavior for students who are added after the assignment is published. If not specified, defaults to none. Supported values are: none, assignIfOpen. For example, a teacher can use assignIfOpen to indicate that an assignment should be assigned to any new student who joins the class while the assignment is still open, and none to indicate that an assignment should not be assigned to new students.
-     * @return EducationAddedStudentAction|null
+     * @return EducationAssignment_addedStudentAction|null
     */
-    public function getAddedStudentAction(): ?EducationAddedStudentAction {
+    public function getAddedStudentAction(): ?EducationAssignment_addedStudentAction {
         $val = $this->getBackingStore()->get('addedStudentAction');
-        if (is_null($val) || $val instanceof EducationAddedStudentAction) {
+        if (is_null($val) || $val instanceof EducationAssignment_addedStudentAction) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'addedStudentAction'");
@@ -40,11 +40,11 @@ class EducationAssignment extends Entity implements Parsable
 
     /**
      * Gets the addToCalendarAction property value. Optional field to control the assignment behavior  for adding assignments to students' and teachers' calendars when the assignment is published. The possible values are: none, studentsAndPublisher, studentsAndTeamOwners, unknownFutureValue, and studentsOnly. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: studentsOnly. The default value is none.
-     * @return EducationAddToCalendarOptions|null
+     * @return EducationAssignment_addToCalendarAction|null
     */
-    public function getAddToCalendarAction(): ?EducationAddToCalendarOptions {
+    public function getAddToCalendarAction(): ?EducationAssignment_addToCalendarAction {
         $val = $this->getBackingStore()->get('addToCalendarAction');
-        if (is_null($val) || $val instanceof EducationAddToCalendarOptions) {
+        if (is_null($val) || $val instanceof EducationAssignment_addToCalendarAction) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'addToCalendarAction'");
@@ -215,8 +215,8 @@ class EducationAssignment extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'addedStudentAction' => fn(ParseNode $n) => $o->setAddedStudentAction($n->getEnumValue(EducationAddedStudentAction::class)),
-            'addToCalendarAction' => fn(ParseNode $n) => $o->setAddToCalendarAction($n->getEnumValue(EducationAddToCalendarOptions::class)),
+            'addedStudentAction' => fn(ParseNode $n) => $o->setAddedStudentAction($n->getEnumValue(EducationAssignment_addedStudentAction::class)),
+            'addToCalendarAction' => fn(ParseNode $n) => $o->setAddToCalendarAction($n->getEnumValue(EducationAssignment_addToCalendarAction::class)),
             'allowLateSubmissions' => fn(ParseNode $n) => $o->setAllowLateSubmissions($n->getBooleanValue()),
             'allowStudentsToAddResourcesToSubmission' => fn(ParseNode $n) => $o->setAllowStudentsToAddResourcesToSubmission($n->getBooleanValue()),
             'assignDateTime' => fn(ParseNode $n) => $o->setAssignDateTime($n->getDateTimeValue()),
@@ -238,7 +238,7 @@ class EducationAssignment extends Entity implements Parsable
             'resources' => fn(ParseNode $n) => $o->setResources($n->getCollectionOfObjectValues([EducationAssignmentResource::class, 'createFromDiscriminatorValue'])),
             'resourcesFolderUrl' => fn(ParseNode $n) => $o->setResourcesFolderUrl($n->getStringValue()),
             'rubric' => fn(ParseNode $n) => $o->setRubric($n->getObjectValue([EducationRubric::class, 'createFromDiscriminatorValue'])),
-            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(EducationAssignmentStatus::class)),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(EducationAssignment_status::class)),
             'submissions' => fn(ParseNode $n) => $o->setSubmissions($n->getCollectionOfObjectValues([EducationSubmission::class, 'createFromDiscriminatorValue'])),
             'webUrl' => fn(ParseNode $n) => $o->setWebUrl($n->getStringValue()),
         ]);
@@ -344,11 +344,11 @@ class EducationAssignment extends Entity implements Parsable
 
     /**
      * Gets the status property value. Status of the Assignment.  You can't PATCH this value.  Possible values are: draft, scheduled, published, assigned.
-     * @return EducationAssignmentStatus|null
+     * @return EducationAssignment_status|null
     */
-    public function getStatus(): ?EducationAssignmentStatus {
+    public function getStatus(): ?EducationAssignment_status {
         $val = $this->getBackingStore()->get('status');
-        if (is_null($val) || $val instanceof EducationAssignmentStatus) {
+        if (is_null($val) || $val instanceof EducationAssignment_status) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
@@ -406,17 +406,17 @@ class EducationAssignment extends Entity implements Parsable
 
     /**
      * Sets the addedStudentAction property value. Optional field to control the assignment behavior for students who are added after the assignment is published. If not specified, defaults to none. Supported values are: none, assignIfOpen. For example, a teacher can use assignIfOpen to indicate that an assignment should be assigned to any new student who joins the class while the assignment is still open, and none to indicate that an assignment should not be assigned to new students.
-     * @param EducationAddedStudentAction|null $value Value to set for the addedStudentAction property.
+     * @param EducationAssignment_addedStudentAction|null $value Value to set for the addedStudentAction property.
     */
-    public function setAddedStudentAction(?EducationAddedStudentAction $value): void {
+    public function setAddedStudentAction(?EducationAssignment_addedStudentAction $value): void {
         $this->getBackingStore()->set('addedStudentAction', $value);
     }
 
     /**
      * Sets the addToCalendarAction property value. Optional field to control the assignment behavior  for adding assignments to students' and teachers' calendars when the assignment is published. The possible values are: none, studentsAndPublisher, studentsAndTeamOwners, unknownFutureValue, and studentsOnly. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: studentsOnly. The default value is none.
-     * @param EducationAddToCalendarOptions|null $value Value to set for the addToCalendarAction property.
+     * @param EducationAssignment_addToCalendarAction|null $value Value to set for the addToCalendarAction property.
     */
-    public function setAddToCalendarAction(?EducationAddToCalendarOptions $value): void {
+    public function setAddToCalendarAction(?EducationAssignment_addToCalendarAction $value): void {
         $this->getBackingStore()->set('addToCalendarAction', $value);
     }
 
@@ -590,9 +590,9 @@ class EducationAssignment extends Entity implements Parsable
 
     /**
      * Sets the status property value. Status of the Assignment.  You can't PATCH this value.  Possible values are: draft, scheduled, published, assigned.
-     * @param EducationAssignmentStatus|null $value Value to set for the status property.
+     * @param EducationAssignment_status|null $value Value to set for the status property.
     */
-    public function setStatus(?EducationAssignmentStatus $value): void {
+    public function setStatus(?EducationAssignment_status $value): void {
         $this->getBackingStore()->set('status', $value);
     }
 

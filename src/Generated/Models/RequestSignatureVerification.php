@@ -49,11 +49,11 @@ class RequestSignatureVerification implements AdditionalDataHolder, BackedModel,
 
     /**
      * Gets the allowedWeakAlgorithms property value. Specifies which weak algorithms are allowed.  The possible values are: rsaSha1, unknownFutureValue.
-     * @return WeakAlgorithms|null
+     * @return RequestSignatureVerification_allowedWeakAlgorithms|null
     */
-    public function getAllowedWeakAlgorithms(): ?WeakAlgorithms {
+    public function getAllowedWeakAlgorithms(): ?RequestSignatureVerification_allowedWeakAlgorithms {
         $val = $this->getBackingStore()->get('allowedWeakAlgorithms');
-        if (is_null($val) || $val instanceof WeakAlgorithms) {
+        if (is_null($val) || $val instanceof RequestSignatureVerification_allowedWeakAlgorithms) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'allowedWeakAlgorithms'");
@@ -74,7 +74,7 @@ class RequestSignatureVerification implements AdditionalDataHolder, BackedModel,
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'allowedWeakAlgorithms' => fn(ParseNode $n) => $o->setAllowedWeakAlgorithms($n->getEnumValue(WeakAlgorithms::class)),
+            'allowedWeakAlgorithms' => fn(ParseNode $n) => $o->setAllowedWeakAlgorithms($n->getEnumValue(RequestSignatureVerification_allowedWeakAlgorithms::class)),
             'isSignedRequestRequired' => fn(ParseNode $n) => $o->setIsSignedRequestRequired($n->getBooleanValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
@@ -125,9 +125,9 @@ class RequestSignatureVerification implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the allowedWeakAlgorithms property value. Specifies which weak algorithms are allowed.  The possible values are: rsaSha1, unknownFutureValue.
-     * @param WeakAlgorithms|null $value Value to set for the allowedWeakAlgorithms property.
+     * @param RequestSignatureVerification_allowedWeakAlgorithms|null $value Value to set for the allowedWeakAlgorithms property.
     */
-    public function setAllowedWeakAlgorithms(?WeakAlgorithms $value): void {
+    public function setAllowedWeakAlgorithms(?RequestSignatureVerification_allowedWeakAlgorithms $value): void {
         $this->getBackingStore()->set('allowedWeakAlgorithms', $value);
     }
 

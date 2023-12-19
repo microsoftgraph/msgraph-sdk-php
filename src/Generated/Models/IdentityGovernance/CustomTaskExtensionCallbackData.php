@@ -33,17 +33,17 @@ class CustomTaskExtensionCallbackData extends CustomExtensionData implements Par
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'operationStatus' => fn(ParseNode $n) => $o->setOperationStatus($n->getEnumValue(CustomTaskExtensionOperationStatus::class)),
+            'operationStatus' => fn(ParseNode $n) => $o->setOperationStatus($n->getEnumValue(CustomTaskExtensionCallbackData_operationStatus::class)),
         ]);
     }
 
     /**
      * Gets the operationStatus property value. Operation status that's provided by the Azure Logic App indicating whenever the Azure Logic App has run successfully or not. Supported values: completed, failed, unknownFutureValue.
-     * @return CustomTaskExtensionOperationStatus|null
+     * @return CustomTaskExtensionCallbackData_operationStatus|null
     */
-    public function getOperationStatus(): ?CustomTaskExtensionOperationStatus {
+    public function getOperationStatus(): ?CustomTaskExtensionCallbackData_operationStatus {
         $val = $this->getBackingStore()->get('operationStatus');
-        if (is_null($val) || $val instanceof CustomTaskExtensionOperationStatus) {
+        if (is_null($val) || $val instanceof CustomTaskExtensionCallbackData_operationStatus) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'operationStatus'");
@@ -60,9 +60,9 @@ class CustomTaskExtensionCallbackData extends CustomExtensionData implements Par
 
     /**
      * Sets the operationStatus property value. Operation status that's provided by the Azure Logic App indicating whenever the Azure Logic App has run successfully or not. Supported values: completed, failed, unknownFutureValue.
-     * @param CustomTaskExtensionOperationStatus|null $value Value to set for the operationStatus property.
+     * @param CustomTaskExtensionCallbackData_operationStatus|null $value Value to set for the operationStatus property.
     */
-    public function setOperationStatus(?CustomTaskExtensionOperationStatus $value): void {
+    public function setOperationStatus(?CustomTaskExtensionCallbackData_operationStatus $value): void {
         $this->getBackingStore()->set('operationStatus', $value);
     }
 

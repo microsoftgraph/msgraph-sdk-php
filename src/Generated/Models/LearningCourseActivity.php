@@ -82,7 +82,7 @@ class LearningCourseActivity extends Entity implements Parsable
             'learnerUserId' => fn(ParseNode $n) => $o->setLearnerUserId($n->getStringValue()),
             'learningContentId' => fn(ParseNode $n) => $o->setLearningContentId($n->getStringValue()),
             'learningProviderId' => fn(ParseNode $n) => $o->setLearningProviderId($n->getStringValue()),
-            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(CourseStatus::class)),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(LearningCourseActivity_status::class)),
         ]);
     }
 
@@ -124,11 +124,11 @@ class LearningCourseActivity extends Entity implements Parsable
 
     /**
      * Gets the status property value. The status of the course activity. Possible values are: notStarted, inProgress, completed. Required.
-     * @return CourseStatus|null
+     * @return LearningCourseActivity_status|null
     */
-    public function getStatus(): ?CourseStatus {
+    public function getStatus(): ?LearningCourseActivity_status {
         $val = $this->getBackingStore()->get('status');
-        if (is_null($val) || $val instanceof CourseStatus) {
+        if (is_null($val) || $val instanceof LearningCourseActivity_status) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
@@ -199,9 +199,9 @@ class LearningCourseActivity extends Entity implements Parsable
 
     /**
      * Sets the status property value. The status of the course activity. Possible values are: notStarted, inProgress, completed. Required.
-     * @param CourseStatus|null $value Value to set for the status property.
+     * @param LearningCourseActivity_status|null $value Value to set for the status property.
     */
-    public function setStatus(?CourseStatus $value): void {
+    public function setStatus(?LearningCourseActivity_status $value): void {
         $this->getBackingStore()->set('status', $value);
     }
 

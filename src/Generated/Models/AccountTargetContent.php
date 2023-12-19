@@ -71,7 +71,7 @@ class AccountTargetContent implements AdditionalDataHolder, BackedModel, Parsabl
         $o = $this;
         return  [
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
-            'type' => fn(ParseNode $n) => $o->setType($n->getEnumValue(AccountTargetContentType::class)),
+            'type' => fn(ParseNode $n) => $o->setType($n->getEnumValue(AccountTargetContent_type::class)),
         ];
     }
 
@@ -89,11 +89,11 @@ class AccountTargetContent implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Gets the type property value. The type of account target content. Possible values are: unknown, includeAll, addressBook, unknownFutureValue.
-     * @return AccountTargetContentType|null
+     * @return AccountTargetContent_type|null
     */
-    public function getType(): ?AccountTargetContentType {
+    public function getType(): ?AccountTargetContent_type {
         $val = $this->getBackingStore()->get('type');
-        if (is_null($val) || $val instanceof AccountTargetContentType) {
+        if (is_null($val) || $val instanceof AccountTargetContent_type) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'type'");
@@ -135,9 +135,9 @@ class AccountTargetContent implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the type property value. The type of account target content. Possible values are: unknown, includeAll, addressBook, unknownFutureValue.
-     * @param AccountTargetContentType|null $value Value to set for the type property.
+     * @param AccountTargetContent_type|null $value Value to set for the type property.
     */
-    public function setType(?AccountTargetContentType $value): void {
+    public function setType(?AccountTargetContent_type $value): void {
         $this->getBackingStore()->set('type', $value);
     }
 

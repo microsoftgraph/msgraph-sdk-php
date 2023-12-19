@@ -57,11 +57,11 @@ class OnlineMeetingRestricted implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Gets the contentSharingDisabled property value. Specifies the reason shared content from this participant is disabled. Possible values are: watermarkProtection, unknownFutureValue.
-     * @return OnlineMeetingContentSharingDisabledReason|null
+     * @return OnlineMeetingRestricted_contentSharingDisabled|null
     */
-    public function getContentSharingDisabled(): ?OnlineMeetingContentSharingDisabledReason {
+    public function getContentSharingDisabled(): ?OnlineMeetingRestricted_contentSharingDisabled {
         $val = $this->getBackingStore()->get('contentSharingDisabled');
-        if (is_null($val) || $val instanceof OnlineMeetingContentSharingDisabledReason) {
+        if (is_null($val) || $val instanceof OnlineMeetingRestricted_contentSharingDisabled) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'contentSharingDisabled'");
@@ -74,9 +74,9 @@ class OnlineMeetingRestricted implements AdditionalDataHolder, BackedModel, Pars
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'contentSharingDisabled' => fn(ParseNode $n) => $o->setContentSharingDisabled($n->getEnumValue(OnlineMeetingContentSharingDisabledReason::class)),
+            'contentSharingDisabled' => fn(ParseNode $n) => $o->setContentSharingDisabled($n->getEnumValue(OnlineMeetingRestricted_contentSharingDisabled::class)),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
-            'videoDisabled' => fn(ParseNode $n) => $o->setVideoDisabled($n->getEnumValue(OnlineMeetingVideoDisabledReason::class)),
+            'videoDisabled' => fn(ParseNode $n) => $o->setVideoDisabled($n->getEnumValue(OnlineMeetingRestricted_videoDisabled::class)),
         ];
     }
 
@@ -94,11 +94,11 @@ class OnlineMeetingRestricted implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Gets the videoDisabled property value. Specifies the reason video from this participant is disabled. Possible values are: watermarkProtection, unknownFutureValue.
-     * @return OnlineMeetingVideoDisabledReason|null
+     * @return OnlineMeetingRestricted_videoDisabled|null
     */
-    public function getVideoDisabled(): ?OnlineMeetingVideoDisabledReason {
+    public function getVideoDisabled(): ?OnlineMeetingRestricted_videoDisabled {
         $val = $this->getBackingStore()->get('videoDisabled');
-        if (is_null($val) || $val instanceof OnlineMeetingVideoDisabledReason) {
+        if (is_null($val) || $val instanceof OnlineMeetingRestricted_videoDisabled) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'videoDisabled'");
@@ -133,9 +133,9 @@ class OnlineMeetingRestricted implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the contentSharingDisabled property value. Specifies the reason shared content from this participant is disabled. Possible values are: watermarkProtection, unknownFutureValue.
-     * @param OnlineMeetingContentSharingDisabledReason|null $value Value to set for the contentSharingDisabled property.
+     * @param OnlineMeetingRestricted_contentSharingDisabled|null $value Value to set for the contentSharingDisabled property.
     */
-    public function setContentSharingDisabled(?OnlineMeetingContentSharingDisabledReason $value): void {
+    public function setContentSharingDisabled(?OnlineMeetingRestricted_contentSharingDisabled $value): void {
         $this->getBackingStore()->set('contentSharingDisabled', $value);
     }
 
@@ -149,9 +149,9 @@ class OnlineMeetingRestricted implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the videoDisabled property value. Specifies the reason video from this participant is disabled. Possible values are: watermarkProtection, unknownFutureValue.
-     * @param OnlineMeetingVideoDisabledReason|null $value Value to set for the videoDisabled property.
+     * @param OnlineMeetingRestricted_videoDisabled|null $value Value to set for the videoDisabled property.
     */
-    public function setVideoDisabled(?OnlineMeetingVideoDisabledReason $value): void {
+    public function setVideoDisabled(?OnlineMeetingRestricted_videoDisabled $value): void {
         $this->getBackingStore()->set('videoDisabled', $value);
     }
 

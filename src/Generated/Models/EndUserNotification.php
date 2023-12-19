@@ -102,9 +102,9 @@ class EndUserNotification extends Entity implements Parsable
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'lastModifiedBy' => fn(ParseNode $n) => $o->setLastModifiedBy($n->getObjectValue([EmailIdentity::class, 'createFromDiscriminatorValue'])),
             'lastModifiedDateTime' => fn(ParseNode $n) => $o->setLastModifiedDateTime($n->getDateTimeValue()),
-            'notificationType' => fn(ParseNode $n) => $o->setNotificationType($n->getEnumValue(EndUserNotificationType::class)),
-            'source' => fn(ParseNode $n) => $o->setSource($n->getEnumValue(SimulationContentSource::class)),
-            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(SimulationContentStatus::class)),
+            'notificationType' => fn(ParseNode $n) => $o->setNotificationType($n->getEnumValue(EndUserNotification_notificationType::class)),
+            'source' => fn(ParseNode $n) => $o->setSource($n->getEnumValue(EndUserNotification_source::class)),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(EndUserNotification_status::class)),
             'supportedLocales' => function (ParseNode $n) {
                 $val = $n->getCollectionOfPrimitiveValues();
                 if (is_array($val)) {
@@ -142,11 +142,11 @@ class EndUserNotification extends Entity implements Parsable
 
     /**
      * Gets the notificationType property value. Type of notification. Possible values are: unknown, positiveReinforcement, noTraining, trainingAssignment, trainingReminder, unknownFutureValue.
-     * @return EndUserNotificationType|null
+     * @return EndUserNotification_notificationType|null
     */
-    public function getNotificationType(): ?EndUserNotificationType {
+    public function getNotificationType(): ?EndUserNotification_notificationType {
         $val = $this->getBackingStore()->get('notificationType');
-        if (is_null($val) || $val instanceof EndUserNotificationType) {
+        if (is_null($val) || $val instanceof EndUserNotification_notificationType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'notificationType'");
@@ -154,11 +154,11 @@ class EndUserNotification extends Entity implements Parsable
 
     /**
      * Gets the source property value. The source of the content. Possible values are: unknown, global, tenant, unknownFutureValue.
-     * @return SimulationContentSource|null
+     * @return EndUserNotification_source|null
     */
-    public function getSource(): ?SimulationContentSource {
+    public function getSource(): ?EndUserNotification_source {
         $val = $this->getBackingStore()->get('source');
-        if (is_null($val) || $val instanceof SimulationContentSource) {
+        if (is_null($val) || $val instanceof EndUserNotification_source) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'source'");
@@ -166,11 +166,11 @@ class EndUserNotification extends Entity implements Parsable
 
     /**
      * Gets the status property value. The status of the notification. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
-     * @return SimulationContentStatus|null
+     * @return EndUserNotification_status|null
     */
-    public function getStatus(): ?SimulationContentStatus {
+    public function getStatus(): ?EndUserNotification_status {
         $val = $this->getBackingStore()->get('status');
-        if (is_null($val) || $val instanceof SimulationContentStatus) {
+        if (is_null($val) || $val instanceof EndUserNotification_status) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
@@ -267,25 +267,25 @@ class EndUserNotification extends Entity implements Parsable
 
     /**
      * Sets the notificationType property value. Type of notification. Possible values are: unknown, positiveReinforcement, noTraining, trainingAssignment, trainingReminder, unknownFutureValue.
-     * @param EndUserNotificationType|null $value Value to set for the notificationType property.
+     * @param EndUserNotification_notificationType|null $value Value to set for the notificationType property.
     */
-    public function setNotificationType(?EndUserNotificationType $value): void {
+    public function setNotificationType(?EndUserNotification_notificationType $value): void {
         $this->getBackingStore()->set('notificationType', $value);
     }
 
     /**
      * Sets the source property value. The source of the content. Possible values are: unknown, global, tenant, unknownFutureValue.
-     * @param SimulationContentSource|null $value Value to set for the source property.
+     * @param EndUserNotification_source|null $value Value to set for the source property.
     */
-    public function setSource(?SimulationContentSource $value): void {
+    public function setSource(?EndUserNotification_source $value): void {
         $this->getBackingStore()->set('source', $value);
     }
 
     /**
      * Sets the status property value. The status of the notification. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
-     * @param SimulationContentStatus|null $value Value to set for the status property.
+     * @param EndUserNotification_status|null $value Value to set for the status property.
     */
-    public function setStatus(?SimulationContentStatus $value): void {
+    public function setStatus(?EndUserNotification_status $value): void {
         $this->getBackingStore()->set('status', $value);
     }
 

@@ -4,7 +4,6 @@ namespace Microsoft\Graph\Generated\Communications\Calls\Item\Answer;
 
 use Microsoft\Graph\Generated\Models\IncomingCallOptions;
 use Microsoft\Graph\Generated\Models\MediaConfig;
-use Microsoft\Graph\Generated\Models\Modality;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -40,13 +39,13 @@ class AnswerPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Gets the acceptedModalities property value. The acceptedModalities property
-     * @return array<Modality>|null
+     * @return array<AnswerPostRequestBody_acceptedModalities>|null
     */
     public function getAcceptedModalities(): ?array {
         $val = $this->getBackingStore()->get('acceptedModalities');
         if (is_array($val) || is_null($val)) {
-            TypeUtils::validateCollectionValues($val, Modality::class);
-            /** @var array<Modality>|null $val */
+            TypeUtils::validateCollectionValues($val, AnswerPostRequestBody_acceptedModalities::class);
+            /** @var array<AnswerPostRequestBody_acceptedModalities>|null $val */
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'acceptedModalities'");
@@ -104,7 +103,7 @@ class AnswerPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'acceptedModalities' => fn(ParseNode $n) => $o->setAcceptedModalities($n->getCollectionOfEnumValues(Modality::class)),
+            'acceptedModalities' => fn(ParseNode $n) => $o->setAcceptedModalities($n->getCollectionOfEnumValues(AnswerPostRequestBody_acceptedModalities::class)),
             'callbackUri' => fn(ParseNode $n) => $o->setCallbackUri($n->getStringValue()),
             'callOptions' => fn(ParseNode $n) => $o->setCallOptions($n->getObjectValue([IncomingCallOptions::class, 'createFromDiscriminatorValue'])),
             'mediaConfig' => fn(ParseNode $n) => $o->setMediaConfig($n->getObjectValue([MediaConfig::class, 'createFromDiscriminatorValue'])),
@@ -151,7 +150,7 @@ class AnswerPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the acceptedModalities property value. The acceptedModalities property
-     * @param array<Modality>|null $value Value to set for the acceptedModalities property.
+     * @param array<AnswerPostRequestBody_acceptedModalities>|null $value Value to set for the acceptedModalities property.
     */
     public function setAcceptedModalities(?array $value): void {
         $this->getBackingStore()->set('acceptedModalities', $value);

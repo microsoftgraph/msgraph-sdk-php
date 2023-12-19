@@ -193,7 +193,7 @@ class ColumnDefinition extends Entity implements Parsable
             'term' => fn(ParseNode $n) => $o->setTerm($n->getObjectValue([TermColumn::class, 'createFromDiscriminatorValue'])),
             'text' => fn(ParseNode $n) => $o->setText($n->getObjectValue([TextColumn::class, 'createFromDiscriminatorValue'])),
             'thumbnail' => fn(ParseNode $n) => $o->setThumbnail($n->getObjectValue([ThumbnailColumn::class, 'createFromDiscriminatorValue'])),
-            'type' => fn(ParseNode $n) => $o->setType($n->getEnumValue(ColumnTypes::class)),
+            'type' => fn(ParseNode $n) => $o->setType($n->getEnumValue(ColumnDefinition_type::class)),
             'validation' => fn(ParseNode $n) => $o->setValidation($n->getObjectValue([ColumnValidation::class, 'createFromDiscriminatorValue'])),
         ]);
     }
@@ -428,11 +428,11 @@ class ColumnDefinition extends Entity implements Parsable
 
     /**
      * Gets the type property value. For site columns, the type of column. Read-only.
-     * @return ColumnTypes|null
+     * @return ColumnDefinition_type|null
     */
-    public function getType(): ?ColumnTypes {
+    public function getType(): ?ColumnDefinition_type {
         $val = $this->getBackingStore()->get('type');
-        if (is_null($val) || $val instanceof ColumnTypes) {
+        if (is_null($val) || $val instanceof ColumnDefinition_type) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'type'");
@@ -732,9 +732,9 @@ class ColumnDefinition extends Entity implements Parsable
 
     /**
      * Sets the type property value. For site columns, the type of column. Read-only.
-     * @param ColumnTypes|null $value Value to set for the type property.
+     * @param ColumnDefinition_type|null $value Value to set for the type property.
     */
-    public function setType(?ColumnTypes $value): void {
+    public function setType(?ColumnDefinition_type $value): void {
         $this->getBackingStore()->set('type', $value);
     }
 

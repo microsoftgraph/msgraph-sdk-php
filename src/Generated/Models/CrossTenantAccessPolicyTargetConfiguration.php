@@ -37,11 +37,11 @@ class CrossTenantAccessPolicyTargetConfiguration implements AdditionalDataHolder
 
     /**
      * Gets the accessType property value. Defines whether access is allowed or blocked. The possible values are: allowed, blocked, unknownFutureValue.
-     * @return CrossTenantAccessPolicyTargetConfigurationAccessType|null
+     * @return CrossTenantAccessPolicyTargetConfiguration_accessType|null
     */
-    public function getAccessType(): ?CrossTenantAccessPolicyTargetConfigurationAccessType {
+    public function getAccessType(): ?CrossTenantAccessPolicyTargetConfiguration_accessType {
         $val = $this->getBackingStore()->get('accessType');
-        if (is_null($val) || $val instanceof CrossTenantAccessPolicyTargetConfigurationAccessType) {
+        if (is_null($val) || $val instanceof CrossTenantAccessPolicyTargetConfiguration_accessType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'accessType'");
@@ -75,7 +75,7 @@ class CrossTenantAccessPolicyTargetConfiguration implements AdditionalDataHolder
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'accessType' => fn(ParseNode $n) => $o->setAccessType($n->getEnumValue(CrossTenantAccessPolicyTargetConfigurationAccessType::class)),
+            'accessType' => fn(ParseNode $n) => $o->setAccessType($n->getEnumValue(CrossTenantAccessPolicyTargetConfiguration_accessType::class)),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'targets' => fn(ParseNode $n) => $o->setTargets($n->getCollectionOfObjectValues([CrossTenantAccessPolicyTarget::class, 'createFromDiscriminatorValue'])),
         ];
@@ -120,9 +120,9 @@ class CrossTenantAccessPolicyTargetConfiguration implements AdditionalDataHolder
 
     /**
      * Sets the accessType property value. Defines whether access is allowed or blocked. The possible values are: allowed, blocked, unknownFutureValue.
-     * @param CrossTenantAccessPolicyTargetConfigurationAccessType|null $value Value to set for the accessType property.
+     * @param CrossTenantAccessPolicyTargetConfiguration_accessType|null $value Value to set for the accessType property.
     */
-    public function setAccessType(?CrossTenantAccessPolicyTargetConfigurationAccessType $value): void {
+    public function setAccessType(?CrossTenantAccessPolicyTargetConfiguration_accessType $value): void {
         $this->getBackingStore()->set('accessType', $value);
     }
 

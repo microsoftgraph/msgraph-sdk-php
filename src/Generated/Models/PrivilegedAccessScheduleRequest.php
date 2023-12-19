@@ -34,11 +34,11 @@ class PrivilegedAccessScheduleRequest extends Request implements Parsable
 
     /**
      * Gets the action property value. Represents the type of operation on the group membership or ownership assignment request. The possible values are: adminAssign, adminUpdate, adminRemove, selfActivate, selfDeactivate, adminExtend, adminRenew. adminAssign: For administrators to assign group membership or ownership to principals.adminRemove: For administrators to remove principals from group membership or ownership. adminUpdate: For administrators to change existing group membership or ownership assignments.adminExtend: For administrators to extend expiring assignments.adminRenew: For administrators to renew expired assignments.selfActivate: For principals to activate their assignments.selfDeactivate: For principals to deactivate their active assignments.
-     * @return ScheduleRequestActions|null
+     * @return PrivilegedAccessScheduleRequest_action|null
     */
-    public function getAction(): ?ScheduleRequestActions {
+    public function getAction(): ?PrivilegedAccessScheduleRequest_action {
         $val = $this->getBackingStore()->get('action');
-        if (is_null($val) || $val instanceof ScheduleRequestActions) {
+        if (is_null($val) || $val instanceof PrivilegedAccessScheduleRequest_action) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'action'");
@@ -51,7 +51,7 @@ class PrivilegedAccessScheduleRequest extends Request implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'action' => fn(ParseNode $n) => $o->setAction($n->getEnumValue(ScheduleRequestActions::class)),
+            'action' => fn(ParseNode $n) => $o->setAction($n->getEnumValue(PrivilegedAccessScheduleRequest_action::class)),
             'isValidationOnly' => fn(ParseNode $n) => $o->setIsValidationOnly($n->getBooleanValue()),
             'justification' => fn(ParseNode $n) => $o->setJustification($n->getStringValue()),
             'scheduleInfo' => fn(ParseNode $n) => $o->setScheduleInfo($n->getObjectValue([RequestSchedule::class, 'createFromDiscriminatorValue'])),
@@ -122,9 +122,9 @@ class PrivilegedAccessScheduleRequest extends Request implements Parsable
 
     /**
      * Sets the action property value. Represents the type of operation on the group membership or ownership assignment request. The possible values are: adminAssign, adminUpdate, adminRemove, selfActivate, selfDeactivate, adminExtend, adminRenew. adminAssign: For administrators to assign group membership or ownership to principals.adminRemove: For administrators to remove principals from group membership or ownership. adminUpdate: For administrators to change existing group membership or ownership assignments.adminExtend: For administrators to extend expiring assignments.adminRenew: For administrators to renew expired assignments.selfActivate: For principals to activate their assignments.selfDeactivate: For principals to deactivate their active assignments.
-     * @param ScheduleRequestActions|null $value Value to set for the action property.
+     * @param PrivilegedAccessScheduleRequest_action|null $value Value to set for the action property.
     */
-    public function setAction(?ScheduleRequestActions $value): void {
+    public function setAction(?PrivilegedAccessScheduleRequest_action $value): void {
         $this->getBackingStore()->set('action', $value);
     }
 

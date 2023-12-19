@@ -32,17 +32,17 @@ class SimulationNotification extends BaseEndUserNotification implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'targettedUserType' => fn(ParseNode $n) => $o->setTargettedUserType($n->getEnumValue(TargettedUserType::class)),
+            'targettedUserType' => fn(ParseNode $n) => $o->setTargettedUserType($n->getEnumValue(SimulationNotification_targettedUserType::class)),
         ]);
     }
 
     /**
      * Gets the targettedUserType property value. Target user type. Possible values are: unknown, clicked, compromised, allUsers, unknownFutureValue.
-     * @return TargettedUserType|null
+     * @return SimulationNotification_targettedUserType|null
     */
-    public function getTargettedUserType(): ?TargettedUserType {
+    public function getTargettedUserType(): ?SimulationNotification_targettedUserType {
         $val = $this->getBackingStore()->get('targettedUserType');
-        if (is_null($val) || $val instanceof TargettedUserType) {
+        if (is_null($val) || $val instanceof SimulationNotification_targettedUserType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'targettedUserType'");
@@ -59,9 +59,9 @@ class SimulationNotification extends BaseEndUserNotification implements Parsable
 
     /**
      * Sets the targettedUserType property value. Target user type. Possible values are: unknown, clicked, compromised, allUsers, unknownFutureValue.
-     * @param TargettedUserType|null $value Value to set for the targettedUserType property.
+     * @param SimulationNotification_targettedUserType|null $value Value to set for the targettedUserType property.
     */
-    public function setTargettedUserType(?TargettedUserType $value): void {
+    public function setTargettedUserType(?SimulationNotification_targettedUserType $value): void {
         $this->getBackingStore()->set('targettedUserType', $value);
     }
 

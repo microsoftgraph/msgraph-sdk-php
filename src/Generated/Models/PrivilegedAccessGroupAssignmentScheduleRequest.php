@@ -27,11 +27,11 @@ class PrivilegedAccessGroupAssignmentScheduleRequest extends PrivilegedAccessSch
 
     /**
      * Gets the accessId property value. The identifier of a membership or ownership assignment relationship to the group. Required. The possible values are: owner, member, unknownFutureValue.
-     * @return PrivilegedAccessGroupRelationships|null
+     * @return PrivilegedAccessGroupAssignmentScheduleRequest_accessId|null
     */
-    public function getAccessId(): ?PrivilegedAccessGroupRelationships {
+    public function getAccessId(): ?PrivilegedAccessGroupAssignmentScheduleRequest_accessId {
         $val = $this->getBackingStore()->get('accessId');
-        if (is_null($val) || $val instanceof PrivilegedAccessGroupRelationships) {
+        if (is_null($val) || $val instanceof PrivilegedAccessGroupAssignmentScheduleRequest_accessId) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'accessId'");
@@ -56,7 +56,7 @@ class PrivilegedAccessGroupAssignmentScheduleRequest extends PrivilegedAccessSch
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'accessId' => fn(ParseNode $n) => $o->setAccessId($n->getEnumValue(PrivilegedAccessGroupRelationships::class)),
+            'accessId' => fn(ParseNode $n) => $o->setAccessId($n->getEnumValue(PrivilegedAccessGroupAssignmentScheduleRequest_accessId::class)),
             'activatedUsing' => fn(ParseNode $n) => $o->setActivatedUsing($n->getObjectValue([PrivilegedAccessGroupEligibilitySchedule::class, 'createFromDiscriminatorValue'])),
             'group' => fn(ParseNode $n) => $o->setGroup($n->getObjectValue([Group::class, 'createFromDiscriminatorValue'])),
             'groupId' => fn(ParseNode $n) => $o->setGroupId($n->getStringValue()),
@@ -157,9 +157,9 @@ class PrivilegedAccessGroupAssignmentScheduleRequest extends PrivilegedAccessSch
 
     /**
      * Sets the accessId property value. The identifier of a membership or ownership assignment relationship to the group. Required. The possible values are: owner, member, unknownFutureValue.
-     * @param PrivilegedAccessGroupRelationships|null $value Value to set for the accessId property.
+     * @param PrivilegedAccessGroupAssignmentScheduleRequest_accessId|null $value Value to set for the accessId property.
     */
-    public function setAccessId(?PrivilegedAccessGroupRelationships $value): void {
+    public function setAccessId(?PrivilegedAccessGroupAssignmentScheduleRequest_accessId $value): void {
         $this->getBackingStore()->set('accessId', $value);
     }
 

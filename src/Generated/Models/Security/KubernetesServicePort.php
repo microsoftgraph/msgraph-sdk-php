@@ -79,7 +79,7 @@ class KubernetesServicePort implements AdditionalDataHolder, BackedModel, Parsab
             'nodePort' => fn(ParseNode $n) => $o->setNodePort($n->getIntegerValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'port' => fn(ParseNode $n) => $o->setPort($n->getIntegerValue()),
-            'protocol' => fn(ParseNode $n) => $o->setProtocol($n->getEnumValue(ContainerPortProtocol::class)),
+            'protocol' => fn(ParseNode $n) => $o->setProtocol($n->getEnumValue(KubernetesServicePort_protocol::class)),
             'targetPort' => fn(ParseNode $n) => $o->setTargetPort($n->getStringValue()),
         ];
     }
@@ -134,11 +134,11 @@ class KubernetesServicePort implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Gets the protocol property value. The protocol name. Possible values are: udp, tcp, sctp, unknownFutureValue.
-     * @return ContainerPortProtocol|null
+     * @return KubernetesServicePort_protocol|null
     */
-    public function getProtocol(): ?ContainerPortProtocol {
+    public function getProtocol(): ?KubernetesServicePort_protocol {
         $val = $this->getBackingStore()->get('protocol');
-        if (is_null($val) || $val instanceof ContainerPortProtocol) {
+        if (is_null($val) || $val instanceof KubernetesServicePort_protocol) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'protocol'");
@@ -229,9 +229,9 @@ class KubernetesServicePort implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the protocol property value. The protocol name. Possible values are: udp, tcp, sctp, unknownFutureValue.
-     * @param ContainerPortProtocol|null $value Value to set for the protocol property.
+     * @param KubernetesServicePort_protocol|null $value Value to set for the protocol property.
     */
-    public function setProtocol(?ContainerPortProtocol $value): void {
+    public function setProtocol(?KubernetesServicePort_protocol $value): void {
         $this->getBackingStore()->set('protocol', $value);
     }
 

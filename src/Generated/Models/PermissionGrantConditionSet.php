@@ -120,7 +120,7 @@ class PermissionGrantConditionSet extends Entity implements Parsable
                 /** @var array<string>|null $val */
                 $this->setPermissions($val);
             },
-            'permissionType' => fn(ParseNode $n) => $o->setPermissionType($n->getEnumValue(PermissionType::class)),
+            'permissionType' => fn(ParseNode $n) => $o->setPermissionType($n->getEnumValue(PermissionGrantConditionSet_permissionType::class)),
             'resourceApplication' => fn(ParseNode $n) => $o->setResourceApplication($n->getStringValue()),
         ]);
     }
@@ -153,11 +153,11 @@ class PermissionGrantConditionSet extends Entity implements Parsable
 
     /**
      * Gets the permissionType property value. The permission type of the permission being granted. Possible values: application for application permissions (for example app roles), or delegated for delegated permissions. The value delegatedUserConsentable indicates delegated permissions that haven't been configured by the API publisher to require admin consent—this value may be used in built-in permission grant policies, but can't be used in custom permission grant policies. Required.
-     * @return PermissionType|null
+     * @return PermissionGrantConditionSet_permissionType|null
     */
-    public function getPermissionType(): ?PermissionType {
+    public function getPermissionType(): ?PermissionGrantConditionSet_permissionType {
         $val = $this->getBackingStore()->get('permissionType');
-        if (is_null($val) || $val instanceof PermissionType) {
+        if (is_null($val) || $val instanceof PermissionGrantConditionSet_permissionType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'permissionType'");
@@ -241,9 +241,9 @@ class PermissionGrantConditionSet extends Entity implements Parsable
 
     /**
      * Sets the permissionType property value. The permission type of the permission being granted. Possible values: application for application permissions (for example app roles), or delegated for delegated permissions. The value delegatedUserConsentable indicates delegated permissions that haven't been configured by the API publisher to require admin consent—this value may be used in built-in permission grant policies, but can't be used in custom permission grant policies. Required.
-     * @param PermissionType|null $value Value to set for the permissionType property.
+     * @param PermissionGrantConditionSet_permissionType|null $value Value to set for the permissionType property.
     */
-    public function setPermissionType(?PermissionType $value): void {
+    public function setPermissionType(?PermissionGrantConditionSet_permissionType $value): void {
         $this->getBackingStore()->set('permissionType', $value);
     }
 

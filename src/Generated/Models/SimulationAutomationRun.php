@@ -47,7 +47,7 @@ class SimulationAutomationRun extends Entity implements Parsable
             'endDateTime' => fn(ParseNode $n) => $o->setEndDateTime($n->getDateTimeValue()),
             'simulationId' => fn(ParseNode $n) => $o->setSimulationId($n->getStringValue()),
             'startDateTime' => fn(ParseNode $n) => $o->setStartDateTime($n->getDateTimeValue()),
-            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(SimulationAutomationRunStatus::class)),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(SimulationAutomationRun_status::class)),
         ]);
     }
 
@@ -77,11 +77,11 @@ class SimulationAutomationRun extends Entity implements Parsable
 
     /**
      * Gets the status property value. Status of the attack simulation automation run. The possible values are: unknown, running, succeeded, failed, skipped, unknownFutureValue.
-     * @return SimulationAutomationRunStatus|null
+     * @return SimulationAutomationRun_status|null
     */
-    public function getStatus(): ?SimulationAutomationRunStatus {
+    public function getStatus(): ?SimulationAutomationRun_status {
         $val = $this->getBackingStore()->get('status');
-        if (is_null($val) || $val instanceof SimulationAutomationRunStatus) {
+        if (is_null($val) || $val instanceof SimulationAutomationRun_status) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
@@ -125,9 +125,9 @@ class SimulationAutomationRun extends Entity implements Parsable
 
     /**
      * Sets the status property value. Status of the attack simulation automation run. The possible values are: unknown, running, succeeded, failed, skipped, unknownFutureValue.
-     * @param SimulationAutomationRunStatus|null $value Value to set for the status property.
+     * @param SimulationAutomationRun_status|null $value Value to set for the status property.
     */
-    public function setStatus(?SimulationAutomationRunStatus $value): void {
+    public function setStatus(?SimulationAutomationRun_status $value): void {
         $this->getBackingStore()->set('status', $value);
     }
 

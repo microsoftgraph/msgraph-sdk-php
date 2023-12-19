@@ -55,11 +55,11 @@ class Fido2AuthenticationMethod extends AuthenticationMethod implements Parsable
 
     /**
      * Gets the attestationLevel property value. The attestation level of this FIDO2 security key. Possible values are: attested, or notAttested.
-     * @return AttestationLevel|null
+     * @return Fido2AuthenticationMethod_attestationLevel|null
     */
-    public function getAttestationLevel(): ?AttestationLevel {
+    public function getAttestationLevel(): ?Fido2AuthenticationMethod_attestationLevel {
         $val = $this->getBackingStore()->get('attestationLevel');
-        if (is_null($val) || $val instanceof AttestationLevel) {
+        if (is_null($val) || $val instanceof Fido2AuthenticationMethod_attestationLevel) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'attestationLevel'");
@@ -105,7 +105,7 @@ class Fido2AuthenticationMethod extends AuthenticationMethod implements Parsable
                 /** @var array<string>|null $val */
                 $this->setAttestationCertificates($val);
             },
-            'attestationLevel' => fn(ParseNode $n) => $o->setAttestationLevel($n->getEnumValue(AttestationLevel::class)),
+            'attestationLevel' => fn(ParseNode $n) => $o->setAttestationLevel($n->getEnumValue(Fido2AuthenticationMethod_attestationLevel::class)),
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'model' => fn(ParseNode $n) => $o->setModel($n->getStringValue()),
@@ -156,9 +156,9 @@ class Fido2AuthenticationMethod extends AuthenticationMethod implements Parsable
 
     /**
      * Sets the attestationLevel property value. The attestation level of this FIDO2 security key. Possible values are: attested, or notAttested.
-     * @param AttestationLevel|null $value Value to set for the attestationLevel property.
+     * @param Fido2AuthenticationMethod_attestationLevel|null $value Value to set for the attestationLevel property.
     */
-    public function setAttestationLevel(?AttestationLevel $value): void {
+    public function setAttestationLevel(?Fido2AuthenticationMethod_attestationLevel $value): void {
         $this->getBackingStore()->set('attestationLevel', $value);
     }
 

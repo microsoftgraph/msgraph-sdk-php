@@ -32,17 +32,17 @@ class TeamworkUserIdentity extends Identity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'userIdentityType' => fn(ParseNode $n) => $o->setUserIdentityType($n->getEnumValue(TeamworkUserIdentityType::class)),
+            'userIdentityType' => fn(ParseNode $n) => $o->setUserIdentityType($n->getEnumValue(TeamworkUserIdentity_userIdentityType::class)),
         ]);
     }
 
     /**
      * Gets the userIdentityType property value. Type of user. Possible values are: aadUser, onPremiseAadUser, anonymousGuest, federatedUser, personalMicrosoftAccountUser, skypeUser, phoneUser, unknownFutureValue and emailUser.
-     * @return TeamworkUserIdentityType|null
+     * @return TeamworkUserIdentity_userIdentityType|null
     */
-    public function getUserIdentityType(): ?TeamworkUserIdentityType {
+    public function getUserIdentityType(): ?TeamworkUserIdentity_userIdentityType {
         $val = $this->getBackingStore()->get('userIdentityType');
-        if (is_null($val) || $val instanceof TeamworkUserIdentityType) {
+        if (is_null($val) || $val instanceof TeamworkUserIdentity_userIdentityType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'userIdentityType'");
@@ -59,9 +59,9 @@ class TeamworkUserIdentity extends Identity implements Parsable
 
     /**
      * Sets the userIdentityType property value. Type of user. Possible values are: aadUser, onPremiseAadUser, anonymousGuest, federatedUser, personalMicrosoftAccountUser, skypeUser, phoneUser, unknownFutureValue and emailUser.
-     * @param TeamworkUserIdentityType|null $value Value to set for the userIdentityType property.
+     * @param TeamworkUserIdentity_userIdentityType|null $value Value to set for the userIdentityType property.
     */
-    public function setUserIdentityType(?TeamworkUserIdentityType $value): void {
+    public function setUserIdentityType(?TeamworkUserIdentity_userIdentityType $value): void {
         $this->getBackingStore()->set('userIdentityType', $value);
     }
 

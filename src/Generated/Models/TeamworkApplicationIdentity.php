@@ -27,11 +27,11 @@ class TeamworkApplicationIdentity extends Identity implements Parsable
 
     /**
      * Gets the applicationIdentityType property value. Type of application that is referenced. Possible values are: aadApplication, bot, tenantBot, office365Connector, outgoingWebhook, and unknownFutureValue.
-     * @return TeamworkApplicationIdentityType|null
+     * @return TeamworkApplicationIdentity_applicationIdentityType|null
     */
-    public function getApplicationIdentityType(): ?TeamworkApplicationIdentityType {
+    public function getApplicationIdentityType(): ?TeamworkApplicationIdentity_applicationIdentityType {
         $val = $this->getBackingStore()->get('applicationIdentityType');
-        if (is_null($val) || $val instanceof TeamworkApplicationIdentityType) {
+        if (is_null($val) || $val instanceof TeamworkApplicationIdentity_applicationIdentityType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'applicationIdentityType'");
@@ -44,7 +44,7 @@ class TeamworkApplicationIdentity extends Identity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'applicationIdentityType' => fn(ParseNode $n) => $o->setApplicationIdentityType($n->getEnumValue(TeamworkApplicationIdentityType::class)),
+            'applicationIdentityType' => fn(ParseNode $n) => $o->setApplicationIdentityType($n->getEnumValue(TeamworkApplicationIdentity_applicationIdentityType::class)),
         ]);
     }
 
@@ -59,9 +59,9 @@ class TeamworkApplicationIdentity extends Identity implements Parsable
 
     /**
      * Sets the applicationIdentityType property value. Type of application that is referenced. Possible values are: aadApplication, bot, tenantBot, office365Connector, outgoingWebhook, and unknownFutureValue.
-     * @param TeamworkApplicationIdentityType|null $value Value to set for the applicationIdentityType property.
+     * @param TeamworkApplicationIdentity_applicationIdentityType|null $value Value to set for the applicationIdentityType property.
     */
-    public function setApplicationIdentityType(?TeamworkApplicationIdentityType $value): void {
+    public function setApplicationIdentityType(?TeamworkApplicationIdentity_applicationIdentityType $value): void {
         $this->getBackingStore()->set('applicationIdentityType', $value);
     }
 

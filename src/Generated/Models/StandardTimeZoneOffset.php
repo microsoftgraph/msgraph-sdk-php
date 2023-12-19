@@ -77,11 +77,11 @@ class StandardTimeZoneOffset implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Gets the dayOfWeek property value. Represents the day of the week when the transition from daylight saving time to standard time.
-     * @return DayOfWeek|null
+     * @return StandardTimeZoneOffset_dayOfWeek|null
     */
-    public function getDayOfWeek(): ?DayOfWeek {
+    public function getDayOfWeek(): ?StandardTimeZoneOffset_dayOfWeek {
         $val = $this->getBackingStore()->get('dayOfWeek');
-        if (is_null($val) || $val instanceof DayOfWeek) {
+        if (is_null($val) || $val instanceof StandardTimeZoneOffset_dayOfWeek) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'dayOfWeek'");
@@ -95,7 +95,7 @@ class StandardTimeZoneOffset implements AdditionalDataHolder, BackedModel, Parsa
         $o = $this;
         return  [
             'dayOccurrence' => fn(ParseNode $n) => $o->setDayOccurrence($n->getIntegerValue()),
-            'dayOfWeek' => fn(ParseNode $n) => $o->setDayOfWeek($n->getEnumValue(DayOfWeek::class)),
+            'dayOfWeek' => fn(ParseNode $n) => $o->setDayOfWeek($n->getEnumValue(StandardTimeZoneOffset_dayOfWeek::class)),
             'month' => fn(ParseNode $n) => $o->setMonth($n->getIntegerValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'time' => fn(ParseNode $n) => $o->setTime($n->getTimeValue()),
@@ -191,9 +191,9 @@ class StandardTimeZoneOffset implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the dayOfWeek property value. Represents the day of the week when the transition from daylight saving time to standard time.
-     * @param DayOfWeek|null $value Value to set for the dayOfWeek property.
+     * @param StandardTimeZoneOffset_dayOfWeek|null $value Value to set for the dayOfWeek property.
     */
-    public function setDayOfWeek(?DayOfWeek $value): void {
+    public function setDayOfWeek(?StandardTimeZoneOffset_dayOfWeek $value): void {
         $this->getBackingStore()->set('dayOfWeek', $value);
     }
 

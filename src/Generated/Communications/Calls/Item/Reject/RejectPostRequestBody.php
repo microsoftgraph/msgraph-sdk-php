@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Communications\Calls\Item\Reject;
 
-use Microsoft\Graph\Generated\Models\RejectReason;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -76,17 +75,17 @@ class RejectPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
         $o = $this;
         return  [
             'callbackUri' => fn(ParseNode $n) => $o->setCallbackUri($n->getStringValue()),
-            'reason' => fn(ParseNode $n) => $o->setReason($n->getEnumValue(RejectReason::class)),
+            'reason' => fn(ParseNode $n) => $o->setReason($n->getEnumValue(RejectPostRequestBody_reason::class)),
         ];
     }
 
     /**
      * Gets the reason property value. The reason property
-     * @return RejectReason|null
+     * @return RejectPostRequestBody_reason|null
     */
-    public function getReason(): ?RejectReason {
+    public function getReason(): ?RejectPostRequestBody_reason {
         $val = $this->getBackingStore()->get('reason');
-        if (is_null($val) || $val instanceof RejectReason) {
+        if (is_null($val) || $val instanceof RejectPostRequestBody_reason) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'reason'");
@@ -128,9 +127,9 @@ class RejectPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the reason property value. The reason property
-     * @param RejectReason|null $value Value to set for the reason property.
+     * @param RejectPostRequestBody_reason|null $value Value to set for the reason property.
     */
-    public function setReason(?RejectReason $value): void {
+    public function setReason(?RejectPostRequestBody_reason $value): void {
         $this->getBackingStore()->set('reason', $value);
     }
 

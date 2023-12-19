@@ -58,19 +58,19 @@ class AccessPackageResourceRequest extends Entity implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'catalog' => fn(ParseNode $n) => $o->setCatalog($n->getObjectValue([AccessPackageCatalog::class, 'createFromDiscriminatorValue'])),
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
-            'requestType' => fn(ParseNode $n) => $o->setRequestType($n->getEnumValue(AccessPackageRequestType::class)),
+            'requestType' => fn(ParseNode $n) => $o->setRequestType($n->getEnumValue(AccessPackageResourceRequest_requestType::class)),
             'resource' => fn(ParseNode $n) => $o->setResource($n->getObjectValue([AccessPackageResource::class, 'createFromDiscriminatorValue'])),
-            'state' => fn(ParseNode $n) => $o->setState($n->getEnumValue(AccessPackageRequestState::class)),
+            'state' => fn(ParseNode $n) => $o->setState($n->getEnumValue(AccessPackageResourceRequest_state::class)),
         ]);
     }
 
     /**
      * Gets the requestType property value. The type of the request. Use adminAdd to add a resource, if the caller is an administrator or resource owner, adminUpdate to update a resource, or adminRemove to remove a resource.
-     * @return AccessPackageRequestType|null
+     * @return AccessPackageResourceRequest_requestType|null
     */
-    public function getRequestType(): ?AccessPackageRequestType {
+    public function getRequestType(): ?AccessPackageResourceRequest_requestType {
         $val = $this->getBackingStore()->get('requestType');
-        if (is_null($val) || $val instanceof AccessPackageRequestType) {
+        if (is_null($val) || $val instanceof AccessPackageResourceRequest_requestType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'requestType'");
@@ -90,11 +90,11 @@ class AccessPackageResourceRequest extends Entity implements Parsable
 
     /**
      * Gets the state property value. The outcome of whether the service was able to add the resource to the catalog.  The value is delivered if the resource was added or removed, and deliveryFailed if it could not be added or removed. Read-only.
-     * @return AccessPackageRequestState|null
+     * @return AccessPackageResourceRequest_state|null
     */
-    public function getState(): ?AccessPackageRequestState {
+    public function getState(): ?AccessPackageResourceRequest_state {
         $val = $this->getBackingStore()->get('state');
-        if (is_null($val) || $val instanceof AccessPackageRequestState) {
+        if (is_null($val) || $val instanceof AccessPackageResourceRequest_state) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'state'");
@@ -131,9 +131,9 @@ class AccessPackageResourceRequest extends Entity implements Parsable
 
     /**
      * Sets the requestType property value. The type of the request. Use adminAdd to add a resource, if the caller is an administrator or resource owner, adminUpdate to update a resource, or adminRemove to remove a resource.
-     * @param AccessPackageRequestType|null $value Value to set for the requestType property.
+     * @param AccessPackageResourceRequest_requestType|null $value Value to set for the requestType property.
     */
-    public function setRequestType(?AccessPackageRequestType $value): void {
+    public function setRequestType(?AccessPackageResourceRequest_requestType $value): void {
         $this->getBackingStore()->set('requestType', $value);
     }
 
@@ -147,9 +147,9 @@ class AccessPackageResourceRequest extends Entity implements Parsable
 
     /**
      * Sets the state property value. The outcome of whether the service was able to add the resource to the catalog.  The value is delivered if the resource was added or removed, and deliveryFailed if it could not be added or removed. Read-only.
-     * @param AccessPackageRequestState|null $value Value to set for the state property.
+     * @param AccessPackageResourceRequest_state|null $value Value to set for the state property.
     */
-    public function setState(?AccessPackageRequestState $value): void {
+    public function setState(?AccessPackageResourceRequest_state $value): void {
         $this->getBackingStore()->set('state', $value);
     }
 

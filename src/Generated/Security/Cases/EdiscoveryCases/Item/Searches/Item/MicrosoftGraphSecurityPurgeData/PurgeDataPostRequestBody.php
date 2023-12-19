@@ -2,8 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\MicrosoftGraphSecurityPurgeData;
 
-use Microsoft\Graph\Generated\Models\Security\PurgeAreas;
-use Microsoft\Graph\Generated\Models\Security\PurgeType;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -64,18 +62,18 @@ class PurgeDataPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'purgeAreas' => fn(ParseNode $n) => $o->setPurgeAreas($n->getEnumValue(PurgeAreas::class)),
-            'purgeType' => fn(ParseNode $n) => $o->setPurgeType($n->getEnumValue(PurgeType::class)),
+            'purgeAreas' => fn(ParseNode $n) => $o->setPurgeAreas($n->getEnumValue(PurgeDataPostRequestBody_purgeAreas::class)),
+            'purgeType' => fn(ParseNode $n) => $o->setPurgeType($n->getEnumValue(PurgeDataPostRequestBody_purgeType::class)),
         ];
     }
 
     /**
      * Gets the purgeAreas property value. The purgeAreas property
-     * @return PurgeAreas|null
+     * @return PurgeDataPostRequestBody_purgeAreas|null
     */
-    public function getPurgeAreas(): ?PurgeAreas {
+    public function getPurgeAreas(): ?PurgeDataPostRequestBody_purgeAreas {
         $val = $this->getBackingStore()->get('purgeAreas');
-        if (is_null($val) || $val instanceof PurgeAreas) {
+        if (is_null($val) || $val instanceof PurgeDataPostRequestBody_purgeAreas) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'purgeAreas'");
@@ -83,11 +81,11 @@ class PurgeDataPostRequestBody implements AdditionalDataHolder, BackedModel, Par
 
     /**
      * Gets the purgeType property value. The purgeType property
-     * @return PurgeType|null
+     * @return PurgeDataPostRequestBody_purgeType|null
     */
-    public function getPurgeType(): ?PurgeType {
+    public function getPurgeType(): ?PurgeDataPostRequestBody_purgeType {
         $val = $this->getBackingStore()->get('purgeType');
-        if (is_null($val) || $val instanceof PurgeType) {
+        if (is_null($val) || $val instanceof PurgeDataPostRequestBody_purgeType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'purgeType'");
@@ -121,17 +119,17 @@ class PurgeDataPostRequestBody implements AdditionalDataHolder, BackedModel, Par
 
     /**
      * Sets the purgeAreas property value. The purgeAreas property
-     * @param PurgeAreas|null $value Value to set for the purgeAreas property.
+     * @param PurgeDataPostRequestBody_purgeAreas|null $value Value to set for the purgeAreas property.
     */
-    public function setPurgeAreas(?PurgeAreas $value): void {
+    public function setPurgeAreas(?PurgeDataPostRequestBody_purgeAreas $value): void {
         $this->getBackingStore()->set('purgeAreas', $value);
     }
 
     /**
      * Sets the purgeType property value. The purgeType property
-     * @param PurgeType|null $value Value to set for the purgeType property.
+     * @param PurgeDataPostRequestBody_purgeType|null $value Value to set for the purgeType property.
     */
-    public function setPurgeType(?PurgeType $value): void {
+    public function setPurgeType(?PurgeDataPostRequestBody_purgeType $value): void {
         $this->getBackingStore()->set('purgeType', $value);
     }
 

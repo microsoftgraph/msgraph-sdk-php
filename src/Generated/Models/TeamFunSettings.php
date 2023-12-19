@@ -101,18 +101,18 @@ class TeamFunSettings implements AdditionalDataHolder, BackedModel, Parsable
             'allowCustomMemes' => fn(ParseNode $n) => $o->setAllowCustomMemes($n->getBooleanValue()),
             'allowGiphy' => fn(ParseNode $n) => $o->setAllowGiphy($n->getBooleanValue()),
             'allowStickersAndMemes' => fn(ParseNode $n) => $o->setAllowStickersAndMemes($n->getBooleanValue()),
-            'giphyContentRating' => fn(ParseNode $n) => $o->setGiphyContentRating($n->getEnumValue(GiphyRatingType::class)),
+            'giphyContentRating' => fn(ParseNode $n) => $o->setGiphyContentRating($n->getEnumValue(TeamFunSettings_giphyContentRating::class)),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 
     /**
      * Gets the giphyContentRating property value. Giphy content rating. Possible values are: moderate, strict.
-     * @return GiphyRatingType|null
+     * @return TeamFunSettings_giphyContentRating|null
     */
-    public function getGiphyContentRating(): ?GiphyRatingType {
+    public function getGiphyContentRating(): ?TeamFunSettings_giphyContentRating {
         $val = $this->getBackingStore()->get('giphyContentRating');
-        if (is_null($val) || $val instanceof GiphyRatingType) {
+        if (is_null($val) || $val instanceof TeamFunSettings_giphyContentRating) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'giphyContentRating'");
@@ -185,9 +185,9 @@ class TeamFunSettings implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the giphyContentRating property value. Giphy content rating. Possible values are: moderate, strict.
-     * @param GiphyRatingType|null $value Value to set for the giphyContentRating property.
+     * @param TeamFunSettings_giphyContentRating|null $value Value to set for the giphyContentRating property.
     */
-    public function setGiphyContentRating(?GiphyRatingType $value): void {
+    public function setGiphyContentRating(?TeamFunSettings_giphyContentRating $value): void {
         $this->getBackingStore()->set('giphyContentRating', $value);
     }
 

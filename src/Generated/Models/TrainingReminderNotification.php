@@ -27,11 +27,11 @@ class TrainingReminderNotification extends BaseEndUserNotification implements Pa
 
     /**
      * Gets the deliveryFrequency property value. Configurable frequency for the reminder email introduced during simulation creation. Possible values are: unknown, weekly, biWeekly, unknownFutureValue.
-     * @return NotificationDeliveryFrequency|null
+     * @return TrainingReminderNotification_deliveryFrequency|null
     */
-    public function getDeliveryFrequency(): ?NotificationDeliveryFrequency {
+    public function getDeliveryFrequency(): ?TrainingReminderNotification_deliveryFrequency {
         $val = $this->getBackingStore()->get('deliveryFrequency');
-        if (is_null($val) || $val instanceof NotificationDeliveryFrequency) {
+        if (is_null($val) || $val instanceof TrainingReminderNotification_deliveryFrequency) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'deliveryFrequency'");
@@ -44,7 +44,7 @@ class TrainingReminderNotification extends BaseEndUserNotification implements Pa
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'deliveryFrequency' => fn(ParseNode $n) => $o->setDeliveryFrequency($n->getEnumValue(NotificationDeliveryFrequency::class)),
+            'deliveryFrequency' => fn(ParseNode $n) => $o->setDeliveryFrequency($n->getEnumValue(TrainingReminderNotification_deliveryFrequency::class)),
         ]);
     }
 
@@ -59,9 +59,9 @@ class TrainingReminderNotification extends BaseEndUserNotification implements Pa
 
     /**
      * Sets the deliveryFrequency property value. Configurable frequency for the reminder email introduced during simulation creation. Possible values are: unknown, weekly, biWeekly, unknownFutureValue.
-     * @param NotificationDeliveryFrequency|null $value Value to set for the deliveryFrequency property.
+     * @param TrainingReminderNotification_deliveryFrequency|null $value Value to set for the deliveryFrequency property.
     */
-    public function setDeliveryFrequency(?NotificationDeliveryFrequency $value): void {
+    public function setDeliveryFrequency(?TrainingReminderNotification_deliveryFrequency $value): void {
         $this->getBackingStore()->set('deliveryFrequency', $value);
     }
 

@@ -130,12 +130,12 @@ class Team extends Entity implements Parsable
             'photo' => fn(ParseNode $n) => $o->setPhoto($n->getObjectValue([ProfilePhoto::class, 'createFromDiscriminatorValue'])),
             'primaryChannel' => fn(ParseNode $n) => $o->setPrimaryChannel($n->getObjectValue([Channel::class, 'createFromDiscriminatorValue'])),
             'schedule' => fn(ParseNode $n) => $o->setSchedule($n->getObjectValue([Schedule::class, 'createFromDiscriminatorValue'])),
-            'specialization' => fn(ParseNode $n) => $o->setSpecialization($n->getEnumValue(TeamSpecialization::class)),
+            'specialization' => fn(ParseNode $n) => $o->setSpecialization($n->getEnumValue(Team_specialization::class)),
             'summary' => fn(ParseNode $n) => $o->setSummary($n->getObjectValue([TeamSummary::class, 'createFromDiscriminatorValue'])),
             'tags' => fn(ParseNode $n) => $o->setTags($n->getCollectionOfObjectValues([TeamworkTag::class, 'createFromDiscriminatorValue'])),
             'template' => fn(ParseNode $n) => $o->setTemplate($n->getObjectValue([TeamsTemplate::class, 'createFromDiscriminatorValue'])),
             'tenantId' => fn(ParseNode $n) => $o->setTenantId($n->getStringValue()),
-            'visibility' => fn(ParseNode $n) => $o->setVisibility($n->getEnumValue(TeamVisibilityType::class)),
+            'visibility' => fn(ParseNode $n) => $o->setVisibility($n->getEnumValue(Team_visibility::class)),
             'webUrl' => fn(ParseNode $n) => $o->setWebUrl($n->getStringValue()),
         ]);
     }
@@ -332,11 +332,11 @@ class Team extends Entity implements Parsable
 
     /**
      * Gets the specialization property value. Optional. Indicates whether the team is intended for a particular use case.  Each team specialization has access to unique behaviors and experiences targeted to its use case.
-     * @return TeamSpecialization|null
+     * @return Team_specialization|null
     */
-    public function getSpecialization(): ?TeamSpecialization {
+    public function getSpecialization(): ?Team_specialization {
         $val = $this->getBackingStore()->get('specialization');
-        if (is_null($val) || $val instanceof TeamSpecialization) {
+        if (is_null($val) || $val instanceof Team_specialization) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'specialization'");
@@ -394,11 +394,11 @@ class Team extends Entity implements Parsable
 
     /**
      * Gets the visibility property value. The visibility of the group and team. Defaults to Public.
-     * @return TeamVisibilityType|null
+     * @return Team_visibility|null
     */
-    public function getVisibility(): ?TeamVisibilityType {
+    public function getVisibility(): ?Team_visibility {
         $val = $this->getBackingStore()->get('visibility');
-        if (is_null($val) || $val instanceof TeamVisibilityType) {
+        if (is_null($val) || $val instanceof Team_visibility) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'visibility'");
@@ -622,9 +622,9 @@ class Team extends Entity implements Parsable
 
     /**
      * Sets the specialization property value. Optional. Indicates whether the team is intended for a particular use case.  Each team specialization has access to unique behaviors and experiences targeted to its use case.
-     * @param TeamSpecialization|null $value Value to set for the specialization property.
+     * @param Team_specialization|null $value Value to set for the specialization property.
     */
-    public function setSpecialization(?TeamSpecialization $value): void {
+    public function setSpecialization(?Team_specialization $value): void {
         $this->getBackingStore()->set('specialization', $value);
     }
 
@@ -662,9 +662,9 @@ class Team extends Entity implements Parsable
 
     /**
      * Sets the visibility property value. The visibility of the group and team. Defaults to Public.
-     * @param TeamVisibilityType|null $value Value to set for the visibility property.
+     * @param Team_visibility|null $value Value to set for the visibility property.
     */
-    public function setVisibility(?TeamVisibilityType $value): void {
+    public function setVisibility(?Team_visibility $value): void {
         $this->getBackingStore()->set('visibility', $value);
     }
 

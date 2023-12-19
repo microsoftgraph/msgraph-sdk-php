@@ -79,7 +79,7 @@ class ScheduleItem implements AdditionalDataHolder, BackedModel, Parsable
             'location' => fn(ParseNode $n) => $o->setLocation($n->getStringValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'start' => fn(ParseNode $n) => $o->setStart($n->getObjectValue([DateTimeTimeZone::class, 'createFromDiscriminatorValue'])),
-            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(FreeBusyStatus::class)),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(ScheduleItem_status::class)),
             'subject' => fn(ParseNode $n) => $o->setSubject($n->getStringValue()),
         ];
     }
@@ -134,11 +134,11 @@ class ScheduleItem implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the status property value. The availability status of the user or resource during the corresponding event. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
-     * @return FreeBusyStatus|null
+     * @return ScheduleItem_status|null
     */
-    public function getStatus(): ?FreeBusyStatus {
+    public function getStatus(): ?ScheduleItem_status {
         $val = $this->getBackingStore()->get('status');
-        if (is_null($val) || $val instanceof FreeBusyStatus) {
+        if (is_null($val) || $val instanceof ScheduleItem_status) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
@@ -229,9 +229,9 @@ class ScheduleItem implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the status property value. The availability status of the user or resource during the corresponding event. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
-     * @param FreeBusyStatus|null $value Value to set for the status property.
+     * @param ScheduleItem_status|null $value Value to set for the status property.
     */
-    public function setStatus(?FreeBusyStatus $value): void {
+    public function setStatus(?ScheduleItem_status $value): void {
         $this->getBackingStore()->set('status', $value);
     }
 

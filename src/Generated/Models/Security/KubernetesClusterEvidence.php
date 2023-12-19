@@ -59,7 +59,7 @@ class KubernetesClusterEvidence extends AlertEvidence implements Parsable
             'cloudResource' => fn(ParseNode $n) => $o->setCloudResource($n->getObjectValue([AlertEvidence::class, 'createFromDiscriminatorValue'])),
             'distribution' => fn(ParseNode $n) => $o->setDistribution($n->getStringValue()),
             'name' => fn(ParseNode $n) => $o->setName($n->getStringValue()),
-            'platform' => fn(ParseNode $n) => $o->setPlatform($n->getEnumValue(KubernetesPlatform::class)),
+            'platform' => fn(ParseNode $n) => $o->setPlatform($n->getEnumValue(KubernetesClusterEvidence_platform::class)),
             'version' => fn(ParseNode $n) => $o->setVersion($n->getStringValue()),
         ]);
     }
@@ -78,11 +78,11 @@ class KubernetesClusterEvidence extends AlertEvidence implements Parsable
 
     /**
      * Gets the platform property value. The platform the cluster runs on. Possible values are: unknown, aks, eks, gke, arc, unknownFutureValue.
-     * @return KubernetesPlatform|null
+     * @return KubernetesClusterEvidence_platform|null
     */
-    public function getPlatform(): ?KubernetesPlatform {
+    public function getPlatform(): ?KubernetesClusterEvidence_platform {
         $val = $this->getBackingStore()->get('platform');
-        if (is_null($val) || $val instanceof KubernetesPlatform) {
+        if (is_null($val) || $val instanceof KubernetesClusterEvidence_platform) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'platform'");
@@ -139,9 +139,9 @@ class KubernetesClusterEvidence extends AlertEvidence implements Parsable
 
     /**
      * Sets the platform property value. The platform the cluster runs on. Possible values are: unknown, aks, eks, gke, arc, unknownFutureValue.
-     * @param KubernetesPlatform|null $value Value to set for the platform property.
+     * @param KubernetesClusterEvidence_platform|null $value Value to set for the platform property.
     */
-    public function setPlatform(?KubernetesPlatform $value): void {
+    public function setPlatform(?KubernetesClusterEvidence_platform $value): void {
         $this->getBackingStore()->set('platform', $value);
     }
 

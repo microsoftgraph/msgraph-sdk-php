@@ -37,11 +37,11 @@ class TimeConstraint implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the activityDomain property value. The nature of the activity, optional. The possible values are: work, personal, unrestricted, or unknown.
-     * @return ActivityDomain|null
+     * @return TimeConstraint_activityDomain|null
     */
-    public function getActivityDomain(): ?ActivityDomain {
+    public function getActivityDomain(): ?TimeConstraint_activityDomain {
         $val = $this->getBackingStore()->get('activityDomain');
-        if (is_null($val) || $val instanceof ActivityDomain) {
+        if (is_null($val) || $val instanceof TimeConstraint_activityDomain) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'activityDomain'");
@@ -75,7 +75,7 @@ class TimeConstraint implements AdditionalDataHolder, BackedModel, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'activityDomain' => fn(ParseNode $n) => $o->setActivityDomain($n->getEnumValue(ActivityDomain::class)),
+            'activityDomain' => fn(ParseNode $n) => $o->setActivityDomain($n->getEnumValue(TimeConstraint_activityDomain::class)),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'timeSlots' => fn(ParseNode $n) => $o->setTimeSlots($n->getCollectionOfObjectValues([TimeSlot::class, 'createFromDiscriminatorValue'])),
         ];
@@ -120,9 +120,9 @@ class TimeConstraint implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the activityDomain property value. The nature of the activity, optional. The possible values are: work, personal, unrestricted, or unknown.
-     * @param ActivityDomain|null $value Value to set for the activityDomain property.
+     * @param TimeConstraint_activityDomain|null $value Value to set for the activityDomain property.
     */
-    public function setActivityDomain(?ActivityDomain $value): void {
+    public function setActivityDomain(?TimeConstraint_activityDomain $value): void {
         $this->getBackingStore()->set('activityDomain', $value);
     }
 

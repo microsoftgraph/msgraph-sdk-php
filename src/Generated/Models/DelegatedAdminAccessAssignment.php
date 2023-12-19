@@ -72,7 +72,7 @@ class DelegatedAdminAccessAssignment extends Entity implements Parsable
             'accessDetails' => fn(ParseNode $n) => $o->setAccessDetails($n->getObjectValue([DelegatedAdminAccessDetails::class, 'createFromDiscriminatorValue'])),
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'lastModifiedDateTime' => fn(ParseNode $n) => $o->setLastModifiedDateTime($n->getDateTimeValue()),
-            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(DelegatedAdminAccessAssignmentStatus::class)),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(DelegatedAdminAccessAssignment_status::class)),
         ]);
     }
 
@@ -90,11 +90,11 @@ class DelegatedAdminAccessAssignment extends Entity implements Parsable
 
     /**
      * Gets the status property value. The status of the access assignment. Read-only. The possible values are: pending, active, deleting, deleted, error, unknownFutureValue.
-     * @return DelegatedAdminAccessAssignmentStatus|null
+     * @return DelegatedAdminAccessAssignment_status|null
     */
-    public function getStatus(): ?DelegatedAdminAccessAssignmentStatus {
+    public function getStatus(): ?DelegatedAdminAccessAssignment_status {
         $val = $this->getBackingStore()->get('status');
-        if (is_null($val) || $val instanceof DelegatedAdminAccessAssignmentStatus) {
+        if (is_null($val) || $val instanceof DelegatedAdminAccessAssignment_status) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
@@ -147,9 +147,9 @@ class DelegatedAdminAccessAssignment extends Entity implements Parsable
 
     /**
      * Sets the status property value. The status of the access assignment. Read-only. The possible values are: pending, active, deleting, deleted, error, unknownFutureValue.
-     * @param DelegatedAdminAccessAssignmentStatus|null $value Value to set for the status property.
+     * @param DelegatedAdminAccessAssignment_status|null $value Value to set for the status property.
     */
-    public function setStatus(?DelegatedAdminAccessAssignmentStatus $value): void {
+    public function setStatus(?DelegatedAdminAccessAssignment_status $value): void {
         $this->getBackingStore()->set('status', $value);
     }
 

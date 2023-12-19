@@ -18,6 +18,7 @@ use Microsoft\Graph\Generated\Communications\Calls\Item\PlayPrompt\PlayPromptReq
 use Microsoft\Graph\Generated\Communications\Calls\Item\RecordResponse\RecordResponseRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\Item\Redirect\RedirectRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\Item\Reject\RejectRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Calls\Item\SendDtmfTones\SendDtmfTonesRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\Item\SubscribeToTone\SubscribeToToneRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\Item\Transfer\TransferRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\Item\Unmute\UnmuteRequestBuilder;
@@ -130,6 +131,13 @@ class CallItemRequestBuilder extends BaseRequestBuilder
     */
     public function reject(): RejectRequestBuilder {
         return new RejectRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the sendDtmfTones method.
+    */
+    public function sendDtmfTones(): SendDtmfTonesRequestBuilder {
+        return new SendDtmfTonesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

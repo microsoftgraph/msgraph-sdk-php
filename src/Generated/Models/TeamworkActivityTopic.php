@@ -63,7 +63,7 @@ class TeamworkActivityTopic implements AdditionalDataHolder, BackedModel, Parsab
         $o = $this;
         return  [
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
-            'source' => fn(ParseNode $n) => $o->setSource($n->getEnumValue(TeamworkActivityTopicSource::class)),
+            'source' => fn(ParseNode $n) => $o->setSource($n->getEnumValue(TeamworkActivityTopic_source::class)),
             'value' => fn(ParseNode $n) => $o->setValue($n->getStringValue()),
             'webUrl' => fn(ParseNode $n) => $o->setWebUrl($n->getStringValue()),
         ];
@@ -83,11 +83,11 @@ class TeamworkActivityTopic implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Gets the source property value. Type of source. Possible values are: entityUrl, text. For supported Microsoft Graph URLs, use entityUrl. For custom text, use text.
-     * @return TeamworkActivityTopicSource|null
+     * @return TeamworkActivityTopic_source|null
     */
-    public function getSource(): ?TeamworkActivityTopicSource {
+    public function getSource(): ?TeamworkActivityTopic_source {
         $val = $this->getBackingStore()->get('source');
-        if (is_null($val) || $val instanceof TeamworkActivityTopicSource) {
+        if (is_null($val) || $val instanceof TeamworkActivityTopic_source) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'source'");
@@ -155,9 +155,9 @@ class TeamworkActivityTopic implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the source property value. Type of source. Possible values are: entityUrl, text. For supported Microsoft Graph URLs, use entityUrl. For custom text, use text.
-     * @param TeamworkActivityTopicSource|null $value Value to set for the source property.
+     * @param TeamworkActivityTopic_source|null $value Value to set for the source property.
     */
-    public function setSource(?TeamworkActivityTopicSource $value): void {
+    public function setSource(?TeamworkActivityTopic_source $value): void {
         $this->getBackingStore()->set('source', $value);
     }
 

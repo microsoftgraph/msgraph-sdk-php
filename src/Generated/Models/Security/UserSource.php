@@ -45,18 +45,18 @@ class UserSource extends DataSource implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'email' => fn(ParseNode $n) => $o->setEmail($n->getStringValue()),
-            'includedSources' => fn(ParseNode $n) => $o->setIncludedSources($n->getEnumValue(SourceType::class)),
+            'includedSources' => fn(ParseNode $n) => $o->setIncludedSources($n->getEnumValue(UserSource_includedSources::class)),
             'siteWebUrl' => fn(ParseNode $n) => $o->setSiteWebUrl($n->getStringValue()),
         ]);
     }
 
     /**
      * Gets the includedSources property value. Specifies which sources are included in this group. Possible values are: mailbox, site.
-     * @return SourceType|null
+     * @return UserSource_includedSources|null
     */
-    public function getIncludedSources(): ?SourceType {
+    public function getIncludedSources(): ?UserSource_includedSources {
         $val = $this->getBackingStore()->get('includedSources');
-        if (is_null($val) || $val instanceof SourceType) {
+        if (is_null($val) || $val instanceof UserSource_includedSources) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'includedSources'");
@@ -95,9 +95,9 @@ class UserSource extends DataSource implements Parsable
 
     /**
      * Sets the includedSources property value. Specifies which sources are included in this group. Possible values are: mailbox, site.
-     * @param SourceType|null $value Value to set for the includedSources property.
+     * @param UserSource_includedSources|null $value Value to set for the includedSources property.
     */
-    public function setIncludedSources(?SourceType $value): void {
+    public function setIncludedSources(?UserSource_includedSources $value): void {
         $this->getBackingStore()->set('includedSources', $value);
     }
 

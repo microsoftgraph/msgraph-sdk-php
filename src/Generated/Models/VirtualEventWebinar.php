@@ -26,19 +26,19 @@ class VirtualEventWebinar extends VirtualEvent implements Parsable
     }
 
     /**
-     * Gets the audience property value. The audience property
-     * @return MeetingAudience|null
+     * Gets the audience property value. To whom the webinar is visible.
+     * @return VirtualEventWebinar_audience|null
     */
-    public function getAudience(): ?MeetingAudience {
+    public function getAudience(): ?VirtualEventWebinar_audience {
         $val = $this->getBackingStore()->get('audience');
-        if (is_null($val) || $val instanceof MeetingAudience) {
+        if (is_null($val) || $val instanceof VirtualEventWebinar_audience) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'audience'");
     }
 
     /**
-     * Gets the coOrganizers property value. The coOrganizers property
+     * Gets the coOrganizers property value. Identity information of coorganizers of the webinar.
      * @return array<CommunicationsUserIdentity>|null
     */
     public function getCoOrganizers(): ?array {
@@ -58,14 +58,14 @@ class VirtualEventWebinar extends VirtualEvent implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'audience' => fn(ParseNode $n) => $o->setAudience($n->getEnumValue(MeetingAudience::class)),
+            'audience' => fn(ParseNode $n) => $o->setAudience($n->getEnumValue(VirtualEventWebinar_audience::class)),
             'coOrganizers' => fn(ParseNode $n) => $o->setCoOrganizers($n->getCollectionOfObjectValues([CommunicationsUserIdentity::class, 'createFromDiscriminatorValue'])),
             'registrations' => fn(ParseNode $n) => $o->setRegistrations($n->getCollectionOfObjectValues([VirtualEventRegistration::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
     /**
-     * Gets the registrations property value. The registrations property
+     * Gets the registrations property value. Registration records of the webinar.
      * @return array<VirtualEventRegistration>|null
     */
     public function getRegistrations(): ?array {
@@ -90,15 +90,15 @@ class VirtualEventWebinar extends VirtualEvent implements Parsable
     }
 
     /**
-     * Sets the audience property value. The audience property
-     * @param MeetingAudience|null $value Value to set for the audience property.
+     * Sets the audience property value. To whom the webinar is visible.
+     * @param VirtualEventWebinar_audience|null $value Value to set for the audience property.
     */
-    public function setAudience(?MeetingAudience $value): void {
+    public function setAudience(?VirtualEventWebinar_audience $value): void {
         $this->getBackingStore()->set('audience', $value);
     }
 
     /**
-     * Sets the coOrganizers property value. The coOrganizers property
+     * Sets the coOrganizers property value. Identity information of coorganizers of the webinar.
      * @param array<CommunicationsUserIdentity>|null $value Value to set for the coOrganizers property.
     */
     public function setCoOrganizers(?array $value): void {
@@ -106,7 +106,7 @@ class VirtualEventWebinar extends VirtualEvent implements Parsable
     }
 
     /**
-     * Sets the registrations property value. The registrations property
+     * Sets the registrations property value. Registration records of the webinar.
      * @param array<VirtualEventRegistration>|null $value Value to set for the registrations property.
     */
     public function setRegistrations(?array $value): void {

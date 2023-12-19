@@ -90,7 +90,7 @@ class ServiceHealthIssuePost implements AdditionalDataHolder, BackedModel, Parsa
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'description' => fn(ParseNode $n) => $o->setDescription($n->getObjectValue([ItemBody::class, 'createFromDiscriminatorValue'])),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
-            'postType' => fn(ParseNode $n) => $o->setPostType($n->getEnumValue(PostType::class)),
+            'postType' => fn(ParseNode $n) => $o->setPostType($n->getEnumValue(ServiceHealthIssuePost_postType::class)),
         ];
     }
 
@@ -108,11 +108,11 @@ class ServiceHealthIssuePost implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Gets the postType property value. The post type of the service issue historical post. Possible values are: regular, quick, strategic, unknownFutureValue.
-     * @return PostType|null
+     * @return ServiceHealthIssuePost_postType|null
     */
-    public function getPostType(): ?PostType {
+    public function getPostType(): ?ServiceHealthIssuePost_postType {
         $val = $this->getBackingStore()->get('postType');
-        if (is_null($val) || $val instanceof PostType) {
+        if (is_null($val) || $val instanceof ServiceHealthIssuePost_postType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'postType'");
@@ -172,9 +172,9 @@ class ServiceHealthIssuePost implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the postType property value. The post type of the service issue historical post. Possible values are: regular, quick, strategic, unknownFutureValue.
-     * @param PostType|null $value Value to set for the postType property.
+     * @param ServiceHealthIssuePost_postType|null $value Value to set for the postType property.
     */
-    public function setPostType(?PostType $value): void {
+    public function setPostType(?ServiceHealthIssuePost_postType $value): void {
         $this->getBackingStore()->set('postType', $value);
     }
 

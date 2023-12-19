@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Users\Item\GetMailTips;
 
-use Microsoft\Graph\Generated\Models\MailTipsType;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -86,17 +85,17 @@ class GetMailTipsPostRequestBody implements AdditionalDataHolder, BackedModel, P
                 /** @var array<string>|null $val */
                 $this->setEmailAddresses($val);
             },
-            'MailTipsOptions' => fn(ParseNode $n) => $o->setMailTipsOptions($n->getEnumValue(MailTipsType::class)),
+            'MailTipsOptions' => fn(ParseNode $n) => $o->setMailTipsOptions($n->getEnumValue(GetMailTipsPostRequestBody_MailTipsOptions::class)),
         ];
     }
 
     /**
      * Gets the MailTipsOptions property value. The MailTipsOptions property
-     * @return MailTipsType|null
+     * @return GetMailTipsPostRequestBody_MailTipsOptions|null
     */
-    public function getMailTipsOptions(): ?MailTipsType {
+    public function getMailTipsOptions(): ?GetMailTipsPostRequestBody_MailTipsOptions {
         $val = $this->getBackingStore()->get('mailTipsOptions');
-        if (is_null($val) || $val instanceof MailTipsType) {
+        if (is_null($val) || $val instanceof GetMailTipsPostRequestBody_MailTipsOptions) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'mailTipsOptions'");
@@ -138,9 +137,9 @@ class GetMailTipsPostRequestBody implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the MailTipsOptions property value. The MailTipsOptions property
-     * @param MailTipsType|null $value Value to set for the MailTipsOptions property.
+     * @param GetMailTipsPostRequestBody_MailTipsOptions|null $value Value to set for the MailTipsOptions property.
     */
-    public function setMailTipsOptions(?MailTipsType $value): void {
+    public function setMailTipsOptions(?GetMailTipsPostRequestBody_MailTipsOptions $value): void {
         $this->getBackingStore()->set('mailTipsOptions', $value);
     }
 

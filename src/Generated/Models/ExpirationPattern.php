@@ -91,7 +91,7 @@ class ExpirationPattern implements AdditionalDataHolder, BackedModel, Parsable
             'duration' => fn(ParseNode $n) => $o->setDuration($n->getDateIntervalValue()),
             'endDateTime' => fn(ParseNode $n) => $o->setEndDateTime($n->getDateTimeValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
-            'type' => fn(ParseNode $n) => $o->setType($n->getEnumValue(ExpirationPatternType::class)),
+            'type' => fn(ParseNode $n) => $o->setType($n->getEnumValue(ExpirationPattern_type::class)),
         ];
     }
 
@@ -109,11 +109,11 @@ class ExpirationPattern implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the type property value. The requestor's desired expiration pattern type. The possible values are: notSpecified, noExpiration, afterDateTime, afterDuration.
-     * @return ExpirationPatternType|null
+     * @return ExpirationPattern_type|null
     */
-    public function getType(): ?ExpirationPatternType {
+    public function getType(): ?ExpirationPattern_type {
         $val = $this->getBackingStore()->get('type');
-        if (is_null($val) || $val instanceof ExpirationPatternType) {
+        if (is_null($val) || $val instanceof ExpirationPattern_type) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'type'");
@@ -173,9 +173,9 @@ class ExpirationPattern implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the type property value. The requestor's desired expiration pattern type. The possible values are: notSpecified, noExpiration, afterDateTime, afterDuration.
-     * @param ExpirationPatternType|null $value Value to set for the type property.
+     * @param ExpirationPattern_type|null $value Value to set for the type property.
     */
-    public function setType(?ExpirationPatternType $value): void {
+    public function setType(?ExpirationPattern_type $value): void {
         $this->getBackingStore()->set('type', $value);
     }
 

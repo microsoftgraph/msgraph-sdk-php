@@ -28,11 +28,11 @@ class Payload extends Entity implements Parsable
 
     /**
      * Gets the brand property value. The branch of a payload. Possible values are: unknown, other, americanExpress, capitalOne, dhl, docuSign, dropbox, facebook, firstAmerican, microsoft, netflix, scotiabank, sendGrid, stewartTitle, tesco, wellsFargo, syrinxCloud, adobe, teams, zoom, unknownFutureValue.
-     * @return PayloadBrand|null
+     * @return Payload_brand|null
     */
-    public function getBrand(): ?PayloadBrand {
+    public function getBrand(): ?Payload_brand {
         $val = $this->getBackingStore()->get('brand');
-        if (is_null($val) || $val instanceof PayloadBrand) {
+        if (is_null($val) || $val instanceof Payload_brand) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'brand'");
@@ -40,11 +40,11 @@ class Payload extends Entity implements Parsable
 
     /**
      * Gets the complexity property value. The complexity of a payload. Possible values are: unknown, low, medium, high, unknownFutureValue.
-     * @return PayloadComplexity|null
+     * @return Payload_complexity|null
     */
-    public function getComplexity(): ?PayloadComplexity {
+    public function getComplexity(): ?Payload_complexity {
         $val = $this->getBackingStore()->get('complexity');
-        if (is_null($val) || $val instanceof PayloadComplexity) {
+        if (is_null($val) || $val instanceof Payload_complexity) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'complexity'");
@@ -117,14 +117,14 @@ class Payload extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'brand' => fn(ParseNode $n) => $o->setBrand($n->getEnumValue(PayloadBrand::class)),
-            'complexity' => fn(ParseNode $n) => $o->setComplexity($n->getEnumValue(PayloadComplexity::class)),
+            'brand' => fn(ParseNode $n) => $o->setBrand($n->getEnumValue(Payload_brand::class)),
+            'complexity' => fn(ParseNode $n) => $o->setComplexity($n->getEnumValue(Payload_complexity::class)),
             'createdBy' => fn(ParseNode $n) => $o->setCreatedBy($n->getObjectValue([EmailIdentity::class, 'createFromDiscriminatorValue'])),
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
             'detail' => fn(ParseNode $n) => $o->setDetail($n->getObjectValue([PayloadDetail::class, 'createFromDiscriminatorValue'])),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
-            'industry' => fn(ParseNode $n) => $o->setIndustry($n->getEnumValue(PayloadIndustry::class)),
+            'industry' => fn(ParseNode $n) => $o->setIndustry($n->getEnumValue(Payload_industry::class)),
             'isAutomated' => fn(ParseNode $n) => $o->setIsAutomated($n->getBooleanValue()),
             'isControversial' => fn(ParseNode $n) => $o->setIsControversial($n->getBooleanValue()),
             'isCurrentEvent' => fn(ParseNode $n) => $o->setIsCurrentEvent($n->getBooleanValue()),
@@ -139,23 +139,23 @@ class Payload extends Entity implements Parsable
                 /** @var array<string>|null $val */
                 $this->setPayloadTags($val);
             },
-            'platform' => fn(ParseNode $n) => $o->setPlatform($n->getEnumValue(PayloadDeliveryPlatform::class)),
+            'platform' => fn(ParseNode $n) => $o->setPlatform($n->getEnumValue(Payload_platform::class)),
             'predictedCompromiseRate' => fn(ParseNode $n) => $o->setPredictedCompromiseRate($n->getFloatValue()),
-            'simulationAttackType' => fn(ParseNode $n) => $o->setSimulationAttackType($n->getEnumValue(SimulationAttackType::class)),
+            'simulationAttackType' => fn(ParseNode $n) => $o->setSimulationAttackType($n->getEnumValue(Payload_simulationAttackType::class)),
             'source' => fn(ParseNode $n) => $o->setSource($n->getEnumValue(SimulationContentSource::class)),
-            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(SimulationContentStatus::class)),
-            'technique' => fn(ParseNode $n) => $o->setTechnique($n->getEnumValue(SimulationAttackTechnique::class)),
-            'theme' => fn(ParseNode $n) => $o->setTheme($n->getEnumValue(PayloadTheme::class)),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(Payload_status::class)),
+            'technique' => fn(ParseNode $n) => $o->setTechnique($n->getEnumValue(Payload_technique::class)),
+            'theme' => fn(ParseNode $n) => $o->setTheme($n->getEnumValue(Payload_theme::class)),
         ]);
     }
 
     /**
      * Gets the industry property value. Industry of a payload. Possible values are: unknown, other, banking, businessServices, consumerServices, education, energy, construction, consulting, financialServices, government, hospitality, insurance, legal, courierServices, IT, healthcare, manufacturing, retail, telecom, realEstate, unknownFutureValue.
-     * @return PayloadIndustry|null
+     * @return Payload_industry|null
     */
-    public function getIndustry(): ?PayloadIndustry {
+    public function getIndustry(): ?Payload_industry {
         $val = $this->getBackingStore()->get('industry');
-        if (is_null($val) || $val instanceof PayloadIndustry) {
+        if (is_null($val) || $val instanceof Payload_industry) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'industry'");
@@ -249,11 +249,11 @@ class Payload extends Entity implements Parsable
 
     /**
      * Gets the platform property value. The payload delivery platform for a simulation. Possible values are: unknown, sms, email, teams, unknownFutureValue.
-     * @return PayloadDeliveryPlatform|null
+     * @return Payload_platform|null
     */
-    public function getPlatform(): ?PayloadDeliveryPlatform {
+    public function getPlatform(): ?Payload_platform {
         $val = $this->getBackingStore()->get('platform');
-        if (is_null($val) || $val instanceof PayloadDeliveryPlatform) {
+        if (is_null($val) || $val instanceof Payload_platform) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'platform'");
@@ -273,11 +273,11 @@ class Payload extends Entity implements Parsable
 
     /**
      * Gets the simulationAttackType property value. Attack type of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, social, cloud, endpoint, unknownFutureValue.
-     * @return SimulationAttackType|null
+     * @return Payload_simulationAttackType|null
     */
-    public function getSimulationAttackType(): ?SimulationAttackType {
+    public function getSimulationAttackType(): ?Payload_simulationAttackType {
         $val = $this->getBackingStore()->get('simulationAttackType');
-        if (is_null($val) || $val instanceof SimulationAttackType) {
+        if (is_null($val) || $val instanceof Payload_simulationAttackType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'simulationAttackType'");
@@ -297,11 +297,11 @@ class Payload extends Entity implements Parsable
 
     /**
      * Gets the status property value. Simulation content status. Supports $filter and $orderby. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
-     * @return SimulationContentStatus|null
+     * @return Payload_status|null
     */
-    public function getStatus(): ?SimulationContentStatus {
+    public function getStatus(): ?Payload_status {
         $val = $this->getBackingStore()->get('status');
-        if (is_null($val) || $val instanceof SimulationContentStatus) {
+        if (is_null($val) || $val instanceof Payload_status) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
@@ -309,11 +309,11 @@ class Payload extends Entity implements Parsable
 
     /**
      * Gets the technique property value. The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue, oAuthConsentGrant. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: oAuthConsentGrant. For more information on the types of social engineering attack techniques, see simulations.
-     * @return SimulationAttackTechnique|null
+     * @return Payload_technique|null
     */
-    public function getTechnique(): ?SimulationAttackTechnique {
+    public function getTechnique(): ?Payload_technique {
         $val = $this->getBackingStore()->get('technique');
-        if (is_null($val) || $val instanceof SimulationAttackTechnique) {
+        if (is_null($val) || $val instanceof Payload_technique) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'technique'");
@@ -321,11 +321,11 @@ class Payload extends Entity implements Parsable
 
     /**
      * Gets the theme property value. The theme of a payload. Possible values are: unknown, other, accountActivation, accountVerification, billing, cleanUpMail, controversial, documentReceived, expense, fax, financeReport, incomingMessages, invoice, itemReceived, loginAlert, mailReceived, password, payment, payroll, personalizedOffer, quarantine, remoteWork, reviewMessage, securityUpdate, serviceSuspended, signatureRequired, upgradeMailboxStorage, verifyMailbox, voicemail, advertisement, employeeEngagement, unknownFutureValue.
-     * @return PayloadTheme|null
+     * @return Payload_theme|null
     */
-    public function getTheme(): ?PayloadTheme {
+    public function getTheme(): ?Payload_theme {
         $val = $this->getBackingStore()->get('theme');
-        if (is_null($val) || $val instanceof PayloadTheme) {
+        if (is_null($val) || $val instanceof Payload_theme) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'theme'");
@@ -363,17 +363,17 @@ class Payload extends Entity implements Parsable
 
     /**
      * Sets the brand property value. The branch of a payload. Possible values are: unknown, other, americanExpress, capitalOne, dhl, docuSign, dropbox, facebook, firstAmerican, microsoft, netflix, scotiabank, sendGrid, stewartTitle, tesco, wellsFargo, syrinxCloud, adobe, teams, zoom, unknownFutureValue.
-     * @param PayloadBrand|null $value Value to set for the brand property.
+     * @param Payload_brand|null $value Value to set for the brand property.
     */
-    public function setBrand(?PayloadBrand $value): void {
+    public function setBrand(?Payload_brand $value): void {
         $this->getBackingStore()->set('brand', $value);
     }
 
     /**
      * Sets the complexity property value. The complexity of a payload. Possible values are: unknown, low, medium, high, unknownFutureValue.
-     * @param PayloadComplexity|null $value Value to set for the complexity property.
+     * @param Payload_complexity|null $value Value to set for the complexity property.
     */
-    public function setComplexity(?PayloadComplexity $value): void {
+    public function setComplexity(?Payload_complexity $value): void {
         $this->getBackingStore()->set('complexity', $value);
     }
 
@@ -419,9 +419,9 @@ class Payload extends Entity implements Parsable
 
     /**
      * Sets the industry property value. Industry of a payload. Possible values are: unknown, other, banking, businessServices, consumerServices, education, energy, construction, consulting, financialServices, government, hospitality, insurance, legal, courierServices, IT, healthcare, manufacturing, retail, telecom, realEstate, unknownFutureValue.
-     * @param PayloadIndustry|null $value Value to set for the industry property.
+     * @param Payload_industry|null $value Value to set for the industry property.
     */
-    public function setIndustry(?PayloadIndustry $value): void {
+    public function setIndustry(?Payload_industry $value): void {
         $this->getBackingStore()->set('industry', $value);
     }
 
@@ -483,9 +483,9 @@ class Payload extends Entity implements Parsable
 
     /**
      * Sets the platform property value. The payload delivery platform for a simulation. Possible values are: unknown, sms, email, teams, unknownFutureValue.
-     * @param PayloadDeliveryPlatform|null $value Value to set for the platform property.
+     * @param Payload_platform|null $value Value to set for the platform property.
     */
-    public function setPlatform(?PayloadDeliveryPlatform $value): void {
+    public function setPlatform(?Payload_platform $value): void {
         $this->getBackingStore()->set('platform', $value);
     }
 
@@ -499,9 +499,9 @@ class Payload extends Entity implements Parsable
 
     /**
      * Sets the simulationAttackType property value. Attack type of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, social, cloud, endpoint, unknownFutureValue.
-     * @param SimulationAttackType|null $value Value to set for the simulationAttackType property.
+     * @param Payload_simulationAttackType|null $value Value to set for the simulationAttackType property.
     */
-    public function setSimulationAttackType(?SimulationAttackType $value): void {
+    public function setSimulationAttackType(?Payload_simulationAttackType $value): void {
         $this->getBackingStore()->set('simulationAttackType', $value);
     }
 
@@ -515,25 +515,25 @@ class Payload extends Entity implements Parsable
 
     /**
      * Sets the status property value. Simulation content status. Supports $filter and $orderby. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
-     * @param SimulationContentStatus|null $value Value to set for the status property.
+     * @param Payload_status|null $value Value to set for the status property.
     */
-    public function setStatus(?SimulationContentStatus $value): void {
+    public function setStatus(?Payload_status $value): void {
         $this->getBackingStore()->set('status', $value);
     }
 
     /**
      * Sets the technique property value. The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue, oAuthConsentGrant. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: oAuthConsentGrant. For more information on the types of social engineering attack techniques, see simulations.
-     * @param SimulationAttackTechnique|null $value Value to set for the technique property.
+     * @param Payload_technique|null $value Value to set for the technique property.
     */
-    public function setTechnique(?SimulationAttackTechnique $value): void {
+    public function setTechnique(?Payload_technique $value): void {
         $this->getBackingStore()->set('technique', $value);
     }
 
     /**
      * Sets the theme property value. The theme of a payload. Possible values are: unknown, other, accountActivation, accountVerification, billing, cleanUpMail, controversial, documentReceived, expense, fax, financeReport, incomingMessages, invoice, itemReceived, loginAlert, mailReceived, password, payment, payroll, personalizedOffer, quarantine, remoteWork, reviewMessage, securityUpdate, serviceSuspended, signatureRequired, upgradeMailboxStorage, verifyMailbox, voicemail, advertisement, employeeEngagement, unknownFutureValue.
-     * @param PayloadTheme|null $value Value to set for the theme property.
+     * @param Payload_theme|null $value Value to set for the theme property.
     */
-    public function setTheme(?PayloadTheme $value): void {
+    public function setTheme(?Payload_theme $value): void {
         $this->getBackingStore()->set('theme', $value);
     }
 

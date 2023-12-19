@@ -74,7 +74,7 @@ class TrainingSetting implements AdditionalDataHolder, BackedModel, Parsable
         $o = $this;
         return  [
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
-            'settingType' => fn(ParseNode $n) => $o->setSettingType($n->getEnumValue(TrainingSettingType::class)),
+            'settingType' => fn(ParseNode $n) => $o->setSettingType($n->getEnumValue(TrainingSetting_settingType::class)),
         ];
     }
 
@@ -92,11 +92,11 @@ class TrainingSetting implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the settingType property value. Type of setting. Possible values are: microsoftCustom, microsoftManaged, noTraining, custom, unknownFutureValue.
-     * @return TrainingSettingType|null
+     * @return TrainingSetting_settingType|null
     */
-    public function getSettingType(): ?TrainingSettingType {
+    public function getSettingType(): ?TrainingSetting_settingType {
         $val = $this->getBackingStore()->get('settingType');
-        if (is_null($val) || $val instanceof TrainingSettingType) {
+        if (is_null($val) || $val instanceof TrainingSetting_settingType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'settingType'");
@@ -138,9 +138,9 @@ class TrainingSetting implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the settingType property value. Type of setting. Possible values are: microsoftCustom, microsoftManaged, noTraining, custom, unknownFutureValue.
-     * @param TrainingSettingType|null $value Value to set for the settingType property.
+     * @param TrainingSetting_settingType|null $value Value to set for the settingType property.
     */
-    public function setSettingType(?TrainingSettingType $value): void {
+    public function setSettingType(?TrainingSetting_settingType $value): void {
         $this->getBackingStore()->set('settingType', $value);
     }
 

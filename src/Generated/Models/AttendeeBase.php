@@ -39,17 +39,17 @@ class AttendeeBase extends Recipient implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'type' => fn(ParseNode $n) => $o->setType($n->getEnumValue(AttendeeType::class)),
+            'type' => fn(ParseNode $n) => $o->setType($n->getEnumValue(AttendeeBase_type::class)),
         ]);
     }
 
     /**
      * Gets the type property value. The type of attendee. The possible values are: required, optional, resource. Currently if the attendee is a person, findMeetingTimes always considers the person is of the Required type.
-     * @return AttendeeType|null
+     * @return AttendeeBase_type|null
     */
-    public function getType(): ?AttendeeType {
+    public function getType(): ?AttendeeBase_type {
         $val = $this->getBackingStore()->get('type');
-        if (is_null($val) || $val instanceof AttendeeType) {
+        if (is_null($val) || $val instanceof AttendeeBase_type) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'type'");
@@ -66,9 +66,9 @@ class AttendeeBase extends Recipient implements Parsable
 
     /**
      * Sets the type property value. The type of attendee. The possible values are: required, optional, resource. Currently if the attendee is a person, findMeetingTimes always considers the person is of the Required type.
-     * @param AttendeeType|null $value Value to set for the type property.
+     * @param AttendeeBase_type|null $value Value to set for the type property.
     */
-    public function setType(?AttendeeType $value): void {
+    public function setType(?AttendeeBase_type $value): void {
         $this->getBackingStore()->set('type', $value);
     }
 

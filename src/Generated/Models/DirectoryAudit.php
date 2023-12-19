@@ -103,7 +103,7 @@ class DirectoryAudit extends Entity implements Parsable
             'initiatedBy' => fn(ParseNode $n) => $o->setInitiatedBy($n->getObjectValue([AuditActivityInitiator::class, 'createFromDiscriminatorValue'])),
             'loggedByService' => fn(ParseNode $n) => $o->setLoggedByService($n->getStringValue()),
             'operationType' => fn(ParseNode $n) => $o->setOperationType($n->getStringValue()),
-            'result' => fn(ParseNode $n) => $o->setResult($n->getEnumValue(OperationResult::class)),
+            'result' => fn(ParseNode $n) => $o->setResult($n->getEnumValue(DirectoryAudit_result::class)),
             'resultReason' => fn(ParseNode $n) => $o->setResultReason($n->getStringValue()),
             'targetResources' => fn(ParseNode $n) => $o->setTargetResources($n->getCollectionOfObjectValues([TargetResource::class, 'createFromDiscriminatorValue'])),
         ]);
@@ -147,11 +147,11 @@ class DirectoryAudit extends Entity implements Parsable
 
     /**
      * Gets the result property value. Indicates the result of the activity. Possible values are: success, failure, timeout, unknownFutureValue.
-     * @return OperationResult|null
+     * @return DirectoryAudit_result|null
     */
-    public function getResult(): ?OperationResult {
+    public function getResult(): ?DirectoryAudit_result {
         $val = $this->getBackingStore()->get('result');
-        if (is_null($val) || $val instanceof OperationResult) {
+        if (is_null($val) || $val instanceof DirectoryAudit_result) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'result'");
@@ -268,9 +268,9 @@ class DirectoryAudit extends Entity implements Parsable
 
     /**
      * Sets the result property value. Indicates the result of the activity. Possible values are: success, failure, timeout, unknownFutureValue.
-     * @param OperationResult|null $value Value to set for the result property.
+     * @param DirectoryAudit_result|null $value Value to set for the result property.
     */
-    public function setResult(?OperationResult $value): void {
+    public function setResult(?DirectoryAudit_result $value): void {
         $this->getBackingStore()->set('result', $value);
     }
 

@@ -27,11 +27,11 @@ class TeamworkConversationIdentity extends Identity implements Parsable
 
     /**
      * Gets the conversationIdentityType property value. Type of conversation. Possible values are: team, channel, chat, and unknownFutureValue.
-     * @return TeamworkConversationIdentityType|null
+     * @return TeamworkConversationIdentity_conversationIdentityType|null
     */
-    public function getConversationIdentityType(): ?TeamworkConversationIdentityType {
+    public function getConversationIdentityType(): ?TeamworkConversationIdentity_conversationIdentityType {
         $val = $this->getBackingStore()->get('conversationIdentityType');
-        if (is_null($val) || $val instanceof TeamworkConversationIdentityType) {
+        if (is_null($val) || $val instanceof TeamworkConversationIdentity_conversationIdentityType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'conversationIdentityType'");
@@ -44,7 +44,7 @@ class TeamworkConversationIdentity extends Identity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'conversationIdentityType' => fn(ParseNode $n) => $o->setConversationIdentityType($n->getEnumValue(TeamworkConversationIdentityType::class)),
+            'conversationIdentityType' => fn(ParseNode $n) => $o->setConversationIdentityType($n->getEnumValue(TeamworkConversationIdentity_conversationIdentityType::class)),
         ]);
     }
 
@@ -59,9 +59,9 @@ class TeamworkConversationIdentity extends Identity implements Parsable
 
     /**
      * Sets the conversationIdentityType property value. Type of conversation. Possible values are: team, channel, chat, and unknownFutureValue.
-     * @param TeamworkConversationIdentityType|null $value Value to set for the conversationIdentityType property.
+     * @param TeamworkConversationIdentity_conversationIdentityType|null $value Value to set for the conversationIdentityType property.
     */
-    public function setConversationIdentityType(?TeamworkConversationIdentityType $value): void {
+    public function setConversationIdentityType(?TeamworkConversationIdentity_conversationIdentityType $value): void {
         $this->getBackingStore()->set('conversationIdentityType', $value);
     }
 

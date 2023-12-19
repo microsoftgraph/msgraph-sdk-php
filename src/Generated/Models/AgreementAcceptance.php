@@ -124,7 +124,7 @@ class AgreementAcceptance extends Entity implements Parsable
             'deviceOSVersion' => fn(ParseNode $n) => $o->setDeviceOSVersion($n->getStringValue()),
             'expirationDateTime' => fn(ParseNode $n) => $o->setExpirationDateTime($n->getDateTimeValue()),
             'recordedDateTime' => fn(ParseNode $n) => $o->setRecordedDateTime($n->getDateTimeValue()),
-            'state' => fn(ParseNode $n) => $o->setState($n->getEnumValue(AgreementAcceptanceState::class)),
+            'state' => fn(ParseNode $n) => $o->setState($n->getEnumValue(AgreementAcceptance_state::class)),
             'userDisplayName' => fn(ParseNode $n) => $o->setUserDisplayName($n->getStringValue()),
             'userEmail' => fn(ParseNode $n) => $o->setUserEmail($n->getStringValue()),
             'userId' => fn(ParseNode $n) => $o->setUserId($n->getStringValue()),
@@ -146,11 +146,11 @@ class AgreementAcceptance extends Entity implements Parsable
 
     /**
      * Gets the state property value. The state of the agreement acceptance. Possible values are: accepted, declined. Supports $filter (eq).
-     * @return AgreementAcceptanceState|null
+     * @return AgreementAcceptance_state|null
     */
-    public function getState(): ?AgreementAcceptanceState {
+    public function getState(): ?AgreementAcceptance_state {
         $val = $this->getBackingStore()->get('state');
-        if (is_null($val) || $val instanceof AgreementAcceptanceState) {
+        if (is_null($val) || $val instanceof AgreementAcceptance_state) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'state'");
@@ -291,9 +291,9 @@ class AgreementAcceptance extends Entity implements Parsable
 
     /**
      * Sets the state property value. The state of the agreement acceptance. Possible values are: accepted, declined. Supports $filter (eq).
-     * @param AgreementAcceptanceState|null $value Value to set for the state property.
+     * @param AgreementAcceptance_state|null $value Value to set for the state property.
     */
-    public function setState(?AgreementAcceptanceState $value): void {
+    public function setState(?AgreementAcceptance_state $value): void {
         $this->getBackingStore()->set('state', $value);
     }
 

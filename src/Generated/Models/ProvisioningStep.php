@@ -90,8 +90,8 @@ class ProvisioningStep implements AdditionalDataHolder, BackedModel, Parsable
             'details' => fn(ParseNode $n) => $o->setDetails($n->getObjectValue([DetailsInfo::class, 'createFromDiscriminatorValue'])),
             'name' => fn(ParseNode $n) => $o->setName($n->getStringValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
-            'provisioningStepType' => fn(ParseNode $n) => $o->setProvisioningStepType($n->getEnumValue(ProvisioningStepType::class)),
-            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(ProvisioningResult::class)),
+            'provisioningStepType' => fn(ParseNode $n) => $o->setProvisioningStepType($n->getEnumValue(ProvisioningStep_provisioningStepType::class)),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(ProvisioningStep_status::class)),
         ];
     }
 
@@ -121,11 +121,11 @@ class ProvisioningStep implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the provisioningStepType property value. Type of step. Possible values are: import, scoping, matching, processing, referenceResolution, export, unknownFutureValue.
-     * @return ProvisioningStepType|null
+     * @return ProvisioningStep_provisioningStepType|null
     */
-    public function getProvisioningStepType(): ?ProvisioningStepType {
+    public function getProvisioningStepType(): ?ProvisioningStep_provisioningStepType {
         $val = $this->getBackingStore()->get('provisioningStepType');
-        if (is_null($val) || $val instanceof ProvisioningStepType) {
+        if (is_null($val) || $val instanceof ProvisioningStep_provisioningStepType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'provisioningStepType'");
@@ -133,11 +133,11 @@ class ProvisioningStep implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the status property value. Status of the step. Possible values are: success, warning,  failure, skipped, unknownFutureValue.
-     * @return ProvisioningResult|null
+     * @return ProvisioningStep_status|null
     */
-    public function getStatus(): ?ProvisioningResult {
+    public function getStatus(): ?ProvisioningStep_status {
         $val = $this->getBackingStore()->get('status');
-        if (is_null($val) || $val instanceof ProvisioningResult) {
+        if (is_null($val) || $val instanceof ProvisioningStep_status) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
@@ -207,17 +207,17 @@ class ProvisioningStep implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the provisioningStepType property value. Type of step. Possible values are: import, scoping, matching, processing, referenceResolution, export, unknownFutureValue.
-     * @param ProvisioningStepType|null $value Value to set for the provisioningStepType property.
+     * @param ProvisioningStep_provisioningStepType|null $value Value to set for the provisioningStepType property.
     */
-    public function setProvisioningStepType(?ProvisioningStepType $value): void {
+    public function setProvisioningStepType(?ProvisioningStep_provisioningStepType $value): void {
         $this->getBackingStore()->set('provisioningStepType', $value);
     }
 
     /**
      * Sets the status property value. Status of the step. Possible values are: success, warning,  failure, skipped, unknownFutureValue.
-     * @param ProvisioningResult|null $value Value to set for the status property.
+     * @param ProvisioningStep_status|null $value Value to set for the status property.
     */
-    public function setStatus(?ProvisioningResult $value): void {
+    public function setStatus(?ProvisioningStep_status $value): void {
         $this->getBackingStore()->set('status', $value);
     }
 

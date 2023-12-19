@@ -72,7 +72,7 @@ class WorkforceIntegration extends ChangeTrackedEntity implements Parsable
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'encryption' => fn(ParseNode $n) => $o->setEncryption($n->getObjectValue([WorkforceIntegrationEncryption::class, 'createFromDiscriminatorValue'])),
             'isActive' => fn(ParseNode $n) => $o->setIsActive($n->getBooleanValue()),
-            'supportedEntities' => fn(ParseNode $n) => $o->setSupportedEntities($n->getEnumValue(WorkforceIntegrationSupportedEntities::class)),
+            'supportedEntities' => fn(ParseNode $n) => $o->setSupportedEntities($n->getEnumValue(WorkforceIntegration_supportedEntities::class)),
             'url' => fn(ParseNode $n) => $o->setUrl($n->getStringValue()),
         ]);
     }
@@ -91,11 +91,11 @@ class WorkforceIntegration extends ChangeTrackedEntity implements Parsable
 
     /**
      * Gets the supportedEntities property value. The Shifts entities supported for synchronous change notifications. Shifts will make a call back to the url provided on client changes on those entities added here. By default, no entities are supported for change notifications. Possible values are: none, shift, swapRequest, userShiftPreferences, openshift, openShiftRequest, offerShiftRequest, unknownFutureValue.
-     * @return WorkforceIntegrationSupportedEntities|null
+     * @return WorkforceIntegration_supportedEntities|null
     */
-    public function getSupportedEntities(): ?WorkforceIntegrationSupportedEntities {
+    public function getSupportedEntities(): ?WorkforceIntegration_supportedEntities {
         $val = $this->getBackingStore()->get('supportedEntities');
-        if (is_null($val) || $val instanceof WorkforceIntegrationSupportedEntities) {
+        if (is_null($val) || $val instanceof WorkforceIntegration_supportedEntities) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'supportedEntities'");
@@ -161,9 +161,9 @@ class WorkforceIntegration extends ChangeTrackedEntity implements Parsable
 
     /**
      * Sets the supportedEntities property value. The Shifts entities supported for synchronous change notifications. Shifts will make a call back to the url provided on client changes on those entities added here. By default, no entities are supported for change notifications. Possible values are: none, shift, swapRequest, userShiftPreferences, openshift, openShiftRequest, offerShiftRequest, unknownFutureValue.
-     * @param WorkforceIntegrationSupportedEntities|null $value Value to set for the supportedEntities property.
+     * @param WorkforceIntegration_supportedEntities|null $value Value to set for the supportedEntities property.
     */
-    public function setSupportedEntities(?WorkforceIntegrationSupportedEntities $value): void {
+    public function setSupportedEntities(?WorkforceIntegration_supportedEntities $value): void {
         $this->getBackingStore()->set('supportedEntities', $value);
     }
 

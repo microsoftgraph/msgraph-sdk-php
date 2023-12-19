@@ -72,11 +72,11 @@ class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, BackedModel
 
     /**
      * Gets the encryptionMethod property value. Select the encryption method for removable  drives. Possible values are: aesCbc128, aesCbc256, xtsAes128, xtsAes256.
-     * @return BitLockerEncryptionMethod|null
+     * @return BitLockerRemovableDrivePolicy_encryptionMethod|null
     */
-    public function getEncryptionMethod(): ?BitLockerEncryptionMethod {
+    public function getEncryptionMethod(): ?BitLockerRemovableDrivePolicy_encryptionMethod {
         $val = $this->getBackingStore()->get('encryptionMethod');
-        if (is_null($val) || $val instanceof BitLockerEncryptionMethod) {
+        if (is_null($val) || $val instanceof BitLockerRemovableDrivePolicy_encryptionMethod) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'encryptionMethod'");
@@ -90,7 +90,7 @@ class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, BackedModel
         $o = $this;
         return  [
             'blockCrossOrganizationWriteAccess' => fn(ParseNode $n) => $o->setBlockCrossOrganizationWriteAccess($n->getBooleanValue()),
-            'encryptionMethod' => fn(ParseNode $n) => $o->setEncryptionMethod($n->getEnumValue(BitLockerEncryptionMethod::class)),
+            'encryptionMethod' => fn(ParseNode $n) => $o->setEncryptionMethod($n->getEnumValue(BitLockerRemovableDrivePolicy_encryptionMethod::class)),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'requireEncryptionForWriteAccess' => fn(ParseNode $n) => $o->setRequireEncryptionForWriteAccess($n->getBooleanValue()),
         ];
@@ -158,9 +158,9 @@ class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the encryptionMethod property value. Select the encryption method for removable  drives. Possible values are: aesCbc128, aesCbc256, xtsAes128, xtsAes256.
-     * @param BitLockerEncryptionMethod|null $value Value to set for the encryptionMethod property.
+     * @param BitLockerRemovableDrivePolicy_encryptionMethod|null $value Value to set for the encryptionMethod property.
     */
-    public function setEncryptionMethod(?BitLockerEncryptionMethod $value): void {
+    public function setEncryptionMethod(?BitLockerRemovableDrivePolicy_encryptionMethod $value): void {
         $this->getBackingStore()->set('encryptionMethod', $value);
     }
 

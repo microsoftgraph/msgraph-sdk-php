@@ -58,11 +58,11 @@ class RiskServicePrincipalActivity implements AdditionalDataHolder, BackedModel,
 
     /**
      * Gets the detail property value. Details of the detected risk. Note: Details for this property are only available for Workload Identities Premium customers. Events in tenants without this license will be returned hidden. The possible values are: none, hidden, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: adminConfirmedServicePrincipalCompromised , adminDismissedAllRiskForServicePrincipal.
-     * @return RiskDetail|null
+     * @return RiskServicePrincipalActivity_detail|null
     */
-    public function getDetail(): ?RiskDetail {
+    public function getDetail(): ?RiskServicePrincipalActivity_detail {
         $val = $this->getBackingStore()->get('detail');
-        if (is_null($val) || $val instanceof RiskDetail) {
+        if (is_null($val) || $val instanceof RiskServicePrincipalActivity_detail) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'detail'");
@@ -75,7 +75,7 @@ class RiskServicePrincipalActivity implements AdditionalDataHolder, BackedModel,
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'detail' => fn(ParseNode $n) => $o->setDetail($n->getEnumValue(RiskDetail::class)),
+            'detail' => fn(ParseNode $n) => $o->setDetail($n->getEnumValue(RiskServicePrincipalActivity_detail::class)),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'riskEventTypes' => function (ParseNode $n) {
                 $val = $n->getCollectionOfPrimitiveValues();
@@ -143,9 +143,9 @@ class RiskServicePrincipalActivity implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the detail property value. Details of the detected risk. Note: Details for this property are only available for Workload Identities Premium customers. Events in tenants without this license will be returned hidden. The possible values are: none, hidden, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: adminConfirmedServicePrincipalCompromised , adminDismissedAllRiskForServicePrincipal.
-     * @param RiskDetail|null $value Value to set for the detail property.
+     * @param RiskServicePrincipalActivity_detail|null $value Value to set for the detail property.
     */
-    public function setDetail(?RiskDetail $value): void {
+    public function setDetail(?RiskServicePrincipalActivity_detail $value): void {
         $this->getBackingStore()->set('detail', $value);
     }
 

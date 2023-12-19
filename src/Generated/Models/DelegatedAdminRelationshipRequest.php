@@ -59,7 +59,7 @@ class DelegatedAdminRelationshipRequest extends Entity implements Parsable
             'action' => fn(ParseNode $n) => $o->setAction($n->getEnumValue(DelegatedAdminRelationshipRequestAction::class)),
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'lastModifiedDateTime' => fn(ParseNode $n) => $o->setLastModifiedDateTime($n->getDateTimeValue()),
-            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(DelegatedAdminRelationshipRequestStatus::class)),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(DelegatedAdminRelationshipRequest_status::class)),
         ]);
     }
 
@@ -77,11 +77,11 @@ class DelegatedAdminRelationshipRequest extends Entity implements Parsable
 
     /**
      * Gets the status property value. The status of the request. Read-only. The possible values are: created, pending, succeeded, failed, unknownFutureValue.
-     * @return DelegatedAdminRelationshipRequestStatus|null
+     * @return DelegatedAdminRelationshipRequest_status|null
     */
-    public function getStatus(): ?DelegatedAdminRelationshipRequestStatus {
+    public function getStatus(): ?DelegatedAdminRelationshipRequest_status {
         $val = $this->getBackingStore()->get('status');
-        if (is_null($val) || $val instanceof DelegatedAdminRelationshipRequestStatus) {
+        if (is_null($val) || $val instanceof DelegatedAdminRelationshipRequest_status) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
@@ -125,9 +125,9 @@ class DelegatedAdminRelationshipRequest extends Entity implements Parsable
 
     /**
      * Sets the status property value. The status of the request. Read-only. The possible values are: created, pending, succeeded, failed, unknownFutureValue.
-     * @param DelegatedAdminRelationshipRequestStatus|null $value Value to set for the status property.
+     * @param DelegatedAdminRelationshipRequest_status|null $value Value to set for the status property.
     */
-    public function setStatus(?DelegatedAdminRelationshipRequestStatus $value): void {
+    public function setStatus(?DelegatedAdminRelationshipRequest_status $value): void {
         $this->getBackingStore()->set('status', $value);
     }
 

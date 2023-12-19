@@ -95,7 +95,7 @@ class BrowserSharedCookieHistory implements AdditionalDataHolder, BackedModel, P
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'path' => fn(ParseNode $n) => $o->setPath($n->getStringValue()),
             'publishedDateTime' => fn(ParseNode $n) => $o->setPublishedDateTime($n->getDateTimeValue()),
-            'sourceEnvironment' => fn(ParseNode $n) => $o->setSourceEnvironment($n->getEnumValue(BrowserSharedCookieSourceEnvironment::class)),
+            'sourceEnvironment' => fn(ParseNode $n) => $o->setSourceEnvironment($n->getEnumValue(BrowserSharedCookieHistory_sourceEnvironment::class)),
         ];
     }
 
@@ -173,11 +173,11 @@ class BrowserSharedCookieHistory implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Gets the sourceEnvironment property value. Specifies how the cookies are shared between Microsoft Edge and Internet Explorer. The possible values are: microsoftEdge, internetExplorer11, both, unknownFutureValue.
-     * @return BrowserSharedCookieSourceEnvironment|null
+     * @return BrowserSharedCookieHistory_sourceEnvironment|null
     */
-    public function getSourceEnvironment(): ?BrowserSharedCookieSourceEnvironment {
+    public function getSourceEnvironment(): ?BrowserSharedCookieHistory_sourceEnvironment {
         $val = $this->getBackingStore()->get('sourceEnvironment');
-        if (is_null($val) || $val instanceof BrowserSharedCookieSourceEnvironment) {
+        if (is_null($val) || $val instanceof BrowserSharedCookieHistory_sourceEnvironment) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'sourceEnvironment'");
@@ -282,9 +282,9 @@ class BrowserSharedCookieHistory implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the sourceEnvironment property value. Specifies how the cookies are shared between Microsoft Edge and Internet Explorer. The possible values are: microsoftEdge, internetExplorer11, both, unknownFutureValue.
-     * @param BrowserSharedCookieSourceEnvironment|null $value Value to set for the sourceEnvironment property.
+     * @param BrowserSharedCookieHistory_sourceEnvironment|null $value Value to set for the sourceEnvironment property.
     */
-    public function setSourceEnvironment(?BrowserSharedCookieSourceEnvironment $value): void {
+    public function setSourceEnvironment(?BrowserSharedCookieHistory_sourceEnvironment $value): void {
         $this->getBackingStore()->set('sourceEnvironment', $value);
     }
 

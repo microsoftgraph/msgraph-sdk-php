@@ -90,7 +90,7 @@ class ConnectedOrganization extends Entity implements Parsable
             'identitySources' => fn(ParseNode $n) => $o->setIdentitySources($n->getCollectionOfObjectValues([IdentitySource::class, 'createFromDiscriminatorValue'])),
             'internalSponsors' => fn(ParseNode $n) => $o->setInternalSponsors($n->getCollectionOfObjectValues([DirectoryObject::class, 'createFromDiscriminatorValue'])),
             'modifiedDateTime' => fn(ParseNode $n) => $o->setModifiedDateTime($n->getDateTimeValue()),
-            'state' => fn(ParseNode $n) => $o->setState($n->getEnumValue(ConnectedOrganizationState::class)),
+            'state' => fn(ParseNode $n) => $o->setState($n->getEnumValue(ConnectedOrganization_state::class)),
         ]);
     }
 
@@ -136,11 +136,11 @@ class ConnectedOrganization extends Entity implements Parsable
 
     /**
      * Gets the state property value. The state of a connected organization defines whether assignment policies with requestor scope type AllConfiguredConnectedOrganizationSubjects are applicable or not.  The possible values are: configured, proposed, unknownFutureValue.
-     * @return ConnectedOrganizationState|null
+     * @return ConnectedOrganization_state|null
     */
-    public function getState(): ?ConnectedOrganizationState {
+    public function getState(): ?ConnectedOrganization_state {
         $val = $this->getBackingStore()->get('state');
-        if (is_null($val) || $val instanceof ConnectedOrganizationState) {
+        if (is_null($val) || $val instanceof ConnectedOrganization_state) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'state'");
@@ -220,9 +220,9 @@ class ConnectedOrganization extends Entity implements Parsable
 
     /**
      * Sets the state property value. The state of a connected organization defines whether assignment policies with requestor scope type AllConfiguredConnectedOrganizationSubjects are applicable or not.  The possible values are: configured, proposed, unknownFutureValue.
-     * @param ConnectedOrganizationState|null $value Value to set for the state property.
+     * @param ConnectedOrganization_state|null $value Value to set for the state property.
     */
-    public function setState(?ConnectedOrganizationState $value): void {
+    public function setState(?ConnectedOrganization_state $value): void {
         $this->getBackingStore()->set('state', $value);
     }
 

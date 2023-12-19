@@ -103,7 +103,7 @@ class UserTrainingStatusInfo implements AdditionalDataHolder, BackedModel, Parsa
             'completionDateTime' => fn(ParseNode $n) => $o->setCompletionDateTime($n->getDateTimeValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
-            'trainingStatus' => fn(ParseNode $n) => $o->setTrainingStatus($n->getEnumValue(TrainingStatus::class)),
+            'trainingStatus' => fn(ParseNode $n) => $o->setTrainingStatus($n->getEnumValue(UserTrainingStatusInfo_trainingStatus::class)),
         ];
     }
 
@@ -121,11 +121,11 @@ class UserTrainingStatusInfo implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Gets the trainingStatus property value. The status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
-     * @return TrainingStatus|null
+     * @return UserTrainingStatusInfo_trainingStatus|null
     */
-    public function getTrainingStatus(): ?TrainingStatus {
+    public function getTrainingStatus(): ?UserTrainingStatusInfo_trainingStatus {
         $val = $this->getBackingStore()->get('trainingStatus');
-        if (is_null($val) || $val instanceof TrainingStatus) {
+        if (is_null($val) || $val instanceof UserTrainingStatusInfo_trainingStatus) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'trainingStatus'");
@@ -194,9 +194,9 @@ class UserTrainingStatusInfo implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the trainingStatus property value. The status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
-     * @param TrainingStatus|null $value Value to set for the trainingStatus property.
+     * @param UserTrainingStatusInfo_trainingStatus|null $value Value to set for the trainingStatus property.
     */
-    public function setTrainingStatus(?TrainingStatus $value): void {
+    public function setTrainingStatus(?UserTrainingStatusInfo_trainingStatus $value): void {
         $this->getBackingStore()->set('trainingStatus', $value);
     }
 

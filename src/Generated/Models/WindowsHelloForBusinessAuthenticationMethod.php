@@ -72,17 +72,17 @@ class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationMethod i
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'device' => fn(ParseNode $n) => $o->setDevice($n->getObjectValue([Device::class, 'createFromDiscriminatorValue'])),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
-            'keyStrength' => fn(ParseNode $n) => $o->setKeyStrength($n->getEnumValue(AuthenticationMethodKeyStrength::class)),
+            'keyStrength' => fn(ParseNode $n) => $o->setKeyStrength($n->getEnumValue(WindowsHelloForBusinessAuthenticationMethod_keyStrength::class)),
         ]);
     }
 
     /**
      * Gets the keyStrength property value. Key strength of this Windows Hello for Business key. Possible values are: normal, weak, unknown.
-     * @return AuthenticationMethodKeyStrength|null
+     * @return WindowsHelloForBusinessAuthenticationMethod_keyStrength|null
     */
-    public function getKeyStrength(): ?AuthenticationMethodKeyStrength {
+    public function getKeyStrength(): ?WindowsHelloForBusinessAuthenticationMethod_keyStrength {
         $val = $this->getBackingStore()->get('keyStrength');
-        if (is_null($val) || $val instanceof AuthenticationMethodKeyStrength) {
+        if (is_null($val) || $val instanceof WindowsHelloForBusinessAuthenticationMethod_keyStrength) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'keyStrength'");
@@ -126,9 +126,9 @@ class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationMethod i
 
     /**
      * Sets the keyStrength property value. Key strength of this Windows Hello for Business key. Possible values are: normal, weak, unknown.
-     * @param AuthenticationMethodKeyStrength|null $value Value to set for the keyStrength property.
+     * @param WindowsHelloForBusinessAuthenticationMethod_keyStrength|null $value Value to set for the keyStrength property.
     */
-    public function setKeyStrength(?AuthenticationMethodKeyStrength $value): void {
+    public function setKeyStrength(?WindowsHelloForBusinessAuthenticationMethod_keyStrength $value): void {
         $this->getBackingStore()->set('keyStrength', $value);
     }
 

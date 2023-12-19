@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\ReviewSets\Item\MicrosoftGraphSecurityAddToReviewSet;
 
-use Microsoft\Graph\Generated\Models\Security\AdditionalDataOptions;
 use Microsoft\Graph\Generated\Models\Security\EdiscoverySearch;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
@@ -51,11 +50,11 @@ class AddToReviewSetPostRequestBody implements AdditionalDataHolder, BackedModel
 
     /**
      * Gets the additionalDataOptions property value. The additionalDataOptions property
-     * @return AdditionalDataOptions|null
+     * @return AddToReviewSetPostRequestBody_additionalDataOptions|null
     */
-    public function getAdditionalDataOptions(): ?AdditionalDataOptions {
+    public function getAdditionalDataOptions(): ?AddToReviewSetPostRequestBody_additionalDataOptions {
         $val = $this->getBackingStore()->get('additionalDataOptions');
-        if (is_null($val) || $val instanceof AdditionalDataOptions) {
+        if (is_null($val) || $val instanceof AddToReviewSetPostRequestBody_additionalDataOptions) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalDataOptions'");
@@ -76,7 +75,7 @@ class AddToReviewSetPostRequestBody implements AdditionalDataHolder, BackedModel
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'additionalDataOptions' => fn(ParseNode $n) => $o->setAdditionalDataOptions($n->getEnumValue(AdditionalDataOptions::class)),
+            'additionalDataOptions' => fn(ParseNode $n) => $o->setAdditionalDataOptions($n->getEnumValue(AddToReviewSetPostRequestBody_additionalDataOptions::class)),
             'search' => fn(ParseNode $n) => $o->setSearch($n->getObjectValue([EdiscoverySearch::class, 'createFromDiscriminatorValue'])),
         ];
     }
@@ -113,9 +112,9 @@ class AddToReviewSetPostRequestBody implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the additionalDataOptions property value. The additionalDataOptions property
-     * @param AdditionalDataOptions|null $value Value to set for the additionalDataOptions property.
+     * @param AddToReviewSetPostRequestBody_additionalDataOptions|null $value Value to set for the additionalDataOptions property.
     */
-    public function setAdditionalDataOptions(?AdditionalDataOptions $value): void {
+    public function setAdditionalDataOptions(?AddToReviewSetPostRequestBody_additionalDataOptions $value): void {
         $this->getBackingStore()->set('additionalDataOptions', $value);
     }
 

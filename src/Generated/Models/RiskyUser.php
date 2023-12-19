@@ -43,10 +43,10 @@ class RiskyUser extends Entity implements Parsable
             'history' => fn(ParseNode $n) => $o->setHistory($n->getCollectionOfObjectValues([RiskyUserHistoryItem::class, 'createFromDiscriminatorValue'])),
             'isDeleted' => fn(ParseNode $n) => $o->setIsDeleted($n->getBooleanValue()),
             'isProcessing' => fn(ParseNode $n) => $o->setIsProcessing($n->getBooleanValue()),
-            'riskDetail' => fn(ParseNode $n) => $o->setRiskDetail($n->getEnumValue(RiskDetail::class)),
+            'riskDetail' => fn(ParseNode $n) => $o->setRiskDetail($n->getEnumValue(RiskyUser_riskDetail::class)),
             'riskLastUpdatedDateTime' => fn(ParseNode $n) => $o->setRiskLastUpdatedDateTime($n->getDateTimeValue()),
-            'riskLevel' => fn(ParseNode $n) => $o->setRiskLevel($n->getEnumValue(RiskLevel::class)),
-            'riskState' => fn(ParseNode $n) => $o->setRiskState($n->getEnumValue(RiskState::class)),
+            'riskLevel' => fn(ParseNode $n) => $o->setRiskLevel($n->getEnumValue(RiskyUser_riskLevel::class)),
+            'riskState' => fn(ParseNode $n) => $o->setRiskState($n->getEnumValue(RiskyUser_riskState::class)),
             'userDisplayName' => fn(ParseNode $n) => $o->setUserDisplayName($n->getStringValue()),
             'userPrincipalName' => fn(ParseNode $n) => $o->setUserPrincipalName($n->getStringValue()),
         ]);
@@ -92,11 +92,11 @@ class RiskyUser extends Entity implements Parsable
 
     /**
      * Gets the riskDetail property value. Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
-     * @return RiskDetail|null
+     * @return RiskyUser_riskDetail|null
     */
-    public function getRiskDetail(): ?RiskDetail {
+    public function getRiskDetail(): ?RiskyUser_riskDetail {
         $val = $this->getBackingStore()->get('riskDetail');
-        if (is_null($val) || $val instanceof RiskDetail) {
+        if (is_null($val) || $val instanceof RiskyUser_riskDetail) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'riskDetail'");
@@ -116,11 +116,11 @@ class RiskyUser extends Entity implements Parsable
 
     /**
      * Gets the riskLevel property value. Level of the detected risky user. Possible values are: low, medium, high, hidden, none, unknownFutureValue.
-     * @return RiskLevel|null
+     * @return RiskyUser_riskLevel|null
     */
-    public function getRiskLevel(): ?RiskLevel {
+    public function getRiskLevel(): ?RiskyUser_riskLevel {
         $val = $this->getBackingStore()->get('riskLevel');
-        if (is_null($val) || $val instanceof RiskLevel) {
+        if (is_null($val) || $val instanceof RiskyUser_riskLevel) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'riskLevel'");
@@ -128,11 +128,11 @@ class RiskyUser extends Entity implements Parsable
 
     /**
      * Gets the riskState property value. State of the user's risk. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
-     * @return RiskState|null
+     * @return RiskyUser_riskState|null
     */
-    public function getRiskState(): ?RiskState {
+    public function getRiskState(): ?RiskyUser_riskState {
         $val = $this->getBackingStore()->get('riskState');
-        if (is_null($val) || $val instanceof RiskState) {
+        if (is_null($val) || $val instanceof RiskyUser_riskState) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'riskState'");
@@ -205,9 +205,9 @@ class RiskyUser extends Entity implements Parsable
 
     /**
      * Sets the riskDetail property value. Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
-     * @param RiskDetail|null $value Value to set for the riskDetail property.
+     * @param RiskyUser_riskDetail|null $value Value to set for the riskDetail property.
     */
-    public function setRiskDetail(?RiskDetail $value): void {
+    public function setRiskDetail(?RiskyUser_riskDetail $value): void {
         $this->getBackingStore()->set('riskDetail', $value);
     }
 
@@ -221,17 +221,17 @@ class RiskyUser extends Entity implements Parsable
 
     /**
      * Sets the riskLevel property value. Level of the detected risky user. Possible values are: low, medium, high, hidden, none, unknownFutureValue.
-     * @param RiskLevel|null $value Value to set for the riskLevel property.
+     * @param RiskyUser_riskLevel|null $value Value to set for the riskLevel property.
     */
-    public function setRiskLevel(?RiskLevel $value): void {
+    public function setRiskLevel(?RiskyUser_riskLevel $value): void {
         $this->getBackingStore()->set('riskLevel', $value);
     }
 
     /**
      * Sets the riskState property value. State of the user's risk. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
-     * @param RiskState|null $value Value to set for the riskState property.
+     * @param RiskyUser_riskState|null $value Value to set for the riskState property.
     */
-    public function setRiskState(?RiskState $value): void {
+    public function setRiskState(?RiskyUser_riskState $value): void {
         $this->getBackingStore()->set('riskState', $value);
     }
 

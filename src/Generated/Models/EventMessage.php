@@ -70,10 +70,10 @@ class EventMessage extends Message implements Parsable
             'isDelegated' => fn(ParseNode $n) => $o->setIsDelegated($n->getBooleanValue()),
             'isOutOfDate' => fn(ParseNode $n) => $o->setIsOutOfDate($n->getBooleanValue()),
             'location' => fn(ParseNode $n) => $o->setLocation($n->getObjectValue([Location::class, 'createFromDiscriminatorValue'])),
-            'meetingMessageType' => fn(ParseNode $n) => $o->setMeetingMessageType($n->getEnumValue(MeetingMessageType::class)),
+            'meetingMessageType' => fn(ParseNode $n) => $o->setMeetingMessageType($n->getEnumValue(EventMessage_meetingMessageType::class)),
             'recurrence' => fn(ParseNode $n) => $o->setRecurrence($n->getObjectValue([PatternedRecurrence::class, 'createFromDiscriminatorValue'])),
             'startDateTime' => fn(ParseNode $n) => $o->setStartDateTime($n->getObjectValue([DateTimeTimeZone::class, 'createFromDiscriminatorValue'])),
-            'type' => fn(ParseNode $n) => $o->setType($n->getEnumValue(EventType::class)),
+            'type' => fn(ParseNode $n) => $o->setType($n->getEnumValue(EventMessage_type::class)),
         ]);
     }
 
@@ -127,11 +127,11 @@ class EventMessage extends Message implements Parsable
 
     /**
      * Gets the meetingMessageType property value. The meetingMessageType property
-     * @return MeetingMessageType|null
+     * @return EventMessage_meetingMessageType|null
     */
-    public function getMeetingMessageType(): ?MeetingMessageType {
+    public function getMeetingMessageType(): ?EventMessage_meetingMessageType {
         $val = $this->getBackingStore()->get('meetingMessageType');
-        if (is_null($val) || $val instanceof MeetingMessageType) {
+        if (is_null($val) || $val instanceof EventMessage_meetingMessageType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'meetingMessageType'");
@@ -163,11 +163,11 @@ class EventMessage extends Message implements Parsable
 
     /**
      * Gets the type property value. The type property
-     * @return EventType|null
+     * @return EventMessage_type|null
     */
-    public function getType(): ?EventType {
+    public function getType(): ?EventMessage_type {
         $val = $this->getBackingStore()->get('type');
-        if (is_null($val) || $val instanceof EventType) {
+        if (is_null($val) || $val instanceof EventMessage_type) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'type'");
@@ -241,9 +241,9 @@ class EventMessage extends Message implements Parsable
 
     /**
      * Sets the meetingMessageType property value. The meetingMessageType property
-     * @param MeetingMessageType|null $value Value to set for the meetingMessageType property.
+     * @param EventMessage_meetingMessageType|null $value Value to set for the meetingMessageType property.
     */
-    public function setMeetingMessageType(?MeetingMessageType $value): void {
+    public function setMeetingMessageType(?EventMessage_meetingMessageType $value): void {
         $this->getBackingStore()->set('meetingMessageType', $value);
     }
 
@@ -265,9 +265,9 @@ class EventMessage extends Message implements Parsable
 
     /**
      * Sets the type property value. The type property
-     * @param EventType|null $value Value to set for the type property.
+     * @param EventMessage_type|null $value Value to set for the type property.
     */
-    public function setType(?EventType $value): void {
+    public function setType(?EventMessage_type $value): void {
         $this->getBackingStore()->set('type', $value);
     }
 

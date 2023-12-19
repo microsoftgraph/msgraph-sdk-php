@@ -87,7 +87,7 @@ class ActivityHistoryItem extends Entity implements Parsable
             'lastActiveDateTime' => fn(ParseNode $n) => $o->setLastActiveDateTime($n->getDateTimeValue()),
             'lastModifiedDateTime' => fn(ParseNode $n) => $o->setLastModifiedDateTime($n->getDateTimeValue()),
             'startedDateTime' => fn(ParseNode $n) => $o->setStartedDateTime($n->getDateTimeValue()),
-            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(Status::class)),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(ActivityHistoryItem_status::class)),
             'userTimezone' => fn(ParseNode $n) => $o->setUserTimezone($n->getStringValue()),
         ]);
     }
@@ -130,11 +130,11 @@ class ActivityHistoryItem extends Entity implements Parsable
 
     /**
      * Gets the status property value. Set by the server. A status code used to identify valid objects. Values: active, updated, deleted, ignored.
-     * @return Status|null
+     * @return ActivityHistoryItem_status|null
     */
-    public function getStatus(): ?Status {
+    public function getStatus(): ?ActivityHistoryItem_status {
         $val = $this->getBackingStore()->get('status');
-        if (is_null($val) || $val instanceof Status) {
+        if (is_null($val) || $val instanceof ActivityHistoryItem_status) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
@@ -227,9 +227,9 @@ class ActivityHistoryItem extends Entity implements Parsable
 
     /**
      * Sets the status property value. Set by the server. A status code used to identify valid objects. Values: active, updated, deleted, ignored.
-     * @param Status|null $value Value to set for the status property.
+     * @param ActivityHistoryItem_status|null $value Value to set for the status property.
     */
-    public function setStatus(?Status $value): void {
+    public function setStatus(?ActivityHistoryItem_status $value): void {
         $this->getBackingStore()->set('status', $value);
     }
 

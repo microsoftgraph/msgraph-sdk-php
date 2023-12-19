@@ -67,20 +67,20 @@ class DataSourceContainer extends Entity implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
-            'holdStatus' => fn(ParseNode $n) => $o->setHoldStatus($n->getEnumValue(DataSourceHoldStatus::class)),
+            'holdStatus' => fn(ParseNode $n) => $o->setHoldStatus($n->getEnumValue(DataSourceContainer_holdStatus::class)),
             'lastModifiedDateTime' => fn(ParseNode $n) => $o->setLastModifiedDateTime($n->getDateTimeValue()),
             'releasedDateTime' => fn(ParseNode $n) => $o->setReleasedDateTime($n->getDateTimeValue()),
-            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(DataSourceContainerStatus::class)),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(DataSourceContainer_status::class)),
         ]);
     }
 
     /**
      * Gets the holdStatus property value. The hold status of the dataSourceContainer. The possible values are: notApplied, applied, applying, removing, partial
-     * @return DataSourceHoldStatus|null
+     * @return DataSourceContainer_holdStatus|null
     */
-    public function getHoldStatus(): ?DataSourceHoldStatus {
+    public function getHoldStatus(): ?DataSourceContainer_holdStatus {
         $val = $this->getBackingStore()->get('holdStatus');
-        if (is_null($val) || $val instanceof DataSourceHoldStatus) {
+        if (is_null($val) || $val instanceof DataSourceContainer_holdStatus) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'holdStatus'");
@@ -112,11 +112,11 @@ class DataSourceContainer extends Entity implements Parsable
 
     /**
      * Gets the status property value. Latest status of the dataSourceContainer. Possible values are: Active, Released.
-     * @return DataSourceContainerStatus|null
+     * @return DataSourceContainer_status|null
     */
-    public function getStatus(): ?DataSourceContainerStatus {
+    public function getStatus(): ?DataSourceContainer_status {
         $val = $this->getBackingStore()->get('status');
-        if (is_null($val) || $val instanceof DataSourceContainerStatus) {
+        if (is_null($val) || $val instanceof DataSourceContainer_status) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
@@ -154,9 +154,9 @@ class DataSourceContainer extends Entity implements Parsable
 
     /**
      * Sets the holdStatus property value. The hold status of the dataSourceContainer. The possible values are: notApplied, applied, applying, removing, partial
-     * @param DataSourceHoldStatus|null $value Value to set for the holdStatus property.
+     * @param DataSourceContainer_holdStatus|null $value Value to set for the holdStatus property.
     */
-    public function setHoldStatus(?DataSourceHoldStatus $value): void {
+    public function setHoldStatus(?DataSourceContainer_holdStatus $value): void {
         $this->getBackingStore()->set('holdStatus', $value);
     }
 
@@ -178,9 +178,9 @@ class DataSourceContainer extends Entity implements Parsable
 
     /**
      * Sets the status property value. Latest status of the dataSourceContainer. Possible values are: Active, Released.
-     * @param DataSourceContainerStatus|null $value Value to set for the status property.
+     * @param DataSourceContainer_status|null $value Value to set for the status property.
     */
-    public function setStatus(?DataSourceContainerStatus $value): void {
+    public function setStatus(?DataSourceContainer_status $value): void {
         $this->getBackingStore()->set('status', $value);
     }
 

@@ -38,11 +38,11 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
 
     /**
      * Gets the assignedTo property value. The assignedTo property
-     * @return ScheduleChangeRequestActor|null
+     * @return ScheduleChangeRequest_assignedTo|null
     */
-    public function getAssignedTo(): ?ScheduleChangeRequestActor {
+    public function getAssignedTo(): ?ScheduleChangeRequest_assignedTo {
         $val = $this->getBackingStore()->get('assignedTo');
-        if (is_null($val) || $val instanceof ScheduleChangeRequestActor) {
+        if (is_null($val) || $val instanceof ScheduleChangeRequest_assignedTo) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'assignedTo'");
@@ -55,14 +55,14 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'assignedTo' => fn(ParseNode $n) => $o->setAssignedTo($n->getEnumValue(ScheduleChangeRequestActor::class)),
+            'assignedTo' => fn(ParseNode $n) => $o->setAssignedTo($n->getEnumValue(ScheduleChangeRequest_assignedTo::class)),
             'managerActionDateTime' => fn(ParseNode $n) => $o->setManagerActionDateTime($n->getDateTimeValue()),
             'managerActionMessage' => fn(ParseNode $n) => $o->setManagerActionMessage($n->getStringValue()),
             'managerUserId' => fn(ParseNode $n) => $o->setManagerUserId($n->getStringValue()),
             'senderDateTime' => fn(ParseNode $n) => $o->setSenderDateTime($n->getDateTimeValue()),
             'senderMessage' => fn(ParseNode $n) => $o->setSenderMessage($n->getStringValue()),
             'senderUserId' => fn(ParseNode $n) => $o->setSenderUserId($n->getStringValue()),
-            'state' => fn(ParseNode $n) => $o->setState($n->getEnumValue(ScheduleChangeState::class)),
+            'state' => fn(ParseNode $n) => $o->setState($n->getEnumValue(ScheduleChangeRequest_state::class)),
         ]);
     }
 
@@ -140,11 +140,11 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
 
     /**
      * Gets the state property value. The state property
-     * @return ScheduleChangeState|null
+     * @return ScheduleChangeRequest_state|null
     */
-    public function getState(): ?ScheduleChangeState {
+    public function getState(): ?ScheduleChangeRequest_state {
         $val = $this->getBackingStore()->get('state');
-        if (is_null($val) || $val instanceof ScheduleChangeState) {
+        if (is_null($val) || $val instanceof ScheduleChangeRequest_state) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'state'");
@@ -164,9 +164,9 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
 
     /**
      * Sets the assignedTo property value. The assignedTo property
-     * @param ScheduleChangeRequestActor|null $value Value to set for the assignedTo property.
+     * @param ScheduleChangeRequest_assignedTo|null $value Value to set for the assignedTo property.
     */
-    public function setAssignedTo(?ScheduleChangeRequestActor $value): void {
+    public function setAssignedTo(?ScheduleChangeRequest_assignedTo $value): void {
         $this->getBackingStore()->set('assignedTo', $value);
     }
 
@@ -220,9 +220,9 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
 
     /**
      * Sets the state property value. The state property
-     * @param ScheduleChangeState|null $value Value to set for the state property.
+     * @param ScheduleChangeRequest_state|null $value Value to set for the state property.
     */
-    public function setState(?ScheduleChangeState $value): void {
+    public function setState(?ScheduleChangeRequest_state $value): void {
         $this->getBackingStore()->set('state', $value);
     }
 

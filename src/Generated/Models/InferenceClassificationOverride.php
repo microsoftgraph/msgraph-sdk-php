@@ -26,11 +26,11 @@ class InferenceClassificationOverride extends Entity implements Parsable
 
     /**
      * Gets the classifyAs property value. Specifies how incoming messages from a specific sender should always be classified as. The possible values are: focused, other.
-     * @return InferenceClassificationType|null
+     * @return InferenceClassificationOverride_classifyAs|null
     */
-    public function getClassifyAs(): ?InferenceClassificationType {
+    public function getClassifyAs(): ?InferenceClassificationOverride_classifyAs {
         $val = $this->getBackingStore()->get('classifyAs');
-        if (is_null($val) || $val instanceof InferenceClassificationType) {
+        if (is_null($val) || $val instanceof InferenceClassificationOverride_classifyAs) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'classifyAs'");
@@ -43,7 +43,7 @@ class InferenceClassificationOverride extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'classifyAs' => fn(ParseNode $n) => $o->setClassifyAs($n->getEnumValue(InferenceClassificationType::class)),
+            'classifyAs' => fn(ParseNode $n) => $o->setClassifyAs($n->getEnumValue(InferenceClassificationOverride_classifyAs::class)),
             'senderEmailAddress' => fn(ParseNode $n) => $o->setSenderEmailAddress($n->getObjectValue([EmailAddress::class, 'createFromDiscriminatorValue'])),
         ]);
     }
@@ -72,9 +72,9 @@ class InferenceClassificationOverride extends Entity implements Parsable
 
     /**
      * Sets the classifyAs property value. Specifies how incoming messages from a specific sender should always be classified as. The possible values are: focused, other.
-     * @param InferenceClassificationType|null $value Value to set for the classifyAs property.
+     * @param InferenceClassificationOverride_classifyAs|null $value Value to set for the classifyAs property.
     */
-    public function setClassifyAs(?InferenceClassificationType $value): void {
+    public function setClassifyAs(?InferenceClassificationOverride_classifyAs $value): void {
         $this->getBackingStore()->set('classifyAs', $value);
     }
 

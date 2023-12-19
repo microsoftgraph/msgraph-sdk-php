@@ -65,7 +65,7 @@ class CoachmarkLocation implements AdditionalDataHolder, BackedModel, Parsable
             'length' => fn(ParseNode $n) => $o->setLength($n->getIntegerValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'offset' => fn(ParseNode $n) => $o->setOffset($n->getIntegerValue()),
-            'type' => fn(ParseNode $n) => $o->setType($n->getEnumValue(CoachmarkLocationType::class)),
+            'type' => fn(ParseNode $n) => $o->setType($n->getEnumValue(CoachmarkLocation_type::class)),
         ];
     }
 
@@ -107,11 +107,11 @@ class CoachmarkLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the type property value. Type of coachmark location. The possible values are: unknown, fromEmail, subject, externalTag, displayName, messageBody, unknownFutureValue.
-     * @return CoachmarkLocationType|null
+     * @return CoachmarkLocation_type|null
     */
-    public function getType(): ?CoachmarkLocationType {
+    public function getType(): ?CoachmarkLocation_type {
         $val = $this->getBackingStore()->get('type');
-        if (is_null($val) || $val instanceof CoachmarkLocationType) {
+        if (is_null($val) || $val instanceof CoachmarkLocation_type) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'type'");
@@ -171,9 +171,9 @@ class CoachmarkLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the type property value. Type of coachmark location. The possible values are: unknown, fromEmail, subject, externalTag, displayName, messageBody, unknownFutureValue.
-     * @param CoachmarkLocationType|null $value Value to set for the type property.
+     * @param CoachmarkLocation_type|null $value Value to set for the type property.
     */
-    public function setType(?CoachmarkLocationType $value): void {
+    public function setType(?CoachmarkLocation_type $value): void {
         $this->getBackingStore()->set('type', $value);
     }
 

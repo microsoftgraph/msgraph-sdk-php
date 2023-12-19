@@ -33,7 +33,7 @@ class Relation extends Entity implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'fromTerm' => fn(ParseNode $n) => $o->setFromTerm($n->getObjectValue([Term::class, 'createFromDiscriminatorValue'])),
-            'relationship' => fn(ParseNode $n) => $o->setRelationship($n->getEnumValue(RelationType::class)),
+            'relationship' => fn(ParseNode $n) => $o->setRelationship($n->getEnumValue(Relation_relationship::class)),
             'set' => fn(ParseNode $n) => $o->setSet($n->getObjectValue([Set::class, 'createFromDiscriminatorValue'])),
             'toTerm' => fn(ParseNode $n) => $o->setToTerm($n->getObjectValue([Term::class, 'createFromDiscriminatorValue'])),
         ]);
@@ -53,11 +53,11 @@ class Relation extends Entity implements Parsable
 
     /**
      * Gets the relationship property value. The type of relation. Possible values are: pin, reuse.
-     * @return RelationType|null
+     * @return Relation_relationship|null
     */
-    public function getRelationship(): ?RelationType {
+    public function getRelationship(): ?Relation_relationship {
         $val = $this->getBackingStore()->get('relationship');
-        if (is_null($val) || $val instanceof RelationType) {
+        if (is_null($val) || $val instanceof Relation_relationship) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'relationship'");
@@ -109,9 +109,9 @@ class Relation extends Entity implements Parsable
 
     /**
      * Sets the relationship property value. The type of relation. Possible values are: pin, reuse.
-     * @param RelationType|null $value Value to set for the relationship property.
+     * @param Relation_relationship|null $value Value to set for the relationship property.
     */
-    public function setRelationship(?RelationType $value): void {
+    public function setRelationship(?Relation_relationship $value): void {
         $this->getBackingStore()->set('relationship', $value);
     }
 

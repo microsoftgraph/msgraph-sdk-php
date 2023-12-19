@@ -204,11 +204,11 @@ class Alert extends Entity implements Parsable
 
     /**
      * Gets the feedback property value. Analyst feedback on the alert. Possible values are: unknown, truePositive, falsePositive, benignPositive. (supports update)
-     * @return AlertFeedback|null
+     * @return Alert_feedback|null
     */
-    public function getFeedback(): ?AlertFeedback {
+    public function getFeedback(): ?Alert_feedback {
         $val = $this->getBackingStore()->get('feedback');
-        if (is_null($val) || $val instanceof AlertFeedback) {
+        if (is_null($val) || $val instanceof Alert_feedback) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'feedback'");
@@ -249,7 +249,7 @@ class Alert extends Entity implements Parsable
                 $this->setDetectionIds($val);
             },
             'eventDateTime' => fn(ParseNode $n) => $o->setEventDateTime($n->getDateTimeValue()),
-            'feedback' => fn(ParseNode $n) => $o->setFeedback($n->getEnumValue(AlertFeedback::class)),
+            'feedback' => fn(ParseNode $n) => $o->setFeedback($n->getEnumValue(Alert_feedback::class)),
             'fileStates' => fn(ParseNode $n) => $o->setFileStates($n->getCollectionOfObjectValues([FileSecurityState::class, 'createFromDiscriminatorValue'])),
             'historyStates' => fn(ParseNode $n) => $o->setHistoryStates($n->getCollectionOfObjectValues([AlertHistoryState::class, 'createFromDiscriminatorValue'])),
             'hostStates' => fn(ParseNode $n) => $o->setHostStates($n->getCollectionOfObjectValues([HostSecurityState::class, 'createFromDiscriminatorValue'])),
@@ -790,9 +790,9 @@ class Alert extends Entity implements Parsable
 
     /**
      * Sets the feedback property value. Analyst feedback on the alert. Possible values are: unknown, truePositive, falsePositive, benignPositive. (supports update)
-     * @param AlertFeedback|null $value Value to set for the feedback property.
+     * @param Alert_feedback|null $value Value to set for the feedback property.
     */
-    public function setFeedback(?AlertFeedback $value): void {
+    public function setFeedback(?Alert_feedback $value): void {
         $this->getBackingStore()->set('feedback', $value);
     }
 

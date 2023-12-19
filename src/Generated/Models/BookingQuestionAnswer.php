@@ -62,11 +62,11 @@ class BookingQuestionAnswer implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Gets the answerInputType property value. The expected answer type. The possible values are: text, radioButton, unknownFutureValue.
-     * @return AnswerInputType|null
+     * @return BookingQuestionAnswer_answerInputType|null
     */
-    public function getAnswerInputType(): ?AnswerInputType {
+    public function getAnswerInputType(): ?BookingQuestionAnswer_answerInputType {
         $val = $this->getBackingStore()->get('answerInputType');
-        if (is_null($val) || $val instanceof AnswerInputType) {
+        if (is_null($val) || $val instanceof BookingQuestionAnswer_answerInputType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'answerInputType'");
@@ -102,7 +102,7 @@ class BookingQuestionAnswer implements AdditionalDataHolder, BackedModel, Parsab
         $o = $this;
         return  [
             'answer' => fn(ParseNode $n) => $o->setAnswer($n->getStringValue()),
-            'answerInputType' => fn(ParseNode $n) => $o->setAnswerInputType($n->getEnumValue(AnswerInputType::class)),
+            'answerInputType' => fn(ParseNode $n) => $o->setAnswerInputType($n->getEnumValue(BookingQuestionAnswer_answerInputType::class)),
             'answerOptions' => function (ParseNode $n) {
                 $val = $n->getCollectionOfPrimitiveValues();
                 if (is_array($val)) {
@@ -222,9 +222,9 @@ class BookingQuestionAnswer implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the answerInputType property value. The expected answer type. The possible values are: text, radioButton, unknownFutureValue.
-     * @param AnswerInputType|null $value Value to set for the answerInputType property.
+     * @param BookingQuestionAnswer_answerInputType|null $value Value to set for the answerInputType property.
     */
-    public function setAnswerInputType(?AnswerInputType $value): void {
+    public function setAnswerInputType(?BookingQuestionAnswer_answerInputType $value): void {
         $this->getBackingStore()->set('answerInputType', $value);
     }
 

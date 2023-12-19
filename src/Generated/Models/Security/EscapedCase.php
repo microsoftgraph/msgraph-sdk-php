@@ -82,7 +82,7 @@ class EscapedCase extends Entity implements Parsable
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'lastModifiedBy' => fn(ParseNode $n) => $o->setLastModifiedBy($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
             'lastModifiedDateTime' => fn(ParseNode $n) => $o->setLastModifiedDateTime($n->getDateTimeValue()),
-            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(CaseStatus::class)),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(Case_status::class)),
         ]);
     }
 
@@ -112,11 +112,11 @@ class EscapedCase extends Entity implements Parsable
 
     /**
      * Gets the status property value. The status property
-     * @return CaseStatus|null
+     * @return Case_status|null
     */
-    public function getStatus(): ?CaseStatus {
+    public function getStatus(): ?Case_status {
         $val = $this->getBackingStore()->get('status');
-        if (is_null($val) || $val instanceof CaseStatus) {
+        if (is_null($val) || $val instanceof Case_status) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
@@ -178,9 +178,9 @@ class EscapedCase extends Entity implements Parsable
 
     /**
      * Sets the status property value. The status property
-     * @param CaseStatus|null $value Value to set for the status property.
+     * @param Case_status|null $value Value to set for the status property.
     */
-    public function setStatus(?CaseStatus $value): void {
+    public function setStatus(?Case_status $value): void {
         $this->getBackingStore()->set('status', $value);
     }
 

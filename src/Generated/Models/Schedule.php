@@ -50,7 +50,7 @@ class Schedule extends Entity implements Parsable
             'openShiftChangeRequests' => fn(ParseNode $n) => $o->setOpenShiftChangeRequests($n->getCollectionOfObjectValues([OpenShiftChangeRequest::class, 'createFromDiscriminatorValue'])),
             'openShifts' => fn(ParseNode $n) => $o->setOpenShifts($n->getCollectionOfObjectValues([OpenShift::class, 'createFromDiscriminatorValue'])),
             'openShiftsEnabled' => fn(ParseNode $n) => $o->setOpenShiftsEnabled($n->getBooleanValue()),
-            'provisionStatus' => fn(ParseNode $n) => $o->setProvisionStatus($n->getEnumValue(OperationStatus::class)),
+            'provisionStatus' => fn(ParseNode $n) => $o->setProvisionStatus($n->getEnumValue(Schedule_provisionStatus::class)),
             'provisionStatusCode' => fn(ParseNode $n) => $o->setProvisionStatusCode($n->getStringValue()),
             'schedulingGroups' => fn(ParseNode $n) => $o->setSchedulingGroups($n->getCollectionOfObjectValues([SchedulingGroup::class, 'createFromDiscriminatorValue'])),
             'shifts' => fn(ParseNode $n) => $o->setShifts($n->getCollectionOfObjectValues([Shift::class, 'createFromDiscriminatorValue'])),
@@ -141,11 +141,11 @@ class Schedule extends Entity implements Parsable
 
     /**
      * Gets the provisionStatus property value. The status of the schedule provisioning. The possible values are notStarted, running, completed, failed.
-     * @return OperationStatus|null
+     * @return Schedule_provisionStatus|null
     */
-    public function getProvisionStatus(): ?OperationStatus {
+    public function getProvisionStatus(): ?Schedule_provisionStatus {
         $val = $this->getBackingStore()->get('provisionStatus');
-        if (is_null($val) || $val instanceof OperationStatus) {
+        if (is_null($val) || $val instanceof Schedule_provisionStatus) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'provisionStatus'");
@@ -384,9 +384,9 @@ class Schedule extends Entity implements Parsable
 
     /**
      * Sets the provisionStatus property value. The status of the schedule provisioning. The possible values are notStarted, running, completed, failed.
-     * @param OperationStatus|null $value Value to set for the provisionStatus property.
+     * @param Schedule_provisionStatus|null $value Value to set for the provisionStatus property.
     */
-    public function setProvisionStatus(?OperationStatus $value): void {
+    public function setProvisionStatus(?Schedule_provisionStatus $value): void {
         $this->getBackingStore()->set('provisionStatus', $value);
     }
 

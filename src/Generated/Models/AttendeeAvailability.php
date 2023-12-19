@@ -61,11 +61,11 @@ class AttendeeAvailability implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Gets the availability property value. The availability status of the attendee. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
-     * @return FreeBusyStatus|null
+     * @return AttendeeAvailability_availability|null
     */
-    public function getAvailability(): ?FreeBusyStatus {
+    public function getAvailability(): ?AttendeeAvailability_availability {
         $val = $this->getBackingStore()->get('availability');
-        if (is_null($val) || $val instanceof FreeBusyStatus) {
+        if (is_null($val) || $val instanceof AttendeeAvailability_availability) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'availability'");
@@ -87,7 +87,7 @@ class AttendeeAvailability implements AdditionalDataHolder, BackedModel, Parsabl
         $o = $this;
         return  [
             'attendee' => fn(ParseNode $n) => $o->setAttendee($n->getObjectValue([AttendeeBase::class, 'createFromDiscriminatorValue'])),
-            'availability' => fn(ParseNode $n) => $o->setAvailability($n->getEnumValue(FreeBusyStatus::class)),
+            'availability' => fn(ParseNode $n) => $o->setAvailability($n->getEnumValue(AttendeeAvailability_availability::class)),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
@@ -133,9 +133,9 @@ class AttendeeAvailability implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the availability property value. The availability status of the attendee. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
-     * @param FreeBusyStatus|null $value Value to set for the availability property.
+     * @param AttendeeAvailability_availability|null $value Value to set for the availability property.
     */
-    public function setAvailability(?FreeBusyStatus $value): void {
+    public function setAvailability(?AttendeeAvailability_availability $value): void {
         $this->getBackingStore()->set('availability', $value);
     }
 

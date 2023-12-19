@@ -85,11 +85,11 @@ class BrowserSiteHistory implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the compatibilityMode property value. Controls what compatibility setting is used for specific sites or domains. The possible values are: default, internetExplorer8Enterprise, internetExplorer7Enterprise, internetExplorer11, internetExplorer10, internetExplorer9, internetExplorer8, internetExplorer7, internetExplorer5, unknownFutureValue.
-     * @return BrowserSiteCompatibilityMode|null
+     * @return BrowserSiteHistory_compatibilityMode|null
     */
-    public function getCompatibilityMode(): ?BrowserSiteCompatibilityMode {
+    public function getCompatibilityMode(): ?BrowserSiteHistory_compatibilityMode {
         $val = $this->getBackingStore()->get('compatibilityMode');
-        if (is_null($val) || $val instanceof BrowserSiteCompatibilityMode) {
+        if (is_null($val) || $val instanceof BrowserSiteHistory_compatibilityMode) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'compatibilityMode'");
@@ -104,12 +104,12 @@ class BrowserSiteHistory implements AdditionalDataHolder, BackedModel, Parsable
         return  [
             'allowRedirect' => fn(ParseNode $n) => $o->setAllowRedirect($n->getBooleanValue()),
             'comment' => fn(ParseNode $n) => $o->setComment($n->getStringValue()),
-            'compatibilityMode' => fn(ParseNode $n) => $o->setCompatibilityMode($n->getEnumValue(BrowserSiteCompatibilityMode::class)),
+            'compatibilityMode' => fn(ParseNode $n) => $o->setCompatibilityMode($n->getEnumValue(BrowserSiteHistory_compatibilityMode::class)),
             'lastModifiedBy' => fn(ParseNode $n) => $o->setLastModifiedBy($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
-            'mergeType' => fn(ParseNode $n) => $o->setMergeType($n->getEnumValue(BrowserSiteMergeType::class)),
+            'mergeType' => fn(ParseNode $n) => $o->setMergeType($n->getEnumValue(BrowserSiteHistory_mergeType::class)),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'publishedDateTime' => fn(ParseNode $n) => $o->setPublishedDateTime($n->getDateTimeValue()),
-            'targetEnvironment' => fn(ParseNode $n) => $o->setTargetEnvironment($n->getEnumValue(BrowserSiteTargetEnvironment::class)),
+            'targetEnvironment' => fn(ParseNode $n) => $o->setTargetEnvironment($n->getEnumValue(BrowserSiteHistory_targetEnvironment::class)),
         ];
     }
 
@@ -127,11 +127,11 @@ class BrowserSiteHistory implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the mergeType property value. The merge type of the site. The possible values are: noMerge, default, unknownFutureValue.
-     * @return BrowserSiteMergeType|null
+     * @return BrowserSiteHistory_mergeType|null
     */
-    public function getMergeType(): ?BrowserSiteMergeType {
+    public function getMergeType(): ?BrowserSiteHistory_mergeType {
         $val = $this->getBackingStore()->get('mergeType');
-        if (is_null($val) || $val instanceof BrowserSiteMergeType) {
+        if (is_null($val) || $val instanceof BrowserSiteHistory_mergeType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'mergeType'");
@@ -163,11 +163,11 @@ class BrowserSiteHistory implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the targetEnvironment property value. The target environment that the site should open in. The possible values are: internetExplorerMode, internetExplorer11, microsoftEdge, configurable, none, unknownFutureValue.Prior to June 15, 2022, the internetExplorer11 option would allow opening a site in the Internet Explorer 11 (IE11) desktop application. Following the retirement of IE11 on June 15, 2022, the internetExplorer11 option will no longer open an IE11 window and will instead behave the same as the internetExplorerMode option.
-     * @return BrowserSiteTargetEnvironment|null
+     * @return BrowserSiteHistory_targetEnvironment|null
     */
-    public function getTargetEnvironment(): ?BrowserSiteTargetEnvironment {
+    public function getTargetEnvironment(): ?BrowserSiteHistory_targetEnvironment {
         $val = $this->getBackingStore()->get('targetEnvironment');
-        if (is_null($val) || $val instanceof BrowserSiteTargetEnvironment) {
+        if (is_null($val) || $val instanceof BrowserSiteHistory_targetEnvironment) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'targetEnvironment'");
@@ -223,9 +223,9 @@ class BrowserSiteHistory implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the compatibilityMode property value. Controls what compatibility setting is used for specific sites or domains. The possible values are: default, internetExplorer8Enterprise, internetExplorer7Enterprise, internetExplorer11, internetExplorer10, internetExplorer9, internetExplorer8, internetExplorer7, internetExplorer5, unknownFutureValue.
-     * @param BrowserSiteCompatibilityMode|null $value Value to set for the compatibilityMode property.
+     * @param BrowserSiteHistory_compatibilityMode|null $value Value to set for the compatibilityMode property.
     */
-    public function setCompatibilityMode(?BrowserSiteCompatibilityMode $value): void {
+    public function setCompatibilityMode(?BrowserSiteHistory_compatibilityMode $value): void {
         $this->getBackingStore()->set('compatibilityMode', $value);
     }
 
@@ -239,9 +239,9 @@ class BrowserSiteHistory implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the mergeType property value. The merge type of the site. The possible values are: noMerge, default, unknownFutureValue.
-     * @param BrowserSiteMergeType|null $value Value to set for the mergeType property.
+     * @param BrowserSiteHistory_mergeType|null $value Value to set for the mergeType property.
     */
-    public function setMergeType(?BrowserSiteMergeType $value): void {
+    public function setMergeType(?BrowserSiteHistory_mergeType $value): void {
         $this->getBackingStore()->set('mergeType', $value);
     }
 
@@ -263,9 +263,9 @@ class BrowserSiteHistory implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the targetEnvironment property value. The target environment that the site should open in. The possible values are: internetExplorerMode, internetExplorer11, microsoftEdge, configurable, none, unknownFutureValue.Prior to June 15, 2022, the internetExplorer11 option would allow opening a site in the Internet Explorer 11 (IE11) desktop application. Following the retirement of IE11 on June 15, 2022, the internetExplorer11 option will no longer open an IE11 window and will instead behave the same as the internetExplorerMode option.
-     * @param BrowserSiteTargetEnvironment|null $value Value to set for the targetEnvironment property.
+     * @param BrowserSiteHistory_targetEnvironment|null $value Value to set for the targetEnvironment property.
     */
-    public function setTargetEnvironment(?BrowserSiteTargetEnvironment $value): void {
+    public function setTargetEnvironment(?BrowserSiteHistory_targetEnvironment $value): void {
         $this->getBackingStore()->set('targetEnvironment', $value);
     }
 

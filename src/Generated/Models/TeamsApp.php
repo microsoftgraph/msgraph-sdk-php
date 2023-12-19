@@ -53,11 +53,11 @@ class TeamsApp extends Entity implements Parsable
 
     /**
      * Gets the distributionMethod property value. The method of distribution for the app. Read-only.
-     * @return TeamsAppDistributionMethod|null
+     * @return TeamsApp_distributionMethod|null
     */
-    public function getDistributionMethod(): ?TeamsAppDistributionMethod {
+    public function getDistributionMethod(): ?TeamsApp_distributionMethod {
         $val = $this->getBackingStore()->get('distributionMethod');
-        if (is_null($val) || $val instanceof TeamsAppDistributionMethod) {
+        if (is_null($val) || $val instanceof TeamsApp_distributionMethod) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'distributionMethod'");
@@ -84,7 +84,7 @@ class TeamsApp extends Entity implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'appDefinitions' => fn(ParseNode $n) => $o->setAppDefinitions($n->getCollectionOfObjectValues([TeamsAppDefinition::class, 'createFromDiscriminatorValue'])),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
-            'distributionMethod' => fn(ParseNode $n) => $o->setDistributionMethod($n->getEnumValue(TeamsAppDistributionMethod::class)),
+            'distributionMethod' => fn(ParseNode $n) => $o->setDistributionMethod($n->getEnumValue(TeamsApp_distributionMethod::class)),
             'externalId' => fn(ParseNode $n) => $o->setExternalId($n->getStringValue()),
         ]);
     }
@@ -119,9 +119,9 @@ class TeamsApp extends Entity implements Parsable
 
     /**
      * Sets the distributionMethod property value. The method of distribution for the app. Read-only.
-     * @param TeamsAppDistributionMethod|null $value Value to set for the distributionMethod property.
+     * @param TeamsApp_distributionMethod|null $value Value to set for the distributionMethod property.
     */
-    public function setDistributionMethod(?TeamsAppDistributionMethod $value): void {
+    public function setDistributionMethod(?TeamsApp_distributionMethod $value): void {
         $this->getBackingStore()->set('distributionMethod', $value);
     }
 

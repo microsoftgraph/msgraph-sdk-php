@@ -63,7 +63,7 @@ class TeamsAppResourceSpecificPermission implements AdditionalDataHolder, Backed
         $o = $this;
         return  [
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
-            'permissionType' => fn(ParseNode $n) => $o->setPermissionType($n->getEnumValue(TeamsAppResourceSpecificPermissionType::class)),
+            'permissionType' => fn(ParseNode $n) => $o->setPermissionType($n->getEnumValue(TeamsAppResourceSpecificPermission_permissionType::class)),
             'permissionValue' => fn(ParseNode $n) => $o->setPermissionValue($n->getStringValue()),
         ];
     }
@@ -82,11 +82,11 @@ class TeamsAppResourceSpecificPermission implements AdditionalDataHolder, Backed
 
     /**
      * Gets the permissionType property value. The type of resource-specific permission.
-     * @return TeamsAppResourceSpecificPermissionType|null
+     * @return TeamsAppResourceSpecificPermission_permissionType|null
     */
-    public function getPermissionType(): ?TeamsAppResourceSpecificPermissionType {
+    public function getPermissionType(): ?TeamsAppResourceSpecificPermission_permissionType {
         $val = $this->getBackingStore()->get('permissionType');
-        if (is_null($val) || $val instanceof TeamsAppResourceSpecificPermissionType) {
+        if (is_null($val) || $val instanceof TeamsAppResourceSpecificPermission_permissionType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'permissionType'");
@@ -141,9 +141,9 @@ class TeamsAppResourceSpecificPermission implements AdditionalDataHolder, Backed
 
     /**
      * Sets the permissionType property value. The type of resource-specific permission.
-     * @param TeamsAppResourceSpecificPermissionType|null $value Value to set for the permissionType property.
+     * @param TeamsAppResourceSpecificPermission_permissionType|null $value Value to set for the permissionType property.
     */
-    public function setPermissionType(?TeamsAppResourceSpecificPermissionType $value): void {
+    public function setPermissionType(?TeamsAppResourceSpecificPermission_permissionType $value): void {
         $this->getBackingStore()->set('permissionType', $value);
     }
 

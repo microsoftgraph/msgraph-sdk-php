@@ -28,11 +28,11 @@ class Training extends Entity implements Parsable
 
     /**
      * Gets the availabilityStatus property value. Training availability status. Possible values are: unknown, notAvailable, available, archive, delete, unknownFutureValue.
-     * @return TrainingAvailabilityStatus|null
+     * @return Training_availabilityStatus|null
     */
-    public function getAvailabilityStatus(): ?TrainingAvailabilityStatus {
+    public function getAvailabilityStatus(): ?Training_availabilityStatus {
         $val = $this->getBackingStore()->get('availabilityStatus');
-        if (is_null($val) || $val instanceof TrainingAvailabilityStatus) {
+        if (is_null($val) || $val instanceof Training_availabilityStatus) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'availabilityStatus'");
@@ -105,7 +105,7 @@ class Training extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'availabilityStatus' => fn(ParseNode $n) => $o->setAvailabilityStatus($n->getEnumValue(TrainingAvailabilityStatus::class)),
+            'availabilityStatus' => fn(ParseNode $n) => $o->setAvailabilityStatus($n->getEnumValue(Training_availabilityStatus::class)),
             'createdBy' => fn(ParseNode $n) => $o->setCreatedBy($n->getObjectValue([EmailIdentity::class, 'createFromDiscriminatorValue'])),
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
@@ -115,7 +115,7 @@ class Training extends Entity implements Parsable
             'languageDetails' => fn(ParseNode $n) => $o->setLanguageDetails($n->getCollectionOfObjectValues([TrainingLanguageDetail::class, 'createFromDiscriminatorValue'])),
             'lastModifiedBy' => fn(ParseNode $n) => $o->setLastModifiedBy($n->getObjectValue([EmailIdentity::class, 'createFromDiscriminatorValue'])),
             'lastModifiedDateTime' => fn(ParseNode $n) => $o->setLastModifiedDateTime($n->getDateTimeValue()),
-            'source' => fn(ParseNode $n) => $o->setSource($n->getEnumValue(SimulationContentSource::class)),
+            'source' => fn(ParseNode $n) => $o->setSource($n->getEnumValue(Training_source::class)),
             'supportedLocales' => function (ParseNode $n) {
                 $val = $n->getCollectionOfPrimitiveValues();
                 if (is_array($val)) {
@@ -132,7 +132,7 @@ class Training extends Entity implements Parsable
                 /** @var array<string>|null $val */
                 $this->setTags($val);
             },
-            'type' => fn(ParseNode $n) => $o->setType($n->getEnumValue(TrainingType::class)),
+            'type' => fn(ParseNode $n) => $o->setType($n->getEnumValue(Training_type::class)),
         ]);
     }
 
@@ -188,11 +188,11 @@ class Training extends Entity implements Parsable
 
     /**
      * Gets the source property value. Training content source. Possible values are: unknown, global, tenant, unknownFutureValue.
-     * @return SimulationContentSource|null
+     * @return Training_source|null
     */
-    public function getSource(): ?SimulationContentSource {
+    public function getSource(): ?Training_source {
         $val = $this->getBackingStore()->get('source');
-        if (is_null($val) || $val instanceof SimulationContentSource) {
+        if (is_null($val) || $val instanceof Training_source) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'source'");
@@ -228,11 +228,11 @@ class Training extends Entity implements Parsable
 
     /**
      * Gets the type property value. The type of training. Possible values are: unknown, phishing, unknownFutureValue.
-     * @return TrainingType|null
+     * @return Training_type|null
     */
-    public function getType(): ?TrainingType {
+    public function getType(): ?Training_type {
         $val = $this->getBackingStore()->get('type');
-        if (is_null($val) || $val instanceof TrainingType) {
+        if (is_null($val) || $val instanceof Training_type) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'type'");
@@ -262,9 +262,9 @@ class Training extends Entity implements Parsable
 
     /**
      * Sets the availabilityStatus property value. Training availability status. Possible values are: unknown, notAvailable, available, archive, delete, unknownFutureValue.
-     * @param TrainingAvailabilityStatus|null $value Value to set for the availabilityStatus property.
+     * @param Training_availabilityStatus|null $value Value to set for the availabilityStatus property.
     */
-    public function setAvailabilityStatus(?TrainingAvailabilityStatus $value): void {
+    public function setAvailabilityStatus(?Training_availabilityStatus $value): void {
         $this->getBackingStore()->set('availabilityStatus', $value);
     }
 
@@ -342,9 +342,9 @@ class Training extends Entity implements Parsable
 
     /**
      * Sets the source property value. Training content source. Possible values are: unknown, global, tenant, unknownFutureValue.
-     * @param SimulationContentSource|null $value Value to set for the source property.
+     * @param Training_source|null $value Value to set for the source property.
     */
-    public function setSource(?SimulationContentSource $value): void {
+    public function setSource(?Training_source $value): void {
         $this->getBackingStore()->set('source', $value);
     }
 
@@ -366,9 +366,9 @@ class Training extends Entity implements Parsable
 
     /**
      * Sets the type property value. The type of training. Possible values are: unknown, phishing, unknownFutureValue.
-     * @param TrainingType|null $value Value to set for the type property.
+     * @param Training_type|null $value Value to set for the type property.
     */
-    public function setType(?TrainingType $value): void {
+    public function setType(?Training_type $value): void {
         $this->getBackingStore()->set('type', $value);
     }
 

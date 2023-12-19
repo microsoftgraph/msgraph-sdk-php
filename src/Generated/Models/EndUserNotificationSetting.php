@@ -70,20 +70,20 @@ class EndUserNotificationSetting implements AdditionalDataHolder, BackedModel, P
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'notificationPreference' => fn(ParseNode $n) => $o->setNotificationPreference($n->getEnumValue(EndUserNotificationPreference::class)),
+            'notificationPreference' => fn(ParseNode $n) => $o->setNotificationPreference($n->getEnumValue(EndUserNotificationSetting_notificationPreference::class)),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'positiveReinforcement' => fn(ParseNode $n) => $o->setPositiveReinforcement($n->getObjectValue([PositiveReinforcementNotification::class, 'createFromDiscriminatorValue'])),
-            'settingType' => fn(ParseNode $n) => $o->setSettingType($n->getEnumValue(EndUserNotificationSettingType::class)),
+            'settingType' => fn(ParseNode $n) => $o->setSettingType($n->getEnumValue(EndUserNotificationSetting_settingType::class)),
         ];
     }
 
     /**
      * Gets the notificationPreference property value. Notification preference. Possible values are: unknown, microsoft, custom, unknownFutureValue.
-     * @return EndUserNotificationPreference|null
+     * @return EndUserNotificationSetting_notificationPreference|null
     */
-    public function getNotificationPreference(): ?EndUserNotificationPreference {
+    public function getNotificationPreference(): ?EndUserNotificationSetting_notificationPreference {
         $val = $this->getBackingStore()->get('notificationPreference');
-        if (is_null($val) || $val instanceof EndUserNotificationPreference) {
+        if (is_null($val) || $val instanceof EndUserNotificationSetting_notificationPreference) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'notificationPreference'");
@@ -115,11 +115,11 @@ class EndUserNotificationSetting implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Gets the settingType property value. End user notification type. Possible values are: unknown, noTraining, trainingSelected, noNotification, unknownFutureValue.
-     * @return EndUserNotificationSettingType|null
+     * @return EndUserNotificationSetting_settingType|null
     */
-    public function getSettingType(): ?EndUserNotificationSettingType {
+    public function getSettingType(): ?EndUserNotificationSetting_settingType {
         $val = $this->getBackingStore()->get('settingType');
-        if (is_null($val) || $val instanceof EndUserNotificationSettingType) {
+        if (is_null($val) || $val instanceof EndUserNotificationSetting_settingType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'settingType'");
@@ -155,9 +155,9 @@ class EndUserNotificationSetting implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the notificationPreference property value. Notification preference. Possible values are: unknown, microsoft, custom, unknownFutureValue.
-     * @param EndUserNotificationPreference|null $value Value to set for the notificationPreference property.
+     * @param EndUserNotificationSetting_notificationPreference|null $value Value to set for the notificationPreference property.
     */
-    public function setNotificationPreference(?EndUserNotificationPreference $value): void {
+    public function setNotificationPreference(?EndUserNotificationSetting_notificationPreference $value): void {
         $this->getBackingStore()->set('notificationPreference', $value);
     }
 
@@ -179,9 +179,9 @@ class EndUserNotificationSetting implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the settingType property value. End user notification type. Possible values are: unknown, noTraining, trainingSelected, noNotification, unknownFutureValue.
-     * @param EndUserNotificationSettingType|null $value Value to set for the settingType property.
+     * @param EndUserNotificationSetting_settingType|null $value Value to set for the settingType property.
     */
-    public function setSettingType(?EndUserNotificationSettingType $value): void {
+    public function setSettingType(?EndUserNotificationSetting_settingType $value): void {
         $this->getBackingStore()->set('settingType', $value);
     }
 

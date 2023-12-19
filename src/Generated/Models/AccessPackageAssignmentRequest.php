@@ -116,9 +116,9 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'customExtensionCalloutInstances' => fn(ParseNode $n) => $o->setCustomExtensionCalloutInstances($n->getCollectionOfObjectValues([CustomExtensionCalloutInstance::class, 'createFromDiscriminatorValue'])),
             'requestor' => fn(ParseNode $n) => $o->setRequestor($n->getObjectValue([AccessPackageSubject::class, 'createFromDiscriminatorValue'])),
-            'requestType' => fn(ParseNode $n) => $o->setRequestType($n->getEnumValue(AccessPackageRequestType::class)),
+            'requestType' => fn(ParseNode $n) => $o->setRequestType($n->getEnumValue(AccessPackageAssignmentRequest_requestType::class)),
             'schedule' => fn(ParseNode $n) => $o->setSchedule($n->getObjectValue([EntitlementManagementSchedule::class, 'createFromDiscriminatorValue'])),
-            'state' => fn(ParseNode $n) => $o->setState($n->getEnumValue(AccessPackageRequestState::class)),
+            'state' => fn(ParseNode $n) => $o->setState($n->getEnumValue(AccessPackageAssignmentRequest_state::class)),
             'status' => fn(ParseNode $n) => $o->setStatus($n->getStringValue()),
         ]);
     }
@@ -137,11 +137,11 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
 
     /**
      * Gets the requestType property value. The type of the request. The possible values are: notSpecified, userAdd, UserExtend, userUpdate, userRemove, adminAdd, adminUpdate, adminRemove, systemAdd, systemUpdate, systemRemove, onBehalfAdd (not supported), unknownFutureValue. A request from the user themselves would have requestType of userAdd, userUpdate or userRemove. This property can't be changed once set.
-     * @return AccessPackageRequestType|null
+     * @return AccessPackageAssignmentRequest_requestType|null
     */
-    public function getRequestType(): ?AccessPackageRequestType {
+    public function getRequestType(): ?AccessPackageAssignmentRequest_requestType {
         $val = $this->getBackingStore()->get('requestType');
-        if (is_null($val) || $val instanceof AccessPackageRequestType) {
+        if (is_null($val) || $val instanceof AccessPackageAssignmentRequest_requestType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'requestType'");
@@ -161,11 +161,11 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
 
     /**
      * Gets the state property value. The state of the request. The possible values are: submitted, pendingApproval, delivering, delivered, deliveryFailed, denied, scheduled, canceled, partiallyDelivered, unknownFutureValue. Read-only. Supports $filter (eq).
-     * @return AccessPackageRequestState|null
+     * @return AccessPackageAssignmentRequest_state|null
     */
-    public function getState(): ?AccessPackageRequestState {
+    public function getState(): ?AccessPackageAssignmentRequest_state {
         $val = $this->getBackingStore()->get('state');
-        if (is_null($val) || $val instanceof AccessPackageRequestState) {
+        if (is_null($val) || $val instanceof AccessPackageAssignmentRequest_state) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'state'");
@@ -260,9 +260,9 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
 
     /**
      * Sets the requestType property value. The type of the request. The possible values are: notSpecified, userAdd, UserExtend, userUpdate, userRemove, adminAdd, adminUpdate, adminRemove, systemAdd, systemUpdate, systemRemove, onBehalfAdd (not supported), unknownFutureValue. A request from the user themselves would have requestType of userAdd, userUpdate or userRemove. This property can't be changed once set.
-     * @param AccessPackageRequestType|null $value Value to set for the requestType property.
+     * @param AccessPackageAssignmentRequest_requestType|null $value Value to set for the requestType property.
     */
-    public function setRequestType(?AccessPackageRequestType $value): void {
+    public function setRequestType(?AccessPackageAssignmentRequest_requestType $value): void {
         $this->getBackingStore()->set('requestType', $value);
     }
 
@@ -276,9 +276,9 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
 
     /**
      * Sets the state property value. The state of the request. The possible values are: submitted, pendingApproval, delivering, delivered, deliveryFailed, denied, scheduled, canceled, partiallyDelivered, unknownFutureValue. Read-only. Supports $filter (eq).
-     * @param AccessPackageRequestState|null $value Value to set for the state property.
+     * @param AccessPackageAssignmentRequest_state|null $value Value to set for the state property.
     */
-    public function setState(?AccessPackageRequestState $value): void {
+    public function setState(?AccessPackageAssignmentRequest_state $value): void {
         $this->getBackingStore()->set('state', $value);
     }
 

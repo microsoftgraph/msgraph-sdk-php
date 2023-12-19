@@ -27,11 +27,11 @@ class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSchedule i
 
     /**
      * Gets the accessId property value. The identifier of the membership or ownership assignment to the group that is governed by PIM. Required. The possible values are: owner, member, unknownFutureValue. Supports $filter (eq).
-     * @return PrivilegedAccessGroupRelationships|null
+     * @return PrivilegedAccessGroupAssignmentSchedule_accessId|null
     */
-    public function getAccessId(): ?PrivilegedAccessGroupRelationships {
+    public function getAccessId(): ?PrivilegedAccessGroupAssignmentSchedule_accessId {
         $val = $this->getBackingStore()->get('accessId');
-        if (is_null($val) || $val instanceof PrivilegedAccessGroupRelationships) {
+        if (is_null($val) || $val instanceof PrivilegedAccessGroupAssignmentSchedule_accessId) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'accessId'");
@@ -51,11 +51,11 @@ class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSchedule i
 
     /**
      * Gets the assignmentType property value. Indicates whether the membership or ownership assignment for the principal is granted through activation or direct assignment. Required. The possible values are: assigned, activated, unknownFutureValue. Supports $filter (eq).
-     * @return PrivilegedAccessGroupAssignmentType|null
+     * @return PrivilegedAccessGroupAssignmentSchedule_assignmentType|null
     */
-    public function getAssignmentType(): ?PrivilegedAccessGroupAssignmentType {
+    public function getAssignmentType(): ?PrivilegedAccessGroupAssignmentSchedule_assignmentType {
         $val = $this->getBackingStore()->get('assignmentType');
-        if (is_null($val) || $val instanceof PrivilegedAccessGroupAssignmentType) {
+        if (is_null($val) || $val instanceof PrivilegedAccessGroupAssignmentSchedule_assignmentType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'assignmentType'");
@@ -68,12 +68,12 @@ class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSchedule i
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'accessId' => fn(ParseNode $n) => $o->setAccessId($n->getEnumValue(PrivilegedAccessGroupRelationships::class)),
+            'accessId' => fn(ParseNode $n) => $o->setAccessId($n->getEnumValue(PrivilegedAccessGroupAssignmentSchedule_accessId::class)),
             'activatedUsing' => fn(ParseNode $n) => $o->setActivatedUsing($n->getObjectValue([PrivilegedAccessGroupEligibilitySchedule::class, 'createFromDiscriminatorValue'])),
-            'assignmentType' => fn(ParseNode $n) => $o->setAssignmentType($n->getEnumValue(PrivilegedAccessGroupAssignmentType::class)),
+            'assignmentType' => fn(ParseNode $n) => $o->setAssignmentType($n->getEnumValue(PrivilegedAccessGroupAssignmentSchedule_assignmentType::class)),
             'group' => fn(ParseNode $n) => $o->setGroup($n->getObjectValue([Group::class, 'createFromDiscriminatorValue'])),
             'groupId' => fn(ParseNode $n) => $o->setGroupId($n->getStringValue()),
-            'memberType' => fn(ParseNode $n) => $o->setMemberType($n->getEnumValue(PrivilegedAccessGroupMemberType::class)),
+            'memberType' => fn(ParseNode $n) => $o->setMemberType($n->getEnumValue(PrivilegedAccessGroupAssignmentSchedule_memberType::class)),
             'principal' => fn(ParseNode $n) => $o->setPrincipal($n->getObjectValue([DirectoryObject::class, 'createFromDiscriminatorValue'])),
             'principalId' => fn(ParseNode $n) => $o->setPrincipalId($n->getStringValue()),
         ]);
@@ -105,11 +105,11 @@ class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSchedule i
 
     /**
      * Gets the memberType property value. Indicates whether the assignment is derived from a direct group assignment or through a transitive assignment. The possible values are: direct, group, unknownFutureValue. Supports $filter (eq).
-     * @return PrivilegedAccessGroupMemberType|null
+     * @return PrivilegedAccessGroupAssignmentSchedule_memberType|null
     */
-    public function getMemberType(): ?PrivilegedAccessGroupMemberType {
+    public function getMemberType(): ?PrivilegedAccessGroupAssignmentSchedule_memberType {
         $val = $this->getBackingStore()->get('memberType');
-        if (is_null($val) || $val instanceof PrivilegedAccessGroupMemberType) {
+        if (is_null($val) || $val instanceof PrivilegedAccessGroupAssignmentSchedule_memberType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'memberType'");
@@ -157,9 +157,9 @@ class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSchedule i
 
     /**
      * Sets the accessId property value. The identifier of the membership or ownership assignment to the group that is governed by PIM. Required. The possible values are: owner, member, unknownFutureValue. Supports $filter (eq).
-     * @param PrivilegedAccessGroupRelationships|null $value Value to set for the accessId property.
+     * @param PrivilegedAccessGroupAssignmentSchedule_accessId|null $value Value to set for the accessId property.
     */
-    public function setAccessId(?PrivilegedAccessGroupRelationships $value): void {
+    public function setAccessId(?PrivilegedAccessGroupAssignmentSchedule_accessId $value): void {
         $this->getBackingStore()->set('accessId', $value);
     }
 
@@ -173,9 +173,9 @@ class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSchedule i
 
     /**
      * Sets the assignmentType property value. Indicates whether the membership or ownership assignment for the principal is granted through activation or direct assignment. Required. The possible values are: assigned, activated, unknownFutureValue. Supports $filter (eq).
-     * @param PrivilegedAccessGroupAssignmentType|null $value Value to set for the assignmentType property.
+     * @param PrivilegedAccessGroupAssignmentSchedule_assignmentType|null $value Value to set for the assignmentType property.
     */
-    public function setAssignmentType(?PrivilegedAccessGroupAssignmentType $value): void {
+    public function setAssignmentType(?PrivilegedAccessGroupAssignmentSchedule_assignmentType $value): void {
         $this->getBackingStore()->set('assignmentType', $value);
     }
 
@@ -197,9 +197,9 @@ class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSchedule i
 
     /**
      * Sets the memberType property value. Indicates whether the assignment is derived from a direct group assignment or through a transitive assignment. The possible values are: direct, group, unknownFutureValue. Supports $filter (eq).
-     * @param PrivilegedAccessGroupMemberType|null $value Value to set for the memberType property.
+     * @param PrivilegedAccessGroupAssignmentSchedule_memberType|null $value Value to set for the memberType property.
     */
-    public function setMemberType(?PrivilegedAccessGroupMemberType $value): void {
+    public function setMemberType(?PrivilegedAccessGroupAssignmentSchedule_memberType $value): void {
         $this->getBackingStore()->set('memberType', $value);
     }
 

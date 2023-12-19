@@ -34,7 +34,7 @@ class UnifiedGroupSource extends DataSource implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'group' => fn(ParseNode $n) => $o->setGroup($n->getObjectValue([Group::class, 'createFromDiscriminatorValue'])),
-            'includedSources' => fn(ParseNode $n) => $o->setIncludedSources($n->getEnumValue(SourceType::class)),
+            'includedSources' => fn(ParseNode $n) => $o->setIncludedSources($n->getEnumValue(UnifiedGroupSource_includedSources::class)),
         ]);
     }
 
@@ -52,11 +52,11 @@ class UnifiedGroupSource extends DataSource implements Parsable
 
     /**
      * Gets the includedSources property value. Specifies which sources are included in this group. Possible values are: mailbox, site.
-     * @return SourceType|null
+     * @return UnifiedGroupSource_includedSources|null
     */
-    public function getIncludedSources(): ?SourceType {
+    public function getIncludedSources(): ?UnifiedGroupSource_includedSources {
         $val = $this->getBackingStore()->get('includedSources');
-        if (is_null($val) || $val instanceof SourceType) {
+        if (is_null($val) || $val instanceof UnifiedGroupSource_includedSources) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'includedSources'");
@@ -82,9 +82,9 @@ class UnifiedGroupSource extends DataSource implements Parsable
 
     /**
      * Sets the includedSources property value. Specifies which sources are included in this group. Possible values are: mailbox, site.
-     * @param SourceType|null $value Value to set for the includedSources property.
+     * @param UnifiedGroupSource_includedSources|null $value Value to set for the includedSources property.
     */
-    public function setIncludedSources(?SourceType $value): void {
+    public function setIncludedSources(?UnifiedGroupSource_includedSources $value): void {
         $this->getBackingStore()->set('includedSources', $value);
     }
 

@@ -26,11 +26,11 @@ class OutlookCategory extends Entity implements Parsable
 
     /**
      * Gets the color property value. A pre-set color constant that characterizes a category, and that is mapped to one of 25 predefined colors. For more details, see the following note.
-     * @return CategoryColor|null
+     * @return OutlookCategory_color|null
     */
-    public function getColor(): ?CategoryColor {
+    public function getColor(): ?OutlookCategory_color {
         $val = $this->getBackingStore()->get('color');
-        if (is_null($val) || $val instanceof CategoryColor) {
+        if (is_null($val) || $val instanceof OutlookCategory_color) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'color'");
@@ -55,7 +55,7 @@ class OutlookCategory extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'color' => fn(ParseNode $n) => $o->setColor($n->getEnumValue(CategoryColor::class)),
+            'color' => fn(ParseNode $n) => $o->setColor($n->getEnumValue(OutlookCategory_color::class)),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
         ]);
     }
@@ -72,9 +72,9 @@ class OutlookCategory extends Entity implements Parsable
 
     /**
      * Sets the color property value. A pre-set color constant that characterizes a category, and that is mapped to one of 25 predefined colors. For more details, see the following note.
-     * @param CategoryColor|null $value Value to set for the color property.
+     * @param OutlookCategory_color|null $value Value to set for the color property.
     */
-    public function setColor(?CategoryColor $value): void {
+    public function setColor(?OutlookCategory_color $value): void {
         $this->getBackingStore()->set('color', $value);
     }
 

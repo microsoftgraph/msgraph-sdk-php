@@ -65,7 +65,7 @@ class AlterationResponse implements AdditionalDataHolder, BackedModel, Parsable
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'originalQueryString' => fn(ParseNode $n) => $o->setOriginalQueryString($n->getStringValue()),
             'queryAlteration' => fn(ParseNode $n) => $o->setQueryAlteration($n->getObjectValue([SearchAlteration::class, 'createFromDiscriminatorValue'])),
-            'queryAlterationType' => fn(ParseNode $n) => $o->setQueryAlterationType($n->getEnumValue(SearchAlterationType::class)),
+            'queryAlterationType' => fn(ParseNode $n) => $o->setQueryAlterationType($n->getEnumValue(AlterationResponse_queryAlterationType::class)),
         ];
     }
 
@@ -107,11 +107,11 @@ class AlterationResponse implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the queryAlterationType property value. Defines the type of the spelling correction. Possible values are: suggestion, modification.
-     * @return SearchAlterationType|null
+     * @return AlterationResponse_queryAlterationType|null
     */
-    public function getQueryAlterationType(): ?SearchAlterationType {
+    public function getQueryAlterationType(): ?AlterationResponse_queryAlterationType {
         $val = $this->getBackingStore()->get('queryAlterationType');
-        if (is_null($val) || $val instanceof SearchAlterationType) {
+        if (is_null($val) || $val instanceof AlterationResponse_queryAlterationType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'queryAlterationType'");
@@ -171,9 +171,9 @@ class AlterationResponse implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the queryAlterationType property value. Defines the type of the spelling correction. Possible values are: suggestion, modification.
-     * @param SearchAlterationType|null $value Value to set for the queryAlterationType property.
+     * @param AlterationResponse_queryAlterationType|null $value Value to set for the queryAlterationType property.
     */
-    public function setQueryAlterationType(?SearchAlterationType $value): void {
+    public function setQueryAlterationType(?AlterationResponse_queryAlterationType $value): void {
         $this->getBackingStore()->set('queryAlterationType', $value);
     }
 

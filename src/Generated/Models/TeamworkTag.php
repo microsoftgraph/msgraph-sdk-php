@@ -60,7 +60,7 @@ class TeamworkTag extends Entity implements Parsable
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'memberCount' => fn(ParseNode $n) => $o->setMemberCount($n->getIntegerValue()),
             'members' => fn(ParseNode $n) => $o->setMembers($n->getCollectionOfObjectValues([TeamworkTagMember::class, 'createFromDiscriminatorValue'])),
-            'tagType' => fn(ParseNode $n) => $o->setTagType($n->getEnumValue(TeamworkTagType::class)),
+            'tagType' => fn(ParseNode $n) => $o->setTagType($n->getEnumValue(TeamworkTag_tagType::class)),
             'teamId' => fn(ParseNode $n) => $o->setTeamId($n->getStringValue()),
         ]);
     }
@@ -93,11 +93,11 @@ class TeamworkTag extends Entity implements Parsable
 
     /**
      * Gets the tagType property value. The type of the tag. Default is standard.
-     * @return TeamworkTagType|null
+     * @return TeamworkTag_tagType|null
     */
-    public function getTagType(): ?TeamworkTagType {
+    public function getTagType(): ?TeamworkTag_tagType {
         $val = $this->getBackingStore()->get('tagType');
-        if (is_null($val) || $val instanceof TeamworkTagType) {
+        if (is_null($val) || $val instanceof TeamworkTag_tagType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'tagType'");
@@ -163,9 +163,9 @@ class TeamworkTag extends Entity implements Parsable
 
     /**
      * Sets the tagType property value. The type of the tag. Default is standard.
-     * @param TeamworkTagType|null $value Value to set for the tagType property.
+     * @param TeamworkTag_tagType|null $value Value to set for the tagType property.
     */
-    public function setTagType(?TeamworkTagType $value): void {
+    public function setTagType(?TeamworkTag_tagType $value): void {
         $this->getBackingStore()->set('tagType', $value);
     }
 

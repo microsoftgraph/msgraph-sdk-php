@@ -103,7 +103,7 @@ class Process implements AdditionalDataHolder, BackedModel, Parsable
             'commandLine' => fn(ParseNode $n) => $o->setCommandLine($n->getStringValue()),
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'fileHash' => fn(ParseNode $n) => $o->setFileHash($n->getObjectValue([FileHash::class, 'createFromDiscriminatorValue'])),
-            'integrityLevel' => fn(ParseNode $n) => $o->setIntegrityLevel($n->getEnumValue(ProcessIntegrityLevel::class)),
+            'integrityLevel' => fn(ParseNode $n) => $o->setIntegrityLevel($n->getEnumValue(Process_integrityLevel::class)),
             'isElevated' => fn(ParseNode $n) => $o->setIsElevated($n->getBooleanValue()),
             'name' => fn(ParseNode $n) => $o->setName($n->getStringValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
@@ -129,11 +129,11 @@ class Process implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the integrityLevel property value. The integrity level of the process. Possible values are: unknown, untrusted, low, medium, high, system.
-     * @return ProcessIntegrityLevel|null
+     * @return Process_integrityLevel|null
     */
-    public function getIntegrityLevel(): ?ProcessIntegrityLevel {
+    public function getIntegrityLevel(): ?Process_integrityLevel {
         $val = $this->getBackingStore()->get('integrityLevel');
-        if (is_null($val) || $val instanceof ProcessIntegrityLevel) {
+        if (is_null($val) || $val instanceof Process_integrityLevel) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'integrityLevel'");
@@ -306,9 +306,9 @@ class Process implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the integrityLevel property value. The integrity level of the process. Possible values are: unknown, untrusted, low, medium, high, system.
-     * @param ProcessIntegrityLevel|null $value Value to set for the integrityLevel property.
+     * @param Process_integrityLevel|null $value Value to set for the integrityLevel property.
     */
-    public function setIntegrityLevel(?ProcessIntegrityLevel $value): void {
+    public function setIntegrityLevel(?Process_integrityLevel $value): void {
         $this->getBackingStore()->set('integrityLevel', $value);
     }
 

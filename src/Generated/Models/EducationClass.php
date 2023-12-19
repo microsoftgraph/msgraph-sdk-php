@@ -163,11 +163,11 @@ class EducationClass extends Entity implements Parsable
 
     /**
      * Gets the externalSource property value. How this class was created. Possible values are: sis, manual.
-     * @return EducationExternalSource|null
+     * @return EducationClass_externalSource|null
     */
-    public function getExternalSource(): ?EducationExternalSource {
+    public function getExternalSource(): ?EducationClass_externalSource {
         $val = $this->getBackingStore()->get('externalSource');
-        if (is_null($val) || $val instanceof EducationExternalSource) {
+        if (is_null($val) || $val instanceof EducationClass_externalSource) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'externalSource'");
@@ -203,7 +203,7 @@ class EducationClass extends Entity implements Parsable
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'externalId' => fn(ParseNode $n) => $o->setExternalId($n->getStringValue()),
             'externalName' => fn(ParseNode $n) => $o->setExternalName($n->getStringValue()),
-            'externalSource' => fn(ParseNode $n) => $o->setExternalSource($n->getEnumValue(EducationExternalSource::class)),
+            'externalSource' => fn(ParseNode $n) => $o->setExternalSource($n->getEnumValue(EducationClass_externalSource::class)),
             'externalSourceDetail' => fn(ParseNode $n) => $o->setExternalSourceDetail($n->getStringValue()),
             'grade' => fn(ParseNode $n) => $o->setGrade($n->getStringValue()),
             'group' => fn(ParseNode $n) => $o->setGroup($n->getObjectValue([Group::class, 'createFromDiscriminatorValue'])),
@@ -423,9 +423,9 @@ class EducationClass extends Entity implements Parsable
 
     /**
      * Sets the externalSource property value. How this class was created. Possible values are: sis, manual.
-     * @param EducationExternalSource|null $value Value to set for the externalSource property.
+     * @param EducationClass_externalSource|null $value Value to set for the externalSource property.
     */
-    public function setExternalSource(?EducationExternalSource $value): void {
+    public function setExternalSource(?EducationClass_externalSource $value): void {
         $this->getBackingStore()->set('externalSource', $value);
     }
 

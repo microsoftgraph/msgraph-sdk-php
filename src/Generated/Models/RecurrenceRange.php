@@ -80,7 +80,7 @@ class RecurrenceRange implements AdditionalDataHolder, BackedModel, Parsable
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'recurrenceTimeZone' => fn(ParseNode $n) => $o->setRecurrenceTimeZone($n->getStringValue()),
             'startDate' => fn(ParseNode $n) => $o->setStartDate($n->getDateValue()),
-            'type' => fn(ParseNode $n) => $o->setType($n->getEnumValue(RecurrenceRangeType::class)),
+            'type' => fn(ParseNode $n) => $o->setType($n->getEnumValue(RecurrenceRange_type::class)),
         ];
     }
 
@@ -134,11 +134,11 @@ class RecurrenceRange implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the type property value. The recurrence range. The possible values are: endDate, noEnd, numbered. Required.
-     * @return RecurrenceRangeType|null
+     * @return RecurrenceRange_type|null
     */
-    public function getType(): ?RecurrenceRangeType {
+    public function getType(): ?RecurrenceRange_type {
         $val = $this->getBackingStore()->get('type');
-        if (is_null($val) || $val instanceof RecurrenceRangeType) {
+        if (is_null($val) || $val instanceof RecurrenceRange_type) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'type'");
@@ -216,9 +216,9 @@ class RecurrenceRange implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the type property value. The recurrence range. The possible values are: endDate, noEnd, numbered. Required.
-     * @param RecurrenceRangeType|null $value Value to set for the type property.
+     * @param RecurrenceRange_type|null $value Value to set for the type property.
     */
-    public function setType(?RecurrenceRangeType $value): void {
+    public function setType(?RecurrenceRange_type $value): void {
         $this->getBackingStore()->set('type', $value);
     }
 

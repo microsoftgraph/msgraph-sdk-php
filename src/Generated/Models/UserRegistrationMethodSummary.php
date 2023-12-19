@@ -66,8 +66,8 @@ class UserRegistrationMethodSummary implements AdditionalDataHolder, BackedModel
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'totalUserCount' => fn(ParseNode $n) => $o->setTotalUserCount($n->getIntegerValue()),
             'userRegistrationMethodCounts' => fn(ParseNode $n) => $o->setUserRegistrationMethodCounts($n->getCollectionOfObjectValues([UserRegistrationMethodCount::class, 'createFromDiscriminatorValue'])),
-            'userRoles' => fn(ParseNode $n) => $o->setUserRoles($n->getEnumValue(IncludedUserRoles::class)),
-            'userTypes' => fn(ParseNode $n) => $o->setUserTypes($n->getEnumValue(IncludedUserTypes::class)),
+            'userRoles' => fn(ParseNode $n) => $o->setUserRoles($n->getEnumValue(UserRegistrationMethodSummary_userRoles::class)),
+            'userTypes' => fn(ParseNode $n) => $o->setUserTypes($n->getEnumValue(UserRegistrationMethodSummary_userTypes::class)),
         ];
     }
 
@@ -111,11 +111,11 @@ class UserRegistrationMethodSummary implements AdditionalDataHolder, BackedModel
 
     /**
      * Gets the userRoles property value. The role type of the user. Possible values are: all, privilegedAdmin, admin, user, unknownFutureValue.
-     * @return IncludedUserRoles|null
+     * @return UserRegistrationMethodSummary_userRoles|null
     */
-    public function getUserRoles(): ?IncludedUserRoles {
+    public function getUserRoles(): ?UserRegistrationMethodSummary_userRoles {
         $val = $this->getBackingStore()->get('userRoles');
-        if (is_null($val) || $val instanceof IncludedUserRoles) {
+        if (is_null($val) || $val instanceof UserRegistrationMethodSummary_userRoles) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'userRoles'");
@@ -123,11 +123,11 @@ class UserRegistrationMethodSummary implements AdditionalDataHolder, BackedModel
 
     /**
      * Gets the userTypes property value. User type. Possible values are: all, member, guest, unknownFutureValue.
-     * @return IncludedUserTypes|null
+     * @return UserRegistrationMethodSummary_userTypes|null
     */
-    public function getUserTypes(): ?IncludedUserTypes {
+    public function getUserTypes(): ?UserRegistrationMethodSummary_userTypes {
         $val = $this->getBackingStore()->get('userTypes');
-        if (is_null($val) || $val instanceof IncludedUserTypes) {
+        if (is_null($val) || $val instanceof UserRegistrationMethodSummary_userTypes) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'userTypes'");
@@ -188,17 +188,17 @@ class UserRegistrationMethodSummary implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the userRoles property value. The role type of the user. Possible values are: all, privilegedAdmin, admin, user, unknownFutureValue.
-     * @param IncludedUserRoles|null $value Value to set for the userRoles property.
+     * @param UserRegistrationMethodSummary_userRoles|null $value Value to set for the userRoles property.
     */
-    public function setUserRoles(?IncludedUserRoles $value): void {
+    public function setUserRoles(?UserRegistrationMethodSummary_userRoles $value): void {
         $this->getBackingStore()->set('userRoles', $value);
     }
 
     /**
      * Sets the userTypes property value. User type. Possible values are: all, member, guest, unknownFutureValue.
-     * @param IncludedUserTypes|null $value Value to set for the userTypes property.
+     * @param UserRegistrationMethodSummary_userTypes|null $value Value to set for the userTypes property.
     */
-    public function setUserTypes(?IncludedUserTypes $value): void {
+    public function setUserTypes(?UserRegistrationMethodSummary_userTypes $value): void {
         $this->getBackingStore()->set('userTypes', $value);
     }
 

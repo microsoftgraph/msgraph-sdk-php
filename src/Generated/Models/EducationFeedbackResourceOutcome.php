@@ -45,17 +45,17 @@ class EducationFeedbackResourceOutcome extends EducationOutcome implements Parsa
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'feedbackResource' => fn(ParseNode $n) => $o->setFeedbackResource($n->getObjectValue([EducationResource::class, 'createFromDiscriminatorValue'])),
-            'resourceStatus' => fn(ParseNode $n) => $o->setResourceStatus($n->getEnumValue(EducationFeedbackResourceOutcomeStatus::class)),
+            'resourceStatus' => fn(ParseNode $n) => $o->setResourceStatus($n->getEnumValue(EducationFeedbackResourceOutcome_resourceStatus::class)),
         ]);
     }
 
     /**
      * Gets the resourceStatus property value. The status of the feedback resource. The possible values are: notPublished, pendingPublish, published, failedPublish, unknownFutureValue.
-     * @return EducationFeedbackResourceOutcomeStatus|null
+     * @return EducationFeedbackResourceOutcome_resourceStatus|null
     */
-    public function getResourceStatus(): ?EducationFeedbackResourceOutcomeStatus {
+    public function getResourceStatus(): ?EducationFeedbackResourceOutcome_resourceStatus {
         $val = $this->getBackingStore()->get('resourceStatus');
-        if (is_null($val) || $val instanceof EducationFeedbackResourceOutcomeStatus) {
+        if (is_null($val) || $val instanceof EducationFeedbackResourceOutcome_resourceStatus) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'resourceStatus'");
@@ -81,9 +81,9 @@ class EducationFeedbackResourceOutcome extends EducationOutcome implements Parsa
 
     /**
      * Sets the resourceStatus property value. The status of the feedback resource. The possible values are: notPublished, pendingPublish, published, failedPublish, unknownFutureValue.
-     * @param EducationFeedbackResourceOutcomeStatus|null $value Value to set for the resourceStatus property.
+     * @param EducationFeedbackResourceOutcome_resourceStatus|null $value Value to set for the resourceStatus property.
     */
-    public function setResourceStatus(?EducationFeedbackResourceOutcomeStatus $value): void {
+    public function setResourceStatus(?EducationFeedbackResourceOutcome_resourceStatus $value): void {
         $this->getBackingStore()->set('resourceStatus', $value);
     }
 

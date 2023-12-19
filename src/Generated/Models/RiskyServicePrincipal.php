@@ -69,10 +69,10 @@ class RiskyServicePrincipal extends Entity implements Parsable
             'history' => fn(ParseNode $n) => $o->setHistory($n->getCollectionOfObjectValues([RiskyServicePrincipalHistoryItem::class, 'createFromDiscriminatorValue'])),
             'isEnabled' => fn(ParseNode $n) => $o->setIsEnabled($n->getBooleanValue()),
             'isProcessing' => fn(ParseNode $n) => $o->setIsProcessing($n->getBooleanValue()),
-            'riskDetail' => fn(ParseNode $n) => $o->setRiskDetail($n->getEnumValue(RiskDetail::class)),
+            'riskDetail' => fn(ParseNode $n) => $o->setRiskDetail($n->getEnumValue(RiskyServicePrincipal_riskDetail::class)),
             'riskLastUpdatedDateTime' => fn(ParseNode $n) => $o->setRiskLastUpdatedDateTime($n->getDateTimeValue()),
-            'riskLevel' => fn(ParseNode $n) => $o->setRiskLevel($n->getEnumValue(RiskLevel::class)),
-            'riskState' => fn(ParseNode $n) => $o->setRiskState($n->getEnumValue(RiskState::class)),
+            'riskLevel' => fn(ParseNode $n) => $o->setRiskLevel($n->getEnumValue(RiskyServicePrincipal_riskLevel::class)),
+            'riskState' => fn(ParseNode $n) => $o->setRiskState($n->getEnumValue(RiskyServicePrincipal_riskState::class)),
             'servicePrincipalType' => fn(ParseNode $n) => $o->setServicePrincipalType($n->getStringValue()),
         ]);
     }
@@ -117,11 +117,11 @@ class RiskyServicePrincipal extends Entity implements Parsable
 
     /**
      * Gets the riskDetail property value. Details of the detected risk. Note: Details for this property are only available for Workload Identities Premium customers. Events in tenants without this license will be returned hidden. The possible values are: none, hidden,  unknownFutureValue, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: adminConfirmedServicePrincipalCompromised , adminDismissedAllRiskForServicePrincipal.
-     * @return RiskDetail|null
+     * @return RiskyServicePrincipal_riskDetail|null
     */
-    public function getRiskDetail(): ?RiskDetail {
+    public function getRiskDetail(): ?RiskyServicePrincipal_riskDetail {
         $val = $this->getBackingStore()->get('riskDetail');
-        if (is_null($val) || $val instanceof RiskDetail) {
+        if (is_null($val) || $val instanceof RiskyServicePrincipal_riskDetail) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'riskDetail'");
@@ -141,11 +141,11 @@ class RiskyServicePrincipal extends Entity implements Parsable
 
     /**
      * Gets the riskLevel property value. Level of the detected risky workload identity. The possible values are: low, medium, high, hidden, none, unknownFutureValue. Supports $filter (eq).
-     * @return RiskLevel|null
+     * @return RiskyServicePrincipal_riskLevel|null
     */
-    public function getRiskLevel(): ?RiskLevel {
+    public function getRiskLevel(): ?RiskyServicePrincipal_riskLevel {
         $val = $this->getBackingStore()->get('riskLevel');
-        if (is_null($val) || $val instanceof RiskLevel) {
+        if (is_null($val) || $val instanceof RiskyServicePrincipal_riskLevel) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'riskLevel'");
@@ -153,11 +153,11 @@ class RiskyServicePrincipal extends Entity implements Parsable
 
     /**
      * Gets the riskState property value. State of the service principal's risk. The possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
-     * @return RiskState|null
+     * @return RiskyServicePrincipal_riskState|null
     */
-    public function getRiskState(): ?RiskState {
+    public function getRiskState(): ?RiskyServicePrincipal_riskState {
         $val = $this->getBackingStore()->get('riskState');
-        if (is_null($val) || $val instanceof RiskState) {
+        if (is_null($val) || $val instanceof RiskyServicePrincipal_riskState) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'riskState'");
@@ -235,9 +235,9 @@ class RiskyServicePrincipal extends Entity implements Parsable
 
     /**
      * Sets the riskDetail property value. Details of the detected risk. Note: Details for this property are only available for Workload Identities Premium customers. Events in tenants without this license will be returned hidden. The possible values are: none, hidden,  unknownFutureValue, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: adminConfirmedServicePrincipalCompromised , adminDismissedAllRiskForServicePrincipal.
-     * @param RiskDetail|null $value Value to set for the riskDetail property.
+     * @param RiskyServicePrincipal_riskDetail|null $value Value to set for the riskDetail property.
     */
-    public function setRiskDetail(?RiskDetail $value): void {
+    public function setRiskDetail(?RiskyServicePrincipal_riskDetail $value): void {
         $this->getBackingStore()->set('riskDetail', $value);
     }
 
@@ -251,17 +251,17 @@ class RiskyServicePrincipal extends Entity implements Parsable
 
     /**
      * Sets the riskLevel property value. Level of the detected risky workload identity. The possible values are: low, medium, high, hidden, none, unknownFutureValue. Supports $filter (eq).
-     * @param RiskLevel|null $value Value to set for the riskLevel property.
+     * @param RiskyServicePrincipal_riskLevel|null $value Value to set for the riskLevel property.
     */
-    public function setRiskLevel(?RiskLevel $value): void {
+    public function setRiskLevel(?RiskyServicePrincipal_riskLevel $value): void {
         $this->getBackingStore()->set('riskLevel', $value);
     }
 
     /**
      * Sets the riskState property value. State of the service principal's risk. The possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
-     * @param RiskState|null $value Value to set for the riskState property.
+     * @param RiskyServicePrincipal_riskState|null $value Value to set for the riskState property.
     */
-    public function setRiskState(?RiskState $value): void {
+    public function setRiskState(?RiskyServicePrincipal_riskState $value): void {
         $this->getBackingStore()->set('riskState', $value);
     }
 

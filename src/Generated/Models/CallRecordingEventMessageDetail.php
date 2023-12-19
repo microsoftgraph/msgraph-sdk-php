@@ -64,11 +64,11 @@ class CallRecordingEventMessageDetail extends EventMessageDetail implements Pars
 
     /**
      * Gets the callRecordingStatus property value. Status of the call recording. Possible values are: success, failure, initial, chunkFinished, unknownFutureValue.
-     * @return CallRecordingStatus|null
+     * @return CallRecordingEventMessageDetail_callRecordingStatus|null
     */
-    public function getCallRecordingStatus(): ?CallRecordingStatus {
+    public function getCallRecordingStatus(): ?CallRecordingEventMessageDetail_callRecordingStatus {
         $val = $this->getBackingStore()->get('callRecordingStatus');
-        if (is_null($val) || $val instanceof CallRecordingStatus) {
+        if (is_null($val) || $val instanceof CallRecordingEventMessageDetail_callRecordingStatus) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'callRecordingStatus'");
@@ -96,7 +96,7 @@ class CallRecordingEventMessageDetail extends EventMessageDetail implements Pars
             'callId' => fn(ParseNode $n) => $o->setCallId($n->getStringValue()),
             'callRecordingDisplayName' => fn(ParseNode $n) => $o->setCallRecordingDisplayName($n->getStringValue()),
             'callRecordingDuration' => fn(ParseNode $n) => $o->setCallRecordingDuration($n->getDateIntervalValue()),
-            'callRecordingStatus' => fn(ParseNode $n) => $o->setCallRecordingStatus($n->getEnumValue(CallRecordingStatus::class)),
+            'callRecordingStatus' => fn(ParseNode $n) => $o->setCallRecordingStatus($n->getEnumValue(CallRecordingEventMessageDetail_callRecordingStatus::class)),
             'callRecordingUrl' => fn(ParseNode $n) => $o->setCallRecordingUrl($n->getStringValue()),
             'initiator' => fn(ParseNode $n) => $o->setInitiator($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
             'meetingOrganizer' => fn(ParseNode $n) => $o->setMeetingOrganizer($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
@@ -168,9 +168,9 @@ class CallRecordingEventMessageDetail extends EventMessageDetail implements Pars
 
     /**
      * Sets the callRecordingStatus property value. Status of the call recording. Possible values are: success, failure, initial, chunkFinished, unknownFutureValue.
-     * @param CallRecordingStatus|null $value Value to set for the callRecordingStatus property.
+     * @param CallRecordingEventMessageDetail_callRecordingStatus|null $value Value to set for the callRecordingStatus property.
     */
-    public function setCallRecordingStatus(?CallRecordingStatus $value): void {
+    public function setCallRecordingStatus(?CallRecordingEventMessageDetail_callRecordingStatus $value): void {
         $this->getBackingStore()->set('callRecordingStatus', $value);
     }
 

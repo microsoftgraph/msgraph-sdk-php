@@ -64,7 +64,7 @@ class LoginPageLayoutConfiguration implements AdditionalDataHolder, BackedModel,
         return  [
             'isFooterShown' => fn(ParseNode $n) => $o->setIsFooterShown($n->getBooleanValue()),
             'isHeaderShown' => fn(ParseNode $n) => $o->setIsHeaderShown($n->getBooleanValue()),
-            'layoutTemplateType' => fn(ParseNode $n) => $o->setLayoutTemplateType($n->getEnumValue(LayoutTemplateType::class)),
+            'layoutTemplateType' => fn(ParseNode $n) => $o->setLayoutTemplateType($n->getEnumValue(LoginPageLayoutConfiguration_layoutTemplateType::class)),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
@@ -95,11 +95,11 @@ class LoginPageLayoutConfiguration implements AdditionalDataHolder, BackedModel,
 
     /**
      * Gets the layoutTemplateType property value. Represents the layout template to be displayed on the login page for a tenant. The possible values are  default - Represents the default Microsoft layout with a centered lightbox.  verticalSplit - Represents a layout with a background on the left side and a full-height lightbox to the right.  unknownFutureValue - Evolvable enumeration sentinel value. Don't use.
-     * @return LayoutTemplateType|null
+     * @return LoginPageLayoutConfiguration_layoutTemplateType|null
     */
-    public function getLayoutTemplateType(): ?LayoutTemplateType {
+    public function getLayoutTemplateType(): ?LoginPageLayoutConfiguration_layoutTemplateType {
         $val = $this->getBackingStore()->get('layoutTemplateType');
-        if (is_null($val) || $val instanceof LayoutTemplateType) {
+        if (is_null($val) || $val instanceof LoginPageLayoutConfiguration_layoutTemplateType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'layoutTemplateType'");
@@ -163,9 +163,9 @@ class LoginPageLayoutConfiguration implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the layoutTemplateType property value. Represents the layout template to be displayed on the login page for a tenant. The possible values are  default - Represents the default Microsoft layout with a centered lightbox.  verticalSplit - Represents a layout with a background on the left side and a full-height lightbox to the right.  unknownFutureValue - Evolvable enumeration sentinel value. Don't use.
-     * @param LayoutTemplateType|null $value Value to set for the layoutTemplateType property.
+     * @param LoginPageLayoutConfiguration_layoutTemplateType|null $value Value to set for the layoutTemplateType property.
     */
-    public function setLayoutTemplateType(?LayoutTemplateType $value): void {
+    public function setLayoutTemplateType(?LoginPageLayoutConfiguration_layoutTemplateType $value): void {
         $this->getBackingStore()->set('layoutTemplateType', $value);
     }
 

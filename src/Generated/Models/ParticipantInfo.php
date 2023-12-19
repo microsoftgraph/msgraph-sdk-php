@@ -69,11 +69,11 @@ class ParticipantInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the endpointType property value. The type of endpoint the participant is using. Possible values are: default, skypeForBusiness, or skypeForBusinessVoipPhone. Read-only.
-     * @return EndpointType|null
+     * @return ParticipantInfo_endpointType|null
     */
-    public function getEndpointType(): ?EndpointType {
+    public function getEndpointType(): ?ParticipantInfo_endpointType {
         $val = $this->getBackingStore()->get('endpointType');
-        if (is_null($val) || $val instanceof EndpointType) {
+        if (is_null($val) || $val instanceof ParticipantInfo_endpointType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'endpointType'");
@@ -87,7 +87,7 @@ class ParticipantInfo implements AdditionalDataHolder, BackedModel, Parsable
         $o = $this;
         return  [
             'countryCode' => fn(ParseNode $n) => $o->setCountryCode($n->getStringValue()),
-            'endpointType' => fn(ParseNode $n) => $o->setEndpointType($n->getEnumValue(EndpointType::class)),
+            'endpointType' => fn(ParseNode $n) => $o->setEndpointType($n->getEnumValue(ParticipantInfo_endpointType::class)),
             'identity' => fn(ParseNode $n) => $o->setIdentity($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
             'languageId' => fn(ParseNode $n) => $o->setLanguageId($n->getStringValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
@@ -197,9 +197,9 @@ class ParticipantInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the endpointType property value. The type of endpoint the participant is using. Possible values are: default, skypeForBusiness, or skypeForBusinessVoipPhone. Read-only.
-     * @param EndpointType|null $value Value to set for the endpointType property.
+     * @param ParticipantInfo_endpointType|null $value Value to set for the endpointType property.
     */
-    public function setEndpointType(?EndpointType $value): void {
+    public function setEndpointType(?ParticipantInfo_endpointType $value): void {
         $this->getBackingStore()->set('endpointType', $value);
     }
 

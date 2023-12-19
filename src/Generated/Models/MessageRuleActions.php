@@ -114,7 +114,7 @@ class MessageRuleActions implements AdditionalDataHolder, BackedModel, Parsable
             'forwardAsAttachmentTo' => fn(ParseNode $n) => $o->setForwardAsAttachmentTo($n->getCollectionOfObjectValues([Recipient::class, 'createFromDiscriminatorValue'])),
             'forwardTo' => fn(ParseNode $n) => $o->setForwardTo($n->getCollectionOfObjectValues([Recipient::class, 'createFromDiscriminatorValue'])),
             'markAsRead' => fn(ParseNode $n) => $o->setMarkAsRead($n->getBooleanValue()),
-            'markImportance' => fn(ParseNode $n) => $o->setMarkImportance($n->getEnumValue(Importance::class)),
+            'markImportance' => fn(ParseNode $n) => $o->setMarkImportance($n->getEnumValue(MessageRuleActions_markImportance::class)),
             'moveToFolder' => fn(ParseNode $n) => $o->setMoveToFolder($n->getStringValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'permanentDelete' => fn(ParseNode $n) => $o->setPermanentDelete($n->getBooleanValue()),
@@ -165,11 +165,11 @@ class MessageRuleActions implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the markImportance property value. Sets the importance of the message, which can be: low, normal, high.
-     * @return Importance|null
+     * @return MessageRuleActions_markImportance|null
     */
-    public function getMarkImportance(): ?Importance {
+    public function getMarkImportance(): ?MessageRuleActions_markImportance {
         $val = $this->getBackingStore()->get('markImportance');
-        if (is_null($val) || $val instanceof Importance) {
+        if (is_null($val) || $val instanceof MessageRuleActions_markImportance) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'markImportance'");
@@ -323,9 +323,9 @@ class MessageRuleActions implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the markImportance property value. Sets the importance of the message, which can be: low, normal, high.
-     * @param Importance|null $value Value to set for the markImportance property.
+     * @param MessageRuleActions_markImportance|null $value Value to set for the markImportance property.
     */
-    public function setMarkImportance(?Importance $value): void {
+    public function setMarkImportance(?MessageRuleActions_markImportance $value): void {
         $this->getBackingStore()->set('markImportance', $value);
     }
 

@@ -76,7 +76,7 @@ class ProvisioningStatusInfo implements AdditionalDataHolder, BackedModel, Parsa
         return  [
             'errorInformation' => fn(ParseNode $n) => $o->setErrorInformation($n->getObjectValue([ProvisioningErrorInfo::class, 'createFromDiscriminatorValue'])),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
-            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(ProvisioningResult::class)),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(ProvisioningStatusInfo_status::class)),
         ];
     }
 
@@ -94,11 +94,11 @@ class ProvisioningStatusInfo implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Gets the status property value. Possible values are: success, warning, failure, skipped, unknownFutureValue.
-     * @return ProvisioningResult|null
+     * @return ProvisioningStatusInfo_status|null
     */
-    public function getStatus(): ?ProvisioningResult {
+    public function getStatus(): ?ProvisioningStatusInfo_status {
         $val = $this->getBackingStore()->get('status');
-        if (is_null($val) || $val instanceof ProvisioningResult) {
+        if (is_null($val) || $val instanceof ProvisioningStatusInfo_status) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
@@ -149,9 +149,9 @@ class ProvisioningStatusInfo implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the status property value. Possible values are: success, warning, failure, skipped, unknownFutureValue.
-     * @param ProvisioningResult|null $value Value to set for the status property.
+     * @param ProvisioningStatusInfo_status|null $value Value to set for the status property.
     */
-    public function setStatus(?ProvisioningResult $value): void {
+    public function setStatus(?ProvisioningStatusInfo_status $value): void {
         $this->getBackingStore()->set('status', $value);
     }
 

@@ -68,11 +68,11 @@ class EdiscoverySearch extends Search implements Parsable
 
     /**
      * Gets the dataSourceScopes property value. When specified, the collection will span across a service for an entire workload. Possible values are: none, allTenantMailboxes, allTenantSites, allCaseCustodians, allCaseNoncustodialDataSources.
-     * @return DataSourceScopes|null
+     * @return EdiscoverySearch_dataSourceScopes|null
     */
-    public function getDataSourceScopes(): ?DataSourceScopes {
+    public function getDataSourceScopes(): ?EdiscoverySearch_dataSourceScopes {
         $val = $this->getBackingStore()->get('dataSourceScopes');
-        if (is_null($val) || $val instanceof DataSourceScopes) {
+        if (is_null($val) || $val instanceof EdiscoverySearch_dataSourceScopes) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'dataSourceScopes'");
@@ -88,7 +88,7 @@ class EdiscoverySearch extends Search implements Parsable
             'additionalSources' => fn(ParseNode $n) => $o->setAdditionalSources($n->getCollectionOfObjectValues([DataSource::class, 'createFromDiscriminatorValue'])),
             'addToReviewSetOperation' => fn(ParseNode $n) => $o->setAddToReviewSetOperation($n->getObjectValue([EdiscoveryAddToReviewSetOperation::class, 'createFromDiscriminatorValue'])),
             'custodianSources' => fn(ParseNode $n) => $o->setCustodianSources($n->getCollectionOfObjectValues([DataSource::class, 'createFromDiscriminatorValue'])),
-            'dataSourceScopes' => fn(ParseNode $n) => $o->setDataSourceScopes($n->getEnumValue(DataSourceScopes::class)),
+            'dataSourceScopes' => fn(ParseNode $n) => $o->setDataSourceScopes($n->getEnumValue(EdiscoverySearch_dataSourceScopes::class)),
             'lastEstimateStatisticsOperation' => fn(ParseNode $n) => $o->setLastEstimateStatisticsOperation($n->getObjectValue([EdiscoveryEstimateOperation::class, 'createFromDiscriminatorValue'])),
             'noncustodialSources' => fn(ParseNode $n) => $o->setNoncustodialSources($n->getCollectionOfObjectValues([EdiscoveryNoncustodialDataSource::class, 'createFromDiscriminatorValue'])),
         ]);
@@ -160,9 +160,9 @@ class EdiscoverySearch extends Search implements Parsable
 
     /**
      * Sets the dataSourceScopes property value. When specified, the collection will span across a service for an entire workload. Possible values are: none, allTenantMailboxes, allTenantSites, allCaseCustodians, allCaseNoncustodialDataSources.
-     * @param DataSourceScopes|null $value Value to set for the dataSourceScopes property.
+     * @param EdiscoverySearch_dataSourceScopes|null $value Value to set for the dataSourceScopes property.
     */
-    public function setDataSourceScopes(?DataSourceScopes $value): void {
+    public function setDataSourceScopes(?EdiscoverySearch_dataSourceScopes $value): void {
         $this->getBackingStore()->set('dataSourceScopes', $value);
     }
 

@@ -67,7 +67,7 @@ class PasswordCredentialConfiguration implements AdditionalDataHolder, BackedMod
             'maxLifetime' => fn(ParseNode $n) => $o->setMaxLifetime($n->getDateIntervalValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'restrictForAppsCreatedAfterDateTime' => fn(ParseNode $n) => $o->setRestrictForAppsCreatedAfterDateTime($n->getDateTimeValue()),
-            'restrictionType' => fn(ParseNode $n) => $o->setRestrictionType($n->getEnumValue(AppCredentialRestrictionType::class)),
+            'restrictionType' => fn(ParseNode $n) => $o->setRestrictionType($n->getEnumValue(PasswordCredentialConfiguration_restrictionType::class)),
         ];
     }
 
@@ -109,11 +109,11 @@ class PasswordCredentialConfiguration implements AdditionalDataHolder, BackedMod
 
     /**
      * Gets the restrictionType property value. The type of restriction being applied. The possible values are: passwordAddition, passwordLifetime, symmetricKeyAddition, symmetricKeyLifetime,customPasswordAddition, unknownFutureValue. Each value of restrictionType can be used only once per policy.
-     * @return AppCredentialRestrictionType|null
+     * @return PasswordCredentialConfiguration_restrictionType|null
     */
-    public function getRestrictionType(): ?AppCredentialRestrictionType {
+    public function getRestrictionType(): ?PasswordCredentialConfiguration_restrictionType {
         $val = $this->getBackingStore()->get('restrictionType');
-        if (is_null($val) || $val instanceof AppCredentialRestrictionType) {
+        if (is_null($val) || $val instanceof PasswordCredentialConfiguration_restrictionType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'restrictionType'");
@@ -173,9 +173,9 @@ class PasswordCredentialConfiguration implements AdditionalDataHolder, BackedMod
 
     /**
      * Sets the restrictionType property value. The type of restriction being applied. The possible values are: passwordAddition, passwordLifetime, symmetricKeyAddition, symmetricKeyLifetime,customPasswordAddition, unknownFutureValue. Each value of restrictionType can be used only once per policy.
-     * @param AppCredentialRestrictionType|null $value Value to set for the restrictionType property.
+     * @param PasswordCredentialConfiguration_restrictionType|null $value Value to set for the restrictionType property.
     */
-    public function setRestrictionType(?AppCredentialRestrictionType $value): void {
+    public function setRestrictionType(?PasswordCredentialConfiguration_restrictionType $value): void {
         $this->getBackingStore()->set('restrictionType', $value);
     }
 

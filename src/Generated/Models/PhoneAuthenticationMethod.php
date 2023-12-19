@@ -33,8 +33,8 @@ class PhoneAuthenticationMethod extends AuthenticationMethod implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'phoneNumber' => fn(ParseNode $n) => $o->setPhoneNumber($n->getStringValue()),
-            'phoneType' => fn(ParseNode $n) => $o->setPhoneType($n->getEnumValue(AuthenticationPhoneType::class)),
-            'smsSignInState' => fn(ParseNode $n) => $o->setSmsSignInState($n->getEnumValue(AuthenticationMethodSignInState::class)),
+            'phoneType' => fn(ParseNode $n) => $o->setPhoneType($n->getEnumValue(PhoneAuthenticationMethod_phoneType::class)),
+            'smsSignInState' => fn(ParseNode $n) => $o->setSmsSignInState($n->getEnumValue(PhoneAuthenticationMethod_smsSignInState::class)),
         ]);
     }
 
@@ -52,11 +52,11 @@ class PhoneAuthenticationMethod extends AuthenticationMethod implements Parsable
 
     /**
      * Gets the phoneType property value. The type of this phone. Possible values are: mobile, alternateMobile, or office.
-     * @return AuthenticationPhoneType|null
+     * @return PhoneAuthenticationMethod_phoneType|null
     */
-    public function getPhoneType(): ?AuthenticationPhoneType {
+    public function getPhoneType(): ?PhoneAuthenticationMethod_phoneType {
         $val = $this->getBackingStore()->get('phoneType');
-        if (is_null($val) || $val instanceof AuthenticationPhoneType) {
+        if (is_null($val) || $val instanceof PhoneAuthenticationMethod_phoneType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'phoneType'");
@@ -64,11 +64,11 @@ class PhoneAuthenticationMethod extends AuthenticationMethod implements Parsable
 
     /**
      * Gets the smsSignInState property value. Whether a phone is ready to be used for SMS sign-in or not. Possible values are: notSupported, notAllowedByPolicy, notEnabled, phoneNumberNotUnique, ready, or notConfigured, unknownFutureValue.
-     * @return AuthenticationMethodSignInState|null
+     * @return PhoneAuthenticationMethod_smsSignInState|null
     */
-    public function getSmsSignInState(): ?AuthenticationMethodSignInState {
+    public function getSmsSignInState(): ?PhoneAuthenticationMethod_smsSignInState {
         $val = $this->getBackingStore()->get('smsSignInState');
-        if (is_null($val) || $val instanceof AuthenticationMethodSignInState) {
+        if (is_null($val) || $val instanceof PhoneAuthenticationMethod_smsSignInState) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'smsSignInState'");
@@ -95,17 +95,17 @@ class PhoneAuthenticationMethod extends AuthenticationMethod implements Parsable
 
     /**
      * Sets the phoneType property value. The type of this phone. Possible values are: mobile, alternateMobile, or office.
-     * @param AuthenticationPhoneType|null $value Value to set for the phoneType property.
+     * @param PhoneAuthenticationMethod_phoneType|null $value Value to set for the phoneType property.
     */
-    public function setPhoneType(?AuthenticationPhoneType $value): void {
+    public function setPhoneType(?PhoneAuthenticationMethod_phoneType $value): void {
         $this->getBackingStore()->set('phoneType', $value);
     }
 
     /**
      * Sets the smsSignInState property value. Whether a phone is ready to be used for SMS sign-in or not. Possible values are: notSupported, notAllowedByPolicy, notEnabled, phoneNumberNotUnique, ready, or notConfigured, unknownFutureValue.
-     * @param AuthenticationMethodSignInState|null $value Value to set for the smsSignInState property.
+     * @param PhoneAuthenticationMethod_smsSignInState|null $value Value to set for the smsSignInState property.
     */
-    public function setSmsSignInState(?AuthenticationMethodSignInState $value): void {
+    public function setSmsSignInState(?PhoneAuthenticationMethod_smsSignInState $value): void {
         $this->getBackingStore()->set('smsSignInState', $value);
     }
 

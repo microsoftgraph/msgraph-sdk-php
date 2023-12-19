@@ -58,11 +58,11 @@ class AccessPackageAssignmentReviewSettings implements AdditionalDataHolder, Bac
 
     /**
      * Gets the expirationBehavior property value. The default decision to apply if the access is not reviewed. The possible values are: keepAccess, removeAccess, acceptAccessRecommendation, unknownFutureValue.
-     * @return AccessReviewExpirationBehavior|null
+     * @return AccessPackageAssignmentReviewSettings_expirationBehavior|null
     */
-    public function getExpirationBehavior(): ?AccessReviewExpirationBehavior {
+    public function getExpirationBehavior(): ?AccessPackageAssignmentReviewSettings_expirationBehavior {
         $val = $this->getBackingStore()->get('expirationBehavior');
-        if (is_null($val) || $val instanceof AccessReviewExpirationBehavior) {
+        if (is_null($val) || $val instanceof AccessPackageAssignmentReviewSettings_expirationBehavior) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'expirationBehavior'");
@@ -89,7 +89,7 @@ class AccessPackageAssignmentReviewSettings implements AdditionalDataHolder, Bac
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'expirationBehavior' => fn(ParseNode $n) => $o->setExpirationBehavior($n->getEnumValue(AccessReviewExpirationBehavior::class)),
+            'expirationBehavior' => fn(ParseNode $n) => $o->setExpirationBehavior($n->getEnumValue(AccessPackageAssignmentReviewSettings_expirationBehavior::class)),
             'fallbackReviewers' => fn(ParseNode $n) => $o->setFallbackReviewers($n->getCollectionOfObjectValues([SubjectSet::class, 'createFromDiscriminatorValue'])),
             'isEnabled' => fn(ParseNode $n) => $o->setIsEnabled($n->getBooleanValue()),
             'isRecommendationEnabled' => fn(ParseNode $n) => $o->setIsRecommendationEnabled($n->getBooleanValue()),
@@ -222,9 +222,9 @@ class AccessPackageAssignmentReviewSettings implements AdditionalDataHolder, Bac
 
     /**
      * Sets the expirationBehavior property value. The default decision to apply if the access is not reviewed. The possible values are: keepAccess, removeAccess, acceptAccessRecommendation, unknownFutureValue.
-     * @param AccessReviewExpirationBehavior|null $value Value to set for the expirationBehavior property.
+     * @param AccessPackageAssignmentReviewSettings_expirationBehavior|null $value Value to set for the expirationBehavior property.
     */
-    public function setExpirationBehavior(?AccessReviewExpirationBehavior $value): void {
+    public function setExpirationBehavior(?AccessPackageAssignmentReviewSettings_expirationBehavior $value): void {
         $this->getBackingStore()->set('expirationBehavior', $value);
     }
 

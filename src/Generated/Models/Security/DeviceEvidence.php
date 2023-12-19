@@ -41,11 +41,11 @@ class DeviceEvidence extends AlertEvidence implements Parsable
 
     /**
      * Gets the defenderAvStatus property value. State of the Defender AntiMalware engine. The possible values are: notReporting, disabled, notUpdated, updated, unknown, notSupported, unknownFutureValue.
-     * @return DefenderAvStatus|null
+     * @return DeviceEvidence_defenderAvStatus|null
     */
-    public function getDefenderAvStatus(): ?DefenderAvStatus {
+    public function getDefenderAvStatus(): ?DeviceEvidence_defenderAvStatus {
         $val = $this->getBackingStore()->get('defenderAvStatus');
-        if (is_null($val) || $val instanceof DefenderAvStatus) {
+        if (is_null($val) || $val instanceof DeviceEvidence_defenderAvStatus) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'defenderAvStatus'");
@@ -71,10 +71,10 @@ class DeviceEvidence extends AlertEvidence implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'azureAdDeviceId' => fn(ParseNode $n) => $o->setAzureAdDeviceId($n->getStringValue()),
-            'defenderAvStatus' => fn(ParseNode $n) => $o->setDefenderAvStatus($n->getEnumValue(DefenderAvStatus::class)),
+            'defenderAvStatus' => fn(ParseNode $n) => $o->setDefenderAvStatus($n->getEnumValue(DeviceEvidence_defenderAvStatus::class)),
             'deviceDnsName' => fn(ParseNode $n) => $o->setDeviceDnsName($n->getStringValue()),
             'firstSeenDateTime' => fn(ParseNode $n) => $o->setFirstSeenDateTime($n->getDateTimeValue()),
-            'healthStatus' => fn(ParseNode $n) => $o->setHealthStatus($n->getEnumValue(DeviceHealthStatus::class)),
+            'healthStatus' => fn(ParseNode $n) => $o->setHealthStatus($n->getEnumValue(DeviceEvidence_healthStatus::class)),
             'ipInterfaces' => function (ParseNode $n) {
                 $val = $n->getCollectionOfPrimitiveValues();
                 if (is_array($val)) {
@@ -85,12 +85,12 @@ class DeviceEvidence extends AlertEvidence implements Parsable
             },
             'loggedOnUsers' => fn(ParseNode $n) => $o->setLoggedOnUsers($n->getCollectionOfObjectValues([LoggedOnUser::class, 'createFromDiscriminatorValue'])),
             'mdeDeviceId' => fn(ParseNode $n) => $o->setMdeDeviceId($n->getStringValue()),
-            'onboardingStatus' => fn(ParseNode $n) => $o->setOnboardingStatus($n->getEnumValue(OnboardingStatus::class)),
+            'onboardingStatus' => fn(ParseNode $n) => $o->setOnboardingStatus($n->getEnumValue(DeviceEvidence_onboardingStatus::class)),
             'osBuild' => fn(ParseNode $n) => $o->setOsBuild($n->getIntegerValue()),
             'osPlatform' => fn(ParseNode $n) => $o->setOsPlatform($n->getStringValue()),
             'rbacGroupId' => fn(ParseNode $n) => $o->setRbacGroupId($n->getIntegerValue()),
             'rbacGroupName' => fn(ParseNode $n) => $o->setRbacGroupName($n->getStringValue()),
-            'riskScore' => fn(ParseNode $n) => $o->setRiskScore($n->getEnumValue(DeviceRiskScore::class)),
+            'riskScore' => fn(ParseNode $n) => $o->setRiskScore($n->getEnumValue(DeviceEvidence_riskScore::class)),
             'version' => fn(ParseNode $n) => $o->setVersion($n->getStringValue()),
             'vmMetadata' => fn(ParseNode $n) => $o->setVmMetadata($n->getObjectValue([VmMetadata::class, 'createFromDiscriminatorValue'])),
         ]);
@@ -110,11 +110,11 @@ class DeviceEvidence extends AlertEvidence implements Parsable
 
     /**
      * Gets the healthStatus property value. The health state of the device. The possible values are: active, inactive, impairedCommunication, noSensorData, noSensorDataImpairedCommunication, unknown, unknownFutureValue.
-     * @return DeviceHealthStatus|null
+     * @return DeviceEvidence_healthStatus|null
     */
-    public function getHealthStatus(): ?DeviceHealthStatus {
+    public function getHealthStatus(): ?DeviceEvidence_healthStatus {
         $val = $this->getBackingStore()->get('healthStatus');
-        if (is_null($val) || $val instanceof DeviceHealthStatus) {
+        if (is_null($val) || $val instanceof DeviceEvidence_healthStatus) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'healthStatus'");
@@ -162,11 +162,11 @@ class DeviceEvidence extends AlertEvidence implements Parsable
 
     /**
      * Gets the onboardingStatus property value. The status of the machine onboarding to Microsoft Defender for Endpoint. The possible values are: insufficientInfo, onboarded, canBeOnboarded, unsupported, unknownFutureValue.
-     * @return OnboardingStatus|null
+     * @return DeviceEvidence_onboardingStatus|null
     */
-    public function getOnboardingStatus(): ?OnboardingStatus {
+    public function getOnboardingStatus(): ?DeviceEvidence_onboardingStatus {
         $val = $this->getBackingStore()->get('onboardingStatus');
-        if (is_null($val) || $val instanceof OnboardingStatus) {
+        if (is_null($val) || $val instanceof DeviceEvidence_onboardingStatus) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'onboardingStatus'");
@@ -222,11 +222,11 @@ class DeviceEvidence extends AlertEvidence implements Parsable
 
     /**
      * Gets the riskScore property value. Risk score as evaluated by Microsoft Defender for Endpoint. The possible values are: none, informational, low, medium, high, unknownFutureValue.
-     * @return DeviceRiskScore|null
+     * @return DeviceEvidence_riskScore|null
     */
-    public function getRiskScore(): ?DeviceRiskScore {
+    public function getRiskScore(): ?DeviceEvidence_riskScore {
         $val = $this->getBackingStore()->get('riskScore');
-        if (is_null($val) || $val instanceof DeviceRiskScore) {
+        if (is_null($val) || $val instanceof DeviceEvidence_riskScore) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'riskScore'");
@@ -290,9 +290,9 @@ class DeviceEvidence extends AlertEvidence implements Parsable
 
     /**
      * Sets the defenderAvStatus property value. State of the Defender AntiMalware engine. The possible values are: notReporting, disabled, notUpdated, updated, unknown, notSupported, unknownFutureValue.
-     * @param DefenderAvStatus|null $value Value to set for the defenderAvStatus property.
+     * @param DeviceEvidence_defenderAvStatus|null $value Value to set for the defenderAvStatus property.
     */
-    public function setDefenderAvStatus(?DefenderAvStatus $value): void {
+    public function setDefenderAvStatus(?DeviceEvidence_defenderAvStatus $value): void {
         $this->getBackingStore()->set('defenderAvStatus', $value);
     }
 
@@ -314,9 +314,9 @@ class DeviceEvidence extends AlertEvidence implements Parsable
 
     /**
      * Sets the healthStatus property value. The health state of the device. The possible values are: active, inactive, impairedCommunication, noSensorData, noSensorDataImpairedCommunication, unknown, unknownFutureValue.
-     * @param DeviceHealthStatus|null $value Value to set for the healthStatus property.
+     * @param DeviceEvidence_healthStatus|null $value Value to set for the healthStatus property.
     */
-    public function setHealthStatus(?DeviceHealthStatus $value): void {
+    public function setHealthStatus(?DeviceEvidence_healthStatus $value): void {
         $this->getBackingStore()->set('healthStatus', $value);
     }
 
@@ -346,9 +346,9 @@ class DeviceEvidence extends AlertEvidence implements Parsable
 
     /**
      * Sets the onboardingStatus property value. The status of the machine onboarding to Microsoft Defender for Endpoint. The possible values are: insufficientInfo, onboarded, canBeOnboarded, unsupported, unknownFutureValue.
-     * @param OnboardingStatus|null $value Value to set for the onboardingStatus property.
+     * @param DeviceEvidence_onboardingStatus|null $value Value to set for the onboardingStatus property.
     */
-    public function setOnboardingStatus(?OnboardingStatus $value): void {
+    public function setOnboardingStatus(?DeviceEvidence_onboardingStatus $value): void {
         $this->getBackingStore()->set('onboardingStatus', $value);
     }
 
@@ -386,9 +386,9 @@ class DeviceEvidence extends AlertEvidence implements Parsable
 
     /**
      * Sets the riskScore property value. Risk score as evaluated by Microsoft Defender for Endpoint. The possible values are: none, informational, low, medium, high, unknownFutureValue.
-     * @param DeviceRiskScore|null $value Value to set for the riskScore property.
+     * @param DeviceEvidence_riskScore|null $value Value to set for the riskScore property.
     */
-    public function setRiskScore(?DeviceRiskScore $value): void {
+    public function setRiskScore(?DeviceEvidence_riskScore $value): void {
         $this->getBackingStore()->set('riskScore', $value);
     }
 

@@ -27,11 +27,11 @@ class CloudAppSecuritySessionControl extends ConditionalAccessSessionControl imp
 
     /**
      * Gets the cloudAppSecurityType property value. Possible values are: mcasConfigured, monitorOnly, blockDownloads, unknownFutureValue. For more information, see Deploy Conditional Access App Control for featured apps.
-     * @return CloudAppSecuritySessionControlType|null
+     * @return CloudAppSecuritySessionControl_cloudAppSecurityType|null
     */
-    public function getCloudAppSecurityType(): ?CloudAppSecuritySessionControlType {
+    public function getCloudAppSecurityType(): ?CloudAppSecuritySessionControl_cloudAppSecurityType {
         $val = $this->getBackingStore()->get('cloudAppSecurityType');
-        if (is_null($val) || $val instanceof CloudAppSecuritySessionControlType) {
+        if (is_null($val) || $val instanceof CloudAppSecuritySessionControl_cloudAppSecurityType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'cloudAppSecurityType'");
@@ -44,7 +44,7 @@ class CloudAppSecuritySessionControl extends ConditionalAccessSessionControl imp
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'cloudAppSecurityType' => fn(ParseNode $n) => $o->setCloudAppSecurityType($n->getEnumValue(CloudAppSecuritySessionControlType::class)),
+            'cloudAppSecurityType' => fn(ParseNode $n) => $o->setCloudAppSecurityType($n->getEnumValue(CloudAppSecuritySessionControl_cloudAppSecurityType::class)),
         ]);
     }
 
@@ -59,9 +59,9 @@ class CloudAppSecuritySessionControl extends ConditionalAccessSessionControl imp
 
     /**
      * Sets the cloudAppSecurityType property value. Possible values are: mcasConfigured, monitorOnly, blockDownloads, unknownFutureValue. For more information, see Deploy Conditional Access App Control for featured apps.
-     * @param CloudAppSecuritySessionControlType|null $value Value to set for the cloudAppSecurityType property.
+     * @param CloudAppSecuritySessionControl_cloudAppSecurityType|null $value Value to set for the cloudAppSecurityType property.
     */
-    public function setCloudAppSecurityType(?CloudAppSecuritySessionControlType $value): void {
+    public function setCloudAppSecurityType(?CloudAppSecuritySessionControl_cloudAppSecurityType $value): void {
         $this->getBackingStore()->set('cloudAppSecurityType', $value);
     }
 

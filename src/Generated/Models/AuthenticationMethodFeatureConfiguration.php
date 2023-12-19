@@ -77,7 +77,7 @@ class AuthenticationMethodFeatureConfiguration implements AdditionalDataHolder, 
             'excludeTarget' => fn(ParseNode $n) => $o->setExcludeTarget($n->getObjectValue([FeatureTarget::class, 'createFromDiscriminatorValue'])),
             'includeTarget' => fn(ParseNode $n) => $o->setIncludeTarget($n->getObjectValue([FeatureTarget::class, 'createFromDiscriminatorValue'])),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
-            'state' => fn(ParseNode $n) => $o->setState($n->getEnumValue(AdvancedConfigState::class)),
+            'state' => fn(ParseNode $n) => $o->setState($n->getEnumValue(AuthenticationMethodFeatureConfiguration_state::class)),
         ];
     }
 
@@ -107,11 +107,11 @@ class AuthenticationMethodFeatureConfiguration implements AdditionalDataHolder, 
 
     /**
      * Gets the state property value. Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Microsoft Entra ID for the setting. The default value is disabled.
-     * @return AdvancedConfigState|null
+     * @return AuthenticationMethodFeatureConfiguration_state|null
     */
-    public function getState(): ?AdvancedConfigState {
+    public function getState(): ?AuthenticationMethodFeatureConfiguration_state {
         $val = $this->getBackingStore()->get('state');
-        if (is_null($val) || $val instanceof AdvancedConfigState) {
+        if (is_null($val) || $val instanceof AuthenticationMethodFeatureConfiguration_state) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'state'");
@@ -171,9 +171,9 @@ class AuthenticationMethodFeatureConfiguration implements AdditionalDataHolder, 
 
     /**
      * Sets the state property value. Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Microsoft Entra ID for the setting. The default value is disabled.
-     * @param AdvancedConfigState|null $value Value to set for the state property.
+     * @param AuthenticationMethodFeatureConfiguration_state|null $value Value to set for the state property.
     */
-    public function setState(?AdvancedConfigState $value): void {
+    public function setState(?AuthenticationMethodFeatureConfiguration_state $value): void {
         $this->getBackingStore()->set('state', $value);
     }
 

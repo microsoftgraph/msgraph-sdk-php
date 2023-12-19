@@ -76,8 +76,8 @@ class SubjectRightsRequestStageDetail implements AdditionalDataHolder, BackedMod
         return  [
             'error' => fn(ParseNode $n) => $o->setError($n->getObjectValue([PublicError::class, 'createFromDiscriminatorValue'])),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
-            'stage' => fn(ParseNode $n) => $o->setStage($n->getEnumValue(SubjectRightsRequestStage::class)),
-            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(SubjectRightsRequestStageStatus::class)),
+            'stage' => fn(ParseNode $n) => $o->setStage($n->getEnumValue(SubjectRightsRequestStageDetail_stage::class)),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(SubjectRightsRequestStageDetail_status::class)),
         ];
     }
 
@@ -95,11 +95,11 @@ class SubjectRightsRequestStageDetail implements AdditionalDataHolder, BackedMod
 
     /**
      * Gets the stage property value. The stage of the subject rights request. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue, approval. You must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: approval.
-     * @return SubjectRightsRequestStage|null
+     * @return SubjectRightsRequestStageDetail_stage|null
     */
-    public function getStage(): ?SubjectRightsRequestStage {
+    public function getStage(): ?SubjectRightsRequestStageDetail_stage {
         $val = $this->getBackingStore()->get('stage');
-        if (is_null($val) || $val instanceof SubjectRightsRequestStage) {
+        if (is_null($val) || $val instanceof SubjectRightsRequestStageDetail_stage) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'stage'");
@@ -107,11 +107,11 @@ class SubjectRightsRequestStageDetail implements AdditionalDataHolder, BackedMod
 
     /**
      * Gets the status property value. Status of the current stage. Possible values are: notStarted, current, completed, failed, unknownFutureValue.
-     * @return SubjectRightsRequestStageStatus|null
+     * @return SubjectRightsRequestStageDetail_status|null
     */
-    public function getStatus(): ?SubjectRightsRequestStageStatus {
+    public function getStatus(): ?SubjectRightsRequestStageDetail_status {
         $val = $this->getBackingStore()->get('status');
-        if (is_null($val) || $val instanceof SubjectRightsRequestStageStatus) {
+        if (is_null($val) || $val instanceof SubjectRightsRequestStageDetail_status) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
@@ -163,17 +163,17 @@ class SubjectRightsRequestStageDetail implements AdditionalDataHolder, BackedMod
 
     /**
      * Sets the stage property value. The stage of the subject rights request. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue, approval. You must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: approval.
-     * @param SubjectRightsRequestStage|null $value Value to set for the stage property.
+     * @param SubjectRightsRequestStageDetail_stage|null $value Value to set for the stage property.
     */
-    public function setStage(?SubjectRightsRequestStage $value): void {
+    public function setStage(?SubjectRightsRequestStageDetail_stage $value): void {
         $this->getBackingStore()->set('stage', $value);
     }
 
     /**
      * Sets the status property value. Status of the current stage. Possible values are: notStarted, current, completed, failed, unknownFutureValue.
-     * @param SubjectRightsRequestStageStatus|null $value Value to set for the status property.
+     * @param SubjectRightsRequestStageDetail_status|null $value Value to set for the status property.
     */
-    public function setStatus(?SubjectRightsRequestStageStatus $value): void {
+    public function setStatus(?SubjectRightsRequestStageDetail_status $value): void {
         $this->getBackingStore()->set('status', $value);
     }
 

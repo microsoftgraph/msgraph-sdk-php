@@ -139,7 +139,7 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
                 /** @var array<string>|null $val */
                 $this->setHeaderContains($val);
             },
-            'importance' => fn(ParseNode $n) => $o->setImportance($n->getEnumValue(Importance::class)),
+            'importance' => fn(ParseNode $n) => $o->setImportance($n->getEnumValue(MessageRulePredicates_importance::class)),
             'isApprovalRequest' => fn(ParseNode $n) => $o->setIsApprovalRequest($n->getBooleanValue()),
             'isAutomaticForward' => fn(ParseNode $n) => $o->setIsAutomaticForward($n->getBooleanValue()),
             'isAutomaticReply' => fn(ParseNode $n) => $o->setIsAutomaticReply($n->getBooleanValue()),
@@ -151,7 +151,7 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
             'isReadReceipt' => fn(ParseNode $n) => $o->setIsReadReceipt($n->getBooleanValue()),
             'isSigned' => fn(ParseNode $n) => $o->setIsSigned($n->getBooleanValue()),
             'isVoicemail' => fn(ParseNode $n) => $o->setIsVoicemail($n->getBooleanValue()),
-            'messageActionFlag' => fn(ParseNode $n) => $o->setMessageActionFlag($n->getEnumValue(MessageActionFlag::class)),
+            'messageActionFlag' => fn(ParseNode $n) => $o->setMessageActionFlag($n->getEnumValue(MessageRulePredicates_messageActionFlag::class)),
             'notSentToMe' => fn(ParseNode $n) => $o->setNotSentToMe($n->getBooleanValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'recipientContains' => function (ParseNode $n) {
@@ -170,7 +170,7 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
                 /** @var array<string>|null $val */
                 $this->setSenderContains($val);
             },
-            'sensitivity' => fn(ParseNode $n) => $o->setSensitivity($n->getEnumValue(Sensitivity::class)),
+            'sensitivity' => fn(ParseNode $n) => $o->setSensitivity($n->getEnumValue(MessageRulePredicates_sensitivity::class)),
             'sentCcMe' => fn(ParseNode $n) => $o->setSentCcMe($n->getBooleanValue()),
             'sentOnlyToMe' => fn(ParseNode $n) => $o->setSentOnlyToMe($n->getBooleanValue()),
             'sentToAddresses' => fn(ParseNode $n) => $o->setSentToAddresses($n->getCollectionOfObjectValues([Recipient::class, 'createFromDiscriminatorValue'])),
@@ -230,11 +230,11 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Gets the importance property value. The importance that is stamped on an incoming message in order for the condition or exception to apply: low, normal, high.
-     * @return Importance|null
+     * @return MessageRulePredicates_importance|null
     */
-    public function getImportance(): ?Importance {
+    public function getImportance(): ?MessageRulePredicates_importance {
         $val = $this->getBackingStore()->get('importance');
-        if (is_null($val) || $val instanceof Importance) {
+        if (is_null($val) || $val instanceof MessageRulePredicates_importance) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'importance'");
@@ -374,11 +374,11 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Gets the messageActionFlag property value. Represents the flag-for-action value that appears on an incoming message in order for the condition or exception to apply. The possible values are: any, call, doNotForward, followUp, fyi, forward, noResponseNecessary, read, reply, replyToAll, review.
-     * @return MessageActionFlag|null
+     * @return MessageRulePredicates_messageActionFlag|null
     */
-    public function getMessageActionFlag(): ?MessageActionFlag {
+    public function getMessageActionFlag(): ?MessageRulePredicates_messageActionFlag {
         $val = $this->getBackingStore()->get('messageActionFlag');
-        if (is_null($val) || $val instanceof MessageActionFlag) {
+        if (is_null($val) || $val instanceof MessageRulePredicates_messageActionFlag) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'messageActionFlag'");
@@ -438,11 +438,11 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Gets the sensitivity property value. Represents the sensitivity level that must be stamped on an incoming message in order for the condition or exception to apply. The possible values are: normal, personal, private, confidential.
-     * @return Sensitivity|null
+     * @return MessageRulePredicates_sensitivity|null
     */
-    public function getSensitivity(): ?Sensitivity {
+    public function getSensitivity(): ?MessageRulePredicates_sensitivity {
         $val = $this->getBackingStore()->get('sensitivity');
-        if (is_null($val) || $val instanceof Sensitivity) {
+        if (is_null($val) || $val instanceof MessageRulePredicates_sensitivity) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'sensitivity'");
@@ -641,9 +641,9 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the importance property value. The importance that is stamped on an incoming message in order for the condition or exception to apply: low, normal, high.
-     * @param Importance|null $value Value to set for the importance property.
+     * @param MessageRulePredicates_importance|null $value Value to set for the importance property.
     */
-    public function setImportance(?Importance $value): void {
+    public function setImportance(?MessageRulePredicates_importance $value): void {
         $this->getBackingStore()->set('importance', $value);
     }
 
@@ -737,9 +737,9 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the messageActionFlag property value. Represents the flag-for-action value that appears on an incoming message in order for the condition or exception to apply. The possible values are: any, call, doNotForward, followUp, fyi, forward, noResponseNecessary, read, reply, replyToAll, review.
-     * @param MessageActionFlag|null $value Value to set for the messageActionFlag property.
+     * @param MessageRulePredicates_messageActionFlag|null $value Value to set for the messageActionFlag property.
     */
-    public function setMessageActionFlag(?MessageActionFlag $value): void {
+    public function setMessageActionFlag(?MessageRulePredicates_messageActionFlag $value): void {
         $this->getBackingStore()->set('messageActionFlag', $value);
     }
 
@@ -777,9 +777,9 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the sensitivity property value. Represents the sensitivity level that must be stamped on an incoming message in order for the condition or exception to apply. The possible values are: normal, personal, private, confidential.
-     * @param Sensitivity|null $value Value to set for the sensitivity property.
+     * @param MessageRulePredicates_sensitivity|null $value Value to set for the sensitivity property.
     */
-    public function setSensitivity(?Sensitivity $value): void {
+    public function setSensitivity(?MessageRulePredicates_sensitivity $value): void {
         $this->getBackingStore()->set('sensitivity', $value);
     }
 

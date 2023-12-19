@@ -64,7 +64,7 @@ class CvssSummary implements AdditionalDataHolder, BackedModel, Parsable
         return  [
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'score' => fn(ParseNode $n) => $o->setScore($n->getFloatValue()),
-            'severity' => fn(ParseNode $n) => $o->setSeverity($n->getEnumValue(VulnerabilitySeverity::class)),
+            'severity' => fn(ParseNode $n) => $o->setSeverity($n->getEnumValue(CvssSummary_severity::class)),
             'vectorString' => fn(ParseNode $n) => $o->setVectorString($n->getStringValue()),
         ];
     }
@@ -95,11 +95,11 @@ class CvssSummary implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the severity property value. The CVSS severity rating for this vulnerability. The possible values are: none, low, medium, high, critical, unknownFutureValue.
-     * @return VulnerabilitySeverity|null
+     * @return CvssSummary_severity|null
     */
-    public function getSeverity(): ?VulnerabilitySeverity {
+    public function getSeverity(): ?CvssSummary_severity {
         $val = $this->getBackingStore()->get('severity');
-        if (is_null($val) || $val instanceof VulnerabilitySeverity) {
+        if (is_null($val) || $val instanceof CvssSummary_severity) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'severity'");
@@ -163,9 +163,9 @@ class CvssSummary implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the severity property value. The CVSS severity rating for this vulnerability. The possible values are: none, low, medium, high, critical, unknownFutureValue.
-     * @param VulnerabilitySeverity|null $value Value to set for the severity property.
+     * @param CvssSummary_severity|null $value Value to set for the severity property.
     */
-    public function setSeverity(?VulnerabilitySeverity $value): void {
+    public function setSeverity(?CvssSummary_severity $value): void {
         $this->getBackingStore()->set('severity', $value);
     }
 

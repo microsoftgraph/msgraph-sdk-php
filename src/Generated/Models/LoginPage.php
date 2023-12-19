@@ -100,8 +100,8 @@ class LoginPage extends Entity implements Parsable
             'language' => fn(ParseNode $n) => $o->setLanguage($n->getStringValue()),
             'lastModifiedBy' => fn(ParseNode $n) => $o->setLastModifiedBy($n->getObjectValue([EmailIdentity::class, 'createFromDiscriminatorValue'])),
             'lastModifiedDateTime' => fn(ParseNode $n) => $o->setLastModifiedDateTime($n->getDateTimeValue()),
-            'source' => fn(ParseNode $n) => $o->setSource($n->getEnumValue(SimulationContentSource::class)),
-            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(SimulationContentStatus::class)),
+            'source' => fn(ParseNode $n) => $o->setSource($n->getEnumValue(LoginPage_source::class)),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(LoginPage_status::class)),
         ]);
     }
 
@@ -143,11 +143,11 @@ class LoginPage extends Entity implements Parsable
 
     /**
      * Gets the source property value. The source of the content. Possible values are: unknown, global, tenant, unknownFutureValue.
-     * @return SimulationContentSource|null
+     * @return LoginPage_source|null
     */
-    public function getSource(): ?SimulationContentSource {
+    public function getSource(): ?LoginPage_source {
         $val = $this->getBackingStore()->get('source');
-        if (is_null($val) || $val instanceof SimulationContentSource) {
+        if (is_null($val) || $val instanceof LoginPage_source) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'source'");
@@ -155,11 +155,11 @@ class LoginPage extends Entity implements Parsable
 
     /**
      * Gets the status property value. The login page status. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
-     * @return SimulationContentStatus|null
+     * @return LoginPage_status|null
     */
-    public function getStatus(): ?SimulationContentStatus {
+    public function getStatus(): ?LoginPage_status {
         $val = $this->getBackingStore()->get('status');
-        if (is_null($val) || $val instanceof SimulationContentStatus) {
+        if (is_null($val) || $val instanceof LoginPage_status) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
@@ -249,17 +249,17 @@ class LoginPage extends Entity implements Parsable
 
     /**
      * Sets the source property value. The source of the content. Possible values are: unknown, global, tenant, unknownFutureValue.
-     * @param SimulationContentSource|null $value Value to set for the source property.
+     * @param LoginPage_source|null $value Value to set for the source property.
     */
-    public function setSource(?SimulationContentSource $value): void {
+    public function setSource(?LoginPage_source $value): void {
         $this->getBackingStore()->set('source', $value);
     }
 
     /**
      * Sets the status property value. The login page status. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
-     * @param SimulationContentStatus|null $value Value to set for the status property.
+     * @param LoginPage_status|null $value Value to set for the status property.
     */
-    public function setStatus(?SimulationContentStatus $value): void {
+    public function setStatus(?LoginPage_status $value): void {
         $this->getBackingStore()->set('status', $value);
     }
 

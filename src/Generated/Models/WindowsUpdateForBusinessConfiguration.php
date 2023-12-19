@@ -298,7 +298,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
             'scheduleRestartWarningInHours' => fn(ParseNode $n) => $o->setScheduleRestartWarningInHours($n->getIntegerValue()),
             'skipChecksBeforeRestart' => fn(ParseNode $n) => $o->setSkipChecksBeforeRestart($n->getBooleanValue()),
             'updateNotificationLevel' => fn(ParseNode $n) => $o->setUpdateNotificationLevel($n->getEnumValue(WindowsUpdateNotificationDisplayOption::class)),
-            'updateWeeks' => fn(ParseNode $n) => $o->setUpdateWeeks($n->getEnumValue(WindowsUpdateForBusinessUpdateWeeks::class)),
+            'updateWeeks' => fn(ParseNode $n) => $o->setUpdateWeeks($n->getEnumValue(WindowsUpdateForBusinessConfiguration_updateWeeks::class)),
             'userPauseAccess' => fn(ParseNode $n) => $o->setUserPauseAccess($n->getEnumValue(Enablement::class)),
             'userWindowsUpdateScanAccess' => fn(ParseNode $n) => $o->setUserWindowsUpdateScanAccess($n->getEnumValue(Enablement::class)),
         ]);
@@ -474,11 +474,11 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
 
     /**
      * Gets the updateWeeks property value. Schedule the update installation on the weeks of the month. Possible values are: UserDefined, FirstWeek, SecondWeek, ThirdWeek, FourthWeek, EveryWeek. Returned by default. Query parameters are not supported. Possible values are: userDefined, firstWeek, secondWeek, thirdWeek, fourthWeek, everyWeek, unknownFutureValue.
-     * @return WindowsUpdateForBusinessUpdateWeeks|null
+     * @return WindowsUpdateForBusinessConfiguration_updateWeeks|null
     */
-    public function getUpdateWeeks(): ?WindowsUpdateForBusinessUpdateWeeks {
+    public function getUpdateWeeks(): ?WindowsUpdateForBusinessConfiguration_updateWeeks {
         $val = $this->getBackingStore()->get('updateWeeks');
-        if (is_null($val) || $val instanceof WindowsUpdateForBusinessUpdateWeeks) {
+        if (is_null($val) || $val instanceof WindowsUpdateForBusinessConfiguration_updateWeeks) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'updateWeeks'");
@@ -816,9 +816,9 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
 
     /**
      * Sets the updateWeeks property value. Schedule the update installation on the weeks of the month. Possible values are: UserDefined, FirstWeek, SecondWeek, ThirdWeek, FourthWeek, EveryWeek. Returned by default. Query parameters are not supported. Possible values are: userDefined, firstWeek, secondWeek, thirdWeek, fourthWeek, everyWeek, unknownFutureValue.
-     * @param WindowsUpdateForBusinessUpdateWeeks|null $value Value to set for the updateWeeks property.
+     * @param WindowsUpdateForBusinessConfiguration_updateWeeks|null $value Value to set for the updateWeeks property.
     */
-    public function setUpdateWeeks(?WindowsUpdateForBusinessUpdateWeeks $value): void {
+    public function setUpdateWeeks(?WindowsUpdateForBusinessConfiguration_updateWeeks $value): void {
         $this->getBackingStore()->set('updateWeeks', $value);
     }
 

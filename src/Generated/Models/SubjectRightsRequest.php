@@ -128,11 +128,11 @@ class SubjectRightsRequest extends Entity implements Parsable
 
     /**
      * Gets the dataSubjectType property value. The type of the data subject. Possible values are: customer, currentEmployee, formerEmployee, prospectiveEmployee, student, teacher, faculty, other, unknownFutureValue.
-     * @return DataSubjectType|null
+     * @return SubjectRightsRequest_dataSubjectType|null
     */
-    public function getDataSubjectType(): ?DataSubjectType {
+    public function getDataSubjectType(): ?SubjectRightsRequest_dataSubjectType {
         $val = $this->getBackingStore()->get('dataSubjectType');
-        if (is_null($val) || $val instanceof DataSubjectType) {
+        if (is_null($val) || $val instanceof SubjectRightsRequest_dataSubjectType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'dataSubjectType'");
@@ -189,7 +189,7 @@ class SubjectRightsRequest extends Entity implements Parsable
             'createdBy' => fn(ParseNode $n) => $o->setCreatedBy($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'dataSubject' => fn(ParseNode $n) => $o->setDataSubject($n->getObjectValue([DataSubject::class, 'createFromDiscriminatorValue'])),
-            'dataSubjectType' => fn(ParseNode $n) => $o->setDataSubjectType($n->getEnumValue(DataSubjectType::class)),
+            'dataSubjectType' => fn(ParseNode $n) => $o->setDataSubjectType($n->getEnumValue(SubjectRightsRequest_dataSubjectType::class)),
             'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'externalId' => fn(ParseNode $n) => $o->setExternalId($n->getStringValue()),
@@ -213,9 +213,9 @@ class SubjectRightsRequest extends Entity implements Parsable
             },
             'siteLocations' => fn(ParseNode $n) => $o->setSiteLocations($n->getObjectValue([SubjectRightsRequestSiteLocation::class, 'createFromDiscriminatorValue'])),
             'stages' => fn(ParseNode $n) => $o->setStages($n->getCollectionOfObjectValues([SubjectRightsRequestStageDetail::class, 'createFromDiscriminatorValue'])),
-            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(SubjectRightsRequestStatus::class)),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(SubjectRightsRequest_status::class)),
             'team' => fn(ParseNode $n) => $o->setTeam($n->getObjectValue([Team::class, 'createFromDiscriminatorValue'])),
-            'type' => fn(ParseNode $n) => $o->setType($n->getEnumValue(SubjectRightsRequestType::class)),
+            'type' => fn(ParseNode $n) => $o->setType($n->getEnumValue(SubjectRightsRequest_type::class)),
         ]);
     }
 
@@ -385,11 +385,11 @@ class SubjectRightsRequest extends Entity implements Parsable
 
     /**
      * Gets the status property value. The status of the request. Possible values are: active, closed, unknownFutureValue.
-     * @return SubjectRightsRequestStatus|null
+     * @return SubjectRightsRequest_status|null
     */
-    public function getStatus(): ?SubjectRightsRequestStatus {
+    public function getStatus(): ?SubjectRightsRequest_status {
         $val = $this->getBackingStore()->get('status');
-        if (is_null($val) || $val instanceof SubjectRightsRequestStatus) {
+        if (is_null($val) || $val instanceof SubjectRightsRequest_status) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
@@ -409,11 +409,11 @@ class SubjectRightsRequest extends Entity implements Parsable
 
     /**
      * Gets the type property value. The type of the request. Possible values are: export, delete, access, tagForAction, unknownFutureValue.
-     * @return SubjectRightsRequestType|null
+     * @return SubjectRightsRequest_type|null
     */
-    public function getType(): ?SubjectRightsRequestType {
+    public function getType(): ?SubjectRightsRequest_type {
         $val = $this->getBackingStore()->get('type');
-        if (is_null($val) || $val instanceof SubjectRightsRequestType) {
+        if (is_null($val) || $val instanceof SubjectRightsRequest_type) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'type'");
@@ -521,9 +521,9 @@ class SubjectRightsRequest extends Entity implements Parsable
 
     /**
      * Sets the dataSubjectType property value. The type of the data subject. Possible values are: customer, currentEmployee, formerEmployee, prospectiveEmployee, student, teacher, faculty, other, unknownFutureValue.
-     * @param DataSubjectType|null $value Value to set for the dataSubjectType property.
+     * @param SubjectRightsRequest_dataSubjectType|null $value Value to set for the dataSubjectType property.
     */
-    public function setDataSubjectType(?DataSubjectType $value): void {
+    public function setDataSubjectType(?SubjectRightsRequest_dataSubjectType $value): void {
         $this->getBackingStore()->set('dataSubjectType', $value);
     }
 
@@ -657,9 +657,9 @@ class SubjectRightsRequest extends Entity implements Parsable
 
     /**
      * Sets the status property value. The status of the request. Possible values are: active, closed, unknownFutureValue.
-     * @param SubjectRightsRequestStatus|null $value Value to set for the status property.
+     * @param SubjectRightsRequest_status|null $value Value to set for the status property.
     */
-    public function setStatus(?SubjectRightsRequestStatus $value): void {
+    public function setStatus(?SubjectRightsRequest_status $value): void {
         $this->getBackingStore()->set('status', $value);
     }
 
@@ -673,9 +673,9 @@ class SubjectRightsRequest extends Entity implements Parsable
 
     /**
      * Sets the type property value. The type of the request. Possible values are: export, delete, access, tagForAction, unknownFutureValue.
-     * @param SubjectRightsRequestType|null $value Value to set for the type property.
+     * @param SubjectRightsRequest_type|null $value Value to set for the type property.
     */
-    public function setType(?SubjectRightsRequestType $value): void {
+    public function setType(?SubjectRightsRequest_type $value): void {
         $this->getBackingStore()->set('type', $value);
     }
 

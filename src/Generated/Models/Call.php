@@ -117,11 +117,11 @@ class Call extends Entity implements Parsable
 
     /**
      * Gets the direction property value. The direction of the call. The possible values are incoming or outgoing. Read-only.
-     * @return CallDirection|null
+     * @return Call_direction|null
     */
-    public function getDirection(): ?CallDirection {
+    public function getDirection(): ?Call_direction {
         $val = $this->getBackingStore()->get('direction');
-        if (is_null($val) || $val instanceof CallDirection) {
+        if (is_null($val) || $val instanceof Call_direction) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'direction'");
@@ -141,7 +141,7 @@ class Call extends Entity implements Parsable
             'callRoutes' => fn(ParseNode $n) => $o->setCallRoutes($n->getCollectionOfObjectValues([CallRoute::class, 'createFromDiscriminatorValue'])),
             'chatInfo' => fn(ParseNode $n) => $o->setChatInfo($n->getObjectValue([ChatInfo::class, 'createFromDiscriminatorValue'])),
             'contentSharingSessions' => fn(ParseNode $n) => $o->setContentSharingSessions($n->getCollectionOfObjectValues([ContentSharingSession::class, 'createFromDiscriminatorValue'])),
-            'direction' => fn(ParseNode $n) => $o->setDirection($n->getEnumValue(CallDirection::class)),
+            'direction' => fn(ParseNode $n) => $o->setDirection($n->getEnumValue(Call_direction::class)),
             'incomingContext' => fn(ParseNode $n) => $o->setIncomingContext($n->getObjectValue([IncomingContext::class, 'createFromDiscriminatorValue'])),
             'mediaConfig' => fn(ParseNode $n) => $o->setMediaConfig($n->getObjectValue([MediaConfig::class, 'createFromDiscriminatorValue'])),
             'mediaState' => fn(ParseNode $n) => $o->setMediaState($n->getObjectValue([CallMediaState::class, 'createFromDiscriminatorValue'])),
@@ -149,10 +149,10 @@ class Call extends Entity implements Parsable
             'myParticipantId' => fn(ParseNode $n) => $o->setMyParticipantId($n->getStringValue()),
             'operations' => fn(ParseNode $n) => $o->setOperations($n->getCollectionOfObjectValues([CommsOperation::class, 'createFromDiscriminatorValue'])),
             'participants' => fn(ParseNode $n) => $o->setParticipants($n->getCollectionOfObjectValues([Participant::class, 'createFromDiscriminatorValue'])),
-            'requestedModalities' => fn(ParseNode $n) => $o->setRequestedModalities($n->getCollectionOfEnumValues(Modality::class)),
+            'requestedModalities' => fn(ParseNode $n) => $o->setRequestedModalities($n->getCollectionOfEnumValues(Call_requestedModalities::class)),
             'resultInfo' => fn(ParseNode $n) => $o->setResultInfo($n->getObjectValue([ResultInfo::class, 'createFromDiscriminatorValue'])),
             'source' => fn(ParseNode $n) => $o->setSource($n->getObjectValue([ParticipantInfo::class, 'createFromDiscriminatorValue'])),
-            'state' => fn(ParseNode $n) => $o->setState($n->getEnumValue(CallState::class)),
+            'state' => fn(ParseNode $n) => $o->setState($n->getEnumValue(Call_state::class)),
             'subject' => fn(ParseNode $n) => $o->setSubject($n->getStringValue()),
             'targets' => fn(ParseNode $n) => $o->setTargets($n->getCollectionOfObjectValues([InvitationParticipantInfo::class, 'createFromDiscriminatorValue'])),
             'tenantId' => fn(ParseNode $n) => $o->setTenantId($n->getStringValue()),
@@ -251,13 +251,13 @@ class Call extends Entity implements Parsable
 
     /**
      * Gets the requestedModalities property value. The list of requested modalities. Possible values are: unknown, audio, video, videoBasedScreenSharing, data.
-     * @return array<Modality>|null
+     * @return array<Call_requestedModalities>|null
     */
     public function getRequestedModalities(): ?array {
         $val = $this->getBackingStore()->get('requestedModalities');
         if (is_array($val) || is_null($val)) {
-            TypeUtils::validateCollectionValues($val, Modality::class);
-            /** @var array<Modality>|null $val */
+            TypeUtils::validateCollectionValues($val, Call_requestedModalities::class);
+            /** @var array<Call_requestedModalities>|null $val */
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'requestedModalities'");
@@ -289,11 +289,11 @@ class Call extends Entity implements Parsable
 
     /**
      * Gets the state property value. The call state. Possible values are: incoming, establishing, ringing, established, hold, transferring, transferAccepted, redirecting, terminating, terminated. Read-only.
-     * @return CallState|null
+     * @return Call_state|null
     */
-    public function getState(): ?CallState {
+    public function getState(): ?Call_state {
         $val = $this->getBackingStore()->get('state');
-        if (is_null($val) || $val instanceof CallState) {
+        if (is_null($val) || $val instanceof Call_state) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'state'");
@@ -451,9 +451,9 @@ class Call extends Entity implements Parsable
 
     /**
      * Sets the direction property value. The direction of the call. The possible values are incoming or outgoing. Read-only.
-     * @param CallDirection|null $value Value to set for the direction property.
+     * @param Call_direction|null $value Value to set for the direction property.
     */
-    public function setDirection(?CallDirection $value): void {
+    public function setDirection(?Call_direction $value): void {
         $this->getBackingStore()->set('direction', $value);
     }
 
@@ -515,7 +515,7 @@ class Call extends Entity implements Parsable
 
     /**
      * Sets the requestedModalities property value. The list of requested modalities. Possible values are: unknown, audio, video, videoBasedScreenSharing, data.
-     * @param array<Modality>|null $value Value to set for the requestedModalities property.
+     * @param array<Call_requestedModalities>|null $value Value to set for the requestedModalities property.
     */
     public function setRequestedModalities(?array $value): void {
         $this->getBackingStore()->set('requestedModalities', $value);
@@ -539,9 +539,9 @@ class Call extends Entity implements Parsable
 
     /**
      * Sets the state property value. The call state. Possible values are: incoming, establishing, ringing, established, hold, transferring, transferAccepted, redirecting, terminating, terminated. Read-only.
-     * @param CallState|null $value Value to set for the state property.
+     * @param Call_state|null $value Value to set for the state property.
     */
-    public function setState(?CallState $value): void {
+    public function setState(?Call_state $value): void {
         $this->getBackingStore()->set('state', $value);
     }
 

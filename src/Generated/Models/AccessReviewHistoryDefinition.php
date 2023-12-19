@@ -52,13 +52,13 @@ class AccessReviewHistoryDefinition extends Entity implements Parsable
 
     /**
      * Gets the decisions property value. Determines which review decisions will be included in the fetched review history data if specified. Optional on create. All decisions are included by default if no decisions are provided on create. Possible values are: approve, deny, dontKnow, notReviewed, and notNotified.
-     * @return array<AccessReviewHistoryDecisionFilter>|null
+     * @return array<AccessReviewHistoryDefinition_decisions>|null
     */
     public function getDecisions(): ?array {
         $val = $this->getBackingStore()->get('decisions');
         if (is_array($val) || is_null($val)) {
-            TypeUtils::validateCollectionValues($val, AccessReviewHistoryDecisionFilter::class);
-            /** @var array<AccessReviewHistoryDecisionFilter>|null $val */
+            TypeUtils::validateCollectionValues($val, AccessReviewHistoryDefinition_decisions::class);
+            /** @var array<AccessReviewHistoryDefinition_decisions>|null $val */
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'decisions'");
@@ -85,14 +85,14 @@ class AccessReviewHistoryDefinition extends Entity implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'createdBy' => fn(ParseNode $n) => $o->setCreatedBy($n->getObjectValue([UserIdentity::class, 'createFromDiscriminatorValue'])),
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
-            'decisions' => fn(ParseNode $n) => $o->setDecisions($n->getCollectionOfEnumValues(AccessReviewHistoryDecisionFilter::class)),
+            'decisions' => fn(ParseNode $n) => $o->setDecisions($n->getCollectionOfEnumValues(AccessReviewHistoryDefinition_decisions::class)),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'instances' => fn(ParseNode $n) => $o->setInstances($n->getCollectionOfObjectValues([AccessReviewHistoryInstance::class, 'createFromDiscriminatorValue'])),
             'reviewHistoryPeriodEndDateTime' => fn(ParseNode $n) => $o->setReviewHistoryPeriodEndDateTime($n->getDateTimeValue()),
             'reviewHistoryPeriodStartDateTime' => fn(ParseNode $n) => $o->setReviewHistoryPeriodStartDateTime($n->getDateTimeValue()),
             'scheduleSettings' => fn(ParseNode $n) => $o->setScheduleSettings($n->getObjectValue([AccessReviewHistoryScheduleSettings::class, 'createFromDiscriminatorValue'])),
             'scopes' => fn(ParseNode $n) => $o->setScopes($n->getCollectionOfObjectValues([AccessReviewScope::class, 'createFromDiscriminatorValue'])),
-            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(AccessReviewHistoryStatus::class)),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(AccessReviewHistoryDefinition_status::class)),
         ]);
     }
 
@@ -162,11 +162,11 @@ class AccessReviewHistoryDefinition extends Entity implements Parsable
 
     /**
      * Gets the status property value. Represents the status of the review history data collection. The possible values are: done, inProgress, error, requested, unknownFutureValue.
-     * @return AccessReviewHistoryStatus|null
+     * @return AccessReviewHistoryDefinition_status|null
     */
-    public function getStatus(): ?AccessReviewHistoryStatus {
+    public function getStatus(): ?AccessReviewHistoryDefinition_status {
         $val = $this->getBackingStore()->get('status');
-        if (is_null($val) || $val instanceof AccessReviewHistoryStatus) {
+        if (is_null($val) || $val instanceof AccessReviewHistoryDefinition_status) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
@@ -208,7 +208,7 @@ class AccessReviewHistoryDefinition extends Entity implements Parsable
 
     /**
      * Sets the decisions property value. Determines which review decisions will be included in the fetched review history data if specified. Optional on create. All decisions are included by default if no decisions are provided on create. Possible values are: approve, deny, dontKnow, notReviewed, and notNotified.
-     * @param array<AccessReviewHistoryDecisionFilter>|null $value Value to set for the decisions property.
+     * @param array<AccessReviewHistoryDefinition_decisions>|null $value Value to set for the decisions property.
     */
     public function setDecisions(?array $value): void {
         $this->getBackingStore()->set('decisions', $value);
@@ -264,9 +264,9 @@ class AccessReviewHistoryDefinition extends Entity implements Parsable
 
     /**
      * Sets the status property value. Represents the status of the review history data collection. The possible values are: done, inProgress, error, requested, unknownFutureValue.
-     * @param AccessReviewHistoryStatus|null $value Value to set for the status property.
+     * @param AccessReviewHistoryDefinition_status|null $value Value to set for the status property.
     */
-    public function setStatus(?AccessReviewHistoryStatus $value): void {
+    public function setStatus(?AccessReviewHistoryDefinition_status $value): void {
         $this->getBackingStore()->set('status', $value);
     }
 

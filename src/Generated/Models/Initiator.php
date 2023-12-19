@@ -32,17 +32,17 @@ class Initiator extends Identity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'initiatorType' => fn(ParseNode $n) => $o->setInitiatorType($n->getEnumValue(InitiatorType::class)),
+            'initiatorType' => fn(ParseNode $n) => $o->setInitiatorType($n->getEnumValue(Initiator_initiatorType::class)),
         ]);
     }
 
     /**
      * Gets the initiatorType property value. Type of initiator. Possible values are: user, application, system, unknownFutureValue.
-     * @return InitiatorType|null
+     * @return Initiator_initiatorType|null
     */
-    public function getInitiatorType(): ?InitiatorType {
+    public function getInitiatorType(): ?Initiator_initiatorType {
         $val = $this->getBackingStore()->get('initiatorType');
-        if (is_null($val) || $val instanceof InitiatorType) {
+        if (is_null($val) || $val instanceof Initiator_initiatorType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'initiatorType'");
@@ -59,9 +59,9 @@ class Initiator extends Identity implements Parsable
 
     /**
      * Sets the initiatorType property value. Type of initiator. Possible values are: user, application, system, unknownFutureValue.
-     * @param InitiatorType|null $value Value to set for the initiatorType property.
+     * @param Initiator_initiatorType|null $value Value to set for the initiatorType property.
     */
-    public function setInitiatorType(?InitiatorType $value): void {
+    public function setInitiatorType(?Initiator_initiatorType $value): void {
         $this->getBackingStore()->set('initiatorType', $value);
     }
 

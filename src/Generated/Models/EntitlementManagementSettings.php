@@ -39,11 +39,11 @@ class EntitlementManagementSettings extends Entity implements Parsable
 
     /**
      * Gets the externalUserLifecycleAction property value. Automatic action that the service should take when an external user's last access package assignment is removed. The possible values are: none, blockSignIn, blockSignInAndDelete, unknownFutureValue.
-     * @return AccessPackageExternalUserLifecycleAction|null
+     * @return EntitlementManagementSettings_externalUserLifecycleAction|null
     */
-    public function getExternalUserLifecycleAction(): ?AccessPackageExternalUserLifecycleAction {
+    public function getExternalUserLifecycleAction(): ?EntitlementManagementSettings_externalUserLifecycleAction {
         $val = $this->getBackingStore()->get('externalUserLifecycleAction');
-        if (is_null($val) || $val instanceof AccessPackageExternalUserLifecycleAction) {
+        if (is_null($val) || $val instanceof EntitlementManagementSettings_externalUserLifecycleAction) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'externalUserLifecycleAction'");
@@ -57,7 +57,7 @@ class EntitlementManagementSettings extends Entity implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'durationUntilExternalUserDeletedAfterBlocked' => fn(ParseNode $n) => $o->setDurationUntilExternalUserDeletedAfterBlocked($n->getDateIntervalValue()),
-            'externalUserLifecycleAction' => fn(ParseNode $n) => $o->setExternalUserLifecycleAction($n->getEnumValue(AccessPackageExternalUserLifecycleAction::class)),
+            'externalUserLifecycleAction' => fn(ParseNode $n) => $o->setExternalUserLifecycleAction($n->getEnumValue(EntitlementManagementSettings_externalUserLifecycleAction::class)),
         ]);
     }
 
@@ -81,9 +81,9 @@ class EntitlementManagementSettings extends Entity implements Parsable
 
     /**
      * Sets the externalUserLifecycleAction property value. Automatic action that the service should take when an external user's last access package assignment is removed. The possible values are: none, blockSignIn, blockSignInAndDelete, unknownFutureValue.
-     * @param AccessPackageExternalUserLifecycleAction|null $value Value to set for the externalUserLifecycleAction property.
+     * @param EntitlementManagementSettings_externalUserLifecycleAction|null $value Value to set for the externalUserLifecycleAction property.
     */
-    public function setExternalUserLifecycleAction(?AccessPackageExternalUserLifecycleAction $value): void {
+    public function setExternalUserLifecycleAction(?EntitlementManagementSettings_externalUserLifecycleAction $value): void {
         $this->getBackingStore()->set('externalUserLifecycleAction', $value);
     }
 

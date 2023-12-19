@@ -57,11 +57,11 @@ class WindowsProtectionState extends Entity implements Parsable
 
     /**
      * Gets the deviceState property value. Indicates device's health state. Possible values are: clean, fullScanPending, rebootPending, manualStepsPending, offlineScanPending, critical. Possible values are: clean, fullScanPending, rebootPending, manualStepsPending, offlineScanPending, critical.
-     * @return WindowsDeviceHealthState|null
+     * @return WindowsProtectionState_deviceState|null
     */
-    public function getDeviceState(): ?WindowsDeviceHealthState {
+    public function getDeviceState(): ?WindowsProtectionState_deviceState {
         $val = $this->getBackingStore()->get('deviceState');
-        if (is_null($val) || $val instanceof WindowsDeviceHealthState) {
+        if (is_null($val) || $val instanceof WindowsProtectionState_deviceState) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'deviceState'");
@@ -88,7 +88,7 @@ class WindowsProtectionState extends Entity implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'antiMalwareVersion' => fn(ParseNode $n) => $o->setAntiMalwareVersion($n->getStringValue()),
             'detectedMalwareState' => fn(ParseNode $n) => $o->setDetectedMalwareState($n->getCollectionOfObjectValues([WindowsDeviceMalwareState::class, 'createFromDiscriminatorValue'])),
-            'deviceState' => fn(ParseNode $n) => $o->setDeviceState($n->getEnumValue(WindowsDeviceHealthState::class)),
+            'deviceState' => fn(ParseNode $n) => $o->setDeviceState($n->getEnumValue(WindowsProtectionState_deviceState::class)),
             'engineVersion' => fn(ParseNode $n) => $o->setEngineVersion($n->getStringValue()),
             'fullScanOverdue' => fn(ParseNode $n) => $o->setFullScanOverdue($n->getBooleanValue()),
             'fullScanRequired' => fn(ParseNode $n) => $o->setFullScanRequired($n->getBooleanValue()),
@@ -100,7 +100,7 @@ class WindowsProtectionState extends Entity implements Parsable
             'lastReportedDateTime' => fn(ParseNode $n) => $o->setLastReportedDateTime($n->getDateTimeValue()),
             'malwareProtectionEnabled' => fn(ParseNode $n) => $o->setMalwareProtectionEnabled($n->getBooleanValue()),
             'networkInspectionSystemEnabled' => fn(ParseNode $n) => $o->setNetworkInspectionSystemEnabled($n->getBooleanValue()),
-            'productStatus' => fn(ParseNode $n) => $o->setProductStatus($n->getEnumValue(WindowsDefenderProductStatus::class)),
+            'productStatus' => fn(ParseNode $n) => $o->setProductStatus($n->getEnumValue(WindowsProtectionState_productStatus::class)),
             'quickScanOverdue' => fn(ParseNode $n) => $o->setQuickScanOverdue($n->getBooleanValue()),
             'realTimeProtectionEnabled' => fn(ParseNode $n) => $o->setRealTimeProtectionEnabled($n->getBooleanValue()),
             'rebootRequired' => fn(ParseNode $n) => $o->setRebootRequired($n->getBooleanValue()),
@@ -232,11 +232,11 @@ class WindowsProtectionState extends Entity implements Parsable
 
     /**
      * Gets the productStatus property value. Product Status of Windows Defender Antivirus. Possible values are: noStatus, serviceNotRunning, serviceStartedWithoutMalwareProtection, pendingFullScanDueToThreatAction, pendingRebootDueToThreatAction, pendingManualStepsDueToThreatAction, avSignaturesOutOfDate, asSignaturesOutOfDate, noQuickScanHappenedForSpecifiedPeriod, noFullScanHappenedForSpecifiedPeriod, systemInitiatedScanInProgress, systemInitiatedCleanInProgress, samplesPendingSubmission, productRunningInEvaluationMode, productRunningInNonGenuineMode, productExpired, offlineScanRequired, serviceShutdownAsPartOfSystemShutdown, threatRemediationFailedCritically, threatRemediationFailedNonCritically, noStatusFlagsSet, platformOutOfDate, platformUpdateInProgress, platformAboutToBeOutdated, signatureOrPlatformEndOfLifeIsPastOrIsImpending, windowsSModeSignaturesInUseOnNonWin10SInstall. Possible values are: noStatus, serviceNotRunning, serviceStartedWithoutMalwareProtection, pendingFullScanDueToThreatAction, pendingRebootDueToThreatAction, pendingManualStepsDueToThreatAction, avSignaturesOutOfDate, asSignaturesOutOfDate, noQuickScanHappenedForSpecifiedPeriod, noFullScanHappenedForSpecifiedPeriod, systemInitiatedScanInProgress, systemInitiatedCleanInProgress, samplesPendingSubmission, productRunningInEvaluationMode, productRunningInNonGenuineMode, productExpired, offlineScanRequired, serviceShutdownAsPartOfSystemShutdown, threatRemediationFailedCritically, threatRemediationFailedNonCritically, noStatusFlagsSet, platformOutOfDate, platformUpdateInProgress, platformAboutToBeOutdated, signatureOrPlatformEndOfLifeIsPastOrIsImpending, windowsSModeSignaturesInUseOnNonWin10SInstall.
-     * @return WindowsDefenderProductStatus|null
+     * @return WindowsProtectionState_productStatus|null
     */
-    public function getProductStatus(): ?WindowsDefenderProductStatus {
+    public function getProductStatus(): ?WindowsProtectionState_productStatus {
         $val = $this->getBackingStore()->get('productStatus');
-        if (is_null($val) || $val instanceof WindowsDefenderProductStatus) {
+        if (is_null($val) || $val instanceof WindowsProtectionState_productStatus) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'productStatus'");
@@ -361,9 +361,9 @@ class WindowsProtectionState extends Entity implements Parsable
 
     /**
      * Sets the deviceState property value. Indicates device's health state. Possible values are: clean, fullScanPending, rebootPending, manualStepsPending, offlineScanPending, critical. Possible values are: clean, fullScanPending, rebootPending, manualStepsPending, offlineScanPending, critical.
-     * @param WindowsDeviceHealthState|null $value Value to set for the deviceState property.
+     * @param WindowsProtectionState_deviceState|null $value Value to set for the deviceState property.
     */
-    public function setDeviceState(?WindowsDeviceHealthState $value): void {
+    public function setDeviceState(?WindowsProtectionState_deviceState $value): void {
         $this->getBackingStore()->set('deviceState', $value);
     }
 
@@ -457,9 +457,9 @@ class WindowsProtectionState extends Entity implements Parsable
 
     /**
      * Sets the productStatus property value. Product Status of Windows Defender Antivirus. Possible values are: noStatus, serviceNotRunning, serviceStartedWithoutMalwareProtection, pendingFullScanDueToThreatAction, pendingRebootDueToThreatAction, pendingManualStepsDueToThreatAction, avSignaturesOutOfDate, asSignaturesOutOfDate, noQuickScanHappenedForSpecifiedPeriod, noFullScanHappenedForSpecifiedPeriod, systemInitiatedScanInProgress, systemInitiatedCleanInProgress, samplesPendingSubmission, productRunningInEvaluationMode, productRunningInNonGenuineMode, productExpired, offlineScanRequired, serviceShutdownAsPartOfSystemShutdown, threatRemediationFailedCritically, threatRemediationFailedNonCritically, noStatusFlagsSet, platformOutOfDate, platformUpdateInProgress, platformAboutToBeOutdated, signatureOrPlatformEndOfLifeIsPastOrIsImpending, windowsSModeSignaturesInUseOnNonWin10SInstall. Possible values are: noStatus, serviceNotRunning, serviceStartedWithoutMalwareProtection, pendingFullScanDueToThreatAction, pendingRebootDueToThreatAction, pendingManualStepsDueToThreatAction, avSignaturesOutOfDate, asSignaturesOutOfDate, noQuickScanHappenedForSpecifiedPeriod, noFullScanHappenedForSpecifiedPeriod, systemInitiatedScanInProgress, systemInitiatedCleanInProgress, samplesPendingSubmission, productRunningInEvaluationMode, productRunningInNonGenuineMode, productExpired, offlineScanRequired, serviceShutdownAsPartOfSystemShutdown, threatRemediationFailedCritically, threatRemediationFailedNonCritically, noStatusFlagsSet, platformOutOfDate, platformUpdateInProgress, platformAboutToBeOutdated, signatureOrPlatformEndOfLifeIsPastOrIsImpending, windowsSModeSignaturesInUseOnNonWin10SInstall.
-     * @param WindowsDefenderProductStatus|null $value Value to set for the productStatus property.
+     * @param WindowsProtectionState_productStatus|null $value Value to set for the productStatus property.
     */
-    public function setProductStatus(?WindowsDefenderProductStatus $value): void {
+    public function setProductStatus(?WindowsProtectionState_productStatus $value): void {
         $this->getBackingStore()->set('productStatus', $value);
     }
 

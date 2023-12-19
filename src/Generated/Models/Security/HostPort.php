@@ -55,9 +55,9 @@ class HostPort extends Entity implements Parsable
             'lastSeenDateTime' => fn(ParseNode $n) => $o->setLastSeenDateTime($n->getDateTimeValue()),
             'mostRecentSslCertificate' => fn(ParseNode $n) => $o->setMostRecentSslCertificate($n->getObjectValue([SslCertificate::class, 'createFromDiscriminatorValue'])),
             'port' => fn(ParseNode $n) => $o->setPort($n->getIntegerValue()),
-            'protocol' => fn(ParseNode $n) => $o->setProtocol($n->getEnumValue(HostPortProtocol::class)),
+            'protocol' => fn(ParseNode $n) => $o->setProtocol($n->getEnumValue(HostPort_protocol::class)),
             'services' => fn(ParseNode $n) => $o->setServices($n->getCollectionOfObjectValues([HostPortComponent::class, 'createFromDiscriminatorValue'])),
-            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(HostPortStatus::class)),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(HostPort_status::class)),
             'timesObserved' => fn(ParseNode $n) => $o->setTimesObserved($n->getIntegerValue()),
         ]);
     }
@@ -136,11 +136,11 @@ class HostPort extends Entity implements Parsable
 
     /**
      * Gets the protocol property value. The general protocol used to scan the port. The possible values are: tcp, udp, unknownFutureValue.
-     * @return HostPortProtocol|null
+     * @return HostPort_protocol|null
     */
-    public function getProtocol(): ?HostPortProtocol {
+    public function getProtocol(): ?HostPort_protocol {
         $val = $this->getBackingStore()->get('protocol');
-        if (is_null($val) || $val instanceof HostPortProtocol) {
+        if (is_null($val) || $val instanceof HostPort_protocol) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'protocol'");
@@ -162,11 +162,11 @@ class HostPort extends Entity implements Parsable
 
     /**
      * Gets the status property value. The status of the port. The possible values are: open, filtered, closed, unknownFutureValue.
-     * @return HostPortStatus|null
+     * @return HostPort_status|null
     */
-    public function getStatus(): ?HostPortStatus {
+    public function getStatus(): ?HostPort_status {
         $val = $this->getBackingStore()->get('status');
-        if (is_null($val) || $val instanceof HostPortStatus) {
+        if (is_null($val) || $val instanceof HostPort_status) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
@@ -261,9 +261,9 @@ class HostPort extends Entity implements Parsable
 
     /**
      * Sets the protocol property value. The general protocol used to scan the port. The possible values are: tcp, udp, unknownFutureValue.
-     * @param HostPortProtocol|null $value Value to set for the protocol property.
+     * @param HostPort_protocol|null $value Value to set for the protocol property.
     */
-    public function setProtocol(?HostPortProtocol $value): void {
+    public function setProtocol(?HostPort_protocol $value): void {
         $this->getBackingStore()->set('protocol', $value);
     }
 
@@ -277,9 +277,9 @@ class HostPort extends Entity implements Parsable
 
     /**
      * Sets the status property value. The status of the port. The possible values are: open, filtered, closed, unknownFutureValue.
-     * @param HostPortStatus|null $value Value to set for the status property.
+     * @param HostPort_status|null $value Value to set for the status property.
     */
-    public function setStatus(?HostPortStatus $value): void {
+    public function setStatus(?HostPort_status $value): void {
         $this->getBackingStore()->set('status', $value);
     }
 

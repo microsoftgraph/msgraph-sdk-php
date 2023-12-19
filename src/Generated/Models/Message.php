@@ -160,8 +160,8 @@ class Message extends OutlookItem implements Parsable
             'flag' => fn(ParseNode $n) => $o->setFlag($n->getObjectValue([FollowupFlag::class, 'createFromDiscriminatorValue'])),
             'from' => fn(ParseNode $n) => $o->setFrom($n->getObjectValue([Recipient::class, 'createFromDiscriminatorValue'])),
             'hasAttachments' => fn(ParseNode $n) => $o->setHasAttachments($n->getBooleanValue()),
-            'importance' => fn(ParseNode $n) => $o->setImportance($n->getEnumValue(Importance::class)),
-            'inferenceClassification' => fn(ParseNode $n) => $o->setInferenceClassification($n->getEnumValue(InferenceClassificationType::class)),
+            'importance' => fn(ParseNode $n) => $o->setImportance($n->getEnumValue(Message_importance::class)),
+            'inferenceClassification' => fn(ParseNode $n) => $o->setInferenceClassification($n->getEnumValue(Message_inferenceClassification::class)),
             'internetMessageHeaders' => fn(ParseNode $n) => $o->setInternetMessageHeaders($n->getCollectionOfObjectValues([InternetMessageHeader::class, 'createFromDiscriminatorValue'])),
             'internetMessageId' => fn(ParseNode $n) => $o->setInternetMessageId($n->getStringValue()),
             'isDeliveryReceiptRequested' => fn(ParseNode $n) => $o->setIsDeliveryReceiptRequested($n->getBooleanValue()),
@@ -220,11 +220,11 @@ class Message extends OutlookItem implements Parsable
 
     /**
      * Gets the importance property value. The importance property
-     * @return Importance|null
+     * @return Message_importance|null
     */
-    public function getImportance(): ?Importance {
+    public function getImportance(): ?Message_importance {
         $val = $this->getBackingStore()->get('importance');
-        if (is_null($val) || $val instanceof Importance) {
+        if (is_null($val) || $val instanceof Message_importance) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'importance'");
@@ -232,11 +232,11 @@ class Message extends OutlookItem implements Parsable
 
     /**
      * Gets the inferenceClassification property value. The inferenceClassification property
-     * @return InferenceClassificationType|null
+     * @return Message_inferenceClassification|null
     */
-    public function getInferenceClassification(): ?InferenceClassificationType {
+    public function getInferenceClassification(): ?Message_inferenceClassification {
         $val = $this->getBackingStore()->get('inferenceClassification');
-        if (is_null($val) || $val instanceof InferenceClassificationType) {
+        if (is_null($val) || $val instanceof Message_inferenceClassification) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'inferenceClassification'");
@@ -584,17 +584,17 @@ class Message extends OutlookItem implements Parsable
 
     /**
      * Sets the importance property value. The importance property
-     * @param Importance|null $value Value to set for the importance property.
+     * @param Message_importance|null $value Value to set for the importance property.
     */
-    public function setImportance(?Importance $value): void {
+    public function setImportance(?Message_importance $value): void {
         $this->getBackingStore()->set('importance', $value);
     }
 
     /**
      * Sets the inferenceClassification property value. The inferenceClassification property
-     * @param InferenceClassificationType|null $value Value to set for the inferenceClassification property.
+     * @param Message_inferenceClassification|null $value Value to set for the inferenceClassification property.
     */
-    public function setInferenceClassification(?InferenceClassificationType $value): void {
+    public function setInferenceClassification(?Message_inferenceClassification $value): void {
         $this->getBackingStore()->set('inferenceClassification', $value);
     }
 

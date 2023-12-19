@@ -78,11 +78,11 @@ class SignIn extends Entity implements Parsable
 
     /**
      * Gets the conditionalAccessStatus property value. Reports status of an activated conditional access policy. Possible values are: success, failure, notApplied, and unknownFutureValue.  Supports $filter (eq).
-     * @return ConditionalAccessStatus|null
+     * @return SignIn_conditionalAccessStatus|null
     */
-    public function getConditionalAccessStatus(): ?ConditionalAccessStatus {
+    public function getConditionalAccessStatus(): ?SignIn_conditionalAccessStatus {
         $val = $this->getBackingStore()->get('conditionalAccessStatus');
-        if (is_null($val) || $val instanceof ConditionalAccessStatus) {
+        if (is_null($val) || $val instanceof SignIn_conditionalAccessStatus) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'conditionalAccessStatus'");
@@ -135,7 +135,7 @@ class SignIn extends Entity implements Parsable
             'appId' => fn(ParseNode $n) => $o->setAppId($n->getStringValue()),
             'appliedConditionalAccessPolicies' => fn(ParseNode $n) => $o->setAppliedConditionalAccessPolicies($n->getCollectionOfObjectValues([AppliedConditionalAccessPolicy::class, 'createFromDiscriminatorValue'])),
             'clientAppUsed' => fn(ParseNode $n) => $o->setClientAppUsed($n->getStringValue()),
-            'conditionalAccessStatus' => fn(ParseNode $n) => $o->setConditionalAccessStatus($n->getEnumValue(ConditionalAccessStatus::class)),
+            'conditionalAccessStatus' => fn(ParseNode $n) => $o->setConditionalAccessStatus($n->getEnumValue(SignIn_conditionalAccessStatus::class)),
             'correlationId' => fn(ParseNode $n) => $o->setCorrelationId($n->getStringValue()),
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'deviceDetail' => fn(ParseNode $n) => $o->setDeviceDetail($n->getObjectValue([DeviceDetail::class, 'createFromDiscriminatorValue'])),
@@ -144,8 +144,8 @@ class SignIn extends Entity implements Parsable
             'location' => fn(ParseNode $n) => $o->setLocation($n->getObjectValue([SignInLocation::class, 'createFromDiscriminatorValue'])),
             'resourceDisplayName' => fn(ParseNode $n) => $o->setResourceDisplayName($n->getStringValue()),
             'resourceId' => fn(ParseNode $n) => $o->setResourceId($n->getStringValue()),
-            'riskDetail' => fn(ParseNode $n) => $o->setRiskDetail($n->getEnumValue(RiskDetail::class)),
-            'riskEventTypes' => fn(ParseNode $n) => $o->setRiskEventTypes($n->getCollectionOfEnumValues(RiskEventType::class)),
+            'riskDetail' => fn(ParseNode $n) => $o->setRiskDetail($n->getEnumValue(SignIn_riskDetail::class)),
+            'riskEventTypes' => fn(ParseNode $n) => $o->setRiskEventTypes($n->getCollectionOfEnumValues(SignIn_riskEventTypes::class)),
             'riskEventTypes_v2' => function (ParseNode $n) {
                 $val = $n->getCollectionOfPrimitiveValues();
                 if (is_array($val)) {
@@ -154,9 +154,9 @@ class SignIn extends Entity implements Parsable
                 /** @var array<string>|null $val */
                 $this->setRiskEventTypesV2($val);
             },
-            'riskLevelAggregated' => fn(ParseNode $n) => $o->setRiskLevelAggregated($n->getEnumValue(RiskLevel::class)),
-            'riskLevelDuringSignIn' => fn(ParseNode $n) => $o->setRiskLevelDuringSignIn($n->getEnumValue(RiskLevel::class)),
-            'riskState' => fn(ParseNode $n) => $o->setRiskState($n->getEnumValue(RiskState::class)),
+            'riskLevelAggregated' => fn(ParseNode $n) => $o->setRiskLevelAggregated($n->getEnumValue(SignIn_riskLevelAggregated::class)),
+            'riskLevelDuringSignIn' => fn(ParseNode $n) => $o->setRiskLevelDuringSignIn($n->getEnumValue(SignIn_riskLevelDuringSignIn::class)),
+            'riskState' => fn(ParseNode $n) => $o->setRiskState($n->getEnumValue(SignIn_riskState::class)),
             'status' => fn(ParseNode $n) => $o->setStatus($n->getObjectValue([SignInStatus::class, 'createFromDiscriminatorValue'])),
             'userDisplayName' => fn(ParseNode $n) => $o->setUserDisplayName($n->getStringValue()),
             'userId' => fn(ParseNode $n) => $o->setUserId($n->getStringValue()),
@@ -226,11 +226,11 @@ class SignIn extends Entity implements Parsable
 
     /**
      * Gets the riskDetail property value. Provides the 'reason' behind a specific state of a risky user, sign-in or a risk event. The possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far.  Supports $filter (eq).Note: Details for this property require a Microsoft Entra ID P2 license. Other licenses return the value hidden.
-     * @return RiskDetail|null
+     * @return SignIn_riskDetail|null
     */
-    public function getRiskDetail(): ?RiskDetail {
+    public function getRiskDetail(): ?SignIn_riskDetail {
         $val = $this->getBackingStore()->get('riskDetail');
-        if (is_null($val) || $val instanceof RiskDetail) {
+        if (is_null($val) || $val instanceof SignIn_riskDetail) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'riskDetail'");
@@ -238,13 +238,13 @@ class SignIn extends Entity implements Parsable
 
     /**
      * Gets the riskEventTypes property value. Risk event types associated with the sign-in. The possible values are: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, and unknownFutureValue.  Supports $filter (eq).
-     * @return array<RiskEventType>|null
+     * @return array<SignIn_riskEventTypes>|null
     */
     public function getRiskEventTypes(): ?array {
         $val = $this->getBackingStore()->get('riskEventTypes');
         if (is_array($val) || is_null($val)) {
-            TypeUtils::validateCollectionValues($val, RiskEventType::class);
-            /** @var array<RiskEventType>|null $val */
+            TypeUtils::validateCollectionValues($val, SignIn_riskEventTypes::class);
+            /** @var array<SignIn_riskEventTypes>|null $val */
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'riskEventTypes'");
@@ -266,11 +266,11 @@ class SignIn extends Entity implements Parsable
 
     /**
      * Gets the riskLevelAggregated property value. Aggregated risk level. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in wasn't enabled for Microsoft Entra ID Protection.  Supports $filter (eq).  Note: Details for this property are only available for Microsoft Entra ID P2 customers. All other customers are returned hidden.
-     * @return RiskLevel|null
+     * @return SignIn_riskLevelAggregated|null
     */
-    public function getRiskLevelAggregated(): ?RiskLevel {
+    public function getRiskLevelAggregated(): ?SignIn_riskLevelAggregated {
         $val = $this->getBackingStore()->get('riskLevelAggregated');
-        if (is_null($val) || $val instanceof RiskLevel) {
+        if (is_null($val) || $val instanceof SignIn_riskLevelAggregated) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'riskLevelAggregated'");
@@ -278,11 +278,11 @@ class SignIn extends Entity implements Parsable
 
     /**
      * Gets the riskLevelDuringSignIn property value. Risk level during sign-in. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in wasn't enabled for Microsoft Entra ID Protection.  Supports $filter (eq).  Note: Details for this property are only available for Microsoft Entra ID P2 customers. All other customers are returned hidden.
-     * @return RiskLevel|null
+     * @return SignIn_riskLevelDuringSignIn|null
     */
-    public function getRiskLevelDuringSignIn(): ?RiskLevel {
+    public function getRiskLevelDuringSignIn(): ?SignIn_riskLevelDuringSignIn {
         $val = $this->getBackingStore()->get('riskLevelDuringSignIn');
-        if (is_null($val) || $val instanceof RiskLevel) {
+        if (is_null($val) || $val instanceof SignIn_riskLevelDuringSignIn) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'riskLevelDuringSignIn'");
@@ -290,11 +290,11 @@ class SignIn extends Entity implements Parsable
 
     /**
      * Gets the riskState property value. Reports status of the risky user, sign-in, or a risk event. The possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.  Supports $filter (eq).
-     * @return RiskState|null
+     * @return SignIn_riskState|null
     */
-    public function getRiskState(): ?RiskState {
+    public function getRiskState(): ?SignIn_riskState {
         $val = $this->getBackingStore()->get('riskState');
-        if (is_null($val) || $val instanceof RiskState) {
+        if (is_null($val) || $val instanceof SignIn_riskState) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'riskState'");
@@ -413,9 +413,9 @@ class SignIn extends Entity implements Parsable
 
     /**
      * Sets the conditionalAccessStatus property value. Reports status of an activated conditional access policy. Possible values are: success, failure, notApplied, and unknownFutureValue.  Supports $filter (eq).
-     * @param ConditionalAccessStatus|null $value Value to set for the conditionalAccessStatus property.
+     * @param SignIn_conditionalAccessStatus|null $value Value to set for the conditionalAccessStatus property.
     */
-    public function setConditionalAccessStatus(?ConditionalAccessStatus $value): void {
+    public function setConditionalAccessStatus(?SignIn_conditionalAccessStatus $value): void {
         $this->getBackingStore()->set('conditionalAccessStatus', $value);
     }
 
@@ -485,15 +485,15 @@ class SignIn extends Entity implements Parsable
 
     /**
      * Sets the riskDetail property value. Provides the 'reason' behind a specific state of a risky user, sign-in or a risk event. The possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far.  Supports $filter (eq).Note: Details for this property require a Microsoft Entra ID P2 license. Other licenses return the value hidden.
-     * @param RiskDetail|null $value Value to set for the riskDetail property.
+     * @param SignIn_riskDetail|null $value Value to set for the riskDetail property.
     */
-    public function setRiskDetail(?RiskDetail $value): void {
+    public function setRiskDetail(?SignIn_riskDetail $value): void {
         $this->getBackingStore()->set('riskDetail', $value);
     }
 
     /**
      * Sets the riskEventTypes property value. Risk event types associated with the sign-in. The possible values are: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, and unknownFutureValue.  Supports $filter (eq).
-     * @param array<RiskEventType>|null $value Value to set for the riskEventTypes property.
+     * @param array<SignIn_riskEventTypes>|null $value Value to set for the riskEventTypes property.
     */
     public function setRiskEventTypes(?array $value): void {
         $this->getBackingStore()->set('riskEventTypes', $value);
@@ -509,25 +509,25 @@ class SignIn extends Entity implements Parsable
 
     /**
      * Sets the riskLevelAggregated property value. Aggregated risk level. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in wasn't enabled for Microsoft Entra ID Protection.  Supports $filter (eq).  Note: Details for this property are only available for Microsoft Entra ID P2 customers. All other customers are returned hidden.
-     * @param RiskLevel|null $value Value to set for the riskLevelAggregated property.
+     * @param SignIn_riskLevelAggregated|null $value Value to set for the riskLevelAggregated property.
     */
-    public function setRiskLevelAggregated(?RiskLevel $value): void {
+    public function setRiskLevelAggregated(?SignIn_riskLevelAggregated $value): void {
         $this->getBackingStore()->set('riskLevelAggregated', $value);
     }
 
     /**
      * Sets the riskLevelDuringSignIn property value. Risk level during sign-in. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in wasn't enabled for Microsoft Entra ID Protection.  Supports $filter (eq).  Note: Details for this property are only available for Microsoft Entra ID P2 customers. All other customers are returned hidden.
-     * @param RiskLevel|null $value Value to set for the riskLevelDuringSignIn property.
+     * @param SignIn_riskLevelDuringSignIn|null $value Value to set for the riskLevelDuringSignIn property.
     */
-    public function setRiskLevelDuringSignIn(?RiskLevel $value): void {
+    public function setRiskLevelDuringSignIn(?SignIn_riskLevelDuringSignIn $value): void {
         $this->getBackingStore()->set('riskLevelDuringSignIn', $value);
     }
 
     /**
      * Sets the riskState property value. Reports status of the risky user, sign-in, or a risk event. The possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.  Supports $filter (eq).
-     * @param RiskState|null $value Value to set for the riskState property.
+     * @param SignIn_riskState|null $value Value to set for the riskState property.
     */
-    public function setRiskState(?RiskState $value): void {
+    public function setRiskState(?SignIn_riskState $value): void {
         $this->getBackingStore()->set('riskState', $value);
     }
 

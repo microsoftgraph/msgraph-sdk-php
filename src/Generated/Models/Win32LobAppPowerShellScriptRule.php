@@ -77,7 +77,7 @@ class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements Parsabl
             'operationType' => fn(ParseNode $n) => $o->setOperationType($n->getEnumValue(Win32LobAppPowerShellScriptRuleOperationType::class)),
             'operator' => fn(ParseNode $n) => $o->setOperator($n->getEnumValue(Win32LobAppRuleOperator::class)),
             'runAs32Bit' => fn(ParseNode $n) => $o->setRunAs32Bit($n->getBooleanValue()),
-            'runAsAccount' => fn(ParseNode $n) => $o->setRunAsAccount($n->getEnumValue(RunAsAccountType::class)),
+            'runAsAccount' => fn(ParseNode $n) => $o->setRunAsAccount($n->getEnumValue(Win32LobAppPowerShellScriptRule_runAsAccount::class)),
             'scriptContent' => fn(ParseNode $n) => $o->setScriptContent($n->getStringValue()),
         ]);
     }
@@ -120,11 +120,11 @@ class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements Parsabl
 
     /**
      * Gets the runAsAccount property value. The execution context of the script. Do not specify this value if the rule is used for detection. Script detection rules will run in the same context as the associated app install context. Possible values are: system, user.
-     * @return RunAsAccountType|null
+     * @return Win32LobAppPowerShellScriptRule_runAsAccount|null
     */
-    public function getRunAsAccount(): ?RunAsAccountType {
+    public function getRunAsAccount(): ?Win32LobAppPowerShellScriptRule_runAsAccount {
         $val = $this->getBackingStore()->get('runAsAccount');
-        if (is_null($val) || $val instanceof RunAsAccountType) {
+        if (is_null($val) || $val instanceof Win32LobAppPowerShellScriptRule_runAsAccount) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'runAsAccount'");
@@ -208,9 +208,9 @@ class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements Parsabl
 
     /**
      * Sets the runAsAccount property value. The execution context of the script. Do not specify this value if the rule is used for detection. Script detection rules will run in the same context as the associated app install context. Possible values are: system, user.
-     * @param RunAsAccountType|null $value Value to set for the runAsAccount property.
+     * @param Win32LobAppPowerShellScriptRule_runAsAccount|null $value Value to set for the runAsAccount property.
     */
-    public function setRunAsAccount(?RunAsAccountType $value): void {
+    public function setRunAsAccount(?Win32LobAppPowerShellScriptRule_runAsAccount $value): void {
         $this->getBackingStore()->set('runAsAccount', $value);
     }
 

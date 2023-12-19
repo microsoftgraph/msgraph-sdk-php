@@ -43,11 +43,11 @@ class CaseOperation extends Entity implements Parsable
 
     /**
      * Gets the action property value. The type of action the operation represents. Possible values are: addToReviewSet,applyTags,contentExport,convertToPdf,estimateStatistics, purgeData
-     * @return CaseAction|null
+     * @return CaseOperation_action|null
     */
-    public function getAction(): ?CaseAction {
+    public function getAction(): ?CaseOperation_action {
         $val = $this->getBackingStore()->get('action');
-        if (is_null($val) || $val instanceof CaseAction) {
+        if (is_null($val) || $val instanceof CaseOperation_action) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'action'");
@@ -96,13 +96,13 @@ class CaseOperation extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'action' => fn(ParseNode $n) => $o->setAction($n->getEnumValue(CaseAction::class)),
+            'action' => fn(ParseNode $n) => $o->setAction($n->getEnumValue(CaseOperation_action::class)),
             'completedDateTime' => fn(ParseNode $n) => $o->setCompletedDateTime($n->getDateTimeValue()),
             'createdBy' => fn(ParseNode $n) => $o->setCreatedBy($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'percentProgress' => fn(ParseNode $n) => $o->setPercentProgress($n->getIntegerValue()),
             'resultInfo' => fn(ParseNode $n) => $o->setResultInfo($n->getObjectValue([ResultInfo::class, 'createFromDiscriminatorValue'])),
-            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(CaseOperationStatus::class)),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(CaseOperation_status::class)),
         ]);
     }
 
@@ -132,11 +132,11 @@ class CaseOperation extends Entity implements Parsable
 
     /**
      * Gets the status property value. The status of the case operation. Possible values are: notStarted, submissionFailed, running, succeeded, partiallySucceeded, failed.
-     * @return CaseOperationStatus|null
+     * @return CaseOperation_status|null
     */
-    public function getStatus(): ?CaseOperationStatus {
+    public function getStatus(): ?CaseOperation_status {
         $val = $this->getBackingStore()->get('status');
-        if (is_null($val) || $val instanceof CaseOperationStatus) {
+        if (is_null($val) || $val instanceof CaseOperation_status) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
@@ -159,9 +159,9 @@ class CaseOperation extends Entity implements Parsable
 
     /**
      * Sets the action property value. The type of action the operation represents. Possible values are: addToReviewSet,applyTags,contentExport,convertToPdf,estimateStatistics, purgeData
-     * @param CaseAction|null $value Value to set for the action property.
+     * @param CaseOperation_action|null $value Value to set for the action property.
     */
-    public function setAction(?CaseAction $value): void {
+    public function setAction(?CaseOperation_action $value): void {
         $this->getBackingStore()->set('action', $value);
     }
 
@@ -207,9 +207,9 @@ class CaseOperation extends Entity implements Parsable
 
     /**
      * Sets the status property value. The status of the case operation. Possible values are: notStarted, submissionFailed, running, succeeded, partiallySucceeded, failed.
-     * @param CaseOperationStatus|null $value Value to set for the status property.
+     * @param CaseOperation_status|null $value Value to set for the status property.
     */
-    public function setStatus(?CaseOperationStatus $value): void {
+    public function setStatus(?CaseOperation_status $value): void {
         $this->getBackingStore()->set('status', $value);
     }
 

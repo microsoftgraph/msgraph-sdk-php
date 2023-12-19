@@ -79,7 +79,7 @@ class RecentNotebook implements AdditionalDataHolder, BackedModel, Parsable
             'lastAccessedTime' => fn(ParseNode $n) => $o->setLastAccessedTime($n->getDateTimeValue()),
             'links' => fn(ParseNode $n) => $o->setLinks($n->getObjectValue([RecentNotebookLinks::class, 'createFromDiscriminatorValue'])),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
-            'sourceService' => fn(ParseNode $n) => $o->setSourceService($n->getEnumValue(OnenoteSourceService::class)),
+            'sourceService' => fn(ParseNode $n) => $o->setSourceService($n->getEnumValue(RecentNotebook_sourceService::class)),
         ];
     }
 
@@ -121,11 +121,11 @@ class RecentNotebook implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the sourceService property value. The backend store where the Notebook resides, either OneDriveForBusiness or OneDrive.
-     * @return OnenoteSourceService|null
+     * @return RecentNotebook_sourceService|null
     */
-    public function getSourceService(): ?OnenoteSourceService {
+    public function getSourceService(): ?RecentNotebook_sourceService {
         $val = $this->getBackingStore()->get('sourceService');
-        if (is_null($val) || $val instanceof OnenoteSourceService) {
+        if (is_null($val) || $val instanceof RecentNotebook_sourceService) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'sourceService'");
@@ -194,9 +194,9 @@ class RecentNotebook implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the sourceService property value. The backend store where the Notebook resides, either OneDriveForBusiness or OneDrive.
-     * @param OnenoteSourceService|null $value Value to set for the sourceService property.
+     * @param RecentNotebook_sourceService|null $value Value to set for the sourceService property.
     */
-    public function setSourceService(?OnenoteSourceService $value): void {
+    public function setSourceService(?RecentNotebook_sourceService $value): void {
         $this->getBackingStore()->set('sourceService', $value);
     }
 

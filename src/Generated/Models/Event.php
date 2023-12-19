@@ -147,7 +147,7 @@ class Event extends OutlookItem implements Parsable
             'hasAttachments' => fn(ParseNode $n) => $o->setHasAttachments($n->getBooleanValue()),
             'hideAttendees' => fn(ParseNode $n) => $o->setHideAttendees($n->getBooleanValue()),
             'iCalUId' => fn(ParseNode $n) => $o->setICalUId($n->getStringValue()),
-            'importance' => fn(ParseNode $n) => $o->setImportance($n->getEnumValue(Importance::class)),
+            'importance' => fn(ParseNode $n) => $o->setImportance($n->getEnumValue(Event_importance::class)),
             'instances' => fn(ParseNode $n) => $o->setInstances($n->getCollectionOfObjectValues([Event::class, 'createFromDiscriminatorValue'])),
             'isAllDay' => fn(ParseNode $n) => $o->setIsAllDay($n->getBooleanValue()),
             'isCancelled' => fn(ParseNode $n) => $o->setIsCancelled($n->getBooleanValue()),
@@ -159,7 +159,7 @@ class Event extends OutlookItem implements Parsable
             'locations' => fn(ParseNode $n) => $o->setLocations($n->getCollectionOfObjectValues([Location::class, 'createFromDiscriminatorValue'])),
             'multiValueExtendedProperties' => fn(ParseNode $n) => $o->setMultiValueExtendedProperties($n->getCollectionOfObjectValues([MultiValueLegacyExtendedProperty::class, 'createFromDiscriminatorValue'])),
             'onlineMeeting' => fn(ParseNode $n) => $o->setOnlineMeeting($n->getObjectValue([OnlineMeetingInfo::class, 'createFromDiscriminatorValue'])),
-            'onlineMeetingProvider' => fn(ParseNode $n) => $o->setOnlineMeetingProvider($n->getEnumValue(OnlineMeetingProviderType::class)),
+            'onlineMeetingProvider' => fn(ParseNode $n) => $o->setOnlineMeetingProvider($n->getEnumValue(Event_onlineMeetingProvider::class)),
             'onlineMeetingUrl' => fn(ParseNode $n) => $o->setOnlineMeetingUrl($n->getStringValue()),
             'organizer' => fn(ParseNode $n) => $o->setOrganizer($n->getObjectValue([Recipient::class, 'createFromDiscriminatorValue'])),
             'originalEndTimeZone' => fn(ParseNode $n) => $o->setOriginalEndTimeZone($n->getStringValue()),
@@ -169,14 +169,14 @@ class Event extends OutlookItem implements Parsable
             'reminderMinutesBeforeStart' => fn(ParseNode $n) => $o->setReminderMinutesBeforeStart($n->getIntegerValue()),
             'responseRequested' => fn(ParseNode $n) => $o->setResponseRequested($n->getBooleanValue()),
             'responseStatus' => fn(ParseNode $n) => $o->setResponseStatus($n->getObjectValue([ResponseStatus::class, 'createFromDiscriminatorValue'])),
-            'sensitivity' => fn(ParseNode $n) => $o->setSensitivity($n->getEnumValue(Sensitivity::class)),
+            'sensitivity' => fn(ParseNode $n) => $o->setSensitivity($n->getEnumValue(Event_sensitivity::class)),
             'seriesMasterId' => fn(ParseNode $n) => $o->setSeriesMasterId($n->getStringValue()),
-            'showAs' => fn(ParseNode $n) => $o->setShowAs($n->getEnumValue(FreeBusyStatus::class)),
+            'showAs' => fn(ParseNode $n) => $o->setShowAs($n->getEnumValue(Event_showAs::class)),
             'singleValueExtendedProperties' => fn(ParseNode $n) => $o->setSingleValueExtendedProperties($n->getCollectionOfObjectValues([SingleValueLegacyExtendedProperty::class, 'createFromDiscriminatorValue'])),
             'start' => fn(ParseNode $n) => $o->setStart($n->getObjectValue([DateTimeTimeZone::class, 'createFromDiscriminatorValue'])),
             'subject' => fn(ParseNode $n) => $o->setSubject($n->getStringValue()),
             'transactionId' => fn(ParseNode $n) => $o->setTransactionId($n->getStringValue()),
-            'type' => fn(ParseNode $n) => $o->setType($n->getEnumValue(EventType::class)),
+            'type' => fn(ParseNode $n) => $o->setType($n->getEnumValue(Event_type::class)),
             'webLink' => fn(ParseNode $n) => $o->setWebLink($n->getStringValue()),
         ]);
     }
@@ -219,11 +219,11 @@ class Event extends OutlookItem implements Parsable
 
     /**
      * Gets the importance property value. The importance property
-     * @return Importance|null
+     * @return Event_importance|null
     */
-    public function getImportance(): ?Importance {
+    public function getImportance(): ?Event_importance {
         $val = $this->getBackingStore()->get('importance');
-        if (is_null($val) || $val instanceof Importance) {
+        if (is_null($val) || $val instanceof Event_importance) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'importance'");
@@ -369,11 +369,11 @@ class Event extends OutlookItem implements Parsable
 
     /**
      * Gets the onlineMeetingProvider property value. The onlineMeetingProvider property
-     * @return OnlineMeetingProviderType|null
+     * @return Event_onlineMeetingProvider|null
     */
-    public function getOnlineMeetingProvider(): ?OnlineMeetingProviderType {
+    public function getOnlineMeetingProvider(): ?Event_onlineMeetingProvider {
         $val = $this->getBackingStore()->get('onlineMeetingProvider');
-        if (is_null($val) || $val instanceof OnlineMeetingProviderType) {
+        if (is_null($val) || $val instanceof Event_onlineMeetingProvider) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'onlineMeetingProvider'");
@@ -489,11 +489,11 @@ class Event extends OutlookItem implements Parsable
 
     /**
      * Gets the sensitivity property value. The sensitivity property
-     * @return Sensitivity|null
+     * @return Event_sensitivity|null
     */
-    public function getSensitivity(): ?Sensitivity {
+    public function getSensitivity(): ?Event_sensitivity {
         $val = $this->getBackingStore()->get('sensitivity');
-        if (is_null($val) || $val instanceof Sensitivity) {
+        if (is_null($val) || $val instanceof Event_sensitivity) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'sensitivity'");
@@ -513,11 +513,11 @@ class Event extends OutlookItem implements Parsable
 
     /**
      * Gets the showAs property value. The showAs property
-     * @return FreeBusyStatus|null
+     * @return Event_showAs|null
     */
-    public function getShowAs(): ?FreeBusyStatus {
+    public function getShowAs(): ?Event_showAs {
         $val = $this->getBackingStore()->get('showAs');
-        if (is_null($val) || $val instanceof FreeBusyStatus) {
+        if (is_null($val) || $val instanceof Event_showAs) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'showAs'");
@@ -575,11 +575,11 @@ class Event extends OutlookItem implements Parsable
 
     /**
      * Gets the type property value. The type property
-     * @return EventType|null
+     * @return Event_type|null
     */
-    public function getType(): ?EventType {
+    public function getType(): ?Event_type {
         $val = $this->getBackingStore()->get('type');
-        if (is_null($val) || $val instanceof EventType) {
+        if (is_null($val) || $val instanceof Event_type) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'type'");
@@ -737,9 +737,9 @@ class Event extends OutlookItem implements Parsable
 
     /**
      * Sets the importance property value. The importance property
-     * @param Importance|null $value Value to set for the importance property.
+     * @param Event_importance|null $value Value to set for the importance property.
     */
-    public function setImportance(?Importance $value): void {
+    public function setImportance(?Event_importance $value): void {
         $this->getBackingStore()->set('importance', $value);
     }
 
@@ -833,9 +833,9 @@ class Event extends OutlookItem implements Parsable
 
     /**
      * Sets the onlineMeetingProvider property value. The onlineMeetingProvider property
-     * @param OnlineMeetingProviderType|null $value Value to set for the onlineMeetingProvider property.
+     * @param Event_onlineMeetingProvider|null $value Value to set for the onlineMeetingProvider property.
     */
-    public function setOnlineMeetingProvider(?OnlineMeetingProviderType $value): void {
+    public function setOnlineMeetingProvider(?Event_onlineMeetingProvider $value): void {
         $this->getBackingStore()->set('onlineMeetingProvider', $value);
     }
 
@@ -913,9 +913,9 @@ class Event extends OutlookItem implements Parsable
 
     /**
      * Sets the sensitivity property value. The sensitivity property
-     * @param Sensitivity|null $value Value to set for the sensitivity property.
+     * @param Event_sensitivity|null $value Value to set for the sensitivity property.
     */
-    public function setSensitivity(?Sensitivity $value): void {
+    public function setSensitivity(?Event_sensitivity $value): void {
         $this->getBackingStore()->set('sensitivity', $value);
     }
 
@@ -929,9 +929,9 @@ class Event extends OutlookItem implements Parsable
 
     /**
      * Sets the showAs property value. The showAs property
-     * @param FreeBusyStatus|null $value Value to set for the showAs property.
+     * @param Event_showAs|null $value Value to set for the showAs property.
     */
-    public function setShowAs(?FreeBusyStatus $value): void {
+    public function setShowAs(?Event_showAs $value): void {
         $this->getBackingStore()->set('showAs', $value);
     }
 
@@ -969,9 +969,9 @@ class Event extends OutlookItem implements Parsable
 
     /**
      * Sets the type property value. The type property
-     * @param EventType|null $value Value to set for the type property.
+     * @param Event_type|null $value Value to set for the type property.
     */
-    public function setType(?EventType $value): void {
+    public function setType(?Event_type $value): void {
         $this->getBackingStore()->set('type', $value);
     }
 

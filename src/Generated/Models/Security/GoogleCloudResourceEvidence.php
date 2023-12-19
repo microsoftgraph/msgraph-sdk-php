@@ -33,7 +33,7 @@ class GoogleCloudResourceEvidence extends AlertEvidence implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'location' => fn(ParseNode $n) => $o->setLocation($n->getStringValue()),
-            'locationType' => fn(ParseNode $n) => $o->setLocationType($n->getEnumValue(GoogleCloudLocationType::class)),
+            'locationType' => fn(ParseNode $n) => $o->setLocationType($n->getEnumValue(GoogleCloudResourceEvidence_locationType::class)),
             'projectId' => fn(ParseNode $n) => $o->setProjectId($n->getStringValue()),
             'projectNumber' => fn(ParseNode $n) => $o->setProjectNumber($n->getIntegerValue()),
             'resourceName' => fn(ParseNode $n) => $o->setResourceName($n->getStringValue()),
@@ -55,11 +55,11 @@ class GoogleCloudResourceEvidence extends AlertEvidence implements Parsable
 
     /**
      * Gets the locationType property value. The type of location. Possible values are: unknown, regional, zonal, global, unknownFutureValue.
-     * @return GoogleCloudLocationType|null
+     * @return GoogleCloudResourceEvidence_locationType|null
     */
-    public function getLocationType(): ?GoogleCloudLocationType {
+    public function getLocationType(): ?GoogleCloudResourceEvidence_locationType {
         $val = $this->getBackingStore()->get('locationType');
-        if (is_null($val) || $val instanceof GoogleCloudLocationType) {
+        if (is_null($val) || $val instanceof GoogleCloudResourceEvidence_locationType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'locationType'");
@@ -137,9 +137,9 @@ class GoogleCloudResourceEvidence extends AlertEvidence implements Parsable
 
     /**
      * Sets the locationType property value. The type of location. Possible values are: unknown, regional, zonal, global, unknownFutureValue.
-     * @param GoogleCloudLocationType|null $value Value to set for the locationType property.
+     * @param GoogleCloudResourceEvidence_locationType|null $value Value to set for the locationType property.
     */
-    public function setLocationType(?GoogleCloudLocationType $value): void {
+    public function setLocationType(?GoogleCloudResourceEvidence_locationType $value): void {
         $this->getBackingStore()->set('locationType', $value);
     }
 

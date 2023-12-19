@@ -145,7 +145,7 @@ class MailTips implements AdditionalDataHolder, BackedModel, Parsable
             'mailboxFull' => fn(ParseNode $n) => $o->setMailboxFull($n->getBooleanValue()),
             'maxMessageSize' => fn(ParseNode $n) => $o->setMaxMessageSize($n->getIntegerValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
-            'recipientScope' => fn(ParseNode $n) => $o->setRecipientScope($n->getEnumValue(RecipientScopeType::class)),
+            'recipientScope' => fn(ParseNode $n) => $o->setRecipientScope($n->getEnumValue(MailTips_recipientScope::class)),
             'recipientSuggestions' => fn(ParseNode $n) => $o->setRecipientSuggestions($n->getCollectionOfObjectValues([Recipient::class, 'createFromDiscriminatorValue'])),
             'totalMemberCount' => fn(ParseNode $n) => $o->setTotalMemberCount($n->getIntegerValue()),
         ];
@@ -201,11 +201,11 @@ class MailTips implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the recipientScope property value. The scope of the recipient. Possible values are: none, internal, external, externalPartner, externalNonParther. For example, an administrator can set another organization to be its 'partner'. The scope is useful if an administrator wants certain mailtips to be accessible to certain scopes. It's also useful to senders to inform them that their message may leave the organization, helping them make the correct decisions about wording, tone and content.
-     * @return RecipientScopeType|null
+     * @return MailTips_recipientScope|null
     */
-    public function getRecipientScope(): ?RecipientScopeType {
+    public function getRecipientScope(): ?MailTips_recipientScope {
         $val = $this->getBackingStore()->get('recipientScope');
-        if (is_null($val) || $val instanceof RecipientScopeType) {
+        if (is_null($val) || $val instanceof MailTips_recipientScope) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'recipientScope'");
@@ -356,9 +356,9 @@ class MailTips implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the recipientScope property value. The scope of the recipient. Possible values are: none, internal, external, externalPartner, externalNonParther. For example, an administrator can set another organization to be its 'partner'. The scope is useful if an administrator wants certain mailtips to be accessible to certain scopes. It's also useful to senders to inform them that their message may leave the organization, helping them make the correct decisions about wording, tone and content.
-     * @param RecipientScopeType|null $value Value to set for the recipientScope property.
+     * @param MailTips_recipientScope|null $value Value to set for the recipientScope property.
     */
-    public function setRecipientScope(?RecipientScopeType $value): void {
+    public function setRecipientScope(?MailTips_recipientScope $value): void {
         $this->getBackingStore()->set('recipientScope', $value);
     }
 

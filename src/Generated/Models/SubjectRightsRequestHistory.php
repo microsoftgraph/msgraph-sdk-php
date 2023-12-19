@@ -90,8 +90,8 @@ class SubjectRightsRequestHistory implements AdditionalDataHolder, BackedModel, 
             'changedBy' => fn(ParseNode $n) => $o->setChangedBy($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
             'eventDateTime' => fn(ParseNode $n) => $o->setEventDateTime($n->getDateTimeValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
-            'stage' => fn(ParseNode $n) => $o->setStage($n->getEnumValue(SubjectRightsRequestStage::class)),
-            'stageStatus' => fn(ParseNode $n) => $o->setStageStatus($n->getEnumValue(SubjectRightsRequestStageStatus::class)),
+            'stage' => fn(ParseNode $n) => $o->setStage($n->getEnumValue(SubjectRightsRequestHistory_stage::class)),
+            'stageStatus' => fn(ParseNode $n) => $o->setStageStatus($n->getEnumValue(SubjectRightsRequestHistory_stageStatus::class)),
             'type' => fn(ParseNode $n) => $o->setType($n->getStringValue()),
         ];
     }
@@ -110,11 +110,11 @@ class SubjectRightsRequestHistory implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Gets the stage property value. The stage when the entity was changed. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue, approval. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: approval.
-     * @return SubjectRightsRequestStage|null
+     * @return SubjectRightsRequestHistory_stage|null
     */
-    public function getStage(): ?SubjectRightsRequestStage {
+    public function getStage(): ?SubjectRightsRequestHistory_stage {
         $val = $this->getBackingStore()->get('stage');
-        if (is_null($val) || $val instanceof SubjectRightsRequestStage) {
+        if (is_null($val) || $val instanceof SubjectRightsRequestHistory_stage) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'stage'");
@@ -122,11 +122,11 @@ class SubjectRightsRequestHistory implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Gets the stageStatus property value. The status of the stage when the entity was changed. Possible values are: notStarted, current, completed, failed, unknownFutureValue.
-     * @return SubjectRightsRequestStageStatus|null
+     * @return SubjectRightsRequestHistory_stageStatus|null
     */
-    public function getStageStatus(): ?SubjectRightsRequestStageStatus {
+    public function getStageStatus(): ?SubjectRightsRequestHistory_stageStatus {
         $val = $this->getBackingStore()->get('stageStatus');
-        if (is_null($val) || $val instanceof SubjectRightsRequestStageStatus) {
+        if (is_null($val) || $val instanceof SubjectRightsRequestHistory_stageStatus) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'stageStatus'");
@@ -200,17 +200,17 @@ class SubjectRightsRequestHistory implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the stage property value. The stage when the entity was changed. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue, approval. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: approval.
-     * @param SubjectRightsRequestStage|null $value Value to set for the stage property.
+     * @param SubjectRightsRequestHistory_stage|null $value Value to set for the stage property.
     */
-    public function setStage(?SubjectRightsRequestStage $value): void {
+    public function setStage(?SubjectRightsRequestHistory_stage $value): void {
         $this->getBackingStore()->set('stage', $value);
     }
 
     /**
      * Sets the stageStatus property value. The status of the stage when the entity was changed. Possible values are: notStarted, current, completed, failed, unknownFutureValue.
-     * @param SubjectRightsRequestStageStatus|null $value Value to set for the stageStatus property.
+     * @param SubjectRightsRequestHistory_stageStatus|null $value Value to set for the stageStatus property.
     */
-    public function setStageStatus(?SubjectRightsRequestStageStatus $value): void {
+    public function setStageStatus(?SubjectRightsRequestHistory_stageStatus $value): void {
         $this->getBackingStore()->set('stageStatus', $value);
     }
 

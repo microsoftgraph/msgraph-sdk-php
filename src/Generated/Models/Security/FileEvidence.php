@@ -27,11 +27,11 @@ class FileEvidence extends AlertEvidence implements Parsable
 
     /**
      * Gets the detectionStatus property value. The status of the detection.The possible values are: detected, blocked, prevented, unknownFutureValue.
-     * @return DetectionStatus|null
+     * @return FileEvidence_detectionStatus|null
     */
-    public function getDetectionStatus(): ?DetectionStatus {
+    public function getDetectionStatus(): ?FileEvidence_detectionStatus {
         $val = $this->getBackingStore()->get('detectionStatus');
-        if (is_null($val) || $val instanceof DetectionStatus) {
+        if (is_null($val) || $val instanceof FileEvidence_detectionStatus) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'detectionStatus'");
@@ -44,7 +44,7 @@ class FileEvidence extends AlertEvidence implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'detectionStatus' => fn(ParseNode $n) => $o->setDetectionStatus($n->getEnumValue(DetectionStatus::class)),
+            'detectionStatus' => fn(ParseNode $n) => $o->setDetectionStatus($n->getEnumValue(FileEvidence_detectionStatus::class)),
             'fileDetails' => fn(ParseNode $n) => $o->setFileDetails($n->getObjectValue([FileDetails::class, 'createFromDiscriminatorValue'])),
             'mdeDeviceId' => fn(ParseNode $n) => $o->setMdeDeviceId($n->getStringValue()),
         ]);
@@ -87,9 +87,9 @@ class FileEvidence extends AlertEvidence implements Parsable
 
     /**
      * Sets the detectionStatus property value. The status of the detection.The possible values are: detected, blocked, prevented, unknownFutureValue.
-     * @param DetectionStatus|null $value Value to set for the detectionStatus property.
+     * @param FileEvidence_detectionStatus|null $value Value to set for the detectionStatus property.
     */
-    public function setDetectionStatus(?DetectionStatus $value): void {
+    public function setDetectionStatus(?FileEvidence_detectionStatus $value): void {
         $this->getBackingStore()->set('detectionStatus', $value);
     }
 

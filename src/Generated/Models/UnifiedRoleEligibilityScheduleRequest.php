@@ -26,11 +26,11 @@ class UnifiedRoleEligibilityScheduleRequest extends Request implements Parsable
 
     /**
      * Gets the action property value. Represents the type of operation on the role eligibility request. The possible values are: adminAssign, adminUpdate, adminRemove, selfActivate, selfDeactivate, adminExtend, adminRenew, selfExtend, selfRenew, unknownFutureValue. adminAssign: For administrators to assign eligible roles to principals.adminRemove: For administrators to remove eligible roles from principals. adminUpdate: For administrators to change existing role eligibilities.adminExtend: For administrators to extend expiring role eligibilities.adminRenew: For administrators to renew expired eligibilities.selfActivate: For users to activate their assignments.selfDeactivate: For users to deactivate their active assignments.selfExtend: For users to request to extend their expiring assignments.selfRenew: For users to request to renew their expired assignments.
-     * @return UnifiedRoleScheduleRequestActions|null
+     * @return UnifiedRoleEligibilityScheduleRequest_action|null
     */
-    public function getAction(): ?UnifiedRoleScheduleRequestActions {
+    public function getAction(): ?UnifiedRoleEligibilityScheduleRequest_action {
         $val = $this->getBackingStore()->get('action');
-        if (is_null($val) || $val instanceof UnifiedRoleScheduleRequestActions) {
+        if (is_null($val) || $val instanceof UnifiedRoleEligibilityScheduleRequest_action) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'action'");
@@ -91,7 +91,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'action' => fn(ParseNode $n) => $o->setAction($n->getEnumValue(UnifiedRoleScheduleRequestActions::class)),
+            'action' => fn(ParseNode $n) => $o->setAction($n->getEnumValue(UnifiedRoleEligibilityScheduleRequest_action::class)),
             'appScope' => fn(ParseNode $n) => $o->setAppScope($n->getObjectValue([AppScope::class, 'createFromDiscriminatorValue'])),
             'appScopeId' => fn(ParseNode $n) => $o->setAppScopeId($n->getStringValue()),
             'directoryScope' => fn(ParseNode $n) => $o->setDirectoryScope($n->getObjectValue([DirectoryObject::class, 'createFromDiscriminatorValue'])),
@@ -254,9 +254,9 @@ class UnifiedRoleEligibilityScheduleRequest extends Request implements Parsable
 
     /**
      * Sets the action property value. Represents the type of operation on the role eligibility request. The possible values are: adminAssign, adminUpdate, adminRemove, selfActivate, selfDeactivate, adminExtend, adminRenew, selfExtend, selfRenew, unknownFutureValue. adminAssign: For administrators to assign eligible roles to principals.adminRemove: For administrators to remove eligible roles from principals. adminUpdate: For administrators to change existing role eligibilities.adminExtend: For administrators to extend expiring role eligibilities.adminRenew: For administrators to renew expired eligibilities.selfActivate: For users to activate their assignments.selfDeactivate: For users to deactivate their active assignments.selfExtend: For users to request to extend their expiring assignments.selfRenew: For users to request to renew their expired assignments.
-     * @param UnifiedRoleScheduleRequestActions|null $value Value to set for the action property.
+     * @param UnifiedRoleEligibilityScheduleRequest_action|null $value Value to set for the action property.
     */
-    public function setAction(?UnifiedRoleScheduleRequestActions $value): void {
+    public function setAction(?UnifiedRoleEligibilityScheduleRequest_action $value): void {
         $this->getBackingStore()->set('action', $value);
     }
 

@@ -50,11 +50,11 @@ class ThreatAssessmentRequest extends Entity implements Parsable
 
     /**
      * Gets the contentType property value. The content type of threat assessment. Possible values are: mail, url, file.
-     * @return ThreatAssessmentContentType|null
+     * @return ThreatAssessmentRequest_contentType|null
     */
-    public function getContentType(): ?ThreatAssessmentContentType {
+    public function getContentType(): ?ThreatAssessmentRequest_contentType {
         $val = $this->getBackingStore()->get('contentType');
-        if (is_null($val) || $val instanceof ThreatAssessmentContentType) {
+        if (is_null($val) || $val instanceof ThreatAssessmentRequest_contentType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'contentType'");
@@ -104,23 +104,23 @@ class ThreatAssessmentRequest extends Entity implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'category' => fn(ParseNode $n) => $o->setCategory($n->getEnumValue(ThreatCategory::class)),
-            'contentType' => fn(ParseNode $n) => $o->setContentType($n->getEnumValue(ThreatAssessmentContentType::class)),
+            'contentType' => fn(ParseNode $n) => $o->setContentType($n->getEnumValue(ThreatAssessmentRequest_contentType::class)),
             'createdBy' => fn(ParseNode $n) => $o->setCreatedBy($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'expectedAssessment' => fn(ParseNode $n) => $o->setExpectedAssessment($n->getEnumValue(ThreatExpectedAssessment::class)),
-            'requestSource' => fn(ParseNode $n) => $o->setRequestSource($n->getEnumValue(ThreatAssessmentRequestSource::class)),
+            'requestSource' => fn(ParseNode $n) => $o->setRequestSource($n->getEnumValue(ThreatAssessmentRequest_requestSource::class)),
             'results' => fn(ParseNode $n) => $o->setResults($n->getCollectionOfObjectValues([ThreatAssessmentResult::class, 'createFromDiscriminatorValue'])),
-            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(ThreatAssessmentStatus::class)),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(ThreatAssessmentRequest_status::class)),
         ]);
     }
 
     /**
      * Gets the requestSource property value. The source of the threat assessment request. Possible values are: administrator.
-     * @return ThreatAssessmentRequestSource|null
+     * @return ThreatAssessmentRequest_requestSource|null
     */
-    public function getRequestSource(): ?ThreatAssessmentRequestSource {
+    public function getRequestSource(): ?ThreatAssessmentRequest_requestSource {
         $val = $this->getBackingStore()->get('requestSource');
-        if (is_null($val) || $val instanceof ThreatAssessmentRequestSource) {
+        if (is_null($val) || $val instanceof ThreatAssessmentRequest_requestSource) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'requestSource'");
@@ -142,11 +142,11 @@ class ThreatAssessmentRequest extends Entity implements Parsable
 
     /**
      * Gets the status property value. The assessment process status. Possible values are: pending, completed.
-     * @return ThreatAssessmentStatus|null
+     * @return ThreatAssessmentRequest_status|null
     */
-    public function getStatus(): ?ThreatAssessmentStatus {
+    public function getStatus(): ?ThreatAssessmentRequest_status {
         $val = $this->getBackingStore()->get('status');
-        if (is_null($val) || $val instanceof ThreatAssessmentStatus) {
+        if (is_null($val) || $val instanceof ThreatAssessmentRequest_status) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
@@ -178,9 +178,9 @@ class ThreatAssessmentRequest extends Entity implements Parsable
 
     /**
      * Sets the contentType property value. The content type of threat assessment. Possible values are: mail, url, file.
-     * @param ThreatAssessmentContentType|null $value Value to set for the contentType property.
+     * @param ThreatAssessmentRequest_contentType|null $value Value to set for the contentType property.
     */
-    public function setContentType(?ThreatAssessmentContentType $value): void {
+    public function setContentType(?ThreatAssessmentRequest_contentType $value): void {
         $this->getBackingStore()->set('contentType', $value);
     }
 
@@ -210,9 +210,9 @@ class ThreatAssessmentRequest extends Entity implements Parsable
 
     /**
      * Sets the requestSource property value. The source of the threat assessment request. Possible values are: administrator.
-     * @param ThreatAssessmentRequestSource|null $value Value to set for the requestSource property.
+     * @param ThreatAssessmentRequest_requestSource|null $value Value to set for the requestSource property.
     */
-    public function setRequestSource(?ThreatAssessmentRequestSource $value): void {
+    public function setRequestSource(?ThreatAssessmentRequest_requestSource $value): void {
         $this->getBackingStore()->set('requestSource', $value);
     }
 
@@ -226,9 +226,9 @@ class ThreatAssessmentRequest extends Entity implements Parsable
 
     /**
      * Sets the status property value. The assessment process status. Possible values are: pending, completed.
-     * @param ThreatAssessmentStatus|null $value Value to set for the status property.
+     * @param ThreatAssessmentRequest_status|null $value Value to set for the status property.
     */
-    public function setStatus(?ThreatAssessmentStatus $value): void {
+    public function setStatus(?ThreatAssessmentRequest_status $value): void {
         $this->getBackingStore()->set('status', $value);
     }
 

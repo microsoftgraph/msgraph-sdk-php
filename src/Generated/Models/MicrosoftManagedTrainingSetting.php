@@ -46,17 +46,17 @@ class MicrosoftManagedTrainingSetting extends TrainingSetting implements Parsabl
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'completionDateTime' => fn(ParseNode $n) => $o->setCompletionDateTime($n->getDateTimeValue()),
-            'trainingCompletionDuration' => fn(ParseNode $n) => $o->setTrainingCompletionDuration($n->getEnumValue(TrainingCompletionDuration::class)),
+            'trainingCompletionDuration' => fn(ParseNode $n) => $o->setTrainingCompletionDuration($n->getEnumValue(MicrosoftManagedTrainingSetting_trainingCompletionDuration::class)),
         ]);
     }
 
     /**
      * Gets the trainingCompletionDuration property value. The training completion duration that needs to be provided before scheduling the training. The possible values are: week, fortnite, month, unknownFutureValue.
-     * @return TrainingCompletionDuration|null
+     * @return MicrosoftManagedTrainingSetting_trainingCompletionDuration|null
     */
-    public function getTrainingCompletionDuration(): ?TrainingCompletionDuration {
+    public function getTrainingCompletionDuration(): ?MicrosoftManagedTrainingSetting_trainingCompletionDuration {
         $val = $this->getBackingStore()->get('trainingCompletionDuration');
-        if (is_null($val) || $val instanceof TrainingCompletionDuration) {
+        if (is_null($val) || $val instanceof MicrosoftManagedTrainingSetting_trainingCompletionDuration) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'trainingCompletionDuration'");
@@ -82,9 +82,9 @@ class MicrosoftManagedTrainingSetting extends TrainingSetting implements Parsabl
 
     /**
      * Sets the trainingCompletionDuration property value. The training completion duration that needs to be provided before scheduling the training. The possible values are: week, fortnite, month, unknownFutureValue.
-     * @param TrainingCompletionDuration|null $value Value to set for the trainingCompletionDuration property.
+     * @param MicrosoftManagedTrainingSetting_trainingCompletionDuration|null $value Value to set for the trainingCompletionDuration property.
     */
-    public function setTrainingCompletionDuration(?TrainingCompletionDuration $value): void {
+    public function setTrainingCompletionDuration(?MicrosoftManagedTrainingSetting_trainingCompletionDuration $value): void {
         $this->getBackingStore()->set('trainingCompletionDuration', $value);
     }
 

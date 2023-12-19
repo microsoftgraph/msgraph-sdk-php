@@ -28,11 +28,11 @@ class ProcessEvidence extends AlertEvidence implements Parsable
 
     /**
      * Gets the detectionStatus property value. The status of the detection.The possible values are: detected, blocked, prevented, unknownFutureValue.
-     * @return DetectionStatus|null
+     * @return ProcessEvidence_detectionStatus|null
     */
-    public function getDetectionStatus(): ?DetectionStatus {
+    public function getDetectionStatus(): ?ProcessEvidence_detectionStatus {
         $val = $this->getBackingStore()->get('detectionStatus');
-        if (is_null($val) || $val instanceof DetectionStatus) {
+        if (is_null($val) || $val instanceof ProcessEvidence_detectionStatus) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'detectionStatus'");
@@ -45,7 +45,7 @@ class ProcessEvidence extends AlertEvidence implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'detectionStatus' => fn(ParseNode $n) => $o->setDetectionStatus($n->getEnumValue(DetectionStatus::class)),
+            'detectionStatus' => fn(ParseNode $n) => $o->setDetectionStatus($n->getEnumValue(ProcessEvidence_detectionStatus::class)),
             'imageFile' => fn(ParseNode $n) => $o->setImageFile($n->getObjectValue([FileDetails::class, 'createFromDiscriminatorValue'])),
             'mdeDeviceId' => fn(ParseNode $n) => $o->setMdeDeviceId($n->getStringValue()),
             'parentProcessCreationDateTime' => fn(ParseNode $n) => $o->setParentProcessCreationDateTime($n->getDateTimeValue()),
@@ -186,9 +186,9 @@ class ProcessEvidence extends AlertEvidence implements Parsable
 
     /**
      * Sets the detectionStatus property value. The status of the detection.The possible values are: detected, blocked, prevented, unknownFutureValue.
-     * @param DetectionStatus|null $value Value to set for the detectionStatus property.
+     * @param ProcessEvidence_detectionStatus|null $value Value to set for the detectionStatus property.
     */
-    public function setDetectionStatus(?DetectionStatus $value): void {
+    public function setDetectionStatus(?ProcessEvidence_detectionStatus $value): void {
         $this->getBackingStore()->set('detectionStatus', $value);
     }
 

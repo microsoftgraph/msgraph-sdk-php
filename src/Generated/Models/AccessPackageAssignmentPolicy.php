@@ -40,11 +40,11 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
 
     /**
      * Gets the allowedTargetScope property value. Principals that can be assigned the access package through this policy. The possible values are: notSpecified, specificDirectoryUsers, specificConnectedOrganizationUsers, specificDirectoryServicePrincipals, allMemberUsers, allDirectoryUsers, allDirectoryServicePrincipals, allConfiguredConnectedOrganizationUsers, allExternalUsers, unknownFutureValue.
-     * @return AllowedTargetScope|null
+     * @return AccessPackageAssignmentPolicy_allowedTargetScope|null
     */
-    public function getAllowedTargetScope(): ?AllowedTargetScope {
+    public function getAllowedTargetScope(): ?AccessPackageAssignmentPolicy_allowedTargetScope {
         $val = $this->getBackingStore()->get('allowedTargetScope');
-        if (is_null($val) || $val instanceof AllowedTargetScope) {
+        if (is_null($val) || $val instanceof AccessPackageAssignmentPolicy_allowedTargetScope) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'allowedTargetScope'");
@@ -144,7 +144,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'accessPackage' => fn(ParseNode $n) => $o->setAccessPackage($n->getObjectValue([AccessPackage::class, 'createFromDiscriminatorValue'])),
-            'allowedTargetScope' => fn(ParseNode $n) => $o->setAllowedTargetScope($n->getEnumValue(AllowedTargetScope::class)),
+            'allowedTargetScope' => fn(ParseNode $n) => $o->setAllowedTargetScope($n->getEnumValue(AccessPackageAssignmentPolicy_allowedTargetScope::class)),
             'automaticRequestSettings' => fn(ParseNode $n) => $o->setAutomaticRequestSettings($n->getObjectValue([AccessPackageAutomaticRequestSettings::class, 'createFromDiscriminatorValue'])),
             'catalog' => fn(ParseNode $n) => $o->setCatalog($n->getObjectValue([AccessPackageCatalog::class, 'createFromDiscriminatorValue'])),
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
@@ -270,9 +270,9 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
 
     /**
      * Sets the allowedTargetScope property value. Principals that can be assigned the access package through this policy. The possible values are: notSpecified, specificDirectoryUsers, specificConnectedOrganizationUsers, specificDirectoryServicePrincipals, allMemberUsers, allDirectoryUsers, allDirectoryServicePrincipals, allConfiguredConnectedOrganizationUsers, allExternalUsers, unknownFutureValue.
-     * @param AllowedTargetScope|null $value Value to set for the allowedTargetScope property.
+     * @param AccessPackageAssignmentPolicy_allowedTargetScope|null $value Value to set for the allowedTargetScope property.
     */
-    public function setAllowedTargetScope(?AllowedTargetScope $value): void {
+    public function setAllowedTargetScope(?AccessPackageAssignmentPolicy_allowedTargetScope $value): void {
         $this->getBackingStore()->set('allowedTargetScope', $value);
     }
 

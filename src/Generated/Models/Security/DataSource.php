@@ -82,17 +82,17 @@ class DataSource extends Entity implements Parsable
             'createdBy' => fn(ParseNode $n) => $o->setCreatedBy($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
-            'holdStatus' => fn(ParseNode $n) => $o->setHoldStatus($n->getEnumValue(DataSourceHoldStatus::class)),
+            'holdStatus' => fn(ParseNode $n) => $o->setHoldStatus($n->getEnumValue(DataSource_holdStatus::class)),
         ]);
     }
 
     /**
      * Gets the holdStatus property value. The hold status of the dataSource.The possible values are: notApplied, applied, applying, removing, partial
-     * @return DataSourceHoldStatus|null
+     * @return DataSource_holdStatus|null
     */
-    public function getHoldStatus(): ?DataSourceHoldStatus {
+    public function getHoldStatus(): ?DataSource_holdStatus {
         $val = $this->getBackingStore()->get('holdStatus');
-        if (is_null($val) || $val instanceof DataSourceHoldStatus) {
+        if (is_null($val) || $val instanceof DataSource_holdStatus) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'holdStatus'");
@@ -136,9 +136,9 @@ class DataSource extends Entity implements Parsable
 
     /**
      * Sets the holdStatus property value. The hold status of the dataSource.The possible values are: notApplied, applied, applying, removing, partial
-     * @param DataSourceHoldStatus|null $value Value to set for the holdStatus property.
+     * @param DataSource_holdStatus|null $value Value to set for the holdStatus property.
     */
-    public function setHoldStatus(?DataSourceHoldStatus $value): void {
+    public function setHoldStatus(?DataSource_holdStatus $value): void {
         $this->getBackingStore()->set('holdStatus', $value);
     }
 

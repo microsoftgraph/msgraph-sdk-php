@@ -58,11 +58,11 @@ class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the callDurationSource property value. The source of the call duration data. If the call uses a third-party telecommunications operator via the Operator Connect Program, the operator can provide their own call duration data. In this case, the property value is operator. Otherwise, the value is microsoft.
-     * @return PstnCallDurationSource|null
+     * @return PstnCallLogRow_callDurationSource|null
     */
-    public function getCallDurationSource(): ?PstnCallDurationSource {
+    public function getCallDurationSource(): ?PstnCallLogRow_callDurationSource {
         $val = $this->getBackingStore()->get('callDurationSource');
-        if (is_null($val) || $val instanceof PstnCallDurationSource) {
+        if (is_null($val) || $val instanceof PstnCallLogRow_callDurationSource) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'callDurationSource'");
@@ -219,7 +219,7 @@ class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'callDurationSource' => fn(ParseNode $n) => $o->setCallDurationSource($n->getEnumValue(PstnCallDurationSource::class)),
+            'callDurationSource' => fn(ParseNode $n) => $o->setCallDurationSource($n->getEnumValue(PstnCallLogRow_callDurationSource::class)),
             'calleeNumber' => fn(ParseNode $n) => $o->setCalleeNumber($n->getStringValue()),
             'callerNumber' => fn(ParseNode $n) => $o->setCallerNumber($n->getStringValue()),
             'callId' => fn(ParseNode $n) => $o->setCallId($n->getStringValue()),
@@ -428,9 +428,9 @@ class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the callDurationSource property value. The source of the call duration data. If the call uses a third-party telecommunications operator via the Operator Connect Program, the operator can provide their own call duration data. In this case, the property value is operator. Otherwise, the value is microsoft.
-     * @param PstnCallDurationSource|null $value Value to set for the callDurationSource property.
+     * @param PstnCallLogRow_callDurationSource|null $value Value to set for the callDurationSource property.
     */
-    public function setCallDurationSource(?PstnCallDurationSource $value): void {
+    public function setCallDurationSource(?PstnCallLogRow_callDurationSource $value): void {
         $this->getBackingStore()->set('callDurationSource', $value);
     }
 

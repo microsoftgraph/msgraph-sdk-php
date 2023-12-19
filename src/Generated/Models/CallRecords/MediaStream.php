@@ -51,11 +51,11 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the audioCodec property value. Codec name used to encode audio for transmission on the network. Possible values are: unknown, invalid, cn, pcma, pcmu, amrWide, g722, g7221, g7221c, g729, multiChannelAudio, muchv2, opus, satin, satinFullband, rtAudio8, rtAudio16, silk, silkNarrow, silkWide, siren, xmsRta, unknownFutureValue.
-     * @return AudioCodec|null
+     * @return MediaStream_audioCodec|null
     */
-    public function getAudioCodec(): ?AudioCodec {
+    public function getAudioCodec(): ?MediaStream_audioCodec {
         $val = $this->getBackingStore()->get('audioCodec');
-        if (is_null($val) || $val instanceof AudioCodec) {
+        if (is_null($val) || $val instanceof MediaStream_audioCodec) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'audioCodec'");
@@ -232,7 +232,7 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'audioCodec' => fn(ParseNode $n) => $o->setAudioCodec($n->getEnumValue(AudioCodec::class)),
+            'audioCodec' => fn(ParseNode $n) => $o->setAudioCodec($n->getEnumValue(MediaStream_audioCodec::class)),
             'averageAudioDegradation' => fn(ParseNode $n) => $o->setAverageAudioDegradation($n->getFloatValue()),
             'averageAudioNetworkJitter' => fn(ParseNode $n) => $o->setAverageAudioNetworkJitter($n->getDateIntervalValue()),
             'averageBandwidthEstimate' => fn(ParseNode $n) => $o->setAverageBandwidthEstimate($n->getIntegerValue()),
@@ -261,7 +261,7 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
             'startDateTime' => fn(ParseNode $n) => $o->setStartDateTime($n->getDateTimeValue()),
             'streamDirection' => fn(ParseNode $n) => $o->setStreamDirection($n->getEnumValue(MediaStreamDirection::class)),
             'streamId' => fn(ParseNode $n) => $o->setStreamId($n->getStringValue()),
-            'videoCodec' => fn(ParseNode $n) => $o->setVideoCodec($n->getEnumValue(VideoCodec::class)),
+            'videoCodec' => fn(ParseNode $n) => $o->setVideoCodec($n->getEnumValue(MediaStream_videoCodec::class)),
             'wasMediaBypassed' => fn(ParseNode $n) => $o->setWasMediaBypassed($n->getBooleanValue()),
         ];
     }
@@ -448,11 +448,11 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the videoCodec property value. Codec name used to encode video for transmission on the network. Possible values are: unknown, invalid, av1, h263, h264, h264s, h264uc, h265, rtvc1, rtVideo, xrtvc1, unknownFutureValue.
-     * @return VideoCodec|null
+     * @return MediaStream_videoCodec|null
     */
-    public function getVideoCodec(): ?VideoCodec {
+    public function getVideoCodec(): ?MediaStream_videoCodec {
         $val = $this->getBackingStore()->get('videoCodec');
-        if (is_null($val) || $val instanceof VideoCodec) {
+        if (is_null($val) || $val instanceof MediaStream_videoCodec) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'videoCodec'");
@@ -519,9 +519,9 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the audioCodec property value. Codec name used to encode audio for transmission on the network. Possible values are: unknown, invalid, cn, pcma, pcmu, amrWide, g722, g7221, g7221c, g729, multiChannelAudio, muchv2, opus, satin, satinFullband, rtAudio8, rtAudio16, silk, silkNarrow, silkWide, siren, xmsRta, unknownFutureValue.
-     * @param AudioCodec|null $value Value to set for the audioCodec property.
+     * @param MediaStream_audioCodec|null $value Value to set for the audioCodec property.
     */
-    public function setAudioCodec(?AudioCodec $value): void {
+    public function setAudioCodec(?MediaStream_audioCodec $value): void {
         $this->getBackingStore()->set('audioCodec', $value);
     }
 
@@ -759,9 +759,9 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the videoCodec property value. Codec name used to encode video for transmission on the network. Possible values are: unknown, invalid, av1, h263, h264, h264s, h264uc, h265, rtvc1, rtVideo, xrtvc1, unknownFutureValue.
-     * @param VideoCodec|null $value Value to set for the videoCodec property.
+     * @param MediaStream_videoCodec|null $value Value to set for the videoCodec property.
     */
-    public function setVideoCodec(?VideoCodec $value): void {
+    public function setVideoCodec(?MediaStream_videoCodec $value): void {
         $this->getBackingStore()->set('videoCodec', $value);
     }
 

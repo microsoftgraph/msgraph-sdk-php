@@ -73,7 +73,7 @@ class AccessPackageSubject extends Entity implements Parsable
             'objectId' => fn(ParseNode $n) => $o->setObjectId($n->getStringValue()),
             'onPremisesSecurityIdentifier' => fn(ParseNode $n) => $o->setOnPremisesSecurityIdentifier($n->getStringValue()),
             'principalName' => fn(ParseNode $n) => $o->setPrincipalName($n->getStringValue()),
-            'subjectType' => fn(ParseNode $n) => $o->setSubjectType($n->getEnumValue(AccessPackageSubjectType::class)),
+            'subjectType' => fn(ParseNode $n) => $o->setSubjectType($n->getEnumValue(AccessPackageSubject_subjectType::class)),
         ]);
     }
 
@@ -115,11 +115,11 @@ class AccessPackageSubject extends Entity implements Parsable
 
     /**
      * Gets the subjectType property value. The resource type of the subject. The possible values are: notSpecified, user, servicePrincipal, unknownFutureValue.
-     * @return AccessPackageSubjectType|null
+     * @return AccessPackageSubject_subjectType|null
     */
-    public function getSubjectType(): ?AccessPackageSubjectType {
+    public function getSubjectType(): ?AccessPackageSubject_subjectType {
         $val = $this->getBackingStore()->get('subjectType');
-        if (is_null($val) || $val instanceof AccessPackageSubjectType) {
+        if (is_null($val) || $val instanceof AccessPackageSubject_subjectType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'subjectType'");
@@ -190,9 +190,9 @@ class AccessPackageSubject extends Entity implements Parsable
 
     /**
      * Sets the subjectType property value. The resource type of the subject. The possible values are: notSpecified, user, servicePrincipal, unknownFutureValue.
-     * @param AccessPackageSubjectType|null $value Value to set for the subjectType property.
+     * @param AccessPackageSubject_subjectType|null $value Value to set for the subjectType property.
     */
-    public function setSubjectType(?AccessPackageSubjectType $value): void {
+    public function setSubjectType(?AccessPackageSubject_subjectType $value): void {
         $this->getBackingStore()->set('subjectType', $value);
     }
 

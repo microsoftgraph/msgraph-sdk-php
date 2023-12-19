@@ -70,13 +70,13 @@ class RecurrencePattern implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the daysOfWeek property value. A collection of the days of the week on which the event occurs. The possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday. If type is relativeMonthly or relativeYearly, and daysOfWeek specifies more than one day, the event falls on the first day that satisfies the pattern.  Required if type is weekly, relativeMonthly, or relativeYearly.
-     * @return array<DayOfWeek>|null
+     * @return array<RecurrencePattern_daysOfWeek>|null
     */
     public function getDaysOfWeek(): ?array {
         $val = $this->getBackingStore()->get('daysOfWeek');
         if (is_array($val) || is_null($val)) {
-            TypeUtils::validateCollectionValues($val, DayOfWeek::class);
-            /** @var array<DayOfWeek>|null $val */
+            TypeUtils::validateCollectionValues($val, RecurrencePattern_daysOfWeek::class);
+            /** @var array<RecurrencePattern_daysOfWeek>|null $val */
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'daysOfWeek'");
@@ -90,23 +90,23 @@ class RecurrencePattern implements AdditionalDataHolder, BackedModel, Parsable
         $o = $this;
         return  [
             'dayOfMonth' => fn(ParseNode $n) => $o->setDayOfMonth($n->getIntegerValue()),
-            'daysOfWeek' => fn(ParseNode $n) => $o->setDaysOfWeek($n->getCollectionOfEnumValues(DayOfWeek::class)),
-            'firstDayOfWeek' => fn(ParseNode $n) => $o->setFirstDayOfWeek($n->getEnumValue(DayOfWeek::class)),
-            'index' => fn(ParseNode $n) => $o->setIndex($n->getEnumValue(WeekIndex::class)),
+            'daysOfWeek' => fn(ParseNode $n) => $o->setDaysOfWeek($n->getCollectionOfEnumValues(RecurrencePattern_daysOfWeek::class)),
+            'firstDayOfWeek' => fn(ParseNode $n) => $o->setFirstDayOfWeek($n->getEnumValue(RecurrencePattern_firstDayOfWeek::class)),
+            'index' => fn(ParseNode $n) => $o->setIndex($n->getEnumValue(RecurrencePattern_index::class)),
             'interval' => fn(ParseNode $n) => $o->setInterval($n->getIntegerValue()),
             'month' => fn(ParseNode $n) => $o->setMonth($n->getIntegerValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
-            'type' => fn(ParseNode $n) => $o->setType($n->getEnumValue(RecurrencePatternType::class)),
+            'type' => fn(ParseNode $n) => $o->setType($n->getEnumValue(RecurrencePattern_type::class)),
         ];
     }
 
     /**
      * Gets the firstDayOfWeek property value. The first day of the week. The possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday. Default is sunday. Required if type is weekly.
-     * @return DayOfWeek|null
+     * @return RecurrencePattern_firstDayOfWeek|null
     */
-    public function getFirstDayOfWeek(): ?DayOfWeek {
+    public function getFirstDayOfWeek(): ?RecurrencePattern_firstDayOfWeek {
         $val = $this->getBackingStore()->get('firstDayOfWeek');
-        if (is_null($val) || $val instanceof DayOfWeek) {
+        if (is_null($val) || $val instanceof RecurrencePattern_firstDayOfWeek) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'firstDayOfWeek'");
@@ -114,11 +114,11 @@ class RecurrencePattern implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the index property value. Specifies on which instance of the allowed days specified in daysOfWeek the event occurs, counted from the first instance in the month. The possible values are: first, second, third, fourth, last. Default is first. Optional and used if type is relativeMonthly or relativeYearly.
-     * @return WeekIndex|null
+     * @return RecurrencePattern_index|null
     */
-    public function getIndex(): ?WeekIndex {
+    public function getIndex(): ?RecurrencePattern_index {
         $val = $this->getBackingStore()->get('index');
-        if (is_null($val) || $val instanceof WeekIndex) {
+        if (is_null($val) || $val instanceof RecurrencePattern_index) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'index'");
@@ -162,11 +162,11 @@ class RecurrencePattern implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the type property value. The recurrence pattern type: daily, weekly, absoluteMonthly, relativeMonthly, absoluteYearly, relativeYearly. Required. For more information, see values of type property.
-     * @return RecurrencePatternType|null
+     * @return RecurrencePattern_type|null
     */
-    public function getType(): ?RecurrencePatternType {
+    public function getType(): ?RecurrencePattern_type {
         $val = $this->getBackingStore()->get('type');
-        if (is_null($val) || $val instanceof RecurrencePatternType) {
+        if (is_null($val) || $val instanceof RecurrencePattern_type) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'type'");
@@ -214,7 +214,7 @@ class RecurrencePattern implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the daysOfWeek property value. A collection of the days of the week on which the event occurs. The possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday. If type is relativeMonthly or relativeYearly, and daysOfWeek specifies more than one day, the event falls on the first day that satisfies the pattern.  Required if type is weekly, relativeMonthly, or relativeYearly.
-     * @param array<DayOfWeek>|null $value Value to set for the daysOfWeek property.
+     * @param array<RecurrencePattern_daysOfWeek>|null $value Value to set for the daysOfWeek property.
     */
     public function setDaysOfWeek(?array $value): void {
         $this->getBackingStore()->set('daysOfWeek', $value);
@@ -222,17 +222,17 @@ class RecurrencePattern implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the firstDayOfWeek property value. The first day of the week. The possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday. Default is sunday. Required if type is weekly.
-     * @param DayOfWeek|null $value Value to set for the firstDayOfWeek property.
+     * @param RecurrencePattern_firstDayOfWeek|null $value Value to set for the firstDayOfWeek property.
     */
-    public function setFirstDayOfWeek(?DayOfWeek $value): void {
+    public function setFirstDayOfWeek(?RecurrencePattern_firstDayOfWeek $value): void {
         $this->getBackingStore()->set('firstDayOfWeek', $value);
     }
 
     /**
      * Sets the index property value. Specifies on which instance of the allowed days specified in daysOfWeek the event occurs, counted from the first instance in the month. The possible values are: first, second, third, fourth, last. Default is first. Optional and used if type is relativeMonthly or relativeYearly.
-     * @param WeekIndex|null $value Value to set for the index property.
+     * @param RecurrencePattern_index|null $value Value to set for the index property.
     */
-    public function setIndex(?WeekIndex $value): void {
+    public function setIndex(?RecurrencePattern_index $value): void {
         $this->getBackingStore()->set('index', $value);
     }
 
@@ -262,9 +262,9 @@ class RecurrencePattern implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the type property value. The recurrence pattern type: daily, weekly, absoluteMonthly, relativeMonthly, absoluteYearly, relativeYearly. Required. For more information, see values of type property.
-     * @param RecurrencePatternType|null $value Value to set for the type property.
+     * @param RecurrencePattern_type|null $value Value to set for the type property.
     */
-    public function setType(?RecurrencePatternType $value): void {
+    public function setType(?RecurrencePattern_type $value): void {
         $this->getBackingStore()->set('type', $value);
     }
 

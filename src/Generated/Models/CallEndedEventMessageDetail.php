@@ -41,11 +41,11 @@ class CallEndedEventMessageDetail extends EventMessageDetail implements Parsable
 
     /**
      * Gets the callEventType property value. Represents the call event type. Possible values are: call, meeting, screenShare, unknownFutureValue.
-     * @return TeamworkCallEventType|null
+     * @return CallEndedEventMessageDetail_callEventType|null
     */
-    public function getCallEventType(): ?TeamworkCallEventType {
+    public function getCallEventType(): ?CallEndedEventMessageDetail_callEventType {
         $val = $this->getBackingStore()->get('callEventType');
-        if (is_null($val) || $val instanceof TeamworkCallEventType) {
+        if (is_null($val) || $val instanceof CallEndedEventMessageDetail_callEventType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'callEventType'");
@@ -85,7 +85,7 @@ class CallEndedEventMessageDetail extends EventMessageDetail implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'callDuration' => fn(ParseNode $n) => $o->setCallDuration($n->getDateIntervalValue()),
-            'callEventType' => fn(ParseNode $n) => $o->setCallEventType($n->getEnumValue(TeamworkCallEventType::class)),
+            'callEventType' => fn(ParseNode $n) => $o->setCallEventType($n->getEnumValue(CallEndedEventMessageDetail_callEventType::class)),
             'callId' => fn(ParseNode $n) => $o->setCallId($n->getStringValue()),
             'callParticipants' => fn(ParseNode $n) => $o->setCallParticipants($n->getCollectionOfObjectValues([CallParticipantInfo::class, 'createFromDiscriminatorValue'])),
             'initiator' => fn(ParseNode $n) => $o->setInitiator($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
@@ -127,9 +127,9 @@ class CallEndedEventMessageDetail extends EventMessageDetail implements Parsable
 
     /**
      * Sets the callEventType property value. Represents the call event type. Possible values are: call, meeting, screenShare, unknownFutureValue.
-     * @param TeamworkCallEventType|null $value Value to set for the callEventType property.
+     * @param CallEndedEventMessageDetail_callEventType|null $value Value to set for the callEventType property.
     */
-    public function setCallEventType(?TeamworkCallEventType $value): void {
+    public function setCallEventType(?CallEndedEventMessageDetail_callEventType $value): void {
         $this->getBackingStore()->set('callEventType', $value);
     }
 

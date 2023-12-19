@@ -69,11 +69,11 @@ class ProvisioningErrorInfo implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Gets the errorCategory property value. Categorizes the error code. Possible values are failure, nonServiceFailure, success, unknownFutureValue
-     * @return ProvisioningStatusErrorCategory|null
+     * @return ProvisioningErrorInfo_errorCategory|null
     */
-    public function getErrorCategory(): ?ProvisioningStatusErrorCategory {
+    public function getErrorCategory(): ?ProvisioningErrorInfo_errorCategory {
         $val = $this->getBackingStore()->get('errorCategory');
-        if (is_null($val) || $val instanceof ProvisioningStatusErrorCategory) {
+        if (is_null($val) || $val instanceof ProvisioningErrorInfo_errorCategory) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'errorCategory'");
@@ -99,7 +99,7 @@ class ProvisioningErrorInfo implements AdditionalDataHolder, BackedModel, Parsab
         $o = $this;
         return  [
             'additionalDetails' => fn(ParseNode $n) => $o->setAdditionalDetails($n->getStringValue()),
-            'errorCategory' => fn(ParseNode $n) => $o->setErrorCategory($n->getEnumValue(ProvisioningStatusErrorCategory::class)),
+            'errorCategory' => fn(ParseNode $n) => $o->setErrorCategory($n->getEnumValue(ProvisioningErrorInfo_errorCategory::class)),
             'errorCode' => fn(ParseNode $n) => $o->setErrorCode($n->getStringValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'reason' => fn(ParseNode $n) => $o->setReason($n->getStringValue()),
@@ -183,9 +183,9 @@ class ProvisioningErrorInfo implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the errorCategory property value. Categorizes the error code. Possible values are failure, nonServiceFailure, success, unknownFutureValue
-     * @param ProvisioningStatusErrorCategory|null $value Value to set for the errorCategory property.
+     * @param ProvisioningErrorInfo_errorCategory|null $value Value to set for the errorCategory property.
     */
-    public function setErrorCategory(?ProvisioningStatusErrorCategory $value): void {
+    public function setErrorCategory(?ProvisioningErrorInfo_errorCategory $value): void {
         $this->getBackingStore()->set('errorCategory', $value);
     }
 

@@ -76,7 +76,7 @@ class TargetResource implements AdditionalDataHolder, BackedModel, Parsable
         $o = $this;
         return  [
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
-            'groupType' => fn(ParseNode $n) => $o->setGroupType($n->getEnumValue(GroupType::class)),
+            'groupType' => fn(ParseNode $n) => $o->setGroupType($n->getEnumValue(TargetResource_groupType::class)),
             'id' => fn(ParseNode $n) => $o->setId($n->getStringValue()),
             'modifiedProperties' => fn(ParseNode $n) => $o->setModifiedProperties($n->getCollectionOfObjectValues([ModifiedProperty::class, 'createFromDiscriminatorValue'])),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
@@ -87,11 +87,11 @@ class TargetResource implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the groupType property value. When type is set to Group, this indicates the group type. Possible values are: unifiedGroups, azureAD, and unknownFutureValue
-     * @return GroupType|null
+     * @return TargetResource_groupType|null
     */
-    public function getGroupType(): ?GroupType {
+    public function getGroupType(): ?TargetResource_groupType {
         $val = $this->getBackingStore()->get('groupType');
-        if (is_null($val) || $val instanceof GroupType) {
+        if (is_null($val) || $val instanceof TargetResource_groupType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'groupType'");
@@ -200,9 +200,9 @@ class TargetResource implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the groupType property value. When type is set to Group, this indicates the group type. Possible values are: unifiedGroups, azureAD, and unknownFutureValue
-     * @param GroupType|null $value Value to set for the groupType property.
+     * @param TargetResource_groupType|null $value Value to set for the groupType property.
     */
-    public function setGroupType(?GroupType $value): void {
+    public function setGroupType(?TargetResource_groupType $value): void {
         $this->getBackingStore()->set('groupType', $value);
     }
 

@@ -152,7 +152,7 @@ class UserActivity extends Entity implements Parsable
             'fallbackUrl' => fn(ParseNode $n) => $o->setFallbackUrl($n->getStringValue()),
             'historyItems' => fn(ParseNode $n) => $o->setHistoryItems($n->getCollectionOfObjectValues([ActivityHistoryItem::class, 'createFromDiscriminatorValue'])),
             'lastModifiedDateTime' => fn(ParseNode $n) => $o->setLastModifiedDateTime($n->getDateTimeValue()),
-            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(Status::class)),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(UserActivity_status::class)),
             'userTimezone' => fn(ParseNode $n) => $o->setUserTimezone($n->getStringValue()),
             'visualElements' => fn(ParseNode $n) => $o->setVisualElements($n->getObjectValue([VisualInfo::class, 'createFromDiscriminatorValue'])),
         ]);
@@ -186,11 +186,11 @@ class UserActivity extends Entity implements Parsable
 
     /**
      * Gets the status property value. Set by the server. A status code used to identify valid objects. Values: active, updated, deleted, ignored.
-     * @return Status|null
+     * @return UserActivity_status|null
     */
-    public function getStatus(): ?Status {
+    public function getStatus(): ?UserActivity_status {
         $val = $this->getBackingStore()->get('status');
-        if (is_null($val) || $val instanceof Status) {
+        if (is_null($val) || $val instanceof UserActivity_status) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
@@ -332,9 +332,9 @@ class UserActivity extends Entity implements Parsable
 
     /**
      * Sets the status property value. Set by the server. A status code used to identify valid objects. Values: active, updated, deleted, ignored.
-     * @param Status|null $value Value to set for the status property.
+     * @param UserActivity_status|null $value Value to set for the status property.
     */
-    public function setStatus(?Status $value): void {
+    public function setStatus(?UserActivity_status $value): void {
         $this->getBackingStore()->set('status', $value);
     }
 

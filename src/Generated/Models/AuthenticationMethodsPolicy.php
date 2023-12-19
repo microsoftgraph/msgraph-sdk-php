@@ -75,7 +75,7 @@ class AuthenticationMethodsPolicy extends Entity implements Parsable
             'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'lastModifiedDateTime' => fn(ParseNode $n) => $o->setLastModifiedDateTime($n->getDateTimeValue()),
-            'policyMigrationState' => fn(ParseNode $n) => $o->setPolicyMigrationState($n->getEnumValue(AuthenticationMethodsPolicyMigrationState::class)),
+            'policyMigrationState' => fn(ParseNode $n) => $o->setPolicyMigrationState($n->getEnumValue(AuthenticationMethodsPolicy_policyMigrationState::class)),
             'policyVersion' => fn(ParseNode $n) => $o->setPolicyVersion($n->getStringValue()),
             'reconfirmationInDays' => fn(ParseNode $n) => $o->setReconfirmationInDays($n->getIntegerValue()),
             'registrationEnforcement' => fn(ParseNode $n) => $o->setRegistrationEnforcement($n->getObjectValue([RegistrationEnforcement::class, 'createFromDiscriminatorValue'])),
@@ -96,11 +96,11 @@ class AuthenticationMethodsPolicy extends Entity implements Parsable
 
     /**
      * Gets the policyMigrationState property value. The state of migration of the authentication methods policy from the legacy multifactor authentication and self-service password reset (SSPR) policies. The possible values are: premigration - means the authentication methods policy is used for authentication only, legacy policies are respected. migrationInProgress - means the authentication methods policy is used for both authentication and SSPR, legacy policies are respected. migrationComplete - means the authentication methods policy is used for authentication and SSPR, legacy policies are ignored. unknownFutureValue - Evolvable enumeration sentinel value. Do not use.
-     * @return AuthenticationMethodsPolicyMigrationState|null
+     * @return AuthenticationMethodsPolicy_policyMigrationState|null
     */
-    public function getPolicyMigrationState(): ?AuthenticationMethodsPolicyMigrationState {
+    public function getPolicyMigrationState(): ?AuthenticationMethodsPolicy_policyMigrationState {
         $val = $this->getBackingStore()->get('policyMigrationState');
-        if (is_null($val) || $val instanceof AuthenticationMethodsPolicyMigrationState) {
+        if (is_null($val) || $val instanceof AuthenticationMethodsPolicy_policyMigrationState) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'policyMigrationState'");
@@ -192,9 +192,9 @@ class AuthenticationMethodsPolicy extends Entity implements Parsable
 
     /**
      * Sets the policyMigrationState property value. The state of migration of the authentication methods policy from the legacy multifactor authentication and self-service password reset (SSPR) policies. The possible values are: premigration - means the authentication methods policy is used for authentication only, legacy policies are respected. migrationInProgress - means the authentication methods policy is used for both authentication and SSPR, legacy policies are respected. migrationComplete - means the authentication methods policy is used for authentication and SSPR, legacy policies are ignored. unknownFutureValue - Evolvable enumeration sentinel value. Do not use.
-     * @param AuthenticationMethodsPolicyMigrationState|null $value Value to set for the policyMigrationState property.
+     * @param AuthenticationMethodsPolicy_policyMigrationState|null $value Value to set for the policyMigrationState property.
     */
-    public function setPolicyMigrationState(?AuthenticationMethodsPolicyMigrationState $value): void {
+    public function setPolicyMigrationState(?AuthenticationMethodsPolicy_policyMigrationState $value): void {
         $this->getBackingStore()->set('policyMigrationState', $value);
     }
 

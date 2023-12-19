@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\AssignSensitivityLabel;
 
-use Microsoft\Graph\Generated\Models\SensitivityLabelAssignmentMethod;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -50,11 +49,11 @@ class AssignSensitivityLabelPostRequestBody implements AdditionalDataHolder, Bac
 
     /**
      * Gets the assignmentMethod property value. The assignmentMethod property
-     * @return SensitivityLabelAssignmentMethod|null
+     * @return AssignSensitivityLabelPostRequestBody_assignmentMethod|null
     */
-    public function getAssignmentMethod(): ?SensitivityLabelAssignmentMethod {
+    public function getAssignmentMethod(): ?AssignSensitivityLabelPostRequestBody_assignmentMethod {
         $val = $this->getBackingStore()->get('assignmentMethod');
-        if (is_null($val) || $val instanceof SensitivityLabelAssignmentMethod) {
+        if (is_null($val) || $val instanceof AssignSensitivityLabelPostRequestBody_assignmentMethod) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'assignmentMethod'");
@@ -75,7 +74,7 @@ class AssignSensitivityLabelPostRequestBody implements AdditionalDataHolder, Bac
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'assignmentMethod' => fn(ParseNode $n) => $o->setAssignmentMethod($n->getEnumValue(SensitivityLabelAssignmentMethod::class)),
+            'assignmentMethod' => fn(ParseNode $n) => $o->setAssignmentMethod($n->getEnumValue(AssignSensitivityLabelPostRequestBody_assignmentMethod::class)),
             'justificationText' => fn(ParseNode $n) => $o->setJustificationText($n->getStringValue()),
             'sensitivityLabelId' => fn(ParseNode $n) => $o->setSensitivityLabelId($n->getStringValue()),
         ];
@@ -126,9 +125,9 @@ class AssignSensitivityLabelPostRequestBody implements AdditionalDataHolder, Bac
 
     /**
      * Sets the assignmentMethod property value. The assignmentMethod property
-     * @param SensitivityLabelAssignmentMethod|null $value Value to set for the assignmentMethod property.
+     * @param AssignSensitivityLabelPostRequestBody_assignmentMethod|null $value Value to set for the assignmentMethod property.
     */
-    public function setAssignmentMethod(?SensitivityLabelAssignmentMethod $value): void {
+    public function setAssignmentMethod(?AssignSensitivityLabelPostRequestBody_assignmentMethod $value): void {
         $this->getBackingStore()->set('assignmentMethod', $value);
     }
 

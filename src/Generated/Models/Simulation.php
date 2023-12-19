@@ -27,11 +27,11 @@ class Simulation extends Entity implements Parsable
 
     /**
      * Gets the attackTechnique property value. The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue, oAuthConsentGrant. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: oAuthConsentGrant. For more information on the types of social engineering attack techniques, see simulations.
-     * @return SimulationAttackTechnique|null
+     * @return Simulation_attackTechnique|null
     */
-    public function getAttackTechnique(): ?SimulationAttackTechnique {
+    public function getAttackTechnique(): ?Simulation_attackTechnique {
         $val = $this->getBackingStore()->get('attackTechnique');
-        if (is_null($val) || $val instanceof SimulationAttackTechnique) {
+        if (is_null($val) || $val instanceof Simulation_attackTechnique) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'attackTechnique'");
@@ -39,11 +39,11 @@ class Simulation extends Entity implements Parsable
 
     /**
      * Gets the attackType property value. Attack type of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, social, cloud, endpoint, unknownFutureValue.
-     * @return SimulationAttackType|null
+     * @return Simulation_attackType|null
     */
-    public function getAttackType(): ?SimulationAttackType {
+    public function getAttackType(): ?Simulation_attackType {
         $val = $this->getBackingStore()->get('attackType');
-        if (is_null($val) || $val instanceof SimulationAttackType) {
+        if (is_null($val) || $val instanceof Simulation_attackType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'attackType'");
@@ -164,8 +164,8 @@ class Simulation extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'attackTechnique' => fn(ParseNode $n) => $o->setAttackTechnique($n->getEnumValue(SimulationAttackTechnique::class)),
-            'attackType' => fn(ParseNode $n) => $o->setAttackType($n->getEnumValue(SimulationAttackType::class)),
+            'attackTechnique' => fn(ParseNode $n) => $o->setAttackTechnique($n->getEnumValue(Simulation_attackTechnique::class)),
+            'attackType' => fn(ParseNode $n) => $o->setAttackType($n->getEnumValue(Simulation_attackType::class)),
             'automationId' => fn(ParseNode $n) => $o->setAutomationId($n->getStringValue()),
             'completionDateTime' => fn(ParseNode $n) => $o->setCompletionDateTime($n->getDateTimeValue()),
             'createdBy' => fn(ParseNode $n) => $o->setCreatedBy($n->getObjectValue([EmailIdentity::class, 'createFromDiscriminatorValue'])),
@@ -184,9 +184,9 @@ class Simulation extends Entity implements Parsable
             'loginPage' => fn(ParseNode $n) => $o->setLoginPage($n->getObjectValue([LoginPage::class, 'createFromDiscriminatorValue'])),
             'oAuthConsentAppDetail' => fn(ParseNode $n) => $o->setOAuthConsentAppDetail($n->getObjectValue([OAuthConsentAppDetail::class, 'createFromDiscriminatorValue'])),
             'payload' => fn(ParseNode $n) => $o->setPayload($n->getObjectValue([Payload::class, 'createFromDiscriminatorValue'])),
-            'payloadDeliveryPlatform' => fn(ParseNode $n) => $o->setPayloadDeliveryPlatform($n->getEnumValue(PayloadDeliveryPlatform::class)),
+            'payloadDeliveryPlatform' => fn(ParseNode $n) => $o->setPayloadDeliveryPlatform($n->getEnumValue(Simulation_payloadDeliveryPlatform::class)),
             'report' => fn(ParseNode $n) => $o->setReport($n->getObjectValue([SimulationReport::class, 'createFromDiscriminatorValue'])),
-            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(SimulationStatus::class)),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(Simulation_status::class)),
             'trainingSetting' => fn(ParseNode $n) => $o->setTrainingSetting($n->getObjectValue([TrainingSetting::class, 'createFromDiscriminatorValue'])),
         ]);
     }
@@ -301,11 +301,11 @@ class Simulation extends Entity implements Parsable
 
     /**
      * Gets the payloadDeliveryPlatform property value. Method of delivery of the phishing payload used in the attack simulation and training campaign. Possible values are: unknown, sms, email, teams, unknownFutureValue.
-     * @return PayloadDeliveryPlatform|null
+     * @return Simulation_payloadDeliveryPlatform|null
     */
-    public function getPayloadDeliveryPlatform(): ?PayloadDeliveryPlatform {
+    public function getPayloadDeliveryPlatform(): ?Simulation_payloadDeliveryPlatform {
         $val = $this->getBackingStore()->get('payloadDeliveryPlatform');
-        if (is_null($val) || $val instanceof PayloadDeliveryPlatform) {
+        if (is_null($val) || $val instanceof Simulation_payloadDeliveryPlatform) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'payloadDeliveryPlatform'");
@@ -325,11 +325,11 @@ class Simulation extends Entity implements Parsable
 
     /**
      * Gets the status property value. Status of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, draft, running, scheduled, succeeded, failed, cancelled, excluded, unknownFutureValue.
-     * @return SimulationStatus|null
+     * @return Simulation_status|null
     */
-    public function getStatus(): ?SimulationStatus {
+    public function getStatus(): ?Simulation_status {
         $val = $this->getBackingStore()->get('status');
-        if (is_null($val) || $val instanceof SimulationStatus) {
+        if (is_null($val) || $val instanceof Simulation_status) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
@@ -381,17 +381,17 @@ class Simulation extends Entity implements Parsable
 
     /**
      * Sets the attackTechnique property value. The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue, oAuthConsentGrant. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: oAuthConsentGrant. For more information on the types of social engineering attack techniques, see simulations.
-     * @param SimulationAttackTechnique|null $value Value to set for the attackTechnique property.
+     * @param Simulation_attackTechnique|null $value Value to set for the attackTechnique property.
     */
-    public function setAttackTechnique(?SimulationAttackTechnique $value): void {
+    public function setAttackTechnique(?Simulation_attackTechnique $value): void {
         $this->getBackingStore()->set('attackTechnique', $value);
     }
 
     /**
      * Sets the attackType property value. Attack type of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, social, cloud, endpoint, unknownFutureValue.
-     * @param SimulationAttackType|null $value Value to set for the attackType property.
+     * @param Simulation_attackType|null $value Value to set for the attackType property.
     */
-    public function setAttackType(?SimulationAttackType $value): void {
+    public function setAttackType(?Simulation_attackType $value): void {
         $this->getBackingStore()->set('attackType', $value);
     }
 
@@ -541,9 +541,9 @@ class Simulation extends Entity implements Parsable
 
     /**
      * Sets the payloadDeliveryPlatform property value. Method of delivery of the phishing payload used in the attack simulation and training campaign. Possible values are: unknown, sms, email, teams, unknownFutureValue.
-     * @param PayloadDeliveryPlatform|null $value Value to set for the payloadDeliveryPlatform property.
+     * @param Simulation_payloadDeliveryPlatform|null $value Value to set for the payloadDeliveryPlatform property.
     */
-    public function setPayloadDeliveryPlatform(?PayloadDeliveryPlatform $value): void {
+    public function setPayloadDeliveryPlatform(?Simulation_payloadDeliveryPlatform $value): void {
         $this->getBackingStore()->set('payloadDeliveryPlatform', $value);
     }
 
@@ -557,9 +557,9 @@ class Simulation extends Entity implements Parsable
 
     /**
      * Sets the status property value. Status of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, draft, running, scheduled, succeeded, failed, cancelled, excluded, unknownFutureValue.
-     * @param SimulationStatus|null $value Value to set for the status property.
+     * @param Simulation_status|null $value Value to set for the status property.
     */
-    public function setStatus(?SimulationStatus $value): void {
+    public function setStatus(?Simulation_status $value): void {
         $this->getBackingStore()->set('status', $value);
     }
 

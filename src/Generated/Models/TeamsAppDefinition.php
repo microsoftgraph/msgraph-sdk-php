@@ -98,7 +98,7 @@ class TeamsAppDefinition extends Entity implements Parsable
             'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'lastModifiedDateTime' => fn(ParseNode $n) => $o->setLastModifiedDateTime($n->getDateTimeValue()),
-            'publishingState' => fn(ParseNode $n) => $o->setPublishingState($n->getEnumValue(TeamsAppPublishingState::class)),
+            'publishingState' => fn(ParseNode $n) => $o->setPublishingState($n->getEnumValue(TeamsAppDefinition_publishingState::class)),
             'shortDescription' => fn(ParseNode $n) => $o->setShortDescription($n->getStringValue()),
             'teamsAppId' => fn(ParseNode $n) => $o->setTeamsAppId($n->getStringValue()),
             'version' => fn(ParseNode $n) => $o->setVersion($n->getStringValue()),
@@ -119,11 +119,11 @@ class TeamsAppDefinition extends Entity implements Parsable
 
     /**
      * Gets the publishingState property value. The published status of a specific version of a Teams app. Possible values are:submitted—The specific version of the Teams app has been submitted and is under review. published—The request to publish the specific version of the Teams app has been approved by the admin and the app is published.  rejected—The admin rejected the request to publish the specific version of the Teams app.
-     * @return TeamsAppPublishingState|null
+     * @return TeamsAppDefinition_publishingState|null
     */
-    public function getPublishingState(): ?TeamsAppPublishingState {
+    public function getPublishingState(): ?TeamsAppDefinition_publishingState {
         $val = $this->getBackingStore()->get('publishingState');
-        if (is_null($val) || $val instanceof TeamsAppPublishingState) {
+        if (is_null($val) || $val instanceof TeamsAppDefinition_publishingState) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'publishingState'");
@@ -233,9 +233,9 @@ class TeamsAppDefinition extends Entity implements Parsable
 
     /**
      * Sets the publishingState property value. The published status of a specific version of a Teams app. Possible values are:submitted—The specific version of the Teams app has been submitted and is under review. published—The request to publish the specific version of the Teams app has been approved by the admin and the app is published.  rejected—The admin rejected the request to publish the specific version of the Teams app.
-     * @param TeamsAppPublishingState|null $value Value to set for the publishingState property.
+     * @param TeamsAppDefinition_publishingState|null $value Value to set for the publishingState property.
     */
-    public function setPublishingState(?TeamsAppPublishingState $value): void {
+    public function setPublishingState(?TeamsAppDefinition_publishingState $value): void {
         $this->getBackingStore()->set('publishingState', $value);
     }
 

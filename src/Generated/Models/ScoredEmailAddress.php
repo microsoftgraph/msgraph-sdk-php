@@ -78,7 +78,7 @@ class ScoredEmailAddress implements AdditionalDataHolder, BackedModel, Parsable
             'itemId' => fn(ParseNode $n) => $o->setItemId($n->getStringValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'relevanceScore' => fn(ParseNode $n) => $o->setRelevanceScore($n->getFloatValue()),
-            'selectionLikelihood' => fn(ParseNode $n) => $o->setSelectionLikelihood($n->getEnumValue(SelectionLikelihoodInfo::class)),
+            'selectionLikelihood' => fn(ParseNode $n) => $o->setSelectionLikelihood($n->getEnumValue(ScoredEmailAddress_selectionLikelihood::class)),
         ];
     }
 
@@ -120,11 +120,11 @@ class ScoredEmailAddress implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the selectionLikelihood property value. The selectionLikelihood property
-     * @return SelectionLikelihoodInfo|null
+     * @return ScoredEmailAddress_selectionLikelihood|null
     */
-    public function getSelectionLikelihood(): ?SelectionLikelihoodInfo {
+    public function getSelectionLikelihood(): ?ScoredEmailAddress_selectionLikelihood {
         $val = $this->getBackingStore()->get('selectionLikelihood');
-        if (is_null($val) || $val instanceof SelectionLikelihoodInfo) {
+        if (is_null($val) || $val instanceof ScoredEmailAddress_selectionLikelihood) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'selectionLikelihood'");
@@ -193,9 +193,9 @@ class ScoredEmailAddress implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the selectionLikelihood property value. The selectionLikelihood property
-     * @param SelectionLikelihoodInfo|null $value Value to set for the selectionLikelihood property.
+     * @param ScoredEmailAddress_selectionLikelihood|null $value Value to set for the selectionLikelihood property.
     */
-    public function setSelectionLikelihood(?SelectionLikelihoodInfo $value): void {
+    public function setSelectionLikelihood(?ScoredEmailAddress_selectionLikelihood $value): void {
         $this->getBackingStore()->set('selectionLikelihood', $value);
     }
 

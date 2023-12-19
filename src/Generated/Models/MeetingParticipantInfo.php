@@ -64,7 +64,7 @@ class MeetingParticipantInfo implements AdditionalDataHolder, BackedModel, Parsa
         return  [
             'identity' => fn(ParseNode $n) => $o->setIdentity($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
-            'role' => fn(ParseNode $n) => $o->setRole($n->getEnumValue(OnlineMeetingRole::class)),
+            'role' => fn(ParseNode $n) => $o->setRole($n->getEnumValue(MeetingParticipantInfo_role::class)),
             'upn' => fn(ParseNode $n) => $o->setUpn($n->getStringValue()),
         ];
     }
@@ -95,11 +95,11 @@ class MeetingParticipantInfo implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Gets the role property value. Specifies the participant's role in the meeting.
-     * @return OnlineMeetingRole|null
+     * @return MeetingParticipantInfo_role|null
     */
-    public function getRole(): ?OnlineMeetingRole {
+    public function getRole(): ?MeetingParticipantInfo_role {
         $val = $this->getBackingStore()->get('role');
-        if (is_null($val) || $val instanceof OnlineMeetingRole) {
+        if (is_null($val) || $val instanceof MeetingParticipantInfo_role) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'role'");
@@ -163,9 +163,9 @@ class MeetingParticipantInfo implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the role property value. Specifies the participant's role in the meeting.
-     * @param OnlineMeetingRole|null $value Value to set for the role property.
+     * @param MeetingParticipantInfo_role|null $value Value to set for the role property.
     */
-    public function setRole(?OnlineMeetingRole $value): void {
+    public function setRole(?MeetingParticipantInfo_role $value): void {
         $this->getBackingStore()->set('role', $value);
     }
 

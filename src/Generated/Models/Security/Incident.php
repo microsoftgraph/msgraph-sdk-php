@@ -55,11 +55,11 @@ class Incident extends Entity implements Parsable
 
     /**
      * Gets the classification property value. The specification for the incident. Possible values are: unknown, falsePositive, truePositive, informationalExpectedActivity, unknownFutureValue.
-     * @return AlertClassification|null
+     * @return Incident_classification|null
     */
-    public function getClassification(): ?AlertClassification {
+    public function getClassification(): ?Incident_classification {
         $val = $this->getBackingStore()->get('classification');
-        if (is_null($val) || $val instanceof AlertClassification) {
+        if (is_null($val) || $val instanceof Incident_classification) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'classification'");
@@ -119,11 +119,11 @@ class Incident extends Entity implements Parsable
 
     /**
      * Gets the determination property value. Specifies the determination of the incident. Possible values are: unknown, apt, malware, securityPersonnel, securityTesting, unwantedSoftware, other, multiStagedAttack, compromisedUser, phishing, maliciousUserActivity, clean, insufficientData, confirmedUserActivity, lineOfBusinessApplication, unknownFutureValue.
-     * @return AlertDetermination|null
+     * @return Incident_determination|null
     */
-    public function getDetermination(): ?AlertDetermination {
+    public function getDetermination(): ?Incident_determination {
         $val = $this->getBackingStore()->get('determination');
-        if (is_null($val) || $val instanceof AlertDetermination) {
+        if (is_null($val) || $val instanceof Incident_determination) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'determination'");
@@ -150,7 +150,7 @@ class Incident extends Entity implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'alerts' => fn(ParseNode $n) => $o->setAlerts($n->getCollectionOfObjectValues([Alert::class, 'createFromDiscriminatorValue'])),
             'assignedTo' => fn(ParseNode $n) => $o->setAssignedTo($n->getStringValue()),
-            'classification' => fn(ParseNode $n) => $o->setClassification($n->getEnumValue(AlertClassification::class)),
+            'classification' => fn(ParseNode $n) => $o->setClassification($n->getEnumValue(Incident_classification::class)),
             'comments' => fn(ParseNode $n) => $o->setComments($n->getCollectionOfObjectValues([AlertComment::class, 'createFromDiscriminatorValue'])),
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'customTags' => function (ParseNode $n) {
@@ -162,7 +162,7 @@ class Incident extends Entity implements Parsable
                 $this->setCustomTags($val);
             },
             'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
-            'determination' => fn(ParseNode $n) => $o->setDetermination($n->getEnumValue(AlertDetermination::class)),
+            'determination' => fn(ParseNode $n) => $o->setDetermination($n->getEnumValue(Incident_determination::class)),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'incidentWebUrl' => fn(ParseNode $n) => $o->setIncidentWebUrl($n->getStringValue()),
             'lastModifiedBy' => fn(ParseNode $n) => $o->setLastModifiedBy($n->getStringValue()),
@@ -323,9 +323,9 @@ class Incident extends Entity implements Parsable
 
     /**
      * Sets the classification property value. The specification for the incident. Possible values are: unknown, falsePositive, truePositive, informationalExpectedActivity, unknownFutureValue.
-     * @param AlertClassification|null $value Value to set for the classification property.
+     * @param Incident_classification|null $value Value to set for the classification property.
     */
-    public function setClassification(?AlertClassification $value): void {
+    public function setClassification(?Incident_classification $value): void {
         $this->getBackingStore()->set('classification', $value);
     }
 
@@ -363,9 +363,9 @@ class Incident extends Entity implements Parsable
 
     /**
      * Sets the determination property value. Specifies the determination of the incident. Possible values are: unknown, apt, malware, securityPersonnel, securityTesting, unwantedSoftware, other, multiStagedAttack, compromisedUser, phishing, maliciousUserActivity, clean, insufficientData, confirmedUserActivity, lineOfBusinessApplication, unknownFutureValue.
-     * @param AlertDetermination|null $value Value to set for the determination property.
+     * @param Incident_determination|null $value Value to set for the determination property.
     */
-    public function setDetermination(?AlertDetermination $value): void {
+    public function setDetermination(?Incident_determination $value): void {
         $this->getBackingStore()->set('determination', $value);
     }
 

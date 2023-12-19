@@ -45,7 +45,7 @@ class EventMessageRequest extends EventMessage implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'allowNewTimeProposals' => fn(ParseNode $n) => $o->setAllowNewTimeProposals($n->getBooleanValue()),
-            'meetingRequestType' => fn(ParseNode $n) => $o->setMeetingRequestType($n->getEnumValue(MeetingRequestType::class)),
+            'meetingRequestType' => fn(ParseNode $n) => $o->setMeetingRequestType($n->getEnumValue(EventMessageRequest_meetingRequestType::class)),
             'previousEndDateTime' => fn(ParseNode $n) => $o->setPreviousEndDateTime($n->getObjectValue([DateTimeTimeZone::class, 'createFromDiscriminatorValue'])),
             'previousLocation' => fn(ParseNode $n) => $o->setPreviousLocation($n->getObjectValue([Location::class, 'createFromDiscriminatorValue'])),
             'previousStartDateTime' => fn(ParseNode $n) => $o->setPreviousStartDateTime($n->getObjectValue([DateTimeTimeZone::class, 'createFromDiscriminatorValue'])),
@@ -55,11 +55,11 @@ class EventMessageRequest extends EventMessage implements Parsable
 
     /**
      * Gets the meetingRequestType property value. The meetingRequestType property
-     * @return MeetingRequestType|null
+     * @return EventMessageRequest_meetingRequestType|null
     */
-    public function getMeetingRequestType(): ?MeetingRequestType {
+    public function getMeetingRequestType(): ?EventMessageRequest_meetingRequestType {
         $val = $this->getBackingStore()->get('meetingRequestType');
-        if (is_null($val) || $val instanceof MeetingRequestType) {
+        if (is_null($val) || $val instanceof EventMessageRequest_meetingRequestType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'meetingRequestType'");
@@ -137,9 +137,9 @@ class EventMessageRequest extends EventMessage implements Parsable
 
     /**
      * Sets the meetingRequestType property value. The meetingRequestType property
-     * @param MeetingRequestType|null $value Value to set for the meetingRequestType property.
+     * @param EventMessageRequest_meetingRequestType|null $value Value to set for the meetingRequestType property.
     */
-    public function setMeetingRequestType(?MeetingRequestType $value): void {
+    public function setMeetingRequestType(?EventMessageRequest_meetingRequestType $value): void {
         $this->getBackingStore()->set('meetingRequestType', $value);
     }
 

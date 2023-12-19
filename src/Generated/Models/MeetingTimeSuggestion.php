@@ -95,7 +95,7 @@ class MeetingTimeSuggestion implements AdditionalDataHolder, BackedModel, Parsab
             'meetingTimeSlot' => fn(ParseNode $n) => $o->setMeetingTimeSlot($n->getObjectValue([TimeSlot::class, 'createFromDiscriminatorValue'])),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'order' => fn(ParseNode $n) => $o->setOrder($n->getIntegerValue()),
-            'organizerAvailability' => fn(ParseNode $n) => $o->setOrganizerAvailability($n->getEnumValue(FreeBusyStatus::class)),
+            'organizerAvailability' => fn(ParseNode $n) => $o->setOrganizerAvailability($n->getEnumValue(MeetingTimeSuggestion_organizerAvailability::class)),
             'suggestionReason' => fn(ParseNode $n) => $o->setSuggestionReason($n->getStringValue()),
         ];
     }
@@ -152,11 +152,11 @@ class MeetingTimeSuggestion implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Gets the organizerAvailability property value. Availability of the meeting organizer for this meeting suggestion. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
-     * @return FreeBusyStatus|null
+     * @return MeetingTimeSuggestion_organizerAvailability|null
     */
-    public function getOrganizerAvailability(): ?FreeBusyStatus {
+    public function getOrganizerAvailability(): ?MeetingTimeSuggestion_organizerAvailability {
         $val = $this->getBackingStore()->get('organizerAvailability');
-        if (is_null($val) || $val instanceof FreeBusyStatus) {
+        if (is_null($val) || $val instanceof MeetingTimeSuggestion_organizerAvailability) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'organizerAvailability'");
@@ -256,9 +256,9 @@ class MeetingTimeSuggestion implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the organizerAvailability property value. Availability of the meeting organizer for this meeting suggestion. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
-     * @param FreeBusyStatus|null $value Value to set for the organizerAvailability property.
+     * @param MeetingTimeSuggestion_organizerAvailability|null $value Value to set for the organizerAvailability property.
     */
-    public function setOrganizerAvailability(?FreeBusyStatus $value): void {
+    public function setOrganizerAvailability(?MeetingTimeSuggestion_organizerAvailability $value): void {
         $this->getBackingStore()->set('organizerAvailability', $value);
     }
 

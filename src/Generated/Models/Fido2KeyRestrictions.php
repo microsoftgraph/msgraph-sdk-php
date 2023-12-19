@@ -72,11 +72,11 @@ class Fido2KeyRestrictions implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Gets the enforcementType property value. Enforcement type. Possible values are: allow, block.
-     * @return Fido2RestrictionEnforcementType|null
+     * @return Fido2KeyRestrictions_enforcementType|null
     */
-    public function getEnforcementType(): ?Fido2RestrictionEnforcementType {
+    public function getEnforcementType(): ?Fido2KeyRestrictions_enforcementType {
         $val = $this->getBackingStore()->get('enforcementType');
-        if (is_null($val) || $val instanceof Fido2RestrictionEnforcementType) {
+        if (is_null($val) || $val instanceof Fido2KeyRestrictions_enforcementType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'enforcementType'");
@@ -97,7 +97,7 @@ class Fido2KeyRestrictions implements AdditionalDataHolder, BackedModel, Parsabl
                 /** @var array<string>|null $val */
                 $this->setAaGuids($val);
             },
-            'enforcementType' => fn(ParseNode $n) => $o->setEnforcementType($n->getEnumValue(Fido2RestrictionEnforcementType::class)),
+            'enforcementType' => fn(ParseNode $n) => $o->setEnforcementType($n->getEnumValue(Fido2KeyRestrictions_enforcementType::class)),
             'isEnforced' => fn(ParseNode $n) => $o->setIsEnforced($n->getBooleanValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
@@ -165,9 +165,9 @@ class Fido2KeyRestrictions implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the enforcementType property value. Enforcement type. Possible values are: allow, block.
-     * @param Fido2RestrictionEnforcementType|null $value Value to set for the enforcementType property.
+     * @param Fido2KeyRestrictions_enforcementType|null $value Value to set for the enforcementType property.
     */
-    public function setEnforcementType(?Fido2RestrictionEnforcementType $value): void {
+    public function setEnforcementType(?Fido2KeyRestrictions_enforcementType $value): void {
         $this->getBackingStore()->set('enforcementType', $value);
     }
 

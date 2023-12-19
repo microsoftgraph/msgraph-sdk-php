@@ -27,11 +27,11 @@ class SignInFrequencySessionControl extends ConditionalAccessSessionControl impl
 
     /**
      * Gets the authenticationType property value. The possible values are primaryAndSecondaryAuthentication, secondaryAuthentication, unknownFutureValue.
-     * @return SignInFrequencyAuthenticationType|null
+     * @return SignInFrequencySessionControl_authenticationType|null
     */
-    public function getAuthenticationType(): ?SignInFrequencyAuthenticationType {
+    public function getAuthenticationType(): ?SignInFrequencySessionControl_authenticationType {
         $val = $this->getBackingStore()->get('authenticationType');
-        if (is_null($val) || $val instanceof SignInFrequencyAuthenticationType) {
+        if (is_null($val) || $val instanceof SignInFrequencySessionControl_authenticationType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'authenticationType'");
@@ -44,20 +44,20 @@ class SignInFrequencySessionControl extends ConditionalAccessSessionControl impl
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'authenticationType' => fn(ParseNode $n) => $o->setAuthenticationType($n->getEnumValue(SignInFrequencyAuthenticationType::class)),
-            'frequencyInterval' => fn(ParseNode $n) => $o->setFrequencyInterval($n->getEnumValue(SignInFrequencyInterval::class)),
-            'type' => fn(ParseNode $n) => $o->setType($n->getEnumValue(SigninFrequencyType::class)),
+            'authenticationType' => fn(ParseNode $n) => $o->setAuthenticationType($n->getEnumValue(SignInFrequencySessionControl_authenticationType::class)),
+            'frequencyInterval' => fn(ParseNode $n) => $o->setFrequencyInterval($n->getEnumValue(SignInFrequencySessionControl_frequencyInterval::class)),
+            'type' => fn(ParseNode $n) => $o->setType($n->getEnumValue(SignInFrequencySessionControl_type::class)),
             'value' => fn(ParseNode $n) => $o->setValue($n->getIntegerValue()),
         ]);
     }
 
     /**
      * Gets the frequencyInterval property value. The possible values are timeBased, everyTime, unknownFutureValue.
-     * @return SignInFrequencyInterval|null
+     * @return SignInFrequencySessionControl_frequencyInterval|null
     */
-    public function getFrequencyInterval(): ?SignInFrequencyInterval {
+    public function getFrequencyInterval(): ?SignInFrequencySessionControl_frequencyInterval {
         $val = $this->getBackingStore()->get('frequencyInterval');
-        if (is_null($val) || $val instanceof SignInFrequencyInterval) {
+        if (is_null($val) || $val instanceof SignInFrequencySessionControl_frequencyInterval) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'frequencyInterval'");
@@ -65,11 +65,11 @@ class SignInFrequencySessionControl extends ConditionalAccessSessionControl impl
 
     /**
      * Gets the type property value. Possible values are: days, hours.
-     * @return SigninFrequencyType|null
+     * @return SignInFrequencySessionControl_type|null
     */
-    public function getType(): ?SigninFrequencyType {
+    public function getType(): ?SignInFrequencySessionControl_type {
         $val = $this->getBackingStore()->get('type');
-        if (is_null($val) || $val instanceof SigninFrequencyType) {
+        if (is_null($val) || $val instanceof SignInFrequencySessionControl_type) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'type'");
@@ -101,25 +101,25 @@ class SignInFrequencySessionControl extends ConditionalAccessSessionControl impl
 
     /**
      * Sets the authenticationType property value. The possible values are primaryAndSecondaryAuthentication, secondaryAuthentication, unknownFutureValue.
-     * @param SignInFrequencyAuthenticationType|null $value Value to set for the authenticationType property.
+     * @param SignInFrequencySessionControl_authenticationType|null $value Value to set for the authenticationType property.
     */
-    public function setAuthenticationType(?SignInFrequencyAuthenticationType $value): void {
+    public function setAuthenticationType(?SignInFrequencySessionControl_authenticationType $value): void {
         $this->getBackingStore()->set('authenticationType', $value);
     }
 
     /**
      * Sets the frequencyInterval property value. The possible values are timeBased, everyTime, unknownFutureValue.
-     * @param SignInFrequencyInterval|null $value Value to set for the frequencyInterval property.
+     * @param SignInFrequencySessionControl_frequencyInterval|null $value Value to set for the frequencyInterval property.
     */
-    public function setFrequencyInterval(?SignInFrequencyInterval $value): void {
+    public function setFrequencyInterval(?SignInFrequencySessionControl_frequencyInterval $value): void {
         $this->getBackingStore()->set('frequencyInterval', $value);
     }
 
     /**
      * Sets the type property value. Possible values are: days, hours.
-     * @param SigninFrequencyType|null $value Value to set for the type property.
+     * @param SignInFrequencySessionControl_type|null $value Value to set for the type property.
     */
-    public function setType(?SigninFrequencyType $value): void {
+    public function setType(?SignInFrequencySessionControl_type $value): void {
         $this->getBackingStore()->set('type', $value);
     }
 

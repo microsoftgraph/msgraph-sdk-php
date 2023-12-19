@@ -46,7 +46,7 @@ class DataPolicyOperation extends Entity implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'completedDateTime' => fn(ParseNode $n) => $o->setCompletedDateTime($n->getDateTimeValue()),
             'progress' => fn(ParseNode $n) => $o->setProgress($n->getFloatValue()),
-            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(DataPolicyOperationStatus::class)),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(DataPolicyOperation_status::class)),
             'storageLocation' => fn(ParseNode $n) => $o->setStorageLocation($n->getStringValue()),
             'submittedDateTime' => fn(ParseNode $n) => $o->setSubmittedDateTime($n->getDateTimeValue()),
             'userId' => fn(ParseNode $n) => $o->setUserId($n->getStringValue()),
@@ -67,11 +67,11 @@ class DataPolicyOperation extends Entity implements Parsable
 
     /**
      * Gets the status property value. Possible values are: notStarted, running, complete, failed, unknownFutureValue.
-     * @return DataPolicyOperationStatus|null
+     * @return DataPolicyOperation_status|null
     */
-    public function getStatus(): ?DataPolicyOperationStatus {
+    public function getStatus(): ?DataPolicyOperation_status {
         $val = $this->getBackingStore()->get('status');
-        if (is_null($val) || $val instanceof DataPolicyOperationStatus) {
+        if (is_null($val) || $val instanceof DataPolicyOperation_status) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
@@ -145,9 +145,9 @@ class DataPolicyOperation extends Entity implements Parsable
 
     /**
      * Sets the status property value. Possible values are: notStarted, running, complete, failed, unknownFutureValue.
-     * @param DataPolicyOperationStatus|null $value Value to set for the status property.
+     * @param DataPolicyOperation_status|null $value Value to set for the status property.
     */
-    public function setStatus(?DataPolicyOperationStatus $value): void {
+    public function setStatus(?DataPolicyOperation_status $value): void {
         $this->getBackingStore()->set('status', $value);
     }
 

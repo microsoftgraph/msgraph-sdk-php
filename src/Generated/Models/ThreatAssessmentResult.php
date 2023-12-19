@@ -46,7 +46,7 @@ class ThreatAssessmentResult extends Entity implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'message' => fn(ParseNode $n) => $o->setMessage($n->getStringValue()),
-            'resultType' => fn(ParseNode $n) => $o->setResultType($n->getEnumValue(ThreatAssessmentResultType::class)),
+            'resultType' => fn(ParseNode $n) => $o->setResultType($n->getEnumValue(ThreatAssessmentResult_resultType::class)),
         ]);
     }
 
@@ -64,11 +64,11 @@ class ThreatAssessmentResult extends Entity implements Parsable
 
     /**
      * Gets the resultType property value. The threat assessment result type. Possible values are: checkPolicy, rescan.
-     * @return ThreatAssessmentResultType|null
+     * @return ThreatAssessmentResult_resultType|null
     */
-    public function getResultType(): ?ThreatAssessmentResultType {
+    public function getResultType(): ?ThreatAssessmentResult_resultType {
         $val = $this->getBackingStore()->get('resultType');
-        if (is_null($val) || $val instanceof ThreatAssessmentResultType) {
+        if (is_null($val) || $val instanceof ThreatAssessmentResult_resultType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'resultType'");
@@ -103,9 +103,9 @@ class ThreatAssessmentResult extends Entity implements Parsable
 
     /**
      * Sets the resultType property value. The threat assessment result type. Possible values are: checkPolicy, rescan.
-     * @param ThreatAssessmentResultType|null $value Value to set for the resultType property.
+     * @param ThreatAssessmentResult_resultType|null $value Value to set for the resultType property.
     */
-    public function setResultType(?ThreatAssessmentResultType $value): void {
+    public function setResultType(?ThreatAssessmentResult_resultType $value): void {
         $this->getBackingStore()->set('resultType', $value);
     }
 

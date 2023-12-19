@@ -126,7 +126,7 @@ class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'sectionGroupsUrl' => fn(ParseNode $n) => $o->setSectionGroupsUrl($n->getStringValue()),
             'sectionsUrl' => fn(ParseNode $n) => $o->setSectionsUrl($n->getStringValue()),
-            'userRole' => fn(ParseNode $n) => $o->setUserRole($n->getEnumValue(OnenoteUserRole::class)),
+            'userRole' => fn(ParseNode $n) => $o->setUserRole($n->getEnumValue(CopyNotebookModel_userRole::class)),
         ];
     }
 
@@ -264,11 +264,11 @@ class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the userRole property value. The userRole property
-     * @return OnenoteUserRole|null
+     * @return CopyNotebookModel_userRole|null
     */
-    public function getUserRole(): ?OnenoteUserRole {
+    public function getUserRole(): ?CopyNotebookModel_userRole {
         $val = $this->getBackingStore()->get('userRole');
-        if (is_null($val) || $val instanceof OnenoteUserRole) {
+        if (is_null($val) || $val instanceof CopyNotebookModel_userRole) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'userRole'");
@@ -436,9 +436,9 @@ class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the userRole property value. The userRole property
-     * @param OnenoteUserRole|null $value Value to set for the userRole property.
+     * @param CopyNotebookModel_userRole|null $value Value to set for the userRole property.
     */
-    public function setUserRole(?OnenoteUserRole $value): void {
+    public function setUserRole(?CopyNotebookModel_userRole $value): void {
         $this->getBackingStore()->set('userRole', $value);
     }
 

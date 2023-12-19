@@ -28,13 +28,13 @@ class CustomTrainingSetting extends TrainingSetting implements Parsable
 
     /**
      * Gets the assignedTo property value. A user collection that specifies to whom the training should be assigned. Possible values are: none, allUsers, clickedPayload, compromised, reportedPhish, readButNotClicked, didNothing, unknownFutureValue.
-     * @return array<TrainingAssignedTo>|null
+     * @return array<CustomTrainingSetting_assignedTo>|null
     */
     public function getAssignedTo(): ?array {
         $val = $this->getBackingStore()->get('assignedTo');
         if (is_array($val) || is_null($val)) {
-            TypeUtils::validateCollectionValues($val, TrainingAssignedTo::class);
-            /** @var array<TrainingAssignedTo>|null $val */
+            TypeUtils::validateCollectionValues($val, CustomTrainingSetting_assignedTo::class);
+            /** @var array<CustomTrainingSetting_assignedTo>|null $val */
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'assignedTo'");
@@ -83,7 +83,7 @@ class CustomTrainingSetting extends TrainingSetting implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'assignedTo' => fn(ParseNode $n) => $o->setAssignedTo($n->getCollectionOfEnumValues(TrainingAssignedTo::class)),
+            'assignedTo' => fn(ParseNode $n) => $o->setAssignedTo($n->getCollectionOfEnumValues(CustomTrainingSetting_assignedTo::class)),
             'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'durationInMinutes' => fn(ParseNode $n) => $o->setDurationInMinutes($n->getIntegerValue()),
@@ -118,7 +118,7 @@ class CustomTrainingSetting extends TrainingSetting implements Parsable
 
     /**
      * Sets the assignedTo property value. A user collection that specifies to whom the training should be assigned. Possible values are: none, allUsers, clickedPayload, compromised, reportedPhish, readButNotClicked, didNothing, unknownFutureValue.
-     * @param array<TrainingAssignedTo>|null $value Value to set for the assignedTo property.
+     * @param array<CustomTrainingSetting_assignedTo>|null $value Value to set for the assignedTo property.
     */
     public function setAssignedTo(?array $value): void {
         $this->getBackingStore()->set('assignedTo', $value);

@@ -49,11 +49,11 @@ class BroadcastMeetingSettings implements AdditionalDataHolder, BackedModel, Par
 
     /**
      * Gets the allowedAudience property value. Defines who can join the Teams live event. Possible values are listed in the following table.
-     * @return BroadcastMeetingAudience|null
+     * @return BroadcastMeetingSettings_allowedAudience|null
     */
-    public function getAllowedAudience(): ?BroadcastMeetingAudience {
+    public function getAllowedAudience(): ?BroadcastMeetingSettings_allowedAudience {
         $val = $this->getBackingStore()->get('allowedAudience');
-        if (is_null($val) || $val instanceof BroadcastMeetingAudience) {
+        if (is_null($val) || $val instanceof BroadcastMeetingSettings_allowedAudience) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'allowedAudience'");
@@ -86,7 +86,7 @@ class BroadcastMeetingSettings implements AdditionalDataHolder, BackedModel, Par
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'allowedAudience' => fn(ParseNode $n) => $o->setAllowedAudience($n->getEnumValue(BroadcastMeetingAudience::class)),
+            'allowedAudience' => fn(ParseNode $n) => $o->setAllowedAudience($n->getEnumValue(BroadcastMeetingSettings_allowedAudience::class)),
             'captions' => fn(ParseNode $n) => $o->setCaptions($n->getObjectValue([BroadcastMeetingCaptionSettings::class, 'createFromDiscriminatorValue'])),
             'isAttendeeReportEnabled' => fn(ParseNode $n) => $o->setIsAttendeeReportEnabled($n->getBooleanValue()),
             'isQuestionAndAnswerEnabled' => fn(ParseNode $n) => $o->setIsQuestionAndAnswerEnabled($n->getBooleanValue()),
@@ -181,9 +181,9 @@ class BroadcastMeetingSettings implements AdditionalDataHolder, BackedModel, Par
 
     /**
      * Sets the allowedAudience property value. Defines who can join the Teams live event. Possible values are listed in the following table.
-     * @param BroadcastMeetingAudience|null $value Value to set for the allowedAudience property.
+     * @param BroadcastMeetingSettings_allowedAudience|null $value Value to set for the allowedAudience property.
     */
-    public function setAllowedAudience(?BroadcastMeetingAudience $value): void {
+    public function setAllowedAudience(?BroadcastMeetingSettings_allowedAudience $value): void {
         $this->getBackingStore()->set('allowedAudience', $value);
     }
 

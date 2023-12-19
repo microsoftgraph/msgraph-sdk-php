@@ -88,7 +88,7 @@ class ProvisioningObjectSummary extends Entity implements Parsable
             'initiatedBy' => fn(ParseNode $n) => $o->setInitiatedBy($n->getObjectValue([Initiator::class, 'createFromDiscriminatorValue'])),
             'jobId' => fn(ParseNode $n) => $o->setJobId($n->getStringValue()),
             'modifiedProperties' => fn(ParseNode $n) => $o->setModifiedProperties($n->getCollectionOfObjectValues([ModifiedProperty::class, 'createFromDiscriminatorValue'])),
-            'provisioningAction' => fn(ParseNode $n) => $o->setProvisioningAction($n->getEnumValue(ProvisioningAction::class)),
+            'provisioningAction' => fn(ParseNode $n) => $o->setProvisioningAction($n->getEnumValue(ProvisioningObjectSummary_provisioningAction::class)),
             'provisioningStatusInfo' => fn(ParseNode $n) => $o->setProvisioningStatusInfo($n->getObjectValue([ProvisioningStatusInfo::class, 'createFromDiscriminatorValue'])),
             'provisioningSteps' => fn(ParseNode $n) => $o->setProvisioningSteps($n->getCollectionOfObjectValues([ProvisioningStep::class, 'createFromDiscriminatorValue'])),
             'servicePrincipal' => fn(ParseNode $n) => $o->setServicePrincipal($n->getObjectValue([ProvisioningServicePrincipal::class, 'createFromDiscriminatorValue'])),
@@ -140,11 +140,11 @@ class ProvisioningObjectSummary extends Entity implements Parsable
 
     /**
      * Gets the provisioningAction property value. Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Microsoft Entra activity list. Supports $filter (eq, contains).
-     * @return ProvisioningAction|null
+     * @return ProvisioningObjectSummary_provisioningAction|null
     */
-    public function getProvisioningAction(): ?ProvisioningAction {
+    public function getProvisioningAction(): ?ProvisioningObjectSummary_provisioningAction {
         $val = $this->getBackingStore()->get('provisioningAction');
-        if (is_null($val) || $val instanceof ProvisioningAction) {
+        if (is_null($val) || $val instanceof ProvisioningObjectSummary_provisioningAction) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'provisioningAction'");
@@ -330,9 +330,9 @@ class ProvisioningObjectSummary extends Entity implements Parsable
 
     /**
      * Sets the provisioningAction property value. Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Microsoft Entra activity list. Supports $filter (eq, contains).
-     * @param ProvisioningAction|null $value Value to set for the provisioningAction property.
+     * @param ProvisioningObjectSummary_provisioningAction|null $value Value to set for the provisioningAction property.
     */
-    public function setProvisioningAction(?ProvisioningAction $value): void {
+    public function setProvisioningAction(?ProvisioningObjectSummary_provisioningAction $value): void {
         $this->getBackingStore()->set('provisioningAction', $value);
     }
 

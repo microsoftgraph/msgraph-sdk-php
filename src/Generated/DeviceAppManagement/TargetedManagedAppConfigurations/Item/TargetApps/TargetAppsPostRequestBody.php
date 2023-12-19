@@ -3,7 +3,6 @@
 namespace Microsoft\Graph\Generated\DeviceAppManagement\TargetedManagedAppConfigurations\Item\TargetApps;
 
 use Microsoft\Graph\Generated\Models\ManagedMobileApp;
-use Microsoft\Graph\Generated\Models\TargetedManagedAppGroupType;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -52,11 +51,11 @@ class TargetAppsPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
 
     /**
      * Gets the appGroupType property value. The appGroupType property
-     * @return TargetedManagedAppGroupType|null
+     * @return TargetAppsPostRequestBody_appGroupType|null
     */
-    public function getAppGroupType(): ?TargetedManagedAppGroupType {
+    public function getAppGroupType(): ?TargetAppsPostRequestBody_appGroupType {
         $val = $this->getBackingStore()->get('appGroupType');
-        if (is_null($val) || $val instanceof TargetedManagedAppGroupType) {
+        if (is_null($val) || $val instanceof TargetAppsPostRequestBody_appGroupType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'appGroupType'");
@@ -91,7 +90,7 @@ class TargetAppsPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'appGroupType' => fn(ParseNode $n) => $o->setAppGroupType($n->getEnumValue(TargetedManagedAppGroupType::class)),
+            'appGroupType' => fn(ParseNode $n) => $o->setAppGroupType($n->getEnumValue(TargetAppsPostRequestBody_appGroupType::class)),
             'apps' => fn(ParseNode $n) => $o->setApps($n->getCollectionOfObjectValues([ManagedMobileApp::class, 'createFromDiscriminatorValue'])),
         ];
     }
@@ -116,9 +115,9 @@ class TargetAppsPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
 
     /**
      * Sets the appGroupType property value. The appGroupType property
-     * @param TargetedManagedAppGroupType|null $value Value to set for the appGroupType property.
+     * @param TargetAppsPostRequestBody_appGroupType|null $value Value to set for the appGroupType property.
     */
-    public function setAppGroupType(?TargetedManagedAppGroupType $value): void {
+    public function setAppGroupType(?TargetAppsPostRequestBody_appGroupType $value): void {
         $this->getBackingStore()->set('appGroupType', $value);
     }
 

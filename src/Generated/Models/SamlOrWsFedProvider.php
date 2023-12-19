@@ -43,7 +43,7 @@ class SamlOrWsFedProvider extends IdentityProviderBase implements Parsable
             'issuerUri' => fn(ParseNode $n) => $o->setIssuerUri($n->getStringValue()),
             'metadataExchangeUri' => fn(ParseNode $n) => $o->setMetadataExchangeUri($n->getStringValue()),
             'passiveSignInUri' => fn(ParseNode $n) => $o->setPassiveSignInUri($n->getStringValue()),
-            'preferredAuthenticationProtocol' => fn(ParseNode $n) => $o->setPreferredAuthenticationProtocol($n->getEnumValue(AuthenticationProtocol::class)),
+            'preferredAuthenticationProtocol' => fn(ParseNode $n) => $o->setPreferredAuthenticationProtocol($n->getEnumValue(SamlOrWsFedProvider_preferredAuthenticationProtocol::class)),
             'signingCertificate' => fn(ParseNode $n) => $o->setSigningCertificate($n->getStringValue()),
         ]);
     }
@@ -86,11 +86,11 @@ class SamlOrWsFedProvider extends IdentityProviderBase implements Parsable
 
     /**
      * Gets the preferredAuthenticationProtocol property value. Preferred authentication protocol. The possible values are: wsFed, saml, unknownFutureValue.
-     * @return AuthenticationProtocol|null
+     * @return SamlOrWsFedProvider_preferredAuthenticationProtocol|null
     */
-    public function getPreferredAuthenticationProtocol(): ?AuthenticationProtocol {
+    public function getPreferredAuthenticationProtocol(): ?SamlOrWsFedProvider_preferredAuthenticationProtocol {
         $val = $this->getBackingStore()->get('preferredAuthenticationProtocol');
-        if (is_null($val) || $val instanceof AuthenticationProtocol) {
+        if (is_null($val) || $val instanceof SamlOrWsFedProvider_preferredAuthenticationProtocol) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'preferredAuthenticationProtocol'");
@@ -147,9 +147,9 @@ class SamlOrWsFedProvider extends IdentityProviderBase implements Parsable
 
     /**
      * Sets the preferredAuthenticationProtocol property value. Preferred authentication protocol. The possible values are: wsFed, saml, unknownFutureValue.
-     * @param AuthenticationProtocol|null $value Value to set for the preferredAuthenticationProtocol property.
+     * @param SamlOrWsFedProvider_preferredAuthenticationProtocol|null $value Value to set for the preferredAuthenticationProtocol property.
     */
-    public function setPreferredAuthenticationProtocol(?AuthenticationProtocol $value): void {
+    public function setPreferredAuthenticationProtocol(?SamlOrWsFedProvider_preferredAuthenticationProtocol $value): void {
         $this->getBackingStore()->set('preferredAuthenticationProtocol', $value);
     }
 

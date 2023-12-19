@@ -53,7 +53,7 @@ class Operation extends Entity implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'lastActionDateTime' => fn(ParseNode $n) => $o->setLastActionDateTime($n->getDateTimeValue()),
-            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(OperationStatus::class)),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(Operation_status::class)),
         ]);
     }
 
@@ -71,11 +71,11 @@ class Operation extends Entity implements Parsable
 
     /**
      * Gets the status property value. The current status of the operation: notStarted, running, completed, failed
-     * @return OperationStatus|null
+     * @return Operation_status|null
     */
-    public function getStatus(): ?OperationStatus {
+    public function getStatus(): ?Operation_status {
         $val = $this->getBackingStore()->get('status');
-        if (is_null($val) || $val instanceof OperationStatus) {
+        if (is_null($val) || $val instanceof Operation_status) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
@@ -110,9 +110,9 @@ class Operation extends Entity implements Parsable
 
     /**
      * Sets the status property value. The current status of the operation: notStarted, running, completed, failed
-     * @param OperationStatus|null $value Value to set for the status property.
+     * @param Operation_status|null $value Value to set for the status property.
     */
-    public function setStatus(?OperationStatus $value): void {
+    public function setStatus(?Operation_status $value): void {
         $this->getBackingStore()->set('status', $value);
     }
 

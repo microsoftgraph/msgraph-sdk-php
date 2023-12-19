@@ -41,11 +41,11 @@ class CountryNamedLocation extends NamedLocation implements Parsable
 
     /**
      * Gets the countryLookupMethod property value. Determines what method is used to decide which country the user is located in. Possible values are clientIpAddress(default) and authenticatorAppGps. Note: authenticatorAppGps is not yet supported in the Microsoft Cloud for US Government.
-     * @return CountryLookupMethodType|null
+     * @return CountryNamedLocation_countryLookupMethod|null
     */
-    public function getCountryLookupMethod(): ?CountryLookupMethodType {
+    public function getCountryLookupMethod(): ?CountryNamedLocation_countryLookupMethod {
         $val = $this->getBackingStore()->get('countryLookupMethod');
-        if (is_null($val) || $val instanceof CountryLookupMethodType) {
+        if (is_null($val) || $val instanceof CountryNamedLocation_countryLookupMethod) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'countryLookupMethod'");
@@ -66,7 +66,7 @@ class CountryNamedLocation extends NamedLocation implements Parsable
                 /** @var array<string>|null $val */
                 $this->setCountriesAndRegions($val);
             },
-            'countryLookupMethod' => fn(ParseNode $n) => $o->setCountryLookupMethod($n->getEnumValue(CountryLookupMethodType::class)),
+            'countryLookupMethod' => fn(ParseNode $n) => $o->setCountryLookupMethod($n->getEnumValue(CountryNamedLocation_countryLookupMethod::class)),
             'includeUnknownCountriesAndRegions' => fn(ParseNode $n) => $o->setIncludeUnknownCountriesAndRegions($n->getBooleanValue()),
         ]);
     }
@@ -104,9 +104,9 @@ class CountryNamedLocation extends NamedLocation implements Parsable
 
     /**
      * Sets the countryLookupMethod property value. Determines what method is used to decide which country the user is located in. Possible values are clientIpAddress(default) and authenticatorAppGps. Note: authenticatorAppGps is not yet supported in the Microsoft Cloud for US Government.
-     * @param CountryLookupMethodType|null $value Value to set for the countryLookupMethod property.
+     * @param CountryNamedLocation_countryLookupMethod|null $value Value to set for the countryLookupMethod property.
     */
-    public function setCountryLookupMethod(?CountryLookupMethodType $value): void {
+    public function setCountryLookupMethod(?CountryNamedLocation_countryLookupMethod $value): void {
         $this->getBackingStore()->set('countryLookupMethod', $value);
     }
 

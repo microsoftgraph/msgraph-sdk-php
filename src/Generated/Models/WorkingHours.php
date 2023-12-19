@@ -59,13 +59,13 @@ class WorkingHours implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the daysOfWeek property value. The days of the week on which the user works.
-     * @return array<DayOfWeek>|null
+     * @return array<WorkingHours_daysOfWeek>|null
     */
     public function getDaysOfWeek(): ?array {
         $val = $this->getBackingStore()->get('daysOfWeek');
         if (is_array($val) || is_null($val)) {
-            TypeUtils::validateCollectionValues($val, DayOfWeek::class);
-            /** @var array<DayOfWeek>|null $val */
+            TypeUtils::validateCollectionValues($val, WorkingHours_daysOfWeek::class);
+            /** @var array<WorkingHours_daysOfWeek>|null $val */
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'daysOfWeek'");
@@ -90,7 +90,7 @@ class WorkingHours implements AdditionalDataHolder, BackedModel, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'daysOfWeek' => fn(ParseNode $n) => $o->setDaysOfWeek($n->getCollectionOfEnumValues(DayOfWeek::class)),
+            'daysOfWeek' => fn(ParseNode $n) => $o->setDaysOfWeek($n->getCollectionOfEnumValues(WorkingHours_daysOfWeek::class)),
             'endTime' => fn(ParseNode $n) => $o->setEndTime($n->getTimeValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'startTime' => fn(ParseNode $n) => $o->setStartTime($n->getTimeValue()),
@@ -165,7 +165,7 @@ class WorkingHours implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the daysOfWeek property value. The days of the week on which the user works.
-     * @param array<DayOfWeek>|null $value Value to set for the daysOfWeek property.
+     * @param array<WorkingHours_daysOfWeek>|null $value Value to set for the daysOfWeek property.
     */
     public function setDaysOfWeek(?array $value): void {
         $this->getBackingStore()->set('daysOfWeek', $value);

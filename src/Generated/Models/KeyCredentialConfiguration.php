@@ -67,7 +67,7 @@ class KeyCredentialConfiguration implements AdditionalDataHolder, BackedModel, P
             'maxLifetime' => fn(ParseNode $n) => $o->setMaxLifetime($n->getDateIntervalValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'restrictForAppsCreatedAfterDateTime' => fn(ParseNode $n) => $o->setRestrictForAppsCreatedAfterDateTime($n->getDateTimeValue()),
-            'restrictionType' => fn(ParseNode $n) => $o->setRestrictionType($n->getEnumValue(AppKeyCredentialRestrictionType::class)),
+            'restrictionType' => fn(ParseNode $n) => $o->setRestrictionType($n->getEnumValue(KeyCredentialConfiguration_restrictionType::class)),
         ];
     }
 
@@ -109,11 +109,11 @@ class KeyCredentialConfiguration implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Gets the restrictionType property value. The type of restriction being applied. Possible values are asymmetricKeyLifetime, unknownFutureValue. Each value of restrictionType can be used only once per policy.
-     * @return AppKeyCredentialRestrictionType|null
+     * @return KeyCredentialConfiguration_restrictionType|null
     */
-    public function getRestrictionType(): ?AppKeyCredentialRestrictionType {
+    public function getRestrictionType(): ?KeyCredentialConfiguration_restrictionType {
         $val = $this->getBackingStore()->get('restrictionType');
-        if (is_null($val) || $val instanceof AppKeyCredentialRestrictionType) {
+        if (is_null($val) || $val instanceof KeyCredentialConfiguration_restrictionType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'restrictionType'");
@@ -173,9 +173,9 @@ class KeyCredentialConfiguration implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the restrictionType property value. The type of restriction being applied. Possible values are asymmetricKeyLifetime, unknownFutureValue. Each value of restrictionType can be used only once per policy.
-     * @param AppKeyCredentialRestrictionType|null $value Value to set for the restrictionType property.
+     * @param KeyCredentialConfiguration_restrictionType|null $value Value to set for the restrictionType property.
     */
-    public function setRestrictionType(?AppKeyCredentialRestrictionType $value): void {
+    public function setRestrictionType(?KeyCredentialConfiguration_restrictionType $value): void {
         $this->getBackingStore()->set('restrictionType', $value);
     }
 

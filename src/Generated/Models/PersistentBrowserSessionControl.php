@@ -32,17 +32,17 @@ class PersistentBrowserSessionControl extends ConditionalAccessSessionControl im
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'mode' => fn(ParseNode $n) => $o->setMode($n->getEnumValue(PersistentBrowserSessionMode::class)),
+            'mode' => fn(ParseNode $n) => $o->setMode($n->getEnumValue(PersistentBrowserSessionControl_mode::class)),
         ]);
     }
 
     /**
      * Gets the mode property value. Possible values are: always, never.
-     * @return PersistentBrowserSessionMode|null
+     * @return PersistentBrowserSessionControl_mode|null
     */
-    public function getMode(): ?PersistentBrowserSessionMode {
+    public function getMode(): ?PersistentBrowserSessionControl_mode {
         $val = $this->getBackingStore()->get('mode');
-        if (is_null($val) || $val instanceof PersistentBrowserSessionMode) {
+        if (is_null($val) || $val instanceof PersistentBrowserSessionControl_mode) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'mode'");
@@ -59,9 +59,9 @@ class PersistentBrowserSessionControl extends ConditionalAccessSessionControl im
 
     /**
      * Sets the mode property value. Possible values are: always, never.
-     * @param PersistentBrowserSessionMode|null $value Value to set for the mode property.
+     * @param PersistentBrowserSessionControl_mode|null $value Value to set for the mode property.
     */
-    public function setMode(?PersistentBrowserSessionMode $value): void {
+    public function setMode(?PersistentBrowserSessionControl_mode $value): void {
         $this->getBackingStore()->set('mode', $value);
     }
 

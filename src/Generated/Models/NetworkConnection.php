@@ -130,11 +130,11 @@ class NetworkConnection implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the direction property value. Network connection direction. Possible values are: unknown, inbound, outbound.
-     * @return ConnectionDirection|null
+     * @return NetworkConnection_direction|null
     */
-    public function getDirection(): ?ConnectionDirection {
+    public function getDirection(): ?NetworkConnection_direction {
         $val = $this->getBackingStore()->get('direction');
-        if (is_null($val) || $val instanceof ConnectionDirection) {
+        if (is_null($val) || $val instanceof NetworkConnection_direction) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'direction'");
@@ -165,7 +165,7 @@ class NetworkConnection implements AdditionalDataHolder, BackedModel, Parsable
             'destinationLocation' => fn(ParseNode $n) => $o->setDestinationLocation($n->getStringValue()),
             'destinationPort' => fn(ParseNode $n) => $o->setDestinationPort($n->getStringValue()),
             'destinationUrl' => fn(ParseNode $n) => $o->setDestinationUrl($n->getStringValue()),
-            'direction' => fn(ParseNode $n) => $o->setDirection($n->getEnumValue(ConnectionDirection::class)),
+            'direction' => fn(ParseNode $n) => $o->setDirection($n->getEnumValue(NetworkConnection_direction::class)),
             'domainRegisteredDateTime' => fn(ParseNode $n) => $o->setDomainRegisteredDateTime($n->getDateTimeValue()),
             'localDnsName' => fn(ParseNode $n) => $o->setLocalDnsName($n->getStringValue()),
             'natDestinationAddress' => fn(ParseNode $n) => $o->setNatDestinationAddress($n->getStringValue()),
@@ -173,12 +173,12 @@ class NetworkConnection implements AdditionalDataHolder, BackedModel, Parsable
             'natSourceAddress' => fn(ParseNode $n) => $o->setNatSourceAddress($n->getStringValue()),
             'natSourcePort' => fn(ParseNode $n) => $o->setNatSourcePort($n->getStringValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
-            'protocol' => fn(ParseNode $n) => $o->setProtocol($n->getEnumValue(SecurityNetworkProtocol::class)),
+            'protocol' => fn(ParseNode $n) => $o->setProtocol($n->getEnumValue(NetworkConnection_protocol::class)),
             'riskScore' => fn(ParseNode $n) => $o->setRiskScore($n->getStringValue()),
             'sourceAddress' => fn(ParseNode $n) => $o->setSourceAddress($n->getStringValue()),
             'sourceLocation' => fn(ParseNode $n) => $o->setSourceLocation($n->getStringValue()),
             'sourcePort' => fn(ParseNode $n) => $o->setSourcePort($n->getStringValue()),
-            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(ConnectionStatus::class)),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(NetworkConnection_status::class)),
             'urlParameters' => fn(ParseNode $n) => $o->setUrlParameters($n->getStringValue()),
         ];
     }
@@ -257,11 +257,11 @@ class NetworkConnection implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the protocol property value. Network protocol. Possible values are: unknown, ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII.
-     * @return SecurityNetworkProtocol|null
+     * @return NetworkConnection_protocol|null
     */
-    public function getProtocol(): ?SecurityNetworkProtocol {
+    public function getProtocol(): ?NetworkConnection_protocol {
         $val = $this->getBackingStore()->get('protocol');
-        if (is_null($val) || $val instanceof SecurityNetworkProtocol) {
+        if (is_null($val) || $val instanceof NetworkConnection_protocol) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'protocol'");
@@ -317,11 +317,11 @@ class NetworkConnection implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the status property value. Network connection status. Possible values are: unknown, attempted, succeeded, blocked, failed.
-     * @return ConnectionStatus|null
+     * @return NetworkConnection_status|null
     */
-    public function getStatus(): ?ConnectionStatus {
+    public function getStatus(): ?NetworkConnection_status {
         $val = $this->getBackingStore()->get('status');
-        if (is_null($val) || $val instanceof ConnectionStatus) {
+        if (is_null($val) || $val instanceof NetworkConnection_status) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
@@ -434,9 +434,9 @@ class NetworkConnection implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the direction property value. Network connection direction. Possible values are: unknown, inbound, outbound.
-     * @param ConnectionDirection|null $value Value to set for the direction property.
+     * @param NetworkConnection_direction|null $value Value to set for the direction property.
     */
-    public function setDirection(?ConnectionDirection $value): void {
+    public function setDirection(?NetworkConnection_direction $value): void {
         $this->getBackingStore()->set('direction', $value);
     }
 
@@ -498,9 +498,9 @@ class NetworkConnection implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the protocol property value. Network protocol. Possible values are: unknown, ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII.
-     * @param SecurityNetworkProtocol|null $value Value to set for the protocol property.
+     * @param NetworkConnection_protocol|null $value Value to set for the protocol property.
     */
-    public function setProtocol(?SecurityNetworkProtocol $value): void {
+    public function setProtocol(?NetworkConnection_protocol $value): void {
         $this->getBackingStore()->set('protocol', $value);
     }
 
@@ -538,9 +538,9 @@ class NetworkConnection implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the status property value. Network connection status. Possible values are: unknown, attempted, succeeded, blocked, failed.
-     * @param ConnectionStatus|null $value Value to set for the status property.
+     * @param NetworkConnection_status|null $value Value to set for the status property.
     */
-    public function setStatus(?ConnectionStatus $value): void {
+    public function setStatus(?NetworkConnection_status $value): void {
         $this->getBackingStore()->set('status', $value);
     }
 

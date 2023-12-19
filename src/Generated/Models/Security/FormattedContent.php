@@ -75,18 +75,18 @@ class FormattedContent implements AdditionalDataHolder, BackedModel, Parsable
         $o = $this;
         return  [
             'content' => fn(ParseNode $n) => $o->setContent($n->getStringValue()),
-            'format' => fn(ParseNode $n) => $o->setFormat($n->getEnumValue(ContentFormat::class)),
+            'format' => fn(ParseNode $n) => $o->setFormat($n->getEnumValue(FormattedContent_format::class)),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 
     /**
      * Gets the format property value. The format of the content. The possible values are: text, html, markdown, unknownFutureValue.
-     * @return ContentFormat|null
+     * @return FormattedContent_format|null
     */
-    public function getFormat(): ?ContentFormat {
+    public function getFormat(): ?FormattedContent_format {
         $val = $this->getBackingStore()->get('format');
-        if (is_null($val) || $val instanceof ContentFormat) {
+        if (is_null($val) || $val instanceof FormattedContent_format) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'format'");
@@ -141,9 +141,9 @@ class FormattedContent implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the format property value. The format of the content. The possible values are: text, html, markdown, unknownFutureValue.
-     * @param ContentFormat|null $value Value to set for the format property.
+     * @param FormattedContent_format|null $value Value to set for the format property.
     */
-    public function setFormat(?ContentFormat $value): void {
+    public function setFormat(?FormattedContent_format $value): void {
         $this->getBackingStore()->set('format', $value);
     }
 

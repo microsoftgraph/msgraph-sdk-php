@@ -34,7 +34,7 @@ class UserLastSignInRecommendationInsightSetting extends AccessReviewRecommendat
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'recommendationLookBackDuration' => fn(ParseNode $n) => $o->setRecommendationLookBackDuration($n->getDateIntervalValue()),
-            'signInScope' => fn(ParseNode $n) => $o->setSignInScope($n->getEnumValue(UserSignInRecommendationScope::class)),
+            'signInScope' => fn(ParseNode $n) => $o->setSignInScope($n->getEnumValue(UserLastSignInRecommendationInsightSetting_signInScope::class)),
         ]);
     }
 
@@ -52,11 +52,11 @@ class UserLastSignInRecommendationInsightSetting extends AccessReviewRecommendat
 
     /**
      * Gets the signInScope property value. Indicates whether inactivity is calculated based on the user's inactivity in the tenant or in the application. The possible values are tenant, application, unknownFutureValue. application is only relevant when the access review is a review of an assignment to an application.
-     * @return UserSignInRecommendationScope|null
+     * @return UserLastSignInRecommendationInsightSetting_signInScope|null
     */
-    public function getSignInScope(): ?UserSignInRecommendationScope {
+    public function getSignInScope(): ?UserLastSignInRecommendationInsightSetting_signInScope {
         $val = $this->getBackingStore()->get('signInScope');
-        if (is_null($val) || $val instanceof UserSignInRecommendationScope) {
+        if (is_null($val) || $val instanceof UserLastSignInRecommendationInsightSetting_signInScope) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'signInScope'");
@@ -82,9 +82,9 @@ class UserLastSignInRecommendationInsightSetting extends AccessReviewRecommendat
 
     /**
      * Sets the signInScope property value. Indicates whether inactivity is calculated based on the user's inactivity in the tenant or in the application. The possible values are tenant, application, unknownFutureValue. application is only relevant when the access review is a review of an assignment to an application.
-     * @param UserSignInRecommendationScope|null $value Value to set for the signInScope property.
+     * @param UserLastSignInRecommendationInsightSetting_signInScope|null $value Value to set for the signInScope property.
     */
-    public function setSignInScope(?UserSignInRecommendationScope $value): void {
+    public function setSignInScope(?UserLastSignInRecommendationInsightSetting_signInScope $value): void {
         $this->getBackingStore()->set('signInScope', $value);
     }
 

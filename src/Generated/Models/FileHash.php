@@ -62,7 +62,7 @@ class FileHash implements AdditionalDataHolder, BackedModel, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'hashType' => fn(ParseNode $n) => $o->setHashType($n->getEnumValue(FileHashType::class)),
+            'hashType' => fn(ParseNode $n) => $o->setHashType($n->getEnumValue(FileHash_hashType::class)),
             'hashValue' => fn(ParseNode $n) => $o->setHashValue($n->getStringValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
@@ -70,11 +70,11 @@ class FileHash implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the hashType property value. File hash type. Possible values are: unknown, sha1, sha256, md5, authenticodeHash256, lsHash, ctph, peSha1, peSha256.
-     * @return FileHashType|null
+     * @return FileHash_hashType|null
     */
-    public function getHashType(): ?FileHashType {
+    public function getHashType(): ?FileHash_hashType {
         $val = $this->getBackingStore()->get('hashType');
-        if (is_null($val) || $val instanceof FileHashType) {
+        if (is_null($val) || $val instanceof FileHash_hashType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'hashType'");
@@ -133,9 +133,9 @@ class FileHash implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the hashType property value. File hash type. Possible values are: unknown, sha1, sha256, md5, authenticodeHash256, lsHash, ctph, peSha1, peSha256.
-     * @param FileHashType|null $value Value to set for the hashType property.
+     * @param FileHash_hashType|null $value Value to set for the hashType property.
     */
-    public function setHashType(?FileHashType $value): void {
+    public function setHashType(?FileHash_hashType $value): void {
         $this->getBackingStore()->set('hashType', $value);
     }
 

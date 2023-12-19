@@ -28,11 +28,11 @@ class EdiscoveryReviewTag extends Tag implements Parsable
 
     /**
      * Gets the childSelectability property value. Indicates whether a single or multiple child tags can be associated with a document. Possible values are: One, Many.  This value controls whether the UX presents the tags as checkboxes or a radio button group.
-     * @return ChildSelectability|null
+     * @return EdiscoveryReviewTag_childSelectability|null
     */
-    public function getChildSelectability(): ?ChildSelectability {
+    public function getChildSelectability(): ?EdiscoveryReviewTag_childSelectability {
         $val = $this->getBackingStore()->get('childSelectability');
-        if (is_null($val) || $val instanceof ChildSelectability) {
+        if (is_null($val) || $val instanceof EdiscoveryReviewTag_childSelectability) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'childSelectability'");
@@ -59,7 +59,7 @@ class EdiscoveryReviewTag extends Tag implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'childSelectability' => fn(ParseNode $n) => $o->setChildSelectability($n->getEnumValue(ChildSelectability::class)),
+            'childSelectability' => fn(ParseNode $n) => $o->setChildSelectability($n->getEnumValue(EdiscoveryReviewTag_childSelectability::class)),
             'childTags' => fn(ParseNode $n) => $o->setChildTags($n->getCollectionOfObjectValues([EdiscoveryReviewTag::class, 'createFromDiscriminatorValue'])),
             'parent' => fn(ParseNode $n) => $o->setParent($n->getObjectValue([EdiscoveryReviewTag::class, 'createFromDiscriminatorValue'])),
         ]);
@@ -90,9 +90,9 @@ class EdiscoveryReviewTag extends Tag implements Parsable
 
     /**
      * Sets the childSelectability property value. Indicates whether a single or multiple child tags can be associated with a document. Possible values are: One, Many.  This value controls whether the UX presents the tags as checkboxes or a radio button group.
-     * @param ChildSelectability|null $value Value to set for the childSelectability property.
+     * @param EdiscoveryReviewTag_childSelectability|null $value Value to set for the childSelectability property.
     */
-    public function setChildSelectability(?ChildSelectability $value): void {
+    public function setChildSelectability(?EdiscoveryReviewTag_childSelectability $value): void {
         $this->getBackingStore()->set('childSelectability', $value);
     }
 

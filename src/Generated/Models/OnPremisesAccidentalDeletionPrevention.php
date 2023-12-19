@@ -76,7 +76,7 @@ class OnPremisesAccidentalDeletionPrevention implements AdditionalDataHolder, Ba
         return  [
             'alertThreshold' => fn(ParseNode $n) => $o->setAlertThreshold($n->getIntegerValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
-            'synchronizationPreventionType' => fn(ParseNode $n) => $o->setSynchronizationPreventionType($n->getEnumValue(OnPremisesDirectorySynchronizationDeletionPreventionType::class)),
+            'synchronizationPreventionType' => fn(ParseNode $n) => $o->setSynchronizationPreventionType($n->getEnumValue(OnPremisesAccidentalDeletionPrevention_synchronizationPreventionType::class)),
         ];
     }
 
@@ -94,11 +94,11 @@ class OnPremisesAccidentalDeletionPrevention implements AdditionalDataHolder, Ba
 
     /**
      * Gets the synchronizationPreventionType property value. The status of the accidental deletion prevention feature. The possible values are: disabled, enabledForCount, enabledForPercentage, unknownFutureValue.
-     * @return OnPremisesDirectorySynchronizationDeletionPreventionType|null
+     * @return OnPremisesAccidentalDeletionPrevention_synchronizationPreventionType|null
     */
-    public function getSynchronizationPreventionType(): ?OnPremisesDirectorySynchronizationDeletionPreventionType {
+    public function getSynchronizationPreventionType(): ?OnPremisesAccidentalDeletionPrevention_synchronizationPreventionType {
         $val = $this->getBackingStore()->get('synchronizationPreventionType');
-        if (is_null($val) || $val instanceof OnPremisesDirectorySynchronizationDeletionPreventionType) {
+        if (is_null($val) || $val instanceof OnPremisesAccidentalDeletionPrevention_synchronizationPreventionType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'synchronizationPreventionType'");
@@ -149,9 +149,9 @@ class OnPremisesAccidentalDeletionPrevention implements AdditionalDataHolder, Ba
 
     /**
      * Sets the synchronizationPreventionType property value. The status of the accidental deletion prevention feature. The possible values are: disabled, enabledForCount, enabledForPercentage, unknownFutureValue.
-     * @param OnPremisesDirectorySynchronizationDeletionPreventionType|null $value Value to set for the synchronizationPreventionType property.
+     * @param OnPremisesAccidentalDeletionPrevention_synchronizationPreventionType|null $value Value to set for the synchronizationPreventionType property.
     */
-    public function setSynchronizationPreventionType(?OnPremisesDirectorySynchronizationDeletionPreventionType $value): void {
+    public function setSynchronizationPreventionType(?OnPremisesAccidentalDeletionPrevention_synchronizationPreventionType $value): void {
         $this->getBackingStore()->set('synchronizationPreventionType', $value);
     }
 

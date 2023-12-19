@@ -88,7 +88,7 @@ class FollowupFlag implements AdditionalDataHolder, BackedModel, Parsable
         return  [
             'completedDateTime' => fn(ParseNode $n) => $o->setCompletedDateTime($n->getObjectValue([DateTimeTimeZone::class, 'createFromDiscriminatorValue'])),
             'dueDateTime' => fn(ParseNode $n) => $o->setDueDateTime($n->getObjectValue([DateTimeTimeZone::class, 'createFromDiscriminatorValue'])),
-            'flagStatus' => fn(ParseNode $n) => $o->setFlagStatus($n->getEnumValue(FollowupFlagStatus::class)),
+            'flagStatus' => fn(ParseNode $n) => $o->setFlagStatus($n->getEnumValue(FollowupFlag_flagStatus::class)),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'startDateTime' => fn(ParseNode $n) => $o->setStartDateTime($n->getObjectValue([DateTimeTimeZone::class, 'createFromDiscriminatorValue'])),
         ];
@@ -96,11 +96,11 @@ class FollowupFlag implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the flagStatus property value. The status for follow-up for an item. Possible values are notFlagged, complete, and flagged.
-     * @return FollowupFlagStatus|null
+     * @return FollowupFlag_flagStatus|null
     */
-    public function getFlagStatus(): ?FollowupFlagStatus {
+    public function getFlagStatus(): ?FollowupFlag_flagStatus {
         $val = $this->getBackingStore()->get('flagStatus');
-        if (is_null($val) || $val instanceof FollowupFlagStatus) {
+        if (is_null($val) || $val instanceof FollowupFlag_flagStatus) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'flagStatus'");
@@ -177,9 +177,9 @@ class FollowupFlag implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the flagStatus property value. The status for follow-up for an item. Possible values are notFlagged, complete, and flagged.
-     * @param FollowupFlagStatus|null $value Value to set for the flagStatus property.
+     * @param FollowupFlag_flagStatus|null $value Value to set for the flagStatus property.
     */
-    public function setFlagStatus(?FollowupFlagStatus $value): void {
+    public function setFlagStatus(?FollowupFlag_flagStatus $value): void {
         $this->getBackingStore()->set('flagStatus', $value);
     }
 

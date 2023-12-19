@@ -112,7 +112,7 @@ class SharepointSettings extends Entity implements Parsable
                 $this->setExcludedFileExtensionsForSyncApp($val);
             },
             'idleSessionSignOut' => fn(ParseNode $n) => $o->setIdleSessionSignOut($n->getObjectValue([IdleSessionSignOut::class, 'createFromDiscriminatorValue'])),
-            'imageTaggingOption' => fn(ParseNode $n) => $o->setImageTaggingOption($n->getEnumValue(ImageTaggingChoice::class)),
+            'imageTaggingOption' => fn(ParseNode $n) => $o->setImageTaggingOption($n->getEnumValue(SharepointSettings_imageTaggingOption::class)),
             'isCommentingOnSitePagesEnabled' => fn(ParseNode $n) => $o->setIsCommentingOnSitePagesEnabled($n->getBooleanValue()),
             'isFileActivityNotificationEnabled' => fn(ParseNode $n) => $o->setIsFileActivityNotificationEnabled($n->getBooleanValue()),
             'isLegacyAuthProtocolsEnabled' => fn(ParseNode $n) => $o->setIsLegacyAuthProtocolsEnabled($n->getBooleanValue()),
@@ -145,8 +145,8 @@ class SharepointSettings extends Entity implements Parsable
                 /** @var array<string>|null $val */
                 $this->setSharingBlockedDomainList($val);
             },
-            'sharingCapability' => fn(ParseNode $n) => $o->setSharingCapability($n->getEnumValue(SharingCapabilities::class)),
-            'sharingDomainRestrictionMode' => fn(ParseNode $n) => $o->setSharingDomainRestrictionMode($n->getEnumValue(SharingDomainRestrictionMode::class)),
+            'sharingCapability' => fn(ParseNode $n) => $o->setSharingCapability($n->getEnumValue(SharepointSettings_sharingCapability::class)),
+            'sharingDomainRestrictionMode' => fn(ParseNode $n) => $o->setSharingDomainRestrictionMode($n->getEnumValue(SharepointSettings_sharingDomainRestrictionMode::class)),
             'siteCreationDefaultManagedPath' => fn(ParseNode $n) => $o->setSiteCreationDefaultManagedPath($n->getStringValue()),
             'siteCreationDefaultStorageLimitInMB' => fn(ParseNode $n) => $o->setSiteCreationDefaultStorageLimitInMB($n->getIntegerValue()),
             'tenantDefaultTimezone' => fn(ParseNode $n) => $o->setTenantDefaultTimezone($n->getStringValue()),
@@ -167,11 +167,11 @@ class SharepointSettings extends Entity implements Parsable
 
     /**
      * Gets the imageTaggingOption property value. Specifies the image tagging option for the tenant. Possible values are: disabled, basic, enhanced.
-     * @return ImageTaggingChoice|null
+     * @return SharepointSettings_imageTaggingOption|null
     */
-    public function getImageTaggingOption(): ?ImageTaggingChoice {
+    public function getImageTaggingOption(): ?SharepointSettings_imageTaggingOption {
         $val = $this->getBackingStore()->get('imageTaggingOption');
-        if (is_null($val) || $val instanceof ImageTaggingChoice) {
+        if (is_null($val) || $val instanceof SharepointSettings_imageTaggingOption) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'imageTaggingOption'");
@@ -399,11 +399,11 @@ class SharepointSettings extends Entity implements Parsable
 
     /**
      * Gets the sharingCapability property value. Sharing capability for the tenant. Possible values are: disabled, externalUserSharingOnly, externalUserAndGuestSharing, existingExternalUserSharingOnly.
-     * @return SharingCapabilities|null
+     * @return SharepointSettings_sharingCapability|null
     */
-    public function getSharingCapability(): ?SharingCapabilities {
+    public function getSharingCapability(): ?SharepointSettings_sharingCapability {
         $val = $this->getBackingStore()->get('sharingCapability');
-        if (is_null($val) || $val instanceof SharingCapabilities) {
+        if (is_null($val) || $val instanceof SharepointSettings_sharingCapability) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'sharingCapability'");
@@ -411,11 +411,11 @@ class SharepointSettings extends Entity implements Parsable
 
     /**
      * Gets the sharingDomainRestrictionMode property value. Specifies the external sharing mode for domains. Possible values are: none, allowList, blockList.
-     * @return SharingDomainRestrictionMode|null
+     * @return SharepointSettings_sharingDomainRestrictionMode|null
     */
-    public function getSharingDomainRestrictionMode(): ?SharingDomainRestrictionMode {
+    public function getSharingDomainRestrictionMode(): ?SharepointSettings_sharingDomainRestrictionMode {
         $val = $this->getBackingStore()->get('sharingDomainRestrictionMode');
-        if (is_null($val) || $val instanceof SharingDomainRestrictionMode) {
+        if (is_null($val) || $val instanceof SharepointSettings_sharingDomainRestrictionMode) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'sharingDomainRestrictionMode'");
@@ -536,9 +536,9 @@ class SharepointSettings extends Entity implements Parsable
 
     /**
      * Sets the imageTaggingOption property value. Specifies the image tagging option for the tenant. Possible values are: disabled, basic, enhanced.
-     * @param ImageTaggingChoice|null $value Value to set for the imageTaggingOption property.
+     * @param SharepointSettings_imageTaggingOption|null $value Value to set for the imageTaggingOption property.
     */
-    public function setImageTaggingOption(?ImageTaggingChoice $value): void {
+    public function setImageTaggingOption(?SharepointSettings_imageTaggingOption $value): void {
         $this->getBackingStore()->set('imageTaggingOption', $value);
     }
 
@@ -688,17 +688,17 @@ class SharepointSettings extends Entity implements Parsable
 
     /**
      * Sets the sharingCapability property value. Sharing capability for the tenant. Possible values are: disabled, externalUserSharingOnly, externalUserAndGuestSharing, existingExternalUserSharingOnly.
-     * @param SharingCapabilities|null $value Value to set for the sharingCapability property.
+     * @param SharepointSettings_sharingCapability|null $value Value to set for the sharingCapability property.
     */
-    public function setSharingCapability(?SharingCapabilities $value): void {
+    public function setSharingCapability(?SharepointSettings_sharingCapability $value): void {
         $this->getBackingStore()->set('sharingCapability', $value);
     }
 
     /**
      * Sets the sharingDomainRestrictionMode property value. Specifies the external sharing mode for domains. Possible values are: none, allowList, blockList.
-     * @param SharingDomainRestrictionMode|null $value Value to set for the sharingDomainRestrictionMode property.
+     * @param SharepointSettings_sharingDomainRestrictionMode|null $value Value to set for the sharingDomainRestrictionMode property.
     */
-    public function setSharingDomainRestrictionMode(?SharingDomainRestrictionMode $value): void {
+    public function setSharingDomainRestrictionMode(?SharepointSettings_sharingDomainRestrictionMode $value): void {
         $this->getBackingStore()->set('sharingDomainRestrictionMode', $value);
     }
 

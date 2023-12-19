@@ -40,11 +40,11 @@ class Room extends Place implements Parsable
 
     /**
      * Gets the bookingType property value. Type of room. Possible values are standard, and reserved.
-     * @return BookingType|null
+     * @return Room_bookingType|null
     */
-    public function getBookingType(): ?BookingType {
+    public function getBookingType(): ?Room_bookingType {
         $val = $this->getBackingStore()->get('bookingType');
-        if (is_null($val) || $val instanceof BookingType) {
+        if (is_null($val) || $val instanceof Room_bookingType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'bookingType'");
@@ -106,7 +106,7 @@ class Room extends Place implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'audioDeviceName' => fn(ParseNode $n) => $o->setAudioDeviceName($n->getStringValue()),
-            'bookingType' => fn(ParseNode $n) => $o->setBookingType($n->getEnumValue(BookingType::class)),
+            'bookingType' => fn(ParseNode $n) => $o->setBookingType($n->getEnumValue(Room_bookingType::class)),
             'building' => fn(ParseNode $n) => $o->setBuilding($n->getStringValue()),
             'capacity' => fn(ParseNode $n) => $o->setCapacity($n->getIntegerValue()),
             'displayDeviceName' => fn(ParseNode $n) => $o->setDisplayDeviceName($n->getStringValue()),
@@ -245,9 +245,9 @@ class Room extends Place implements Parsable
 
     /**
      * Sets the bookingType property value. Type of room. Possible values are standard, and reserved.
-     * @param BookingType|null $value Value to set for the bookingType property.
+     * @param Room_bookingType|null $value Value to set for the bookingType property.
     */
-    public function setBookingType(?BookingType $value): void {
+    public function setBookingType(?Room_bookingType $value): void {
         $this->getBackingStore()->set('bookingType', $value);
     }
 

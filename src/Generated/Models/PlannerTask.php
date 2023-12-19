@@ -231,7 +231,7 @@ class PlannerTask extends Entity implements Parsable
             'orderHint' => fn(ParseNode $n) => $o->setOrderHint($n->getStringValue()),
             'percentComplete' => fn(ParseNode $n) => $o->setPercentComplete($n->getIntegerValue()),
             'planId' => fn(ParseNode $n) => $o->setPlanId($n->getStringValue()),
-            'previewType' => fn(ParseNode $n) => $o->setPreviewType($n->getEnumValue(PlannerPreviewType::class)),
+            'previewType' => fn(ParseNode $n) => $o->setPreviewType($n->getEnumValue(PlannerTask_previewType::class)),
             'priority' => fn(ParseNode $n) => $o->setPriority($n->getIntegerValue()),
             'progressTaskBoardFormat' => fn(ParseNode $n) => $o->setProgressTaskBoardFormat($n->getObjectValue([PlannerProgressTaskBoardTaskFormat::class, 'createFromDiscriminatorValue'])),
             'referenceCount' => fn(ParseNode $n) => $o->setReferenceCount($n->getIntegerValue()),
@@ -290,11 +290,11 @@ class PlannerTask extends Entity implements Parsable
 
     /**
      * Gets the previewType property value. This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference.
-     * @return PlannerPreviewType|null
+     * @return PlannerTask_previewType|null
     */
-    public function getPreviewType(): ?PlannerPreviewType {
+    public function getPreviewType(): ?PlannerTask_previewType {
         $val = $this->getBackingStore()->get('previewType');
-        if (is_null($val) || $val instanceof PlannerPreviewType) {
+        if (is_null($val) || $val instanceof PlannerTask_previewType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'previewType'");
@@ -547,9 +547,9 @@ class PlannerTask extends Entity implements Parsable
 
     /**
      * Sets the previewType property value. This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference.
-     * @param PlannerPreviewType|null $value Value to set for the previewType property.
+     * @param PlannerTask_previewType|null $value Value to set for the previewType property.
     */
-    public function setPreviewType(?PlannerPreviewType $value): void {
+    public function setPreviewType(?PlannerTask_previewType $value): void {
         $this->getBackingStore()->set('previewType', $value);
     }
 

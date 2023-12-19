@@ -39,11 +39,11 @@ class EmailFileAssessmentRequest extends ThreatAssessmentRequest implements Pars
 
     /**
      * Gets the destinationRoutingReason property value. The reason for mail routed to its destination. Possible values are: none, mailFlowRule, safeSender, blockedSender, advancedSpamFiltering, domainAllowList, domainBlockList, notInAddressBook, firstTimeSender, autoPurgeToInbox, autoPurgeToJunk, autoPurgeToDeleted, outbound, notJunk, junk.
-     * @return MailDestinationRoutingReason|null
+     * @return EmailFileAssessmentRequest_destinationRoutingReason|null
     */
-    public function getDestinationRoutingReason(): ?MailDestinationRoutingReason {
+    public function getDestinationRoutingReason(): ?EmailFileAssessmentRequest_destinationRoutingReason {
         $val = $this->getBackingStore()->get('destinationRoutingReason');
-        if (is_null($val) || $val instanceof MailDestinationRoutingReason) {
+        if (is_null($val) || $val instanceof EmailFileAssessmentRequest_destinationRoutingReason) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'destinationRoutingReason'");
@@ -57,7 +57,7 @@ class EmailFileAssessmentRequest extends ThreatAssessmentRequest implements Pars
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'contentData' => fn(ParseNode $n) => $o->setContentData($n->getStringValue()),
-            'destinationRoutingReason' => fn(ParseNode $n) => $o->setDestinationRoutingReason($n->getEnumValue(MailDestinationRoutingReason::class)),
+            'destinationRoutingReason' => fn(ParseNode $n) => $o->setDestinationRoutingReason($n->getEnumValue(EmailFileAssessmentRequest_destinationRoutingReason::class)),
             'recipientEmail' => fn(ParseNode $n) => $o->setRecipientEmail($n->getStringValue()),
         ]);
     }
@@ -95,9 +95,9 @@ class EmailFileAssessmentRequest extends ThreatAssessmentRequest implements Pars
 
     /**
      * Sets the destinationRoutingReason property value. The reason for mail routed to its destination. Possible values are: none, mailFlowRule, safeSender, blockedSender, advancedSpamFiltering, domainAllowList, domainBlockList, notInAddressBook, firstTimeSender, autoPurgeToInbox, autoPurgeToJunk, autoPurgeToDeleted, outbound, notJunk, junk.
-     * @param MailDestinationRoutingReason|null $value Value to set for the destinationRoutingReason property.
+     * @param EmailFileAssessmentRequest_destinationRoutingReason|null $value Value to set for the destinationRoutingReason property.
     */
-    public function setDestinationRoutingReason(?MailDestinationRoutingReason $value): void {
+    public function setDestinationRoutingReason(?EmailFileAssessmentRequest_destinationRoutingReason $value): void {
         $this->getBackingStore()->set('destinationRoutingReason', $value);
     }
 

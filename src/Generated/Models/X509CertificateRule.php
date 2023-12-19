@@ -64,8 +64,8 @@ class X509CertificateRule implements AdditionalDataHolder, BackedModel, Parsable
         return  [
             'identifier' => fn(ParseNode $n) => $o->setIdentifier($n->getStringValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
-            'x509CertificateAuthenticationMode' => fn(ParseNode $n) => $o->setX509CertificateAuthenticationMode($n->getEnumValue(X509CertificateAuthenticationMode::class)),
-            'x509CertificateRuleType' => fn(ParseNode $n) => $o->setX509CertificateRuleType($n->getEnumValue(X509CertificateRuleType::class)),
+            'x509CertificateAuthenticationMode' => fn(ParseNode $n) => $o->setX509CertificateAuthenticationMode($n->getEnumValue(X509CertificateRule_x509CertificateAuthenticationMode::class)),
+            'x509CertificateRuleType' => fn(ParseNode $n) => $o->setX509CertificateRuleType($n->getEnumValue(X509CertificateRule_x509CertificateRuleType::class)),
         ];
     }
 
@@ -95,11 +95,11 @@ class X509CertificateRule implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the x509CertificateAuthenticationMode property value. The type of strong authentication mode. The possible values are: x509CertificateSingleFactor, x509CertificateMultiFactor, unknownFutureValue. Required.
-     * @return X509CertificateAuthenticationMode|null
+     * @return X509CertificateRule_x509CertificateAuthenticationMode|null
     */
-    public function getX509CertificateAuthenticationMode(): ?X509CertificateAuthenticationMode {
+    public function getX509CertificateAuthenticationMode(): ?X509CertificateRule_x509CertificateAuthenticationMode {
         $val = $this->getBackingStore()->get('x509CertificateAuthenticationMode');
-        if (is_null($val) || $val instanceof X509CertificateAuthenticationMode) {
+        if (is_null($val) || $val instanceof X509CertificateRule_x509CertificateAuthenticationMode) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'x509CertificateAuthenticationMode'");
@@ -107,11 +107,11 @@ class X509CertificateRule implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the x509CertificateRuleType property value. The type of the X.509 certificate mode configuration rule. The possible values are: issuerSubject, policyOID, unknownFutureValue. Required.
-     * @return X509CertificateRuleType|null
+     * @return X509CertificateRule_x509CertificateRuleType|null
     */
-    public function getX509CertificateRuleType(): ?X509CertificateRuleType {
+    public function getX509CertificateRuleType(): ?X509CertificateRule_x509CertificateRuleType {
         $val = $this->getBackingStore()->get('x509CertificateRuleType');
-        if (is_null($val) || $val instanceof X509CertificateRuleType) {
+        if (is_null($val) || $val instanceof X509CertificateRule_x509CertificateRuleType) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'x509CertificateRuleType'");
@@ -163,17 +163,17 @@ class X509CertificateRule implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the x509CertificateAuthenticationMode property value. The type of strong authentication mode. The possible values are: x509CertificateSingleFactor, x509CertificateMultiFactor, unknownFutureValue. Required.
-     * @param X509CertificateAuthenticationMode|null $value Value to set for the x509CertificateAuthenticationMode property.
+     * @param X509CertificateRule_x509CertificateAuthenticationMode|null $value Value to set for the x509CertificateAuthenticationMode property.
     */
-    public function setX509CertificateAuthenticationMode(?X509CertificateAuthenticationMode $value): void {
+    public function setX509CertificateAuthenticationMode(?X509CertificateRule_x509CertificateAuthenticationMode $value): void {
         $this->getBackingStore()->set('x509CertificateAuthenticationMode', $value);
     }
 
     /**
      * Sets the x509CertificateRuleType property value. The type of the X.509 certificate mode configuration rule. The possible values are: issuerSubject, policyOID, unknownFutureValue. Required.
-     * @param X509CertificateRuleType|null $value Value to set for the x509CertificateRuleType property.
+     * @param X509CertificateRule_x509CertificateRuleType|null $value Value to set for the x509CertificateRuleType property.
     */
-    public function setX509CertificateRuleType(?X509CertificateRuleType $value): void {
+    public function setX509CertificateRuleType(?X509CertificateRule_x509CertificateRuleType $value): void {
         $this->getBackingStore()->set('x509CertificateRuleType', $value);
     }
 

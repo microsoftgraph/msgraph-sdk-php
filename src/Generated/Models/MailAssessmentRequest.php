@@ -27,11 +27,11 @@ class MailAssessmentRequest extends ThreatAssessmentRequest implements Parsable
 
     /**
      * Gets the destinationRoutingReason property value. The reason for mail routed to its destination. Possible values are: none, mailFlowRule, safeSender, blockedSender, advancedSpamFiltering, domainAllowList, domainBlockList, notInAddressBook, firstTimeSender, autoPurgeToInbox, autoPurgeToJunk, autoPurgeToDeleted, outbound, notJunk, junk.
-     * @return MailDestinationRoutingReason|null
+     * @return MailAssessmentRequest_destinationRoutingReason|null
     */
-    public function getDestinationRoutingReason(): ?MailDestinationRoutingReason {
+    public function getDestinationRoutingReason(): ?MailAssessmentRequest_destinationRoutingReason {
         $val = $this->getBackingStore()->get('destinationRoutingReason');
-        if (is_null($val) || $val instanceof MailDestinationRoutingReason) {
+        if (is_null($val) || $val instanceof MailAssessmentRequest_destinationRoutingReason) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'destinationRoutingReason'");
@@ -44,7 +44,7 @@ class MailAssessmentRequest extends ThreatAssessmentRequest implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'destinationRoutingReason' => fn(ParseNode $n) => $o->setDestinationRoutingReason($n->getEnumValue(MailDestinationRoutingReason::class)),
+            'destinationRoutingReason' => fn(ParseNode $n) => $o->setDestinationRoutingReason($n->getEnumValue(MailAssessmentRequest_destinationRoutingReason::class)),
             'messageUri' => fn(ParseNode $n) => $o->setMessageUri($n->getStringValue()),
             'recipientEmail' => fn(ParseNode $n) => $o->setRecipientEmail($n->getStringValue()),
         ]);
@@ -87,9 +87,9 @@ class MailAssessmentRequest extends ThreatAssessmentRequest implements Parsable
 
     /**
      * Sets the destinationRoutingReason property value. The reason for mail routed to its destination. Possible values are: none, mailFlowRule, safeSender, blockedSender, advancedSpamFiltering, domainAllowList, domainBlockList, notInAddressBook, firstTimeSender, autoPurgeToInbox, autoPurgeToJunk, autoPurgeToDeleted, outbound, notJunk, junk.
-     * @param MailDestinationRoutingReason|null $value Value to set for the destinationRoutingReason property.
+     * @param MailAssessmentRequest_destinationRoutingReason|null $value Value to set for the destinationRoutingReason property.
     */
-    public function setDestinationRoutingReason(?MailDestinationRoutingReason $value): void {
+    public function setDestinationRoutingReason(?MailAssessmentRequest_destinationRoutingReason $value): void {
         $this->getBackingStore()->set('destinationRoutingReason', $value);
     }
 
