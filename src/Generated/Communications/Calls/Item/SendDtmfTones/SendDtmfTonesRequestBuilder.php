@@ -1,27 +1,28 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppRegistrations\Item\IntendedPolicies\Item\TargetApps;
+namespace Microsoft\Graph\Generated\Communications\Calls\Item\SendDtmfTones;
 
 use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\SendDtmfTonesOperation;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
 
 /**
- * Provides operations to call the targetApps method.
+ * Provides operations to call the sendDtmfTones method.
 */
-class TargetAppsRequestBuilder extends BaseRequestBuilder 
+class SendDtmfTonesRequestBuilder extends BaseRequestBuilder 
 {
     /**
-     * Instantiates a new TargetAppsRequestBuilder and sets the default values.
+     * Instantiates a new SendDtmfTonesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/deviceAppManagement/managedAppRegistrations/{managedAppRegistration%2Did}/intendedPolicies/{managedAppPolicy%2Did}/targetApps');
+        parent::__construct($requestAdapter, [], '{+baseurl}/communications/calls/{call%2Did}/sendDtmfTones');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -30,29 +31,28 @@ class TargetAppsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Not yet documented
-     * @param TargetAppsPostRequestBody $body The request body
-     * @param TargetAppsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<void|null>
+     * Invoke action sendDtmfTones
+     * @param SendDtmfTonesPostRequestBody $body The request body
+     * @param SendDtmfTonesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return Promise<SendDtmfTonesOperation|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-mam-targetedmanagedappprotection-targetapps?view=graph-rest-1.0 Find more info here
     */
-    public function post(TargetAppsPostRequestBody $body, ?TargetAppsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+    public function post(SendDtmfTonesPostRequestBody $body, ?SendDtmfTonesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
                 '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendNoContentAsync($requestInfo, $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [SendDtmfTonesOperation::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**
-     * Not yet documented
-     * @param TargetAppsPostRequestBody $body The request body
-     * @param TargetAppsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * Invoke action sendDtmfTones
+     * @param SendDtmfTonesPostRequestBody $body The request body
+     * @param SendDtmfTonesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(TargetAppsPostRequestBody $body, ?TargetAppsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(SendDtmfTonesPostRequestBody $body, ?SendDtmfTonesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -69,10 +69,10 @@ class TargetAppsRequestBuilder extends BaseRequestBuilder
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param string $rawUrl The raw URL to use for the request builder.
-     * @return TargetAppsRequestBuilder
+     * @return SendDtmfTonesRequestBuilder
     */
-    public function withUrl(string $rawUrl): TargetAppsRequestBuilder {
-        return new TargetAppsRequestBuilder($rawUrl, $this->requestAdapter);
+    public function withUrl(string $rawUrl): SendDtmfTonesRequestBuilder {
+        return new SendDtmfTonesRequestBuilder($rawUrl, $this->requestAdapter);
     }
 
 }

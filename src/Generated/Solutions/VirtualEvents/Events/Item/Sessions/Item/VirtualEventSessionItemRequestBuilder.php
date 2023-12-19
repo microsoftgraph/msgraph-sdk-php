@@ -54,7 +54,7 @@ class VirtualEventSessionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get sessions from solutions
+     * Sessions for the virtual event.
      * @param VirtualEventSessionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<VirtualEventSession|null>
      * @throws Exception
@@ -103,7 +103,7 @@ class VirtualEventSessionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get sessions from solutions
+     * Sessions for the virtual event.
      * @param VirtualEventSessionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

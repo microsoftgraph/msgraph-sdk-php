@@ -33,7 +33,7 @@ class VirtualEvent extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdBy property value. The createdBy property
+     * Gets the createdBy property value. Identity information for the creator of the virtual event. Inherited from virtualEvent.
      * @return CommunicationsIdentitySet|null
     */
     public function getCreatedBy(): ?CommunicationsIdentitySet {
@@ -45,7 +45,7 @@ class VirtualEvent extends Entity implements Parsable
     }
 
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. Description of the virtual event.
      * @return ItemBody|null
     */
     public function getDescription(): ?ItemBody {
@@ -57,7 +57,7 @@ class VirtualEvent extends Entity implements Parsable
     }
 
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. Display name of the virtual event.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -69,7 +69,7 @@ class VirtualEvent extends Entity implements Parsable
     }
 
     /**
-     * Gets the endDateTime property value. The endDateTime property
+     * Gets the endDateTime property value. End time of the virtual event. The timeZone property can be set to any of the time zones currently supported by Windows.
      * @return DateTimeTimeZone|null
     */
     public function getEndDateTime(): ?DateTimeTimeZone {
@@ -98,7 +98,7 @@ class VirtualEvent extends Entity implements Parsable
     }
 
     /**
-     * Gets the sessions property value. The sessions property
+     * Gets the sessions property value. Sessions for the virtual event.
      * @return array<VirtualEventSession>|null
     */
     public function getSessions(): ?array {
@@ -112,7 +112,7 @@ class VirtualEvent extends Entity implements Parsable
     }
 
     /**
-     * Gets the startDateTime property value. The startDateTime property
+     * Gets the startDateTime property value. Start time of the virtual event. The timeZone property can be set to any of the time zones currently supported by Windows.
      * @return DateTimeTimeZone|null
     */
     public function getStartDateTime(): ?DateTimeTimeZone {
@@ -124,7 +124,7 @@ class VirtualEvent extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. The status property
+     * Gets the status property value. Status of the virtual event. The possible values are: draft, published, canceled, unknownFutureValue.
      * @return VirtualEventStatus|null
     */
     public function getStatus(): ?VirtualEventStatus {
@@ -151,7 +151,7 @@ class VirtualEvent extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdBy property value. The createdBy property
+     * Sets the createdBy property value. Identity information for the creator of the virtual event. Inherited from virtualEvent.
      * @param CommunicationsIdentitySet|null $value Value to set for the createdBy property.
     */
     public function setCreatedBy(?CommunicationsIdentitySet $value): void {
@@ -159,7 +159,7 @@ class VirtualEvent extends Entity implements Parsable
     }
 
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. Description of the virtual event.
      * @param ItemBody|null $value Value to set for the description property.
     */
     public function setDescription(?ItemBody $value): void {
@@ -167,7 +167,7 @@ class VirtualEvent extends Entity implements Parsable
     }
 
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. Display name of the virtual event.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -175,7 +175,7 @@ class VirtualEvent extends Entity implements Parsable
     }
 
     /**
-     * Sets the endDateTime property value. The endDateTime property
+     * Sets the endDateTime property value. End time of the virtual event. The timeZone property can be set to any of the time zones currently supported by Windows.
      * @param DateTimeTimeZone|null $value Value to set for the endDateTime property.
     */
     public function setEndDateTime(?DateTimeTimeZone $value): void {
@@ -183,7 +183,7 @@ class VirtualEvent extends Entity implements Parsable
     }
 
     /**
-     * Sets the sessions property value. The sessions property
+     * Sets the sessions property value. Sessions for the virtual event.
      * @param array<VirtualEventSession>|null $value Value to set for the sessions property.
     */
     public function setSessions(?array $value): void {
@@ -191,7 +191,7 @@ class VirtualEvent extends Entity implements Parsable
     }
 
     /**
-     * Sets the startDateTime property value. The startDateTime property
+     * Sets the startDateTime property value. Start time of the virtual event. The timeZone property can be set to any of the time zones currently supported by Windows.
      * @param DateTimeTimeZone|null $value Value to set for the startDateTime property.
     */
     public function setStartDateTime(?DateTimeTimeZone $value): void {
@@ -199,7 +199,7 @@ class VirtualEvent extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. The status property
+     * Sets the status property value. Status of the virtual event. The possible values are: draft, published, canceled, unknownFutureValue.
      * @param VirtualEventStatus|null $value Value to set for the status property.
     */
     public function setStatus(?VirtualEventStatus $value): void {
