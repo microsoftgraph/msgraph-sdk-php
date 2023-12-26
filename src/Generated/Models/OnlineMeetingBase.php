@@ -34,7 +34,7 @@ class OnlineMeetingBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the allowAttendeeToEnableCamera property value. The allowAttendeeToEnableCamera property
+     * Gets the allowAttendeeToEnableCamera property value. Indicates whether attendees can turn on their camera.
      * @return bool|null
     */
     public function getAllowAttendeeToEnableCamera(): ?bool {
@@ -46,7 +46,7 @@ class OnlineMeetingBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the allowAttendeeToEnableMic property value. The allowAttendeeToEnableMic property
+     * Gets the allowAttendeeToEnableMic property value. Indicates whether attendees can turn on their microphone.
      * @return bool|null
     */
     public function getAllowAttendeeToEnableMic(): ?bool {
@@ -58,7 +58,7 @@ class OnlineMeetingBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the allowedPresenters property value. The allowedPresenters property
+     * Gets the allowedPresenters property value. Specifies who can be a presenter in a meeting.
      * @return OnlineMeetingPresenters|null
     */
     public function getAllowedPresenters(): ?OnlineMeetingPresenters {
@@ -70,7 +70,7 @@ class OnlineMeetingBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the allowMeetingChat property value. The allowMeetingChat property
+     * Gets the allowMeetingChat property value. Specifies the mode of the meeting chat.
      * @return MeetingChatMode|null
     */
     public function getAllowMeetingChat(): ?MeetingChatMode {
@@ -82,7 +82,7 @@ class OnlineMeetingBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the allowParticipantsToChangeName property value. The allowParticipantsToChangeName property
+     * Gets the allowParticipantsToChangeName property value. Specifies if participants are allowed to rename themselves in an instance of the meeting.
      * @return bool|null
     */
     public function getAllowParticipantsToChangeName(): ?bool {
@@ -94,7 +94,7 @@ class OnlineMeetingBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the allowTeamworkReactions property value. The allowTeamworkReactions property
+     * Gets the allowTeamworkReactions property value. Indicates if Teams reactions are enabled for the meeting.
      * @return bool|null
     */
     public function getAllowTeamworkReactions(): ?bool {
@@ -106,7 +106,7 @@ class OnlineMeetingBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the attendanceReports property value. The attendanceReports property
+     * Gets the attendanceReports property value. The attendance reports of an online meeting. Read-only.
      * @return array<MeetingAttendanceReport>|null
     */
     public function getAttendanceReports(): ?array {
@@ -120,7 +120,7 @@ class OnlineMeetingBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the audioConferencing property value. The audioConferencing property
+     * Gets the audioConferencing property value. The phone access (dial-in) information for an online meeting. Read-only.
      * @return AudioConferencing|null
     */
     public function getAudioConferencing(): ?AudioConferencing {
@@ -132,7 +132,7 @@ class OnlineMeetingBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the chatInfo property value. The chatInfo property
+     * Gets the chatInfo property value. The chat information associated with this online meeting.
      * @return ChatInfo|null
     */
     public function getChatInfo(): ?ChatInfo {
@@ -173,7 +173,7 @@ class OnlineMeetingBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the isEntryExitAnnounced property value. The isEntryExitAnnounced property
+     * Gets the isEntryExitAnnounced property value. Indicates whether to announce when callers join or leave.
      * @return bool|null
     */
     public function getIsEntryExitAnnounced(): ?bool {
@@ -185,7 +185,7 @@ class OnlineMeetingBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the joinInformation property value. The joinInformation property
+     * Gets the joinInformation property value. The join information in the language and locale variant specified in 'Accept-Language' request HTTP header. Read-only.
      * @return ItemBody|null
     */
     public function getJoinInformation(): ?ItemBody {
@@ -197,7 +197,7 @@ class OnlineMeetingBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the joinMeetingIdSettings property value. The joinMeetingIdSettings property
+     * Gets the joinMeetingIdSettings property value. Specifies the joinMeetingId, the meeting passcode, and the requirement for the passcode. Once an onlineMeeting is created, the joinMeetingIdSettings can't be modified. To make any changes to this property, you must cancel this meeting and create a new one.
      * @return JoinMeetingIdSettings|null
     */
     public function getJoinMeetingIdSettings(): ?JoinMeetingIdSettings {
@@ -209,7 +209,7 @@ class OnlineMeetingBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the joinWebUrl property value. The joinWebUrl property
+     * Gets the joinWebUrl property value. The join URL of the online meeting. Read-only.
      * @return string|null
     */
     public function getJoinWebUrl(): ?string {
@@ -221,7 +221,7 @@ class OnlineMeetingBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the lobbyBypassSettings property value. The lobbyBypassSettings property
+     * Gets the lobbyBypassSettings property value. Specifies which participants can bypass the meeting lobby.
      * @return LobbyBypassSettings|null
     */
     public function getLobbyBypassSettings(): ?LobbyBypassSettings {
@@ -233,7 +233,7 @@ class OnlineMeetingBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the recordAutomatically property value. The recordAutomatically property
+     * Gets the recordAutomatically property value. Indicates whether to record the meeting automatically.
      * @return bool|null
     */
     public function getRecordAutomatically(): ?bool {
@@ -257,7 +257,7 @@ class OnlineMeetingBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the subject property value. The subject property
+     * Gets the subject property value. The subject of the online meeting.
      * @return string|null
     */
     public function getSubject(): ?string {
@@ -269,7 +269,7 @@ class OnlineMeetingBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the videoTeleconferenceId property value. The videoTeleconferenceId property
+     * Gets the videoTeleconferenceId property value. The video teleconferencing ID. Read-only.
      * @return string|null
     */
     public function getVideoTeleconferenceId(): ?string {
@@ -281,7 +281,7 @@ class OnlineMeetingBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the watermarkProtection property value. The watermarkProtection property
+     * Gets the watermarkProtection property value. Specifies whether the client application should apply a watermark to a content type.
      * @return WatermarkProtectionValues|null
     */
     public function getWatermarkProtection(): ?WatermarkProtectionValues {
@@ -320,7 +320,7 @@ class OnlineMeetingBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the allowAttendeeToEnableCamera property value. The allowAttendeeToEnableCamera property
+     * Sets the allowAttendeeToEnableCamera property value. Indicates whether attendees can turn on their camera.
      * @param bool|null $value Value to set for the allowAttendeeToEnableCamera property.
     */
     public function setAllowAttendeeToEnableCamera(?bool $value): void {
@@ -328,7 +328,7 @@ class OnlineMeetingBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the allowAttendeeToEnableMic property value. The allowAttendeeToEnableMic property
+     * Sets the allowAttendeeToEnableMic property value. Indicates whether attendees can turn on their microphone.
      * @param bool|null $value Value to set for the allowAttendeeToEnableMic property.
     */
     public function setAllowAttendeeToEnableMic(?bool $value): void {
@@ -336,7 +336,7 @@ class OnlineMeetingBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the allowedPresenters property value. The allowedPresenters property
+     * Sets the allowedPresenters property value. Specifies who can be a presenter in a meeting.
      * @param OnlineMeetingPresenters|null $value Value to set for the allowedPresenters property.
     */
     public function setAllowedPresenters(?OnlineMeetingPresenters $value): void {
@@ -344,7 +344,7 @@ class OnlineMeetingBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the allowMeetingChat property value. The allowMeetingChat property
+     * Sets the allowMeetingChat property value. Specifies the mode of the meeting chat.
      * @param MeetingChatMode|null $value Value to set for the allowMeetingChat property.
     */
     public function setAllowMeetingChat(?MeetingChatMode $value): void {
@@ -352,7 +352,7 @@ class OnlineMeetingBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the allowParticipantsToChangeName property value. The allowParticipantsToChangeName property
+     * Sets the allowParticipantsToChangeName property value. Specifies if participants are allowed to rename themselves in an instance of the meeting.
      * @param bool|null $value Value to set for the allowParticipantsToChangeName property.
     */
     public function setAllowParticipantsToChangeName(?bool $value): void {
@@ -360,7 +360,7 @@ class OnlineMeetingBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the allowTeamworkReactions property value. The allowTeamworkReactions property
+     * Sets the allowTeamworkReactions property value. Indicates if Teams reactions are enabled for the meeting.
      * @param bool|null $value Value to set for the allowTeamworkReactions property.
     */
     public function setAllowTeamworkReactions(?bool $value): void {
@@ -368,7 +368,7 @@ class OnlineMeetingBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the attendanceReports property value. The attendanceReports property
+     * Sets the attendanceReports property value. The attendance reports of an online meeting. Read-only.
      * @param array<MeetingAttendanceReport>|null $value Value to set for the attendanceReports property.
     */
     public function setAttendanceReports(?array $value): void {
@@ -376,7 +376,7 @@ class OnlineMeetingBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the audioConferencing property value. The audioConferencing property
+     * Sets the audioConferencing property value. The phone access (dial-in) information for an online meeting. Read-only.
      * @param AudioConferencing|null $value Value to set for the audioConferencing property.
     */
     public function setAudioConferencing(?AudioConferencing $value): void {
@@ -384,7 +384,7 @@ class OnlineMeetingBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the chatInfo property value. The chatInfo property
+     * Sets the chatInfo property value. The chat information associated with this online meeting.
      * @param ChatInfo|null $value Value to set for the chatInfo property.
     */
     public function setChatInfo(?ChatInfo $value): void {
@@ -392,7 +392,7 @@ class OnlineMeetingBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the isEntryExitAnnounced property value. The isEntryExitAnnounced property
+     * Sets the isEntryExitAnnounced property value. Indicates whether to announce when callers join or leave.
      * @param bool|null $value Value to set for the isEntryExitAnnounced property.
     */
     public function setIsEntryExitAnnounced(?bool $value): void {
@@ -400,7 +400,7 @@ class OnlineMeetingBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the joinInformation property value. The joinInformation property
+     * Sets the joinInformation property value. The join information in the language and locale variant specified in 'Accept-Language' request HTTP header. Read-only.
      * @param ItemBody|null $value Value to set for the joinInformation property.
     */
     public function setJoinInformation(?ItemBody $value): void {
@@ -408,7 +408,7 @@ class OnlineMeetingBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the joinMeetingIdSettings property value. The joinMeetingIdSettings property
+     * Sets the joinMeetingIdSettings property value. Specifies the joinMeetingId, the meeting passcode, and the requirement for the passcode. Once an onlineMeeting is created, the joinMeetingIdSettings can't be modified. To make any changes to this property, you must cancel this meeting and create a new one.
      * @param JoinMeetingIdSettings|null $value Value to set for the joinMeetingIdSettings property.
     */
     public function setJoinMeetingIdSettings(?JoinMeetingIdSettings $value): void {
@@ -416,7 +416,7 @@ class OnlineMeetingBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the joinWebUrl property value. The joinWebUrl property
+     * Sets the joinWebUrl property value. The join URL of the online meeting. Read-only.
      * @param string|null $value Value to set for the joinWebUrl property.
     */
     public function setJoinWebUrl(?string $value): void {
@@ -424,7 +424,7 @@ class OnlineMeetingBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the lobbyBypassSettings property value. The lobbyBypassSettings property
+     * Sets the lobbyBypassSettings property value. Specifies which participants can bypass the meeting lobby.
      * @param LobbyBypassSettings|null $value Value to set for the lobbyBypassSettings property.
     */
     public function setLobbyBypassSettings(?LobbyBypassSettings $value): void {
@@ -432,7 +432,7 @@ class OnlineMeetingBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the recordAutomatically property value. The recordAutomatically property
+     * Sets the recordAutomatically property value. Indicates whether to record the meeting automatically.
      * @param bool|null $value Value to set for the recordAutomatically property.
     */
     public function setRecordAutomatically(?bool $value): void {
@@ -448,7 +448,7 @@ class OnlineMeetingBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the subject property value. The subject property
+     * Sets the subject property value. The subject of the online meeting.
      * @param string|null $value Value to set for the subject property.
     */
     public function setSubject(?string $value): void {
@@ -456,7 +456,7 @@ class OnlineMeetingBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the videoTeleconferenceId property value. The videoTeleconferenceId property
+     * Sets the videoTeleconferenceId property value. The video teleconferencing ID. Read-only.
      * @param string|null $value Value to set for the videoTeleconferenceId property.
     */
     public function setVideoTeleconferenceId(?string $value): void {
@@ -464,7 +464,7 @@ class OnlineMeetingBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the watermarkProtection property value. The watermarkProtection property
+     * Sets the watermarkProtection property value. Specifies whether the client application should apply a watermark to a content type.
      * @param WatermarkProtectionValues|null $value Value to set for the watermarkProtection property.
     */
     public function setWatermarkProtection(?WatermarkProtectionValues $value): void {

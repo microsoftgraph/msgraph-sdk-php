@@ -52,7 +52,7 @@ class AttendanceReportsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get attendanceReports from users
+     * The attendance reports of an online meeting. Read-only.
      * @param AttendanceReportsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MeetingAttendanceReportCollectionResponse|null>
      * @throws Exception
@@ -83,7 +83,7 @@ class AttendanceReportsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get attendanceReports from users
+     * The attendance reports of an online meeting. Read-only.
      * @param AttendanceReportsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

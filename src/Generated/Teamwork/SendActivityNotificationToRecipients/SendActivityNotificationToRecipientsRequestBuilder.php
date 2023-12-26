@@ -30,7 +30,7 @@ class SendActivityNotificationToRecipientsRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Send activity feed notifications to multiple users, in bulk.  For more details about sending notifications and the requirements for doing so, seesending Teams activity notifications.
+     * Send activity feed notifications to multiple users, in bulk.  For more information, see sending Teams activity notifications.
      * @param SendActivityNotificationToRecipientsPostRequestBody $body The request body
      * @param SendActivityNotificationToRecipientsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
@@ -47,7 +47,7 @@ class SendActivityNotificationToRecipientsRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Send activity feed notifications to multiple users, in bulk.  For more details about sending notifications and the requirements for doing so, seesending Teams activity notifications.
+     * Send activity feed notifications to multiple users, in bulk.  For more information, see sending Teams activity notifications.
      * @param SendActivityNotificationToRecipientsPostRequestBody $body The request body
      * @param SendActivityNotificationToRecipientsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Solutions\VirtualEvents\Events\Item\Sessions
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get sessions from solutions
+ * Sessions for the virtual event.
 */
 class SessionsRequestBuilderGetQueryParameters 
 {

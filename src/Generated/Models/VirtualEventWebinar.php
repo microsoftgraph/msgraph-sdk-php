@@ -26,7 +26,7 @@ class VirtualEventWebinar extends VirtualEvent implements Parsable
     }
 
     /**
-     * Gets the audience property value. The audience property
+     * Gets the audience property value. To whom the webinar is visible.
      * @return MeetingAudience|null
     */
     public function getAudience(): ?MeetingAudience {
@@ -38,7 +38,7 @@ class VirtualEventWebinar extends VirtualEvent implements Parsable
     }
 
     /**
-     * Gets the coOrganizers property value. The coOrganizers property
+     * Gets the coOrganizers property value. Identity information of coorganizers of the webinar.
      * @return array<CommunicationsUserIdentity>|null
     */
     public function getCoOrganizers(): ?array {
@@ -65,7 +65,7 @@ class VirtualEventWebinar extends VirtualEvent implements Parsable
     }
 
     /**
-     * Gets the registrations property value. The registrations property
+     * Gets the registrations property value. Registration records of the webinar.
      * @return array<VirtualEventRegistration>|null
     */
     public function getRegistrations(): ?array {
@@ -90,7 +90,7 @@ class VirtualEventWebinar extends VirtualEvent implements Parsable
     }
 
     /**
-     * Sets the audience property value. The audience property
+     * Sets the audience property value. To whom the webinar is visible.
      * @param MeetingAudience|null $value Value to set for the audience property.
     */
     public function setAudience(?MeetingAudience $value): void {
@@ -98,7 +98,7 @@ class VirtualEventWebinar extends VirtualEvent implements Parsable
     }
 
     /**
-     * Sets the coOrganizers property value. The coOrganizers property
+     * Sets the coOrganizers property value. Identity information of coorganizers of the webinar.
      * @param array<CommunicationsUserIdentity>|null $value Value to set for the coOrganizers property.
     */
     public function setCoOrganizers(?array $value): void {
@@ -106,7 +106,7 @@ class VirtualEventWebinar extends VirtualEvent implements Parsable
     }
 
     /**
-     * Sets the registrations property value. The registrations property
+     * Sets the registrations property value. Registration records of the webinar.
      * @param array<VirtualEventRegistration>|null $value Value to set for the registrations property.
     */
     public function setRegistrations(?array $value): void {

@@ -44,7 +44,20 @@ class TeamsAppSettings extends Entity implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'allowUserRequestsForAppAccess' => fn(ParseNode $n) => $o->setAllowUserRequestsForAppAccess($n->getBooleanValue()),
+            'isUserPersonalScopeResourceSpecificConsentEnabled' => fn(ParseNode $n) => $o->setIsUserPersonalScopeResourceSpecificConsentEnabled($n->getBooleanValue()),
         ]);
+    }
+
+    /**
+     * Gets the isUserPersonalScopeResourceSpecificConsentEnabled property value. Indicates whether resource-specific consent for personal scope in Teams apps is enabled for the tenant. True indicates that Teams apps that are allowed in the tenant and require resource-specific permissions can be installed in the personal scope. False blocks the installation of any Teams app that requires resource-specific permissions in the personal scope.
+     * @return bool|null
+    */
+    public function getIsUserPersonalScopeResourceSpecificConsentEnabled(): ?bool {
+        $val = $this->getBackingStore()->get('isUserPersonalScopeResourceSpecificConsentEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isUserPersonalScopeResourceSpecificConsentEnabled'");
     }
 
     /**
@@ -54,6 +67,7 @@ class TeamsAppSettings extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeBooleanValue('allowUserRequestsForAppAccess', $this->getAllowUserRequestsForAppAccess());
+        $writer->writeBooleanValue('isUserPersonalScopeResourceSpecificConsentEnabled', $this->getIsUserPersonalScopeResourceSpecificConsentEnabled());
     }
 
     /**
@@ -62,6 +76,14 @@ class TeamsAppSettings extends Entity implements Parsable
     */
     public function setAllowUserRequestsForAppAccess(?bool $value): void {
         $this->getBackingStore()->set('allowUserRequestsForAppAccess', $value);
+    }
+
+    /**
+     * Sets the isUserPersonalScopeResourceSpecificConsentEnabled property value. Indicates whether resource-specific consent for personal scope in Teams apps is enabled for the tenant. True indicates that Teams apps that are allowed in the tenant and require resource-specific permissions can be installed in the personal scope. False blocks the installation of any Teams app that requires resource-specific permissions in the personal scope.
+     * @param bool|null $value Value to set for the isUserPersonalScopeResourceSpecificConsentEnabled property.
+    */
+    public function setIsUserPersonalScopeResourceSpecificConsentEnabled(?bool $value): void {
+        $this->getBackingStore()->set('isUserPersonalScopeResourceSpecificConsentEnabled', $value);
     }
 
 }
