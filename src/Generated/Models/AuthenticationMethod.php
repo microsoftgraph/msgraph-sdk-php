@@ -56,4 +56,17 @@ class AuthenticationMethod extends Entity implements Parsable
         parent::serialize($writer);
     }
 
+    	
+	 /**
+     * Gets the id property value. Th
+     * @return string|null
+    */
+    public function getId(): ?string {
+        $val = $this->getBackingStore()->get('id');
+        if (is_null($val[1]) || is_string($val[1])) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'id'");
+    }
+	
 }
