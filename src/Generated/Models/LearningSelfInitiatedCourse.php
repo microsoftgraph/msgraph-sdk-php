@@ -37,7 +37,7 @@ class LearningSelfInitiatedCourse extends LearningCourseActivity implements Pars
     }
 
     /**
-     * Gets the startedDateTime property value. The date and time on which the self-initiated course was started by the learner. Optional.
+     * Gets the startedDateTime property value. The date and time on which the learner started the self-initiated course. Optional.
      * @return DateTime|null
     */
     public function getStartedDateTime(): ?DateTime {
@@ -58,7 +58,7 @@ class LearningSelfInitiatedCourse extends LearningCourseActivity implements Pars
     }
 
     /**
-     * Sets the startedDateTime property value. The date and time on which the self-initiated course was started by the learner. Optional.
+     * Sets the startedDateTime property value. The date and time on which the learner started the self-initiated course. Optional.
      * @param DateTime|null $value Value to set for the startedDateTime property.
     */
     public function setStartedDateTime(?DateTime $value): void {
