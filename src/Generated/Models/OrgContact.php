@@ -268,7 +268,7 @@ class OrgContact extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the serviceProvisioningErrors property value. The serviceProvisioningErrors property
+     * Gets the serviceProvisioningErrors property value. Errors published by a federated service describing a non-transient, service-specific error regarding the properties or link from an organizational contact object .  Supports $filter (eq, not, for isResolved and serviceInstance).
      * @return array<ServiceProvisioningError>|null
     */
     public function getServiceProvisioningErrors(): ?array {
@@ -463,7 +463,7 @@ class OrgContact extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the serviceProvisioningErrors property value. The serviceProvisioningErrors property
+     * Sets the serviceProvisioningErrors property value. Errors published by a federated service describing a non-transient, service-specific error regarding the properties or link from an organizational contact object .  Supports $filter (eq, not, for isResolved and serviceInstance).
      * @param array<ServiceProvisioningError>|null $value Value to set for the serviceProvisioningErrors property.
     */
     public function setServiceProvisioningErrors(?array $value): void {

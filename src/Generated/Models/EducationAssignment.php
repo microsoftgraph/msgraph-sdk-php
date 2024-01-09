@@ -231,6 +231,7 @@ class EducationAssignment extends Entity implements Parsable
             'dueDateTime' => fn(ParseNode $n) => $o->setDueDateTime($n->getDateTimeValue()),
             'feedbackResourcesFolderUrl' => fn(ParseNode $n) => $o->setFeedbackResourcesFolderUrl($n->getStringValue()),
             'grading' => fn(ParseNode $n) => $o->setGrading($n->getObjectValue([EducationAssignmentGradeType::class, 'createFromDiscriminatorValue'])),
+            'gradingCategory' => fn(ParseNode $n) => $o->setGradingCategory($n->getObjectValue([EducationGradingCategory::class, 'createFromDiscriminatorValue'])),
             'instructions' => fn(ParseNode $n) => $o->setInstructions($n->getObjectValue([EducationItemBody::class, 'createFromDiscriminatorValue'])),
             'lastModifiedBy' => fn(ParseNode $n) => $o->setLastModifiedBy($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
             'lastModifiedDateTime' => fn(ParseNode $n) => $o->setLastModifiedDateTime($n->getDateTimeValue()),
@@ -254,6 +255,18 @@ class EducationAssignment extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'grading'");
+    }
+
+    /**
+     * Gets the gradingCategory property value. The gradingCategory property
+     * @return EducationGradingCategory|null
+    */
+    public function getGradingCategory(): ?EducationGradingCategory {
+        $val = $this->getBackingStore()->get('gradingCategory');
+        if (is_null($val) || $val instanceof EducationGradingCategory) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'gradingCategory'");
     }
 
     /**
@@ -397,6 +410,7 @@ class EducationAssignment extends Entity implements Parsable
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeDateTimeValue('dueDateTime', $this->getDueDateTime());
         $writer->writeObjectValue('grading', $this->getGrading());
+        $writer->writeObjectValue('gradingCategory', $this->getGradingCategory());
         $writer->writeObjectValue('instructions', $this->getInstructions());
         $writer->writeStringValue('notificationChannelUrl', $this->getNotificationChannelUrl());
         $writer->writeCollectionOfObjectValues('resources', $this->getResources());
@@ -530,6 +544,14 @@ class EducationAssignment extends Entity implements Parsable
     */
     public function setGrading(?EducationAssignmentGradeType $value): void {
         $this->getBackingStore()->set('grading', $value);
+    }
+
+    /**
+     * Sets the gradingCategory property value. The gradingCategory property
+     * @param EducationGradingCategory|null $value Value to set for the gradingCategory property.
+    */
+    public function setGradingCategory(?EducationGradingCategory $value): void {
+        $this->getBackingStore()->set('gradingCategory', $value);
     }
 
     /**

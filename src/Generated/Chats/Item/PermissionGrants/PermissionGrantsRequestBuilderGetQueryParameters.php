@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Chats\Item\PermissionGrants;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List all resource-specific permission grants on the chat. This list specifies the Microsoft Entra apps that have access to the chat, along with the corresponding kind of resource-specific access that each app has.
+ * List all resource-specific permission grants on the chat. This list specifies the Microsoft Entra apps that have access to the chat, along with the corresponding resource-specific access that each app has.
 */
 class PermissionGrantsRequestBuilderGetQueryParameters 
 {

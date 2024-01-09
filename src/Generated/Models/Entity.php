@@ -351,6 +351,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.educationClass': return new EducationClass();
                 case '#microsoft.graph.educationFeedbackOutcome': return new EducationFeedbackOutcome();
                 case '#microsoft.graph.educationFeedbackResourceOutcome': return new EducationFeedbackResourceOutcome();
+                case '#microsoft.graph.educationGradingCategory': return new EducationGradingCategory();
                 case '#microsoft.graph.educationOrganization': return new EducationOrganization();
                 case '#microsoft.graph.educationOutcome': return new EducationOutcome();
                 case '#microsoft.graph.educationPointsOutcome': return new EducationPointsOutcome();
@@ -707,6 +708,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.security.whoisHistoryRecord': return new WhoisHistoryRecord();
                 case '#microsoft.graph.security.whoisRecord': return new WhoisRecord();
                 case '#microsoft.graph.securityReportsRoot': return new SecurityReportsRoot();
+                case '#microsoft.graph.sendDtmfTonesOperation': return new SendDtmfTonesOperation();
                 case '#microsoft.graph.serviceAnnouncement': return new ServiceAnnouncement();
                 case '#microsoft.graph.serviceAnnouncementAttachment': return new ServiceAnnouncementAttachment();
                 case '#microsoft.graph.serviceAnnouncementBase': return new ServiceAnnouncementBase();

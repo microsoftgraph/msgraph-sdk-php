@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Group\ServicePro
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get serviceProvisioningErrors property value
+ * Errors published by a federated service describing a non-transient, service-specific error regarding the properties or link from a group object .  Supports $filter (eq, not, for isResolved and serviceInstance).
 */
 class ServiceProvisioningErrorsRequestBuilderGetQueryParameters 
 {
