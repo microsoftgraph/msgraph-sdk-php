@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Education\Me\Assignments\Item;
 use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Categories\CategoriesRequestBuilder;
+use Microsoft\Graph\Generated\Education\Me\Assignments\Item\GradingCategory\GradingCategoryRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Publish\PublishRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Resources\ResourcesRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Rubric\RubricRequestBuilder;
@@ -28,6 +29,13 @@ class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder
     */
     public function categories(): CategoriesRequestBuilder {
         return new CategoriesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the gradingCategory property of the microsoft.graph.educationAssignment entity.
+    */
+    public function gradingCategory(): GradingCategoryRequestBuilder {
+        return new GradingCategoryRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class EducationAssignmentSettings extends Entity implements Parsable 
 {
@@ -31,8 +32,23 @@ class EducationAssignmentSettings extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'gradingCategories' => fn(ParseNode $n) => $o->setGradingCategories($n->getCollectionOfObjectValues([EducationGradingCategory::class, 'createFromDiscriminatorValue'])),
             'submissionAnimationDisabled' => fn(ParseNode $n) => $o->setSubmissionAnimationDisabled($n->getBooleanValue()),
         ]);
+    }
+
+    /**
+     * Gets the gradingCategories property value. The gradingCategories property
+     * @return array<EducationGradingCategory>|null
+    */
+    public function getGradingCategories(): ?array {
+        $val = $this->getBackingStore()->get('gradingCategories');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, EducationGradingCategory::class);
+            /** @var array<EducationGradingCategory>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'gradingCategories'");
     }
 
     /**
@@ -53,7 +69,16 @@ class EducationAssignmentSettings extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeCollectionOfObjectValues('gradingCategories', $this->getGradingCategories());
         $writer->writeBooleanValue('submissionAnimationDisabled', $this->getSubmissionAnimationDisabled());
+    }
+
+    /**
+     * Sets the gradingCategories property value. The gradingCategories property
+     * @param array<EducationGradingCategory>|null $value Value to set for the gradingCategories property.
+    */
+    public function setGradingCategories(?array $value): void {
+        $this->getBackingStore()->set('gradingCategories', $value);
     }
 
     /**

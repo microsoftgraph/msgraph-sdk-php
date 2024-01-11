@@ -26,7 +26,7 @@ class ServiceProvisioningXmlError extends ServiceProvisioningError implements Pa
     }
 
     /**
-     * Gets the errorDetail property value. The errorDetail property
+     * Gets the errorDetail property value. Error Information published by the Federated Service as an xml string.
      * @return string|null
     */
     public function getErrorDetail(): ?string {
@@ -58,7 +58,7 @@ class ServiceProvisioningXmlError extends ServiceProvisioningError implements Pa
     }
 
     /**
-     * Sets the errorDetail property value. The errorDetail property
+     * Sets the errorDetail property value. Error Information published by the Federated Service as an xml string.
      * @param string|null $value Value to set for the errorDetail property.
     */
     public function setErrorDetail(?string $value): void {
