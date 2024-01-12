@@ -61,7 +61,7 @@ Note that your application will need to handle redirecting the user to the Micro
 [See](https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-auth-code-flow) for more on the `authorization_code` grant flow.
 
 
-### Initialise a GraphServiceClient
+### Initialize a GraphServiceClient
 
 Using the Token Request Context and optional scopes, a `GraphServiceClient` can be initialised:
 
