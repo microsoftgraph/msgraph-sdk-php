@@ -601,11 +601,11 @@ class UserItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a user.
+     * Delete user.   When deleted, user resources are moved to a temporary container and can be restored within 30 days.  After that time, they are permanently deleted.  To learn more, see deletedItems.
      * @param UserItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-mam-user-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/user-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?UserItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -631,7 +631,7 @@ class UserItemRequestBuilder extends BaseRequestBuilder
      * @param UserItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<User|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-mam-user-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-onboarding-user-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?UserItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -648,7 +648,7 @@ class UserItemRequestBuilder extends BaseRequestBuilder
      * @param UserItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<User|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-mam-user-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-onboarding-user-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(User $body, ?UserItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -670,7 +670,7 @@ class UserItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a user.
+     * Delete user.   When deleted, user resources are moved to a temporary container and can be restored within 30 days.  After that time, they are permanently deleted.  To learn more, see deletedItems.
      * @param UserItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

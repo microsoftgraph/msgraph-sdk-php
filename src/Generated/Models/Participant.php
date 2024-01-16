@@ -119,7 +119,7 @@ class Participant extends Entity implements Parsable
     }
 
     /**
-     * Gets the removedState property value. The removedState property
+     * Gets the removedState property value. Indicates the reason why the participant was removed from the roster.
      * @return RemovedState|null
     */
     public function getRemovedState(): ?RemovedState {
@@ -143,7 +143,7 @@ class Participant extends Entity implements Parsable
     }
 
     /**
-     * Gets the rosterSequenceNumber property value. The rosterSequenceNumber property
+     * Gets the rosterSequenceNumber property value. Indicates the roster sequence number in which the participant was last updated.
      * @return int|null
     */
     public function getRosterSequenceNumber(): ?int {
@@ -220,7 +220,7 @@ class Participant extends Entity implements Parsable
     }
 
     /**
-     * Sets the removedState property value. The removedState property
+     * Sets the removedState property value. Indicates the reason why the participant was removed from the roster.
      * @param RemovedState|null $value Value to set for the removedState property.
     */
     public function setRemovedState(?RemovedState $value): void {
@@ -236,7 +236,7 @@ class Participant extends Entity implements Parsable
     }
 
     /**
-     * Sets the rosterSequenceNumber property value. The rosterSequenceNumber property
+     * Sets the rosterSequenceNumber property value. Indicates the roster sequence number in which the participant was last updated.
      * @param int|null $value Value to set for the rosterSequenceNumber property.
     */
     public function setRosterSequenceNumber(?int $value): void {

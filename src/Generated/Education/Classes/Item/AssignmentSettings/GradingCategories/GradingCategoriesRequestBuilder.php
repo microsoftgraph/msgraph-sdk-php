@@ -52,7 +52,7 @@ class GradingCategoriesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get gradingCategories from education
+     * When set, enables users to weight assignments differently when computing a class average grade.
      * @param GradingCategoriesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EducationGradingCategoryCollectionResponse|null>
      * @throws Exception
@@ -83,7 +83,7 @@ class GradingCategoriesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get gradingCategories from education
+     * When set, enables users to weight assignments differently when computing a class average grade.
      * @param GradingCategoriesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

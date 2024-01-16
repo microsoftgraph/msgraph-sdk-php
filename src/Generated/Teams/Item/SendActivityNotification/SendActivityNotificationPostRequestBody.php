@@ -95,6 +95,7 @@ class SendActivityNotificationPostRequestBody implements AdditionalDataHolder, B
             'chainId' => fn(ParseNode $n) => $o->setChainId($n->getIntegerValue()),
             'previewText' => fn(ParseNode $n) => $o->setPreviewText($n->getObjectValue([ItemBody::class, 'createFromDiscriminatorValue'])),
             'recipient' => fn(ParseNode $n) => $o->setRecipient($n->getObjectValue([TeamworkNotificationRecipient::class, 'createFromDiscriminatorValue'])),
+            'teamsAppId' => fn(ParseNode $n) => $o->setTeamsAppId($n->getStringValue()),
             'templateParameters' => fn(ParseNode $n) => $o->setTemplateParameters($n->getCollectionOfObjectValues([KeyValuePair::class, 'createFromDiscriminatorValue'])),
             'topic' => fn(ParseNode $n) => $o->setTopic($n->getObjectValue([TeamworkActivityTopic::class, 'createFromDiscriminatorValue'])),
         ];
@@ -122,6 +123,18 @@ class SendActivityNotificationPostRequestBody implements AdditionalDataHolder, B
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'recipient'");
+    }
+
+    /**
+     * Gets the teamsAppId property value. The teamsAppId property
+     * @return string|null
+    */
+    public function getTeamsAppId(): ?string {
+        $val = $this->getBackingStore()->get('teamsAppId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'teamsAppId'");
     }
 
     /**
@@ -159,6 +172,7 @@ class SendActivityNotificationPostRequestBody implements AdditionalDataHolder, B
         $writer->writeIntegerValue('chainId', $this->getChainId());
         $writer->writeObjectValue('previewText', $this->getPreviewText());
         $writer->writeObjectValue('recipient', $this->getRecipient());
+        $writer->writeStringValue('teamsAppId', $this->getTeamsAppId());
         $writer->writeCollectionOfObjectValues('templateParameters', $this->getTemplateParameters());
         $writer->writeObjectValue('topic', $this->getTopic());
         $writer->writeAdditionalData($this->getAdditionalData());
@@ -210,6 +224,14 @@ class SendActivityNotificationPostRequestBody implements AdditionalDataHolder, B
     */
     public function setRecipient(?TeamworkNotificationRecipient $value): void {
         $this->getBackingStore()->set('recipient', $value);
+    }
+
+    /**
+     * Sets the teamsAppId property value. The teamsAppId property
+     * @param string|null $value Value to set for the teamsAppId property.
+    */
+    public function setTeamsAppId(?string $value): void {
+        $this->getBackingStore()->set('teamsAppId', $value);
     }
 
     /**
