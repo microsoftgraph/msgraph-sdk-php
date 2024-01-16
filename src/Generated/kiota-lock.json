@@ -1,8 +1,8 @@
 {
-  "descriptionHash": "76EEA49778E8E798810C3493B8DF4FB7A7BEF7F59ACCE80B76BB8B115C53E7C039F2C19BF504EEFDD0199533760171D3AA03EB125C7AFBDFD94D83E65084684E",
+  "descriptionHash": "03B9E09A741A76AAFEBA29F6D228D8A89F212F29898DFD5C399502964D5960400BB9306E2310EFE70D87BE5B6B8267C59623C0EE0B097C0D8CBFA62907EB8ECF",
   "descriptionLocation": "../../msgraph-metadata/clean_v10_openapi/openapi.yaml",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.10.0",
+  "kiotaVersion": "1.11.0",
   "clientClassName": "BaseGraphClient",
   "clientNamespaceName": "Microsoft\\Graph\\Generated",
   "language": "PHP",

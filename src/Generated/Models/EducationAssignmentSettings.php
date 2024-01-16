@@ -38,7 +38,7 @@ class EducationAssignmentSettings extends Entity implements Parsable
     }
 
     /**
-     * Gets the gradingCategories property value. The gradingCategories property
+     * Gets the gradingCategories property value. When set, enables users to weight assignments differently when computing a class average grade.
      * @return array<EducationGradingCategory>|null
     */
     public function getGradingCategories(): ?array {
@@ -52,7 +52,7 @@ class EducationAssignmentSettings extends Entity implements Parsable
     }
 
     /**
-     * Gets the submissionAnimationDisabled property value. Indicates whether turn-in celebration animation is shown. A value of true indicates that the animation isn't shown. Default value is false.
+     * Gets the submissionAnimationDisabled property value. Indicates whether to show the turn-in celebration animation. If true, indicates to skip the animation. The default value is false.
      * @return bool|null
     */
     public function getSubmissionAnimationDisabled(): ?bool {
@@ -74,7 +74,7 @@ class EducationAssignmentSettings extends Entity implements Parsable
     }
 
     /**
-     * Sets the gradingCategories property value. The gradingCategories property
+     * Sets the gradingCategories property value. When set, enables users to weight assignments differently when computing a class average grade.
      * @param array<EducationGradingCategory>|null $value Value to set for the gradingCategories property.
     */
     public function setGradingCategories(?array $value): void {
@@ -82,7 +82,7 @@ class EducationAssignmentSettings extends Entity implements Parsable
     }
 
     /**
-     * Sets the submissionAnimationDisabled property value. Indicates whether turn-in celebration animation is shown. A value of true indicates that the animation isn't shown. Default value is false.
+     * Sets the submissionAnimationDisabled property value. Indicates whether to show the turn-in celebration animation. If true, indicates to skip the animation. The default value is false.
      * @param bool|null $value Value to set for the submissionAnimationDisabled property.
     */
     public function setSubmissionAnimationDisabled(?bool $value): void {

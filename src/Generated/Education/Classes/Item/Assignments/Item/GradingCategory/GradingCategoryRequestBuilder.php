@@ -31,7 +31,23 @@ class GradingCategoryRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get gradingCategory from education
+     * Remove a gradingCategory from an educationAssignment. Only teachers can perform this operation.
+     * @param GradingCategoryRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return Promise<void|null>
+     * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/educationassignment-delete-gradingcategory?view=graph-rest-1.0 Find more info here
+    */
+    public function delete(?GradingCategoryRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+        $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
+        $errorMappings = [
+                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+        ];
+        return $this->requestAdapter->sendNoContentAsync($requestInfo, $errorMappings);
+    }
+
+    /**
+     * When set, enables users to weight assignments differently when computing a class average grade.
      * @param GradingCategoryRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EducationGradingCategory|null>
      * @throws Exception
@@ -46,7 +62,25 @@ class GradingCategoryRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get gradingCategory from education
+     * Remove a gradingCategory from an educationAssignment. Only teachers can perform this operation.
+     * @param GradingCategoryRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return RequestInformation
+    */
+    public function toDeleteRequestInformation(?GradingCategoryRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+        $requestInfo = new RequestInformation();
+        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->pathParameters = $this->pathParameters;
+        $requestInfo->httpMethod = HttpMethod::DELETE;
+        if ($requestConfiguration !== null) {
+            $requestInfo->addHeaders($requestConfiguration->headers);
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
+        }
+        $requestInfo->tryAddHeader('Accept', "application/json");
+        return $requestInfo;
+    }
+
+    /**
+     * When set, enables users to weight assignments differently when computing a class average grade.
      * @param GradingCategoryRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

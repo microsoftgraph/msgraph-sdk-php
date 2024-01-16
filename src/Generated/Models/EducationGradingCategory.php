@@ -25,7 +25,7 @@ class EducationGradingCategory extends Entity implements Parsable
     }
 
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The name of the grading category.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -49,7 +49,7 @@ class EducationGradingCategory extends Entity implements Parsable
     }
 
     /**
-     * Gets the percentageWeight property value. The percentageWeight property
+     * Gets the percentageWeight property value. The weight of the category; an integer between 0 and 100.
      * @return int|null
     */
     public function getPercentageWeight(): ?int {
@@ -71,7 +71,7 @@ class EducationGradingCategory extends Entity implements Parsable
     }
 
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The name of the grading category.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -79,7 +79,7 @@ class EducationGradingCategory extends Entity implements Parsable
     }
 
     /**
-     * Sets the percentageWeight property value. The percentageWeight property
+     * Sets the percentageWeight property value. The weight of the category; an integer between 0 and 100.
      * @param int|null $value Value to set for the percentageWeight property.
     */
     public function setPercentageWeight(?int $value): void {
