@@ -35,7 +35,7 @@ class HomeRealmDiscoveryPoliciesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Gets an item from the Microsoft/Graph/Generated.servicePrincipals.item.homeRealmDiscoveryPolicies.item collection
-     * @param string $homeRealmDiscoveryPolicyId Unique identifier of the item
+     * @param string $homeRealmDiscoveryPolicyId The unique identifier of homeRealmDiscoveryPolicy
      * @return HomeRealmDiscoveryPolicyItemRequestBuilder
     */
     public function byHomeRealmDiscoveryPolicyId(string $homeRealmDiscoveryPolicyId): HomeRealmDiscoveryPolicyItemRequestBuilder {

@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Admin\People;
 use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Admin\People\ProfileCardProperties\ProfileCardPropertiesRequestBuilder;
+use Microsoft\Graph\Generated\Admin\People\Pronouns\PronounsRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\PeopleAdminSettings;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -22,6 +23,13 @@ class PeopleRequestBuilder extends BaseRequestBuilder
     */
     public function profileCardProperties(): ProfileCardPropertiesRequestBuilder {
         return new ProfileCardPropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the pronouns property of the microsoft.graph.peopleAdminSettings entity.
+    */
+    public function pronouns(): PronounsRequestBuilder {
+        return new PronounsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -55,22 +63,6 @@ class PeopleRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property people in admin
-     * @param PeopleAdminSettings $body The request body
-     * @param PeopleRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<PeopleAdminSettings|null>
-     * @throws Exception
-    */
-    public function patch(PeopleAdminSettings $body, ?PeopleRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
-        $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
-        $errorMappings = [
-                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-        ];
-        return $this->requestAdapter->sendAsync($requestInfo, [PeopleAdminSettings::class, 'createFromDiscriminatorValue'], $errorMappings);
-    }
-
-    /**
      * Retrieve the properties and relationships of a peopleAdminSettings object.
      * @param PeopleRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -88,26 +80,6 @@ class PeopleRequestBuilder extends BaseRequestBuilder
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         $requestInfo->tryAddHeader('Accept', "application/json");
-        return $requestInfo;
-    }
-
-    /**
-     * Update the navigation property people in admin
-     * @param PeopleAdminSettings $body The request body
-     * @param PeopleRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return RequestInformation
-    */
-    public function toPatchRequestInformation(PeopleAdminSettings $body, ?PeopleRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
-        $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
-        $requestInfo->pathParameters = $this->pathParameters;
-        $requestInfo->httpMethod = HttpMethod::PATCH;
-        if ($requestConfiguration !== null) {
-            $requestInfo->addHeaders($requestConfiguration->headers);
-            $requestInfo->addRequestOptions(...$requestConfiguration->options);
-        }
-        $requestInfo->tryAddHeader('Accept', "application/json");
-        $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

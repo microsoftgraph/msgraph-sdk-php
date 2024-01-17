@@ -41,7 +41,7 @@ class Agreement extends Entity implements Parsable
     }
 
     /**
-     * Gets the displayName property value. Display name of the agreement. The display name is used for internal tracking of the agreement but is not shown to end users who view the agreement. Supports $filter (eq).
+     * Gets the displayName property value. Display name of the agreement. The display name is used for internal tracking of the agreement but isn't shown to end users who view the agreement. Supports $filter (eq).
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -133,7 +133,7 @@ class Agreement extends Entity implements Parsable
     }
 
     /**
-     * Gets the userReacceptRequiredFrequency property value. The duration after which the user must re-accept the terms of use. The value is represented in ISO 8601 format for durations. Supports $filter (eq).
+     * Gets the userReacceptRequiredFrequency property value. The duration after which the user must reaccept the terms of use. The value is represented in ISO 8601 format for durations. Supports $filter (eq).
      * @return DateInterval|null
     */
     public function getUserReacceptRequiredFrequency(): ?DateInterval {
@@ -169,7 +169,7 @@ class Agreement extends Entity implements Parsable
     }
 
     /**
-     * Sets the displayName property value. Display name of the agreement. The display name is used for internal tracking of the agreement but is not shown to end users who view the agreement. Supports $filter (eq).
+     * Sets the displayName property value. Display name of the agreement. The display name is used for internal tracking of the agreement but isn't shown to end users who view the agreement. Supports $filter (eq).
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -217,7 +217,7 @@ class Agreement extends Entity implements Parsable
     }
 
     /**
-     * Sets the userReacceptRequiredFrequency property value. The duration after which the user must re-accept the terms of use. The value is represented in ISO 8601 format for durations. Supports $filter (eq).
+     * Sets the userReacceptRequiredFrequency property value. The duration after which the user must reaccept the terms of use. The value is represented in ISO 8601 format for durations. Supports $filter (eq).
      * @param DateInterval|null $value Value to set for the userReacceptRequiredFrequency property.
     */
     public function setUserReacceptRequiredFrequency(?DateInterval $value): void {

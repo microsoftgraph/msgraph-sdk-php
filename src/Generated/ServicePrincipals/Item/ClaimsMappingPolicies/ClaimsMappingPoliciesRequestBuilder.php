@@ -35,7 +35,7 @@ class ClaimsMappingPoliciesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Gets an item from the Microsoft/Graph/Generated.servicePrincipals.item.claimsMappingPolicies.item collection
-     * @param string $claimsMappingPolicyId Unique identifier of the item
+     * @param string $claimsMappingPolicyId The unique identifier of claimsMappingPolicy
      * @return ClaimsMappingPolicyItemRequestBuilder
     */
     public function byClaimsMappingPolicyId(string $claimsMappingPolicyId): ClaimsMappingPolicyItemRequestBuilder {

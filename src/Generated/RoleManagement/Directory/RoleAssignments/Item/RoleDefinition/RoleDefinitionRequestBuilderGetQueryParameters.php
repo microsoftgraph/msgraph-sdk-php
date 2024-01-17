@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignments\Ite
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The roleDefinition the assignment is for.  Supports $expand. roleDefinition.Id will be auto expanded.
+ * The roleDefinition the assignment is for.  Supports $expand.
 */
 class RoleDefinitionRequestBuilderGetQueryParameters 
 {

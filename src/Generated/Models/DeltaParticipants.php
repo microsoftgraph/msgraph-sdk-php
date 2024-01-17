@@ -38,7 +38,7 @@ class DeltaParticipants extends Entity implements Parsable
     }
 
     /**
-     * Gets the participants property value. The participants property
+     * Gets the participants property value. The collection of participants that were updated since the last roster update.
      * @return array<Participant>|null
     */
     public function getParticipants(): ?array {
@@ -52,7 +52,7 @@ class DeltaParticipants extends Entity implements Parsable
     }
 
     /**
-     * Gets the sequenceNumber property value. The sequenceNumber property
+     * Gets the sequenceNumber property value. The sequence number for the roster update that is used to identify the notification order.
      * @return int|null
     */
     public function getSequenceNumber(): ?int {
@@ -74,7 +74,7 @@ class DeltaParticipants extends Entity implements Parsable
     }
 
     /**
-     * Sets the participants property value. The participants property
+     * Sets the participants property value. The collection of participants that were updated since the last roster update.
      * @param array<Participant>|null $value Value to set for the participants property.
     */
     public function setParticipants(?array $value): void {
@@ -82,7 +82,7 @@ class DeltaParticipants extends Entity implements Parsable
     }
 
     /**
-     * Sets the sequenceNumber property value. The sequenceNumber property
+     * Sets the sequenceNumber property value. The sequence number for the roster update that is used to identify the notification order.
      * @param int|null $value Value to set for the sequenceNumber property.
     */
     public function setSequenceNumber(?int $value): void {
