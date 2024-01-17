@@ -39,7 +39,7 @@ class ServiceProvisioningErrorsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get serviceProvisioningErrors property value
+     * Errors published by a federated service describing a non-transient, service-specific error regarding the properties or link from a group object .  Supports $filter (eq, not, for isResolved and serviceInstance).
      * @param ServiceProvisioningErrorsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ServiceProvisioningErrorCollectionResponse|null>
      * @throws Exception
@@ -54,7 +54,7 @@ class ServiceProvisioningErrorsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get serviceProvisioningErrors property value
+     * Errors published by a federated service describing a non-transient, service-specific error regarding the properties or link from a group object .  Supports $filter (eq, not, for isResolved and serviceInstance).
      * @param ServiceProvisioningErrorsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

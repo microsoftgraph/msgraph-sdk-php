@@ -67,7 +67,7 @@ class RegisteredUsersRequestBuilder extends BaseRequestBuilder
     
     /**
      * Gets an item from the Microsoft/Graph/Generated.devices.item.registeredUsers.item collection
-     * @param string $directoryObjectId Unique identifier of the item
+     * @param string $directoryObjectId The unique identifier of directoryObject
      * @return DirectoryObjectItemRequestBuilder
     */
     public function byDirectoryObjectId(string $directoryObjectId): DirectoryObjectItemRequestBuilder {

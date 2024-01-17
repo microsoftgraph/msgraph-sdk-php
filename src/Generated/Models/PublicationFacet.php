@@ -56,7 +56,7 @@ class PublicationFacet implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the checkedOutBy property value. User who has checked out the file.
+     * Gets the checkedOutBy property value. The user who checked out the file.
      * @return IdentitySet|null
     */
     public function getCheckedOutBy(): ?IdentitySet {
@@ -146,7 +146,7 @@ class PublicationFacet implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the checkedOutBy property value. User who has checked out the file.
+     * Sets the checkedOutBy property value. The user who checked out the file.
      * @param IdentitySet|null $value Value to set for the checkedOutBy property.
     */
     public function setCheckedOutBy(?IdentitySet $value): void {

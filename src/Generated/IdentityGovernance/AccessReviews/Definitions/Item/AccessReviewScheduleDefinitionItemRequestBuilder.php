@@ -79,15 +79,14 @@ class AccessReviewScheduleDefinitionItemRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Update an existing accessReviewScheduleDefinition object to change one or more of its properties.
+     * Update the navigation property definitions in identityGovernance
      * @param AccessReviewScheduleDefinition $body The request body
-     * @param AccessReviewScheduleDefinitionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AccessReviewScheduleDefinitionItemRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AccessReviewScheduleDefinition|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/accessreviewscheduledefinition-update?view=graph-rest-1.0 Find more info here
     */
-    public function patch(AccessReviewScheduleDefinition $body, ?AccessReviewScheduleDefinitionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
-        $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
+    public function put(AccessReviewScheduleDefinition $body, ?AccessReviewScheduleDefinitionItemRequestBuilderPutRequestConfiguration $requestConfiguration = null): Promise {
+        $requestInfo = $this->toPutRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
                 '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -135,16 +134,16 @@ class AccessReviewScheduleDefinitionItemRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Update an existing accessReviewScheduleDefinition object to change one or more of its properties.
+     * Update the navigation property definitions in identityGovernance
      * @param AccessReviewScheduleDefinition $body The request body
-     * @param AccessReviewScheduleDefinitionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AccessReviewScheduleDefinitionItemRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(AccessReviewScheduleDefinition $body, ?AccessReviewScheduleDefinitionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPutRequestInformation(AccessReviewScheduleDefinition $body, ?AccessReviewScheduleDefinitionItemRequestBuilderPutRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
-        $requestInfo->httpMethod = HttpMethod::PATCH;
+        $requestInfo->httpMethod = HttpMethod::PUT;
         if ($requestConfiguration !== null) {
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);

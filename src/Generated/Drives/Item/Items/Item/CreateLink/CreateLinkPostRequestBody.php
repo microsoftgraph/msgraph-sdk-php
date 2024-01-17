@@ -3,6 +3,7 @@
 namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\CreateLink;
 
 use DateTime;
+use Microsoft\Graph\Generated\Models\DriveRecipient;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -10,6 +11,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class CreateLinkPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -78,8 +80,10 @@ class CreateLinkPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
             'expirationDateTime' => fn(ParseNode $n) => $o->setExpirationDateTime($n->getDateTimeValue()),
             'message' => fn(ParseNode $n) => $o->setMessage($n->getStringValue()),
             'password' => fn(ParseNode $n) => $o->setPassword($n->getStringValue()),
+            'recipients' => fn(ParseNode $n) => $o->setRecipients($n->getCollectionOfObjectValues([DriveRecipient::class, 'createFromDiscriminatorValue'])),
             'retainInheritedPermissions' => fn(ParseNode $n) => $o->setRetainInheritedPermissions($n->getBooleanValue()),
             'scope' => fn(ParseNode $n) => $o->setScope($n->getStringValue()),
+            'sendNotification' => fn(ParseNode $n) => $o->setSendNotification($n->getBooleanValue()),
             'type' => fn(ParseNode $n) => $o->setType($n->getStringValue()),
         ];
     }
@@ -109,6 +113,20 @@ class CreateLinkPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
+     * Gets the recipients property value. The recipients property
+     * @return array<DriveRecipient>|null
+    */
+    public function getRecipients(): ?array {
+        $val = $this->getBackingStore()->get('recipients');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, DriveRecipient::class);
+            /** @var array<DriveRecipient>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'recipients'");
+    }
+
+    /**
      * Gets the retainInheritedPermissions property value. The retainInheritedPermissions property
      * @return bool|null
     */
@@ -133,6 +151,18 @@ class CreateLinkPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
+     * Gets the sendNotification property value. The sendNotification property
+     * @return bool|null
+    */
+    public function getSendNotification(): ?bool {
+        $val = $this->getBackingStore()->get('sendNotification');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sendNotification'");
+    }
+
+    /**
      * Gets the type property value. The type property
      * @return string|null
     */
@@ -152,8 +182,10 @@ class CreateLinkPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
         $writer->writeDateTimeValue('expirationDateTime', $this->getExpirationDateTime());
         $writer->writeStringValue('message', $this->getMessage());
         $writer->writeStringValue('password', $this->getPassword());
+        $writer->writeCollectionOfObjectValues('recipients', $this->getRecipients());
         $writer->writeBooleanValue('retainInheritedPermissions', $this->getRetainInheritedPermissions());
         $writer->writeStringValue('scope', $this->getScope());
+        $writer->writeBooleanValue('sendNotification', $this->getSendNotification());
         $writer->writeStringValue('type', $this->getType());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
@@ -199,6 +231,14 @@ class CreateLinkPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
+     * Sets the recipients property value. The recipients property
+     * @param array<DriveRecipient>|null $value Value to set for the recipients property.
+    */
+    public function setRecipients(?array $value): void {
+        $this->getBackingStore()->set('recipients', $value);
+    }
+
+    /**
      * Sets the retainInheritedPermissions property value. The retainInheritedPermissions property
      * @param bool|null $value Value to set for the retainInheritedPermissions property.
     */
@@ -212,6 +252,14 @@ class CreateLinkPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     */
     public function setScope(?string $value): void {
         $this->getBackingStore()->set('scope', $value);
+    }
+
+    /**
+     * Sets the sendNotification property value. The sendNotification property
+     * @param bool|null $value Value to set for the sendNotification property.
+    */
+    public function setSendNotification(?bool $value): void {
+        $this->getBackingStore()->set('sendNotification', $value);
     }
 
     /**

@@ -46,10 +46,11 @@ class VirtualEventRegistrationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get registrations from solutions
+     * Get the properties and relationships of a virtualEventRegistration object.
      * @param VirtualEventRegistrationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<VirtualEventRegistration|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/virtualeventregistration-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?VirtualEventRegistrationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -95,7 +96,7 @@ class VirtualEventRegistrationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get registrations from solutions
+     * Get the properties and relationships of a virtualEventRegistration object.
      * @param VirtualEventRegistrationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

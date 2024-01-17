@@ -294,6 +294,7 @@ class DeviceManagement extends Entity implements Parsable
             'userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric' => fn(ParseNode $n) => $o->setUserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric($n->getObjectValue([UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric::class, 'createFromDiscriminatorValue'])),
             'userExperienceAnalyticsWorkFromAnywhereMetrics' => fn(ParseNode $n) => $o->setUserExperienceAnalyticsWorkFromAnywhereMetrics($n->getCollectionOfObjectValues([UserExperienceAnalyticsWorkFromAnywhereMetric::class, 'createFromDiscriminatorValue'])),
             'userExperienceAnalyticsWorkFromAnywhereModelPerformance' => fn(ParseNode $n) => $o->setUserExperienceAnalyticsWorkFromAnywhereModelPerformance($n->getCollectionOfObjectValues([UserExperienceAnalyticsWorkFromAnywhereModelPerformance::class, 'createFromDiscriminatorValue'])),
+            'virtualEndpoint' => fn(ParseNode $n) => $o->setVirtualEndpoint($n->getObjectValue([VirtualEndpoint::class, 'createFromDiscriminatorValue'])),
             'windowsAutopilotDeviceIdentities' => fn(ParseNode $n) => $o->setWindowsAutopilotDeviceIdentities($n->getCollectionOfObjectValues([WindowsAutopilotDeviceIdentity::class, 'createFromDiscriminatorValue'])),
             'windowsInformationProtectionAppLearningSummaries' => fn(ParseNode $n) => $o->setWindowsInformationProtectionAppLearningSummaries($n->getCollectionOfObjectValues([WindowsInformationProtectionAppLearningSummary::class, 'createFromDiscriminatorValue'])),
             'windowsInformationProtectionNetworkLearningSummaries' => fn(ParseNode $n) => $o->setWindowsInformationProtectionNetworkLearningSummaries($n->getCollectionOfObjectValues([WindowsInformationProtectionNetworkLearningSummary::class, 'createFromDiscriminatorValue'])),
@@ -897,6 +898,18 @@ class DeviceManagement extends Entity implements Parsable
     }
 
     /**
+     * Gets the virtualEndpoint property value. The virtualEndpoint property
+     * @return VirtualEndpoint|null
+    */
+    public function getVirtualEndpoint(): ?VirtualEndpoint {
+        $val = $this->getBackingStore()->get('virtualEndpoint');
+        if (is_null($val) || $val instanceof VirtualEndpoint) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'virtualEndpoint'");
+    }
+
+    /**
      * Gets the windowsAutopilotDeviceIdentities property value. The Windows autopilot device identities contained collection.
      * @return array<WindowsAutopilotDeviceIdentity>|null
     */
@@ -1029,6 +1042,7 @@ class DeviceManagement extends Entity implements Parsable
         $writer->writeObjectValue('userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric', $this->getUserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric());
         $writer->writeCollectionOfObjectValues('userExperienceAnalyticsWorkFromAnywhereMetrics', $this->getUserExperienceAnalyticsWorkFromAnywhereMetrics());
         $writer->writeCollectionOfObjectValues('userExperienceAnalyticsWorkFromAnywhereModelPerformance', $this->getUserExperienceAnalyticsWorkFromAnywhereModelPerformance());
+        $writer->writeObjectValue('virtualEndpoint', $this->getVirtualEndpoint());
         $writer->writeCollectionOfObjectValues('windowsAutopilotDeviceIdentities', $this->getWindowsAutopilotDeviceIdentities());
         $writer->writeCollectionOfObjectValues('windowsInformationProtectionAppLearningSummaries', $this->getWindowsInformationProtectionAppLearningSummaries());
         $writer->writeCollectionOfObjectValues('windowsInformationProtectionNetworkLearningSummaries', $this->getWindowsInformationProtectionNetworkLearningSummaries());
@@ -1506,6 +1520,14 @@ class DeviceManagement extends Entity implements Parsable
     */
     public function setUserExperienceAnalyticsWorkFromAnywhereModelPerformance(?array $value): void {
         $this->getBackingStore()->set('userExperienceAnalyticsWorkFromAnywhereModelPerformance', $value);
+    }
+
+    /**
+     * Sets the virtualEndpoint property value. The virtualEndpoint property
+     * @param VirtualEndpoint|null $value Value to set for the virtualEndpoint property.
+    */
+    public function setVirtualEndpoint(?VirtualEndpoint $value): void {
+        $this->getBackingStore()->set('virtualEndpoint', $value);
     }
 
     /**

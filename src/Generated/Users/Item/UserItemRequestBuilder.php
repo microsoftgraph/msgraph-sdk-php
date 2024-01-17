@@ -58,6 +58,7 @@ use Microsoft\Graph\Generated\Users\Item\Outlook\OutlookRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\OwnedDevices\OwnedDevicesRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\OwnedObjects\OwnedObjectsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\People\PeopleRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\PermissionGrants\PermissionGrantsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Photo\PhotoRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Photos\PhotosRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Planner\PlannerRequestBuilder;
@@ -446,6 +447,13 @@ class UserItemRequestBuilder extends BaseRequestBuilder
     }
     
     /**
+     * Provides operations to manage the permissionGrants property of the microsoft.graph.user entity.
+    */
+    public function permissionGrants(): PermissionGrantsRequestBuilder {
+        return new PermissionGrantsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to manage the photo property of the microsoft.graph.user entity.
     */
     public function photo(): PhotoRequestBuilder {
@@ -593,11 +601,11 @@ class UserItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a user.
+     * Delete user.   When deleted, user resources are moved to a temporary container and can be restored within 30 days.  After that time, they are permanently deleted.  To learn more, see deletedItems.
      * @param UserItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-onboarding-user-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/user-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?UserItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -662,7 +670,7 @@ class UserItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a user.
+     * Delete user.   When deleted, user resources are moved to a temporary container and can be restored within 30 days.  After that time, they are permanently deleted.  To learn more, see deletedItems.
      * @param UserItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

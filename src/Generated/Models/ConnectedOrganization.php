@@ -95,7 +95,7 @@ class ConnectedOrganization extends Entity implements Parsable
     }
 
     /**
-     * Gets the identitySources property value. The identity sources in this connected organization, one of azureActiveDirectoryTenant, domainIdentitySource, externalDomainFederation or crossCloudAzureActiveDirectoryTenant. Nullable.
+     * Gets the identitySources property value. The identity sources in this connected organization, one of azureActiveDirectoryTenant, crossCloudAzureActiveDirectoryTenant, domainIdentitySource, externalDomainFederation, or socialIdentitySource. Nullable.
      * @return array<IdentitySource>|null
     */
     public function getIdentitySources(): ?array {
@@ -195,7 +195,7 @@ class ConnectedOrganization extends Entity implements Parsable
     }
 
     /**
-     * Sets the identitySources property value. The identity sources in this connected organization, one of azureActiveDirectoryTenant, domainIdentitySource, externalDomainFederation or crossCloudAzureActiveDirectoryTenant. Nullable.
+     * Sets the identitySources property value. The identity sources in this connected organization, one of azureActiveDirectoryTenant, crossCloudAzureActiveDirectoryTenant, domainIdentitySource, externalDomainFederation, or socialIdentitySource. Nullable.
      * @param array<IdentitySource>|null $value Value to set for the identitySources property.
     */
     public function setIdentitySources(?array $value): void {

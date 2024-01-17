@@ -27,6 +27,20 @@ class AccessPackageResource extends Entity implements Parsable
     }
 
     /**
+     * Gets the attributes property value. The attributes property
+     * @return array<AccessPackageResourceAttribute>|null
+    */
+    public function getAttributes(): ?array {
+        $val = $this->getBackingStore()->get('attributes');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AccessPackageResourceAttribute::class);
+            /** @var array<AccessPackageResourceAttribute>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'attributes'");
+    }
+
+    /**
      * Gets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @return DateTime|null
     */
@@ -81,6 +95,7 @@ class AccessPackageResource extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'attributes' => fn(ParseNode $n) => $o->setAttributes($n->getCollectionOfObjectValues([AccessPackageResourceAttribute::class, 'createFromDiscriminatorValue'])),
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
@@ -163,6 +178,7 @@ class AccessPackageResource extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeCollectionOfObjectValues('attributes', $this->getAttributes());
         $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
         $writer->writeStringValue('description', $this->getDescription());
         $writer->writeStringValue('displayName', $this->getDisplayName());
@@ -172,6 +188,14 @@ class AccessPackageResource extends Entity implements Parsable
         $writer->writeStringValue('originSystem', $this->getOriginSystem());
         $writer->writeCollectionOfObjectValues('roles', $this->getRoles());
         $writer->writeCollectionOfObjectValues('scopes', $this->getScopes());
+    }
+
+    /**
+     * Sets the attributes property value. The attributes property
+     * @param array<AccessPackageResourceAttribute>|null $value Value to set for the attributes property.
+    */
+    public function setAttributes(?array $value): void {
+        $this->getBackingStore()->set('attributes', $value);
     }
 
     /**

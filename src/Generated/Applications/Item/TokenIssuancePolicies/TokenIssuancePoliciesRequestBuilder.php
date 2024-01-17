@@ -35,7 +35,7 @@ class TokenIssuancePoliciesRequestBuilder extends BaseRequestBuilder
     
     /**
      * Gets an item from the Microsoft/Graph/Generated.applications.item.tokenIssuancePolicies.item collection
-     * @param string $tokenIssuancePolicyId Unique identifier of the item
+     * @param string $tokenIssuancePolicyId The unique identifier of tokenIssuancePolicy
      * @return TokenIssuancePolicyItemRequestBuilder
     */
     public function byTokenIssuancePolicyId(string $tokenIssuancePolicyId): TokenIssuancePolicyItemRequestBuilder {

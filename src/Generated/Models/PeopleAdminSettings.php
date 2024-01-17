@@ -33,6 +33,7 @@ class PeopleAdminSettings extends Entity implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'profileCardProperties' => fn(ParseNode $n) => $o->setProfileCardProperties($n->getCollectionOfObjectValues([ProfileCardProperty::class, 'createFromDiscriminatorValue'])),
+            'pronouns' => fn(ParseNode $n) => $o->setPronouns($n->getObjectValue([PronounsSettings::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -51,12 +52,25 @@ class PeopleAdminSettings extends Entity implements Parsable
     }
 
     /**
+     * Gets the pronouns property value. Represents administrator settings that manage the support of pronouns in an organization.
+     * @return PronounsSettings|null
+    */
+    public function getPronouns(): ?PronounsSettings {
+        $val = $this->getBackingStore()->get('pronouns');
+        if (is_null($val) || $val instanceof PronounsSettings) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'pronouns'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('profileCardProperties', $this->getProfileCardProperties());
+        $writer->writeObjectValue('pronouns', $this->getPronouns());
     }
 
     /**
@@ -65,6 +79,14 @@ class PeopleAdminSettings extends Entity implements Parsable
     */
     public function setProfileCardProperties(?array $value): void {
         $this->getBackingStore()->set('profileCardProperties', $value);
+    }
+
+    /**
+     * Sets the pronouns property value. Represents administrator settings that manage the support of pronouns in an organization.
+     * @param PronounsSettings|null $value Value to set for the pronouns property.
+    */
+    public function setPronouns(?PronounsSettings $value): void {
+        $this->getBackingStore()->set('pronouns', $value);
     }
 
 }

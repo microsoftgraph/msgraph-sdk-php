@@ -52,7 +52,7 @@ class PermissionGrantsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List all resource-specific permission grants on the chat. This list specifies the Microsoft Entra apps that have access to the chat, along with the corresponding kind of resource-specific access that each app has.
+     * List all resource-specific permission grants on the chat. This list specifies the Microsoft Entra apps that have access to the chat, along with the corresponding resource-specific access that each app has.
      * @param PermissionGrantsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ResourceSpecificPermissionGrantCollectionResponse|null>
      * @throws Exception
@@ -84,7 +84,7 @@ class PermissionGrantsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List all resource-specific permission grants on the chat. This list specifies the Microsoft Entra apps that have access to the chat, along with the corresponding kind of resource-specific access that each app has.
+     * List all resource-specific permission grants on the chat. This list specifies the Microsoft Entra apps that have access to the chat, along with the corresponding resource-specific access that each app has.
      * @param PermissionGrantsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
