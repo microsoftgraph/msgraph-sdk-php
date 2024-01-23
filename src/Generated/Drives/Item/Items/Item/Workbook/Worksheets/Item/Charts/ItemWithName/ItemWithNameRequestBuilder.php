@@ -4,6 +4,19 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\I
 
 use Exception;
 use Http\Promise\Promise;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\ItemWithName\Axes\AxesRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\ItemWithName\DataLabels\DataLabelsRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\ItemWithName\Format\FormatRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\ItemWithName\Image\ImageRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\ItemWithName\ImageWithWidth\ImageWithWidthRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\ItemWithName\ImageWithWidthWithHeight\ImageWithWidthWithHeightRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\ItemWithName\ImageWithWidthWithHeightWithFittingMode\ImageWithWidthWithHeightWithFittingModeRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\ItemWithName\Legend\LegendRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\ItemWithName\Series\SeriesRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\ItemWithName\SetData\SetDataRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\ItemWithName\SetPosition\SetPositionRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\ItemWithName\Title\TitleRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\ItemWithName\Worksheet\WorksheetRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\WorkbookChart;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -16,6 +29,76 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class ItemWithNameRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to manage the axes property of the microsoft.graph.workbookChart entity.
+    */
+    public function axes(): AxesRequestBuilder {
+        return new AxesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the dataLabels property of the microsoft.graph.workbookChart entity.
+    */
+    public function dataLabels(): DataLabelsRequestBuilder {
+        return new DataLabelsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the format property of the microsoft.graph.workbookChart entity.
+    */
+    public function format(): FormatRequestBuilder {
+        return new FormatRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the image method.
+    */
+    public function image(): ImageRequestBuilder {
+        return new ImageRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the legend property of the microsoft.graph.workbookChart entity.
+    */
+    public function legend(): LegendRequestBuilder {
+        return new LegendRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the series property of the microsoft.graph.workbookChart entity.
+    */
+    public function series(): SeriesRequestBuilder {
+        return new SeriesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the setData method.
+    */
+    public function setData(): SetDataRequestBuilder {
+        return new SetDataRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the setPosition method.
+    */
+    public function setPosition(): SetPositionRequestBuilder {
+        return new SetPositionRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the title property of the microsoft.graph.workbookChart entity.
+    */
+    public function title(): TitleRequestBuilder {
+        return new TitleRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the worksheet property of the microsoft.graph.workbookChart entity.
+    */
+    public function worksheet(): WorksheetRequestBuilder {
+        return new WorksheetRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Instantiates a new ItemWithNameRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
@@ -46,6 +129,36 @@ class ItemWithNameRequestBuilder extends BaseRequestBuilder
                 '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         return $this->requestAdapter->sendAsync($requestInfo, [WorkbookChart::class, 'createFromDiscriminatorValue'], $errorMappings);
+    }
+
+    /**
+     * Provides operations to call the image method.
+     * @param int $width Usage: width={width}
+     * @return ImageWithWidthRequestBuilder
+    */
+    public function imageWithWidth(int $width): ImageWithWidthRequestBuilder {
+        return new ImageWithWidthRequestBuilder($this->pathParameters, $this->requestAdapter, $width);
+    }
+
+    /**
+     * Provides operations to call the image method.
+     * @param int $height Usage: height={height}
+     * @param int $width Usage: width={width}
+     * @return ImageWithWidthWithHeightRequestBuilder
+    */
+    public function imageWithWidthWithHeight(int $height, int $width): ImageWithWidthWithHeightRequestBuilder {
+        return new ImageWithWidthWithHeightRequestBuilder($this->pathParameters, $this->requestAdapter, $height, $width);
+    }
+
+    /**
+     * Provides operations to call the image method.
+     * @param string $fittingMode Usage: fittingMode='{fittingMode}'
+     * @param int $height Usage: height={height}
+     * @param int $width Usage: width={width}
+     * @return ImageWithWidthWithHeightWithFittingModeRequestBuilder
+    */
+    public function imageWithWidthWithHeightWithFittingMode(string $fittingMode, int $height, int $width): ImageWithWidthWithHeightWithFittingModeRequestBuilder {
+        return new ImageWithWidthWithHeightWithFittingModeRequestBuilder($this->pathParameters, $this->requestAdapter, $fittingMode, $height, $width);
     }
 
     /**

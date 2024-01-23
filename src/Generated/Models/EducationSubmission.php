@@ -47,6 +47,7 @@ class EducationSubmission extends Entity implements Parsable
             'submittedResources' => fn(ParseNode $n) => $o->setSubmittedResources($n->getCollectionOfObjectValues([EducationSubmissionResource::class, 'createFromDiscriminatorValue'])),
             'unsubmittedBy' => fn(ParseNode $n) => $o->setUnsubmittedBy($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
             'unsubmittedDateTime' => fn(ParseNode $n) => $o->setUnsubmittedDateTime($n->getDateTimeValue()),
+            'webUrl' => fn(ParseNode $n) => $o->setWebUrl($n->getStringValue()),
         ]);
     }
 
@@ -225,6 +226,18 @@ class EducationSubmission extends Entity implements Parsable
     }
 
     /**
+     * Gets the webUrl property value. The webUrl property
+     * @return string|null
+    */
+    public function getWebUrl(): ?string {
+        $val = $this->getBackingStore()->get('webUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'webUrl'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -346,6 +359,14 @@ class EducationSubmission extends Entity implements Parsable
     */
     public function setUnsubmittedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('unsubmittedDateTime', $value);
+    }
+
+    /**
+     * Sets the webUrl property value. The webUrl property
+     * @param string|null $value Value to set for the webUrl property.
+    */
+    public function setWebUrl(?string $value): void {
+        $this->getBackingStore()->set('webUrl', $value);
     }
 
 }
