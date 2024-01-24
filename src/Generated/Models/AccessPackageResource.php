@@ -27,7 +27,7 @@ class AccessPackageResource extends Entity implements Parsable
     }
 
     /**
-     * Gets the attributes property value. The attributes property
+     * Gets the attributes property value. Contains information about the attributes to be collected from the requestor and sent to the resource application.
      * @return array<AccessPackageResourceAttribute>|null
     */
     public function getAttributes(): ?array {
@@ -191,7 +191,7 @@ class AccessPackageResource extends Entity implements Parsable
     }
 
     /**
-     * Sets the attributes property value. The attributes property
+     * Sets the attributes property value. Contains information about the attributes to be collected from the requestor and sent to the resource application.
      * @param array<AccessPackageResourceAttribute>|null $value Value to set for the attributes property.
     */
     public function setAttributes(?array $value): void {

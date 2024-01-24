@@ -4,6 +4,17 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\I
 
 use Exception;
 use Http\Promise\Promise;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\ItemAtWithIndex\ClearFilters\ClearFiltersRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\ItemAtWithIndex\Columns\ColumnsRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\ItemAtWithIndex\ConvertToRange\ConvertToRangeRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\ItemAtWithIndex\DataBodyRange\DataBodyRangeRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\ItemAtWithIndex\HeaderRowRange\HeaderRowRangeRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\ItemAtWithIndex\Range\RangeRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\ItemAtWithIndex\ReapplyFilters\ReapplyFiltersRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\ItemAtWithIndex\Rows\RowsRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\ItemAtWithIndex\Sort\SortRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\ItemAtWithIndex\TotalRowRange\TotalRowRangeRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\ItemAtWithIndex\Worksheet\WorksheetRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\WorkbookTable;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -16,6 +27,83 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class ItemAtWithIndexRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to call the clearFilters method.
+    */
+    public function clearFilters(): ClearFiltersRequestBuilder {
+        return new ClearFiltersRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the columns property of the microsoft.graph.workbookTable entity.
+    */
+    public function columns(): ColumnsRequestBuilder {
+        return new ColumnsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the convertToRange method.
+    */
+    public function convertToRange(): ConvertToRangeRequestBuilder {
+        return new ConvertToRangeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the dataBodyRange method.
+    */
+    public function dataBodyRange(): DataBodyRangeRequestBuilder {
+        return new DataBodyRangeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the headerRowRange method.
+    */
+    public function headerRowRange(): HeaderRowRangeRequestBuilder {
+        return new HeaderRowRangeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the range method.
+    */
+    public function range(): RangeRequestBuilder {
+        return new RangeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the reapplyFilters method.
+    */
+    public function reapplyFilters(): ReapplyFiltersRequestBuilder {
+        return new ReapplyFiltersRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the rows property of the microsoft.graph.workbookTable entity.
+    */
+    public function rows(): RowsRequestBuilder {
+        return new RowsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the sort property of the microsoft.graph.workbookTable entity.
+    */
+    public function sort(): SortRequestBuilder {
+        return new SortRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the totalRowRange method.
+    */
+    public function totalRowRange(): TotalRowRangeRequestBuilder {
+        return new TotalRowRangeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the worksheet property of the microsoft.graph.workbookTable entity.
+    */
+    public function worksheet(): WorksheetRequestBuilder {
+        return new WorksheetRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Instantiates a new ItemAtWithIndexRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
