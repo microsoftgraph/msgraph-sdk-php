@@ -7,6 +7,9 @@ defaults:
   run:
     shell: bash
 
+permissions:
+    contents: write
+
 jobs:
   create-tag:
     runs-on: ubuntu-latest
@@ -32,8 +35,6 @@ jobs:
     env:
       SDK_VERSION: ${{ needs.create-tag.outputs.SDK_VERSION }}
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
     - uses: actions/checkout@v4
     - name: Create Release
