@@ -6,7 +6,6 @@ use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Applications\Item\Synchronization\Secrets\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\SynchronizationSecretKeyStringValuePair;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -40,27 +39,27 @@ class SecretsRequestBuilder extends BaseRequestBuilder
 
     /**
      * Update property secrets value.
-     * @param array<SynchronizationSecretKeyStringValuePair> $body The request body
+     * @param SecretsPutRequestBody $body The request body
      * @param SecretsRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<array<SynchronizationSecretKeyStringValuePair>|null>
+     * @return Promise<SecretsPutResponse|null>
      * @throws Exception
     */
-    public function put(array $body, ?SecretsRequestBuilderPutRequestConfiguration $requestConfiguration = null): Promise {
+    public function put(SecretsPutRequestBody $body, ?SecretsRequestBuilderPutRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPutRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
                 '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendCollectionAsync($requestInfo, [SynchronizationSecretKeyStringValuePair::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [SecretsPutResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**
      * Update property secrets value.
-     * @param array<SynchronizationSecretKeyStringValuePair> $body The request body
+     * @param SecretsPutRequestBody $body The request body
      * @param SecretsRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPutRequestInformation(array $body, ?SecretsRequestBuilderPutRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPutRequestInformation(SecretsPutRequestBody $body, ?SecretsRequestBuilderPutRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -70,7 +69,7 @@ class SecretsRequestBuilder extends BaseRequestBuilder
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         $requestInfo->tryAddHeader('Accept', "application/json");
-        $requestInfo->setContentFromParsableCollection($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

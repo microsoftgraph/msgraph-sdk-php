@@ -4,6 +4,7 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\Item\
 
 use Exception;
 use Http\Promise\Promise;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\Item\Rows\ItemAtWithIndex\Range\RangeRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\WorkbookTableRow;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -16,6 +17,13 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class ItemAtWithIndexRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to call the range method.
+    */
+    public function range(): RangeRequestBuilder {
+        return new RangeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Instantiates a new ItemAtWithIndexRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

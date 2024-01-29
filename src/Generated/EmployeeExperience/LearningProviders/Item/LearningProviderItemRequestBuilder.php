@@ -5,7 +5,9 @@ namespace Microsoft\Graph\Generated\EmployeeExperience\LearningProviders\Item;
 use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\EmployeeExperience\LearningProviders\Item\LearningContents\LearningContentsRequestBuilder;
+use Microsoft\Graph\Generated\EmployeeExperience\LearningProviders\Item\LearningContentsWithExternalId\LearningContentsWithExternalIdRequestBuilder;
 use Microsoft\Graph\Generated\EmployeeExperience\LearningProviders\Item\LearningCourseActivities\LearningCourseActivitiesRequestBuilder;
+use Microsoft\Graph\Generated\EmployeeExperience\LearningProviders\Item\LearningCourseActivitiesWithExternalcourseActivityId\LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder;
 use Microsoft\Graph\Generated\Models\LearningProvider;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -76,6 +78,24 @@ class LearningProviderItemRequestBuilder extends BaseRequestBuilder
                 '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         return $this->requestAdapter->sendAsync($requestInfo, [LearningProvider::class, 'createFromDiscriminatorValue'], $errorMappings);
+    }
+
+    /**
+     * Provides operations to manage the learningContents property of the microsoft.graph.learningProvider entity.
+     * @param string $externalId Alternate key of learningContent
+     * @return LearningContentsWithExternalIdRequestBuilder
+    */
+    public function learningContentsWithExternalId(string $externalId): LearningContentsWithExternalIdRequestBuilder {
+        return new LearningContentsWithExternalIdRequestBuilder($this->pathParameters, $this->requestAdapter, $externalId);
+    }
+
+    /**
+     * Provides operations to manage the learningCourseActivities property of the microsoft.graph.learningProvider entity.
+     * @param string $externalcourseActivityId Alternate key of learningCourseActivity
+     * @return LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder
+    */
+    public function learningCourseActivitiesWithExternalcourseActivityId(string $externalcourseActivityId): LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder {
+        return new LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder($this->pathParameters, $this->requestAdapter, $externalcourseActivityId);
     }
 
     /**

@@ -4,6 +4,7 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\I
 
 use Exception;
 use Http\Promise\Promise;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Item\Series\Item\Points\ItemAtWithIndex\Format\FormatRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\WorkbookChartPoint;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -16,6 +17,13 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class ItemAtWithIndexRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to manage the format property of the microsoft.graph.workbookChartPoint entity.
+    */
+    public function format(): FormatRequestBuilder {
+        return new FormatRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Instantiates a new ItemAtWithIndexRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

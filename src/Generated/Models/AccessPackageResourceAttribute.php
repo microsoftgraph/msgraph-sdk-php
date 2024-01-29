@@ -56,7 +56,7 @@ class AccessPackageResourceAttribute implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Gets the destination property value. The destination property
+     * Gets the destination property value. Information about how to set the attribute, currently a accessPackageUserDirectoryAttributeStore type.
      * @return AccessPackageResourceAttributeDestination|null
     */
     public function getDestination(): ?AccessPackageResourceAttributeDestination {
@@ -82,7 +82,7 @@ class AccessPackageResourceAttribute implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. The name of the attribute in the end system. If the destination is accessPackageUserDirectoryAttributeStore, then a user property such as jobTitle or a directory schema extension for the user object type, such as extension2b676109c7c74ae2b41549205f1947edpersonalTitle.
      * @return string|null
     */
     public function getName(): ?string {
@@ -106,7 +106,7 @@ class AccessPackageResourceAttribute implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Gets the source property value. The source property
+     * Gets the source property value. Information about how to populate the attribute value when an accessPackageAssignmentRequest is being fulfilled, currently a accessPackageResourceAttributeQuestion type.
      * @return AccessPackageResourceAttributeSource|null
     */
     public function getSource(): ?AccessPackageResourceAttributeSource {
@@ -146,7 +146,7 @@ class AccessPackageResourceAttribute implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Sets the destination property value. The destination property
+     * Sets the destination property value. Information about how to set the attribute, currently a accessPackageUserDirectoryAttributeStore type.
      * @param AccessPackageResourceAttributeDestination|null $value Value to set for the destination property.
     */
     public function setDestination(?AccessPackageResourceAttributeDestination $value): void {
@@ -154,7 +154,7 @@ class AccessPackageResourceAttribute implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. The name of the attribute in the end system. If the destination is accessPackageUserDirectoryAttributeStore, then a user property such as jobTitle or a directory schema extension for the user object type, such as extension2b676109c7c74ae2b41549205f1947edpersonalTitle.
      * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
@@ -170,7 +170,7 @@ class AccessPackageResourceAttribute implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Sets the source property value. The source property
+     * Sets the source property value. Information about how to populate the attribute value when an accessPackageAssignmentRequest is being fulfilled, currently a accessPackageResourceAttributeQuestion type.
      * @param AccessPackageResourceAttributeSource|null $value Value to set for the source property.
     */
     public function setSource(?AccessPackageResourceAttributeSource $value): void {
