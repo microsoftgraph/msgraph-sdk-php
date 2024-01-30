@@ -28,12 +28,11 @@ class EmployeeExperienceRequestBuilderGetRequestConfiguration extends BaseReques
 
     /**
      * Instantiates a new employeeExperienceRequestBuilderGetQueryParameters.
-     * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return EmployeeExperienceRequestBuilderGetQueryParameters
     */
-    public static function createQueryParameters(?array $expand = null, ?array $select = null): EmployeeExperienceRequestBuilderGetQueryParameters {
-        return new EmployeeExperienceRequestBuilderGetQueryParameters($expand, $select);
+    public static function createQueryParameters(?array $select = null): EmployeeExperienceRequestBuilderGetQueryParameters {
+        return new EmployeeExperienceRequestBuilderGetQueryParameters($select);
     }
 
 }
