@@ -78,7 +78,7 @@ class WorkbookChartSeriesItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of chartseries object.
+     * Update the properties of chartSeries object.
      * @param WorkbookChartSeries $body The request body
      * @param WorkbookChartSeriesItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookChartSeries|null>
@@ -134,7 +134,7 @@ class WorkbookChartSeriesItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of chartseries object.
+     * Update the properties of chartSeries object.
      * @param WorkbookChartSeries $body The request body
      * @param WorkbookChartSeriesItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
