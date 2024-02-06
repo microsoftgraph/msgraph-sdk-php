@@ -23,7 +23,7 @@ class LearningContentsWithExternalIdRequestBuilder extends BaseRequestBuilder
      * @param string|null $externalId Alternate key of learningContent
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter, ?string $externalId = null) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/employeeExperience/learningProviders/{learningProvider%2Did}/learningContents(externalId=\'{externalId}\'){?%24select,%24expand}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/employeeExperience/learningProviders/{learningProvider%2Did}/learningContents(externalId=\'{externalId}\'){?%24expand,%24select}');
         if (is_array($pathParametersOrRawUrl)) {
             $urlTplParams = $pathParametersOrRawUrl;
             $urlTplParams['externalId'] = $externalId;

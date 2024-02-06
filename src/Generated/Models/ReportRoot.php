@@ -2,6 +2,7 @@
 
 namespace Microsoft\Graph\Generated\Models;
 
+use Microsoft\Graph\Generated\Models\Partners\Partners;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -109,6 +110,7 @@ class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable
             'monthlyPrintUsageByPrinter' => fn(ParseNode $n) => $o->setMonthlyPrintUsageByPrinter($n->getCollectionOfObjectValues([PrintUsageByPrinter::class, 'createFromDiscriminatorValue'])),
             'monthlyPrintUsageByUser' => fn(ParseNode $n) => $o->setMonthlyPrintUsageByUser($n->getCollectionOfObjectValues([PrintUsageByUser::class, 'createFromDiscriminatorValue'])),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'partners' => fn(ParseNode $n) => $o->setPartners($n->getObjectValue([Partners::class, 'createFromDiscriminatorValue'])),
             'security' => fn(ParseNode $n) => $o->setSecurity($n->getObjectValue([SecurityReportsRoot::class, 'createFromDiscriminatorValue'])),
         ];
     }
@@ -154,6 +156,18 @@ class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
+     * Gets the partners property value. Represents billing details for a Microsoft direct partner.
+     * @return Partners|null
+    */
+    public function getPartners(): ?Partners {
+        $val = $this->getBackingStore()->get('partners');
+        if (is_null($val) || $val instanceof Partners) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'partners'");
+    }
+
+    /**
      * Gets the security property value. Represents an abstract type that contains resources for attack simulation and training reports.
      * @return SecurityReportsRoot|null
     */
@@ -176,6 +190,7 @@ class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable
         $writer->writeCollectionOfObjectValues('monthlyPrintUsageByPrinter', $this->getMonthlyPrintUsageByPrinter());
         $writer->writeCollectionOfObjectValues('monthlyPrintUsageByUser', $this->getMonthlyPrintUsageByUser());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeObjectValue('partners', $this->getPartners());
         $writer->writeObjectValue('security', $this->getSecurity());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
@@ -242,6 +257,14 @@ class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
+    }
+
+    /**
+     * Sets the partners property value. Represents billing details for a Microsoft direct partner.
+     * @param Partners|null $value Value to set for the partners property.
+    */
+    public function setPartners(?Partners $value): void {
+        $this->getBackingStore()->set('partners', $value);
     }
 
     /**

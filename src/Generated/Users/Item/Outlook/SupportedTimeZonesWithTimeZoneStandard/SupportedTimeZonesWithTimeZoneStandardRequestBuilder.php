@@ -22,7 +22,7 @@ class SupportedTimeZonesWithTimeZoneStandardRequestBuilder extends BaseRequestBu
      * @param string|null $timeZoneStandard Usage: TimeZoneStandard='{TimeZoneStandard}'
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter, ?string $timeZoneStandard = null) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/users/{user%2Did}/outlook/supportedTimeZones(TimeZoneStandard=\'{TimeZoneStandard}\'){?%24top,%24skip,%24search,%24filter,%24count}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/users/{user%2Did}/outlook/supportedTimeZones(TimeZoneStandard=\'{TimeZoneStandard}\'){?%24count,%24filter,%24search,%24skip,%24top}');
         if (is_array($pathParametersOrRawUrl)) {
             $urlTplParams = $pathParametersOrRawUrl;
             $urlTplParams['TimeZoneStandard'] = $timeZoneStandard;

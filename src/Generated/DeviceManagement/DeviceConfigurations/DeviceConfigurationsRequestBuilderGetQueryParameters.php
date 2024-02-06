@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List properties and relationships of the macOSCustomConfiguration objects.
+ * List properties and relationships of the androidWorkProfileCustomConfiguration objects.
 */
 class DeviceConfigurationsRequestBuilderGetQueryParameters 
 {

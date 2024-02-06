@@ -21,7 +21,7 @@ class CountRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/security/incidents/{incident%2Did}/alerts/{alert%2Did}/comments/$count{?%24search,%24filter}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/security/incidents/{incident%2Did}/alerts/{alert%2Did}/comments/$count{?%24filter,%24search}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {

@@ -23,7 +23,7 @@ class LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder extends
      * @param string|null $externalcourseActivityId Alternate key of learningCourseActivity
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter, ?string $externalcourseActivityId = null) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/employeeExperience/learningProviders/{learningProvider%2Did}/learningCourseActivities(externalcourseActivityId=\'{externalcourseActivityId}\'){?%24select,%24expand}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/employeeExperience/learningProviders/{learningProvider%2Did}/learningCourseActivities(externalcourseActivityId=\'{externalcourseActivityId}\'){?%24expand,%24select}');
         if (is_array($pathParametersOrRawUrl)) {
             $urlTplParams = $pathParametersOrRawUrl;
             $urlTplParams['externalcourseActivityId'] = $externalcourseActivityId;

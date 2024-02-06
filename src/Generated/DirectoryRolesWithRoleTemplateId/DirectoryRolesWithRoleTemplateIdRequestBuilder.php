@@ -23,7 +23,7 @@ class DirectoryRolesWithRoleTemplateIdRequestBuilder extends BaseRequestBuilder
      * @param string|null $roleTemplateId Alternate key of directoryRole
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter, ?string $roleTemplateId = null) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/directoryRoles(roleTemplateId=\'{roleTemplateId}\'){?%24select,%24expand}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/directoryRoles(roleTemplateId=\'{roleTemplateId}\'){?%24expand,%24select}');
         if (is_array($pathParametersOrRawUrl)) {
             $urlTplParams = $pathParametersOrRawUrl;
             $urlTplParams['roleTemplateId'] = $roleTemplateId;

@@ -8,6 +8,8 @@ use Microsoft\Graph\Generated\Communications\OnlineMeetings\Item\AttendanceRepor
 use Microsoft\Graph\Generated\Communications\OnlineMeetings\Item\AttendeeReport\AttendeeReportRequestBuilder;
 use Microsoft\Graph\Generated\Communications\OnlineMeetings\Item\GetVirtualAppointmentJoinWebUrl\GetVirtualAppointmentJoinWebUrlRequestBuilder;
 use Microsoft\Graph\Generated\Communications\OnlineMeetings\Item\Recordings\RecordingsRequestBuilder;
+use Microsoft\Graph\Generated\Communications\OnlineMeetings\Item\SendVirtualAppointmentReminderSms\SendVirtualAppointmentReminderSmsRequestBuilder;
+use Microsoft\Graph\Generated\Communications\OnlineMeetings\Item\SendVirtualAppointmentSms\SendVirtualAppointmentSmsRequestBuilder;
 use Microsoft\Graph\Generated\Communications\OnlineMeetings\Item\Transcripts\TranscriptsRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\OnlineMeeting;
@@ -50,6 +52,20 @@ class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder
     }
     
     /**
+     * Provides operations to call the sendVirtualAppointmentReminderSms method.
+    */
+    public function sendVirtualAppointmentReminderSms(): SendVirtualAppointmentReminderSmsRequestBuilder {
+        return new SendVirtualAppointmentReminderSmsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the sendVirtualAppointmentSms method.
+    */
+    public function sendVirtualAppointmentSms(): SendVirtualAppointmentSmsRequestBuilder {
+        return new SendVirtualAppointmentSmsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to manage the transcripts property of the microsoft.graph.onlineMeeting entity.
     */
     public function transcripts(): TranscriptsRequestBuilder {
@@ -62,7 +78,7 @@ class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/communications/onlineMeetings/{onlineMeeting%2Did}{?%24select,%24expand}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/communications/onlineMeetings/{onlineMeeting%2Did}{?%24expand,%24select}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {

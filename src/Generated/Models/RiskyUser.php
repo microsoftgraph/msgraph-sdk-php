@@ -79,7 +79,7 @@ class RiskyUser extends Entity implements Parsable
     }
 
     /**
-     * Gets the isProcessing property value. Indicates whether a user's risky state is being processed by the backend.
+     * Gets the isProcessing property value. Indicates whether a user's risky state is being processed by the backend. Supports $filter (eq).
      * @return bool|null
     */
     public function getIsProcessing(): ?bool {
@@ -103,7 +103,7 @@ class RiskyUser extends Entity implements Parsable
     }
 
     /**
-     * Gets the riskLastUpdatedDateTime property value. The date and time that the risky user was last updated.  The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Gets the riskLastUpdatedDateTime property value. The date and time that the risky user was last updated.  The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, gt, lt).
      * @return DateTime|null
     */
     public function getRiskLastUpdatedDateTime(): ?DateTime {
@@ -115,7 +115,7 @@ class RiskyUser extends Entity implements Parsable
     }
 
     /**
-     * Gets the riskLevel property value. Level of the detected risky user. Possible values are: low, medium, high, hidden, none, unknownFutureValue.
+     * Gets the riskLevel property value. Level of the detected risky user. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Supports $filter (eq).
      * @return RiskLevel|null
     */
     public function getRiskLevel(): ?RiskLevel {
@@ -127,7 +127,7 @@ class RiskyUser extends Entity implements Parsable
     }
 
     /**
-     * Gets the riskState property value. State of the user's risk. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
+     * Gets the riskState property value. State of the user's risk. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue. Supports $filter (eq).
      * @return RiskState|null
     */
     public function getRiskState(): ?RiskState {
@@ -196,7 +196,7 @@ class RiskyUser extends Entity implements Parsable
     }
 
     /**
-     * Sets the isProcessing property value. Indicates whether a user's risky state is being processed by the backend.
+     * Sets the isProcessing property value. Indicates whether a user's risky state is being processed by the backend. Supports $filter (eq).
      * @param bool|null $value Value to set for the isProcessing property.
     */
     public function setIsProcessing(?bool $value): void {
@@ -212,7 +212,7 @@ class RiskyUser extends Entity implements Parsable
     }
 
     /**
-     * Sets the riskLastUpdatedDateTime property value. The date and time that the risky user was last updated.  The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Sets the riskLastUpdatedDateTime property value. The date and time that the risky user was last updated.  The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, gt, lt).
      * @param DateTime|null $value Value to set for the riskLastUpdatedDateTime property.
     */
     public function setRiskLastUpdatedDateTime(?DateTime $value): void {
@@ -220,7 +220,7 @@ class RiskyUser extends Entity implements Parsable
     }
 
     /**
-     * Sets the riskLevel property value. Level of the detected risky user. Possible values are: low, medium, high, hidden, none, unknownFutureValue.
+     * Sets the riskLevel property value. Level of the detected risky user. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Supports $filter (eq).
      * @param RiskLevel|null $value Value to set for the riskLevel property.
     */
     public function setRiskLevel(?RiskLevel $value): void {
@@ -228,7 +228,7 @@ class RiskyUser extends Entity implements Parsable
     }
 
     /**
-     * Sets the riskState property value. State of the user's risk. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
+     * Sets the riskState property value. State of the user's risk. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue. Supports $filter (eq).
      * @param RiskState|null $value Value to set for the riskState property.
     */
     public function setRiskState(?RiskState $value): void {

@@ -86,7 +86,7 @@ class ListItemRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/sites/{site%2Did}/lists/{list%2Did}{?%24select,%24expand}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/sites/{site%2Did}/lists/{list%2Did}{?%24expand,%24select}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -110,11 +110,11 @@ class ListItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Returns the metadata for a [list][].
+     * Get a list of rich long-running operations associated with a list.
      * @param ListItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EscapedList|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/list-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/list-list-operations?view=graph-rest-1.0 Find more info here
     */
     public function get(?ListItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -160,7 +160,7 @@ class ListItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Returns the metadata for a [list][].
+     * Get a list of rich long-running operations associated with a list.
      * @param ListItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

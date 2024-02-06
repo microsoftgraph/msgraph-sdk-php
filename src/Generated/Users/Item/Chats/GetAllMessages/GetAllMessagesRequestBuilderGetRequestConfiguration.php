@@ -29,6 +29,7 @@ class GetAllMessagesRequestBuilderGetRequestConfiguration extends BaseRequestCon
     /**
      * Instantiates a new getAllMessagesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
+     * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values
      * @param string|null $model The payment model for the API
      * @param array<string>|null $orderby Order items by property values
@@ -38,8 +39,8 @@ class GetAllMessagesRequestBuilderGetRequestConfiguration extends BaseRequestCon
      * @param int|null $top Show only the first n items
      * @return GetAllMessagesRequestBuilderGetQueryParameters
     */
-    public static function createQueryParameters(?bool $count = null, ?string $filter = null, ?string $model = null, ?array $orderby = null, ?string $search = null, ?array $select = null, ?int $skip = null, ?int $top = null): GetAllMessagesRequestBuilderGetQueryParameters {
-        return new GetAllMessagesRequestBuilderGetQueryParameters($count, $filter, $model, $orderby, $search, $select, $skip, $top);
+    public static function createQueryParameters(?bool $count = null, ?array $expand = null, ?string $filter = null, ?string $model = null, ?array $orderby = null, ?string $search = null, ?array $select = null, ?int $skip = null, ?int $top = null): GetAllMessagesRequestBuilderGetQueryParameters {
+        return new GetAllMessagesRequestBuilderGetQueryParameters($count, $expand, $filter, $model, $orderby, $search, $select, $skip, $top);
     }
 
 }

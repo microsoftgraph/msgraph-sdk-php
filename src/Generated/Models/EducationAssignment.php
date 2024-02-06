@@ -235,6 +235,7 @@ class EducationAssignment extends Entity implements Parsable
             'instructions' => fn(ParseNode $n) => $o->setInstructions($n->getObjectValue([EducationItemBody::class, 'createFromDiscriminatorValue'])),
             'lastModifiedBy' => fn(ParseNode $n) => $o->setLastModifiedBy($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
             'lastModifiedDateTime' => fn(ParseNode $n) => $o->setLastModifiedDateTime($n->getDateTimeValue()),
+            'moduleUrl' => fn(ParseNode $n) => $o->setModuleUrl($n->getStringValue()),
             'notificationChannelUrl' => fn(ParseNode $n) => $o->setNotificationChannelUrl($n->getStringValue()),
             'resources' => fn(ParseNode $n) => $o->setResources($n->getCollectionOfObjectValues([EducationAssignmentResource::class, 'createFromDiscriminatorValue'])),
             'resourcesFolderUrl' => fn(ParseNode $n) => $o->setResourcesFolderUrl($n->getStringValue()),
@@ -303,6 +304,18 @@ class EducationAssignment extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'lastModifiedDateTime'");
+    }
+
+    /**
+     * Gets the moduleUrl property value. The moduleUrl property
+     * @return string|null
+    */
+    public function getModuleUrl(): ?string {
+        $val = $this->getBackingStore()->get('moduleUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'moduleUrl'");
     }
 
     /**
@@ -412,6 +425,7 @@ class EducationAssignment extends Entity implements Parsable
         $writer->writeObjectValue('grading', $this->getGrading());
         $writer->writeObjectValue('gradingCategory', $this->getGradingCategory());
         $writer->writeObjectValue('instructions', $this->getInstructions());
+        $writer->writeStringValue('moduleUrl', $this->getModuleUrl());
         $writer->writeStringValue('notificationChannelUrl', $this->getNotificationChannelUrl());
         $writer->writeCollectionOfObjectValues('resources', $this->getResources());
         $writer->writeObjectValue('rubric', $this->getRubric());
@@ -576,6 +590,14 @@ class EducationAssignment extends Entity implements Parsable
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastModifiedDateTime', $value);
+    }
+
+    /**
+     * Sets the moduleUrl property value. The moduleUrl property
+     * @param string|null $value Value to set for the moduleUrl property.
+    */
+    public function setModuleUrl(?string $value): void {
+        $this->getBackingStore()->set('moduleUrl', $value);
     }
 
     /**

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\DeviceEnrollmentConfigurati
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List properties and relationships of the deviceEnrollmentLimitConfiguration objects.
+ * List properties and relationships of the deviceEnrollmentPlatformRestrictionsConfiguration objects.
 */
 class DeviceEnrollmentConfigurationsRequestBuilderGetQueryParameters 
 {

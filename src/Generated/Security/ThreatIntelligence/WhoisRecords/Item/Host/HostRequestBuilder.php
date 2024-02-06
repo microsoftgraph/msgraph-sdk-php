@@ -22,7 +22,7 @@ class HostRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/security/threatIntelligence/whoisRecords/{whoisRecord%2Did}/host{?%24select,%24expand}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/security/threatIntelligence/whoisRecords/{whoisRecord%2Did}/host{?%24expand,%24select}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {

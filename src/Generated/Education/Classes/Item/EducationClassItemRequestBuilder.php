@@ -10,6 +10,7 @@ use Microsoft\Graph\Generated\Education\Classes\Item\Assignments\AssignmentsRequ
 use Microsoft\Graph\Generated\Education\Classes\Item\AssignmentSettings\AssignmentSettingsRequestBuilder;
 use Microsoft\Graph\Generated\Education\Classes\Item\Group\GroupRequestBuilder;
 use Microsoft\Graph\Generated\Education\Classes\Item\Members\MembersRequestBuilder;
+use Microsoft\Graph\Generated\Education\Classes\Item\Modules\ModulesRequestBuilder;
 use Microsoft\Graph\Generated\Education\Classes\Item\Schools\SchoolsRequestBuilder;
 use Microsoft\Graph\Generated\Education\Classes\Item\Teachers\TeachersRequestBuilder;
 use Microsoft\Graph\Generated\Models\EducationClass;
@@ -67,6 +68,13 @@ class EducationClassItemRequestBuilder extends BaseRequestBuilder
     }
     
     /**
+     * Provides operations to manage the modules property of the microsoft.graph.educationClass entity.
+    */
+    public function modules(): ModulesRequestBuilder {
+        return new ModulesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to manage the schools property of the microsoft.graph.educationClass entity.
     */
     public function schools(): SchoolsRequestBuilder {
@@ -86,7 +94,7 @@ class EducationClassItemRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/education/classes/{educationClass%2Did}{?%24select,%24expand}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/education/classes/{educationClass%2Did}{?%24expand,%24select}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {

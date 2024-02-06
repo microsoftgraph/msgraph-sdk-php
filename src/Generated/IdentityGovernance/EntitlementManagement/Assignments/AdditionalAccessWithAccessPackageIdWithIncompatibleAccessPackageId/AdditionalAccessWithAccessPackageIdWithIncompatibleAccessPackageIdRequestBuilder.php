@@ -23,7 +23,7 @@ class AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdRequestB
      * @param string|null $incompatibleAccessPackageId Usage: incompatibleAccessPackageId='{incompatibleAccessPackageId}'
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter, ?string $accessPackageId = null, ?string $incompatibleAccessPackageId = null) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/identityGovernance/entitlementManagement/assignments/additionalAccess(accessPackageId=\'{accessPackageId}\',incompatibleAccessPackageId=\'{incompatibleAccessPackageId}\'){?%24top,%24skip,%24search,%24filter,%24count,%24select,%24orderby}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/identityGovernance/entitlementManagement/assignments/additionalAccess(accessPackageId=\'{accessPackageId}\',incompatibleAccessPackageId=\'{incompatibleAccessPackageId}\'){?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}');
         if (is_array($pathParametersOrRawUrl)) {
             $urlTplParams = $pathParametersOrRawUrl;
             $urlTplParams['accessPackageId'] = $accessPackageId;

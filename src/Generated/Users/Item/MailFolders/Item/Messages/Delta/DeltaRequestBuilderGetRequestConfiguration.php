@@ -30,6 +30,7 @@ class DeltaRequestBuilderGetRequestConfiguration extends BaseRequestConfiguratio
      * Instantiates a new deltaRequestBuilderGetQueryParameters.
      * @param string|null $changeType A custom query option to filter the delta response based on the type of change. Supported values are created, updated or deleted.
      * @param bool|null $count Include count of items
+     * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values
      * @param array<string>|null $orderby Order items by property values
      * @param string|null $search Search items by search phrases
@@ -38,8 +39,8 @@ class DeltaRequestBuilderGetRequestConfiguration extends BaseRequestConfiguratio
      * @param int|null $top Show only the first n items
      * @return DeltaRequestBuilderGetQueryParameters
     */
-    public static function createQueryParameters(?string $changeType = null, ?bool $count = null, ?string $filter = null, ?array $orderby = null, ?string $search = null, ?array $select = null, ?int $skip = null, ?int $top = null): DeltaRequestBuilderGetQueryParameters {
-        return new DeltaRequestBuilderGetQueryParameters($changeType, $count, $filter, $orderby, $search, $select, $skip, $top);
+    public static function createQueryParameters(?string $changeType = null, ?bool $count = null, ?array $expand = null, ?string $filter = null, ?array $orderby = null, ?string $search = null, ?array $select = null, ?int $skip = null, ?int $top = null): DeltaRequestBuilderGetQueryParameters {
+        return new DeltaRequestBuilderGetQueryParameters($changeType, $count, $expand, $filter, $orderby, $search, $select, $skip, $top);
     }
 
 }
