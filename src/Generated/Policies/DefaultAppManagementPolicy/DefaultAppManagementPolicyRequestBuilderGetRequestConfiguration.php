@@ -16,7 +16,7 @@ class DefaultAppManagementPolicyRequestBuilderGetRequestConfiguration extends Ba
     public ?DefaultAppManagementPolicyRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new defaultAppManagementPolicyRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new DefaultAppManagementPolicyRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param DefaultAppManagementPolicyRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class DefaultAppManagementPolicyRequestBuilderGetRequestConfiguration extends Ba
     }
 
     /**
-     * Instantiates a new defaultAppManagementPolicyRequestBuilderGetQueryParameters.
+     * Instantiates a new DefaultAppManagementPolicyRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return DefaultAppManagementPolicyRequestBuilderGetQueryParameters

@@ -16,7 +16,7 @@ class CalendarViewRequestBuilderGetRequestConfiguration extends BaseRequestConfi
     public ?CalendarViewRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new calendarViewRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new CalendarViewRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param CalendarViewRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class CalendarViewRequestBuilderGetRequestConfiguration extends BaseRequestConfi
     }
 
     /**
-     * Instantiates a new calendarViewRequestBuilderGetQueryParameters.
+     * Instantiates a new CalendarViewRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param string|null $endDateTime The end date and time of the time range, represented in ISO 8601 format. For example, 2019-11-08T20:00:00-08:00
      * @param array<string>|null $expand Expand related entities

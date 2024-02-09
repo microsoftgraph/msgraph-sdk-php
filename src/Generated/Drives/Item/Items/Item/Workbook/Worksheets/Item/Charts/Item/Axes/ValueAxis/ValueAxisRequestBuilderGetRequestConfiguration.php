@@ -16,7 +16,7 @@ class ValueAxisRequestBuilderGetRequestConfiguration extends BaseRequestConfigur
     public ?ValueAxisRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new valueAxisRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new ValueAxisRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param ValueAxisRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class ValueAxisRequestBuilderGetRequestConfiguration extends BaseRequestConfigur
     }
 
     /**
-     * Instantiates a new valueAxisRequestBuilderGetQueryParameters.
+     * Instantiates a new ValueAxisRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return ValueAxisRequestBuilderGetQueryParameters

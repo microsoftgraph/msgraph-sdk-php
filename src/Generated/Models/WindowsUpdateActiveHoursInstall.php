@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\Time;
 class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallScheduleType implements Parsable 
 {
     /**
-     * Instantiates a new windowsUpdateActiveHoursInstall and sets the default values.
+     * Instantiates a new WindowsUpdateActiveHoursInstall and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SwapShiftsChangeRequest extends OfferShiftRequest implements Parsable 
 {
     /**
-     * Instantiates a new swapShiftsChangeRequest and sets the default values.
+     * Instantiates a new SwapShiftsChangeRequest and sets the default values.
     */
     public function __construct() {
         parent::__construct();

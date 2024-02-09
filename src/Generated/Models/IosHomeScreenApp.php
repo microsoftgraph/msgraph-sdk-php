@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class IosHomeScreenApp extends IosHomeScreenItem implements Parsable 
 {
     /**
-     * Instantiates a new iosHomeScreenApp and sets the default values.
+     * Instantiates a new IosHomeScreenApp and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -18,7 +18,7 @@ class X509CertificateUserBinding implements AdditionalDataHolder, BackedModel, P
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new x509CertificateUserBinding and sets the default values.
+     * Instantiates a new X509CertificateUserBinding and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

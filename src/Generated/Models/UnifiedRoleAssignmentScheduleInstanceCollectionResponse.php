@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class UnifiedRoleAssignmentScheduleInstanceCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new unifiedRoleAssignmentScheduleInstanceCollectionResponse and sets the default values.
+     * Instantiates a new UnifiedRoleAssignmentScheduleInstanceCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

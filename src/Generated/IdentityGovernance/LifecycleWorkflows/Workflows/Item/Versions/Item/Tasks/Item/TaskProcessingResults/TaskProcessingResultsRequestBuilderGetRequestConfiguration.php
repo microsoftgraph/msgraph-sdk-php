@@ -16,7 +16,7 @@ class TaskProcessingResultsRequestBuilderGetRequestConfiguration extends BaseReq
     public ?TaskProcessingResultsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new taskProcessingResultsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new TaskProcessingResultsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param TaskProcessingResultsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class TaskProcessingResultsRequestBuilderGetRequestConfiguration extends BaseReq
     }
 
     /**
-     * Instantiates a new taskProcessingResultsRequestBuilderGetQueryParameters.
+     * Instantiates a new TaskProcessingResultsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

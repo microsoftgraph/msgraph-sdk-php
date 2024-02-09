@@ -16,7 +16,7 @@ class AddToReviewSetOperationRequestBuilderGetRequestConfiguration extends BaseR
     public ?AddToReviewSetOperationRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new addToReviewSetOperationRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new AddToReviewSetOperationRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param AddToReviewSetOperationRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class AddToReviewSetOperationRequestBuilderGetRequestConfiguration extends BaseR
     }
 
     /**
-     * Instantiates a new addToReviewSetOperationRequestBuilderGetQueryParameters.
+     * Instantiates a new AddToReviewSetOperationRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return AddToReviewSetOperationRequestBuilderGetQueryParameters

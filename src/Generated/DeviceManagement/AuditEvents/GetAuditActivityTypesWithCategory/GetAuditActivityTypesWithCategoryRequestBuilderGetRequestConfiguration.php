@@ -16,7 +16,7 @@ class GetAuditActivityTypesWithCategoryRequestBuilderGetRequestConfiguration ext
     public ?GetAuditActivityTypesWithCategoryRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new getAuditActivityTypesWithCategoryRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new GetAuditActivityTypesWithCategoryRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param GetAuditActivityTypesWithCategoryRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class GetAuditActivityTypesWithCategoryRequestBuilderGetRequestConfiguration ext
     }
 
     /**
-     * Instantiates a new getAuditActivityTypesWithCategoryRequestBuilderGetQueryParameters.
+     * Instantiates a new GetAuditActivityTypesWithCategoryRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param string|null $filter Filter items by property values
      * @param string|null $search Search items by search phrases

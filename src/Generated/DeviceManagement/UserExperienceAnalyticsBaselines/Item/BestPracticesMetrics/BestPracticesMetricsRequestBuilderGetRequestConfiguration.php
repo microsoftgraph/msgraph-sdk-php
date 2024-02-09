@@ -16,7 +16,7 @@ class BestPracticesMetricsRequestBuilderGetRequestConfiguration extends BaseRequ
     public ?BestPracticesMetricsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new bestPracticesMetricsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new BestPracticesMetricsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param BestPracticesMetricsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class BestPracticesMetricsRequestBuilderGetRequestConfiguration extends BaseRequ
     }
 
     /**
-     * Instantiates a new bestPracticesMetricsRequestBuilderGetQueryParameters.
+     * Instantiates a new BestPracticesMetricsRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return BestPracticesMetricsRequestBuilderGetQueryParameters

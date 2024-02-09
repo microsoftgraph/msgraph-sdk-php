@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class MessageRule extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new messageRule and sets the default values.
+     * Instantiates a new MessageRule and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -20,7 +20,7 @@ class PasswordCredentialConfiguration implements AdditionalDataHolder, BackedMod
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new passwordCredentialConfiguration and sets the default values.
+     * Instantiates a new PasswordCredentialConfiguration and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

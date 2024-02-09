@@ -19,7 +19,7 @@ class UnicodePostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new unicodePostRequestBody and sets the default values.
+     * Instantiates a new UnicodePostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

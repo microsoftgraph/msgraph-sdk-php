@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class RecordOperation extends CommsOperation implements Parsable 
 {
     /**
-     * Instantiates a new recordOperation and sets the default values.
+     * Instantiates a new RecordOperation and sets the default values.
     */
     public function __construct() {
         parent::__construct();

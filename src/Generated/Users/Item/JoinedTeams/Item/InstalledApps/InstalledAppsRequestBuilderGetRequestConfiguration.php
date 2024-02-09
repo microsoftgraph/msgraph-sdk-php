@@ -16,7 +16,7 @@ class InstalledAppsRequestBuilderGetRequestConfiguration extends BaseRequestConf
     public ?InstalledAppsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new installedAppsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new InstalledAppsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param InstalledAppsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class InstalledAppsRequestBuilderGetRequestConfiguration extends BaseRequestConf
     }
 
     /**
-     * Instantiates a new installedAppsRequestBuilderGetQueryParameters.
+     * Instantiates a new InstalledAppsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

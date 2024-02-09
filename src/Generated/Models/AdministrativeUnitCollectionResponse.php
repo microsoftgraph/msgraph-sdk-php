@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class AdministrativeUnitCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new administrativeUnitCollectionResponse and sets the default values.
+     * Instantiates a new AdministrativeUnitCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

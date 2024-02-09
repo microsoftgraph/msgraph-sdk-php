@@ -18,7 +18,7 @@ class DeleteUserFromSharedAppleDevicePostRequestBody implements AdditionalDataHo
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new deleteUserFromSharedAppleDevicePostRequestBody and sets the default values.
+     * Instantiates a new DeleteUserFromSharedAppleDevicePostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

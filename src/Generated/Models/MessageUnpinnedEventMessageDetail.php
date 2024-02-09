@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class MessageUnpinnedEventMessageDetail extends EventMessageDetail implements Parsable 
 {
     /**
-     * Instantiates a new messageUnpinnedEventMessageDetail and sets the default values.
+     * Instantiates a new MessageUnpinnedEventMessageDetail and sets the default values.
     */
     public function __construct() {
         parent::__construct();

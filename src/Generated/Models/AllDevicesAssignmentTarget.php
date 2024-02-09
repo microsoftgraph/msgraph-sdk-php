@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AllDevicesAssignmentTarget extends DeviceAndAppManagementAssignmentTarget implements Parsable 
 {
     /**
-     * Instantiates a new allDevicesAssignmentTarget and sets the default values.
+     * Instantiates a new AllDevicesAssignmentTarget and sets the default values.
     */
     public function __construct() {
         parent::__construct();

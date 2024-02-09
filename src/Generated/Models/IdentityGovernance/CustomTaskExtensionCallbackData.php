@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class CustomTaskExtensionCallbackData extends CustomExtensionData implements Parsable 
 {
     /**
-     * Instantiates a new customTaskExtensionCallbackData and sets the default values.
+     * Instantiates a new CustomTaskExtensionCallbackData and sets the default values.
     */
     public function __construct() {
         parent::__construct();

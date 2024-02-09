@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\RequestOption;
 class WorkDay_IntlRequestBuilderPostRequestConfiguration extends BaseRequestConfiguration 
 {
     /**
-     * Instantiates a new workDay_IntlRequestBuilderPostRequestConfiguration and sets the default values.
+     * Instantiates a new WorkDay_IntlRequestBuilderPostRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
     */

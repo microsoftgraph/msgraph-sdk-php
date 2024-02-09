@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EnrollmentConfigurationAssignment extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new enrollmentConfigurationAssignment and sets the default values.
+     * Instantiates a new EnrollmentConfigurationAssignment and sets the default values.
     */
     public function __construct() {
         parent::__construct();

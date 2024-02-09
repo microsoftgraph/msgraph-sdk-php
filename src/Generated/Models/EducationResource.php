@@ -19,7 +19,7 @@ class EducationResource implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new educationResource and sets the default values.
+     * Instantiates a new EducationResource and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
@@ -36,9 +36,11 @@ class EducationResource implements AdditionalDataHolder, BackedModel, Parsable
         if ($mappingValueNode !== null) {
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
+                case '#microsoft.graph.educationChannelResource': return new EducationChannelResource();
                 case '#microsoft.graph.educationExcelResource': return new EducationExcelResource();
                 case '#microsoft.graph.educationExternalResource': return new EducationExternalResource();
                 case '#microsoft.graph.educationFileResource': return new EducationFileResource();
+                case '#microsoft.graph.educationLinkedAssignmentResource': return new EducationLinkedAssignmentResource();
                 case '#microsoft.graph.educationLinkResource': return new EducationLinkResource();
                 case '#microsoft.graph.educationMediaResource': return new EducationMediaResource();
                 case '#microsoft.graph.educationPowerPointResource': return new EducationPowerPointResource();

@@ -16,7 +16,7 @@ class PointsRequestBuilderGetRequestConfiguration extends BaseRequestConfigurati
     public ?PointsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new pointsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new PointsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param PointsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class PointsRequestBuilderGetRequestConfiguration extends BaseRequestConfigurati
     }
 
     /**
-     * Instantiates a new pointsRequestBuilderGetQueryParameters.
+     * Instantiates a new PointsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

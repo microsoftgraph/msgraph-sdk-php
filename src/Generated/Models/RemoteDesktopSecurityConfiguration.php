@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class RemoteDesktopSecurityConfiguration extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new remoteDesktopSecurityConfiguration and sets the default values.
+     * Instantiates a new RemoteDesktopSecurityConfiguration and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -16,7 +16,7 @@ class ReviewSetsRequestBuilderGetRequestConfiguration extends BaseRequestConfigu
     public ?ReviewSetsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new reviewSetsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new ReviewSetsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param ReviewSetsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class ReviewSetsRequestBuilderGetRequestConfiguration extends BaseRequestConfigu
     }
 
     /**
-     * Instantiates a new reviewSetsRequestBuilderGetQueryParameters.
+     * Instantiates a new ReviewSetsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class IosMobileAppIdentifier extends MobileAppIdentifier implements Parsable 
 {
     /**
-     * Instantiates a new iosMobileAppIdentifier and sets the default values.
+     * Instantiates a new IosMobileAppIdentifier and sets the default values.
     */
     public function __construct() {
         parent::__construct();

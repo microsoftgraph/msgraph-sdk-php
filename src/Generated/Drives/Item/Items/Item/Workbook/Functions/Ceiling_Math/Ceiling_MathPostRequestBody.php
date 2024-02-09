@@ -19,7 +19,7 @@ class Ceiling_MathPostRequestBody implements AdditionalDataHolder, BackedModel, 
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new ceiling_MathPostRequestBody and sets the default values.
+     * Instantiates a new Ceiling_MathPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

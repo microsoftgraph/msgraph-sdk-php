@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class DeviceLocalCredentialInfo extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new deviceLocalCredentialInfo and sets the default values.
+     * Instantiates a new DeviceLocalCredentialInfo and sets the default values.
     */
     public function __construct() {
         parent::__construct();

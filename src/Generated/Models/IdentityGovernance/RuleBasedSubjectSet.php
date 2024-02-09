@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class RuleBasedSubjectSet extends SubjectSet implements Parsable 
 {
     /**
-     * Instantiates a new ruleBasedSubjectSet and sets the default values.
+     * Instantiates a new RuleBasedSubjectSet and sets the default values.
     */
     public function __construct() {
         parent::__construct();

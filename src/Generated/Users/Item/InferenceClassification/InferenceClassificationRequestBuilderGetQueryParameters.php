@@ -16,7 +16,7 @@ class InferenceClassificationRequestBuilderGetQueryParameters
     public ?array $select = null;
     
     /**
-     * Instantiates a new inferenceClassificationRequestBuilderGetQueryParameters and sets the default values.
+     * Instantiates a new InferenceClassificationRequestBuilderGetQueryParameters and sets the default values.
      * @param array<string>|null $select Select properties to be returned
     */
     public function __construct(?array $select = null) {

@@ -16,7 +16,7 @@ class WhoisHistoryRecordsRequestBuilderGetRequestConfiguration extends BaseReque
     public ?WhoisHistoryRecordsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new whoisHistoryRecordsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new WhoisHistoryRecordsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param WhoisHistoryRecordsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class WhoisHistoryRecordsRequestBuilderGetRequestConfiguration extends BaseReque
     }
 
     /**
-     * Instantiates a new whoisHistoryRecordsRequestBuilderGetQueryParameters.
+     * Instantiates a new WhoisHistoryRecordsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

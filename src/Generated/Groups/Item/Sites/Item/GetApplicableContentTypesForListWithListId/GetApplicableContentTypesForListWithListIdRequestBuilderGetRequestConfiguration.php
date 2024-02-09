@@ -16,7 +16,7 @@ class GetApplicableContentTypesForListWithListIdRequestBuilderGetRequestConfigur
     public ?GetApplicableContentTypesForListWithListIdRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new getApplicableContentTypesForListWithListIdRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new GetApplicableContentTypesForListWithListIdRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param GetApplicableContentTypesForListWithListIdRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,8 +27,9 @@ class GetApplicableContentTypesForListWithListIdRequestBuilderGetRequestConfigur
     }
 
     /**
-     * Instantiates a new getApplicableContentTypesForListWithListIdRequestBuilderGetQueryParameters.
+     * Instantiates a new GetApplicableContentTypesForListWithListIdRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
+     * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values
      * @param array<string>|null $orderby Order items by property values
      * @param string|null $search Search items by search phrases
@@ -37,8 +38,8 @@ class GetApplicableContentTypesForListWithListIdRequestBuilderGetRequestConfigur
      * @param int|null $top Show only the first n items
      * @return GetApplicableContentTypesForListWithListIdRequestBuilderGetQueryParameters
     */
-    public static function createQueryParameters(?bool $count = null, ?string $filter = null, ?array $orderby = null, ?string $search = null, ?array $select = null, ?int $skip = null, ?int $top = null): GetApplicableContentTypesForListWithListIdRequestBuilderGetQueryParameters {
-        return new GetApplicableContentTypesForListWithListIdRequestBuilderGetQueryParameters($count, $filter, $orderby, $search, $select, $skip, $top);
+    public static function createQueryParameters(?bool $count = null, ?array $expand = null, ?string $filter = null, ?array $orderby = null, ?string $search = null, ?array $select = null, ?int $skip = null, ?int $top = null): GetApplicableContentTypesForListWithListIdRequestBuilderGetQueryParameters {
+        return new GetApplicableContentTypesForListWithListIdRequestBuilderGetQueryParameters($count, $expand, $filter, $orderby, $search, $select, $skip, $top);
     }
 
 }

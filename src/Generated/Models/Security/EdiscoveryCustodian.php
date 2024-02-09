@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class EdiscoveryCustodian extends DataSourceContainer implements Parsable 
 {
     /**
-     * Instantiates a new ediscoveryCustodian and sets the default values.
+     * Instantiates a new EdiscoveryCustodian and sets the default values.
     */
     public function __construct() {
         parent::__construct();

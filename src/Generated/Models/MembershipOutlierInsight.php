@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class MembershipOutlierInsight extends GovernanceInsight implements Parsable 
 {
     /**
-     * Instantiates a new membershipOutlierInsight and sets the default values.
+     * Instantiates a new MembershipOutlierInsight and sets the default values.
     */
     public function __construct() {
         parent::__construct();

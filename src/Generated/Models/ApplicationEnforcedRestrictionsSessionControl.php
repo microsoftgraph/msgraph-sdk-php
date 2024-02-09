@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ApplicationEnforcedRestrictionsSessionControl extends ConditionalAccessSessionControl implements Parsable 
 {
     /**
-     * Instantiates a new applicationEnforcedRestrictionsSessionControl and sets the default values.
+     * Instantiates a new ApplicationEnforcedRestrictionsSessionControl and sets the default values.
     */
     public function __construct() {
         parent::__construct();

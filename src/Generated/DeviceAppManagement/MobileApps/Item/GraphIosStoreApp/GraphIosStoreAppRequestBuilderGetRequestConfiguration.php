@@ -16,7 +16,7 @@ class GraphIosStoreAppRequestBuilderGetRequestConfiguration extends BaseRequestC
     public ?GraphIosStoreAppRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new graphIosStoreAppRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new GraphIosStoreAppRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param GraphIosStoreAppRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class GraphIosStoreAppRequestBuilderGetRequestConfiguration extends BaseRequestC
     }
 
     /**
-     * Instantiates a new graphIosStoreAppRequestBuilderGetQueryParameters.
+     * Instantiates a new GraphIosStoreAppRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return GraphIosStoreAppRequestBuilderGetQueryParameters

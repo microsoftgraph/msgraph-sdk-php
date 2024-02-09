@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class OnPremisesDirectorySynchronization extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new onPremisesDirectorySynchronization and sets the default values.
+     * Instantiates a new OnPremisesDirectorySynchronization and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class PrintServiceEndpoint extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new printServiceEndpoint and sets the default values.
+     * Instantiates a new PrintServiceEndpoint and sets the default values.
     */
     public function __construct() {
         parent::__construct();

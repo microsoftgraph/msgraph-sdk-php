@@ -12,7 +12,7 @@ use Psr\Http\Message\StreamInterface;
 class OnlineMeeting extends OnlineMeetingBase implements Parsable 
 {
     /**
-     * Instantiates a new onlineMeeting and sets the default values.
+     * Instantiates a new OnlineMeeting and sets the default values.
     */
     public function __construct() {
         parent::__construct();

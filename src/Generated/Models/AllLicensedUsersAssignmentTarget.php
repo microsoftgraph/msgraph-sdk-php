@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AllLicensedUsersAssignmentTarget extends DeviceAndAppManagementAssignmentTarget implements Parsable 
 {
     /**
-     * Instantiates a new allLicensedUsersAssignmentTarget and sets the default values.
+     * Instantiates a new AllLicensedUsersAssignmentTarget and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -16,7 +16,7 @@ class SchoolsRequestBuilderGetRequestConfiguration extends BaseRequestConfigurat
     public ?SchoolsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new schoolsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new SchoolsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param SchoolsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class SchoolsRequestBuilderGetRequestConfiguration extends BaseRequestConfigurat
     }
 
     /**
-     * Instantiates a new schoolsRequestBuilderGetQueryParameters.
+     * Instantiates a new SchoolsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

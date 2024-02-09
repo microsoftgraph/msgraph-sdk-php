@@ -19,7 +19,7 @@ class T_Inv_2TPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new t_Inv_2TPostRequestBody and sets the default values.
+     * Instantiates a new T_Inv_2TPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

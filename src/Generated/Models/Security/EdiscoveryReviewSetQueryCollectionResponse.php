@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class EdiscoveryReviewSetQueryCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new ediscoveryReviewSetQueryCollectionResponse and sets the default values.
+     * Instantiates a new EdiscoveryReviewSetQueryCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

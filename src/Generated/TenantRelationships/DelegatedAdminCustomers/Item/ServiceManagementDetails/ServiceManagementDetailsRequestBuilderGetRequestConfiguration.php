@@ -16,7 +16,7 @@ class ServiceManagementDetailsRequestBuilderGetRequestConfiguration extends Base
     public ?ServiceManagementDetailsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new serviceManagementDetailsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new ServiceManagementDetailsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param ServiceManagementDetailsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class ServiceManagementDetailsRequestBuilderGetRequestConfiguration extends Base
     }
 
     /**
-     * Instantiates a new serviceManagementDetailsRequestBuilderGetQueryParameters.
+     * Instantiates a new ServiceManagementDetailsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

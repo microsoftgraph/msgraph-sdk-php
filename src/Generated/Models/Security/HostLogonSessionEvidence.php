@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class HostLogonSessionEvidence extends AlertEvidence implements Parsable 
 {
     /**
-     * Instantiates a new hostLogonSessionEvidence and sets the default values.
+     * Instantiates a new HostLogonSessionEvidence and sets the default values.
     */
     public function __construct() {
         parent::__construct();

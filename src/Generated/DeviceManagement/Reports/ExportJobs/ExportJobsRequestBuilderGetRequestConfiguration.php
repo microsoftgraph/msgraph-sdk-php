@@ -16,7 +16,7 @@ class ExportJobsRequestBuilderGetRequestConfiguration extends BaseRequestConfigu
     public ?ExportJobsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new exportJobsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new ExportJobsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param ExportJobsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class ExportJobsRequestBuilderGetRequestConfiguration extends BaseRequestConfigu
     }
 
     /**
-     * Instantiates a new exportJobsRequestBuilderGetQueryParameters.
+     * Instantiates a new ExportJobsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

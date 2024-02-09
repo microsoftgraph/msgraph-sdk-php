@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class PeopleAdminSettings extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new peopleAdminSettings and sets the default values.
+     * Instantiates a new PeopleAdminSettings and sets the default values.
     */
     public function __construct() {
         parent::__construct();

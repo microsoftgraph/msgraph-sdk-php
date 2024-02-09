@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class CloudAppSecuritySessionControl extends ConditionalAccessSessionControl implements Parsable 
 {
     /**
-     * Instantiates a new cloudAppSecuritySessionControl and sets the default values.
+     * Instantiates a new CloudAppSecuritySessionControl and sets the default values.
     */
     public function __construct() {
         parent::__construct();

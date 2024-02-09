@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AzureCommunicationServicesUserConversationMember extends ConversationMember implements Parsable 
 {
     /**
-     * Instantiates a new azureCommunicationServicesUserConversationMember and sets the default values.
+     * Instantiates a new AzureCommunicationServicesUserConversationMember and sets the default values.
     */
     public function __construct() {
         parent::__construct();

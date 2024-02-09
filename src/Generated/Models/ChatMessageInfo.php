@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ChatMessageInfo extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new chatMessageInfo and sets the default values.
+     * Instantiates a new ChatMessageInfo and sets the default values.
     */
     public function __construct() {
         parent::__construct();

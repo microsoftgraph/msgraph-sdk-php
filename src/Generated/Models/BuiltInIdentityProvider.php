@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class BuiltInIdentityProvider extends IdentityProviderBase implements Parsable 
 {
     /**
-     * Instantiates a new builtInIdentityProvider and sets the default values.
+     * Instantiates a new BuiltInIdentityProvider and sets the default values.
     */
     public function __construct() {
         parent::__construct();

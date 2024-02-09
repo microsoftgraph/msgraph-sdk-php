@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TrainingReminderNotification extends BaseEndUserNotification implements Parsable 
 {
     /**
-     * Instantiates a new trainingReminderNotification and sets the default values.
+     * Instantiates a new TrainingReminderNotification and sets the default values.
     */
     public function __construct() {
         parent::__construct();

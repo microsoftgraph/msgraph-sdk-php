@@ -18,7 +18,7 @@ class Pkcs12CertificateInformation implements AdditionalDataHolder, BackedModel,
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new pkcs12CertificateInformation and sets the default values.
+     * Instantiates a new Pkcs12CertificateInformation and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

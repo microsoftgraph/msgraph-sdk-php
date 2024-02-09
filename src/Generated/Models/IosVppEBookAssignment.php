@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class IosVppEBookAssignment extends ManagedEBookAssignment implements Parsable 
 {
     /**
-     * Instantiates a new iosVppEBookAssignment and sets the default values.
+     * Instantiates a new IosVppEBookAssignment and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -19,7 +19,7 @@ class WhoisContact implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new whoisContact and sets the default values.
+     * Instantiates a new WhoisContact and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

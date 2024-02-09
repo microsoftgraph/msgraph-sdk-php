@@ -19,7 +19,7 @@ class LogNorm_DistPostRequestBody implements AdditionalDataHolder, BackedModel, 
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new logNorm_DistPostRequestBody and sets the default values.
+     * Instantiates a new LogNorm_DistPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

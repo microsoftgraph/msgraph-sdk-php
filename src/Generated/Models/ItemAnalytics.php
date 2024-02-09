@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class ItemAnalytics extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new itemAnalytics and sets the default values.
+     * Instantiates a new ItemAnalytics and sets the default values.
     */
     public function __construct() {
         parent::__construct();

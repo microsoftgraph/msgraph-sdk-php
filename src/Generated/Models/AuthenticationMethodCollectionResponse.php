@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class AuthenticationMethodCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new authenticationMethodCollectionResponse and sets the default values.
+     * Instantiates a new AuthenticationMethodCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

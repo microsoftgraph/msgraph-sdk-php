@@ -18,7 +18,7 @@ class CurrencyColumn implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new currencyColumn and sets the default values.
+     * Instantiates a new CurrencyColumn and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

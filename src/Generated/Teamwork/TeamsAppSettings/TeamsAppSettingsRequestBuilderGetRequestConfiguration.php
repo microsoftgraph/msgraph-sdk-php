@@ -16,7 +16,7 @@ class TeamsAppSettingsRequestBuilderGetRequestConfiguration extends BaseRequestC
     public ?TeamsAppSettingsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new teamsAppSettingsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new TeamsAppSettingsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param TeamsAppSettingsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class TeamsAppSettingsRequestBuilderGetRequestConfiguration extends BaseRequestC
     }
 
     /**
-     * Instantiates a new teamsAppSettingsRequestBuilderGetQueryParameters.
+     * Instantiates a new TeamsAppSettingsRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return TeamsAppSettingsRequestBuilderGetQueryParameters

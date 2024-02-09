@@ -16,7 +16,7 @@ class GraphEndpointRequestBuilderGetRequestConfiguration extends BaseRequestConf
     public ?GraphEndpointRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new graphEndpointRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new GraphEndpointRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param GraphEndpointRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class GraphEndpointRequestBuilderGetRequestConfiguration extends BaseRequestConf
     }
 
     /**
-     * Instantiates a new graphEndpointRequestBuilderGetQueryParameters.
+     * Instantiates a new GraphEndpointRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

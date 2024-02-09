@@ -16,7 +16,7 @@ class SupportedTimeZonesRequestBuilderGetRequestConfiguration extends BaseReques
     public ?SupportedTimeZonesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new supportedTimeZonesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new SupportedTimeZonesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param SupportedTimeZonesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class SupportedTimeZonesRequestBuilderGetRequestConfiguration extends BaseReques
     }
 
     /**
-     * Instantiates a new supportedTimeZonesRequestBuilderGetQueryParameters.
+     * Instantiates a new SupportedTimeZonesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param string|null $filter Filter items by property values
      * @param string|null $search Search items by search phrases

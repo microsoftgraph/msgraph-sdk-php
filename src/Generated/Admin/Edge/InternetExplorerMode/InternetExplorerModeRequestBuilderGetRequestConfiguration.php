@@ -16,7 +16,7 @@ class InternetExplorerModeRequestBuilderGetRequestConfiguration extends BaseRequ
     public ?InternetExplorerModeRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new internetExplorerModeRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new InternetExplorerModeRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param InternetExplorerModeRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class InternetExplorerModeRequestBuilderGetRequestConfiguration extends BaseRequ
     }
 
     /**
-     * Instantiates a new internetExplorerModeRequestBuilderGetQueryParameters.
+     * Instantiates a new InternetExplorerModeRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return InternetExplorerModeRequestBuilderGetQueryParameters

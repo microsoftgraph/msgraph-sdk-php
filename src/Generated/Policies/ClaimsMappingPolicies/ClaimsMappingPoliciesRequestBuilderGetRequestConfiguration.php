@@ -16,7 +16,7 @@ class ClaimsMappingPoliciesRequestBuilderGetRequestConfiguration extends BaseReq
     public ?ClaimsMappingPoliciesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new claimsMappingPoliciesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new ClaimsMappingPoliciesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param ClaimsMappingPoliciesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class ClaimsMappingPoliciesRequestBuilderGetRequestConfiguration extends BaseReq
     }
 
     /**
-     * Instantiates a new claimsMappingPoliciesRequestBuilderGetQueryParameters.
+     * Instantiates a new ClaimsMappingPoliciesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

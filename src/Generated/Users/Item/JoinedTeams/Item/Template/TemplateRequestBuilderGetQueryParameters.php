@@ -22,7 +22,7 @@ class TemplateRequestBuilderGetQueryParameters
     public ?array $select = null;
     
     /**
-     * Instantiates a new templateRequestBuilderGetQueryParameters and sets the default values.
+     * Instantiates a new TemplateRequestBuilderGetQueryParameters and sets the default values.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
     */

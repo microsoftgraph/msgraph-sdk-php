@@ -16,7 +16,7 @@ class DefinitionRequestBuilderGetRequestConfiguration extends BaseRequestConfigu
     public ?DefinitionRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new definitionRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new DefinitionRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param DefinitionRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class DefinitionRequestBuilderGetRequestConfiguration extends BaseRequestConfigu
     }
 
     /**
-     * Instantiates a new definitionRequestBuilderGetQueryParameters.
+     * Instantiates a new DefinitionRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return DefinitionRequestBuilderGetQueryParameters

@@ -19,7 +19,7 @@ class Confidence_TPostRequestBody implements AdditionalDataHolder, BackedModel, 
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new confidence_TPostRequestBody and sets the default values.
+     * Instantiates a new Confidence_TPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

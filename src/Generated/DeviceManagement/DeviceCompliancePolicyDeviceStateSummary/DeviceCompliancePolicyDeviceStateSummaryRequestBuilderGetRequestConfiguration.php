@@ -16,7 +16,7 @@ class DeviceCompliancePolicyDeviceStateSummaryRequestBuilderGetRequestConfigurat
     public ?DeviceCompliancePolicyDeviceStateSummaryRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new deviceCompliancePolicyDeviceStateSummaryRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new DeviceCompliancePolicyDeviceStateSummaryRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param DeviceCompliancePolicyDeviceStateSummaryRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class DeviceCompliancePolicyDeviceStateSummaryRequestBuilderGetRequestConfigurat
     }
 
     /**
-     * Instantiates a new deviceCompliancePolicyDeviceStateSummaryRequestBuilderGetQueryParameters.
+     * Instantiates a new DeviceCompliancePolicyDeviceStateSummaryRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return DeviceCompliancePolicyDeviceStateSummaryRequestBuilderGetQueryParameters

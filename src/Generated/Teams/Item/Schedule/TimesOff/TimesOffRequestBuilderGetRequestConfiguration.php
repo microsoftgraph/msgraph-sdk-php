@@ -16,7 +16,7 @@ class TimesOffRequestBuilderGetRequestConfiguration extends BaseRequestConfigura
     public ?TimesOffRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new timesOffRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new TimesOffRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param TimesOffRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class TimesOffRequestBuilderGetRequestConfiguration extends BaseRequestConfigura
     }
 
     /**
-     * Instantiates a new timesOffRequestBuilderGetQueryParameters.
+     * Instantiates a new TimesOffRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param string|null $filter Filter items by property values
      * @param array<string>|null $orderby Order items by property values

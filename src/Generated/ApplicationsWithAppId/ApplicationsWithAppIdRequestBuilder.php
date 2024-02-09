@@ -23,7 +23,7 @@ class ApplicationsWithAppIdRequestBuilder extends BaseRequestBuilder
      * @param string|null $appId Alternate key of application
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter, ?string $appId = null) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/applications(appId=\'{appId}\'){?%24select,%24expand}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/applications(appId=\'{appId}\'){?%24expand,%24select}');
         if (is_array($pathParametersOrRawUrl)) {
             $urlTplParams = $pathParametersOrRawUrl;
             $urlTplParams['appId'] = $appId;
@@ -43,8 +43,7 @@ class ApplicationsWithAppIdRequestBuilder extends BaseRequestBuilder
     public function delete(?ApplicationsWithAppIdRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
-                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         return $this->requestAdapter->sendNoContentAsync($requestInfo, $errorMappings);
     }
@@ -59,8 +58,7 @@ class ApplicationsWithAppIdRequestBuilder extends BaseRequestBuilder
     public function get(?ApplicationsWithAppIdRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
-                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         return $this->requestAdapter->sendAsync($requestInfo, [Application::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
@@ -76,8 +74,7 @@ class ApplicationsWithAppIdRequestBuilder extends BaseRequestBuilder
     public function patch(Application $body, ?ApplicationsWithAppIdRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
-                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         return $this->requestAdapter->sendAsync($requestInfo, [Application::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
@@ -89,7 +86,7 @@ class ApplicationsWithAppIdRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?ApplicationsWithAppIdRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/applications(appId='{appId}')';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -129,7 +126,7 @@ class ApplicationsWithAppIdRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(Application $body, ?ApplicationsWithAppIdRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/applications(appId='{appId}')';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

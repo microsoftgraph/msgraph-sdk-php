@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class GetEffectivePermissionsWithScopeGetResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new getEffectivePermissionsWithScopeGetResponse and sets the default values.
+     * Instantiates a new GetEffectivePermissionsWithScopeGetResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

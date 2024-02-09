@@ -19,7 +19,7 @@ class ParseExpressionResponse implements AdditionalDataHolder, BackedModel, Pars
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new parseExpressionResponse and sets the default values.
+     * Instantiates a new ParseExpressionResponse and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

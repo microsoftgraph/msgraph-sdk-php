@@ -18,7 +18,7 @@ class InvestigationSecurityState implements AdditionalDataHolder, BackedModel, P
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new investigationSecurityState and sets the default values.
+     * Instantiates a new InvestigationSecurityState and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

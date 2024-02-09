@@ -18,7 +18,7 @@ class AttributeMapping implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new attributeMapping and sets the default values.
+     * Instantiates a new AttributeMapping and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class AgreementFile extends AgreementFileProperties implements Parsable 
 {
     /**
-     * Instantiates a new agreementFile and sets the default values.
+     * Instantiates a new AgreementFile and sets the default values.
     */
     public function __construct() {
         parent::__construct();

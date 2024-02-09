@@ -16,7 +16,7 @@ class ChartsRequestBuilderGetRequestConfiguration extends BaseRequestConfigurati
     public ?ChartsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new chartsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new ChartsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param ChartsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class ChartsRequestBuilderGetRequestConfiguration extends BaseRequestConfigurati
     }
 
     /**
-     * Instantiates a new chartsRequestBuilderGetQueryParameters.
+     * Instantiates a new ChartsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

@@ -19,7 +19,7 @@ class UnicharPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new unicharPostRequestBody and sets the default values.
+     * Instantiates a new UnicharPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

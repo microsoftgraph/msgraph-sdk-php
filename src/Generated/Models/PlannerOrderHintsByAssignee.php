@@ -18,7 +18,7 @@ class PlannerOrderHintsByAssignee implements AdditionalDataHolder, BackedModel, 
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new plannerOrderHintsByAssignee and sets the default values.
+     * Instantiates a new PlannerOrderHintsByAssignee and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

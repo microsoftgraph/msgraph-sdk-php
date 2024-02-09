@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class OrganizerMeetingInfo extends MeetingInfo implements Parsable 
 {
     /**
-     * Instantiates a new organizerMeetingInfo and sets the default values.
+     * Instantiates a new OrganizerMeetingInfo and sets the default values.
     */
     public function __construct() {
         parent::__construct();

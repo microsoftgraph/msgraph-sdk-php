@@ -16,7 +16,7 @@ class GraphAppRoleAssignmentRequestBuilderGetRequestConfiguration extends BaseRe
     public ?GraphAppRoleAssignmentRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new graphAppRoleAssignmentRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new GraphAppRoleAssignmentRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param GraphAppRoleAssignmentRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class GraphAppRoleAssignmentRequestBuilderGetRequestConfiguration extends BaseRe
     }
 
     /**
-     * Instantiates a new graphAppRoleAssignmentRequestBuilderGetQueryParameters.
+     * Instantiates a new GraphAppRoleAssignmentRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return GraphAppRoleAssignmentRequestBuilderGetQueryParameters

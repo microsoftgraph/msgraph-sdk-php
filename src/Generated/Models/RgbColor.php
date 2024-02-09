@@ -21,7 +21,7 @@ class RgbColor implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new rgbColor and sets the default values.
+     * Instantiates a new RgbColor and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

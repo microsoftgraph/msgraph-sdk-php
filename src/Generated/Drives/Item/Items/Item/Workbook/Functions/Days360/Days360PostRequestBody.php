@@ -19,7 +19,7 @@ class Days360PostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new days360PostRequestBody and sets the default values.
+     * Instantiates a new Days360PostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

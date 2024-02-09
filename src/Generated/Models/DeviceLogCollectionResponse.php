@@ -13,7 +13,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DeviceLogCollectionResponse extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new deviceLogCollectionResponse and sets the default values.
+     * Instantiates a new DeviceLogCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

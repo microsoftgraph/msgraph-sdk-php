@@ -23,7 +23,7 @@ class SendActivityNotificationPostRequestBody implements AdditionalDataHolder, B
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new sendActivityNotificationPostRequestBody and sets the default values.
+     * Instantiates a new SendActivityNotificationPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

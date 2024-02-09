@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class GroupLifecyclePolicy extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new groupLifecyclePolicy and sets the default values.
+     * Instantiates a new GroupLifecyclePolicy and sets the default values.
     */
     public function __construct() {
         parent::__construct();

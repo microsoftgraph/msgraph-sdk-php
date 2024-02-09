@@ -18,7 +18,7 @@ class FormattedContent implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new formattedContent and sets the default values.
+     * Instantiates a new FormattedContent and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

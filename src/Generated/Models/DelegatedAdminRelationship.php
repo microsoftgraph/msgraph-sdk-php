@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class DelegatedAdminRelationship extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new delegatedAdminRelationship and sets the default values.
+     * Instantiates a new DelegatedAdminRelationship and sets the default values.
     */
     public function __construct() {
         parent::__construct();

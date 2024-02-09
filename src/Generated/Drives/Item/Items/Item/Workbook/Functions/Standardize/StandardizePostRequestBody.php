@@ -19,7 +19,7 @@ class StandardizePostRequestBody implements AdditionalDataHolder, BackedModel, P
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new standardizePostRequestBody and sets the default values.
+     * Instantiates a new StandardizePostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

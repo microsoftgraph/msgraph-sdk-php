@@ -18,7 +18,7 @@ class TextColumn implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new textColumn and sets the default values.
+     * Instantiates a new TextColumn and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

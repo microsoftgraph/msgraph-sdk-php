@@ -16,7 +16,7 @@ class VirtualEventsRequestBuilderGetRequestConfiguration extends BaseRequestConf
     public ?VirtualEventsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new virtualEventsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new VirtualEventsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param VirtualEventsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class VirtualEventsRequestBuilderGetRequestConfiguration extends BaseRequestConf
     }
 
     /**
-     * Instantiates a new virtualEventsRequestBuilderGetQueryParameters.
+     * Instantiates a new VirtualEventsRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return VirtualEventsRequestBuilderGetQueryParameters

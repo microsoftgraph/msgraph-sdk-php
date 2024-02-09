@@ -16,7 +16,7 @@ class DecisionsRequestBuilderGetRequestConfiguration extends BaseRequestConfigur
     public ?DecisionsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new decisionsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new DecisionsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param DecisionsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class DecisionsRequestBuilderGetRequestConfiguration extends BaseRequestConfigur
     }
 
     /**
-     * Instantiates a new decisionsRequestBuilderGetQueryParameters.
+     * Instantiates a new DecisionsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

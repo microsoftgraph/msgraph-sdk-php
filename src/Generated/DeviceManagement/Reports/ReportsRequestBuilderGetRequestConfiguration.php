@@ -16,7 +16,7 @@ class ReportsRequestBuilderGetRequestConfiguration extends BaseRequestConfigurat
     public ?ReportsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new reportsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new ReportsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param ReportsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class ReportsRequestBuilderGetRequestConfiguration extends BaseRequestConfigurat
     }
 
     /**
-     * Instantiates a new reportsRequestBuilderGetQueryParameters.
+     * Instantiates a new ReportsRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return ReportsRequestBuilderGetQueryParameters

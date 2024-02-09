@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class LongRunningOperationCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new longRunningOperationCollectionResponse and sets the default values.
+     * Instantiates a new LongRunningOperationCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

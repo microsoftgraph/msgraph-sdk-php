@@ -19,7 +19,7 @@ class ConcatenatePostRequestBody implements AdditionalDataHolder, BackedModel, P
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new concatenatePostRequestBody and sets the default values.
+     * Instantiates a new ConcatenatePostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

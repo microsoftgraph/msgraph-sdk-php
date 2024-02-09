@@ -16,7 +16,7 @@ class AvailableProviderTypesRequestBuilderGetRequestConfiguration extends BaseRe
     public ?AvailableProviderTypesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new availableProviderTypesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new AvailableProviderTypesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param AvailableProviderTypesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class AvailableProviderTypesRequestBuilderGetRequestConfiguration extends BaseRe
     }
 
     /**
-     * Instantiates a new availableProviderTypesRequestBuilderGetQueryParameters.
+     * Instantiates a new AvailableProviderTypesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param string|null $filter Filter items by property values
      * @param string|null $search Search items by search phrases

@@ -19,7 +19,7 @@ class Atan2PostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new atan2PostRequestBody and sets the default values.
+     * Instantiates a new Atan2PostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

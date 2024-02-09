@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AttackSimulationOperation extends LongRunningOperation implements Parsable 
 {
     /**
-     * Instantiates a new attackSimulationOperation and sets the default values.
+     * Instantiates a new AttackSimulationOperation and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -18,7 +18,7 @@ class AddCopyPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new addCopyPostRequestBody and sets the default values.
+     * Instantiates a new AddCopyPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

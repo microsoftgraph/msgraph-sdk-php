@@ -19,7 +19,7 @@ class Bin2DecPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new bin2DecPostRequestBody and sets the default values.
+     * Instantiates a new Bin2DecPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

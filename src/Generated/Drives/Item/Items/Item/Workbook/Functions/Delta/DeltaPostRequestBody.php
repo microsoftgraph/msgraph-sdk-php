@@ -19,7 +19,7 @@ class DeltaPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new deltaPostRequestBody and sets the default values.
+     * Instantiates a new DeltaPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

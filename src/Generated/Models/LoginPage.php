@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class LoginPage extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new loginPage and sets the default values.
+     * Instantiates a new LoginPage and sets the default values.
     */
     public function __construct() {
         parent::__construct();

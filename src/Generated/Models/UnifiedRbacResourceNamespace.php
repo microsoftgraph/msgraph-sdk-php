@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class UnifiedRbacResourceNamespace extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new unifiedRbacResourceNamespace and sets the default values.
+     * Instantiates a new UnifiedRbacResourceNamespace and sets the default values.
     */
     public function __construct() {
         parent::__construct();

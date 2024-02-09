@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class WorkbookChart extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new workbookChart and sets the default values.
+     * Instantiates a new WorkbookChart and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EducationAssignmentClassRecipient extends EducationAssignmentRecipient implements Parsable 
 {
     /**
-     * Instantiates a new educationAssignmentClassRecipient and sets the default values.
+     * Instantiates a new EducationAssignmentClassRecipient and sets the default values.
     */
     public function __construct() {
         parent::__construct();

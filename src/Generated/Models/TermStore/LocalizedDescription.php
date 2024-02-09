@@ -18,7 +18,7 @@ class LocalizedDescription implements AdditionalDataHolder, BackedModel, Parsabl
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new localizedDescription and sets the default values.
+     * Instantiates a new LocalizedDescription and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

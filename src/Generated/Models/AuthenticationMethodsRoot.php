@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class AuthenticationMethodsRoot extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new authenticationMethodsRoot and sets the default values.
+     * Instantiates a new AuthenticationMethodsRoot and sets the default values.
     */
     public function __construct() {
         parent::__construct();

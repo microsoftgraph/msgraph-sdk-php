@@ -16,7 +16,7 @@ class ChildFoldersRequestBuilderGetRequestConfiguration extends BaseRequestConfi
     public ?ChildFoldersRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new childFoldersRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new ChildFoldersRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param ChildFoldersRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class ChildFoldersRequestBuilderGetRequestConfiguration extends BaseRequestConfi
     }
 
     /**
-     * Instantiates a new childFoldersRequestBuilderGetQueryParameters.
+     * Instantiates a new ChildFoldersRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

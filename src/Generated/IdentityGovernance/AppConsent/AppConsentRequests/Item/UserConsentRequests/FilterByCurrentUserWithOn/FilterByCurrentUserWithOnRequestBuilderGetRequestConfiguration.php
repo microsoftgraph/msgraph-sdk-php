@@ -16,7 +16,7 @@ class FilterByCurrentUserWithOnRequestBuilderGetRequestConfiguration extends Bas
     public ?FilterByCurrentUserWithOnRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new filterByCurrentUserWithOnRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new FilterByCurrentUserWithOnRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param FilterByCurrentUserWithOnRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,8 +27,9 @@ class FilterByCurrentUserWithOnRequestBuilderGetRequestConfiguration extends Bas
     }
 
     /**
-     * Instantiates a new filterByCurrentUserWithOnRequestBuilderGetQueryParameters.
+     * Instantiates a new FilterByCurrentUserWithOnRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
+     * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values
      * @param array<string>|null $orderby Order items by property values
      * @param string|null $search Search items by search phrases
@@ -37,8 +38,8 @@ class FilterByCurrentUserWithOnRequestBuilderGetRequestConfiguration extends Bas
      * @param int|null $top Show only the first n items
      * @return FilterByCurrentUserWithOnRequestBuilderGetQueryParameters
     */
-    public static function createQueryParameters(?bool $count = null, ?string $filter = null, ?array $orderby = null, ?string $search = null, ?array $select = null, ?int $skip = null, ?int $top = null): FilterByCurrentUserWithOnRequestBuilderGetQueryParameters {
-        return new FilterByCurrentUserWithOnRequestBuilderGetQueryParameters($count, $filter, $orderby, $search, $select, $skip, $top);
+    public static function createQueryParameters(?bool $count = null, ?array $expand = null, ?string $filter = null, ?array $orderby = null, ?string $search = null, ?array $select = null, ?int $skip = null, ?int $top = null): FilterByCurrentUserWithOnRequestBuilderGetQueryParameters {
+        return new FilterByCurrentUserWithOnRequestBuilderGetQueryParameters($count, $expand, $filter, $orderby, $search, $select, $skip, $top);
     }
 
 }

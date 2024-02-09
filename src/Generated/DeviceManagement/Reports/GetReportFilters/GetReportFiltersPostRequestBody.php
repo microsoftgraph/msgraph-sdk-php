@@ -19,7 +19,7 @@ class GetReportFiltersPostRequestBody implements AdditionalDataHolder, BackedMod
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new getReportFiltersPostRequestBody and sets the default values.
+     * Instantiates a new GetReportFiltersPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class EducationRubricOutcome extends EducationOutcome implements Parsable 
 {
     /**
-     * Instantiates a new educationRubricOutcome and sets the default values.
+     * Instantiates a new EducationRubricOutcome and sets the default values.
     */
     public function __construct() {
         parent::__construct();

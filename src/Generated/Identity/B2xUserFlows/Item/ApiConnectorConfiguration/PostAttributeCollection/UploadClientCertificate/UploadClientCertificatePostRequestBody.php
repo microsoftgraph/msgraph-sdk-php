@@ -18,7 +18,7 @@ class UploadClientCertificatePostRequestBody implements AdditionalDataHolder, Ba
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new uploadClientCertificatePostRequestBody and sets the default values.
+     * Instantiates a new UploadClientCertificatePostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

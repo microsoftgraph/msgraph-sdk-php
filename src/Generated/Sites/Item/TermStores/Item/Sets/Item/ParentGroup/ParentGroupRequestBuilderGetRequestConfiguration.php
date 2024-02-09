@@ -16,7 +16,7 @@ class ParentGroupRequestBuilderGetRequestConfiguration extends BaseRequestConfig
     public ?ParentGroupRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new parentGroupRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new ParentGroupRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param ParentGroupRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class ParentGroupRequestBuilderGetRequestConfiguration extends BaseRequestConfig
     }
 
     /**
-     * Instantiates a new parentGroupRequestBuilderGetQueryParameters.
+     * Instantiates a new ParentGroupRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return ParentGroupRequestBuilderGetQueryParameters

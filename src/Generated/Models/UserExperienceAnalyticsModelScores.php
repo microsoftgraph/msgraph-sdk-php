@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UserExperienceAnalyticsModelScores extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new userExperienceAnalyticsModelScores and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsModelScores and sets the default values.
     */
     public function __construct() {
         parent::__construct();

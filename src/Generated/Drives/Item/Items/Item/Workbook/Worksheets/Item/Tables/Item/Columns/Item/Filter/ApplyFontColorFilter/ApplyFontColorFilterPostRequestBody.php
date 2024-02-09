@@ -18,7 +18,7 @@ class ApplyFontColorFilterPostRequestBody implements AdditionalDataHolder, Backe
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new applyFontColorFilterPostRequestBody and sets the default values.
+     * Instantiates a new ApplyFontColorFilterPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

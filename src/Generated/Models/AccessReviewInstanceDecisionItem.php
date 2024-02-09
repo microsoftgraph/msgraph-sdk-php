@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class AccessReviewInstanceDecisionItem extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new accessReviewInstanceDecisionItem and sets the default values.
+     * Instantiates a new AccessReviewInstanceDecisionItem and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -16,7 +16,7 @@ class PayloadsRequestBuilderGetRequestConfiguration extends BaseRequestConfigura
     public ?PayloadsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new payloadsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new PayloadsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param PayloadsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class PayloadsRequestBuilderGetRequestConfiguration extends BaseRequestConfigura
     }
 
     /**
-     * Instantiates a new payloadsRequestBuilderGetQueryParameters.
+     * Instantiates a new PayloadsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

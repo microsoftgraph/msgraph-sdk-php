@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class RemoveAccessApplyAction extends AccessReviewApplyAction implements Parsable 
 {
     /**
-     * Instantiates a new removeAccessApplyAction and sets the default values.
+     * Instantiates a new RemoveAccessApplyAction and sets the default values.
     */
     public function __construct() {
         parent::__construct();

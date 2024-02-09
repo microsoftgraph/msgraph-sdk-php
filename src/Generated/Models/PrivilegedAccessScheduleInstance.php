@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class PrivilegedAccessScheduleInstance extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new privilegedAccessScheduleInstance and sets the default values.
+     * Instantiates a new PrivilegedAccessScheduleInstance and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class UsedInsightCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new usedInsightCollectionResponse and sets the default values.
+     * Instantiates a new UsedInsightCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

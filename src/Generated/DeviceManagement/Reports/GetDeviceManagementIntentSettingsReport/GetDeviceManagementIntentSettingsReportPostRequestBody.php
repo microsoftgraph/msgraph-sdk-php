@@ -19,7 +19,7 @@ class GetDeviceManagementIntentSettingsReportPostRequestBody implements Addition
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new getDeviceManagementIntentSettingsReportPostRequestBody and sets the default values.
+     * Instantiates a new GetDeviceManagementIntentSettingsReportPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

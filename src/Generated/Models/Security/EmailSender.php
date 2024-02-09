@@ -18,7 +18,7 @@ class EmailSender implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new emailSender and sets the default values.
+     * Instantiates a new EmailSender and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

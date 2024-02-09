@@ -16,7 +16,7 @@ class ConditionalAccessRequestBuilderGetRequestConfiguration extends BaseRequest
     public ?ConditionalAccessRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new conditionalAccessRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new ConditionalAccessRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param ConditionalAccessRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class ConditionalAccessRequestBuilderGetRequestConfiguration extends BaseRequest
     }
 
     /**
-     * Instantiates a new conditionalAccessRequestBuilderGetQueryParameters.
+     * Instantiates a new ConditionalAccessRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return ConditionalAccessRequestBuilderGetQueryParameters

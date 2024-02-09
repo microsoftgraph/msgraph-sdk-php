@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class ProfileCardPropertyCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new profileCardPropertyCollectionResponse and sets the default values.
+     * Instantiates a new ProfileCardPropertyCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

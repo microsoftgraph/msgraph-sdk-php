@@ -16,7 +16,7 @@ class PostFederationSignupRequestBuilderGetRequestConfiguration extends BaseRequ
     public ?PostFederationSignupRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new postFederationSignupRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new PostFederationSignupRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param PostFederationSignupRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class PostFederationSignupRequestBuilderGetRequestConfiguration extends BaseRequ
     }
 
     /**
-     * Instantiates a new postFederationSignupRequestBuilderGetQueryParameters.
+     * Instantiates a new PostFederationSignupRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return PostFederationSignupRequestBuilderGetQueryParameters

@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UnifiedRoleManagementPolicyAssignment extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new unifiedRoleManagementPolicyAssignment and sets the default values.
+     * Instantiates a new UnifiedRoleManagementPolicyAssignment and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class IPv4CidrRange extends IpRange implements Parsable 
 {
     /**
-     * Instantiates a new iPv4CidrRange and sets the default values.
+     * Instantiates a new IPv4CidrRange and sets the default values.
     */
     public function __construct() {
         parent::__construct();

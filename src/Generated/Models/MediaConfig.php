@@ -18,7 +18,7 @@ class MediaConfig implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new mediaConfig and sets the default values.
+     * Instantiates a new MediaConfig and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

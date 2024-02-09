@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class KubernetesServiceAccountEvidence extends AlertEvidence implements Parsable 
 {
     /**
-     * Instantiates a new kubernetesServiceAccountEvidence and sets the default values.
+     * Instantiates a new KubernetesServiceAccountEvidence and sets the default values.
     */
     public function __construct() {
         parent::__construct();

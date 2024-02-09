@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class PrivilegedAccessScheduleRequest extends Request implements Parsable 
 {
     /**
-     * Instantiates a new privilegedAccessScheduleRequest and sets the default values.
+     * Instantiates a new PrivilegedAccessScheduleRequest and sets the default values.
     */
     public function __construct() {
         parent::__construct();

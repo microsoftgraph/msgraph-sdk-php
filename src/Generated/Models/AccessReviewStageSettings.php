@@ -19,7 +19,7 @@ class AccessReviewStageSettings implements AdditionalDataHolder, BackedModel, Pa
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new accessReviewStageSettings and sets the default values.
+     * Instantiates a new AccessReviewStageSettings and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

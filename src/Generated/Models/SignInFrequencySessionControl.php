@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SignInFrequencySessionControl extends ConditionalAccessSessionControl implements Parsable 
 {
     /**
-     * Instantiates a new signInFrequencySessionControl and sets the default values.
+     * Instantiates a new SignInFrequencySessionControl and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class AppLogCollectionRequestCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new appLogCollectionRequestCollectionResponse and sets the default values.
+     * Instantiates a new AppLogCollectionRequestCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

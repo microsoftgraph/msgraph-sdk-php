@@ -18,7 +18,7 @@ class StopHoldMusicPostRequestBody implements AdditionalDataHolder, BackedModel,
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new stopHoldMusicPostRequestBody and sets the default values.
+     * Instantiates a new StopHoldMusicPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

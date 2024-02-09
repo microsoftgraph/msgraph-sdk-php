@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WindowsMobileMSI extends MobileLobApp implements Parsable 
 {
     /**
-     * Instantiates a new windowsMobileMSI and sets the default values.
+     * Instantiates a new WindowsMobileMSI and sets the default values.
     */
     public function __construct() {
         parent::__construct();

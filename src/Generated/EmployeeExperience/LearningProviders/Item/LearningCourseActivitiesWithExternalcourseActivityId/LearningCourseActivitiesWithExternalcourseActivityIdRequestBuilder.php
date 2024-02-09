@@ -23,7 +23,7 @@ class LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder extends
      * @param string|null $externalcourseActivityId Alternate key of learningCourseActivity
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter, ?string $externalcourseActivityId = null) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/employeeExperience/learningProviders/{learningProvider%2Did}/learningCourseActivities(externalcourseActivityId=\'{externalcourseActivityId}\'){?%24select,%24expand}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/employeeExperience/learningProviders/{learningProvider%2Did}/learningCourseActivities(externalcourseActivityId=\'{externalcourseActivityId}\'){?%24expand,%24select}');
         if (is_array($pathParametersOrRawUrl)) {
             $urlTplParams = $pathParametersOrRawUrl;
             $urlTplParams['externalcourseActivityId'] = $externalcourseActivityId;
@@ -43,8 +43,7 @@ class LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder extends
     public function delete(?LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
-                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         return $this->requestAdapter->sendNoContentAsync($requestInfo, $errorMappings);
     }
@@ -58,8 +57,7 @@ class LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder extends
     public function get(?LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
-                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         return $this->requestAdapter->sendAsync($requestInfo, [LearningCourseActivity::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
@@ -75,8 +73,7 @@ class LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder extends
     public function patch(LearningCourseActivity $body, ?LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
-                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         return $this->requestAdapter->sendAsync($requestInfo, [LearningCourseActivity::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
@@ -88,7 +85,7 @@ class LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder extends
     */
     public function toDeleteRequestInformation(?LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/employeeExperience/learningProviders/{learningProvider%2Did}/learningCourseActivities(externalcourseActivityId='{externalcourseActivityId}')';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -128,7 +125,7 @@ class LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder extends
     */
     public function toPatchRequestInformation(LearningCourseActivity $body, ?LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/employeeExperience/learningProviders/{learningProvider%2Did}/learningCourseActivities(externalcourseActivityId='{externalcourseActivityId}')';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

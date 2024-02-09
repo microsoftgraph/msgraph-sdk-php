@@ -16,7 +16,7 @@ class HostRequestBuilderGetRequestConfiguration extends BaseRequestConfiguration
     public ?HostRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new hostRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new HostRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param HostRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class HostRequestBuilderGetRequestConfiguration extends BaseRequestConfiguration
     }
 
     /**
-     * Instantiates a new hostRequestBuilderGetQueryParameters.
+     * Instantiates a new HostRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return HostRequestBuilderGetQueryParameters

@@ -18,7 +18,7 @@ class GetMemberObjectsPostRequestBody implements AdditionalDataHolder, BackedMod
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new getMemberObjectsPostRequestBody and sets the default values.
+     * Instantiates a new GetMemberObjectsPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

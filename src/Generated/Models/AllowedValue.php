@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AllowedValue extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new allowedValue and sets the default values.
+     * Instantiates a new AllowedValue and sets the default values.
     */
     public function __construct() {
         parent::__construct();

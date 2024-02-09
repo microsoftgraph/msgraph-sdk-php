@@ -16,7 +16,7 @@ class AuthenticationStrengthRequestBuilderGetRequestConfiguration extends BaseRe
     public ?AuthenticationStrengthRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new authenticationStrengthRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new AuthenticationStrengthRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param AuthenticationStrengthRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class AuthenticationStrengthRequestBuilderGetRequestConfiguration extends BaseRe
     }
 
     /**
-     * Instantiates a new authenticationStrengthRequestBuilderGetQueryParameters.
+     * Instantiates a new AuthenticationStrengthRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return AuthenticationStrengthRequestBuilderGetQueryParameters

@@ -16,7 +16,7 @@ class UserFlowIdentityProvidersRequestBuilderGetRequestConfiguration extends Bas
     public ?UserFlowIdentityProvidersRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new userFlowIdentityProvidersRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new UserFlowIdentityProvidersRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param UserFlowIdentityProvidersRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class UserFlowIdentityProvidersRequestBuilderGetRequestConfiguration extends Bas
     }
 
     /**
-     * Instantiates a new userFlowIdentityProvidersRequestBuilderGetQueryParameters.
+     * Instantiates a new UserFlowIdentityProvidersRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

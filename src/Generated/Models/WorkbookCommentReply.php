@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookCommentReply extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new workbookCommentReply and sets the default values.
+     * Instantiates a new WorkbookCommentReply and sets the default values.
     */
     public function __construct() {
         parent::__construct();

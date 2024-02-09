@@ -16,7 +16,7 @@ class EmployeeExperienceRequestBuilderGetQueryParameters
     public ?array $select = null;
     
     /**
-     * Instantiates a new employeeExperienceRequestBuilderGetQueryParameters and sets the default values.
+     * Instantiates a new EmployeeExperienceRequestBuilderGetQueryParameters and sets the default values.
      * @param array<string>|null $select Select properties to be returned
     */
     public function __construct(?array $select = null) {

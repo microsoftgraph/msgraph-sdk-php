@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class OauthApplicationEvidence extends AlertEvidence implements Parsable 
 {
     /**
-     * Instantiates a new oauthApplicationEvidence and sets the default values.
+     * Instantiates a new OauthApplicationEvidence and sets the default values.
     */
     public function __construct() {
         parent::__construct();

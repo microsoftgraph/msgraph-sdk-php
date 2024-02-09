@@ -20,7 +20,7 @@ class RecordResponsePostRequestBody implements AdditionalDataHolder, BackedModel
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new recordResponsePostRequestBody and sets the default values.
+     * Instantiates a new RecordResponsePostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

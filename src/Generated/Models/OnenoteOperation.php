@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class OnenoteOperation extends Operation implements Parsable 
 {
     /**
-     * Instantiates a new onenoteOperation and sets the default values.
+     * Instantiates a new OnenoteOperation and sets the default values.
     */
     public function __construct() {
         parent::__construct();

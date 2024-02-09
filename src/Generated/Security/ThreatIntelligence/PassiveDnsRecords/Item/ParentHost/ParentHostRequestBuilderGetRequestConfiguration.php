@@ -16,7 +16,7 @@ class ParentHostRequestBuilderGetRequestConfiguration extends BaseRequestConfigu
     public ?ParentHostRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new parentHostRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new ParentHostRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param ParentHostRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class ParentHostRequestBuilderGetRequestConfiguration extends BaseRequestConfigu
     }
 
     /**
-     * Instantiates a new parentHostRequestBuilderGetQueryParameters.
+     * Instantiates a new ParentHostRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return ParentHostRequestBuilderGetQueryParameters

@@ -21,7 +21,7 @@ class UserExperienceAnalyticsInsightValue implements AdditionalDataHolder, Backe
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new userExperienceAnalyticsInsightValue and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsInsightValue and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

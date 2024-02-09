@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TabUpdatedEventMessageDetail extends EventMessageDetail implements Parsable 
 {
     /**
-     * Instantiates a new tabUpdatedEventMessageDetail and sets the default values.
+     * Instantiates a new TabUpdatedEventMessageDetail and sets the default values.
     */
     public function __construct() {
         parent::__construct();

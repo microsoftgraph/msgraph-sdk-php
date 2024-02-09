@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class OpenShift extends ChangeTrackedEntity implements Parsable 
 {
     /**
-     * Instantiates a new openShift and sets the default values.
+     * Instantiates a new OpenShift and sets the default values.
     */
     public function __construct() {
         parent::__construct();

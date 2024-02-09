@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Hostname extends Host implements Parsable 
 {
     /**
-     * Instantiates a new hostname and sets the default values.
+     * Instantiates a new Hostname and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -16,7 +16,7 @@ class SoftwareOathMethodsRequestBuilderGetRequestConfiguration extends BaseReque
     public ?SoftwareOathMethodsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new softwareOathMethodsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new SoftwareOathMethodsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param SoftwareOathMethodsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class SoftwareOathMethodsRequestBuilderGetRequestConfiguration extends BaseReque
     }
 
     /**
-     * Instantiates a new softwareOathMethodsRequestBuilderGetQueryParameters.
+     * Instantiates a new SoftwareOathMethodsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

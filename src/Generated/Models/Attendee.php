@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Attendee extends AttendeeBase implements Parsable 
 {
     /**
-     * Instantiates a new attendee and sets the default values.
+     * Instantiates a new Attendee and sets the default values.
     */
     public function __construct() {
         parent::__construct();

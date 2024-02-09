@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class EdiscoveryReviewSet extends DataSet implements Parsable 
 {
     /**
-     * Instantiates a new ediscoveryReviewSet and sets the default values.
+     * Instantiates a new EdiscoveryReviewSet and sets the default values.
     */
     public function __construct() {
         parent::__construct();

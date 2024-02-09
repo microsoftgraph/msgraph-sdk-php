@@ -16,7 +16,7 @@ class SubscribedSkusRequestBuilderGetRequestConfiguration extends BaseRequestCon
     public ?SubscribedSkusRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new subscribedSkusRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new SubscribedSkusRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param SubscribedSkusRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class SubscribedSkusRequestBuilderGetRequestConfiguration extends BaseRequestCon
     }
 
     /**
-     * Instantiates a new subscribedSkusRequestBuilderGetQueryParameters.
+     * Instantiates a new SubscribedSkusRequestBuilderGetQueryParameters.
      * @param array<string>|null $orderby Order items by property values
      * @param string|null $search Search items by search phrases
      * @param array<string>|null $select Select properties to be returned

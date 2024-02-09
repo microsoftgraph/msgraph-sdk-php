@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class CheckMemberGroupsPostResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new checkMemberGroupsPostResponse and sets the default values.
+     * Instantiates a new CheckMemberGroupsPostResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

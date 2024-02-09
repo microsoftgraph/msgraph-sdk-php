@@ -16,7 +16,7 @@ class AssignmentScheduleRequestsRequestBuilderGetRequestConfiguration extends Ba
     public ?AssignmentScheduleRequestsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new assignmentScheduleRequestsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new AssignmentScheduleRequestsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param AssignmentScheduleRequestsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class AssignmentScheduleRequestsRequestBuilderGetRequestConfiguration extends Ba
     }
 
     /**
-     * Instantiates a new assignmentScheduleRequestsRequestBuilderGetQueryParameters.
+     * Instantiates a new AssignmentScheduleRequestsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AppleDeviceFeaturesConfigurationBase extends DeviceConfiguration implements Parsable 
 {
     /**
-     * Instantiates a new appleDeviceFeaturesConfigurationBase and sets the default values.
+     * Instantiates a new AppleDeviceFeaturesConfigurationBase and sets the default values.
     */
     public function __construct() {
         parent::__construct();
