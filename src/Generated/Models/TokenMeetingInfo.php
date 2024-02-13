@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TokenMeetingInfo extends MeetingInfo implements Parsable 
 {
     /**
-     * Instantiates a new tokenMeetingInfo and sets the default values.
+     * Instantiates a new TokenMeetingInfo and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -16,7 +16,7 @@ class UserStatusOverviewRequestBuilderGetRequestConfiguration extends BaseReques
     public ?UserStatusOverviewRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new userStatusOverviewRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new UserStatusOverviewRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param UserStatusOverviewRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class UserStatusOverviewRequestBuilderGetRequestConfiguration extends BaseReques
     }
 
     /**
-     * Instantiates a new userStatusOverviewRequestBuilderGetQueryParameters.
+     * Instantiates a new UserStatusOverviewRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return UserStatusOverviewRequestBuilderGetQueryParameters

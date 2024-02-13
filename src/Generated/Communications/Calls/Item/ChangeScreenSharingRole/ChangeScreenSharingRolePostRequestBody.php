@@ -19,7 +19,7 @@ class ChangeScreenSharingRolePostRequestBody implements AdditionalDataHolder, Ba
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new changeScreenSharingRolePostRequestBody and sets the default values.
+     * Instantiates a new ChangeScreenSharingRolePostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

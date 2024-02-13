@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class RequestorManager extends SubjectSet implements Parsable 
 {
     /**
-     * Instantiates a new requestorManager and sets the default values.
+     * Instantiates a new RequestorManager and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -18,7 +18,7 @@ class TeamworkNotificationRecipient implements AdditionalDataHolder, BackedModel
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new teamworkNotificationRecipient and sets the default values.
+     * Instantiates a new TeamworkNotificationRecipient and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

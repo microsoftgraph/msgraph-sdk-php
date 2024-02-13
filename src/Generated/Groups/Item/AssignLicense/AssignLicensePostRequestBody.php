@@ -20,7 +20,7 @@ class AssignLicensePostRequestBody implements AdditionalDataHolder, BackedModel,
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new assignLicensePostRequestBody and sets the default values.
+     * Instantiates a new AssignLicensePostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

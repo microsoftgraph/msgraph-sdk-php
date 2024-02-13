@@ -16,7 +16,7 @@ class CustodianSourcesRequestBuilderGetRequestConfiguration extends BaseRequestC
     public ?CustodianSourcesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new custodianSourcesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new CustodianSourcesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param CustodianSourcesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class CustodianSourcesRequestBuilderGetRequestConfiguration extends BaseRequestC
     }
 
     /**
-     * Instantiates a new custodianSourcesRequestBuilderGetQueryParameters.
+     * Instantiates a new CustodianSourcesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

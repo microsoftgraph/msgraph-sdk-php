@@ -19,7 +19,7 @@ class GetComplianceSettingNonComplianceReportPostRequestBody implements Addition
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new getComplianceSettingNonComplianceReportPostRequestBody and sets the default values.
+     * Instantiates a new GetComplianceSettingNonComplianceReportPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

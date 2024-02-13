@@ -19,7 +19,7 @@ class ImLog2PostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new imLog2PostRequestBody and sets the default values.
+     * Instantiates a new ImLog2PostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

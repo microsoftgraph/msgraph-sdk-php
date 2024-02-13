@@ -19,7 +19,7 @@ class StandardTimeZoneOffset implements AdditionalDataHolder, BackedModel, Parsa
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new standardTimeZoneOffset and sets the default values.
+     * Instantiates a new StandardTimeZoneOffset and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

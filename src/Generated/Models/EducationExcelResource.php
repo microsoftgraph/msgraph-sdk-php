@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EducationExcelResource extends EducationResource implements Parsable 
 {
     /**
-     * Instantiates a new educationExcelResource and sets the default values.
+     * Instantiates a new EducationExcelResource and sets the default values.
     */
     public function __construct() {
         parent::__construct();

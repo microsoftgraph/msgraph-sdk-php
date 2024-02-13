@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AuthenticationMethodTarget extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new authenticationMethodTarget and sets the default values.
+     * Instantiates a new AuthenticationMethodTarget and sets the default values.
     */
     public function __construct() {
         parent::__construct();

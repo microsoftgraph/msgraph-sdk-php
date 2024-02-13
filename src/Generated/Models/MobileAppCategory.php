@@ -13,7 +13,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class MobileAppCategory extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new mobileAppCategory and sets the default values.
+     * Instantiates a new MobileAppCategory and sets the default values.
     */
     public function __construct() {
         parent::__construct();

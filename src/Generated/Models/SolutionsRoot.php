@@ -19,7 +19,7 @@ class SolutionsRoot implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new solutionsRoot and sets the default values.
+     * Instantiates a new SolutionsRoot and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class KubernetesClusterEvidence extends AlertEvidence implements Parsable 
 {
     /**
-     * Instantiates a new kubernetesClusterEvidence and sets the default values.
+     * Instantiates a new KubernetesClusterEvidence and sets the default values.
     */
     public function __construct() {
         parent::__construct();

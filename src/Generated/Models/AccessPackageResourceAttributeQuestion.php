@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AccessPackageResourceAttributeQuestion extends AccessPackageResourceAttributeSource implements Parsable 
 {
     /**
-     * Instantiates a new accessPackageResourceAttributeQuestion and sets the default values.
+     * Instantiates a new AccessPackageResourceAttributeQuestion and sets the default values.
     */
     public function __construct() {
         parent::__construct();

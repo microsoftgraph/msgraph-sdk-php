@@ -16,7 +16,7 @@ class SecureScoreControlProfilesRequestBuilderGetRequestConfiguration extends Ba
     public ?SecureScoreControlProfilesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new secureScoreControlProfilesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new SecureScoreControlProfilesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param SecureScoreControlProfilesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class SecureScoreControlProfilesRequestBuilderGetRequestConfiguration extends Ba
     }
 
     /**
-     * Instantiates a new secureScoreControlProfilesRequestBuilderGetQueryParameters.
+     * Instantiates a new SecureScoreControlProfilesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

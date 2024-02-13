@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AddLargeGalleryViewOperation extends CommsOperation implements Parsable 
 {
     /**
-     * Instantiates a new addLargeGalleryViewOperation and sets the default values.
+     * Instantiates a new AddLargeGalleryViewOperation and sets the default values.
     */
     public function __construct() {
         parent::__construct();

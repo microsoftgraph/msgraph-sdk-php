@@ -10,7 +10,7 @@ use Psr\Http\Message\StreamInterface;
 class TaskFileAttachment extends AttachmentBase implements Parsable 
 {
     /**
-     * Instantiates a new taskFileAttachment and sets the default values.
+     * Instantiates a new TaskFileAttachment and sets the default values.
     */
     public function __construct() {
         parent::__construct();

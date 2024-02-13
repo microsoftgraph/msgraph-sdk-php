@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ManagedAppStatus extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new managedAppStatus and sets the default values.
+     * Instantiates a new ManagedAppStatus and sets the default values.
     */
     public function __construct() {
         parent::__construct();

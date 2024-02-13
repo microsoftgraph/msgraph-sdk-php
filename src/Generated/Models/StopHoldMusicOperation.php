@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class StopHoldMusicOperation extends CommsOperation implements Parsable 
 {
     /**
-     * Instantiates a new stopHoldMusicOperation and sets the default values.
+     * Instantiates a new StopHoldMusicOperation and sets the default values.
     */
     public function __construct() {
         parent::__construct();

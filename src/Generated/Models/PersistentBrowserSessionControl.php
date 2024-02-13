@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class PersistentBrowserSessionControl extends ConditionalAccessSessionControl implements Parsable 
 {
     /**
-     * Instantiates a new persistentBrowserSessionControl and sets the default values.
+     * Instantiates a new PersistentBrowserSessionControl and sets the default values.
     */
     public function __construct() {
         parent::__construct();

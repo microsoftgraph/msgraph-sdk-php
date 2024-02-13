@@ -16,7 +16,7 @@ class LegendRequestBuilderGetRequestConfiguration extends BaseRequestConfigurati
     public ?LegendRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new legendRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new LegendRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param LegendRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class LegendRequestBuilderGetRequestConfiguration extends BaseRequestConfigurati
     }
 
     /**
-     * Instantiates a new legendRequestBuilderGetQueryParameters.
+     * Instantiates a new LegendRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return LegendRequestBuilderGetQueryParameters

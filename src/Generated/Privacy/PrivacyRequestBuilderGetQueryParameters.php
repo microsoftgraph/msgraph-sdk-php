@@ -22,7 +22,7 @@ class PrivacyRequestBuilderGetQueryParameters
     public ?array $select = null;
     
     /**
-     * Instantiates a new privacyRequestBuilderGetQueryParameters and sets the default values.
+     * Instantiates a new PrivacyRequestBuilderGetQueryParameters and sets the default values.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
     */

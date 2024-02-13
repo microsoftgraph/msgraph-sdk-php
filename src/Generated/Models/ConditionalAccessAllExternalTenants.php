@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ConditionalAccessAllExternalTenants extends ConditionalAccessExternalTenants implements Parsable 
 {
     /**
-     * Instantiates a new conditionalAccessAllExternalTenants and sets the default values.
+     * Instantiates a new ConditionalAccessAllExternalTenants and sets the default values.
     */
     public function __construct() {
         parent::__construct();

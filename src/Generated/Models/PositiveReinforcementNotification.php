@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class PositiveReinforcementNotification extends BaseEndUserNotification implements Parsable 
 {
     /**
-     * Instantiates a new positiveReinforcementNotification and sets the default values.
+     * Instantiates a new PositiveReinforcementNotification and sets the default values.
     */
     public function __construct() {
         parent::__construct();

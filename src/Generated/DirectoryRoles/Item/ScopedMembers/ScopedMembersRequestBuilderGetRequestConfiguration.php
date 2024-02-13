@@ -16,7 +16,7 @@ class ScopedMembersRequestBuilderGetRequestConfiguration extends BaseRequestConf
     public ?ScopedMembersRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new scopedMembersRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new ScopedMembersRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param ScopedMembersRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class ScopedMembersRequestBuilderGetRequestConfiguration extends BaseRequestConf
     }
 
     /**
-     * Instantiates a new scopedMembersRequestBuilderGetQueryParameters.
+     * Instantiates a new ScopedMembersRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

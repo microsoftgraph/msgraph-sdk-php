@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class AccessPackageResourceEnvironment extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new accessPackageResourceEnvironment and sets the default values.
+     * Instantiates a new AccessPackageResourceEnvironment and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -24,6 +24,18 @@ class AccessPackageResourceEnvironment extends Entity implements Parsable
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): AccessPackageResourceEnvironment {
         return new AccessPackageResourceEnvironment();
+    }
+
+    /**
+     * Gets the connectionInfo property value. The connectionInfo property
+     * @return ConnectionInfo|null
+    */
+    public function getConnectionInfo(): ?ConnectionInfo {
+        $val = $this->getBackingStore()->get('connectionInfo');
+        if (is_null($val) || $val instanceof ConnectionInfo) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'connectionInfo'");
     }
 
     /**
@@ -69,6 +81,7 @@ class AccessPackageResourceEnvironment extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'connectionInfo' => fn(ParseNode $n) => $o->setConnectionInfo($n->getObjectValue([ConnectionInfo::class, 'createFromDiscriminatorValue'])),
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
@@ -148,6 +161,7 @@ class AccessPackageResourceEnvironment extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeObjectValue('connectionInfo', $this->getConnectionInfo());
         $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
         $writer->writeStringValue('description', $this->getDescription());
         $writer->writeStringValue('displayName', $this->getDisplayName());
@@ -156,6 +170,14 @@ class AccessPackageResourceEnvironment extends Entity implements Parsable
         $writer->writeStringValue('originId', $this->getOriginId());
         $writer->writeStringValue('originSystem', $this->getOriginSystem());
         $writer->writeCollectionOfObjectValues('resources', $this->getResources());
+    }
+
+    /**
+     * Sets the connectionInfo property value. The connectionInfo property
+     * @param ConnectionInfo|null $value Value to set for the connectionInfo property.
+    */
+    public function setConnectionInfo(?ConnectionInfo $value): void {
+        $this->getBackingStore()->set('connectionInfo', $value);
     }
 
     /**

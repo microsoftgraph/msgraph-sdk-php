@@ -16,7 +16,7 @@ class AssignedToTaskBoardFormatRequestBuilderGetRequestConfiguration extends Bas
     public ?AssignedToTaskBoardFormatRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new assignedToTaskBoardFormatRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new AssignedToTaskBoardFormatRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param AssignedToTaskBoardFormatRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class AssignedToTaskBoardFormatRequestBuilderGetRequestConfiguration extends Bas
     }
 
     /**
-     * Instantiates a new assignedToTaskBoardFormatRequestBuilderGetQueryParameters.
+     * Instantiates a new AssignedToTaskBoardFormatRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return AssignedToTaskBoardFormatRequestBuilderGetQueryParameters

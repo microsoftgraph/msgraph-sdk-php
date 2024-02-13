@@ -16,7 +16,7 @@ class UserExperienceAnalyticsScoreHistoryRequestBuilderGetRequestConfiguration e
     public ?UserExperienceAnalyticsScoreHistoryRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new userExperienceAnalyticsScoreHistoryRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsScoreHistoryRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param UserExperienceAnalyticsScoreHistoryRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class UserExperienceAnalyticsScoreHistoryRequestBuilderGetRequestConfiguration e
     }
 
     /**
-     * Instantiates a new userExperienceAnalyticsScoreHistoryRequestBuilderGetQueryParameters.
+     * Instantiates a new UserExperienceAnalyticsScoreHistoryRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

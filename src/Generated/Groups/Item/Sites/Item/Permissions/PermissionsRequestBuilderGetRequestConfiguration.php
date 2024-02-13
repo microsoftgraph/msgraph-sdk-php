@@ -16,7 +16,7 @@ class PermissionsRequestBuilderGetRequestConfiguration extends BaseRequestConfig
     public ?PermissionsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new permissionsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new PermissionsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param PermissionsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class PermissionsRequestBuilderGetRequestConfiguration extends BaseRequestConfig
     }
 
     /**
-     * Instantiates a new permissionsRequestBuilderGetQueryParameters.
+     * Instantiates a new PermissionsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

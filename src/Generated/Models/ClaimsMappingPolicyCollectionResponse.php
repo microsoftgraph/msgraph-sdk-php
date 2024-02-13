@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class ClaimsMappingPolicyCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new claimsMappingPolicyCollectionResponse and sets the default values.
+     * Instantiates a new ClaimsMappingPolicyCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class IosStoreAppAssignmentSettings extends MobileAppAssignmentSettings implements Parsable 
 {
     /**
-     * Instantiates a new iosStoreAppAssignmentSettings and sets the default values.
+     * Instantiates a new IosStoreAppAssignmentSettings and sets the default values.
     */
     public function __construct() {
         parent::__construct();

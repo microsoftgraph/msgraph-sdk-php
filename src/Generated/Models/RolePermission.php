@@ -22,7 +22,7 @@ class RolePermission implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new rolePermission and sets the default values.
+     * Instantiates a new RolePermission and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

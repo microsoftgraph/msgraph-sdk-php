@@ -16,7 +16,7 @@ class UserStateSummaryRequestBuilderGetRequestConfiguration extends BaseRequestC
     public ?UserStateSummaryRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new userStateSummaryRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new UserStateSummaryRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param UserStateSummaryRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class UserStateSummaryRequestBuilderGetRequestConfiguration extends BaseRequestC
     }
 
     /**
-     * Instantiates a new userStateSummaryRequestBuilderGetQueryParameters.
+     * Instantiates a new UserStateSummaryRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

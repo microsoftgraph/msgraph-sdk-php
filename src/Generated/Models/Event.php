@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Event extends OutlookItem implements Parsable 
 {
     /**
-     * Instantiates a new event and sets the default values.
+     * Instantiates a new Event and sets the default values.
     */
     public function __construct() {
         parent::__construct();

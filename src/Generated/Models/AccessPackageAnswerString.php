@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AccessPackageAnswerString extends AccessPackageAnswer implements Parsable 
 {
     /**
-     * Instantiates a new accessPackageAnswerString and sets the default values.
+     * Instantiates a new AccessPackageAnswerString and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -19,7 +19,7 @@ class X509CertificateAuthenticationModeConfiguration implements AdditionalDataHo
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new x509CertificateAuthenticationModeConfiguration and sets the default values.
+     * Instantiates a new X509CertificateAuthenticationModeConfiguration and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class OutlookCategoryCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new outlookCategoryCollectionResponse and sets the default values.
+     * Instantiates a new OutlookCategoryCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

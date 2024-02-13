@@ -16,7 +16,7 @@ class AuthenticationMethodsRequestBuilderGetRequestConfiguration extends BaseReq
     public ?AuthenticationMethodsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new authenticationMethodsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new AuthenticationMethodsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param AuthenticationMethodsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class AuthenticationMethodsRequestBuilderGetRequestConfiguration extends BaseReq
     }
 
     /**
-     * Instantiates a new authenticationMethodsRequestBuilderGetQueryParameters.
+     * Instantiates a new AuthenticationMethodsRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return AuthenticationMethodsRequestBuilderGetQueryParameters

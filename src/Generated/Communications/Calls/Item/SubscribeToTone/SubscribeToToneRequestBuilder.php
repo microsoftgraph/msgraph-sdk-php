@@ -41,8 +41,7 @@ class SubscribeToToneRequestBuilder extends BaseRequestBuilder
     public function post(SubscribeToTonePostRequestBody $body, ?SubscribeToToneRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
-                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         return $this->requestAdapter->sendAsync($requestInfo, [SubscribeToToneOperation::class, 'createFromDiscriminatorValue'], $errorMappings);
     }

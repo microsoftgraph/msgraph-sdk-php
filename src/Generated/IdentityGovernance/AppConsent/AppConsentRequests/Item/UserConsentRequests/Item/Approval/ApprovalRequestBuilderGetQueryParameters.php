@@ -22,7 +22,7 @@ class ApprovalRequestBuilderGetQueryParameters
     public ?array $select = null;
     
     /**
-     * Instantiates a new approvalRequestBuilderGetQueryParameters and sets the default values.
+     * Instantiates a new ApprovalRequestBuilderGetQueryParameters and sets the default values.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
     */

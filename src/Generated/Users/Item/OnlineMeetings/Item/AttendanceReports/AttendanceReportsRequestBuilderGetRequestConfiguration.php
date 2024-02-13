@@ -16,7 +16,7 @@ class AttendanceReportsRequestBuilderGetRequestConfiguration extends BaseRequest
     public ?AttendanceReportsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new attendanceReportsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new AttendanceReportsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param AttendanceReportsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class AttendanceReportsRequestBuilderGetRequestConfiguration extends BaseRequest
     }
 
     /**
-     * Instantiates a new attendanceReportsRequestBuilderGetQueryParameters.
+     * Instantiates a new AttendanceReportsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

@@ -40,8 +40,7 @@ class FavoriteRequestBuilder extends BaseRequestBuilder
     public function post(FavoritePostRequestBody $body, ?FavoriteRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
-                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         return $this->requestAdapter->sendAsync($requestInfo, [FavoritePostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }

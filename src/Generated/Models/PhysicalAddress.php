@@ -18,7 +18,7 @@ class PhysicalAddress implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new physicalAddress and sets the default values.
+     * Instantiates a new PhysicalAddress and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

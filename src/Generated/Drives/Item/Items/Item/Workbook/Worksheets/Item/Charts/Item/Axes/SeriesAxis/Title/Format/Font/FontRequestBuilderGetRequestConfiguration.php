@@ -16,7 +16,7 @@ class FontRequestBuilderGetRequestConfiguration extends BaseRequestConfiguration
     public ?FontRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new fontRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new FontRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param FontRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class FontRequestBuilderGetRequestConfiguration extends BaseRequestConfiguration
     }
 
     /**
-     * Instantiates a new fontRequestBuilderGetQueryParameters.
+     * Instantiates a new FontRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return FontRequestBuilderGetQueryParameters

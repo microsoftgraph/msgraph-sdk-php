@@ -18,7 +18,7 @@ class ObjectIdentity implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new objectIdentity and sets the default values.
+     * Instantiates a new ObjectIdentity and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

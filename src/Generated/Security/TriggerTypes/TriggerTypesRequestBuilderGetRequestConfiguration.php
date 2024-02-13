@@ -16,7 +16,7 @@ class TriggerTypesRequestBuilderGetRequestConfiguration extends BaseRequestConfi
     public ?TriggerTypesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new triggerTypesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new TriggerTypesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param TriggerTypesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class TriggerTypesRequestBuilderGetRequestConfiguration extends BaseRequestConfi
     }
 
     /**
-     * Instantiates a new triggerTypesRequestBuilderGetQueryParameters.
+     * Instantiates a new TriggerTypesRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return TriggerTypesRequestBuilderGetQueryParameters

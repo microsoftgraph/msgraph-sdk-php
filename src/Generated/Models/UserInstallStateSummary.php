@@ -13,7 +13,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class UserInstallStateSummary extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new userInstallStateSummary and sets the default values.
+     * Instantiates a new UserInstallStateSummary and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -13,7 +13,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class WindowsUniversalAppX extends MobileLobApp implements Parsable 
 {
     /**
-     * Instantiates a new windowsUniversalAppX and sets the default values.
+     * Instantiates a new WindowsUniversalAppX and sets the default values.
     */
     public function __construct() {
         parent::__construct();

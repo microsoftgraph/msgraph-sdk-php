@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TeamMembersNotificationRecipient extends TeamworkNotificationRecipient implements Parsable 
 {
     /**
-     * Instantiates a new teamMembersNotificationRecipient and sets the default values.
+     * Instantiates a new TeamMembersNotificationRecipient and sets the default values.
     */
     public function __construct() {
         parent::__construct();

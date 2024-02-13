@@ -19,7 +19,7 @@ class EntitlementManagementSchedule implements AdditionalDataHolder, BackedModel
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new entitlementManagementSchedule and sets the default values.
+     * Instantiates a new EntitlementManagementSchedule and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

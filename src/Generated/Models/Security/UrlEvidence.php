@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UrlEvidence extends AlertEvidence implements Parsable 
 {
     /**
-     * Instantiates a new urlEvidence and sets the default values.
+     * Instantiates a new UrlEvidence and sets the default values.
     */
     public function __construct() {
         parent::__construct();

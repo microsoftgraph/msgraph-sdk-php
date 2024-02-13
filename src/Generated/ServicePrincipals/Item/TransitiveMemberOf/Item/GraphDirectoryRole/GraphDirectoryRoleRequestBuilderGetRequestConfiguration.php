@@ -16,7 +16,7 @@ class GraphDirectoryRoleRequestBuilderGetRequestConfiguration extends BaseReques
     public ?GraphDirectoryRoleRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new graphDirectoryRoleRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new GraphDirectoryRoleRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param GraphDirectoryRoleRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class GraphDirectoryRoleRequestBuilderGetRequestConfiguration extends BaseReques
     }
 
     /**
-     * Instantiates a new graphDirectoryRoleRequestBuilderGetQueryParameters.
+     * Instantiates a new GraphDirectoryRoleRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return GraphDirectoryRoleRequestBuilderGetQueryParameters

@@ -21,7 +21,7 @@ class Win32LobAppInstallExperience implements AdditionalDataHolder, BackedModel,
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new win32LobAppInstallExperience and sets the default values.
+     * Instantiates a new Win32LobAppInstallExperience and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

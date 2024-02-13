@@ -18,7 +18,7 @@ class ConditionalAccessGuestsOrExternalUsers implements AdditionalDataHolder, Ba
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new conditionalAccessGuestsOrExternalUsers and sets the default values.
+     * Instantiates a new ConditionalAccessGuestsOrExternalUsers and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

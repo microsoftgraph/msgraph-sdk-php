@@ -16,7 +16,7 @@ class IncidentsRequestBuilderGetRequestConfiguration extends BaseRequestConfigur
     public ?IncidentsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new incidentsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new IncidentsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param IncidentsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class IncidentsRequestBuilderGetRequestConfiguration extends BaseRequestConfigur
     }
 
     /**
-     * Instantiates a new incidentsRequestBuilderGetQueryParameters.
+     * Instantiates a new IncidentsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

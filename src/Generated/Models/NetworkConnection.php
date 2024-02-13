@@ -19,7 +19,7 @@ class NetworkConnection implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new networkConnection and sets the default values.
+     * Instantiates a new NetworkConnection and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

@@ -16,7 +16,7 @@ class SearchWithQRequestBuilderGetRequestConfiguration extends BaseRequestConfig
     public ?SearchWithQRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new searchWithQRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new SearchWithQRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param SearchWithQRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,8 +27,9 @@ class SearchWithQRequestBuilderGetRequestConfiguration extends BaseRequestConfig
     }
 
     /**
-     * Instantiates a new searchWithQRequestBuilderGetQueryParameters.
+     * Instantiates a new SearchWithQRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
+     * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values
      * @param array<string>|null $orderby Order items by property values
      * @param string|null $search Search items by search phrases
@@ -37,8 +38,8 @@ class SearchWithQRequestBuilderGetRequestConfiguration extends BaseRequestConfig
      * @param int|null $top Show only the first n items
      * @return SearchWithQRequestBuilderGetQueryParameters
     */
-    public static function createQueryParameters(?bool $count = null, ?string $filter = null, ?array $orderby = null, ?string $search = null, ?array $select = null, ?int $skip = null, ?int $top = null): SearchWithQRequestBuilderGetQueryParameters {
-        return new SearchWithQRequestBuilderGetQueryParameters($count, $filter, $orderby, $search, $select, $skip, $top);
+    public static function createQueryParameters(?bool $count = null, ?array $expand = null, ?string $filter = null, ?array $orderby = null, ?string $search = null, ?array $select = null, ?int $skip = null, ?int $top = null): SearchWithQRequestBuilderGetQueryParameters {
+        return new SearchWithQRequestBuilderGetQueryParameters($count, $expand, $filter, $orderby, $search, $select, $skip, $top);
     }
 
 }

@@ -16,7 +16,7 @@ class SharepointRequestBuilderGetRequestConfiguration extends BaseRequestConfigu
     public ?SharepointRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new sharepointRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new SharepointRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param SharepointRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class SharepointRequestBuilderGetRequestConfiguration extends BaseRequestConfigu
     }
 
     /**
-     * Instantiates a new sharepointRequestBuilderGetQueryParameters.
+     * Instantiates a new SharepointRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return SharepointRequestBuilderGetQueryParameters

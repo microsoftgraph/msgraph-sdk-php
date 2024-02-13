@@ -18,7 +18,7 @@ class SearchAlterationOptions implements AdditionalDataHolder, BackedModel, Pars
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new searchAlterationOptions and sets the default values.
+     * Instantiates a new SearchAlterationOptions and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DeviceCompliancePolicyAssignment extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new deviceCompliancePolicyAssignment and sets the default values.
+     * Instantiates a new DeviceCompliancePolicyAssignment and sets the default values.
     */
     public function __construct() {
         parent::__construct();

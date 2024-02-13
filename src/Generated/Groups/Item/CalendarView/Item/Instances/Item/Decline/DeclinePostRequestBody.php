@@ -19,7 +19,7 @@ class DeclinePostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new declinePostRequestBody and sets the default values.
+     * Instantiates a new DeclinePostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

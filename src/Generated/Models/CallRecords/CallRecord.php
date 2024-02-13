@@ -13,7 +13,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class CallRecord extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new callRecord and sets the default values.
+     * Instantiates a new CallRecord and sets the default values.
     */
     public function __construct() {
         parent::__construct();

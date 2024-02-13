@@ -19,7 +19,7 @@ class SeriesSumPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new seriesSumPostRequestBody and sets the default values.
+     * Instantiates a new SeriesSumPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

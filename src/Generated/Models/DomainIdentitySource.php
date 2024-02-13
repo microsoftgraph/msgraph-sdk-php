@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DomainIdentitySource extends IdentitySource implements Parsable 
 {
     /**
-     * Instantiates a new domainIdentitySource and sets the default values.
+     * Instantiates a new DomainIdentitySource and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Site extends BaseItem implements Parsable 
 {
     /**
-     * Instantiates a new site and sets the default values.
+     * Instantiates a new Site and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -162,7 +162,7 @@ class Site extends BaseItem implements Parsable
     }
 
     /**
-     * Gets the isPersonalSite property value. The isPersonalSite property
+     * Gets the isPersonalSite property value. Identifies whether the site is personal or not. Read-only.
      * @return bool|null
     */
     public function getIsPersonalSite(): ?bool {
@@ -410,7 +410,7 @@ class Site extends BaseItem implements Parsable
     }
 
     /**
-     * Sets the isPersonalSite property value. The isPersonalSite property
+     * Sets the isPersonalSite property value. Identifies whether the site is personal or not. Read-only.
      * @param bool|null $value Value to set for the isPersonalSite property.
     */
     public function setIsPersonalSite(?bool $value): void {

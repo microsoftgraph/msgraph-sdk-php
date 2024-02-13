@@ -16,7 +16,7 @@ class OutlookRequestBuilderGetRequestConfiguration extends BaseRequestConfigurat
     public ?OutlookRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new outlookRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new OutlookRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param OutlookRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class OutlookRequestBuilderGetRequestConfiguration extends BaseRequestConfigurat
     }
 
     /**
-     * Instantiates a new outlookRequestBuilderGetQueryParameters.
+     * Instantiates a new OutlookRequestBuilderGetQueryParameters.
      * @param array<string>|null $select Select properties to be returned
      * @return OutlookRequestBuilderGetQueryParameters
     */

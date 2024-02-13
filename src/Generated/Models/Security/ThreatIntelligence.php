@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class ThreatIntelligence extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new threatIntelligence and sets the default values.
+     * Instantiates a new ThreatIntelligence and sets the default values.
     */
     public function __construct() {
         parent::__construct();

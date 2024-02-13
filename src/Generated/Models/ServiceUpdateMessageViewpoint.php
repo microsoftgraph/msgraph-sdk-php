@@ -18,7 +18,7 @@ class ServiceUpdateMessageViewpoint implements AdditionalDataHolder, BackedModel
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new serviceUpdateMessageViewpoint and sets the default values.
+     * Instantiates a new ServiceUpdateMessageViewpoint and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

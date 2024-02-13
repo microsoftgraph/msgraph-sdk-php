@@ -23,7 +23,7 @@ class WindowsInformationProtectionDataRecoveryCertificate implements AdditionalD
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new windowsInformationProtectionDataRecoveryCertificate and sets the default values.
+     * Instantiates a new WindowsInformationProtectionDataRecoveryCertificate and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

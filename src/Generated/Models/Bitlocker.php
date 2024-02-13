@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Bitlocker extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new bitlocker and sets the default values.
+     * Instantiates a new Bitlocker and sets the default values.
     */
     public function __construct() {
         parent::__construct();

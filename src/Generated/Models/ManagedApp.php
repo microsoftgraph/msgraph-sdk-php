@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ManagedApp extends MobileApp implements Parsable 
 {
     /**
-     * Instantiates a new managedApp and sets the default values.
+     * Instantiates a new ManagedApp and sets the default values.
     */
     public function __construct() {
         parent::__construct();

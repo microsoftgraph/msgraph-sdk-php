@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Pkcs12Certificate extends ApiAuthenticationConfigurationBase implements Parsable 
 {
     /**
-     * Instantiates a new pkcs12Certificate and sets the default values.
+     * Instantiates a new Pkcs12Certificate and sets the default values.
     */
     public function __construct() {
         parent::__construct();

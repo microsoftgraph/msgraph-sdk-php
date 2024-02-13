@@ -18,7 +18,7 @@ class AlterationResponse implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new alterationResponse and sets the default values.
+     * Instantiates a new AlterationResponse and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

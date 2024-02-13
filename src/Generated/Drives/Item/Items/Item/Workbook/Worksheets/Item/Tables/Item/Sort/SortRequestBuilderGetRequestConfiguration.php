@@ -16,7 +16,7 @@ class SortRequestBuilderGetRequestConfiguration extends BaseRequestConfiguration
     public ?SortRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new sortRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new SortRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param SortRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class SortRequestBuilderGetRequestConfiguration extends BaseRequestConfiguration
     }
 
     /**
-     * Instantiates a new sortRequestBuilderGetQueryParameters.
+     * Instantiates a new SortRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return SortRequestBuilderGetQueryParameters

@@ -19,7 +19,7 @@ class AttackSimulationSimulationUserCoverage implements AdditionalDataHolder, Ba
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new attackSimulationSimulationUserCoverage and sets the default values.
+     * Instantiates a new AttackSimulationSimulationUserCoverage and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

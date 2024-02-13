@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class PronounsSettings extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new pronounsSettings and sets the default values.
+     * Instantiates a new PronounsSettings and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DomainDnsMxRecord extends DomainDnsRecord implements Parsable 
 {
     /**
-     * Instantiates a new domainDnsMxRecord and sets the default values.
+     * Instantiates a new DomainDnsMxRecord and sets the default values.
     */
     public function __construct() {
         parent::__construct();

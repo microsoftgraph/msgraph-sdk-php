@@ -16,7 +16,7 @@ class AuthenticationFlowsPolicyRequestBuilderGetRequestConfiguration extends Bas
     public ?AuthenticationFlowsPolicyRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new authenticationFlowsPolicyRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new AuthenticationFlowsPolicyRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param AuthenticationFlowsPolicyRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class AuthenticationFlowsPolicyRequestBuilderGetRequestConfiguration extends Bas
     }
 
     /**
-     * Instantiates a new authenticationFlowsPolicyRequestBuilderGetQueryParameters.
+     * Instantiates a new AuthenticationFlowsPolicyRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return AuthenticationFlowsPolicyRequestBuilderGetQueryParameters

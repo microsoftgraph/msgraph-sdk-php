@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WindowsWebApp extends MobileApp implements Parsable 
 {
     /**
-     * Instantiates a new windowsWebApp and sets the default values.
+     * Instantiates a new WindowsWebApp and sets the default values.
     */
     public function __construct() {
         parent::__construct();

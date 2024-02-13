@@ -22,7 +22,7 @@ class AuditResource implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new auditResource and sets the default values.
+     * Instantiates a new AuditResource and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

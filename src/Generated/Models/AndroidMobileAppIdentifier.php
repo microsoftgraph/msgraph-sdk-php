@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AndroidMobileAppIdentifier extends MobileAppIdentifier implements Parsable 
 {
     /**
-     * Instantiates a new androidMobileAppIdentifier and sets the default values.
+     * Instantiates a new AndroidMobileAppIdentifier and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -34,7 +34,7 @@ class OperationsRequestBuilderGetQueryParameters
     public ?array $select = null;
     
     /**
-     * Instantiates a new operationsRequestBuilderGetQueryParameters and sets the default values.
+     * Instantiates a new OperationsRequestBuilderGetQueryParameters and sets the default values.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $orderby Order items by property values
      * @param string|null $search Search items by search phrases

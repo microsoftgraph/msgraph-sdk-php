@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SimulationNotification extends BaseEndUserNotification implements Parsable 
 {
     /**
-     * Instantiates a new simulationNotification and sets the default values.
+     * Instantiates a new SimulationNotification and sets the default values.
     */
     public function __construct() {
         parent::__construct();

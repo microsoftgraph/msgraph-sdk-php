@@ -18,7 +18,7 @@ class IncomingContext implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new incomingContext and sets the default values.
+     * Instantiates a new IncomingContext and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

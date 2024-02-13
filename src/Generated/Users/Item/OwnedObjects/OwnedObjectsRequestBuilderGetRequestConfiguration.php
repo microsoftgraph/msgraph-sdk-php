@@ -16,7 +16,7 @@ class OwnedObjectsRequestBuilderGetRequestConfiguration extends BaseRequestConfi
     public ?OwnedObjectsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new ownedObjectsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new OwnedObjectsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param OwnedObjectsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class OwnedObjectsRequestBuilderGetRequestConfiguration extends BaseRequestConfi
     }
 
     /**
-     * Instantiates a new ownedObjectsRequestBuilderGetQueryParameters.
+     * Instantiates a new OwnedObjectsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

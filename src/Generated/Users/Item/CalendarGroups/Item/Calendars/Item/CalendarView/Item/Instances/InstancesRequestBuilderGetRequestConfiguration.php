@@ -16,7 +16,7 @@ class InstancesRequestBuilderGetRequestConfiguration extends BaseRequestConfigur
     public ?InstancesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new instancesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new InstancesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param InstancesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class InstancesRequestBuilderGetRequestConfiguration extends BaseRequestConfigur
     }
 
     /**
-     * Instantiates a new instancesRequestBuilderGetQueryParameters.
+     * Instantiates a new InstancesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param string|null $endDateTime The end date and time of the time range, represented in ISO 8601 format. For example, 2019-11-08T20:00:00-08:00
      * @param string|null $filter Filter items by property values

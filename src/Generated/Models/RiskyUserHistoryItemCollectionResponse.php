@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class RiskyUserHistoryItemCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new riskyUserHistoryItemCollectionResponse and sets the default values.
+     * Instantiates a new RiskyUserHistoryItemCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -16,7 +16,7 @@ class RegisteredUsersRequestBuilderGetRequestConfiguration extends BaseRequestCo
     public ?RegisteredUsersRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new registeredUsersRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new RegisteredUsersRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param RegisteredUsersRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class RegisteredUsersRequestBuilderGetRequestConfiguration extends BaseRequestCo
     }
 
     /**
-     * Instantiates a new registeredUsersRequestBuilderGetQueryParameters.
+     * Instantiates a new RegisteredUsersRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

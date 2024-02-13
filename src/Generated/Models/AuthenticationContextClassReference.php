@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AuthenticationContextClassReference extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new authenticationContextClassReference and sets the default values.
+     * Instantiates a new AuthenticationContextClassReference and sets the default values.
     */
     public function __construct() {
         parent::__construct();

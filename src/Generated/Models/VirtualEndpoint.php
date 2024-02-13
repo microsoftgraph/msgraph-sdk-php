@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class VirtualEndpoint extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new virtualEndpoint and sets the default values.
+     * Instantiates a new VirtualEndpoint and sets the default values.
     */
     public function __construct() {
         parent::__construct();

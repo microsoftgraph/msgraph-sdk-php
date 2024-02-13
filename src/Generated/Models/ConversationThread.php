@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class ConversationThread extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new conversationThread and sets the default values.
+     * Instantiates a new ConversationThread and sets the default values.
     */
     public function __construct() {
         parent::__construct();

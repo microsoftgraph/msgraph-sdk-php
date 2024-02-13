@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ChangeTrackedEntity extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new changeTrackedEntity and sets the default values.
+     * Instantiates a new ChangeTrackedEntity and sets the default values.
     */
     public function __construct() {
         parent::__construct();

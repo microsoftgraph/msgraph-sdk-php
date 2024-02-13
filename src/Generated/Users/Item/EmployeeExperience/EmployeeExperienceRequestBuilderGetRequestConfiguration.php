@@ -16,7 +16,7 @@ class EmployeeExperienceRequestBuilderGetRequestConfiguration extends BaseReques
     public ?EmployeeExperienceRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new employeeExperienceRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new EmployeeExperienceRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param EmployeeExperienceRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class EmployeeExperienceRequestBuilderGetRequestConfiguration extends BaseReques
     }
 
     /**
-     * Instantiates a new employeeExperienceRequestBuilderGetQueryParameters.
+     * Instantiates a new EmployeeExperienceRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return EmployeeExperienceRequestBuilderGetQueryParameters

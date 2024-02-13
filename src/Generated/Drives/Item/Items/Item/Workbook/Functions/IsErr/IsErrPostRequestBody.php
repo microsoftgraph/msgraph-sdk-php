@@ -19,7 +19,7 @@ class IsErrPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new isErrPostRequestBody and sets the default values.
+     * Instantiates a new IsErrPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

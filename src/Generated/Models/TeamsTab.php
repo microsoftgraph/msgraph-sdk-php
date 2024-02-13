@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TeamsTab extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new teamsTab and sets the default values.
+     * Instantiates a new TeamsTab and sets the default values.
     */
     public function __construct() {
         parent::__construct();

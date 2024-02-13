@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class SupportedTimeZonesGetResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new supportedTimeZonesGetResponse and sets the default values.
+     * Instantiates a new SupportedTimeZonesGetResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

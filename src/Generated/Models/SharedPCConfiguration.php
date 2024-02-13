@@ -13,7 +13,7 @@ use Microsoft\Kiota\Abstractions\Types\Time;
 class SharedPCConfiguration extends DeviceConfiguration implements Parsable 
 {
     /**
-     * Instantiates a new sharedPCConfiguration and sets the default values.
+     * Instantiates a new SharedPCConfiguration and sets the default values.
     */
     public function __construct() {
         parent::__construct();

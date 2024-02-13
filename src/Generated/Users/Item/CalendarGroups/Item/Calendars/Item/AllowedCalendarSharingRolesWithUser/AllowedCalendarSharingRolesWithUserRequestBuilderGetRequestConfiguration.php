@@ -16,7 +16,7 @@ class AllowedCalendarSharingRolesWithUserRequestBuilderGetRequestConfiguration e
     public ?AllowedCalendarSharingRolesWithUserRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new allowedCalendarSharingRolesWithUserRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new AllowedCalendarSharingRolesWithUserRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param AllowedCalendarSharingRolesWithUserRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class AllowedCalendarSharingRolesWithUserRequestBuilderGetRequestConfiguration e
     }
 
     /**
-     * Instantiates a new allowedCalendarSharingRolesWithUserRequestBuilderGetQueryParameters.
+     * Instantiates a new AllowedCalendarSharingRolesWithUserRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param string|null $filter Filter items by property values
      * @param string|null $search Search items by search phrases

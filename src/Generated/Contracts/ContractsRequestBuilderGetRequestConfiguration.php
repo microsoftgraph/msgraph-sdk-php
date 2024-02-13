@@ -16,7 +16,7 @@ class ContractsRequestBuilderGetRequestConfiguration extends BaseRequestConfigur
     public ?ContractsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new contractsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new ContractsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param ContractsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class ContractsRequestBuilderGetRequestConfiguration extends BaseRequestConfigur
     }
 
     /**
-     * Instantiates a new contractsRequestBuilderGetQueryParameters.
+     * Instantiates a new ContractsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

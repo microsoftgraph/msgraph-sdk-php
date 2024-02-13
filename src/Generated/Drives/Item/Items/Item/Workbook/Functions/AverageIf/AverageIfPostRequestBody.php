@@ -19,7 +19,7 @@ class AverageIfPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new averageIfPostRequestBody and sets the default values.
+     * Instantiates a new AverageIfPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

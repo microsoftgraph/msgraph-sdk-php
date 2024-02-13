@@ -19,7 +19,7 @@ class ChiSq_InvPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new chiSq_InvPostRequestBody and sets the default values.
+     * Instantiates a new ChiSq_InvPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

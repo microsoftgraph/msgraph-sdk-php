@@ -16,7 +16,7 @@ class GetAttackSimulationSimulationUserCoverageRequestBuilderGetRequestConfigura
     public ?GetAttackSimulationSimulationUserCoverageRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new getAttackSimulationSimulationUserCoverageRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new GetAttackSimulationSimulationUserCoverageRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param GetAttackSimulationSimulationUserCoverageRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class GetAttackSimulationSimulationUserCoverageRequestBuilderGetRequestConfigura
     }
 
     /**
-     * Instantiates a new getAttackSimulationSimulationUserCoverageRequestBuilderGetQueryParameters.
+     * Instantiates a new GetAttackSimulationSimulationUserCoverageRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param string|null $filter Filter items by property values
      * @param string|null $search Search items by search phrases

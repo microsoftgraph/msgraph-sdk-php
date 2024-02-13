@@ -16,7 +16,7 @@ class BucketTaskBoardFormatRequestBuilderGetRequestConfiguration extends BaseReq
     public ?BucketTaskBoardFormatRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new bucketTaskBoardFormatRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new BucketTaskBoardFormatRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param BucketTaskBoardFormatRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class BucketTaskBoardFormatRequestBuilderGetRequestConfiguration extends BaseReq
     }
 
     /**
-     * Instantiates a new bucketTaskBoardFormatRequestBuilderGetQueryParameters.
+     * Instantiates a new BucketTaskBoardFormatRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return BucketTaskBoardFormatRequestBuilderGetQueryParameters

@@ -16,7 +16,7 @@ class SiteSourcesRequestBuilderGetRequestConfiguration extends BaseRequestConfig
     public ?SiteSourcesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new siteSourcesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new SiteSourcesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param SiteSourcesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class SiteSourcesRequestBuilderGetRequestConfiguration extends BaseRequestConfig
     }
 
     /**
-     * Instantiates a new siteSourcesRequestBuilderGetQueryParameters.
+     * Instantiates a new SiteSourcesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

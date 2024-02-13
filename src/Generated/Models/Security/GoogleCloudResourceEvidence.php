@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class GoogleCloudResourceEvidence extends AlertEvidence implements Parsable 
 {
     /**
-     * Instantiates a new googleCloudResourceEvidence and sets the default values.
+     * Instantiates a new GoogleCloudResourceEvidence and sets the default values.
     */
     public function __construct() {
         parent::__construct();

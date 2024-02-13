@@ -16,7 +16,7 @@ class MonthlyPrintUsageByUserRequestBuilderGetRequestConfiguration extends BaseR
     public ?MonthlyPrintUsageByUserRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new monthlyPrintUsageByUserRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new MonthlyPrintUsageByUserRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param MonthlyPrintUsageByUserRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class MonthlyPrintUsageByUserRequestBuilderGetRequestConfiguration extends BaseR
     }
 
     /**
-     * Instantiates a new monthlyPrintUsageByUserRequestBuilderGetQueryParameters.
+     * Instantiates a new MonthlyPrintUsageByUserRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AccessReviewNotificationRecipientQueryScope extends AccessReviewNotificationRecipientScope implements Parsable 
 {
     /**
-     * Instantiates a new accessReviewNotificationRecipientQueryScope and sets the default values.
+     * Instantiates a new AccessReviewNotificationRecipientQueryScope and sets the default values.
     */
     public function __construct() {
         parent::__construct();

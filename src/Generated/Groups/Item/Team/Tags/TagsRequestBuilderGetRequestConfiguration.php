@@ -16,7 +16,7 @@ class TagsRequestBuilderGetRequestConfiguration extends BaseRequestConfiguration
     public ?TagsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new tagsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new TagsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param TagsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class TagsRequestBuilderGetRequestConfiguration extends BaseRequestConfiguration
     }
 
     /**
-     * Instantiates a new tagsRequestBuilderGetQueryParameters.
+     * Instantiates a new TagsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

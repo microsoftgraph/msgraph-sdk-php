@@ -16,7 +16,7 @@ class UserConsentRequestsRequestBuilderGetRequestConfiguration extends BaseReque
     public ?UserConsentRequestsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new userConsentRequestsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new UserConsentRequestsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param UserConsentRequestsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class UserConsentRequestsRequestBuilderGetRequestConfiguration extends BaseReque
     }
 
     /**
-     * Instantiates a new userConsentRequestsRequestBuilderGetQueryParameters.
+     * Instantiates a new UserConsentRequestsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

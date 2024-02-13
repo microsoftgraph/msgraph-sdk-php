@@ -13,7 +13,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ManagedAppOperation extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new managedAppOperation and sets the default values.
+     * Instantiates a new ManagedAppOperation and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -19,7 +19,7 @@ class CopyToDefaultContentLocationPostRequestBody implements AdditionalDataHolde
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new copyToDefaultContentLocationPostRequestBody and sets the default values.
+     * Instantiates a new CopyToDefaultContentLocationPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

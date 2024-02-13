@@ -18,7 +18,7 @@ class CustomExtensionClientConfiguration implements AdditionalDataHolder, Backed
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new customExtensionClientConfiguration and sets the default values.
+     * Instantiates a new CustomExtensionClientConfiguration and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

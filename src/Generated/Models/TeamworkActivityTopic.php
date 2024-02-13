@@ -18,7 +18,7 @@ class TeamworkActivityTopic implements AdditionalDataHolder, BackedModel, Parsab
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new teamworkActivityTopic and sets the default values.
+     * Instantiates a new TeamworkActivityTopic and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

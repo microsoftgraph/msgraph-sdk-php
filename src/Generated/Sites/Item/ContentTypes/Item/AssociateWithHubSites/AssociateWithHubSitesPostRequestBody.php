@@ -19,7 +19,7 @@ class AssociateWithHubSitesPostRequestBody implements AdditionalDataHolder, Back
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new associateWithHubSitesPostRequestBody and sets the default values.
+     * Instantiates a new AssociateWithHubSitesPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

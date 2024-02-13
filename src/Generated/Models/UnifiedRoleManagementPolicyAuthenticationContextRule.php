@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UnifiedRoleManagementPolicyAuthenticationContextRule extends UnifiedRoleManagementPolicyRule implements Parsable 
 {
     /**
-     * Instantiates a new unifiedRoleManagementPolicyAuthenticationContextRule and sets the default values.
+     * Instantiates a new UnifiedRoleManagementPolicyAuthenticationContextRule and sets the default values.
     */
     public function __construct() {
         parent::__construct();

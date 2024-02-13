@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class WhoisHistoryRecordCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new whoisHistoryRecordCollectionResponse and sets the default values.
+     * Instantiates a new WhoisHistoryRecordCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -18,7 +18,7 @@ class ChatMessageAttachment implements AdditionalDataHolder, BackedModel, Parsab
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new chatMessageAttachment and sets the default values.
+     * Instantiates a new ChatMessageAttachment and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

@@ -19,7 +19,7 @@ class Gamma_DistPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new gamma_DistPostRequestBody and sets the default values.
+     * Instantiates a new Gamma_DistPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

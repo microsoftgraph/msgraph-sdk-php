@@ -20,7 +20,7 @@ class UpdateAllowedCombinationsPostRequestBody implements AdditionalDataHolder, 
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new updateAllowedCombinationsPostRequestBody and sets the default values.
+     * Instantiates a new UpdateAllowedCombinationsPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

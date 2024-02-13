@@ -19,7 +19,7 @@ class YieldDiscPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new yieldDiscPostRequestBody and sets the default values.
+     * Instantiates a new YieldDiscPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

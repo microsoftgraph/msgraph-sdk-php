@@ -16,7 +16,7 @@ class ScopeRequestBuilderGetRequestConfiguration extends BaseRequestConfiguratio
     public ?ScopeRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new scopeRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new ScopeRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param ScopeRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class ScopeRequestBuilderGetRequestConfiguration extends BaseRequestConfiguratio
     }
 
     /**
-     * Instantiates a new scopeRequestBuilderGetQueryParameters.
+     * Instantiates a new ScopeRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return ScopeRequestBuilderGetQueryParameters

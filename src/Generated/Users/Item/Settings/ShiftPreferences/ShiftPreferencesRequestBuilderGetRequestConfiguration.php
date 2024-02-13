@@ -16,7 +16,7 @@ class ShiftPreferencesRequestBuilderGetRequestConfiguration extends BaseRequestC
     public ?ShiftPreferencesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new shiftPreferencesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new ShiftPreferencesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param ShiftPreferencesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class ShiftPreferencesRequestBuilderGetRequestConfiguration extends BaseRequestC
     }
 
     /**
-     * Instantiates a new shiftPreferencesRequestBuilderGetQueryParameters.
+     * Instantiates a new ShiftPreferencesRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return ShiftPreferencesRequestBuilderGetQueryParameters

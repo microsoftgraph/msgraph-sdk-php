@@ -18,7 +18,7 @@ class CallMediaState implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new callMediaState and sets the default values.
+     * Instantiates a new CallMediaState and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

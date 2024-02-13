@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ItemActivity extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new itemActivity and sets the default values.
+     * Instantiates a new ItemActivity and sets the default values.
     */
     public function __construct() {
         parent::__construct();

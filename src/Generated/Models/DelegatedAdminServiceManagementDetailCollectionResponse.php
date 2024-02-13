@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class DelegatedAdminServiceManagementDetailCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new delegatedAdminServiceManagementDetailCollectionResponse and sets the default values.
+     * Instantiates a new DelegatedAdminServiceManagementDetailCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

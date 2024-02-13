@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class EducationClass extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new educationClass and sets the default values.
+     * Instantiates a new EducationClass and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -209,6 +209,7 @@ class EducationClass extends Entity implements Parsable
             'group' => fn(ParseNode $n) => $o->setGroup($n->getObjectValue([Group::class, 'createFromDiscriminatorValue'])),
             'mailNickname' => fn(ParseNode $n) => $o->setMailNickname($n->getStringValue()),
             'members' => fn(ParseNode $n) => $o->setMembers($n->getCollectionOfObjectValues([EducationUser::class, 'createFromDiscriminatorValue'])),
+            'modules' => fn(ParseNode $n) => $o->setModules($n->getCollectionOfObjectValues([EducationModule::class, 'createFromDiscriminatorValue'])),
             'schools' => fn(ParseNode $n) => $o->setSchools($n->getCollectionOfObjectValues([EducationSchool::class, 'createFromDiscriminatorValue'])),
             'teachers' => fn(ParseNode $n) => $o->setTeachers($n->getCollectionOfObjectValues([EducationUser::class, 'createFromDiscriminatorValue'])),
             'term' => fn(ParseNode $n) => $o->setTerm($n->getObjectValue([EducationTerm::class, 'createFromDiscriminatorValue'])),
@@ -263,6 +264,20 @@ class EducationClass extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'members'");
+    }
+
+    /**
+     * Gets the modules property value. The modules property
+     * @return array<EducationModule>|null
+    */
+    public function getModules(): ?array {
+        $val = $this->getBackingStore()->get('modules');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, EducationModule::class);
+            /** @var array<EducationModule>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'modules'");
     }
 
     /**
@@ -328,6 +343,7 @@ class EducationClass extends Entity implements Parsable
         $writer->writeObjectValue('group', $this->getGroup());
         $writer->writeStringValue('mailNickname', $this->getMailNickname());
         $writer->writeCollectionOfObjectValues('members', $this->getMembers());
+        $writer->writeCollectionOfObjectValues('modules', $this->getModules());
         $writer->writeCollectionOfObjectValues('schools', $this->getSchools());
         $writer->writeCollectionOfObjectValues('teachers', $this->getTeachers());
         $writer->writeObjectValue('term', $this->getTerm());
@@ -467,6 +483,14 @@ class EducationClass extends Entity implements Parsable
     */
     public function setMembers(?array $value): void {
         $this->getBackingStore()->set('members', $value);
+    }
+
+    /**
+     * Sets the modules property value. The modules property
+     * @param array<EducationModule>|null $value Value to set for the modules property.
+    */
+    public function setModules(?array $value): void {
+        $this->getBackingStore()->set('modules', $value);
     }
 
     /**

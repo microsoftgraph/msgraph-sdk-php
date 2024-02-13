@@ -16,7 +16,7 @@ class PrivacyRequestBuilderGetRequestConfiguration extends BaseRequestConfigurat
     public ?PrivacyRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new privacyRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new PrivacyRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param PrivacyRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class PrivacyRequestBuilderGetRequestConfiguration extends BaseRequestConfigurat
     }
 
     /**
-     * Instantiates a new privacyRequestBuilderGetQueryParameters.
+     * Instantiates a new PrivacyRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return PrivacyRequestBuilderGetQueryParameters

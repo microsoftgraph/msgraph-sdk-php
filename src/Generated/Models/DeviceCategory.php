@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DeviceCategory extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new deviceCategory and sets the default values.
+     * Instantiates a new DeviceCategory and sets the default values.
     */
     public function __construct() {
         parent::__construct();

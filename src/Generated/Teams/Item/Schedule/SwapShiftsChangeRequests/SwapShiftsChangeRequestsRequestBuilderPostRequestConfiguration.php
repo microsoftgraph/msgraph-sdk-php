@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\RequestOption;
 class SwapShiftsChangeRequestsRequestBuilderPostRequestConfiguration extends BaseRequestConfiguration 
 {
     /**
-     * Instantiates a new swapShiftsChangeRequestsRequestBuilderPostRequestConfiguration and sets the default values.
+     * Instantiates a new SwapShiftsChangeRequestsRequestBuilderPostRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
     */

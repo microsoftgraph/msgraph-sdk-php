@@ -19,7 +19,7 @@ class Erf_PrecisePostRequestBody implements AdditionalDataHolder, BackedModel, P
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new erf_PrecisePostRequestBody and sets the default values.
+     * Instantiates a new Erf_PrecisePostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

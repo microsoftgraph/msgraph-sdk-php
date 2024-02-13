@@ -13,7 +13,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements Parsable 
 {
     /**
-     * Instantiates a new windowsPhone81GeneralConfiguration and sets the default values.
+     * Instantiates a new WindowsPhone81GeneralConfiguration and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AppHostedMediaConfig extends MediaConfig implements Parsable 
 {
     /**
-     * Instantiates a new appHostedMediaConfig and sets the default values.
+     * Instantiates a new AppHostedMediaConfig and sets the default values.
     */
     public function __construct() {
         parent::__construct();

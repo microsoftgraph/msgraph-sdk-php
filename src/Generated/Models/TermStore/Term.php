@@ -13,7 +13,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Term extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new term and sets the default values.
+     * Instantiates a new Term and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ColumnDefinition extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new columnDefinition and sets the default values.
+     * Instantiates a new ColumnDefinition and sets the default values.
     */
     public function __construct() {
         parent::__construct();

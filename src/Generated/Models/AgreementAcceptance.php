@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AgreementAcceptance extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new agreementAcceptance and sets the default values.
+     * Instantiates a new AgreementAcceptance and sets the default values.
     */
     public function __construct() {
         parent::__construct();

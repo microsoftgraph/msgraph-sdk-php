@@ -20,7 +20,7 @@ class MarkChatUnreadForUserPostRequestBody implements AdditionalDataHolder, Back
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new markChatUnreadForUserPostRequestBody and sets the default values.
+     * Instantiates a new MarkChatUnreadForUserPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

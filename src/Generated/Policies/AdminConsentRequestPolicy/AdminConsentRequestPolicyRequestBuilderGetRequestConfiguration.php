@@ -16,7 +16,7 @@ class AdminConsentRequestPolicyRequestBuilderGetRequestConfiguration extends Bas
     public ?AdminConsentRequestPolicyRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new adminConsentRequestPolicyRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new AdminConsentRequestPolicyRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param AdminConsentRequestPolicyRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class AdminConsentRequestPolicyRequestBuilderGetRequestConfiguration extends Bas
     }
 
     /**
-     * Instantiates a new adminConsentRequestPolicyRequestBuilderGetQueryParameters.
+     * Instantiates a new AdminConsentRequestPolicyRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return AdminConsentRequestPolicyRequestBuilderGetQueryParameters

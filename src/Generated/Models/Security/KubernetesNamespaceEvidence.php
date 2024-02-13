@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class KubernetesNamespaceEvidence extends AlertEvidence implements Parsable 
 {
     /**
-     * Instantiates a new kubernetesNamespaceEvidence and sets the default values.
+     * Instantiates a new KubernetesNamespaceEvidence and sets the default values.
     */
     public function __construct() {
         parent::__construct();

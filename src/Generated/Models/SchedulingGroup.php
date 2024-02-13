@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class SchedulingGroup extends ChangeTrackedEntity implements Parsable 
 {
     /**
-     * Instantiates a new schedulingGroup and sets the default values.
+     * Instantiates a new SchedulingGroup and sets the default values.
     */
     public function __construct() {
         parent::__construct();

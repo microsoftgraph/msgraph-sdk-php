@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class IoTDeviceEvidence extends AlertEvidence implements Parsable 
 {
     /**
-     * Instantiates a new ioTDeviceEvidence and sets the default values.
+     * Instantiates a new IoTDeviceEvidence and sets the default values.
     */
     public function __construct() {
         parent::__construct();

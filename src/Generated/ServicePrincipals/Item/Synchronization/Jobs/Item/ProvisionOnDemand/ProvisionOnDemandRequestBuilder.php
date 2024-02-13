@@ -41,8 +41,7 @@ class ProvisionOnDemandRequestBuilder extends BaseRequestBuilder
     public function post(ProvisionOnDemandPostRequestBody $body, ?ProvisionOnDemandRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
-                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         return $this->requestAdapter->sendAsync($requestInfo, [StringKeyStringValuePair::class, 'createFromDiscriminatorValue'], $errorMappings);
     }

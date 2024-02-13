@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class UnifiedRbacResourceNamespaceCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new unifiedRbacResourceNamespaceCollectionResponse and sets the default values.
+     * Instantiates a new UnifiedRbacResourceNamespaceCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class LongRunningOperation extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new longRunningOperation and sets the default values.
+     * Instantiates a new LongRunningOperation and sets the default values.
     */
     public function __construct() {
         parent::__construct();

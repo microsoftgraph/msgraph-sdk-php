@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class TaskDefinition extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new taskDefinition and sets the default values.
+     * Instantiates a new TaskDefinition and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -19,7 +19,7 @@ class Oct2HexPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new oct2HexPostRequestBody and sets the default values.
+     * Instantiates a new Oct2HexPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

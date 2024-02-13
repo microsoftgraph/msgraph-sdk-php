@@ -16,7 +16,7 @@ class Fido2MethodsRequestBuilderGetRequestConfiguration extends BaseRequestConfi
     public ?Fido2MethodsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new fido2MethodsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new Fido2MethodsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param Fido2MethodsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class Fido2MethodsRequestBuilderGetRequestConfiguration extends BaseRequestConfi
     }
 
     /**
-     * Instantiates a new fido2MethodsRequestBuilderGetQueryParameters.
+     * Instantiates a new Fido2MethodsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

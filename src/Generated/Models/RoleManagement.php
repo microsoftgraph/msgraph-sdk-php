@@ -18,7 +18,7 @@ class RoleManagement implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new roleManagement and sets the default values.
+     * Instantiates a new RoleManagement and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

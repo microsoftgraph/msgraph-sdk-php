@@ -18,7 +18,7 @@ class OnPremisesAccidentalDeletionPrevention implements AdditionalDataHolder, Ba
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new onPremisesAccidentalDeletionPrevention and sets the default values.
+     * Instantiates a new OnPremisesAccidentalDeletionPrevention and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

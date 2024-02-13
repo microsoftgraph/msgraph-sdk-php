@@ -19,7 +19,7 @@ class PrinterCapabilities implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new printerCapabilities and sets the default values.
+     * Instantiates a new PrinterCapabilities and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

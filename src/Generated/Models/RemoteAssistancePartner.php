@@ -13,7 +13,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class RemoteAssistancePartner extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new remoteAssistancePartner and sets the default values.
+     * Instantiates a new RemoteAssistancePartner and sets the default values.
     */
     public function __construct() {
         parent::__construct();

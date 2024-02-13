@@ -16,7 +16,7 @@ class WebinarsRequestBuilderGetRequestConfiguration extends BaseRequestConfigura
     public ?WebinarsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new webinarsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new WebinarsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param WebinarsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class WebinarsRequestBuilderGetRequestConfiguration extends BaseRequestConfigura
     }
 
     /**
-     * Instantiates a new webinarsRequestBuilderGetQueryParameters.
+     * Instantiates a new WebinarsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

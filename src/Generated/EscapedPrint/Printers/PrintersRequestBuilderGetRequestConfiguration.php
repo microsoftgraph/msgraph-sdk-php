@@ -16,7 +16,7 @@ class PrintersRequestBuilderGetRequestConfiguration extends BaseRequestConfigura
     public ?PrintersRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new printersRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new PrintersRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param PrintersRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class PrintersRequestBuilderGetRequestConfiguration extends BaseRequestConfigura
     }
 
     /**
-     * Instantiates a new printersRequestBuilderGetQueryParameters.
+     * Instantiates a new PrintersRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

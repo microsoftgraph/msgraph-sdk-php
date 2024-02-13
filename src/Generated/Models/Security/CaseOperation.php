@@ -13,7 +13,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class CaseOperation extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new caseOperation and sets the default values.
+     * Instantiates a new CaseOperation and sets the default values.
     */
     public function __construct() {
         parent::__construct();

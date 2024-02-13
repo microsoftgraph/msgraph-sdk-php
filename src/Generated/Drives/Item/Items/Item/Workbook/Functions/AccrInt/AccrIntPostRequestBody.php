@@ -19,7 +19,7 @@ class AccrIntPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new accrIntPostRequestBody and sets the default values.
+     * Instantiates a new AccrIntPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

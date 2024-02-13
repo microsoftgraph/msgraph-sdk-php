@@ -22,7 +22,7 @@ class GraphManagedIOSLobAppRequestBuilderGetQueryParameters
     public ?array $select = null;
     
     /**
-     * Instantiates a new graphManagedIOSLobAppRequestBuilderGetQueryParameters and sets the default values.
+     * Instantiates a new GraphManagedIOSLobAppRequestBuilderGetQueryParameters and sets the default values.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
     */

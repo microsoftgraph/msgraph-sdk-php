@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AgreementFileVersion extends AgreementFileProperties implements Parsable 
 {
     /**
-     * Instantiates a new agreementFileVersion and sets the default values.
+     * Instantiates a new AgreementFileVersion and sets the default values.
     */
     public function __construct() {
         parent::__construct();

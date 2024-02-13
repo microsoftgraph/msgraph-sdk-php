@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class GetByUserRoleWithRoleGetResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new getByUserRoleWithRoleGetResponse and sets the default values.
+     * Instantiates a new GetByUserRoleWithRoleGetResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();
