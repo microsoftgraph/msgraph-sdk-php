@@ -18,7 +18,7 @@ class WorkforceIntegrationEncryption implements AdditionalDataHolder, BackedMode
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new workforceIntegrationEncryption and sets the default values.
+     * Instantiates a new WorkforceIntegrationEncryption and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

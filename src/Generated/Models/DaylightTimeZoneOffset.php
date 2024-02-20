@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DaylightTimeZoneOffset extends StandardTimeZoneOffset implements Parsable 
 {
     /**
-     * Instantiates a new daylightTimeZoneOffset and sets the default values.
+     * Instantiates a new DaylightTimeZoneOffset and sets the default values.
     */
     public function __construct() {
         parent::__construct();

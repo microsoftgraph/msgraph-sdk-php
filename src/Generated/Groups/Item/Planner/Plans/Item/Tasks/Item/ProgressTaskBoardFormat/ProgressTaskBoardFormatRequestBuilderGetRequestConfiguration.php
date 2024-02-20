@@ -16,7 +16,7 @@ class ProgressTaskBoardFormatRequestBuilderGetRequestConfiguration extends BaseR
     public ?ProgressTaskBoardFormatRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new progressTaskBoardFormatRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new ProgressTaskBoardFormatRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param ProgressTaskBoardFormatRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class ProgressTaskBoardFormatRequestBuilderGetRequestConfiguration extends BaseR
     }
 
     /**
-     * Instantiates a new progressTaskBoardFormatRequestBuilderGetQueryParameters.
+     * Instantiates a new ProgressTaskBoardFormatRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return ProgressTaskBoardFormatRequestBuilderGetQueryParameters

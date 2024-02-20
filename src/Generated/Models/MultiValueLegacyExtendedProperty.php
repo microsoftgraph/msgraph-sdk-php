@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class MultiValueLegacyExtendedProperty extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new multiValueLegacyExtendedProperty and sets the default values.
+     * Instantiates a new MultiValueLegacyExtendedProperty and sets the default values.
     */
     public function __construct() {
         parent::__construct();

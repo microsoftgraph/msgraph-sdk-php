@@ -16,7 +16,7 @@ class ContentTypesRequestBuilderGetRequestConfiguration extends BaseRequestConfi
     public ?ContentTypesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new contentTypesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new ContentTypesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param ContentTypesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class ContentTypesRequestBuilderGetRequestConfiguration extends BaseRequestConfi
     }
 
     /**
-     * Instantiates a new contentTypesRequestBuilderGetQueryParameters.
+     * Instantiates a new ContentTypesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

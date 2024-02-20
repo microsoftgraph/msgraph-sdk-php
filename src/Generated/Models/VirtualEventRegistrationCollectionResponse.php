@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class VirtualEventRegistrationCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new virtualEventRegistrationCollectionResponse and sets the default values.
+     * Instantiates a new VirtualEventRegistrationCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

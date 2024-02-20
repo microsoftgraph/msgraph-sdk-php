@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WindowsInformationProtectionDesktopApp extends WindowsInformationProtectionApp implements Parsable 
 {
     /**
-     * Instantiates a new windowsInformationProtectionDesktopApp and sets the default values.
+     * Instantiates a new WindowsInformationProtectionDesktopApp and sets the default values.
     */
     public function __construct() {
         parent::__construct();

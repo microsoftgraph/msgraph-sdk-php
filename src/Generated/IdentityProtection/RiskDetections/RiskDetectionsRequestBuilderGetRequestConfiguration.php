@@ -16,7 +16,7 @@ class RiskDetectionsRequestBuilderGetRequestConfiguration extends BaseRequestCon
     public ?RiskDetectionsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new riskDetectionsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new RiskDetectionsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param RiskDetectionsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class RiskDetectionsRequestBuilderGetRequestConfiguration extends BaseRequestCon
     }
 
     /**
-     * Instantiates a new riskDetectionsRequestBuilderGetQueryParameters.
+     * Instantiates a new RiskDetectionsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

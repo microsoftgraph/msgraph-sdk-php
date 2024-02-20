@@ -19,7 +19,7 @@ class ImCotPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new imCotPostRequestBody and sets the default values.
+     * Instantiates a new ImCotPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

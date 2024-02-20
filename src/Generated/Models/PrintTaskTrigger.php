@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class PrintTaskTrigger extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new printTaskTrigger and sets the default values.
+     * Instantiates a new PrintTaskTrigger and sets the default values.
     */
     public function __construct() {
         parent::__construct();

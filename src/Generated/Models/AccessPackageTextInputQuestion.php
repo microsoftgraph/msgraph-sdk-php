@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AccessPackageTextInputQuestion extends AccessPackageQuestion implements Parsable 
 {
     /**
-     * Instantiates a new accessPackageTextInputQuestion and sets the default values.
+     * Instantiates a new AccessPackageTextInputQuestion and sets the default values.
     */
     public function __construct() {
         parent::__construct();

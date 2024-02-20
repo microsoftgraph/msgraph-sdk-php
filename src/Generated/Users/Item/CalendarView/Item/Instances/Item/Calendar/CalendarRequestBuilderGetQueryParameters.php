@@ -16,7 +16,7 @@ class CalendarRequestBuilderGetQueryParameters
     public ?array $select = null;
     
     /**
-     * Instantiates a new calendarRequestBuilderGetQueryParameters and sets the default values.
+     * Instantiates a new CalendarRequestBuilderGetQueryParameters and sets the default values.
      * @param array<string>|null $select Select properties to be returned
     */
     public function __construct(?array $select = null) {

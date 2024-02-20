@@ -20,7 +20,7 @@ class UserSimulationDetails implements AdditionalDataHolder, BackedModel, Parsab
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new userSimulationDetails and sets the default values.
+     * Instantiates a new UserSimulationDetails and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

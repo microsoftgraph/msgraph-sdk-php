@@ -16,7 +16,7 @@ class EdgeRequestBuilderGetRequestConfiguration extends BaseRequestConfiguration
     public ?EdgeRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new edgeRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new EdgeRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param EdgeRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class EdgeRequestBuilderGetRequestConfiguration extends BaseRequestConfiguration
     }
 
     /**
-     * Instantiates a new edgeRequestBuilderGetQueryParameters.
+     * Instantiates a new EdgeRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return EdgeRequestBuilderGetQueryParameters

@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class IdentityProvider extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new identityProvider and sets the default values.
+     * Instantiates a new IdentityProvider and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -16,7 +16,7 @@ class EducationRequestBuilderGetRequestConfiguration extends BaseRequestConfigur
     public ?EducationRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new educationRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new EducationRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param EducationRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class EducationRequestBuilderGetRequestConfiguration extends BaseRequestConfigur
     }
 
     /**
-     * Instantiates a new educationRequestBuilderGetQueryParameters.
+     * Instantiates a new EducationRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return EducationRequestBuilderGetQueryParameters

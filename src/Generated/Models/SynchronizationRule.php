@@ -19,7 +19,7 @@ class SynchronizationRule implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new synchronizationRule and sets the default values.
+     * Instantiates a new SynchronizationRule and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

@@ -19,7 +19,7 @@ class GetCachedReportPostRequestBody implements AdditionalDataHolder, BackedMode
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new getCachedReportPostRequestBody and sets the default values.
+     * Instantiates a new GetCachedReportPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

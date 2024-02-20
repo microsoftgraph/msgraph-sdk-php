@@ -18,7 +18,7 @@ class NumberColumn implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new numberColumn and sets the default values.
+     * Instantiates a new NumberColumn and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

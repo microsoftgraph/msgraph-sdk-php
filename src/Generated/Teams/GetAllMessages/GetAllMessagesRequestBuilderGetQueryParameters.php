@@ -16,6 +16,12 @@ class GetAllMessagesRequestBuilderGetQueryParameters
     public ?bool $count = null;
     
     /**
+     * @QueryParameter("%24expand")
+     * @var array<string>|null $expand Expand related entities
+    */
+    public ?array $expand = null;
+    
+    /**
      * @QueryParameter("%24filter")
      * @var string|null $filter Filter items by property values
     */
@@ -57,8 +63,9 @@ class GetAllMessagesRequestBuilderGetQueryParameters
     public ?int $top = null;
     
     /**
-     * Instantiates a new getAllMessagesRequestBuilderGetQueryParameters and sets the default values.
+     * Instantiates a new GetAllMessagesRequestBuilderGetQueryParameters and sets the default values.
      * @param bool|null $count Include count of items
+     * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values
      * @param string|null $model The payment model for the API
      * @param array<string>|null $orderby Order items by property values
@@ -67,8 +74,9 @@ class GetAllMessagesRequestBuilderGetQueryParameters
      * @param int|null $skip Skip the first n items
      * @param int|null $top Show only the first n items
     */
-    public function __construct(?bool $count = null, ?string $filter = null, ?string $model = null, ?array $orderby = null, ?string $search = null, ?array $select = null, ?int $skip = null, ?int $top = null) {
+    public function __construct(?bool $count = null, ?array $expand = null, ?string $filter = null, ?string $model = null, ?array $orderby = null, ?string $search = null, ?array $select = null, ?int $skip = null, ?int $top = null) {
         $this->count = $count;
+        $this->expand = $expand;
         $this->filter = $filter;
         $this->model = $model;
         $this->orderby = $orderby;

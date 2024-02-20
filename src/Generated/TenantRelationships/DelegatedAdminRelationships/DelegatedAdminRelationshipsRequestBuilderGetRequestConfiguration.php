@@ -16,7 +16,7 @@ class DelegatedAdminRelationshipsRequestBuilderGetRequestConfiguration extends B
     public ?DelegatedAdminRelationshipsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new delegatedAdminRelationshipsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new DelegatedAdminRelationshipsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param DelegatedAdminRelationshipsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class DelegatedAdminRelationshipsRequestBuilderGetRequestConfiguration extends B
     }
 
     /**
-     * Instantiates a new delegatedAdminRelationshipsRequestBuilderGetQueryParameters.
+     * Instantiates a new DelegatedAdminRelationshipsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

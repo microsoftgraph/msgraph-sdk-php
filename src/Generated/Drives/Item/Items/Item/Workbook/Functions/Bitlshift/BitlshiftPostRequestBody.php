@@ -19,7 +19,7 @@ class BitlshiftPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new bitlshiftPostRequestBody and sets the default values.
+     * Instantiates a new BitlshiftPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

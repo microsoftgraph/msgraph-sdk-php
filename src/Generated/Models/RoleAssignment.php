@@ -13,7 +13,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class RoleAssignment extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new roleAssignment and sets the default values.
+     * Instantiates a new RoleAssignment and sets the default values.
     */
     public function __construct() {
         parent::__construct();

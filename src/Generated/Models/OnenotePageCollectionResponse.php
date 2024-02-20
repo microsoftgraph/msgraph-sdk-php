@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class OnenotePageCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new onenotePageCollectionResponse and sets the default values.
+     * Instantiates a new OnenotePageCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

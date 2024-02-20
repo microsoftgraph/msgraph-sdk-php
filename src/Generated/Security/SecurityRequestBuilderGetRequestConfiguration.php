@@ -16,7 +16,7 @@ class SecurityRequestBuilderGetRequestConfiguration extends BaseRequestConfigura
     public ?SecurityRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new securityRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new SecurityRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param SecurityRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class SecurityRequestBuilderGetRequestConfiguration extends BaseRequestConfigura
     }
 
     /**
-     * Instantiates a new securityRequestBuilderGetQueryParameters.
+     * Instantiates a new SecurityRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return SecurityRequestBuilderGetQueryParameters

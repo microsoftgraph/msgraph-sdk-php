@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AadUserConversationMember extends ConversationMember implements Parsable 
 {
     /**
-     * Instantiates a new aadUserConversationMember and sets the default values.
+     * Instantiates a new AadUserConversationMember and sets the default values.
     */
     public function __construct() {
         parent::__construct();

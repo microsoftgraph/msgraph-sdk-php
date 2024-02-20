@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class SasTokenEvidence extends AlertEvidence implements Parsable 
 {
     /**
-     * Instantiates a new sasTokenEvidence and sets the default values.
+     * Instantiates a new SasTokenEvidence and sets the default values.
     */
     public function __construct() {
         parent::__construct();

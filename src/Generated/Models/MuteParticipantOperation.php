@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class MuteParticipantOperation extends CommsOperation implements Parsable 
 {
     /**
-     * Instantiates a new muteParticipantOperation and sets the default values.
+     * Instantiates a new MuteParticipantOperation and sets the default values.
     */
     public function __construct() {
         parent::__construct();

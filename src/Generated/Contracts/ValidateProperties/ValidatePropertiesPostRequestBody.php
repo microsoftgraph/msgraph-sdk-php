@@ -18,7 +18,7 @@ class ValidatePropertiesPostRequestBody implements AdditionalDataHolder, BackedM
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new validatePropertiesPostRequestBody and sets the default values.
+     * Instantiates a new ValidatePropertiesPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

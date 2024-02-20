@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class AttendanceRecord extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new attendanceRecord and sets the default values.
+     * Instantiates a new AttendanceRecord and sets the default values.
     */
     public function __construct() {
         parent::__construct();

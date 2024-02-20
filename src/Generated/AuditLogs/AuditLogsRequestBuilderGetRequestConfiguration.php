@@ -16,7 +16,7 @@ class AuditLogsRequestBuilderGetRequestConfiguration extends BaseRequestConfigur
     public ?AuditLogsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new auditLogsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new AuditLogsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param AuditLogsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class AuditLogsRequestBuilderGetRequestConfiguration extends BaseRequestConfigur
     }
 
     /**
-     * Instantiates a new auditLogsRequestBuilderGetQueryParameters.
+     * Instantiates a new AuditLogsRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return AuditLogsRequestBuilderGetQueryParameters

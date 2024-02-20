@@ -13,7 +13,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class IosManagedAppProtection extends TargetedManagedAppProtection implements Parsable 
 {
     /**
-     * Instantiates a new iosManagedAppProtection and sets the default values.
+     * Instantiates a new IosManagedAppProtection and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -16,7 +16,7 @@ class AgreementsRequestBuilderGetRequestConfiguration extends BaseRequestConfigu
     public ?AgreementsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new agreementsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new AgreementsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param AgreementsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class AgreementsRequestBuilderGetRequestConfiguration extends BaseRequestConfigu
     }
 
     /**
-     * Instantiates a new agreementsRequestBuilderGetQueryParameters.
+     * Instantiates a new AgreementsRequestBuilderGetQueryParameters.
      * @param string|null $search Search items by search phrases
      * @param array<string>|null $select Select properties to be returned
      * @return AgreementsRequestBuilderGetQueryParameters

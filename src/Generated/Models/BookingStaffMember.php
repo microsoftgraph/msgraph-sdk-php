@@ -13,7 +13,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class BookingStaffMember extends BookingStaffMemberBase implements Parsable 
 {
     /**
-     * Instantiates a new bookingStaffMember and sets the default values.
+     * Instantiates a new BookingStaffMember and sets the default values.
     */
     public function __construct() {
         parent::__construct();

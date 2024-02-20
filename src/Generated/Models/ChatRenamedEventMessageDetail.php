@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ChatRenamedEventMessageDetail extends EventMessageDetail implements Parsable 
 {
     /**
-     * Instantiates a new chatRenamedEventMessageDetail and sets the default values.
+     * Instantiates a new ChatRenamedEventMessageDetail and sets the default values.
     */
     public function __construct() {
         parent::__construct();

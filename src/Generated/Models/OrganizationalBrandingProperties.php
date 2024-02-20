@@ -11,7 +11,7 @@ use Psr\Http\Message\StreamInterface;
 class OrganizationalBrandingProperties extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new organizationalBrandingProperties and sets the default values.
+     * Instantiates a new OrganizationalBrandingProperties and sets the default values.
     */
     public function __construct() {
         parent::__construct();

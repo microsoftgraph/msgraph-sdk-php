@@ -19,7 +19,7 @@ class BookingQuestionAnswer implements AdditionalDataHolder, BackedModel, Parsab
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new bookingQuestionAnswer and sets the default values.
+     * Instantiates a new BookingQuestionAnswer and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

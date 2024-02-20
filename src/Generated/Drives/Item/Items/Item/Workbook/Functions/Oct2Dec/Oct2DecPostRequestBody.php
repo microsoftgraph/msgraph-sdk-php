@@ -19,7 +19,7 @@ class Oct2DecPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new oct2DecPostRequestBody and sets the default values.
+     * Instantiates a new Oct2DecPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

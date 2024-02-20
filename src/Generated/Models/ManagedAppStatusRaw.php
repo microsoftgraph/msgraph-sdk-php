@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ManagedAppStatusRaw extends ManagedAppStatus implements Parsable 
 {
     /**
-     * Instantiates a new managedAppStatusRaw and sets the default values.
+     * Instantiates a new ManagedAppStatusRaw and sets the default values.
     */
     public function __construct() {
         parent::__construct();

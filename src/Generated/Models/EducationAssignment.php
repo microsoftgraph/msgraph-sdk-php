@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class EducationAssignment extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new educationAssignment and sets the default values.
+     * Instantiates a new EducationAssignment and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -39,7 +39,7 @@ class EducationAssignment extends Entity implements Parsable
     }
 
     /**
-     * Gets the addToCalendarAction property value. Optional field to control the assignment behavior  for adding assignments to students' and teachers' calendars when the assignment is published. The possible values are: none, studentsAndPublisher, studentsAndTeamOwners, unknownFutureValue, and studentsOnly. You must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: studentsOnly. The default value is none.
+     * Gets the addToCalendarAction property value. Optional field to control the assignment behavior  for adding assignments to students' and teachers' calendars when the assignment is published. The possible values are: none, studentsAndPublisher, studentsAndTeamOwners, unknownFutureValue, and studentsOnly. You must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: studentsOnly. The default value is none.
      * @return EducationAddToCalendarOptions|null
     */
     public function getAddToCalendarAction(): ?EducationAddToCalendarOptions {
@@ -75,7 +75,7 @@ class EducationAssignment extends Entity implements Parsable
     }
 
     /**
-     * Gets the assignDateTime property value. The date when the assignment should become active.  If in the future, the assignment isn't shown to the student until this date.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Gets the assignDateTime property value. The date when the assignment should become active. If in the future, the assignment isn't shown to the student until this date. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return DateTime|null
     */
     public function getAssignDateTime(): ?DateTime {
@@ -87,7 +87,7 @@ class EducationAssignment extends Entity implements Parsable
     }
 
     /**
-     * Gets the assignedDateTime property value. The moment that the assignment was published to students and the assignment shows up on the students timeline.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Gets the assignedDateTime property value. The moment that the assignment was published to students and the assignment shows up on the students timeline. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return DateTime|null
     */
     public function getAssignedDateTime(): ?DateTime {
@@ -111,7 +111,7 @@ class EducationAssignment extends Entity implements Parsable
     }
 
     /**
-     * Gets the categories property value. When set, enables users to easily find assignments of a given type.  Read-only. Nullable.
+     * Gets the categories property value. When set, enables users to easily find assignments of a given type. Read-only. Nullable.
      * @return array<EducationCategory>|null
     */
     public function getCategories(): ?array {
@@ -137,7 +137,7 @@ class EducationAssignment extends Entity implements Parsable
     }
 
     /**
-     * Gets the closeDateTime property value. Date when the assignment will be closed for submissions. This is an optional field that can be null if the assignment doesn't allowLateSubmissions or when the closeDateTime is the same as the dueDateTime. But if specified, then the closeDateTime must be greater than or equal to the dueDateTime. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Gets the closeDateTime property value. Date when the assignment is closed for submissions. This is an optional field that can be null if the assignment doesn't allowLateSubmissions or when the closeDateTime is the same as the dueDateTime. But if specified, then the closeDateTime must be greater than or equal to the dueDateTime. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return DateTime|null
     */
     public function getCloseDateTime(): ?DateTime {
@@ -161,7 +161,7 @@ class EducationAssignment extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdDateTime property value. Moment when the assignment was created.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Gets the createdDateTime property value. Moment when the assignment was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
@@ -185,7 +185,7 @@ class EducationAssignment extends Entity implements Parsable
     }
 
     /**
-     * Gets the dueDateTime property value. Date when the students assignment is due.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Gets the dueDateTime property value. Date when the students assignment is due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return DateTime|null
     */
     public function getDueDateTime(): ?DateTime {
@@ -235,6 +235,7 @@ class EducationAssignment extends Entity implements Parsable
             'instructions' => fn(ParseNode $n) => $o->setInstructions($n->getObjectValue([EducationItemBody::class, 'createFromDiscriminatorValue'])),
             'lastModifiedBy' => fn(ParseNode $n) => $o->setLastModifiedBy($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
             'lastModifiedDateTime' => fn(ParseNode $n) => $o->setLastModifiedDateTime($n->getDateTimeValue()),
+            'moduleUrl' => fn(ParseNode $n) => $o->setModuleUrl($n->getStringValue()),
             'notificationChannelUrl' => fn(ParseNode $n) => $o->setNotificationChannelUrl($n->getStringValue()),
             'resources' => fn(ParseNode $n) => $o->setResources($n->getCollectionOfObjectValues([EducationAssignmentResource::class, 'createFromDiscriminatorValue'])),
             'resourcesFolderUrl' => fn(ParseNode $n) => $o->setResourcesFolderUrl($n->getStringValue()),
@@ -270,7 +271,7 @@ class EducationAssignment extends Entity implements Parsable
     }
 
     /**
-     * Gets the instructions property value. Instructions for the assignment.  The instructsions and the display name tell the student what to do.
+     * Gets the instructions property value. Instructions for the assignment. The instructions and the display name tell the student what to do.
      * @return EducationItemBody|null
     */
     public function getInstructions(): ?EducationItemBody {
@@ -294,7 +295,7 @@ class EducationAssignment extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastModifiedDateTime property value. Moment when the assignment was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Gets the lastModifiedDateTime property value. Moment when the assignment was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
@@ -306,7 +307,19 @@ class EducationAssignment extends Entity implements Parsable
     }
 
     /**
-     * Gets the notificationChannelUrl property value. Optional field to specify the URL of the channel to post the assignment publish notification. If not specified or null, defaults to the General channel. This field only applies to assignments where the assignTo value is educationAssignmentClassRecipient. Updating the notificationChannelUrl isn't allowed after the assignment has been published.
+     * Gets the moduleUrl property value. The URL of the module from which to access the assignment.
+     * @return string|null
+    */
+    public function getModuleUrl(): ?string {
+        $val = $this->getBackingStore()->get('moduleUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'moduleUrl'");
+    }
+
+    /**
+     * Gets the notificationChannelUrl property value. Optional field to specify the URL of the channel to post the assignment publish notification. If not specified or null, defaults to the General channel. This field only applies to assignments where the assignTo value is educationAssignmentClassRecipient. Updating the notificationChannelUrl isn't allowed after the assignment is published.
      * @return string|null
     */
     public function getNotificationChannelUrl(): ?string {
@@ -318,7 +331,7 @@ class EducationAssignment extends Entity implements Parsable
     }
 
     /**
-     * Gets the resources property value. Learning objects that are associated with this assignment.  Only teachers can modify this list. Nullable.
+     * Gets the resources property value. Learning objects that are associated with this assignment. Only teachers can modify this list. Nullable.
      * @return array<EducationAssignmentResource>|null
     */
     public function getResources(): ?array {
@@ -356,7 +369,7 @@ class EducationAssignment extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. Status of the Assignment.  You can't PATCH this value.  Possible values are: draft, scheduled, published, assigned.
+     * Gets the status property value. Status of the Assignment. You can't PATCH this value. Possible values are: draft, scheduled, published, assigned.
      * @return EducationAssignmentStatus|null
     */
     public function getStatus(): ?EducationAssignmentStatus {
@@ -368,7 +381,7 @@ class EducationAssignment extends Entity implements Parsable
     }
 
     /**
-     * Gets the submissions property value. Once published, there's a submission object for each student representing their work and grade.  Read-only. Nullable.
+     * Gets the submissions property value. Once published, there's a submission object for each student representing their work and grade. Read-only. Nullable.
      * @return array<EducationSubmission>|null
     */
     public function getSubmissions(): ?array {
@@ -412,6 +425,7 @@ class EducationAssignment extends Entity implements Parsable
         $writer->writeObjectValue('grading', $this->getGrading());
         $writer->writeObjectValue('gradingCategory', $this->getGradingCategory());
         $writer->writeObjectValue('instructions', $this->getInstructions());
+        $writer->writeStringValue('moduleUrl', $this->getModuleUrl());
         $writer->writeStringValue('notificationChannelUrl', $this->getNotificationChannelUrl());
         $writer->writeCollectionOfObjectValues('resources', $this->getResources());
         $writer->writeObjectValue('rubric', $this->getRubric());
@@ -427,7 +441,7 @@ class EducationAssignment extends Entity implements Parsable
     }
 
     /**
-     * Sets the addToCalendarAction property value. Optional field to control the assignment behavior  for adding assignments to students' and teachers' calendars when the assignment is published. The possible values are: none, studentsAndPublisher, studentsAndTeamOwners, unknownFutureValue, and studentsOnly. You must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: studentsOnly. The default value is none.
+     * Sets the addToCalendarAction property value. Optional field to control the assignment behavior  for adding assignments to students' and teachers' calendars when the assignment is published. The possible values are: none, studentsAndPublisher, studentsAndTeamOwners, unknownFutureValue, and studentsOnly. You must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: studentsOnly. The default value is none.
      * @param EducationAddToCalendarOptions|null $value Value to set for the addToCalendarAction property.
     */
     public function setAddToCalendarAction(?EducationAddToCalendarOptions $value): void {
@@ -451,7 +465,7 @@ class EducationAssignment extends Entity implements Parsable
     }
 
     /**
-     * Sets the assignDateTime property value. The date when the assignment should become active.  If in the future, the assignment isn't shown to the student until this date.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Sets the assignDateTime property value. The date when the assignment should become active. If in the future, the assignment isn't shown to the student until this date. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param DateTime|null $value Value to set for the assignDateTime property.
     */
     public function setAssignDateTime(?DateTime $value): void {
@@ -459,7 +473,7 @@ class EducationAssignment extends Entity implements Parsable
     }
 
     /**
-     * Sets the assignedDateTime property value. The moment that the assignment was published to students and the assignment shows up on the students timeline.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Sets the assignedDateTime property value. The moment that the assignment was published to students and the assignment shows up on the students timeline. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param DateTime|null $value Value to set for the assignedDateTime property.
     */
     public function setAssignedDateTime(?DateTime $value): void {
@@ -475,7 +489,7 @@ class EducationAssignment extends Entity implements Parsable
     }
 
     /**
-     * Sets the categories property value. When set, enables users to easily find assignments of a given type.  Read-only. Nullable.
+     * Sets the categories property value. When set, enables users to easily find assignments of a given type. Read-only. Nullable.
      * @param array<EducationCategory>|null $value Value to set for the categories property.
     */
     public function setCategories(?array $value): void {
@@ -491,7 +505,7 @@ class EducationAssignment extends Entity implements Parsable
     }
 
     /**
-     * Sets the closeDateTime property value. Date when the assignment will be closed for submissions. This is an optional field that can be null if the assignment doesn't allowLateSubmissions or when the closeDateTime is the same as the dueDateTime. But if specified, then the closeDateTime must be greater than or equal to the dueDateTime. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Sets the closeDateTime property value. Date when the assignment is closed for submissions. This is an optional field that can be null if the assignment doesn't allowLateSubmissions or when the closeDateTime is the same as the dueDateTime. But if specified, then the closeDateTime must be greater than or equal to the dueDateTime. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param DateTime|null $value Value to set for the closeDateTime property.
     */
     public function setCloseDateTime(?DateTime $value): void {
@@ -507,7 +521,7 @@ class EducationAssignment extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdDateTime property value. Moment when the assignment was created.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Sets the createdDateTime property value. Moment when the assignment was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
@@ -523,7 +537,7 @@ class EducationAssignment extends Entity implements Parsable
     }
 
     /**
-     * Sets the dueDateTime property value. Date when the students assignment is due.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Sets the dueDateTime property value. Date when the students assignment is due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param DateTime|null $value Value to set for the dueDateTime property.
     */
     public function setDueDateTime(?DateTime $value): void {
@@ -555,7 +569,7 @@ class EducationAssignment extends Entity implements Parsable
     }
 
     /**
-     * Sets the instructions property value. Instructions for the assignment.  The instructsions and the display name tell the student what to do.
+     * Sets the instructions property value. Instructions for the assignment. The instructions and the display name tell the student what to do.
      * @param EducationItemBody|null $value Value to set for the instructions property.
     */
     public function setInstructions(?EducationItemBody $value): void {
@@ -571,7 +585,7 @@ class EducationAssignment extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastModifiedDateTime property value. Moment when the assignment was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Sets the lastModifiedDateTime property value. Moment when the assignment was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
@@ -579,7 +593,15 @@ class EducationAssignment extends Entity implements Parsable
     }
 
     /**
-     * Sets the notificationChannelUrl property value. Optional field to specify the URL of the channel to post the assignment publish notification. If not specified or null, defaults to the General channel. This field only applies to assignments where the assignTo value is educationAssignmentClassRecipient. Updating the notificationChannelUrl isn't allowed after the assignment has been published.
+     * Sets the moduleUrl property value. The URL of the module from which to access the assignment.
+     * @param string|null $value Value to set for the moduleUrl property.
+    */
+    public function setModuleUrl(?string $value): void {
+        $this->getBackingStore()->set('moduleUrl', $value);
+    }
+
+    /**
+     * Sets the notificationChannelUrl property value. Optional field to specify the URL of the channel to post the assignment publish notification. If not specified or null, defaults to the General channel. This field only applies to assignments where the assignTo value is educationAssignmentClassRecipient. Updating the notificationChannelUrl isn't allowed after the assignment is published.
      * @param string|null $value Value to set for the notificationChannelUrl property.
     */
     public function setNotificationChannelUrl(?string $value): void {
@@ -587,7 +609,7 @@ class EducationAssignment extends Entity implements Parsable
     }
 
     /**
-     * Sets the resources property value. Learning objects that are associated with this assignment.  Only teachers can modify this list. Nullable.
+     * Sets the resources property value. Learning objects that are associated with this assignment. Only teachers can modify this list. Nullable.
      * @param array<EducationAssignmentResource>|null $value Value to set for the resources property.
     */
     public function setResources(?array $value): void {
@@ -611,7 +633,7 @@ class EducationAssignment extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. Status of the Assignment.  You can't PATCH this value.  Possible values are: draft, scheduled, published, assigned.
+     * Sets the status property value. Status of the Assignment. You can't PATCH this value. Possible values are: draft, scheduled, published, assigned.
      * @param EducationAssignmentStatus|null $value Value to set for the status property.
     */
     public function setStatus(?EducationAssignmentStatus $value): void {
@@ -619,7 +641,7 @@ class EducationAssignment extends Entity implements Parsable
     }
 
     /**
-     * Sets the submissions property value. Once published, there's a submission object for each student representing their work and grade.  Read-only. Nullable.
+     * Sets the submissions property value. Once published, there's a submission object for each student representing their work and grade. Read-only. Nullable.
      * @param array<EducationSubmission>|null $value Value to set for the submissions property.
     */
     public function setSubmissions(?array $value): void {

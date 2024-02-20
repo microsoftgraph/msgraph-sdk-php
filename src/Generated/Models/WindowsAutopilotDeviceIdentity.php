@@ -13,7 +13,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WindowsAutopilotDeviceIdentity extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new windowsAutopilotDeviceIdentity and sets the default values.
+     * Instantiates a new WindowsAutopilotDeviceIdentity and sets the default values.
     */
     public function __construct() {
         parent::__construct();

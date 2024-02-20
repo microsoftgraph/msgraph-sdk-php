@@ -16,7 +16,7 @@ class TenantRelationshipsRequestBuilderGetRequestConfiguration extends BaseReque
     public ?TenantRelationshipsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new tenantRelationshipsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new TenantRelationshipsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param TenantRelationshipsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class TenantRelationshipsRequestBuilderGetRequestConfiguration extends BaseReque
     }
 
     /**
-     * Instantiates a new tenantRelationshipsRequestBuilderGetQueryParameters.
+     * Instantiates a new TenantRelationshipsRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return TenantRelationshipsRequestBuilderGetQueryParameters

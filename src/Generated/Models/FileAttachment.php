@@ -10,7 +10,7 @@ use Psr\Http\Message\StreamInterface;
 class FileAttachment extends Attachment implements Parsable 
 {
     /**
-     * Instantiates a new fileAttachment and sets the default values.
+     * Instantiates a new FileAttachment and sets the default values.
     */
     public function __construct() {
         parent::__construct();

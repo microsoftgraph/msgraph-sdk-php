@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class GroupPeerOutlierRecommendationInsightSettings extends AccessReviewRecommendationInsightSetting implements Parsable 
 {
     /**
-     * Instantiates a new groupPeerOutlierRecommendationInsightSettings and sets the default values.
+     * Instantiates a new GroupPeerOutlierRecommendationInsightSettings and sets the default values.
     */
     public function __construct() {
         parent::__construct();

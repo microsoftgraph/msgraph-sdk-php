@@ -19,7 +19,7 @@ class Quartile_ExcPostRequestBody implements AdditionalDataHolder, BackedModel, 
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new quartile_ExcPostRequestBody and sets the default values.
+     * Instantiates a new Quartile_ExcPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

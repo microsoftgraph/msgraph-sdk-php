@@ -41,8 +41,7 @@ class UpdateRecordingStatusRequestBuilder extends BaseRequestBuilder
     public function post(UpdateRecordingStatusPostRequestBody $body, ?UpdateRecordingStatusRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
-                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         return $this->requestAdapter->sendAsync($requestInfo, [UpdateRecordingStatusOperation::class, 'createFromDiscriminatorValue'], $errorMappings);
     }

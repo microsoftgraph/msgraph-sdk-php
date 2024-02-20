@@ -23,6 +23,16 @@ use Microsoft\Graph\Generated\Models\IdentityGovernance\TaskProcessingResult;
 use Microsoft\Graph\Generated\Models\IdentityGovernance\TaskReport;
 use Microsoft\Graph\Generated\Models\IdentityGovernance\UserProcessingResult;
 use Microsoft\Graph\Generated\Models\IdentityGovernance\WorkflowTemplate;
+use Microsoft\Graph\Generated\Models\Partners\Billing\AzureUsage;
+use Microsoft\Graph\Generated\Models\Partners\Billing\BilledUsage;
+use Microsoft\Graph\Generated\Models\Partners\Billing\Billing;
+use Microsoft\Graph\Generated\Models\Partners\Billing\ExportSuccessOperation;
+use Microsoft\Graph\Generated\Models\Partners\Billing\FailedOperation;
+use Microsoft\Graph\Generated\Models\Partners\Billing\Manifest;
+use Microsoft\Graph\Generated\Models\Partners\Billing\Operation;
+use Microsoft\Graph\Generated\Models\Partners\Billing\RunningOperation;
+use Microsoft\Graph\Generated\Models\Partners\Billing\UnbilledUsage;
+use Microsoft\Graph\Generated\Models\Partners\Partners;
 use Microsoft\Graph\Generated\Models\Security\Alert;
 use Microsoft\Graph\Generated\Models\Security\Article;
 use Microsoft\Graph\Generated\Models\Security\ArticleIndicator;
@@ -103,7 +113,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new entity and sets the default values.
+     * Instantiates a new Entity and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
@@ -229,6 +239,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.browserSite': return new BrowserSite();
                 case '#microsoft.graph.browserSiteList': return new BrowserSiteList();
                 case '#microsoft.graph.builtInIdentityProvider': return new BuiltInIdentityProvider();
+                case '#microsoft.graph.bulkUpload': return new BulkUpload();
                 case '#microsoft.graph.calendar': return new Calendar();
                 case '#microsoft.graph.calendarGroup': return new CalendarGroup();
                 case '#microsoft.graph.calendarPermission': return new CalendarPermission();
@@ -352,6 +363,8 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.educationFeedbackOutcome': return new EducationFeedbackOutcome();
                 case '#microsoft.graph.educationFeedbackResourceOutcome': return new EducationFeedbackResourceOutcome();
                 case '#microsoft.graph.educationGradingCategory': return new EducationGradingCategory();
+                case '#microsoft.graph.educationModule': return new EducationModule();
+                case '#microsoft.graph.educationModuleResource': return new EducationModuleResource();
                 case '#microsoft.graph.educationOrganization': return new EducationOrganization();
                 case '#microsoft.graph.educationOutcome': return new EducationOutcome();
                 case '#microsoft.graph.educationPointsOutcome': return new EducationPointsOutcome();
@@ -561,6 +574,16 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.participant': return new Participant();
                 case '#microsoft.graph.participantJoiningNotification': return new ParticipantJoiningNotification();
                 case '#microsoft.graph.participantLeftNotification': return new ParticipantLeftNotification();
+                case '#microsoft.graph.partners': return new Partners();
+                case '#microsoft.graph.partners.billing.azureUsage': return new AzureUsage();
+                case '#microsoft.graph.partners.billing.billedUsage': return new BilledUsage();
+                case '#microsoft.graph.partners.billing.billing': return new Billing();
+                case '#microsoft.graph.partners.billing.exportSuccessOperation': return new ExportSuccessOperation();
+                case '#microsoft.graph.partners.billing.failedOperation': return new FailedOperation();
+                case '#microsoft.graph.partners.billing.manifest': return new Manifest();
+                case '#microsoft.graph.partners.billing.operation': return new Operation();
+                case '#microsoft.graph.partners.billing.runningOperation': return new RunningOperation();
+                case '#microsoft.graph.partners.billing.unbilledUsage': return new UnbilledUsage();
                 case '#microsoft.graph.passwordAuthenticationMethod': return new PasswordAuthenticationMethod();
                 case '#microsoft.graph.payload': return new Payload();
                 case '#microsoft.graph.peopleAdminSettings': return new PeopleAdminSettings();

@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class BasicAuthentication extends ApiAuthenticationConfigurationBase implements Parsable 
 {
     /**
-     * Instantiates a new basicAuthentication and sets the default values.
+     * Instantiates a new BasicAuthentication and sets the default values.
     */
     public function __construct() {
         parent::__construct();

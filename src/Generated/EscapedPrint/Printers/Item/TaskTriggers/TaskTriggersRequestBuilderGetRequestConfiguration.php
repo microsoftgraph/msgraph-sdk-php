@@ -16,7 +16,7 @@ class TaskTriggersRequestBuilderGetRequestConfiguration extends BaseRequestConfi
     public ?TaskTriggersRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new taskTriggersRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new TaskTriggersRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param TaskTriggersRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class TaskTriggersRequestBuilderGetRequestConfiguration extends BaseRequestConfi
     }
 
     /**
-     * Instantiates a new taskTriggersRequestBuilderGetQueryParameters.
+     * Instantiates a new TaskTriggersRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

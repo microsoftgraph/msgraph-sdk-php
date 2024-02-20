@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AnonymousGuestConversationMember extends ConversationMember implements Parsable 
 {
     /**
-     * Instantiates a new anonymousGuestConversationMember and sets the default values.
+     * Instantiates a new AnonymousGuestConversationMember and sets the default values.
     */
     public function __construct() {
         parent::__construct();

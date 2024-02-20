@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class KubernetesPodEvidence extends AlertEvidence implements Parsable 
 {
     /**
-     * Instantiates a new kubernetesPodEvidence and sets the default values.
+     * Instantiates a new KubernetesPodEvidence and sets the default values.
     */
     public function __construct() {
         parent::__construct();

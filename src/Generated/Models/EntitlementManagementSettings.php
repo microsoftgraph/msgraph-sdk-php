@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EntitlementManagementSettings extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new entitlementManagementSettings and sets the default values.
+     * Instantiates a new EntitlementManagementSettings and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class IosLobAppCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new iosLobAppCollectionResponse and sets the default values.
+     * Instantiates a new IosLobAppCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

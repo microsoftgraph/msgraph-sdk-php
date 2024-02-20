@@ -19,7 +19,7 @@ class SetUserPreferredPresencePostRequestBody implements AdditionalDataHolder, B
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new setUserPreferredPresencePostRequestBody and sets the default values.
+     * Instantiates a new SetUserPreferredPresencePostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

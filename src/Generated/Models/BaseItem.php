@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class BaseItem extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new baseItem and sets the default values.
+     * Instantiates a new BaseItem and sets the default values.
     */
     public function __construct() {
         parent::__construct();

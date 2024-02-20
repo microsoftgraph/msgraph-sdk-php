@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class FilterOperatorsGetResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new filterOperatorsGetResponse and sets the default values.
+     * Instantiates a new FilterOperatorsGetResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

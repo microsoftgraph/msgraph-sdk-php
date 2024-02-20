@@ -16,7 +16,7 @@ class ExcludesRequestBuilderGetRequestConfiguration extends BaseRequestConfigura
     public ?ExcludesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new excludesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new ExcludesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param ExcludesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class ExcludesRequestBuilderGetRequestConfiguration extends BaseRequestConfigura
     }
 
     /**
-     * Instantiates a new excludesRequestBuilderGetQueryParameters.
+     * Instantiates a new ExcludesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

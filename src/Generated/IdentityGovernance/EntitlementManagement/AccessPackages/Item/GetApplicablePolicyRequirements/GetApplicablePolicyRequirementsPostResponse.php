@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class GetApplicablePolicyRequirementsPostResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new getApplicablePolicyRequirementsPostResponse and sets the default values.
+     * Instantiates a new GetApplicablePolicyRequirementsPostResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

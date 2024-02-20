@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WindowsAppXAppAssignmentSettings extends MobileAppAssignmentSettings implements Parsable 
 {
     /**
-     * Instantiates a new windowsAppXAppAssignmentSettings and sets the default values.
+     * Instantiates a new WindowsAppXAppAssignmentSettings and sets the default values.
     */
     public function __construct() {
         parent::__construct();

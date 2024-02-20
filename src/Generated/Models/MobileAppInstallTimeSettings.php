@@ -22,7 +22,7 @@ class MobileAppInstallTimeSettings implements AdditionalDataHolder, BackedModel,
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new mobileAppInstallTimeSettings and sets the default values.
+     * Instantiates a new MobileAppInstallTimeSettings and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

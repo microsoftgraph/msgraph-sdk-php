@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\RequestOption;
 class UsedRangeWithValuesOnlyRequestBuilderGetRequestConfiguration extends BaseRequestConfiguration 
 {
     /**
-     * Instantiates a new usedRangeWithValuesOnlyRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new UsedRangeWithValuesOnlyRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
     */

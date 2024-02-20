@@ -18,7 +18,7 @@ class RunHuntingQueryPostRequestBody implements AdditionalDataHolder, BackedMode
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new runHuntingQueryPostRequestBody and sets the default values.
+     * Instantiates a new RunHuntingQueryPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

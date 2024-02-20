@@ -16,7 +16,7 @@ class SharedRequestBuilderGetRequestConfiguration extends BaseRequestConfigurati
     public ?SharedRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new sharedRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new SharedRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param SharedRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class SharedRequestBuilderGetRequestConfiguration extends BaseRequestConfigurati
     }
 
     /**
-     * Instantiates a new sharedRequestBuilderGetQueryParameters.
+     * Instantiates a new SharedRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

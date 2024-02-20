@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DeviceConfigurationDeviceStatus extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new deviceConfigurationDeviceStatus and sets the default values.
+     * Instantiates a new DeviceConfigurationDeviceStatus and sets the default values.
     */
     public function __construct() {
         parent::__construct();

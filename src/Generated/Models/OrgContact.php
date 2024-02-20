@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class OrgContact extends DirectoryObject implements Parsable 
 {
     /**
-     * Instantiates a new orgContact and sets the default values.
+     * Instantiates a new OrgContact and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -152,7 +152,7 @@ class OrgContact extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the mail property value. The SMTP address for the contact, for example, 'jeff@contoso.onmicrosoft.com'. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).
+     * Gets the mail property value. The SMTP address for the contact, for example, 'jeff@contoso.com'. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).
      * @return string|null
     */
     public function getMail(): ?string {
@@ -391,7 +391,7 @@ class OrgContact extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the mail property value. The SMTP address for the contact, for example, 'jeff@contoso.onmicrosoft.com'. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).
+     * Sets the mail property value. The SMTP address for the contact, for example, 'jeff@contoso.com'. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).
      * @param string|null $value Value to set for the mail property.
     */
     public function setMail(?string $value): void {

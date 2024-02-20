@@ -19,7 +19,7 @@ class AttributeDefinition implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new attributeDefinition and sets the default values.
+     * Instantiates a new AttributeDefinition and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

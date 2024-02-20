@@ -16,7 +16,7 @@ class ThreadsRequestBuilderGetRequestConfiguration extends BaseRequestConfigurat
     public ?ThreadsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new threadsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new ThreadsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param ThreadsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class ThreadsRequestBuilderGetRequestConfiguration extends BaseRequestConfigurat
     }
 
     /**
-     * Instantiates a new threadsRequestBuilderGetQueryParameters.
+     * Instantiates a new ThreadsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

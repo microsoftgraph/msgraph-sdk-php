@@ -19,7 +19,7 @@ class EoMonthPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new eoMonthPostRequestBody and sets the default values.
+     * Instantiates a new EoMonthPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

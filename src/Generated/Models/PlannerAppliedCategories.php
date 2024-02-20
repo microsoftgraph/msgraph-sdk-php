@@ -18,7 +18,7 @@ class PlannerAppliedCategories implements AdditionalDataHolder, BackedModel, Par
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new plannerAppliedCategories and sets the default values.
+     * Instantiates a new PlannerAppliedCategories and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

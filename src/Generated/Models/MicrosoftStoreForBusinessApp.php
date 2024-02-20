@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
 {
     /**
-     * Instantiates a new microsoftStoreForBusinessApp and sets the default values.
+     * Instantiates a new MicrosoftStoreForBusinessApp and sets the default values.
     */
     public function __construct() {
         parent::__construct();

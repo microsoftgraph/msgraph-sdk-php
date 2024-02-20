@@ -19,7 +19,7 @@ class Poisson_DistPostRequestBody implements AdditionalDataHolder, BackedModel, 
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new poisson_DistPostRequestBody and sets the default values.
+     * Instantiates a new Poisson_DistPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

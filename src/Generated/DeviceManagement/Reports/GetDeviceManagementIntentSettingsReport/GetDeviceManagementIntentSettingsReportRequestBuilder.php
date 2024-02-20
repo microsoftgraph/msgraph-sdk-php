@@ -41,8 +41,7 @@ class GetDeviceManagementIntentSettingsReportRequestBuilder extends BaseRequestB
     public function post(GetDeviceManagementIntentSettingsReportPostRequestBody $body, ?GetDeviceManagementIntentSettingsReportRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
-                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         /** @var Promise<StreamInterface|null> $result */
         $result = $this->requestAdapter->sendPrimitiveAsync($requestInfo, StreamInterface::class, $errorMappings);

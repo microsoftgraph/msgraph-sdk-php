@@ -18,7 +18,7 @@ class RubricQualityFeedbackModel implements AdditionalDataHolder, BackedModel, P
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new rubricQualityFeedbackModel and sets the default values.
+     * Instantiates a new RubricQualityFeedbackModel and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

@@ -19,7 +19,7 @@ class Expon_DistPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new expon_DistPostRequestBody and sets the default values.
+     * Instantiates a new Expon_DistPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

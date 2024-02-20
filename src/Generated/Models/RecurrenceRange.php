@@ -19,7 +19,7 @@ class RecurrenceRange implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new recurrenceRange and sets the default values.
+     * Instantiates a new RecurrenceRange and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

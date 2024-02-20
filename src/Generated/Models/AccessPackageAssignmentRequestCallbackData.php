@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AccessPackageAssignmentRequestCallbackData extends CustomExtensionData implements Parsable 
 {
     /**
-     * Instantiates a new accessPackageAssignmentRequestCallbackData and sets the default values.
+     * Instantiates a new AccessPackageAssignmentRequestCallbackData and sets the default values.
     */
     public function __construct() {
         parent::__construct();

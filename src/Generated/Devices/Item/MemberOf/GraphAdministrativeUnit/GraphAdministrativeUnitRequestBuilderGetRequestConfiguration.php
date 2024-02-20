@@ -16,7 +16,7 @@ class GraphAdministrativeUnitRequestBuilderGetRequestConfiguration extends BaseR
     public ?GraphAdministrativeUnitRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new graphAdministrativeUnitRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new GraphAdministrativeUnitRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param GraphAdministrativeUnitRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class GraphAdministrativeUnitRequestBuilderGetRequestConfiguration extends BaseR
     }
 
     /**
-     * Instantiates a new graphAdministrativeUnitRequestBuilderGetQueryParameters.
+     * Instantiates a new GraphAdministrativeUnitRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

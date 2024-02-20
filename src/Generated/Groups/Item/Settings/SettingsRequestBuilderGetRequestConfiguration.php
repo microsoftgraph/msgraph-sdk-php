@@ -16,7 +16,7 @@ class SettingsRequestBuilderGetRequestConfiguration extends BaseRequestConfigura
     public ?SettingsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new settingsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new SettingsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param SettingsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class SettingsRequestBuilderGetRequestConfiguration extends BaseRequestConfigura
     }
 
     /**
-     * Instantiates a new settingsRequestBuilderGetQueryParameters.
+     * Instantiates a new SettingsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

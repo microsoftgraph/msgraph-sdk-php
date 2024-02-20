@@ -16,7 +16,7 @@ class LastSharedMethodRequestBuilderGetRequestConfiguration extends BaseRequestC
     public ?LastSharedMethodRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new lastSharedMethodRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new LastSharedMethodRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param LastSharedMethodRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class LastSharedMethodRequestBuilderGetRequestConfiguration extends BaseRequestC
     }
 
     /**
-     * Instantiates a new lastSharedMethodRequestBuilderGetQueryParameters.
+     * Instantiates a new LastSharedMethodRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return LastSharedMethodRequestBuilderGetQueryParameters

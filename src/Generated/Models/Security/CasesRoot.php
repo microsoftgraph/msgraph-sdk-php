@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class CasesRoot extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new casesRoot and sets the default values.
+     * Instantiates a new CasesRoot and sets the default values.
     */
     public function __construct() {
         parent::__construct();

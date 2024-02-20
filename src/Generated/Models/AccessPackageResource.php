@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class AccessPackageResource extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new accessPackageResource and sets the default values.
+     * Instantiates a new AccessPackageResource and sets the default values.
     */
     public function __construct() {
         parent::__construct();

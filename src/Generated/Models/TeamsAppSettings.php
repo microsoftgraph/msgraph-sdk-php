@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TeamsAppSettings extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new teamsAppSettings and sets the default values.
+     * Instantiates a new TeamsAppSettings and sets the default values.
     */
     public function __construct() {
         parent::__construct();

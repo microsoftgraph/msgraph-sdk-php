@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class WhoisBaseRecord extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new whoisBaseRecord and sets the default values.
+     * Instantiates a new WhoisBaseRecord and sets the default values.
     */
     public function __construct() {
         parent::__construct();

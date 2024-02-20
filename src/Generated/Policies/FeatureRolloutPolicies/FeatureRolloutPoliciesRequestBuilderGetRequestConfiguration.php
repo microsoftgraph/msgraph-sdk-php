@@ -16,7 +16,7 @@ class FeatureRolloutPoliciesRequestBuilderGetRequestConfiguration extends BaseRe
     public ?FeatureRolloutPoliciesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new featureRolloutPoliciesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new FeatureRolloutPoliciesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param FeatureRolloutPoliciesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class FeatureRolloutPoliciesRequestBuilderGetRequestConfiguration extends BaseRe
     }
 
     /**
-     * Instantiates a new featureRolloutPoliciesRequestBuilderGetQueryParameters.
+     * Instantiates a new FeatureRolloutPoliciesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

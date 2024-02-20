@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List properties and relationships of the iosVppEBook objects.
+ * List properties and relationships of the managedEBook objects.
 */
 class ManagedEBooksRequestBuilderGetQueryParameters 
 {
@@ -58,7 +58,7 @@ class ManagedEBooksRequestBuilderGetQueryParameters
     public ?int $top = null;
     
     /**
-     * Instantiates a new managedEBooksRequestBuilderGetQueryParameters and sets the default values.
+     * Instantiates a new ManagedEBooksRequestBuilderGetQueryParameters and sets the default values.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

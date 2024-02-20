@@ -19,7 +19,7 @@ class CoupDayBsPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new coupDayBsPostRequestBody and sets the default values.
+     * Instantiates a new CoupDayBsPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

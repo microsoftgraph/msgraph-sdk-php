@@ -16,7 +16,7 @@ class ShiftsRequestBuilderGetRequestConfiguration extends BaseRequestConfigurati
     public ?ShiftsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new shiftsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new ShiftsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param ShiftsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class ShiftsRequestBuilderGetRequestConfiguration extends BaseRequestConfigurati
     }
 
     /**
-     * Instantiates a new shiftsRequestBuilderGetQueryParameters.
+     * Instantiates a new ShiftsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param string|null $filter Filter items by property values
      * @param array<string>|null $orderby Order items by property values

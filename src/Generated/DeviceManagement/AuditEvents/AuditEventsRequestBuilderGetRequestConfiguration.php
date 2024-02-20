@@ -16,7 +16,7 @@ class AuditEventsRequestBuilderGetRequestConfiguration extends BaseRequestConfig
     public ?AuditEventsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new auditEventsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new AuditEventsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param AuditEventsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class AuditEventsRequestBuilderGetRequestConfiguration extends BaseRequestConfig
     }
 
     /**
-     * Instantiates a new auditEventsRequestBuilderGetQueryParameters.
+     * Instantiates a new AuditEventsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

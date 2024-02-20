@@ -16,7 +16,7 @@ class RetentionLabelRequestBuilderGetRequestConfiguration extends BaseRequestCon
     public ?RetentionLabelRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new retentionLabelRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new RetentionLabelRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param RetentionLabelRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class RetentionLabelRequestBuilderGetRequestConfiguration extends BaseRequestCon
     }
 
     /**
-     * Instantiates a new retentionLabelRequestBuilderGetQueryParameters.
+     * Instantiates a new RetentionLabelRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return RetentionLabelRequestBuilderGetQueryParameters

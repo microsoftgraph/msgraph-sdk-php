@@ -18,7 +18,7 @@ class EventQuery implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new eventQuery and sets the default values.
+     * Instantiates a new EventQuery and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

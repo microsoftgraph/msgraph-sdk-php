@@ -16,7 +16,7 @@ class ImportedWindowsAutopilotDeviceIdentitiesRequestBuilderGetRequestConfigurat
     public ?ImportedWindowsAutopilotDeviceIdentitiesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new importedWindowsAutopilotDeviceIdentitiesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new ImportedWindowsAutopilotDeviceIdentitiesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param ImportedWindowsAutopilotDeviceIdentitiesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class ImportedWindowsAutopilotDeviceIdentitiesRequestBuilderGetRequestConfigurat
     }
 
     /**
-     * Instantiates a new importedWindowsAutopilotDeviceIdentitiesRequestBuilderGetQueryParameters.
+     * Instantiates a new ImportedWindowsAutopilotDeviceIdentitiesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

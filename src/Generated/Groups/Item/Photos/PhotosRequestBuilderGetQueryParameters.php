@@ -40,7 +40,7 @@ class PhotosRequestBuilderGetQueryParameters
     public ?int $top = null;
     
     /**
-     * Instantiates a new photosRequestBuilderGetQueryParameters and sets the default values.
+     * Instantiates a new PhotosRequestBuilderGetQueryParameters and sets the default values.
      * @param string|null $filter Filter items by property values
      * @param array<string>|null $orderby Order items by property values
      * @param array<string>|null $select Select properties to be returned

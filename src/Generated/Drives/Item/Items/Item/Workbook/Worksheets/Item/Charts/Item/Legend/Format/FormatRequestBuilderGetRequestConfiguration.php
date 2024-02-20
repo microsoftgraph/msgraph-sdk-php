@@ -16,7 +16,7 @@ class FormatRequestBuilderGetRequestConfiguration extends BaseRequestConfigurati
     public ?FormatRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new formatRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new FormatRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param FormatRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class FormatRequestBuilderGetRequestConfiguration extends BaseRequestConfigurati
     }
 
     /**
-     * Instantiates a new formatRequestBuilderGetQueryParameters.
+     * Instantiates a new FormatRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return FormatRequestBuilderGetQueryParameters

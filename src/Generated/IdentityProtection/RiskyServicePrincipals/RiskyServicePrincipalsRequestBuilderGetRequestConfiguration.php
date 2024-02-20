@@ -16,7 +16,7 @@ class RiskyServicePrincipalsRequestBuilderGetRequestConfiguration extends BaseRe
     public ?RiskyServicePrincipalsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new riskyServicePrincipalsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new RiskyServicePrincipalsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param RiskyServicePrincipalsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class RiskyServicePrincipalsRequestBuilderGetRequestConfiguration extends BaseRe
     }
 
     /**
-     * Instantiates a new riskyServicePrincipalsRequestBuilderGetQueryParameters.
+     * Instantiates a new RiskyServicePrincipalsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

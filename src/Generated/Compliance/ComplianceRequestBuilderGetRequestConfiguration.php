@@ -16,7 +16,7 @@ class ComplianceRequestBuilderGetRequestConfiguration extends BaseRequestConfigu
     public ?ComplianceRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new complianceRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new ComplianceRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param ComplianceRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class ComplianceRequestBuilderGetRequestConfiguration extends BaseRequestConfigu
     }
 
     /**
-     * Instantiates a new complianceRequestBuilderGetQueryParameters.
+     * Instantiates a new ComplianceRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return ComplianceRequestBuilderGetQueryParameters

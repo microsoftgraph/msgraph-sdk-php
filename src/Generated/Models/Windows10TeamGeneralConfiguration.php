@@ -13,7 +13,7 @@ use Microsoft\Kiota\Abstractions\Types\Time;
 class Windows10TeamGeneralConfiguration extends DeviceConfiguration implements Parsable 
 {
     /**
-     * Instantiates a new windows10TeamGeneralConfiguration and sets the default values.
+     * Instantiates a new Windows10TeamGeneralConfiguration and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -13,7 +13,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class IosVppApp extends MobileApp implements Parsable 
 {
     /**
-     * Instantiates a new iosVppApp and sets the default values.
+     * Instantiates a new IosVppApp and sets the default values.
     */
     public function __construct() {
         parent::__construct();

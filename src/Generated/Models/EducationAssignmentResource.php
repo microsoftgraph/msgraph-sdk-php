@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EducationAssignmentResource extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new educationAssignmentResource and sets the default values.
+     * Instantiates a new EducationAssignmentResource and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -16,7 +16,7 @@ class ApiConnectorConfigurationRequestBuilderGetRequestConfiguration extends Bas
     public ?ApiConnectorConfigurationRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new apiConnectorConfigurationRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new ApiConnectorConfigurationRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param ApiConnectorConfigurationRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class ApiConnectorConfigurationRequestBuilderGetRequestConfiguration extends Bas
     }
 
     /**
-     * Instantiates a new apiConnectorConfigurationRequestBuilderGetQueryParameters.
+     * Instantiates a new ApiConnectorConfigurationRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return ApiConnectorConfigurationRequestBuilderGetQueryParameters

@@ -18,7 +18,7 @@ class KeyValuePair implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new keyValuePair and sets the default values.
+     * Instantiates a new KeyValuePair and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

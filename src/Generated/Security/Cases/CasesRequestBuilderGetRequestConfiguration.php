@@ -16,7 +16,7 @@ class CasesRequestBuilderGetRequestConfiguration extends BaseRequestConfiguratio
     public ?CasesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new casesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new CasesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param CasesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class CasesRequestBuilderGetRequestConfiguration extends BaseRequestConfiguratio
     }
 
     /**
-     * Instantiates a new casesRequestBuilderGetQueryParameters.
+     * Instantiates a new CasesRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return CasesRequestBuilderGetQueryParameters

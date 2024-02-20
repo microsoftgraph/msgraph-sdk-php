@@ -18,7 +18,7 @@ class AssignedLabel implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new assignedLabel and sets the default values.
+     * Instantiates a new AssignedLabel and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

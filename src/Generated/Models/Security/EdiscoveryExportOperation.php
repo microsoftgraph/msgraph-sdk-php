@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class EdiscoveryExportOperation extends CaseOperation implements Parsable 
 {
     /**
-     * Instantiates a new ediscoveryExportOperation and sets the default values.
+     * Instantiates a new EdiscoveryExportOperation and sets the default values.
     */
     public function __construct() {
         parent::__construct();

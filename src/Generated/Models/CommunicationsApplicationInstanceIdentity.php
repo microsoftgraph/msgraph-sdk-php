@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class CommunicationsApplicationInstanceIdentity extends Identity implements Parsable 
 {
     /**
-     * Instantiates a new communicationsApplicationInstanceIdentity and sets the default values.
+     * Instantiates a new CommunicationsApplicationInstanceIdentity and sets the default values.
     */
     public function __construct() {
         parent::__construct();

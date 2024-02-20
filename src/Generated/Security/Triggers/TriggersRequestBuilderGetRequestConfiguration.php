@@ -16,7 +16,7 @@ class TriggersRequestBuilderGetRequestConfiguration extends BaseRequestConfigura
     public ?TriggersRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new triggersRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new TriggersRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param TriggersRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class TriggersRequestBuilderGetRequestConfiguration extends BaseRequestConfigura
     }
 
     /**
-     * Instantiates a new triggersRequestBuilderGetQueryParameters.
+     * Instantiates a new TriggersRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return TriggersRequestBuilderGetQueryParameters

@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class PrintTaskDefinition extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new printTaskDefinition and sets the default values.
+     * Instantiates a new PrintTaskDefinition and sets the default values.
     */
     public function __construct() {
         parent::__construct();

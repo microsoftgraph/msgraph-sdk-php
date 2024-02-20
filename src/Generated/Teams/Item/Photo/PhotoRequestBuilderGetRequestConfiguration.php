@@ -16,7 +16,7 @@ class PhotoRequestBuilderGetRequestConfiguration extends BaseRequestConfiguratio
     public ?PhotoRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new photoRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new PhotoRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param PhotoRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class PhotoRequestBuilderGetRequestConfiguration extends BaseRequestConfiguratio
     }
 
     /**
-     * Instantiates a new photoRequestBuilderGetQueryParameters.
+     * Instantiates a new PhotoRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return PhotoRequestBuilderGetQueryParameters

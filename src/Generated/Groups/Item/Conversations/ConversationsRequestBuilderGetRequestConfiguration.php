@@ -16,7 +16,7 @@ class ConversationsRequestBuilderGetRequestConfiguration extends BaseRequestConf
     public ?ConversationsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new conversationsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new ConversationsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param ConversationsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class ConversationsRequestBuilderGetRequestConfiguration extends BaseRequestConf
     }
 
     /**
-     * Instantiates a new conversationsRequestBuilderGetQueryParameters.
+     * Instantiates a new ConversationsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param string|null $filter Filter items by property values
      * @param array<string>|null $orderby Order items by property values

@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class AddPostResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new addPostResponse and sets the default values.
+     * Instantiates a new AddPostResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

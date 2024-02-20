@@ -18,7 +18,7 @@ class PlannerExternalReferences implements AdditionalDataHolder, BackedModel, Pa
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new plannerExternalReferences and sets the default values.
+     * Instantiates a new PlannerExternalReferences and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

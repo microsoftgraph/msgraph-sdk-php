@@ -22,7 +22,7 @@ class UserExperienceAnalyticsAppHealthOverviewRequestBuilderGetQueryParameters
     public ?array $select = null;
     
     /**
-     * Instantiates a new userExperienceAnalyticsAppHealthOverviewRequestBuilderGetQueryParameters and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsAppHealthOverviewRequestBuilderGetQueryParameters and sets the default values.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
     */

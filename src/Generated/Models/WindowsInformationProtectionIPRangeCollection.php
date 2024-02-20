@@ -22,7 +22,7 @@ class WindowsInformationProtectionIPRangeCollection implements AdditionalDataHol
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new windowsInformationProtectionIPRangeCollection and sets the default values.
+     * Instantiates a new WindowsInformationProtectionIPRangeCollection and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

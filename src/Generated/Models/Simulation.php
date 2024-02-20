@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Simulation extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new simulation and sets the default values.
+     * Instantiates a new Simulation and sets the default values.
     */
     public function __construct() {
         parent::__construct();

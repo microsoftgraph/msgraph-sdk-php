@@ -16,7 +16,7 @@ class GraphAndroidStoreAppRequestBuilderGetRequestConfiguration extends BaseRequ
     public ?GraphAndroidStoreAppRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new graphAndroidStoreAppRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new GraphAndroidStoreAppRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param GraphAndroidStoreAppRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class GraphAndroidStoreAppRequestBuilderGetRequestConfiguration extends BaseRequ
     }
 
     /**
-     * Instantiates a new graphAndroidStoreAppRequestBuilderGetQueryParameters.
+     * Instantiates a new GraphAndroidStoreAppRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return GraphAndroidStoreAppRequestBuilderGetQueryParameters

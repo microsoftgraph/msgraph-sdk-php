@@ -13,7 +13,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class ManagedMobileLobApp extends ManagedApp implements Parsable 
 {
     /**
-     * Instantiates a new managedMobileLobApp and sets the default values.
+     * Instantiates a new ManagedMobileLobApp and sets the default values.
     */
     public function __construct() {
         parent::__construct();

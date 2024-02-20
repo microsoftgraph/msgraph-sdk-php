@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class WorkbookComment extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new workbookComment and sets the default values.
+     * Instantiates a new WorkbookComment and sets the default values.
     */
     public function __construct() {
         parent::__construct();

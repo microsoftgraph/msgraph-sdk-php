@@ -16,7 +16,7 @@ class MinorGridlinesRequestBuilderGetRequestConfiguration extends BaseRequestCon
     public ?MinorGridlinesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new minorGridlinesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new MinorGridlinesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param MinorGridlinesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class MinorGridlinesRequestBuilderGetRequestConfiguration extends BaseRequestCon
     }
 
     /**
-     * Instantiates a new minorGridlinesRequestBuilderGetQueryParameters.
+     * Instantiates a new MinorGridlinesRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return MinorGridlinesRequestBuilderGetQueryParameters

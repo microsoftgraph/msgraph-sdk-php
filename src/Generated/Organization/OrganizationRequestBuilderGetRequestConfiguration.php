@@ -16,7 +16,7 @@ class OrganizationRequestBuilderGetRequestConfiguration extends BaseRequestConfi
     public ?OrganizationRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new organizationRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new OrganizationRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param OrganizationRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class OrganizationRequestBuilderGetRequestConfiguration extends BaseRequestConfi
     }
 
     /**
-     * Instantiates a new organizationRequestBuilderGetQueryParameters.
+     * Instantiates a new OrganizationRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

@@ -13,7 +13,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class MacOSLobApp extends MobileLobApp implements Parsable 
 {
     /**
-     * Instantiates a new macOSLobApp and sets the default values.
+     * Instantiates a new MacOSLobApp and sets the default values.
     */
     public function __construct() {
         parent::__construct();

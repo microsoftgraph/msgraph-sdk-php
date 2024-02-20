@@ -18,7 +18,7 @@ class ThumbnailColumn implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new thumbnailColumn and sets the default values.
+     * Instantiates a new ThumbnailColumn and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

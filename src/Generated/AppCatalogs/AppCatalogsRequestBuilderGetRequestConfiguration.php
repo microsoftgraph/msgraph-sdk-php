@@ -16,7 +16,7 @@ class AppCatalogsRequestBuilderGetRequestConfiguration extends BaseRequestConfig
     public ?AppCatalogsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new appCatalogsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new AppCatalogsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param AppCatalogsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class AppCatalogsRequestBuilderGetRequestConfiguration extends BaseRequestConfig
     }
 
     /**
-     * Instantiates a new appCatalogsRequestBuilderGetQueryParameters.
+     * Instantiates a new AppCatalogsRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return AppCatalogsRequestBuilderGetQueryParameters

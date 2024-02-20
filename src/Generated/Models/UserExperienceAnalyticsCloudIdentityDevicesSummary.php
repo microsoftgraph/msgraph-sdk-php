@@ -21,7 +21,7 @@ class UserExperienceAnalyticsCloudIdentityDevicesSummary implements AdditionalDa
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new userExperienceAnalyticsCloudIdentityDevicesSummary and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsCloudIdentityDevicesSummary and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

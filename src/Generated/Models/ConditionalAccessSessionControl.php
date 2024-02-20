@@ -18,7 +18,7 @@ class ConditionalAccessSessionControl implements AdditionalDataHolder, BackedMod
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new conditionalAccessSessionControl and sets the default values.
+     * Instantiates a new ConditionalAccessSessionControl and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

@@ -16,7 +16,7 @@ class SslCertificateRequestBuilderGetRequestConfiguration extends BaseRequestCon
     public ?SslCertificateRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new sslCertificateRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new SslCertificateRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param SslCertificateRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class SslCertificateRequestBuilderGetRequestConfiguration extends BaseRequestCon
     }
 
     /**
-     * Instantiates a new sslCertificateRequestBuilderGetQueryParameters.
+     * Instantiates a new SslCertificateRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return SslCertificateRequestBuilderGetQueryParameters

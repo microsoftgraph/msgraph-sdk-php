@@ -16,7 +16,7 @@ class SectionGroupsRequestBuilderGetRequestConfiguration extends BaseRequestConf
     public ?SectionGroupsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new sectionGroupsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new SectionGroupsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param SectionGroupsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class SectionGroupsRequestBuilderGetRequestConfiguration extends BaseRequestConf
     }
 
     /**
-     * Instantiates a new sectionGroupsRequestBuilderGetQueryParameters.
+     * Instantiates a new SectionGroupsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

@@ -16,7 +16,7 @@ class OnenoteRequestBuilderGetRequestConfiguration extends BaseRequestConfigurat
     public ?OnenoteRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new onenoteRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new OnenoteRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param OnenoteRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class OnenoteRequestBuilderGetRequestConfiguration extends BaseRequestConfigurat
     }
 
     /**
-     * Instantiates a new onenoteRequestBuilderGetQueryParameters.
+     * Instantiates a new OnenoteRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return OnenoteRequestBuilderGetQueryParameters

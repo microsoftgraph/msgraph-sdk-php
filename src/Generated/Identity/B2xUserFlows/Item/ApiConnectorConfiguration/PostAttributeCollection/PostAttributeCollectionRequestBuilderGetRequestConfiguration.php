@@ -16,7 +16,7 @@ class PostAttributeCollectionRequestBuilderGetRequestConfiguration extends BaseR
     public ?PostAttributeCollectionRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new postAttributeCollectionRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new PostAttributeCollectionRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param PostAttributeCollectionRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class PostAttributeCollectionRequestBuilderGetRequestConfiguration extends BaseR
     }
 
     /**
-     * Instantiates a new postAttributeCollectionRequestBuilderGetQueryParameters.
+     * Instantiates a new PostAttributeCollectionRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return PostAttributeCollectionRequestBuilderGetQueryParameters

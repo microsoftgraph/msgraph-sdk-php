@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DelegatedAdminServiceManagementDetail extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new delegatedAdminServiceManagementDetail and sets the default values.
+     * Instantiates a new DelegatedAdminServiceManagementDetail and sets the default values.
     */
     public function __construct() {
         parent::__construct();

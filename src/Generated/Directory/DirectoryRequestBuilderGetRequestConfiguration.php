@@ -16,7 +16,7 @@ class DirectoryRequestBuilderGetRequestConfiguration extends BaseRequestConfigur
     public ?DirectoryRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new directoryRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new DirectoryRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param DirectoryRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class DirectoryRequestBuilderGetRequestConfiguration extends BaseRequestConfigur
     }
 
     /**
-     * Instantiates a new directoryRequestBuilderGetQueryParameters.
+     * Instantiates a new DirectoryRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return DirectoryRequestBuilderGetQueryParameters

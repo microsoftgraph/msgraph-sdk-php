@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class LocateDeviceActionResult extends DeviceActionResult implements Parsable 
 {
     /**
-     * Instantiates a new locateDeviceActionResult and sets the default values.
+     * Instantiates a new LocateDeviceActionResult and sets the default values.
     */
     public function __construct() {
         parent::__construct();

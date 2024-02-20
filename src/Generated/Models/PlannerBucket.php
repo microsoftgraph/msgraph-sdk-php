@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class PlannerBucket extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new plannerBucket and sets the default values.
+     * Instantiates a new PlannerBucket and sets the default values.
     */
     public function __construct() {
         parent::__construct();

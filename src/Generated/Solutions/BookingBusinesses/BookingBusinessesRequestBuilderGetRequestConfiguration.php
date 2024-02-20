@@ -16,7 +16,7 @@ class BookingBusinessesRequestBuilderGetRequestConfiguration extends BaseRequest
     public ?BookingBusinessesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new bookingBusinessesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new BookingBusinessesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param BookingBusinessesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class BookingBusinessesRequestBuilderGetRequestConfiguration extends BaseRequest
     }
 
     /**
-     * Instantiates a new bookingBusinessesRequestBuilderGetQueryParameters.
+     * Instantiates a new BookingBusinessesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

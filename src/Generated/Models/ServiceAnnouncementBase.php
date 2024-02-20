@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class ServiceAnnouncementBase extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new serviceAnnouncementBase and sets the default values.
+     * Instantiates a new ServiceAnnouncementBase and sets the default values.
     */
     public function __construct() {
         parent::__construct();

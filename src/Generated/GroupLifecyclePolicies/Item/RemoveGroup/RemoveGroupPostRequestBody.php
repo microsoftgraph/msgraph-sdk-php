@@ -18,7 +18,7 @@ class RemoveGroupPostRequestBody implements AdditionalDataHolder, BackedModel, P
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new removeGroupPostRequestBody and sets the default values.
+     * Instantiates a new RemoveGroupPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class NoTrainingSetting extends TrainingSetting implements Parsable 
 {
     /**
-     * Instantiates a new noTrainingSetting and sets the default values.
+     * Instantiates a new NoTrainingSetting and sets the default values.
     */
     public function __construct() {
         parent::__construct();

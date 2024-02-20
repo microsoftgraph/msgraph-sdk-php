@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class ConditionalAccessEnumeratedExternalTenants extends ConditionalAccessExternalTenants implements Parsable 
 {
     /**
-     * Instantiates a new conditionalAccessEnumeratedExternalTenants and sets the default values.
+     * Instantiates a new ConditionalAccessEnumeratedExternalTenants and sets the default values.
     */
     public function __construct() {
         parent::__construct();

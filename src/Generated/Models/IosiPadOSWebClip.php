@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class IosiPadOSWebClip extends MobileApp implements Parsable 
 {
     /**
-     * Instantiates a new iosiPadOSWebClip and sets the default values.
+     * Instantiates a new IosiPadOSWebClip and sets the default values.
     */
     public function __construct() {
         parent::__construct();

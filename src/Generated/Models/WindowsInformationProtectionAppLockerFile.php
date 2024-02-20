@@ -13,7 +13,7 @@ use Psr\Http\Message\StreamInterface;
 class WindowsInformationProtectionAppLockerFile extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new windowsInformationProtectionAppLockerFile and sets the default values.
+     * Instantiates a new WindowsInformationProtectionAppLockerFile and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -19,7 +19,7 @@ class MarkReadPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new markReadPostRequestBody and sets the default values.
+     * Instantiates a new MarkReadPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

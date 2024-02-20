@@ -16,7 +16,7 @@ class PeopleRequestBuilderGetRequestConfiguration extends BaseRequestConfigurati
     public ?PeopleRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new peopleRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new PeopleRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param PeopleRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class PeopleRequestBuilderGetRequestConfiguration extends BaseRequestConfigurati
     }
 
     /**
-     * Instantiates a new peopleRequestBuilderGetQueryParameters.
+     * Instantiates a new PeopleRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param string|null $filter Filter items by property values
      * @param array<string>|null $orderby Order items by property values

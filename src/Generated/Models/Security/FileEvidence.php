@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class FileEvidence extends AlertEvidence implements Parsable 
 {
     /**
-     * Instantiates a new fileEvidence and sets the default values.
+     * Instantiates a new FileEvidence and sets the default values.
     */
     public function __construct() {
         parent::__construct();

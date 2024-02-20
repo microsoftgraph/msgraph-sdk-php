@@ -14,7 +14,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class AppLogCollectionRequest extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new appLogCollectionRequest and sets the default values.
+     * Instantiates a new AppLogCollectionRequest and sets the default values.
     */
     public function __construct() {
         parent::__construct();

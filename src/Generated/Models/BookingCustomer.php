@@ -13,7 +13,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class BookingCustomer extends BookingCustomerBase implements Parsable 
 {
     /**
-     * Instantiates a new bookingCustomer and sets the default values.
+     * Instantiates a new BookingCustomer and sets the default values.
     */
     public function __construct() {
         parent::__construct();

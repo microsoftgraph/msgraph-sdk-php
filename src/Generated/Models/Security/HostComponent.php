@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class HostComponent extends Artifact implements Parsable 
 {
     /**
-     * Instantiates a new hostComponent and sets the default values.
+     * Instantiates a new HostComponent and sets the default values.
     */
     public function __construct() {
         parent::__construct();

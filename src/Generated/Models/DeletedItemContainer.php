@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class DeletedItemContainer extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new deletedItemContainer and sets the default values.
+     * Instantiates a new DeletedItemContainer and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -16,7 +16,7 @@ class ToTermRequestBuilderGetRequestConfiguration extends BaseRequestConfigurati
     public ?ToTermRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new toTermRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new ToTermRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param ToTermRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class ToTermRequestBuilderGetRequestConfiguration extends BaseRequestConfigurati
     }
 
     /**
-     * Instantiates a new toTermRequestBuilderGetQueryParameters.
+     * Instantiates a new ToTermRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return ToTermRequestBuilderGetQueryParameters

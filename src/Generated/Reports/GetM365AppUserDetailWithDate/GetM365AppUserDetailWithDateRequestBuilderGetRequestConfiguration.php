@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\RequestOption;
 class GetM365AppUserDetailWithDateRequestBuilderGetRequestConfiguration extends BaseRequestConfiguration 
 {
     /**
-     * Instantiates a new getM365AppUserDetailWithDateRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new GetM365AppUserDetailWithDateRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
     */

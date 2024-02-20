@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class LandingPageDetail extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new landingPageDetail and sets the default values.
+     * Instantiates a new LandingPageDetail and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookChartGridlinesFormat extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new workbookChartGridlinesFormat and sets the default values.
+     * Instantiates a new WorkbookChartGridlinesFormat and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SingleServicePrincipal extends SubjectSet implements Parsable 
 {
     /**
-     * Instantiates a new singleServicePrincipal and sets the default values.
+     * Instantiates a new SingleServicePrincipal and sets the default values.
     */
     public function __construct() {
         parent::__construct();

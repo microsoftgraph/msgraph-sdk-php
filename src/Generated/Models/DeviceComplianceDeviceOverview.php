@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DeviceComplianceDeviceOverview extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new deviceComplianceDeviceOverview and sets the default values.
+     * Instantiates a new DeviceComplianceDeviceOverview and sets the default values.
     */
     public function __construct() {
         parent::__construct();

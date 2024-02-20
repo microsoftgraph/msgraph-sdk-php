@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ExternalDomainFederation extends IdentitySource implements Parsable 
 {
     /**
-     * Instantiates a new externalDomainFederation and sets the default values.
+     * Instantiates a new ExternalDomainFederation and sets the default values.
     */
     public function __construct() {
         parent::__construct();

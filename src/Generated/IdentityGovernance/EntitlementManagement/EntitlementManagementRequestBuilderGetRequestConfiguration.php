@@ -16,7 +16,7 @@ class EntitlementManagementRequestBuilderGetRequestConfiguration extends BaseReq
     public ?EntitlementManagementRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new entitlementManagementRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new EntitlementManagementRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param EntitlementManagementRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class EntitlementManagementRequestBuilderGetRequestConfiguration extends BaseReq
     }
 
     /**
-     * Instantiates a new entitlementManagementRequestBuilderGetQueryParameters.
+     * Instantiates a new EntitlementManagementRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return EntitlementManagementRequestBuilderGetQueryParameters
