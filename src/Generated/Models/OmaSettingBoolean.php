@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class OmaSettingBoolean extends OmaSetting implements Parsable 
 {
     /**
-     * Instantiates a new omaSettingBoolean and sets the default values.
+     * Instantiates a new OmaSettingBoolean and sets the default values.
     */
     public function __construct() {
         parent::__construct();

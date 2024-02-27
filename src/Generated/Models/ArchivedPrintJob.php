@@ -19,7 +19,7 @@ class ArchivedPrintJob implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new archivedPrintJob and sets the default values.
+     * Instantiates a new ArchivedPrintJob and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

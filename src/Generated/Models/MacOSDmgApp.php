@@ -13,7 +13,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class MacOSDmgApp extends MobileLobApp implements Parsable 
 {
     /**
-     * Instantiates a new macOSDmgApp and sets the default values.
+     * Instantiates a new MacOSDmgApp and sets the default values.
     */
     public function __construct() {
         parent::__construct();

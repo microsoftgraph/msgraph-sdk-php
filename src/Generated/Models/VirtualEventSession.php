@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class VirtualEventSession extends OnlineMeetingBase implements Parsable 
 {
     /**
-     * Instantiates a new virtualEventSession and sets the default values.
+     * Instantiates a new VirtualEventSession and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -19,7 +19,7 @@ class OptionalClaim implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new optionalClaim and sets the default values.
+     * Instantiates a new OptionalClaim and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

@@ -16,7 +16,7 @@ class TargetDeviceGroupsRequestBuilderGetRequestConfiguration extends BaseReques
     public ?TargetDeviceGroupsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new targetDeviceGroupsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new TargetDeviceGroupsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param TargetDeviceGroupsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class TargetDeviceGroupsRequestBuilderGetRequestConfiguration extends BaseReques
     }
 
     /**
-     * Instantiates a new targetDeviceGroupsRequestBuilderGetQueryParameters.
+     * Instantiates a new TargetDeviceGroupsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

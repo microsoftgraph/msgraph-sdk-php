@@ -18,7 +18,7 @@ class ObjectDefinitionMetadataEntry implements AdditionalDataHolder, BackedModel
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new objectDefinitionMetadataEntry and sets the default values.
+     * Instantiates a new ObjectDefinitionMetadataEntry and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

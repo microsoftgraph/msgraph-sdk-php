@@ -19,7 +19,7 @@ class CrossTenantAccessPolicyTargetConfiguration implements AdditionalDataHolder
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new crossTenantAccessPolicyTargetConfiguration and sets the default values.
+     * Instantiates a new CrossTenantAccessPolicyTargetConfiguration and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

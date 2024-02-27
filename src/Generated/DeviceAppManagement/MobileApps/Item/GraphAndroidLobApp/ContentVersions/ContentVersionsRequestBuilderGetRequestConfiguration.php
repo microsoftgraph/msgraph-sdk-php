@@ -16,7 +16,7 @@ class ContentVersionsRequestBuilderGetRequestConfiguration extends BaseRequestCo
     public ?ContentVersionsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new contentVersionsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new ContentVersionsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param ContentVersionsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class ContentVersionsRequestBuilderGetRequestConfiguration extends BaseRequestCo
     }
 
     /**
-     * Instantiates a new contentVersionsRequestBuilderGetQueryParameters.
+     * Instantiates a new ContentVersionsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

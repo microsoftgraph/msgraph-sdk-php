@@ -16,7 +16,7 @@ class FromTermRequestBuilderGetRequestConfiguration extends BaseRequestConfigura
     public ?FromTermRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new fromTermRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new FromTermRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param FromTermRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class FromTermRequestBuilderGetRequestConfiguration extends BaseRequestConfigura
     }
 
     /**
-     * Instantiates a new fromTermRequestBuilderGetQueryParameters.
+     * Instantiates a new FromTermRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return FromTermRequestBuilderGetQueryParameters

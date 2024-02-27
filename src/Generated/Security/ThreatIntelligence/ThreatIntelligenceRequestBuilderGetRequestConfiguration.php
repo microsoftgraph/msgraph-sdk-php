@@ -16,7 +16,7 @@ class ThreatIntelligenceRequestBuilderGetRequestConfiguration extends BaseReques
     public ?ThreatIntelligenceRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new threatIntelligenceRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new ThreatIntelligenceRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param ThreatIntelligenceRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class ThreatIntelligenceRequestBuilderGetRequestConfiguration extends BaseReques
     }
 
     /**
-     * Instantiates a new threatIntelligenceRequestBuilderGetQueryParameters.
+     * Instantiates a new ThreatIntelligenceRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return ThreatIntelligenceRequestBuilderGetQueryParameters

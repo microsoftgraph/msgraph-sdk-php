@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class AuthenticationStrengthPolicy extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new authenticationStrengthPolicy and sets the default values.
+     * Instantiates a new AuthenticationStrengthPolicy and sets the default values.
     */
     public function __construct() {
         parent::__construct();

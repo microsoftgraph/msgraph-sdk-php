@@ -22,7 +22,7 @@ class ActivatedUsingRequestBuilderGetQueryParameters
     public ?array $select = null;
     
     /**
-     * Instantiates a new activatedUsingRequestBuilderGetQueryParameters and sets the default values.
+     * Instantiates a new ActivatedUsingRequestBuilderGetQueryParameters and sets the default values.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
     */

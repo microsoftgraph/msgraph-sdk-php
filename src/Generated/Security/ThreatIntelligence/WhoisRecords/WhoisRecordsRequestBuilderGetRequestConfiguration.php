@@ -16,7 +16,7 @@ class WhoisRecordsRequestBuilderGetRequestConfiguration extends BaseRequestConfi
     public ?WhoisRecordsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new whoisRecordsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new WhoisRecordsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param WhoisRecordsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class WhoisRecordsRequestBuilderGetRequestConfiguration extends BaseRequestConfi
     }
 
     /**
-     * Instantiates a new whoisRecordsRequestBuilderGetQueryParameters.
+     * Instantiates a new WhoisRecordsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

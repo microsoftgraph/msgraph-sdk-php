@@ -16,7 +16,7 @@ class WindowsProtectionStateRequestBuilderGetRequestConfiguration extends BaseRe
     public ?WindowsProtectionStateRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new windowsProtectionStateRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new WindowsProtectionStateRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param WindowsProtectionStateRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class WindowsProtectionStateRequestBuilderGetRequestConfiguration extends BaseRe
     }
 
     /**
-     * Instantiates a new windowsProtectionStateRequestBuilderGetQueryParameters.
+     * Instantiates a new WindowsProtectionStateRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return WindowsProtectionStateRequestBuilderGetQueryParameters

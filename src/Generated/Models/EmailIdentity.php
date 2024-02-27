@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EmailIdentity extends Identity implements Parsable 
 {
     /**
-     * Instantiates a new emailIdentity and sets the default values.
+     * Instantiates a new EmailIdentity and sets the default values.
     */
     public function __construct() {
         parent::__construct();

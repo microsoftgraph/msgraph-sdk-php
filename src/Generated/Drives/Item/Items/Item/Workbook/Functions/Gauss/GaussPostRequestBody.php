@@ -19,7 +19,7 @@ class GaussPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new gaussPostRequestBody and sets the default values.
+     * Instantiates a new GaussPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

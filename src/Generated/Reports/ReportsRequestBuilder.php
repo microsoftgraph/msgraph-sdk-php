@@ -53,6 +53,7 @@ use Microsoft\Graph\Generated\Reports\GetOneDriveUsageAccountDetailWithPeriod\Ge
 use Microsoft\Graph\Generated\Reports\GetOneDriveUsageFileCountsWithPeriod\GetOneDriveUsageFileCountsWithPeriodRequestBuilder;
 use Microsoft\Graph\Generated\Reports\GetOneDriveUsageStorageWithPeriod\GetOneDriveUsageStorageWithPeriodRequestBuilder;
 use Microsoft\Graph\Generated\Reports\GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTime\GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimeRequestBuilder;
+use Microsoft\Graph\Generated\Reports\GetRelyingPartyDetailedSummaryWithPeriod\GetRelyingPartyDetailedSummaryWithPeriodRequestBuilder;
 use Microsoft\Graph\Generated\Reports\GetSharePointActivityFileCountsWithPeriod\GetSharePointActivityFileCountsWithPeriodRequestBuilder;
 use Microsoft\Graph\Generated\Reports\GetSharePointActivityPagesWithPeriod\GetSharePointActivityPagesWithPeriodRequestBuilder;
 use Microsoft\Graph\Generated\Reports\GetSharePointActivityUserCountsWithPeriod\GetSharePointActivityUserCountsWithPeriodRequestBuilder;
@@ -113,6 +114,7 @@ use Microsoft\Graph\Generated\Reports\ManagedDeviceEnrollmentTopFailures\Managed
 use Microsoft\Graph\Generated\Reports\ManagedDeviceEnrollmentTopFailuresWithPeriod\ManagedDeviceEnrollmentTopFailuresWithPeriodRequestBuilder;
 use Microsoft\Graph\Generated\Reports\MonthlyPrintUsageByPrinter\MonthlyPrintUsageByPrinterRequestBuilder;
 use Microsoft\Graph\Generated\Reports\MonthlyPrintUsageByUser\MonthlyPrintUsageByUserRequestBuilder;
+use Microsoft\Graph\Generated\Reports\Partners\PartnersRequestBuilder;
 use Microsoft\Graph\Generated\Reports\Security\SecurityRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -210,6 +212,13 @@ class ReportsRequestBuilder extends BaseRequestBuilder
     }
     
     /**
+     * Provides operations to manage the partners property of the microsoft.graph.reportRoot entity.
+    */
+    public function partners(): PartnersRequestBuilder {
+        return new PartnersRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to manage the security property of the microsoft.graph.reportRoot entity.
     */
     public function security(): SecurityRequestBuilder {
@@ -222,7 +231,7 @@ class ReportsRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/reports{?%24select,%24expand}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/reports{?%24expand,%24select}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -240,8 +249,7 @@ class ReportsRequestBuilder extends BaseRequestBuilder
     public function get(?ReportsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
-                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         return $this->requestAdapter->sendAsync($requestInfo, [ReportRoot::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
@@ -590,6 +598,15 @@ class ReportsRequestBuilder extends BaseRequestBuilder
     */
     public function getPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTime(DateTime $endDateTime, string $printerId, DateTime $startDateTime): GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimeRequestBuilder {
         return new GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimeRequestBuilder($this->pathParameters, $this->requestAdapter, $endDateTime, $printerId, $startDateTime);
+    }
+
+    /**
+     * Provides operations to call the getRelyingPartyDetailedSummary method.
+     * @param string $period Usage: period='{period}'
+     * @return GetRelyingPartyDetailedSummaryWithPeriodRequestBuilder
+    */
+    public function getRelyingPartyDetailedSummaryWithPeriod(string $period): GetRelyingPartyDetailedSummaryWithPeriodRequestBuilder {
+        return new GetRelyingPartyDetailedSummaryWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
     /**
@@ -1112,8 +1129,7 @@ class ReportsRequestBuilder extends BaseRequestBuilder
     public function patch(ReportRoot $body, ?ReportsRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
-                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         return $this->requestAdapter->sendAsync($requestInfo, [ReportRoot::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
@@ -1147,7 +1163,7 @@ class ReportsRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(ReportRoot $body, ?ReportsRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/reports';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

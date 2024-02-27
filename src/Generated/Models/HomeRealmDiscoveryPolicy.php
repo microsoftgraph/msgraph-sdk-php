@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class HomeRealmDiscoveryPolicy extends StsPolicy implements Parsable 
 {
     /**
-     * Instantiates a new homeRealmDiscoveryPolicy and sets the default values.
+     * Instantiates a new HomeRealmDiscoveryPolicy and sets the default values.
     */
     public function __construct() {
         parent::__construct();

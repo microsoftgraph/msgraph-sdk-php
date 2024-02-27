@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Agreement extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new agreement and sets the default values.
+     * Instantiates a new Agreement and sets the default values.
     */
     public function __construct() {
         parent::__construct();

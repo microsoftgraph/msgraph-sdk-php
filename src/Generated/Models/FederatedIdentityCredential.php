@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class FederatedIdentityCredential extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new federatedIdentityCredential and sets the default values.
+     * Instantiates a new FederatedIdentityCredential and sets the default values.
     */
     public function __construct() {
         parent::__construct();

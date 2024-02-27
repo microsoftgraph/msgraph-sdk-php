@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class OnenoteEntityBaseModel extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new onenoteEntityBaseModel and sets the default values.
+     * Instantiates a new OnenoteEntityBaseModel and sets the default values.
     */
     public function __construct() {
         parent::__construct();

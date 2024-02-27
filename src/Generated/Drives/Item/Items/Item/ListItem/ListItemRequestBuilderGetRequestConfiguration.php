@@ -16,7 +16,7 @@ class ListItemRequestBuilderGetRequestConfiguration extends BaseRequestConfigura
     public ?ListItemRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new listItemRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new ListItemRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param ListItemRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class ListItemRequestBuilderGetRequestConfiguration extends BaseRequestConfigura
     }
 
     /**
-     * Instantiates a new listItemRequestBuilderGetQueryParameters.
+     * Instantiates a new ListItemRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return ListItemRequestBuilderGetQueryParameters

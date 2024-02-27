@@ -16,7 +16,7 @@ class MetricValuesRequestBuilderGetRequestConfiguration extends BaseRequestConfi
     public ?MetricValuesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new metricValuesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new MetricValuesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param MetricValuesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class MetricValuesRequestBuilderGetRequestConfiguration extends BaseRequestConfi
     }
 
     /**
-     * Instantiates a new metricValuesRequestBuilderGetQueryParameters.
+     * Instantiates a new MetricValuesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

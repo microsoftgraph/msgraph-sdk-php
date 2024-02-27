@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Win32LobAppProductCodeRule extends Win32LobAppRule implements Parsable 
 {
     /**
-     * Instantiates a new win32LobAppProductCodeRule and sets the default values.
+     * Instantiates a new Win32LobAppProductCodeRule and sets the default values.
     */
     public function __construct() {
         parent::__construct();

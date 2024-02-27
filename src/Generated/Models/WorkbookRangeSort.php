@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookRangeSort extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new workbookRangeSort and sets the default values.
+     * Instantiates a new WorkbookRangeSort and sets the default values.
     */
     public function __construct() {
         parent::__construct();

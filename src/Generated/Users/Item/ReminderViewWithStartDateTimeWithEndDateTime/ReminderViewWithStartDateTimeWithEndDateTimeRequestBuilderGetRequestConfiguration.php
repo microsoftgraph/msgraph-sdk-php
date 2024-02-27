@@ -16,7 +16,7 @@ class ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilderGetRequestConfig
     public ?ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new reminderViewWithStartDateTimeWithEndDateTimeRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilderGetRequestConfig
     }
 
     /**
-     * Instantiates a new reminderViewWithStartDateTimeWithEndDateTimeRequestBuilderGetQueryParameters.
+     * Instantiates a new ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param string|null $filter Filter items by property values
      * @param string|null $search Search items by search phrases

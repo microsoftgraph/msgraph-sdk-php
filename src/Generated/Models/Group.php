@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Group extends DirectoryObject implements Parsable 
 {
     /**
-     * Instantiates a new group and sets the default values.
+     * Instantiates a new Group and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -358,6 +358,7 @@ class Group extends DirectoryObject implements Parsable
             'threads' => fn(ParseNode $n) => $o->setThreads($n->getCollectionOfObjectValues([ConversationThread::class, 'createFromDiscriminatorValue'])),
             'transitiveMemberOf' => fn(ParseNode $n) => $o->setTransitiveMemberOf($n->getCollectionOfObjectValues([DirectoryObject::class, 'createFromDiscriminatorValue'])),
             'transitiveMembers' => fn(ParseNode $n) => $o->setTransitiveMembers($n->getCollectionOfObjectValues([DirectoryObject::class, 'createFromDiscriminatorValue'])),
+            'uniqueName' => fn(ParseNode $n) => $o->setUniqueName($n->getStringValue()),
             'unseenCount' => fn(ParseNode $n) => $o->setUnseenCount($n->getIntegerValue()),
             'visibility' => fn(ParseNode $n) => $o->setVisibility($n->getStringValue()),
         ]);
@@ -476,7 +477,7 @@ class Group extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the mail property value. The SMTP address for the group, for example, 'serviceadmins@contoso.onmicrosoft.com'. Returned by default. Read-only. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
+     * Gets the mail property value. The SMTP address for the group, for example, 'serviceadmins@contoso.com'. Returned by default. Read-only. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
      * @return string|null
     */
     public function getMail(): ?string {
@@ -938,6 +939,18 @@ class Group extends DirectoryObject implements Parsable
     }
 
     /**
+     * Gets the uniqueName property value. The uniqueName property
+     * @return string|null
+    */
+    public function getUniqueName(): ?string {
+        $val = $this->getBackingStore()->get('uniqueName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'uniqueName'");
+    }
+
+    /**
      * Gets the unseenCount property value. Count of conversations that have received new posts since the signed-in user last visited the group. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
      * @return int|null
     */
@@ -1031,6 +1044,7 @@ class Group extends DirectoryObject implements Parsable
         $writer->writeCollectionOfObjectValues('threads', $this->getThreads());
         $writer->writeCollectionOfObjectValues('transitiveMemberOf', $this->getTransitiveMemberOf());
         $writer->writeCollectionOfObjectValues('transitiveMembers', $this->getTransitiveMembers());
+        $writer->writeStringValue('uniqueName', $this->getUniqueName());
         $writer->writeIntegerValue('unseenCount', $this->getUnseenCount());
         $writer->writeStringValue('visibility', $this->getVisibility());
     }
@@ -1260,7 +1274,7 @@ class Group extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the mail property value. The SMTP address for the group, for example, 'serviceadmins@contoso.onmicrosoft.com'. Returned by default. Read-only. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
+     * Sets the mail property value. The SMTP address for the group, for example, 'serviceadmins@contoso.com'. Returned by default. Read-only. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
      * @param string|null $value Value to set for the mail property.
     */
     public function setMail(?string $value): void {
@@ -1545,6 +1559,14 @@ class Group extends DirectoryObject implements Parsable
     */
     public function setTransitiveMembers(?array $value): void {
         $this->getBackingStore()->set('transitiveMembers', $value);
+    }
+
+    /**
+     * Sets the uniqueName property value. The uniqueName property
+     * @param string|null $value Value to set for the uniqueName property.
+    */
+    public function setUniqueName(?string $value): void {
+        $this->getBackingStore()->set('uniqueName', $value);
     }
 
     /**

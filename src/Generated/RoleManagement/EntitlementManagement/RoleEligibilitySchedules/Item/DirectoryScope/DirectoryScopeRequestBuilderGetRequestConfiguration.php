@@ -16,7 +16,7 @@ class DirectoryScopeRequestBuilderGetRequestConfiguration extends BaseRequestCon
     public ?DirectoryScopeRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new directoryScopeRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new DirectoryScopeRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param DirectoryScopeRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class DirectoryScopeRequestBuilderGetRequestConfiguration extends BaseRequestCon
     }
 
     /**
-     * Instantiates a new directoryScopeRequestBuilderGetQueryParameters.
+     * Instantiates a new DirectoryScopeRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return DirectoryScopeRequestBuilderGetQueryParameters

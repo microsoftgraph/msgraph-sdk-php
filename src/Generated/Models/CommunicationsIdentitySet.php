@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class CommunicationsIdentitySet extends IdentitySet implements Parsable 
 {
     /**
-     * Instantiates a new communicationsIdentitySet and sets the default values.
+     * Instantiates a new CommunicationsIdentitySet and sets the default values.
     */
     public function __construct() {
         parent::__construct();

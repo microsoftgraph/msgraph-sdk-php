@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\RequestOption;
 class UserExperienceAnalyticsAppHealthOSVersionPerformanceRequestBuilderPostRequestConfiguration extends BaseRequestConfiguration 
 {
     /**
-     * Instantiates a new userExperienceAnalyticsAppHealthOSVersionPerformanceRequestBuilderPostRequestConfiguration and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsAppHealthOSVersionPerformanceRequestBuilderPostRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
     */

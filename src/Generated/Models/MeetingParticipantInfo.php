@@ -18,7 +18,7 @@ class MeetingParticipantInfo implements AdditionalDataHolder, BackedModel, Parsa
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new meetingParticipantInfo and sets the default values.
+     * Instantiates a new MeetingParticipantInfo and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

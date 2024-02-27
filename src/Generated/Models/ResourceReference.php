@@ -18,7 +18,7 @@ class ResourceReference implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new resourceReference and sets the default values.
+     * Instantiates a new ResourceReference and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

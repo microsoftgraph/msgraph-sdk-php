@@ -16,7 +16,7 @@ class JobsRequestBuilderGetRequestConfiguration extends BaseRequestConfiguration
     public ?JobsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new jobsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new JobsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param JobsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class JobsRequestBuilderGetRequestConfiguration extends BaseRequestConfiguration
     }
 
     /**
-     * Instantiates a new jobsRequestBuilderGetQueryParameters.
+     * Instantiates a new JobsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

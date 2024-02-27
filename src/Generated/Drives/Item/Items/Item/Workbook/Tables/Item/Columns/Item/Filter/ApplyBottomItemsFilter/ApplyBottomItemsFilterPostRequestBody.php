@@ -18,7 +18,7 @@ class ApplyBottomItemsFilterPostRequestBody implements AdditionalDataHolder, Bac
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new applyBottomItemsFilterPostRequestBody and sets the default values.
+     * Instantiates a new ApplyBottomItemsFilterPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

@@ -16,7 +16,7 @@ class AndroidManagedAppProtectionsRequestBuilderGetRequestConfiguration extends 
     public ?AndroidManagedAppProtectionsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new androidManagedAppProtectionsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new AndroidManagedAppProtectionsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param AndroidManagedAppProtectionsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class AndroidManagedAppProtectionsRequestBuilderGetRequestConfiguration extends 
     }
 
     /**
-     * Instantiates a new androidManagedAppProtectionsRequestBuilderGetQueryParameters.
+     * Instantiates a new AndroidManagedAppProtectionsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

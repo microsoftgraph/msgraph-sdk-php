@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve a list of user objects.
+ * List properties and relationships of the user objects.
 */
 class UsersRequestBuilderGetQueryParameters 
 {
@@ -52,7 +52,7 @@ class UsersRequestBuilderGetQueryParameters
     public ?int $top = null;
     
     /**
-     * Instantiates a new usersRequestBuilderGetQueryParameters and sets the default values.
+     * Instantiates a new UsersRequestBuilderGetQueryParameters and sets the default values.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

@@ -16,7 +16,7 @@ class PassiveDnsRequestBuilderGetRequestConfiguration extends BaseRequestConfigu
     public ?PassiveDnsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new passiveDnsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new PassiveDnsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param PassiveDnsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class PassiveDnsRequestBuilderGetRequestConfiguration extends BaseRequestConfigu
     }
 
     /**
-     * Instantiates a new passiveDnsRequestBuilderGetQueryParameters.
+     * Instantiates a new PassiveDnsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

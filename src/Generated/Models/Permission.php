@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Permission extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new permission and sets the default values.
+     * Instantiates a new Permission and sets the default values.
     */
     public function __construct() {
         parent::__construct();

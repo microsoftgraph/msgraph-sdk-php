@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SharePointIdentitySet extends IdentitySet implements Parsable 
 {
     /**
-     * Instantiates a new sharePointIdentitySet and sets the default values.
+     * Instantiates a new SharePointIdentitySet and sets the default values.
     */
     public function __construct() {
         parent::__construct();

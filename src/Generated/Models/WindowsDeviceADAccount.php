@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WindowsDeviceADAccount extends WindowsDeviceAccount implements Parsable 
 {
     /**
-     * Instantiates a new windowsDeviceADAccount and sets the default values.
+     * Instantiates a new WindowsDeviceADAccount and sets the default values.
     */
     public function __construct() {
         parent::__construct();

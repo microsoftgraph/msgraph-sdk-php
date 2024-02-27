@@ -16,7 +16,7 @@ class NoncustodialDataSourcesRequestBuilderGetRequestConfiguration extends BaseR
     public ?NoncustodialDataSourcesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new noncustodialDataSourcesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new NoncustodialDataSourcesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param NoncustodialDataSourcesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class NoncustodialDataSourcesRequestBuilderGetRequestConfiguration extends BaseR
     }
 
     /**
-     * Instantiates a new noncustodialDataSourcesRequestBuilderGetQueryParameters.
+     * Instantiates a new NoncustodialDataSourcesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

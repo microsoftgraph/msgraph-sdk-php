@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class UserExperienceAnalyticsCategoryCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new userExperienceAnalyticsCategoryCollectionResponse and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsCategoryCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

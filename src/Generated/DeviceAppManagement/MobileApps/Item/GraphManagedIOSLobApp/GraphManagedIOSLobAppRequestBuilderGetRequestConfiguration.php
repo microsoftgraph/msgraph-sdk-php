@@ -16,7 +16,7 @@ class GraphManagedIOSLobAppRequestBuilderGetRequestConfiguration extends BaseReq
     public ?GraphManagedIOSLobAppRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new graphManagedIOSLobAppRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new GraphManagedIOSLobAppRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param GraphManagedIOSLobAppRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class GraphManagedIOSLobAppRequestBuilderGetRequestConfiguration extends BaseReq
     }
 
     /**
-     * Instantiates a new graphManagedIOSLobAppRequestBuilderGetQueryParameters.
+     * Instantiates a new GraphManagedIOSLobAppRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return GraphManagedIOSLobAppRequestBuilderGetQueryParameters

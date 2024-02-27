@@ -16,7 +16,7 @@ class HomeRealmDiscoveryPoliciesRequestBuilderGetRequestConfiguration extends Ba
     public ?HomeRealmDiscoveryPoliciesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new homeRealmDiscoveryPoliciesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new HomeRealmDiscoveryPoliciesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param HomeRealmDiscoveryPoliciesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class HomeRealmDiscoveryPoliciesRequestBuilderGetRequestConfiguration extends Ba
     }
 
     /**
-     * Instantiates a new homeRealmDiscoveryPoliciesRequestBuilderGetQueryParameters.
+     * Instantiates a new HomeRealmDiscoveryPoliciesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

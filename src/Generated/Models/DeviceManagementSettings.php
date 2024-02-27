@@ -18,7 +18,7 @@ class DeviceManagementSettings implements AdditionalDataHolder, BackedModel, Par
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new deviceManagementSettings and sets the default values.
+     * Instantiates a new DeviceManagementSettings and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

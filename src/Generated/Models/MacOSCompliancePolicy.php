@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Parsable 
 {
     /**
-     * Instantiates a new macOSCompliancePolicy and sets the default values.
+     * Instantiates a new MacOSCompliancePolicy and sets the default values.
     */
     public function __construct() {
         parent::__construct();

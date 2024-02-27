@@ -23,7 +23,7 @@ class LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder extends
      * @param string|null $externalcourseActivityId Alternate key of learningCourseActivity
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter, ?string $externalcourseActivityId = null) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/users/{user%2Did}/employeeExperience/learningCourseActivities(externalcourseActivityId=\'{externalcourseActivityId}\'){?%24select,%24expand}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/users/{user%2Did}/employeeExperience/learningCourseActivities(externalcourseActivityId=\'{externalcourseActivityId}\'){?%24expand,%24select}');
         if (is_array($pathParametersOrRawUrl)) {
             $urlTplParams = $pathParametersOrRawUrl;
             $urlTplParams['externalcourseActivityId'] = $externalcourseActivityId;
@@ -43,8 +43,7 @@ class LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder extends
     public function get(?LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
-                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         return $this->requestAdapter->sendAsync($requestInfo, [LearningCourseActivity::class, 'createFromDiscriminatorValue'], $errorMappings);
     }

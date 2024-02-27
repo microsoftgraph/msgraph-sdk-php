@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AttributeRuleMembers extends SubjectSet implements Parsable 
 {
     /**
-     * Instantiates a new attributeRuleMembers and sets the default values.
+     * Instantiates a new AttributeRuleMembers and sets the default values.
     */
     public function __construct() {
         parent::__construct();

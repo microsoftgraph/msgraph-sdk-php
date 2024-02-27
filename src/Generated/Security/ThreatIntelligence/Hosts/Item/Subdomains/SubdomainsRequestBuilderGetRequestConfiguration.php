@@ -16,7 +16,7 @@ class SubdomainsRequestBuilderGetRequestConfiguration extends BaseRequestConfigu
     public ?SubdomainsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new subdomainsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new SubdomainsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param SubdomainsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class SubdomainsRequestBuilderGetRequestConfiguration extends BaseRequestConfigu
     }
 
     /**
-     * Instantiates a new subdomainsRequestBuilderGetQueryParameters.
+     * Instantiates a new SubdomainsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

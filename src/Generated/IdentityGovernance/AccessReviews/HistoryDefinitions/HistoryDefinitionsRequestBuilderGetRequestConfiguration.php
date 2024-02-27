@@ -16,7 +16,7 @@ class HistoryDefinitionsRequestBuilderGetRequestConfiguration extends BaseReques
     public ?HistoryDefinitionsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new historyDefinitionsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new HistoryDefinitionsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param HistoryDefinitionsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class HistoryDefinitionsRequestBuilderGetRequestConfiguration extends BaseReques
     }
 
     /**
-     * Instantiates a new historyDefinitionsRequestBuilderGetQueryParameters.
+     * Instantiates a new HistoryDefinitionsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

@@ -17,7 +17,7 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 class EscapedBaseRequestBuilder extends BaseRequestBuilder 
 {
     /**
-     * Instantiates a new BaseRequestBuilder and sets the default values.
+     * Instantiates a new EscapedBaseRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
@@ -40,8 +40,7 @@ class EscapedBaseRequestBuilder extends BaseRequestBuilder
     public function post(BasePostRequestBody $body, ?BaseRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
-                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         return $this->requestAdapter->sendAsync($requestInfo, [WorkbookFunctionResult::class, 'createFromDiscriminatorValue'], $errorMappings);
     }

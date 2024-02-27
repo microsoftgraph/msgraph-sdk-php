@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SingleValueLegacyExtendedProperty extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new singleValueLegacyExtendedProperty and sets the default values.
+     * Instantiates a new SingleValueLegacyExtendedProperty and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -19,7 +19,7 @@ class ImAbsPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new imAbsPostRequestBody and sets the default values.
+     * Instantiates a new ImAbsPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

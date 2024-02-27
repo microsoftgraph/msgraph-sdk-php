@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class VoiceAuthenticationMethodConfiguration extends AuthenticationMethodConfiguration implements Parsable 
 {
     /**
-     * Instantiates a new voiceAuthenticationMethodConfiguration and sets the default values.
+     * Instantiates a new VoiceAuthenticationMethodConfiguration and sets the default values.
     */
     public function __construct() {
         parent::__construct();

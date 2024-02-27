@@ -16,7 +16,7 @@ class ActivatedUsingRequestBuilderGetRequestConfiguration extends BaseRequestCon
     public ?ActivatedUsingRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new activatedUsingRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new ActivatedUsingRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param ActivatedUsingRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class ActivatedUsingRequestBuilderGetRequestConfiguration extends BaseRequestCon
     }
 
     /**
-     * Instantiates a new activatedUsingRequestBuilderGetQueryParameters.
+     * Instantiates a new ActivatedUsingRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return ActivatedUsingRequestBuilderGetQueryParameters

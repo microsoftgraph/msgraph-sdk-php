@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class OrganizationalBrandingLocalization extends OrganizationalBrandingProperties implements Parsable 
 {
     /**
-     * Instantiates a new organizationalBrandingLocalization and sets the default values.
+     * Instantiates a new OrganizationalBrandingLocalization and sets the default values.
     */
     public function __construct() {
         parent::__construct();

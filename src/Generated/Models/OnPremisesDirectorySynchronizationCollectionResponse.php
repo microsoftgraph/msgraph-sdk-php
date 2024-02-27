@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class OnPremisesDirectorySynchronizationCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new onPremisesDirectorySynchronizationCollectionResponse and sets the default values.
+     * Instantiates a new OnPremisesDirectorySynchronizationCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

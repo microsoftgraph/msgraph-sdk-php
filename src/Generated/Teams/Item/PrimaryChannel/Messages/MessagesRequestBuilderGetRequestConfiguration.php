@@ -16,7 +16,7 @@ class MessagesRequestBuilderGetRequestConfiguration extends BaseRequestConfigura
     public ?MessagesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new messagesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new MessagesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param MessagesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class MessagesRequestBuilderGetRequestConfiguration extends BaseRequestConfigura
     }
 
     /**
-     * Instantiates a new messagesRequestBuilderGetQueryParameters.
+     * Instantiates a new MessagesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

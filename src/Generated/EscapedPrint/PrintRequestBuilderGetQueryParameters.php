@@ -22,7 +22,7 @@ class PrintRequestBuilderGetQueryParameters
     public ?array $select = null;
     
     /**
-     * Instantiates a new printRequestBuilderGetQueryParameters and sets the default values.
+     * Instantiates a new PrintRequestBuilderGetQueryParameters and sets the default values.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
     */

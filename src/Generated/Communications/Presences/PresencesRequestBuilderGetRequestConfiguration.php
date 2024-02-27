@@ -16,7 +16,7 @@ class PresencesRequestBuilderGetRequestConfiguration extends BaseRequestConfigur
     public ?PresencesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new presencesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new PresencesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param PresencesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class PresencesRequestBuilderGetRequestConfiguration extends BaseRequestConfigur
     }
 
     /**
-     * Instantiates a new presencesRequestBuilderGetQueryParameters.
+     * Instantiates a new PresencesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

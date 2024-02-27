@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AndroidStoreApp extends MobileApp implements Parsable 
 {
     /**
-     * Instantiates a new androidStoreApp and sets the default values.
+     * Instantiates a new AndroidStoreApp and sets the default values.
     */
     public function __construct() {
         parent::__construct();

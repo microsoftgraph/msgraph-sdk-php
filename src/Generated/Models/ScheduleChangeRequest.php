@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable 
 {
     /**
-     * Instantiates a new scheduleChangeRequest and sets the default values.
+     * Instantiates a new ScheduleChangeRequest and sets the default values.
     */
     public function __construct() {
         parent::__construct();

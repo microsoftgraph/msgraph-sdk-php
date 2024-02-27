@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\RequestOption;
 class T_Dist_RTRequestBuilderPostRequestConfiguration extends BaseRequestConfiguration 
 {
     /**
-     * Instantiates a new t_Dist_RTRequestBuilderPostRequestConfiguration and sets the default values.
+     * Instantiates a new T_Dist_RTRequestBuilderPostRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
     */

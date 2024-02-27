@@ -16,7 +16,7 @@ class CatalogRequestBuilderGetRequestConfiguration extends BaseRequestConfigurat
     public ?CatalogRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new catalogRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new CatalogRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param CatalogRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class CatalogRequestBuilderGetRequestConfiguration extends BaseRequestConfigurat
     }
 
     /**
-     * Instantiates a new catalogRequestBuilderGetQueryParameters.
+     * Instantiates a new CatalogRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return CatalogRequestBuilderGetQueryParameters

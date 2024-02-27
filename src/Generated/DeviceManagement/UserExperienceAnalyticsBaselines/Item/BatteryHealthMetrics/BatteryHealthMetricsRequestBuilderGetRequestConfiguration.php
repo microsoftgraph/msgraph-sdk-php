@@ -16,7 +16,7 @@ class BatteryHealthMetricsRequestBuilderGetRequestConfiguration extends BaseRequ
     public ?BatteryHealthMetricsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new batteryHealthMetricsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new BatteryHealthMetricsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param BatteryHealthMetricsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class BatteryHealthMetricsRequestBuilderGetRequestConfiguration extends BaseRequ
     }
 
     /**
-     * Instantiates a new batteryHealthMetricsRequestBuilderGetQueryParameters.
+     * Instantiates a new BatteryHealthMetricsRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return BatteryHealthMetricsRequestBuilderGetQueryParameters

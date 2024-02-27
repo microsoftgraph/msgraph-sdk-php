@@ -16,7 +16,7 @@ class GraphApplicationRequestBuilderGetRequestConfiguration extends BaseRequestC
     public ?GraphApplicationRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new graphApplicationRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new GraphApplicationRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param GraphApplicationRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class GraphApplicationRequestBuilderGetRequestConfiguration extends BaseRequestC
     }
 
     /**
-     * Instantiates a new graphApplicationRequestBuilderGetQueryParameters.
+     * Instantiates a new GraphApplicationRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return GraphApplicationRequestBuilderGetQueryParameters

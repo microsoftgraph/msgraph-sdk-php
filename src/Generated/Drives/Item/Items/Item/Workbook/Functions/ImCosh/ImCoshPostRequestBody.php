@@ -19,7 +19,7 @@ class ImCoshPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new imCoshPostRequestBody and sets the default values.
+     * Instantiates a new ImCoshPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

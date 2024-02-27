@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Task extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new task and sets the default values.
+     * Instantiates a new Task and sets the default values.
     */
     public function __construct() {
         parent::__construct();

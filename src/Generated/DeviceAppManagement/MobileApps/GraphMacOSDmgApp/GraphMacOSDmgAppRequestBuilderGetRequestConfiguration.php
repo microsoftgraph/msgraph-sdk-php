@@ -16,7 +16,7 @@ class GraphMacOSDmgAppRequestBuilderGetRequestConfiguration extends BaseRequestC
     public ?GraphMacOSDmgAppRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new graphMacOSDmgAppRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new GraphMacOSDmgAppRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param GraphMacOSDmgAppRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class GraphMacOSDmgAppRequestBuilderGetRequestConfiguration extends BaseRequestC
     }
 
     /**
-     * Instantiates a new graphMacOSDmgAppRequestBuilderGetQueryParameters.
+     * Instantiates a new GraphMacOSDmgAppRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

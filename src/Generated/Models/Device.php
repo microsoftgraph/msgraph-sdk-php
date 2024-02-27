@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Device extends DirectoryObject implements Parsable 
 {
     /**
-     * Instantiates a new device and sets the default values.
+     * Instantiates a new Device and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -196,9 +196,12 @@ class Device extends DirectoryObject implements Parsable
             'extensions' => fn(ParseNode $n) => $o->setExtensions($n->getCollectionOfObjectValues([Extension::class, 'createFromDiscriminatorValue'])),
             'isCompliant' => fn(ParseNode $n) => $o->setIsCompliant($n->getBooleanValue()),
             'isManaged' => fn(ParseNode $n) => $o->setIsManaged($n->getBooleanValue()),
+            'manufacturer' => fn(ParseNode $n) => $o->setManufacturer($n->getStringValue()),
             'mdmAppId' => fn(ParseNode $n) => $o->setMdmAppId($n->getStringValue()),
             'memberOf' => fn(ParseNode $n) => $o->setMemberOf($n->getCollectionOfObjectValues([DirectoryObject::class, 'createFromDiscriminatorValue'])),
+            'model' => fn(ParseNode $n) => $o->setModel($n->getStringValue()),
             'onPremisesLastSyncDateTime' => fn(ParseNode $n) => $o->setOnPremisesLastSyncDateTime($n->getDateTimeValue()),
+            'onPremisesSecurityIdentifier' => fn(ParseNode $n) => $o->setOnPremisesSecurityIdentifier($n->getStringValue()),
             'onPremisesSyncEnabled' => fn(ParseNode $n) => $o->setOnPremisesSyncEnabled($n->getBooleanValue()),
             'operatingSystem' => fn(ParseNode $n) => $o->setOperatingSystem($n->getStringValue()),
             'operatingSystemVersion' => fn(ParseNode $n) => $o->setOperatingSystemVersion($n->getStringValue()),
@@ -252,6 +255,18 @@ class Device extends DirectoryObject implements Parsable
     }
 
     /**
+     * Gets the manufacturer property value. Manufacturer of the device. Read-only.
+     * @return string|null
+    */
+    public function getManufacturer(): ?string {
+        $val = $this->getBackingStore()->get('manufacturer');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'manufacturer'");
+    }
+
+    /**
      * Gets the mdmAppId property value. Application identifier used to register device into MDM. Read-only. Supports $filter (eq, ne, not, startsWith).
      * @return string|null
     */
@@ -278,6 +293,18 @@ class Device extends DirectoryObject implements Parsable
     }
 
     /**
+     * Gets the model property value. Model of the device. Read-only.
+     * @return string|null
+    */
+    public function getModel(): ?string {
+        $val = $this->getBackingStore()->get('model');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'model'");
+    }
+
+    /**
      * Gets the onPremisesLastSyncDateTime property value. The last time at which the object was synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z Read-only. Supports $filter (eq, ne, not, ge, le, in).
      * @return DateTime|null
     */
@@ -287,6 +314,18 @@ class Device extends DirectoryObject implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'onPremisesLastSyncDateTime'");
+    }
+
+    /**
+     * Gets the onPremisesSecurityIdentifier property value. The onPremisesSecurityIdentifier property
+     * @return string|null
+    */
+    public function getOnPremisesSecurityIdentifier(): ?string {
+        $val = $this->getBackingStore()->get('onPremisesSecurityIdentifier');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'onPremisesSecurityIdentifier'");
     }
 
     /**
@@ -451,9 +490,12 @@ class Device extends DirectoryObject implements Parsable
         $writer->writeCollectionOfObjectValues('extensions', $this->getExtensions());
         $writer->writeBooleanValue('isCompliant', $this->getIsCompliant());
         $writer->writeBooleanValue('isManaged', $this->getIsManaged());
+        $writer->writeStringValue('manufacturer', $this->getManufacturer());
         $writer->writeStringValue('mdmAppId', $this->getMdmAppId());
         $writer->writeCollectionOfObjectValues('memberOf', $this->getMemberOf());
+        $writer->writeStringValue('model', $this->getModel());
         $writer->writeDateTimeValue('onPremisesLastSyncDateTime', $this->getOnPremisesLastSyncDateTime());
+        $writer->writeStringValue('onPremisesSecurityIdentifier', $this->getOnPremisesSecurityIdentifier());
         $writer->writeBooleanValue('onPremisesSyncEnabled', $this->getOnPremisesSyncEnabled());
         $writer->writeStringValue('operatingSystem', $this->getOperatingSystem());
         $writer->writeStringValue('operatingSystemVersion', $this->getOperatingSystemVersion());
@@ -580,6 +622,14 @@ class Device extends DirectoryObject implements Parsable
     }
 
     /**
+     * Sets the manufacturer property value. Manufacturer of the device. Read-only.
+     * @param string|null $value Value to set for the manufacturer property.
+    */
+    public function setManufacturer(?string $value): void {
+        $this->getBackingStore()->set('manufacturer', $value);
+    }
+
+    /**
      * Sets the mdmAppId property value. Application identifier used to register device into MDM. Read-only. Supports $filter (eq, ne, not, startsWith).
      * @param string|null $value Value to set for the mdmAppId property.
     */
@@ -596,11 +646,27 @@ class Device extends DirectoryObject implements Parsable
     }
 
     /**
+     * Sets the model property value. Model of the device. Read-only.
+     * @param string|null $value Value to set for the model property.
+    */
+    public function setModel(?string $value): void {
+        $this->getBackingStore()->set('model', $value);
+    }
+
+    /**
      * Sets the onPremisesLastSyncDateTime property value. The last time at which the object was synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z Read-only. Supports $filter (eq, ne, not, ge, le, in).
      * @param DateTime|null $value Value to set for the onPremisesLastSyncDateTime property.
     */
     public function setOnPremisesLastSyncDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('onPremisesLastSyncDateTime', $value);
+    }
+
+    /**
+     * Sets the onPremisesSecurityIdentifier property value. The onPremisesSecurityIdentifier property
+     * @param string|null $value Value to set for the onPremisesSecurityIdentifier property.
+    */
+    public function setOnPremisesSecurityIdentifier(?string $value): void {
+        $this->getBackingStore()->set('onPremisesSecurityIdentifier', $value);
     }
 
     /**

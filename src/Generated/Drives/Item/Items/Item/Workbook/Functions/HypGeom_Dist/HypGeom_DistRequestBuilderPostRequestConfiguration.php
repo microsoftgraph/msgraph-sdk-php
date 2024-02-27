@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\RequestOption;
 class HypGeom_DistRequestBuilderPostRequestConfiguration extends BaseRequestConfiguration 
 {
     /**
-     * Instantiates a new hypGeom_DistRequestBuilderPostRequestConfiguration and sets the default values.
+     * Instantiates a new HypGeom_DistRequestBuilderPostRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
     */

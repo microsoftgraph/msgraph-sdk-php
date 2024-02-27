@@ -18,7 +18,7 @@ class ContentTypeInfo implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new contentTypeInfo and sets the default values.
+     * Instantiates a new ContentTypeInfo and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

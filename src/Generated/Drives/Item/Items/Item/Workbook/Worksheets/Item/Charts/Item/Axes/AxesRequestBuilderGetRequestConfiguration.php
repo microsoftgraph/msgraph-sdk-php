@@ -16,7 +16,7 @@ class AxesRequestBuilderGetRequestConfiguration extends BaseRequestConfiguration
     public ?AxesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new axesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new AxesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param AxesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class AxesRequestBuilderGetRequestConfiguration extends BaseRequestConfiguration
     }
 
     /**
-     * Instantiates a new axesRequestBuilderGetQueryParameters.
+     * Instantiates a new AxesRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return AxesRequestBuilderGetQueryParameters

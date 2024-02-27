@@ -16,7 +16,7 @@ class InstallSummaryRequestBuilderGetRequestConfiguration extends BaseRequestCon
     public ?InstallSummaryRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new installSummaryRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new InstallSummaryRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param InstallSummaryRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class InstallSummaryRequestBuilderGetRequestConfiguration extends BaseRequestCon
     }
 
     /**
-     * Instantiates a new installSummaryRequestBuilderGetQueryParameters.
+     * Instantiates a new InstallSummaryRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return InstallSummaryRequestBuilderGetQueryParameters

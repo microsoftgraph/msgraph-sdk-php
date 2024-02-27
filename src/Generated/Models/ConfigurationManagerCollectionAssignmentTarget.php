@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ConfigurationManagerCollectionAssignmentTarget extends DeviceAndAppManagementAssignmentTarget implements Parsable 
 {
     /**
-     * Instantiates a new configurationManagerCollectionAssignmentTarget and sets the default values.
+     * Instantiates a new ConfigurationManagerCollectionAssignmentTarget and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -19,7 +19,7 @@ class PublicClientApplication implements AdditionalDataHolder, BackedModel, Pars
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new publicClientApplication and sets the default values.
+     * Instantiates a new PublicClientApplication and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

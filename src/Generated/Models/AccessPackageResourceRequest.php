@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AccessPackageResourceRequest extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new accessPackageResourceRequest and sets the default values.
+     * Instantiates a new AccessPackageResourceRequest and sets the default values.
     */
     public function __construct() {
         parent::__construct();

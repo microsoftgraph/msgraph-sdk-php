@@ -18,7 +18,7 @@ class WorkflowExecutionTrigger implements AdditionalDataHolder, BackedModel, Par
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new workflowExecutionTrigger and sets the default values.
+     * Instantiates a new WorkflowExecutionTrigger and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class AuthenticationCombinationConfiguration extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new authenticationCombinationConfiguration and sets the default values.
+     * Instantiates a new AuthenticationCombinationConfiguration and sets the default values.
     */
     public function __construct() {
         parent::__construct();

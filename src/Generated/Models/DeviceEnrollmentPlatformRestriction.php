@@ -21,7 +21,7 @@ class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder, Backe
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new deviceEnrollmentPlatformRestriction and sets the default values.
+     * Instantiates a new DeviceEnrollmentPlatformRestriction and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

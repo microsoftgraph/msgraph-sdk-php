@@ -16,7 +16,7 @@ class LoginPagesRequestBuilderGetRequestConfiguration extends BaseRequestConfigu
     public ?LoginPagesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new loginPagesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new LoginPagesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param LoginPagesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class LoginPagesRequestBuilderGetRequestConfiguration extends BaseRequestConfigu
     }
 
     /**
-     * Instantiates a new loginPagesRequestBuilderGetQueryParameters.
+     * Instantiates a new LoginPagesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

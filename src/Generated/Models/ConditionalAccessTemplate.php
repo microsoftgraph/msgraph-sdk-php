@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ConditionalAccessTemplate extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new conditionalAccessTemplate and sets the default values.
+     * Instantiates a new ConditionalAccessTemplate and sets the default values.
     */
     public function __construct() {
         parent::__construct();

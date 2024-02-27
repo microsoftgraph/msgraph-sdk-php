@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileApps;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List properties and relationships of the androidStoreApp objects.
+ * List properties and relationships of the microsoftStoreForBusinessApp objects.
 */
 class MobileAppsRequestBuilderGetQueryParameters 
 {
@@ -58,7 +58,7 @@ class MobileAppsRequestBuilderGetQueryParameters
     public ?int $top = null;
     
     /**
-     * Instantiates a new mobileAppsRequestBuilderGetQueryParameters and sets the default values.
+     * Instantiates a new MobileAppsRequestBuilderGetQueryParameters and sets the default values.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

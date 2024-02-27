@@ -19,7 +19,7 @@ class SnoozeReminderPostRequestBody implements AdditionalDataHolder, BackedModel
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new snoozeReminderPostRequestBody and sets the default values.
+     * Instantiates a new SnoozeReminderPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

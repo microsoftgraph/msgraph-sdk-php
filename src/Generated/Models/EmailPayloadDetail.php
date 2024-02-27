@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EmailPayloadDetail extends PayloadDetail implements Parsable 
 {
     /**
-     * Instantiates a new emailPayloadDetail and sets the default values.
+     * Instantiates a new EmailPayloadDetail and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TeamArchivedEventMessageDetail extends EventMessageDetail implements Parsable 
 {
     /**
-     * Instantiates a new teamArchivedEventMessageDetail and sets the default values.
+     * Instantiates a new TeamArchivedEventMessageDetail and sets the default values.
     */
     public function __construct() {
         parent::__construct();

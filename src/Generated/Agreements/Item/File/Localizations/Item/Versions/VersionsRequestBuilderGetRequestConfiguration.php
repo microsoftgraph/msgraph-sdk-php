@@ -16,7 +16,7 @@ class VersionsRequestBuilderGetRequestConfiguration extends BaseRequestConfigura
     public ?VersionsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new versionsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new VersionsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param VersionsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class VersionsRequestBuilderGetRequestConfiguration extends BaseRequestConfigura
     }
 
     /**
-     * Instantiates a new versionsRequestBuilderGetQueryParameters.
+     * Instantiates a new VersionsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

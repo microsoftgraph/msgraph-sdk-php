@@ -16,7 +16,7 @@ class GraphGroupRequestBuilderGetRequestConfiguration extends BaseRequestConfigu
     public ?GraphGroupRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new graphGroupRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new GraphGroupRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param GraphGroupRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class GraphGroupRequestBuilderGetRequestConfiguration extends BaseRequestConfigu
     }
 
     /**
-     * Instantiates a new graphGroupRequestBuilderGetQueryParameters.
+     * Instantiates a new GraphGroupRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return GraphGroupRequestBuilderGetQueryParameters

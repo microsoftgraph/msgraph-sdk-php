@@ -16,7 +16,7 @@ class SolutionsRequestBuilderGetRequestConfiguration extends BaseRequestConfigur
     public ?SolutionsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new solutionsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new SolutionsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param SolutionsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class SolutionsRequestBuilderGetRequestConfiguration extends BaseRequestConfigur
     }
 
     /**
-     * Instantiates a new solutionsRequestBuilderGetQueryParameters.
+     * Instantiates a new SolutionsRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return SolutionsRequestBuilderGetQueryParameters

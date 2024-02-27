@@ -19,7 +19,7 @@ class RadiansPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new radiansPostRequestBody and sets the default values.
+     * Instantiates a new RadiansPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

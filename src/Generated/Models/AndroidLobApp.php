@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AndroidLobApp extends MobileLobApp implements Parsable 
 {
     /**
-     * Instantiates a new androidLobApp and sets the default values.
+     * Instantiates a new AndroidLobApp and sets the default values.
     */
     public function __construct() {
         parent::__construct();

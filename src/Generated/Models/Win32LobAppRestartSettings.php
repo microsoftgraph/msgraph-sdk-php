@@ -21,7 +21,7 @@ class Win32LobAppRestartSettings implements AdditionalDataHolder, BackedModel, P
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new win32LobAppRestartSettings and sets the default values.
+     * Instantiates a new Win32LobAppRestartSettings and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class TeamworkTag extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new teamworkTag and sets the default values.
+     * Instantiates a new TeamworkTag and sets the default values.
     */
     public function __construct() {
         parent::__construct();

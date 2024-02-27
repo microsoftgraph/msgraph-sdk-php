@@ -16,7 +16,7 @@ class AccessPackagesRequestBuilderGetRequestConfiguration extends BaseRequestCon
     public ?AccessPackagesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new accessPackagesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new AccessPackagesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param AccessPackagesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class AccessPackagesRequestBuilderGetRequestConfiguration extends BaseRequestCon
     }
 
     /**
-     * Instantiates a new accessPackagesRequestBuilderGetQueryParameters.
+     * Instantiates a new AccessPackagesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

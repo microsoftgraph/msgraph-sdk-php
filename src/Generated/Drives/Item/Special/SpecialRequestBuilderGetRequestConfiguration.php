@@ -16,7 +16,7 @@ class SpecialRequestBuilderGetRequestConfiguration extends BaseRequestConfigurat
     public ?SpecialRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new specialRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new SpecialRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param SpecialRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class SpecialRequestBuilderGetRequestConfiguration extends BaseRequestConfigurat
     }
 
     /**
-     * Instantiates a new specialRequestBuilderGetQueryParameters.
+     * Instantiates a new SpecialRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

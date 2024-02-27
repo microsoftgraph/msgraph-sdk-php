@@ -68,7 +68,7 @@ class CalendarViewRequestBuilderGetQueryParameters
     public ?int $top = null;
     
     /**
-     * Instantiates a new calendarViewRequestBuilderGetQueryParameters and sets the default values.
+     * Instantiates a new CalendarViewRequestBuilderGetQueryParameters and sets the default values.
      * @param bool|null $count Include count of items
      * @param string|null $end The end date and time of the time range, represented in ISO 8601 format. For example, 2019-11-08T20:00:00-08:00
      * @param array<string>|null $expand Expand related entities

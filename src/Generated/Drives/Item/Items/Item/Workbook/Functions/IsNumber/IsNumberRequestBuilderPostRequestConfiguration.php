@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\RequestOption;
 class IsNumberRequestBuilderPostRequestConfiguration extends BaseRequestConfiguration 
 {
     /**
-     * Instantiates a new isNumberRequestBuilderPostRequestConfiguration and sets the default values.
+     * Instantiates a new IsNumberRequestBuilderPostRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
     */

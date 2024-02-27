@@ -19,7 +19,7 @@ class StDev_SPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new stDev_SPostRequestBody and sets the default values.
+     * Instantiates a new StDev_SPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

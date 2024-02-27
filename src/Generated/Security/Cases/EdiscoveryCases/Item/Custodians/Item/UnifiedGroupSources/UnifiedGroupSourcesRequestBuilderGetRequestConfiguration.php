@@ -16,7 +16,7 @@ class UnifiedGroupSourcesRequestBuilderGetRequestConfiguration extends BaseReque
     public ?UnifiedGroupSourcesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new unifiedGroupSourcesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new UnifiedGroupSourcesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param UnifiedGroupSourcesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class UnifiedGroupSourcesRequestBuilderGetRequestConfiguration extends BaseReque
     }
 
     /**
-     * Instantiates a new unifiedGroupSourcesRequestBuilderGetQueryParameters.
+     * Instantiates a new UnifiedGroupSourcesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

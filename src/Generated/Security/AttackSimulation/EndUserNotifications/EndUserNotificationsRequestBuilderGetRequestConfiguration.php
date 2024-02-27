@@ -16,7 +16,7 @@ class EndUserNotificationsRequestBuilderGetRequestConfiguration extends BaseRequ
     public ?EndUserNotificationsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new endUserNotificationsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new EndUserNotificationsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param EndUserNotificationsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class EndUserNotificationsRequestBuilderGetRequestConfiguration extends BaseRequ
     }
 
     /**
-     * Instantiates a new endUserNotificationsRequestBuilderGetQueryParameters.
+     * Instantiates a new EndUserNotificationsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

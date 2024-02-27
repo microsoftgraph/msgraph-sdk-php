@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class TodoTask extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new todoTask and sets the default values.
+     * Instantiates a new TodoTask and sets the default values.
     */
     public function __construct() {
         parent::__construct();

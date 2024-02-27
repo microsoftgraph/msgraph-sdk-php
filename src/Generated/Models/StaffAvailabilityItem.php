@@ -19,7 +19,7 @@ class StaffAvailabilityItem implements AdditionalDataHolder, BackedModel, Parsab
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new staffAvailabilityItem and sets the default values.
+     * Instantiates a new StaffAvailabilityItem and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

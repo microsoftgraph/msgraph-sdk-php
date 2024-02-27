@@ -18,7 +18,7 @@ class VerifiedDomain implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new verifiedDomain and sets the default values.
+     * Instantiates a new VerifiedDomain and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
@@ -108,7 +108,7 @@ class VerifiedDomain implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the name property value. The domain name; for example, contoso.onmicrosoft.com.
+     * Gets the name property value. The domain name; for example, contoso.com`.
      * @return string|null
     */
     public function getName(): ?string {
@@ -198,7 +198,7 @@ class VerifiedDomain implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the name property value. The domain name; for example, contoso.onmicrosoft.com.
+     * Sets the name property value. The domain name; for example, contoso.com`.
      * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {

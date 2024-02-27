@@ -18,7 +18,7 @@ class SetReactionPostRequestBody implements AdditionalDataHolder, BackedModel, P
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new setReactionPostRequestBody and sets the default values.
+     * Instantiates a new SetReactionPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

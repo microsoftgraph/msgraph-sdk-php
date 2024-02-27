@@ -16,7 +16,7 @@ class IdentityGovernanceRequestBuilderGetRequestConfiguration extends BaseReques
     public ?IdentityGovernanceRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new identityGovernanceRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new IdentityGovernanceRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param IdentityGovernanceRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class IdentityGovernanceRequestBuilderGetRequestConfiguration extends BaseReques
     }
 
     /**
-     * Instantiates a new identityGovernanceRequestBuilderGetQueryParameters.
+     * Instantiates a new IdentityGovernanceRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return IdentityGovernanceRequestBuilderGetQueryParameters

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Events;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a list of event objects in the user's mailbox. The list contains single instance meetings and series masters. To get expanded event instances, you can get the calendar view, or get the instances of an event. Currently, this operation returns event bodies in only HTML format. There are two scenarios where an app can get events in another user's calendar:
+ * Get a list of event objects in the user's mailbox. The list contains singleinstance meetings and series masters. To get expanded event instances, you can get the calendar view, orget the instances of an event. Currently, this operation returns event bodies in only HTML format. There are two scenarios where an app can get events in another user's calendar:
 */
 class EventsRequestBuilderGetQueryParameters 
 {
@@ -52,7 +52,7 @@ class EventsRequestBuilderGetQueryParameters
     public ?int $top = null;
     
     /**
-     * Instantiates a new eventsRequestBuilderGetQueryParameters and sets the default values.
+     * Instantiates a new EventsRequestBuilderGetQueryParameters and sets the default values.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

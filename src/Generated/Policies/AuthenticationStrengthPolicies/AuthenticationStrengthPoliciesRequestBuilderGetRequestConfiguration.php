@@ -16,7 +16,7 @@ class AuthenticationStrengthPoliciesRequestBuilderGetRequestConfiguration extend
     public ?AuthenticationStrengthPoliciesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new authenticationStrengthPoliciesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new AuthenticationStrengthPoliciesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param AuthenticationStrengthPoliciesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class AuthenticationStrengthPoliciesRequestBuilderGetRequestConfiguration extend
     }
 
     /**
-     * Instantiates a new authenticationStrengthPoliciesRequestBuilderGetQueryParameters.
+     * Instantiates a new AuthenticationStrengthPoliciesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

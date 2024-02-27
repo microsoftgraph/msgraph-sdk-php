@@ -18,7 +18,7 @@ class WorkbookSessionInfo implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new workbookSessionInfo and sets the default values.
+     * Instantiates a new WorkbookSessionInfo and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

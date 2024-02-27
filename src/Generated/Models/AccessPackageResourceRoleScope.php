@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AccessPackageResourceRoleScope extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new accessPackageResourceRoleScope and sets the default values.
+     * Instantiates a new AccessPackageResourceRoleScope and sets the default values.
     */
     public function __construct() {
         parent::__construct();

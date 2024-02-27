@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ListItemVersion extends BaseItemVersion implements Parsable 
 {
     /**
-     * Instantiates a new listItemVersion and sets the default values.
+     * Instantiates a new ListItemVersion and sets the default values.
     */
     public function __construct() {
         parent::__construct();

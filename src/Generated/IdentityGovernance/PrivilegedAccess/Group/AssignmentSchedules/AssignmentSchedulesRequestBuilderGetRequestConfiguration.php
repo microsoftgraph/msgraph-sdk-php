@@ -16,7 +16,7 @@ class AssignmentSchedulesRequestBuilderGetRequestConfiguration extends BaseReque
     public ?AssignmentSchedulesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new assignmentSchedulesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new AssignmentSchedulesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param AssignmentSchedulesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class AssignmentSchedulesRequestBuilderGetRequestConfiguration extends BaseReque
     }
 
     /**
-     * Instantiates a new assignmentSchedulesRequestBuilderGetQueryParameters.
+     * Instantiates a new AssignmentSchedulesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class ConnectedOrganization extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new connectedOrganization and sets the default values.
+     * Instantiates a new ConnectedOrganization and sets the default values.
     */
     public function __construct() {
         parent::__construct();

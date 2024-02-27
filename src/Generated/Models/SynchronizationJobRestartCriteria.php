@@ -18,7 +18,7 @@ class SynchronizationJobRestartCriteria implements AdditionalDataHolder, BackedM
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new synchronizationJobRestartCriteria and sets the default values.
+     * Instantiates a new SynchronizationJobRestartCriteria and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

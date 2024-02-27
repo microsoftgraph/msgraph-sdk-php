@@ -23,6 +23,16 @@ use Microsoft\Graph\Generated\Models\IdentityGovernance\TaskProcessingResult;
 use Microsoft\Graph\Generated\Models\IdentityGovernance\TaskReport;
 use Microsoft\Graph\Generated\Models\IdentityGovernance\UserProcessingResult;
 use Microsoft\Graph\Generated\Models\IdentityGovernance\WorkflowTemplate;
+use Microsoft\Graph\Generated\Models\Partners\Billing\AzureUsage;
+use Microsoft\Graph\Generated\Models\Partners\Billing\BilledUsage;
+use Microsoft\Graph\Generated\Models\Partners\Billing\Billing;
+use Microsoft\Graph\Generated\Models\Partners\Billing\ExportSuccessOperation;
+use Microsoft\Graph\Generated\Models\Partners\Billing\FailedOperation;
+use Microsoft\Graph\Generated\Models\Partners\Billing\Manifest;
+use Microsoft\Graph\Generated\Models\Partners\Billing\Operation;
+use Microsoft\Graph\Generated\Models\Partners\Billing\RunningOperation;
+use Microsoft\Graph\Generated\Models\Partners\Billing\UnbilledUsage;
+use Microsoft\Graph\Generated\Models\Partners\Partners;
 use Microsoft\Graph\Generated\Models\Security\Alert;
 use Microsoft\Graph\Generated\Models\Security\Article;
 use Microsoft\Graph\Generated\Models\Security\ArticleIndicator;
@@ -103,7 +113,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new entity and sets the default values.
+     * Instantiates a new Entity and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
@@ -229,6 +239,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.browserSite': return new BrowserSite();
                 case '#microsoft.graph.browserSiteList': return new BrowserSiteList();
                 case '#microsoft.graph.builtInIdentityProvider': return new BuiltInIdentityProvider();
+                case '#microsoft.graph.bulkUpload': return new BulkUpload();
                 case '#microsoft.graph.calendar': return new Calendar();
                 case '#microsoft.graph.calendarGroup': return new CalendarGroup();
                 case '#microsoft.graph.calendarPermission': return new CalendarPermission();
@@ -249,6 +260,8 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.chatMessageInfo': return new ChatMessageInfo();
                 case '#microsoft.graph.checklistItem': return new ChecklistItem();
                 case '#microsoft.graph.claimsMappingPolicy': return new ClaimsMappingPolicy();
+                case '#microsoft.graph.cloudClipboardItem': return new CloudClipboardItem();
+                case '#microsoft.graph.cloudClipboardRoot': return new CloudClipboardRoot();
                 case '#microsoft.graph.columnDefinition': return new ColumnDefinition();
                 case '#microsoft.graph.columnLink': return new ColumnLink();
                 case '#microsoft.graph.commsOperation': return new CommsOperation();
@@ -280,6 +293,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.delegatedAdminRelationshipRequest': return new DelegatedAdminRelationshipRequest();
                 case '#microsoft.graph.delegatedAdminServiceManagementDetail': return new DelegatedAdminServiceManagementDetail();
                 case '#microsoft.graph.delegatedPermissionClassification': return new DelegatedPermissionClassification();
+                case '#microsoft.graph.deletedChat': return new DeletedChat();
                 case '#microsoft.graph.deletedItemContainer': return new DeletedItemContainer();
                 case '#microsoft.graph.deletedTeam': return new DeletedTeam();
                 case '#microsoft.graph.deltaParticipants': return new DeltaParticipants();
@@ -322,6 +336,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.deviceManagementPartner': return new DeviceManagementPartner();
                 case '#microsoft.graph.deviceManagementReports': return new DeviceManagementReports();
                 case '#microsoft.graph.deviceManagementTroubleshootingEvent': return new DeviceManagementTroubleshootingEvent();
+                case '#microsoft.graph.deviceRegistrationPolicy': return new DeviceRegistrationPolicy();
                 case '#microsoft.graph.directory': return new Directory();
                 case '#microsoft.graph.directoryAudit': return new DirectoryAudit();
                 case '#microsoft.graph.directoryDefinition': return new DirectoryDefinition();
@@ -352,6 +367,8 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.educationFeedbackOutcome': return new EducationFeedbackOutcome();
                 case '#microsoft.graph.educationFeedbackResourceOutcome': return new EducationFeedbackResourceOutcome();
                 case '#microsoft.graph.educationGradingCategory': return new EducationGradingCategory();
+                case '#microsoft.graph.educationModule': return new EducationModule();
+                case '#microsoft.graph.educationModuleResource': return new EducationModuleResource();
                 case '#microsoft.graph.educationOrganization': return new EducationOrganization();
                 case '#microsoft.graph.educationOutcome': return new EducationOutcome();
                 case '#microsoft.graph.educationPointsOutcome': return new EducationPointsOutcome();
@@ -561,6 +578,16 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.participant': return new Participant();
                 case '#microsoft.graph.participantJoiningNotification': return new ParticipantJoiningNotification();
                 case '#microsoft.graph.participantLeftNotification': return new ParticipantLeftNotification();
+                case '#microsoft.graph.partners': return new Partners();
+                case '#microsoft.graph.partners.billing.azureUsage': return new AzureUsage();
+                case '#microsoft.graph.partners.billing.billedUsage': return new BilledUsage();
+                case '#microsoft.graph.partners.billing.billing': return new Billing();
+                case '#microsoft.graph.partners.billing.exportSuccessOperation': return new ExportSuccessOperation();
+                case '#microsoft.graph.partners.billing.failedOperation': return new FailedOperation();
+                case '#microsoft.graph.partners.billing.manifest': return new Manifest();
+                case '#microsoft.graph.partners.billing.operation': return new Operation();
+                case '#microsoft.graph.partners.billing.runningOperation': return new RunningOperation();
+                case '#microsoft.graph.partners.billing.unbilledUsage': return new UnbilledUsage();
                 case '#microsoft.graph.passwordAuthenticationMethod': return new PasswordAuthenticationMethod();
                 case '#microsoft.graph.payload': return new Payload();
                 case '#microsoft.graph.peopleAdminSettings': return new PeopleAdminSettings();
@@ -621,6 +648,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.rbacApplication': return new RbacApplication();
                 case '#microsoft.graph.recordOperation': return new RecordOperation();
                 case '#microsoft.graph.referenceAttachment': return new ReferenceAttachment();
+                case '#microsoft.graph.relyingPartyDetailedSummary': return new RelyingPartyDetailedSummary();
                 case '#microsoft.graph.remoteAssistancePartner': return new RemoteAssistancePartner();
                 case '#microsoft.graph.remoteDesktopSecurityConfiguration': return new RemoteDesktopSecurityConfiguration();
                 case '#microsoft.graph.request': return new Request();
@@ -894,6 +922,8 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.windowsPhone81CustomConfiguration': return new WindowsPhone81CustomConfiguration();
                 case '#microsoft.graph.windowsPhone81GeneralConfiguration': return new WindowsPhone81GeneralConfiguration();
                 case '#microsoft.graph.windowsProtectionState': return new WindowsProtectionState();
+                case '#microsoft.graph.windowsSetting': return new WindowsSetting();
+                case '#microsoft.graph.windowsSettingInstance': return new WindowsSettingInstance();
                 case '#microsoft.graph.windowsUniversalAppX': return new WindowsUniversalAppX();
                 case '#microsoft.graph.windowsUniversalAppXContainedApp': return new WindowsUniversalAppXContainedApp();
                 case '#microsoft.graph.windowsUpdateForBusinessConfiguration': return new WindowsUpdateForBusinessConfiguration();

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\I
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve a list of chartpoint objects.
+ * Retrieve a list of chartpoints objects.
 */
 class PointsRequestBuilderGetQueryParameters 
 {
@@ -58,7 +58,7 @@ class PointsRequestBuilderGetQueryParameters
     public ?int $top = null;
     
     /**
-     * Instantiates a new pointsRequestBuilderGetQueryParameters and sets the default values.
+     * Instantiates a new PointsRequestBuilderGetQueryParameters and sets the default values.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

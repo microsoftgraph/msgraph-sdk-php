@@ -16,7 +16,7 @@ class ExternalColumnsRequestBuilderGetRequestConfiguration extends BaseRequestCo
     public ?ExternalColumnsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new externalColumnsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new ExternalColumnsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param ExternalColumnsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class ExternalColumnsRequestBuilderGetRequestConfiguration extends BaseRequestCo
     }
 
     /**
-     * Instantiates a new externalColumnsRequestBuilderGetQueryParameters.
+     * Instantiates a new ExternalColumnsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

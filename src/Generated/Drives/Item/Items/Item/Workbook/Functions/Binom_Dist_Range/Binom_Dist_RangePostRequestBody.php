@@ -19,7 +19,7 @@ class Binom_Dist_RangePostRequestBody implements AdditionalDataHolder, BackedMod
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new binom_Dist_RangePostRequestBody and sets the default values.
+     * Instantiates a new Binom_Dist_RangePostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

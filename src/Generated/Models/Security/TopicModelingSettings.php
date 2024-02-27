@@ -18,7 +18,7 @@ class TopicModelingSettings implements AdditionalDataHolder, BackedModel, Parsab
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new topicModelingSettings and sets the default values.
+     * Instantiates a new TopicModelingSettings and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

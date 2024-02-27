@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Payload extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new payload and sets the default values.
+     * Instantiates a new Payload and sets the default values.
     */
     public function __construct() {
         parent::__construct();

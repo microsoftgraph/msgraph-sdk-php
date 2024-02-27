@@ -16,7 +16,7 @@ class PrimaryChannelRequestBuilderGetRequestConfiguration extends BaseRequestCon
     public ?PrimaryChannelRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new primaryChannelRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new PrimaryChannelRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param PrimaryChannelRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class PrimaryChannelRequestBuilderGetRequestConfiguration extends BaseRequestCon
     }
 
     /**
-     * Instantiates a new primaryChannelRequestBuilderGetQueryParameters.
+     * Instantiates a new PrimaryChannelRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return PrimaryChannelRequestBuilderGetQueryParameters

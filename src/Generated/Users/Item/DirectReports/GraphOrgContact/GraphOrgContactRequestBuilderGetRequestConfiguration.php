@@ -16,7 +16,7 @@ class GraphOrgContactRequestBuilderGetRequestConfiguration extends BaseRequestCo
     public ?GraphOrgContactRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new graphOrgContactRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new GraphOrgContactRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param GraphOrgContactRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class GraphOrgContactRequestBuilderGetRequestConfiguration extends BaseRequestCo
     }
 
     /**
-     * Instantiates a new graphOrgContactRequestBuilderGetQueryParameters.
+     * Instantiates a new GraphOrgContactRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

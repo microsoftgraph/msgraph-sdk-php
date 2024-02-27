@@ -18,7 +18,7 @@ class KubernetesServicePort implements AdditionalDataHolder, BackedModel, Parsab
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new kubernetesServicePort and sets the default values.
+     * Instantiates a new KubernetesServicePort and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

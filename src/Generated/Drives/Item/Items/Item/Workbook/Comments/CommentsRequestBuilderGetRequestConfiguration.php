@@ -16,7 +16,7 @@ class CommentsRequestBuilderGetRequestConfiguration extends BaseRequestConfigura
     public ?CommentsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new commentsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new CommentsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param CommentsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class CommentsRequestBuilderGetRequestConfiguration extends BaseRequestConfigura
     }
 
     /**
-     * Instantiates a new commentsRequestBuilderGetQueryParameters.
+     * Instantiates a new CommentsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

@@ -16,7 +16,7 @@ class GetAllMessagesRequestBuilderGetRequestConfiguration extends BaseRequestCon
     public ?GetAllMessagesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new getAllMessagesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new GetAllMessagesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param GetAllMessagesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,8 +27,9 @@ class GetAllMessagesRequestBuilderGetRequestConfiguration extends BaseRequestCon
     }
 
     /**
-     * Instantiates a new getAllMessagesRequestBuilderGetQueryParameters.
+     * Instantiates a new GetAllMessagesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
+     * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values
      * @param string|null $model The payment model for the API
      * @param array<string>|null $orderby Order items by property values
@@ -38,8 +39,8 @@ class GetAllMessagesRequestBuilderGetRequestConfiguration extends BaseRequestCon
      * @param int|null $top Show only the first n items
      * @return GetAllMessagesRequestBuilderGetQueryParameters
     */
-    public static function createQueryParameters(?bool $count = null, ?string $filter = null, ?string $model = null, ?array $orderby = null, ?string $search = null, ?array $select = null, ?int $skip = null, ?int $top = null): GetAllMessagesRequestBuilderGetQueryParameters {
-        return new GetAllMessagesRequestBuilderGetQueryParameters($count, $filter, $model, $orderby, $search, $select, $skip, $top);
+    public static function createQueryParameters(?bool $count = null, ?array $expand = null, ?string $filter = null, ?string $model = null, ?array $orderby = null, ?string $search = null, ?array $select = null, ?int $skip = null, ?int $top = null): GetAllMessagesRequestBuilderGetQueryParameters {
+        return new GetAllMessagesRequestBuilderGetQueryParameters($count, $expand, $filter, $model, $orderby, $search, $select, $skip, $top);
     }
 
 }

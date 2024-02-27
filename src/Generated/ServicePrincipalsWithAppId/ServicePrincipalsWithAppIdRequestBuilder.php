@@ -23,7 +23,7 @@ class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
      * @param string|null $appId Alternate key of servicePrincipal
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter, ?string $appId = null) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/servicePrincipals(appId=\'{appId}\'){?%24select,%24expand}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/servicePrincipals(appId=\'{appId}\'){?%24expand,%24select}');
         if (is_array($pathParametersOrRawUrl)) {
             $urlTplParams = $pathParametersOrRawUrl;
             $urlTplParams['appId'] = $appId;
@@ -43,8 +43,7 @@ class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
     public function delete(?ServicePrincipalsWithAppIdRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
-                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         return $this->requestAdapter->sendNoContentAsync($requestInfo, $errorMappings);
     }
@@ -59,8 +58,7 @@ class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
     public function get(?ServicePrincipalsWithAppIdRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
-                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         return $this->requestAdapter->sendAsync($requestInfo, [ServicePrincipal::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
@@ -75,8 +73,7 @@ class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
     public function patch(ServicePrincipal $body, ?ServicePrincipalsWithAppIdRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
-                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         return $this->requestAdapter->sendAsync($requestInfo, [ServicePrincipal::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
@@ -88,7 +85,7 @@ class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?ServicePrincipalsWithAppIdRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/servicePrincipals(appId='{appId}')';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -128,7 +125,7 @@ class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(ServicePrincipal $body, ?ServicePrincipalsWithAppIdRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/servicePrincipals(appId='{appId}')';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

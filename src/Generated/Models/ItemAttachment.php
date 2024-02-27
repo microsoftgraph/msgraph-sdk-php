@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ItemAttachment extends Attachment implements Parsable 
 {
     /**
-     * Instantiates a new itemAttachment and sets the default values.
+     * Instantiates a new ItemAttachment and sets the default values.
     */
     public function __construct() {
         parent::__construct();

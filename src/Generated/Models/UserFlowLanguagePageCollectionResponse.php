@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class UserFlowLanguagePageCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new userFlowLanguagePageCollectionResponse and sets the default values.
+     * Instantiates a new UserFlowLanguagePageCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

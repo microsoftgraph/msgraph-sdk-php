@@ -16,7 +16,7 @@ class FederationConfigurationsRequestBuilderGetRequestConfiguration extends Base
     public ?FederationConfigurationsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new federationConfigurationsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new FederationConfigurationsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param FederationConfigurationsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class FederationConfigurationsRequestBuilderGetRequestConfiguration extends Base
     }
 
     /**
-     * Instantiates a new federationConfigurationsRequestBuilderGetQueryParameters.
+     * Instantiates a new FederationConfigurationsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

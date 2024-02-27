@@ -16,7 +16,7 @@ class AdministrativeUnitRequestBuilderGetRequestConfiguration extends BaseReques
     public ?AdministrativeUnitRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new administrativeUnitRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new AdministrativeUnitRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param AdministrativeUnitRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class AdministrativeUnitRequestBuilderGetRequestConfiguration extends BaseReques
     }
 
     /**
-     * Instantiates a new administrativeUnitRequestBuilderGetQueryParameters.
+     * Instantiates a new AdministrativeUnitRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return AdministrativeUnitRequestBuilderGetQueryParameters

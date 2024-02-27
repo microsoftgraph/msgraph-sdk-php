@@ -18,7 +18,7 @@ class GetMemberGroupsPostRequestBody implements AdditionalDataHolder, BackedMode
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new getMemberGroupsPostRequestBody and sets the default values.
+     * Instantiates a new GetMemberGroupsPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

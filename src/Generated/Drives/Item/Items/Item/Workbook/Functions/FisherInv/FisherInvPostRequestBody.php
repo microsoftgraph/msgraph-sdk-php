@@ -19,7 +19,7 @@ class FisherInvPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new fisherInvPostRequestBody and sets the default values.
+     * Instantiates a new FisherInvPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

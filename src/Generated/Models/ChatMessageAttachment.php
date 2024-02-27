@@ -18,7 +18,7 @@ class ChatMessageAttachment implements AdditionalDataHolder, BackedModel, Parsab
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new chatMessageAttachment and sets the default values.
+     * Instantiates a new ChatMessageAttachment and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
@@ -68,7 +68,7 @@ class ChatMessageAttachment implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the contentType property value. The media type of the content attachment. It can have the following values: reference: Attachment is a link to another file. Populate the contentURL with the link to the object.Any contentTypes supported by the Bot Framework's Attachment objectapplication/vnd.microsoft.card.codesnippet: A code snippet. application/vnd.microsoft.card.announcement: An announcement header.
+     * Gets the contentType property value. The media type of the content attachment. It can have the following values: reference: Attachment is a link to another file. Populate the contentURL with the link to the object.Any contentType that is supported by the Bot Framework's Attachment objectapplication/vnd.microsoft.card.codesnippet: A code snippet. application/vnd.microsoft.card.announcement: An announcement header.
      * @return string|null
     */
     public function getContentType(): ?string {
@@ -80,7 +80,7 @@ class ChatMessageAttachment implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the contentUrl property value. URL for the content of the attachment. Supported protocols: http, https, file and data.
+     * Gets the contentUrl property value. The URL for the content of the attachment.
      * @return string|null
     */
     public function getContentUrl(): ?string {
@@ -110,7 +110,7 @@ class ChatMessageAttachment implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the id property value. Read-only. Unique id of the attachment.
+     * Gets the id property value. Read-only. The unique id of the attachment.
      * @return string|null
     */
     public function getId(): ?string {
@@ -122,7 +122,7 @@ class ChatMessageAttachment implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the name property value. Name of the attachment.
+     * Gets the name property value. The name of the attachment.
      * @return string|null
     */
     public function getName(): ?string {
@@ -146,7 +146,7 @@ class ChatMessageAttachment implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the teamsAppId property value. The ID of the Teams app that is associated with the attachment. The property is specifically used to attribute a Teams message card to the specified app.
+     * Gets the teamsAppId property value. The ID of the Teams app that is associated with the attachment. The property is used to attribute a Teams message card to the specified app.
      * @return string|null
     */
     public function getTeamsAppId(): ?string {
@@ -158,7 +158,7 @@ class ChatMessageAttachment implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the thumbnailUrl property value. URL to a thumbnail image that the channel can use if it supports using an alternative, smaller form of content or contentUrl. For example, if you set contentType to application/word and set contentUrl to the location of the Word document, you might include a thumbnail image that represents the document. The channel could display the thumbnail image instead of the document. When the user clicks the image, the channel would open the document.
+     * Gets the thumbnailUrl property value. The URL to a thumbnail image that the channel can use if it supports using an alternative, smaller form of content or contentUrl. For example, if you set contentType to application/word and set contentUrl to the location of the Word document, you might include a thumbnail image that represents the document. The channel could display the thumbnail image instead of the document. When the user selects the image, the channel would open the document.
      * @return string|null
     */
     public function getThumbnailUrl(): ?string {
@@ -210,7 +210,7 @@ class ChatMessageAttachment implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the contentType property value. The media type of the content attachment. It can have the following values: reference: Attachment is a link to another file. Populate the contentURL with the link to the object.Any contentTypes supported by the Bot Framework's Attachment objectapplication/vnd.microsoft.card.codesnippet: A code snippet. application/vnd.microsoft.card.announcement: An announcement header.
+     * Sets the contentType property value. The media type of the content attachment. It can have the following values: reference: Attachment is a link to another file. Populate the contentURL with the link to the object.Any contentType that is supported by the Bot Framework's Attachment objectapplication/vnd.microsoft.card.codesnippet: A code snippet. application/vnd.microsoft.card.announcement: An announcement header.
      * @param string|null $value Value to set for the contentType property.
     */
     public function setContentType(?string $value): void {
@@ -218,7 +218,7 @@ class ChatMessageAttachment implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the contentUrl property value. URL for the content of the attachment. Supported protocols: http, https, file and data.
+     * Sets the contentUrl property value. The URL for the content of the attachment.
      * @param string|null $value Value to set for the contentUrl property.
     */
     public function setContentUrl(?string $value): void {
@@ -226,7 +226,7 @@ class ChatMessageAttachment implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the id property value. Read-only. Unique id of the attachment.
+     * Sets the id property value. Read-only. The unique id of the attachment.
      * @param string|null $value Value to set for the id property.
     */
     public function setId(?string $value): void {
@@ -234,7 +234,7 @@ class ChatMessageAttachment implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the name property value. Name of the attachment.
+     * Sets the name property value. The name of the attachment.
      * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
@@ -250,7 +250,7 @@ class ChatMessageAttachment implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the teamsAppId property value. The ID of the Teams app that is associated with the attachment. The property is specifically used to attribute a Teams message card to the specified app.
+     * Sets the teamsAppId property value. The ID of the Teams app that is associated with the attachment. The property is used to attribute a Teams message card to the specified app.
      * @param string|null $value Value to set for the teamsAppId property.
     */
     public function setTeamsAppId(?string $value): void {
@@ -258,7 +258,7 @@ class ChatMessageAttachment implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the thumbnailUrl property value. URL to a thumbnail image that the channel can use if it supports using an alternative, smaller form of content or contentUrl. For example, if you set contentType to application/word and set contentUrl to the location of the Word document, you might include a thumbnail image that represents the document. The channel could display the thumbnail image instead of the document. When the user clicks the image, the channel would open the document.
+     * Sets the thumbnailUrl property value. The URL to a thumbnail image that the channel can use if it supports using an alternative, smaller form of content or contentUrl. For example, if you set contentType to application/word and set contentUrl to the location of the Word document, you might include a thumbnail image that represents the document. The channel could display the thumbnail image instead of the document. When the user selects the image, the channel would open the document.
      * @param string|null $value Value to set for the thumbnailUrl property.
     */
     public function setThumbnailUrl(?string $value): void {

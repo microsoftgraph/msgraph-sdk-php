@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ThreatAssessmentResult extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new threatAssessmentResult and sets the default values.
+     * Instantiates a new ThreatAssessmentResult and sets the default values.
     */
     public function __construct() {
         parent::__construct();

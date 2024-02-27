@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TaskProcessingResult extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new taskProcessingResult and sets the default values.
+     * Instantiates a new TaskProcessingResult and sets the default values.
     */
     public function __construct() {
         parent::__construct();

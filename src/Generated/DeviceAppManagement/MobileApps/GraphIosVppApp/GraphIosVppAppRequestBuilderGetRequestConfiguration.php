@@ -16,7 +16,7 @@ class GraphIosVppAppRequestBuilderGetRequestConfiguration extends BaseRequestCon
     public ?GraphIosVppAppRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new graphIosVppAppRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new GraphIosVppAppRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param GraphIosVppAppRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class GraphIosVppAppRequestBuilderGetRequestConfiguration extends BaseRequestCon
     }
 
     /**
-     * Instantiates a new graphIosVppAppRequestBuilderGetQueryParameters.
+     * Instantiates a new GraphIosVppAppRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

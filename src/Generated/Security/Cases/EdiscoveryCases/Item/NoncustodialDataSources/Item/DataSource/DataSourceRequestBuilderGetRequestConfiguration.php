@@ -16,7 +16,7 @@ class DataSourceRequestBuilderGetRequestConfiguration extends BaseRequestConfigu
     public ?DataSourceRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new dataSourceRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new DataSourceRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param DataSourceRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class DataSourceRequestBuilderGetRequestConfiguration extends BaseRequestConfigu
     }
 
     /**
-     * Instantiates a new dataSourceRequestBuilderGetQueryParameters.
+     * Instantiates a new DataSourceRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return DataSourceRequestBuilderGetQueryParameters

@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class MacOSMicrosoftDefenderApp extends MobileApp implements Parsable 
 {
     /**
-     * Instantiates a new macOSMicrosoftDefenderApp and sets the default values.
+     * Instantiates a new MacOSMicrosoftDefenderApp and sets the default values.
     */
     public function __construct() {
         parent::__construct();

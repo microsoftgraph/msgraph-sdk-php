@@ -16,7 +16,7 @@ class CalendarPermissionsRequestBuilderGetRequestConfiguration extends BaseReque
     public ?CalendarPermissionsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new calendarPermissionsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new CalendarPermissionsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param CalendarPermissionsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class CalendarPermissionsRequestBuilderGetRequestConfiguration extends BaseReque
     }
 
     /**
-     * Instantiates a new calendarPermissionsRequestBuilderGetQueryParameters.
+     * Instantiates a new CalendarPermissionsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param string|null $filter Filter items by property values
      * @param array<string>|null $orderby Order items by property values

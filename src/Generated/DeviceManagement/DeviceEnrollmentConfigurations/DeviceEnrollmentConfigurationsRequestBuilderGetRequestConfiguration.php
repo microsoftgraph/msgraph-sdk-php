@@ -16,7 +16,7 @@ class DeviceEnrollmentConfigurationsRequestBuilderGetRequestConfiguration extend
     public ?DeviceEnrollmentConfigurationsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new deviceEnrollmentConfigurationsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new DeviceEnrollmentConfigurationsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param DeviceEnrollmentConfigurationsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class DeviceEnrollmentConfigurationsRequestBuilderGetRequestConfiguration extend
     }
 
     /**
-     * Instantiates a new deviceEnrollmentConfigurationsRequestBuilderGetQueryParameters.
+     * Instantiates a new DeviceEnrollmentConfigurationsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

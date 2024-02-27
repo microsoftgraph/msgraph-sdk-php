@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Artifact extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new artifact and sets the default values.
+     * Instantiates a new Artifact and sets the default values.
     */
     public function __construct() {
         parent::__construct();

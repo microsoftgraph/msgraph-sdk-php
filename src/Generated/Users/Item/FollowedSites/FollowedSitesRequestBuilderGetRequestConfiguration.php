@@ -16,7 +16,7 @@ class FollowedSitesRequestBuilderGetRequestConfiguration extends BaseRequestConf
     public ?FollowedSitesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new followedSitesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new FollowedSitesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param FollowedSitesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class FollowedSitesRequestBuilderGetRequestConfiguration extends BaseRequestConf
     }
 
     /**
-     * Instantiates a new followedSitesRequestBuilderGetQueryParameters.
+     * Instantiates a new FollowedSitesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

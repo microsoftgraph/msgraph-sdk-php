@@ -19,7 +19,7 @@ class RandBetweenPostRequestBody implements AdditionalDataHolder, BackedModel, P
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new randBetweenPostRequestBody and sets the default values.
+     * Instantiates a new RandBetweenPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

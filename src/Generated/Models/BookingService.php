@@ -14,7 +14,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class BookingService extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new bookingService and sets the default values.
+     * Instantiates a new BookingService and sets the default values.
     */
     public function __construct() {
         parent::__construct();

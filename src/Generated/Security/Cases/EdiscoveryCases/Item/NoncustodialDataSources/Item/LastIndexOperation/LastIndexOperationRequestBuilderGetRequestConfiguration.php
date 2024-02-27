@@ -16,7 +16,7 @@ class LastIndexOperationRequestBuilderGetRequestConfiguration extends BaseReques
     public ?LastIndexOperationRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new lastIndexOperationRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new LastIndexOperationRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param LastIndexOperationRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class LastIndexOperationRequestBuilderGetRequestConfiguration extends BaseReques
     }
 
     /**
-     * Instantiates a new lastIndexOperationRequestBuilderGetQueryParameters.
+     * Instantiates a new LastIndexOperationRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return LastIndexOperationRequestBuilderGetQueryParameters

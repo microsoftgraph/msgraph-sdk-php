@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class PrinterCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new printerCollectionResponse and sets the default values.
+     * Instantiates a new PrinterCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

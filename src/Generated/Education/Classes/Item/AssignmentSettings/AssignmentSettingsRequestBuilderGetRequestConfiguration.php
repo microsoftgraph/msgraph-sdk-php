@@ -16,7 +16,7 @@ class AssignmentSettingsRequestBuilderGetRequestConfiguration extends BaseReques
     public ?AssignmentSettingsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new assignmentSettingsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new AssignmentSettingsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param AssignmentSettingsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class AssignmentSettingsRequestBuilderGetRequestConfiguration extends BaseReques
     }
 
     /**
-     * Instantiates a new assignmentSettingsRequestBuilderGetQueryParameters.
+     * Instantiates a new AssignmentSettingsRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return AssignmentSettingsRequestBuilderGetQueryParameters

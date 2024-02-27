@@ -16,7 +16,7 @@ class RulesRequestBuilderGetRequestConfiguration extends BaseRequestConfiguratio
     public ?RulesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new rulesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new RulesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param RulesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class RulesRequestBuilderGetRequestConfiguration extends BaseRequestConfiguratio
     }
 
     /**
-     * Instantiates a new rulesRequestBuilderGetQueryParameters.
+     * Instantiates a new RulesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

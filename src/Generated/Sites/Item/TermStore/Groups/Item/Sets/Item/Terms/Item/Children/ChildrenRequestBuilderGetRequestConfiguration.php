@@ -16,7 +16,7 @@ class ChildrenRequestBuilderGetRequestConfiguration extends BaseRequestConfigura
     public ?ChildrenRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new childrenRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new ChildrenRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param ChildrenRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class ChildrenRequestBuilderGetRequestConfiguration extends BaseRequestConfigura
     }
 
     /**
-     * Instantiates a new childrenRequestBuilderGetQueryParameters.
+     * Instantiates a new ChildrenRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

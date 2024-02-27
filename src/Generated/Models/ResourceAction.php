@@ -22,7 +22,7 @@ class ResourceAction implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new resourceAction and sets the default values.
+     * Instantiates a new ResourceAction and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

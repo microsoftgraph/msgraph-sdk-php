@@ -16,7 +16,7 @@ class MobileAppTroubleshootingEventsRequestBuilderGetRequestConfiguration extend
     public ?MobileAppTroubleshootingEventsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new mobileAppTroubleshootingEventsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new MobileAppTroubleshootingEventsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param MobileAppTroubleshootingEventsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class MobileAppTroubleshootingEventsRequestBuilderGetRequestConfiguration extend
     }
 
     /**
-     * Instantiates a new mobileAppTroubleshootingEventsRequestBuilderGetQueryParameters.
+     * Instantiates a new MobileAppTroubleshootingEventsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UsedInsight extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new usedInsight and sets the default values.
+     * Instantiates a new UsedInsight and sets the default values.
     */
     public function __construct() {
         parent::__construct();

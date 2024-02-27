@@ -16,7 +16,7 @@ class ContainedAppsRequestBuilderGetRequestConfiguration extends BaseRequestConf
     public ?ContainedAppsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new containedAppsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new ContainedAppsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param ContainedAppsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class ContainedAppsRequestBuilderGetRequestConfiguration extends BaseRequestConf
     }
 
     /**
-     * Instantiates a new containedAppsRequestBuilderGetQueryParameters.
+     * Instantiates a new ContainedAppsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

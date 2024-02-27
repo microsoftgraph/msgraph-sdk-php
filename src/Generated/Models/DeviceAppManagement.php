@@ -14,7 +14,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class DeviceAppManagement extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new deviceAppManagement and sets the default values.
+     * Instantiates a new DeviceAppManagement and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SignInFrequencySessionControl extends ConditionalAccessSessionControl implements Parsable 
 {
     /**
-     * Instantiates a new signInFrequencySessionControl and sets the default values.
+     * Instantiates a new SignInFrequencySessionControl and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -26,7 +26,7 @@ class SignInFrequencySessionControl extends ConditionalAccessSessionControl impl
     }
 
     /**
-     * Gets the authenticationType property value. The possible values are primaryAndSecondaryAuthentication, secondaryAuthentication, unknownFutureValue.
+     * Gets the authenticationType property value. The possible values are primaryAndSecondaryAuthentication, secondaryAuthentication, unknownFutureValue. This property isn't required when using frequencyInterval with the value of timeBased.
      * @return SignInFrequencyAuthenticationType|null
     */
     public function getAuthenticationType(): ?SignInFrequencyAuthenticationType {
@@ -52,7 +52,7 @@ class SignInFrequencySessionControl extends ConditionalAccessSessionControl impl
     }
 
     /**
-     * Gets the frequencyInterval property value. The possible values are timeBased, everyTime, unknownFutureValue.
+     * Gets the frequencyInterval property value. The possible values are timeBased, everyTime, unknownFutureValue. Sign-in frequency of everyTime is available for risky users, risky sign-ins, and Intune device enrollment. For more information, see Require reauthentication every time.
      * @return SignInFrequencyInterval|null
     */
     public function getFrequencyInterval(): ?SignInFrequencyInterval {
@@ -100,7 +100,7 @@ class SignInFrequencySessionControl extends ConditionalAccessSessionControl impl
     }
 
     /**
-     * Sets the authenticationType property value. The possible values are primaryAndSecondaryAuthentication, secondaryAuthentication, unknownFutureValue.
+     * Sets the authenticationType property value. The possible values are primaryAndSecondaryAuthentication, secondaryAuthentication, unknownFutureValue. This property isn't required when using frequencyInterval with the value of timeBased.
      * @param SignInFrequencyAuthenticationType|null $value Value to set for the authenticationType property.
     */
     public function setAuthenticationType(?SignInFrequencyAuthenticationType $value): void {
@@ -108,7 +108,7 @@ class SignInFrequencySessionControl extends ConditionalAccessSessionControl impl
     }
 
     /**
-     * Sets the frequencyInterval property value. The possible values are timeBased, everyTime, unknownFutureValue.
+     * Sets the frequencyInterval property value. The possible values are timeBased, everyTime, unknownFutureValue. Sign-in frequency of everyTime is available for risky users, risky sign-ins, and Intune device enrollment. For more information, see Require reauthentication every time.
      * @param SignInFrequencyInterval|null $value Value to set for the frequencyInterval property.
     */
     public function setFrequencyInterval(?SignInFrequencyInterval $value): void {

@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class X509CertificateAuthenticationMethodConfiguration extends AuthenticationMethodConfiguration implements Parsable 
 {
     /**
-     * Instantiates a new x509CertificateAuthenticationMethodConfiguration and sets the default values.
+     * Instantiates a new X509CertificateAuthenticationMethodConfiguration and sets the default values.
     */
     public function __construct() {
         parent::__construct();

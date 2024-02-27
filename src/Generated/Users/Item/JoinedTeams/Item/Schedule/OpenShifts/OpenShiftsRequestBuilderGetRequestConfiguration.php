@@ -16,7 +16,7 @@ class OpenShiftsRequestBuilderGetRequestConfiguration extends BaseRequestConfigu
     public ?OpenShiftsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new openShiftsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new OpenShiftsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param OpenShiftsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class OpenShiftsRequestBuilderGetRequestConfiguration extends BaseRequestConfigu
     }
 
     /**
-     * Instantiates a new openShiftsRequestBuilderGetQueryParameters.
+     * Instantiates a new OpenShiftsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

@@ -19,7 +19,7 @@ class F_InvPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new f_InvPostRequestBody and sets the default values.
+     * Instantiates a new F_InvPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

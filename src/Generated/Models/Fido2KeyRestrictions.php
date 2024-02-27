@@ -19,7 +19,7 @@ class Fido2KeyRestrictions implements AdditionalDataHolder, BackedModel, Parsabl
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new fido2KeyRestrictions and sets the default values.
+     * Instantiates a new Fido2KeyRestrictions and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class TokenLifetimePolicyCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new tokenLifetimePolicyCollectionResponse and sets the default values.
+     * Instantiates a new TokenLifetimePolicyCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

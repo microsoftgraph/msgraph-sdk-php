@@ -16,7 +16,7 @@ class ScheduledActionConfigurationsRequestBuilderGetRequestConfiguration extends
     public ?ScheduledActionConfigurationsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new scheduledActionConfigurationsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new ScheduledActionConfigurationsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param ScheduledActionConfigurationsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class ScheduledActionConfigurationsRequestBuilderGetRequestConfiguration extends
     }
 
     /**
-     * Instantiates a new scheduledActionConfigurationsRequestBuilderGetQueryParameters.
+     * Instantiates a new ScheduledActionConfigurationsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

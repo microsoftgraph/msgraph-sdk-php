@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TargetApplicationOwners extends SubjectSet implements Parsable 
 {
     /**
-     * Instantiates a new targetApplicationOwners and sets the default values.
+     * Instantiates a new TargetApplicationOwners and sets the default values.
     */
     public function __construct() {
         parent::__construct();

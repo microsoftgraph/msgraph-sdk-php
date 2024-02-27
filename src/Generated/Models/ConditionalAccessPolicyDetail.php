@@ -18,7 +18,7 @@ class ConditionalAccessPolicyDetail implements AdditionalDataHolder, BackedModel
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new conditionalAccessPolicyDetail and sets the default values.
+     * Instantiates a new ConditionalAccessPolicyDetail and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

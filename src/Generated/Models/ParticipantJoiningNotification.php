@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ParticipantJoiningNotification extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new participantJoiningNotification and sets the default values.
+     * Instantiates a new ParticipantJoiningNotification and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class TimeOffReasonCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new timeOffReasonCollectionResponse and sets the default values.
+     * Instantiates a new TimeOffReasonCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

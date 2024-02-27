@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TeamsAsyncOperation extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new teamsAsyncOperation and sets the default values.
+     * Instantiates a new TeamsAsyncOperation and sets the default values.
     */
     public function __construct() {
         parent::__construct();

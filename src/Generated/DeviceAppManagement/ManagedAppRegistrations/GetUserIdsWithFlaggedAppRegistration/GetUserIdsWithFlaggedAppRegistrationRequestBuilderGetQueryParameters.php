@@ -40,7 +40,7 @@ class GetUserIdsWithFlaggedAppRegistrationRequestBuilderGetQueryParameters
     public ?int $top = null;
     
     /**
-     * Instantiates a new getUserIdsWithFlaggedAppRegistrationRequestBuilderGetQueryParameters and sets the default values.
+     * Instantiates a new GetUserIdsWithFlaggedAppRegistrationRequestBuilderGetQueryParameters and sets the default values.
      * @param bool|null $count Include count of items
      * @param string|null $filter Filter items by property values
      * @param string|null $search Search items by search phrases

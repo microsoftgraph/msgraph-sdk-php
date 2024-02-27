@@ -14,7 +14,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class ManagedAppProtection extends ManagedAppPolicy implements Parsable 
 {
     /**
-     * Instantiates a new managedAppProtection and sets the default values.
+     * Instantiates a new ManagedAppProtection and sets the default values.
     */
     public function __construct() {
         parent::__construct();

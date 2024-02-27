@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Calendars;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get all the user's calendars (/calendars navigation property), get the calendars from the default calendar group or from a specific calendar group. 
+ * Get all the user's calendars (/calendars navigation property), get the calendars from the default calendar group or from a specific calendar group.
 */
 class CalendarsRequestBuilderGetQueryParameters 
 {
@@ -52,7 +52,7 @@ class CalendarsRequestBuilderGetQueryParameters
     public ?int $top = null;
     
     /**
-     * Instantiates a new calendarsRequestBuilderGetQueryParameters and sets the default values.
+     * Instantiates a new CalendarsRequestBuilderGetQueryParameters and sets the default values.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

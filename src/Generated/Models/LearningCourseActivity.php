@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class LearningCourseActivity extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new learningCourseActivity and sets the default values.
+     * Instantiates a new LearningCourseActivity and sets the default values.
     */
     public function __construct() {
         parent::__construct();

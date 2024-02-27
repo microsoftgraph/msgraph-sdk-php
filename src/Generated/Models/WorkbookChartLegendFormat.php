@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookChartLegendFormat extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new workbookChartLegendFormat and sets the default values.
+     * Instantiates a new WorkbookChartLegendFormat and sets the default values.
     */
     public function __construct() {
         parent::__construct();

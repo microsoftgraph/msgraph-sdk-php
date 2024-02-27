@@ -16,7 +16,7 @@ class AuthenticationMethodsPolicyRequestBuilderGetRequestConfiguration extends B
     public ?AuthenticationMethodsPolicyRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new authenticationMethodsPolicyRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new AuthenticationMethodsPolicyRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param AuthenticationMethodsPolicyRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class AuthenticationMethodsPolicyRequestBuilderGetRequestConfiguration extends B
     }
 
     /**
-     * Instantiates a new authenticationMethodsPolicyRequestBuilderGetQueryParameters.
+     * Instantiates a new AuthenticationMethodsPolicyRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return AuthenticationMethodsPolicyRequestBuilderGetQueryParameters

@@ -16,7 +16,7 @@ class CombinationConfigurationsRequestBuilderGetRequestConfiguration extends Bas
     public ?CombinationConfigurationsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new combinationConfigurationsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new CombinationConfigurationsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param CombinationConfigurationsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class CombinationConfigurationsRequestBuilderGetRequestConfiguration extends Bas
     }
 
     /**
-     * Instantiates a new combinationConfigurationsRequestBuilderGetQueryParameters.
+     * Instantiates a new CombinationConfigurationsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

@@ -16,7 +16,7 @@ class LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilderGetReque
     public ?LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new learningCourseActivitiesWithExternalcourseActivityIdRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilderGetReque
     }
 
     /**
-     * Instantiates a new learningCourseActivitiesWithExternalcourseActivityIdRequestBuilderGetQueryParameters.
+     * Instantiates a new LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilderGetQueryParameters

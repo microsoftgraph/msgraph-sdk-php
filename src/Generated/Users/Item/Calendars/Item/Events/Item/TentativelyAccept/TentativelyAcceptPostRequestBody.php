@@ -19,7 +19,7 @@ class TentativelyAcceptPostRequestBody implements AdditionalDataHolder, BackedMo
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new tentativelyAcceptPostRequestBody and sets the default values.
+     * Instantiates a new TentativelyAcceptPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

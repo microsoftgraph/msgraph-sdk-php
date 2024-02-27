@@ -18,7 +18,7 @@ class RecommendedAction implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new recommendedAction and sets the default values.
+     * Instantiates a new RecommendedAction and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

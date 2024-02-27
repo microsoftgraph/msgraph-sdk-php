@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AccessPackageUserDirectoryAttributeStore extends AccessPackageResourceAttributeDestination implements Parsable 
 {
     /**
-     * Instantiates a new accessPackageUserDirectoryAttributeStore and sets the default values.
+     * Instantiates a new AccessPackageUserDirectoryAttributeStore and sets the default values.
     */
     public function __construct() {
         parent::__construct();

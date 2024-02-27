@@ -22,7 +22,7 @@ class TeamsAppDefinitionRequestBuilderGetQueryParameters
     public ?array $select = null;
     
     /**
-     * Instantiates a new teamsAppDefinitionRequestBuilderGetQueryParameters and sets the default values.
+     * Instantiates a new TeamsAppDefinitionRequestBuilderGetQueryParameters and sets the default values.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
     */

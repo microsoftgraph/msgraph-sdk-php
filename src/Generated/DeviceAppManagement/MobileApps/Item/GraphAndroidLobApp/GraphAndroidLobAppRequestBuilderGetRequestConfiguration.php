@@ -16,7 +16,7 @@ class GraphAndroidLobAppRequestBuilderGetRequestConfiguration extends BaseReques
     public ?GraphAndroidLobAppRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new graphAndroidLobAppRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new GraphAndroidLobAppRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param GraphAndroidLobAppRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class GraphAndroidLobAppRequestBuilderGetRequestConfiguration extends BaseReques
     }
 
     /**
-     * Instantiates a new graphAndroidLobAppRequestBuilderGetQueryParameters.
+     * Instantiates a new GraphAndroidLobAppRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return GraphAndroidLobAppRequestBuilderGetQueryParameters

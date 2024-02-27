@@ -16,7 +16,7 @@ class MembersWithLicenseErrorsRequestBuilderGetRequestConfiguration extends Base
     public ?MembersWithLicenseErrorsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new membersWithLicenseErrorsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new MembersWithLicenseErrorsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param MembersWithLicenseErrorsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class MembersWithLicenseErrorsRequestBuilderGetRequestConfiguration extends Base
     }
 
     /**
-     * Instantiates a new membersWithLicenseErrorsRequestBuilderGetQueryParameters.
+     * Instantiates a new MembersWithLicenseErrorsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

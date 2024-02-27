@@ -19,7 +19,7 @@ class GetDeviceManagementIntentPerSettingContributingProfilesPostRequestBody imp
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new getDeviceManagementIntentPerSettingContributingProfilesPostRequestBody and sets the default values.
+     * Instantiates a new GetDeviceManagementIntentPerSettingContributingProfilesPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

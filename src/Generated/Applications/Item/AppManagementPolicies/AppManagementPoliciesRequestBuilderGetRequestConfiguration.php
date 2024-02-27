@@ -16,7 +16,7 @@ class AppManagementPoliciesRequestBuilderGetRequestConfiguration extends BaseReq
     public ?AppManagementPoliciesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new appManagementPoliciesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new AppManagementPoliciesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param AppManagementPoliciesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class AppManagementPoliciesRequestBuilderGetRequestConfiguration extends BaseReq
     }
 
     /**
-     * Instantiates a new appManagementPoliciesRequestBuilderGetQueryParameters.
+     * Instantiates a new AppManagementPoliciesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

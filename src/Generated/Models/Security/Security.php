@@ -16,7 +16,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Security extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new security and sets the default values.
+     * Instantiates a new Security and sets the default values.
     */
     public function __construct() {
         parent::__construct();

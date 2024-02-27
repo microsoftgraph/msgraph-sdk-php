@@ -16,7 +16,7 @@ class PermissionGrantPoliciesRequestBuilderGetRequestConfiguration extends BaseR
     public ?PermissionGrantPoliciesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new permissionGrantPoliciesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new PermissionGrantPoliciesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param PermissionGrantPoliciesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class PermissionGrantPoliciesRequestBuilderGetRequestConfiguration extends BaseR
     }
 
     /**
-     * Instantiates a new permissionGrantPoliciesRequestBuilderGetQueryParameters.
+     * Instantiates a new PermissionGrantPoliciesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

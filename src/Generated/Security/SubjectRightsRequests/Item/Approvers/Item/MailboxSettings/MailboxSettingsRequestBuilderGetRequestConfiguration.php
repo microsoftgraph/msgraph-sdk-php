@@ -16,7 +16,7 @@ class MailboxSettingsRequestBuilderGetRequestConfiguration extends BaseRequestCo
     public ?MailboxSettingsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new mailboxSettingsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new MailboxSettingsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param MailboxSettingsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class MailboxSettingsRequestBuilderGetRequestConfiguration extends BaseRequestCo
     }
 
     /**
-     * Instantiates a new mailboxSettingsRequestBuilderGetQueryParameters.
+     * Instantiates a new MailboxSettingsRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return MailboxSettingsRequestBuilderGetQueryParameters
