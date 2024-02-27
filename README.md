@@ -59,6 +59,7 @@ $tokenRequestContext = new AuthorizationCodeContext(
 ```
 Note that your application will need to handle redirecting the user to the Microsoft Identity login page to get the `authorization_code` that's passed into the `AuthorizationCodeContext`.
 [See](https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-auth-code-flow) for more on the `authorization_code` grant flow.
+To prevent signing in your user before each request, see section on [access token management](docs/Examples.md#access-token-management)
 
 
 ### Initialize a GraphServiceClient
@@ -75,6 +76,8 @@ $graphServiceClient = new GraphServiceClient($tokenRequestContext);
 $scopes = ['User.Read', 'Mail.ReadWrite'];
 $graphServiceClient = new GraphServiceClient($tokenRequestContext, $scopes);
 ```
+
+To initialise the `GraphServiceClient` with an already acquired access token, see section on [access token management](docs/Examples.md#access-token-management).
 
 For more on Graph client configuration, see [more examples](docs/Examples.md#creating-a-graph-client)
 
