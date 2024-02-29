@@ -92,14 +92,20 @@ Using the `TokenRequestContext`, an instance of the `GraphServiceClient` request
 The tokens are stored by default in an in-memory cache so that future requests using the same instance of the `GraphServiceClient` can re-use the previously acquired tokens.
 
 For scenarios where an application requires a signed-in user, retaining the same
-instance of the `GraphServiceClient` across multiple requests/within a user session is not feasible.
+instance of the `GraphServiceClient` across multiple requests to your application for the same user's session is not feasible. This section outlines
+how your application can retrieve access tokens from the SDK and pass already acquired access tokens to the SDK for future requests without the user signing in for each request.
 
 ### Retrieving the access token from the SDK
 
 The SDK provides a mechanism to expose the access token and refresh token that it acquires to your application for use in future requests. This would prevent the SDK from making a new
 token request with each `GraphServiceClient` your application instantiates. It also allows your application to prevent its users from signing in with each request within a session.
 
-To get the tokens acquired by the SDK, the built-in [`InMemoryAccessTokenCache`](https://github.com/microsoft/kiota-authentication-phpleague-php/blob/dev/src/Cache/InMemoryAccessTokenCache.php) can be passed to the `GraphServiceClient`. The cache will be populated with a PHPLeague [`AccessToken`](https://github.com/thephpleague/oauth2-client/blob/master/src/Token/AccessToken.php) object which carries both the `access_token`, its expiry and a `refresh_token` if available:
+By default a `GraphServiceClient` instance caches access tokens in a built-in [`InMemoryAccessTokenCache`](https://github.com/microsoft/kiota-authentication-phpleague-php/blob/dev/src/Cache/InMemoryAccessTokenCache.php). The cache will be populated with a PHPLeague [`AccessToken`](https://github.com/thephpleague/oauth2-client/blob/master/src/Token/AccessToken.php) object which carries both the `access_token`, its expiry and a `refresh_token` if available. When the `GraphServiceClient` instance is re-used for a request with the same user/application, the in-memory cache is checked for a valid token otherwise a new token request is made.
+
+However, to get the cached token that the SDK requests for a user/application you
+can initialise an `InMemoryAccessTokenCache` or pass a custom implementation of the [`AccessTokenCache`](https://github.com/microsoft/kiota-authentication-phpleague-php/blob/dev/src/Cache/AccessTokenCache.php) interface interface and pass it as a parameter when initialising the `GraphServiceClient`. The two approaches are outlined below:
+
+*Using an InMemoryAccessTokenCache instance*:
 
 ```php
 use Microsoft\Kiota\Authentication\Cache\InMemoryAccessTokenCache;
@@ -197,7 +203,8 @@ $graphServiceClient = GraphServiceClient::createWithAuthenticationProvider(
 
 ```
 
-To initialize the cache with multiple TokenRequestContext-AccessToken pairs, `withToken` can be used:
+For scenarios where your application may need to make requests for multiple users using the same `GraphServiceClient`, the `InMemoryAccessTokenCache` can
+be initialized with multiple TokenRequestContext-AccessToken pairs using `withToken`:
 ```php
 
 use Microsoft\Kiota\Authentication\Cache\InMemoryAccessTokenCache;
