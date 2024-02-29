@@ -91,6 +91,10 @@ $graphServiceClient = GraphServiceClient::createWithRequestAdapter($requestAdapt
 Using the `TokenRequestContext`, an instance of the `GraphServiceClient` requests access tokens and refresh tokens.
 The tokens are stored by default in an in-memory cache so that future requests using the same instance of the `GraphServiceClient` can re-use the previously acquired tokens.
 
+The default in-memory cache is a map/dictionary with a unique key identifying a user/application with a tenant and a PHPLeague [`AccessToken`](https://github.com/thephpleague/oauth2-client/blob/master/src/Token/AccessToken.php) object as its value. The unique key ensures the right token for a user is retrieved from the cache. For `TokenRequestContexts` that do not require a signed in user (application permissions), the cache key will be **`{tenantId}-{clientId}`** and for those that require a signed in user (delegated permissions), the cache key will be
+**`{tenantId}-{clientId}-{userId}`**. The `AccessToken` object carries both the `access_token`, its expiry and a `refresh_token` if available.
+The in-memory cache lives as a PHP object within the your application's PHP process and is destroyed when the process terminates.
+
 For scenarios where an application requires a signed-in user, retaining the same
 instance of the `GraphServiceClient` across multiple requests to your application for the same user's session is not feasible. This section outlines
 how your application can retrieve access tokens from the SDK and pass already acquired access tokens to the SDK for future requests without the user signing in for each request.
