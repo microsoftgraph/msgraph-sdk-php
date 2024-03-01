@@ -88,6 +88,7 @@ $graphServiceClient = GraphServiceClient::createWithRequestAdapter($requestAdapt
 ```
 
 ## Access token management
+
 Using the `TokenRequestContext`, an instance of the `GraphServiceClient` requests access tokens and refresh tokens.
 The tokens are stored by default in an in-memory cache so that future requests using the same instance of the `GraphServiceClient` can re-use the previously acquired tokens.
 
@@ -109,7 +110,7 @@ By default a `GraphServiceClient` instance caches access tokens in a built-in [`
 However, to get the cached token that the SDK requests for a user/application you
 can initialise an `InMemoryAccessTokenCache` or pass a custom implementation of the [`AccessTokenCache`](https://github.com/microsoft/kiota-authentication-phpleague-php/blob/dev/src/Cache/AccessTokenCache.php) interface interface and pass it as a parameter when initialising the `GraphServiceClient`. The two approaches are outlined below:
 
-### Using an InMemoryAccessTokenCache instance:
+### Using an InMemoryAccessTokenCache instance
 
 ```php
 use Microsoft\Kiota\Authentication\Cache\InMemoryAccessTokenCache;
@@ -143,7 +144,7 @@ $accessToken = $inMemoryCache->getTokenWithContext($tokenRequestContext);
 
 ```
 
-### Using a custom AccessTokenCache implementation:
+### Using a custom AccessTokenCache implementation
 
 A custom [`AccessTokenCache`](https://github.com/microsoft/kiota-authentication-phpleague-php/blob/dev/src/Cache/AccessTokenCache.php) interface implementation can also be provided. After the request, the SDK persists the token in the
 custom cache via the `persistAccessToken()` method.
@@ -152,6 +153,8 @@ By default, the SDK adds a unique cache key/identifier to a `TokenRequestContext
 For `TokenRequestContexts` that do not require a signed in user (application permissions), the cache key will be
 **`{tenantId}-{clientId}`** and for those that require a signed in user (delegated permissions), the cache key will be
 **`{tenantId}-{clientId}-{userId}`**.
+
+Alternatively, you can override the default cache key
 
 To retrieve the access token persisted to your custom cache for a particular user's/application's `TokenRequestContext`:
 ```php
@@ -172,7 +175,8 @@ This is also useful when re-using a previously retrieved access token for a sign
 The SDK will check the cache for a valid token before considering requesting a new token. If the provided token is expired
 and a refresh token is present, the access token will be refreshed and persisted to the cache. If no refresh token is provided, the SDK requests attempts to retrieve a new access token and persists it to the cache. In cases where a signed in user is present, e.g. authorization_code OAuth flows, the new token request will most likely fail because no valid `authorization_code` will be present meaning the user has to sign in again.
 
-### Using the `InMemoryAccessTokenCache`:
+### Using the `InMemoryAccessTokenCache`
+
 The in-memory cache can be hydrated/initialised using the `TokenRequestContext` and a PHPLeague [`AccessToken`](https://github.com/thephpleague/oauth2-client/blob/master/src/Token/AccessToken.php) object for a user/application:
 
 ```php
@@ -255,7 +259,7 @@ $graphServiceClient = GraphServiceClient::createWithAuthenticationProvider(
 
 ```
 
-### Using a custom `AccessTokenCache` implementation`:
+### Using a custom `AccessTokenCache` implementation`
 
 The SDK retrieves cached tokens using a cache key/identifier on the `TokenRequestContext`. The cache key
 on the `TokenRequestContext` is set using `setCacheKey()` which accepts an [`AccessToken`](https://github.com/thephpleague/oauth2-client/blob/master/src/Token/AccessToken.php) object.
@@ -269,13 +273,16 @@ For this scenario, the custom AccessTokenCache will need to be initialized in a 
 
 ```php
 
-$tokenRequestContext->setCacheKey(new AccessToken([
+$accessToken = new AccessToken([
     'access_token' => $accessToken,
     'refresh_token' => $refreshToken,
     'expires' => ...
-]));
+]);
 
-// init custom cache with tokens that map to $tokenRequestContext->getCacheKey()
+$tokenRequestContext->setCacheKey($accessToken);
+
+// init custom cache with tokens mapped to specific user/app using $tokenRequestContext->getCacheKey()
+$customCache = new CustomCache($tokenRequestContext->getCacheKey(), $accessToken);
 
 // init graph client
 $graphServiceClient = GraphServiceClient::createWithAuthenticationProvider(
