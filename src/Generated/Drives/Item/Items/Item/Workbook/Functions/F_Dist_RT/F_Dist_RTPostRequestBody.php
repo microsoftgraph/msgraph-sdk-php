@@ -19,7 +19,7 @@ class F_Dist_RTPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new f_Dist_RTPostRequestBody and sets the default values.
+     * Instantiates a new F_Dist_RTPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

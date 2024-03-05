@@ -16,7 +16,7 @@ class TranscriptsRequestBuilderGetRequestConfiguration extends BaseRequestConfig
     public ?TranscriptsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new transcriptsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new TranscriptsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param TranscriptsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class TranscriptsRequestBuilderGetRequestConfiguration extends BaseRequestConfig
     }
 
     /**
-     * Instantiates a new transcriptsRequestBuilderGetQueryParameters.
+     * Instantiates a new TranscriptsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

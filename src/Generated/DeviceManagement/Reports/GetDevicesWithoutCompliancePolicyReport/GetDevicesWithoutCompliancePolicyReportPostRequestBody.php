@@ -19,7 +19,7 @@ class GetDevicesWithoutCompliancePolicyReportPostRequestBody implements Addition
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new getDevicesWithoutCompliancePolicyReportPostRequestBody and sets the default values.
+     * Instantiates a new GetDevicesWithoutCompliancePolicyReportPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

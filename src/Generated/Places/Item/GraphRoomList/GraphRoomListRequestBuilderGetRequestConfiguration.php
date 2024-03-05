@@ -16,7 +16,7 @@ class GraphRoomListRequestBuilderGetRequestConfiguration extends BaseRequestConf
     public ?GraphRoomListRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new graphRoomListRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new GraphRoomListRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param GraphRoomListRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class GraphRoomListRequestBuilderGetRequestConfiguration extends BaseRequestConf
     }
 
     /**
-     * Instantiates a new graphRoomListRequestBuilderGetQueryParameters.
+     * Instantiates a new GraphRoomListRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return GraphRoomListRequestBuilderGetQueryParameters

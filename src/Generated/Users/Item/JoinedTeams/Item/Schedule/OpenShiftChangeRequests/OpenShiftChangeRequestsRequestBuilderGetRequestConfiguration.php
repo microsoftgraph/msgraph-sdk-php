@@ -16,7 +16,7 @@ class OpenShiftChangeRequestsRequestBuilderGetRequestConfiguration extends BaseR
     public ?OpenShiftChangeRequestsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new openShiftChangeRequestsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new OpenShiftChangeRequestsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param OpenShiftChangeRequestsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class OpenShiftChangeRequestsRequestBuilderGetRequestConfiguration extends BaseR
     }
 
     /**
-     * Instantiates a new openShiftChangeRequestsRequestBuilderGetQueryParameters.
+     * Instantiates a new OpenShiftChangeRequestsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

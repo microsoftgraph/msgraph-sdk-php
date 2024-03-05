@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkflowVersion extends WorkflowBase implements Parsable 
 {
     /**
-     * Instantiates a new workflowVersion and sets the default values.
+     * Instantiates a new WorkflowVersion and sets the default values.
     */
     public function __construct() {
         parent::__construct();

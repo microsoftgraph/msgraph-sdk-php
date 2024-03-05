@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DelegatedAdminRelationshipRequest extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new delegatedAdminRelationshipRequest and sets the default values.
+     * Instantiates a new DelegatedAdminRelationshipRequest and sets the default values.
     */
     public function __construct() {
         parent::__construct();

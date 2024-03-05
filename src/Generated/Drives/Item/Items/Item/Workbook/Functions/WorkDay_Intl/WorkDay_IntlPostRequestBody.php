@@ -19,7 +19,7 @@ class WorkDay_IntlPostRequestBody implements AdditionalDataHolder, BackedModel, 
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new workDay_IntlPostRequestBody and sets the default values.
+     * Instantiates a new WorkDay_IntlPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

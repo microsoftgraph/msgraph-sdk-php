@@ -19,7 +19,7 @@ class ModPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new modPostRequestBody and sets the default values.
+     * Instantiates a new ModPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

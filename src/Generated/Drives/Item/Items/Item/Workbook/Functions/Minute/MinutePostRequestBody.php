@@ -19,7 +19,7 @@ class MinutePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new minutePostRequestBody and sets the default values.
+     * Instantiates a new MinutePostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

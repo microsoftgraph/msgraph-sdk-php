@@ -18,7 +18,7 @@ class SharingInvitation implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new sharingInvitation and sets the default values.
+     * Instantiates a new SharingInvitation and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

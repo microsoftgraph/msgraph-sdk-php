@@ -18,7 +18,7 @@ class EducationSubmissionRecipient implements AdditionalDataHolder, BackedModel,
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new educationSubmissionRecipient and sets the default values.
+     * Instantiates a new EducationSubmissionRecipient and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

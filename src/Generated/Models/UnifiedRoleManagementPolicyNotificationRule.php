@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementPolicyRule implements Parsable 
 {
     /**
-     * Instantiates a new unifiedRoleManagementPolicyNotificationRule and sets the default values.
+     * Instantiates a new UnifiedRoleManagementPolicyNotificationRule and sets the default values.
     */
     public function __construct() {
         parent::__construct();

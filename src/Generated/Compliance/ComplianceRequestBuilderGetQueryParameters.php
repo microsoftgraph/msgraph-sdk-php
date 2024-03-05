@@ -22,7 +22,7 @@ class ComplianceRequestBuilderGetQueryParameters
     public ?array $select = null;
     
     /**
-     * Instantiates a new complianceRequestBuilderGetQueryParameters and sets the default values.
+     * Instantiates a new ComplianceRequestBuilderGetQueryParameters and sets the default values.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
     */

@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AuthenticationFlowsPolicy extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new authenticationFlowsPolicy and sets the default values.
+     * Instantiates a new AuthenticationFlowsPolicy and sets the default values.
     */
     public function __construct() {
         parent::__construct();

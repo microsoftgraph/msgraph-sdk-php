@@ -16,7 +16,7 @@ class ServiceAnnouncementRequestBuilderGetRequestConfiguration extends BaseReque
     public ?ServiceAnnouncementRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new serviceAnnouncementRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new ServiceAnnouncementRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param ServiceAnnouncementRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class ServiceAnnouncementRequestBuilderGetRequestConfiguration extends BaseReque
     }
 
     /**
-     * Instantiates a new serviceAnnouncementRequestBuilderGetQueryParameters.
+     * Instantiates a new ServiceAnnouncementRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return ServiceAnnouncementRequestBuilderGetQueryParameters

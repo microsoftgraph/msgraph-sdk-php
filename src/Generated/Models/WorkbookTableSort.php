@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class WorkbookTableSort extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new workbookTableSort and sets the default values.
+     * Instantiates a new WorkbookTableSort and sets the default values.
     */
     public function __construct() {
         parent::__construct();

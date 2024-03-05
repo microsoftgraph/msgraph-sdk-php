@@ -16,7 +16,7 @@ class LastModifiedByUserRequestBuilderGetRequestConfiguration extends BaseReques
     public ?LastModifiedByUserRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new lastModifiedByUserRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new LastModifiedByUserRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param LastModifiedByUserRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class LastModifiedByUserRequestBuilderGetRequestConfiguration extends BaseReques
     }
 
     /**
-     * Instantiates a new lastModifiedByUserRequestBuilderGetQueryParameters.
+     * Instantiates a new LastModifiedByUserRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return LastModifiedByUserRequestBuilderGetQueryParameters

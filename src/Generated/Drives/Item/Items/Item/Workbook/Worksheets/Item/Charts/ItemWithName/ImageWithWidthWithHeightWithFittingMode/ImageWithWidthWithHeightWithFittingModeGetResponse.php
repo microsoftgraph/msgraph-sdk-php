@@ -18,7 +18,7 @@ class ImageWithWidthWithHeightWithFittingModeGetResponse implements AdditionalDa
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new imageWithWidthWithHeightWithFittingModeGetResponse and sets the default values.
+     * Instantiates a new ImageWithWidthWithHeightWithFittingModeGetResponse and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

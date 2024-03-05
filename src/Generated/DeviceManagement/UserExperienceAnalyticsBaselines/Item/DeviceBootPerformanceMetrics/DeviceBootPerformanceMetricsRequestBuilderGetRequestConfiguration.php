@@ -16,7 +16,7 @@ class DeviceBootPerformanceMetricsRequestBuilderGetRequestConfiguration extends 
     public ?DeviceBootPerformanceMetricsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new deviceBootPerformanceMetricsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new DeviceBootPerformanceMetricsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param DeviceBootPerformanceMetricsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class DeviceBootPerformanceMetricsRequestBuilderGetRequestConfiguration extends 
     }
 
     /**
-     * Instantiates a new deviceBootPerformanceMetricsRequestBuilderGetQueryParameters.
+     * Instantiates a new DeviceBootPerformanceMetricsRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return DeviceBootPerformanceMetricsRequestBuilderGetQueryParameters

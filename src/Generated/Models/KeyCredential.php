@@ -20,7 +20,7 @@ class KeyCredential implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new keyCredential and sets the default values.
+     * Instantiates a new KeyCredential and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

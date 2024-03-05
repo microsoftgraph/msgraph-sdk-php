@@ -16,7 +16,7 @@ class MicrosoftGraphSecurityAsHierarchyRequestBuilderGetRequestConfiguration ext
     public ?MicrosoftGraphSecurityAsHierarchyRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new microsoftGraphSecurityAsHierarchyRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new MicrosoftGraphSecurityAsHierarchyRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param MicrosoftGraphSecurityAsHierarchyRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,8 +27,9 @@ class MicrosoftGraphSecurityAsHierarchyRequestBuilderGetRequestConfiguration ext
     }
 
     /**
-     * Instantiates a new microsoftGraphSecurityAsHierarchyRequestBuilderGetQueryParameters.
+     * Instantiates a new MicrosoftGraphSecurityAsHierarchyRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
+     * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values
      * @param array<string>|null $orderby Order items by property values
      * @param string|null $search Search items by search phrases
@@ -37,8 +38,8 @@ class MicrosoftGraphSecurityAsHierarchyRequestBuilderGetRequestConfiguration ext
      * @param int|null $top Show only the first n items
      * @return MicrosoftGraphSecurityAsHierarchyRequestBuilderGetQueryParameters
     */
-    public static function createQueryParameters(?bool $count = null, ?string $filter = null, ?array $orderby = null, ?string $search = null, ?array $select = null, ?int $skip = null, ?int $top = null): MicrosoftGraphSecurityAsHierarchyRequestBuilderGetQueryParameters {
-        return new MicrosoftGraphSecurityAsHierarchyRequestBuilderGetQueryParameters($count, $filter, $orderby, $search, $select, $skip, $top);
+    public static function createQueryParameters(?bool $count = null, ?array $expand = null, ?string $filter = null, ?array $orderby = null, ?string $search = null, ?array $select = null, ?int $skip = null, ?int $top = null): MicrosoftGraphSecurityAsHierarchyRequestBuilderGetQueryParameters {
+        return new MicrosoftGraphSecurityAsHierarchyRequestBuilderGetQueryParameters($count, $expand, $filter, $orderby, $search, $select, $skip, $top);
     }
 
 }

@@ -19,7 +19,7 @@ class OddFYieldPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new oddFYieldPostRequestBody and sets the default values.
+     * Instantiates a new OddFYieldPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

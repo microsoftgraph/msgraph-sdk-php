@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class LicenseDetails extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new licenseDetails and sets the default values.
+     * Instantiates a new LicenseDetails and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -39,7 +39,7 @@ class LicenseDetails extends Entity implements Parsable
     }
 
     /**
-     * Gets the servicePlans property value. Information about the service plans assigned with the license. Read-only, Not nullable
+     * Gets the servicePlans property value. Information about the service plans assigned with the license. Read-only. Not nullable.
      * @return array<ServicePlanInfo>|null
     */
     public function getServicePlans(): ?array {
@@ -53,7 +53,7 @@ class LicenseDetails extends Entity implements Parsable
     }
 
     /**
-     * Gets the skuId property value. Unique identifier (GUID) for the service SKU. Equal to the skuId property on the related SubscribedSku object. Read-only
+     * Gets the skuId property value. Unique identifier (GUID) for the service SKU. Equal to the skuId property on the related subscribedSku object. Read-only.
      * @return string|null
     */
     public function getSkuId(): ?string {
@@ -65,7 +65,7 @@ class LicenseDetails extends Entity implements Parsable
     }
 
     /**
-     * Gets the skuPartNumber property value. Unique SKU display name. Equal to the skuPartNumber on the related SubscribedSku object; for example: 'AAD_Premium'. Read-only
+     * Gets the skuPartNumber property value. Unique SKU display name. Equal to the skuPartNumber on the related subscribedSku object; for example, AAD_Premium. Read-only.
      * @return string|null
     */
     public function getSkuPartNumber(): ?string {
@@ -88,7 +88,7 @@ class LicenseDetails extends Entity implements Parsable
     }
 
     /**
-     * Sets the servicePlans property value. Information about the service plans assigned with the license. Read-only, Not nullable
+     * Sets the servicePlans property value. Information about the service plans assigned with the license. Read-only. Not nullable.
      * @param array<ServicePlanInfo>|null $value Value to set for the servicePlans property.
     */
     public function setServicePlans(?array $value): void {
@@ -96,7 +96,7 @@ class LicenseDetails extends Entity implements Parsable
     }
 
     /**
-     * Sets the skuId property value. Unique identifier (GUID) for the service SKU. Equal to the skuId property on the related SubscribedSku object. Read-only
+     * Sets the skuId property value. Unique identifier (GUID) for the service SKU. Equal to the skuId property on the related subscribedSku object. Read-only.
      * @param string|null $value Value to set for the skuId property.
     */
     public function setSkuId(?string $value): void {
@@ -104,7 +104,7 @@ class LicenseDetails extends Entity implements Parsable
     }
 
     /**
-     * Sets the skuPartNumber property value. Unique SKU display name. Equal to the skuPartNumber on the related SubscribedSku object; for example: 'AAD_Premium'. Read-only
+     * Sets the skuPartNumber property value. Unique SKU display name. Equal to the skuPartNumber on the related subscribedSku object; for example, AAD_Premium. Read-only.
      * @param string|null $value Value to set for the skuPartNumber property.
     */
     public function setSkuPartNumber(?string $value): void {

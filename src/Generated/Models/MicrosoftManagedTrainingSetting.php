@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class MicrosoftManagedTrainingSetting extends TrainingSetting implements Parsable 
 {
     /**
-     * Instantiates a new microsoftManagedTrainingSetting and sets the default values.
+     * Instantiates a new MicrosoftManagedTrainingSetting and sets the default values.
     */
     public function __construct() {
         parent::__construct();

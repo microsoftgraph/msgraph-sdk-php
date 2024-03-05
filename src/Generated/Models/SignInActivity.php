@@ -19,7 +19,7 @@ class SignInActivity implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new signInActivity and sets the default values.
+     * Instantiates a new SignInActivity and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

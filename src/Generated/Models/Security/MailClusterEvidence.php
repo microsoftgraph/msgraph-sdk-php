@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class MailClusterEvidence extends AlertEvidence implements Parsable 
 {
     /**
-     * Instantiates a new mailClusterEvidence and sets the default values.
+     * Instantiates a new MailClusterEvidence and sets the default values.
     */
     public function __construct() {
         parent::__construct();

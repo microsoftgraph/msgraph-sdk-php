@@ -18,7 +18,7 @@ class AddGroupPostResponse implements AdditionalDataHolder, BackedModel, Parsabl
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new addGroupPostResponse and sets the default values.
+     * Instantiates a new AddGroupPostResponse and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

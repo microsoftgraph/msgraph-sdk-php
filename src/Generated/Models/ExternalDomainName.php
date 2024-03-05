@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ExternalDomainName extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new externalDomainName and sets the default values.
+     * Instantiates a new ExternalDomainName and sets the default values.
     */
     public function __construct() {
         parent::__construct();

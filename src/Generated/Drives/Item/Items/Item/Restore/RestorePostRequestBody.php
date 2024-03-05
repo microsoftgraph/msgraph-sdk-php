@@ -19,7 +19,7 @@ class RestorePostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new restorePostRequestBody and sets the default values.
+     * Instantiates a new RestorePostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

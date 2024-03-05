@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ApprovalStage extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new approvalStage and sets the default values.
+     * Instantiates a new ApprovalStage and sets the default values.
     */
     public function __construct() {
         parent::__construct();

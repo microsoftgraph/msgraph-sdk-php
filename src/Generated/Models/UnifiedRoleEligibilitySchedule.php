@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase implements Parsable 
 {
     /**
-     * Instantiates a new unifiedRoleEligibilitySchedule and sets the default values.
+     * Instantiates a new UnifiedRoleEligibilitySchedule and sets the default values.
     */
     public function __construct() {
         parent::__construct();

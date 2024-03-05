@@ -14,7 +14,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class ManagedDevice extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new managedDevice and sets the default values.
+     * Instantiates a new ManagedDevice and sets the default values.
     */
     public function __construct() {
         parent::__construct();

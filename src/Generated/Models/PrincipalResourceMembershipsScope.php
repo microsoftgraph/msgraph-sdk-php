@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class PrincipalResourceMembershipsScope extends AccessReviewScope implements Parsable 
 {
     /**
-     * Instantiates a new principalResourceMembershipsScope and sets the default values.
+     * Instantiates a new PrincipalResourceMembershipsScope and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -6,6 +6,9 @@ use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\SearchEntity;
+use Microsoft\Graph\Generated\Search\Acronyms\AcronymsRequestBuilder;
+use Microsoft\Graph\Generated\Search\Bookmarks\BookmarksRequestBuilder;
+use Microsoft\Graph\Generated\Search\Qnas\QnasRequestBuilder;
 use Microsoft\Graph\Generated\Search\Query\QueryRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -17,6 +20,27 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class SearchRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to manage the acronyms property of the microsoft.graph.searchEntity entity.
+    */
+    public function acronyms(): AcronymsRequestBuilder {
+        return new AcronymsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the bookmarks property of the microsoft.graph.searchEntity entity.
+    */
+    public function bookmarks(): BookmarksRequestBuilder {
+        return new BookmarksRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the qnas property of the microsoft.graph.searchEntity entity.
+    */
+    public function qnas(): QnasRequestBuilder {
+        return new QnasRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Provides operations to call the query method.
     */
@@ -30,7 +54,7 @@ class SearchRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/search{?%24select,%24expand}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/search{?%24expand,%24select}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -47,8 +71,7 @@ class SearchRequestBuilder extends BaseRequestBuilder
     public function get(?SearchRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
-                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         return $this->requestAdapter->sendAsync($requestInfo, [SearchEntity::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
@@ -63,8 +86,7 @@ class SearchRequestBuilder extends BaseRequestBuilder
     public function patch(SearchEntity $body, ?SearchRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
-                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         return $this->requestAdapter->sendAsync($requestInfo, [SearchEntity::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
@@ -98,7 +120,7 @@ class SearchRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(SearchEntity $body, ?SearchRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/search';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

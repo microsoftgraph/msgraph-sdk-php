@@ -13,7 +13,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class DeviceCompliancePolicyState extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new deviceCompliancePolicyState and sets the default values.
+     * Instantiates a new DeviceCompliancePolicyState and sets the default values.
     */
     public function __construct() {
         parent::__construct();

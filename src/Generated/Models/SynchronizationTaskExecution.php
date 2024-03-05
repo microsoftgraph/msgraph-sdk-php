@@ -19,7 +19,7 @@ class SynchronizationTaskExecution implements AdditionalDataHolder, BackedModel,
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new synchronizationTaskExecution and sets the default values.
+     * Instantiates a new SynchronizationTaskExecution and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

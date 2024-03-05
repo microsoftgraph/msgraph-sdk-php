@@ -16,7 +16,7 @@ class ReputationRequestBuilderGetRequestConfiguration extends BaseRequestConfigu
     public ?ReputationRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new reputationRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new ReputationRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param ReputationRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class ReputationRequestBuilderGetRequestConfiguration extends BaseRequestConfigu
     }
 
     /**
-     * Instantiates a new reputationRequestBuilderGetQueryParameters.
+     * Instantiates a new ReputationRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return ReputationRequestBuilderGetQueryParameters

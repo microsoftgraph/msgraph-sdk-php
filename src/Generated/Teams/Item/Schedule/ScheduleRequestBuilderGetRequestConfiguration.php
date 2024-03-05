@@ -16,7 +16,7 @@ class ScheduleRequestBuilderGetRequestConfiguration extends BaseRequestConfigura
     public ?ScheduleRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new scheduleRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new ScheduleRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param ScheduleRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class ScheduleRequestBuilderGetRequestConfiguration extends BaseRequestConfigura
     }
 
     /**
-     * Instantiates a new scheduleRequestBuilderGetQueryParameters.
+     * Instantiates a new ScheduleRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return ScheduleRequestBuilderGetQueryParameters

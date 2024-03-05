@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class SharedInsight extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new sharedInsight and sets the default values.
+     * Instantiates a new SharedInsight and sets the default values.
     */
     public function __construct() {
         parent::__construct();

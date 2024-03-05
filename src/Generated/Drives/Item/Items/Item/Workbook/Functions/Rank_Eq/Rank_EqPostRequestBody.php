@@ -19,7 +19,7 @@ class Rank_EqPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new rank_EqPostRequestBody and sets the default values.
+     * Instantiates a new Rank_EqPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

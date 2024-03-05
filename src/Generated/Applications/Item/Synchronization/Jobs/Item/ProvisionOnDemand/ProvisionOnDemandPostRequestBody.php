@@ -20,7 +20,7 @@ class ProvisionOnDemandPostRequestBody implements AdditionalDataHolder, BackedMo
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new provisionOnDemandPostRequestBody and sets the default values.
+     * Instantiates a new ProvisionOnDemandPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

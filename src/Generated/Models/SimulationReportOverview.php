@@ -19,7 +19,7 @@ class SimulationReportOverview implements AdditionalDataHolder, BackedModel, Par
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new simulationReportOverview and sets the default values.
+     * Instantiates a new SimulationReportOverview and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

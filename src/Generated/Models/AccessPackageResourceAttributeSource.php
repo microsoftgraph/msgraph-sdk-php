@@ -18,7 +18,7 @@ class AccessPackageResourceAttributeSource implements AdditionalDataHolder, Back
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new accessPackageResourceAttributeSource and sets the default values.
+     * Instantiates a new AccessPackageResourceAttributeSource and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

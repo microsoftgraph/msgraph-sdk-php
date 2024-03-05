@@ -18,7 +18,7 @@ class PreviewPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new previewPostRequestBody and sets the default values.
+     * Instantiates a new PreviewPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

@@ -18,7 +18,7 @@ class PasswordProfile implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new passwordProfile and sets the default values.
+     * Instantiates a new PasswordProfile and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
@@ -70,7 +70,7 @@ class PasswordProfile implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the forceChangePasswordNextSignIn property value. true if the user must change her password on the next login; otherwise false.
+     * Gets the forceChangePasswordNextSignIn property value. true if the user must change their password on the next sign-in; otherwise false.
      * @return bool|null
     */
     public function getForceChangePasswordNextSignIn(): ?bool {
@@ -82,7 +82,7 @@ class PasswordProfile implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the forceChangePasswordNextSignInWithMfa property value. If true, at next sign-in, the user must perform a multi-factor authentication (MFA) before being forced to change their password. The behavior is identical to forceChangePasswordNextSignIn except that the user is required to first perform a multi-factor authentication before password change. After a password change, this property will be automatically reset to false. If not set, default is false.
+     * Gets the forceChangePasswordNextSignInWithMfa property value. If true, at next sign-in, the user must perform a multifactor authentication (MFA) before being forced to change their password. The behavior is identical to forceChangePasswordNextSignIn except that the user is required to first perform a multifactor authentication before password change. After a password change, this property will be automatically reset to false. If not set, default is false.
      * @return bool|null
     */
     public function getForceChangePasswordNextSignInWithMfa(): ?bool {
@@ -106,7 +106,7 @@ class PasswordProfile implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the password property value. The password for the user. This property is required when a user is created. It can be updated, but the user will be required to change the password on the next login. The password must satisfy minimum requirements as specified by the user's passwordPolicies property. By default, a strong password is required.
+     * Gets the password property value. The password for the user. This property is required when a user is created. It can be updated, but the user will be required to change the password on the next sign-in. The password must satisfy minimum requirements as specified by the user's passwordPolicies property. By default, a strong password is required.
      * @return string|null
     */
     public function getPassword(): ?string {
@@ -146,7 +146,7 @@ class PasswordProfile implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the forceChangePasswordNextSignIn property value. true if the user must change her password on the next login; otherwise false.
+     * Sets the forceChangePasswordNextSignIn property value. true if the user must change their password on the next sign-in; otherwise false.
      * @param bool|null $value Value to set for the forceChangePasswordNextSignIn property.
     */
     public function setForceChangePasswordNextSignIn(?bool $value): void {
@@ -154,7 +154,7 @@ class PasswordProfile implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the forceChangePasswordNextSignInWithMfa property value. If true, at next sign-in, the user must perform a multi-factor authentication (MFA) before being forced to change their password. The behavior is identical to forceChangePasswordNextSignIn except that the user is required to first perform a multi-factor authentication before password change. After a password change, this property will be automatically reset to false. If not set, default is false.
+     * Sets the forceChangePasswordNextSignInWithMfa property value. If true, at next sign-in, the user must perform a multifactor authentication (MFA) before being forced to change their password. The behavior is identical to forceChangePasswordNextSignIn except that the user is required to first perform a multifactor authentication before password change. After a password change, this property will be automatically reset to false. If not set, default is false.
      * @param bool|null $value Value to set for the forceChangePasswordNextSignInWithMfa property.
     */
     public function setForceChangePasswordNextSignInWithMfa(?bool $value): void {
@@ -170,7 +170,7 @@ class PasswordProfile implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the password property value. The password for the user. This property is required when a user is created. It can be updated, but the user will be required to change the password on the next login. The password must satisfy minimum requirements as specified by the user's passwordPolicies property. By default, a strong password is required.
+     * Sets the password property value. The password for the user. This property is required when a user is created. It can be updated, but the user will be required to change the password on the next sign-in. The password must satisfy minimum requirements as specified by the user's passwordPolicies property. By default, a strong password is required.
      * @param string|null $value Value to set for the password property.
     */
     public function setPassword(?string $value): void {

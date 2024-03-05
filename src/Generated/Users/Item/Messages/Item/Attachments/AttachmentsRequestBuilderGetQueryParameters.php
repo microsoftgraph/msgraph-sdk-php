@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Messages\Item\Attachments;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve a list of attachment objects attached to a message.
+ * Retrieve a list of attachment objects.
 */
 class AttachmentsRequestBuilderGetQueryParameters 
 {
@@ -40,7 +40,7 @@ class AttachmentsRequestBuilderGetQueryParameters
     public ?array $select = null;
     
     /**
-     * Instantiates a new attachmentsRequestBuilderGetQueryParameters and sets the default values.
+     * Instantiates a new AttachmentsRequestBuilderGetQueryParameters and sets the default values.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

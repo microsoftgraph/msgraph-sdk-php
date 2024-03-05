@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class FeatureRolloutPolicyCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new featureRolloutPolicyCollectionResponse and sets the default values.
+     * Instantiates a new FeatureRolloutPolicyCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

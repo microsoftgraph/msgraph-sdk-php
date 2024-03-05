@@ -20,7 +20,7 @@ class ClonePostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new clonePostRequestBody and sets the default values.
+     * Instantiates a new ClonePostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

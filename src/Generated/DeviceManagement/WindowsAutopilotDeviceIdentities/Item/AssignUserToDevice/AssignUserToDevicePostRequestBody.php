@@ -18,7 +18,7 @@ class AssignUserToDevicePostRequestBody implements AdditionalDataHolder, BackedM
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new assignUserToDevicePostRequestBody and sets the default values.
+     * Instantiates a new AssignUserToDevicePostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

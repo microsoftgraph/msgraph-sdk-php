@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class OpenTypeExtension extends Extension implements Parsable 
 {
     /**
-     * Instantiates a new openTypeExtension and sets the default values.
+     * Instantiates a new OpenTypeExtension and sets the default values.
     */
     public function __construct() {
         parent::__construct();

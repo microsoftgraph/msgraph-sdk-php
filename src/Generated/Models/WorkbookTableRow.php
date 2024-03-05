@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookTableRow extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new workbookTableRow and sets the default values.
+     * Instantiates a new WorkbookTableRow and sets the default values.
     */
     public function __construct() {
         parent::__construct();

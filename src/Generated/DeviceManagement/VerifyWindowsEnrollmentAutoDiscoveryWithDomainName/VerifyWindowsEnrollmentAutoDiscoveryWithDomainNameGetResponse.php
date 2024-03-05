@@ -18,7 +18,7 @@ class VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameGetResponse implements A
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new verifyWindowsEnrollmentAutoDiscoveryWithDomainNameGetResponse and sets the default values.
+     * Instantiates a new VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameGetResponse and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

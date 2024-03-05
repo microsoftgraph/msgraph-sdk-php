@@ -18,7 +18,7 @@ class CrossTenantAccessPolicyInboundTrust implements AdditionalDataHolder, Backe
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new crossTenantAccessPolicyInboundTrust and sets the default values.
+     * Instantiates a new CrossTenantAccessPolicyInboundTrust and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

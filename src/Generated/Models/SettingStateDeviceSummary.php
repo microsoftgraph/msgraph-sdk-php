@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SettingStateDeviceSummary extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new settingStateDeviceSummary and sets the default values.
+     * Instantiates a new SettingStateDeviceSummary and sets the default values.
     */
     public function __construct() {
         parent::__construct();

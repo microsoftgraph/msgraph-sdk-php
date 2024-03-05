@@ -16,7 +16,7 @@ class InformationProtectionRequestBuilderGetRequestConfiguration extends BaseReq
     public ?InformationProtectionRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new informationProtectionRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new InformationProtectionRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param InformationProtectionRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class InformationProtectionRequestBuilderGetRequestConfiguration extends BaseReq
     }
 
     /**
-     * Instantiates a new informationProtectionRequestBuilderGetQueryParameters.
+     * Instantiates a new InformationProtectionRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return InformationProtectionRequestBuilderGetQueryParameters

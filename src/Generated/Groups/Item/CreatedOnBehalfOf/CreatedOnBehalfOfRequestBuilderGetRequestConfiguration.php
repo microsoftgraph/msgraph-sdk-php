@@ -16,7 +16,7 @@ class CreatedOnBehalfOfRequestBuilderGetRequestConfiguration extends BaseRequest
     public ?CreatedOnBehalfOfRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new createdOnBehalfOfRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new CreatedOnBehalfOfRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param CreatedOnBehalfOfRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class CreatedOnBehalfOfRequestBuilderGetRequestConfiguration extends BaseRequest
     }
 
     /**
-     * Instantiates a new createdOnBehalfOfRequestBuilderGetQueryParameters.
+     * Instantiates a new CreatedOnBehalfOfRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return CreatedOnBehalfOfRequestBuilderGetQueryParameters

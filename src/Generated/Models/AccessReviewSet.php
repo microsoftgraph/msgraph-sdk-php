@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class AccessReviewSet extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new accessReviewSet and sets the default values.
+     * Instantiates a new AccessReviewSet and sets the default values.
     */
     public function __construct() {
         parent::__construct();

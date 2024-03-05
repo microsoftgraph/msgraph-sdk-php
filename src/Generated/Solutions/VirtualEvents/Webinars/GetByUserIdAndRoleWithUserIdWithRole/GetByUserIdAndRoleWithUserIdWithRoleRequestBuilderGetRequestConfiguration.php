@@ -16,7 +16,7 @@ class GetByUserIdAndRoleWithUserIdWithRoleRequestBuilderGetRequestConfiguration 
     public ?GetByUserIdAndRoleWithUserIdWithRoleRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new getByUserIdAndRoleWithUserIdWithRoleRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new GetByUserIdAndRoleWithUserIdWithRoleRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param GetByUserIdAndRoleWithUserIdWithRoleRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,8 +27,9 @@ class GetByUserIdAndRoleWithUserIdWithRoleRequestBuilderGetRequestConfiguration 
     }
 
     /**
-     * Instantiates a new getByUserIdAndRoleWithUserIdWithRoleRequestBuilderGetQueryParameters.
+     * Instantiates a new GetByUserIdAndRoleWithUserIdWithRoleRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
+     * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values
      * @param array<string>|null $orderby Order items by property values
      * @param string|null $search Search items by search phrases
@@ -37,8 +38,8 @@ class GetByUserIdAndRoleWithUserIdWithRoleRequestBuilderGetRequestConfiguration 
      * @param int|null $top Show only the first n items
      * @return GetByUserIdAndRoleWithUserIdWithRoleRequestBuilderGetQueryParameters
     */
-    public static function createQueryParameters(?bool $count = null, ?string $filter = null, ?array $orderby = null, ?string $search = null, ?array $select = null, ?int $skip = null, ?int $top = null): GetByUserIdAndRoleWithUserIdWithRoleRequestBuilderGetQueryParameters {
-        return new GetByUserIdAndRoleWithUserIdWithRoleRequestBuilderGetQueryParameters($count, $filter, $orderby, $search, $select, $skip, $top);
+    public static function createQueryParameters(?bool $count = null, ?array $expand = null, ?string $filter = null, ?array $orderby = null, ?string $search = null, ?array $select = null, ?int $skip = null, ?int $top = null): GetByUserIdAndRoleWithUserIdWithRoleRequestBuilderGetQueryParameters {
+        return new GetByUserIdAndRoleWithUserIdWithRoleRequestBuilderGetQueryParameters($count, $expand, $filter, $orderby, $search, $select, $skip, $top);
     }
 
 }

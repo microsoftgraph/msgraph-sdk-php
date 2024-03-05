@@ -19,7 +19,7 @@ class ReptPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new reptPostRequestBody and sets the default values.
+     * Instantiates a new ReptPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

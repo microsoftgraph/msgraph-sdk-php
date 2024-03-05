@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\RequestOption;
 class Percentile_ExcRequestBuilderPostRequestConfiguration extends BaseRequestConfiguration 
 {
     /**
-     * Instantiates a new percentile_ExcRequestBuilderPostRequestConfiguration and sets the default values.
+     * Instantiates a new Percentile_ExcRequestBuilderPostRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
     */

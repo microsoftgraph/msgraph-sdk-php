@@ -16,7 +16,7 @@ class PrincipalRequestBuilderGetRequestConfiguration extends BaseRequestConfigur
     public ?PrincipalRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new principalRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new PrincipalRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param PrincipalRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class PrincipalRequestBuilderGetRequestConfiguration extends BaseRequestConfigur
     }
 
     /**
-     * Instantiates a new principalRequestBuilderGetQueryParameters.
+     * Instantiates a new PrincipalRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return PrincipalRequestBuilderGetQueryParameters

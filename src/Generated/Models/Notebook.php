@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Notebook extends OnenoteEntityHierarchyModel implements Parsable 
 {
     /**
-     * Instantiates a new notebook and sets the default values.
+     * Instantiates a new Notebook and sets the default values.
     */
     public function __construct() {
         parent::__construct();

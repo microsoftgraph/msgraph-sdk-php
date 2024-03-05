@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\RequestOption;
 class Oct2BinRequestBuilderPostRequestConfiguration extends BaseRequestConfiguration 
 {
     /**
-     * Instantiates a new oct2BinRequestBuilderPostRequestConfiguration and sets the default values.
+     * Instantiates a new Oct2BinRequestBuilderPostRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
     */

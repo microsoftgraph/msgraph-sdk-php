@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class NetworkConnectionEvidence extends AlertEvidence implements Parsable 
 {
     /**
-     * Instantiates a new networkConnectionEvidence and sets the default values.
+     * Instantiates a new NetworkConnectionEvidence and sets the default values.
     */
     public function __construct() {
         parent::__construct();

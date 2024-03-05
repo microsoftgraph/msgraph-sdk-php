@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class ProfileCardProperty extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new profileCardProperty and sets the default values.
+     * Instantiates a new ProfileCardProperty and sets the default values.
     */
     public function __construct() {
         parent::__construct();

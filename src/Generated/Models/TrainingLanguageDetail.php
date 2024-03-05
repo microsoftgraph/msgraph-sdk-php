@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TrainingLanguageDetail extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new trainingLanguageDetail and sets the default values.
+     * Instantiates a new TrainingLanguageDetail and sets the default values.
     */
     public function __construct() {
         parent::__construct();

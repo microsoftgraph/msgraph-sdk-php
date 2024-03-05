@@ -16,7 +16,7 @@ class SoftwareUpdateStatusSummaryRequestBuilderGetRequestConfiguration extends B
     public ?SoftwareUpdateStatusSummaryRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new softwareUpdateStatusSummaryRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new SoftwareUpdateStatusSummaryRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param SoftwareUpdateStatusSummaryRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class SoftwareUpdateStatusSummaryRequestBuilderGetRequestConfiguration extends B
     }
 
     /**
-     * Instantiates a new softwareUpdateStatusSummaryRequestBuilderGetQueryParameters.
+     * Instantiates a new SoftwareUpdateStatusSummaryRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return SoftwareUpdateStatusSummaryRequestBuilderGetQueryParameters

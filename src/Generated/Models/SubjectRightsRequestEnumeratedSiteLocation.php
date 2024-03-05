@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class SubjectRightsRequestEnumeratedSiteLocation extends SubjectRightsRequestSiteLocation implements Parsable 
 {
     /**
-     * Instantiates a new subjectRightsRequestEnumeratedSiteLocation and sets the default values.
+     * Instantiates a new SubjectRightsRequestEnumeratedSiteLocation and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List properties and relationships of the iosMobileAppConfiguration objects.
+ * List properties and relationships of the managedDeviceMobileAppConfiguration objects.
 */
 class MobileAppConfigurationsRequestBuilderGetQueryParameters 
 {
@@ -58,7 +58,7 @@ class MobileAppConfigurationsRequestBuilderGetQueryParameters
     public ?int $top = null;
     
     /**
-     * Instantiates a new mobileAppConfigurationsRequestBuilderGetQueryParameters and sets the default values.
+     * Instantiates a new MobileAppConfigurationsRequestBuilderGetQueryParameters and sets the default values.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

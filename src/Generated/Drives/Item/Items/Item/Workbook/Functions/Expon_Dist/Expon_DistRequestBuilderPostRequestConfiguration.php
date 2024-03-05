@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\RequestOption;
 class Expon_DistRequestBuilderPostRequestConfiguration extends BaseRequestConfiguration 
 {
     /**
-     * Instantiates a new expon_DistRequestBuilderPostRequestConfiguration and sets the default values.
+     * Instantiates a new Expon_DistRequestBuilderPostRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
     */

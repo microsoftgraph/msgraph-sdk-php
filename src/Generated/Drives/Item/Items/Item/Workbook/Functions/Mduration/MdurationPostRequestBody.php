@@ -19,7 +19,7 @@ class MdurationPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new mdurationPostRequestBody and sets the default values.
+     * Instantiates a new MdurationPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

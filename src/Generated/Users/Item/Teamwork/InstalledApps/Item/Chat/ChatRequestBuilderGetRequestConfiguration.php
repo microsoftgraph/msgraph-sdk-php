@@ -16,7 +16,7 @@ class ChatRequestBuilderGetRequestConfiguration extends BaseRequestConfiguration
     public ?ChatRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new chatRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new ChatRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param ChatRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class ChatRequestBuilderGetRequestConfiguration extends BaseRequestConfiguration
     }
 
     /**
-     * Instantiates a new chatRequestBuilderGetQueryParameters.
+     * Instantiates a new ChatRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return ChatRequestBuilderGetQueryParameters

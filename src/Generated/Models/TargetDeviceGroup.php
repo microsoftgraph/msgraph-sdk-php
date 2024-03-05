@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TargetDeviceGroup extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new targetDeviceGroup and sets the default values.
+     * Instantiates a new TargetDeviceGroup and sets the default values.
     */
     public function __construct() {
         parent::__construct();

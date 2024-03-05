@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class MediaPrompt extends Prompt implements Parsable 
 {
     /**
-     * Instantiates a new mediaPrompt and sets the default values.
+     * Instantiates a new MediaPrompt and sets the default values.
     */
     public function __construct() {
         parent::__construct();

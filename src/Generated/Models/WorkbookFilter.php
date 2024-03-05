@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookFilter extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new workbookFilter and sets the default values.
+     * Instantiates a new WorkbookFilter and sets the default values.
     */
     public function __construct() {
         parent::__construct();

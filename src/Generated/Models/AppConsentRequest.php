@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class AppConsentRequest extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new appConsentRequest and sets the default values.
+     * Instantiates a new AppConsentRequest and sets the default values.
     */
     public function __construct() {
         parent::__construct();

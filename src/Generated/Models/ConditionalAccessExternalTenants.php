@@ -18,7 +18,7 @@ class ConditionalAccessExternalTenants implements AdditionalDataHolder, BackedMo
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new conditionalAccessExternalTenants and sets the default values.
+     * Instantiates a new ConditionalAccessExternalTenants and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

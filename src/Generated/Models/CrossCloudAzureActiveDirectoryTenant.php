@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class CrossCloudAzureActiveDirectoryTenant extends IdentitySource implements Parsable 
 {
     /**
-     * Instantiates a new crossCloudAzureActiveDirectoryTenant and sets the default values.
+     * Instantiates a new CrossCloudAzureActiveDirectoryTenant and sets the default values.
     */
     public function __construct() {
         parent::__construct();

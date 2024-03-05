@@ -18,7 +18,7 @@ class MediaContentRatingIreland implements AdditionalDataHolder, BackedModel, Pa
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new mediaContentRatingIreland and sets the default values.
+     * Instantiates a new MediaContentRatingIreland and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

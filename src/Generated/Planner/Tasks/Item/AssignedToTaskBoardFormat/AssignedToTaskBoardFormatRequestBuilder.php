@@ -22,7 +22,7 @@ class AssignedToTaskBoardFormatRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/planner/tasks/{plannerTask%2Did}/assignedToTaskBoardFormat{?%24select,%24expand}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/planner/tasks/{plannerTask%2Did}/assignedToTaskBoardFormat{?%24expand,%24select}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -39,8 +39,7 @@ class AssignedToTaskBoardFormatRequestBuilder extends BaseRequestBuilder
     public function delete(?AssignedToTaskBoardFormatRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
-                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         return $this->requestAdapter->sendNoContentAsync($requestInfo, $errorMappings);
     }
@@ -55,8 +54,7 @@ class AssignedToTaskBoardFormatRequestBuilder extends BaseRequestBuilder
     public function get(?AssignedToTaskBoardFormatRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
-                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         return $this->requestAdapter->sendAsync($requestInfo, [PlannerAssignedToTaskBoardTaskFormat::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
@@ -72,8 +70,7 @@ class AssignedToTaskBoardFormatRequestBuilder extends BaseRequestBuilder
     public function patch(PlannerAssignedToTaskBoardTaskFormat $body, ?AssignedToTaskBoardFormatRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
-                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         return $this->requestAdapter->sendAsync($requestInfo, [PlannerAssignedToTaskBoardTaskFormat::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
@@ -85,7 +82,7 @@ class AssignedToTaskBoardFormatRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?AssignedToTaskBoardFormatRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/planner/tasks/{plannerTask%2Did}/assignedToTaskBoardFormat';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -125,7 +122,7 @@ class AssignedToTaskBoardFormatRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(PlannerAssignedToTaskBoardTaskFormat $body, ?AssignedToTaskBoardFormatRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/planner/tasks/{plannerTask%2Did}/assignedToTaskBoardFormat';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

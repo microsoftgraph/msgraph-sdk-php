@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\RequestOption;
 class CasesRequestBuilderDeleteRequestConfiguration extends BaseRequestConfiguration 
 {
     /**
-     * Instantiates a new casesRequestBuilderDeleteRequestConfiguration and sets the default values.
+     * Instantiates a new CasesRequestBuilderDeleteRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
     */

@@ -16,7 +16,7 @@ class GradingCategoriesRequestBuilderGetRequestConfiguration extends BaseRequest
     public ?GradingCategoriesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new gradingCategoriesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new GradingCategoriesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param GradingCategoriesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class GradingCategoriesRequestBuilderGetRequestConfiguration extends BaseRequest
     }
 
     /**
-     * Instantiates a new gradingCategoriesRequestBuilderGetQueryParameters.
+     * Instantiates a new GradingCategoriesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

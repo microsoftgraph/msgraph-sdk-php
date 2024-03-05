@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class RiskyUserHistoryItem extends RiskyUser implements Parsable 
 {
     /**
-     * Instantiates a new riskyUserHistoryItem and sets the default values.
+     * Instantiates a new RiskyUserHistoryItem and sets the default values.
     */
     public function __construct() {
         parent::__construct();

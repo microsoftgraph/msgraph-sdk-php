@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class AndroidManagedAppProtectionCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new androidManagedAppProtectionCollectionResponse and sets the default values.
+     * Instantiates a new AndroidManagedAppProtectionCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

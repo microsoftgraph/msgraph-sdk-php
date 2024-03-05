@@ -19,7 +19,7 @@ class WorkDayPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new workDayPostRequestBody and sets the default values.
+     * Instantiates a new WorkDayPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

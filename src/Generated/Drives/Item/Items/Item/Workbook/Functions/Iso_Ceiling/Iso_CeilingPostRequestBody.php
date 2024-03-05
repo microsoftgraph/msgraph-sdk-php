@@ -19,7 +19,7 @@ class Iso_CeilingPostRequestBody implements AdditionalDataHolder, BackedModel, P
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new iso_CeilingPostRequestBody and sets the default values.
+     * Instantiates a new Iso_CeilingPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

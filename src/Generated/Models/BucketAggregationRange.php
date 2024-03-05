@@ -18,7 +18,7 @@ class BucketAggregationRange implements AdditionalDataHolder, BackedModel, Parsa
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new bucketAggregationRange and sets the default values.
+     * Instantiates a new BucketAggregationRange and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

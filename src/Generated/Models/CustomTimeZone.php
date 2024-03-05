@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class CustomTimeZone extends TimeZoneBase implements Parsable 
 {
     /**
-     * Instantiates a new customTimeZone and sets the default values.
+     * Instantiates a new CustomTimeZone and sets the default values.
     */
     public function __construct() {
         parent::__construct();

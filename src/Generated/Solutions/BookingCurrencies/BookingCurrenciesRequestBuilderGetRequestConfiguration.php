@@ -16,7 +16,7 @@ class BookingCurrenciesRequestBuilderGetRequestConfiguration extends BaseRequest
     public ?BookingCurrenciesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new bookingCurrenciesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new BookingCurrenciesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param BookingCurrenciesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class BookingCurrenciesRequestBuilderGetRequestConfiguration extends BaseRequest
     }
 
     /**
-     * Instantiates a new bookingCurrenciesRequestBuilderGetQueryParameters.
+     * Instantiates a new BookingCurrenciesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

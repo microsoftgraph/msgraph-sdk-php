@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignmentSched
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The principal that's getting a role assignment through the request. Supports $expand.
+ * The principal that's getting a role assignment through the request. Supports $expand and $select nested in $expand for id only.
 */
 class PrincipalRequestBuilderGetQueryParameters 
 {
@@ -22,7 +22,7 @@ class PrincipalRequestBuilderGetQueryParameters
     public ?array $select = null;
     
     /**
-     * Instantiates a new principalRequestBuilderGetQueryParameters and sets the default values.
+     * Instantiates a new PrincipalRequestBuilderGetQueryParameters and sets the default values.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
     */

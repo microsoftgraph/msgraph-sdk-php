@@ -18,7 +18,7 @@ class ValidatePermissionPostRequestBody implements AdditionalDataHolder, BackedM
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new validatePermissionPostRequestBody and sets the default values.
+     * Instantiates a new ValidatePermissionPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

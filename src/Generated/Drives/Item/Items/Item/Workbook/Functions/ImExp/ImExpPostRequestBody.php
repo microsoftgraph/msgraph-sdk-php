@@ -19,7 +19,7 @@ class ImExpPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new imExpPostRequestBody and sets the default values.
+     * Instantiates a new ImExpPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

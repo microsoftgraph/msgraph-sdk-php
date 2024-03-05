@@ -14,7 +14,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class ComplianceManagementPartner extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new complianceManagementPartner and sets the default values.
+     * Instantiates a new ComplianceManagementPartner and sets the default values.
     */
     public function __construct() {
         parent::__construct();

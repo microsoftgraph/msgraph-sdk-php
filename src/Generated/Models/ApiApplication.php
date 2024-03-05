@@ -19,7 +19,7 @@ class ApiApplication implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new apiApplication and sets the default values.
+     * Instantiates a new ApiApplication and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

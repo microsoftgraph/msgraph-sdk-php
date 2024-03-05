@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ContentSharingSession extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new contentSharingSession and sets the default values.
+     * Instantiates a new ContentSharingSession and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class CustomCalloutExtensionCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new customCalloutExtensionCollectionResponse and sets the default values.
+     * Instantiates a new CustomCalloutExtensionCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

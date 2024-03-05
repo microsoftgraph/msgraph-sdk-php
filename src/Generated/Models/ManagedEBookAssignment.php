@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ManagedEBookAssignment extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new managedEBookAssignment and sets the default values.
+     * Instantiates a new ManagedEBookAssignment and sets the default values.
     */
     public function __construct() {
         parent::__construct();

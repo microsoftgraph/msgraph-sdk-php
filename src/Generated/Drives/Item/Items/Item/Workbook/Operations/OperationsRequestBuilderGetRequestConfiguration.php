@@ -16,7 +16,7 @@ class OperationsRequestBuilderGetRequestConfiguration extends BaseRequestConfigu
     public ?OperationsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new operationsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new OperationsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param OperationsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class OperationsRequestBuilderGetRequestConfiguration extends BaseRequestConfigu
     }
 
     /**
-     * Instantiates a new operationsRequestBuilderGetQueryParameters.
+     * Instantiates a new OperationsRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $orderby Order items by property values
      * @param string|null $search Search items by search phrases

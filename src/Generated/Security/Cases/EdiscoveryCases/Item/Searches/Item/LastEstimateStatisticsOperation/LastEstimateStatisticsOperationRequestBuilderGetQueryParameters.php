@@ -22,7 +22,7 @@ class LastEstimateStatisticsOperationRequestBuilderGetQueryParameters
     public ?array $select = null;
     
     /**
-     * Instantiates a new lastEstimateStatisticsOperationRequestBuilderGetQueryParameters and sets the default values.
+     * Instantiates a new LastEstimateStatisticsOperationRequestBuilderGetQueryParameters and sets the default values.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
     */

@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class CallStartedEventMessageDetail extends EventMessageDetail implements Parsable 
 {
     /**
-     * Instantiates a new callStartedEventMessageDetail and sets the default values.
+     * Instantiates a new CallStartedEventMessageDetail and sets the default values.
     */
     public function __construct() {
         parent::__construct();

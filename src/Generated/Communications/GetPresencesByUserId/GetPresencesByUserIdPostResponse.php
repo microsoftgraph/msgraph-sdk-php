@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class GetPresencesByUserIdPostResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new getPresencesByUserIdPostResponse and sets the default values.
+     * Instantiates a new GetPresencesByUserIdPostResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

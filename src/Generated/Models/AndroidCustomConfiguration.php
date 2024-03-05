@@ -13,7 +13,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class AndroidCustomConfiguration extends DeviceConfiguration implements Parsable 
 {
     /**
-     * Instantiates a new androidCustomConfiguration and sets the default values.
+     * Instantiates a new AndroidCustomConfiguration and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class OnDemandExecutionOnly extends WorkflowExecutionConditions implements Parsable 
 {
     /**
-     * Instantiates a new onDemandExecutionOnly and sets the default values.
+     * Instantiates a new OnDemandExecutionOnly and sets the default values.
     */
     public function __construct() {
         parent::__construct();

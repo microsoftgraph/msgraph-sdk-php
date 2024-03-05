@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Domain extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new domain and sets the default values.
+     * Instantiates a new Domain and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -136,7 +136,7 @@ class Domain extends Entity implements Parsable
     }
 
     /**
-     * Gets the isInitial property value. true if this is the initial domain created by Microsoft Online Services (companyname.onmicrosoft.com). There is only one initial domain per company. Not nullable
+     * Gets the isInitial property value. true if this is the initial domain created by Microsoft Online Services (contoso.com). There is only one initial domain per company. Not nullable
      * @return bool|null
     */
     public function getIsInitial(): ?bool {
@@ -347,7 +347,7 @@ class Domain extends Entity implements Parsable
     }
 
     /**
-     * Sets the isInitial property value. true if this is the initial domain created by Microsoft Online Services (companyname.onmicrosoft.com). There is only one initial domain per company. Not nullable
+     * Sets the isInitial property value. true if this is the initial domain created by Microsoft Online Services (contoso.com). There is only one initial domain per company. Not nullable
      * @param bool|null $value Value to set for the isInitial property.
     */
     public function setIsInitial(?bool $value): void {

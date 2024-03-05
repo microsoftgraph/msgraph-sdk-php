@@ -20,7 +20,7 @@ class ExpirationPattern implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new expirationPattern and sets the default values.
+     * Instantiates a new ExpirationPattern and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

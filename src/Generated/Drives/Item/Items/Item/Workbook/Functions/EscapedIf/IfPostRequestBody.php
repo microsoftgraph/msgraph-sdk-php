@@ -19,7 +19,7 @@ class IfPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new ifPostRequestBody and sets the default values.
+     * Instantiates a new IfPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

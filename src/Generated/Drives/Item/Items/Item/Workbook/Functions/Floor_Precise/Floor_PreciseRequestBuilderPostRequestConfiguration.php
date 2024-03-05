@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\RequestOption;
 class Floor_PreciseRequestBuilderPostRequestConfiguration extends BaseRequestConfiguration 
 {
     /**
-     * Instantiates a new floor_PreciseRequestBuilderPostRequestConfiguration and sets the default values.
+     * Instantiates a new Floor_PreciseRequestBuilderPostRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
     */

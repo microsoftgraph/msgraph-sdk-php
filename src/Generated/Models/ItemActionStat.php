@@ -18,7 +18,7 @@ class ItemActionStat implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new itemActionStat and sets the default values.
+     * Instantiates a new ItemActionStat and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

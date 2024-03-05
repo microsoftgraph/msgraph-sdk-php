@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy implements Parsable 
 {
     /**
-     * Instantiates a new windowsPhone81CompliancePolicy and sets the default values.
+     * Instantiates a new WindowsPhone81CompliancePolicy and sets the default values.
     */
     public function __construct() {
         parent::__construct();

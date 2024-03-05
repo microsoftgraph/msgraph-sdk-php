@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleAss
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * If the request is from an eligible administrator to activate a role, this parameter will show the related eligible assignment for that activation. Otherwise, it is null. Supports $expand.
+ * If the request is from an eligible administrator to activate a role, this parameter shows the related eligible assignment for that activation. Otherwise, it's null. Supports $expand and $select nested in $expand.
 */
 class ActivatedUsingRequestBuilderGetQueryParameters 
 {
@@ -22,7 +22,7 @@ class ActivatedUsingRequestBuilderGetQueryParameters
     public ?array $select = null;
     
     /**
-     * Instantiates a new activatedUsingRequestBuilderGetQueryParameters and sets the default values.
+     * Instantiates a new ActivatedUsingRequestBuilderGetQueryParameters and sets the default values.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
     */

@@ -16,7 +16,7 @@ class ServicePrincipalsWithAppIdRequestBuilderGetRequestConfiguration extends Ba
     public ?ServicePrincipalsWithAppIdRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new servicePrincipalsWithAppIdRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new ServicePrincipalsWithAppIdRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param ServicePrincipalsWithAppIdRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class ServicePrincipalsWithAppIdRequestBuilderGetRequestConfiguration extends Ba
     }
 
     /**
-     * Instantiates a new servicePrincipalsWithAppIdRequestBuilderGetQueryParameters.
+     * Instantiates a new ServicePrincipalsWithAppIdRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return ServicePrincipalsWithAppIdRequestBuilderGetQueryParameters

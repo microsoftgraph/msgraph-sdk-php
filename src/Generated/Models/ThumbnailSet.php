@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ThumbnailSet extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new thumbnailSet and sets the default values.
+     * Instantiates a new ThumbnailSet and sets the default values.
     */
     public function __construct() {
         parent::__construct();

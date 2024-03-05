@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppRegistrations;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List properties and relationships of the androidManagedAppRegistration objects.
+ * List properties and relationships of the managedAppRegistration objects.
 */
 class ManagedAppRegistrationsRequestBuilderGetQueryParameters 
 {
@@ -58,7 +58,7 @@ class ManagedAppRegistrationsRequestBuilderGetQueryParameters
     public ?int $top = null;
     
     /**
-     * Instantiates a new managedAppRegistrationsRequestBuilderGetQueryParameters and sets the default values.
+     * Instantiates a new ManagedAppRegistrationsRequestBuilderGetQueryParameters and sets the default values.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

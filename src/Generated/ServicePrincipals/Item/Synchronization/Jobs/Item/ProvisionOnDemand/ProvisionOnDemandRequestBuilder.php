@@ -31,7 +31,7 @@ class ProvisionOnDemandRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Select a user and provision the account on-demand. The rate limit for this API is 5 requests per 10 seconds. 
+     * Select a user and provision the account on-demand. The rate limit for this API is 5 requests per 10 seconds.
      * @param ProvisionOnDemandPostRequestBody $body The request body
      * @param ProvisionOnDemandRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StringKeyStringValuePair|null>
@@ -41,14 +41,13 @@ class ProvisionOnDemandRequestBuilder extends BaseRequestBuilder
     public function post(ProvisionOnDemandPostRequestBody $body, ?ProvisionOnDemandRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
-                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         return $this->requestAdapter->sendAsync($requestInfo, [StringKeyStringValuePair::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**
-     * Select a user and provision the account on-demand. The rate limit for this API is 5 requests per 10 seconds. 
+     * Select a user and provision the account on-demand. The rate limit for this API is 5 requests per 10 seconds.
      * @param ProvisionOnDemandPostRequestBody $body The request body
      * @param ProvisionOnDemandRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

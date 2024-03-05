@@ -20,6 +20,7 @@ use Microsoft\Graph\Generated\Groups\Item\Sites\Item\GetByPathWithPath\LastModif
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\GetByPathWithPath\Lists\ListsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\GetByPathWithPath\Onenote\OnenoteRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\GetByPathWithPath\Operations\OperationsRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\GetByPathWithPath\Pages\PagesRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\GetByPathWithPath\Permissions\PermissionsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\GetByPathWithPath\Sites\SitesRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\GetByPathWithPath\TermStore\TermStoreRequestBuilder;
@@ -128,6 +129,13 @@ class GetByPathWithPathRequestBuilder extends BaseRequestBuilder
     }
     
     /**
+     * Provides operations to manage the pages property of the microsoft.graph.site entity.
+    */
+    public function pages(): PagesRequestBuilder {
+        return new PagesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to manage the permissions property of the microsoft.graph.site entity.
     */
     public function permissions(): PermissionsRequestBuilder {
@@ -181,8 +189,7 @@ class GetByPathWithPathRequestBuilder extends BaseRequestBuilder
     public function get(?GetByPathWithPathRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
-                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         return $this->requestAdapter->sendAsync($requestInfo, [Site::class, 'createFromDiscriminatorValue'], $errorMappings);
     }

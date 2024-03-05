@@ -19,7 +19,7 @@ class SendMailPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new sendMailPostRequestBody and sets the default values.
+     * Instantiates a new SendMailPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

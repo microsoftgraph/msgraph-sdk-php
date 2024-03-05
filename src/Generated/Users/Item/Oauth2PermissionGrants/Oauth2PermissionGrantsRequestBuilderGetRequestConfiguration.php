@@ -16,7 +16,7 @@ class Oauth2PermissionGrantsRequestBuilderGetRequestConfiguration extends BaseRe
     public ?Oauth2PermissionGrantsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new oauth2PermissionGrantsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new Oauth2PermissionGrantsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param Oauth2PermissionGrantsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class Oauth2PermissionGrantsRequestBuilderGetRequestConfiguration extends BaseRe
     }
 
     /**
-     * Instantiates a new oauth2PermissionGrantsRequestBuilderGetQueryParameters.
+     * Instantiates a new Oauth2PermissionGrantsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

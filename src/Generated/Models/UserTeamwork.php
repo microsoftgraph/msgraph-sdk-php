@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class UserTeamwork extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new userTeamwork and sets the default values.
+     * Instantiates a new UserTeamwork and sets the default values.
     */
     public function __construct() {
         parent::__construct();

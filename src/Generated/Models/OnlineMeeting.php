@@ -12,7 +12,7 @@ use Psr\Http\Message\StreamInterface;
 class OnlineMeeting extends OnlineMeetingBase implements Parsable 
 {
     /**
-     * Instantiates a new onlineMeeting and sets the default values.
+     * Instantiates a new OnlineMeeting and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -65,7 +65,7 @@ class OnlineMeeting extends OnlineMeetingBase implements Parsable
     }
 
     /**
-     * Gets the endDateTime property value. The meeting end time in UTC.
+     * Gets the endDateTime property value. The meeting end time in UTC. Required when you create an online meeting.
      * @return DateTime|null
     */
     public function getEndDateTime(): ?DateTime {
@@ -121,7 +121,7 @@ class OnlineMeeting extends OnlineMeetingBase implements Parsable
     }
 
     /**
-     * Gets the participants property value. The participants associated with the online meeting, including the organizer and the attendees.
+     * Gets the participants property value. The participants associated with the online meeting.  This includes the organizer and the attendees.
      * @return MeetingParticipants|null
     */
     public function getParticipants(): ?MeetingParticipants {
@@ -147,7 +147,7 @@ class OnlineMeeting extends OnlineMeetingBase implements Parsable
     }
 
     /**
-     * Gets the startDateTime property value. The meeting start time in UTC.
+     * Gets the startDateTime property value. The meeting start time in UTC. Required when you create an online meeting.
      * @return DateTime|null
     */
     public function getStartDateTime(): ?DateTime {
@@ -215,7 +215,7 @@ class OnlineMeeting extends OnlineMeetingBase implements Parsable
     }
 
     /**
-     * Sets the endDateTime property value. The meeting end time in UTC.
+     * Sets the endDateTime property value. The meeting end time in UTC. Required when you create an online meeting.
      * @param DateTime|null $value Value to set for the endDateTime property.
     */
     public function setEndDateTime(?DateTime $value): void {
@@ -239,7 +239,7 @@ class OnlineMeeting extends OnlineMeetingBase implements Parsable
     }
 
     /**
-     * Sets the participants property value. The participants associated with the online meeting, including the organizer and the attendees.
+     * Sets the participants property value. The participants associated with the online meeting.  This includes the organizer and the attendees.
      * @param MeetingParticipants|null $value Value to set for the participants property.
     */
     public function setParticipants(?MeetingParticipants $value): void {
@@ -255,7 +255,7 @@ class OnlineMeeting extends OnlineMeetingBase implements Parsable
     }
 
     /**
-     * Sets the startDateTime property value. The meeting start time in UTC.
+     * Sets the startDateTime property value. The meeting start time in UTC. Required when you create an online meeting.
      * @param DateTime|null $value Value to set for the startDateTime property.
     */
     public function setStartDateTime(?DateTime $value): void {

@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ManagedDeviceMobileAppConfigurationAssignment extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new managedDeviceMobileAppConfigurationAssignment and sets the default values.
+     * Instantiates a new ManagedDeviceMobileAppConfigurationAssignment and sets the default values.
     */
     public function __construct() {
         parent::__construct();

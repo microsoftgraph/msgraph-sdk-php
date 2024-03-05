@@ -16,7 +16,7 @@ class MetricDevicesRequestBuilderGetRequestConfiguration extends BaseRequestConf
     public ?MetricDevicesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new metricDevicesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new MetricDevicesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param MetricDevicesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class MetricDevicesRequestBuilderGetRequestConfiguration extends BaseRequestConf
     }
 
     /**
-     * Instantiates a new metricDevicesRequestBuilderGetQueryParameters.
+     * Instantiates a new MetricDevicesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

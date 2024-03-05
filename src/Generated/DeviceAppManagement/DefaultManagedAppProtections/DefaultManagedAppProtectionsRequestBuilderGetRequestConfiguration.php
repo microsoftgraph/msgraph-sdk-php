@@ -16,7 +16,7 @@ class DefaultManagedAppProtectionsRequestBuilderGetRequestConfiguration extends 
     public ?DefaultManagedAppProtectionsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new defaultManagedAppProtectionsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new DefaultManagedAppProtectionsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param DefaultManagedAppProtectionsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class DefaultManagedAppProtectionsRequestBuilderGetRequestConfiguration extends 
     }
 
     /**
-     * Instantiates a new defaultManagedAppProtectionsRequestBuilderGetQueryParameters.
+     * Instantiates a new DefaultManagedAppProtectionsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

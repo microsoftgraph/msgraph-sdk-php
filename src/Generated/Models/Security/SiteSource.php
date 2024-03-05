@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SiteSource extends DataSource implements Parsable 
 {
     /**
-     * Instantiates a new siteSource and sets the default values.
+     * Instantiates a new SiteSource and sets the default values.
     */
     public function __construct() {
         parent::__construct();

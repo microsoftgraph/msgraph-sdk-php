@@ -16,7 +16,7 @@ class MessageRequestBuilderGetRequestConfiguration extends BaseRequestConfigurat
     public ?MessageRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new messageRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new MessageRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param MessageRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class MessageRequestBuilderGetRequestConfiguration extends BaseRequestConfigurat
     }
 
     /**
-     * Instantiates a new messageRequestBuilderGetQueryParameters.
+     * Instantiates a new MessageRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return MessageRequestBuilderGetQueryParameters

@@ -19,7 +19,7 @@ class Norm_DistPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new norm_DistPostRequestBody and sets the default values.
+     * Instantiates a new Norm_DistPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

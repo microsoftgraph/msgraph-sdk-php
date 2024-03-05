@@ -16,7 +16,7 @@ class GraphDeviceRequestBuilderGetRequestConfiguration extends BaseRequestConfig
     public ?GraphDeviceRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new graphDeviceRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new GraphDeviceRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param GraphDeviceRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class GraphDeviceRequestBuilderGetRequestConfiguration extends BaseRequestConfig
     }
 
     /**
-     * Instantiates a new graphDeviceRequestBuilderGetQueryParameters.
+     * Instantiates a new GraphDeviceRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return GraphDeviceRequestBuilderGetQueryParameters

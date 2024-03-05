@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ManagedIOSStoreApp extends ManagedApp implements Parsable 
 {
     /**
-     * Instantiates a new managedIOSStoreApp and sets the default values.
+     * Instantiates a new ManagedIOSStoreApp and sets the default values.
     */
     public function __construct() {
         parent::__construct();

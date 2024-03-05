@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\RequestOption;
 class Quartile_ExcRequestBuilderPostRequestConfiguration extends BaseRequestConfiguration 
 {
     /**
-     * Instantiates a new quartile_ExcRequestBuilderPostRequestConfiguration and sets the default values.
+     * Instantiates a new Quartile_ExcRequestBuilderPostRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
     */

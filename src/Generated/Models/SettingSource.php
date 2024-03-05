@@ -18,7 +18,7 @@ class SettingSource implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new settingSource and sets the default values.
+     * Instantiates a new SettingSource and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class HostPairCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new hostPairCollectionResponse and sets the default values.
+     * Instantiates a new HostPairCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -16,7 +16,7 @@ class CustomExtensionRequestBuilderGetRequestConfiguration extends BaseRequestCo
     public ?CustomExtensionRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new customExtensionRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new CustomExtensionRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param CustomExtensionRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class CustomExtensionRequestBuilderGetRequestConfiguration extends BaseRequestCo
     }
 
     /**
-     * Instantiates a new customExtensionRequestBuilderGetQueryParameters.
+     * Instantiates a new CustomExtensionRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return CustomExtensionRequestBuilderGetQueryParameters

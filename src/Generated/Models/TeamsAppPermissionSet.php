@@ -19,7 +19,7 @@ class TeamsAppPermissionSet implements AdditionalDataHolder, BackedModel, Parsab
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new teamsAppPermissionSet and sets the default values.
+     * Instantiates a new TeamsAppPermissionSet and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

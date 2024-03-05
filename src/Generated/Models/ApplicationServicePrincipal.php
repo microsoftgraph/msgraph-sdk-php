@@ -18,7 +18,7 @@ class ApplicationServicePrincipal implements AdditionalDataHolder, BackedModel, 
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new applicationServicePrincipal and sets the default values.
+     * Instantiates a new ApplicationServicePrincipal and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

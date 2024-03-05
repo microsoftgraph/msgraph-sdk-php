@@ -20,7 +20,7 @@ class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new alertEvidence and sets the default values.
+     * Instantiates a new AlertEvidence and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
@@ -47,7 +47,9 @@ class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.security.containerImageEvidence': return new ContainerImageEvidence();
                 case '#microsoft.graph.security.containerRegistryEvidence': return new ContainerRegistryEvidence();
                 case '#microsoft.graph.security.deviceEvidence': return new DeviceEvidence();
+                case '#microsoft.graph.security.dnsEvidence': return new DnsEvidence();
                 case '#microsoft.graph.security.fileEvidence': return new FileEvidence();
+                case '#microsoft.graph.security.fileHashEvidence': return new FileHashEvidence();
                 case '#microsoft.graph.security.gitHubOrganizationEvidence': return new GitHubOrganizationEvidence();
                 case '#microsoft.graph.security.gitHubRepoEvidence': return new GitHubRepoEvidence();
                 case '#microsoft.graph.security.gitHubUserEvidence': return new GitHubUserEvidence();

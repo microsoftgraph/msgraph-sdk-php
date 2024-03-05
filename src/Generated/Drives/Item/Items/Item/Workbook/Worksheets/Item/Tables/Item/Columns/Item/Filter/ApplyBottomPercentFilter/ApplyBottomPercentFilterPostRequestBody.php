@@ -18,7 +18,7 @@ class ApplyBottomPercentFilterPostRequestBody implements AdditionalDataHolder, B
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new applyBottomPercentFilterPostRequestBody and sets the default values.
+     * Instantiates a new ApplyBottomPercentFilterPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

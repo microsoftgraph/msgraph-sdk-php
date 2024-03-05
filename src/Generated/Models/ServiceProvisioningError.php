@@ -19,7 +19,7 @@ class ServiceProvisioningError implements AdditionalDataHolder, BackedModel, Par
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new serviceProvisioningError and sets the default values.
+     * Instantiates a new ServiceProvisioningError and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

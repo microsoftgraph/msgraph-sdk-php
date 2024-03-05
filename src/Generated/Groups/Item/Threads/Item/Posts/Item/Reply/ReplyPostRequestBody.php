@@ -19,7 +19,7 @@ class ReplyPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new replyPostRequestBody and sets the default values.
+     * Instantiates a new ReplyPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

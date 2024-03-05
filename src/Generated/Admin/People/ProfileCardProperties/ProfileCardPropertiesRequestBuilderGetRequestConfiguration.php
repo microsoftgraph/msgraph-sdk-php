@@ -16,7 +16,7 @@ class ProfileCardPropertiesRequestBuilderGetRequestConfiguration extends BaseReq
     public ?ProfileCardPropertiesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new profileCardPropertiesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new ProfileCardPropertiesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param ProfileCardPropertiesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class ProfileCardPropertiesRequestBuilderGetRequestConfiguration extends BaseReq
     }
 
     /**
-     * Instantiates a new profileCardPropertiesRequestBuilderGetQueryParameters.
+     * Instantiates a new ProfileCardPropertiesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

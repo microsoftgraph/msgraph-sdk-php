@@ -20,7 +20,7 @@ class KeyCredentialConfiguration implements AdditionalDataHolder, BackedModel, P
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new keyCredentialConfiguration and sets the default values.
+     * Instantiates a new KeyCredentialConfiguration and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

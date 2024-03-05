@@ -20,7 +20,7 @@ class ForwardPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new forwardPostRequestBody and sets the default values.
+     * Instantiates a new ForwardPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WhoisHistoryRecord extends WhoisBaseRecord implements Parsable 
 {
     /**
-     * Instantiates a new whoisHistoryRecord and sets the default values.
+     * Instantiates a new WhoisHistoryRecord and sets the default values.
     */
     public function __construct() {
         parent::__construct();

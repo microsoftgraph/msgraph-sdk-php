@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ChatMessageFromIdentitySet extends IdentitySet implements Parsable 
 {
     /**
-     * Instantiates a new chatMessageFromIdentitySet and sets the default values.
+     * Instantiates a new ChatMessageFromIdentitySet and sets the default values.
     */
     public function __construct() {
         parent::__construct();

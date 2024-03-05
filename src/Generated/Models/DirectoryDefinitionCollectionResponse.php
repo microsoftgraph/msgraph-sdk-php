@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class DirectoryDefinitionCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new directoryDefinitionCollectionResponse and sets the default values.
+     * Instantiates a new DirectoryDefinitionCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

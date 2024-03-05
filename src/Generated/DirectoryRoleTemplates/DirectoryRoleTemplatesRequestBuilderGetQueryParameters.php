@@ -52,7 +52,7 @@ class DirectoryRoleTemplatesRequestBuilderGetQueryParameters
     public ?int $skip = null;
     
     /**
-     * Instantiates a new directoryRoleTemplatesRequestBuilderGetQueryParameters and sets the default values.
+     * Instantiates a new DirectoryRoleTemplatesRequestBuilderGetQueryParameters and sets the default values.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

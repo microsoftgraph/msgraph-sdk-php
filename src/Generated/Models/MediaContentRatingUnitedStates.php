@@ -18,7 +18,7 @@ class MediaContentRatingUnitedStates implements AdditionalDataHolder, BackedMode
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new mediaContentRatingUnitedStates and sets the default values.
+     * Instantiates a new MediaContentRatingUnitedStates and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

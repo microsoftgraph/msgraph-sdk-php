@@ -16,7 +16,7 @@ class TelecomExpenseManagementPartnersRequestBuilderGetRequestConfiguration exte
     public ?TelecomExpenseManagementPartnersRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new telecomExpenseManagementPartnersRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new TelecomExpenseManagementPartnersRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param TelecomExpenseManagementPartnersRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class TelecomExpenseManagementPartnersRequestBuilderGetRequestConfiguration exte
     }
 
     /**
-     * Instantiates a new telecomExpenseManagementPartnersRequestBuilderGetQueryParameters.
+     * Instantiates a new TelecomExpenseManagementPartnersRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

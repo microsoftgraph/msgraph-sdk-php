@@ -22,7 +22,7 @@ class FileEncryptionInfo implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new fileEncryptionInfo and sets the default values.
+     * Instantiates a new FileEncryptionInfo and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

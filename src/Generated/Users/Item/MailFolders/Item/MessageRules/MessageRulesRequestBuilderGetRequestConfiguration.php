@@ -16,7 +16,7 @@ class MessageRulesRequestBuilderGetRequestConfiguration extends BaseRequestConfi
     public ?MessageRulesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new messageRulesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new MessageRulesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param MessageRulesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class MessageRulesRequestBuilderGetRequestConfiguration extends BaseRequestConfi
     }
 
     /**
-     * Instantiates a new messageRulesRequestBuilderGetQueryParameters.
+     * Instantiates a new MessageRulesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param string|null $filter Filter items by property values
      * @param array<string>|null $orderby Order items by property values

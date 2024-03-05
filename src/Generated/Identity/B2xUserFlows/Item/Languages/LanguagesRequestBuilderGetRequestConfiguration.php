@@ -16,7 +16,7 @@ class LanguagesRequestBuilderGetRequestConfiguration extends BaseRequestConfigur
     public ?LanguagesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new languagesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new LanguagesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param LanguagesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class LanguagesRequestBuilderGetRequestConfiguration extends BaseRequestConfigur
     }
 
     /**
-     * Instantiates a new languagesRequestBuilderGetQueryParameters.
+     * Instantiates a new LanguagesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

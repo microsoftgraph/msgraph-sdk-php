@@ -16,7 +16,7 @@ class OnPremisesSynchronizationRequestBuilderGetRequestConfiguration extends Bas
     public ?OnPremisesSynchronizationRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new onPremisesSynchronizationRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new OnPremisesSynchronizationRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param OnPremisesSynchronizationRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class OnPremisesSynchronizationRequestBuilderGetRequestConfiguration extends Bas
     }
 
     /**
-     * Instantiates a new onPremisesSynchronizationRequestBuilderGetQueryParameters.
+     * Instantiates a new OnPremisesSynchronizationRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

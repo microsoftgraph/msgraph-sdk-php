@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class StartHoldMusicOperation extends CommsOperation implements Parsable 
 {
     /**
-     * Instantiates a new startHoldMusicOperation and sets the default values.
+     * Instantiates a new StartHoldMusicOperation and sets the default values.
     */
     public function __construct() {
         parent::__construct();

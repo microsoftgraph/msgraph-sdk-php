@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\PrivilegedAccess\Group\As
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * References the group that is the scope of the membership or ownership assignment through PIM for groups. Supports $expand.
+ * References the group that is the scope of the membership or ownership assignment through PIM for groups. Supports $expand and $select nested in $expand for select properties like id, displayName, and mail.
 */
 class GroupRequestBuilderGetQueryParameters 
 {
@@ -22,7 +22,7 @@ class GroupRequestBuilderGetQueryParameters
     public ?array $select = null;
     
     /**
-     * Instantiates a new groupRequestBuilderGetQueryParameters and sets the default values.
+     * Instantiates a new GroupRequestBuilderGetQueryParameters and sets the default values.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
     */

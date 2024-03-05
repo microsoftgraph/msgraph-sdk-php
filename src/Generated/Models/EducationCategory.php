@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EducationCategory extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new educationCategory and sets the default values.
+     * Instantiates a new EducationCategory and sets the default values.
     */
     public function __construct() {
         parent::__construct();

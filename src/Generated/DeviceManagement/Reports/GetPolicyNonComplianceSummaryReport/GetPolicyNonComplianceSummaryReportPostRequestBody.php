@@ -19,7 +19,7 @@ class GetPolicyNonComplianceSummaryReportPostRequestBody implements AdditionalDa
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new getPolicyNonComplianceSummaryReportPostRequestBody and sets the default values.
+     * Instantiates a new GetPolicyNonComplianceSummaryReportPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

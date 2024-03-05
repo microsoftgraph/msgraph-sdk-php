@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookFormatProtection extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new workbookFormatProtection and sets the default values.
+     * Instantiates a new WorkbookFormatProtection and sets the default values.
     */
     public function __construct() {
         parent::__construct();

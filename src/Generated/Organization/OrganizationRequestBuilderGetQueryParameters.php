@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Organization;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List properties and relationships of the organization objects.
+ * Retrieve a list of organization objects. There's only one organization object in the collection.
 */
 class OrganizationRequestBuilderGetQueryParameters 
 {
@@ -58,7 +58,7 @@ class OrganizationRequestBuilderGetQueryParameters
     public ?int $top = null;
     
     /**
-     * Instantiates a new organizationRequestBuilderGetQueryParameters and sets the default values.
+     * Instantiates a new OrganizationRequestBuilderGetQueryParameters and sets the default values.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

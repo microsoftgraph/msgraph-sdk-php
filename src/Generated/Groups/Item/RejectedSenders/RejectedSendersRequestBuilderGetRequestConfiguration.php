@@ -16,7 +16,7 @@ class RejectedSendersRequestBuilderGetRequestConfiguration extends BaseRequestCo
     public ?RejectedSendersRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new rejectedSendersRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new RejectedSendersRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param RejectedSendersRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class RejectedSendersRequestBuilderGetRequestConfiguration extends BaseRequestCo
     }
 
     /**
-     * Instantiates a new rejectedSendersRequestBuilderGetQueryParameters.
+     * Instantiates a new RejectedSendersRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param string|null $filter Filter items by property values
      * @param array<string>|null $orderby Order items by property values

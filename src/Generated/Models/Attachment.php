@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Attachment extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new attachment and sets the default values.
+     * Instantiates a new Attachment and sets the default values.
     */
     public function __construct() {
         parent::__construct();

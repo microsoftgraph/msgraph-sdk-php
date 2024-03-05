@@ -16,7 +16,7 @@ class WindowsInformationProtectionPoliciesRequestBuilderGetRequestConfiguration 
     public ?WindowsInformationProtectionPoliciesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new windowsInformationProtectionPoliciesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new WindowsInformationProtectionPoliciesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param WindowsInformationProtectionPoliciesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class WindowsInformationProtectionPoliciesRequestBuilderGetRequestConfiguration 
     }
 
     /**
-     * Instantiates a new windowsInformationProtectionPoliciesRequestBuilderGetQueryParameters.
+     * Instantiates a new WindowsInformationProtectionPoliciesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

@@ -19,7 +19,7 @@ class EducationStudent implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new educationStudent and sets the default values.
+     * Instantiates a new EducationStudent and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

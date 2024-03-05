@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class PlannerAssignedToTaskBoardTaskFormat extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new plannerAssignedToTaskBoardTaskFormat and sets the default values.
+     * Instantiates a new PlannerAssignedToTaskBoardTaskFormat and sets the default values.
     */
     public function __construct() {
         parent::__construct();

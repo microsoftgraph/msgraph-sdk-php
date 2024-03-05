@@ -19,7 +19,7 @@ class MaxAPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new maxAPostRequestBody and sets the default values.
+     * Instantiates a new MaxAPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

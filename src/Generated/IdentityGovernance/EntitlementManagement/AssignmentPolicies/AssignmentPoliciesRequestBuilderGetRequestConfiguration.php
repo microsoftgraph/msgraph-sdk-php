@@ -16,7 +16,7 @@ class AssignmentPoliciesRequestBuilderGetRequestConfiguration extends BaseReques
     public ?AssignmentPoliciesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new assignmentPoliciesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new AssignmentPoliciesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param AssignmentPoliciesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class AssignmentPoliciesRequestBuilderGetRequestConfiguration extends BaseReques
     }
 
     /**
-     * Instantiates a new assignmentPoliciesRequestBuilderGetQueryParameters.
+     * Instantiates a new AssignmentPoliciesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

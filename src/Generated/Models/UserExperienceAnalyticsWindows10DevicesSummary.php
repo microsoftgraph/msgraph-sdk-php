@@ -21,7 +21,7 @@ class UserExperienceAnalyticsWindows10DevicesSummary implements AdditionalDataHo
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new userExperienceAnalyticsWindows10DevicesSummary and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsWindows10DevicesSummary and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

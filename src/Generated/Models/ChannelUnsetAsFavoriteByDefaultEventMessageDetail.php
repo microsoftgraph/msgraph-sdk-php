@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ChannelUnsetAsFavoriteByDefaultEventMessageDetail extends EventMessageDetail implements Parsable 
 {
     /**
-     * Instantiates a new channelUnsetAsFavoriteByDefaultEventMessageDetail and sets the default values.
+     * Instantiates a new ChannelUnsetAsFavoriteByDefaultEventMessageDetail and sets the default values.
     */
     public function __construct() {
         parent::__construct();

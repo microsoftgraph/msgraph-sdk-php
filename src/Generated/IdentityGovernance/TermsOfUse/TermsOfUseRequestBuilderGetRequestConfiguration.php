@@ -16,7 +16,7 @@ class TermsOfUseRequestBuilderGetRequestConfiguration extends BaseRequestConfigu
     public ?TermsOfUseRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new termsOfUseRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new TermsOfUseRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param TermsOfUseRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class TermsOfUseRequestBuilderGetRequestConfiguration extends BaseRequestConfigu
     }
 
     /**
-     * Instantiates a new termsOfUseRequestBuilderGetQueryParameters.
+     * Instantiates a new TermsOfUseRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return TermsOfUseRequestBuilderGetQueryParameters

@@ -40,8 +40,7 @@ class TimeOffRequestItemRequestBuilder extends BaseRequestBuilder
     public function delete(?TimeOffRequestItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
-                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         return $this->requestAdapter->sendNoContentAsync($requestInfo, $errorMappings);
     }
@@ -56,8 +55,7 @@ class TimeOffRequestItemRequestBuilder extends BaseRequestBuilder
     public function get(?TimeOffRequestItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
-                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         return $this->requestAdapter->sendAsync($requestInfo, [TimeOffRequest::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
@@ -72,8 +70,7 @@ class TimeOffRequestItemRequestBuilder extends BaseRequestBuilder
     public function patch(TimeOffRequest $body, ?TimeOffRequestItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
-                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         return $this->requestAdapter->sendAsync($requestInfo, [TimeOffRequest::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
@@ -85,7 +82,7 @@ class TimeOffRequestItemRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?TimeOffRequestItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/groups/{group%2Did}/team/schedule/timeOffRequests/{timeOffRequest%2Did}';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -125,7 +122,7 @@ class TimeOffRequestItemRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(TimeOffRequest $body, ?TimeOffRequestItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/groups/{group%2Did}/team/schedule/timeOffRequests/{timeOffRequest%2Did}';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

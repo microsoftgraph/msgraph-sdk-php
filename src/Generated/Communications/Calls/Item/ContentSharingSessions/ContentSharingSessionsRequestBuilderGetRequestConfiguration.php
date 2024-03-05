@@ -16,7 +16,7 @@ class ContentSharingSessionsRequestBuilderGetRequestConfiguration extends BaseRe
     public ?ContentSharingSessionsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new contentSharingSessionsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new ContentSharingSessionsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param ContentSharingSessionsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class ContentSharingSessionsRequestBuilderGetRequestConfiguration extends BaseRe
     }
 
     /**
-     * Instantiates a new contentSharingSessionsRequestBuilderGetQueryParameters.
+     * Instantiates a new ContentSharingSessionsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

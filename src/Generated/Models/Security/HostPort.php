@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class HostPort extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new hostPort and sets the default values.
+     * Instantiates a new HostPort and sets the default values.
     */
     public function __construct() {
         parent::__construct();

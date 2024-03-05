@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSchedule implements Parsable 
 {
     /**
-     * Instantiates a new privilegedAccessGroupAssignmentSchedule and sets the default values.
+     * Instantiates a new PrivilegedAccessGroupAssignmentSchedule and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -26,7 +26,7 @@ class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSchedule i
     }
 
     /**
-     * Gets the accessId property value. The identifier of the membership or ownership assignment to the group that is governed by PIM. Required. The possible values are: owner, member, unknownFutureValue. Supports $filter (eq).
+     * Gets the accessId property value. The identifier of the membership or ownership assignment to the group that is governed through PIM. Required. The possible values are: owner, member, unknownFutureValue. Supports $filter (eq).
      * @return PrivilegedAccessGroupRelationships|null
     */
     public function getAccessId(): ?PrivilegedAccessGroupRelationships {
@@ -38,7 +38,7 @@ class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSchedule i
     }
 
     /**
-     * Gets the activatedUsing property value. When the request activates an ownership or membership assignment in PIM for groups, this object represents the eligibility relationship. Otherwise, it is null. Supports $expand.
+     * Gets the activatedUsing property value. When the request activates an ownership or membership assignment in PIM for groups, this object represents the eligibility relationship. Otherwise, it's null. Supports $expand.
      * @return PrivilegedAccessGroupEligibilitySchedule|null
     */
     public function getActivatedUsing(): ?PrivilegedAccessGroupEligibilitySchedule {
@@ -80,7 +80,7 @@ class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSchedule i
     }
 
     /**
-     * Gets the group property value. References the group that is the scope of the membership or ownership assignment through PIM for groups. Supports $expand.
+     * Gets the group property value. References the group that is the scope of the membership or ownership assignment through PIM for groups. Supports $expand and $select nested in $expand for select properties like id, displayName, and mail.
      * @return Group|null
     */
     public function getGroup(): ?Group {
@@ -116,7 +116,7 @@ class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSchedule i
     }
 
     /**
-     * Gets the principal property value. References the principal that's in the scope of this membership or ownership assignment request to the group that's governed by PIM. Supports $expand.
+     * Gets the principal property value. References the principal that's in the scope of this membership or ownership assignment request to the group that's governed through PIM. Supports $expand and $select nested in $expand for id only.
      * @return DirectoryObject|null
     */
     public function getPrincipal(): ?DirectoryObject {
@@ -156,7 +156,7 @@ class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSchedule i
     }
 
     /**
-     * Sets the accessId property value. The identifier of the membership or ownership assignment to the group that is governed by PIM. Required. The possible values are: owner, member, unknownFutureValue. Supports $filter (eq).
+     * Sets the accessId property value. The identifier of the membership or ownership assignment to the group that is governed through PIM. Required. The possible values are: owner, member, unknownFutureValue. Supports $filter (eq).
      * @param PrivilegedAccessGroupRelationships|null $value Value to set for the accessId property.
     */
     public function setAccessId(?PrivilegedAccessGroupRelationships $value): void {
@@ -164,7 +164,7 @@ class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSchedule i
     }
 
     /**
-     * Sets the activatedUsing property value. When the request activates an ownership or membership assignment in PIM for groups, this object represents the eligibility relationship. Otherwise, it is null. Supports $expand.
+     * Sets the activatedUsing property value. When the request activates an ownership or membership assignment in PIM for groups, this object represents the eligibility relationship. Otherwise, it's null. Supports $expand.
      * @param PrivilegedAccessGroupEligibilitySchedule|null $value Value to set for the activatedUsing property.
     */
     public function setActivatedUsing(?PrivilegedAccessGroupEligibilitySchedule $value): void {
@@ -180,7 +180,7 @@ class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSchedule i
     }
 
     /**
-     * Sets the group property value. References the group that is the scope of the membership or ownership assignment through PIM for groups. Supports $expand.
+     * Sets the group property value. References the group that is the scope of the membership or ownership assignment through PIM for groups. Supports $expand and $select nested in $expand for select properties like id, displayName, and mail.
      * @param Group|null $value Value to set for the group property.
     */
     public function setGroup(?Group $value): void {
@@ -204,7 +204,7 @@ class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSchedule i
     }
 
     /**
-     * Sets the principal property value. References the principal that's in the scope of this membership or ownership assignment request to the group that's governed by PIM. Supports $expand.
+     * Sets the principal property value. References the principal that's in the scope of this membership or ownership assignment request to the group that's governed through PIM. Supports $expand and $select nested in $expand for id only.
      * @param DirectoryObject|null $value Value to set for the principal property.
     */
     public function setPrincipal(?DirectoryObject $value): void {

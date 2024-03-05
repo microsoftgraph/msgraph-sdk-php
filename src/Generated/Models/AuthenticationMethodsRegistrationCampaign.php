@@ -19,7 +19,7 @@ class AuthenticationMethodsRegistrationCampaign implements AdditionalDataHolder,
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new authenticationMethodsRegistrationCampaign and sets the default values.
+     * Instantiates a new AuthenticationMethodsRegistrationCampaign and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

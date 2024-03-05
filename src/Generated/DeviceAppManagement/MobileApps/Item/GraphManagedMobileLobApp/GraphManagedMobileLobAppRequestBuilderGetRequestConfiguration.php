@@ -16,7 +16,7 @@ class GraphManagedMobileLobAppRequestBuilderGetRequestConfiguration extends Base
     public ?GraphManagedMobileLobAppRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new graphManagedMobileLobAppRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new GraphManagedMobileLobAppRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param GraphManagedMobileLobAppRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class GraphManagedMobileLobAppRequestBuilderGetRequestConfiguration extends Base
     }
 
     /**
-     * Instantiates a new graphManagedMobileLobAppRequestBuilderGetQueryParameters.
+     * Instantiates a new GraphManagedMobileLobAppRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return GraphManagedMobileLobAppRequestBuilderGetQueryParameters

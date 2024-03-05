@@ -19,7 +19,7 @@ class RomanPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new romanPostRequestBody and sets the default values.
+     * Instantiates a new RomanPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

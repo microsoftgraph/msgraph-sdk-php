@@ -10,7 +10,7 @@ use Psr\Http\Message\StreamInterface;
 class TeamworkHostedContent extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new teamworkHostedContent and sets the default values.
+     * Instantiates a new TeamworkHostedContent and sets the default values.
     */
     public function __construct() {
         parent::__construct();

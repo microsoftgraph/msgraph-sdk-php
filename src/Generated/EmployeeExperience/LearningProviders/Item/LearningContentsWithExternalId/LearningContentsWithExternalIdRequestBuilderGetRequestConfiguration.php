@@ -16,7 +16,7 @@ class LearningContentsWithExternalIdRequestBuilderGetRequestConfiguration extend
     public ?LearningContentsWithExternalIdRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new learningContentsWithExternalIdRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new LearningContentsWithExternalIdRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param LearningContentsWithExternalIdRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class LearningContentsWithExternalIdRequestBuilderGetRequestConfiguration extend
     }
 
     /**
-     * Instantiates a new learningContentsWithExternalIdRequestBuilderGetQueryParameters.
+     * Instantiates a new LearningContentsWithExternalIdRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return LearningContentsWithExternalIdRequestBuilderGetQueryParameters

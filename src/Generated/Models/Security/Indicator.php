@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Indicator extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new indicator and sets the default values.
+     * Instantiates a new Indicator and sets the default values.
     */
     public function __construct() {
         parent::__construct();

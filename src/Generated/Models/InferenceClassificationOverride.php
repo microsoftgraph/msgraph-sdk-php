@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class InferenceClassificationOverride extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new inferenceClassificationOverride and sets the default values.
+     * Instantiates a new InferenceClassificationOverride and sets the default values.
     */
     public function __construct() {
         parent::__construct();

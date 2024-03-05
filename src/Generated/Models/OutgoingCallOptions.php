@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class OutgoingCallOptions extends CallOptions implements Parsable 
 {
     /**
-     * Instantiates a new outgoingCallOptions and sets the default values.
+     * Instantiates a new OutgoingCallOptions and sets the default values.
     */
     public function __construct() {
         parent::__construct();

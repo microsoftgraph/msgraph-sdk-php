@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ItemIdResolver extends UrlToItemResolverBase implements Parsable 
 {
     /**
-     * Instantiates a new itemIdResolver and sets the default values.
+     * Instantiates a new ItemIdResolver and sets the default values.
     */
     public function __construct() {
         parent::__construct();

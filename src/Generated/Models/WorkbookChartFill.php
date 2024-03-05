@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookChartFill extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new workbookChartFill and sets the default values.
+     * Instantiates a new WorkbookChartFill and sets the default values.
     */
     public function __construct() {
         parent::__construct();

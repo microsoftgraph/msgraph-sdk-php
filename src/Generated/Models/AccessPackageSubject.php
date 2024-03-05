@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AccessPackageSubject extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new accessPackageSubject and sets the default values.
+     * Instantiates a new AccessPackageSubject and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Team extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new team and sets the default values.
+     * Instantiates a new Team and sets the default values.
     */
     public function __construct() {
         parent::__construct();

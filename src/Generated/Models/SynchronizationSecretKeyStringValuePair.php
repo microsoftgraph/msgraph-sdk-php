@@ -18,7 +18,7 @@ class SynchronizationSecretKeyStringValuePair implements AdditionalDataHolder, B
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new synchronizationSecretKeyStringValuePair and sets the default values.
+     * Instantiates a new SynchronizationSecretKeyStringValuePair and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

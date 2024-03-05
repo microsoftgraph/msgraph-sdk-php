@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class CheckGrantedPermissionsForAppPostResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new checkGrantedPermissionsForAppPostResponse and sets the default values.
+     * Instantiates a new CheckGrantedPermissionsForAppPostResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

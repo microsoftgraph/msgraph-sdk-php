@@ -16,7 +16,7 @@ class UserExperienceAnalyticsOverviewRequestBuilderGetRequestConfiguration exten
     public ?UserExperienceAnalyticsOverviewRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new userExperienceAnalyticsOverviewRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsOverviewRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param UserExperienceAnalyticsOverviewRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class UserExperienceAnalyticsOverviewRequestBuilderGetRequestConfiguration exten
     }
 
     /**
-     * Instantiates a new userExperienceAnalyticsOverviewRequestBuilderGetQueryParameters.
+     * Instantiates a new UserExperienceAnalyticsOverviewRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return UserExperienceAnalyticsOverviewRequestBuilderGetQueryParameters

@@ -23,7 +23,7 @@ class DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincip
     public ?string $userPrincipalName = null;
     
     /**
-     * Instantiates a new doesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilderGetQueryParameters and sets the default values.
+     * Instantiates a new DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilderGetQueryParameters and sets the default values.
      * @param string|null $tenantId Usage: tenantId='@tenantId'
      * @param string|null $userId Usage: userId='@userId'
      * @param string|null $userPrincipalName Usage: userPrincipalName='@userPrincipalName'

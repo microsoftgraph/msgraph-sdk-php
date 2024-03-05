@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ActivityHistoryItem extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new activityHistoryItem and sets the default values.
+     * Instantiates a new ActivityHistoryItem and sets the default values.
     */
     public function __construct() {
         parent::__construct();

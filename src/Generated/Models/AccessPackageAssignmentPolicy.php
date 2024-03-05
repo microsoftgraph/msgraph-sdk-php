@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class AccessPackageAssignmentPolicy extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new accessPackageAssignmentPolicy and sets the default values.
+     * Instantiates a new AccessPackageAssignmentPolicy and sets the default values.
     */
     public function __construct() {
         parent::__construct();

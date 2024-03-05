@@ -16,7 +16,7 @@ class GraphWin32LobAppRequestBuilderGetRequestConfiguration extends BaseRequestC
     public ?GraphWin32LobAppRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new graphWin32LobAppRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new GraphWin32LobAppRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param GraphWin32LobAppRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class GraphWin32LobAppRequestBuilderGetRequestConfiguration extends BaseRequestC
     }
 
     /**
-     * Instantiates a new graphWin32LobAppRequestBuilderGetQueryParameters.
+     * Instantiates a new GraphWin32LobAppRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values
