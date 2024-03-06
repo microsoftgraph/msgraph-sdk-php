@@ -23,7 +23,7 @@ class DirectoryRolesWithRoleTemplateIdRequestBuilder extends BaseRequestBuilder
      * @param string|null $roleTemplateId Alternate key of directoryRole
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter, ?string $roleTemplateId = null) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/directoryRoles(roleTemplateId=\'{roleTemplateId}\'){?%24select,%24expand}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/directoryRoles(roleTemplateId=\'{roleTemplateId}\'){?%24expand,%24select}');
         if (is_array($pathParametersOrRawUrl)) {
             $urlTplParams = $pathParametersOrRawUrl;
             $urlTplParams['roleTemplateId'] = $roleTemplateId;
@@ -42,8 +42,7 @@ class DirectoryRolesWithRoleTemplateIdRequestBuilder extends BaseRequestBuilder
     public function delete(?DirectoryRolesWithRoleTemplateIdRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
-                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         return $this->requestAdapter->sendNoContentAsync($requestInfo, $errorMappings);
     }
@@ -58,8 +57,7 @@ class DirectoryRolesWithRoleTemplateIdRequestBuilder extends BaseRequestBuilder
     public function get(?DirectoryRolesWithRoleTemplateIdRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
-                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         return $this->requestAdapter->sendAsync($requestInfo, [DirectoryRole::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
@@ -74,8 +72,7 @@ class DirectoryRolesWithRoleTemplateIdRequestBuilder extends BaseRequestBuilder
     public function patch(DirectoryRole $body, ?DirectoryRolesWithRoleTemplateIdRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
-                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         return $this->requestAdapter->sendAsync($requestInfo, [DirectoryRole::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
@@ -87,7 +84,7 @@ class DirectoryRolesWithRoleTemplateIdRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?DirectoryRolesWithRoleTemplateIdRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/directoryRoles(roleTemplateId=\'{roleTemplateId}\')';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -127,7 +124,7 @@ class DirectoryRolesWithRoleTemplateIdRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(DirectoryRole $body, ?DirectoryRolesWithRoleTemplateIdRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/directoryRoles(roleTemplateId=\'{roleTemplateId}\')';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

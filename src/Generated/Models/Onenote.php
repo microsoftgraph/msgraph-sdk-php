@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Onenote extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new onenote and sets the default values.
+     * Instantiates a new Onenote and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -16,7 +16,7 @@ class ApplicationTemplatesRequestBuilderGetRequestConfiguration extends BaseRequ
     public ?ApplicationTemplatesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new applicationTemplatesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new ApplicationTemplatesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param ApplicationTemplatesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class ApplicationTemplatesRequestBuilderGetRequestConfiguration extends BaseRequ
     }
 
     /**
-     * Instantiates a new applicationTemplatesRequestBuilderGetQueryParameters.
+     * Instantiates a new ApplicationTemplatesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

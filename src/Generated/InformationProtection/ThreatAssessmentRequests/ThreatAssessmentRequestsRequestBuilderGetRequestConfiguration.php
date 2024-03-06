@@ -16,7 +16,7 @@ class ThreatAssessmentRequestsRequestBuilderGetRequestConfiguration extends Base
     public ?ThreatAssessmentRequestsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new threatAssessmentRequestsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new ThreatAssessmentRequestsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param ThreatAssessmentRequestsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class ThreatAssessmentRequestsRequestBuilderGetRequestConfiguration extends Base
     }
 
     /**
-     * Instantiates a new threatAssessmentRequestsRequestBuilderGetQueryParameters.
+     * Instantiates a new ThreatAssessmentRequestsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

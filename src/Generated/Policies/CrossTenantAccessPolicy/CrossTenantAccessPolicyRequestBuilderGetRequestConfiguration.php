@@ -16,7 +16,7 @@ class CrossTenantAccessPolicyRequestBuilderGetRequestConfiguration extends BaseR
     public ?CrossTenantAccessPolicyRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new crossTenantAccessPolicyRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new CrossTenantAccessPolicyRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param CrossTenantAccessPolicyRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class CrossTenantAccessPolicyRequestBuilderGetRequestConfiguration extends BaseR
     }
 
     /**
-     * Instantiates a new crossTenantAccessPolicyRequestBuilderGetQueryParameters.
+     * Instantiates a new CrossTenantAccessPolicyRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return CrossTenantAccessPolicyRequestBuilderGetQueryParameters

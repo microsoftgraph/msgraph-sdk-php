@@ -16,7 +16,7 @@ class AppConsentRequestBuilderGetRequestConfiguration extends BaseRequestConfigu
     public ?AppConsentRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new appConsentRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new AppConsentRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param AppConsentRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class AppConsentRequestBuilderGetRequestConfiguration extends BaseRequestConfigu
     }
 
     /**
-     * Instantiates a new appConsentRequestBuilderGetQueryParameters.
+     * Instantiates a new AppConsentRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return AppConsentRequestBuilderGetQueryParameters

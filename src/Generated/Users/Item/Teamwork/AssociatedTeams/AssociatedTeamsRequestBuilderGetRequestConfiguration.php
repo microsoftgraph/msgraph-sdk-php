@@ -16,7 +16,7 @@ class AssociatedTeamsRequestBuilderGetRequestConfiguration extends BaseRequestCo
     public ?AssociatedTeamsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new associatedTeamsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new AssociatedTeamsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param AssociatedTeamsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class AssociatedTeamsRequestBuilderGetRequestConfiguration extends BaseRequestCo
     }
 
     /**
-     * Instantiates a new associatedTeamsRequestBuilderGetQueryParameters.
+     * Instantiates a new AssociatedTeamsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

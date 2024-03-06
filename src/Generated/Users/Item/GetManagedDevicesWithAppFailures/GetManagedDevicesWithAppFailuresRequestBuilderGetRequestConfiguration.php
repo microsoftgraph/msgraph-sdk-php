@@ -16,7 +16,7 @@ class GetManagedDevicesWithAppFailuresRequestBuilderGetRequestConfiguration exte
     public ?GetManagedDevicesWithAppFailuresRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new getManagedDevicesWithAppFailuresRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new GetManagedDevicesWithAppFailuresRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param GetManagedDevicesWithAppFailuresRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class GetManagedDevicesWithAppFailuresRequestBuilderGetRequestConfiguration exte
     }
 
     /**
-     * Instantiates a new getManagedDevicesWithAppFailuresRequestBuilderGetQueryParameters.
+     * Instantiates a new GetManagedDevicesWithAppFailuresRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param string|null $filter Filter items by property values
      * @param string|null $search Search items by search phrases

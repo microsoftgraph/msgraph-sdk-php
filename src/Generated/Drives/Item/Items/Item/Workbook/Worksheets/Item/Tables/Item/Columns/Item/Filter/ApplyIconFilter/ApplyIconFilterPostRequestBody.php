@@ -19,7 +19,7 @@ class ApplyIconFilterPostRequestBody implements AdditionalDataHolder, BackedMode
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new applyIconFilterPostRequestBody and sets the default values.
+     * Instantiates a new ApplyIconFilterPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

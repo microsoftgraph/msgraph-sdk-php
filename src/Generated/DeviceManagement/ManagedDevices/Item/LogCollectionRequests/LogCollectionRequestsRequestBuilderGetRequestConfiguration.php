@@ -16,7 +16,7 @@ class LogCollectionRequestsRequestBuilderGetRequestConfiguration extends BaseReq
     public ?LogCollectionRequestsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new logCollectionRequestsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new LogCollectionRequestsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param LogCollectionRequestsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class LogCollectionRequestsRequestBuilderGetRequestConfiguration extends BaseReq
     }
 
     /**
-     * Instantiates a new logCollectionRequestsRequestBuilderGetQueryParameters.
+     * Instantiates a new LogCollectionRequestsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

@@ -18,7 +18,7 @@ class UnmutePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new unmutePostRequestBody and sets the default values.
+     * Instantiates a new UnmutePostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

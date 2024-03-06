@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WindowsInformationProtectionPolicy extends WindowsInformationProtection implements Parsable 
 {
     /**
-     * Instantiates a new windowsInformationProtectionPolicy and sets the default values.
+     * Instantiates a new WindowsInformationProtectionPolicy and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -21,7 +21,7 @@ class EdgeSearchEngineBase implements AdditionalDataHolder, BackedModel, Parsabl
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new edgeSearchEngineBase and sets the default values.
+     * Instantiates a new EdgeSearchEngineBase and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

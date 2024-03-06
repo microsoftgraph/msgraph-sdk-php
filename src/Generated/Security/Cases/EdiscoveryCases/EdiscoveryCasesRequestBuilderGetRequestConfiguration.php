@@ -16,7 +16,7 @@ class EdiscoveryCasesRequestBuilderGetRequestConfiguration extends BaseRequestCo
     public ?EdiscoveryCasesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new ediscoveryCasesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new EdiscoveryCasesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param EdiscoveryCasesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class EdiscoveryCasesRequestBuilderGetRequestConfiguration extends BaseRequestCo
     }
 
     /**
-     * Instantiates a new ediscoveryCasesRequestBuilderGetQueryParameters.
+     * Instantiates a new EdiscoveryCasesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

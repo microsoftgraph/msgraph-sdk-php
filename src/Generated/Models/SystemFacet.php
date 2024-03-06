@@ -18,7 +18,7 @@ class SystemFacet implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new systemFacet and sets the default values.
+     * Instantiates a new SystemFacet and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

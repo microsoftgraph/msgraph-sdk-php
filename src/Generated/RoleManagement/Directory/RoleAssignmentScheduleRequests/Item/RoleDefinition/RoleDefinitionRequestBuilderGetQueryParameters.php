@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignmentSched
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Detailed information for the unifiedRoleDefinition object that is referenced through the roleDefinitionId property. Supports $expand.
+ * Detailed information for the unifiedRoleDefinition object that is referenced through the roleDefinitionId property. Supports $expand and $select nested in $expand.
 */
 class RoleDefinitionRequestBuilderGetQueryParameters 
 {
@@ -22,7 +22,7 @@ class RoleDefinitionRequestBuilderGetQueryParameters
     public ?array $select = null;
     
     /**
-     * Instantiates a new roleDefinitionRequestBuilderGetQueryParameters and sets the default values.
+     * Instantiates a new RoleDefinitionRequestBuilderGetQueryParameters and sets the default values.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
     */

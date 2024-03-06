@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\Alerts_v2;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a list of alert resources that have been created to track suspicious activities in an organization. This operation lets you filter and sort through alerts to create an informed cyber security response. It exposes a collection of alerts that were flagged in your network, within the time range you specified in your environment retention policy. The most recent alerts are displayed at the top of the list.
+ * Get a list of alert resources created to track suspicious activities in an organization. This operation lets you filter and sort through alerts to create an informed cyber security response. It exposes a collection of alerts that were flagged in your network, within the time range you specified in your environment retention policy. The most recent alerts are displayed at the top of the list.
 */
 class Alerts_v2RequestBuilderGetQueryParameters 
 {
@@ -58,7 +58,7 @@ class Alerts_v2RequestBuilderGetQueryParameters
     public ?int $top = null;
     
     /**
-     * Instantiates a new alerts_v2RequestBuilderGetQueryParameters and sets the default values.
+     * Instantiates a new Alerts_v2RequestBuilderGetQueryParameters and sets the default values.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SingleUser extends SubjectSet implements Parsable 
 {
     /**
-     * Instantiates a new singleUser and sets the default values.
+     * Instantiates a new SingleUser and sets the default values.
     */
     public function __construct() {
         parent::__construct();

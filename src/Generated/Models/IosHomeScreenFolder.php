@@ -13,7 +13,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class IosHomeScreenFolder extends IosHomeScreenItem implements Parsable 
 {
     /**
-     * Instantiates a new iosHomeScreenFolder and sets the default values.
+     * Instantiates a new IosHomeScreenFolder and sets the default values.
     */
     public function __construct() {
         parent::__construct();

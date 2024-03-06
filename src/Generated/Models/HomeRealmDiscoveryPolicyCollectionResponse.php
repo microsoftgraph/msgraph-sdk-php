@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class HomeRealmDiscoveryPolicyCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new homeRealmDiscoveryPolicyCollectionResponse and sets the default values.
+     * Instantiates a new HomeRealmDiscoveryPolicyCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

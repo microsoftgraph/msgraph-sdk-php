@@ -16,7 +16,7 @@ class TaughtClassesRequestBuilderGetRequestConfiguration extends BaseRequestConf
     public ?TaughtClassesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new taughtClassesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new TaughtClassesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param TaughtClassesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class TaughtClassesRequestBuilderGetRequestConfiguration extends BaseRequestConf
     }
 
     /**
-     * Instantiates a new taughtClassesRequestBuilderGetQueryParameters.
+     * Instantiates a new TaughtClassesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

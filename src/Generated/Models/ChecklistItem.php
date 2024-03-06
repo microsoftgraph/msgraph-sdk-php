@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ChecklistItem extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new checklistItem and sets the default values.
+     * Instantiates a new ChecklistItem and sets the default values.
     */
     public function __construct() {
         parent::__construct();

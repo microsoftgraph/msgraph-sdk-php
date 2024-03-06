@@ -14,7 +14,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class DeviceConfiguration extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new deviceConfiguration and sets the default values.
+     * Instantiates a new DeviceConfiguration and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -16,7 +16,7 @@ class CollaboratorsRequestBuilderGetRequestConfiguration extends BaseRequestConf
     public ?CollaboratorsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new collaboratorsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new CollaboratorsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param CollaboratorsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class CollaboratorsRequestBuilderGetRequestConfiguration extends BaseRequestConf
     }
 
     /**
-     * Instantiates a new collaboratorsRequestBuilderGetQueryParameters.
+     * Instantiates a new CollaboratorsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

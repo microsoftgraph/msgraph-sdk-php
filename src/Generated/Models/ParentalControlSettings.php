@@ -19,7 +19,7 @@ class ParentalControlSettings implements AdditionalDataHolder, BackedModel, Pars
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new parentalControlSettings and sets the default values.
+     * Instantiates a new ParentalControlSettings and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ManagedAndroidLobApp extends ManagedMobileLobApp implements Parsable 
 {
     /**
-     * Instantiates a new managedAndroidLobApp and sets the default values.
+     * Instantiates a new ManagedAndroidLobApp and sets the default values.
     */
     public function __construct() {
         parent::__construct();

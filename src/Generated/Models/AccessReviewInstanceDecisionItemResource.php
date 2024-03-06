@@ -18,7 +18,7 @@ class AccessReviewInstanceDecisionItemResource implements AdditionalDataHolder, 
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new accessReviewInstanceDecisionItemResource and sets the default values.
+     * Instantiates a new AccessReviewInstanceDecisionItemResource and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

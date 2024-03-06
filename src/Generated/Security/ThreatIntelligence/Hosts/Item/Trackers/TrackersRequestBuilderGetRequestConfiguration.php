@@ -16,7 +16,7 @@ class TrackersRequestBuilderGetRequestConfiguration extends BaseRequestConfigura
     public ?TrackersRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new trackersRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new TrackersRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param TrackersRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class TrackersRequestBuilderGetRequestConfiguration extends BaseRequestConfigura
     }
 
     /**
-     * Instantiates a new trackersRequestBuilderGetQueryParameters.
+     * Instantiates a new TrackersRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

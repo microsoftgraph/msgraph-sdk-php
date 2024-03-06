@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class OfferShiftRequestCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new offerShiftRequestCollectionResponse and sets the default values.
+     * Instantiates a new OfferShiftRequestCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

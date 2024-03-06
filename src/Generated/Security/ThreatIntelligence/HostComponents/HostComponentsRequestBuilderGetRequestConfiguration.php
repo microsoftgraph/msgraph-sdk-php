@@ -16,7 +16,7 @@ class HostComponentsRequestBuilderGetRequestConfiguration extends BaseRequestCon
     public ?HostComponentsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new hostComponentsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new HostComponentsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param HostComponentsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class HostComponentsRequestBuilderGetRequestConfiguration extends BaseRequestCon
     }
 
     /**
-     * Instantiates a new hostComponentsRequestBuilderGetQueryParameters.
+     * Instantiates a new HostComponentsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

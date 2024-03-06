@@ -16,7 +16,7 @@ class AnalyticsRequestBuilderGetRequestConfiguration extends BaseRequestConfigur
     public ?AnalyticsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new analyticsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new AnalyticsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param AnalyticsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class AnalyticsRequestBuilderGetRequestConfiguration extends BaseRequestConfigur
     }
 
     /**
-     * Instantiates a new analyticsRequestBuilderGetQueryParameters.
+     * Instantiates a new AnalyticsRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return AnalyticsRequestBuilderGetQueryParameters

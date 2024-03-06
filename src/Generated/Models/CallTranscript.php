@@ -11,7 +11,7 @@ use Psr\Http\Message\StreamInterface;
 class CallTranscript extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new callTranscript and sets the default values.
+     * Instantiates a new CallTranscript and sets the default values.
     */
     public function __construct() {
         parent::__construct();

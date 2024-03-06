@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppPolicies;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List properties and relationships of the managedAppConfiguration objects.
+ * List properties and relationships of the managedAppProtection objects.
 */
 class ManagedAppPoliciesRequestBuilderGetQueryParameters 
 {
@@ -58,7 +58,7 @@ class ManagedAppPoliciesRequestBuilderGetQueryParameters
     public ?int $top = null;
     
     /**
-     * Instantiates a new managedAppPoliciesRequestBuilderGetQueryParameters and sets the default values.
+     * Instantiates a new ManagedAppPoliciesRequestBuilderGetQueryParameters and sets the default values.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

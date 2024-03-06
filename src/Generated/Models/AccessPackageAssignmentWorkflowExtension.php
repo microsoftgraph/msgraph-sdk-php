@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AccessPackageAssignmentWorkflowExtension extends CustomCalloutExtension implements Parsable 
 {
     /**
-     * Instantiates a new accessPackageAssignmentWorkflowExtension and sets the default values.
+     * Instantiates a new AccessPackageAssignmentWorkflowExtension and sets the default values.
     */
     public function __construct() {
         parent::__construct();

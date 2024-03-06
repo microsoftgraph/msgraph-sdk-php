@@ -19,7 +19,7 @@ class GetHistoricalReportPostRequestBody implements AdditionalDataHolder, Backed
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new getHistoricalReportPostRequestBody and sets the default values.
+     * Instantiates a new GetHistoricalReportPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

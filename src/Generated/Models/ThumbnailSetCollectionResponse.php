@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class ThumbnailSetCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new thumbnailSetCollectionResponse and sets the default values.
+     * Instantiates a new ThumbnailSetCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

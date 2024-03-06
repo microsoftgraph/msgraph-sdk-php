@@ -16,7 +16,7 @@ class RubricsRequestBuilderGetRequestConfiguration extends BaseRequestConfigurat
     public ?RubricsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new rubricsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new RubricsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param RubricsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class RubricsRequestBuilderGetRequestConfiguration extends BaseRequestConfigurat
     }
 
     /**
-     * Instantiates a new rubricsRequestBuilderGetQueryParameters.
+     * Instantiates a new RubricsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

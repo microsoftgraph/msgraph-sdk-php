@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ServiceEndpoint extends Endpoint implements Parsable 
 {
     /**
-     * Instantiates a new serviceEndpoint and sets the default values.
+     * Instantiates a new ServiceEndpoint and sets the default values.
     */
     public function __construct() {
         parent::__construct();

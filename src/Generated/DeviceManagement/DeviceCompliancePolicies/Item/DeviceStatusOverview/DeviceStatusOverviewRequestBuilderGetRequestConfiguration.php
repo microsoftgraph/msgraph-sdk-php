@@ -16,7 +16,7 @@ class DeviceStatusOverviewRequestBuilderGetRequestConfiguration extends BaseRequ
     public ?DeviceStatusOverviewRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new deviceStatusOverviewRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new DeviceStatusOverviewRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param DeviceStatusOverviewRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class DeviceStatusOverviewRequestBuilderGetRequestConfiguration extends BaseRequ
     }
 
     /**
-     * Instantiates a new deviceStatusOverviewRequestBuilderGetQueryParameters.
+     * Instantiates a new DeviceStatusOverviewRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return DeviceStatusOverviewRequestBuilderGetQueryParameters

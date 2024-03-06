@@ -16,7 +16,7 @@ class ResourcesRequestBuilderGetRequestConfiguration extends BaseRequestConfigur
     public ?ResourcesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new resourcesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new ResourcesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param ResourcesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class ResourcesRequestBuilderGetRequestConfiguration extends BaseRequestConfigur
     }
 
     /**
-     * Instantiates a new resourcesRequestBuilderGetQueryParameters.
+     * Instantiates a new ResourcesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

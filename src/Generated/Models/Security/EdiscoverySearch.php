@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class EdiscoverySearch extends Search implements Parsable 
 {
     /**
-     * Instantiates a new ediscoverySearch and sets the default values.
+     * Instantiates a new EdiscoverySearch and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Alert extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new alert and sets the default values.
+     * Instantiates a new Alert and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -40,7 +40,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Gets the alertPolicyId property value. The alertPolicyId property
+     * Gets the alertPolicyId property value. The ID of the policy that generated the alert, and populated when there is a specific policy that generated the alert, whether configured by a customer or a built-in policy.
      * @return string|null
     */
     public function getAlertPolicyId(): ?string {
@@ -52,7 +52,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Gets the alertWebUrl property value. URL for the alert page in the Microsoft 365 Defender portal.
+     * Gets the alertWebUrl property value. The alertWebUrl property
      * @return string|null
     */
     public function getAlertWebUrl(): ?string {
@@ -138,7 +138,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Gets the detectionSource property value. Detection technology or sensor that identified the notable component or activity. Possible values are: unknown, microsoftDefenderForEndpoint, antivirus, smartScreen, customTi, microsoftDefenderForOffice365, automatedInvestigation, microsoftThreatExperts, customDetection, microsoftDefenderForIdentity, cloudAppSecurity, microsoft365Defender, azureAdIdentityProtection, manual, microsoftDataLossPrevention, appGovernancePolicy, appGovernanceDetection, unknownFutureValue, microsoftDefenderForCloud, microsoftDefenderForIoT, microsoftDefenderForServers, microsoftDefenderForStorage, microsoftDefenderForDNS, microsoftDefenderForDatabases, microsoftDefenderForContainers, microsoftDefenderForNetwork, microsoftDefenderForAppService, microsoftDefenderForKeyVault, microsoftDefenderForResourceManager, microsoftDefenderForApiManagement. You must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: microsoftDefenderForCloud, microsoftDefenderForIoT, microsoftDefenderForServers, microsoftDefenderForStorage, microsoftDefenderForDNS, microsoftDefenderForDatabases, microsoftDefenderForContainers, microsoftDefenderForNetwork, microsoftDefenderForAppService, microsoftDefenderForKeyVault, microsoftDefenderForResourceManager, microsoftDefenderForApiManagement.
+     * Gets the detectionSource property value. Detection technology or sensor that identified the notable component or activity. Possible values are: unknown, microsoftDefenderForEndpoint, antivirus, smartScreen, customTi, microsoftDefenderForOffice365, automatedInvestigation, microsoftThreatExperts, customDetection, microsoftDefenderForIdentity, cloudAppSecurity, microsoft365Defender, azureAdIdentityProtection, manual, microsoftDataLossPrevention, appGovernancePolicy, appGovernanceDetection, unknownFutureValue, microsoftDefenderForCloud, microsoftDefenderForIoT, microsoftDefenderForServers, microsoftDefenderForStorage, microsoftDefenderForDNS, microsoftDefenderForDatabases, microsoftDefenderForContainers, microsoftDefenderForNetwork, microsoftDefenderForAppService, microsoftDefenderForKeyVault, microsoftDefenderForResourceManager, microsoftDefenderForApiManagement, microsoftSentinel, nrtAlerts, scheduledAlerts, microsoftDefenderThreatIntelligenceAnalytics, builtInMl. You must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: microsoftDefenderForCloud, microsoftDefenderForIoT, microsoftDefenderForServers, microsoftDefenderForStorage, microsoftDefenderForDNS, microsoftDefenderForDatabases, microsoftDefenderForContainers, microsoftDefenderForNetwork, microsoftDefenderForAppService, microsoftDefenderForKeyVault, microsoftDefenderForResourceManager, microsoftDefenderForApiManagement, microsoftSentinel, nrtAlerts, scheduledAlerts, microsoftDefenderThreatIntelligenceAnalytics, builtInMl.
      * @return DetectionSource|null
     */
     public function getDetectionSource(): ?DetectionSource {
@@ -227,6 +227,14 @@ class Alert extends Entity implements Parsable
             'serviceSource' => fn(ParseNode $n) => $o->setServiceSource($n->getEnumValue(ServiceSource::class)),
             'severity' => fn(ParseNode $n) => $o->setSeverity($n->getEnumValue(AlertSeverity::class)),
             'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(AlertStatus::class)),
+            'systemTags' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setSystemTags($val);
+            },
             'tenantId' => fn(ParseNode $n) => $o->setTenantId($n->getStringValue()),
             'threatDisplayName' => fn(ParseNode $n) => $o->setThreatDisplayName($n->getStringValue()),
             'threatFamilyName' => fn(ParseNode $n) => $o->setThreatFamilyName($n->getStringValue()),
@@ -393,6 +401,20 @@ class Alert extends Entity implements Parsable
     }
 
     /**
+     * Gets the systemTags property value. The system tags associated with the alert.
+     * @return array<string>|null
+    */
+    public function getSystemTags(): ?array {
+        $val = $this->getBackingStore()->get('systemTags');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'systemTags'");
+    }
+
+    /**
      * Gets the tenantId property value. The Microsoft Entra tenant the alert was created in.
      * @return string|null
     */
@@ -472,6 +494,7 @@ class Alert extends Entity implements Parsable
         $writer->writeEnumValue('serviceSource', $this->getServiceSource());
         $writer->writeEnumValue('severity', $this->getSeverity());
         $writer->writeEnumValue('status', $this->getStatus());
+        $writer->writeCollectionOfPrimitiveValues('systemTags', $this->getSystemTags());
         $writer->writeStringValue('tenantId', $this->getTenantId());
         $writer->writeStringValue('threatDisplayName', $this->getThreatDisplayName());
         $writer->writeStringValue('threatFamilyName', $this->getThreatFamilyName());
@@ -487,7 +510,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Sets the alertPolicyId property value. The alertPolicyId property
+     * Sets the alertPolicyId property value. The ID of the policy that generated the alert, and populated when there is a specific policy that generated the alert, whether configured by a customer or a built-in policy.
      * @param string|null $value Value to set for the alertPolicyId property.
     */
     public function setAlertPolicyId(?string $value): void {
@@ -495,7 +518,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Sets the alertWebUrl property value. URL for the alert page in the Microsoft 365 Defender portal.
+     * Sets the alertWebUrl property value. The alertWebUrl property
      * @param string|null $value Value to set for the alertWebUrl property.
     */
     public function setAlertWebUrl(?string $value): void {
@@ -551,7 +574,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Sets the detectionSource property value. Detection technology or sensor that identified the notable component or activity. Possible values are: unknown, microsoftDefenderForEndpoint, antivirus, smartScreen, customTi, microsoftDefenderForOffice365, automatedInvestigation, microsoftThreatExperts, customDetection, microsoftDefenderForIdentity, cloudAppSecurity, microsoft365Defender, azureAdIdentityProtection, manual, microsoftDataLossPrevention, appGovernancePolicy, appGovernanceDetection, unknownFutureValue, microsoftDefenderForCloud, microsoftDefenderForIoT, microsoftDefenderForServers, microsoftDefenderForStorage, microsoftDefenderForDNS, microsoftDefenderForDatabases, microsoftDefenderForContainers, microsoftDefenderForNetwork, microsoftDefenderForAppService, microsoftDefenderForKeyVault, microsoftDefenderForResourceManager, microsoftDefenderForApiManagement. You must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: microsoftDefenderForCloud, microsoftDefenderForIoT, microsoftDefenderForServers, microsoftDefenderForStorage, microsoftDefenderForDNS, microsoftDefenderForDatabases, microsoftDefenderForContainers, microsoftDefenderForNetwork, microsoftDefenderForAppService, microsoftDefenderForKeyVault, microsoftDefenderForResourceManager, microsoftDefenderForApiManagement.
+     * Sets the detectionSource property value. Detection technology or sensor that identified the notable component or activity. Possible values are: unknown, microsoftDefenderForEndpoint, antivirus, smartScreen, customTi, microsoftDefenderForOffice365, automatedInvestigation, microsoftThreatExperts, customDetection, microsoftDefenderForIdentity, cloudAppSecurity, microsoft365Defender, azureAdIdentityProtection, manual, microsoftDataLossPrevention, appGovernancePolicy, appGovernanceDetection, unknownFutureValue, microsoftDefenderForCloud, microsoftDefenderForIoT, microsoftDefenderForServers, microsoftDefenderForStorage, microsoftDefenderForDNS, microsoftDefenderForDatabases, microsoftDefenderForContainers, microsoftDefenderForNetwork, microsoftDefenderForAppService, microsoftDefenderForKeyVault, microsoftDefenderForResourceManager, microsoftDefenderForApiManagement, microsoftSentinel, nrtAlerts, scheduledAlerts, microsoftDefenderThreatIntelligenceAnalytics, builtInMl. You must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: microsoftDefenderForCloud, microsoftDefenderForIoT, microsoftDefenderForServers, microsoftDefenderForStorage, microsoftDefenderForDNS, microsoftDefenderForDatabases, microsoftDefenderForContainers, microsoftDefenderForNetwork, microsoftDefenderForAppService, microsoftDefenderForKeyVault, microsoftDefenderForResourceManager, microsoftDefenderForApiManagement, microsoftSentinel, nrtAlerts, scheduledAlerts, microsoftDefenderThreatIntelligenceAnalytics, builtInMl.
      * @param DetectionSource|null $value Value to set for the detectionSource property.
     */
     public function setDetectionSource(?DetectionSource $value): void {
@@ -684,6 +707,14 @@ class Alert extends Entity implements Parsable
     */
     public function setStatus(?AlertStatus $value): void {
         $this->getBackingStore()->set('status', $value);
+    }
+
+    /**
+     * Sets the systemTags property value. The system tags associated with the alert.
+     * @param array<string>|null $value Value to set for the systemTags property.
+    */
+    public function setSystemTags(?array $value): void {
+        $this->getBackingStore()->set('systemTags', $value);
     }
 
     /**

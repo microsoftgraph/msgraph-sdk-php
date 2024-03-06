@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class OutlookCategory extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new outlookCategory and sets the default values.
+     * Instantiates a new OutlookCategory and sets the default values.
     */
     public function __construct() {
         parent::__construct();

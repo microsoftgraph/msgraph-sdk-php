@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class BlobContainerEvidence extends AlertEvidence implements Parsable 
 {
     /**
-     * Instantiates a new blobContainerEvidence and sets the default values.
+     * Instantiates a new BlobContainerEvidence and sets the default values.
     */
     public function __construct() {
         parent::__construct();

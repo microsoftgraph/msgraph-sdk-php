@@ -16,7 +16,7 @@ class SeriesAxisRequestBuilderGetRequestConfiguration extends BaseRequestConfigu
     public ?SeriesAxisRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new seriesAxisRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new SeriesAxisRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param SeriesAxisRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class SeriesAxisRequestBuilderGetRequestConfiguration extends BaseRequestConfigu
     }
 
     /**
-     * Instantiates a new seriesAxisRequestBuilderGetQueryParameters.
+     * Instantiates a new SeriesAxisRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return SeriesAxisRequestBuilderGetQueryParameters

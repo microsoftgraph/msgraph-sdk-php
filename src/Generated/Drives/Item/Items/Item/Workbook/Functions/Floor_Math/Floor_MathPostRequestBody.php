@@ -19,7 +19,7 @@ class Floor_MathPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new floor_MathPostRequestBody and sets the default values.
+     * Instantiates a new Floor_MathPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

@@ -4,6 +4,11 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\I
 
 use Exception;
 use Http\Promise\Promise;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Columns\ItemAtWithIndex\DataBodyRange\DataBodyRangeRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Columns\ItemAtWithIndex\Filter\FilterRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Columns\ItemAtWithIndex\HeaderRowRange\HeaderRowRangeRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Columns\ItemAtWithIndex\Range\RangeRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Columns\ItemAtWithIndex\TotalRowRange\TotalRowRangeRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\WorkbookTableColumn;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -16,6 +21,41 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class ItemAtWithIndexRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to call the dataBodyRange method.
+    */
+    public function dataBodyRange(): DataBodyRangeRequestBuilder {
+        return new DataBodyRangeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the filter property of the microsoft.graph.workbookTableColumn entity.
+    */
+    public function filter(): FilterRequestBuilder {
+        return new FilterRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the headerRowRange method.
+    */
+    public function headerRowRange(): HeaderRowRangeRequestBuilder {
+        return new HeaderRowRangeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the range method.
+    */
+    public function range(): RangeRequestBuilder {
+        return new RangeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the totalRowRange method.
+    */
+    public function totalRowRange(): TotalRowRangeRequestBuilder {
+        return new TotalRowRangeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Instantiates a new ItemAtWithIndexRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
@@ -42,8 +82,7 @@ class ItemAtWithIndexRequestBuilder extends BaseRequestBuilder
     public function get(?ItemAtWithIndexRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
-                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         return $this->requestAdapter->sendAsync($requestInfo, [WorkbookTableColumn::class, 'createFromDiscriminatorValue'], $errorMappings);
     }

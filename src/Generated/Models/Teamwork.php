@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Teamwork extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new teamwork and sets the default values.
+     * Instantiates a new Teamwork and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -23,6 +23,20 @@ class Teamwork extends Entity implements Parsable
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): Teamwork {
         return new Teamwork();
+    }
+
+    /**
+     * Gets the deletedChats property value. The deletedChats property
+     * @return array<DeletedChat>|null
+    */
+    public function getDeletedChats(): ?array {
+        $val = $this->getBackingStore()->get('deletedChats');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, DeletedChat::class);
+            /** @var array<DeletedChat>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deletedChats'");
     }
 
     /**
@@ -46,6 +60,7 @@ class Teamwork extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'deletedChats' => fn(ParseNode $n) => $o->setDeletedChats($n->getCollectionOfObjectValues([DeletedChat::class, 'createFromDiscriminatorValue'])),
             'deletedTeams' => fn(ParseNode $n) => $o->setDeletedTeams($n->getCollectionOfObjectValues([DeletedTeam::class, 'createFromDiscriminatorValue'])),
             'teamsAppSettings' => fn(ParseNode $n) => $o->setTeamsAppSettings($n->getObjectValue([TeamsAppSettings::class, 'createFromDiscriminatorValue'])),
             'workforceIntegrations' => fn(ParseNode $n) => $o->setWorkforceIntegrations($n->getCollectionOfObjectValues([WorkforceIntegration::class, 'createFromDiscriminatorValue'])),
@@ -84,9 +99,18 @@ class Teamwork extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeCollectionOfObjectValues('deletedChats', $this->getDeletedChats());
         $writer->writeCollectionOfObjectValues('deletedTeams', $this->getDeletedTeams());
         $writer->writeObjectValue('teamsAppSettings', $this->getTeamsAppSettings());
         $writer->writeCollectionOfObjectValues('workforceIntegrations', $this->getWorkforceIntegrations());
+    }
+
+    /**
+     * Sets the deletedChats property value. The deletedChats property
+     * @param array<DeletedChat>|null $value Value to set for the deletedChats property.
+    */
+    public function setDeletedChats(?array $value): void {
+        $this->getBackingStore()->set('deletedChats', $value);
     }
 
     /**

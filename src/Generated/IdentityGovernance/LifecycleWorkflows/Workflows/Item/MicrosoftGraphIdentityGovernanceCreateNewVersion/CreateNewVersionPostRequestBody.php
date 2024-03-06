@@ -19,7 +19,7 @@ class CreateNewVersionPostRequestBody implements AdditionalDataHolder, BackedMod
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new createNewVersionPostRequestBody and sets the default values.
+     * Instantiates a new CreateNewVersionPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

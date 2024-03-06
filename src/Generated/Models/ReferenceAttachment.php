@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ReferenceAttachment extends Attachment implements Parsable 
 {
     /**
-     * Instantiates a new referenceAttachment and sets the default values.
+     * Instantiates a new ReferenceAttachment and sets the default values.
     */
     public function __construct() {
         parent::__construct();

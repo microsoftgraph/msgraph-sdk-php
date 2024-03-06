@@ -4,6 +4,27 @@ namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\GetByPathWithPath;
 
 use Exception;
 use Http\Promise\Promise;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\GetByPathWithPath\Analytics\AnalyticsRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\GetByPathWithPath\Columns\ColumnsRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\GetByPathWithPath\ContentTypes\ContentTypesRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\GetByPathWithPath\CreatedByUser\CreatedByUserRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\GetByPathWithPath\Drive\DriveRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\GetByPathWithPath\Drives\DrivesRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\GetByPathWithPath\ExternalColumns\ExternalColumnsRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\GetByPathWithPath\GetActivitiesByInterval\GetActivitiesByIntervalRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\GetByPathWithPath\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\GetByPathWithPath\GetApplicableContentTypesForListWithListId\GetApplicableContentTypesForListWithListIdRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\GetByPathWithPath\GetByPathWithPath1\GetByPathWithPath1RequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\GetByPathWithPath\Items\ItemsRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\GetByPathWithPath\LastModifiedByUser\LastModifiedByUserRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\GetByPathWithPath\Lists\ListsRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\GetByPathWithPath\Onenote\OnenoteRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\GetByPathWithPath\Operations\OperationsRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\GetByPathWithPath\Pages\PagesRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\GetByPathWithPath\Permissions\PermissionsRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\GetByPathWithPath\Sites\SitesRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\GetByPathWithPath\TermStore\TermStoreRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\GetByPathWithPath\TermStores\TermStoresRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Site;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -16,6 +37,132 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class GetByPathWithPathRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to manage the analytics property of the microsoft.graph.site entity.
+    */
+    public function analytics(): AnalyticsRequestBuilder {
+        return new AnalyticsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the columns property of the microsoft.graph.site entity.
+    */
+    public function columns(): ColumnsRequestBuilder {
+        return new ColumnsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the contentTypes property of the microsoft.graph.site entity.
+    */
+    public function contentTypes(): ContentTypesRequestBuilder {
+        return new ContentTypesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the createdByUser property of the microsoft.graph.baseItem entity.
+    */
+    public function createdByUser(): CreatedByUserRequestBuilder {
+        return new CreatedByUserRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the drive property of the microsoft.graph.site entity.
+    */
+    public function drive(): DriveRequestBuilder {
+        return new DriveRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the drives property of the microsoft.graph.site entity.
+    */
+    public function drives(): DrivesRequestBuilder {
+        return new DrivesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the externalColumns property of the microsoft.graph.site entity.
+    */
+    public function externalColumns(): ExternalColumnsRequestBuilder {
+        return new ExternalColumnsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the getActivitiesByInterval method.
+    */
+    public function getActivitiesByInterval(): GetActivitiesByIntervalRequestBuilder {
+        return new GetActivitiesByIntervalRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the items property of the microsoft.graph.site entity.
+    */
+    public function items(): ItemsRequestBuilder {
+        return new ItemsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the lastModifiedByUser property of the microsoft.graph.baseItem entity.
+    */
+    public function lastModifiedByUser(): LastModifiedByUserRequestBuilder {
+        return new LastModifiedByUserRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the lists property of the microsoft.graph.site entity.
+    */
+    public function lists(): ListsRequestBuilder {
+        return new ListsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the onenote property of the microsoft.graph.site entity.
+    */
+    public function onenote(): OnenoteRequestBuilder {
+        return new OnenoteRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the operations property of the microsoft.graph.site entity.
+    */
+    public function operations(): OperationsRequestBuilder {
+        return new OperationsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the pages property of the microsoft.graph.site entity.
+    */
+    public function pages(): PagesRequestBuilder {
+        return new PagesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the permissions property of the microsoft.graph.site entity.
+    */
+    public function permissions(): PermissionsRequestBuilder {
+        return new PermissionsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the sites property of the microsoft.graph.site entity.
+    */
+    public function sites(): SitesRequestBuilder {
+        return new SitesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the termStore property of the microsoft.graph.site entity.
+    */
+    public function termStore(): TermStoreRequestBuilder {
+        return new TermStoreRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the termStores property of the microsoft.graph.site entity.
+    */
+    public function termStores(): TermStoresRequestBuilder {
+        return new TermStoresRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Instantiates a new GetByPathWithPathRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
@@ -42,10 +189,38 @@ class GetByPathWithPathRequestBuilder extends BaseRequestBuilder
     public function get(?GetByPathWithPathRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
-                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         return $this->requestAdapter->sendAsync($requestInfo, [Site::class, 'createFromDiscriminatorValue'], $errorMappings);
+    }
+
+    /**
+     * Provides operations to call the getActivitiesByInterval method.
+     * @param string $endDateTime Usage: endDateTime='{endDateTime}'
+     * @param string $interval Usage: interval='{interval}'
+     * @param string $startDateTime Usage: startDateTime='{startDateTime}'
+     * @return GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder
+    */
+    public function getActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval(string $endDateTime, string $interval, string $startDateTime): GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder {
+        return new GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder($this->pathParameters, $this->requestAdapter, $endDateTime, $interval, $startDateTime);
+    }
+
+    /**
+     * Provides operations to call the getApplicableContentTypesForList method.
+     * @param string $listId Usage: listId='{listId}'
+     * @return GetApplicableContentTypesForListWithListIdRequestBuilder
+    */
+    public function getApplicableContentTypesForListWithListId(string $listId): GetApplicableContentTypesForListWithListIdRequestBuilder {
+        return new GetApplicableContentTypesForListWithListIdRequestBuilder($this->pathParameters, $this->requestAdapter, $listId);
+    }
+
+    /**
+     * Provides operations to call the getByPath method.
+     * @param string $path1 Usage: path='{path1}'
+     * @return GetByPathWithPath1RequestBuilder
+    */
+    public function getByPathWithPath1(string $path1): GetByPathWithPath1RequestBuilder {
+        return new GetByPathWithPath1RequestBuilder($this->pathParameters, $this->requestAdapter, $path1);
     }
 
     /**

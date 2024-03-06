@@ -16,7 +16,7 @@ class SchedulingGroupsRequestBuilderGetRequestConfiguration extends BaseRequestC
     public ?SchedulingGroupsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new schedulingGroupsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new SchedulingGroupsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param SchedulingGroupsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class SchedulingGroupsRequestBuilderGetRequestConfiguration extends BaseRequestC
     }
 
     /**
-     * Instantiates a new schedulingGroupsRequestBuilderGetQueryParameters.
+     * Instantiates a new SchedulingGroupsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param string|null $filter Filter items by property values
      * @param array<string>|null $orderby Order items by property values

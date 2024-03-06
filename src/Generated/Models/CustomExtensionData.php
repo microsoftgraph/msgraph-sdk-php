@@ -20,7 +20,7 @@ class CustomExtensionData implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new customExtensionData and sets the default values.
+     * Instantiates a new CustomExtensionData and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

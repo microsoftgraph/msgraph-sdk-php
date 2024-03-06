@@ -19,7 +19,7 @@ class ProfileCardAnnotation implements AdditionalDataHolder, BackedModel, Parsab
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new profileCardAnnotation and sets the default values.
+     * Instantiates a new ProfileCardAnnotation and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

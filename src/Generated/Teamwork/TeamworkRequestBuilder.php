@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Teamwork;
+use Microsoft\Graph\Generated\Teamwork\DeletedChats\DeletedChatsRequestBuilder;
 use Microsoft\Graph\Generated\Teamwork\DeletedTeams\DeletedTeamsRequestBuilder;
 use Microsoft\Graph\Generated\Teamwork\SendActivityNotificationToRecipients\SendActivityNotificationToRecipientsRequestBuilder;
 use Microsoft\Graph\Generated\Teamwork\TeamsAppSettings\TeamsAppSettingsRequestBuilder;
@@ -20,6 +21,13 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class TeamworkRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to manage the deletedChats property of the microsoft.graph.teamwork entity.
+    */
+    public function deletedChats(): DeletedChatsRequestBuilder {
+        return new DeletedChatsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Provides operations to manage the deletedTeams property of the microsoft.graph.teamwork entity.
     */
@@ -54,7 +62,7 @@ class TeamworkRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/teamwork{?%24select,%24expand}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/teamwork{?%24expand,%24select}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -71,8 +79,7 @@ class TeamworkRequestBuilder extends BaseRequestBuilder
     public function get(?TeamworkRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
-                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         return $this->requestAdapter->sendAsync($requestInfo, [Teamwork::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
@@ -87,8 +94,7 @@ class TeamworkRequestBuilder extends BaseRequestBuilder
     public function patch(Teamwork $body, ?TeamworkRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
-                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         return $this->requestAdapter->sendAsync($requestInfo, [Teamwork::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
@@ -122,7 +128,7 @@ class TeamworkRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(Teamwork $body, ?TeamworkRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/teamwork';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

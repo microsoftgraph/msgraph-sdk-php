@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class LogicAppTriggerEndpointConfiguration extends CustomExtensionEndpointConfiguration implements Parsable 
 {
     /**
-     * Instantiates a new logicAppTriggerEndpointConfiguration and sets the default values.
+     * Instantiates a new LogicAppTriggerEndpointConfiguration and sets the default values.
     */
     public function __construct() {
         parent::__construct();

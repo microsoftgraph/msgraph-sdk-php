@@ -16,7 +16,7 @@ class PasswordMethodsRequestBuilderGetRequestConfiguration extends BaseRequestCo
     public ?PasswordMethodsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new passwordMethodsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new PasswordMethodsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param PasswordMethodsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class PasswordMethodsRequestBuilderGetRequestConfiguration extends BaseRequestCo
     }
 
     /**
-     * Instantiates a new passwordMethodsRequestBuilderGetQueryParameters.
+     * Instantiates a new PasswordMethodsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

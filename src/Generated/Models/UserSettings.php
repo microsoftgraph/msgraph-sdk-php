@@ -5,11 +5,12 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class UserSettings extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new userSettings and sets the default values.
+     * Instantiates a new UserSettings and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -58,6 +59,7 @@ class UserSettings extends Entity implements Parsable
             'contributionToContentDiscoveryAsOrganizationDisabled' => fn(ParseNode $n) => $o->setContributionToContentDiscoveryAsOrganizationDisabled($n->getBooleanValue()),
             'contributionToContentDiscoveryDisabled' => fn(ParseNode $n) => $o->setContributionToContentDiscoveryDisabled($n->getBooleanValue()),
             'shiftPreferences' => fn(ParseNode $n) => $o->setShiftPreferences($n->getObjectValue([ShiftPreferences::class, 'createFromDiscriminatorValue'])),
+            'windows' => fn(ParseNode $n) => $o->setWindows($n->getCollectionOfObjectValues([WindowsSetting::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -74,6 +76,20 @@ class UserSettings extends Entity implements Parsable
     }
 
     /**
+     * Gets the windows property value. The windows property
+     * @return array<WindowsSetting>|null
+    */
+    public function getWindows(): ?array {
+        $val = $this->getBackingStore()->get('windows');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, WindowsSetting::class);
+            /** @var array<WindowsSetting>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'windows'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -82,6 +98,7 @@ class UserSettings extends Entity implements Parsable
         $writer->writeBooleanValue('contributionToContentDiscoveryAsOrganizationDisabled', $this->getContributionToContentDiscoveryAsOrganizationDisabled());
         $writer->writeBooleanValue('contributionToContentDiscoveryDisabled', $this->getContributionToContentDiscoveryDisabled());
         $writer->writeObjectValue('shiftPreferences', $this->getShiftPreferences());
+        $writer->writeCollectionOfObjectValues('windows', $this->getWindows());
     }
 
     /**
@@ -106,6 +123,14 @@ class UserSettings extends Entity implements Parsable
     */
     public function setShiftPreferences(?ShiftPreferences $value): void {
         $this->getBackingStore()->set('shiftPreferences', $value);
+    }
+
+    /**
+     * Sets the windows property value. The windows property
+     * @param array<WindowsSetting>|null $value Value to set for the windows property.
+    */
+    public function setWindows(?array $value): void {
+        $this->getBackingStore()->set('windows', $value);
     }
 
 }

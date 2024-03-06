@@ -19,7 +19,7 @@ class OddFPricePostRequestBody implements AdditionalDataHolder, BackedModel, Par
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new oddFPricePostRequestBody and sets the default values.
+     * Instantiates a new OddFPricePostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

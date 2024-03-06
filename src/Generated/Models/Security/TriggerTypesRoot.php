@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class TriggerTypesRoot extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new triggerTypesRoot and sets the default values.
+     * Instantiates a new TriggerTypesRoot and sets the default values.
     */
     public function __construct() {
         parent::__construct();

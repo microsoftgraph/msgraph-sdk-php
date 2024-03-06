@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class SoftwareOathAuthenticationMethodCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new softwareOathAuthenticationMethodCollectionResponse and sets the default values.
+     * Instantiates a new SoftwareOathAuthenticationMethodCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

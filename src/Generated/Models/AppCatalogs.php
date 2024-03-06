@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class AppCatalogs extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new appCatalogs and sets the default values.
+     * Instantiates a new AppCatalogs and sets the default values.
     */
     public function __construct() {
         parent::__construct();

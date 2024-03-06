@@ -18,7 +18,7 @@ class SiteCollection implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new siteCollection and sets the default values.
+     * Instantiates a new SiteCollection and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
@@ -56,7 +56,7 @@ class SiteCollection implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the dataLocationCode property value. The geographic region code for where this site collection resides. Read-only.
+     * Gets the dataLocationCode property value. The geographic region code for where this site collection resides. Only present for multi-geo tenants. Read-only.
      * @return string|null
     */
     public function getDataLocationCode(): ?string {
@@ -146,7 +146,7 @@ class SiteCollection implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the dataLocationCode property value. The geographic region code for where this site collection resides. Read-only.
+     * Sets the dataLocationCode property value. The geographic region code for where this site collection resides. Only present for multi-geo tenants. Read-only.
      * @param string|null $value Value to set for the dataLocationCode property.
     */
     public function setDataLocationCode(?string $value): void {

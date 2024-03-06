@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\Time;
 class EducationAssignmentDefaults extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new educationAssignmentDefaults and sets the default values.
+     * Instantiates a new EducationAssignmentDefaults and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -76,7 +76,7 @@ class EducationAssignmentDefaults extends Entity implements Parsable
     }
 
     /**
-     * Gets the notificationChannelUrl property value. Default Teams channel to which notifications will be sent. Default value is null.
+     * Gets the notificationChannelUrl property value. Default Teams channel to which notifications are sent. Default value is null.
      * @return string|null
     */
     public function getNotificationChannelUrl(): ?string {
@@ -124,7 +124,7 @@ class EducationAssignmentDefaults extends Entity implements Parsable
     }
 
     /**
-     * Sets the notificationChannelUrl property value. Default Teams channel to which notifications will be sent. Default value is null.
+     * Sets the notificationChannelUrl property value. Default Teams channel to which notifications are sent. Default value is null.
      * @param string|null $value Value to set for the notificationChannelUrl property.
     */
     public function setNotificationChannelUrl(?string $value): void {

@@ -19,7 +19,7 @@ class ConditionalAccessClientApplications implements AdditionalDataHolder, Backe
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new conditionalAccessClientApplications and sets the default values.
+     * Instantiates a new ConditionalAccessClientApplications and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

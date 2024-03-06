@@ -18,7 +18,7 @@ class CertificationControl implements AdditionalDataHolder, BackedModel, Parsabl
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new certificationControl and sets the default values.
+     * Instantiates a new CertificationControl and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

@@ -16,7 +16,7 @@ class AccessPackagesIncompatibleWithRequestBuilderGetRequestConfiguration extend
     public ?AccessPackagesIncompatibleWithRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new accessPackagesIncompatibleWithRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new AccessPackagesIncompatibleWithRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param AccessPackagesIncompatibleWithRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class AccessPackagesIncompatibleWithRequestBuilderGetRequestConfiguration extend
     }
 
     /**
-     * Instantiates a new accessPackagesIncompatibleWithRequestBuilderGetQueryParameters.
+     * Instantiates a new AccessPackagesIncompatibleWithRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

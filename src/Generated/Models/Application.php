@@ -12,7 +12,7 @@ use Psr\Http\Message\StreamInterface;
 class Application extends DirectoryObject implements Parsable 
 {
     /**
-     * Instantiates a new application and sets the default values.
+     * Instantiates a new Application and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -282,6 +282,7 @@ class Application extends DirectoryObject implements Parsable
             'tokenEncryptionKeyId' => fn(ParseNode $n) => $o->setTokenEncryptionKeyId($n->getStringValue()),
             'tokenIssuancePolicies' => fn(ParseNode $n) => $o->setTokenIssuancePolicies($n->getCollectionOfObjectValues([TokenIssuancePolicy::class, 'createFromDiscriminatorValue'])),
             'tokenLifetimePolicies' => fn(ParseNode $n) => $o->setTokenLifetimePolicies($n->getCollectionOfObjectValues([TokenLifetimePolicy::class, 'createFromDiscriminatorValue'])),
+            'uniqueName' => fn(ParseNode $n) => $o->setUniqueName($n->getStringValue()),
             'verifiedPublisher' => fn(ParseNode $n) => $o->setVerifiedPublisher($n->getObjectValue([VerifiedPublisher::class, 'createFromDiscriminatorValue'])),
             'web' => fn(ParseNode $n) => $o->setWeb($n->getObjectValue([WebApplication::class, 'createFromDiscriminatorValue'])),
         ]);
@@ -642,6 +643,18 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
+     * Gets the uniqueName property value. The uniqueName property
+     * @return string|null
+    */
+    public function getUniqueName(): ?string {
+        $val = $this->getBackingStore()->get('uniqueName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'uniqueName'");
+    }
+
+    /**
      * Gets the verifiedPublisher property value. Specifies the verified publisher of the application. For more information about how publisher verification helps support application security, trustworthiness, and compliance, see Publisher verification.
      * @return VerifiedPublisher|null
     */
@@ -714,6 +727,7 @@ class Application extends DirectoryObject implements Parsable
         $writer->writeStringValue('tokenEncryptionKeyId', $this->getTokenEncryptionKeyId());
         $writer->writeCollectionOfObjectValues('tokenIssuancePolicies', $this->getTokenIssuancePolicies());
         $writer->writeCollectionOfObjectValues('tokenLifetimePolicies', $this->getTokenLifetimePolicies());
+        $writer->writeStringValue('uniqueName', $this->getUniqueName());
         $writer->writeObjectValue('verifiedPublisher', $this->getVerifiedPublisher());
         $writer->writeObjectValue('web', $this->getWeb());
     }
@@ -1060,6 +1074,14 @@ class Application extends DirectoryObject implements Parsable
     */
     public function setTokenLifetimePolicies(?array $value): void {
         $this->getBackingStore()->set('tokenLifetimePolicies', $value);
+    }
+
+    /**
+     * Sets the uniqueName property value. The uniqueName property
+     * @param string|null $value Value to set for the uniqueName property.
+    */
+    public function setUniqueName(?string $value): void {
+        $this->getBackingStore()->set('uniqueName', $value);
     }
 
     /**

@@ -16,7 +16,7 @@ class Alerts_v2RequestBuilderGetRequestConfiguration extends BaseRequestConfigur
     public ?Alerts_v2RequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new alerts_v2RequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new Alerts_v2RequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param Alerts_v2RequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class Alerts_v2RequestBuilderGetRequestConfiguration extends BaseRequestConfigur
     }
 
     /**
-     * Instantiates a new alerts_v2RequestBuilderGetQueryParameters.
+     * Instantiates a new Alerts_v2RequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

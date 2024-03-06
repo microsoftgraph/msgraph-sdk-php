@@ -16,7 +16,7 @@ class GraphWindowsWebAppRequestBuilderGetRequestConfiguration extends BaseReques
     public ?GraphWindowsWebAppRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new graphWindowsWebAppRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new GraphWindowsWebAppRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param GraphWindowsWebAppRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class GraphWindowsWebAppRequestBuilderGetRequestConfiguration extends BaseReques
     }
 
     /**
-     * Instantiates a new graphWindowsWebAppRequestBuilderGetQueryParameters.
+     * Instantiates a new GraphWindowsWebAppRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return GraphWindowsWebAppRequestBuilderGetQueryParameters

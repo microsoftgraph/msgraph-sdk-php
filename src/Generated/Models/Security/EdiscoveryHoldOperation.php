@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EdiscoveryHoldOperation extends CaseOperation implements Parsable 
 {
     /**
-     * Instantiates a new ediscoveryHoldOperation and sets the default values.
+     * Instantiates a new EdiscoveryHoldOperation and sets the default values.
     */
     public function __construct() {
         parent::__construct();

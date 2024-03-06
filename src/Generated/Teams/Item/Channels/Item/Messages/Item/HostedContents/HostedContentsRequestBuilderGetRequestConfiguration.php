@@ -16,7 +16,7 @@ class HostedContentsRequestBuilderGetRequestConfiguration extends BaseRequestCon
     public ?HostedContentsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new hostedContentsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new HostedContentsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param HostedContentsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class HostedContentsRequestBuilderGetRequestConfiguration extends BaseRequestCon
     }
 
     /**
-     * Instantiates a new hostedContentsRequestBuilderGetQueryParameters.
+     * Instantiates a new HostedContentsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

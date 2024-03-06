@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TeleconferenceDeviceAudioQuality extends TeleconferenceDeviceMediaQuality implements Parsable 
 {
     /**
-     * Instantiates a new teleconferenceDeviceAudioQuality and sets the default values.
+     * Instantiates a new TeleconferenceDeviceAudioQuality and sets the default values.
     */
     public function __construct() {
         parent::__construct();

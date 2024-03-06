@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ColumnLink extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new columnLink and sets the default values.
+     * Instantiates a new ColumnLink and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class PlannerTask extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new plannerTask and sets the default values.
+     * Instantiates a new PlannerTask and sets the default values.
     */
     public function __construct() {
         parent::__construct();

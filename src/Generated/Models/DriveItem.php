@@ -11,7 +11,7 @@ use Psr\Http\Message\StreamInterface;
 class DriveItem extends BaseItem implements Parsable 
 {
     /**
-     * Instantiates a new driveItem and sets the default values.
+     * Instantiates a new DriveItem and sets the default values.
     */
     public function __construct() {
         parent::__construct();

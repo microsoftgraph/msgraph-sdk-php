@@ -19,7 +19,7 @@ class SecureScoreControlStateUpdate implements AdditionalDataHolder, BackedModel
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new secureScoreControlStateUpdate and sets the default values.
+     * Instantiates a new SecureScoreControlStateUpdate and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

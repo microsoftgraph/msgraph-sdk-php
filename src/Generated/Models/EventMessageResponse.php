@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EventMessageResponse extends EventMessage implements Parsable 
 {
     /**
-     * Instantiates a new eventMessageResponse and sets the default values.
+     * Instantiates a new EventMessageResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

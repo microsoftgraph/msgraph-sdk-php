@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class DeviceCompliancePolicySettingStateSummaryCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new deviceCompliancePolicySettingStateSummaryCollectionResponse and sets the default values.
+     * Instantiates a new DeviceCompliancePolicySettingStateSummaryCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

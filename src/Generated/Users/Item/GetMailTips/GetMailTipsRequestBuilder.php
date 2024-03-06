@@ -40,8 +40,7 @@ class GetMailTipsRequestBuilder extends BaseRequestBuilder
     public function post(GetMailTipsPostRequestBody $body, ?GetMailTipsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
-                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         return $this->requestAdapter->sendAsync($requestInfo, [GetMailTipsPostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }

@@ -18,7 +18,7 @@ class MediaContentRatingCanada implements AdditionalDataHolder, BackedModel, Par
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new mediaContentRatingCanada and sets the default values.
+     * Instantiates a new MediaContentRatingCanada and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

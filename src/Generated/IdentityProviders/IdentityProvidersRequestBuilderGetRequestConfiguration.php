@@ -16,7 +16,7 @@ class IdentityProvidersRequestBuilderGetRequestConfiguration extends BaseRequest
     public ?IdentityProvidersRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new identityProvidersRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new IdentityProvidersRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param IdentityProvidersRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class IdentityProvidersRequestBuilderGetRequestConfiguration extends BaseRequest
     }
 
     /**
-     * Instantiates a new identityProvidersRequestBuilderGetQueryParameters.
+     * Instantiates a new IdentityProvidersRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

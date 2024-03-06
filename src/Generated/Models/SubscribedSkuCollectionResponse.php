@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class SubscribedSkuCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new subscribedSkuCollectionResponse and sets the default values.
+     * Instantiates a new SubscribedSkuCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -19,7 +19,7 @@ class ChiSq_Dist_RTPostRequestBody implements AdditionalDataHolder, BackedModel,
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new chiSq_Dist_RTPostRequestBody and sets the default values.
+     * Instantiates a new ChiSq_Dist_RTPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class MicrosoftCustomTrainingSetting extends TrainingSetting implements Parsable 
 {
     /**
-     * Instantiates a new microsoftCustomTrainingSetting and sets the default values.
+     * Instantiates a new MicrosoftCustomTrainingSetting and sets the default values.
     */
     public function __construct() {
         parent::__construct();

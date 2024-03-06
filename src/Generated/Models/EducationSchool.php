@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class EducationSchool extends EducationOrganization implements Parsable 
 {
     /**
-     * Instantiates a new educationSchool and sets the default values.
+     * Instantiates a new EducationSchool and sets the default values.
     */
     public function __construct() {
         parent::__construct();

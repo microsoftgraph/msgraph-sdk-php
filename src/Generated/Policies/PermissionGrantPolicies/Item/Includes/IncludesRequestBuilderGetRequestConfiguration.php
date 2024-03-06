@@ -16,7 +16,7 @@ class IncludesRequestBuilderGetRequestConfiguration extends BaseRequestConfigura
     public ?IncludesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new includesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new IncludesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param IncludesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class IncludesRequestBuilderGetRequestConfiguration extends BaseRequestConfigura
     }
 
     /**
-     * Instantiates a new includesRequestBuilderGetQueryParameters.
+     * Instantiates a new IncludesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

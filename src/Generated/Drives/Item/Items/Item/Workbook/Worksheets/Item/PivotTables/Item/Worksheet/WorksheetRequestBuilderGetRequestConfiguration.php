@@ -16,7 +16,7 @@ class WorksheetRequestBuilderGetRequestConfiguration extends BaseRequestConfigur
     public ?WorksheetRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new worksheetRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new WorksheetRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param WorksheetRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class WorksheetRequestBuilderGetRequestConfiguration extends BaseRequestConfigur
     }
 
     /**
-     * Instantiates a new worksheetRequestBuilderGetQueryParameters.
+     * Instantiates a new WorksheetRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return WorksheetRequestBuilderGetQueryParameters

@@ -18,7 +18,7 @@ class CustomSecurityAttributeValue implements AdditionalDataHolder, BackedModel,
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new customSecurityAttributeValue and sets the default values.
+     * Instantiates a new CustomSecurityAttributeValue and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

@@ -16,7 +16,7 @@ class SupportedLanguagesRequestBuilderGetRequestConfiguration extends BaseReques
     public ?SupportedLanguagesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new supportedLanguagesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new SupportedLanguagesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param SupportedLanguagesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class SupportedLanguagesRequestBuilderGetRequestConfiguration extends BaseReques
     }
 
     /**
-     * Instantiates a new supportedLanguagesRequestBuilderGetQueryParameters.
+     * Instantiates a new SupportedLanguagesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param string|null $filter Filter items by property values
      * @param string|null $search Search items by search phrases

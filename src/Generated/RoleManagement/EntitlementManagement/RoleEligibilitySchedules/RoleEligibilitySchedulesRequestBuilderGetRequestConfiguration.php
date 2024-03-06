@@ -16,7 +16,7 @@ class RoleEligibilitySchedulesRequestBuilderGetRequestConfiguration extends Base
     public ?RoleEligibilitySchedulesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new roleEligibilitySchedulesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new RoleEligibilitySchedulesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param RoleEligibilitySchedulesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class RoleEligibilitySchedulesRequestBuilderGetRequestConfiguration extends Base
     }
 
     /**
-     * Instantiates a new roleEligibilitySchedulesRequestBuilderGetQueryParameters.
+     * Instantiates a new RoleEligibilitySchedulesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

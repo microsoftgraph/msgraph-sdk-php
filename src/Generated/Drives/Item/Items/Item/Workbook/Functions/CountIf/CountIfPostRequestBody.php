@@ -19,7 +19,7 @@ class CountIfPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new countIfPostRequestBody and sets the default values.
+     * Instantiates a new CountIfPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

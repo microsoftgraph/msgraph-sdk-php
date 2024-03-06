@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class CalendarPermissionCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new calendarPermissionCollectionResponse and sets the default values.
+     * Instantiates a new CalendarPermissionCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

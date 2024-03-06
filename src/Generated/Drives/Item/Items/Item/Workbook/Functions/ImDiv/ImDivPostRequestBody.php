@@ -19,7 +19,7 @@ class ImDivPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new imDivPostRequestBody and sets the default values.
+     * Instantiates a new ImDivPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

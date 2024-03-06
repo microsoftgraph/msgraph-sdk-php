@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class OmaSettingString extends OmaSetting implements Parsable 
 {
     /**
-     * Instantiates a new omaSettingString and sets the default values.
+     * Instantiates a new OmaSettingString and sets the default values.
     */
     public function __construct() {
         parent::__construct();

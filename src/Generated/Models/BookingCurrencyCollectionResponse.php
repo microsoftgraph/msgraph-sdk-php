@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class BookingCurrencyCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new bookingCurrencyCollectionResponse and sets the default values.
+     * Instantiates a new BookingCurrencyCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

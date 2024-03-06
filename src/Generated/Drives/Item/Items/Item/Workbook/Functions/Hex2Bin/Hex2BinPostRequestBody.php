@@ -19,7 +19,7 @@ class Hex2BinPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new hex2BinPostRequestBody and sets the default values.
+     * Instantiates a new Hex2BinPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

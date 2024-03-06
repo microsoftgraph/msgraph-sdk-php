@@ -16,7 +16,7 @@ class AccessReviewsRequestBuilderGetRequestConfiguration extends BaseRequestConf
     public ?AccessReviewsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new accessReviewsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new AccessReviewsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param AccessReviewsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class AccessReviewsRequestBuilderGetRequestConfiguration extends BaseRequestConf
     }
 
     /**
-     * Instantiates a new accessReviewsRequestBuilderGetQueryParameters.
+     * Instantiates a new AccessReviewsRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return AccessReviewsRequestBuilderGetQueryParameters

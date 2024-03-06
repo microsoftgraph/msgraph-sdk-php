@@ -16,7 +16,7 @@ class ConditionalAccessPoliciesRequestBuilderGetRequestConfiguration extends Bas
     public ?ConditionalAccessPoliciesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new conditionalAccessPoliciesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new ConditionalAccessPoliciesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param ConditionalAccessPoliciesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class ConditionalAccessPoliciesRequestBuilderGetRequestConfiguration extends Bas
     }
 
     /**
-     * Instantiates a new conditionalAccessPoliciesRequestBuilderGetQueryParameters.
+     * Instantiates a new ConditionalAccessPoliciesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

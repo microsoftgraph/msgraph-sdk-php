@@ -16,7 +16,7 @@ class RebootAnalyticsMetricsRequestBuilderGetRequestConfiguration extends BaseRe
     public ?RebootAnalyticsMetricsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new rebootAnalyticsMetricsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new RebootAnalyticsMetricsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param RebootAnalyticsMetricsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class RebootAnalyticsMetricsRequestBuilderGetRequestConfiguration extends BaseRe
     }
 
     /**
-     * Instantiates a new rebootAnalyticsMetricsRequestBuilderGetQueryParameters.
+     * Instantiates a new RebootAnalyticsMetricsRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return RebootAnalyticsMetricsRequestBuilderGetQueryParameters

@@ -14,7 +14,7 @@ use Microsoft\Kiota\Abstractions\Types\Date;
 class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implements Parsable 
 {
     /**
-     * Instantiates a new windowsUpdateForBusinessConfiguration and sets the default values.
+     * Instantiates a new WindowsUpdateForBusinessConfiguration and sets the default values.
     */
     public function __construct() {
         parent::__construct();

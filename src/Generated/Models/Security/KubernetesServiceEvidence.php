@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class KubernetesServiceEvidence extends AlertEvidence implements Parsable 
 {
     /**
-     * Instantiates a new kubernetesServiceEvidence and sets the default values.
+     * Instantiates a new KubernetesServiceEvidence and sets the default values.
     */
     public function __construct() {
         parent::__construct();

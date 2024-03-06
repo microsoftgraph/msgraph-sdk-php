@@ -22,7 +22,7 @@ class GetEffectivePermissionsWithScopeRequestBuilder extends BaseRequestBuilder
      * @param string|null $scope Usage: scope='{scope}'
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter, ?string $scope = null) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/deviceManagement/getEffectivePermissions(scope=\'{scope}\'){?%24top,%24skip,%24search,%24filter,%24count}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/deviceManagement/getEffectivePermissions(scope=\'{scope}\'){?%24count,%24filter,%24search,%24skip,%24top}');
         if (is_array($pathParametersOrRawUrl)) {
             $urlTplParams = $pathParametersOrRawUrl;
             $urlTplParams['scope'] = $scope;
@@ -41,8 +41,7 @@ class GetEffectivePermissionsWithScopeRequestBuilder extends BaseRequestBuilder
     public function get(?GetEffectivePermissionsWithScopeRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
-                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         return $this->requestAdapter->sendAsync($requestInfo, [GetEffectivePermissionsWithScopeGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }

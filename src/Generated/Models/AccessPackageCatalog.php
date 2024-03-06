@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class AccessPackageCatalog extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new accessPackageCatalog and sets the default values.
+     * Instantiates a new AccessPackageCatalog and sets the default values.
     */
     public function __construct() {
         parent::__construct();

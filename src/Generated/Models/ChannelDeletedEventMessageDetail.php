@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ChannelDeletedEventMessageDetail extends EventMessageDetail implements Parsable 
 {
     /**
-     * Instantiates a new channelDeletedEventMessageDetail and sets the default values.
+     * Instantiates a new ChannelDeletedEventMessageDetail and sets the default values.
     */
     public function __construct() {
         parent::__construct();

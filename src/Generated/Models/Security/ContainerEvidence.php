@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class ContainerEvidence extends AlertEvidence implements Parsable 
 {
     /**
-     * Instantiates a new containerEvidence and sets the default values.
+     * Instantiates a new ContainerEvidence and sets the default values.
     */
     public function __construct() {
         parent::__construct();

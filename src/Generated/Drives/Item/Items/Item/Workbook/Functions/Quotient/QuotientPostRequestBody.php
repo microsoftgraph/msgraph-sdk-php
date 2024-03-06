@@ -19,7 +19,7 @@ class QuotientPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new quotientPostRequestBody and sets the default values.
+     * Instantiates a new QuotientPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

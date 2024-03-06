@@ -21,7 +21,7 @@ class Win32LobAppMsiInformation implements AdditionalDataHolder, BackedModel, Pa
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new win32LobAppMsiInformation and sets the default values.
+     * Instantiates a new Win32LobAppMsiInformation and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

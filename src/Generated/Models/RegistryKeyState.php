@@ -18,7 +18,7 @@ class RegistryKeyState implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new registryKeyState and sets the default values.
+     * Instantiates a new RegistryKeyState and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

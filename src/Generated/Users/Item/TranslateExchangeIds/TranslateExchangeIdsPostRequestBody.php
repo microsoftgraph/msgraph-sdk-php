@@ -20,7 +20,7 @@ class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder, Backe
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new translateExchangeIdsPostRequestBody and sets the default values.
+     * Instantiates a new TranslateExchangeIdsPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

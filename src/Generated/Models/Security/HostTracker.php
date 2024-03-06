@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class HostTracker extends Artifact implements Parsable 
 {
     /**
-     * Instantiates a new hostTracker and sets the default values.
+     * Instantiates a new HostTracker and sets the default values.
     */
     public function __construct() {
         parent::__construct();

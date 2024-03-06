@@ -18,7 +18,7 @@ class AuthenticationMethodFeatureConfiguration implements AdditionalDataHolder, 
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new authenticationMethodFeatureConfiguration and sets the default values.
+     * Instantiates a new AuthenticationMethodFeatureConfiguration and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

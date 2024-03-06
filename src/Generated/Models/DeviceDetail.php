@@ -18,7 +18,7 @@ class DeviceDetail implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new deviceDetail and sets the default values.
+     * Instantiates a new DeviceDetail and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

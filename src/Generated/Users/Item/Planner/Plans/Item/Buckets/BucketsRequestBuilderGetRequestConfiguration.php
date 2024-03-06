@@ -16,7 +16,7 @@ class BucketsRequestBuilderGetRequestConfiguration extends BaseRequestConfigurat
     public ?BucketsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new bucketsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new BucketsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param BucketsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class BucketsRequestBuilderGetRequestConfiguration extends BaseRequestConfigurat
     }
 
     /**
-     * Instantiates a new bucketsRequestBuilderGetQueryParameters.
+     * Instantiates a new BucketsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

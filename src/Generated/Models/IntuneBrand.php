@@ -21,7 +21,7 @@ class IntuneBrand implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new intuneBrand and sets the default values.
+     * Instantiates a new IntuneBrand and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

@@ -16,7 +16,7 @@ class MostRecentSslCertificateRequestBuilderGetRequestConfiguration extends Base
     public ?MostRecentSslCertificateRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new mostRecentSslCertificateRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new MostRecentSslCertificateRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param MostRecentSslCertificateRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class MostRecentSslCertificateRequestBuilderGetRequestConfiguration extends Base
     }
 
     /**
-     * Instantiates a new mostRecentSslCertificateRequestBuilderGetQueryParameters.
+     * Instantiates a new MostRecentSslCertificateRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return MostRecentSslCertificateRequestBuilderGetQueryParameters

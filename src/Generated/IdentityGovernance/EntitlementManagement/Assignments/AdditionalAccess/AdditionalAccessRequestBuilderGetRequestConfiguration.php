@@ -16,7 +16,7 @@ class AdditionalAccessRequestBuilderGetRequestConfiguration extends BaseRequestC
     public ?AdditionalAccessRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new additionalAccessRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new AdditionalAccessRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param AdditionalAccessRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,8 +27,9 @@ class AdditionalAccessRequestBuilderGetRequestConfiguration extends BaseRequestC
     }
 
     /**
-     * Instantiates a new additionalAccessRequestBuilderGetQueryParameters.
+     * Instantiates a new AdditionalAccessRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
+     * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values
      * @param array<string>|null $orderby Order items by property values
      * @param string|null $search Search items by search phrases
@@ -37,8 +38,8 @@ class AdditionalAccessRequestBuilderGetRequestConfiguration extends BaseRequestC
      * @param int|null $top Show only the first n items
      * @return AdditionalAccessRequestBuilderGetQueryParameters
     */
-    public static function createQueryParameters(?bool $count = null, ?string $filter = null, ?array $orderby = null, ?string $search = null, ?array $select = null, ?int $skip = null, ?int $top = null): AdditionalAccessRequestBuilderGetQueryParameters {
-        return new AdditionalAccessRequestBuilderGetQueryParameters($count, $filter, $orderby, $search, $select, $skip, $top);
+    public static function createQueryParameters(?bool $count = null, ?array $expand = null, ?string $filter = null, ?array $orderby = null, ?string $search = null, ?array $select = null, ?int $skip = null, ?int $top = null): AdditionalAccessRequestBuilderGetQueryParameters {
+        return new AdditionalAccessRequestBuilderGetQueryParameters($count, $expand, $filter, $orderby, $search, $select, $skip, $top);
     }
 
 }

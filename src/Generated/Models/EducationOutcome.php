@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EducationOutcome extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new educationOutcome and sets the default values.
+     * Instantiates a new EducationOutcome and sets the default values.
     */
     public function __construct() {
         parent::__construct();

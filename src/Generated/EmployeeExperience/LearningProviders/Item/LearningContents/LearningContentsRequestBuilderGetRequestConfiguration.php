@@ -16,7 +16,7 @@ class LearningContentsRequestBuilderGetRequestConfiguration extends BaseRequestC
     public ?LearningContentsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new learningContentsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new LearningContentsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param LearningContentsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class LearningContentsRequestBuilderGetRequestConfiguration extends BaseRequestC
     }
 
     /**
-     * Instantiates a new learningContentsRequestBuilderGetQueryParameters.
+     * Instantiates a new LearningContentsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

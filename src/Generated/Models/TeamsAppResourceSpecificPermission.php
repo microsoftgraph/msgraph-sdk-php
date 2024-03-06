@@ -18,7 +18,7 @@ class TeamsAppResourceSpecificPermission implements AdditionalDataHolder, Backed
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new teamsAppResourceSpecificPermission and sets the default values.
+     * Instantiates a new TeamsAppResourceSpecificPermission and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

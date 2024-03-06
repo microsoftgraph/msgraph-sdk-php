@@ -16,7 +16,7 @@ class EndpointsRequestBuilderGetRequestConfiguration extends BaseRequestConfigur
     public ?EndpointsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new endpointsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new EndpointsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param EndpointsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class EndpointsRequestBuilderGetRequestConfiguration extends BaseRequestConfigur
     }
 
     /**
-     * Instantiates a new endpointsRequestBuilderGetQueryParameters.
+     * Instantiates a new EndpointsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

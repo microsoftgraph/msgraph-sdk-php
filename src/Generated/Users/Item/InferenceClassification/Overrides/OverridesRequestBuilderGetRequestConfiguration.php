@@ -16,7 +16,7 @@ class OverridesRequestBuilderGetRequestConfiguration extends BaseRequestConfigur
     public ?OverridesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new overridesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new OverridesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param OverridesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class OverridesRequestBuilderGetRequestConfiguration extends BaseRequestConfigur
     }
 
     /**
-     * Instantiates a new overridesRequestBuilderGetQueryParameters.
+     * Instantiates a new OverridesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param string|null $filter Filter items by property values
      * @param array<string>|null $orderby Order items by property values

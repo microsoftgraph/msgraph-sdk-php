@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class PlannerGroup extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new plannerGroup and sets the default values.
+     * Instantiates a new PlannerGroup and sets the default values.
     */
     public function __construct() {
         parent::__construct();

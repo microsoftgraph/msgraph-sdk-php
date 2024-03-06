@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\PrivilegedAccess\Group\As
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * When the request activates an ownership or membership assignment in PIM for groups, this object represents the eligibility relationship. Otherwise, it is null. Supports $expand.
+ * When the request activates an ownership or membership assignment in PIM for groups, this object represents the eligibility relationship. Otherwise, it's null. Supports $expand.
 */
 class ActivatedUsingRequestBuilderGetQueryParameters 
 {
@@ -22,7 +22,7 @@ class ActivatedUsingRequestBuilderGetQueryParameters
     public ?array $select = null;
     
     /**
-     * Instantiates a new activatedUsingRequestBuilderGetQueryParameters and sets the default values.
+     * Instantiates a new ActivatedUsingRequestBuilderGetQueryParameters and sets the default values.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
     */

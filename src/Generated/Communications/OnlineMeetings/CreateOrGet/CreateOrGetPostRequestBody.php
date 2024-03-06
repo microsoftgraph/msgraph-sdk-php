@@ -21,7 +21,7 @@ class CreateOrGetPostRequestBody implements AdditionalDataHolder, BackedModel, P
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new createOrGetPostRequestBody and sets the default values.
+     * Instantiates a new CreateOrGetPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Printer extends PrinterBase implements Parsable 
 {
     /**
-     * Instantiates a new printer and sets the default values.
+     * Instantiates a new Printer and sets the default values.
     */
     public function __construct() {
         parent::__construct();

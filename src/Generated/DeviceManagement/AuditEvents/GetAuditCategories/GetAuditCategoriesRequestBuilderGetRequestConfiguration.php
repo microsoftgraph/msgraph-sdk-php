@@ -16,7 +16,7 @@ class GetAuditCategoriesRequestBuilderGetRequestConfiguration extends BaseReques
     public ?GetAuditCategoriesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new getAuditCategoriesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new GetAuditCategoriesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param GetAuditCategoriesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class GetAuditCategoriesRequestBuilderGetRequestConfiguration extends BaseReques
     }
 
     /**
-     * Instantiates a new getAuditCategoriesRequestBuilderGetQueryParameters.
+     * Instantiates a new GetAuditCategoriesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param string|null $filter Filter items by property values
      * @param string|null $search Search items by search phrases

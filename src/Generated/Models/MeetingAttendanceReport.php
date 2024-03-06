@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class MeetingAttendanceReport extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new meetingAttendanceReport and sets the default values.
+     * Instantiates a new MeetingAttendanceReport and sets the default values.
     */
     public function __construct() {
         parent::__construct();

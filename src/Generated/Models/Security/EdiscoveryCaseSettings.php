@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EdiscoveryCaseSettings extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new ediscoveryCaseSettings and sets the default values.
+     * Instantiates a new EdiscoveryCaseSettings and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -16,7 +16,7 @@ class GetAttackSimulationRepeatOffendersRequestBuilderGetRequestConfiguration ex
     public ?GetAttackSimulationRepeatOffendersRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new getAttackSimulationRepeatOffendersRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new GetAttackSimulationRepeatOffendersRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param GetAttackSimulationRepeatOffendersRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class GetAttackSimulationRepeatOffendersRequestBuilderGetRequestConfiguration ex
     }
 
     /**
-     * Instantiates a new getAttackSimulationRepeatOffendersRequestBuilderGetQueryParameters.
+     * Instantiates a new GetAttackSimulationRepeatOffendersRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param string|null $filter Filter items by property values
      * @param string|null $search Search items by search phrases

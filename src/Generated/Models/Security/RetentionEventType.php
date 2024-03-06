@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class RetentionEventType extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new retentionEventType and sets the default values.
+     * Instantiates a new RetentionEventType and sets the default values.
     */
     public function __construct() {
         parent::__construct();

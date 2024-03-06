@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Windows10CompliancePolicy extends DeviceCompliancePolicy implements Parsable 
 {
     /**
-     * Instantiates a new windows10CompliancePolicy and sets the default values.
+     * Instantiates a new Windows10CompliancePolicy and sets the default values.
     */
     public function __construct() {
         parent::__construct();

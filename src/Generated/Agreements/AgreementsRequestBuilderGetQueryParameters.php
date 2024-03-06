@@ -22,7 +22,7 @@ class AgreementsRequestBuilderGetQueryParameters
     public ?array $select = null;
     
     /**
-     * Instantiates a new agreementsRequestBuilderGetQueryParameters and sets the default values.
+     * Instantiates a new AgreementsRequestBuilderGetQueryParameters and sets the default values.
      * @param string|null $search Search items by search phrases
      * @param array<string>|null $select Select properties to be returned
     */

@@ -16,7 +16,7 @@ class CalendarRequestBuilderGetRequestConfiguration extends BaseRequestConfigura
     public ?CalendarRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new calendarRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new CalendarRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param CalendarRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class CalendarRequestBuilderGetRequestConfiguration extends BaseRequestConfigura
     }
 
     /**
-     * Instantiates a new calendarRequestBuilderGetQueryParameters.
+     * Instantiates a new CalendarRequestBuilderGetQueryParameters.
      * @param array<string>|null $select Select properties to be returned
      * @return CalendarRequestBuilderGetQueryParameters
     */

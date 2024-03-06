@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookChartDataLabels extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new workbookChartDataLabels and sets the default values.
+     * Instantiates a new WorkbookChartDataLabels and sets the default values.
     */
     public function __construct() {
         parent::__construct();

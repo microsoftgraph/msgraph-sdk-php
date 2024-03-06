@@ -19,7 +19,7 @@ class ReplaceBPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new replaceBPostRequestBody and sets the default values.
+     * Instantiates a new ReplaceBPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

@@ -13,7 +13,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements Parsable 
 {
     /**
-     * Instantiates a new androidGeneralDeviceConfiguration and sets the default values.
+     * Instantiates a new AndroidGeneralDeviceConfiguration and sets the default values.
     */
     public function __construct() {
         parent::__construct();

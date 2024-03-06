@@ -16,7 +16,7 @@ class CommunicationsRequestBuilderGetRequestConfiguration extends BaseRequestCon
     public ?CommunicationsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new communicationsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new CommunicationsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param CommunicationsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class CommunicationsRequestBuilderGetRequestConfiguration extends BaseRequestCon
     }
 
     /**
-     * Instantiates a new communicationsRequestBuilderGetQueryParameters.
+     * Instantiates a new CommunicationsRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return CommunicationsRequestBuilderGetQueryParameters

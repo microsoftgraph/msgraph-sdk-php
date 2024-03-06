@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UserConsentRequest extends Request implements Parsable 
 {
     /**
-     * Instantiates a new userConsentRequest and sets the default values.
+     * Instantiates a new UserConsentRequest and sets the default values.
     */
     public function __construct() {
         parent::__construct();

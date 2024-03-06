@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ClientUserAgent extends UserAgent implements Parsable 
 {
     /**
-     * Instantiates a new clientUserAgent and sets the default values.
+     * Instantiates a new ClientUserAgent and sets the default values.
     */
     public function __construct() {
         parent::__construct();

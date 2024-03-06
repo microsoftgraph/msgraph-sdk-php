@@ -16,7 +16,7 @@ class OnlineMeetingsRequestBuilderGetRequestConfiguration extends BaseRequestCon
     public ?OnlineMeetingsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new onlineMeetingsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new OnlineMeetingsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param OnlineMeetingsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class OnlineMeetingsRequestBuilderGetRequestConfiguration extends BaseRequestCon
     }
 
     /**
-     * Instantiates a new onlineMeetingsRequestBuilderGetQueryParameters.
+     * Instantiates a new OnlineMeetingsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

@@ -14,7 +14,7 @@ use Psr\Http\Message\StreamInterface;
 class MobileAppContentFile extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new mobileAppContentFile and sets the default values.
+     * Instantiates a new MobileAppContentFile and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -18,7 +18,7 @@ class SensitivityLabelAssignment implements AdditionalDataHolder, BackedModel, P
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new sensitivityLabelAssignment and sets the default values.
+     * Instantiates a new SensitivityLabelAssignment and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

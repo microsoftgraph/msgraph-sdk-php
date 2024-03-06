@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class MdmWindowsInformationProtectionPolicyCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new mdmWindowsInformationProtectionPolicyCollectionResponse and sets the default values.
+     * Instantiates a new MdmWindowsInformationProtectionPolicyCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

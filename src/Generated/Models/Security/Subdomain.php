@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Subdomain extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new subdomain and sets the default values.
+     * Instantiates a new Subdomain and sets the default values.
     */
     public function __construct() {
         parent::__construct();

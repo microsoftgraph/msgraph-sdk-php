@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class LifecycleManagementSettings extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new lifecycleManagementSettings and sets the default values.
+     * Instantiates a new LifecycleManagementSettings and sets the default values.
     */
     public function __construct() {
         parent::__construct();

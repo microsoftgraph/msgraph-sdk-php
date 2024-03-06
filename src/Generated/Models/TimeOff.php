@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TimeOff extends ChangeTrackedEntity implements Parsable 
 {
     /**
-     * Instantiates a new timeOff and sets the default values.
+     * Instantiates a new TimeOff and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -26,7 +26,7 @@ class TimeOff extends ChangeTrackedEntity implements Parsable
     }
 
     /**
-     * Gets the draftTimeOff property value. The draft version of this timeOff that is viewable by managers. Required.
+     * Gets the draftTimeOff property value. The draft version of this timeOff item that is viewable by managers. It must be shared before it is visible to team members. Required.
      * @return TimeOffItem|null
     */
     public function getDraftTimeOff(): ?TimeOffItem {
@@ -51,7 +51,7 @@ class TimeOff extends ChangeTrackedEntity implements Parsable
     }
 
     /**
-     * Gets the sharedTimeOff property value. The shared version of this timeOff that is viewable by both employees and managers. Required.
+     * Gets the sharedTimeOff property value. The shared version of this timeOff that is viewable by both employees and managers. Updates to the sharedTimeOff property send notifications to users in the Teams client. Required.
      * @return TimeOffItem|null
     */
     public function getSharedTimeOff(): ?TimeOffItem {
@@ -86,7 +86,7 @@ class TimeOff extends ChangeTrackedEntity implements Parsable
     }
 
     /**
-     * Sets the draftTimeOff property value. The draft version of this timeOff that is viewable by managers. Required.
+     * Sets the draftTimeOff property value. The draft version of this timeOff item that is viewable by managers. It must be shared before it is visible to team members. Required.
      * @param TimeOffItem|null $value Value to set for the draftTimeOff property.
     */
     public function setDraftTimeOff(?TimeOffItem $value): void {
@@ -94,7 +94,7 @@ class TimeOff extends ChangeTrackedEntity implements Parsable
     }
 
     /**
-     * Sets the sharedTimeOff property value. The shared version of this timeOff that is viewable by both employees and managers. Required.
+     * Sets the sharedTimeOff property value. The shared version of this timeOff that is viewable by both employees and managers. Updates to the sharedTimeOff property send notifications to users in the Teams client. Required.
      * @param TimeOffItem|null $value Value to set for the sharedTimeOff property.
     */
     public function setSharedTimeOff(?TimeOffItem $value): void {

@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\RequestOption;
 class NotesRequestBuilderPostRequestConfiguration extends BaseRequestConfiguration 
 {
     /**
-     * Instantiates a new notesRequestBuilderPostRequestConfiguration and sets the default values.
+     * Instantiates a new NotesRequestBuilderPostRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
     */

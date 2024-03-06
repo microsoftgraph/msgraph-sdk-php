@@ -13,7 +13,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class MacOSGeneralDeviceConfiguration extends DeviceConfiguration implements Parsable 
 {
     /**
-     * Instantiates a new macOSGeneralDeviceConfiguration and sets the default values.
+     * Instantiates a new MacOSGeneralDeviceConfiguration and sets the default values.
     */
     public function __construct() {
         parent::__construct();

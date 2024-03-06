@@ -19,7 +19,7 @@ class BesselIPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new besselIPostRequestBody and sets the default values.
+     * Instantiates a new BesselIPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

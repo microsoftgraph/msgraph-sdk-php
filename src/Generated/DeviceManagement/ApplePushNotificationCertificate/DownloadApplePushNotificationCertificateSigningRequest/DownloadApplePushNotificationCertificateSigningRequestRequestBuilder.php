@@ -38,8 +38,7 @@ class DownloadApplePushNotificationCertificateSigningRequestRequestBuilder exten
     public function get(?DownloadApplePushNotificationCertificateSigningRequestRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
-                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         return $this->requestAdapter->sendAsync($requestInfo, [DownloadApplePushNotificationCertificateSigningRequestGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }

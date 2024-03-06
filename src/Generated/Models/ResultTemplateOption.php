@@ -18,7 +18,7 @@ class ResultTemplateOption implements AdditionalDataHolder, BackedModel, Parsabl
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new resultTemplateOption and sets the default values.
+     * Instantiates a new ResultTemplateOption and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

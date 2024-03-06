@@ -22,7 +22,7 @@ class ValueAxisRequestBuilderGetQueryParameters
     public ?array $select = null;
     
     /**
-     * Instantiates a new valueAxisRequestBuilderGetQueryParameters and sets the default values.
+     * Instantiates a new ValueAxisRequestBuilderGetQueryParameters and sets the default values.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
     */

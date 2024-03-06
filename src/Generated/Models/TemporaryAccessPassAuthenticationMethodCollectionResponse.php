@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class TemporaryAccessPassAuthenticationMethodCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new temporaryAccessPassAuthenticationMethodCollectionResponse and sets the default values.
+     * Instantiates a new TemporaryAccessPassAuthenticationMethodCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

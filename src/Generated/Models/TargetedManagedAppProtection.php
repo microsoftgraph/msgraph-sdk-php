@@ -13,7 +13,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class TargetedManagedAppProtection extends ManagedAppProtection implements Parsable 
 {
     /**
-     * Instantiates a new targetedManagedAppProtection and sets the default values.
+     * Instantiates a new TargetedManagedAppProtection and sets the default values.
     */
     public function __construct() {
         parent::__construct();

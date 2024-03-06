@@ -11,7 +11,7 @@ use Psr\Http\Message\StreamInterface;
 class EnterpriseCodeSigningCertificate extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new enterpriseCodeSigningCertificate and sets the default values.
+     * Instantiates a new EnterpriseCodeSigningCertificate and sets the default values.
     */
     public function __construct() {
         parent::__construct();

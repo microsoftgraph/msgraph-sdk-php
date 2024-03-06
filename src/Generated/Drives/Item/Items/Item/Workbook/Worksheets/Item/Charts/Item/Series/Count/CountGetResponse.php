@@ -18,7 +18,7 @@ class CountGetResponse implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new countGetResponse and sets the default values.
+     * Instantiates a new CountGetResponse and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

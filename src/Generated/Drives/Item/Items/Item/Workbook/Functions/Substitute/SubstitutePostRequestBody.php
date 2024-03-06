@@ -19,7 +19,7 @@ class SubstitutePostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new substitutePostRequestBody and sets the default values.
+     * Instantiates a new SubstitutePostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

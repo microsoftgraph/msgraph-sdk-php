@@ -18,7 +18,7 @@ class AuthenticationMethodsRegistrationCampaignIncludeTarget implements Addition
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new authenticationMethodsRegistrationCampaignIncludeTarget and sets the default values.
+     * Instantiates a new AuthenticationMethodsRegistrationCampaignIncludeTarget and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

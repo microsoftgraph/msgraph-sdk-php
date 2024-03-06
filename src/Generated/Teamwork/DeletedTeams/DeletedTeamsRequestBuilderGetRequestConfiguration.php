@@ -16,7 +16,7 @@ class DeletedTeamsRequestBuilderGetRequestConfiguration extends BaseRequestConfi
     public ?DeletedTeamsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new deletedTeamsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new DeletedTeamsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param DeletedTeamsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class DeletedTeamsRequestBuilderGetRequestConfiguration extends BaseRequestConfi
     }
 
     /**
-     * Instantiates a new deletedTeamsRequestBuilderGetQueryParameters.
+     * Instantiates a new DeletedTeamsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

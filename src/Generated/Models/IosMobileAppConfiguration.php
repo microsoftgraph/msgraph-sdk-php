@@ -14,7 +14,7 @@ use Psr\Http\Message\StreamInterface;
 class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfiguration implements Parsable 
 {
     /**
-     * Instantiates a new iosMobileAppConfiguration and sets the default values.
+     * Instantiates a new IosMobileAppConfiguration and sets the default values.
     */
     public function __construct() {
         parent::__construct();

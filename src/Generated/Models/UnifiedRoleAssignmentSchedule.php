@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase implements Parsable 
 {
     /**
-     * Instantiates a new unifiedRoleAssignmentSchedule and sets the default values.
+     * Instantiates a new UnifiedRoleAssignmentSchedule and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -25,7 +25,7 @@ class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase implements P
     }
 
     /**
-     * Gets the activatedUsing property value. If the request is from an eligible administrator to activate a role, this parameter will show the related eligible assignment for that activation. Otherwise, it is null. Supports $expand.
+     * Gets the activatedUsing property value. If the request is from an eligible administrator to activate a role, this parameter shows the related eligible assignment for that activation. Otherwise, it's null. Supports $expand.
      * @return UnifiedRoleEligibilitySchedule|null
     */
     public function getActivatedUsing(): ?UnifiedRoleEligibilitySchedule {
@@ -37,7 +37,7 @@ class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase implements P
     }
 
     /**
-     * Gets the assignmentType property value. Type of the assignment which can either be Assigned or Activated. Supports $filter (eq, ne).
+     * Gets the assignmentType property value. The type of the assignment that can either be Assigned or Activated. Supports $filter (eq, ne).
      * @return string|null
     */
     public function getAssignmentType(): ?string {
@@ -63,7 +63,7 @@ class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase implements P
     }
 
     /**
-     * Gets the memberType property value. How the assignments is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleAssignmentSchedule can be managed by the caller. Supports $filter (eq, ne).
+     * Gets the memberType property value. How the assignment is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleAssignmentSchedule can be managed by the caller. Supports $filter (eq, ne).
      * @return string|null
     */
     public function getMemberType(): ?string {
@@ -99,7 +99,7 @@ class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase implements P
     }
 
     /**
-     * Sets the activatedUsing property value. If the request is from an eligible administrator to activate a role, this parameter will show the related eligible assignment for that activation. Otherwise, it is null. Supports $expand.
+     * Sets the activatedUsing property value. If the request is from an eligible administrator to activate a role, this parameter shows the related eligible assignment for that activation. Otherwise, it's null. Supports $expand.
      * @param UnifiedRoleEligibilitySchedule|null $value Value to set for the activatedUsing property.
     */
     public function setActivatedUsing(?UnifiedRoleEligibilitySchedule $value): void {
@@ -107,7 +107,7 @@ class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase implements P
     }
 
     /**
-     * Sets the assignmentType property value. Type of the assignment which can either be Assigned or Activated. Supports $filter (eq, ne).
+     * Sets the assignmentType property value. The type of the assignment that can either be Assigned or Activated. Supports $filter (eq, ne).
      * @param string|null $value Value to set for the assignmentType property.
     */
     public function setAssignmentType(?string $value): void {
@@ -115,7 +115,7 @@ class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase implements P
     }
 
     /**
-     * Sets the memberType property value. How the assignments is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleAssignmentSchedule can be managed by the caller. Supports $filter (eq, ne).
+     * Sets the memberType property value. How the assignment is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleAssignmentSchedule can be managed by the caller. Supports $filter (eq, ne).
      * @param string|null $value Value to set for the memberType property.
     */
     public function setMemberType(?string $value): void {

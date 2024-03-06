@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class SynchronizationTemplate extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new synchronizationTemplate and sets the default values.
+     * Instantiates a new SynchronizationTemplate and sets the default values.
     */
     public function __construct() {
         parent::__construct();

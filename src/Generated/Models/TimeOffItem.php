@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TimeOffItem extends ScheduleEntity implements Parsable 
 {
     /**
-     * Instantiates a new timeOffItem and sets the default values.
+     * Instantiates a new TimeOffItem and sets the default values.
     */
     public function __construct() {
         parent::__construct();

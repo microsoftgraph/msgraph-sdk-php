@@ -18,7 +18,7 @@ class AccessPackageLocalizedText implements AdditionalDataHolder, BackedModel, P
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new accessPackageLocalizedText and sets the default values.
+     * Instantiates a new AccessPackageLocalizedText and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

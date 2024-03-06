@@ -18,7 +18,7 @@ class SetVerifiedPublisherPostRequestBody implements AdditionalDataHolder, Backe
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new setVerifiedPublisherPostRequestBody and sets the default values.
+     * Instantiates a new SetVerifiedPublisherPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

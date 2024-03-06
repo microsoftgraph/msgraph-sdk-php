@@ -16,7 +16,7 @@ class GetEffectivePermissionsWithScopeRequestBuilderGetRequestConfiguration exte
     public ?GetEffectivePermissionsWithScopeRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new getEffectivePermissionsWithScopeRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new GetEffectivePermissionsWithScopeRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param GetEffectivePermissionsWithScopeRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class GetEffectivePermissionsWithScopeRequestBuilderGetRequestConfiguration exte
     }
 
     /**
-     * Instantiates a new getEffectivePermissionsWithScopeRequestBuilderGetQueryParameters.
+     * Instantiates a new GetEffectivePermissionsWithScopeRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param string|null $filter Filter items by property values
      * @param string|null $search Search items by search phrases

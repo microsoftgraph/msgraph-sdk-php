@@ -16,7 +16,7 @@ class UserExperienceAnalyticsMetricHistoryRequestBuilderGetRequestConfiguration 
     public ?UserExperienceAnalyticsMetricHistoryRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new userExperienceAnalyticsMetricHistoryRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsMetricHistoryRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param UserExperienceAnalyticsMetricHistoryRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class UserExperienceAnalyticsMetricHistoryRequestBuilderGetRequestConfiguration 
     }
 
     /**
-     * Instantiates a new userExperienceAnalyticsMetricHistoryRequestBuilderGetQueryParameters.
+     * Instantiates a new UserExperienceAnalyticsMetricHistoryRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

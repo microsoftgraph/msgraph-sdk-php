@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleAss
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The schedule for an eligible role assignment that is referenced through the targetScheduleId property. Supports $expand.
+ * The schedule for an eligible role assignment that is referenced through the targetScheduleId property. Supports $expand and $select nested in $expand.
 */
 class TargetScheduleRequestBuilderGetQueryParameters 
 {
@@ -22,7 +22,7 @@ class TargetScheduleRequestBuilderGetQueryParameters
     public ?array $select = null;
     
     /**
-     * Instantiates a new targetScheduleRequestBuilderGetQueryParameters and sets the default values.
+     * Instantiates a new TargetScheduleRequestBuilderGetQueryParameters and sets the default values.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
     */

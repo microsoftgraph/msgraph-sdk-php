@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class DomainDnsRecordCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new domainDnsRecordCollectionResponse and sets the default values.
+     * Instantiates a new DomainDnsRecordCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

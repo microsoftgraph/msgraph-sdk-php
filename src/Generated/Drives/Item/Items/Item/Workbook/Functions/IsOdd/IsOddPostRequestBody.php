@@ -19,7 +19,7 @@ class IsOddPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new isOddPostRequestBody and sets the default values.
+     * Instantiates a new IsOddPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

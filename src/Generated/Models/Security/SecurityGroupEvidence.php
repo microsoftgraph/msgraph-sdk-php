@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SecurityGroupEvidence extends AlertEvidence implements Parsable 
 {
     /**
-     * Instantiates a new securityGroupEvidence and sets the default values.
+     * Instantiates a new SecurityGroupEvidence and sets the default values.
     */
     public function __construct() {
         parent::__construct();

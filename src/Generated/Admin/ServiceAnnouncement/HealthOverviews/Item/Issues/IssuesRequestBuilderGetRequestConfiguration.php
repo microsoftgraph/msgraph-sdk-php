@@ -16,7 +16,7 @@ class IssuesRequestBuilderGetRequestConfiguration extends BaseRequestConfigurati
     public ?IssuesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new issuesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new IssuesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param IssuesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class IssuesRequestBuilderGetRequestConfiguration extends BaseRequestConfigurati
     }
 
     /**
-     * Instantiates a new issuesRequestBuilderGetQueryParameters.
+     * Instantiates a new IssuesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

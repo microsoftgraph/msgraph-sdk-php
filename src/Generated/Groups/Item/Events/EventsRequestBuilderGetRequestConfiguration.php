@@ -16,7 +16,7 @@ class EventsRequestBuilderGetRequestConfiguration extends BaseRequestConfigurati
     public ?EventsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new eventsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new EventsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param EventsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class EventsRequestBuilderGetRequestConfiguration extends BaseRequestConfigurati
     }
 
     /**
-     * Instantiates a new eventsRequestBuilderGetQueryParameters.
+     * Instantiates a new EventsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param string|null $filter Filter items by property values
      * @param array<string>|null $orderby Order items by property values

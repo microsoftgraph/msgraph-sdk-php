@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class ServicePrincipal extends DirectoryObject implements Parsable 
 {
     /**
-     * Instantiates a new servicePrincipal and sets the default values.
+     * Instantiates a new ServicePrincipal and sets the default values.
     */
     public function __construct() {
         parent::__construct();

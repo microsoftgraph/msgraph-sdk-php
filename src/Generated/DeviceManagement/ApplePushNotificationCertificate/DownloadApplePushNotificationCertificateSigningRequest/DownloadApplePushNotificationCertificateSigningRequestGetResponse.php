@@ -18,7 +18,7 @@ class DownloadApplePushNotificationCertificateSigningRequestGetResponse implemen
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new downloadApplePushNotificationCertificateSigningRequestGetResponse and sets the default values.
+     * Instantiates a new DownloadApplePushNotificationCertificateSigningRequestGetResponse and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

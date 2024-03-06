@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class ProvisioningObjectSummary extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new provisioningObjectSummary and sets the default values.
+     * Instantiates a new ProvisioningObjectSummary and sets the default values.
     */
     public function __construct() {
         parent::__construct();

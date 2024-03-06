@@ -20,7 +20,7 @@ class TermColumn implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new termColumn and sets the default values.
+     * Instantiates a new TermColumn and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

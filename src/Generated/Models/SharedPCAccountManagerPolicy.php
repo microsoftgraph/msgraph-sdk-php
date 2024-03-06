@@ -21,7 +21,7 @@ class SharedPCAccountManagerPolicy implements AdditionalDataHolder, BackedModel,
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new sharedPCAccountManagerPolicy and sets the default values.
+     * Instantiates a new SharedPCAccountManagerPolicy and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

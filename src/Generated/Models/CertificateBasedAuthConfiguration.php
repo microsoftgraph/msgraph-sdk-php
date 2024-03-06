@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class CertificateBasedAuthConfiguration extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new certificateBasedAuthConfiguration and sets the default values.
+     * Instantiates a new CertificateBasedAuthConfiguration and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -19,7 +19,7 @@ class GammaLn_PrecisePostRequestBody implements AdditionalDataHolder, BackedMode
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new gammaLn_PrecisePostRequestBody and sets the default values.
+     * Instantiates a new GammaLn_PrecisePostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

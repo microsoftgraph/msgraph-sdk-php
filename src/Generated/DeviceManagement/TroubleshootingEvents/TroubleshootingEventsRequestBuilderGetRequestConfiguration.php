@@ -16,7 +16,7 @@ class TroubleshootingEventsRequestBuilderGetRequestConfiguration extends BaseReq
     public ?TroubleshootingEventsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new troubleshootingEventsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new TroubleshootingEventsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param TroubleshootingEventsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class TroubleshootingEventsRequestBuilderGetRequestConfiguration extends BaseReq
     }
 
     /**
-     * Instantiates a new troubleshootingEventsRequestBuilderGetQueryParameters.
+     * Instantiates a new TroubleshootingEventsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

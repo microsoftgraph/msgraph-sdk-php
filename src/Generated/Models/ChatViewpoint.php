@@ -19,7 +19,7 @@ class ChatViewpoint implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new chatViewpoint and sets the default values.
+     * Instantiates a new ChatViewpoint and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

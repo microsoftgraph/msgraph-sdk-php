@@ -16,7 +16,7 @@ class InReplyToRequestBuilderGetRequestConfiguration extends BaseRequestConfigur
     public ?InReplyToRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new inReplyToRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new InReplyToRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param InReplyToRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class InReplyToRequestBuilderGetRequestConfiguration extends BaseRequestConfigur
     }
 
     /**
-     * Instantiates a new inReplyToRequestBuilderGetQueryParameters.
+     * Instantiates a new InReplyToRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return InReplyToRequestBuilderGetQueryParameters

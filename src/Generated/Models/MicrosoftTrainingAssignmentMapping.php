@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class MicrosoftTrainingAssignmentMapping extends TrainingSetting implements Parsable 
 {
     /**
-     * Instantiates a new microsoftTrainingAssignmentMapping and sets the default values.
+     * Instantiates a new MicrosoftTrainingAssignmentMapping and sets the default values.
     */
     public function __construct() {
         parent::__construct();

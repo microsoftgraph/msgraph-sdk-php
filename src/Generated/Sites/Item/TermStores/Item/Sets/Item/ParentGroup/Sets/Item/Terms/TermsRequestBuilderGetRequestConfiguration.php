@@ -16,7 +16,7 @@ class TermsRequestBuilderGetRequestConfiguration extends BaseRequestConfiguratio
     public ?TermsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new termsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new TermsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param TermsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class TermsRequestBuilderGetRequestConfiguration extends BaseRequestConfiguratio
     }
 
     /**
-     * Instantiates a new termsRequestBuilderGetQueryParameters.
+     * Instantiates a new TermsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values
